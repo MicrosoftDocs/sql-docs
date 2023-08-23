@@ -80,7 +80,7 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, NULL is als
 
 #### [ @xml_compression = ] *xml_compression*
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Specifies whether to calculate savings for XML compression. *xml_compression* is **bit**, and can be NULL, 0, or 1. The default is NULL.
 
@@ -163,7 +163,7 @@ Similarly, when the `@data_compression` parameter is set to `NONE`, `ROW`, or `P
 The following example estimates the size of the `Production.WorkOrderRouting` table if it is compressed by using `ROW` compression.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 EXEC sys.sp_estimate_data_compression_savings
      'Production', 'WorkOrderRouting', NULL, NULL, 'ROW';
@@ -177,7 +177,7 @@ GO
 The following example estimates the size of the `Production.ProductModel` table if it is compressed by using `PAGE` compression, and the *xml_compression* value is enabled.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 EXEC sys.sp_estimate_data_compression_savings
      'Production', 'ProductModel', NULL, NULL, 'PAGE', 1;

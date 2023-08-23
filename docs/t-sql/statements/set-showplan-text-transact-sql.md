@@ -74,7 +74,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
  This is the query using an index:  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET SHOWPLAN_TEXT ON;  
 GO  
@@ -97,13 +97,13 @@ WHERE ProductID = 905;
   
 StmtText                                                                                                                                                                                        
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
-|--Clustered Index Seek(OBJECT:([AdventureWorks2012].[Production].[Product].[PK_Product_ProductID]), SEEK:([AdventureWorks2012].[Production].[Product].[ProductID]=CONVERT_IMPLICIT(int,[@1],0)) ORDERED FORWARD)   
+|--Clustered Index Seek(OBJECT:([AdventureWorks2022].[Production].[Product].[PK_Product_ProductID]), SEEK:([AdventureWorks2022].[Production].[Product].[ProductID]=CONVERT_IMPLICIT(int,[@1],0)) ORDERED FORWARD)   
 ```  
   
  Here is the query not using an index:  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET SHOWPLAN_TEXT ON;  
 GO  
@@ -126,7 +126,7 @@ WHERE StandardCost < 500.00;
   
 StmtText                                                                                                                                                                                                  
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
-|--Clustered Index Scan(OBJECT:([AdventureWorks2012].[Production].[ProductCostHistory].[PK_ProductCostHistory_ProductCostID]), WHERE:([AdventureWorks2012].[Production].[ProductCostHistory].[StandardCost]<[@1]))  
+|--Clustered Index Scan(OBJECT:([AdventureWorks2022].[Production].[ProductCostHistory].[PK_ProductCostHistory_ProductCostID]), WHERE:([AdventureWorks2022].[Production].[ProductCostHistory].[StandardCost]<[@1]))  
 ```  
   
 ## See Also  

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Transparent data encryption (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuresynapse-md](../../../includes/ssazuresynapse-md.md)] data files. This encryption is known as encrypting data at rest.
+Transparent data encryption (TDE) encrypts [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssazuresynapse-md](../../../includes/ssazuresynapse-md.md)] data files. This encryption is known as encrypting data at rest.
 
 To help secure a user database, you can take precautions like:
 
@@ -94,7 +94,7 @@ To use TDE, follow these steps.
 
 1. Set the database to use encryption.
 
-The following example shows encryption and decryption of the `AdventureWorks2012` database using a certificate named `MyServerCert` that's installed on the server.
+The following example shows encryption and decryption of the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] database using a certificate named `MyServerCert` that's installed on the server.
 
 ```sql
 USE master;
@@ -103,13 +103,13 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<UseStrongPasswordHere>';
 GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My DEK Certificate';
 GO
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE DATABASE ENCRYPTION KEY
 WITH ALGORITHM = AES_256
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 SET ENCRYPTION ON;
 GO
 ```
@@ -253,7 +253,7 @@ Letting a database use TDE removes the remaining part of the current virtual tra
 To find the status of log-file encryption, see the `encryption_state` column in the `sys.dm_database_encryption_keys` view, as in this example:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 /* The value 3 represents an encrypted state
    on the database and transaction logs. */
@@ -318,7 +318,7 @@ When you encrypt a database using TDE, files related to buffer pool extension (B
 
 ## TDE and In-Memory OLTP
 
-You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
+You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] and [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], In-Memory OLTP log records and data are encrypted if you enable TDE. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], In-Memory OLTP log records are encrypted if you enable TDE, but files in the MEMORY_OPTIMIZED_DATA filegroup are unencrypted.
 
 ## Guidelines on managing certificates used in TDE
 

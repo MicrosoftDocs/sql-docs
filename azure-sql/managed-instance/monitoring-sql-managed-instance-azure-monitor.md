@@ -4,7 +4,7 @@ description: Start here to learn how to monitor Azure SQL Managed Instance with 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 08/03/2022
+ms.date: 08/10/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
@@ -57,6 +57,8 @@ Diagnostic settings available for managed instances include:
 For more information on the resource logs and diagnostics available, see [Diagnostic telemetry for export](../database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#diagnostic-telemetry-for-export). 
 
 See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, Azure PowerShell or the Azure CLI. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Managed Instance are listed in [Azure SQL Managed Instance monitoring data reference](monitoring-sql-managed-instance-azure-monitor-reference.md#resource-logs).
+
+Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and may change over time as new resource logs become available and are added to the category group. Note that this may incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
 
 ## Analyzing metrics
 
@@ -116,7 +118,7 @@ Azure Monitor alerts proactively notify you when important conditions are found 
 
 If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
 
-The following table lists common and recommended alert rules for Azure SQL Managed Instance. You may see different options available depending on your purchase model.
+The following table lists common and recommended alert rules for Azure SQL Managed Instance. You may see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|

@@ -187,7 +187,7 @@ An IAM page covers a 4-GB range in a file and is the same coverage as a GAM or S
 IAM pages are allocated as required for each allocation unit and are located randomly in the file. The `sys.system_internals_allocation_units` system view points to the first IAM page for an allocation unit. All the IAM pages for that allocation unit are linked in an IAM chain.
 
 > [!IMPORTANT]  
-> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed. This view is not available in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
+> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed. This view is not available in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
 :::image type="content" source="media/pages-and-extents-architecture-guide/iam-chain.svg" alt-text="Diagram showing IAM pages linked in a chain per allocation unit.":::
 

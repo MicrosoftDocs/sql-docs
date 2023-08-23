@@ -135,7 +135,7 @@ A database is a securable contained by the server that is its parent in the perm
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
-|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY SENSITIVITY CLASSIFICATION<br /> **Applies to**: SQL Server (SQL Server 2019 and later), Azure SQL Database.|CONTROL|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -175,11 +175,11 @@ A database is a securable contained by the server that is its parent in the perm
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
 |DELETE|CONTROL|CONTROL SERVER|
 |EXECUTE|CONTROL|CONTROL SERVER|
-|EXECUTE ANY EXTERNAL ENDPOINT <br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE ANY EXTERNAL ENDPOINT <br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|
 |EXECUTE EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
-|KILL DATABASE CONNECTION<br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
+|KILL DATABASE CONNECTION<br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
 |SELECT|CONTROL|CONTROL SERVER|
 |SHOWPLAN|CONTROL|ALTER TRACE|
@@ -227,33 +227,33 @@ GO
 
 ### B. Granting SHOWPLAN permission to an application role
 
- The following example grants `SHOWPLAN` permission on the `AdventureWorks2012` database to application role `AuditMonitor`.
+ The following example grants `SHOWPLAN` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to application role `AuditMonitor`.
 
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GRANT SHOWPLAN TO AuditMonitor;
 GO
 ```
 
 ### C. Granting CREATE VIEW with GRANT OPTION
 
- The following example grants `CREATE VIEW` permission on the `AdventureWorks2012` database to user `CarmineEs` with the right to grant `CREATE VIEW` to other principals.
+ The following example grants `CREATE VIEW` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to user `CarmineEs` with the right to grant `CREATE VIEW` to other principals.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;
 GO
 ```
 
 ### D. Granting CONTROL permission to a database user
 
- The following example grants `CONTROL` permission on the `AdventureWorks2012` database to the database user `Sarah`. The user must exist in the database and the context must be set to the database.
+ The following example grants `CONTROL` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to the database user `Sarah`. The user must exist in the database and the context must be set to the database.
 
 ```sql
-USE AdventureWorks2012;
-GRANT CONTROL ON DATABASE::AdventureWorks2012 TO Sarah;
+USE AdventureWorks2022;
+GRANT CONTROL ON DATABASE::AdventureWorks2022 TO Sarah;
 GO
 ```
 

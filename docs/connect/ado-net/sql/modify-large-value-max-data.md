@@ -37,7 +37,7 @@ The `OPENROWSET` function includes the `BULK` rowset provider, which allows you 
   
 The `OPENROWSET BULK` option arguments provide significant control over where to begin and end reading data, how to deal with errors, and how data is interpreted. For example, you can specify that the data file be read as a single-row, single-column rowset of type `varbinary`, `varchar`, or `nvarchar`. For the complete syntax and options, see SQL Server Books Online.  
   
-The following example inserts a photo into the ProductPhoto table in the AdventureWorks sample database. When using the `BULK OPENROWSET` provider, you must supply the named list of columns even if you aren't inserting values into every column. The primary key in this case is defined as an identity column, and may be omitted from the column list. Note that you must also supply a correlation name at the end of the `OPENROWSET` statement, which in this case is ThumbnailPhoto. This correlates with the column in the `ProductPhoto` table into which the file is being loaded.  
+The following example inserts a photo into the ProductPhoto table in the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample database. When using the `BULK OPENROWSET` provider, you must supply the named list of columns even if you aren't inserting values into every column. The primary key in this case is defined as an identity column, and may be omitted from the column list. Note that you must also supply a correlation name at the end of the `OPENROWSET` statement, which in this case is ThumbnailPhoto. This correlates with the column in the `ProductPhoto` table into which the file is being loaded.  
   
 ```sql
 INSERT Production.ProductPhoto (  
@@ -77,7 +77,7 @@ The WRITE method specifies that a section of the value of the *column_name* will
 This Transact-SQL example updates a partial value in DocumentSummary, an `nvarchar(max)` column in the Document table in the AdventureWorks database. The word 'components' is replaced by the word 'features' by specifying the replacement word, the beginning location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example includes SELECT statements before and after the UPDATE statement to compare results.  
   
 ```sql
-USE AdventureWorks;  
+USE AdventureWorks2022;
 GO  
 --View the existing value.  
 SELECT DocumentSummary  
@@ -179,7 +179,7 @@ The following code retrieves the name and the `LargePhoto` object from the `Prod
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   
 ## Using large value type parameters  
-Large value types can be used in <xref:Microsoft.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:Microsoft.Data.SqlClient.SqlParameter> objects. You can retrieve large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> values, as shown in the following example. The code assumes that the following GetDocumentSummary stored procedure exists in the AdventureWorks sample database. The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.  
+Large value types can be used in <xref:Microsoft.Data.SqlClient.SqlParameter> objects the same way you use smaller value types in <xref:Microsoft.Data.SqlClient.SqlParameter> objects. You can retrieve large value types as <xref:Microsoft.Data.SqlClient.SqlParameter> values, as shown in the following example. The code assumes that the following GetDocumentSummary stored procedure exists in the [!INCLUDE [sssampledbobject-md](../../../includes/sssampledbobject-md.md)] sample database. The stored procedure takes an input parameter named @DocumentID and returns the contents of the DocumentSummary column in the @DocumentSummary output parameter.  
   
 ```sql
 CREATE PROCEDURE GetDocumentSummary   

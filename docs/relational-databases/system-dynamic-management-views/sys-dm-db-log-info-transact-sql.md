@@ -44,7 +44,7 @@ sys.dm_db_log_info ( database_id )
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Database ID. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
+|database_id|**int**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |file_id|**smallint**|The file ID of the transaction log.|  
 |vlf_begin_offset|**bigint** |Offset location of the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the beginning of the transaction log file.|
 |vlf_size_mb |**float** |[virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) size in MB, rounded to two decimal places.|
@@ -86,7 +86,7 @@ HAVING COUNT(l.database_id) > 100;
 The following query can be used to determine the position of the last active VLF before running SHRINK FILE on transaction log to determine if transaction log can shrink.
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2022;
 GO
 
 ;WITH cte_vlf AS (

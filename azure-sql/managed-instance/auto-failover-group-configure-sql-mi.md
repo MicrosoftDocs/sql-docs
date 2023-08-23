@@ -14,8 +14,8 @@ ms.custom: azure-sql-split, devx-track-azurepowershell
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/auto-failover-group-configure-sql-db.md)
-> * [Azure SQL Managed Instance](auto-failover-group-configure-sql-mi.md)
+> * [Azure SQL Database](../database/auto-failover-group-configure-sql-db.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](auto-failover-group-configure-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
 This article teaches you how to configure an [auto-failover group](auto-failover-group-sql-mi.md) for Azure SQL Managed Instance using the Azure portal and Azure PowerShell. For an end-to-end experience, review the [Auto-failover group tutorial](failover-group-add-instance-tutorial.md). 
 

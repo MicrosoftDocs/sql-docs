@@ -4,7 +4,7 @@ description: "Removes the space character or other specified characters from the
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 05/08/2023
+ms.date: 07/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -31,7 +31,7 @@ Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], optionally 
 
 ## Syntax
 
-Syntax for SQL Server prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure_md](../../includes/ssazure_md.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]::
+Syntax for SQL Server prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse-md.md)], and [!INCLUDE [fabric](../../includes/fabric.md)]::
 
 ```syntaxsql
 TRIM ( [ characters FROM ] string )
@@ -40,7 +40,8 @@ TRIM ( [ characters FROM ] string )
 Syntax for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]:
 
 > [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 ```syntaxsql
 TRIM ( [ LEADING | TRAILING | BOTH ] [characters FROM ] string )
@@ -124,7 +125,8 @@ In this example, only the trailing period and spaces from before `#` and after t
 ### C. Remove specified characters from the start of a string
 
 > [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the leading `.` from the start of the string before the word `test`.
 
@@ -141,7 +143,8 @@ SELECT TRIM(LEADING '.,! ' FROM  '     .#     test    .') AS Result;
 ### D. Remove specified characters from the end of a string
 
 > [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the trailing `.` from the end of the string after the word `test`.
 
@@ -158,7 +161,8 @@ SELECT TRIM(TRAILING '.,! ' FROM '     .#     test    .') AS Result;
 ### E. Remove specified characters from the beginning and end of a string
 
 > [!IMPORTANT]
-> You will need your database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> You will need your SQL Server database compatibility level set to 160 to use the `LEADING`, `TRAILING`, or `BOTH` keywords.
+> `LEADING`, `TRAILING`, or `BOTH` keywords are not currently supported in Microsoft Fabric.
 
 The following example removes the characters `123` from the beginning and end of the string `123abc123`.
 
@@ -173,7 +177,7 @@ abc
 ```
 ::: moniker-end
 
-## See also
+## Next steps
 
 - [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
 - [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)

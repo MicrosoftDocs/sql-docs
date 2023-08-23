@@ -1,9 +1,9 @@
 ---
-title: "Database Identifiers"
+title: "Database identifiers"
 description: "Get acquainted with database identifiers. Learn about their collation, various classes, delimiting requirements, and naming rules."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/16/2017"
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -19,7 +19,7 @@ dev_langs:
   - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
-# Database Identifiers
+# Database identifiers
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW Fabric SE Fabric DW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
@@ -39,14 +39,14 @@ CREATE TABLE TableX
 > [!NOTE]  
 > The names of variables, or the parameters of functions and stored procedures must comply with the rules for [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers.
 
-## Classes of Identifiers
+## Classes of identifiers
 There are two classes of identifiers:
 
 -  Regular identifiers    
    Comply with the rules for the format of identifiers. Regular identifiers are not delimited when they are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT *
    FROM HumanResources.Employee
@@ -57,7 +57,7 @@ There are two classes of identifiers:
    Are enclosed in double quotation marks (") or brackets ([ ]). Identifiers that comply with the rules for the format of identifiers might not be delimited. For example:
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT *
    FROM [HumanResources].[Employee] --Delimiter is optional.
@@ -67,7 +67,7 @@ There are two classes of identifiers:
 Identifiers that do not comply with all the rules for identifiers must be delimited in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For example:
 
 ```sql
-USE AdventureWorks
+USE AdventureWorks2022;
 GO
 CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
 (
@@ -90,10 +90,11 @@ WHERE [Order] = 10;            --Identifier is a reserved keyword.
 
 Both regular and delimited identifiers must contain from 1 through 128 characters. For local temporary tables, the identifier can have a maximum of 116 characters.
 
-## Rules for Regular Identifiers
+## Rules for regular identifiers
+
  The names of variables, functions, and stored procedures must comply with the following rules for [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers.
 
-1.  The first character must be one of the following:
+1. The first character must be one of the following:
 
     -   A letter as defined by the Unicode Standard 3.2. The Unicode definition of letters includes Latin characters from a through z, from A through Z, and also letter characters from other languages.
 
@@ -103,7 +104,7 @@ Both regular and delimited identifiers must contain from 1 through 128 character
 
         Some [!INCLUDE[tsql](../../includes/tsql-md.md)] functions have names that start with double at signs (@@). To avoid confusion with these functions, you should not use names that start with @@.
 
-2.  Subsequent characters can include the following:
+1. Subsequent characters can include the following:
 
     -   Letters as defined in the Unicode Standard 3.2.
 
@@ -111,29 +112,36 @@ Both regular and delimited identifiers must contain from 1 through 128 character
 
     -   The at sign (@), dollar sign ($), number sign (#), or underscore (\_).
 
-3.  The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) statement.
+1. The identifier must not be a [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved word. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserves both the uppercase and lowercase versions of reserved words. When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets. The words that are reserved depend on the database compatibility level. This level can be set by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) statement.
 
-4.  Embedded spaces or special characters are not allowed.
+1. Embedded spaces or special characters are not allowed.
 
-5.  [Supplementary characters](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) are not allowed.
+1. [Supplementary characters](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) are not allowed.
 
  When identifiers are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, the identifiers that do not comply with these rules must be delimited by double quotation marks or brackets.
 
 > [!NOTE]
 > Some rules for the format of regular identifiers depend on the database compatibility level. This level can be set by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
-## See Also
-[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
-[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
-[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
-[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
-[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
-[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-[Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+## Catalog collation in Azure SQL Database
+
+You cannot change or set the logical server collation on Azure SQL Database, but you can configure each database's collations separately for data in the database and for catalog. The catalog collation determines the collation for system metadata, such as object identifiers. Both collations can be specified independently when you [create the database in the Azure portal](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&preserve-view=true&tabs=azure-portal#create-a-single-database), in T-SQL with [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name), in PowerShell with [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase).
+
+For details and examples, see [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-current&preserve-view=true#collation_name). Specify a collation for the database (`COLLATE`) and a catalog collation for system metadata and object identifiers (`CATALOG_COLLATION`).
+
+## Next steps
+
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)
+- [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)
+- [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)
+- [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+- [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)
+- [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)
+- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)
+- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [Reserved Keywords (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)

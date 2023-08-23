@@ -45,10 +45,10 @@ DROP MASTER KEY
  Requires CONTROL permission on the database.  
   
 ## Examples  
- The following example removes the master key for the `AdventureWorks2012` database.  
+ The following example removes the master key for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DROP MASTER KEY;  
 GO  
 ```  

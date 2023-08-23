@@ -186,7 +186,7 @@ Specifies the indexed views are expanded. Also specifies the Query Optimizer won
 This query hint virtually disallows direct use of indexed views and indexes on indexed views in the query plan.
 
 > [!NOTE]  
-> The indexed view remains condensed if there's a direct reference to the view in the query's SELECT part. The view also remains condensed if you specify WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( *<index_value>* [ , *...n* ] ) ). For more information about the query hint NOEXPAND, see [Using NOEXPAND](../queries/hints-transact-sql-table.md#using-noexpand).
+> The indexed view remains condensed if there's a direct reference to the view in the query's SELECT part. The view also remains condensed if you specify `WITH (NOEXPAND)` or `WITH (NOEXPAND, INDEX( <index_value> [ , *...n* ] ) )`. For more information about the query hint NOEXPAND, see [Using NOEXPAND](../queries/hints-transact-sql-table.md#using-noexpand).
 
 The hint only affects the views in the statements' SELECT part, including those views in INSERT, UPDATE, MERGE, and DELETE statements.
 

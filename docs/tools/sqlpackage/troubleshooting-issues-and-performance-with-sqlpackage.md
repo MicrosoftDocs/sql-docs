@@ -88,6 +88,22 @@ The connection string provided contains encryption settings which may lead to co
 
 More information about the connection security changes in SqlPackage is available in this [blog post](https://aka.ms/dacfx-connection).
 
+
+### Import action error 2714 for constraint
+
+When performing an import action you may receive error 2714 as below if an object already exists.
+```
+*** Error importing database:Could not import package.
+Error SQL72014: Core Microsoft SqlClient Data Provider: Msg 2714, Level 16, State 5, Line 1 There is already an object named 'DF_Department_ModifiedDate_0FF0B724' in the database.
+Error SQL72045: Script execution error.  The executed script:
+ALTER TABLE [HumanResources].[Department]
+    ADD CONSTRAINT [DF_Department_ModifiedDate_] DEFAULT ('') FOR [ModifiedDate];
+```
+There are a couple causes and solutions to workaround this error:
+1) Verify that the destination you are importing into is an empty database.
+2) If your database has constraints that are using the DEFAULT attribute (so SQL will name the constraint) as well as an explicitly named constraint, you may have an issue where a constraint with the same name is attempted to be created twice. It is recommended to use all explicitly named constraints (not using DEFAULT), or all unexplicitly defined (using DEFAULT).
+3) Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of bacpac corruption.
+
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
 
@@ -107,6 +123,7 @@ In scenarios where the OS disk space is limited and runs out during the export, 
 During an export process the table data is compressed in the bacpac file. The use of `/p:CompressionOption` set to `Fast`, `SuperFast`, or `NotCompressed` may improve the export process speed while compressing the output bacpac file less.
 
 To obtain the database schema and data while skipping the schema validation, perform an [Export](sqlpackage-export.md) with the property `/p:VerifyExtraction=True`.
+
 
 ## Azure SQL Database
 

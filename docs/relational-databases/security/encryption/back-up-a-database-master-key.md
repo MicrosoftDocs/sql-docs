@@ -49,8 +49,8 @@ Requires CONTROL permission on the database.
 7. Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql
-    -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2012;   
+    -- Creates a backup of the "AdventureWorks2022" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
+    USE AdventureWorks2022;   
     GO  
     OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';   
   

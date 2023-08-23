@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/13/2023
+ms.date: 08/01/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -272,6 +272,7 @@ ms.topic: include
 | 371 | 14 | No | The user does not have the external policy action '%ls' or permission '%.\*ls' to perform this action. |
 | 372 | 14 | No | External access policies needed to validate access are either expired or not found. To force a policy fetch, execute the procedure 'sys.sp_external_policy_refresh'. If the error persists, please check provided errors related to external access policy fetch. |
 | 373 | 14 | No | The %ls permission or external policy action '%ls' was denied on the object '%.\*ls', database '%.\*ls', schema '%.\*ls'. |
+| 374 | 14 | No | The Babylon engine could not be initialized. |
 | 401 | 16 | No | Unimplemented statement or expression %ls. |
 | 402 | 16 | No | The data types %s and %s are incompatible in the %s operator. |
 | 403 | 16 | No | Invalid operator for data type. Operator equals %ls, type equals %ls. |

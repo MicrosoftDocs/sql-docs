@@ -162,7 +162,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
 > [!TIP]
 > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]  
 
 #### ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ]
 
@@ -295,7 +295,7 @@ Requires `ALTER` permission on the table or view.
 The following example updates all statistics on the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
 GO  
@@ -306,7 +306,7 @@ GO
 The following example updates the statistics for the `AK_SalesOrderDetail_rowguid` index of the `SalesOrderDetail` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
 GO  
@@ -317,7 +317,7 @@ GO
 The following example creates and then updates the statistics for the `Name` and `ProductNumber` columns in the `Product` table.
   
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO  
 CREATE STATISTICS Products
     ON Production.Product ([Name], ProductNumber)
@@ -332,7 +332,7 @@ UPDATE STATISTICS Production.Product(Products)
 The following example updates the `Products` statistics in the `Product` table, forces a full scan of all rows in the `Product` table, and turns off automatic statistics for the `Products` statistics.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
     WITH FULLSCAN, NORECOMPUTE;  

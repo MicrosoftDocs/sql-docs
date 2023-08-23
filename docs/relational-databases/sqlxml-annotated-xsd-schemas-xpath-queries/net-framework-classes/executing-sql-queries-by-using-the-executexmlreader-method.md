@@ -29,7 +29,7 @@ using System.IO;
 using System.Xml;  
    class Test  
    {  
-      static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks2012;Integrated Security=SSPI";  
+      static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks2022;Integrated Security=SSPI";  
       public static int testParams()  
       {  
          SqlXmlParameter p;  

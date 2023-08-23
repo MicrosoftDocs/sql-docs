@@ -63,7 +63,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|The event contents, in XML format. Is not nullable.|  
 |file_name|**nvarchar(260)**|The name of the file that contains the event. Is not nullable.|  
 |file_offset|**bigint**|The offset of the block in the file that contains the event. Is not nullable.|  
-|timestamp_utc|**datetime2(7)**|**Applies to**: [!INCLUDE[sssql17](../../includes/sssql17-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
+|timestamp_utc|**datetime2(7)**|**Applies to**: [!INCLUDE[sssql17](../../includes/sssql17-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
 
   
 ## Remarks  
@@ -73,7 +73,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ### Azure SQL
 
- In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], store .xel files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file).
+ In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], store .xel files in Azure Blob Storage. You can use `sys.fn_xe_file_target_read_file` to read from extended event sessions you create yourself and store in Azure Blob Storage. For example walkthrough, review [Event File target code for extended events in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file).
 
 If you specify wildcard and/or a path for a local file system, you will receive an error message similar to:
 

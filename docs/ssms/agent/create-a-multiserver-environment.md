@@ -12,15 +12,15 @@ helpviewer_keywords:
   - "master servers [SQL Server], about master servers"
   - "target servers [SQL Server], about target servers"
   - "multiserver environments [SQL Server]"
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
+monikerRange: " >= sql-server-2016"
 ---
 # Create a Multiserver Environment
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-
-> [!IMPORTANT]  
-> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Multiserver administration requires that you set up a master server (MSX) and one or more target servers (TSX). Jobs that will be processed on all the target servers are first defined on the master server and then downloaded to the target servers.  
+
+> [!IMPORTANT]  
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. The [Multi Server Administration feature is not supported on Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 By default, full Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption and certificate validation are enabled for connections between master servers and target servers. For more information, see [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   

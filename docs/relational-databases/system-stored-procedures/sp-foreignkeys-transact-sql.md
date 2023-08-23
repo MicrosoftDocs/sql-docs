@@ -94,7 +94,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
 EXEC sp_foreignkeys @table_server = N'Seattle1',   
    @pktab_name = N'Department',   
-   @pktab_catalog = N'AdventureWorks2012';  
+   @pktab_catalog = N'AdventureWorks2022';  
 ```  
   
 ## See Also  

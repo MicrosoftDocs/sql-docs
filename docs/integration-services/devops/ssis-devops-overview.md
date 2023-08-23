@@ -3,7 +3,7 @@ title: "SQL Server Integration Services DevOps overview"
 description: Learn how to build SSIS CICD with SSIS DevOps Tools.
 author: chugugrace
 ms.author: chugu
-ms.date: "4/21/2021"
+ms.date: "7/22/2022"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -55,7 +55,7 @@ Path of a separate folder to save build results, which can be published as build
 ### Limitations and known issues
 
 - SSIS Build task relies on Visual Studio and SSIS designer, which is mandatory on build agents. Thus, to run SSIS Build task in the pipeline:
-    - for Microsoft-hosted agents, you must choose an available image that includes Visual Studio and SQL Server Integration Services extension, for example, **windows-2019**. Details refer to [Microsoft-hosted agents documentation](/azure/devops/pipelines/agents/hosted) for softwares included in available images.
+    - for Microsoft-hosted agents, you must choose an available image that includes Visual Studio and SQL Server Integration Services extension, for example, **windows-2022**. Details refer to [Microsoft-hosted agents documentation](/azure/devops/pipelines/agents/hosted) for softwares included in available images.
     - for self-hosted agents, install Visual Studio and SSIS designer (either VS2017 + SSDT2017, or VS2019 + SSIS Projects extension) on self-hosted agents.
 
 - To build SSIS projects using any out-of-box components (including SSIS Azure feature pack, and other third-party components), those out-of-box components must be installed on the machine where the pipeline agent is running.  For Microsoft-hosted agent, user can add a [PowerShell Script task](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops&preserve-view=true) or [Command Line Script task](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops&preserve-view=true) to download and install the components before SSIS Build task  is executed. Below is the sample PowerShell script to install Azure Feature Pack: 
@@ -112,7 +112,7 @@ Type of the destination. Currently SSIS Deploy task supports two types:
 
 #### Destination server
 
-Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
+Name of destination Database Engine. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
 
 #### Destination path
 

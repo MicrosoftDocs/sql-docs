@@ -52,12 +52,12 @@ GETANSINULL returns 1 if the database's nullability allows for null values. This
 -   SET ANSI_NULL_DFLT_OFF OFF  
   
 ## Examples  
- The following example returns the default nullability for the `AdventureWorks2012` database.  
+ The following example returns the default nullability for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-SELECT GETANSINULL('AdventureWorks2012')  
+SELECT GETANSINULL('AdventureWorks2022')  
 GO  
 ```  
   

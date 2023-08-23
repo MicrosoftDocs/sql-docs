@@ -109,7 +109,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not cache a plan for this procedure and the procedure is recompiled at run time.  
   
  ENCRYPTION  
- **Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: SQL Server ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the ALTER PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -186,7 +186,7 @@ GO
  The following example alters the `uspVendorAllInfo` stored procedure. It removes the EXECUTE AS CALLER clause and modifies the body of the procedure to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
     @Product VARCHAR(25)   

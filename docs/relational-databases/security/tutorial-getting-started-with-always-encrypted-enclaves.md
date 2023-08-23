@@ -265,4 +265,4 @@ After completing this tutorial, you can go to one of the following tutorials:
 ## See also
 
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
-- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

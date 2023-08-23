@@ -43,7 +43,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Download [AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases).
+* Download [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).
 
 Instructions for restoring databases in SSMS are here: [Restore a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
@@ -57,7 +57,7 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 
 2. Expand the **Databases** node.
 
-3. Right-click the database **Adventureworks2016** > **Tasks** > **Back Up**:
+3. Right-click the database **AdventureWorks2022** > **Tasks** > **Back Up**:
 
     ![Back up a database](media/scripting-ssms/backupdb.png)
 
@@ -73,7 +73,7 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 
 ### Script T-SQL when you shrink the transaction log
 
-1. Right-click the database **AdventureWorks2016** > **Tasks** > **Shrink** > **Files**:
+1. Right-click the database **AdventureWorks2022** > **Tasks** > **Shrink** > **Files**:
 
      ![Shrink files](media/scripting-ssms/shrinkfiles.png)
 
@@ -93,7 +93,7 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 
 ## Script databases
 
-The following section teaches you to script out the database by using the **Script As** and **Generate Scripts** options. The **Script As** option re-creates the database and its configuration options. You can script both the schema and the data by using the **Generate Scripts** option. In this section, you create two new databases. You use the **Script As** option to create *AdventureWorks2016a*. You use the **Generate Scripts** option to create *AdventureWorks2016b*.
+The following section teaches you to script out the database by using the **Script As** and **Generate Scripts** options. The **Script As** option re-creates the database and its configuration options. You can script both the schema and the data by using the **Generate Scripts** option. In this section, you create two new databases. You use the **Script As** option to create *AdventureWorks2022a*. You use the **Generate Scripts** option to create *AdventureWorks2022b*.
 
 ### Script a database by using the Script option
 
@@ -101,7 +101,7 @@ The following section teaches you to script out the database by using the **Scri
 
 2. Expand the **Databases** node.
 
-3. Right-click the database **AdventureWorks2016** > **Script Database As** > **Create To** > **New Query Editor Window**:
+3. Right-click the database **AdventureWorks2022** > **Script Database As** > **Create To** > **New Query Editor Window**:
 
     ![Script database](media/scripting-ssms/scriptdb.png)
 
@@ -110,13 +110,13 @@ The following section teaches you to script out the database by using the **Scri
     ![Scripted-out database](media/scripting-ssms/scriptedoutdb.png)
     This option scripts out only the database configuration options.
 
-5. On your keyboard, select Ctrl+F to open the **Find** dialog box. Select the down arrow to open the **Replace** option. On the top **Find** line, type AdventureWorks2016, and on the bottom **Replace** line, type AdventureWorks2016a.
+5. On your keyboard, select Ctrl+F to open the **Find** dialog box. Select the down arrow to open the **Replace** option. On the top **Find** line, type AdventureWorks2022, and on the bottom **Replace** line, type AdventureWorks2022a.
 
-6. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016a*. 
+6. Select **Replace All** to replace all instances of *AdventureWorks2022* with *AdventureWorks2022a*. 
 
     ![Find and replace](media/scripting-ssms/findandreplace.png)
 
-7. Select **Execute** to execute the query and create your new AdventureWorks2016a database. 
+7. Select **Execute** to execute the query and create your new AdventureWorks2022a database. 
 
 ### Script a database by using the Generate Scripts option
 
@@ -124,7 +124,7 @@ The following section teaches you to script out the database by using the **Scri
 
 2. Expand the **Databases** node.
 
-3. Right-click **AdventureWorks2016** > **Tasks** > **Generate Scripts**:
+3. Right-click **AdventureWorks2022** > **Tasks** > **Generate Scripts**:
 
     ![Generate scripts for databases](media/scripting-ssms/generatescriptsfordb.png)
 
@@ -151,13 +151,13 @@ The following section teaches you to script out the database by using the **Scri
 
 7. Select **Next** on the **Summary**. Then select **Next** again to generate the script in a **New Query** window.
 
-8. On your keyboard, open the **Find** dialog box (Ctrl+F). Select the down arrow to open the **Replace** option. On the top **Find** line, enter *AdventureWorks2016*. On the bottom **Replace** line, enter *AdventureWorks2016b*.
+8. On your keyboard, open the **Find** dialog box (Ctrl+F). Select the down arrow to open the **Replace** option. On the top **Find** line, enter *AdventureWorks2022*. On the bottom **Replace** line, enter *AdventureWorks2022b*.
 
-9. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*.
+9. Select **Replace All** to replace all instances of *AdventureWorks2022* with *AdventureWorks2022b*.
 
-    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
+   ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
-10. Select **Execute** to execute the query and create your new AdventureWorks2016b database.
+10. Select **Execute** to execute the query and create your new AdventureWorks2022b database.
 
 ## Script tables
 
@@ -167,7 +167,7 @@ This section covers how to script out tables from your database. Use this option
 
 2. Expand your **Databases** node.
 
-3. Expand your **AdventureWorks2016** database node. 
+3. Expand your **AdventureWorks2022** database node. 
 
 4. Expand your **Tables** node.
 
@@ -178,7 +178,7 @@ This section covers how to script out tables from your database. Use this option
 6. Select **Execute** to execute the query. This action drops the *Errorlog* table and re-creates it. 
 
     >[!NOTE]
-    > The *Errorlog* table is empty by default in the AdventureWorks2016 database. So you're not losing any data by dropping the table. However, following these steps on a table with data causes data loss.
+    > The *Errorlog* table is empty by default in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. So you're not losing any data by dropping the table. However, following these steps on a table with data causes data loss.
 
 ## Script stored procedures
 

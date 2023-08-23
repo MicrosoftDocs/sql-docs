@@ -1,6 +1,6 @@
 ---
 title: SSIS Projects extension for VS2022 troubleshooting guide
-description: "View the release notes for all versions of SSIS that work with Visual Studio 2022 and earlier Visual Studio versions."
+description: "SSIS Projects extension for VS2022 troubleshooting guide"
 author: chugugrace
 ms.author: chugu
 ms.reviewer: maghan, drskwier
@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!IMPORTANT]
 > You can download the [SSIS](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices) from the [Visual Studio Marketplace](<https://marketplace.visualstudio.com/>).
 
-Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team.
+Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-p/SSIS for the latest information, tips, news, and announcements about SSIS directly from the product team. Integration Services (SSIS) extension release notes are listed on the [extension marketplace](https://marketplace.visualstudio.com/items?itemName=SSIS.MicrosoftDataToolsIntegrationServices).
 
 ## Component Download
 - To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector](https://aka.ms/SSISMSOracleConnector) and [Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
@@ -43,40 +43,40 @@ Visit https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/bg-
 
 ## Known issues
 **Version 1.0**
-  1. SQL server 2016 is not supported as target server version. (Target server version supported are SQL server 2017, 2019 and 2022.)
+  1. SQL Server 2016 is not supported as target server version. (Target server versions supported are SQL Server 2017, 2019 and 2022.)
   2. In the context menu (right mouse button) on objects in the project (e.g. the solution, a package) in Visual Studio, many of the entries appear many times. This happens only when Microsoft Analysis Services Projects 2022 is installed together.
-  3. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  3. Project name in Solution Explorer UI doesn't show target server version as suffix.
   4. Dimension Processing and Partition Processing components are not supported.
   5. DQO related components are not supported.
   
 **Version 0.4**
-  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  1. Target server versions supported: SQL Server 2017, SQL Server 2019 and SQL Server 2022
   2. Can't design Dimension Processing and Partition Processing.
   3. Can't design DQS related component.
-  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  4. Project name in Solution Explorer UI doesn't show target server version as suffix.
   
 **Version 0.3**
-  1. Target sever versions supported: SQL server 2017, SQL server 2019 and SQL server 2022
+  1. Target server versions supported: SQL Server 2017, SQL Server 2019 and SQL Server 2022
   2. Can't design Dimension Processing and Partition Processing.
   3. Can't design DQS related component.
-  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  4. Project name in Solution Explorer UI doesn't show target server version as suffix.
   5. Localization and globalization aren't supported.
   6. **Can't edit Execute SQL Task** when SQL Server 2022 is installed at the same machine
       - Edit Execute SQL Task shows error: "'Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTaskExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version-16.0.0.0, Culture-neutral, PublicKeyToken=89845dcd8080cc91' is not registered for use on this computer." 
       - Workaround: Executing with non-admin user might solve the issue. If not, SQL Server 2022 & VS extension for SSIS have to be installed on separate machines for now. We are working on the fix.
   
 **Version 0.2**
-  1. Target sever versions supported: SQL server 2019 and SQL server 2022
+  1. Target server versions supported: SQL Server 2019 and SQL Server 2022
   2. Can't design Dimension Processing and Partition Processing.
   3. Can't design DQS related component.
-  4. Project name in Solution Explorer UI doesn’t show target server version as suffix.
+  4. Project name in Solution Explorer UI doesn't show target server version as suffix.
   5. Side by side, localization and globalization aren't supported.
   6. Azure-enabled SSIS projects aren't supported
-  7. Repair action doesn't take effct. Reinstall it instead.
+  7. Repair action doesn't take effect. Reinstall it instead.
   8. Logging container can't choose packages.
   
 **Version 0.1**
-  1. Target server versions supported: SQL server 2019 and SQL server 2022 
+  1. Target server versions supported: SQL Server 2019 and SQL Server 2022 
   1. Can't design Dimension Processing and Partition Processing.
   1. Can't design DQS related component.
   1. Project name in Solution Explorer UI doesn't show target server version as suffix.

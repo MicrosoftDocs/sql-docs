@@ -156,16 +156,16 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
         @rmtuser = '<login_name>',         -- login
         @rmtpassword = '<secure_password>' -- password
 
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     SET XACT_ABORT ON;
     GO
     BEGIN DISTRIBUTED TRANSACTION;
     -- Delete candidate from local instance.
-    DELETE AdventureWorks2012.HumanResources.JobCandidate
+    DELETE AdventureWorks2022.HumanResources.JobCandidate
         WHERE JobCandidateID = 13;
     -- Delete candidate from remote instance.
-    DELETE RemoteServer.AdventureWorks2012.HumanResources.JobCandidate
+    DELETE RemoteServer.AdventureWorks2022.HumanResources.JobCandidate
         WHERE JobCandidateID = 13;
     COMMIT TRANSACTION;
     GO

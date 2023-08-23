@@ -4,7 +4,7 @@ description: Start here to learn how to monitor Azure SQL Database with Azure Mo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/29/2022
+ms.date: 08/10/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -55,6 +55,8 @@ For more information on the resource logs and diagnostics available, see [Diagno
 
 See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, CLI, or PowerShell. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Database are listed in [Azure SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
 
+Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and may change over time as new resource logs become available and are added to the category group. Note that this may incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
+
 ## Analyzing metrics
 
 You can analyze metrics for Azure SQL Database alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
@@ -83,7 +85,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Use the following queries to monitor your database. You may see different options available depending on your purchase model.
+Use the following queries to monitor your database. You may see different options available depending on your purchasing model.
 
 Example A: **Log_write_percent** from the past hour
 
@@ -136,7 +138,7 @@ If you are creating or running an application in Azure, [Azure Monitor Applicati
 
 You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
-The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
+The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|

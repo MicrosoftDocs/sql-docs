@@ -60,7 +60,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. The following example prepares a statement in the AdventureWorks2016 database, and later executes it using the handle.
+B. The following example prepares a statement in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, and later executes it using the handle.
 
 ```sql
 -- Prepare query

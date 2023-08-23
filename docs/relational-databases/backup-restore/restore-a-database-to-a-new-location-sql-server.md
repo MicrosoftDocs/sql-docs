@@ -169,15 +169,15 @@ helpviewer_keywords:
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  
--- AdventureWorks2012_Backup is the name of the backup device.  
+-- AdventureWorks2022_Backup is the name of the backup device.  
 RESTORE FILELISTONLY  
-   FROM AdventureWorks2012_Backup;  
+   FROM AdventureWorks2022_Backup;  
 -- Restore the files for MyAdvWorks.  
 RESTORE DATABASE MyAdvWorks  
-   FROM AdventureWorks2012_Backup  
+   FROM AdventureWorks2022_Backup  
    WITH RECOVERY,  
-   MOVE 'AdventureWorks2012_Data' TO 'D:\MyData\MyAdvWorks_Data.mdf',   
-   MOVE 'AdventureWorks2012_Log' TO 'F:\MyLog\MyAdvWorks_Log.ldf';  
+   MOVE 'AdventureWorks2022_Data' TO 'D:\MyData\MyAdvWorks_Data.mdf',   
+   MOVE 'AdventureWorks2022_Log' TO 'F:\MyLog\MyAdvWorks_Log.ldf';  
 GO  
   
 ```  

@@ -3,7 +3,7 @@ title: "Subqueries (SQL Server)"
 description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/25/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -21,13 +21,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 A subquery is a query that is nested inside a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery.
 
-> [!NOTE]  
-> The samples in this article use the AdventureWorks2016 database available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 A subquery can be used anywhere an expression is allowed. In this example, a subquery is used as a column expression named MaxUnitPrice in a `SELECT` statement.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT Ord.SalesOrderID, Ord.OrderDate,
     (SELECT MAX(OrdDet.UnitPrice)
@@ -46,7 +45,7 @@ Many [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that include subquer
 The following example shows both a subquery `SELECT` and a join `SELECT` that return the same result set and execution plan:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 
 /* SELECT statement built using a subquery. */
@@ -115,7 +114,7 @@ A subquery is subject to the following restrictions:
 In the following example, the *BusinessEntityID* column in the `WHERE` clause of the outer query is implicitly qualified by the table name in the outer query `FROM` clause (*Sales.Store*). The reference to *CustomerID* in the select list of the subquery is qualified by the subquery `FROM` clause, that is, by the *Sales.Customer* table.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Sales.Store
@@ -126,12 +125,12 @@ WHERE BusinessEntityID NOT IN
 GO
 ```
 
-The general rule is that column names in a statement are implicitly qualified by the table referenced in the `FROM` clause at the same level. If a column doesn't exist in the table referenced in the `FROM` clause of a subquery, it is implicitly qualified by the table referenced in the `FROM` clause of the outer query.
+The general rule is that column names in a statement are implicitly qualified by the table referenced in the `FROM` clause at the same level. If a column doesn't exist in the table referenced in the `FROM` clause of a subquery, it's implicitly qualified by the table referenced in the `FROM` clause of the outer query.
 
 Here's what the query looks like with these implicit assumptions specified:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Sales.Store
@@ -154,7 +153,7 @@ A subquery can itself include one or more subqueries. Any number of subqueries c
 The following query finds the names of employees who are also sales persons.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT LastName, FirstName
 FROM Person.Person
@@ -199,7 +198,7 @@ The innermost query returns the sales person IDs. The query at the next higher l
 You can also express this query as a join:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT LastName, FirstName
 FROM Person.Person c
@@ -216,7 +215,7 @@ Many queries can be evaluated by executing the subquery once and substituting th
 This query retrieves one instance of each employee's first and last name for which the bonus in the *SalesPerson* table is 5000 and for which the employee identification numbers match in the *Employee* and *SalesPerson* tables.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT c.LastName, c.FirstName, e.BusinessEntityID
 FROM Person.Person AS c JOIN HumanResources.Employee AS e
@@ -244,7 +243,7 @@ That is exactly how this query is evaluated: [!INCLUDE[ssNoVersion](../../includ
 For example, if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first examines the row for `Syed Abbas`, the variable *Employee.BusinessEntityID* takes the value 285, which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitutes into the inner query. These two query samples represent a decomposition of the previous sample with the correlated subquery.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT Bonus
 FROM Sales.SalesPerson
@@ -255,7 +254,7 @@ GO
 The result is 0.00 (`Syed Abbas` didn't receive a bonus because they aren't a sales person), so the outer query evaluates to:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT LastName, FirstName
 FROM Person.Person AS c JOIN HumanResources.Employee AS e
@@ -264,7 +263,7 @@ WHERE 5000 IN (0.00);
 GO
 ```
 
-Because this is false, the row for `Syed Abbas` isn't included in the results of the previous sample query with the correlated subquery. Go through the same procedure with the row for `Pamela Ansman-Wolfe`. You'll see that this row is included in the results, because `WHERE 5000 IN (5000)` includes results.
+Because this is false, the row for `Syed Abbas` isn't included in the results of the previous sample query with the correlated subquery. Go through the same procedure with the row for `Pamela Ansman-Wolfe`. You see that this row is included in the results, because `WHERE 5000 IN (5000)` includes results.
 
 Correlated subqueries can also include table-valued functions in the `FROM` clause by referencing columns from a table in the outer query as an argument of the table-valued function. In this case, for each row of the outer query, the table-valued function is evaluated according to the subquery.
 
@@ -272,21 +271,21 @@ Correlated subqueries can also include table-valued functions in the `FROM` clau
 
 Subqueries can be specified in many places:
 
-- With aliases. For more information, see [Subqueries with Aliases](#aliases).
+- With aliases. For more information, see [Subqueries with table aliases](#aliases).
 - With `IN` or `NOT IN`. For more information, see [Subqueries with IN](#in) and [Subqueries with NOT IN](#notin).
 - In `UPDATE`, `DELETE`, and `INSERT` statements. For more information, see [Subqueries in UPDATE, DELETE, and INSERT Statements](#upsert).
-- With comparison operators. For more information, see [Subqueries with Comparison Operators](#comparison).
-- With `ANY`, `SOME`, or `ALL`. For more information, see [Comparison Operators Modified by ANY, SOME, or ALL](#comparison_modified).
+- With comparison operators. For more information, see [Subqueries with comparison operators](#comparison).
+- With `ANY`, `SOME`, or `ALL`. For more information, see [Comparison operators modified by ANY, SOME, or ALL](#comparison_modified).
 - With `IS [NOT] DISTINCT FROM`. For more information, see [IS [NOT] DISTINCT FROM (Transact-SQL)](../../t-sql/queries/is-distinct-from-transact-sql.md).
 - With `EXISTS` or `NOT EXISTS`. For more information, see [Subqueries with EXISTS](#exists) and [Subqueries with NOT EXISTS](#notexists).
-- In place of an expression. For more information, see [Subqueries used in place of an Expression](#expression).
+- In place of an expression. For more information, see [Subqueries used in place of an expression](#expression).
 
 ### <a id="aliases"></a> Subqueries with table aliases
 
 Many statements in which the subquery and the outer query refer to the same table can be stated as self-joins (joining a table to itself). For example, you can find addresses of employees from a particular state using a subquery:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT StateProvinceID, AddressID
 FROM Person.Address
@@ -313,7 +312,7 @@ StateProvinceID AddressID
 Or you can use a self-join:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT e1.StateProvinceID, e1.AddressID
 FROM Person.Address AS e1
@@ -326,7 +325,7 @@ GO
 Table aliases `e1` and `e2` are required because the table being joined to itself appears in two different roles. Aliases can also be used in nested queries that refer to the same table in an inner and outer query.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT e1.StateProvinceID, e1.AddressID
 FROM Person.Address AS e1
@@ -345,7 +344,7 @@ The result of a subquery introduced with `IN` (or with `NOT IN`) is a list of ze
 The following query finds the names of all the wheel products that Adventure Works Cycles makes.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -382,7 +381,7 @@ Touring Rear Wheel
 This statement is evaluated in two steps. First, the inner query returns the subcategory identification number that matches the name 'Wheel' (17). Second, this value is substituted into the outer query, which finds the product names that go with the subcategory identification numbers in `Production.Product`.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -393,7 +392,7 @@ GO
 One difference in using a join rather than a subquery for this and similar problems is that the join lets you show columns from more than one table in the result. For example, if you want to include the name of the product subcategory in the result, you must use a join version.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT p.[Name], s.[Name]
 FROM Production.Product p
@@ -428,7 +427,7 @@ Touring Rear Wheel Wheels
 The following query finds the name of all vendors whose credit rating is good, from whom Adventure Works Cycles orders at least 20 items, and whose average lead time to deliver is less than 16 days.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Purchasing.Vendor
@@ -468,7 +467,7 @@ The inner query is evaluated, producing the ID numbers of the vendors who meet t
 Using a join, the same query is expressed like this:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT [Name]
 FROM Purchasing.Vendor v
@@ -488,7 +487,7 @@ Subqueries introduced with the keyword `NOT IN` also return a list of zero or mo
 The following query finds the names of the products that aren't finished bicycles.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -510,7 +509,7 @@ Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT` data m
 The following example doubles the value in the *ListPrice* column in the *Production.Product* table. The subquery in the `WHERE` clause references the *Purchasing.ProductVendor* table to restrict the rows updated in the *Product* table to just those supplied by *BusinessEntity* 1540.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 UPDATE Production.Product
 SET ListPrice = ListPrice * 2
@@ -521,10 +520,10 @@ WHERE ProductID IN
 GO
 ```
 
-Here is an equivalent `UPDATE` statement using a join:
+Here's an equivalent `UPDATE` statement using a join:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 UPDATE Production.Product
 SET ListPrice = ListPrice * 2
@@ -537,7 +536,7 @@ GO
 For clarity in case the same table is itself referenced in other subqueries, use the target table's alias:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 UPDATE p
 SET ListPrice = ListPrice * 2
@@ -558,7 +557,7 @@ To use a subquery introduced with an unmodified comparison operator, you must be
 For example, if you assume each sales person only covers one sales territory, and you want to find the customers located in the territory covered by Linda Mitchell, you can write a statement with a subquery introduced with the simple `=` comparison operator.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT CustomerID
 FROM Sales.Customer
@@ -574,7 +573,7 @@ If, however, `Linda Mitchell` covered more than one sales territory, then an err
 Subqueries introduced with unmodified comparison operators often include aggregate functions, because these return a single value. For example, the following statement finds the names of all products whose list price is greater than the average list price.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -587,7 +586,7 @@ GO
 Because subqueries introduced with unmodified comparison operators must return a single value, they can't include `GROUP BY` or `HAVING` clauses unless you know the `GROUP BY` or `HAVING` clause itself returns a single value. For example, the following query finds the products priced higher than the lowest-priced product that is in ProductSubcategoryID 14.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -614,7 +613,7 @@ Similarly, `> ANY` means that for a row to satisfy the condition specified in th
 The following query provides an example of a subquery introduced with a comparison operator modified by `ANY`. It finds the products whose list prices are greater than or equal to the maximum list price of any product subcategory.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -625,7 +624,7 @@ WHERE ListPrice >= ANY
 GO
 ```
 
-For each Product subcategory, the inner query finds the maximum list price. The outer query looks at all of these values and determines which individual product's list prices are greater than or equal to any product subcategory's maximum list price. If `ANY` is changed to `ALL`, the query will return only those products whose list price is greater than or equal to all the list prices returned in the inner query.
+For each Product subcategory, the inner query finds the maximum list price. The outer query looks at all of these values and determines which individual product's list prices are greater than or equal to any product subcategory's maximum list price. If `ANY` is changed to `ALL`, the query returns only those products whose list price is greater than or equal to all the list prices returned in the inner query.
 
 If the subquery doesn't return any values, the entire query fails to return any values.
 
@@ -633,7 +632,7 @@ The `= ANY` operator is equivalent to `IN`. For example, to find the names of al
 
 ```sql
 --Using = ANY
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -644,7 +643,7 @@ WHERE ProductSubcategoryID = ANY
 GO
 
 --Using IN
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -687,7 +686,7 @@ The `<> ANY` operator, however, differs from `NOT IN`:
 For example, the following query finds customers located in a territory not covered by any sales persons.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT CustomerID
 FROM Sales.Customer
@@ -714,7 +713,7 @@ A subquery introduced with EXISTS has the following syntax:
 The following query finds the names of all products that are in the Wheels subcategory:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -755,14 +754,14 @@ To understand the results of this query, consider the name of each product in tu
 Notice that subqueries that are introduced with EXISTS are a bit different from other subqueries in the following ways:
 
 - The keyword `EXISTS` isn't preceded by a column name, constant, or other expression.
-- The select list of a subquery introduced by `EXISTS` almost always consists of an asterisk (*). There is no reason to list column names because you're just testing whether rows that meet the conditions specified in the subquery exist.
+- The select list of a subquery introduced by `EXISTS` almost always consists of an asterisk (*). There's no reason to list column names because you're just testing whether rows that meet the conditions specified in the subquery exist.
 
-The `EXISTS` keyword is important because frequently there is no alternative formulation without subqueries. Although some queries that are created with EXISTS can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
+The `EXISTS` keyword is important because frequently there's no alternative formulation without subqueries. Although some queries that are created with EXISTS can't be expressed any other way, many queries can use `IN` or a comparison operator modified by `ANY` or `ALL` to achieve similar results.
 
 For example, the preceding query can be expressed by using `IN`:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -775,12 +774,12 @@ GO
 
 ### <a id="notexists"></a> Subqueries with `NOT EXISTS`
 
-`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause in which it is used is satisfied if no rows are returned by the subquery.
+`NOT EXISTS` works like `EXISTS`, except the `WHERE` clause in which it's used is satisfied if no rows are returned by the subquery.
 
 For example, to find the names of products that aren't in the wheels subcategory:
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name]
 FROM Production.Product
@@ -800,7 +799,7 @@ In [!INCLUDE[tsql](../../includes/tsql-md.md)], a subquery can be substituted an
 The following example illustrates how you might use this enhancement. This query finds the prices of all mountain bike products, their average price, and the difference between the price of each mountain bike and the average price.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 SELECT [Name], ListPrice,
 (SELECT AVG(ListPrice) FROM Production.Product) AS Average,

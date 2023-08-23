@@ -5,12 +5,13 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 03/08/2023
-ms.service: sql
 ms.topic: conceptual
 ms.custom: references_regions
 ---
 
 # Prerequisites
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 An Azure Arc-enabled instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is an instance on-premises or in a cloud provider that is connected to Azure Arc. This article explains those prerequisites.
 
@@ -100,7 +101,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Azure VMware Solution.
 
 > [!NOTE]  
-> Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Connect your SQL Server to Azure Arc](connect.md).
+> Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
 ## Register resource providers
 
@@ -143,6 +144,6 @@ Before configuring your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md
 
 ## Next steps
 
-- [Connect your SQL Server to Azure Arc](deployment-options.md)
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 
 

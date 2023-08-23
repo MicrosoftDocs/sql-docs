@@ -83,7 +83,7 @@ Requires membership in the **PolicyAdministratorRole** fixed database role.
 
 ## Examples
 
-The following example updates an existing policy category subscription so that the `AdventureWorks2022` database subscribes to the `Finance` policy category.
+The following example updates an existing policy category subscription so that the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database subscribes to the `Finance` policy category.
 
 ```sql
 EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription

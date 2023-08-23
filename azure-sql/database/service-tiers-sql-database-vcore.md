@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/05/2023
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -16,8 +16,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](service-tiers-sql-database-vcore.md)
-> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
+> * [Azure SQL Database](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
 This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 
@@ -243,7 +243,7 @@ Fsv2-series in only supported in the General Purpose tier. For regions where Fsv
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
-- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves), which isn't supported with other hardware configurations.
+- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads which require stronger security protection of hardware enclaves, compared to Virtualization-based Security (VBS) enclaves.
 - DC-series is designed for workloads that process sensitive data and demand confidential query processing capabilities, provided by Always Encrypted with secure enclaves.
 - DC-series hardware provides balanced compute and memory resources.
 
@@ -295,16 +295,22 @@ Hyperscale service tier premium-series and premium-series memory optimized hardw
 - Canada Central
 - Central India
 - Central US
+- East Asia
 - East US
 - East US 2
 - Japan East
-- North Europe
+- Japan West*
 - North Central US
+- North Europe
+- Southeast Asia
 - South Central US
 - UK South
 - West Europe
 - West US 1
 - West US 2
+- West US 3
+
+\* Premium-series memory optimized hardware is not currently available.
 
 #### Fsv2-series
 
@@ -340,6 +346,7 @@ DC-series is available in the following regions:
 - UK South
 - West Europe
 - West US
+- Southeast Asia
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 

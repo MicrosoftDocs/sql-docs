@@ -1,9 +1,9 @@
 USE master
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILEGROUP Test1FG1;
 GO
-ALTER DATABASE AdventureWorks2012 
+ALTER DATABASE AdventureWorks2022 
 ADD FILE 
 (
     NAME = test1dat3,

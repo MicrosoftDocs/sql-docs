@@ -48,12 +48,12 @@ Products whose data or object models can be represented in a hierarchy use Windo
 |`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|SQL Server Extended Events|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects such as cubes, aggregations, and dimensions.|  
   
- For example, you can use the SQLSERVER:\SQL folder to start paths that can represent any object that is supported by the SMO object model. The leading part of a SQLSERVER:\SQL path is SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. The nodes after the instance name alternate between object collections (such as *Databases* or *Views*) and object names (such as AdventureWorks2012). Schemas are not represented as object classes. When you specify the node for a top-level object in a schema, such as a table or view, you must specify the object name in the format *SchemaName.ObjectName*.  
+ For example, you can use the SQLSERVER:\SQL folder to start paths that can represent any object that is supported by the SMO object model. The leading part of a SQLSERVER:\SQL path is SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. The nodes after the instance name alternate between object collections (such as *Databases* or *Views*) and object names (such as [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]). Schemas are not represented as object classes. When you specify the node for a top-level object in a schema, such as a table or view, you must specify the object name in the format *SchemaName.ObjectName*.  
   
- The following example shows the path of the Vendor table in the Purchasing schema of the AdventureWorks2012 database in a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer:  
+ The following example shows the path of the Vendor table in the Purchasing schema of the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer:  
   
 ```powershell
-SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
+SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022\Tables\Purchasing.Vendor  
 ```
   
  For more information about the SMO object model hierarchy, see [SMO Object Model Diagram](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
@@ -63,7 +63,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Path|SMO class|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2022`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## SQL Server Provider Tasks  
   

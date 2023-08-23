@@ -3,7 +3,7 @@ title: "CREATE EXTERNAL TABLE (Transact-SQL)"
 description: CREATE EXTERNAL TABLE (Transact-SQL) creates an external table.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 03/28/2023
+ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -119,7 +119,7 @@ In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will
 
 :::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
-To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` with SqlBinRoot the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
+To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf` under the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn`.
 
 #### DATA_SOURCE = *external_data_source_name*
 
@@ -228,6 +228,9 @@ You can create many external tables that reference the same or different externa
 Since the data for an external table is not under the direct management control of SQL Server, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources. If you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+
+When the external table is using `DELIMITEDTEXT`, `CSV`, `PARQUET`, or `DELTA` as data types, external tables only support statistics for one column per `CREATE STATISTICS` command.
+
 
 Only these Data Definition Language (DDL) statements are allowed on external tables:
 
@@ -1303,7 +1306,7 @@ In the following image example, if `LOCATION='/webdata/'`, a PolyBase query will
 
 :::image type="content" source="media/create-external-table-transact-sql/aps-polybase-folder-traversal.png" alt-text="A diagram of folders and file data for external tables.":::
 
-To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the `core-site.xml` configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+To change the default and only read from the root folder, set the attribute `<polybase.recursive.traversal>` to 'false' in the `core-site.xml` configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf\` under the `bin` root of SQL Server. For example, `C:\Program Files\Microsoft SQL Server\MSSQL13.XD14\MSSQL\Binn\`.
 
 #### DATA_SOURCE = *external_data_source_name*
 

@@ -114,7 +114,7 @@ FROM T
  In the example, you first create a table (T) with a typed **xml** column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T and delete one or more nodes from the document.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 DROP TABLE T  
 GO  

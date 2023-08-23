@@ -10,7 +10,7 @@ ms.topic: faq
 ---
 # Migrate SQL Server workloads (FAQ)
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi-sqlvm](../includes/appliesto-sqlserver-sqldb-sqlmi-sqlvm.md)]
 
 Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 
@@ -160,7 +160,7 @@ The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensin
 
 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits) is a licensing program that can be applied to on-premises SQL Server licenses, allowing license mobility, AHB, and other benefits. SA is required if AHB is to be invoked for using existing SQL Server licenses (with SA) when moving to Azure SQL. Without SA + AHB, customers are charged with PAYG pricing.
 
-Alternatively, the outsourcing software management terms applicable to SQL server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
+Alternatively, the outsourcing software management terms applicable to SQL Server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
 
 #### Do I have to pay for high availability (HA) in SQL Managed Instance and SQL Database?
 

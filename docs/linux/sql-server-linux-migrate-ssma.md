@@ -26,7 +26,7 @@ SSMA supports a variety of source databases including Oracle, MySQL, Sybase, DB2
 To get started, download SQL Server Migration Assistant (SSMA) for your source database from the following list:
 - [SSMA for Access](https://aka.ms/ssmaforaccess)
 - [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql) 
+- [SSMA for MySQL](https://aka.ms/ssmaformysql) 
 - [SSMA for Oracle](https://aka.ms/ssmafororacle)
 - [SSMA for Sybase ASE](https://aka.ms/ssmaforsybase) 
 

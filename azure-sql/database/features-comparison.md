@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 05/21/2023
+ms.date: 07/24/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -46,7 +46,7 @@ The following table lists the major features of SQL Server and provides informat
 | [BULK INSERT statement](/sql/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server) | Yes, but just from Azure Blob storage as a source. | Yes, but just from Azure Blob Storage as a source - see [differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#bulk-insert--openrowset). |
 | [Certificates and asymmetric keys](/sql/relational-databases/security/sql-server-certificates-and-asymmetric-keys) | Yes, without access to file system for `BACKUP` and `CREATE` operations. | Yes, without access to file system for `BACKUP` and `CREATE` operations - see [certificate differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#certificates). |
 | [Change data capture - CDC](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) | Yes, for S3 tier and above. Basic, S0, S1, S2 are not supported. | Yes |
-| [Collation - server/instance](/sql/relational-databases/collations/set-or-change-the-server-collation) | No, default server collation `SQL_Latin1_General_CP1_CI_AS` is always used. | Yes, can be set when the [instance is created](../managed-instance/create-template-quickstart.md) and can't be updated later. |
+| [Collation - server/instance](/sql/relational-databases/collations/set-or-change-the-server-collation) | Yes, the default database collation is `SQL_Latin1_General_CP1_CI_AS`. The [database collation can be set on database creation](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true#collation_name) and cannot be updated. Specify a collation for data (`COLLATE`) and a catalog collation for system metadata and object identifiers (`CATALOG_COLLATION`). In Azure SQL Database, there is no server collation.| Yes, can be set when the [instance is created](../managed-instance/create-template-quickstart.md) and can't be updated later. |
 | [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) | Yes - [Premium tier, Standard tier - S3 and above, General Purpose tier, Business Critical, and Hyperscale tiers](/sql/relational-databases/indexes/columnstore-indexes-overview). |Yes |
 | [Common language runtime - CLR](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts) | No | Yes, but without access to file system in `CREATE ASSEMBLY` statement - see [CLR differences](../managed-instance/transact-sql-tsql-differences-sql-server.md#clr) |
 | [Credentials](/sql/relational-databases/security/authentication-access/credentials-database-engine) | Yes, but only [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql). | Yes, but only **Azure Key Vault** and `SHARED ACCESS SIGNATURE` are supported - see [details](../managed-instance/transact-sql-tsql-differences-sql-server.md#credential) |
@@ -158,10 +158,10 @@ The following table compares the maximum resource limits available for Azure SQL
 
 | **Category** | **Azure SQL Database** | **Azure SQL Managed Instance** |
 |:--|:--|:--|
-| **Compute size**| Up to 128 vCores  | Up to 80 vCores| 
+| **Compute size**| Up to 128 vCores  | Up to 128 vCores| 
 | **Storage size** | 1 GB - 100 TB | 16 TB | 
 | **Tempdb size** | [32 GB per vCore](resource-limits-vcore-single-databases.md), up to 2,560 GB |Up to 4 TB - [limited by reserved storage size](../managed-instance/resource-limits.md#service-tier-characteristics) |
-| **Log write throughput** | Up to 100mb/sec | [4 MB/s per vCore (max 48 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
+| **Log write throughput** | Up to 100mb/sec | [4.5 MB/s per vCore (max 192 MB/s)](../managed-instance/resource-limits.md#service-tier-characteristics) |
 | **Availability** | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-database/) <br> 99.995% SLA with [zone redundancy](high-availability-sla.md#zone-redundant-availability) | [Default SLA](https://azure.microsoft.com/support/legal/sla/azure-sql-sql-managed-instance/)|
 | **Backups** | A choice of locally-redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |A choice of locally-redundant (LRS), zone-redundant (ZRS), geo-redundant (GRS) or geo-zone-redundant (GZRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available| 
 | [**Read-only replicas**](read-scale-out.md) |Read scale with 1-4 high availability replicas or 1-30 [named replicas](service-tier-hyperscale-replicas.md#named-replica)  <br> 0 - 4 [geo-replicas](active-geo-replication-overview.md) |1 built-in high availability replica is readable <br> 0 - 1 geo-replicas using [auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md)  | 

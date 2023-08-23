@@ -244,7 +244,7 @@ GO
  The following example uses the `OVER` clause to sort the result set by `Name` before it adds the sequence number column.  
   
 ```  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE SCHEMA Samples ;  
@@ -261,7 +261,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### F. Resetting the sequence number  
- Example E consumed the first 79 of the `Samples.IDLabel` sequence numbers. (Your version of `AdventureWorks2012` may return a different number of results.) Execute the following to consume the next 79 sequence numbers (80 though 158).  
+ Example E consumed the first 79 of the `Samples.IDLabel` sequence numbers. (Your version of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] may return a different number of results.) Execute the following to consume the next 79 sequence numbers (80 though 158).  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT JobTitle
 FROM HumanResources.Employee

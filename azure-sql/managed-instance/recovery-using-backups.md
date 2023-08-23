@@ -22,8 +22,8 @@ Some of the content in this article is duplicated in /azure-sql/database/recover
 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/recovery-using-backups.md)
-> * [Azure SQL Managed Instance](recovery-using-backups.md)
+> * [Azure SQL Database](../database/recovery-using-backups.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](recovery-using-backups.md?view=azuresql-mi&preserve-view=true)
 
 This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [Restore a database from a backup in Azure SQL Database](../database/recovery-using-backups.md).
 

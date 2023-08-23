@@ -15,9 +15,9 @@ ms.topic: reference
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database logical server](resource-limits-logical-server.md)
-> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md)
-> * [Azure SQL Managed Instance](../managed-instance/resource-limits.md)
+> * [Azure SQL Database logical server](resource-limits-logical-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Database single database](resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true)
 
 This article provides an overview of resource management in Azure SQL Database. It provides information on what happens when resource limits are reached, and describes  resource governance mechanisms that are used to enforce these limits.
 

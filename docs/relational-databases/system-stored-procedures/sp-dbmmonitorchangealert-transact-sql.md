@@ -89,11 +89,11 @@ sp_dbmmonitorchangealert database_name
 |5|Retention period|8 hours|Yes|  
   
 ```  
-EXEC sp_dbmmonitorchangealert AdventureWorks2012, 1, 30, 1 ;  
-EXEC sp_dbmmonitorchangealert AdventureWorks2012, 2, 10000, 1 ;  
-EXEC sp_dbmmonitorchangealert AdventureWorks2012, 3, 10000, 1 ;  
-EXEC sp_dbmmonitorchangealert AdventureWorks2012, 4, 1000, 0 ;  
-EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;  
+EXEC sp_dbmmonitorchangealert AdventureWorks2022, 1, 30, 1 ;  
+EXEC sp_dbmmonitorchangealert AdventureWorks2022, 2, 10000, 1 ;  
+EXEC sp_dbmmonitorchangealert AdventureWorks2022, 3, 10000, 1 ;  
+EXEC sp_dbmmonitorchangealert AdventureWorks2022, 4, 1000, 0 ;  
+EXEC sp_dbmmonitorchangealert AdventureWorks2022, 5, 8, 1 ;  
 ```  
   
 ## See Also  

@@ -28,8 +28,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
             //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
   
-            //Reference the AdventureWorks2012 database.   
-            Database db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+            Database db = srv.Databases["AdventureWorks2022"];  
   
             //Define a Synonym object variable by supplying the   
             //parent database, name, and schema arguments in the constructor.   
@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
   
             //Specify the base object, which is the object on which   
             //the synonym is based.   
-            syn.BaseDatabase = "AdventureWorks2012";  
+            syn.BaseDatabase = "AdventureWorks2022";  
             syn.BaseSchema = "Sales";  
             syn.BaseObject = "Store";  
             syn.BaseServer = srv.Name;  
@@ -56,13 +56,13 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
 #And the database object corresponding to Adventureworks  
-$db = $srv.Databases["AdventureWorks2012"]  
+$db = $srv.Databases["AdventureWorks2022"]  
   
 $syn = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Synonym `  
 -argumentlist $db, "Shop", "Sales"  
   
 #Specify the base object, which is the object on which the synonym is based.  
-$syn.BaseDatabase = "AdventureWorks2012"  
+$syn.BaseDatabase = "AdventureWorks2022"  
 $syn.BaseSchema = "Sales"  
 $syn.BaseObject = "Store"  
 $syn.BaseServer = $srv.Name  

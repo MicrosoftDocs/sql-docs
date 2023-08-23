@@ -77,13 +77,13 @@ sp_dbmmonitorhelpalert database_name
  The following example returns a row that indicates whether a warning is enabled for the oldest unsent transaction performance metric on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitorhelpalert AdventureWorks2012, 1 ;  
+EXEC sp_dbmmonitorhelpalert AdventureWorks2022, 1 ;  
 ```  
   
  The following example returns a row for each performance metric that indicates whether it is enabled on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitorhelpalert AdventureWorks2012;  
+EXEC sp_dbmmonitorhelpalert AdventureWorks2022;  
 ```  
   
 ## See Also  

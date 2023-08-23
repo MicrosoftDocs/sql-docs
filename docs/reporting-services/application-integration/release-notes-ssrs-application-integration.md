@@ -20,7 +20,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 
 | Change description | Details |
 | :----------------- | :------ |
-| Bug Fixes | Fixed issues with PDF Renderer: Can detect complex clusters and write them out using Glyph ID’s. |
+| Bug Fixes | Fixed issues with PDF Renderer: Can detect complex clusters and write them out using Glyph ID's. |
 |           | Jquery was updated from 3.5.1 to 3.6.0 to resolve security vulnerability |
 
 ## 150.1537.0

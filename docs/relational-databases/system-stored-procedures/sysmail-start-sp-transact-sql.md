@@ -72,7 +72,7 @@ GO
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)
 - [sysmail_stop_sp (Transact-SQL)](sysmail-stop-sp-transact-sql.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

@@ -89,13 +89,13 @@ You can create nonclustered indexes in [!INCLUDE[ssnoversion](../../includes/ssn
   
 #### To create a nonclustered index on a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] with AdventureWorks2019 installed. See [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md?view=sql-server-ver15&tabs=ssms&preserve-view=true) to download AdventureWorks2019.
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] with [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] installed. You can download [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] from [sample databases](../../samples/adventureworks-install-configure.md?view=sql-server-ver15&tabs=ssms&preserve-view=true).
 2.  On the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2019;  
+    USE AdventureWorks2022;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
     IF EXISTS (SELECT name FROM sys.indexes  

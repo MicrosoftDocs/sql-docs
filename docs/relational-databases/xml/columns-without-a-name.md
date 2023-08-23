@@ -29,7 +29,7 @@ Produce this XML. By default, for each row in the rowset, a `<row>` element is g
 The following query returns a three-column rowset. The third column without a name has XML data. The PATH mode inserts an instance of the xml type.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID,
        Name,

@@ -31,7 +31,7 @@ For a quick description on how to use Query Store in troubleshooting scenarios, 
 
 ## <a name="Insight"></a> Use Query Performance Insight in Azure SQL Database
 
-If you run Query Store in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
+If you run Query Store in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can use [Query Performance Insight](/azure/sql-database/sql-database-query-performance) to analyze resource consumption over time. While you can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to get detailed resource consumption for all your queries, such as CPU, memory, and I/O, Query Performance Insight gives you a quick and efficient way to determine their impact on overall DTU consumption for your database. For more information, see [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use).
 
 ## Use Query Store with Elastic Pool databases
 
@@ -104,7 +104,7 @@ If you run your workload on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], sign 
 - Rewrite problematic queries, for example, to take advantage of query parameterization or to implement more optimal logic.
 
 > [!TIP]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
 
 ## <a name="Verify"></a> Verify that Query Store collects query data continuously
 
@@ -230,7 +230,7 @@ Consider the following options:
 
 ### Find non-parameterized queries in Query Store
 
-You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:
+You can find the number of plans stored in Query Store using the below query, using query store DMVs, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]:
 
 ```sql
 SELECT count(Pl.plan_id) AS plan_count, Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
@@ -243,7 +243,7 @@ GROUP BY Qry.query_hash, Txt.query_text_id, Txt.query_sql_text
 ORDER BY plan_count desc;
 ```
 
-The following sample creates an [Extended Events session](../extended-events/extended-events.md) to capture the event `query_store_db_diagnostics`, which can be useful in diagnosing query resource consumption. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+The following sample creates an [Extended Events session](../extended-events/extended-events.md) to capture the event `query_store_db_diagnostics`, which can be useful in diagnosing query resource consumption. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this extended event session creates an event file in the SQL Server Log folder by default. For example, in a default [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] installation on Windows, the event file (.xel file) should be created in the folder `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`. For [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], specify an Azure Blob Storage location instead. For more information, see [XEvent event_file for Azure SQL Managed Instance](/azure/azure-sql/database/xevent-code-event-file#phase-2-transact-sql-code-that-uses-azure-storage-container). The event 'qds.query_store_db_diagnostics' is not available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
 
 
 ```sql
@@ -298,7 +298,7 @@ WHERE is_forced_plan = 1;
 For a full list of reasons, see [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track and troubleshoot plan forcing failures.
 
 > [!TIP]
-> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
+> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider the [Query Store hints](query-store-hints.md) feature for forcing query hints on queries without code changes. For more information and examples, see [Query Store hints](query-store-hints.md).
 
 
 ## <a name="Renaming"></a> Avoid renaming databases for queries with forced plans
@@ -326,9 +326,9 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 
 ## <a name="geosyncreplicas"></a> Using Query Store in Azure SQL Database active geo-replication
 
-Query Store on a secondary active geo-replica of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] will be a read-only copy of the activity on the primary replica. 
+Query Store on a secondary active geo-replica of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] will be a read-only copy of the activity on the primary replica. 
 
-Avoid mismatched tiers with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] geo-replication. A secondary database should be at or near the same compute size of the primary database, and in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type in [sys.dm_db_wait_stats](../system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md) which indicates transaction log rate throttling on the primary replica due to secondary lag.
+Avoid mismatched tiers with [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] geo-replication. A secondary database should be at or near the same compute size of the primary database, and in the same service tier of the primary database. Look for the HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO wait type in [sys.dm_db_wait_stats](../system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md) which indicates transaction log rate throttling on the primary replica due to secondary lag.
 
 For more on estimating and configuring the size of the secondary Azure SQL database of active geo-replication, see [Configuring secondary database](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
 

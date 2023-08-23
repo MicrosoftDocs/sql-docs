@@ -21,8 +21,8 @@ monikerRange: "= azuresql || = azuresql-db "
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md)
-> * [Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md)
+> * [Azure SQL Database](business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 
 
 **Business continuity** in Azure SQL Database refers to the mechanisms, policies, and procedures that enable your business to continue operating in the face of disruption, particularly to its computing infrastructure. In most cases, SQL Database handles the disruptive events that might happen in the cloud environment and keep your applications and business processes running. However, there are some disruptive events that cannot be handled by SQL Database automatically, such as:

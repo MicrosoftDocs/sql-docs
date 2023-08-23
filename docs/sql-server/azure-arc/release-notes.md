@@ -5,11 +5,28 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 07/13/2023
-ms.service: sql
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## August 2023
+
+This release is published August 10, 2023.
+
+### Extension version
+
+`1.1.2406.45`
+
+### Azure extension for SQL Server
+
+- Support to automatically rotate certificates for Microsoft Entra ID authentication. Review [Rotate certificates](rotate-certificates.md).
+
+   [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+- Configure patching in Azure portal. Review [Configure in the Azure portal](patch.md#configure-in-the-azure-portal).
 
 ## July 2023
 
@@ -17,7 +34,7 @@ This release is published July 13, 2023.
 
 ### Extension version
 
-`1.1.2378.31`
+`1.1.2384.34`
 
 ### Azure extension for SQL Server
 
@@ -33,7 +50,7 @@ This release is published June 13, 2023.
 
 ### Azure extension for SQL Server
 
-- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-license-type.md).
+- Support for being able to view your SQL Server configuration is now available. See [Manage SQL Server license and billing options](manage-configuration.md).
   - View SQL Server instances
   - Modify host level properties like license type
   - Subscribe to Extended Security Update (ESU)
@@ -99,8 +116,8 @@ This release is published February 17, 2023
 
 ### Azure extension for SQL Server
 
-- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
-- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-license-type.md#manage-sql-server-license-and-billing-options).
+- [Best practices assessment](assess.md) (BPA) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-configuration.md).
+- [Viewing SQL Server databases - Azure Arc](view-databases.md) on Arc-enabled SQL Server requires Software Assurance or [Azure pay-as-you-go license](manage-configuration.md).
 
 ## January 2023
 
@@ -314,3 +331,4 @@ The October update includes the following improvements:
 The following issues apply to the October release:
 
 - Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [prerequisites](prerequisites.md).
+

@@ -600,7 +600,7 @@ public class BulkCopyExistingTransactions {
   
 5. Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** `SELECT ProductID, Name, ProductNumber FROM Production.Product`, and **Next**  
   
-6. Check the configuration: You can leave the Row delimiter as `{CR}{LF}` and Column Delimiter as Comma `{,}`.  Select **Edit Mappings**... and check that the data **Type** is correct for each column (for example, integer for `ProductID` and Unicode string for the others).  
+6. Check the configuration: You can leave the Row delimiter as `{CR}{LF}` and Column Delimiter as Comma `{,}`.  Select **Edit Mappings...** and check that the data **Type** is correct for each column (for example, integer for `ProductID` and Unicode string for the others).  
   
 7. Skip ahead to **Finish** and run the export.  
 

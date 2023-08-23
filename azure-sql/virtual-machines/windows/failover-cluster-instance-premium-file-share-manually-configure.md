@@ -42,7 +42,7 @@ Before you complete the instructions in this article, you should already have:
 
 To mount your premium file share, follow these steps: 
 
-1. Sign in to the [Azure portal](https://portal.azure.com). and go to your storage account.
+1. Sign in to the [Azure portal](https://portal.azure.com), and go to your storage account.
 1. Go to **File shares** under **Data storage**, and then select the premium file share you want to use for your SQL storage.
 1. Select **Connect** to bring up the connection string for your file share.
 1. In the drop-down list, select the drive letter you want to use, choose **Storage account key** as the authentication method, and then copy the code block to a text editor, such as Notepad.

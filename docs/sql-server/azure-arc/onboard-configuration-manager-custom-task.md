@@ -26,7 +26,9 @@ Before you get started, be sure to review the [prerequisites](prerequisites.md) 
 
 ## Generate a service principal
 
-Create an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+Create a Microsoft Entra ID [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and assign the necessary roles and permissions to the service principal.
 

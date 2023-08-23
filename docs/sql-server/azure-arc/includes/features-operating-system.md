@@ -15,7 +15,7 @@ The following table identifies features available by operating system:
 | [Install Azure extension for SQL Server during setup](../../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#install-sql-server-2022) <sup>1</sup> | Yes | No |
 | [Best practices assessment](../assess.md) | Yes | No |
 | [Detailed database inventory](../view-databases.md#inventory-databases) | Yes | No |
-| [Azure Active Directory authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) <sup>1</sup> | Yes | Yes |
+| [Microsoft Entra ID authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) <sup>1</sup> | Yes | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | No |
 | [Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes |
 | [Automated backups](../point-in-time-restore.md) | Yes | No |

@@ -33,7 +33,7 @@ Azure Key Vault automatically rotates the certificate for you. Key vault rotates
 
 The functionality described in this article applies to an instance of Azure Arc-enabled SQL Server configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
 
-- [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+- [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 
 ## Service managed certificate rotation
 

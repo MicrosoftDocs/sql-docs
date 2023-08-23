@@ -185,6 +185,20 @@ To enable the availability group feature, follow these steps:
 1. Select **Apply**. Select **OK** in the pop-up dialog.
 1. Restart the SQL Server service.
 1. Repeat these steps for the other SQL Server instance.
+   
+## Enable FILESTREAM feature
+
+The FILESTREAM feature is disabled by default. Use the **SQL Server Configuration Manager** to enable the feature on both SQL Server instances.
+
+To enable the FILESTREAM feature, follow these steps:
+
+1. Launch the RDP file to the first SQL Server VM (such as **SQL-VM-1**) with a domain account that is a member of sysadmin fixed server role, such as the **CORP\Install** domain account created in the [prerequisites document](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md)
+1. From the **Start** screen of one your SQL Server VMs, launch **SQL Server Configuration Manager**.
+1. In the browser tree, highlight **SQL Server Services**, right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
+1. Select the **FILESTREAM** tab, then check the box to **Enable FILESTREAM for Transact-SQL access**:
+1. Select **Apply**. Select **OK** in the pop-up dialog.
+1. Restart the SQL Server service.
+1. Repeat these steps for the other SQL Server instance.
 
 ## Create database
 

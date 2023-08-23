@@ -52,7 +52,7 @@ Msg 41374, Level 16, State 1, Procedure sp_xtp_unbind_db_resource_pool_internal,
 Database 'Hekaton_DB' does not have a binding to a resource pool.
 ```
 
-## Example
+## Examples
 
 The following code unbinds the database `Hekaton_DB` from the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] resource pool it is bound to. If `Hekaton_DB` isn't currently bound to a [!INCLUDE [inmemory](../../includes/inmemory-md.md)] resource pool, a message is given. The database must be restarted for the unbinding to take effect.
 

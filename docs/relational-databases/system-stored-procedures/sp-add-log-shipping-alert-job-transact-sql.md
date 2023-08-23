@@ -42,7 +42,7 @@ The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job ID of t
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

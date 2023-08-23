@@ -36,7 +36,6 @@ sp_addapprole
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @rolename = ] N'*rolename*'

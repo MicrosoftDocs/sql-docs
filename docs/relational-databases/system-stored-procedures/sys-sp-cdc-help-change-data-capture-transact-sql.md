@@ -59,7 +59,7 @@ If *@source_name* is non-null, *@source_schema* must also be non-null.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

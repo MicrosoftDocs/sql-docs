@@ -60,7 +60,7 @@ The new sequence number for the account. *@sequence_number* is **int**, with no 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -68,7 +68,7 @@ None.
 
 Returns an error if the account specified isn't associated with the profile specified.
 
-The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that has the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the e-mail message fails.
+The sequence number determines the order in which Database Mail uses accounts in the profile. For a new e-mail message, Database Mail starts with the account that's the lowest sequence number. Should that account fail, Database Mail uses the account with the next highest sequence number, and so on, until either Database Mail sends the message successfully, or the account with the highest sequence number fails. If the account with the highest sequence number fails, the e-mail message fails.
 
 If more than one account exists with the same sequence number, Database Mail only uses one of those accounts for a given e-mail message. In this case, Database Mail makes no guarantees as to which of the accounts is used for that sequence number or that the same account is used from message to message.
 

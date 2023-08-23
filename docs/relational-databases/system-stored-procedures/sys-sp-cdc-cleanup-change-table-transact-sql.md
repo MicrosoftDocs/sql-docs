@@ -61,7 +61,7 @@ The maximum number of delete entries that can be deleted by using a single state
 
 An OUTPUT parameter indicating whether the cleanup operation failed or not. *@fCleanupFailed* is **bit**, with a default of `0`.
 
-## Result sets
+## Result set
 
 None, unless the optional *@fCleanupFailed* OUTPUT parameter is used.
 
@@ -69,7 +69,7 @@ None, unless the optional *@fCleanupFailed* OUTPUT parameter is used.
 
 `0` (success) or `1` (failure).
 
-## Example
+## Examples
 
 ```sql
 -- Declaring a variable and Setting to zero first
@@ -94,7 +94,7 @@ CLEANUP SUCCESS
 
 `sys.sp_cdc_cleanup_change_table` performs the following operations:
 
-1. If the *@low_water_mark* parameter is NULL, the start_lsn value for the *@capture instance* is left unchanged. However, if the current low watermark is greater than the low watermark value specified using the *@low_water_mark* parameter for the procedure, the [Error 22957](../errors-events/database-engine-events-and-errors.md) is thrown. The error message for Error 22957 is `LSN %s, specified as the new low endpoint for the change table associated with capture instance '%s', is not within the Change Data Capture timeline [%s, %s].`
+1. If the *@low_water_mark* parameter is NULL, the start_lsn value for the *@capture instance* is left unchanged. However, if the current low watermark is greater than the low watermark value specified using the *@low_water_mark* parameter for the procedure, the [Error 22957](../errors-events/database-engine-events-and-errors.md) is thrown. The error message for Error 22957 is `LSN %s, specified as the new low endpoint for the change table associated with capture instance '%s', isn't within the Change Data Capture timeline [%s, %s].`
 
    > [!NOTE]  
    > The new low watermark might not be the low watermark that is specified in the stored procedure call. If other entries in the `cdc.lsn_time_mapping` table share the same commit time, the smallest start_lsn represented in the group of entries is selected as the adjusted low watermark. If the *@low_water_mark* parameter is NULL or the current low watermark is greater than the new low watermark, the `start_lsn` value for the capture instance is left unchanged.

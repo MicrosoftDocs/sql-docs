@@ -62,7 +62,7 @@ When `'all'` is specified, all capture instances defined for *@source_name* are 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_help_fulltext_system_components"
 dev_langs:
   - "TSQL"
-monikerRange: "=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_help_fulltext_system_components (Transact-SQL)
 
@@ -63,7 +63,7 @@ Depending on component type, *param* is one of the following options:
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 The following result set is returned for the system components.
 
@@ -113,7 +113,7 @@ GO
 
 ### C. Determine whether a specific word breaker is registered
 
-The following example will list the word breaker for the Turkish language (LCID = 1055) if it has been installed on the system and registered on the service instance. This example specifies the parameter names, `@component_type` and `@param`.
+The following example will list the word breaker for the Turkish language (LCID = 1055) if it's been installed on the system and registered on the service instance. This example specifies the parameter names, `@component_type` and `@param`.
 
 ```sql
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;
@@ -124,7 +124,7 @@ By default, this word breaker isn't installed, so the result set is empty.
 
 ### D. Determine whether a specific filter has been registered
 
-The following example lists the filter for the `.xdoc` component if it has been manually installed on the system and registered on the server instance.
+The following example lists the filter for the `.xdoc` component if it's been manually installed on the system and registered on the server instance.
 
 ```sql
 EXEC sp_help_fulltext_system_components 'filter', '.xdoc';

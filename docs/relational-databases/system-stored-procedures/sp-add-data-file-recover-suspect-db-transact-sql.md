@@ -75,7 +75,7 @@ If *@filegrowth* is NULL, the default value is `10%`, and the minimum value is `
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -45,7 +45,7 @@ The name of the profile to be deleted. *@profile_name* is **sysname**, with a de
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

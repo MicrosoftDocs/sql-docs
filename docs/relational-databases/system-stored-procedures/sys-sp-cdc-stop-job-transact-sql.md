@@ -44,7 +44,7 @@ Type of job to add. *@job_type* is **nvarchar(20)** with a default of `capture`.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

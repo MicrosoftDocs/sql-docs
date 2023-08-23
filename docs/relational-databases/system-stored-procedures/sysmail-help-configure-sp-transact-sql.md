@@ -41,7 +41,7 @@ The name of the configuration setting to retrieve. When specified, the value of 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 When no *@parameter_name* is specified, `sysmail_help_configure_sp` returns a result set with the following columns.
 

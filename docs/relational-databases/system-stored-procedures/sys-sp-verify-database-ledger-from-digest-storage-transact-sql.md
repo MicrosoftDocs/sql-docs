@@ -65,7 +65,7 @@ Example of the input JSON document:
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 One row, with one column called `last_verified_block_id`.
 

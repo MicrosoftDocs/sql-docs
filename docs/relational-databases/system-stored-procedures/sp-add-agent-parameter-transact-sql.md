@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.
+Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

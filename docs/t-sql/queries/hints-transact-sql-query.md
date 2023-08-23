@@ -181,7 +181,7 @@ Optimized plan forcing reduces compilation overhead for repeating forced queries
 
 #### EXPAND VIEWS
 
-Specifies the indexed views are expanded. Also specifies the Query Optimizer won't consider any indexed view as a replacement for any query part. A view is expanded when the view definition replaces the view name in the query text.
+Specifies the indexed views are expanded. Also specifies the Query Optimizer doesn't consider any indexed view as a replacement for any query part. A view is expanded when the view definition replaces the view name in the query text.
 
 This query hint virtually disallows direct use of indexed views and indexes on indexed views in the query plan.
 
@@ -207,20 +207,18 @@ Force or disable the pushdown of the computation of qualifying expressions in Ha
 
 #### { FORCE | DISABLE } SCALEOUTEXECUTION
 
-Force or disable scale out execution of PolyBase queries that are using external tables in SQL Server 2019 Big Data Clusters. This hint will only be honored by a query using the master instance of a SQL big data cluster. The scale out will occur across the compute pool of the big data cluster.
+Force or disable scale out execution of PolyBase queries that are using external tables in SQL Server 2019 Big Data Clusters. This hint is only honored by a query using the master instance of a SQL Big Data Cluster. The scale out occurs across the compute pool of the big data cluster.
 
 #### KEEP PLAN
 
 Changes the [recompilation thresholds](../../relational-databases/statistics/statistics.md#auto_update_statistics-option) for temporary tables, and makes them identical to those for permanent tables. The estimated recompile threshold starts an automatic recompile for the query when the estimated number of indexed column changes have been made to a table by running one of the following statements:
 
-#### - UPDATE
-
-#### - DELETE
-
+- UPDATE
+- DELETE
 - MERGE
 - INSERT
 
-Specifying KEEP PLAN makes sure a query won't be recompiled as frequently when there are multiple updates to a table.
+Specifying KEEP PLAN makes sure a query isn't recompiled as frequently when there are multiple updates to a table.
 
 #### KEEPFIXED PLAN
 
@@ -236,9 +234,9 @@ Prevents the query from using a nonclustered memory optimized columnstore index.
 
 **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] Service Pack 3, [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
-The maximum memory grant size in PERCENT of configured memory limit. The query is guaranteed not to exceed this limit if the query is running in a user defined resource pool. In this case, if the query does not have the minimum required memory the system will raise an error. If a query is running in the system pool (default), then it will get at minimum the memory required to run. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.
+The maximum memory grant size in PERCENT of configured memory limit. The query is guaranteed not to exceed this limit if the query is running in a user defined resource pool. In this case, if the query doesn't have the minimum required memory the system raises an error. If a query is running in the system pool (default), then it gets at minimum the memory required to run. The actual limit can be lower if the Resource Governor setting is lower than the value specified by this hint. Valid values are between 0.0 and 100.0.
 
-The  memory grant hint isn't available for index creation or rebuild.
+The memory grant hint isn't available for index creation or index rebuilding.
 
 #### MIN_GRANT_PERCENT = <numeric_value>
 
@@ -246,13 +244,11 @@ The  memory grant hint isn't available for index creation or rebuild.
 
 The minimum memory grant size in PERCENT of configured memory limit. The query is guaranteed to get `MAX(required memory, min grant)` because at least required memory is needed to start a query. Valid values are between 0.0 and 100.0.
 
-#### The min_grant_percent memory grant option overrides the `sp_configure` option (minimum memory per query (KB)) regardless of the size.
-
-The  memory grant hint isn't available for index creation or rebuild.
+The min_grant_percent memory grant option overrides the `sp_configure` option (minimum memory per query (KB)) regardless of the size. The memory grant hint isn't available for index creation or index rebuilding.
 
 #### MAXDOP <integer_value>
 
-**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Overrides the **max degree of parallelism** configuration option of `sp_configure`. Also overrides the Resource Governor for the query specifying this option. The MAXDOP query hint can exceed the value configured with `sp_configure`. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE [ssDE](../../includes/ssde-md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP (Transact-SQL)](../statements/alter-workload-group-transact-sql.md). All semantic rules used with the **max degree of parallelism** configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -271,7 +267,7 @@ For more information, see [WITH common_table_expression (Transact-SQL)](../queri
 
 #### NO_PERFORMANCE_SPOOL
 
-**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Prevents a spool operator from being added to query plans (except for the plans when spool is required to guarantee valid update semantics). The spool operator may reduce performance in some scenarios. For example, the spool uses `tempdb`, and `tempdb` contention can occur if there are many concurrent queries running with the spool operations.
 
@@ -297,7 +293,7 @@ OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior
 
 Instructs the Query Optimizer to use the average selectivity of the predicate across all column values instead of using the runtime parameter value when the query is compiled and optimized.
 
-If you use `OPTIMIZE FOR @variable_name = <literal_constant>` and `OPTIMIZE FOR UNKNOWN` in the same query hint, the Query Optimizer will use the *literal_constant* specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.
+If you use `OPTIMIZE FOR @variable_name = <literal_constant>` and `OPTIMIZE FOR UNKNOWN` in the same query hint, the Query Optimizer uses the *literal_constant* specified for a specific value. The Query Optimizer uses UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.
 
 #### PARAMETERIZATION { SIMPLE | FORCED }
 
@@ -314,7 +310,7 @@ SIMPLE instructs the Query Optimizer to attempt simple parameterization. FORCED 
 
 This option lets you enable a plan-affecting trace flag only during single-query compilation. Like other query-level options, you can use it together with plan guides to match the text of a query being executed from any session, and automatically apply a plan-affecting trace flag when this query is being compiled. The QUERYTRACEON option is only supported for Query Optimizer trace flags. For more information, see [Trace Flags](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-Using this option won't return any error or warning if an unsupported trace flag number is used. If the specified trace flag isn't one that affects a query execution plan, the option will be silently ignored.
+Using this option won't return any error or warning if an unsupported trace flag number is used. If the specified trace flag isn't one that affects a query execution plan, the option is silently ignored.
 
 To use more than one trace flag in a query, specify one QUERYTRACEON hint for each different trace flag number.
 
@@ -332,7 +328,7 @@ If such a plan isn't possible, the Query Optimizer returns an error instead of d
 
 #### <a id="use_hint"></a> USE HINT ( '*hint_name*' )
 
-**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] SP1) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Provides one or more additional hints to the query processor. The additional hints are specified by a hint name **inside single quotation marks**.
 
@@ -350,37 +346,37 @@ The following hint names are supported:
 
   Causes [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using maximum selectivity when estimating AND predicates for filters to account for full independence. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and earlier versions, and equivalent to [trace flag](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9472 when used with cardinality estimation model of [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] or higher.
 
-  **Applies to**: [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'ASSUME_PARTIAL_CORRELATION_FOR_FILTER_ESTIMATES'
 
   Causes [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using most to least selectivity when estimating AND predicates for filters to account for partial correlation. This hint name is the default behavior of the cardinality estimation model of [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] or higher.
 
-  **Applies to**: [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
 
   Disables batch mode adaptive joins. For more information, see [Batch mode Adaptive Joins](../../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-adaptive-joins).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
 
   Disables batch mode memory grant feedback. For more information, see [Batch mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#batch-mode-memory-grant-feedback).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_DEFERRED_COMPILATION_TV'
 
   Disables table variable deferred compilation. For more information, see [Table variable deferred compilation](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_INTERLEAVED_EXECUTION_TVF'
 
   Disables interleaved execution for multi-statement table-valued functions. For more information, see [Interleaved execution for multi-statement table-valued functions](../../relational-databases/performance/intelligent-query-processing-details.md#interleaved-execution-for-mstvfs).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_OPTIMIZED_NESTED_LOOP'
 
@@ -390,12 +386,10 @@ The following hint names are supported:
 
   Causes SQL Server to generate a plan that doesn't use row goal modifications with queries that contain these keywords:
 
-#### - TOP
-
-#### - OPTION (FAST N)
-
+  - TOP
+  - OPTION (FAST N)
   - IN
-- EXISTS
+  - EXISTS
 
   This hint name is equivalent to [trace flag](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 
@@ -407,19 +401,19 @@ The following hint names are supported:
 
   Disables row mode memory grant feedback. For more information, see [Row mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#row-mode-memory-grant-feedback).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISABLE_TSQL_SCALAR_UDF_INLINING'
 
   Disables scalar UDF inlining. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'DISALLOW_BATCH_MODE'
 
   Disables batch mode execution. For more information, see [Execution modes](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'
 
@@ -441,7 +435,7 @@ The following hint names are supported:
 
   Forces the Query Optimizer behavior at a query level. This behavior happens as if the query was compiled with database compatibility level *n*, where *n* is a supported database compatibility level (for example 100, 130, etc.). Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for *n*.
 
-  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU10) and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)]
+  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)] CU10) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
   > [!NOTE]  
   > The QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint doesn't override default or legacy cardinality estimation setting, if it's forced through database scoped configuration, trace flag or another query hint such as QUERYTRACEON.  
@@ -486,7 +480,7 @@ Applies the specified table hint to the table or view that corresponds to *expos
 
 When you specify *exposed_object_name* without also specifying a table hint, any indexes you specify in the query as part of a table hint for the object are disregarded. The Query Optimizer then determines index usage. You can use this technique to eliminate the effect of an INDEX table hint when you can't modify the original query. See Example J.
 
-#### <table_hint> ::= {
+<table_hint> ::= {
 
 NOEXPAND [ , INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) ] | INDEX ( *<index_value>* [ ,...n ] ) | INDEX = ( *<index_value>* ) | FORCESEEK [(*<index_value>*(*<index_column_name>* [,... ] ) ) ] | FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS = *<integer_value>* | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
 
@@ -509,10 +503,8 @@ We recommend using the INDEX, FORCESCAN, or FORCESEEK table hint as a query hint
 
 When specified as a query hint, the INDEX, FORCESCAN, and FORCESEEK table hints are valid for the following objects:
 
-#### - Tables
-
-#### - Views
-
+- Tables
+- Views
 - Indexed views
 - Common table expressions (the hint must be specified in the SELECT statement whose result set populates the common table expression)
 - Dynamic Management Views (DMVs)

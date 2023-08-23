@@ -32,11 +32,11 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 
 ## Arguments
 
-#### [ @target_server = ] 'server_name'
+#### [ @target_server = ] '*server_name*'
 
 The name of the Azure SQL Database server that hosts the active secondary database. *server_name* is **sysname**, with no default.
 
-#### [ @target_database = ] 'database_name'
+#### [ @target_database = ] '*database_name*'
 
 The name of the active secondary database. *database_name* is **sysname**, with no default.
 
@@ -48,7 +48,7 @@ The most likely error conditions are as follows:
 
 - The server name or database name is missing.
 
-- The link cannot be found to the specified server name or database.
+- The link can't be found to the specified server name or database.
 
 - Interlink connectivity has been lost, and `sys.sp_wait_for_database_copy_sync` will return after the connection timeout.
 

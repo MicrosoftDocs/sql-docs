@@ -78,6 +78,7 @@ Choosing a maintenance window other than the default is available on all SLOs **
 - Instance pools
 - Basic, S0 and S1
 - DC, Fsv2, M-series
+- Hyperscale service tier with zone redundancy 
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
@@ -180,20 +181,20 @@ The following table is for databases that are not [zone-redundant](high-availabi
 
 The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
 
-| Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
-|:---|:---|:---|
-| Australia East |  | Yes |
-| Canada Central  |  | Yes |
-| Central US | Yes | Yes |
-| East US 1  | Yes | Yes |
-| East US 2  |  | Yes |
-| Japan East |  | Yes |
-| North Europe |  | Yes |
-| South Central US |  | Yes |
-| Southeast Asia |  | Yes |
-| UK South |  | Yes |
-| West Europe |  | Yes |
-| West US 2 |  | Yes |
+| Azure Region  | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
+|:---|:---|
+| Australia East |  Yes |
+| Canada Central  |  Yes |
+| Central US |  Yes |
+| East US 1  |  Yes |
+| East US 2  |  Yes |
+| Japan East |  Yes |
+| North Europe |  Yes |
+| South Central US  | Yes |
+| Southeast Asia |  Yes |
+| UK South |  Yes |
+| West Europe |  Yes |
+| West US 2 |  Yes |
 
 ## Gateway maintenance
 

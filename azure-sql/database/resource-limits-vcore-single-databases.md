@@ -968,7 +968,7 @@ The following table covers these SLOs: `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`,
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-### <a id="gen5-hardware-part-2-4"></a>Business Critical standard-series (Gen5) (part 3 of 3)
+### <a id="gen5-hardware-part-3-4"></a>Business Critical standard-series (Gen5) (part 3 of 3)
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical standard-series databases follow the naming convention `BC_Gen5_` followed by the number of vCores. 
 

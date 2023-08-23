@@ -18,9 +18,9 @@ To automatically connect your SQL Server instances, see [Automatically Connect y
 Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 >
 
-This article describes how to connect SQL Servers installed on multiple Windows or Linux machines to Azure ARC as a single task using a script. If the machines are already connected to Azure Arc, use [Azure policy](connect-at-scale-policy.md) to deploy the Azure SQL extension.
+This article describes how to connect SQL Servers installed on multiple Windows or Linux machines to Azure Arc as a single task using a script. If the machines are already connected to Azure Arc, use [Azure policy](connect-at-scale-policy.md) to deploy the Azure SQL extension.
 
-For the best experience, use an Azure Active Directory [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+For the best experience, use Microsoft Entra ID. With Microsoft Entra ID, you define a [service principal](/azure/active-directory/develop/app-objects-and-service-principals). The service principal is a special limited management identity that is granted only the minimum permissions necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
 
 Before you get started, be sure to review the [prerequisites](prerequisites.md) and make sure that you've created a [custom role](/azure/role-based-access-control/custom-roles-portal) that meets the required permissions.
 

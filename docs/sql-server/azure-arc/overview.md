@@ -33,9 +33,11 @@ Azure Arc enables you to manage all of your SQL Servers from a single point of c
 
 You can optimize the configuration of your SQL Servers for best performance and security by running a best practices assessment.  The assessment report shows you specific ways to improve your configuration to match the best practices established by Microsoft Support through many years of experience learning from real-world usage of SQL Server.  Each suggestion includes the details on how to change the configuration.
 
-## Azure Active Directory authentication
+## Microsoft Entra ID authentication
 
-New in SQL Server 2022, you can enable Azure Active Directory for authentication to SQL Server.  This feature requires using Azure Arc-enabled SQL Server to establish the secure connection to Azure Active Directory for performing the authentication.
+New in SQL Server 2022, you can enable Microsoft Entra ID for authentication to SQL Server.  This feature requires using Azure Arc-enabled SQL Server to establish the secure connection to Azure for performing the authentication.
+
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 ## Microsoft Defender for Cloud
 
@@ -85,7 +87,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Azure pay-as-you-go billing](manage-configuration.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
+| [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | No | No | No | No | No | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Purview: DevOps policies](/azure/purview/how-to-policies-devops-authoring-generic) | No | No | No | No | No | Yes |
 | [Microsoft Purview: data owner policies (preview)](/azure/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
@@ -99,7 +101,7 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Azure pay-as-you-go billing](manage-configuration.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Best practices assessment](assess.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Detailed database inventory](view-databases.md#inventory-databases) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Azure Active Directory authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Microsoft Entra ID authentication](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes </br>  [Express LocalDB is not supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities) | Yes | Yes |
 | [Microsoft Purview: Govern using DevOps and data owner policies](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |

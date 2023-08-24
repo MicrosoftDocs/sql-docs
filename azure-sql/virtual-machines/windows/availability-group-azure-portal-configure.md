@@ -168,7 +168,7 @@ On the **WSFC and Credentials** tab, provide account information to configure an
 
     a. Use the same domain-joined account that creates the cluster and joins the VMs to the domain by choosing **Same as domain join account**. This is the same account as above.
 
-    b. By selecting [Group Managed Service Account](/azure//active-directory-domain-services/create-gmsa.md) (GMSA) we will install all required tools and services on the VMs being created, including installing ADDS tool, joining the VMs to GMSA Security group, and installing the GMSA service. In order for this deployment of GMSA to be successful, the domain join user is required to have at least write permission on the GMSA AD group.
+    b. By selecting [Group Managed Service Account](/azure/active-directory-domain-services/create-gmsa.md) (GMSA) we will install all required tools and services on the VMs being created, including installing ADDS tool, joining the VMs to GMSA Security group, and installing the GMSA service. In order for this deployment of GMSA to be successful, the domain join user is required to have at least write permission on the GMSA AD group.
 
     c. Or you can select **Custom** and provide different account details to use with the SQL Server service account.  
 

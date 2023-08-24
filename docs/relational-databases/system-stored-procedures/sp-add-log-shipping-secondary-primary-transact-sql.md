@@ -112,7 +112,7 @@ The ID for the secondary server in the log shipping configuration. *@secondary_i
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

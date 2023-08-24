@@ -201,7 +201,7 @@ The name of the proxy that the job step runs as. *@proxy_name* is type **sysname
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

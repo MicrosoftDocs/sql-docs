@@ -52,7 +52,7 @@ When `OUTPUT` is specified, this option puts *@privilege* in the output paramete
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ When `OUTPUT` is specified, this option puts *@privilege* in the output paramete
 
 ## Remarks
 
-If *@acctname* is specified, `xp_logininfo` reports the highest privilege level of the specified Windows user or group. If a Windows user has access as both a system administrator and as a domain user, it is reported as a system administrator. If the user is a member of multiple Windows groups of equal privilege level, only the group that was first granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is reported.
+If *@acctname* is specified, `xp_logininfo` reports the highest privilege level of the specified Windows user or group. If a Windows user has access as both a system administrator and as a domain user, it's reported as a system administrator. If the user is a member of multiple Windows groups of equal privilege level, only the group that was first granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is reported.
 
 If *@acctname* is a valid Windows user or group that isn't associated with a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login, an empty result set is returned. If *@acctname* can't be identified as a valid Windows user or group, an error message is returned.
 

@@ -22,7 +22,7 @@ dev_langs:
 
 Merges all data and delta files in the transaction range specified.
 
-> [!NOTE]
+> [!NOTE]  
 > This stored procedure is deprecated in [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. It is no longer needed, and cannot be used, starting [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
 
 For more information, see [Creating and Managing Storage for Memory-Optimized Objects](../in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).

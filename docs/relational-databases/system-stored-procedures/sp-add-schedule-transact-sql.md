@@ -120,9 +120,9 @@ The number of weeks or months between the scheduled execution of a job. *@freq_r
 
 The date on which execution of a job can begin. *@active_start_date* is **int**, with a default of NULL, which indicates today's date. The date is formatted as `yyyyMMdd`. If *@active_start_date* isn't NULL, the date must be greater than or equal to 19900101.
 
-After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
+After the schedule is created, review the start date and confirm that it's the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
 
-For weekly or monthly schedules, the Agent ignores if *@active_start_date* is in the past, and instead uses the current date. When a SQL Server Agent schedule is created using `sp_add_schedule` there is an option to specify the parameter *@active_start_date* that is the date that job execution begins. If the schedule type is weekly or monthly, and the *@active_start_date* parameter is set to a date in the past, the *@active_start_date* parameter is ignored and the current date is used for *@active_start_date*.
+For weekly or monthly schedules, the Agent ignores if *@active_start_date* is in the past, and instead uses the current date. When a SQL Server Agent schedule is created using `sp_add_schedule` there's an option to specify the parameter *@active_start_date* that is the date that job execution begins. If the schedule type is weekly or monthly, and the *@active_start_date* parameter is set to a date in the past, the *@active_start_date* parameter is ignored and the current date is used for *@active_start_date*.
 
 #### [ @active_end_date = ] *active_end_date*
 
@@ -156,7 +156,7 @@ An identifier for the schedule. *@schedule_id* is a variable of type **int**.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

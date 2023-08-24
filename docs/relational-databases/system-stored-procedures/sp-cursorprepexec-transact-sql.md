@@ -29,7 +29,7 @@ Compiles a plan for the submitted cursor statement or batch, then creates and po
 ```syntaxsql
 sp_cursorprepexec prepared handle OUTPUT , cursor OUTPUT , params , statement , options
     [ , scrollopt [ , ccopt [ , rowcount ] ] ]
-    [ , '@parameter_name [ , ...n ] ' ]
+    [ , '@parameter_name [ , ...n ]' ]
 ```
 
 ## Arguments

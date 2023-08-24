@@ -62,7 +62,7 @@ If you want to delete data that has already been migrated to Azure, do the follo
 
 1. Resume data migration. For more info, see [Pause and resume data migration (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-## Example
+## Examples
 
 To reconcile the batch IDs, run the following statement.
 

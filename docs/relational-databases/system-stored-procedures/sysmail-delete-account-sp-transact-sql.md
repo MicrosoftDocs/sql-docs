@@ -45,7 +45,7 @@ The name of the account to delete. *@account_name* is **sysname**, with no defau
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -97,7 +97,7 @@ The name of the server that issues remote procedure calls. *@rpcsrvname* is **sy
 
 The publisher type of the Publisher. *@publisher_type* is **sysname**, with a default of `%`, which is the only value that returns a result set.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

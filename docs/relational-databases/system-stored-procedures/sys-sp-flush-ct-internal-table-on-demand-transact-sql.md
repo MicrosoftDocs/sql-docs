@@ -46,7 +46,7 @@ The change tracking-enabled table to be manually cleaned up. The backlogs are le
 
 `0` (success) or `1` (failure).
 
-## Example
+## Examples
 
 ```sql
 DECLARE @DeletedRowCount BIGINT;

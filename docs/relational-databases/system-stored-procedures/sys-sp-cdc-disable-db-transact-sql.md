@@ -39,7 +39,7 @@ sys.sp_cdc_disable_db
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

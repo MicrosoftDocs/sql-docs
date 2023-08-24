@@ -78,10 +78,10 @@ The following examples show how to call `sp_kill_filestream_non_transacted_handl
 ```sql
 -- Close all open handles in the current database.
 sp_kill_filestream_non_transacted_handles;
-  
+
 -- Close all open handles in myFileTable.
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable';
-  
+
 -- Close a specific handle in myFileTable.
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD;
 ```

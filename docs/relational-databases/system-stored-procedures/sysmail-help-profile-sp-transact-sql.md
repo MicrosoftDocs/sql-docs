@@ -45,7 +45,7 @@ The profile name to return information for. *@profile_name* is **sysname**, with
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set with the following columns.
 

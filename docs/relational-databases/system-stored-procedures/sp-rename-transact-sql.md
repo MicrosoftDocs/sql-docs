@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "renaming tables"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest"
 ---
 # sp_rename (Transact-SQL)
 
@@ -34,7 +34,7 @@ Changes the name of a user-created object in the current database. This object c
 [!INCLUDE [synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
 
 > [!CAUTION]  
-> Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.
+> Changing any part of an object name can break scripts and stored procedures. We recommend you don't use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,7 +67,7 @@ Quotation marks are only necessary if a qualified object is specified. If a full
 The new name for the specified object. *new_name* must be a one-part name and must follow the rules for identifiers. *newname* is **sysname**, with no default.
 
 > [!NOTE]  
-> Trigger names cannot start with # or ##.
+> Trigger names can't start with # or ##.
 
 #### [ @objtype = ] '*object_type*'
 

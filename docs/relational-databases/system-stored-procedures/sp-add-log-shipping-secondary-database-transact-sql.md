@@ -112,7 +112,7 @@ The length of time in minutes in which the history is retained. *@history_retent
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

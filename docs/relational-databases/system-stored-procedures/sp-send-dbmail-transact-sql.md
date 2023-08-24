@@ -59,7 +59,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of NULL. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there is no default public profile for the database, *@profile_name* must be specified.
+The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of NULL. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there's no default public profile for the database, *@profile_name* must be specified.
 
 #### [ @recipients = ] '*recipients*'
 
@@ -118,7 +118,7 @@ The sensitivity of the message. The parameter is of type **varchar(12)**. The pa
 A semicolon-delimited list of file names to attach to the e-mail message. Files in the list must be specified as absolute paths. The attachments list is of type **nvarchar(max)**. By default, Database Mail limits file attachments to 1 MB per file.
 
 > [!IMPORTANT]  
-> This parameter isn't available in Azure SQL Managed Instance, because it cannot access the local file system.
+> This parameter isn't available in Azure SQL Managed Instance, because it can't access the local file system.
 
 #### [ @query = ] N'*query*'
 
@@ -195,7 +195,7 @@ Optional output parameter returns the `mailitem_id` of the message. *@mailitem_i
 
 A return code of `0` means success. Any other value means failure. The error code for the statement that failed is stored in the `@@ERROR` variable.
 
-## Result sets
+## Result set
 
 On success, returns the message "Mail queued."
 
@@ -205,7 +205,7 @@ Before use, Database Mail must be enabled using the Database Mail Configuration 
 
 `sysmail_stop_sp` stops Database Mail by stopping the Service Broker objects that the external program uses. `sp_send_dbmail` still accepts mail when Database Mail is stopped using `sysmail_stop_sp`. To start Database Mail, use `sysmail_start_sp`.
 
-When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, `sp_send_dbmail` uses the default public profile. If there is no default private profile for the user and no default public profile, `sp_send_dbmail` returns an error.
+When *@profile* isn't specified, `sp_send_dbmail` uses a default profile. If the user sending the e-mail message has a default private profile, Database Mail uses that profile. If the user has no default private profile, `sp_send_dbmail` uses the default public profile. If there's no default private profile for the user and no default public profile, `sp_send_dbmail` returns an error.
 
 `sp_send_dbmail` doesn't support e-mail messages with no content. To send an e-mail message, you must specify at least one of *@body*, *@query*, *@file_attachments*, or *@subject*. Otherwise, `sp_send_dbmail` returns an error.
 
@@ -292,5 +292,5 @@ EXEC msdb.dbo.sp_send_dbmail @recipients = 'yourfriend@adventure-works.com',
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
-- [Database Mail Stored Procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
+- [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)
 - [sp_addrolemember (Transact-SQL)](sp-addrolemember-transact-sql.md)

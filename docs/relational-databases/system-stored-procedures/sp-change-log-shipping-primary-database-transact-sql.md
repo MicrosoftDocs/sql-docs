@@ -113,7 +113,7 @@ Specifies whether a log shipping configuration uses [backup compression](../back
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -133,7 +133,7 @@ Only members of the **sysadmin** fixed server role can run this procedure.
 
 ## Examples
 
-This example illustrates the use of `sp_change_log_shipping_primary_database` to update the settings associated with the primary database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
+This example illustrates the use of `sp_change_log_shipping_primary_database` to update the settings associated with the primary database [!INCLUDE [ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
 EXEC master.dbo.sp_change_log_shipping_primary_database

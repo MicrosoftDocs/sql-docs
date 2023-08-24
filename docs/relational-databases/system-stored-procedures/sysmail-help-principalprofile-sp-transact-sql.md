@@ -54,7 +54,7 @@ The name of the profile for the association to list. *@profile_name* is **sysnam
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set that contains the columns listed in the following table.
 

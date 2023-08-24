@@ -40,7 +40,7 @@ core.sp_purge_data
 
 ## Arguments
 
-#### [ @retention_days =] *retention_days*
+#### [ @retention_days = ] *retention_days*
 
 The number of days to retain data in the management data warehouse tables. Data with a time stamp older than *@retention_days* is removed. *@retention_days* is **smallint**, with a default of NULL. If specified, the value must be positive. When NULL, the value in the valid_through column in the `core.snapshots` view determines the rows that are eligible for removal.
 
@@ -106,7 +106,7 @@ GO
 -- Get the collection set unique identifier for the Disk Usage system collection set.
 DECLARE @disk_usage_collection_set_uid uniqueidentifier = (SELECT collection_set_uid
     FROM msdb.dbo.syscollector_collection_sets WHERE name = N'Disk Usage');
-  
+
 EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = @disk_usage_collection_set_uid;
 GO
 ```

@@ -91,7 +91,7 @@ Maximum number of delete entries that can be deleted using a single statement on
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -43,11 +43,11 @@ sys.sp_cdc_set_scheduler_job
 
 #### [ @jobType = ] N'*JobType*'
 
-The type of CDC job, such as a capture job, or clean up job. *@jobType* is **nvarchar(20)**. Valid values are `capture`, `cleanup` or `both`. There is no default value.
+The type of CDC job, such as a capture job, or clean up job. *@jobType* is **nvarchar(20)**. Valid values are `capture`, `cleanup` or `both`. There's no default value.
 
 #### [ @state = ] N'*state*'
 
-Instructs the CDC scheduler to pause or resume scheduling the job. Valid values are `pause` or `resume`. There is no default value.
+Instructs the CDC scheduler to pause or resume scheduling the job. Valid values are `pause` or `resume`. There's no default value.
 
 #### [ @abortTask = ] *abortTask*
 
@@ -57,7 +57,7 @@ Indicates whether you want to abort the current running task or not. Valid **int
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

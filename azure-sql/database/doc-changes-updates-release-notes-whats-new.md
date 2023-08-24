@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 08/04/2023
+ms.date: 08/24/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -172,6 +172,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | **Hyperscale zone redundant configuration preview** | It's now possible to create new Hyperscale databases with zone redundancy to make your databases resilient to a much larger set of failures. This feature is currently in preview for the Hyperscale service tier. To learn more, see [Hyperscale zone redundancy](high-availability-sla.md#zone-redundant-availability). |
 | **Hyperscale storage redundancy GA** | Choosing your storage redundancy for your databases in the Hyperscale service tier is now generally available. See [Configure backup storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) to learn more. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute distributed transactions among cloud databases in Azure SQL Database and Azure SQL Managed Instance. Elastic transactions are now generally available. |
+| **Hyperscale reverse migration** | Reverse migration is now generally available. Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. Learn about [reverse migration from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale). |
 | **New Hyperscale articles** | We have reorganized some existing content into new articles and added new content for Hyperscale. Learn about [Hyperscale distributed functions architecture](hyperscale-architecture.md), [how to manage a Hyperscale database](manage-hyperscale-database.md), and how to [create a Hyperscale database](hyperscale-database-create-quickstart.md). |
 | **Free Azure SQL Database** | Try Azure SQL Database for free using the Azure free account. To learn more, review [Try SQL Database for free](free-sql-db-free-account-how-to-deploy.md).|
 

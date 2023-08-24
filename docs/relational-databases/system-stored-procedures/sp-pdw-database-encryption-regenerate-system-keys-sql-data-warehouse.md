@@ -27,7 +27,7 @@ sp_pdw_database_encryption_regenerate_system_keys
 [ ; ]
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE [synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Return code values
@@ -44,7 +44,7 @@ This procedure should be used when the traffic in the appliance is low.
 
 Requires membership in the **sysadmin** fixed database role, or CONTROL SERVER permission.
 
-## Example
+## Examples
 
 The following example regenerates the database encryption keys.
 

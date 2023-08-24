@@ -119,7 +119,7 @@ The name of the category for this operator. *@category_name* is **sysname**, wit
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -38,7 +38,7 @@ sp_fulltext_pendingchanges table_id
 
 ID of the table. If the table isn't full-text indexed, or change tracking isn't enabled on the table, an error is returned.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

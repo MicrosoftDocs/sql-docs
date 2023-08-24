@@ -59,7 +59,7 @@ Whether this profile is the default profile for the database user. A database us
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

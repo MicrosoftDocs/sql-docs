@@ -62,7 +62,7 @@ The name of the source table on which to enable change data capture. *@source_na
 
 The name of the database role used to gate access to change data. *@role_name* is **sysname** and must be specified. If explicitly set to NULL, no gating role is used to limit access to the change data.
 
-If the role currently exists, it is used. If the role doesn't exist, an attempt is made to create a database role with the specified name. The role name is trimmed of white space at the right of the string before attempting to create the role. If the caller isn't authorized to create a role within the database, the stored procedure operation fails.
+If the role currently exists, it's used. If the role doesn't exist, an attempt is made to create a database role with the specified name. The role name is trimmed of white space at the right of the string before attempting to create the role. If the caller isn't authorized to create a role within the database, the stored procedure operation fails.
 
 #### [ @capture_instance = ] '*capture_instance*'
 
@@ -117,7 +117,7 @@ If you enable partition switching on [!INCLUDE [ssnoversion-md](../../includes/s
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

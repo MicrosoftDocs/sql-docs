@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Creates an alert.
+Creates an alert.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,12 +67,12 @@ Indicates the current status of the alert. *@enabled* is **tinyint**, with a def
 
 #### [ @delay_between_responses = ] *delay_between_responses*
 
-The wait period, in seconds, between responses to the alert. *@delay_between_responses* is **int**, with a default of `0`, which means there is no waiting between responses (each occurrence of the alert generates a response). The response can be in either or both of these forms:
+The wait period, in seconds, between responses to the alert. *@delay_between_responses* is **int**, with a default of `0`, which means there's no waiting between responses (each occurrence of the alert generates a response). The response can be in either or both of these forms:
 
 - One or more notifications sent through e-mail or pager
 - A job to execute
 
-By setting this value, it is possible to prevent, for example, unwanted e-mail messages from being sent when an alert repeatedly occurs in a short period of time.
+By setting this value, it's possible to prevent, for example, unwanted e-mail messages from being sent when an alert repeatedly occurs in a short period of time.
 
 #### [ @notification_message = ] N'*notification_message*'
 
@@ -94,7 +94,7 @@ Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversio
 
 #### [ @database_name = ] '*database*'
 
-The database in which the error must occur for the alert to fire. If *@database_name* is not supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is NULL.
+The database in which the error must occur for the alert to fire. If *@database_name* isn't supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is NULL.
 
 #### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
 
@@ -142,7 +142,7 @@ The query that specifies the WMI event for the alert. *@wmi_query* is **nvarchar
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -183,7 +183,7 @@ The following example adds an alert (Test Alert) that runs the `Back up the Adve
 ```sql
 USE msdb;
 GO
-  
+
 EXEC dbo.sp_add_alert
     @name = N'Test Alert',
     @message_id = 55001,

@@ -49,7 +49,7 @@ If no value is provided, the procedure reports all sessions belonging to the ins
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 `sp_who` returns a result set with the following information.
 

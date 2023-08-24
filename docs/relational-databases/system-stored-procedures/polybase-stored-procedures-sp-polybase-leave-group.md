@@ -50,7 +50,7 @@ After running the stored procedure, restart the PolyBase engine and PolyBase Dat
 EXEC sys.dm_exec_compute_nodes;
 ```
 
-## Example
+## Examples
 
 The example removes the current machine from a PolyBase group.
 

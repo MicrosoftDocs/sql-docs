@@ -46,7 +46,7 @@ The database to release unused memory for memory-optimized tables. *@dbname* is 
 
 - When the *@dname* parameter isn't specified, only system-level memory structures in the instance are considered.
 
-- When the *@dname* parameter provided is `'tempdb'`, the memory structures related to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) are affected.
+- When the *@dname* parameter provided is `tempdb`, the memory structures related to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) are affected.
 
 - When the *@dname* parameter provided is a user database, the memory structures related memory-optimized tables are affected.
 

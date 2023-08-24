@@ -37,7 +37,7 @@ sys.sp_cdc_help_jobs
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

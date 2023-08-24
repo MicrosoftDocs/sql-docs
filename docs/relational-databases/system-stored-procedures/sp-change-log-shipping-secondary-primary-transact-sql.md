@@ -43,7 +43,7 @@ sp_change_log_shipping_secondary_primary
 
 #### [ @primary_server = ] '*primary_server*'
 
-The name of the primary instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be NULL.
+The name of the primary instance of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *@primary_server* is **sysname** and can't be NULL.
 
 #### [ @primary_database = ] '*primary_database*'
 
@@ -66,7 +66,7 @@ The length of time in minutes in which the backup files are retained. *@file_ret
 The security mode used to connect to the monitor server.
 
 - `1`: Windows Authentication;
-- `0`: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
+- `0`: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
 
 *@monitor_server_security_mode* is **bit** and defaults to NULL.
 
@@ -82,7 +82,7 @@ The password of the account used to access the monitor server.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

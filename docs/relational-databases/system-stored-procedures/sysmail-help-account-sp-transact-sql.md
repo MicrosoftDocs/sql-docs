@@ -45,7 +45,7 @@ The name of the account to list information for. *@account_name* is **sysname**,
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Returns a result set containing the columns listed below.
 

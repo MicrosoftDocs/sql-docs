@@ -41,11 +41,11 @@ The name for the new profile. *@profile_name* is **sysname**, with no default.
 
 To send e-mail using SQL Server Agent jobs in [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], SQL Server Agent can use only one Database Mail profile, and it must be called `AzureManagedInstance_dbmail_profile`. For more information and a sample script, see [Azure SQL Managed Instance SQL Agent job notifications](/azure/azure-sql/managed-instance/job-automation-managed-instance#sql-agent-job-notifications).
 
-#### `[ @description = ] N'*description*'
+#### [ @description = ] N'*description*'
 
 The optional description for the new profile. *@description* is **nvarchar(256)**, with no default.
 
-#### `[ @profile_id = ] *new_profile_id* OUTPUT
+#### [ @profile_id = ] *new_profile_id* OUTPUT
 
 Returns the ID for the new profile. *@profile_id* is **int**, with a default of NULL.
 
@@ -85,12 +85,12 @@ The following example creates a new Database Mail profile named `AdventureWorks 
 
 ```sql
 DECLARE @profileId INT;
-  
+
 EXECUTE msdb.dbo.sysmail_add_profile_sp
        @profile_name = 'AdventureWorks Administrator',
        @description = 'Profile used for administrative mail.',
        @profile_id = @profileId OUTPUT;
-  
+
 SELECT @profileId;
 ```
 

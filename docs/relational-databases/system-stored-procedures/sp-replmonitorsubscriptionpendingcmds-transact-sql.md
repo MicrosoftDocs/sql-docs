@@ -71,7 +71,7 @@ The type of subscription. *subscription_type* is **int**, with no default and ca
 
 The `dbversion` of the subscription database. *subdb_version* is an optional parameter of type **int**, with a default value of 0.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -80,7 +80,7 @@ The `dbversion` of the subscription database. *subdb_version* is an optional par
 
 ## Return code values
 
-**0** (success) or **1** (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 

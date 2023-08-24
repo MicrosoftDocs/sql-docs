@@ -139,7 +139,7 @@ Number of weeks or months between the scheduled execution of the job. *@freq_rec
 
 Date on which job execution can begin. *@active_start_date* is **int**, with no default. The date is formatted as `yyyyMMdd`. If *@active_start_date* is set, the date must be greater than or equal to `19900101`.
 
-After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
+After the schedule is created, review the start date and confirm that it's the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).
 
 #### [ @active_end_date = ] *active_end_date*
 
@@ -155,7 +155,7 @@ Time on any day between *active_start_date* and *@active_end_date* to end job ex
 
 #### [ @schedule_id = ] *schedule_id* OUTPUT
 
-Schedule identification number assigned to the schedule if it is created successfully. *@schedule_id* is an output variable of type **int**, with no default.
+Schedule identification number assigned to the schedule if it's created successfully. *@schedule_id* is an output variable of type **int**, with no default.
 
 #### [ @schedule_uid = ] *_schedule_uid* OUTPUT
 
@@ -165,7 +165,7 @@ A unique identifier for the schedule. *@schedule_uid* is a variable of type **un
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -185,7 +185,7 @@ Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../i
 
 For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
 
-## Example
+## Examples
 
 The following example assigns a job schedule to `SaturdayReports`, which executes every Saturday at 2:00 AM.
 

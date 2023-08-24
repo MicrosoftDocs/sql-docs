@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "sp_wait_for_database_copy_sync"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_wait_for_database_copy_sync (Active geo-replication)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
+This procedure is scoped to an [!INCLUDE [ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
 
 ## Syntax
 
@@ -73,6 +73,6 @@ GO
 
 ## See also
 
-- [sys.dm_continuous_copy_status (Azure SQL Database)](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
-- [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [sys.dm_continuous_copy_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
+- [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)

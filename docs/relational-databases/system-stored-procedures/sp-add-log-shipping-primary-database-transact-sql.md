@@ -126,7 +126,7 @@ Specifies whether a log shipping configuration uses [backup compression](../back
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

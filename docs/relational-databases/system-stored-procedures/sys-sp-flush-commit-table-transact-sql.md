@@ -50,7 +50,7 @@ The watermark change tracking version for `syscommittab` cleanup. *@cleanup_vers
 
 `0` (success) or `1` (failure).
 
-## Example
+## Examples
 
 ```sql
 EXEC sys.sp_flush_commit_table 11;

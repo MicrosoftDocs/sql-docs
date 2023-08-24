@@ -68,7 +68,7 @@ The proxy identification number assigned to the proxy if created successfully.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -23,14 +23,14 @@ dev_langs:
 
 [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
 
-- [sp_add_maintenance_plan](sp-add-maintenance-plan-transact-sql.md)  
-- [sp_add_maintenance_plan_db](sp-add-maintenance-plan-db-transact-sql.md)  
-- [sp_add_maintenance_plan_job](sp-add-maintenance-plan-job-transact-sql.md)  
-- [sp_delete_maintenance_plan](sp-delete-maintenance-plan-transact-sql.md)  
-- [sp_delete_maintenance_plan_db](sp-delete-maintenance-plan-db-transact-sql.md)  
-- [sp_delete_maintenance_plan_job](sp-delete-maintenance-plan-job-transact-sql.md)  
-- [sp_help_maintenance_plan](sp-help-maintenance-plan-transact-sql.md)  
-- [sp_delete_maintenance_plan](sp-delete-maintenance-plan-transact-sql.md)  
+- [sp_add_maintenance_plan](sp-add-maintenance-plan-transact-sql.md)
+- [sp_add_maintenance_plan_db](sp-add-maintenance-plan-db-transact-sql.md)
+- [sp_add_maintenance_plan_job](sp-add-maintenance-plan-job-transact-sql.md)
+- [sp_delete_maintenance_plan](sp-delete-maintenance-plan-transact-sql.md)
+- [sp_delete_maintenance_plan_db](sp-delete-maintenance-plan-db-transact-sql.md)
+- [sp_delete_maintenance_plan_job](sp-delete-maintenance-plan-job-transact-sql.md)
+- [sp_help_maintenance_plan](sp-help-maintenance-plan-transact-sql.md)
+- [sp_delete_maintenance_plan](sp-delete-maintenance-plan-transact-sql.md)
 
 ## See also
 

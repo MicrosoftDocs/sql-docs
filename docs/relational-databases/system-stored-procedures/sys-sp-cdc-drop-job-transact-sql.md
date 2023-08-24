@@ -43,7 +43,7 @@ Type of job to remove. *job_type* is **nvarchar(20)** and can't be NULL. Valid i
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Nones
 

@@ -66,7 +66,7 @@ After running the stored procedure, shut down the PolyBase engine, and restart t
 EXEC sys.dm_exec_compute_nodes;
 ```
 
-## Example
+## Examples
 
 The example joins the current machine as a compute node to a PolyBase group. The name of the head node is `HST01` and the name of the SQL Server instance on the head node is `MSSQLSERVER`.
 

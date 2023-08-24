@@ -369,9 +369,9 @@ The following are accepted values for the header *content-type*.
 
 - application/json
 - application/vnd.microsoft.*.json
-- application/xml 
-- application/vnd.microsoft.*.xml  
-- application/vnd.microsoft.*+xml  
+- application/xml
+- application/vnd.microsoft.*.xml
+- application/vnd.microsoft.*+xml
 - application/x-www-form-urlencoded
 - text/*
 
@@ -525,7 +525,7 @@ Then, create the database scoped credentials using the SAS token provided by the
 
 ```sql
 create database scoped credential [filestore]
-with identity='SHARED ACCESS SIGNATURE', 
+with identity='SHARED ACCESS SIGNATURE',
 secret='sv=2022-11-02&ss=bfqt&srt=sco&sp=seespotrun&se=2023-08-03T02:21:25Z&st=2023-08-02T18:21:25Z&spr=https&sig=WWwwWWwwWWYaKCheeseNXCCCCCCDDDDDSSSSSU%3D'
 go
 ```

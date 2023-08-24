@@ -51,7 +51,7 @@ A description of the parameter.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

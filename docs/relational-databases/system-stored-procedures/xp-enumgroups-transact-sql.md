@@ -40,7 +40,7 @@ The name of the Windows domain for which to enumerate a list of global groups. *
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

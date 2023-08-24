@@ -64,7 +64,7 @@ In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the [sys.dm_xtp_system
 
 Requires membership in the **db_owner** fixed database role.
 
-## Example
+## Examples
 
 To mark unneeded source files for garbage collection in the `tempdb` database, use the following sample script:
 

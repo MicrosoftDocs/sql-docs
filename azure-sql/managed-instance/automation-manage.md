@@ -12,13 +12,13 @@ ms.topic: conceptual
 
 # Manage databases in Azure SQL Managed Instance by using Azure Automation
 
-[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/automation-manage.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](automation-manage.md?view=azuresql-mi&preserve-view=true)
 
-This guide will introduce you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Managed Instance.
+This guide introduces you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Managed Instance.
 
 ## About Azure Automation
 

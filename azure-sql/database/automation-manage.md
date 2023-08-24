@@ -13,13 +13,13 @@ ms.custom: sqldbrb=1
 
 # Manage databases in Azure SQL Database by using Azure Automation
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](automation-manage.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/automation-manage.md?view=azuresql-mi&preserve-view=true)
 
-This guide will introduce you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Database.
+This guide introduces you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Database.
 
 ## About Azure Automation
 

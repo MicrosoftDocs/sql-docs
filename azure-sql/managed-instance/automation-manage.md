@@ -1,25 +1,24 @@
 ---
-title: Manage databases with Azure Automation
-description: Learn about how the Azure Automation service can be used to manage Azure SQL Database at scale.
+title: Azure Automation and Azure SQL Managed Instance
+description: Learn about how the Azure Automation service can be used to manage databases in Azure SQL Managed Instance at scale.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, mathoma
 ms.date: 08/24/2023
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom: sqldbrb=1
 ---
 
-# Manage databases in Azure SQL Database by using Azure Automation
+# Manage databases in Azure SQL Managed Instance by using Azure Automation
 
-[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](automation-manage.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/automation-manage.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](../database/automation-manage.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](automation-manage.md?view=azuresql-mi&preserve-view=true)
 
-This guide introduces you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Database.
+This guide introduces you to the Azure Automation service, and how it can be used to simplify the management of databases in Azure SQL Managed Instance.
 
 ## About Azure Automation
 
@@ -29,15 +28,13 @@ Azure Automation provides a workflow execution engine with high reliability and 
 
 Lower operational overhead and free up IT / DevOps staff to focus on work that adds business value by moving your cloud management tasks to be run automatically by Azure Automation.
 
-## How Azure Automation can help manage your databases
+## How Azure Automation can help manage your SQL managed instances
 
-With Azure Automation, you can manage databases in Azure SQL Database by using the [latest Az PowerShell cmdlets](/powershell/azure/install-azure-powershell) that are available in [Azure Az PowerShell](/powershell/azure/new-azureps-module-az). Azure Automation has these Azure Az PowerShell cmdlets immediately available, so that you can perform all of your SQL Database management tasks within the service. You can also pair these cmdlets in Azure Automation with the cmdlets for other Azure services, to automate complex tasks across Azure services and across third-party systems.
+With Azure Automation, you can manage databases in Azure SQL Managed Instance by using the [latest Az PowerShell cmdlets]/powershell/azure/install-azure-powershell) that are available in [Azure Az PowerShell](/powershell/azure/new-azureps-module-az). Azure Automation has these Azure Az PowerShell cmdlets immediately available, so that you can perform all of your management tasks within the service. You can also pair these cmdlets in Azure Automation with the cmdlets for other Azure services, to automate complex tasks across Azure services and across third-party systems.
 
-Azure Automation also has the ability to communicate with Azure SQL logical servers directly, by issuing SQL commands using PowerShell.
+Azure Automation also has the ability to communicate with SQL managed instances directly, by issuing SQL commands using PowerShell.
 
 The runbook and module galleries for [Azure Automation](/azure/automation/automation-runbook-gallery) offer a variety of runbooks from Microsoft and the community that you can import into Azure Automation. To use one, download a runbook from the gallery, or you can directly import runbooks from the gallery, or from your Automation account in the Azure portal.
-
-For a tutorial, see [Manage databases in Azure SQL Database using Azure Automation](/azure/automation/manage-sql-server-in-automation).
 
 >[!NOTE]
 > The Automation runbook may run from a range of IP addresses at any datacenter in an Azure region. To learn more, see [Automation region DNS records](/azure/automation/how-to/automation-region-dns-records).
@@ -56,13 +53,11 @@ For more information on this required action, visit [Migrate from an existing Ru
 
 ## Other automation methods
 
-Instead of SQL Agent, Azure SQL Database can use an [elastic job agent](elastic-jobs-overview.md) to execute T-SQL statements on a schedule. For more information on the differences between SQL Agent and elastic jobs, see [Automate management tasks in Azure SQL](job-automation-overview.md).
+Azure SQL Managed Instance has near complete compatibility with SQL Agent in the latest version of SQL Server. For more information, see [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](job-automation-managed-instance.md).
 
 ## Next steps
 
-For a tutorial and samples, see [Manage databases in Azure SQL Database using Azure Automation](/azure/automation/manage-sql-server-in-automation).
-
-Now that you've learned the basics of Azure Automation and how it can be used to manage Azure SQL Database, follow these links to learn more about Azure Automation:
+Now that you've learned the basics of Azure Automation and how it can be used to manage SQL managed instances, follow these links to learn more about Azure Automation.
 
 - [Azure Automation Overview](/azure/automation/automation-intro)
 - [My first runbook](/azure/automation/learn/powershell-runbook-managed-identity)

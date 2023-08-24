@@ -1404,7 +1404,8 @@
       href: managed-instance/distributed-transaction-coordinator-dtc.md
     - name: Enroll in November 2022 feature wave
       href: managed-instance/november-2022-feature-wave-enroll.md
-
+    - name: Azure Automation
+      href: managed-instance/automation-manage.md
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks

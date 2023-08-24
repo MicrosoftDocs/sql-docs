@@ -59,6 +59,5 @@ Azure SQL Managed Instance has near complete compatibility with SQL Agent in the
 
 Now that you've learned the basics of Azure Automation and how it can be used to manage SQL managed instances, follow these links to learn more about Azure Automation.
 
-- 
 - [Azure Automation Overview](/azure/automation/automation-intro)
 - [My first runbook](/azure/automation/learn/powershell-runbook-managed-identity)

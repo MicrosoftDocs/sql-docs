@@ -5,7 +5,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, mathoma
 ms.date: 08/24/2023
-ms.service: sql-db
+ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
 ms.custom: sqldbrb=1

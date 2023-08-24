@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/04/2023
+ms.date: 08/23/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -152,6 +152,9 @@ Rotating the TDE protector for a server means to switch to a new asymmetric key 
 [Automated rotation of the TDE protector](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation) can be enabled when configuring the TDE protector for the server. Automated rotation is disabled by default. When enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server will be automatically rotated to the latest key version within 60 minutes.
 
 When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE protector on Azure SQL Database and Azure SQL Managed Instance.
+
+> [!NOTE]
+> Setting TDE with CMK using manual or automated rotation of keys will always use the latest version of the key that is supported. The setup does not allow using a previous or lower version of keys. Always using the latest key version complies with the Azure SQL security policy that disallows previous key versions that may be compromised. The previous versions of the key may be needed for [database backup or restore purposes](transparent-data-encryption-byok-overview.md#database-backup-and-restore-with-customer-managed-tde), especially in case of [long-term retention backups](long-term-retention-overview.md), where the older key versions must be preserved. For geo-replication setups, all keys required by the source server need to be present on the target server.
 
 ### Geo-replication considerations when configuring automated rotation of the TDE protector
 

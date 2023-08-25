@@ -10125,8 +10125,9 @@ items:
       - name: Set up AD Authentication
         href: linux/sql-server-linux-active-directory-authentication.md
     - name: Create failover cluster instance
-      href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
+      - name: Overview
+        href: linux/sql-server-linux-shared-disk-cluster-configure.md
       - name: iSCSI
         href: linux/sql-server-linux-shared-disk-cluster-configure-iscsi.md
       - name: NFS

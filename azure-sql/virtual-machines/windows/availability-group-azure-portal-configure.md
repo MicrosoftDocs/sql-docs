@@ -102,7 +102,7 @@ On the **Basics** tab, select the subscription and resource group. Also, provide
 
 1. Under **Licensing**, you have the option to enable [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your existing Windows Server license to Azure. This option is available only if you're a Software Assurance customer.
 
-    Select **Yes** if you want to enable Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is unavailable if you selected one of the free SQL Server images, such as the developer edition. 
+    Select **Yes** if you want to enable Azure Hybrid Benefit, and then confirm that you have Software Assurance by selecting the checkbox. This option is unavailable if you selected one of the free SQL Server images, such as the Developer edition. 
 
 1. Under **SQL Server License**, you have the option to enable [Azure Hybrid Benefit](/azure/virtual-machines/windows/hybrid-use-benefit-licensing) to bring your own SQL Server license and save on licensing cost. This option is available only if you're a Software Assurance customer.
 

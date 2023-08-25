@@ -1231,8 +1231,8 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service | Authentication |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- | --: |
-| Azure Storage Account(V2) | `abs` | `abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
-| Azure Data Lake Storage Gen2 | `adls`   | `adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
+| Azure Storage Account(V2) | `abs` | `abs://<container_name>@<storage_account_name>.blob.core.windows.net/` or <br /> `abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
+| Azure Data Lake Storage Gen2 | `adls`   | `adls://<container_name>@<storage_account_name>.dfs.core.windows.net/` or <br /> `adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | `sqlserver`|`<server_name>[\<instance_name>][:port]`| Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   | SQL authentication only |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
@@ -1414,6 +1414,17 @@ Users will also need to configure their external data sources to use new connect
 |:--|:--|:--|
 | Azure Blob Storage | wasb[s] | abs |
 | ADLS Gen2 | abfs[s] | adls |
+
+SQL Server 2022 supports two URL formats for both Azure Storage Account v2 (abs) and Azure Data Lake Gen2 (adls), the location path can be `<container>@<storage_account_name>..`or `<storage_account_name>../<container>`. For example:
+
+Azure Storage Account v2:
+`abs://<container>@<storage_account_name>.blob.core.windows.net` or `abs://<storage_account_name>.blob.core.windows.net/<container>`
+
+Azure Data Lake Gen2 supports: 
+`adls://<container>@<storage_account_name>.blob.core.windows.net` or `adls://<storage_account_name>.dfs.core.windows.net/<container>`
+
+Both are fully supported, `<container>@<storage_account_name>../` follows the same format as Azure SQL Managed Instance, and it is the recommended format for compatibility.
+
 
 ## Examples
 
@@ -1672,7 +1683,7 @@ GO
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
-  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
+  ( LOCATION = 'abs://<container>@<storage_account_name>.blob.core.windows.net/' , 
     CREDENTIAL = AzureStorageCredentialv2,
   ) ;
 ```
@@ -1694,7 +1705,7 @@ GO
 CREATE EXTERNAL DATA SOURCE data_lake_gen2_dfs
 WITH
 (
-LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
+LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
 ,CREDENTIAL = datalakegen2
 )
 ```

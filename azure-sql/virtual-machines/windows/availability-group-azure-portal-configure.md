@@ -253,7 +253,7 @@ After the deployment finishes, you can browse to the [SQL virtual machines resou
 :::image type="content" source="./media/availability-group-az-portal-configure/unhealthy-availability-group.png" alt-text="Screenshot of the Azure portal that shows the health of an availability group, which is currently not healthy." lightbox="./media/availability-group-az-portal-configure/unhealthy-availability-group.png":::
 
 > [!NOTE]
-> **Synchronization Health** on the **High Availability** page of the Azure portal will show **Not Healthy** until you add databases to your availability group.
+> **Synchronization Health** on the **High Availability** page of the Azure portal shows **Not Healthy** until you add databases to your availability group.
 
 ## Add databases to the availability group
 

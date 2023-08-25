@@ -58,7 +58,7 @@ To configure an Always On availability group by using the Azure portal, you must
 
 Use Azure Marketplace to choose one of severla preconfigured images from the gallery. There are two entry points to start a high availability deployment. 
 
-The first option is to search the marketplace in Azure portal for "SQL Server High Availability" and find the tile:
+The first option is to search the marketplace in Azure portal for "SQL Server High Availability" and find the **SQL Server with High Availability** tile:
 
    :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-ha-tile.png" alt-text="Screenshot of the Azure portal that shows the marketplace tile for SQL Server with High Availability":::
 

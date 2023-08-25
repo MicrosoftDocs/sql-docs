@@ -35,7 +35,7 @@ Securing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can be viewe
   
  Implementing physical network security starts with keeping unauthorized users off the network. For more information, see [SQL Server security best practices - Infrastructure threats](sql-server-security-best-practices.md#infrastructure-threats).  
   
-### Operating System Security
+### Operating system security
 
  Operating system service packs and upgrades include important security enhancements. Apply all updates and upgrades to the operating system after you test them with the database applications.  
   
@@ -63,7 +63,7 @@ Securing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can be viewe
 |[!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] Authentication|[Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE [ssEW](../../includes/ssew-md.md)] and IIS access|[Internet Information Services Security Flowchart](/iis/get-started/introduction-to-iis/introduction-to-iis-architecture#http-request-processing-in-iis)|  
   
-### SQL Server Operating System Files Security
+### SQL Server operating system files security
 
  [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] uses operating system files for operation and data storage. Best practices for file security require that you restrict access to these files. The following table contains information about these files.  
   
@@ -79,7 +79,7 @@ Securing [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] can be viewe
 SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));  
 ```  
   
-## Principals and Database Object Security
+## Principals and database object security
 
  Principals are the individuals, groups, and processes granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. "Securables" are the server, database, and objects the database contains. Each has a set of permissions that can be configured to help reduce the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] surface area. The following table contains information about principals and securables.
   
@@ -89,7 +89,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 |Server and database objects security|[Securables](../../relational-databases/security/securables.md)|  
 |The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security hierarchy|[Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
   
-### Encryption and Certificates
+### Encryption and certificates
 
  Encryption does not solve access control problems. However, it enhances security by limiting data loss even in the rare occurrence that access controls are bypassed. For example, if the database host computer is misconfigured and a malicious user obtains sensitive data, such as credit card numbers, that stolen information might be useless if it is encrypted. The following table contains more information about encryption in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -122,10 +122,10 @@ WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks describ
 
 Windows Defender Application Control (WDAC) prevents unauthorized code execution. WDAC is effective way to mitigate the threat of executable file-based malware. For more information, see to [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) documentation.
 
-## SQL Server Security Tools, Utilities, Views, and Functions
+## SQL Server security tools, utilities, views, and functions
  [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides tools, utilities, views, and functions that can be used to configure and administer security.
   
-### SQL Server Security Tools and Utilities
+### SQL Server security tools and utilities
  The following table contains information about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] tools and utilities that you can use to configure and administer security.  
   
 |For information about|See|  
@@ -136,7 +136,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
 |Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipulating symmetric keys for a report server|[rskeymgmt Utility (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
 
-### SQL Server Security Catalog Views and Functions
+### SQL Server security catalog views and functions
 
  The [!INCLUDE [ssDE](../../includes/ssde-md.md)] exposes security information in several views and functions that are optimized for performance and utility. The following table contains information about security views and functions.  
   
@@ -146,7 +146,7 @@ Windows Defender Application Control (WDAC) prevents unauthorized code execution
 |[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security functions, which return information about the current user, permissions and schemas.|[Security Functions (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
 
-## Related Content
+## Related content
 
 - [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

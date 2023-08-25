@@ -108,7 +108,7 @@ ALTER TABLE [HumanResources].[Department]
 These are the causes and solutions to work around this error:
 
 1. Verify that the destination you are importing into is an empty database.
-1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) as well as an explicitly named constraint, you may have an issue where a constraint with the same name is attempted to be created twice. It is recommended to use all explicitly-named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
+1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) as well as an explicitly named constraint, you may have an issue where a constraint with the same name is attempted to be created twice. It is recommended to use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
 1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of .bacpac corruption.
 
 ## Diagnostics

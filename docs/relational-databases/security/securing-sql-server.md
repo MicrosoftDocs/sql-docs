@@ -106,7 +106,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 |Creating a certificate for use by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|  
 |Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
 
-## Application Security
+## Application security
 
 ### Client programs
 

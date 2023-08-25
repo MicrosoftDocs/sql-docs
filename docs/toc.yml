@@ -10125,8 +10125,9 @@ items:
       - name: Set up AD Authentication
         href: linux/sql-server-linux-active-directory-authentication.md
     - name: Create failover cluster instance
-      href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
+      - name: Overview
+        href: linux/sql-server-linux-shared-disk-cluster-configure.md
       - name: iSCSI
         href: linux/sql-server-linux-shared-disk-cluster-configure-iscsi.md
       - name: NFS
@@ -10179,6 +10180,8 @@ items:
         href: linux/sql-server-linux-configure-time-zone-2019.md
       - name: Configure time zone on SQL Server 2017
         href: linux/sql-server-linux-configure-time-zone-2017.md
+      - name: Configure Power BI Report Server catalog
+        href: linux/sql-server-linux-configure-power-bi-report-server-catalog.md
       - name: Configure to send usage and diagnostic data to Microsoft
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers

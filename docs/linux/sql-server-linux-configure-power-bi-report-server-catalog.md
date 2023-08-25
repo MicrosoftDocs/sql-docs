@@ -61,7 +61,7 @@ Here are the minimum required SPNs for this scenario:
    setspn -S MSSQLSvc/rhel8test.CORPNET.CONTOSO.COM:1433 CORPNET\linuxservice
    ```
 
-2. The next two SPNs are for the Power BI Report Server service account.
+- The next two SPNs are for the Power BI Report Server service account.
 
    ```console
    setspn -S HTTP/WIN22.CORPNET.CONTOSO.COM CORPNET\pbirsservice

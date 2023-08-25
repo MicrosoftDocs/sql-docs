@@ -64,7 +64,7 @@ The first option is to search the Azure Marketplace for "SQL Server High Availab
 
 Select **Create** on the tile to continue. 
 
-The second option is to search the Azure portal, on the left menu, select **Azure SQL**. If **Azure SQL** isn't in the list, select **All services**, type **Azure SQL** in the search box, and select the result.  
+The second option is to go to **Azure SQL** in the Azure portal. If **Azure SQL** isn't already in your menu list, select **All services**, type **Azure SQL** in the search box, and select the result.  
 
 1. Select **+ Create** to open the **Select SQL deployment option** pane.  
 

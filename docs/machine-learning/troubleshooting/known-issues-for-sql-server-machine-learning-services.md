@@ -770,6 +770,29 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] on Linux
 
+### Generic error when running `sp_execute_external_script` on Ubuntu 20.04 with SQL Server 2022 CU6 on Linux
+
+Installing SQL Server 2022 CU6 for Linux on Ubuntu 20.04 can result in the following error when running `sp_execute_external_script`
+for R and Python scripts:
+
+```output
+Msg 39012, Level 16, State 14, Line 0
+Unable to communicate with the runtime for 'R' script for request id: 94257840-1704-45E8-83D2-2F74AEB46CF7. Please check the requirements of 'R' runtime.
+
+STDERR message(s) from external script: 
+/usr/lib/R/library/RevoScaleR/rxLibs/x64/libExaCore.so.2(_Z21CriticalSignalHandleri+0x29)[0x7f2568289d89]
+/usr/lib/x86_64-linux-gnu/libc.so.6(+0x43090)[0x7f2568d66090]
+```
+
+#### Workaround
+
+Run the following command to install the package dependency `libssl-dev`, which enables SQL Server to resolve the system provided shared libraries `libssl` and `libcrypto`.
+
+```bash
+sudo apt-get update
+sudo apt-get install libssl-dev
+```
+
 ### <a id="modprobe"></a> Firewall rule creation error in `modprobe` when running `mssql-launchpadd` on Linux
 
 When viewing the logs of `mssql-launchpadd` using `sudo journalctl -a -u mssql-launchpadd`, you might see a firewall rule creation error similar to the following output.

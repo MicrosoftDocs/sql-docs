@@ -54,7 +54,7 @@ Prior to installing and configuring PBIRS, you must configure the required SPNs 
 
 Here are the minimum required SPNs for this scenario:
 
-1. Using an Administrative command prompt, create the SPN for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux service account. This instance is using the default port of 1433:
+- Using an Administrative command prompt, create the SPN for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux service account. This instance is using the default port of 1433:
 
    ```console
    setspn -S MSSQLSvc/rhel8test:1433 CORPNET\linuxservice

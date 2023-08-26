@@ -73,7 +73,12 @@ If you are asked to provide logs, zip up the entire folder to ensure that the co
 
 ## Recovering editor files after a crash
 
-If Azure Data Studio crashes unexpectedly and editor files do not appear after re-opening, navigate to `~/Library/Application Support/azuredatastudio/Backups/`, which may contain one or more folders containing the files.
+If Azure Data Studio crashes unexpectedly, restarting Azure Data Studio should reopen any unsaved editor files as well. If they do not, there may have been an error trying to reopen them. In that case, follow these steps to navigate to the folder containing the backups where you can manually open them to recover their contents.
+
+1. Run the `Developer: Open User Data Folder` command in Azure Data Studio
+2. In the folder that opens, navigate to the `Backups` folder
+
+This will contain folders with randomly generated names. Within these folders will be files that contain the editor backups (which will include some additional metadata along with their text contents). 
 
 
 ## Next Steps

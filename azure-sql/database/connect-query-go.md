@@ -92,7 +92,7 @@ Get the connection information you need to connect to the database. You'll need 
    GO
    ```
 
-2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script in the **SqlServerSample** folder. Replace the appropriate values for your server and database.
+2. At the command prompt, navigate to **SqlServerSample** and use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server and database.
 
    ```bash
    az login

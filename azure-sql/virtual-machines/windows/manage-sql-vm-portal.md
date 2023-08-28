@@ -1,10 +1,10 @@
 ---
-title: Manage SQL Server virtual machines in Azure by using the Azure portal
-description: Learn how to access the SQL virtual machines resource in the Azure portal for a SQL Server VM hosted on Azure to modify SQL Server settings.
+title: Manage SQL VMs in Azure by using the portal
+description: Learn how to manage SQL Server on Azure VMs in the Azure portal by accessing the SQL virtual machines resource to modify SQL Server settings.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 04/05/2023
+ms.date: 08/28/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -38,7 +38,7 @@ To access the **SQL virtual machines** resource, do the following:
 
    :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-search.png" alt-text="Screenshot of the Azure portal, All services selected, and the search box highlighted.":::
 
-1. The portal lists all SQL Server VMs available within the subscription. Select the one that you want to manage to open the **SQL virtual machines** resource. Use the search box if your SQL Server VM isn't appearing. 
+1. The portal lists all SQL Server VMs available within the selected subscription. Choose the one you want to manage to open the **SQL virtual machines** resource. Use the search box if your SQL Server VM isn't appearing, and make sure you've selected the correct subscription.  
 
    :::image type="content" source="./media/manage-sql-vm-portal/all-sql-vms.png" alt-text="Screenshot of the Azure portal, the SQL virtual machines resource page, with a VM selected.":::
 
@@ -75,18 +75,23 @@ Choose **Yes** next to **Configure tempdb data files** to modify your settings, 
 
 :::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page. ":::
 
-
 Restart your SQL Server service to apply your changes. 
 
-## Patching
+## Updates
 
-Use the **Patching** page of the SQL virtual machines resource to enable auto patching of your VM and automatically install Windows and SQL Server updates marked as Important. You can also configure a maintenance schedule here, such as running patching daily, as well as a local start time for maintenance, and a maintenance window. 
+You have two different options when automatically patching your SQL Server on Azure VMs - the new integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience currently in preview, and the existing [Automated Patching](automated-patching.md) feature. 
 
+Update Manager allows you to choose which updates and patches to apply to multiple SQL Server VMs at scale, including _Cumulative Updates_. **Automated Patching** lets you manage patches for a single VM and only applies updates that are marked as Critical or Important (which doesn't include Cumulative Updates for SQL Server). 
 
-:::image type="content" source="./media/manage-sql-vm-portal/sql-vm-automated-patching.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to configure automated patching and schedule.":::
+Choose the experience that best suits your business needs as enabling both can lead to unexpected behaviors, scheduling conflicts, and unintentionally applying patches outside of maintenance windows. 
 
+To use the Update Manager, select **Updates** under settings in the resource menu, make sure automated patching is disabled and then select **Try Azure Update Manager** in the navigation bar to integrate Update Manager into your **Updates** page. Once you enable this for any VM, all your other SQL Server VMs will also integrate the new experience unless you've already enabled Automated Patching for any specific VM. If you see **Leave new experience** instead of **Try Azure Update Manager** then you're already using the integrated **Azure Update Manager** experience. 
 
-To learn more, see, [Automated patching](automated-patching.md). 
+:::image type="content" source="media/manage-sql-vm-portal/updates-update-manager.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in the Azure portal with Try Azure Update Manager highlighted.":::
+
+If you've never enabled Update Manager before, then to enable Automated Patching, select **Enable** on the **Updates** page. Otherwise, to go back to the **Automated Patching** page, choose **Leave new experience**: 
+
+:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in the Azure portal with leave new experience highlighted.":::
 
 ## Backups
 

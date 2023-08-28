@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/12/2023
+ms.date: 08/28/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -18,6 +18,12 @@ tags: azure-service-management
 When you deploy an Azure virtual machine (VM) with SQL Server installed on it, either manually, or through a built-in image, you can use Azure features to improve your experience. This article summarizes the documentation changes associated with new features and improvements in the recent releases of [SQL Server on Azure Virtual Machines (VMs)](https://azure.microsoft.com/services/virtual-machines/sql-server/). To learn more about SQL Server on Azure VMs, see the [overview](sql-server-on-azure-vm-iaas-what-is-overview.md). 
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
+
+## August 2023
+
+| Changes | Details |
+| --- | --- |
+| **Azure Update Manager preview** | It's now possible to automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates, which isn't currently possible with the existing Automated Patching feature. Using Azure Update Manager for your SQL Server on Azure VMs is currently in preview. To learn more, review [Azure Update Manager for SQL Server on Azure VMs](../azure-update-manager-sql-vm.md). | 
 
 ## July 2023
 

@@ -4,7 +4,7 @@ description: This article explains the Automated Patching feature for SQL Server
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 07/31/2023
+ms.date: 08/28/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article
@@ -18,7 +18,8 @@ tags: azure-resource-manager
 Automated Patching establishes a maintenance window for an Azure virtual machine running SQL Server. Automated Updates can only be installed during this maintenance window. For SQL Server, this restriction ensures that system updates and any associated restarts occur at the best possible time for the database.
 
 > [!IMPORTANT]  
-> Only Windows and SQL Server updates marked as **Important** or **Critical** are installed. Other SQL Server updates, such as service packs and cumulative updates that are not marked as **Important** or **Critical**, must be installed manually.
+> - With automated patching, only Windows and SQL Server updates marked as **Important** or **Critical** are installed. Other SQL Server updates, such as service packs and cumulative updates that are not marked as **Important** or **Critical**, must be installed manually. 
+> - To automatically install Cumulative Updates, review the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience. 
 
 ## Prerequisites
 
@@ -47,6 +48,8 @@ The following table describes the options that can be configured for Automated P
 | **Maintenance window duration** | 30-180 | The number of minutes permitted to complete the download and installation of updates. |
 | **Patch Category** | Important | The category of Windows updates to download and install. |
 
+
+
 ## Configure in the Azure portal
 
 You can use the Azure portal to configure Automated Patching during provisioning or for existing VMs.
@@ -61,13 +64,19 @@ On the **SQL Server settings** tab, select **Change configuration** under **Auto
 
 For more information, see [Provision a SQL Server virtual machine on Azure](create-sql-vm-portal.md).
 
-### Exist VMs
+### Existing VMs
 
-For existing SQL Server virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and select **Patching** under **Settings**.
+For existing SQL Server virtual machines, open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and select **Updates** under **Settings**.
+
+If you've never enabled the [Azure Update Manager](../azure-update-manager-sql-vm.md) experience for any SQL Server VM in your portal, then select **Enable** to enable Automated Patching for your existing SQL Server VM. 
 
 :::image type="content" source="./media/automated-patching/azure-sql-rm-patching-existing-vms.png" alt-text="Screenshot of SQL Automatic Patching for existing VMs.":::
 
-When you're finished, select the **OK** button on the bottom of the **SQL Server configuration** blade to save your changes.
+If you've used the Azure Update Manager before, you'll need to go to the **Updates** page under **Settings** in your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and then choose **Leave new experience** to go back to the **Automated Patching** experience: 
+
+:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in the Azure portal with leave new experience highlighted.":::
+
+After you've enabled Automated Patching and configured your patching settings, select the **OK** button on the bottom of the **Updates** page to save your changes.
 
 If you're enabling Automated Patching for the first time, Azure configures the SQL Server IaaS Agent in the background. During this time, the Azure portal might not show that Automated Patching is configured. Wait several minutes for the agent to be installed and configured. After that the Azure portal reflects the new settings.
 

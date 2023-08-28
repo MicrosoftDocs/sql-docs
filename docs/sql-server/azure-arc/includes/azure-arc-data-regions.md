@@ -32,3 +32,6 @@ Arc-enabled SQL Server is available in the following regions:
 - Korea Central
 - Southeast Asia
 - Australia East
+
+[!IMPORTANT]
+Arc-enabled Server and Arc-enabled SQL Server should be onboarded in the same region for successful onboarding and functioning.

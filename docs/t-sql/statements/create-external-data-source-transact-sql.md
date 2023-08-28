@@ -3,8 +3,8 @@ title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 description: CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 05/02/2023
+ms.reviewer: randolphwest, hudequei
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1231,8 +1231,8 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service | Authentication |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- | --: |
-| Azure Storage Account(V2) | `abs` | `abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
-| Azure Data Lake Storage Gen2 | `adls`   | `adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
+| Azure Storage Account(V2) | `abs` | `abs://<container_name>@<storage_account_name>.blob.core.windows.net/`<br />or<br />`abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
+| Azure Data Lake Storage Gen2 | `adls`   | `adls://<container_name>@<storage_account_name>.dfs.core.windows.net/`<br />or<br />`adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | `sqlserver`|`<server_name>[\<instance_name>][:port]`| Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   | SQL authentication only |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
@@ -1266,6 +1266,10 @@ Additional notes and guidance when setting the location:
 - Differing from previous versions, in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the prefix used for Azure Data Lake Storage Gen2 changed from `abfs[s]` to `adls`.
 - For an example using PolyBase to virtualize a CSV file in Azure Storage, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
 - For an example using PolyBase to virtualize a delta table in ADLS Gen2, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] fully supports two URL formats for both Azure Storage Account v2 (`abs`) and Azure Data Lake Gen2 (`adls`). 
+    - The LOCATION path can use the formats: `<container>@<storage_account_name>..` (recommended) or `<storage_account_name>../<container>`. For example:
+       - Azure Storage Account v2: `abs://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `abs://<storage_account_name>.blob.core.windows.net/<container>`.
+       - Azure Data Lake Gen2 supports: `adls://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `adls://<storage_account_name>.dfs.core.windows.net/<container>`.
 
 #### CONNECTION_OPTIONS = *key_value_pair*
 
@@ -1672,7 +1676,7 @@ GO
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
-  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
+  ( LOCATION = 'abs://<container>@<storage_account_name>.blob.core.windows.net/' , 
     CREDENTIAL = AzureStorageCredentialv2,
   ) ;
 ```
@@ -1694,7 +1698,7 @@ GO
 CREATE EXTERNAL DATA SOURCE data_lake_gen2_dfs
 WITH
 (
-LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
+LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
 ,CREDENTIAL = datalakegen2
 )
 ```

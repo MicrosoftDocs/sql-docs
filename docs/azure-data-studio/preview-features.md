@@ -4,7 +4,7 @@ description: Learn more about Azure Data Studio preview features and how to enab
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 08/21/2023
+ms.date: 08/28/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ---
@@ -42,6 +42,7 @@ You can enable or disable preview features at any time in Settings.
 - Create Database
 - Delete Database
 - User Management
+- SQLCMD mode in Query Editor
 
 ### First-party extensions in preview
 
@@ -67,4 +68,4 @@ You can enable or disable preview features at any time in Settings.
 
 ## Next steps
 
-- [Azure Data Studio](what-is-azure-data-studio.md)
+- [User Settings](settings-list.md)

@@ -14,7 +14,7 @@ tags: azure-resource-manager
 # Azure Update Manager for SQL Server on Azure VMs
 [!INCLUDE[appliesto-sqlvm](../includes/appliesto-sqlvm.md)]
 
-This article explains how to integrate Azure Update Manager with your [SQL virtual machines](windows/manage-sql-vm-portal.md) resource for your [SQL Server on Azure Virtual Machines (VMs)](windows/sql-server-on-azure-vm-iaas-what-is-overview.md). With Azure Update Manager, you can automatically installs Cumulative Updates for your SQL Server, as well as SQL Server and OS updates marked as Critical or Important. 
+This article explains how to integrate Azure Update Manager with your [SQL virtual machines](windows/manage-sql-vm-portal.md) resource for your [SQL Server on Azure Virtual Machines (VMs)](windows/sql-server-on-azure-vm-iaas-what-is-overview.md). With Azure Update Manager, you can automatically install Cumulative Updates for your SQL Server, as well as SQL Server and OS updates marked as Critical or Important. 
 
 ## Overview 
 

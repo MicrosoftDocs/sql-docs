@@ -74,7 +74,7 @@ If you've never enabled the [Azure Update Manager](../azure-update-manager-sql-v
 
 If you've used the Azure Update Manager before, you'll need to go to the **Updates** page under **Settings** in your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource) and then choose **Leave new experience** to go back to the **Automated Patching** experience: 
 
-:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in teh Azure portal with leave new experience highlighted.":::
+:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in the Azure portal with leave new experience highlighted.":::
 
 After you've enabled Automated Patching and configured your patching settings, select the **OK** button on the bottom of the **Updates** page to save your changes.
 

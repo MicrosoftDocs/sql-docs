@@ -91,7 +91,7 @@ To use the Update Manager, select **Updates** under settings in the resource men
 
 If you've never enabled Update Manager before, then to enable Automated Patching, select **Enable** on the **Updates** page. Otherwise, to go back to the **Automated Patching** page, choose **Leave new experience**: 
 
-:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in teh Azure portal with leave new experience highlighted.":::
+:::image type="content" source="media/manage-sql-vm-portal/updates-automated-patching.png" alt-text="Screenshot of the updates page in the SQL virtual machines resource in the Azure portal with leave new experience highlighted.":::
 
 ## Backups
 

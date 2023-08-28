@@ -34,5 +34,5 @@ Arc-enabled SQL Server is available in the following regions:
 - Australia East
 
 > [!IMPORTANT]
-> Arc-enabled Server and Arc-enabled SQL Server should be onboarded in the same region for successful onboarding and 
+> For successful onboarding and functioning, assign the same region to both Arc-enabled Server and Arc-enabled SQL Server 
 functioning.

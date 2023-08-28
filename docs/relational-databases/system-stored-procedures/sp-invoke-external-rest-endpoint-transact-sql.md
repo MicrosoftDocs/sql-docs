@@ -24,9 +24,6 @@ monikerRange: "azuresqldb-current"
 
 The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST endpoint provided as an input argument to the procedure.
 
-> [!WARNING]  
-> This feature is in public preview. Your use of the feature is governed by the [Supplemental Terms of Use For Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
-
 ## Syntax
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

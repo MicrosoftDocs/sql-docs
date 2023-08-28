@@ -5,7 +5,7 @@ description: Use Go to create a program that connects to a database in Azure SQL
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/22/2023
+ms.date: 08/28/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -95,7 +95,8 @@ Get the connection information you need to connect to the database. You'll need 
 2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server, database, username, and password.
 
    ```bash
-   sqlcmd -S <your_server>.database.windows.net -U <your_username> -P <your_password> -d <your_database> -i ./CreateTestData.sql
+   az login
+   sqlcmd -S <your_server>.database.windows.net -G -d <your_database> -i ./CreateTestData.sql
    ```
 
 ## Insert code to query the database
@@ -120,19 +121,16 @@ Get the connection information you need to connect to the database. You'll need 
 
    var server = "<your_server.database.windows.net>"
    var port = 1433
-   var user = "<your_username>"
-   var password = "<your_password>"
    var database = "<your_database>"
 
    func main() {
        // Build connection string
-       connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;",
-           server, user, password, port, database)
+       connString := fmt.Sprintf("server=%s;port=%d;database=%s;fedauth=ActiveDirectoryDefault;", server, port, database)
 
        var err error
 
        // Create connection pool
-       db, err = sql.Open("sqlserver", connString)
+           db, err = sql.Open(azuread.DriverName, connString)
        if err != nil {
            log.Fatal("Error creating connection pool: ", err.Error())
        }
@@ -312,6 +310,7 @@ Get the connection information you need to connect to the database. You'll need 
 2. At the command prompt, run the following command.
 
    ```bash
+   az login   
    go run sample.go
    ```
 

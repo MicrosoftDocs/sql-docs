@@ -130,7 +130,7 @@ Get the connection information you need to connect to the database. You'll need 
        var err error
 
        // Create connection pool
-	     db, err = sql.Open(azuread.DriverName, connString)
+           db, err = sql.Open(azuread.DriverName, connString)
        if err != nil {
            log.Fatal("Error creating connection pool: ", err.Error())
        }

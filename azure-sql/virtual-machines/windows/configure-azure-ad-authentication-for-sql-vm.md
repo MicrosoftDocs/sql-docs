@@ -126,7 +126,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 1. Assign `Application.Read.All` role to the identity: 
 
    ```powershell
-    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
+   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
    ```

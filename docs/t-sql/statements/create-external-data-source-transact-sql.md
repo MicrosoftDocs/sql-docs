@@ -1266,9 +1266,10 @@ Additional notes and guidance when setting the location:
 - Differing from previous versions, in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the prefix used for Azure Data Lake Storage Gen2 changed from `abfs[s]` to `adls`.
 - For an example using PolyBase to virtualize a CSV file in Azure Storage, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
 - For an example using PolyBase to virtualize a delta table in ADLS Gen2, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
-- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] fully supports two URL formats for both Azure Storage Account v2 (`abs`) and Azure Data Lake Gen2 (`adls`), the location path can be `<container>@<storage_account_name>..` (recommended) or `<storage_account_name>../<container>`. For example:
-    - Azure Storage Account v2: `abs://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `abs://<storage_account_name>.blob.core.windows.net/<container>`.
-    - Azure Data Lake Gen2 supports: `adls://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `adls://<storage_account_name>.dfs.core.windows.net/<container>`.
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] fully supports two URL formats for both Azure Storage Account v2 (`abs`) and Azure Data Lake Gen2 (`adls`). 
+    - The LOCATION path can use the formats: `<container>@<storage_account_name>..` (recommended) or `<storage_account_name>../<container>`. For example:
+       - Azure Storage Account v2: `abs://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `abs://<storage_account_name>.blob.core.windows.net/<container>`.
+       - Azure Data Lake Gen2 supports: `adls://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `adls://<storage_account_name>.dfs.core.windows.net/<container>`.
 
 #### CONNECTION_OPTIONS = *key_value_pair*
 

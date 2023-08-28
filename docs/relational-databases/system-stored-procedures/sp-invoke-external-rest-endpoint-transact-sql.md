@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 monikerRange: "azuresqldb-current"
 ---
-# sp_invoke_external_rest_endpoint (Transact-SQL) (Preview)
+# sp_invoke_external_rest_endpoint (Transact-SQL)
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 

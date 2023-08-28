@@ -35,4 +35,3 @@ Arc-enabled SQL Server is available in the following regions:
 
 > [!IMPORTANT]
 > For successful onboarding and functioning, assign the same region to both Arc-enabled Server and Arc-enabled SQL Server 
-functioning.

@@ -92,7 +92,7 @@ Get the connection information you need to connect to the database. You'll need 
    GO
    ```
 
-2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server, database, username, and password.
+2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script in the **SqlServerSample** folder. Replace the appropriate values for your server and database.
 
    ```bash
    az login
@@ -103,7 +103,7 @@ Get the connection information you need to connect to the database. You'll need 
 
 1. Create a file named **sample.go** in the **SqlServerSample** folder.
 
-2. In the file, paste this code. Add the values for your server, database, username, and password. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
+2. In the file, paste this code. Add the values for your server and database. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
 
    ```go
    package main
@@ -302,7 +302,6 @@ Get the connection information you need to connect to the database. You'll need 
 1. At the command prompt, navigate to **SqlServerSample** and install the SQL Server driver for Go by running the following commands.
 
    ```bash
-   cd SqlServerSample
    go mod init SqlServerSample
    go mod tidy
    ```

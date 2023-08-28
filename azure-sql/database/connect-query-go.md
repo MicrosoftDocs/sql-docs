@@ -5,7 +5,7 @@ description: Use Go to create a program that connects to a database in Azure SQL
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/22/2023
+ms.date: 08/28/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -92,23 +92,24 @@ Get the connection information you need to connect to the database. You'll need 
    GO
    ```
 
-2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server, database, username, and password.
+2. At the command prompt, navigate to **SqlServerSample** and use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server and database.
 
    ```bash
-   sqlcmd -S <your_server>.database.windows.net -U <your_username> -P <your_password> -d <your_database> -i ./CreateTestData.sql
+   az login
+   sqlcmd -S <your_server>.database.windows.net -G -d <your_database> -i ./CreateTestData.sql
    ```
 
 ## Insert code to query the database
 
 1. Create a file named **sample.go** in the **SqlServerSample** folder.
 
-2. In the file, paste this code. Add the values for your server, database, username, and password. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
+2. In the file, paste this code. Add the values for your server and database. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
 
    ```go
    package main
 
    import (
-       _ "github.com/microsoft/go-mssqldb"
+       "github.com/microsoft/go-mssqldb/azuread"
        "database/sql"
        "context"
        "log"
@@ -120,19 +121,16 @@ Get the connection information you need to connect to the database. You'll need 
 
    var server = "<your_server.database.windows.net>"
    var port = 1433
-   var user = "<your_username>"
-   var password = "<your_password>"
    var database = "<your_database>"
 
    func main() {
        // Build connection string
-       connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;",
-           server, user, password, port, database)
+       connString := fmt.Sprintf("server=%s;port=%d;database=%s;fedauth=ActiveDirectoryDefault;", server, port, database)
 
        var err error
 
        // Create connection pool
-       db, err = sql.Open("sqlserver", connString)
+           db, err = sql.Open(azuread.DriverName, connString)
        if err != nil {
            log.Fatal("Error creating connection pool: ", err.Error())
        }
@@ -304,7 +302,6 @@ Get the connection information you need to connect to the database. You'll need 
 1. At the command prompt, navigate to **SqlServerSample** and install the SQL Server driver for Go by running the following commands.
 
    ```bash
-   cd SqlServerSample
    go mod init SqlServerSample
    go mod tidy
    ```
@@ -312,6 +309,7 @@ Get the connection information you need to connect to the database. You'll need 
 2. At the command prompt, run the following command.
 
    ```bash
+   az login   
    go run sample.go
    ```
 

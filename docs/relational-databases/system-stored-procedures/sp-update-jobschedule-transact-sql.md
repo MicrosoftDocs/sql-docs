@@ -1,9 +1,10 @@
 ---
 title: "sp_update_jobschedule (Transact-SQL)"
-description: "sp_update_jobschedule (Transact-SQL)"
+description: Changes the schedule settings for the specified job.
 author: markingmyname
 ms.author: maghan
-ms.date: "03/14/2017"
+ms.reviewer: randolphwest
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -16,33 +17,30 @@ dev_langs:
   - "TSQL"
 ---
 # sp_update_jobschedule (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Changes the schedule settings for the specified job.  
-  
- **sp_update_jobschedule** is provided for backward compatibility only.  
-  
-> [!IMPORTANT]
->  For more information about syntax used in earlier versions of Microsoft SQL Server, see the Transact-SQL Referencefor Microsoft SQL Server 2000*.*  
-  
-## Remarks  
- Job schedules can now be managed independently of jobs. To update a schedule, use **sp_update_schedule**.  
-  
-## Permissions  
- By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  
-  
--   **SQLAgentUserRole**  
-  
--   **SQLAgentReaderRole**  
-  
--   **SQLAgentOperatorRole**  
-  
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
-  
- Only members of **sysadmin** can use this stored procedure to update job schedules that are owned by other users.  
-  
-## See Also  
- [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
-  
-  
+Changes the schedule settings for the specified job.
+
+`sp_update_jobschedule` is provided for backward compatibility only.
+
+Job schedules can now be managed independently of jobs. To update a schedule, use [sp_update_schedule (Transact-SQL)](sp-update-schedule-transact-sql.md).
+
+## Permissions
+
+[!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
+
+Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the `msdb` database:
+
+- **SQLAgentUserRole**
+- **SQLAgentReaderRole**
+- **SQLAgentOperatorRole**
+
+For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
+
+Only members of **sysadmin** can use this stored procedure to update job schedules that are owned by other users.
+
+## See also
+
+- [SQL Server Agent stored procedures (Transact-SQL)](sql-server-agent-stored-procedures-transact-sql.md)
+- [sp_update_schedule (Transact-SQL)](sp-update-schedule-transact-sql.md)

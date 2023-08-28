@@ -109,7 +109,7 @@ Get the connection information you need to connect to the database. You'll need 
    package main
 
    import (
-       _ "github.com/microsoft/go-mssqldb"
+       "github.com/microsoft/go-mssqldb/azuread"
        "database/sql"
        "context"
        "log"

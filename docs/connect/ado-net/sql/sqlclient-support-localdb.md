@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Beginning in SQL Server 2012 (code name Denali, version 11), a lightweight version of SQL Server, called LocalDB, is available. This article discusses how to connect to a LocalDB database.  
+Beginning in SQL Server 2012, a lightweight version of SQL Server, called LocalDB, is available. This article discusses how to connect to a LocalDB database.  
   
 ## Remarks  
 For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.  

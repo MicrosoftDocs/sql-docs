@@ -4,7 +4,7 @@ description: The sp_invoke_external_rest_endpoint stored procedure invokes an HT
 author: jettermctedder
 ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 08/02/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 monikerRange: "azuresqldb-current"
 ---
-# sp_invoke_external_rest_endpoint (Transact-SQL) (Preview)
+# sp_invoke_external_rest_endpoint (Transact-SQL)
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 

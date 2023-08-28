@@ -23,7 +23,6 @@ For updates made in previous years, see the [What's new archive](doc-changes-upd
 
 | Changes | Details |
 | --- | --- |
-| **Configure AG from Azure portal GA** | The experience to deploy an Always On availability group to multiple subnets by using the Azure portal is now generally available. To learn more, review [Configure availability group through the Azure portal](availability-group-azure-portal-configure.md). | 
 | **Azure Update Manager preview** | It's now possible to automatically patch multiple SQL Server VMs at scale with the Azure Update Manager integrated in to the [SQL virtual machines](manage-sql-vm-portal.md) resource in the Azure portal, including Cumulative Updates, which isn't currently possible with the existing Automated Patching feature. Using Azure Update Manager for your SQL Server on Azure VMs is currently in preview. To learn more, review [Azure Update Manager for SQL Server on Azure VMs](../azure-update-manager-sql-vm.md). | 
 
 ## July 2023

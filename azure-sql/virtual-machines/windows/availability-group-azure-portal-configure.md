@@ -60,7 +60,7 @@ Use Azure Marketplace to choose one of several preconfigured images from the gal
 
 The first option is to search the Azure Marketplace for "SQL Server High Availability" and find the **SQL Server with High Availability** tile:
 
-   :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-ha-tile.png" alt-text="Screenshot of the Azure portal that shows the marketplace tile for SQL Server with High Availability":::
+   :::image type="content" source="./media/availability-group-az-portal-configure/sql-server-ha-tile.png" alt-text="Screenshot of the Azure portal that shows the marketplace tile for SQL Server with High Availability.":::
 
 Select **Create** on the tile to continue. 
 

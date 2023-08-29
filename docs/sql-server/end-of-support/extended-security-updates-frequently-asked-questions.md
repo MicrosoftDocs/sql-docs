@@ -105,17 +105,9 @@ Government customers that are unable to connect or register their [!INCLUDE [ssn
 
 Yes, you can migrate [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure Stack and receive ESUs for no extra cost after the End of Support dates.
 
-#### For customers with a SQL Server cluster using shared storage, what is the guidance to migrating to Azure?
-
-Azure doesn't currently support shared storage clustering. For advice on how to configure a highly available [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance on Azure, refer to the [SQL Server High Availability guide](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview).
-
 #### Can I get Extended Security Updates for SQL Server with a third-party hosting provider?
 
 You can't get ESUs if you move your [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] environment to a PaaS implementation on other cloud providers. If your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running on a virtual machine (IaaS) with License Mobility for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance, you can subscribe to Extended Security Updates enabled by Azure Arc.
-
-#### What are the best practices for enhancing performance of SQL Server in Azure virtual machines?
-
-For advice on how to optimize performance for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
 
 #### How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?
 

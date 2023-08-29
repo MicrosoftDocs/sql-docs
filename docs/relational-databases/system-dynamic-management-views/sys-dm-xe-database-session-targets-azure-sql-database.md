@@ -27,6 +27,7 @@ Azure SQL Database supports only [database-scoped sessions](/azure/azure-sql/dat
 |execution_duration_ms|**bigint**|The total amount of time, in milliseconds, that the target has been executing. Is not nullable.|  
 |target_data|**nvarchar(max)**|The data that the target maintains, such as event aggregation information. Is nullable.| 
 |bytes_written|**bigint**|Number of bytes written to target. Is not nullable. |
+|failed_buffer_count| **bigint** | Number of buffers that have failed to be processed by the target (different from other cases of dropped buffers since other targets may have succeeded independently). Null if feature is not currently enabled for current instance. |
   
 ## Permissions  
 

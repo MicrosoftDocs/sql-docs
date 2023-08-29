@@ -71,7 +71,7 @@ From Azure Data Studio, run the `Developer: Open Logs Folder` command to open th
 
 If you are asked to provide logs, zip up the entire folder to ensure that the correct logs are included.
 
-## Recovering editor files after a crash
+## Recover editor files after a crash
 
 If Azure Data Studio crashes unexpectedly, restarting Azure Data Studio should reopen any unsaved editor files as well. If they do not, there may have been an error trying to reopen them. In that case, follow these steps to navigate to the folder containing the backups where you can manually open them to recover their contents.
 

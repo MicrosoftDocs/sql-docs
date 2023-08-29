@@ -5,7 +5,7 @@ description: Use Go to create a program that connects to a database in Azure SQL
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/28/2023
+ms.date: 08/29/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -46,6 +46,8 @@ To complete this quickstart, you need:
   - **Ubuntu**:  Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/ubuntu/).
   - **Windows**: Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/windows/).
 
+- The [Azure PowerShell Az module](/powershell/azure/install-azure-powershell) for your operating system installed.
+  
 ## Get server connection information
 
 Get the connection information you need to connect to the database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.

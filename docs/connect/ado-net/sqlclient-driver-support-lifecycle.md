@@ -21,7 +21,7 @@ Microsoft.Data.SqlClient library follows the latest .NET Core support policy for
 
 ## Microsoft.Data.SqlClient release cadence
 
-New stable (GA) releases are published every six months on a regular cadence beginning with version 1.2, along with 2 to 3 preview releases in between. Long Term Support (LTS) releases are chosen by stakeholders and maintainers based on a few qualifications and customer response.
+New stable (GA) releases are published every six months on a regular cadence beginning with version 1.2, along with 2 to 3 preview releases in between. Stakeholders and maintainers choose Long Term Support (LTS) releases based on a few qualifications and customer response.
 
 ### Actively supported releases
 
@@ -45,7 +45,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 ## Azure Key Vault Provider release cadence
 
-New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Long Term Support (LTS) releases are chosen by stakeholders and maintainers based on a few qualifications and customer response.
+New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Stakeholders and maintainers choose Long Term Support (LTS) releases based on a few qualifications and customer response.
 
 ### Actively supported Azure Key Vault Provider releases
 

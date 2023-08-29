@@ -21,7 +21,7 @@ You can delete a foreign key constraint in [!INCLUDE [ssnoversion](../../include
 
 Foreign keys reference keys in other tables, for more information, see [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md).
   
-## <a id="Security"></a> <a id="Permissions"></a> Permissions
+## <a id="Permissions"></a> Permissions
  Requires ALTER permission on the table.  
   
 ## <a id="SSMSProcedure"></a> Use SQL Server Management Studio

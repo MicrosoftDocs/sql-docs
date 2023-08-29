@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Primary keys can be referenced by foreign keys in another table. If referenced by a foreign key, you'll need to drop referencing foreign keys first, then drop the primary key. For more information, see [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md).
 
-## <a id="Security"></a> <a name="Permissions"> Permissions
+## <a name="Permissions"></a> Permissions
 
  Requires ALTER permission on the table.
 

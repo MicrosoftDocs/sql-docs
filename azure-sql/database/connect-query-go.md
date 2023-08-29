@@ -46,7 +46,7 @@ To complete this quickstart, you need:
   - **Ubuntu**:  Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/ubuntu/).
   - **Windows**: Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/windows/).
 
-- The [Azure PowerShell Az module](../powershell/azure/install-azure-powershell) for your operating system installed.
+- The [Azure PowerShell Az module](../../../powershell/azure/install-azure-powershell) for your operating system installed.
   
 ## Get server connection information
 

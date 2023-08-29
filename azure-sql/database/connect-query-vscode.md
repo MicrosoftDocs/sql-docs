@@ -139,22 +139,21 @@ Run the following [INSERT](/sql/t-sql/statements/insert-transact-sql) Transact-S
 
    ```sql
    INSERT INTO [SalesLT].[Product]
-        ( [Name]
-        , [ProductNumber]
-        , [Color]
-        , [ProductCategoryID]
-        , [StandardCost]
-        , [ListPrice]
-        , [SellStartDate]
-        )
+        ([Name]
+        ,[ProductNumber]
+        ,[Color]
+        ,[ProductCategoryID]
+        ,[StandardCost]
+        ,[ListPrice]
+        ,[SellStartDate])
      VALUES
         ('myNewProduct'
-        ,123456789
-        ,'NewColor'
-        ,1
+         ,123456789
+         ,'NewColor'
+         ,1
          ,100
          ,100
-         ,GETDATE() );
+         ,GETDATE());
    ```
 
 2. Press **Ctrl**+**Shift**+**E** to insert a new row in the `Product` table.

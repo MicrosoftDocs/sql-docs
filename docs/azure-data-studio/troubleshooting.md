@@ -1,17 +1,17 @@
 ---
 title: Azure Data Studio Troubleshooting
 description: "Learn how to get logs and troubleshoot Azure Data Studio, which is helpful in reporting bug reports."
-author: dzsquared
-ms.author: drskwier
-ms.reviewer: hanqin, maghan
-ms.date: 06/06/2023
+author: erinstellato-ms
+ms.author: erinstellato
+ms.reviewer: maghan, randolphwest
+ms.date: 08/29/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
 # Azure Data Studio Troubleshooting
-Azure Data Studio tracks issues and feature requests using on a [GitHub repository issue tracker](https://github.com/Microsoft/azuredatastudio/issues) for the `azuredatastudio` repository. 
+Azure Data Studio tracks issues and feature requests using on a [GitHub repository issue tracker](https://github.com/Microsoft/azuredatastudio/issues) for the `azuredatastudio` repository.
 
 ## If you've experienced any issue
 
@@ -70,6 +70,16 @@ From Azure Data Studio, run the `Developer: Open Logs Folder` command to open th
 1. `exthost#/output_logging_#######` - these folders contain the messages displayed in the `Output` panel in Azure Data Studio. Each file is named `#-<Channel Name>` so for example the `Notebooks` output channel may output to a file named `3-Notebooks.log`.
 
 If you are asked to provide logs, zip up the entire folder to ensure that the correct logs are included.
+
+## Recover editor files after a crash
+
+If Azure Data Studio crashes unexpectedly, restarting Azure Data Studio should reopen any unsaved editor files as well. If they do not, there may have been an error trying to reopen them. In that case, follow these steps to navigate to the folder containing the backups where you can manually open them to recover their contents.
+
+1. Run the `Developer: Open User Data Folder` command in Azure Data Studio from the **Command Palette** (**Ctrl/Cmd + Shift + P**).
+2. In the folder that opens, navigate to the `Backups` folder.
+
+This will contain folders with randomly generated names. Within these folders will be files that contain the editor backups (which will include some additional metadata along with their text contents). 
+
 
 ## Next Steps
 - [Report an issue](https://github.com/Microsoft/azuredatastudio/issues)

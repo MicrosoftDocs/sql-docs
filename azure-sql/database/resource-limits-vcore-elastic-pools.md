@@ -710,7 +710,7 @@ The following table covers these SLOs: `HS_Gen5_16`, `HS_Gen5_18`, `HS_Gen5_20`,
 | vCores | 16 | 18 | 20 | 24 | 32 | 40 | 80 |
 |:-|-:|-:|-:|-:|-:|-:|-:|
 | Hardware | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 | Gen5 |
-| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 |
+| Max number DBs per pool <sup>1</sup> | 25 | 25 | 25 | 25 | 25 | 25 | 25 |
 | Memory (GB) | 83 | 93.4 | 103.8 | 124.6 | 166.1 | 207.6 | 415.2 |
 | Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | In-memory OLTP storage (GB) | N/A | N/A | N/A | N/A | N/A | N/A | N/A |

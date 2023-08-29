@@ -55,7 +55,7 @@ With [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions, c
 
 1. Right-click **Protocols for** *&lt;instance Name&gt;*, and then select **Properties**.
 
-1. Select a certificate from the  **Certificate** dropdown list menu, and then select **Apply**.
+1. Select a certificate from the  **Certificate** dropdown list, and then select **Apply**.
 
 1. Select **OK**.
 ::: moniker-end

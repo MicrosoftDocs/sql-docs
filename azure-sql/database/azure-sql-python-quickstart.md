@@ -52,7 +52,8 @@ Create a new Python project using Visual Studio Code.
     #### [macOS/Linux](#tab/mac-linux)
 
     ```Bash
-    python3 -m venv .venv
+    python3 -m venv .
+    
     source .venv/bin/activate
     ```
 
@@ -72,7 +73,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
     pyodbc
     fastapi
     uvicorn[standard]
-    install pydantic
+    pydantic
     azure-identity
     ```
 

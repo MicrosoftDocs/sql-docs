@@ -178,7 +178,7 @@ landingContent:
           - text: Maintenance window
             url: ../database/maintenance-window.md
           - text: Resource health
-            url: ../database/resource-health-to-troubleshoot-connectivity.md
+            url: ../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true
 
       - linkListType: how-to-guide
         links:

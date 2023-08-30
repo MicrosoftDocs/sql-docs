@@ -1,7 +1,7 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/10/2023
+ms.date: 08/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
@@ -131,7 +131,7 @@ Not all filters are available with this release, including filters for Microsoft
 
 The **mssql-server-is** package isn't supported on SUSE in this release. It's currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
 
-[!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. This functionality has been tested with the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+[!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)] packages can use ODBC connections on Linux. We have tested this functionality with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 The following features aren't supported in this release when you run SSIS packages on Linux:
 
@@ -167,4 +167,81 @@ The following limitations apply to [!INCLUDE [ssManStudioFull](../../includes/ss
 
 ### High availability and disaster recovery
 
-For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (preview) and Ubuntu 22.04 (preview), when you enable the HA/DR stack with Pacemaker, you can experience issues with automatic and manual failover. This is currently limited to the Pacemaker HA stack. Other HA stacks, including HPE Serviceguard and DH2i DxEnterprise, don't have these issues.
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (preview) and Ubuntu 22.04 (preview), when you enable the HA/DR stack with Pacemaker, you can experience issues with automatic and manual failover. These issues are currently limited to the Pacemaker HA stack. Other HA stacks, including HPE Serviceguard and DH2i DxEnterprise, don't have these issues.
+
+### Machine Learning Services
+
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (preview) and Ubuntu 22.04 (preview), there are some prerequisites to take into account with `cgroup-v1`, before installing Machine Learning Services.
+
+#### [RHEL 9 (preview)](#tab/rhel9)
+
+1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
+
+1. Then follow instructions to [install SQL Machine Learning Services](../sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages) as documented.
+
+1. Disable network namespace isolation.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
+
+1. Restart `mssql-launchpadd` service for these changes to take effect.
+
+   ```bash
+   sudo systemctl restart mssql-launchpadd
+   ```
+
+#### [Ubuntu 22.04 (preview)](#tab/ubuntu22)
+
+For Ubuntu 22.04 (preview), you should reach out to Canonical directly for the exact steps. Based on the available information, here's a summary of the steps that are needed. We don't recommend these steps on a production workload.
+
+1. Open the **grub** bootloader configuration file located at `/etc/default/grub`.
+
+   ```bash
+   sudo vi /etc/default/grub
+   ```
+
+1. Find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT=` and append `systemd.unified_cgroup_hierarchy=0` to the string value of this parameter. The result should be something like the following output:
+
+   ```makefile
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash systemd.unified_cgroup_hierarchy=0"
+   ```
+
+   Save the file and exit the editor.
+
+1. Update **grub** and reboot the system.
+
+   ```bash
+   sudo update-grub
+   sudo reboot
+   ```
+
+1. Once the system finishes the reboot, verify that `cgroup-v1` is set up correctly, by checking the `cgroup` mount points.
+
+   ```bash
+   mount | grep cgroup
+   ```
+
+   The output should look as follows, you should see `cgroup` without a number suffix in the output:
+
+   ```output
+   tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,size=4096k,nr_inodes=1024,mode=755,inode64)
+   cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+   cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
+   cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+   cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+   cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+   cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+   cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+   cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+   cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,rdma)
+   cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+   cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+   cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+   cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+   cgroup on /sys/fs/cgroup/misc type cgroup (rw,nosuid,nodev,noexec,relatime,misc)
+   ```
+
+   Once you have enabled `cgroup-v1` for Ubuntu 22.04, follow the steps in [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](../sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages), to install and enable SQL Machine Learning Service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] preview packages on Ubuntu 22.04.
+
+---

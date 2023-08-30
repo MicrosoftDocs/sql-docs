@@ -3,7 +3,7 @@ title: "sys.dm_xe_sessions (Transact-SQL)"
 description: sys.dm_xe_sessions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/28/2023
+ms.date: 08/29/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -41,7 +41,7 @@ Azure SQL Database supports only database-scoped sessions. See [sys.dm_xe_databa
 | `flags` | **int** | A bitmap that indicates the flags that have been set on the session. Not nullable. |
 | `flag_desc` | **nvarchar(256)** | A description of the flags set on the session. Not nullable. `flag_desc` can be any combination of the following values:<br /><br />- Flush buffers on close<br />- Dedicated dispatcher<br />- Allow recursive events |
 | `dropped_event_count` | **int** | The number of events that were dropped when the buffers were full. This value is `0` if `buffer_policy_desc` is "Drop full buffer" or "Don't drop events". Not nullable. |
-| `dropped_buffer_count` | **int** | The number of buffers that were dropped when the buffers were full. This value is `0` if `buffer_policy_desc` is set to "Drop event" or "Don't drop events". Not nullable. |
+| `dropped_buffer_count` | **int** | The number of buffers that were dropped when the buffers were full. This value is `0` if `buffer_policy_desc` is set to "Drop event" or "Don't drop events". Not nullable. Even if a buffer isn't dropped at the session level, individual targets may still fail to process a buffer for target specific reasons. |
 | `blocked_event_fire_time` | **int** | The length of time that event firings were blocked when buffers were full. This value is `0` if `buffer_policy_desc` is "Drop full buffer" or "Drop event". Not nullable. |
 | `create_time` | **datetime** | The time that the session was created (started). Not nullable. |
 | `largest_event_dropped_size` | **int** | The size of the largest event that didn't fit into the session buffer. Not nullable. |

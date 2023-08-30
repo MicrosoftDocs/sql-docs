@@ -1174,7 +1174,8 @@
         href: managed-instance/management-operations-cancel.md
       - name: API reference
         href: managed-instance/api-references-create-manage-instance.md
-
+      - name: Use Resource Health for connectivity issues
+        href: managed-instance/resource-health-to-troubleshoot-connectivity.md
     - name: Machine Learning Services
       items:
       - name: Overview

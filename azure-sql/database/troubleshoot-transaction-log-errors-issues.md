@@ -23,7 +23,9 @@ You may see errors 9002 or 40552 when the transaction log is full and cannot acc
 
 > [!NOTE]
 > **This article is focused on Azure SQL Database.** Azure SQL Database is based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar, though troubleshooting options and tools may differ from SQL Server.
+>
 > For more on troubleshooting a transaction log in Azure SQL Managed Instance, see [Troubleshoot transaction log errors with Azure SQL Database](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true).
+>
 > For more on troubleshooting a transaction log in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
 
 ## Automated backups and the transaction log
@@ -125,9 +127,7 @@ OUTER APPLY sys.dm_exec_sql_text (r.sql_handle) AS est;
 
 ### File management to free more space
 
-If the transaction log is prevented from truncating in Azure SQL Database elastic pools, freeing space for the elastic pool may be part of the solution. However, resolving the root the condition blocking transaction log file truncation is key.
-
-In some cases, temporarily creating more disk space allows long-running transactions to complete, removing the condition blocking the transaction log file from truncating with a normal transaction log backup. However, freeing up space may provide only temporary relief until the transaction log grows again.
+If the transaction log is prevented from truncating in Azure SQL Database elastic pools, freeing space for the elastic pool may be part of the solution. However, resolving the root the condition blocking transaction log file truncation is key. In some cases, temporarily creating more disk space allows long-running transactions to complete, removing the condition blocking the transaction log file from truncating with a normal transaction log backup. However, freeing up space may provide only temporary relief until the transaction log grows again.
 
 For more information on managing the file space of databases and elastic pools, see [Manage file space for databases in Azure SQL Database](file-space-manage.md?view=azuresql-db&preserve-view=true).
 

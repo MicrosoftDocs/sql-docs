@@ -23,20 +23,22 @@ You may see errors 9002 or 40552 when the transaction log is full and cannot acc
 
 > [!NOTE]
 > **This article is focused on Azure SQL Managed Instance.** Azure SQL Managed Instance is based on the latest stable version of the Microsoft SQL Server database engine, so much of the content is similar, though troubleshooting options and tools may differ from SQL Server.
+>
 > For more on troubleshooting a transaction log in Azure SQL Database, see [Troubleshoot transaction log errors with Azure SQL Database](../database/troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true).
+>
 > For more on troubleshooting a transaction log in SQL Server, see [Troubleshoot a Full Transaction Log (SQL Server Error 9002)](/sql/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002).
 
 ## Automated backups and the transaction log
 
-In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](../database/automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
+In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
 
 The location and name of database files cannot be managed but administrators can manage database files and file autogrowth settings. The typical causes and resolutions of transaction log issues are similar to SQL Server.
 
-Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Truncation leaves empty space in the log file, which can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail. For information on transaction log size limits, see [resource limits for SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true)
+Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Truncation leaves empty space in the log file, which can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail. For information on transaction log size limits, see [resource limits for SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true).
 
 ## Prevented transaction log truncation
 
-To discover what is preventing log truncation in a given case, refer to  `log_reuse_wait_desc` in `sys.databases`. The log reuse wait informs you to what conditions or causes are preventing the transaction log from being truncated by a regular log backup. For more information, see [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).
+To discover what is preventing log truncation in a given case, refer to  `log_reuse_wait_desc` in `sys.databases`. The log reuse wait informs you to what conditions or causes are preventing the transaction log from being truncated by a regular log backup. For more information, see [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azuresql-mi&preserve-view=true).
 
 ```sql
 SELECT [name], log_reuse_wait_desc FROM sys.databases;
@@ -51,7 +53,7 @@ The following values of `log_reuse_wait_desc` in `sys.databases` may indicate th
 | **LOG BACKUP** | A log backup is required. | No response required unless sustained. If sustained, file a support request with [Azure Support](https://portal.azure.com/#create/Microsoft.Support). | 
 | **ACTIVE BACKUP OR RESTORE** | A database backup is in progress. | No response required unless sustained. If sustained, file a support request with [Azure Support](https://portal.azure.com/#create/Microsoft.Support). | 
 | **ACTIVE TRANSACTION** | An ongoing transaction is preventing log truncation. | The log file cannot be truncated due to active and/or uncommitted transactions. See next section.| 
-| **REPLICATION** | In Azure SQL Managed Instance, may occur if either [replication](replication-transactional-overview.md?view=azuresql-mi&preserve-view=true) or CDC are enabled. | If sustained, investigate agents involved with CDC or replication. For troubleshooting CDC, query jobs in [msdb.dbo.cdc_jobs](/sql/relational-databases/system-tables/dbo-cdc-jobs-transact-sql). If not present, add via [sys.sp_cdc_add_job](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql). For replication, consider [Troubleshooting transactional replication](/sql/relational-databases/replication/troubleshoot-tran-repl-errors). If unresolvable, file a support request with [Azure Support](https://portal.azure.com/#create/Microsoft.Support). |
+| **REPLICATION** | In Azure SQL Managed Instance, may occur if either [replication](replication-transactional-overview.md?view=azuresql-mi&preserve-view=true) or CDC are enabled. | If sustained, investigate agents involved with CDC or replication. For troubleshooting CDC, query jobs in [msdb.dbo.cdc_jobs](/sql/relational-databases/system-tables/dbo-cdc-jobs-transact-sql). If not present, add via [sys.sp_cdc_add_job](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql). For replication, see [Troubleshooting transactional replication](/sql/relational-databases/replication/troubleshoot-tran-repl-errors?view=azuresql-mi&preserve-view=true). If unresolvable, file a support request with [Azure Support](https://portal.azure.com/#create/Microsoft.Support). |
 | **AVAILABILITY_REPLICA** | Synchronization to the secondary replica is in progress. | No response required unless sustained. If sustained, file a support request with [Azure Support](https://portal.azure.com/#create/Microsoft.Support). |
 
 ### Log truncation prevented by an active transaction
@@ -60,10 +62,10 @@ The most common scenario for a transaction log that cannot accept new transactio
 
 Run this sample query to find uncommitted or active transactions and their properties.
 
-- Returns information about transaction properties, from [sys.dm_tran_active_transactions](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql).
-- Returns session connection information, from [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql).
-- Returns request information (for active requests), from [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql). This query can also be used to identify sessions being blocked, look for the `request_blocked_by`. For more information, see [Gather blocking information](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking#gather-blocking-information).
-- Returns the current request's text or input buffer text, using the [sys.dm_exec_sql_text](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql) or [sys.dm_exec_input_buffer](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql) DMVs. If the data returned by the `text` field of `sys.dm_exec_sql_text` is NULL, the request is not active but has an outstanding transaction. In that case, the `event_info` field of `sys.dm_exec_input_buffer` contains the last statement passed to the database engine. 
+- Returns information about transaction properties, from [sys.dm_tran_active_transactions](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql?view=azuresql-mi&preserve-view=true).
+- Returns session connection information, from [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql?view=azuresql-mi&preserve-view=true).
+- Returns request information (for active requests), from [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql?view=azuresql-mi&preserve-view=true). This query can also be used to identify sessions being blocked, look for the `request_blocked_by`. For more information, see [Gather blocking information](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking#gather-blocking-information).
+- Returns the current request's text or input buffer text, using the [sys.dm_exec_sql_text](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=azuresql-mi&preserve-view=true) or [sys.dm_exec_input_buffer](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql?view=azuresql-mi&preserve-view=true) DMVs. If the data returned by the `text` field of `sys.dm_exec_sql_text` is `NULL`, the request is not active but has an outstanding transaction. In that case, the `event_info` field of `sys.dm_exec_input_buffer` contains the last statement passed to the database engine.
 
 ```sql
 SELECT [database_name] = db_name(s.database_id)
@@ -89,13 +91,6 @@ SELECT [database_name] = db_name(s.database_id)
                      WHEN 7 THEN 'The transaction is being rolled back.'
                      WHEN 8 THEN 'The transaction has been rolled back.' END 
 , transaction_name = tat.name
-, azure_dtc_state    --Applies to: Azure SQL Database only
-             =    CASE tat.dtc_state 
-                 WHEN 1 THEN 'ACTIVE'
-                 WHEN 2 THEN 'PREPARED'
-                 WHEN 3 THEN 'COMMITTED'
-                 WHEN 4 THEN 'ABORTED'
-                 WHEN 5 THEN 'RECOVERED' END
 , transaction_type = CASE tat.transaction_type    WHEN 1 THEN 'Read/write transaction'
                                              WHEN 2 THEN 'Read-only transaction'
                                              WHEN 3 THEN 'System transaction'
@@ -116,9 +111,7 @@ OUTER APPLY sys.dm_exec_sql_text (r.sql_handle) AS est;
 
 ### File management to free more space
 
-If the transaction log is prevented from truncating in Azure SQL Managed Instance, freeing space for the managed instance may be part of the solution. However, resolving the root the condition blocking transaction log file truncation is key.
-
-In some cases, temporarily creating more disk space allows long-running transactions to complete, removing the condition blocking the transaction log file from truncating with a normal transaction log backup. However, freeing up space may provide only temporary relief until the transaction log grows again. 
+If the transaction log is prevented from truncating in Azure SQL Managed Instance, freeing space may be part of the solution. However, resolving the root the condition blocking transaction log file truncation is key. In some cases, temporarily creating more disk space allows long-running transactions to complete, removing the condition blocking the transaction log file from truncating with a normal transaction log backup. However, freeing up space may provide only temporary relief until the transaction log grows again.
 
 ### Error 40552: The session has been terminated because of excessive transaction log space usage
 

@@ -39,19 +39,19 @@ sysmail_help_profileaccount_sp
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID of the profile to list. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The profile ID of the profile to list. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name of the profile to list. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The profile name of the profile to list. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @account_id = ] *account_id*
 
-The account ID to list. *@account_id* is **int**, with a default of NULL. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
+The account ID to list. *@account_id* is **int**, with a default of `NULL`. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to list. *@account_name* is **sysname**, with a default of NULL. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
+The name of the account to list. *@account_name* is **sysname**, with a default of `NULL`. When *@account_id* and *@account_name* are both NULL, lists all the accounts in the profile.
 
 ## Return code values
 

@@ -60,7 +60,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
 1. Select **Add Access Policy**.
-1. For **Key permissions**, use **0 selected**.
+1. For **Key permissions**, use **Sign**.
 1. For **Secret permissions**, select **Get** and **List**.
 1. For **Certificate permissions**, select **Get** and **List**.
 1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.

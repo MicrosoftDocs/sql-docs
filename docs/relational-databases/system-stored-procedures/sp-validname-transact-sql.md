@@ -1,6 +1,6 @@
 ---
 title: "sp_validname (Transact-SQL)"
-description: "sp_validname (Transact-SQL)"
+description: Checks for valid SQL Server identifier names.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest

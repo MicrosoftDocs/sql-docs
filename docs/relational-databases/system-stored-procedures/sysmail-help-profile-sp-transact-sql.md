@@ -35,11 +35,11 @@ sysmail_help_profile_sp [ [ @profile_id = ] profile_id | [ @profile_name = ] 'pr
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID to return information for. *@profile_id* is **int**, with a default of NULL.
+The profile ID to return information for. *@profile_id* is **int**, with a default of `NULL`.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The profile name to return information for. *@profile_name* is **sysname**, with a default of NULL.
+The profile name to return information for. *@profile_name* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 

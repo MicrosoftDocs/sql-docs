@@ -34,7 +34,7 @@ xp_enumgroups [ 'domain_name' ]
 
 #### '*domain_name*'
 
-The name of the Windows domain for which to enumerate a list of global groups. *domain_name* is **sysname**, with a default of NULL.
+The name of the Windows domain for which to enumerate a list of global groups. *domain_name* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 

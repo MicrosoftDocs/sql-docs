@@ -71,7 +71,7 @@ The new name for the specified object. *new_name* must be a one-part name and mu
 
 #### [ @objtype = ] '*object_type*'
 
-The type of object being renamed. *object_type* is **varchar(13)**, with a default of NULL, and can be one of these values.
+The type of object being renamed. *object_type* is **varchar(13)**, with a default of `NULL`, and can be one of these values.
 
 | Value | Description |
 | --- | --- |
@@ -114,7 +114,7 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 
 ## Permissions
 
-To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles. To rename a ledger table, ALTER LEDGER permission is required.
+To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the **sysadmin** or **dbcreator** fixed server roles. To rename a ledger table, ALTER LEDGER permission is required.
 
 ## Examples
 

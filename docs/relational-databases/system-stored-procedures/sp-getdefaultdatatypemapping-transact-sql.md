@@ -129,7 +129,7 @@ Specifies if the mapping has the potential for data loss. *@dataloss* is **bit**
 
 ## Remarks
 
-`sp_getdefaultdatatypemapping` is used in all types of replication between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.
+`sp_getdefaultdatatypemapping` is used in all types of replication between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.
 
 `sp_getdefaultdatatypemapping` returns the default destination data type that is the closest match to the specified source data type.
 

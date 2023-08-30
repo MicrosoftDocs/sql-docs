@@ -47,7 +47,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |database_transaction_commit_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN of the commit log record for the transaction in the database log.|  
 |database_transaction_last_rollback_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN that was most recently rolled back to. If no rollback has taken place, the value is MaxLSN.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.<br /><br /> LSN of the next record to undo.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|
+|database_transaction_first_repl_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> LSN of the first log record in the transaction which needs replication|  
   
 ## Permissions
 

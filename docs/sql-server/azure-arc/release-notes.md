@@ -4,13 +4,25 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/13/2023
+ms.date: 09/12/2023
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## September 2023
+
+This release is published September 13, 2023.
+
+### Extension version
+
+`1.1.2431.47`
+
+### Azure extension for SQL Server
+
+- Automatic patching generally available
 
 ## August 2023
 

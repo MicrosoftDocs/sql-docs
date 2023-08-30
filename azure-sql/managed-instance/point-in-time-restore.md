@@ -394,4 +394,4 @@ Use one of the following methods to connect to the database in your managed inst
 
 ## Next steps
 
-Learn about [automated backups](../database/automated-backups-overview.md).
+Learn about [automated backups](automated-backups-overview.md).

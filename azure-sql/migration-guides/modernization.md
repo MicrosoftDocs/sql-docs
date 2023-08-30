@@ -256,7 +256,7 @@ Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implem
 
 #### How are backups handled in Azure SQL PaaS services?
 
-You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md) and [SQL Database](../database/automated-backups-overview.md) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
+You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true) and [SQL Database](../database/automated-backups-overview.md?view=azuresql-db&preserve-view=true) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
 
 #### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 

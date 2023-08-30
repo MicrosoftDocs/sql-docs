@@ -30,11 +30,11 @@ You may see errors 9002 or 40552 when the transaction log is full and cannot acc
 
 ## Automated backups and the transaction log
 
-In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
+In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
 
 The location and name of database files cannot be managed but administrators can manage database files and file autogrowth settings. The typical causes and resolutions of transaction log issues are similar to SQL Server.
 
-Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Truncation leaves empty space in the log file, which can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail. For information on transaction log size limits, see [resource limits for SQL Managed Instance](../managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true).
+Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Truncation leaves empty space in the log file, which can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail. For information on transaction log size limits, see [resource limits for SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
 ## Prevented transaction log truncation
 

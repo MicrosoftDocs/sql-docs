@@ -27,6 +27,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
     
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
+|node_id|**smallint**|Check description.|  
 |xtp_transaction_id|**bigint**|Internal ID for this transaction in the XTP transaction manager.|  
 |transaction_id|**bigint**|The transaction ID. Joins with the `transaction_id` in other transaction-related DMVs, such as `sys.dm_tran_active_transactions`.<br /><br /> 0 for XTP-only transactions, such as transactions started by natively compiled stored procedures.|  
 |session_id|**smallint**|The `session_id` of the session that is executing this transaction. Joins with `sys.dm_exec_sessions`.|  
@@ -36,6 +37,8 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-curren
 |state_desc|**nvarchar**|The description of the transaction state.|  
 |result|**int**|The result of this transaction. The following are the possible values.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
 |result_desc|**nvarchar**|The result of this transaction. The following are the possible values.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|xtp_parent_transaction_node_id|**smallint**|Check description|  
+|xtp_parent_transaction_id|**bigint**|Check description|  
 |last_error|**int**|Internal use only|  
 |is_speculative|**bit**|Internal use only|  
 |is_prepared|**bit**|Internal use only|  

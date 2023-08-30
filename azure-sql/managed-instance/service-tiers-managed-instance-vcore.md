@@ -54,9 +54,6 @@ The following factors affect the amount of storage used for data and log files, 
 
 To monitor total consumed instance storage size for SQL Managed Instance, use the *storage_space_used_mb* [metric](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances). To monitor the current allocated and used storage size of individual data and log files in a database using T-SQL, use the [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) view and the [FILEPROPERTY(... , 'SpaceUsed')](/sql/t-sql/functions/fileproperty-transact-sql) function.
 
-> [!TIP]
-> Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](../database/file-space-manage.md).
-
 ## Backup storage
 
 Storage for database backups is allocated to support the capabilities of SQL Managed Instance. This storage is separate from data and log file storage, and is billed separately.

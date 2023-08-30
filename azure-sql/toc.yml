@@ -1947,9 +1947,9 @@
       href: database/troubleshoot-memory-errors-issues.md
     - name: Import/Export service hangs
       href: database/database-import-export-hang.md
-    - name: Transaction log errors
+    - name: Transaction log errors in Azure SQL Database
       href: database/troubleshoot-transaction-log-errors-issues.md
-    - name: Transaction log errors
+    - name: Transaction log errors in Azure SQL Managed Instance
       href: managed-instance/troubleshoot-transaction-log-errors-issues.md
     - name: Request quota increases
       href: database/quota-increase-request.md

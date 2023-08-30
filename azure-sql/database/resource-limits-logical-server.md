@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 04/13/2023
+ms.date: 08/30/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -243,7 +243,7 @@ WHERE database_id = DB_ID();
 This query should be executed in the user database, not in the `master` database. For elastic pools, the query can be executed in any database in the pool. Reported values apply to the entire pool.
 
 > [!IMPORTANT]  
-> In Premium and Business Critical service tiers, if the workload attempts to increase combined local storage consumption by data files, transaction log files, and `tempdb` files over the **maximum local storage** limit, an out-of-space error will occur.
+> In Premium and Business Critical service tiers, if the workload attempts to increase combined local storage consumption by data files, transaction log files, and `tempdb` files over the **maximum local storage** limit, an out-of-space error will occur. This will happen even if used space in a database file has not reached the maximum size of the file.
 
 Local SSD storage is also used by databases in service tiers other than Premium and Business Critical for the `tempdb` database and Hyperscale RBPEX cache. As databases are created, deleted, and increase or decrease in size, total local storage consumption on a machine fluctuates over time. If the system detects that available local storage on a machine is low, and a database or an elastic pool is at risk of running out of space, it will move the database or elastic pool to a different machine with sufficient local storage available.
 

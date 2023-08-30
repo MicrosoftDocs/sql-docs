@@ -34,5 +34,5 @@ monikerRange: "=azure-sqldw-latest || =fabric"
 
 ## See also
 
-- [System stored functions (Transact-SQL)](~/relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

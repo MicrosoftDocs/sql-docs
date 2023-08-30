@@ -4,7 +4,7 @@ description: Lists the SQL Server Agent subsystems.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 08/29/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -60,6 +60,8 @@ This procedure lists the subsystems available in the instance.
 ## Permissions
 
 By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted the **SQLAgentOperatorRole** fixed database role in the `msdb` database.
+
+For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
 
 ## See also
 

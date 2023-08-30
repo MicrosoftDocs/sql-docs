@@ -59,7 +59,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of NULL. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there's no default public profile for the database, *@profile_name* must be specified.
+The name of the profile to send the message from. The *@profile_name* is of type **sysname**, with a default of `NULL`. The *@profile_name* must be the name of an existing Database Mail profile. When no *@profile_name* is specified, `sp_send_dbmail` uses the default private profile for the current user. If the user doesn't have a default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If the user doesn't have a default private profile and there's no default public profile for the database, *@profile_name* must be specified.
 
 #### [ @recipients = ] '*recipients*'
 
@@ -87,11 +87,11 @@ The subject of the e-mail message. The subject is of type **nvarchar(255)**. If 
 
 #### [ @body = ] N'*body*'
 
-The body of the e-mail message. The message body is of type **nvarchar(max)**, with a default of NULL.
+The body of the e-mail message. The message body is of type **nvarchar(max)**, with a default of `NULL`.
 
 #### [ @body_format = ] '*body_format*'
 
-The format of the message body. The parameter is of type **varchar(20)**, with a default of NULL. When specified, the headers of the outgoing message are set to indicate that the message body has the specified format. The parameter may contain one of the following values:
+The format of the message body. The parameter is of type **varchar(20)**, with a default of `NULL`. When specified, the headers of the outgoing message are set to indicate that the message body has the specified format. The parameter may contain one of the following values:
 
 - TEXT (default)
 - HTML
@@ -138,7 +138,7 @@ When the value is `0`, the query results are included in the body of the e-mail 
 
 #### [ @query_attachment_filename = ] N'*query_attachment_filename*'
 
-Specifies the file name to use for the result set of the query attachment. *@query_attachment_filename* is of type **nvarchar(255)**, with a default of NULL. This parameter is ignored when *@attach_query_result_as_file* is `0`. When *@attach_query_result_as_file* is `1` and this parameter is NULL, Database Mail creates an arbitrary filename.
+Specifies the file name to use for the result set of the query attachment. *@query_attachment_filename* is of type **nvarchar(255)**, with a default of `NULL`. This parameter is ignored when *@attach_query_result_as_file* is `0`. When *@attach_query_result_as_file* is `1` and this parameter is NULL, Database Mail creates an arbitrary filename.
 
 #### [ @query_result_header = ] *query_result_header*
 

@@ -36,11 +36,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 
 #### [ @acctname = ] '*@acctname*'
 
-The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of NULL. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `'CONTOSO\macraes'`, or `'BUILTIN\Administrators'`.
+The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of `NULL`. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `'CONTOSO\macraes'`, or `'BUILTIN\Administrators'`.
 
 #### [ @option = ] 'all' | 'members' ]
 
-Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. *@option* is **varchar(10)**, with a default of NULL. Unless `all` is specified, only the first permission path is displayed.
+Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. *@option* is **varchar(10)**, with a default of `NULL`. Unless `all` is specified, only the first permission path is displayed.
 
 #### [ @privilege = ] '*variable_name*' OUTPUT ]
 

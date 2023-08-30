@@ -38,13 +38,13 @@ sp_add_jobserver
 
 #### [ @job_id = ] *job_id*
 
-The identification number of the job. *job_id* is **uniqueidentifier**, with a default of NULL.
+The identification number of the job. *job_id* is **uniqueidentifier**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @job_name = ] '*job_name*'
 
-The name of the job. *job_name* is **sysname**, with a default of NULL.
+The name of the job. *job_name* is **sysname**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 

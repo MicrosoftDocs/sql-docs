@@ -47,7 +47,7 @@ The optional description for the new profile. *@description* is **nvarchar(256)*
 
 #### [ @profile_id = ] *new_profile_id* OUTPUT
 
-Returns the ID for the new profile. *@profile_id* is **int**, with a default of NULL.
+Returns the ID for the new profile. *@profile_id* is **int**, with a default of `NULL`.
 
 ## Return code values
 

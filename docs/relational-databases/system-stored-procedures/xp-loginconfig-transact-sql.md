@@ -37,7 +37,7 @@ xp_loginconfig [ 'config_name' ]
 
 #### '*config_name*'
 
-The configuration value to be displayed. If *config_name* isn't specified, all configuration values are reported. *config_name* is **sysname**, with a default of NULL, and can be one of the following values.
+The configuration value to be displayed. If *config_name* isn't specified, all configuration values are reported. *config_name* is **sysname**, with a default of `NULL`, and can be one of the following values.
 
 | Value | Description |
 | --- | --- |

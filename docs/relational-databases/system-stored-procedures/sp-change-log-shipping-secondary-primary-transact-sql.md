@@ -59,7 +59,7 @@ The directory on the secondary server where backup files are copied to. *@backup
 
 #### [ @file_retention_period = ] '*file_retention_period*'
 
-The length of time in minutes in which the backup files are retained. *@file_retention_period* is **int**, with a default of NULL. A value of 14420 is used if none is specified.
+The length of time in minutes in which the backup files are retained. *@file_retention_period* is **int**, with a default of `NULL`. A value of 14420 is used if none is specified.
 
 #### [ @monitor_server_security_mode = ] '*monitor_server_security_mode*'
 

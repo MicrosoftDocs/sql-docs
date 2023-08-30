@@ -339,10 +339,7 @@ When *@use_default_datatypes* is set to `0`, you must execute [sp_changearticlec
 
 #### [ @identityrangemanagementoption = ] N'*identityrangemanagementoption*'
 
-
-
 Specifies how identity range management is handled for the article. *@identityrangemanagementoption* is **nvarchar(10)**, and can be one of the following values.
-
 
 | Value | Description |
 | --- | --- |
@@ -357,7 +354,7 @@ For more information, see [Replicate Identity Columns](../replication/publish/re
 
 #### [ @publisher = ] N'*publisher*'
 
-Specifies a non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *@publisher* is **sysname**, with a default of `NULL`.
+Specifies a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *@publisher* is **sysname**, with a default of `NULL`.
 
 *@publisher* shouldn't be used when adding an article to a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.
 
@@ -448,7 +445,7 @@ This table describes the allowable values of *@schema_option* based upon the rep
 | **indexed view schema only** | `0x01`, `0x010`, `0x020`, `0x040`, `0x0100`, `0x2000`, `0x40000`, `0x100000`, `0x200000`, `0x400000`, `0x800000`, `0x2000000`, `0x8000000`, `0x40000000`, and `0x80000000` | `0x01`, `0x010`, `0x020`, `0x040`, `0x0100`, `0x2000`, `0x40000`, `0x100000`, `0x200000`, `0x400000`, `0x800000`, `0x2000000`, `0x8000000`, `0x40000000`, and `0x80000000` |
 
 > [!NOTE]  
-> For queued updating publications, the *@schema_option* values of `0x8000` and `0x80` must be enabled. The supported *@schema_option* values for non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publications are: `0x01`, `0x02`, `0x10`, `0x40`, `0x80`, `0x1000`, `0x4000` and `0X8000`.
+> For queued updating publications, the *@schema_option* values of `0x8000` and `0x80` must be enabled. The supported *@schema_option* values for non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] publications are: `0x01`, `0x02`, `0x10`, `0x40`, `0x80`, `0x1000`, `0x4000` and `0X8000`.
 
 ## Examples
 

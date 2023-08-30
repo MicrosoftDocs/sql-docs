@@ -76,7 +76,7 @@ By setting this value, it's possible to prevent, for example, unwanted e-mail me
 
 #### [ @notification_message = ] N'*notification_message*'
 
-An optional additional message sent to the operator as part of the e-mail, `net send`, or pager notification. *@notification_message* is **nvarchar(512)**, with a default of NULL. Specifying *@notification_message* is useful for adding special notes such as remedial procedures.
+An optional additional message sent to the operator as part of the e-mail, `net send`, or pager notification. *@notification_message* is **nvarchar(512)**, with a default of `NULL`. Specifying *@notification_message* is useful for adding special notes such as remedial procedures.
 
 #### [ @include_event_description_in = ] *include_event_description_in*
 
@@ -98,17 +98,17 @@ The database in which the error must occur for the alert to fire. If *@database_
 
 #### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
 
-The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of NULL. This parameter is useful for filtering object names (for example, `%customer_table%`).
+The sequence of characters that the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error must be like. [!INCLUDE [tsql](../../includes/tsql-md.md)] LIKE expression pattern-matching characters can be used. *@event_description_keyword* is **nvarchar(100)**, with a default of `NULL`. This parameter is useful for filtering object names (for example, `%customer_table%`).
 
 #### [ @job_id = ] *job_id*
 
-The job identification number of the job to run in response to this alert. *@job_id* is **uniqueidentifier**, with a default of NULL.
+The job identification number of the job to run in response to this alert. *@job_id* is **uniqueidentifier**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @job_name = ] '*job_name*'
 
-The name of the job to be executed in response to this alert. *@job_name* is **sysname**, with a default of NULL.
+The name of the job to be executed in response to this alert. *@job_name* is **sysname**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
@@ -118,7 +118,7 @@ Not implemented in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ve
 
 #### [ @performance_condition = ] N'*performance_condition*'
 
-A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)** with a default of NULL, and consists of these elements.
+A value expressed in the format '*ItemComparatorValue*'. *@performance_condition* is **nvarchar(512)** with a default of `NULL`, and consists of these elements.
 
 | Format element | Description |
 | --- | --- |
@@ -128,15 +128,15 @@ A value expressed in the format '*ItemComparatorValue*'. *@performance_condition
 
 #### [ @category_name = ] '*category*'
 
-The name of the alert category. *@category_name* is **sysname**, with a default of NULL.
+The name of the alert category. *@category_name* is **sysname**, with a default of `NULL`.
 
 #### [ @wmi_namespace = ] '*wmi_namespace*'
 
-The WMI namespace to query for events. *@wmi_namespace* is **sysname**, with a default of NULL. Only namespaces on the local server are supported.
+The WMI namespace to query for events. *@wmi_namespace* is **sysname**, with a default of `NULL`. Only namespaces on the local server are supported.
 
 #### [ @wmi_query = ] N'*wmi_query*'
 
-The query that specifies the WMI event for the alert. *@wmi_query* is **nvarchar(512)**, with a default of NULL.
+The query that specifies the WMI event for the alert. *@wmi_query* is **nvarchar(512)**, with a default of `NULL`.
 
 ## Return code values
 

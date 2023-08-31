@@ -100,22 +100,27 @@ You can save this file as `/opt/mssql/bin/runassessment.ps1`.
 
 ```powershell
 [CmdletBinding()] param ()
+
 $Error.Clear()
+
 # Create output directory if not exists
+
 $outDir = '/var/opt/mssql/log/assessments'
 if (-not ( Test-Path $outDir )) { mkdir $outDir }
 $outPath = Join-Path $outDir 'assessment-latest'
+
 $errorPath = Join-Path $outDir 'assessment-latest-errors'
-if ( Test-Path $errorPath ) { remove-item $errorPath }
+if( Test-Path $errorPath ) { remove-item $errorPath }
+
 function ConvertTo-LogOutput {
     [CmdletBinding()]
     param (
-        [Parameter(ValueFromPipeline = $true)]
+        [Parameter(ValueFromPipeline=$true)]
         $input
     )
     process {
-        switch ($input) {
-            { $_ -is [System.Management.Automation.WarningRecord] } {
+        switch($input){
+            { $_ -is [System.Management.Automation.WarningRecord] }{
                 $result = @{
                     'TimeStamp' = $(Get-Date).ToString("O");
                     'Warning'   = $_.Message
@@ -152,7 +157,7 @@ function Get-TargetsRecursive {
 
     [CmdletBinding()]
     Param (
-        [Parameter(ValueFromPipeline = $true)]
+        [Parameter(ValueFromPipeline=$true)]
         [Microsoft.SqlServer.Management.Smo.Server] $server
     )
 
@@ -160,23 +165,23 @@ function Get-TargetsRecursive {
     $server.Databases
 }
 
-function Get-ConfSetting {
+function Get-ConfSetting{
     [CmdletBinding()]
     param (
         $confFile,
         $section,
         $name,
-        $defaultValue = $null
+        $defaultValue=$null
     )
 
     $inSection = $false
 
-    switch -regex -file $confFile {
-        "^\s*\[\s*(.+?)\s*\]" {
+    switch -regex -file $confFile{
+        "^\s*\[\s*(.+?)\s*\]"{
             $inSection = $matches[1] -eq $section
         }
-        "^\s*$($name)\s*=\s*(.+?)\s*$" {
-            if ($inSection) {
+        "^\s*$($name)\s*=\s*(.+?)\s*$"{
+            if($inSection){
                 return $matches[1]
             }
         }
@@ -189,25 +194,28 @@ try {
 
     Write-Verbose "Acquiring credentials"
 
-    $login, $pwd = Get-Content '/var/opt/mssql/secrets/assessment' -Encoding UTF8NoBOM -TotalCount 2
+    $login, $pwd    = Get-Content '/var/opt/mssql/secrets/assessment' -Encoding UTF8NoBOM -TotalCount 2
     $securePassword = ConvertTo-SecureString $pwd -AsPlainText -Force
-    $credential = New-Object System.Management.Automation.PSCredential ($login, $securePassword)
-
+    $credential     = New-Object System.Management.Automation.PSCredential ($login, $securePassword)
+    $securePassword.MakeReadOnly()
+    
     Write-Verbose "Acquired credentials"
 
     $serverInstance = '.'
 
-    if (Test-Path /var/opt/mssql/mssql.conf) {
+    if(Test-Path /var/opt/mssql/mssql.conf) {
         $port = Get-ConfSetting /var/opt/mssql/mssql.conf network tcpport
 
-        if (-not [string]::IsNullOrWhiteSpace($port)) {
+
+        if(-not [string]::IsNullOrWhiteSpace($port)) {
             Write-Verbose "Using port $($port)"
             $serverInstance = "$($serverInstance),$($port)"
         }
     }
 
+    # IMPORTANT: If the script is run in trusted environments and there is a prelogin handshake error, add -TrustServerCertificate flag in the commands for $serverName, $hostName and Get-SqlInstance lines below.
     $serverName = (Invoke-SqlCmd -ServerInstance $serverInstance -Credential $credential -Query "SELECT @@SERVERNAME")[0]
-    $hostName = (Invoke-SqlCmd -ServerInstance $serverInstance -Credential $credential -Query "SELECT HOST_NAME()")[0]
+    $hostName   = (Invoke-SqlCmd -ServerInstance $serverInstance -Credential $credential -Query "SELECT HOST_NAME()")[0]
 
     # Invoke assessment and store results.
     # Replace 'ConvertTo-Json' with 'ConvertTo-Csv' to change output format.
@@ -216,7 +224,7 @@ try {
 
     Get-SqlInstance -ServerInstance $serverInstance -Credential $credential -ErrorAction Stop
     | Get-TargetsRecursive
-    | % { Write-Verbose "Invoke assessment on $($_.Urn)"; $_ }
+    | %{ Write-Verbose "Invoke assessment on $($_.Urn)"; $_ }
     | Invoke-SqlAssessment 3>&1
     | ConvertTo-LogOutput
     | ConvertTo-Json -AsArray
@@ -234,6 +242,8 @@ finally {
     }
 }
 ```
+> [!NOTE]  
+> In the above script, when it is run in trusted environments and there is a prelogin handshake error, add -TrustServerCertificate flag in the commands for $serverName, $hostName and Get-SqlInstance lines in the above code. .
 
 ### Run the assessment
 

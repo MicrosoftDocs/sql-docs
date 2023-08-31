@@ -3,7 +3,7 @@ title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/03/2022
+ms.date: 08/31/2023
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: subject-monitoring
@@ -34,7 +34,7 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > [!NOTE]
 > SQL Insights (preview) does not support the following Azure SQL Database scenarios:
 > - **Elastic pools**: Metrics cannot be gathered for elastic pools. Metrics cannot be gathered for databases within elastic pools.
-> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md)
+> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, and S1 [service objectives](./resource-limits-dtu-single-databases.md)
 > 
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
 > - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.

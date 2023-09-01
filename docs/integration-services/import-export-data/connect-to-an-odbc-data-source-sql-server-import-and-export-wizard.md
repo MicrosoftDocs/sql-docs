@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE [sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 This article demonstrates how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
@@ -129,7 +129,7 @@ To build and test the connection string for your ODBC driver on your own compute
 
     ![Test new File DSN](../../integration-services/import-export-data/media/test-new-file-dsn.png)
 
-9. After you test your data source and close the dialog boxes, find the File DSN where you saved it in the file system. If you didn't change the file extension, the default extension is .DSN.
+9. After you test your data source and close the dialog boxes, find the File DSN where you saved it in the file system. If you didn't change the file extension, the default extension is `.DSN`.
 
 10. Open the saved file with Notepad or another text editor. Here are the contents of our SQL Server example.
 

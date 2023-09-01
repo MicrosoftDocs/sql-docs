@@ -3,7 +3,7 @@ title: "Availability group wizard: Specify availability group options"
 description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "05/17/2016"
+ms.date: "09/01/2022"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
@@ -19,12 +19,12 @@ f1_keywords:
  **Availability group name**  
  Specify the name of the availability group. For a new availability group, specify a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique across all availability groups in the Windows Server failover cluster (WSFC). The maximum length for an availability group name is 128 characters.  
 
- **Cluster type** 
+ **Cluster type**
  Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose one from the following list:
 
    * **Windows Server Failover Clustering**
    
-      Use when the availability group is hosted on instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that belong to a Windows Server failover cluster for high availability and disaster recovery. Applies to all supported versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+      Use when the availability group is hosted on instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that belong to a Windows Server failover cluster for high availability and disaster recovery. Applies to all supported versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
    * **EXTERNAL**
       
@@ -35,20 +35,18 @@ f1_keywords:
 
    * **NONE**
       
-      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is not managed by a cluster technology for read scale and load balancing. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later. 
+      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is not managed by a cluster technology for read scale and load balancing. Applies to [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] and later.
  
    **Database level health detection**
-   Check this box to enable database level health detection (DB_FAILOVER) option for the availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong and will trigger the automatic failover of the availability group. See 
-   [SQL Server Always On Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md).
+   Check this box to enable database level health detection (DB_FAILOVER) option for the availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong and will trigger the automatic failover of the availability group. See [SQL Server Always On Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md).
 
-   **Per Database DTC Support** Check this box to enable distributed transactions for the databases in the availability group. In order to guarantee distributed transdactions, the availability group mught be configured to register databases as distributed transaction resource managers. See [Configure distributed transactions for an Always On availability group](configure-availability-group-for-distributed-transactions.md)
+   **Per Database DTC Support** Check this box to enable distributed transactions for the databases in the availability group. In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers. See [Configure distributed transactions for an Always On availability group](configure-availability-group-for-distributed-transactions.md)
 
-   **Contained** Check this box to create a [contained availability group](contained-availability-groups-overview.md). A contained availability group support managing metadata objects (users, logins, permissions, SQL Agent jobs, etc) at the availability group level in addition to the instance level. 
+   **Contained** Check this box to create a [contained availability group](contained-availability-groups-overview.md). A contained availability group supports managing metadata objects (users, logins, permissions, SQL Agent jobs, etc.) at the availability group level in addition to the instance level.
 
    * **Reuse System Databases**
 
-      When using a contained availability group, check this box if you want to reuse exisitng system databases from e previouew Contained Availability Group of the same name. 
-
+      When using a contained availability group, check this box if you want to reuse existing system databases from a previously created contained availability group of the same name.
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
@@ -59,5 +57,4 @@ Select Databases Page (New Availability Group Wizard and Add Database Wizard)
 -   [Use the Add Database to Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## See Also  
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
+ [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

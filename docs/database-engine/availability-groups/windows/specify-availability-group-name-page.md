@@ -3,7 +3,7 @@ title: "Availability group wizard: Specify availability group options"
 description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "09/01/2022"
+ms.date: "09/01/2023"
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual

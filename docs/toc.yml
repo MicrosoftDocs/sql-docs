@@ -7,6 +7,8 @@ items:
   href: sql-server/previous-versions-sql-server.md
 - name: Overview
   items:
+  - name: Connect to the Database Engine
+    href: sql-server/connect-to-database-engine.md
   - name: What's New
     items:
     - name: SQL Server 2022
@@ -8380,9 +8382,9 @@ items:
           href: tools/configuration-manager/new-alias-alias-tab.md
         - name: Properties
           href: tools/configuration-manager/alias-properties-alias-tab.md
-        - name: Creating a Valid Connection String Using Shared Memory Protocol
+        - name: Create a valid connection string using shared memory
           href: tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md
-        - name: Creating a Valid Connection String Using TCP IP
+        - name: "Create a valid connection string using TCP/IP"
           href: tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md
     - name: Error logs
       href: tools/configuration-manager/monitoring-the-error-logs.md

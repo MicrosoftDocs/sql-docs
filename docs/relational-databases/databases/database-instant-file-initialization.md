@@ -50,7 +50,7 @@ To grant an account the `Perform volume maintenance tasks` permission:
   
 1. In the left pane, expand **Local Policies**, and then select **User Rights Assignment**.  
   
-1. In the right pane, double-click **Perform volume maintenance tasks**.  
+1. In the right pane, double-click **Perform volume maintenance tasks**.  If installed on Windows 10 or 11, right click for Properties first.
   
 1. Select **Add User or Group** and add the account that runs the SQL Server service.  
   

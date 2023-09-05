@@ -8432,6 +8432,8 @@ items:
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Anonymous Usage Data
       href: ssdt/anonymous-usage-data.md
+    - name: Connect to an existing database in SSDT
+      href: ssdt/connect-to-an-existing-database-in-sql-server-data-tools.md   
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: Project-Oriented Offline Database Development

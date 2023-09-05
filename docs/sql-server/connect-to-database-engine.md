@@ -3,7 +3,7 @@ title: Connect to the SQL Server Database Engine
 description: Learn how to connect to the Database Engine used by SQL Server and Azure SQL services
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/01/2023
+ms.date: 09/05/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -148,20 +148,22 @@ To connect to a server on the local network with named pipes, use one of the fol
 
 1. If you're connecting to a server configured with default TCP port `1433`, use one of the following options:
 
-   - `MyServer`
-   - `192.10.1.128`
+   - `tcp:MyServer`
+   - `tcp:192.10.1.128`
 
 1. If you're connecting to a server configured with a custom TCP port, such as `51433`, use one of the following options:
 
    - `MyServer,51433`
+   - `tcp:MyServer,51433`
    - `192.10.1.128,51433`
+   - `tcp:192.10.1.128,51433`
 
 #### Connect to a SQL Server named instance on the network, using TCP/IP
 
 In this example, the named instance is called `MyInstance`. Make sure the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Browser service is running on the server, and use one of the following options:
 
-- `MyServer\MyInstance`
-- `192.10.1.128\MyInstance`
+- `tcp:MyServer\MyInstance`
+- `tcp:192.10.1.128\MyInstance`
 
 ## Get help
 

@@ -7,9 +7,13 @@ items:
   href: sql-server/previous-versions-sql-server.md
 - name: Overview
   items:
-  - name: Connect to the Database Engine
-    href: sql-server/connect-to-database-engine.md
-  - name: What's New
+  - name: Get started
+    items:
+    - name: What is SQL Server?
+      href: sql-server/what-is-sql-server.md
+    - name: Connect to the Database Engine
+      href: sql-server/connect-to-database-engine.md
+  - name: What's new?
     items:
     - name: SQL Server 2022
       href: sql-server/what-s-new-in-sql-server-2022.md
@@ -19,7 +23,7 @@ items:
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
       href: sql-server/what-s-new-in-sql-server-2016.md
-  - name: Editions & Features
+  - name: Editions and features
     items:
     - name: SQL Server 2022
       href: sql-server/editions-and-components-of-sql-server-2022.md
@@ -29,7 +33,7 @@ items:
       href: sql-server/editions-and-components-of-sql-server-2017.md
     - name: SQL Server 2016
       href: sql-server/editions-and-components-of-sql-server-2016.md
-  - name: Release Notes
+  - name: Release notes
     items:
     - name: SQL Server 2022
       href: sql-server/sql-server-2022-release-notes.md

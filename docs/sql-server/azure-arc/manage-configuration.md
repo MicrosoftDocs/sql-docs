@@ -153,7 +153,7 @@ There are two ways to configure the SQL Server host in Azure portal.
 
 * Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled Server in Azure portal.":::
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled Server in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
 
   Or
 
@@ -163,7 +163,7 @@ There are two ways to configure the SQL Server host in Azure portal.
    * **ESU Status**
    * **Automated patching**
 
-   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration.":::
+   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration."  lightbox="media/billing/sql-server-instance-configuration.png" :::
 
 #### Set **License Type** property
 

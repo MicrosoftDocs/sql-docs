@@ -56,6 +56,7 @@ The estimated latency to change the service tier, scale the compute size of a si
 >
 > - In the case of changing the service tier or scaling compute for an elastic pool, the summation of space used across all databases in the pool should be used to calculate the estimate.
 > - In the case of moving a database to/from an elastic pool, only the space used by the database impacts the latency, not the space used by the elastic pool.
+> - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Similarly, Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations) for more details.
 > - For Standard and General Purpose elastic pools, latency of moving a database in/out of an elastic pool or between elastic pools will be proportional to database size if the elastic pool is using Premium File Share ([PFS](/azure/storage/files/storage-files-introduction)) storage. To determine if a pool is using PFS storage, execute the following query in the context of any database in the pool. If the value in the AccountType column is `PremiumFileStorage` or `PremiumFileStorage-ZRS`, the pool is using PFS storage.
 
 ```sql

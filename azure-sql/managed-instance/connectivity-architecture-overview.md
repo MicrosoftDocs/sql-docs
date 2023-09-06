@@ -114,7 +114,7 @@ When connecting to the VNet-local endpoint, always use its domain name as the un
 
 The public endpoint is an optional domain name in the form of `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. Public endpoint allows TDS traffic only to reach SQL Managed Instance on port 3342 and cannot be used for integration scenarios, such as failover groups, Managed Instance Link, and similar.
 
-When connecting to the VNet-local endpoint, always use its domain name as the underlying IP address may occasionally change.
+When connecting to the public endpoint, always use its domain name as the underlying IP address may occasionally change.
 
 Public endpoint always operates in [proxy connection type](connection-types-overview.md).
 

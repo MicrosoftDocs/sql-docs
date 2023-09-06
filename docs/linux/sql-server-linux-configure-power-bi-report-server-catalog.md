@@ -3,14 +3,14 @@ title: Configure Power BI Report Server catalog databases for SQL Server on Linu
 description: Learn how to configure SQL Server on Linux to host the Power BI Report Server catalog database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/17/2023
+ms.date: 09/05/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
 ---
 # Configure Power BI Report Server catalog databases for SQL Server on Linux
 
-[!INCLUDE [sql-linux-pbirs-2022](../includes/applies-to-version/sql-linux-pbirs-2022.md)]
+[!INCLUDE [sql-linux-pbirs-2019](../includes/applies-to-version/sql-linux-pbirs-2019.md)]
 
 This article explains how to install and configure the Power BI Report Server (PBIRS) catalog database for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux.
 
@@ -24,9 +24,9 @@ In this article, the examples use the domain `CORPNET.CONTOSO.COM`, and the foll
 | --- | --- | --- |
 | Windows domain controller | Windows Server 2019 or Windows Server 2022 | |
 | Report development and deployment (`WIN19`) | Windows Server 2019, running Visual Studio 2019 | - Report development and deployment<br /><br />- File share services to serve as a repository for demand driven or scheduled report output |
-| SQL Server Reporting Services (`WIN22`) | Windows Server 2022, running Power BI Report Server (PBIRS) 2022 | |
+| SQL Server Reporting Services (`WIN22`) | Windows Server 2022, running a supported version of Power BI Report Server (PBIRS) <sup>1</sup> | |
 | Developer machine | Windows 11 client, running SQL Server Management Studio (SSMS) | |
-| SQL Server 2022 (`rhel8test`) | Red Hat Enterprise Linux (RHEL) 8.x Server, running [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] with the latest CU | |
+| SQL Server 2019 (`rhel8test`) | Red Hat Enterprise Linux (RHEL) 8.x Server, running [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] with the latest CU | |
 
 ### Configure accounts
 

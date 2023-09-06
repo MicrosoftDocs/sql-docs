@@ -10,7 +10,7 @@ ms.topic: conceptual
 ---
 # Configure Azure Arc-enabled SQL Server
 
-Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. The Arc-enabled SQL Server overview blade reflects how the SQL Server Configuration effects a particular instance.
+Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. The Azure Arc-enabled SQL Server **Overview** reflects how the SQL Server Configuration effects a particular instance.
 
 Azure portal SQL Server Configuration allows you to perform the following management tasks:
 
@@ -59,7 +59,7 @@ SQL Server license type identifies the type of license for SQL Server instances 
 
 **License type** is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options. It allows you to track your SQL Server license inventory from using Azure Resource Graph. You can also track the software usage in the Cost Management + Billing portal.
 
-For your convenience, the overview blade of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
+For your convenience, **Overview** of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
 
 > [!NOTE]
 > [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
@@ -149,14 +149,19 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 
 ### [Azure portal](#tab/azure)
 
-There are two ways to open the SQL Server Configuration blade.
+There are two ways to configure the SQL Server host in Azure portal.
 
-1. Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
+* Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled SQL Server in Azure portal.":::
-  
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled Server in Azure portal.":::
 
-1. Open the Arc-enabled SQL Server overview page and click on `Host license type` or `ESU status` values as shown.
+  Or
+
+* Open the Arc-enabled SQL Server overview page, and select **Properties**. Under **Host configuration properties**, select the setting you need to modify:
+
+   * **License type**
+   * **ESU Status**
+   * **Automated patching**
 
    :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration.":::
 

@@ -29,7 +29,7 @@ For more information on connection properties, see [Setting the connection prope
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication.
+See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] settings, which control the behavior of NTLM authentication.
 
 ## Logging
 

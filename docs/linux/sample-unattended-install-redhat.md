@@ -42,7 +42,7 @@ Save the sample script to a file and then to customize it. You'll need to replac
 # Password for the SA user (required)
 MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
-# Product ID of the version of SQL server you're installing
+# Product ID of the version of SQL Server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'

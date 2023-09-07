@@ -44,8 +44,9 @@ Subnets that are marked as **Not ready** don't fulfill all the requirements for 
 - attaching a route table
 - attaching a network security group
 
-In the case that subnet is part of some other virtual network, extra requirement is
- - [bi-directional peering](/azure/virtual-network/virtual-network-peering-overview) between current and destination virtual network.
+In the case that subnet is part of some other virtual network, extra requirements are
+ - [Bi-directional peering](/azure/virtual-network/virtual-network-peering-overview) between current and destination virtual network.
+ - Current and destination subnets use separate route tables and network security groups.
 
 After all requirements are satisfied, the subnet moves from the **Not ready** to the **Ready for Managed Instance** category and can be used for a managed instance. 
 

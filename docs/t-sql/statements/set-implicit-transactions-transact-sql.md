@@ -231,8 +231,8 @@ GO
 [D.01] Now, SET IMPLICIT_TRANSACTIONS ON.  
 [D.02] @@TranCount, at start, == 0  
 [D.03] @@TranCount, after INSERTs, == 2  
-[D.04] @@TranCount, after INSERTs, == 1  
-[D.05] @@TranCount, after INSERTs, == 0  
+[D.04] @@TranCount, after a COMMIT, == 1  
+[D.05] @@TranCount, after another COMMIT, == 0  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

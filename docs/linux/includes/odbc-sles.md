@@ -45,7 +45,7 @@ Use the following steps to install the **mssql-tools18** on SUSE Linux Enterpris
 1. Install **mssql-tools18** with the unixODBC developer package.
 
    ```bash
-   sudo zypper install -y mssql-tools18 unixodbc-dev
+   sudo zypper install -y mssql-tools18 unixODBC-devel
    ```
 
    > [!NOTE]  

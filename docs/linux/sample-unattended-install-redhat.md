@@ -183,7 +183,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Configure SQL Server with the `MSSQL_SA_PASSWORD` and automatically accept the End-User License Agreement.
 
-1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixodbc-dev` package.
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixODBC-devel` package.
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 

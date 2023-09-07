@@ -18,7 +18,7 @@ This release is published September 13, 2023.
 
 ### Extension version
 
-`1.1.2431.47`
+`1.1.2440.53`
 
 ### Azure extension for SQL Server
 
@@ -240,4 +240,5 @@ This release is published September 13, 2022
 - Azure extension for SQL Server has been enhanced to support configuring Microsoft Entra ID authentication using `mssql-conf`. For more details, see [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 

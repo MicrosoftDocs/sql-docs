@@ -1,19 +1,31 @@
 {:allowed-branchname-matches ["main" "release-.*" "sandbox-.*"]
  :allowed-filename-matches ["(?i)docs/(?:(?!toc.yml))" "docs-msdn" "(?i)azure-sql/(?:(?!toc.yml))" "(?i)data-migration/(?:(?!toc.yml))"]
 
- :template-header
- "
-## Acrolinx scorecard
+:guidance-profile "1889ea46-76de-460c-a27c-6667b60e201e" ;; testing March 2023 updated guidelines - Microsoft standard.
  
-**A minimum total score of 80 is required.**
+ :template-header ;; This displays in the pull request results pane.
+ "
+## Acrolinx Scorecards
 
-Select the total score link to review all feedback on brand, terms, spelling, grammar, readability, and inclusive language. *You should fix all spelling errors regardless of your total score.* This helps maintain customer trust in overall content quality.
-
-| Article | **Total score**<br />**Required:80** | Word and phrases<br />(Brand, terms)<br />Preferred: 100 | Correctness<br />(Spelling, grammar)<br />Preferred: 100 | Clarity<br />(Readability)<br />Preferred: 80 |
+**A minimum total score of 80 is required. The total score is an average of the subscores.**
+Select **Total score** to review the Acrolinx scorecard for your article. Try to increase your individual scores, ex. Correctness. Your article will be clearer and more consistent with Microsoft standards.
+ 
+ 
+| Article | **Total score**<br />**Required: 80** | Word and phrases<br />(Brand, terms)<br />Preferred: 100 | Correctness<br />(Spelling, grammar)<br />Preferred: 100 | Clarity<br />(Readability)<br />Preferred: 80 |
 |---------|:------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------------------:|:---------------------------------------------:|
 "
 
- :template-change
- "| ${s/status} ${s/file} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases}  | ${acrolinx/scores/correctness}  | ${acrolinx/scores/clarity}  | ${acrolinx/scores/inclusive}  |
+ :template-change ;; Can be overriden in repo-specific edn file. This displays in the pull request results pane.
+ "| ${s/status} ${s/file} | [${acrolinx/qualityscore}](${acrolinx/scorecard}) | ${acrolinx/scores/words_and_phrases}  | ${acrolinx/scores/correctness}  | ${acrolinx/scores/clarity}  |
+"
+
+ :template-footer 
+ "
+**More information about Acrolinx**
+
+- [Install Acrolinx locally for VSCode](https://review.learn.microsoft.com/en-us/help/platform/acrolinx-vscode-setup)
+- [False positives or issues](https://aka.ms/acrolinxbug)
+- [Troubleshooting issues with Acrolinx](https://review.docs.microsoft.com/help/contribute/acrolinx-error-messages)
+
 "
 }

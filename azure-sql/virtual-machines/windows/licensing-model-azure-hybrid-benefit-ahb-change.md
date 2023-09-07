@@ -149,6 +149,7 @@ Make sure your [subscription is registered with resource provider (RP)](/azure/a
 The SQL IaaS Agent extension is required to change the license. Make sure you [remove and reinstall the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm#register-in-full-mode) if it's in a failed state.
 
 **How Can I deploy a SQL Server BYOL (bring your own license) image?**
+
 BYOL images have been retired from Azure Marketplace. You can deploy a pay-as-you-go (PAYG) gallery image and change the license to (BYOL) by enabling the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/faq/).
 
 **SQL Server edition, version, or licensing on Azure Portal does not reflect correctly after edition or version upgrade**

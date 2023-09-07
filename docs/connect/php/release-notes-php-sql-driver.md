@@ -4,7 +4,7 @@ description: This page discusses what was changed in each version of the Microso
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/28/2023
+ms.date: 09/06/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

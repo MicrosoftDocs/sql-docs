@@ -142,11 +142,14 @@ This error occurs when you try to change the license model on a SQL Server VM th
 
 You'll need to [register your SQL Server VM with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
-**Change licensing to AHB, BYOL, HADR or PAYG**
+**Change licensing to AHB, HADR or PAYG**
 
 Make sure your [subscription is registered with resource provider (RP)](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm#register-subscription-with-rp).
 
 The SQL IaaS Agent extension is required to change the license. Make sure you [remove and reinstall the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm#register-in-full-mode) if it's in a failed state.
+
+**How Can I deploy SQL Server BYOL(Bring your own License) Image?**
+BYOL images have been retired from Azure Marketplace. You can deploy a pay-as-you-go (PAYG) gallery image and change the license to (BYOL) by enabling the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/faq/)
 
 **SQL Server edition, version, or licensing on Azure Portal does not reflect correctly after edition or version upgrade**
 

@@ -18,16 +18,16 @@ On Linux and macOS, the drivers for PHP are easily downloaded and installed usin
 
 Microsoft Drivers 5.11 for PHP for SQL Server is the latest general availability (GA) version.
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)**  
-[GitHub Release Tag v5.11.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.0)
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  
+[GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
 
 > [!NOTE]
 > Make sure you have the latest version of the ODBC driver installed to ensure optimal performance and security. For download information, see [Download ODBC Driver for SQL Server](../odbc/download-odbc-driver-for-sql-server.md).
 
 ### Version information
 
-- Release number: 5.11.0
-- Released: February 28, 2023
+- Release number: 5.11.1
+- Released: August 30, 2023
 
 If you have feedback, the best way to contact the Microsoft Drivers for PHP for SQL Server team is by filing an issue on the [GitHub repository](https://github.com/Microsoft/msphpsql/issues).
 

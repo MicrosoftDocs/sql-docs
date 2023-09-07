@@ -30,8 +30,26 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+## 5.11.1
 
-## 5.11
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  
+[GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
+
+- Release number: 5.11.1
+- Released: August 30, 2023
+
+### What's new in 5.11.1
+
+| New item | Details |
+| :------- | :------ | 
+| Reset type after bind param. | &nbsp; |
+| Fixed error when using PDO::ATTR_STRINGIFY_FETCHES. | &nbsp; |
+| Change connection options to case insensitive. | &nbsp; |
+| Bugfix for 1465 Adding a NULL check. | &nbsp; |
+
+## Previous releases
+
+## 5.11.0
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)**  
 [GitHub Release Tag v5.11.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.0)
@@ -39,7 +57,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Release number: 5.11.0
 - Released: February 28, 2023
 
-### What's new in 5.11
+### What's new in 5.11.0
 
 | New item |
 | :------- |
@@ -74,8 +92,6 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ### Known issues
 
 - If string parameters are bound as short string and later reused to bind longer strings, a string truncation error will occur.
-
-## Previous releases
 
 ## 5.9
 

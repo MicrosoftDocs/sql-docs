@@ -4,7 +4,7 @@ description: "Runs UPDATE STATISTICS against all user-defined and internal table
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 06/13/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -41,7 +41,7 @@ sp_updatestats [ [ @resample = ] 'resample' ]
 
 #### [ @resample = ] 'resample'
 
-Specifies that `sp_updatestats` uses the RESAMPLE option of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. If `'resample'` isn't specified, `sp_updatestats` updates statistics by using the default sampling. The `resample` argument is **varchar(8)** with a default value of `NO`.
+Specifies that `sp_updatestats` uses the RESAMPLE option of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. If `resample` isn't specified, `sp_updatestats` updates statistics by using the default sampling. The `resample` argument is **varchar(8)** with a default value of `NO`.
 
 ## Remarks
 
@@ -77,13 +77,10 @@ EXEC sp_updatestats;
 
 Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, among other parameters, and update statistics with a linear threshold.
 
-## See also
+## Related content
 
-- [System stored procedures](system-stored-procedures-transact-sql.md)
-
-## Next steps
-
-- [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)

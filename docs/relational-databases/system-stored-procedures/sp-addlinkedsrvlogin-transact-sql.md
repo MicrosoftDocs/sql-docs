@@ -4,7 +4,7 @@ description: Creates or updates a mapping between a login on the local instance 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,7 +44,7 @@ The name of a linked server that the login mapping applies to. *@rmtsrvname* is 
 
 #### [ @useself = ] '*useself*'
 
-Determines whether to connect to *rmtsrvname* by impersonating local logins or explicitly submitting a login and password. *@useself* is **varchar(8)**, with a default of `'true'`.
+Determines whether to connect to *rmtsrvname* by impersonating local logins or explicitly submitting a login and password. *@useself* is **varchar(8)**, with a default of `true`.
 
 - A value of `true` specifies that logins use their own credentials to connect to *@rmtsrvname*, with the *@rmtuser* and *@rmtpassword* arguments being ignored.
 - `false` specifies that the *@rmtuser* and *@rmtpassword* arguments are used to connect to *@rmtsrvname* for the specified *@locallogin*.
@@ -112,7 +112,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 ```
 
 > [!NOTE]  
-> If there are explicit mappings created for individual logins, they take precedence over any global mappings that may exist for that linked server.
+> If there are explicit mappings created for individual logins, they take precedence over any global mappings that might exist for that linked server.
 
 ### B. Connect a specific login to the linked server by using different user credentials
 
@@ -123,9 +123,9 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 ```
 
 > [!CAUTION]  
-> This example doesn't use Windows Authentication. Passwords will be transmitted unencrypted. Passwords may be visible in data source definitions and scripts that are saved to disk, in backups, and in log files. Never use an administrator password in this kind of connection. Consult your network administrator for security guidance specific to your environment.
+> This example doesn't use Windows Authentication. Passwords will be transmitted unencrypted. Passwords might be visible in data source definitions and scripts that are saved to disk, in backups, and in log files. Never use an administrator password in this kind of connection. Consult your network administrator for security guidance specific to your environment.
 
-## See also
+## Related content
 
 - [Linked Servers Catalog Views (Transact-SQL)](../system-catalog-views/linked-servers-catalog-views-transact-sql.md)
 - [sp_addlinkedserver (Transact-SQL)](sp-addlinkedserver-transact-sql.md)

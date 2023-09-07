@@ -27,7 +27,7 @@ Microsoft Drivers 5.11 for PHP for SQL Server is the latest general availability
 ### Version information
 
 - Release number: 5.11.1
-- Released: August 30, 2023
+- Released: September 7, 2023
 
 If you have feedback, the best way to contact the Microsoft Drivers for PHP for SQL Server team is by filing an issue on the [GitHub repository](https://github.com/Microsoft/msphpsql/issues).
 

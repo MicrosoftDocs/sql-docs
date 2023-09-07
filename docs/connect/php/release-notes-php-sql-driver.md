@@ -36,7 +36,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 [GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
 
 - Release number: 5.11.1
-- Released: August 30, 2023
+- Released: September 7, 2023
 
 ### What's new in 5.11.1
 

@@ -27,13 +27,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ```syntaxsql
 GRANT <permission> [ ,...n ] ON   
-    [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
+    [ OBJECT :: ][ schema_name ]. object_name [ ( column_name [ ,...n ] ) ]  
     TO <database_principal> [ ,...n ]   
     [ WITH GRANT OPTION ]  
     [ AS <database_principal> ]  
   
 <permission> ::=  
-    ALL [ PRIVILEGES ] | permission [ ( column [ ,...n ] ) ]  
+    ALL [ PRIVILEGES ] | permission [ ( column_name [ ,...n ] ) ]  
   
 <database_principal> ::=   
         Database_user   
@@ -61,11 +61,14 @@ GRANT <permission> [ ,...n ] ON
 - Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
+> [!CAUTION]
+> The ALL permission is deprecated and maintained only for compatibility.
+  
 PRIVILEGES  
  Included for [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 compliance. Does not change the behavior of ALL.  
   
-*column*  
- Specifies the name of a column in a table, view, or table-valued function on which the permission is being granted. The parentheses ( ) are required. Only SELECT, REFERENCES, and UPDATE permissions can be granted on a column. *column* can be specified in the permissions clause or after the securable name.  
+*column_name*  
+ Specifies the name of a column in a table, view, or table-valued function on which the permission is being granted. The parentheses ( ) are required. Only SELECT, REFERENCES, UPDATE, and UNMASK permissions can be granted on a column. *column_name* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  
 >  A table-level DENY does not take precedence over a column-level GRANT. This inconsistency in the permissions hierarchy has been preserved for backward compatibility.  
@@ -79,7 +82,7 @@ PRIVILEGES
  WITH GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS \<database_principal> 
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to grant the permission.  
   
  *Database_user*  

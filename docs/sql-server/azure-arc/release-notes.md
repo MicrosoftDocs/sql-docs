@@ -183,7 +183,7 @@ This release is published November 12, 2022
 - Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server now support billing through Azure when pay-as-you-go activation is selected in [SQL 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] setup wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) or [command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] includes the pay-as-you-go activation option that forces the installation of Azure extension for SQL Server during setup.
 - Billing meters are introduced to support pay-as-you-go billing through Azure
-- SQL Server Azure Arc instance now shows the databases registered to the SQL server. To view databases, navigate to the data management tab of the SQL Server Azure Arc resource. For more details, review [View databases](view-databases.md).
+- SQL Server Azure Arc instance now shows the databases registered to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance. To view databases, navigate to the data management tab of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Azure Arc resource. For more details, review [View databases](view-databases.md).
 
 ### Other changes
 
@@ -193,7 +193,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 |:--|:--|
 |Paid|SQL Server instance is installed using a product key with Software Assurance or SQL subscription|
 |LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
-|PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]|
+|PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])|
 |Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
 |HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
 

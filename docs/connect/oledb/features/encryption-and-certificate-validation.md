@@ -116,7 +116,7 @@ The following table describes the encryption and validation outcome for legacy a
 
 ## See also
 
-[OLE DB driver for SQL server features](oledb-driver-for-sql-server-features.md)  
+[OLE DB Driver for SQL Server Features](oledb-driver-for-sql-server-features.md)  
 [Initialization and authorization properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)  
 [Connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
 [Major version differences](../major-version-differences.md)  

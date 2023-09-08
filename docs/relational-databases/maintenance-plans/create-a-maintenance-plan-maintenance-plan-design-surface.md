@@ -194,7 +194,7 @@ To create or manage maintenance plans, you must be a member of the **sysadmin** 
 
    1. In the **Connection Properties** dialog box, in the **Connection name** box, enter the name of the connection you are creating.
 
-   1. Under **Specify the following to connect to SQL Server data**, in the **Select or enter a server name** box, either enter the name of the SQL server you want to use or select the ellipsis **(...)** and select a server in the **SQL Server** dialog box. If you select a server from the **SQL Server** dialog box, select **OK**.
+   1. Under **Specify the following to connect to SQL Server data**, in the **Select or enter a server name** box, either enter the name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance you want to use or select the ellipsis **(...)** and select a server in the **SQL Server** dialog box. If you select a server from the **SQL Server** dialog box, select **OK**.
 
    1. Under **Enter information to log on to the server**, select either **Use Windows NT Integrated security** or **Use a specific user name and password**. If you elect to use a specific user name and password, enter that information in the **User name** and **Password** boxes, respectively.
 

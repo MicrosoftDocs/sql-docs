@@ -1392,21 +1392,30 @@
     items:
     - name: How-to documentation
       href: managed-instance/how-to-content-reference-guide.md      
-    - name: Start & stop instance
-      href: managed-instance/instance-stop-start-how-to.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
-    - name: Copy or move a database
-      href: managed-instance/database-copy-move-how-to.md
-    - name: Job automation with SQL Agent 
-      href: managed-instance/job-automation-managed-instance.md
     - name: Distributed transactions with DTC
       displayName: distributed transaction coordinator 
       href: managed-instance/distributed-transaction-coordinator-dtc.md
     - name: Enroll in November 2022 feature wave
       href: managed-instance/november-2022-feature-wave-enroll.md
-    - name: Azure Automation
-      href: managed-instance/automation-manage.md
+
+    - name: Automation
+      items:
+      - name: Azure Automation
+        href: managed-instance/automation-manage.md
+      - name: Job automation with SQL Agent 
+        href: managed-instance/job-automation-managed-instance.md
+
+    - name: Manage
+      items:
+      - name: Start & stop instance
+        href: managed-instance/instance-stop-start-how-to.md
+      - name: Copy or move a database
+        href: managed-instance/database-copy-move-how-to.md
+      - name: Manage file space
+        href: managed-instance/file-space-manage.md
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks

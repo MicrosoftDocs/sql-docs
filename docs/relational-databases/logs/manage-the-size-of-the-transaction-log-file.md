@@ -18,7 +18,7 @@ helpviewer_keywords:
 
 This article covers how to monitor [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transaction log size, shrink the transaction log, add to or enlarge a transaction log file, optimize the `tempdb` transaction log growth rate, and control the growth of a transaction log file.
 
-This article applies to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Though very similar, for information on managing the size of transaction log files in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-mi&preserve-view=true). For information about [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Manage file space for databases in Azure SQL Database](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-db&preserve-view=true).
+This article applies to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Though very similar, for information on managing the size of transaction log files in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], see [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-mi&preserve-view=true). For information about [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Manage file space for databases in Azure SQL Database](/azure/azure-sql/managed-instance/file-space-manage?view=azuresql-db&preserve-view=true).
 
 ## Understand types of storage space for a database
 
@@ -33,7 +33,7 @@ Understanding the following storage space quantities are important for managing 
 
 The following diagram illustrates the relationship between the different types of storage space for a database.
 
-:::image type="content" source="./media/manage-the-size-of-the-transaction-log-file/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
+:::image type="content" source="../media/manage-the-size-of-the-transaction-log-file/understand-database-space-quantities.png" alt-text="Diagram that demonstrates the size of difference database space concepts in the database quantity table.":::
 
 ### Query a single database for file space information
 
@@ -126,7 +126,7 @@ For more information, see the [Recommendations](#Recommendations).
 
 For more information, see the [Recommendations](#Recommendations).
 
-## Recommendations
+## <a id="Recommendations"></a> Recommendations
 
 Following are some general recommendations when you are working with transaction log files:
 

@@ -19,7 +19,7 @@ monikerRange: "= azuresql-mi"
 
 This article covers how to monitor transaction log size in databases in Azure SQL Managed Instance. We'll review how to shrink the transaction log, enlarge a transaction log file, and control the growth of a transaction log file.
 
-This article applies to Azure SQL Managed Instance. Though very similar, for information on managing the size of transaction log files in SQL Server, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).
+This article applies to Azure SQL Managed Instance. Though very similar, for information on managing the size of transaction log files in SQL Server, see [Manage the size of the transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file).
 
 ## Understand types of storage space for a database
 
@@ -65,7 +65,7 @@ To reduce the physical size of a physical log file by returning free space in th
 > [!CAUTION]
 > Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations. Shrink commands impact database performance while running, and if possible should be run during periods of low usage. It is not recommended to shrink data files if regular application workload will cause the files to grow to the same allocated size again.
 
-Be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#rebuild-indexes). 
+Be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#index-maintenance-after-shrink). 
  
 Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](/sql/relational-databases/logs/the-transaction-log-sql-server?view=azuresql-mi&preserve-view=true#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log growth operations. For more information, see the [Recommendations](#Recommendations).
 
@@ -132,7 +132,7 @@ If there are multiple indexes with low page density, you may be able to rebuild 
 
 #### Sample index rebuild command
 
-Following is a sample command to rebuild an index and increase its page density, using the [ALTER INDEX](sql/t-sql/statements/alter-index-transact-sql?view=azuresql-mi&preserve-view=true) statement:
+Following is a sample command to rebuild an index and increase its page density, using the [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresql-mi&preserve-view=true) statement:
 
 ```sql
 ALTER INDEX [index_name] ON [schema_name].[table_name] REBUILD WITH (FILLFACTOR = 100, MAXDOP = 8, ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = NONE)), RESUMABLE = ON);

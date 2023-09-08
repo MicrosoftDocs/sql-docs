@@ -177,7 +177,7 @@ Because of a potential impact to database performance, Azure SQL Database does n
 
 In Azure SQL Database, to shrink files you can use either `DBCC SHRINKDATABASE` or `DBCC SHRINKFILE` commands:
 
-- `DBCC SHRINKDATABASE` shrinks all data and log files in a database using a single command. The command shrinks one data file at a time, which can take a long time for larger databases. It also [shrinks the log file](#shrinking-transaction-log-file), which is usually unnecessary because Azure SQL Database shrinks log files automatically as needed.
+- `DBCC SHRINKDATABASE` shrinks all data and log files in a database using a single command. The command shrinks one data file at a time, which can take a long time for larger databases. It also [shrinks the log file](#shrink-transaction-log-file), which is usually unnecessary because Azure SQL Database shrinks log files automatically as needed.
 - `DBCC SHRINKFILE` command supports more advanced scenarios:
     - It can target individual files as needed, rather than shrinking all files in the database.
     - Each `DBCC SHRINKFILE` command can run in parallel with other `DBCC SHRINKFILE` commands to shrink multiple files at the same time and reduce the total time of shrink, at the expense of higher resource usage and a higher chance of blocking user queries, if they are executing during shrink.
@@ -316,7 +316,7 @@ If there are multiple indexes with low page density, you may be able to rebuild 
 
 #### Sample index rebuild command
 
-Following is a sample command to rebuild an index and increase its page density, using the [ALTER INDEX](sql/t-sql/statements/alter-index-transact-sql?view=azuresql-db&preserve-view=true) statement:
+Following is a sample command to rebuild an index and increase its page density, using the [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresql-db&preserve-view=true) statement:
 
 ```sql
 ALTER INDEX [index_name] ON [schema_name].[table_name] REBUILD WITH (FILLFACTOR = 100, MAXDOP = 8, ONLINE = ON (WAIT_AT_LOW_PRIORITY (MAX_DURATION = 5 MINUTES, ABORT_AFTER_WAIT = NONE)), RESUMABLE = ON);

@@ -1,10 +1,10 @@
 ---
 title: "BASE64_DECODE (Transact-SQL)"
-description: "Transact-SQL reference for the BASE64_DECODE function."
+description: "BASE64_DECODE converts a base64 encoded varchar into the corresponding varbinary."
 author: abledenthusiast
 ms.author: aaronpitman
 ms.reviewer: wiassaf
-ms.date: 05/23/2023
+ms.date: 09/08/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "base64 decoding [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "=fabric"
+monikerRange: "=azuresqldb-current||=fabric"
 ---
 
-# BASE64_DECODE (Transact SQL)
-[!INCLUDE [fabric-se-and-dw](../../includes/applies-to-version/fabric-se-and-dw.md)]
+# BASE64_DECODE (Transact-SQL)
+[!INCLUDE [asdb-fabric-se-and-dw](../../includes/applies-to-version/asdb-fabricse-fabricdw.md)]
 
 BASE64_DECODE converts a base64 encoded varchar into the corresponding varbinary.
 

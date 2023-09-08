@@ -73,7 +73,7 @@ Before shrinking the transaction log, keep in mind [Factors that can delay log t
 
 You can shrink a log file only while the database is online, and at least one [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) is free. In some cases, shrinking the log may not be possible until after the next log truncation.  
   
-Factors such as a long-running transaction, that keep [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) active for an extended period, can restrict log shrinkage or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
+Factors, such as a long-running transaction, can keep [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) active for an extended period, can restrict log shrinkage, or even prevent the log from shrinking at all. For information, see [Factors that can delay log truncation](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
 Shrinking a log file removes one or more [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) that hold no part of the logical log (that is, *inactive VLFs*). When you shrink a transaction log file, inactive VLFs are removed from the end of the log file to reduce the log to approximately the target size.
 
@@ -122,7 +122,7 @@ For more information, see the [Recommendations](#Recommendations).
   
 - To change the current file size in KB, MB, GB, and TB units, use the `SIZE` option.  
 - To change the growth increment, use the `FILEGROWTH` option. A value of 0 indicates that automatic growth is set to off and no additional space is permitted.  
-- To control the maximum the size of a log file in KB, MB, GB, and TB units or to set growth to UNLIMITED, use the `MAXSIZE` option.  
+- To control the maximum size of a log file in KB, MB, GB, and TB units or to set growth to UNLIMITED, use the `MAXSIZE` option.  
 
 For more information, see the [Recommendations](#Recommendations).
 
@@ -152,7 +152,7 @@ Following are some general recommendations when you are working with transaction
     - A large autogrowth increment can cause the database to pause while the new space is allocated, potentially causing query timeouts.
     - A large autogrowth increment can generate too few and large [VLFs](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) and can also affect performance. To determine the optimal VLF distribution for the current transaction log size of all databases in a given instance, and the required growth increments to achieve the required size, see this [script for analyzing and fixing VLFs, provided by the SQL Tiger Team](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
-- Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE (Transact-SQL) File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+- Even with autogrow enabled, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query. For more information on changing the growth increment, see [ALTER DATABASE (Transact-SQL) File and Filegroup options](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 - Having multiple log files in a database does not enhance performance in any way, because the transaction log files do not use [proportional fill](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) like data files in a same filegroup.  
 

@@ -86,7 +86,7 @@ For greater detail, see the [Hyperscale elastic pool resource limits](resource-l
 
 ## Limitations
 
-During preview, consider the following limitations: 
+Consider the following limitations: 
 
 - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Individual databases need to be moved out of their respective existing pool before they can be added to the Hyperscale elastic pool.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.

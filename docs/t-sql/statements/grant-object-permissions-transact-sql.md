@@ -202,6 +202,14 @@ CREATE ROLE newrole ;
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  
 ```  
+
+### G. Granting UNMASK permission on a column
+ The following example grants the `UNMASK` permission for the column `email` in the table `Data.Membership` to user `OutreachCoordinator`.
+
+```sql
+GRANT UNMASK ON OBJECT::Data.Membership (email) to OutreachCoordinator;
+GO
+```
   
 ## See Also  
  [DENY Object Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   

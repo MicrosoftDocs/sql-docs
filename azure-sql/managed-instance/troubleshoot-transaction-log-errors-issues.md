@@ -5,7 +5,7 @@ description: Provides steps to troubleshoot transaction log issues in Azure SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/30/2023
+ms.date: 09/08/2023
 ms.service: sql-managed-instance
 ms.subservice: development
 ms.topic: troubleshooting
@@ -117,7 +117,9 @@ If the transaction log is prevented from truncating in Azure SQL Managed Instanc
 
 `40552: The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction.`
 
-To resolve this issue, try the following methods:
+While Error 9002 is more common than Error 40552 in Azure SQL Managed Instance, both can occur.
+
+To resolve Error 40552, try the following methods:
 
 1. The issue can occur in any DML operation such as insert, update, or delete. Review the transaction to avoid unnecessary writes. Try to reduce the number of rows that are operated on immediately by implementing batching or splitting into multiple smaller transactions. For more information, see [How to use batching to improve application performance](../performance-improve-use-batching.md?view=azuresql-mi&preserve-view=true).
 1. The issue can occur because of index rebuild operations. To avoid this issue, ensure the following formula is true: (number of rows that are affected in the table) multiplied by (the average size of field that's updated in bytes + 80) < 2 gigabytes (GB). For large tables, consider creating partitions and performing index maintenance only on some partitions of the table. For more information, see [Create Partitioned Tables and Indexes](/sql/relational-databases/partitions/create-partitioned-tables-and-indexes?view=azuresqldb-current&preserve-view=true).

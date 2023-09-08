@@ -5,7 +5,7 @@ description: Provides steps to troubleshoot transaction log issues in Azure SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/30/2023
+ms.date: 09/08/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: troubleshooting

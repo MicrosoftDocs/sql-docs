@@ -150,7 +150,7 @@ The SQL IaaS Agent extension is required to change the license. Make sure you [r
 
 **How Can I deploy a SQL Server BYOL (bring your own license) image?**
 
-BYOL images have been retired from Azure Marketplace. You can deploy a pay-as-you-go (PAYG) gallery image and change the license to (BYOL) by enabling the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/faq/).
+BYOL images have been retired from Azure Marketplace. You can choose a SQL Server Standard or Enterprise edition marketplace image, and enable [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/faq/) during deployment, to create a SQL virtual machine using an existing license.
 
 **SQL Server edition, version, or licensing on Azure Portal does not reflect correctly after edition or version upgrade**
 

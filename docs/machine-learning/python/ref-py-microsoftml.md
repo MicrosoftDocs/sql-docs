@@ -41,7 +41,7 @@ The **microsoftml** module is available only when you install one of the followi
 Algorithms in **microsoftml** depend on [revoscalepy](ref-py-revoscalepy.md) for:
 
 + Data source objects - Data consumed by **microsoftml** functions are created using **revoscalepy** functions.
-+ Remote computing (shifting function execution to a remote SQL Server instance) - The **revoscalepy** package provides functions for creating and activating a remote compute context for SQL server.
++ Remote computing (shifting function execution to a remote SQL Server instance) - The **revoscalepy** package provides functions for creating and activating a remote compute context for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 In most cases, you will load the packages together whenever you are using **microsoftml**.
 

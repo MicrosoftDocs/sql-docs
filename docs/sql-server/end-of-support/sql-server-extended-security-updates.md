@@ -391,7 +391,7 @@ Follow these steps to link an ESU invoice to your Azure Arc [!INCLUDE [ssnoversi
 
 1. Navigate to **Azure Arc** and select **SQL Server instances**.
 
-1. Use the checkboxes next to each SQL server you would like to link, and then select **Link ESU invoice**.
+1. Use the checkboxes next to each [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance you would like to link, and then select **Link ESU invoice**.
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot of all SQL Server instances on the Azure Arc section." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png":::
 

@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 #Get a server object which corresponds to the default instance  
 $svr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
-#Create a linked server object which corresponds to an OLEDB type of SQL server product  
+#Create a linked server object which corresponds to an OLEDB type of SQL Server product  
 $lsvr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.LinkedServer -argumentlist $svr,"OLEDBSRV"  
   
 #When the product name is SQL Server the remaining properties are not required to be set.   

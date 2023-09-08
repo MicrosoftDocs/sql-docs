@@ -136,7 +136,7 @@ But whether a specific authentication type is supported depends on destination s
 
 |Destination server type|Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
-|SQL server on-premises or VM |N/A|Windows Authentication|
+|[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on-premises or VM |N/A|Windows Authentication|
 |Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
 
 #### Domain name
@@ -219,7 +219,7 @@ Whether to roll back the configuration made by this task when error occurs.
 
 #### Target server
 
-Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
+Name of target [!INCLUDE [ssde-md](../../includes/ssde-md.md)]. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
 
 #### Authentication type
 
@@ -234,7 +234,7 @@ But whether a specific authentication type is supported depends on destination s
 
 |Destination server type|Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
-|SQL server on-premises or VM |N/A|Windows Authentication|
+|[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] on-premises or VM |N/A|Windows Authentication|
 |Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
 
 #### Username

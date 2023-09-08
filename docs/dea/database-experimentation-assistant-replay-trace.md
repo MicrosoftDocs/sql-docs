@@ -45,7 +45,7 @@ First, you need to perform a trace replay against target 1, which represents you
 
 4. Under **SQL Server connection details**, enter or select the following information:
 
-    - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Server Type**: Specify the type of the SQL Server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Server name**: Specify the server name or IP address of your SQL Server.
     - **Authentication Type**: For the authentication type, select **Windows**.
     - **Database name**: Enter a name for a database on which to start a server-side trace. If you don't specify a database, trace is captured on all the databases on the server.

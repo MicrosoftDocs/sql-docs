@@ -215,7 +215,7 @@ The following table describes recommendations for other client drivers:
 
 ## <a id="additionalconfig"></a> Additional configuration options
 
-If you are using third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to Active Directory domain and you would like to force SQL server in using the openldap library directly, you can configure the **disablesssd** option with **mssql-conf** as follows:
+If you are using third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to Active Directory domain and you would like to force [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to use the `openldap` library directly, you can configure the `disablesssd` option with **mssql-conf** as follows:
 
 ```bash
 sudo mssql-conf set network.disablesssd true

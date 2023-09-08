@@ -35,11 +35,11 @@ sysmail_delete_profile_sp { [ @profile_id = ] profile_id | [ @profile_name = ] '
 
 #### [ @profile_id = ] *profile_id*
 
-The profile ID of the profile to be deleted. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The profile ID of the profile to be deleted. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile to be deleted. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The name of the profile to be deleted. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 ## Return code values
 

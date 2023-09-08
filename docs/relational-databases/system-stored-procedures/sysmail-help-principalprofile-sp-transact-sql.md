@@ -36,19 +36,19 @@ sysmail_help_principalprofile_sp [ { [ @principal_id = ] principal_id | [ @princ
 
 #### [ @principal_id = ] *principal_id*
 
-The ID of the database user or role in the `msdb` database for the association to list. *@principal_id* is **int**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The ID of the database user or role in the `msdb` database for the association to list. *@principal_id* is **int**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @principal_name = ] '*principal_name*'
 
-The name of the database user or role in the `msdb` database for the association to list. *@principal_name* is **sysname**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified.
+The name of the database user or role in the `msdb` database for the association to list. *@principal_name* is **sysname**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified.
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile for the association to list. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* may be specified.
+The ID of the profile for the association to list. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
-The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of NULL. Either *@profile_id* or *@profile_name* may be specified.
+The name of the profile for the association to list. *@profile_name* is **sysname**, with a default of `NULL`. Either *@profile_id* or *@profile_name* may be specified.
 
 ## Return code values
 

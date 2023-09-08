@@ -16,7 +16,6 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-
 # sp_external_policy_refresh (Transact-SQL)
 
 [!INCLUDE [sqlserver2022](../../includes/applies-to-version/sqlserver2022-asdb.md)]
@@ -52,7 +51,7 @@ Requires ALTER SERVER STATE (covered by CONTROL SERVER) permission.
 
 The following example downloads complete set of policies.
 
-```
+```sql
 EXEC sp_external_policy_refresh @type = 'reload'
 ```
 
@@ -60,7 +59,7 @@ EXEC sp_external_policy_refresh @type = 'reload'
 
 The following example downloads policies incrementally by using the default type 'update'.
 
-```
+```sql
 EXEC sp_external_policy_refresh
 ```
 

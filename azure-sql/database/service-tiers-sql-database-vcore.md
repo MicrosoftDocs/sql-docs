@@ -340,7 +340,6 @@ Fsv2-series is available in the following regions:
 DC-series is available in the following regions:
 
 - Canada Central
-- Canada East
 - East US
 - North Europe
 - UK South

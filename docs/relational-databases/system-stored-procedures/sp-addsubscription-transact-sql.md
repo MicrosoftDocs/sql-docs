@@ -341,7 +341,7 @@ Indicates that the subscription supports memory optimized tables. *@memory_optim
 
 `sp_addsubscription` is used in snapshot replication and transactional replication.
 
-When `sp_addsubscription` is executed by a member of the sysadmin fixed server role to create a push subscription, the Distribution Agent job is implicitly created and runs under the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service account. We recommend that you execute [sp_addpushsubscription_agent](sp-addpushsubscription-agent-transact-sql.md) and specify the credentials of a different, agent-specific Windows account for @job_login and @job_password. For more information, see [Replication Agent Security Model](../replication/security/replication-agent-security-model.md).
+When `sp_addsubscription` is executed by a member of the **sysadmin** fixed server role to create a push subscription, the Distribution Agent job is implicitly created and runs under the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service account. We recommend that you execute [sp_addpushsubscription_agent](sp-addpushsubscription-agent-transact-sql.md) and specify the credentials of a different, agent-specific Windows account for @job_login and @job_password. For more information, see [Replication Agent Security Model](../replication/security/replication-agent-security-model.md).
 
 `sp_addsubscription` prevents ODBC and OLE DB Subscribers access to publications that:
 

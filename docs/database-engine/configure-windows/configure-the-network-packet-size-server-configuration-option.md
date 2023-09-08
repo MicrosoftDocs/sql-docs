@@ -81,7 +81,7 @@ For more information, see [Server Configuration Options (SQL Server)](../../data
 
 ### Configure network packet size on the client side
 
-The following table provides examples of some data connection technologies that you can use to connect to SQL Server and how to control the network packet size when using these in client applications. For a complete list of various data connection technologies that you can use to connect to SQL server visit [Homepage for SQL client programming](../../connect/homepage-sql-connection-programming.md):
+The following table provides examples of some data connection technologies that you can use to connect to SQL Server and how to control the network packet size when using these in client applications. For a complete list of various data connection technologies that you can use to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see [Homepage for SQL client programming](../../connect/homepage-sql-connection-programming.md):
 
 | Client library | Option | Default |
 | --- | --- | --- |

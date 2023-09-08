@@ -565,7 +565,7 @@ Microsoft Distributed Transaction Coordinator (MS DTC) component to be released 
 
 ### Security implications for autorecovered snapshots
 
-For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists(ACLs) to allow access only to the special builtin group which SQL server account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
+For VSS snapshots, after the auto recovery, the files will be secured using Access Control Lists (ACLs) to allow access only to the special builtin group which the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] account belongs to.  This implies that member of either box admin or that special group will be able to attach the database. The client requesting an attach of the database files on a snapshot either has to be a member of Builtin/Administrators or the SQL Server account.
 
 #### Simple Recovery model user databases
 

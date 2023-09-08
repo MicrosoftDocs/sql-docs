@@ -1,6 +1,6 @@
 ---
 title: "sp_vupgrade_replication (Transact-SQL)"
-description: "sp_vupgrade_replication (Transact-SQL)"
+description: Activated by setup when upgrading a replication server.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -40,7 +40,6 @@ sp_vupgrade_replication
 ## Arguments
 
 #### [ @login = ] N'*login*'
-
 
 The system administrator login to use when creating new system objects in the Distribution database. *@login* is **sysname**, with a default of `NULL`. This parameter isn't required if *@security_mode* is set to `1`, which is Windows Authentication.
 

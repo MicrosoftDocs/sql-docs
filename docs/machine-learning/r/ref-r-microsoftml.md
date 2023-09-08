@@ -34,7 +34,7 @@ The **MicrosoftML** package is based on R 3.5.2 and available only when you inst
 Algorithms in **MicrosoftML** depend on [RevoScaleR](ref-r-revoscaler.md) for:
 
 + Data source objects. Data consumed by **MicrosoftML** functions are created using **RevoScaleR** functions.
-+ Remote computing (shifting function execution to a remote SQL Server instance). The **RevoScaleR** package provides functions for creating and activating a remote compute context for SQL server.
++ Remote computing (shifting function execution to a remote SQL Server instance). The **RevoScaleR** package provides functions for creating and activating a remote compute context for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 In most cases, you will load the packages together whenever you are using **MicrosoftML**.
 

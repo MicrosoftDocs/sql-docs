@@ -26,9 +26,9 @@ You can now create and utilize Azure AD server principals, which are logins in t
 - Increase functional improvement support, such as utilizing [Azure AD-only authentication](authentication-azure-ad-only-authentication.md). Azure AD-only authentication allows SQL authentication to be disabled, which includes the SQL server admin, SQL logins and users.
 - Allows Azure AD principals to support geo-replicas. Azure AD principals will be able to connect to the geo-replica of a user database, with a *read-only* permission and *deny* permission to the primary server.
 - Ability to use Azure AD service principal logins with special roles to execute a full automation of user and database creation, as well as maintenance provided by Azure AD applications.
-- Closer functionality between Managed Instance and SQL Database, as Managed Instance already supports Azure AD logins in the `master` database.
+- Closer functionality between Azure SQL Managed Instance and Azure SQL Database, as SQL Managed Instance already supports Azure AD logins in the `master` database.
 
-For more information on Azure AD authentication in Azure SQL, see [Use Azure Active Directory authentication](authentication-aad-overview.md)
+For more information on Azure AD authentication in Azure SQL, see [Use Azure Active Directory authentication](authentication-aad-overview.md).
 
 ## Permissions
 
@@ -59,7 +59,7 @@ For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/cr
 
 ### Create user syntax
 
-The below T-SQL syntax is already available in SQL Database, and can be used for creating database-level Azure AD principals mapped to Azure AD logins in the virtual `master` database.
+The following T-SQL syntax is already available in SQL Database, and can be used for creating database-level Azure AD principals mapped to Azure AD logins in the virtual `master` database.
 
 To create an Azure AD user from an Azure AD login, use the following syntax. Only the Azure AD admin can execute this command in the virtual `master` database.
 
@@ -90,7 +90,7 @@ The Azure AD principal `login_name` won't be able to log into any user database 
 >   DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
 >   ```
 
-## Azure AD logins and users with non-unique display names
+## Azure AD logins and users with nonunique display names
 
 Using the display name of a service principal that isn't unique in Azure AD leads to errors when creating the login or user in Azure SQL. For example, if `myapp` isn't unique, you may run into the following error when executing the following query:
 
@@ -110,7 +110,7 @@ This error occurs because Azure AD allows duplicate display names for [Azure AD 
 >
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is a repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal.
 
-### T-SQL create login/user extension for non-unique display names
+### T-SQL create login/user extension for nonunique display names
 
 ```sql
 CREATE LOGIN login_name FROM EXTERNAL PROVIDER 
@@ -143,7 +143,7 @@ We recommend this naming convention for the suffix to explicitly associate the a
 
 ### Identify the user created for the application
 
-For non-unique service principals, it's important to verify the Azure AD alias is tied to the correct application. To check that the user was created for the correct service principal (application):
+For nonunique service principals, it's important to verify the Azure AD alias is tied to the correct application. To check that the user was created for the correct service principal (application):
 
 1. Get the **Application ID** of the application, or **Object ID** of the Azure AD group from the user created in SQL Database. See the following queries:
 
@@ -153,7 +153,7 @@ For non-unique service principals, it's important to verify the Azure AD alias i
      SELECT CAST(sid as uniqueidentifier) ApplicationID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
      ```
 
-     The Application ID is converted from the security identification number (SID) for the specified login or user name which we can confirm by executing the below query and comparing the last several digits and create dates:
+     The Application ID is converted from the security identification number (SID) for the specified login or user name, which we can confirm by executing the below query and comparing the last several digits and create dates:
 
      ```sql
      SELECT SID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
@@ -219,7 +219,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Az
 - When permissions are altered for an Azure AD login with existing open connections to an Azure SQL Database, permissions aren't effective until the user reconnects. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This applies to server role membership change using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement. 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported.
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Azure AD groups.
-- The current scripting command in SQL Server Management Studio and in Azure Data Studio for Azure AD users with logins does not generate a correct T-SQL syntax for a user creation with a login. Instead, the script generates a T-SQL syntax for a contained Azure AD user without a login in the virtual `master` database.
+- The current scripting command in SQL Server Management Studio and in Azure Data Studio for Azure AD users with logins doesn't generate a correct T-SQL syntax for a user creation with a login. Instead, the script generates a T-SQL syntax for a contained Azure AD user without a login in the virtual `master` database.
 - To distinguish between the Azure AD contained user without a login in the virtual `master` database and an Azure AD user created from a login in the virtual `master` database, view the `SID` in **sys.database_principals**, and check for the `AADE` suffix appended in the `SID` column for a user created with a login.
 
 ## Next steps

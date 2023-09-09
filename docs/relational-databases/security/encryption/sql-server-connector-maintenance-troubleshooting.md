@@ -196,7 +196,7 @@ Though you could perform all the configuration steps as a member of the sysadmin
 
 **How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE [ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
-:::image type="content" source="../../../relational-databases/security/encryption/media/azure-ad-change-default-directory-helpsteps.png" alt-text="Azure AD change default directory help steps.":::
+:::image type="content" source="../../../relational-databases/security/encryption/media/sql-server-connector-maintenance-troubleshooting/azure-ad-change-default-directory-helpsteps.png" alt-text="Azure AD change default directory help steps.":::
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. On the upper-right corner of the page, select the settings icon, or your user profile.

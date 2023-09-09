@@ -3,7 +3,7 @@ title: "GRANT Object Permissions (Transact-SQL)"
 description: GRANT Object Permissions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/10/2017"
+ms.date: "09/08/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

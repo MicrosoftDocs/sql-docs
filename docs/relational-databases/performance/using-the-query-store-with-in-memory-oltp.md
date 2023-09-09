@@ -19,38 +19,38 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.
 
 Compile and runtime statistics are collected and exposed the same way as for disk-based workloads.
-When you migrate to in-memory OLTP you can continue using Query Store views in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as well as custom scripts you have developed for disk-based workloads before migration. This saves your investment in learning Query Store technology and makes it generally usable for troubleshooting all type of workloads.  
+When you migrate to in-memory OLTP, you can continue using Query Store views in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and custom scripts you have developed for disk-based workloads before migration. This saves your investment in learning Query Store technology and makes it usable for troubleshooting all workloads.  
 For general information on using the Query Store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
-Using the Query Store with in-memory OLTP does not require any additional feature configuration. When you enable it on your database it will work for all types of workloads.  
+Using the Query Store with in-memory OLTP requires no additional feature configuration. When you enable it on your database, it works for all types of workloads.  
 However, there are some specific aspects that users should be aware of when using Query Store with in-memory OLTP:
 
-- When Query Store is enabled, queries, plans and compile-time statistics are collected by default. However, runtime statistics collection is not activated unless you explicitly enable it with  [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
+- When Query Store is enabled, queries, plans, and compile-time statistics are collected by default. However, runtime statistics collection is only activated if you explicitly enable it with  [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
 
-- When you set *\@new_collection_value* to 0 Query Store will stop collecting runtime statistics for affected procedure or for the entire [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+- When you set *\@new_collection_value* to 0, the Query Store stops collecting runtime statistics for the affected procedure or the entire [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
-- The value configured with [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) is not persisted. Make sure you check and configure again statistics collection after restarting [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
+- The value configured with [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) isn't persisted. Make sure you check and configure again the statistics collection after restarting [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-- As in case with regular query statistics collection, performance may decrease when you use Query Store to track workload execution. You may want to consider enabling statistics collection only for an important subset of natively compiled stored procedures.
+- As with regular query statistics collection, performance may decrease when you use Query Store to track workload execution. Consider enabling statistics collection only for an important subset of natively compiled stored procedures.
 
 - Queries and plans are captured and stored on the first native compilation and updated upon every recompilation.
 
-- If you enabled Query Store or cleared its content after all native stored procedure were compiled you must recompile them manually in order to make them captured by the Query Store. The same applies if you removed queries manually by using [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md) or [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md). Use [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) to force procedure recompilation.
+- If you enabled Query Store or cleared its content after all native stored procedures were compiled you must recompile them manually to make them capture by the Query Store. The same applies if you removed queries manually by using [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md) or [sp_query_store_remove_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transact-sql.md). Use [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) to force procedure recompilation.
 
 - Query Store leverages plan generation mechanisms from in-memory OLTP to capture query execution plan during the compilation. Stored plan is semantically equivalent to one that you would get by using `SET SHOWPLAN_XML ON` with one difference; plans in Query Store are split and stored per individual statement.
 
-- When you run Query Store in a database with a mixed workload then you can use **is_natively_compiled** field from [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) to quickly find query plans that are generated by the native code compilation.
+- When you run Query Store in a database with a mixed workload, then you can use the **is_natively_compiled** field from [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) to quickly find query plans that are generated by the native code compilation.
 
-- Query Store capture mode (*QUERY_CAPTURE_MODE* parameter in **ALTER TABLE** statement) does not affect queries from natively compiled modules as they are always captured regardless of the configured value. This includes setting `QUERY_CAPTURE_MODE = NONE`.
+- Query Store capture mode (*QUERY_CAPTURE_MODE* parameter in **ALTER TABLE** statement) doesn't affect queries from natively compiled modules as they're always captured regardless of the configured value. This includes setting `QUERY_CAPTURE_MODE = NONE`.
 
-- The duration of query compilation captured by the Query Store includes only time spent in query optimization, before the native code was generated. More precisely, it doesn't include time for C code compilation and generation of internal structures necessary for C code generation.
+- The duration of query compilation captured by the Query Store includes only time spent in query optimization before the native code was generated. More precisely, it doesn't include time for C code compilation and generation of internal structures necessary for C code generation.
 
-- Memory grants metrics within [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) are not populated for natively compiled queries - their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.
+- Memory grants metrics within [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) aren't populated for natively compiled queries - their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.
 
-## Enable and using Query Store with In-Memory OLTP
+## Enable and use Query Store with In-Memory OLTP
 
-The following simple example  demonstrates using Query Store with in-memory OLTP in an end-to-end user scenario. In this example we assume that a  database (`MemoryOLTP`) is enabled for in-memory OLTP.  
-    For more details on prerequisites for memory-optimized tables, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
+The following simple example demonstrates using Query Store with in-memory OLTP in an end-to-end user scenario. In this example, we assume that a  database (`MemoryOLTP`) is enabled for in-memory OLTP.  
+    For more information on prerequisites for memory-optimized tables, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
 ```
 USE MemoryOLTP;

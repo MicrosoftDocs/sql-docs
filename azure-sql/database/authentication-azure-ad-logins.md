@@ -4,7 +4,7 @@ description: Using Azure Active Directory server principals (logins) in Azure SQ
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
-ms.date: 08/24/2022
+ms.date: 09/08/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -90,6 +90,102 @@ The Azure AD principal `login_name` won't be able to log into any user database 
 >   DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
 >   ```
 
+## Azure AD logins and users with non-unique display names
+
+Using the display name of a service principal that isn't unique in Azure AD leads to errors when creating the login or user in Azure SQL. For example, if `myapp` isn't unique, you may run into the following error when executing the following query:
+
+```sql
+CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER 
+```
+
+```output
+Msg 33131, Level 16, State 1, Line 4 
+Principal 'myapp' has a duplicate display name. Make the display name unique in Azure Active Directory and execute this statement again. 
+```
+
+This error occurs because Azure AD allows duplicate display names for [Azure AD application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Azure AD logins and users. To mitigate this problem, the DDL statements to create logins and users have been extended to include the **Object ID** of the Azure resource.
+
+> [!NOTE]
+> Most non-unique display names in Azure AD are related to service principals, though occasionally group names can also be non-unique. Azure AD user principal names are unique, as two users cannot have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
+>
+> If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is a repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal.
+
+### T-SQL create login/user extension for non-unique display names
+
+```sql
+CREATE LOGIN login_name FROM EXTERNAL PROVIDER 
+  WITH OBJECT_ID = 'objectid'
+```
+
+```sql
+CREATE USER [user_name] FROM EXTERNAL PROVIDER 
+  WITH OBJECT_ID='objectid'
+```
+
+With the T-SQL DDL extension to create logins or users with the Object ID, you can avoid error *33131* and also specify an alias for the login or user created with the Object ID. For example, the following will create a login `myapp4466e` using the application Object ID `4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx`.
+
+```sql
+CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER 
+  WITH OBJECT_ID='4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx' 
+```
+
+- To execute the above query, the specified Object ID must exist in the Azure AD tenant where the Azure SQL resource resides. Otherwise, the `CREATE` command will fail with the error message: `Msg 37545, Level 16, State 1, Line 1 '' is not a valid object id for '' or you do not have permission.`
+- The login name must contain the original service principal name extended by a user-defined suffix. As a best practice, the suffix can include an initial part of its Object ID. For example, `myapp2ba6c` for the Object ID `2ba6c0a3-cda4-4878-a5ca-xxxxxxxxxxxx`.  
+
+The prefix of the alias is your service principal, or application display name, and must be a part of the initial `CREATE LOGIN` or `CREATE USER` statement. The alias suffix should be the first few characters of the Object ID.
+
+We recommend this naming convention for the suffix to explicitly associate the application login or user alias with its Object ID.
+
+> [!NOTE]
+> The application alias adheres to T-SQL syntax, including a max length of up to 128-characters. However we recommend limiting the suffix to the first 5 characters of the Object ID.
+>
+> Changing the display name of the service principal in the Azure Portal after running the `CREATE LOGIN` or `CREATE USER` statement with the `WITH OBJECT_ID` extension doesn't affect the new database login or user, as there is no synchronization between Azure AD and Azure SQL after the CREATE statement.
+
+### Identify the user created for the application
+
+For non-unique service principals, it's important to verify the Azure AD alias is tied to the correct application. To check that the user was created for the correct service principal (application):
+
+1. Get the **Application ID** of the application, or **Object ID** of the Azure AD group from the user created in SQL Database. See the following queries:
+
+   - To get the **Application ID** of the service principal from the user created, execute the following query:
+
+     ```sql
+     SELECT CAST(sid as uniqueidentifier) ApplicationID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
+     ```
+
+     The Application ID is converted from the security identification number (SID) for the specified login or user name which we can confirm by executing the below query and comparing the last several digits and create dates:
+
+     ```sql
+     SELECT SID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
+     ```
+
+   - To get the **Object ID** of the Azure AD group from the user created, execute the following query:
+
+     ```sql
+     SELECT CAST(sid as uniqueidentifier) ObjectID, createdate FROM sys.sysusers WHERE NAME = 'myappgroupd3451b' 
+     ```
+
+     To check the SID of the Azure AD group from the user created, execute the following query: 
+
+     ```sql
+     SELECT SID, createdate FROM sys.sysusers WHERE NAME = 'myappgroupd3451b' 
+     ```
+
+   - To get the Object ID and Application ID of the application using PowerShell execute the following command: 
+
+     ```powershell
+     Get-AzADApplication -DisplayName "myapp2ba6c"
+     ```
+
+1. Go to the [Azure portal](https://portal.azure.com), and in your **Enterprise Application** or Azure AD group resource, check the **Application ID** or **Object ID** respectively. See if it matches the one obtained from the above query.
+
+> [!NOTE]
+> When creating a user from a service principal, the **Object ID** is required when using the `WITH OBJECT_ID` clause with the `CREATE` T-SQL statement. This is different from the **Application ID** that is returned when you are trying to verify the alias in Azure SQL. Using this verification process, you can identify the main owner of the SQL alias in Azure AD, and prevent possible mistakes when creating logins or users with an Object ID.
+
+### Finding the right Object ID
+
+For information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object.).
+
 ## Roles for Azure AD principals
 
 [Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to *users* in the virtual `master` database for Azure AD principals, including **dbmanager** and **loginmanager**. 
@@ -97,7 +193,6 @@ The Azure AD principal `login_name` won't be able to log into any user database 
 [Azure SQL Database server roles](security-server-roles.md) can be assigned to *logins* in the virtual `master` database.
 
 For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Azure Active Directory server logins](authentication-azure-ad-logins-tutorial.md).
-
 
 ## Limitations and remarks
 

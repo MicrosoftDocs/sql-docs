@@ -195,8 +195,6 @@ Azure SQL Database provides both short-term and long-term retention of backups. 
 
 For all new, restored, and copied databases, Azure SQL Database retains sufficient backups to allow PITR within the last 7 days by default. The service takes regular full, differential, and log backups to ensure that databases are restorable to any point in time within the retention period that's defined for the database. 
 
-Short-term back up retention of 1 to 35 days for Hyperscale databases is now in preview. To learn more, review [Managing backup retention in Hyperscale](hyperscale-automated-backups-overview.md#backup-retention). 
-
 Differential backups can be configured to occur either once in 12 hours or once in 24 hours. A 24-hour differential backup frequency might increase the time required to restore the database, compared to the 12-hour frequency. In the vCore model, the default frequency for differential backups is once in 12 hours. In the DTU model, the default frequency is once in 24 hours.  
 
 You can specify your backup storage redundancy option for STR when you create your database, and then change it at a later time. If you change your backup redundancy option after your database is created, new backups will use the new redundancy option. Backup copies made with the previous STR redundancy option are not moved or copied. They're left in the original storage account until the retention period expires, which can be 1 to 35 days.

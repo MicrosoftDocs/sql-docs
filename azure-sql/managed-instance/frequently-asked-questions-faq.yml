@@ -275,7 +275,7 @@ sections:
         answer: |
           ### Is the backup storage deducted from my managed instance storage?
           
-          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](../database/automated-backups-overview.md).
+          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](automated-backups-overview.md).
           
           ### How can I see when automated backups are made on my managed instance?
           
@@ -515,7 +515,7 @@ sections:
           
           ### How can I monitor billing cost for my backup storage consumption?
           
-          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](../database/automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
+          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
           
           ### How can I optimize my backup storage costs on the managed instance?
           

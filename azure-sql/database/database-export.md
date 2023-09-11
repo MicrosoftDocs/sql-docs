@@ -36,7 +36,7 @@ When you need to export a database for archiving or for moving to another platfo
 - For larger databases, BACPAC export/import may take a long time, and may fail for various reasons.
 
 > [!NOTE]
-> BACPACs are not intended to be used for backup and restore operations. Azure automatically creates backups for every user database. For details, see [business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md) and [SQL Database backups](automated-backups-overview.md).
+> BACPACs are not intended to be used for backup and restore operations. Azure automatically creates backups for every user database. For details, see [business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md) and [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true) or [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
 
 > [!NOTE]
 > [Import and Export using Private Link](database-import-export-private-link.md) is in preview.

@@ -45,7 +45,7 @@ sp_grantlogin [@loginame=] 'login'
  **sp_grantlogin** cannot be executed within a user-defined transaction.  
   
 ## Permissions  
- Requires ALTER ANY LOGIN permission on the server.  
+ Requires membership of server role **securityadmin**.  
   
 ## Examples  
  The following example uses `CREATE LOGIN` to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the Windows user `Corporate\BobJ.` This is the preferred method.  

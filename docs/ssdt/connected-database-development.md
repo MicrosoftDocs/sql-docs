@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 This section describes features provided by SQL Server Data Tools for designing and querying a connected database.  
   
-Using the SQL Server Object Explorer in Visual Studio, developers can now create, edit and browse database objects located in either an on-premises database server, such as SQL Server 2008 or Microsoft SQL Server 2012, or off-premise in SQL Azure. Developers can easily clone an existing production database to a test instance, perform additional development work on it, and publish the changes back to the production database.  
+Using the SQL Server Object Explorer in Visual Studio, developers can now create, edit and browse database objects located in either an on-premises database server, such as [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], or off-premises in Azure SQL. Developers can easily clone an existing production database to a test instance, perform additional development work on it, and publish the changes back to the production database.  
   
 > [!NOTE]  
 > How To topics in this section contain a series of tasks that can be completed in a sequence.  
@@ -26,8 +26,8 @@ Using the SQL Server Object Explorer in Visual Studio, developers can now create
 |[How to: Create Database Objects Using Table Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)|Use the new Table Designer to design tables and manage table relationships.|  
 |[How to: Update a Connected Database with Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Update a connected database without writing ALTER scripts.|  
 |[Filter and Sort Dialog Box](../ssdt/filter-and-sort-dialog-box.md)|Specify which data should display in the Data View.|  
-|[How to: Create New Database Objects Using Queries](../ssdt/how-to-create-new-database-objects-using-queries.md)|Use Transact\-SQL Editor to edit and execute Transact\-SQL scripts.|  
-|[How to: Edit an Existing Table using Queries](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Write Transact\-SQL scripts to edit the definition of a table, or populate data.|  
+|[How to: Create New Database Objects Using Queries](../ssdt/how-to-create-new-database-objects-using-queries.md)|Use Transact-SQL Editor to edit and execute Transact-SQL scripts.|  
+|[How to: Edit an Existing Table using Queries](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Write Transact-SQL scripts to edit the definition of a table, or populate data.|  
 |[How to: View and Edit Data in a Table](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Use the Data Editor to view or enter data in a table.|  
 |[How to: Delete Objects and Resolve Dependencies](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Rename or delete database entities, and let SQL Server Data Tools automatically resolve object dependencies.|  
 |[How to: Clone an Existing Database](../ssdt/how-to-clone-an-existing-database.md)|Create a development database from a production database.|  

@@ -81,7 +81,7 @@ You have two options for creating a SQL Server unit test:
   
 After you have configured the test project and created the unit test, the next steps are:  
   
--   Add a Transact\-SQL test script.  
+-   Add a Transact-SQL test script.  
   
 -   Define pre-test and post-test actions.  
   

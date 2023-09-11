@@ -35,7 +35,9 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
-Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the Query Store and an improved algorithm known as percentile grant.
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (with percentile feedback, multiple past executions). Based on this historical query information, memory grant feedback adjusts the grant given to the query accordingly for subsequent executions.
+
+This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the Query Store and an improved algorithm known as percentile grant.
 
 ### Batch mode memory grant feedback
 

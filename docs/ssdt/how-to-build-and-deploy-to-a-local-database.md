@@ -67,5 +67,5 @@ Microsoft SQL Server 2012 provides a local on-demand server instance, called SQL
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. In the **Results** pane below the Transact\-SQL Editor pane, you will see that the Apples and Potato Chips rows of the `Products` table are returned.  
+9. In the **Results** pane below the Transact-SQL Editor pane, you will see that the Apples and Potato Chips rows of the `Products` table are returned.  
   

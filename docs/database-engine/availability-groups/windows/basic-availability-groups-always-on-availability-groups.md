@@ -43,7 +43,7 @@ ms.topic: how-to
 ## Configuration  
  An Always On basic availability group can be created on any two SQL Server 2016 Standard Edition servers. When you create a basic availability group, you must specify both replicas during creation.  
   
- To create a basic availability group, use the **CREATE AVAILABILITY GROUP** transact-SQL command and specify the **WITH BASIC** option (the default is **ADVANCED**). You can also create the basic availability group using the UI in SQL Server Management Studio starting with version 17.8. For more information, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
+ To create a basic availability group, use the **CREATE AVAILABILITY GROUP** Transact-SQL command and specify the **WITH BASIC** option (the default is **ADVANCED**). You can also create the basic availability group using the UI in SQL Server Management Studio starting with version 17.8. For more information, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
 
 See the following example for creating a basic availability group using Transact-SQL (T-SQL): 
 

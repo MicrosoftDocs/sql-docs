@@ -13,15 +13,15 @@ f1_keywords:
 
 # How to: Debug Stored Procedures
 
-The Transact\-SQL debugger allows you to interactively debug stored procedures by displaying the SQL call stack, local variables, and parameters for the SQL stored procedure. As with debugging in other programming languages, you can view and modify local variables and parameters, view global variables, as well as control and manage breakpoints while debugging your Transact\-SQL script.  
+The Transact-SQL debugger allows you to interactively debug stored procedures by displaying the SQL call stack, local variables, and parameters for the SQL stored procedure. As with debugging in other programming languages, you can view and modify local variables and parameters, view global variables, as well as control and manage breakpoints while debugging your Transact-SQL script.  
   
-This example shows how to create and debug a Transact\-SQL stored procedure by stepping into it.  
+This example shows how to create and debug a Transact-SQL stored procedure by stepping into it.  
   
 > [!WARNING]  
 > The following procedure uses entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
 
 > [!NOTE]
-> Transact\-SQL debugging isn't available for Azure SQL Database or Azure SQL Managed Instance.
+> Transact-SQL debugging isn't available for Azure SQL Database or Azure SQL Managed Instance.
   
 ### To debug stored procedures  
   
@@ -50,7 +50,7 @@ This example shows how to create and debug a Transact\-SQL stored procedure by s
   
 6.  Click the left window margin to add a breakpoint to the `EXEC` statement.  
   
-7.  Press the drop-down arrow on the green arrow button in the Transact\-SQL editor toolbar and select **Execute with Debugger** to execute the query with debugging on.  
+7.  Press the drop-down arrow on the green arrow button in the Transact-SQL editor toolbar and select **Execute with Debugger** to execute the query with debugging on.  
   
 8.  Alternately, you can start debugging from SQL Server Object Explorer. Right-click the **AddProduct** stored procedure (located under **Local** -> **TradeDev** database -> **Programmability** -> **Stored Procedures**). Select **Debug Procedure...**. If the object requires parameters, the **Debug Procedure** dialog box appears, with a table containing a row for each parameter. Each row in the table contains a column for the name of the parameter, and one for the value of that parameter. Enter values for each parameter, and click OK.  
   

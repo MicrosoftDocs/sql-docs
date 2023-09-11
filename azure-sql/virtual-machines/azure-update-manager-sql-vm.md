@@ -4,7 +4,7 @@ description: Learn how to use the Azure Update Manager to automatically update a
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 09/06/2023
+ms.date: 09/11/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -146,7 +146,7 @@ To configure a schedule for multiple SQL Server VMs, follow these steps:
 
 Consider the following:
 
-- Automated patching is incompatible with the Azure Update Manager. If you choose to use the Azure Update Manager to manage your SQL Server VMs, be sure to disable automated patching to avoid unexpected and unscheduled patching.
+- [Automated patching via the SQL Server IaaS Agent extension](./windows/automated-patching) is incompatible with the Azure Update Manager. If you choose to use the Azure Update Manager to manage your SQL Server VMs, be sure to disable automated patching to avoid unexpected and unscheduled patching.
 - Azure Update Manager isn't aware if you have an Always On availability group configured for your SQL Server VM, so be cautious when creating your patching schedules for your availability group replicas to avoid unexpected failovers.
 
 ## Next steps

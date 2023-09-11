@@ -1,8 +1,8 @@
 ---
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault.
-author: Rupp29
-ms.author: arupp
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto, randolphwest
 ms.date: 03/20/2023
 ms.service: sql

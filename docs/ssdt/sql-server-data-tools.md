@@ -38,7 +38,7 @@ For information about SQL Server Data Tools with Visual Studio 2017, see [Previo
 
 ## Core SQL Server Data Tools
 
-SQL Server Data Tools (SSDT) transforms database development by introducing a ubiquitous, declarative model (SQL database projects) that spans all the phases of database development inside Visual Studio. You can use SSDT Transact\-SQL design capabilities to build, debug, maintain, and refactor databases. You can work with a database project or directly connect to a database instance on or off-premise.
+SQL Server Data Tools (SSDT) transforms database development by introducing a ubiquitous, declarative model (SQL database projects) that spans all the phases of database development inside Visual Studio. You can use SSDT Transact\-SQL design capabilities to build, debug, maintain, and refactor databases. You can work with a database project or directly connect to a database instance on or off-premises.
 
 Developers can use familiar Visual Studio tools for database development. Tools such as: code navigation, IntelliSense, language support that parallels what is available for C# and Visual Basic, platform-specific validation, debugging, and declarative editing in the Transact\-SQL editor. SSDT also provides a visual Table Designer for creating and editing tables in either database projects or connected database instances. While you are working on your database projects in a team-based environment, you can use version control for all the files. When it's time to publish your project, you can publish to all supported SQL platforms; including SQL Database and SQL Server. SSDT platform validation capability ensures that your scripts work on the target you specify.
 

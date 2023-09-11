@@ -5,7 +5,7 @@ description: This article compares the database engine features of Azure SQL Dat
 author: danimir
 ms.author: danil
 ms.reviewer: wiassaf, bonova, mathoma, danil
-ms.date: 08/30/2023
+ms.date: 09/11/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -126,7 +126,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | **Active geo-replication** | Yes, see [Active geo-replication](active-geo-replication-overview.md?view=azuresql-db&preserve-view=true) - all service tiers. | No, see [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true) as an alternative. |
 | **Auto-failover groups**| Yes, see [Auto-failover groups](auto-failover-group-sql-db.md?view=azuresql-db&preserve-view=true) - all service tiers. | Yes, see [Auto-failover groups](../managed-instance/auto-failover-group-sql-mi.md?view=azuresql-mi&preserve-view=true).|
 | **Auto-scale** | Yes, but only in [serverless model](serverless-tier-overview.md?view=azuresql-db&preserve-view=true). In the non-serverless model, the change of service tier (change of vCore, storage, or DTU) is fast and online. The service tier change requires minimal or no downtime. | No, you need to choose reserved compute and storage. The change of service tier (vCore or max storage) is online and requires minimal or no downtime. |
-| **Automatic backups** | Yes, see [automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes, see [autoamted backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
+| **Automatic backups** | Yes, see [automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. | Yes, see [automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true). Full backups are taken every 7 days, differential 12 hours, and log backups every 5-10 min. |
 | **Automatic tuning (indexes)**| Yes, see [Automatic tuning](automatic-tuning-overview.md?view=azuresql-db&preserve-view=true)| No |
 | [Availability Zones](/azure/availability-zones/az-overview) | Yes | Yes, in preview, currently for the Business Critical tier only |
 | [Azure Resource Health](/azure/service-health/resource-health-overview) | Yes | Yes |
@@ -134,11 +134,7 @@ The Azure platform provides a number of PaaS capabilities that are added as an a
 | [Azure Database Migration Service (DMS)](/azure/dms/dms-overview) | Yes | Yes |
 | [Data Migration Service (DMA)](/sql/dma/dma-overview) | Yes | No |
 | **Elastic jobs** | Yes, see [Elastic jobs](elastic-jobs-overview.md?view=azuresql-db&preserve-view=true) (public preview) | No. Use [SQL Agent](../managed-instance/transact-sql-tsql-differences-sql-server.md?view=azuresql-mi&preserve-view=true#sql-server-agent) or [Azure Automation](../managed-instance/automation-manage.md). |
-| **File system access** | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql?view=azuresqldb-current&preserve-view=true
-#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-current&preserve-view=true
-#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql?view=azuresqldb-mi-current&preserve-view=true
-#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-mi-current&preserve-view=true
-#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. |
+| **File system access** | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql?view=azuresqldb-current&preserve-view=true#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-current&preserve-view=true#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. | No. Use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql?view=azuresqldb-mi-current&preserve-view=true#f-importing-data-from-a-file-in-azure-blob-storage) or [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql?view=azuresqldb-mi-current&preserve-view=true#i-accessing-data-from-a-file-stored-on-azure-blob-storage) to access and load data from Azure Blob Storage as an alternative. |
 | **Geo-restore**| Yes, see [Geo-restore](recovery-using-backups.md?view=azuresql-db&preserve-view=true#geo-restore) | Yes, see [Geo-restore](../managed-instance/recovery-using-backups.md?view=azuresql-mi&preserve-view=true#geo-restore) |
 | **Long-term retention (LTR)**| Yes, see [long-term retention](long-term-retention-overview.md?view=azuresql-db&preserve-view=true), keep automatically taken backups up to 10 years. | Yes, see [long-term retention](long-term-retention-overview.md?view=azuresql-mi&preserve-view=true), keep automatically taken backups up to 10 years. |
 | **Pause/resume** | Yes, in [serverless model](serverless-tier-overview.md?view=azuresql-db&preserve-view=true) | Yes, with [Stop / start preview](../managed-instance/instance-stop-start-how-to.md?view=azuresql-mi&preserve-view=true) |

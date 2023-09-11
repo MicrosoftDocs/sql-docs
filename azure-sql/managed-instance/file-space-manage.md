@@ -4,7 +4,7 @@ description: This page describes how to manage file space with databases in Azur
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 09/08/2023
+ms.date: 09/11/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -60,12 +60,12 @@ Storage space metrics displayed in the Azure Resource Manager based metrics APIs
 
 ## <a id="ShrinkSize"></a> Shrink log file size
 
-To reduce the physical size of a physical log file by returning free space in the file to the operating system, shrink the log file. A shrink only makes a difference when a transaction log file contains unused space. If the log file is full, likely because of open transactions, investigate [what is preventing transaction log truncation](troubleshoot-transaction-log-errors-issues.md?view=azuresqldb-mi-current&preserve-view=true#prevented-transaction-log-truncation).
+To reduce the physical size of a physical log file by removing unused space, shrink the log file. A shrink only makes a difference when a transaction log file contains unused space. If the log file is full, likely because of open transactions, investigate [what is preventing transaction log truncation](troubleshoot-transaction-log-errors-issues.md?view=azuresqldb-mi-current&preserve-view=true#prevented-transaction-log-truncation).
 
 > [!CAUTION]
 > Shrink operations should not be considered a regular maintenance operation. Data and log files that grow due to regular, recurring business operations do not require shrink operations. Shrink commands impact database performance while running, and if possible should be run during periods of low usage. It is not recommended to shrink data files if regular application workload will cause the files to grow to the same allocated size again.
 
-Be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#index-maintenance-after-shrink). 
+Be aware of the potential negative performance impact of shrinking database files, see [Index maintenance after shrink](#index-maintenance-after-shrink). In rare cases, shrink operations can be affected by [automated database backups](automated-backups-overview.md). If necessary, retry the shrink operation.
  
 Before shrinking the transaction log, keep in mind [Factors that can delay log truncation](/sql/relational-databases/logs/the-transaction-log-sql-server?view=azuresqldb-mi-current&preserve-view=true#FactorsThatDelayTruncation). If the storage space is required again after a log shrink, the transaction log will grow again and by doing that, introduce performance overhead during log growth operations. For more information, see the [Recommendations](#Recommendations).
 
@@ -240,7 +240,7 @@ Following are some general recommendations when you are working with transaction
   
 ## Next steps
 
-- [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql?view=azuresqldb-mi-current&preserve-view=true)
+- [Automated backups in Azure SQL Managed Instance](automated-backups-overview.md)
 - [ALTER DATABASE (Transact-SQL) File and Filegroup options](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options?view=azuresqldb-mi-current&preserve-view=true)
 - [Overview of Azure SQL Managed Instance resource limits](resource-limits.md)
 - [Troubleshoot transaction log errors with Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md)

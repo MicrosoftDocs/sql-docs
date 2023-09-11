@@ -5,7 +5,7 @@ description: Provides steps to troubleshoot transaction log issues in Azure SQL 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 09/08/2023
+ms.date: 09/11/2023
 ms.service: sql-managed-instance
 ms.subservice: development
 ms.topic: troubleshooting
@@ -30,11 +30,13 @@ You may see errors 9002 or 40552 when the transaction log is full and cannot acc
 
 ## Automated backups and the transaction log
 
-In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](automated-backups-overview.md?view=azuresql-mi&preserve-view=true).
+In Azure SQL Managed Instance, transaction log backups are taken automatically. For frequency, retention, and more information, see [Automated backups](automated-backups-overview.md?view=azuresql-mi&preserve-view=true). To track when automated backups have been performed on a SQL managed instance, review [Monitor backup activity](backup-activity-monitor.md?view=azuresql-mi&preserve-view=true).
 
-The location and name of database files cannot be managed but administrators can manage database files and file autogrowth settings. The typical causes and resolutions of transaction log issues are similar to SQL Server.
+The location and name of database files cannot be managed but administrators can manage database files and file autogrowth settings. The typical causes and resolutions of transaction log issues are similar to SQL Server. 
 
-Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Truncation leaves empty space in the log file, which can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail. For information on transaction log size limits, see [resource limits for SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true).
+Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Log truncation deletes inactive [virtual log files (VLFs)](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) from the transaction log, freeing space inside the file but not changing the size of the file on disk. The empty space in the log file can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail.
+
+In Azure SQL Managed Instance, you can purchase add-on storage, independently from compute, up to a limit. For more information, see [File management to free more space](#file-management-to-free-more-space).
 
 ## Prevented transaction log truncation
 
@@ -113,6 +115,27 @@ OUTER APPLY sys.dm_exec_sql_text (r.sql_handle) AS est;
 
 If the transaction log is prevented from truncating in Azure SQL Managed Instance, freeing space may be part of the solution. However, resolving the root the condition blocking transaction log file truncation is key. In some cases, temporarily creating more disk space allows long-running transactions to complete, removing the condition blocking the transaction log file from truncating with a normal transaction log backup. However, freeing up space may provide only temporary relief until the transaction log grows again.
 
+In Azure SQL Managed Instance, you can purchase add-on storage, independently from compute, up to a limit. For example, in the Azure portal, access the **Compute + storage** page to increase the **Storage in GB**. For information on transaction log size limits, see [resource limits for SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true). For more information, see [Manage file space for databases in Azure SQL Managed Instance](file-space-manage.md?preserve-view=azuresql-mi&preserve-view=true).
+
+Backup storage is not deducted from your SQL managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. 
+
+### Error 9002: The transaction log for database is full
+
+`9002: The transaction log for database '%.*ls' is full. To find out why space in the log cannot be reused, see the log_reuse_wait_desc column in sys.databases.`
+
+[Error 9002](/sql/relational-databases/errors-events/mssqlserver-9002-database-engine-error) occurs in SQL Server and in Azure SQL Managed Instance for the same reasons. 
+
+The appropriate response to a full transaction log depends on what conditions caused the log to fill.
+
+To resolve Error 9002, try the following methods:
+
+- Transaction log not being truncated and has grown to fill all available space.
+    - Since transaction log backups in Azure SQL Managed Instance are automatic, something else must be keeping the transaction log activity from being truncated. Incomplete replication, CDC, or availability group synchronization may be preventing truncation, see [Prevented transaction log truncation](#prevented-transaction-log-truncation).
+- The SQL managed instance reserved storage size is full, and the transaction log cannot grow.
+    - Add space up to the resource limit, see [File management to free more space](#file-management-to-free-more-space).
+- Transaction Log size is set to a fixed maximum value, or autogrow is disabled, and so cannot grow.
+    - See MAXSIZE and FILEGROWTH properties in [ALTER DATABASE File and Filegroups](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options?view=azuresqldb-mi-current&preserve-view=true).
+
 ### Error 40552: The session has been terminated because of excessive transaction log space usage
 
 `40552: The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction.`
@@ -121,14 +144,13 @@ While Error 9002 is more common than Error 40552 in Azure SQL Managed Instance, 
 
 To resolve Error 40552, try the following methods:
 
-1. The issue can occur in any DML operation such as insert, update, or delete. Review the transaction to avoid unnecessary writes. Try to reduce the number of rows that are operated on immediately by implementing batching or splitting into multiple smaller transactions. For more information, see [How to use batching to improve application performance](../performance-improve-use-batching.md?view=azuresql-mi&preserve-view=true).
-1. The issue can occur because of index rebuild operations. To avoid this issue, ensure the following formula is true: (number of rows that are affected in the table) multiplied by (the average size of field that's updated in bytes + 80) < 2 gigabytes (GB). For large tables, consider creating partitions and performing index maintenance only on some partitions of the table. For more information, see [Create Partitioned Tables and Indexes](/sql/relational-databases/partitions/create-partitioned-tables-and-indexes?view=azuresqldb-current&preserve-view=true).
-1. If you perform bulk inserts using the `bcp.exe` utility or the `System.Data.SqlClient.SqlBulkCopy` class, try using the `-b batchsize` or `BatchSize` options to limit the number of rows copied to the server in each transaction. For more information, see [bcp Utility](/sql/tools/bcp-utility).
-1. If you are rebuilding an index with the `ALTER INDEX` statement, use the `SORT_IN_TEMPDB = ON`, `ONLINE = ON`, and `RESUMABLE=ON` options. With resumable indexes, log truncation is more frequent. For more information, see [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).
+- The issue can occur in any DML operation such as insert, update, or delete. Review the transaction to avoid unnecessary writes. Try to reduce the number of rows that are operated on immediately by implementing batching or splitting into multiple smaller transactions. For more information, see [How to use batching to improve application performance](../performance-improve-use-batching.md?view=azuresql-mi&preserve-view=true).
+- The issue can occur because of index rebuild operations. To avoid this issue, ensure the following formula is true: (number of rows that are affected in the table) multiplied by (the average size of field that's updated in bytes + 80) < 2 gigabytes (GB). For large tables, consider creating partitions and performing index maintenance only on some partitions of the table. For more information, see [Create Partitioned Tables and Indexes](/sql/relational-databases/partitions/create-partitioned-tables-and-indexes?view=azuresqldb-current&preserve-view=true).
+- If you perform bulk inserts using the `bcp.exe` utility or the `System.Data.SqlClient.SqlBulkCopy` class, try using the `-b batchsize` or `BatchSize` options to limit the number of rows copied to the server in each transaction. For more information, see [bcp Utility](/sql/tools/bcp-utility).
+- If you are rebuilding an index with the `ALTER INDEX` statement, use the `SORT_IN_TEMPDB = ON`, `ONLINE = ON`, and `RESUMABLE=ON` options. With resumable indexes, log truncation is more frequent. For more information, see [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).
 
 ## Next steps
 
 - [Understand and resolve blocking problems](/troubleshoot/sql/database-engine/performance/understand-resolve-blocking#gather-blocking-information)
 - [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](../database/troubleshoot-common-errors-issues.md?view=azuresql-mi&preserve-view=true)
 - [Troubleshoot transient connection errors in Azure SQL Database and SQL Managed Instance](../database/troubleshoot-common-connectivity-issues.md?view=azuresql-mi&preserve-view=true)
-- Video: [Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)

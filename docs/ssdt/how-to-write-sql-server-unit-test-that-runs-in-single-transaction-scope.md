@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 You can modify unit tests to run within the scope of a single transaction. If you take this approach, you can roll back any changes that the test enacted after the test ends. The following procedures explain how to:  
   
--   Create a transaction in your Transact\-SQL test script that uses **BEGIN TRANSACTION** and **ROLLBACK TRANSACTION**.  
+-   Create a transaction in your Transact-SQL test script that uses **BEGIN TRANSACTION** and **ROLLBACK TRANSACTION**.  
   
 -   Create a transaction for a single test method in a test class.  
   
@@ -23,15 +23,15 @@ You can modify unit tests to run within the scope of a single transaction. If yo
   
 For some procedures in this topic, the Distributed Transaction Coordinator service must be running on the computer on which you run unit tests. For more information, see the procedure at the end of this topic.  
   
-## To create a transaction using Transact\-SQL  
+## To create a transaction using Transact-SQL  
   
-#### To create a transaction using Transact\-SQL  
+#### To create a transaction using Transact-SQL  
   
 1.  Open a unit test in the SQL Server Unit Test Designer. (Double-click the source code file for the unit test to display the designer.)  
   
 2.  Specify the type of script for which you want to create the transaction. For example, you can specify pre-test, test, or post-test.  
   
-3.  Enter a test script in the Transact\-SQL editor.  
+3.  Enter a test script in the Transact-SQL editor.  
   
 4.  Insert `BEGIN TRANSACTION` and `ROLLBACK TRANSACTION` statements, as shown in this simple example. The example uses a database table that is named OrderDetails and that contains 50 rows of data:  
   

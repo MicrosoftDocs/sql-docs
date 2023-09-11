@@ -29,13 +29,13 @@ SSDT also makes this task simple by being aware of your target platform and auto
   
 ### To use platform validation when editing scripts  
   
-1.  Right-click the **Products** table in Solution Explorer, and select **View Code** to open it in Transact\-SQL Editor.  
+1.  Right-click the **Products** table in Solution Explorer, and select **View Code** to open it in Transact-SQL Editor.  
   
 2.  Append `ON [PRIMARY]` to the end of the `CREATE TABLE` statement.  
   
 3.  Notice that the following error shows up in the **Error List** pane:  SQL70015: 'Filegroup reference and partitioning scheme' is not supported in SQL Azure..  
   
-    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact\-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100)).  
+    SSDT automatically validates your script based on the target platform. In this case, since filegroup is not supported in SQL Azure, SSDT returns an error. For a list of non-supported Transact-SQL statements in SQL Azure, see [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Remove the `ON` clause. Notice that the error immediately disappears from the **Error List**.  
   
@@ -49,7 +49,7 @@ SSDT also makes this task simple by being aware of your target platform and auto
   
 4.  In the **Connection Properties** dialog box, enter your SQL Server instance name and your credentials for authentication. In **Connect to a database**, enter **NewTrade**. This will attempt to publish your database project to a new database. You can also choose an existing database to publish to. For example, if you choose the existing **TradeDev** database, then all the changes you have been making to the objects (as scripts) in the offline **TradeDev** project will be propagated to the live **TradeDev** database.  
   
-    If you have permission to make any changes to the database you want to publish to, press the **Publish** button. If, however, you do not have write access to a production database, you can click the **Generate Script** button to produce a Transact\-SQL publish script, which can then be handed off to a DBA. The DBA can then run the script to update the production server so that its schema is in sync with the database project.  
+    If you have permission to make any changes to the database you want to publish to, press the **Publish** button. If, however, you do not have write access to a production database, you can click the **Generate Script** button to produce a Transact-SQL publish script, which can then be handed off to a DBA. The DBA can then run the script to update the production server so that its schema is in sync with the database project.  
   
 5.  The **Data Tools Operations**  window will show the progress of your publish operations, and notify you of any errors. In this new window, you can also choose to view the deployment preview, the generated script, or the full publish results if desired.  
   

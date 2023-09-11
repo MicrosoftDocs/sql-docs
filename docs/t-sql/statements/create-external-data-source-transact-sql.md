@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, hudequei
-ms.date: 08/28/2023
+ms.date: 09/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1325,11 +1325,6 @@ There are multiple ways to create a shared access signature:
 - For Azure Blob Storage and Azure Data Lake Gen 2:
   - Allowed services: `Blob` must be selected to generate the SAS token
   - Allowed resource types: `Container` and `Object` must be selected to generate the SAS token
-- When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
-  - Exclude the leading `?` when configured as the secret.
-  - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`).
-  - Use a valid expiration period (all dates are in UTC time).
-  - `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
 
 For an example of using a `CREDENTIAL` with S3-compatible object storage and PolyBase, see [Configure PolyBase to access external data in S3-compatible object storage](../../relational-databases/polybase/polybase-configure-s3-compatible.md).
 
@@ -2695,7 +2690,6 @@ Additional notes and guidance when creating a credential:
 - To load data from Azure Storage into [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], use a Shared Access Signature (SAS token).
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - If a credential is required, the credential must be created using `Managed Identity` or `SHARED ACCESS SIGNATURE` as the IDENTITY. To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
-- `TYPE` = `BLOB_STORAGE` is only permitted for bulk operations; you cannot create external tables for an external data source with `TYPE` = `BLOB_STORAGE`.
 
 To use the managed service identity for the database scoped credential:
   - Specify `WITH IDENTITY = 'Managed Identity'`

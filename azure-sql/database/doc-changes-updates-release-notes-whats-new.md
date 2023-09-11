@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 08/25/2023
+ms.date: 09/08/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -77,6 +77,13 @@ The following table lists the new generally available (GA) features of Azure SQL
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
+
+### September 2023
+
+| Changes | Details |
+| --- | --- |
+| **BASE64_ENCODE and BASE64_DECODE support** | The [BASE64_ENCODE](/sql/t-sql/functions/base64-encode-transact-sql) and [BASE64_DECODE](/sql/t-sql/functions/base64-decode-transact-sql) are now available in Azure SQL Database. |
+
 
 ### August 2023
 

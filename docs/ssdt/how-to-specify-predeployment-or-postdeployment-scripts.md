@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # How to: Specify Predeployment or Postdeployment Scripts
 
-Pre-deployment and post-deployment scripts execute Transact\-SQL statements before and after the main deployment script, which is generated from the database project. The pre-deployment script will not be executed when updating targets from schema compare results in Visual Studio. A project can have only one pre-deployment and one post-deployment script. These scripts can be used for many purposes. For example:  
+Pre-deployment and post-deployment scripts execute Transact-SQL statements before and after the main deployment script, which is generated from the database project. The pre-deployment script will not be executed when updating targets from schema compare results in Visual Studio. A project can have only one pre-deployment and one post-deployment script. These scripts can be used for many purposes. For example:  
   
 -   A pre-deployment script can copy data from a table that is being changed into a temporary table before re-formatting and applying the data to the changed table in a post-deployment script,  
   
@@ -36,7 +36,7 @@ END
   
 5.  Double-click the file in the Scripts folder.  
   
-    The Transact\-SQL editor opens, displaying the contents of the file.  
+    The Transact-SQL editor opens, displaying the contents of the file.  
   
 You can use SQLCMD syntax and variables in your scripts and set these in the database project properties. For example:  
   

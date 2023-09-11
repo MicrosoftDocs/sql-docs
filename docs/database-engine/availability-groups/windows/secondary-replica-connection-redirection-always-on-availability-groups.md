@@ -82,7 +82,7 @@ The following picture represents the availability group.
 
 ![Availability group with primary, secondary, and asynchronous secondary](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
-The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`.
+The following Transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`.
 ```sql
 CREATE AVAILABILITY GROUP MyAg   
      WITH ( CLUSTER_TYPE =  NONE )  

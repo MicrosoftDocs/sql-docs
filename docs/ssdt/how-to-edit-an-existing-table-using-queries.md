@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # How to: Edit an Existing Table using Queries
 
-You can edit the definition of a table or its data by writing a Transact\-SQL query. To view or enter data in a table visually, use the Data Editor as described in [Connected Database Development](../ssdt/connected-database-development.md).  
+You can edit the definition of a table or its data by writing a Transact-SQL query. To view or enter data in a table visually, use the Data Editor as described in [Connected Database Development](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  
 > The following procedures use entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
@@ -26,7 +26,7 @@ You can edit the definition of a table or its data by writing a Transact\-SQL qu
   
 4.  Update the database following the steps in the [How to: Update a Connected Database with Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) topic.  
   
-### To populate data in new tables using a Transact\-SQL query  
+### To populate data in new tables using a Transact-SQL query  
   
 1.  Right-click the **Trade** database node and select **New Query**.  
   

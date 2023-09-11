@@ -52,7 +52,7 @@ In addition to T-SQL statements related to the unsupported features described in
 - `OPENQUERY`, `OPENDATASOURCE`, and four-part names.
 - .NET Framework: CLR integration
 - Semantic search
-- Server credentials: Use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-SQL) instead.
+- Server credentials: Use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql) instead.
 - Server-level permissions: `GRANT`, `REVOKE`, and `DENY` of server level permissions are not supported. Some server-level permissions are replaced by database-level permissions, or granted implicitly by built-in server roles. Some server-level DMVs and catalog views have similar database-level views.
 - `SET REMOTE_PROC_TRANSACTIONS`
 - `SHUTDOWN`

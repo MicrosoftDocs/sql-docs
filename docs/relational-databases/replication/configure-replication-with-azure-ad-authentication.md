@@ -50,7 +50,7 @@ When configuring replication with Azure AD authentication, you first need to [cr
 To create the SQL login from Azure AD, and give it sysadmin permissions, use the following Transact-SQL (T-SQL) command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [login_name] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin' 
 ```
@@ -58,7 +58,7 @@ EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin'
 For example, to add the login name for `newuser@tenant.com`, use this command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [newuser@tenant.com] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='newuser@tenant.com', @rolename='sysadmin' 
 ```

@@ -190,6 +190,9 @@ The following diagram shows how these tables are related to each other. Some of 
 
    ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/azure-data-studio-tables-created.png)
 
+```
+COMMENTING OUT, SINCE THIS SECTION SEEMS IRRELEVANT WITHOUT THE SAMPLE DATA LINKS, WHICH ARE NO LONGER ACTIVE, AND I'M NOT SURE HOW TO UPDATE THEM
+
 ## Load data into the tables
 
 1. Create a folder called *sampleData* in your Downloads folder to store sample data for your database.
@@ -213,6 +216,7 @@ The following diagram shows how these tables are related to each other. Some of 
    ```
 
 You have now loaded sample data into the tables you created earlier.
+```
 
 ## Query data
 

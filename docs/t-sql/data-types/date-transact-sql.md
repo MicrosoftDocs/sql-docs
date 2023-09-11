@@ -64,7 +64,7 @@ The following tables show the valid string literal formats for the **date** data
   
 |Unseparated|Description|  
 |-----------------|-----------------|  
-|[yy]yymmdd<br /><br /> yyyy[mm][dd]|The **date** data can be specified with four, six, or eight digits. A six- or eight-digit string is always interpreted as **ymd**. The month and day must always be two digits. A four-digit string is interpreted as year.|  
+|[yy]yymmdd<br /><br /> yyyy|The **date** data can be specified with four, six, or eight digits. A six- or eight-digit string is always interpreted as **ymd**. The month and day must always be two digits. A four-digit string is interpreted as year.|  
   
 |ODBC|Description|  
 |----------|-----------------|  

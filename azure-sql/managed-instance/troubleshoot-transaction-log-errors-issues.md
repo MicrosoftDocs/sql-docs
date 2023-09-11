@@ -34,7 +34,7 @@ In Azure SQL Managed Instance, transaction log backups are taken automatically. 
 
 The location and name of database files cannot be managed but administrators can manage database files and file autogrowth settings. The typical causes and resolutions of transaction log issues are similar to SQL Server. 
 
-Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Log truncation deletes inactive [virtual log files (VLFs)](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) from the transaction log, freeing space inside the file but not changing the size of the file on disk. The empty space in the log file can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions will fail.
+Similar to SQL Server, the transaction log for each database is truncated whenever a log backup completes successfully. Log truncation deletes inactive [virtual log files (VLFs)](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide?view=azuresqldb-mi-current&preserve-view=true#physical_arch) from the transaction log, freeing space inside the file but not changing the size of the file on disk. The empty space in the log file can then be used for new transactions. When the log file cannot be truncated by log backups, the log file grows to accommodate new transactions. If the log file grows to its maximum limit in Azure SQL Managed Instance, new write transactions fail.
 
 In Azure SQL Managed Instance, you can purchase add-on storage, independently from compute, up to a limit. For more information, see [File management to free more space](#file-management-to-free-more-space).
 
@@ -129,7 +129,7 @@ The appropriate response to a full transaction log depends on what conditions ca
 
 To resolve Error 9002, try the following methods:
 
-- Transaction log not being truncated and has grown to fill all available space.
+- Transaction log is not being truncated and has grown to fill all available space.
     - Since transaction log backups in Azure SQL Managed Instance are automatic, something else must be keeping the transaction log activity from being truncated. Incomplete replication, CDC, or availability group synchronization may be preventing truncation, see [Prevented transaction log truncation](#prevented-transaction-log-truncation).
 - The SQL managed instance reserved storage size is full, and the transaction log cannot grow.
     - Add space up to the resource limit, see [File management to free more space](#file-management-to-free-more-space).

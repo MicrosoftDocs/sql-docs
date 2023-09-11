@@ -101,7 +101,7 @@ For more information about index maintenance, see [Optimize index maintenance to
 
 ### Evaluate index page density
 
-If truncating data files did not result in a sufficient reduction in allocated space, you will need to shrink data files. However, as an optional but recommended step, you should first determine average page density for indexes in the database. For the same amount of data, shrink will complete faster if page density is high, because it will have to move fewer pages. If page density is low for some indexes, consider performing maintenance on these indexes to increase page density before shrinking data files. This will also let shrink achieve a deeper reduction in allocated storage space.
+If truncating data files did not result in a sufficient reduction in allocated space, you may decide to shrink database data files to reclaim unused space from those files. However, as an optional but recommended step, you should first determine average page density for indexes in the database. For the same amount of data, shrink will complete faster if page density is high, because it will have to move fewer pages. If page density is low for some indexes, consider performing maintenance on these indexes to increase page density before shrinking data files. This will also let shrink achieve a deeper reduction in allocated storage space.
 
 To determine page density for all indexes in the database, use the following query. Page density is reported in the `avg_page_space_used_in_percent` column.
 

@@ -144,14 +144,14 @@ If (-Not $storage)
 > [!NOTE]
 > Automated Backup does not support storing backups in premium storage, but it can take backups from VM disks which use Premium Storage.
 
-If you want to custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
+If you want to use a custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
 
 ```powershell
 $storage_container = "backupcontainer"
 
 New-AzStorageContainer -Name $storage_container -Context $storage.Context
 
-if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName$resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
 	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
 } `
  else `
@@ -166,9 +166,7 @@ Next, use the following script to get the Access key for the storage account:
 $accesskey = (Get-AzStorageAccountKey -ResourceGroupName $resourcegroupname  -Name $storage_accountname)[0].value
 ```
 
-Then use the **Update-AzSqlVM** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. Full backups are scheduled for every Saturday (weekly) with a time window starting at 20:00 for two hours. Log backups are scheduled for every 30 minutes. 
-
-Then use the **New-AzVMSqlServerAutoBackupConfig** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are retained for 10 days. The second command, **Set-AzVMSqlServerExtension**, updates the specified Azure VM with these settings.
+Then use the **Update-AzSqlVM** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. 
 
 ```powershell
 Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `

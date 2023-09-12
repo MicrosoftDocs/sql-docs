@@ -229,14 +229,14 @@ If (-Not $storage)
 > [!NOTE]
 > Automated Backup does not support storing backups in premium storage, but it can take backups from VM disks which use Premium Storage.
 
-If you want to custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
+If you want to use a custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
 
 ```powershell
 $storage_container = "backupcontainer"
 
 New-AzStorageContainer -Name $storage_container -Context $storage.Context
 
-if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName$resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
 	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
 } `
  else `
@@ -277,7 +277,7 @@ $password = "r@ndom Va1ue"
 $encryptionpassword = $password | ConvertTo-SecureString -AsPlainText -Force  
 
 Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
--AutoBackupSettingBackupScheduleType manual `
+-AutoBackupSettingBackupScheduleType Manual `
 -AutoBackupSettingFullBackupFrequency Weekly `
 -AutoBackupSettingDaysOfWeek Saturday `
 -AutoBackupSettingFullBackupStartTime 20 `

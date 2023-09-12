@@ -189,7 +189,7 @@ For nonunique service principals, it's important to verify the Azure AD alias is
      Get-AzADApplication -DisplayName "myapp2ba6c"
      ```
 
-1. Go to the [Azure portal](https://portal.azure.com), and in your **Enterprise Application** or Azure AD group resource, check the **Application ID** or **Object ID** respectively. See if it matches the one obtained from the above query.
+1. Go to the [Azure portal](https://portal.azure.com), and in your **Enterprise application** or Azure AD group resource, check the **Application ID** or **Object ID** respectively. See if it matches the one obtained from the above query.
 
 > [!NOTE]
 > When creating a user from a service principal, the **Object ID** is required when using the `WITH OBJECT_ID` clause with the `CREATE` T-SQL statement. This is different from the **Application ID** that is returned when you are trying to verify the alias in Azure SQL. Using this verification process, you can identify the main owner of the SQL alias in Azure AD, and prevent possible mistakes when creating logins or users with an Object ID.

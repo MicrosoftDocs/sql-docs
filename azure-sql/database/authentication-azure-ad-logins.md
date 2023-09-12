@@ -4,7 +4,7 @@ description: Using Azure Active Directory server principals (logins) in Azure SQ
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
-ms.date: 09/08/2023
+ms.date: 09/15/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -153,11 +153,15 @@ For nonunique service principals, it's important to verify the Azure AD alias is
      SELECT CAST(sid as uniqueidentifier) ApplicationID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
      ```
 
+     :::image type="content" source="media/authentication-azure-ad-logins/application-id-output.png" alt-text="Screenshot of SSMS output for the Application ID.":::
+
      The Application ID is converted from the security identification number (SID) for the specified login or user name, which we can confirm by executing the below query and comparing the last several digits and create dates:
 
      ```sql
      SELECT SID, create_date FROM sys.server_principals WHERE NAME = 'myapp2ba6c' 
      ```
+
+     :::image type="content" source="media/authentication-azure-ad-logins/security-id-output.png" alt-text="Screenshot of SSMS output for the SID of the application.":::
 
    - To get the **Object ID** of the Azure AD group from the user created, execute the following query:
 
@@ -165,11 +169,15 @@ For nonunique service principals, it's important to verify the Azure AD alias is
      SELECT CAST(sid as uniqueidentifier) ObjectID, createdate FROM sys.sysusers WHERE NAME = 'myappgroupd3451b' 
      ```
 
+     :::image type="content" source="media/authentication-azure-ad-logins/object-id-output.png" alt-text="Screenshot of SSMS output for the Object ID of the Azure AD group.":::
+
      To check the SID of the Azure AD group from the user created, execute the following query: 
 
      ```sql
      SELECT SID, createdate FROM sys.sysusers WHERE NAME = 'myappgroupd3451b' 
      ```
+
+     :::image type="content" source="media/authentication-azure-ad-logins/security-id-group-output.png" alt-text="Screenshot of SSMS output for the SID of the group.":::
 
    - To get the Object ID and Application ID of the application using PowerShell execute the following command: 
 
@@ -184,7 +192,7 @@ For nonunique service principals, it's important to verify the Azure AD alias is
 
 ### Finding the right Object ID
 
-For information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object.).
+For information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object). You can locate the Object ID of the service principal listed next to the application name in the Azure portal.
 
 ## Roles for Azure AD principals
 

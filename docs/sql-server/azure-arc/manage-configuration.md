@@ -5,7 +5,7 @@ description: Explains how to manage SQL Server licensing options. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 08/17/2023
+ms.date: 09/12/2023
 ms.topic: conceptual
 ---
 # Configure Azure Arc-enabled SQL Server

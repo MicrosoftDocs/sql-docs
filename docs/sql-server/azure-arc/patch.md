@@ -4,7 +4,7 @@ description: This article explains how to configure Azure Arc-enabled SQL Server
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
-ms.date: 03/13/2023
+ms.date: 09/12/2023
 ms.subservice: 
 ms.topic: conceptual 
 ---

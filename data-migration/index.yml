@@ -131,6 +131,9 @@ conceptualContent:
         - text: Azure Table Storage to Azure Cosmos DB
           url: /azure/cosmos-db/table-import
           itemType: how-to-guide
+        - text: Elasticsearch to Azure Data Explorer
+          url: /azure/data-explorer/migrate-elasticsearch-to-azure-data-explorer
+          itemType: how-to-guide
     - title: "Resources"
       links:
         - text: Getting started video overview

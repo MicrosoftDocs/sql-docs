@@ -39,7 +39,7 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
    | Setting       | Example value | Description |
    | ------------ | ------------------ | ------------------------------------------------- |
    | **Server name** | localhost / exampleserver.mysql.database.azure.con | The fully qualified server name. |
-   | **Authentication type** | Password | The authentication method for accessing your MySQL server. This option lets you choose between MySQL native authentication (Password) and Microsoft Entra authentication.|
+   | **Authentication type** | Password | The authentication method for accessing your MySQL server. This option lets you choose between MySQL native authentication (Password) and Azure Active Directory authentication.|
    | **User name** | exampleuser | The user name you want to sign in with. |
    | **Password** | *password* | The password for the account you're logging in with. |
    | **Remember Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |

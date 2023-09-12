@@ -4,13 +4,25 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/13/2023
+ms.date: 09/12/2023
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## September 2023
+
+This release is published September 13, 2023.
+
+### Extension version
+
+`1.1.2440.53`
+
+### Azure extension for SQL Server
+
+- Automatic patching generally available
 
 ## August 2023
 
@@ -228,4 +240,5 @@ This release is published September 13, 2022
 - Azure extension for SQL Server has been enhanced to support configuring Microsoft Entra ID authentication using `mssql-conf`. For more details, see [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 

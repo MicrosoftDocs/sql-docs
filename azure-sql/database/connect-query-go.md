@@ -1,11 +1,11 @@
 ---
 title: Use Go to query
 titleSuffix: Azure SQL Database & SQL Managed Instance
-description: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries.
+description: "Quickstart: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries."
 author: dlevy-msft
 ms.author: dlevy
-ms.reviewer: wiassaf, mathoma
-ms.date: 08/29/2023
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 09/12/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -13,57 +13,54 @@ ms.custom:
   - sqldbrb=2
   - mode-api
 ms.devlang: golang
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll use the Golang programming language to connect to an Azure SQL Database or a database in Azure SQL Managed Instance with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.  
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
+In this quickstart, you'll use the Golang programming language to connect to an Azure SQL database, or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)], with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL (T-SQL) statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
-- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
-- An Azure SQL Database or a database in Azure SQL Managed Instance. You can use one of these quickstarts to create a database:
+- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/).
+- An Azure SQL database or a database in [!INCLUDE [ssazuremi_md](../../docs/includes/ssazuremi_md.md)]. You can use one of these quickstarts to create a database:
 
-  || SQL Database | SQL Managed Instance | SQL Server on Azure VM |
-  |:--- |:--- |:---|:---|
-  | **Create**| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
+  | | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
+  | :--- | :--- | :--- | :--- |
+  | **Create**| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
   | **Create** | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
-  | **Create** | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
-  | **Configure** | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
-  | **Configure** ||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |**Load data**|AdventureWorks loaded per quickstart|[Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
-  | **Load data** ||Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
+  | **Create** | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md) |
+  | **Configure** | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
+  | **Configure** | | [Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md) |
+  | **Load data** | [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] loaded per quickstart | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
+  | **Load data** | | Restore or import [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
-  > [!IMPORTANT]
-  > The scripts in this article are written to use the AdventureWorks database. With a SQL Managed Instance, you must either import the AdventureWorks database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > [!IMPORTANT]  
+  > The scripts in this article are written to use the [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] database. With a SQL managed instance, you must either import the [!INCLUDE [sssampledbobject-md](../../docs/includes/sssampledbobject-md.md)] database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
-- Golang and related software for your operating system installed:
-
-  - **macOS**: Install Homebrew and Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/mac/).
-  - **Ubuntu**:  Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/ubuntu/).
-  - **Windows**: Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/windows/).
+- [Go](https://go.dev/doc/install) and related software for your operating system installed.
 
 - The [Azure PowerShell Az module](/powershell/azure/install-azure-powershell) for your operating system installed.
-  
+
 ## Get server connection information
 
 Get the connection information you need to connect to the database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-2. Navigate to the **SQL Databases**  or **SQL Managed Instances** page.
+1. Navigate to the **SQL Databases**  or **SQL Managed Instances** page.
 
-3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
+1. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server on Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
 
-> [!NOTE]
+> [!NOTE]  
 > For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
 ## Create a new folder for the Golang project and dependencies
 
-1. From the terminal, create a new project folder called **SqlServerSample**. 
+1. From the terminal, create a new project folder called `SqlServerSample`.
 
    ```bash
    mkdir SqlServerSample
@@ -71,7 +68,7 @@ Get the connection information you need to connect to the database. You'll need 
 
 ## Create sample data
 
-1. In a text editor, create a file called **CreateTestData.sql** in the **SqlServerSample** folder. In the file, paste this T-SQL code, which creates a schema, table, and inserts a few rows.
+1. In a text editor, create a file called `CreateTestData.sql` in the `SqlServerSample` folder. In the file, paste this T-SQL code, which creates a schema, table, and inserts a few rows.
 
    ```sql
    CREATE SCHEMA TestSchema;
@@ -94,7 +91,7 @@ Get the connection information you need to connect to the database. You'll need 
    GO
    ```
 
-2. At the command prompt, navigate to **SqlServerSample** and use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server and database.
+1. At the command prompt, navigate to `SqlServerSample` and use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server and database.
 
    ```bash
    az login
@@ -103,9 +100,9 @@ Get the connection information you need to connect to the database. You'll need 
 
 ## Insert code to query the database
 
-1. Create a file named **sample.go** in the **SqlServerSample** folder.
+1. Create a file named `sample.go` in the `SqlServerSample` folder.
 
-2. In the file, paste this code. Add the values for your server and database. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
+1. In the file, paste this code. Add the values for your server and database. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
 
    ```go
    package main
@@ -301,23 +298,23 @@ Get the connection information you need to connect to the database. You'll need 
 
 ## Get Golang project dependencies and run the code
 
-1. At the command prompt, navigate to **SqlServerSample** and install the SQL Server driver for Go by running the following commands.
+1. At the command prompt, navigate to `SqlServerSample` and install the SQL Server driver for Go by running the following commands.
 
    ```bash
    go mod init SqlServerSample
    go mod tidy
    ```
 
-2. At the command prompt, run the following command.
+1. At the command prompt, run the following command.
 
    ```bash
-   az login   
+   az login
    go run sample.go
    ```
 
-3. Verify the output.
+1. Verify the output.
 
-   ```text
+   ```output
    Connected!
    Inserted ID: 4 successfully.
    ID: 1, Name: Jared, Location: Australia

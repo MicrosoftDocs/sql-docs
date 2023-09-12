@@ -1,6 +1,6 @@
 ---
-title: Connect using Azure Active Directory authentication
-description: Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
+title: Connect using Microsoft Entra authentication
+description: Learn how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/22/2023
@@ -8,15 +8,15 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Connect using Azure Active Directory authentication
+# Connect using Microsoft Entra authentication
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
+This article provides information on how to develop Java applications that use the Microsoft Entra authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Azure Active Directory (Azure AD) authentication, which is a mechanism to connect to Azure SQL Database using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview).
+You can use Microsoft Entra authentication, which is a mechanism to connect to Azure SQL Database using identities in Microsoft Entra ID. Use Microsoft Entra authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC driver allows you to specify your Microsoft Entra credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Microsoft Entra authentication visit [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
-Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
+Connection properties to support Microsoft Entra authentication in the Microsoft JDBC Driver for SQL Server are:
 
 - **authentication**:  Use this property to indicate which SQL authentication method to use for the connection.
   Possible values are:
@@ -25,11 +25,11 @@ Connection properties to support Azure Active Directory authentication in the Mi
   - **ActiveDirectoryDefault**
     - Since driver version 12.2, `authentication=ActiveDirectoryDefault` can be used to connect to an Azure SQL Database/Synapse Analytics via the **DefaultAzureCredential** from the Azure Identity client library. For more information, see [Connect using ActiveDirectoryDefault authentication mode](#connect-using-activedirectorydefault-authentication-mode).
   - **ActiveDirectoryIntegrated**
-    - Since driver version 6.0, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Synapse Analytics via integrated authentication. To use this authentication mode, you must federate the on-premises Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it's set up, you can connect by either adding the native library `mssql-jdbc_auth-<version>-<arch>.dll` to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL Database/Azure Synapse Analytics without prompted for credentials when you're logged in to a domain joined machine. For more information, see [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode).
+    - Since driver version 6.0, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Synapse Analytics via integrated authentication. To use this authentication mode, you must federate the on-premises Active Directory Federation Services (ADFS) with Microsoft Entra ID in the cloud. Once it's set up, you can connect by either adding the native library `mssql-jdbc_auth-<version>-<arch>.dll` to the application class path on Windows, or by setting up a Kerberos ticket for cross-platform authentication support. You're able to access Azure SQL Database/Azure Synapse Analytics without prompted for credentials when you're logged in to a domain joined machine. For more information, see [Connect using ActiveDirectoryIntegrated authentication mode](#connect-using-activedirectoryintegrated-authentication-mode).
   - **ActiveDirectoryPassword**
-    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Synapse Analytics with Azure AD user name and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
+    - Since driver version 6.0, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Synapse Analytics with Microsoft Entra user name and password. For more information, see [Connect using ActiveDirectoryPassword authentication mode](#connect-using-activedirectorypassword-authentication-mode).
   - **ActiveDirectoryInteractive**
-    - Since driver version 9.2, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics via interactive authentication flow (multi-factor authentication). For more information, see [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode).
+    - Since driver version 9.2, `authentication=ActiveDirectoryInteractive` can be used to connect to an Azure SQL Database/Synapse Analytics via interactive authentication flow (multifactor authentication). For more information, see [Connect using ActiveDirectoryInteractive authentication mode](#connect-using-activedirectoryinteractive-authentication-mode).
   - **ActiveDirectoryServicePrincipal**
     - Since driver version 9.2, `authentication=ActiveDirectoryServicePrincipal` can be used to connect to an Azure SQL Database/Synapse Analytics by specifying the application/client ID in the userName property and secret of a service principal identity in the password property. For more information, see [Connect using ActiveDirectoryServicePrincipal authentication mode](#connect-using-activedirectoryserviceprincipal-authentication-mode).
   - **ActiveDirectoryServicePrincipalCertificate**
@@ -220,7 +220,7 @@ There are two ways to use `ActiveDirectoryIntegrated` authentication in the Micr
 
 Ensure you have required dependent libraries from the [Client setup requirements](#client-setup-requirements).
 
-The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. This example runs on a domain joined machine that is federated with Azure Active Directory. A contained database user that represents your Azure AD user, or one of the groups you belong to, must exist in the database, and must have the CONNECT permission.
+The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. This example runs on a domain joined machine that is federated with Microsoft Entra ID. A contained database user that represents your Microsoft Entra user, or one of the groups you belong to, must exist in the database, and must have the CONNECT permission.
 
 Replace the server/database name with your server/database name in the following lines before executing the example:
 
@@ -272,7 +272,7 @@ You must up a Kerberos ticket to link your current user to a Windows domain acco
 > [!NOTE]
 > On Windows, `mssql-jdbc_auth-<version>-<arch>.dll` from the [downloaded package](download-microsoft-jdbc-driver-for-sql-server.md) can be used instead of these Kerberos configuration steps. These steps are only required if you can't use the DLL.
 
-JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Center (KDC) on a domain joined machine that is federated with Azure Active Directory.
+JDK comes with `kinit`, which you can use to get a TGT from Key Distribution Center (KDC) on a domain joined machine that is federated with Microsoft Entra ID.
 
 ##### Step 1: Ticket granting ticket retrieval
 
@@ -347,7 +347,7 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace user name with the name of the Azure AD user that you want to connect as.
+1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
@@ -392,7 +392,7 @@ You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Azure AD user or one of the groups, the specified Azure AD user belongs to, must exist in the database, and must have the CONNECT permission (except for Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user that represents the specified Microsoft Entra user or one of the groups, the specified Microsoft Entra user belongs to, must exist in the database, and must have the CONNECT permission (except for Microsoft Entra server admin or group)
 
 ## Connect using ActiveDirectoryInteractive authentication mode
 
@@ -408,7 +408,7 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace user name with the name of the Azure AD user that you want to connect as.
+1. Locate the following lines of code. Replace user name with the name of the Microsoft Entra user that you want to connect as.
 
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
@@ -445,11 +445,11 @@ public class AADInteractive {
 }
 ```
 
-When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how your Azure AD has been configured. It might or might not include multi-factor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
+When you run the program, a browser is displayed to authenticate the user. Exactly what you see depends on how your Microsoft Entra ID has been configured. It might or might not include multifactor authentication prompts for username, password, PIN, or second device authentication via a phone. If multiple interactive authentication requests are done in the same program, later requests might not even prompt you if the authentication library can reuse a previously cached authentication token.
 
-For information about how to configure Azure AD to require Multi-Factor Authentication, see [Getting started with Azure AD Multi-Factor Authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
+For information about how to configure Microsoft Entra ID to require multifactor authentication, see [Getting started with Microsoft Entra multifactor authentication in the cloud](/azure/active-directory/authentication/howto-mfa-getstarted).
 
-For screenshots of these dialog boxes, see [Using Azure AD Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
+For screenshots of these dialog boxes, see [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 If user authentication is completed successfully, you should see the following message in the browser:
 
@@ -464,7 +464,7 @@ You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Azure AD user or one of the groups the specified Azure AD user belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user that represents the specified Microsoft Entra user or one of the groups the specified Microsoft Entra user belongs to, must exist in the database and must have the CONNECT permission (except for a Microsoft Entra server admin or group)
 
 ## Connect using ActiveDirectoryServicePrincipal authentication mode
 
@@ -481,7 +481,7 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Azure AD service principal that you want to connect as. Replace the value of `principalSecret` with the secret.
+1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `principalSecret` with the secret.
 
     ```java
     String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
@@ -529,7 +529,7 @@ You have successfully logged on as: <your app/client ID>
 ```
 
 > [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Azure AD principal or one of the groups the specified Azure AD principal belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user that represents the specified Microsoft Entra principal or one of the groups the specified Microsoft Entra principal belongs to, must exist in the database and must have the CONNECT permission (except for a Microsoft Entra server admin or group)
 
 ## Connect using ActiveDirectoryServicePrincipalCertificate authentication mode
 
@@ -546,7 +546,7 @@ To build and run the example:
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Azure AD service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the Service Principal certificate.
+1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the Service Principal certificate.
 
     ```java
     String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
@@ -596,11 +596,11 @@ You have successfully logged on as: <your app/client ID>
 ```
 
 > [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Azure AD principal or one of the groups the specified Azure AD principal belongs to, must exist in the database and must have the CONNECT permission (except for an Azure Active Directory server admin or group)
+> A contained user database must exist and a contained database user that represents the specified Microsoft Entra principal or one of the groups the specified Microsoft Entra principal belongs to, must exist in the database and must have the CONNECT permission (except for a Microsoft Entra server admin or group)
 
 ## Connect using access token
 
-Applications/services can retrieve an access token from the Azure Active Directory and use that to connect to Azure SQL Database/Synapse Analytics.
+Applications/services can retrieve an access token from the Microsoft Entra ID and use that to connect to Azure SQL Database/Synapse Analytics.
 
 > [!NOTE]
 > `accessToken` can only be set using the Properties parameter of the `getConnection()` method in the DriverManager class. It can't be used in the connection string. Starting with driver version 12.2, users can implement and provide an `accessToken` callback to the driver for token renewal in connection pooling scenarios. Connection pooling scenarios require the connection pool implementation to use the standard [JDBC connection pooling classes](using-connection-pooling.md).
@@ -609,9 +609,9 @@ The following example contains a simple Java application that connects to Azure 
 
 To build and run the example:
 
-1. Create an application account in Azure Active Directory for your service.
+1. Create an application account in Microsoft Entra ID for your service.
     1. Sign in to the Azure portal.
-    2. Select Azure Active Directory in the left-hand navigation.
+    2. Select Microsoft Entra ID in the left-hand navigation.
     3. Select the `App registrations` tab.
     4. In the drawer, select `New application registration`.
     5. Enter `mytokentest` as a friendly name for the application, select `Web App/API`.
@@ -620,16 +620,16 @@ To build and run the example:
     8. While still in the Azure portal, select the `Settings` tab of your application, and open the `Properties` tab.
     9. Find the `Application ID` (also known as Client ID) value and copy it. You need this value later to configure your application (for example, `1846943b-ad04-4808-aa13-4702d908b5c1`).
     10. Under the section `Keys`, create a key to fill in the name field, select the duration of the key, and save the configuration (leave the value field empty). After you save, the value field should be filled automatically. Copy the generated value. This value is the client Secret.
-    11. Select Azure Active Directory on the left side panel. Under `App Registrations`, find the `End points` tab. Copy the URL under `OATH 2.0 TOKEN ENDPOINT`, this URL is your STS URL.
+    11. Select Microsoft Entra ID on the left side panel. Under `App Registrations`, find the `End points` tab. Copy the URL under `OATH 2.0 TOKEN ENDPOINT`, this URL is your STS URL.
 
     ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
-1. Sign in to your Azure SQL Server user database as an Azure Active Directory admin and use a T-SQL command, provision a contained database user for your application principal. For more information on how to create an Azure Active Directory admin and a contained database user, see the [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview).
+1. Sign in to your Azure SQL Server user database as a Microsoft Entra admin and use a T-SQL command, provision a contained database user for your application principal. For more information on how to create a Microsoft Entra admin and a contained database user, see the [Connecting to SQL Database or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
     ```sql
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-1. On the client machine where you run the example, download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies. MSAL is only required to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure AD. If you already have an access token, you can skip this step and remove the section in the example that retrieves an access token.
+1. On the client machine where you run the example, download the [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) library and its dependencies. MSAL is only required to run this specific example. The example uses the APIs from this library to retrieve the access token from Microsoft Entra ID. If you already have an access token, you can skip this step and remove the section in the example that retrieves an access token.
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 
@@ -851,8 +851,8 @@ You have successfully logged on as: <your client ID>
 
 Learn more about related concepts in the following articles:
 
-- [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Connecting to SQL Database By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
 - [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 - [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
-- [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Connecting to SQL Database or Azure Synapse Analytics By Using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
 - [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)

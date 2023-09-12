@@ -10,7 +10,7 @@ ms.topic: "overview"
 ---
 # Azure Data Studio - Azure connectivity
 
-Azure Data Studio uses the Microsoft Authentication Library (MSAL) by default to acquire an access token from Azure Active Directory. The settings that apply to Azure authentication are discussed, along with commonly observed issues and their solutions.
+Azure Data Studio uses the Microsoft Authentication Library (MSAL) by default to acquire an access token from Microsoft Entra ID. The settings that apply to Azure authentication are discussed, along with commonly observed issues and their solutions.
 
 ## Azure: Authentication library
 
@@ -64,7 +64,7 @@ When both options are checked, users are prompted to select one of the two authe
 
 ## Azure account configuration
 
-Azure Data Studio supports Azure Active Directory (Azure AD) authentication with National clouds. **Azure Public Cloud** is enabled by default, but users can enable other national clouds as needed:
+Azure Data Studio supports Microsoft Entra authentication with National clouds. **Azure Public Cloud** is enabled by default, but users can enable other national clouds as needed:
 
 `Settings.json`
 
@@ -197,7 +197,7 @@ Azure Data Studio's default behavior includes validating system's root CA certif
 "http.systemCertificates": true
 ```
 
-If a system's Root CA certificate is expired, authentication requests to Azure Active Directory will fail and an error like below would be captured in 'Azure Account' logs:
+If a system's Root CA certificate is expired, authentication requests to Microsoft Entra ID will fail and an error like below would be captured in 'Azure Account' logs:
 
 `error: certificate is expired`
 
@@ -249,7 +249,7 @@ This setting disables system keychain integration to prevent repeated keychain a
 
 ## Clear Azure account token cache
 
-Azure Data Studio maintains a cache of access tokens to prevent the throttling of token requests to Azure Active Directory (Azure AD). It's possible that Azure Data Studio's token cache may be outdated, which requires cleaning up expired access tokens from the application cache.
+Azure Data Studio maintains a cache of access tokens to prevent the throttling of token requests to Microsoft Entra ID. It's possible that Azure Data Studio's token cache may be outdated, which requires cleaning up expired access tokens from the application cache.
 
 Execute this command from **Command Palette (Ctrl/CMD + Shift + P)** to clear access tokens for linked Azure accounts:
 

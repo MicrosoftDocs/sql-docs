@@ -58,7 +58,7 @@ This procedure throws an error if collection items of this collection type exist
 
 Requires membership in the **dc_admin** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 This example deletes the Generic T-SQL Query collector type.
 

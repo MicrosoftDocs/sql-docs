@@ -40,7 +40,7 @@ As more service providers, also known as independent software vendors (ISVs), us
 
 However, there's one significant limitation to this approach. When multiple databases are hosted on the same Azure SQL logical server, they share the server-level TDE protector. ISVs are unable to offer true customer-managed keys (CMK) capabilities to their customers. Without the ability to manage their own encryption keys, customers may be hesitant to entrust sensitive data to the ISV's service, particularly if compliance regulations require them to maintain full control over their encryption keys.
 
-With database level TDE CMK, ISVs can offer CMK capability to their customers and achieve security isolation, as each database’s TDE protector can potentially be owned by the respective ISV customer in a key vault that they own. The security isolation achieved for ISV’s customers is both in terms of the *key* and the *identity* used to access the key.
+With database level TDE CMK, ISVs can offer CMK capability to their customers and achieve security isolation, as each database's TDE protector can potentially be owned by the respective ISV customer in a key vault that they own. The security isolation achieved for ISV's customers is both in terms of the *key* and the *identity* used to access the key.
 
 The diagram below summarizes the new functionality indicated above. It presents two separate Azure AD tenants. The `Best Services` tenant that contains the Azure SQL logical server with two databases, `DB 1` and `DB 2`, and the `Azure Key Vault 1` with a `Key 1` accessing the database `DB 1` using `UMI 1`. Both `UMI 1` and `Key 1` represent the server level setting. By default, all databases created initially on this server inherit this setting for TDE with CMK. The `Contoso` tenant represents a client tenant that contains `Azure Key Vault 2` with a `Key 2` assessing the database `DB 2` across the tenant as part of the database level CMK cross-tenant support using `Key 2` and `UMI 2` setup for this database.  
 
@@ -124,7 +124,7 @@ In case of an inaccessible TDE protector as described in [Transparent data encry
 
 ### Additional considerations
 
-- If TDE with CMK is already enabled at the server level, setting CMK for a particular database overrides the server level CMK setting (database’s DEK gets re-encrypted with the database-level TDE protector).
+- If TDE with CMK is already enabled at the server level, setting CMK for a particular database overrides the server level CMK setting (database's DEK gets re-encrypted with the database-level TDE protector).
 - Any logical server level key changes or rotations don't affect database level CMK settings and the database continues to use its own CMK setting.
 - Database level CMK isn't supported through Transact-SQL (T-SQL).
 - The logical server user-assigned managed identity (UMI) can be used at the database level. However, it's recommended to use a designated UMI for the database level CMK.

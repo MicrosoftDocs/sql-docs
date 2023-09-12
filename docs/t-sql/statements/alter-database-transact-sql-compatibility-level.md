@@ -55,18 +55,18 @@ The version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with wh
 
 | Product | Database Engine version | Default compatibility level designation | Supported compatibility level values |
 | --- | --- | --- | --- |
-| [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |
-| [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] | 12 | 150 | 150, 140, 130, 120, 110, 100 |
-| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
-| [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
-| [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |
-| [!INCLUDE[sql2008r2-md](../../includes/sql2008r2-md.md)] | 10.5 | 100 | 100, 90, 80 |
-| [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] | 10 | 100 | 100, 90, 80 |
-| [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] | 9 | 90 | 90, 80 |
-| [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] | 8 | 80 | 80 |
+| [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] | 16 | 160 | 160, 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] | 15 | 150 | 150, 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] | 14 | 140 | 140, 130, 120, 110, 100 |
+| [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] | 13 | 130 | 130, 120, 110, 100 |
+| [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] | 12 | 120 | 120, 110, 100 |
+| [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] | 11 | 110 | 110, 100, 90 |
+| [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] | 10.5 | 100 | 100, 90, 80 |
+| [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] | 10 | 100 | 100, 90, 80 |
+| [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] | 9 | 90 | 90, 80 |
+| [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] | 8 | 80 | 80 |
 
 > [!IMPORTANT]  
 > The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
@@ -104,11 +104,11 @@ To determine the current compatibility level, query the `compatibility_level` co
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-### Remarks for Azure SQL Database
+### Remarks for Azure SQL 
 
-As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] doesn't update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE[msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
+As of **November 2022** the default compatibility level for newly created databases in  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. [!INCLUDE [msCoName](../../includes/msconame-md.md)] doesn't update database compatibility level for existing databases. It is up to customers to do at their own discretion. [!INCLUDE [msCoName](../../includes/msconame-md.md)] highly recommends that customers plan to upgrade to the latest compatibility level in order to use the latest query optimization improvements.
 
-For details about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+For details about how to assess the performance differences of your most important queries between two different compatibility levels on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://techcommunity.microsoft.com/t5/azure-sql-blog/improved-query-performance-with-compatibility-level-130-in-azure/ba-p/386100). This article refers to compatibility level 130 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but the same methodology applies for upgrades to 140 or higher levels in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 To determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you're connected to, execute the following query.
 
@@ -116,11 +116,11 @@ To determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that
 SELECT SERVERPROPERTY('ProductVersion');
 ```
 
-Not all features that vary by compatibility level are supported on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Not all features that vary by compatibility level are supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Compatibility levels and database engine upgrades
 
-Database compatibility level is a valuable tool to help with database modernization by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded while keeping the same functional status for connecting applications by maintaining the same pre-upgrade database compatibility level. This means that it's possible to upgrade from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (such as [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]) to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (including Azure SQL Managed Instance) with no application changes (except for database connectivity). For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
+Database compatibility level is a valuable tool to help with database modernization by allowing the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to be upgraded while keeping the same functional status for connecting applications by maintaining the same pre-upgrade database compatibility level. This means that it's possible to upgrade from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (such as [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]) to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (including Azure SQL Managed Instance) with no application changes (except for database connectivity). For more information, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
 As long as the application doesn't need to use enhancements that are only available in a higher database compatibility level, it is a valid approach to upgrade the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and maintain the previous database compatibility level. For more information on using compatibility level for backward compatibility, see [Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md).
 
@@ -147,7 +147,7 @@ For more information, including the recommended workflow for upgrading database 
      Examples of breaking changes **not protected** by compatibility level are:
 
      - Changed column names in system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the column `single_pages_kb` in `sys.dm_os_sys_info` was renamed to `pages_kb`. Regardless of the compatibility level, the query `SELECT single_pages_kb FROM sys.dm_os_sys_info` will produce error 207 (Invalid column name).
-     - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` will produce error 2812 (Couldn't find stored procedure 'sp_dboption').
+     - Removed system objects. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] the `sp_dboption` was removed. Regardless of the compatibility level, the statement `EXEC sp_dboption 'AdventureWorks2022', 'autoshrink', 'FALSE';` will produce error 2812 (Couldn't find stored procedure 'sp_dboption').
 
      For more information on breaking changes, see [Breaking Changes to Database Engine Features in SQL Server 2019](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2019.md), [Breaking Changes to Database Engine Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes to Database Engine Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), and [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
@@ -163,7 +163,7 @@ Starting with database compatibility level 130, any new fixes and features affec
 
 The fundamental plan-affecting changes added only to the default compatibility level of a new version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are:
 
-1. **Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions under trace flag 4199 become automatically enabled in the default compatibility level of a newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version**. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+1. **Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions under trace flag 4199 become automatically enabled in the default compatibility level of a newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version**. **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
     For example, when [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] was released, all the Query Optimizer fixes released for previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions (and respective compatibility levels 100 through 120) became automatically enabled for databases that use the [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] default compatibility level (130). Only post-RTM Query Optimizer fixes need to be explicitly enabled.
 
@@ -182,12 +182,12 @@ The fundamental plan-affecting changes added only to the default compatibility l
     | --- | --- | --- | --- | --- |
     | 13 ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) | 100 to 120<br /><br /><br />130 | Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
     | 14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) | 100 to 120<br /><br /><br />130<br /><br /><br />140 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
-    | 15 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) | 100 to 120<br /><br /><br />130 to 140<br /><br /><br />150 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
-    | 16 ([!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) and 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) | 100 to 120<br /><br /><br />130 to 150<br /><br /><br />160 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
+    | 15 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 140<br /><br /><br />150 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
+    | 16 ([!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]) and 12 ([!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]) | 100 to 120<br /><br /><br />130 to 150<br /><br /><br />160 | Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On | **Disabled**<br />Enabled<br /><br />**Enabled**<br />Enabled<br /><br />**Enabled**<br />Enabled | Disabled<br />Enabled<br /><br />Disabled<br />Enabled<br /><br />Disabled<br />Enabled |
 
     Query Optimizer fixes that address wrong results or access violation errors aren't protected by trace flag 4199. Those fixes aren't considered optional.
 
-1. **Changes to the [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) released on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are enabled only in the default compatibility level of a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] version**, but not on previous compatibility levels.
+1. **Changes to the [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md) released on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] are enabled only in the default compatibility level of a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] version**, but not on previous compatibility levels.
 
     For example, when [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] was released, changes to the cardinality estimation process were available only for databases using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] default compatibility level (130). Previous compatibility levels retained the cardinality estimation behavior that was available before [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
 
@@ -202,7 +202,7 @@ The fundamental plan-affecting changes added only to the default compatibility l
     | 15 ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])<sup>1</sup> | < 150<br />150 | Disabled<br />Enabled |
     | 16 ([!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<sup>1</sup> | < 160<br />160 | Disabled<br />Enabled |
 
-    <sup>1</sup> Also applicable to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+    <sup>1</sup> Also applicable to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Other differences between specific compatibility levels are available in the next sections of this article.
 
@@ -354,10 +354,10 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the compatibility level
 
-The following example changes the compatibility level of the **AdventureWorks2019** [sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
+The following example changes the compatibility level of the **AdventureWorks2022** [sample database](../../samples/adventureworks-install-configure.md) database to 150, the default for [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)].
 
 ```sql
-ALTER DATABASE AdventureWorks2019
+ALTER DATABASE AdventureWorks2022
 SET COMPATIBILITY_LEVEL = 150;
 GO
 ```
@@ -439,10 +439,10 @@ This returns results such as the following:
 Under the database compatibility level setting of 90, variable assignment is allowed in a statement containing a top-level UNION operator, but returns unexpected results. For example, in the following statements, local variable `@v` is assigned the value of the column `BusinessEntityID` from the union of two tables. By definition, when the SELECT statement returns more than one value, the variable is assigned the last value that is returned. In this case, the variable is correctly assigned the last value, however, the result set of the SELECT UNION statement is also returned.
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 SET compatibility_level = 110;
 GO
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @v int;
 SELECT @v = BusinessEntityID FROM HumanResources.Employee

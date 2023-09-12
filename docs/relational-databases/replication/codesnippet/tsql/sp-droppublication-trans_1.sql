@@ -4,7 +4,7 @@ SET @publicationDB = N'AdventureWorks';
 SET @publication = N'AdvWorksProductTran'; 
 
 -- Remove a transactional publication.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_droppublication @publication = @publication;
 
 -- Remove replication objects from the database.

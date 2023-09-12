@@ -3,7 +3,7 @@ title: "RS.exe Utility"
 description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/16/2017
+ms.date: 08/17/2023
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -40,7 +40,26 @@ rs {-?}
 ```  
   
 ##  <a name="bkmk_filelocation"></a> File Location  
- **RS.exe** is located at **\Program Files\Microsoft SQL Server\110\Tools\Binn**. You can run the utility from any folder on your file system.  
+ **RS.exe** is located in the following folders, depending on the report server version. You can run the utility from any folder on your file system.
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
+```  
+C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn  
+```
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)]
+
+```  
+C:\Program Files\Microsoft SQL Server Reporting Services\Shared Tools
+```  
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+```  
+C:\Program Files\Microsoft Power BI Report Server\Shared Tools
+```  
+ 
   
 ##  <a name="bkmk_arguments"></a> Arguments  
  **-?**  

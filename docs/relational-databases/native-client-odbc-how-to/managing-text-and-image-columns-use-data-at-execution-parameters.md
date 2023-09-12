@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the sample.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
@@ -209,7 +209,7 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')  
      DROP TABLE emp4  
 GO  

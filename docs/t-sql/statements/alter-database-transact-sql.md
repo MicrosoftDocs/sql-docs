@@ -146,7 +146,7 @@ Renames the database with the name specified as *new_database_name*.
 Specifies the collation for the database. *collation_name* can be either a Windows collation name or a SQL collation name. If not specified, the database is assigned the collation of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Collation cannot be changed after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Collation cannot be changed after database has been created on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 When creating databases with other than the default collation, the data in the database always respects the specified collation. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], when creating a contained database, the internal catalog information is maintained using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default collation, **Latin1_General_100_CI_AS_WS_KS_SC**.
 
@@ -238,12 +238,12 @@ Requires `ALTER` permission on the database.
 
 ### A. Change the name of a database
 
-The following example changes the name of the `AdventureWorks2012` database to `Northwind`.
+The following example changes the name of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to `Northwind`.
 
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 Modify Name = Northwind ;
 GO
 ```
@@ -934,8 +934,6 @@ ALTER DATABASE { database_name | Current }
 <auto_option> ::= 
 { 
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
-  | AUTO_UPDATE_STATISTICS { ON | OFF } 
-  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
 } 
 
 <sql_option> ::= 
@@ -1019,7 +1017,7 @@ Before you run these examples, make sure the database you are altering is not th
 ### A. Change the name of the database
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY NAME = Northwind;
 ```
 

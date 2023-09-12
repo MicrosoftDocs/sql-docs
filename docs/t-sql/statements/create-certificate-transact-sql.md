@@ -126,7 +126,7 @@ CREATE CERTIFICATE certificate_name
  Specifies the complete path, including file name, to a DER-encoded file that contains the certificate. If the EXECUTABLE option is used, the file is a DLL that has been signed by the certificate. *path_to_file* can be a local path or a UNC path to a network location. The file is accessed in the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. This account must have the required file-system permissions.  
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support creating a certificate from a file or using private key files.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support creating a certificate from a file or using private key files.
   
  BINARY = *asn_encoded_certificate*  
  ASN encoded certificate bytes specified as a binary constant.  
@@ -143,10 +143,10 @@ CREATE CERTIFICATE certificate_name
  Specifies the complete path, including file name, to the private key. *path_to_private_key* can be a local path or a UNC path to a network location. The file is accessed in the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. This account must have the necessary file-system permissions.  
   
 > [!IMPORTANT]  
-> This option is not available in a contained database or in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+> This option is not available in a contained database or in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  BINARY = *private_key_bits*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks aren't performed on this password. The private key bits should be in a PVK file format.  
   
@@ -220,7 +220,7 @@ GO
 ```  
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support creating a certificate from a file.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support creating a certificate from a file.
    
 ### C. Creating a certificate from a signed executable file  
   
@@ -242,7 +242,7 @@ GO
 ``` 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not support creating a certificate from a file.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] does not support creating a certificate from a file.
 
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the ['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) server configuration option prevents loading assemblies without first setting up the security for them. Load the certificate, create a login from it, grant `UNSAFE ASSEMBLY` to that login, and then load the assembly.

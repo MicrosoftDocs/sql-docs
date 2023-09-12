@@ -126,7 +126,7 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 
 ### A. Check a table
 
-The following example checks the constraint integrity of the table `Table1` in the `AdventureWorks2022` database.
+The following example checks the constraint integrity of the table `Table1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 USE AdventureWorks2022;

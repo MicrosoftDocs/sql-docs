@@ -65,7 +65,7 @@ The new **bcp** supports Azure AD authentication, including Multi-Factor Authent
 
 - Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022
 
-This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and the latest [Microsoft ODBC Driver for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+This component requires both [Windows Installer 4.5](https://windows-installer.soft32.com/) and the latest [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md#version-17).
 
 To check the **bcp** version, execute `bcp -v` command, and confirm that 15.0.4298.1 or later is in use.
 
@@ -542,7 +542,7 @@ Computed and **timestamp** columns are bulk copied from [!INCLUDE [ssNoVersion](
   For example, the following `bcp out` command creates a data file named `Currency Types.dat`:
 
   ```cmd
-  bcp AdventureWorks2012.Sales.Currency out "Currency Types.dat" -T -c
+  bcp AdventureWorks2022.Sales.Currency out "Currency Types.dat" -T -c
   ```
 
 - To specify a database name that contains a space or quotation mark, you must use the `-q` option.

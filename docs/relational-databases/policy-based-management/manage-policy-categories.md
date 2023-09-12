@@ -78,7 +78,7 @@ f1_keywords:
     GO  
     -- configures the specified database to subscribe to a policy category that is named 'Table Naming Policies'.  
     EXEC dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DATABASE'  
-    , @target_object = N'AdventureWorks2012'  
+    , @target_object = N'AdventureWorks2022'  
     , @policy_category = N'Table Naming Policies';  
     GO  
     ```  

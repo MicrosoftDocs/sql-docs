@@ -196,7 +196,7 @@ TLS 1.3 isn't supported by the driver; therefore, it has been removed from the s
 
 ### Enable optimized parameter binding
 
-Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names aren't sent to the SQL server when the command is executed.
+Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names aren't sent to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance when the command is executed.
 
 ```cs
 public class SqlCommand

@@ -65,7 +65,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE Description = N'data signed by certificate ''Shipping04''';  
 GO  
 ```  
@@ -74,7 +74,7 @@ GO
  This query returns only records that have not been changed since they were signed using certificate `Shipping04`.  
   
 ```sql
-SELECT Data FROM [AdventureWorks2012].[SignedData04]   
+SELECT Data FROM [AdventureWorks2022].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   
 AND Description = N'data signed by certificate ''Shipping04''';  

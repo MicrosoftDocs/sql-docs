@@ -54,7 +54,7 @@ When executing a user-defined procedure, we recommend qualifying the procedure n
 The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify Parameters](../../relational-databases/stored-procedures/specify-parameters.md).  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;
 GO
@@ -63,7 +63,7 @@ GO
 -Or-  
 
 ```sql  
-EXEC AdventureWorks2019.dbo.uspGetEmployeeManagers 50;  
+EXEC AdventureWorks2022.dbo.uspGetEmployeeManagers 50;  
 GO  
 ```  
 
@@ -146,7 +146,7 @@ Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssm
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to execute a stored procedure that expects one parameter. The example executes the `uspGetEmployeeManagers` stored procedure with the value `6` specified as the `@EmployeeID` parameter.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  

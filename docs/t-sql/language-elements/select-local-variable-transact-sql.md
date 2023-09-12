@@ -86,10 +86,10 @@ One SELECT statement can initialize multiple local variables.
 
 In the following example, the variable `@var1` is assigned "Generic Name" as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` doesn't exist in the table. The variable retains the "Generic Name" value.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the `AdventureWorksLT` sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The `AdventureWorksLT` database is used as the sample database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
--- Uses AdventureWorks2019LT
+-- Uses AdventureWorks2022LT
 DECLARE @var1 VARCHAR(30);
 SELECT @var1 = 'Generic Name';
 
@@ -111,10 +111,10 @@ Generic Name
 
 In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` doesn't exist, the subquery returns no value, and the variable is set to `NULL`.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the `AdventureWorksLT` sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The `AdventureWorksLT` database is used as the sample database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
--- Uses AdventureWorks2019
+-- Uses AdventureWorksLT
 DECLARE @var1 VARCHAR(30);
 SELECT @var1 = 'Generic Name';
 
@@ -145,7 +145,9 @@ FROM
 
 In this case, it isn't guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant. This applies to expressions containing variables string concatenation, as demonstrated below, but also to expressions with non-string variables or += style operators. Use aggregation functions instead for a set-based operation instead of a row-by-row operation.
 
-For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md).
+
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 An example to avoid, where using ORDER BY in attempt to order concatenation causes list to be incomplete:
 

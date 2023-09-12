@@ -58,7 +58,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
-FROM AdventureWorks2012.HumanResources.vEmployee  
+FROM AdventureWorks2022.HumanResources.vEmployee  
 WHERE LastName like 'B%';  
   
 OPEN Employee_Cursor;  

@@ -48,7 +48,7 @@ One of three character strings: `INFORMATIONAL`, `WARNING`, or `ERROR`. *severit
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 `xp_logevent` returns the following error message for the included code example:
 

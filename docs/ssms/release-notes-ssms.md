@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 07/03/2023
+ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -90,6 +90,7 @@ SSMS 19.1 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users will still have issues editing a NVARCHAR(255) column in a table, users will see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions will be incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
 | Import/Export Data-Tier Application | Using Export to Data-Tier Application with a Microsoft Azure Storage Account generates the error "An error occurred while loading data." | Use SSMS 19.0.2 or earlier. |
+| Object Explorer | Modifying a stored procedure when using Azure AD Authentication generates a "Cannot open server" error. | Use a non-Azure AD login, or SSMS 18.12.1. |
 | PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. | No current alternative. |
@@ -191,7 +192,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.41. |
 | Accessibility | Improved keyboard navigation and screen reader text in the data classification window. |
 | Always Encrypted | Added the ability to explicitly configure an attestation protocol in the "Connect To Server" dialog when using Always Encrypted with secure enclaves (column encryption). |
-| Azure Active Directory Authentication | Connections to relational SQL instances now support Azure Active Directory Service Principal, Azure Active Directory Managed Identity and Azure Active Directory Default authentication methods. “Default” uses a series of possible sources for authentication, including environment variables, Azure Managed Identity, the user’s shared token cache, Visual Studio, Azure CLI, and Azure PowerShell. For more information, visit: [Options (Azure Services)](menu-help/options-azure-services.md) |
+| Azure Active Directory Authentication | Connections to relational SQL instances now support Azure Active Directory Service Principal, Azure Active Directory Managed Identity and Azure Active Directory Default authentication methods. "Default" uses a series of possible sources for authentication, including environment variables, Azure Managed Identity, the user's shared token cache, Visual Studio, Azure CLI, and Azure PowerShell. For more information, visit: [Options (Azure Services)](menu-help/options-azure-services.md) |
 | Auditing | Added support for SQL 2022 actions. |
 | Client Driver | Changed to Microsoft.Data.SqlClient. |
 | Contained Always On Availability Group | Added support for Contained Always On Availability Groups. |
@@ -204,10 +205,10 @@ Download previous SSMS versions by selecting the download link in the related se
 | Link feature for Azure SQL Managed Instance | Introduced rollback support if selected tasks fail in the MI Link wizard. |
 | Maintenance Plan | The Maintenance Plan node is now available in Object Explorer. |
 | Object Explorer | Dropped Columns folder now exists under the Columns folder for Ledger tables, which have been altered to remove one or more columns. |
-| PowerShell | Removed “Generate PowerShell Script from In-Memory OLTP Migration. |
+| PowerShell | Removed "Generate PowerShell Script" from In-Memory OLTP Migration. |
 | Query Execution or Results | Improved checks for open connections. |
 | Query Plan | Added ellipses button to Residual property for Merge Join operator. See [SSMS: Add ellipsis button to Residual property for Merge Join operator](https://feedback.azure.com/d365community/idea/025ef426-4a88-ed11-a81b-000d3adb7ffd). |
-| Query Results | Added option in **Tools > Options > Query Execution** to not display the “querying transaction count” window when closing a query window. See [SSMS - Querying transaction count - Async](https://feedback.azure.com/d365community/idea/aaaad978-65b9-ec11-a81c-6045bd80aaa9). |
+| Query Results | Added option in **Tools > Options > Query Execution** to not display the "querying transaction count" window when closing a query window. See [SSMS - Querying transaction count - Async](https://feedback.azure.com/d365community/idea/aaaad978-65b9-ec11-a81c-6045bd80aaa9). |
 | Query Tuning Assistant | Updated user interface for improved accessibility. |
 | Security | Added support for permissions introduced in SQL Server 2022 and SQL Server 2019. |
 | Scripting | Compatibility level defaults to 160 when scripting. |

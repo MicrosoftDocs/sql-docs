@@ -4,7 +4,7 @@ description: Create database syntax for SQL Server, Azure SQL Database, Azure Sy
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf
-ms.date: 07/18/2023
+ms.date: 07/21/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -378,6 +378,7 @@ Controls the file properties.
 Specifies the logical name for the file. NAME is required when FILENAME is specified, except when specifying one of the FOR ATTACH clauses. A FILESTREAM filegroup cannot be named PRIMARY.
 
 *logical_file_name*
+
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file. *Logical_file_name* must be unique in the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). The name can be a character or Unicode constant, or a regular or delimited identifier.
 
 #### FILENAME { '_os_file_name_' | '_filestream_path_' }
@@ -385,6 +386,7 @@ Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 Specifies the operating system (physical) file name.
 
 **'** *os_file_name* **'**
+
 Is the path and file name used by the operating system when you create the file. The file must reside on one of the following devices: the local server on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, a Storage Area Network [SAN], or an iSCSI-based network. The specified path must exist before executing the CREATE DATABASE statement. For more information, see [Database Files and Filegroups](#database-files-and-filegroups) later in this article.
 
 SIZE, MAXSIZE, and FILEGROWTH parameters can be set when a UNC path is specified for the file.
@@ -397,6 +399,7 @@ If the file is on a raw partition, *os_file_name* must specify only the drive le
 Data files should not be put on compressed file systems unless the files are read-only secondary files, or the database is read-only. Log files should never be put on compressed file systems.
 
 **'** *filestream_path* **'**
+
 For a FILESTREAM filegroup, FILENAME refers to a path where FILESTREAM data will be stored. The path up to the last folder must exist, and the last folder must not exist. For example, if you specify the path `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` must exist before you run ALTER DATABASE, but the `MyFilestreamData` folder must not exist.
 
 The filegroup and file (`<filespec>`) must be created in the same statement.
@@ -410,6 +413,7 @@ Specifies the size of the file.
 SIZE cannot be specified when the *os_file_name* is specified as a UNC path. SIZE does not apply to a FILESTREAM filegroup.
 
 *size*
+
 Is the initial size of the file.
 
 When *size* is not supplied for the primary file, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the size of the primary file in the `model` database. The default size of the `model` database is 8 MB (beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) or 1 MB (for earlier versions). When a secondary data file or log file is specified, but *size* is not specified for the file, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] makes the file 8 MB (beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) or 1 MB (for earlier versions). The size specified for the primary file must be at least as large as the primary file of the `model` database.
@@ -421,9 +425,11 @@ The kilobyte (KB), megabyte (MB), gigabyte (GB), or terabyte (TB) suffixes can b
 Specifies the maximum size to which the file can grow. MAXSIZE cannot be specified when the *os_file_name* is specified as a UNC path.
 
 *max_size*
+
 Is the maximum file size. The KB, MB, GB, and TB suffixes can be used. The default is MB. Specify a whole number. Do not include a decimal. If *max_size* is not specified, the file grows until the disk is full. *Max_size* is an integer value. For values greater than 2147483647, use larger units.
 
 UNLIMITED
+
 Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a log file specified with unlimited growth has a maximum size of 2 TB, and a data file has a maximum size of 16 TB.
 
 > [!NOTE]
@@ -434,6 +440,7 @@ Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](
 Specifies the automatic growth increment of the file. The FILEGROWTH setting for a file cannot exceed the MAXSIZE setting. FILEGROWTH cannot be specified when the *os_file_name* is specified as a UNC path. FILEGROWTH does not apply to a FILESTREAM filegroup.
 
 *growth_increment*
+
 Is the amount of space added to the file every time that new space is required.
 
 The value can be specified in MB, KB, GB, TB, or percent (%). If a number is specified without an MB, KB, or % suffix, the default is MB. When % is specified, the growth increment size is the specified percentage of the size of the file at the time the increment occurs. The size specified is rounded to the nearest 64 KB, and the minimum value is 64 KB.
@@ -457,15 +464,19 @@ Controls the filegroup properties. Filegroup cannot be specified on a database s
 Is the logical name of the filegroup.
 
 *filegroup_name*
+
 *filegroup_name* must be unique in the database and cannot be the system-provided names PRIMARY and PRIMARY_LOG. The name can be a character or Unicode constant, or a regular or delimited identifier. The name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).
 
 CONTAINS FILESTREAM
+
 Specifies that the filegroup stores FILESTREAM binary large objects (BLOBs) in the file system.
 
 DEFAULT
+
 Specifies the named filegroup is the default filegroup in the database.
 
 CONTAINS MEMORY_OPTIMIZED_DATA
+
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later
 
 Specifies that the filegroup stores memory_optimized data in the file system. For more information, see [In-Memory Optimization Overview and Usage Scenarios](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For code samples that create a filegroup to store memory-optimized data, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
@@ -487,7 +498,9 @@ For descriptions of NAME and FILENAME and their values, see the descriptions of 
 
 Specifies that the database being created is a database snapshot of the source database specified by *source_database_name*. The snapshot and source database must be on the same instance.
 
-For more information, see [Database Snapshots](#database-snapshots) in the Remarks section.
+Prior to SQL Server 2019, the source database for a database snapshot could not contain a MEMORY_OPTIMIZED_DATA filegroup. Support for in-memory database snapshots was added in SQL Server 2019.
+
+For more information, see [Database Snapshots](#database-snapshots).
 
 ## Remarks
 
@@ -532,7 +545,7 @@ If creating a database snapshot fails, the snapshot becomes suspect and must be 
 
 Each snapshot persists until it is deleted by using `DROP DATABASE`.
 
-For more information, see [Database Snapshots](../../relational-databases/databases/database-snapshots-sql-server.md).
+For more information, see [Database Snapshots](../../relational-databases/databases/database-snapshots-sql-server.md) and [Create a database snapshot (Transact-SQL)](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).
 
 ## Database options
 
@@ -778,19 +791,19 @@ GO
 
 ### H. Attach a full-text catalog that has been moved
 
-The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
+The following example attaches the full-text catalog `AdvWksFtCat` along with the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.
 
 ```sql
 USE master;
 GO
---Detach the AdventureWorks2012 database
-sp_detach_db AdventureWorks2012;
+--Detach the AdventureWorks2022 database
+sp_detach_db AdventureWorks2022;
 GO
 -- Physically move the full text catalog to the new location.
---Attach the AdventureWorks2012 database and specify the new location of the full-text catalog.
-CREATE DATABASE AdventureWorks2012 ON
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_data.mdf'),
-    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf'),
+--Attach the AdventureWorks2022 database and specify the new location of the full-text catalog.
+CREATE DATABASE AdventureWorks2022 ON
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_data.mdf'),
+    (FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_log.ldf'),
     (FILENAME = 'c:\myFTCatalogs\AdvWksFtCat')
 FOR ATTACH;
 GO
@@ -944,7 +957,7 @@ GO
 
 ## Overview
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
 
 ## Syntax
 
@@ -1145,7 +1158,7 @@ The name of the database that is to be copied.
 
 ## Remarks
 
-Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+Databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 `MAXSIZE` provides the ability to limit the size of the database. If the size of the database reaches its `MAXSIZE`, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update `MAXSIZE` to a value larger than your current database size or delete some data to free storage space. There might be as much as a fifteen-minute delay before you can insert new data.
 
@@ -1351,7 +1364,7 @@ When set to `ON`, it creates a ledger database, in which the integrity of all us
 
 ## Remarks
 
-Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+Databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 > [!IMPORTANT]
 > The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.
@@ -1461,7 +1474,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 #### *database_name*
 
-The name of the new database. This name must be unique on the SQL server, which can host both databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
+The name of the new database. This name must be unique on the SQL server, which can host both databases in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] databases, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](../../relational-databases/databases/database-identifiers.md).
 
 #### *collation_name*
 

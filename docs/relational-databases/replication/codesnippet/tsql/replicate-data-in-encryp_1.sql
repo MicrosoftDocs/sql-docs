@@ -1,6 +1,6 @@
 
 -- Execute at the Publisher on the publication database.
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
 -- Create the database master key if it doesn't exist.

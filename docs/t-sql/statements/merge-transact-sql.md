@@ -91,7 +91,8 @@ MERGE
 <merge_hint>::=  
 {  
     { [ <table_hint_limited> [ ,...n ] ]  
-    [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
+    [ [ , ] { INDEX ( index_val [ ,...n ] ) | INDEX = index_val }]
+    }  
 }  
 
 <merge_search_condition> ::=  
@@ -184,7 +185,7 @@ The table or view against which the data rows from \<table_source> are matched b
   
 If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
-*target_table* can't be a remote table. *target_table* can't have any rules defined on it.  
+*target_table* can't be a remote table. *target_table* can't have any rules defined on it. *target_table* can't be a memory-optimized table. 
 
 
 Hints can be specified as a <merge_hint>. 
@@ -298,7 +299,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 ::: moniker range="=azure-sqldw-latest"
 
 >[!NOTE]
-> In Azure Synapse Analytics, the MERGE command has following differences compared to SQL server and Azure SQL database.  
+> In Azure Synapse Analytics, the MERGE command has following differences compared to SQL Server and Azure SQL database.  
 > - Using MERGE to update a distribution key column is not supported in builds older than `10.0.17829.0`. If unable to pause or force-upgrade, use the ANSI `UPDATE FROM ... JOIN` statement as a workaround until on version `10.0.17829.0`.
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - MERGE…WHEN NOT MATCHED INSERT is not supported for tables with IDENTITY columns.  

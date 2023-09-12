@@ -90,7 +90,7 @@ sp_describe_cursor_columns
  The following example opens a global cursor and uses `sp_describe_cursor_columns` to report on the columns used in the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a global cursor.  
 DECLARE abc CURSOR KEYSET FOR  

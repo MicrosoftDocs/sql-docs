@@ -46,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the stored procedure used by this sample.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'TestParm')  
    DROP PROCEDURE TestParm  
 GO  
@@ -179,7 +179,7 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 DROP PROCEDURE TestParm  
 GO  
 ```  

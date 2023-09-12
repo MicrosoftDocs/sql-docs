@@ -14,7 +14,7 @@ f1_keywords:
   - "sp_persistent_version_cleanup_TSQL"
 dev_langs:
   - "TSQL"
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
+monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15 || =azuresqldb-mi-current || =azuresqldb-current"
 ---
 # sys.sp_persistent_version_cleanup (Transact-SQL)
 
@@ -64,7 +64,7 @@ Optional. Possible options determine whether or not to reclaim off-row PVS page.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -90,7 +90,7 @@ WHERE command LIKE '%PERSISTED_VERSION_CLEANER%';
 
 Database Mirroring can't be set for a database where ADR is enabled or there are still versions in the persisted version store (PVS). If ADR is disabled, run `sys.sp_persistent_version_cleanup` to clean up previous versions still in the PVS.
 
-## Example
+## Examples
 
 To activate the PVS cleanup process manually between workloads or during maintenance windows, use the following sample script:
 

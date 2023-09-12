@@ -82,7 +82,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  The following displays the status of all statistics on the `Product` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_autostats 'Production.Product';  
 GO  
@@ -92,7 +92,7 @@ GO
  The following enables the AUTO_UPDATE_STATISTICS option for all statistics on the `Product` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_autostats 'Production.Product', 'ON';  
 GO  
@@ -102,7 +102,7 @@ GO
  The following example disables the AUTO_UPDATE_STATISTICS option for the `AK_Product_Name` index on the `Product` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;  
 GO  

@@ -234,7 +234,7 @@ _Suppress unwanted line breaks:_ You might use SQL Server Management Studio (SSM
  The following example specifies `FOR XML AUTO` with the `TYPE` and `XMLSCHEMA` options. Because of the `TYPE` option, the result set is returned to the client as an **xml** type. The `XMLSCHEMA` option specifies that the inline XSD schema is included in the XML data returned, and the `ELEMENTS` option specifies that the XML result is element-centric.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  
 FROM Person.Person AS p  

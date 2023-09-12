@@ -114,7 +114,7 @@ helpviewer_keywords:
 3.  Paste the following example into the query window and then select **Execute**. This example creates a database audit specification called `Audit_Pay_Tables`. It audits SELECT and INSERT statements by the `dbo` user for the `HumanResources.EmployeePayHistory` table, based on the server audit defined in the previous section.  
   
     ```  
-    USE AdventureWorks2012 ;   
+    USE AdventureWorks2022;   
     GO  
     -- Create the database audit specification.   
     CREATE DATABASE AUDIT SPECIFICATION Audit_Pay_Tables  

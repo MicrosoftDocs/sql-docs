@@ -45,7 +45,7 @@ The name of the database. *@dbName* is **sysname**, with no default.
 
 #### [ @filegroup = ] N'*filegroup_name*'
 
-The filegroup you're adding the file to. *@filegroup* is **nvarchar(260)**, with a default of NULL, which indicates the primary file.
+The filegroup you're adding the file to. *@filegroup* is **nvarchar(260)**, with a default of `NULL`, which indicates the primary file.
 
 #### [ @name = ] N'*logical_file_name*'
 
@@ -57,17 +57,17 @@ The path and file name used by the operating system for the file. The file must 
 
 #### [ @size = ] N'*size*'
 
-The initial size of the file. *@size* is **nvarchar(20)**, with a default of NULL. Specify a whole number; don't include a decimal. The `MB` and `KB` suffixes can be used to specify megabytes or kilobytes. The default is `MB`. The minimum value is 512 KB. If *@size* isn't specified, the default is 1 MB.
+The initial size of the file. *@size* is **nvarchar(20)**, with a default of `NULL`. Specify a whole number; don't include a decimal. The `MB` and `KB` suffixes can be used to specify megabytes or kilobytes. The default is `MB`. The minimum value is 512 KB. If *@size* isn't specified, the default is 1 MB.
 
 #### [ @maxsize = ] N'*max_size*'
 
-The maximum size to which the file can grow. *@maxsize* is **nvarchar(20)**, with a default of NULL. Specify a whole number; don't include a decimal. The `MB` and `KB` suffixes can be used to specify megabytes or kilobytes. The default is `MB`.
+The maximum size to which the file can grow. *@maxsize* is **nvarchar(20)**, with a default of `NULL`. Specify a whole number; don't include a decimal. The `MB` and `KB` suffixes can be used to specify megabytes or kilobytes. The default is `MB`.
 
 If *@maxsize* isn't specified, the file grows until the disk is full. The [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows application log warns an administrator when a disk is about to become full.
 
 #### [ @filegrowth = ] N'*growth_increment*'
 
-The amount of space added to the file each time new space is required. *@filegrowth* is **nvarchar(20)**, with a default of NULL. A value of `0` indicates no growth. Specify a whole number; don't include a decimal. The value can be specified in `MB`, `KB`, or percent (`%`). When `%` is specified, the growth increment is the specified percentage of the size of the file at the time the increment occurs. If a number is specified without an `MB`, `KB`, or `%` suffix, the default is `MB`.
+The amount of space added to the file each time new space is required. *@filegrowth* is **nvarchar(20)**, with a default of `NULL`. A value of `0` indicates no growth. Specify a whole number; don't include a decimal. The value can be specified in `MB`, `KB`, or percent (`%`). When `%` is specified, the growth increment is the specified percentage of the size of the file at the time the increment occurs. If a number is specified without an `MB`, `KB`, or `%` suffix, the default is `MB`.
 
 If *@filegrowth* is NULL, the default value is `10%`, and the minimum value is `64 KB`. The size specified is rounded to the nearest 64 KB.
 
@@ -75,7 +75,7 @@ If *@filegrowth* is NULL, the default value is `10%`, and the minimum value is `
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

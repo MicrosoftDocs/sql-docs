@@ -503,6 +503,9 @@ public bool IsTransient(Exception ex)
 - [Connection libraries for SQL Database and SQL Server](connect-query-content-reference-guide.md#libraries)
 - [Connection pooling (ADO.NET)](/dotnet/framework/data/adonet/sql-server-connection-pooling)
 - [*Retrying* is an Apache 2.0 licensed general-purpose retrying library, written in Python,](https://pypi.python.org/pypi/retrying) to simplify the task of adding retry behavior to just about anything.
+- [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
+- [Troubleshooting transaction log errors with Azure SQL Database](troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true)
+- [Troubleshooting transaction log errors with Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true)
 
 <!-- Link references. -->
 
@@ -510,7 +513,3 @@ public bool IsTransient(Exception ex)
 
 [step-4-connect-resiliently-to-sql-with-php-p42h]: /sql/connect/php/step-4-connect-resiliently-to-sql-with-php
 
-## See also
-
-- [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
-- [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md)

@@ -72,7 +72,7 @@ For details and specific instructions for installing the `pyodbc` driver on all 
     pyodbc
     fastapi
     uvicorn[standard]
-    install pydantic
+    pydantic
     azure-identity
     ```
 

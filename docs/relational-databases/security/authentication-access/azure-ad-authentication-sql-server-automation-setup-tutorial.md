@@ -22,7 +22,7 @@ In this article, we'll go over how to set up the Azure Active Directory (Azure A
 - The Azure CLI
 - ARM Template
 
-We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
+We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL Server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 > [!NOTE]
 > This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
@@ -60,7 +60,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
 1. Select **Add Access Policy**.
-1. For **Key permissions**, use **0 selected**.
+1. For **Key permissions**, use **Sign**.
 1. For **Secret permissions**, select **Get** and **List**.
 1. For **Certificate permissions**, select **Get** and **List**.
 1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.

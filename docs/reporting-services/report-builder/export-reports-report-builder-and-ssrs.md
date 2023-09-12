@@ -9,6 +9,7 @@ ms.subservice: report-builder
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
+
 # Export paginated reports (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
@@ -148,7 +149,7 @@ If you export the report to HTML, the dates and numbers *do* render correctly.
 
 ### Export reports with embedded or external images
 
-When you export a paginated report in PowerPoint format, if the report has an embedded or external image in the background, the image doesn't come up in the exported file. The same is true when you export to other formats like PDF.
+When you export a paginated report in PowerPoint format, if the report has an embedded or external image in the background, the image doesn't come up in the exported file. The same is true when you export to other formats like Word.
 
 ## <a id="OtherWaysExportingReports"></a> Other ways of exporting reports
 
@@ -178,3 +179,4 @@ For more information, see [Export a Report Using URL Access](../../reporting-ser
 - [Saving Reports (Report Builder)](../../reporting-services/report-builder/saving-reports-report-builder.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+

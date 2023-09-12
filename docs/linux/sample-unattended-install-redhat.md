@@ -42,7 +42,7 @@ Save the sample script to a file and then to customize it. You'll need to replac
 # Password for the SA user (required)
 MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
-# Product ID of the version of SQL server you're installing
+# Product ID of the version of SQL Server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'
@@ -183,7 +183,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Configure SQL Server with the `MSSQL_SA_PASSWORD` and automatically accept the End-User License Agreement.
 
-1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixodbc-dev` package.
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixODBC-devel` package.
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 

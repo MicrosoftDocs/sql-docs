@@ -3,7 +3,7 @@ title: "LEAD (Transact-SQL)"
 description: "LEAD (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: "11/09/2017"
+ms.date: 07/26/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -27,14 +27,16 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ## Syntax  
   
 ```syntaxsql  
-LEAD ( scalar_expression [ ,offset ] , [ default ] )   
+LEAD ( scalar_expression [ , offset ] , [ default ] ) [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *scalar_expression*  
+
+#### *scalar_expression*  
+
  The value to be returned based on the specified offset. It is an expression of any type that returns a single (scalar) value. *scalar_expression* cannot be an analytic function.  
   
  *offset*  
@@ -42,9 +44,22 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
  *default*  
  The value to return when *offset* is beyond the scope of the partition. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.
-  
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+
+#### [ IGNORE NULLS | RESPECT NULLS ]
+
+**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+
+IGNORE NULLS - Ignore NULL values in the dataset when computing the first value over a partition.
+
+RESPECT NULLS - Respect NULL values in the dataset when computing first value over a partition. `RESPECT NULLS` is the default behavior if a NULLS option is not specified.
+
+There was a [bug fix in SQL Server 2022 CU4](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate4#2278800) related to IGNORE NULLS in `LAG` and `LEAD`.
+
+For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+
+#### OVER ( [ *partition_by_clause* ] *order_by_clause* )
+
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  The data type of the specified *scalar_expression*. NULL is returned if *scalar_expression* is nullable or *default* is set to NULL.  
@@ -57,7 +72,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  The query uses the LEAD function to return the difference in sales quotas for a specific employee over subsequent years. Notice that because there is no lead value available for the last row, the default of zero (0) is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
     LEAD(SalesQuota, 1,0) OVER (ORDER BY YEAR(QuotaDate)) AS NextQuota  
@@ -67,7 +82,7 @@ WHERE BusinessEntityID = 275 AND YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```output
 BusinessEntityID SalesYear   CurrentQuota          NextQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             556000.00  
@@ -82,7 +97,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
  The following example uses the LEAD function to compare year-to-date sales between employees. The PARTITION BY clause is specified to partition the rows in the result set by sales territory. The LEAD function is applied to each partition separately and computation restarts for each partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition before the function is applied. The ORDER BY clause in the SELECT statement orders the rows in the whole result set. Notice that because there is no lead value available for the last row of each partition, the default of zero (0) is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
        LEAD (SalesYTD, 1, 0) OVER (PARTITION BY TerritoryName ORDER BY SalesYTD DESC) AS NextRepSales  
@@ -93,7 +108,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
+```output   
 TerritoryName            BusinessEntityID SalesYTD              NextRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          1453719.4653  
@@ -105,7 +120,7 @@ Northwest                280              1352577.1325          0.00
 ```  
   
 ### C. Specifying arbitrary expressions  
- The following example demonstrates specifying a variety of arbitrary expressions in the LEAD function syntax.  
+ The following example demonstrates specifying various arbitrary expressions and ignoring NULL values in the LEAD function syntax.
   
 ```sql  
 CREATE TABLE T (a INT, b INT, c INT);   
@@ -113,26 +128,119 @@ GO
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   
 SELECT b, c,   
-    LEAD(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) OVER (ORDER BY a) AS i  
+    LEAD(2*c, b*(SELECT MIN(b) FROM T), -c/2.0) IGNORE NULLS OVER (ORDER BY a) AS i  
 FROM T;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```output  
 b           c           i  
 ----------- ----------- -----------  
-1           -3          8  
-2           4           2  
-1           NULL        2  
-3           1           0  
-2           NULL        NULL  
 1           5           -2  
+2           NULL        NULL  
+3           1           0  
+1           NULL        2  
+2           4           2  
+1           -3          8  
 ```  
-  
+
+### D. Use IGNORE NULLS to find non-NULL values
+
+The following sample query demonstrates using the IGNORE NULLS argument.
+
+The IGNORE NULLS argument is used with both [LAG](lag-transact-sql.md) and LEAD to demonstrate substitution of NULL values for preceding or next non-NULL values.
+
+- If the preceding row contained NULL with `LAG`, then the current row uses the most recent non-NULL value.
+- If the next row contains a NULL with `LEAD`, then the current row uses the next available non-NULL value.
+
+```sql
+DROP TABLE IF EXISTS #test_ignore_nulls;
+CREATE TABLE #test_ignore_nulls (column_a int, column_b int);
+GO
+
+INSERT INTO #test_ignore_nulls VALUES
+    (1, 8),
+    (2, 9),
+    (3, NULL),
+    (4, 10),
+    (5, NULL),
+    (6, NULL),
+    (7, 11);
+
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b) IGNORE NULLS OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b) IGNORE NULLS OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--cleanup
+DROP TABLE #test_ignore_nulls;
+```
+
+```output
+column_a     column_b    Previous value for column_b    Next value for column_b
+1            8           NULL                           9
+2            9           8                              10
+3            NULL        9                              10
+4            10          9                              11
+5            NULL        10                             11
+6            NULL        10                             11
+7            11          10                             NULL
+```
+
+### E. Use RESPECT NULLS to keep NULL values
+
+The following sample query demonstrates using the RESPECT NULLS argument, which is the default behavior if not specified, as opposed to the IGNORE NULLS argument in the previous example.
+
+- If the preceding row contained NULL with `LAG`, then the current row uses the most recent value.
+- If the next row contains a NULL with `LEAD`, then the current row uses the next value.
+
+```sql
+DROP TABLE IF EXISTS #test_ignore_nulls;
+CREATE TABLE #test_ignore_nulls (column_a int, column_b int);
+GO
+
+INSERT INTO #test_ignore_nulls VALUES
+    (1, 8),
+    (2, 9),
+    (3, NULL),
+    (4, 10),
+    (5, NULL),
+    (6, NULL),
+    (7, 11);
+
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b) RESPECT NULLS OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b) RESPECT NULLS OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--Identical output
+SELECT column_a, column_b,
+      [Previous value for column_b] = LAG(column_b)  OVER (ORDER BY column_a),
+      [Next value for column_b] = LEAD(column_b)  OVER (ORDER BY column_a)
+FROM #test_ignore_nulls
+ORDER BY column_a;
+
+--cleanup
+DROP TABLE #test_ignore_nulls;
+```
+
+```output
+column_a     column_b    Previous value for column_b    Next value for column_b
+1            8           NULL                           9
+2            9           8                              NULL
+3            NULL        9                              10
+4            10          NULL                           NULL
+5            NULL        10                             NULL
+6            NULL        NULL                           11
+7            11          NULL                           NULL
+```
+
 ## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### D: Compare values between quarters  
+### A. Compare values between quarters  
  The following example demonstrates the LEAD function. The query obtains the difference in sales quota values for a specified employee over subsequent calendar quarters. Notice that because there is no lead value available after the last row, the default of zero (0) is used.  
   
 ```sql  
@@ -148,7 +256,7 @@ ORDER BY CalendarYear, CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```output
 Year Quarter  SalesQuota  NextQuota  Diff  
 ---- -------  ----------  ---------  -------------  
 2001 3        28000.0000   7000.0000   21000.0000 
@@ -159,9 +267,9 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## See Also  
- [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
-  
-  
+## Next steps  
 
-
+- [LAG (Transact-SQL)](../../t-sql/functions/lag-transact-sql.md)  
+- [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
+- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
+- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

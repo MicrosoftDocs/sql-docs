@@ -39,7 +39,7 @@ None.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -52,7 +52,7 @@ This stored procedure is in the `msdb` database. This stored procedure starts th
 When the queues are started, the Database Mail external program can process messages. This procedure allows you to restart the queues after the queues have been stopped with the `sysmail_stop_sp` stored procedure.
 
 > [!NOTE]  
-> This stored procedure only starts the queues for Database Mail. This stored procedure does not activate [!INCLUDE [ssSB](../../includes/sssb-md.md)] message delivery in the database.
+> This stored procedure only starts the queues for Database Mail. This stored procedure doesn't activate [!INCLUDE [ssSB](../../includes/sssb-md.md)] message delivery in the database.
 
 ## Permissions
 
@@ -72,7 +72,7 @@ GO
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)
 - [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)
 - [sysmail_stop_sp (Transact-SQL)](sysmail-stop-sp-transact-sql.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

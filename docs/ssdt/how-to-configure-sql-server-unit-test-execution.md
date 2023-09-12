@@ -52,7 +52,7 @@ These settings control how your test connects to the database that you will test
   
 1.  In **Solution Explorer**, right-click your database project, and then click **Build**.  
   
-    When you build your database project, you generate a Transact\-SQL script. This script, when it is run against a database, re-creates the structure of your database project in that database.  
+    When you build your database project, you generate a Transact-SQL script. This script, when it is run against a database, re-creates the structure of your database project in that database.  
   
 2.  Select the test project that you want to configure.  
   
@@ -70,7 +70,7 @@ These settings control how your test connects to the database that you will test
   
 5.  Click **OK** to close the **SQL Server Test Configuration -'\<projectname\>'** dialog box.  
   
-    At the start of the test run, the Transact\-SQL script that was generated in step 1 is run. This action deploys the schema to the target database.  
+    At the start of the test run, the Transact-SQL script that was generated in step 1 is run. This action deploys the schema to the target database.  
   
 6.  Rebuild the unit test project to apply the configuration changes.  
   

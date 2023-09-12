@@ -40,7 +40,7 @@ Before you test the package, verify that the control and data flows in the Lesso
   
 1.  On the **Debug** menu, select **Start Debugging**.  
   
-    The package runs, resulting in 1,097 rows successfully added into the **NewFactCurrencyRate** fact table in **AdventureWorksDW2012**. To verify this result, select the **Data Flow** tab.
+    The package runs, resulting in 1,097 rows successfully added into the **NewFactCurrencyRate** fact table in [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)]. To verify this result, select the **Data Flow** tab.
   
 2.  After the package has completed running, on the **Debug** menu, select **Stop Debugging**.  
   

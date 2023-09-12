@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current"
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  This database-scoped system view is designed to provide an early warning system to determine objects that will be impacted by a major release upgrade in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. You can use the view either before or after the upgrade to get a full enumeration of impacted objects. You will need to query this view in each database to get a full accounting across the entire server.  
+  This database-scoped system view is designed to provide an early warning system to determine objects that will be impacted by a major release upgrade in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. You can use the view either before or after the upgrade to get a full enumeration of impacted objects. You will need to query this view in each database to get a full accounting across the entire server.  
   
 |Column name|Data Type|Description|  
 |-----------------|---------------|-----------------|  

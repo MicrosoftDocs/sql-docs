@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.
+Adds a new parameter and its value to an agent profile. This stored procedure is executed at the Distributor on any database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -51,13 +51,13 @@ To find out what agent type this *@profile_id* represents, find the *@profile_id
 
 #### [ @parameter_name = ] '*parameter_name*'
 
-The name of the parameter. *@parameter_name* is **sysname**, with no default. For a list of parameters already defined in system profiles, see [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). For a complete list of valid parameters for each agent, see the following topics:
+The name of the parameter. *@parameter_name* is **sysname**, with no default. For a list of parameters already defined in system profiles, see [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md). For a complete list of valid parameters for each agent, see the following topics:
 
-- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)
-- [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)
-- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)
-- [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)
-- [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)
+- [Replication Snapshot Agent](../replication/agents/replication-snapshot-agent.md)
+- [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)
+- [Replication Distribution Agent](../replication/agents/replication-distribution-agent.md)
+- [Replication Merge Agent](../replication/agents/replication-merge-agent.md)
+- [Replication Queue Reader Agent](../replication/agents/replication-queue-reader-agent.md)
 
 #### [ @parameter_value = ] '*parameter_value*'
 
@@ -77,8 +77,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_add_agent_par
 
 ## See also
 
-- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)
-- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)
+- [Work with Replication Agent Profiles](../replication/agents/work-with-replication-agent-profiles.md)
+- [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)
 - [sp_add_agent_profile (Transact-SQL)](sp-add-agent-profile-transact-sql.md)
 - [sp_change_agent_profile (Transact-SQL)](sp-change-agent-profile-transact-sql.md)
 - [sp_change_agent_parameter (Transact-SQL)](sp-change-agent-parameter-transact-sql.md)

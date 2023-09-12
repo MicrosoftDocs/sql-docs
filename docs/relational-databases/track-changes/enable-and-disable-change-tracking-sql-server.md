@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  Before you can use change tracking, you must enable change tracking at the database level. The following example shows how to enable change tracking by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
@@ -71,7 +71,7 @@ DISABLE CHANGE_TRACKING;
 When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET CHANGE_TRACKING = OFF  
 ```  
 

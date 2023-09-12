@@ -61,7 +61,7 @@ Indicates the status of the added job. *enabled* is **tinyint**, with a default 
 
 #### [ @description = ] N'*description*'
 
-The description of the job. *@description* is **nvarchar(512)**, with a default of NULL. If *@description* is omitted, `N'No description available'` is used.
+The description of the job. *@description* is **nvarchar(512)**, with a default of `NULL`. If *@description* is omitted, `N'No description available'` is used.
 
 #### [ @start_step_id = ] *step_id*
 
@@ -69,15 +69,15 @@ The identification number of the first step to execute for the job. *@start_step
 
 #### [ @category_name = ] '*category*'
 
-The category for the job. *@category_name* is **sysname**, with a default of NULL.
+The category for the job. *@category_name* is **sysname**, with a default of `NULL`.
 
 #### [ @category_id = ] *category_id*
 
-A language-independent mechanism for specifying a job category. *@category_id* is **int**, with a default of NULL.
+A language-independent mechanism for specifying a job category. *@category_id* is **int**, with a default of `NULL`.
 
 #### [ @owner_login_name = ] '*login*'
 
-The name of the login that owns the job. *@owner_login_name* is **sysname**, with a default of NULL, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
+The name of the login that owns the job. *@owner_login_name* is **sysname**, with a default of `NULL`, which is interpreted as the current login name. Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
 
 #### [ @notify_level_eventlog = ] *eventlog_level*
 
@@ -104,15 +104,15 @@ A value that indicates when to send a page upon the completion of this job. *@no
 
 #### [ @notify_email_operator_name = ] '*email_name*'
 
-The e-mail name of the person to send e-mail to when *@notify_email_operator_name* is reached. *@notify_email_operator_name* is **sysname**, with a default of NULL.
+The e-mail name of the person to send e-mail to when *@notify_email_operator_name* is reached. *@notify_email_operator_name* is **sysname**, with a default of `NULL`.
 
 #### [ @notify_netsend_operator_name = ] '*netsend_name*'
 
-The name of the operator to whom the network message is sent upon completion of this job. *@notify_netsend_operator_name* is **sysname**, with a default of NULL.
+The name of the operator to whom the network message is sent upon completion of this job. *@notify_netsend_operator_name* is **sysname**, with a default of `NULL`.
 
 #### [ @notify_page_operator_name = ] '*page_name*'
 
-The name of the person to page upon completion of this job. *@notify_page_operator_name* is **sysname**, with a default of NULL.
+The name of the person to page upon completion of this job. *@notify_page_operator_name* is **sysname**, with a default of `NULL`.
 
 #### [ @delete_level = ] *delete_level*
 
@@ -123,13 +123,13 @@ A value that indicates when to delete the job. *delete_value* is **int**, with a
 
 #### [ @job_id = ] *job_id* OUTPUT
 
-The job identification number assigned to the job if created successfully. *@job_id* is an output variable of type **uniqueidentifier**, with a default of NULL.
+The job identification number assigned to the job if created successfully. *@job_id* is an output variable of type **uniqueidentifier**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -153,7 +153,7 @@ Other users must be granted one of the following [!INCLUDE [ssNoVersion](../../i
 - **SQLAgentReaderRole**
 - **SQLAgentOperatorRole**
 
-For information about the specific permissions that are associated with each of these fixed database roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
+For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).
 
 Only members of the **sysadmin** fixed server role can set or change the value for *@owner_login_name*. If users who aren't members of the **sysadmin** role set or change the value of *@owner_login_name*, execution of this stored procedure fails and an error is returned.
 

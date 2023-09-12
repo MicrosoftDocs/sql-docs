@@ -47,15 +47,15 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 
 #### [ @account_id = ] *account_id*
 
-The account ID to update. *@account_id* is **int**, with a default of NULL. At least one of *@account_id* or *@account_name* must be specified. If both are specified, the procedure changes the name of the account.
+The account ID to update. *@account_id* is **int**, with a default of `NULL`. At least one of *@account_id* or *@account_name* must be specified. If both are specified, the procedure changes the name of the account.
 
 #### [ @account_name = ] '*account_name*'
 
-The name of the account to update. *@account_name* is **sysname**, with a default of NULL. At least one of *@account_id* or *@account_name* must be specified. If both are specified, the procedure changes the name of the account.
+The name of the account to update. *@account_name* is **sysname**, with a default of `NULL`. At least one of *@account_id* or *@account_name* must be specified. If both are specified, the procedure changes the name of the account.
 
 #### [ @email_address = ] '*email_address*'
 
-The new e-mail address to send the message from. This address must be an internet e-mail address. The server name in the address is the server that Database Mail uses to send mail from this account. *@email_address* is **nvarchar(128)**, with a default of NULL.
+The new e-mail address to send the message from. This address must be an internet e-mail address. The server name in the address is the server that Database Mail uses to send mail from this account. *@email_address* is **nvarchar(128)**, with a default of `NULL`.
 
 #### [ @display_name = ] '*display_name*'
 
@@ -67,7 +67,7 @@ The new address to use in the Reply-To header of e-mail messages from this accou
 
 #### [ @description = ] '*description*'
 
-The new description for the account. *@description* is **nvarchar(256)**, with a default of NULL.
+The new description for the account. *@description* is **nvarchar(256)**, with a default of `NULL`.
 
 #### [ @mailserver_name = ] '*server_name*'
 
@@ -162,6 +162,6 @@ EXEC msdb.dbo.sysmail_update_account_sp
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

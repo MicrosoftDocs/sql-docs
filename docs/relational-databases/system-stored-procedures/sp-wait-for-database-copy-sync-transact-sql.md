@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "sp_wait_for_database_copy_sync"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_wait_for_database_copy_sync (Active geo-replication)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE [Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
+This procedure is scoped to an [!INCLUDE [ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the `sys.sp_wait_for_database_copy_sync` causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run `sys.sp_wait_for_database_copy_sync` on only the primary database.
 
 ## Syntax
 
@@ -32,11 +32,11 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 
 ## Arguments
 
-#### [ @target_server = ] 'server_name'
+#### [ @target_server = ] '*server_name*'
 
 The name of the Azure SQL Database server that hosts the active secondary database. *server_name* is **sysname**, with no default.
 
-#### [ @target_database = ] 'database_name'
+#### [ @target_database = ] '*database_name*'
 
 The name of the active secondary database. *database_name* is **sysname**, with no default.
 
@@ -48,7 +48,7 @@ The most likely error conditions are as follows:
 
 - The server name or database name is missing.
 
-- The link cannot be found to the specified server name or database.
+- The link can't be found to the specified server name or database.
 
 - Interlink connectivity has been lost, and `sys.sp_wait_for_database_copy_sync` will return after the connection timeout.
 
@@ -73,6 +73,6 @@ GO
 
 ## See also
 
-- [sys.dm_continuous_copy_status (Azure SQL Database)](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
-- [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
+- [sys.dm_continuous_copy_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)
+- [Geo-Replication Dynamic Management Views (DMVs) and Functions (Azure SQL Database)](../system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 - [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)

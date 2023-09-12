@@ -48,7 +48,7 @@ DROP DATABASE ENCRYPTION KEY
  The following example removes the database encryption and drops the database encryption key.  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET ENCRYPTION OFF;  
 GO  
 /* Wait for decryption operation to complete, look for a   
@@ -56,7 +56,7 @@ value of  1 in the query below. */
 SELECT encryption_state  
 FROM sys.dm_database_encryption_keys;  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DROP DATABASE ENCRYPTION KEY;  
 GO  

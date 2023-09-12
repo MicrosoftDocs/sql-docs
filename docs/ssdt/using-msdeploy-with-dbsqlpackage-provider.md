@@ -19,7 +19,7 @@ ms.topic: conceptual
   
 -   **DeployReport**: Creates an XML report of the changes that would be made by a publish action.  
   
--   **Script**: Creates a Transact\-SQL script equivalent to the script executed by the Publish Action.  
+-   **Script**: Creates a Transact-SQL script equivalent to the script executed by the Publish Action.  
   
 For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) or [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx command-line tool).  
   

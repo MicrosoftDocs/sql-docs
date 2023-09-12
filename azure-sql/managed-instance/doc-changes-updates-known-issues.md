@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/14/2023
+ms.date: 08/09/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -41,14 +41,13 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [SQL Agent jobs can be interrupted by Agent process restart](#sql-agent-jobs-can-be-interrupted-by-agent-process-restart) | Dec 2019 | Resolved | Mar 2020 |
 | [Azure AD logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | Nov 2019 | No Workaround | |
 | [In-memory OLTP memory limits aren't applied](#in-memory-oltp-memory-limits-arent-applied) | Oct 2019 | Has Workaround | |
-| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Has Workaround | |
+| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Resolved | August 2020 |
 | [Change service tier and create instance operations are blocked by ongoing database restore](#change-service-tier-and-create-instance-operations-are-blocked-by-ongoing-database-restore) | Sep 2019 | Has Workaround | |
 | [Resource Governor on Business Critical service tier might need to be reconfigured after failover](#resource-governor-on-business-critical-service-tier-might-need-to-be-reconfigured-after-failover) | Sep 2019 | Has Workaround | |
 | [Cross-database Service Broker dialogs must be reinitialized after service tier upgrade](#cross-database-service-broker-dialogs-must-be-reinitialized-after-service-tier-upgrade) | Aug 2019 | Has Workaround | |
 | [Impersonation of Azure AD login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | Jul 2019 | No Workaround | |
 | [@query parameter not supported in sp_send_db_mail](#query-parameter-not-supported-in-sp_send_db_mail) | Apr 2019 | Resolved | Jan 2021 |
 | [Transactional replication must be reconfigured after geo-failover](#transactional-replication-must-be-reconfigured-after-geo-failover) | Mar 2019 | No Workaround | |
-| [Temporary database is used during RESTORE operation](#temporary-database-is-used-during-restore-operation) | | Has Workaround | |
 | [tempdb structure and content is re-created](#tempdb-structure-and-content-is-re-created) | | No Workaround | |
 | [Exceeding storage space with small database files](#exceeding-storage-space-with-small-database-files) | | Has Workaround | |
 | [GUID values shown instead of database names](#guid-values-shown-instead-of-database-names) | | Has Workaround | |
@@ -152,8 +151,6 @@ The Business Critical service tier doesn't correctly apply [max memory limits fo
 
 SQL Server and SQL Managed Instance [don't allow a user to drop a file that isn't empty](/sql/relational-databases/databases/delete-data-or-log-files-from-a-database#Prerequisites). If you try to remove a nonempty data file using an `ALTER DATABASE REMOVE FILE` statement, the error `Msg 5042 – The file '<file_name>' cannot be removed because it is not empty` isn't immediately returned. SQL Managed Instance will keep trying to drop the file, and the operation will fail after 30 minutes with `Internal server error`.
 
-**Workaround**: Remove the contents of the file using the `DBCC SHRINKFILE (N'<file_name>', EMPTYFILE)` command. If this is the only file in the file group you would need to delete data from the table or partition associated to this file group before you shrink the file, and optionally load this data into another table/partition.
-
 ### Change service tier and create instance operations are blocked by ongoing database restore
 
 An ongoing `RESTORE` statement, a Data Migration Service migration process, and built-in point-in-time restore, will block updating a service tier or resize of the existing instance and creating new instances until the restore process finishes.
@@ -173,16 +170,6 @@ The [Resource Governor](/sql/relational-databases/resource-governor/resource-gov
 Cross-database Service Broker dialogs will stop delivering the messages to the services in other databases after change service tier operation. The messages *aren't lost*, and they can be found in the sender queue. Any change of vCores or instance storage size in SQL Managed Instance causes a `service_broke_guid` value in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) view to be changed for all databases. Any `DIALOG` created using a [BEGIN DIALOG](/sql/t-sql/statements/begin-dialog-conversation-transact-sql) statement that references Service Brokers in other database stops delivering messages to the target service.
 
 **Workaround**: Stop any activity that uses cross-database Service Broker dialog conversations before updating a service tier, and reinitialize them afterward. If there are remaining messages that are undelivered after a service tier change, read the messages from the source queue and resend them to the target queue.
-
-### Temporary database is used during RESTORE operation
-
-When a database is restoring in SQL Managed Instance, the restore service first creates an empty database with the desired name to allocate the name on the instance. After some time, this database will be dropped, and restoring of the actual database will be started.
-
-The database that is in *Restoring* state temporarily has a random GUID value instead of name. The temporary name is changed to the desired name specified in the `RESTORE` statement once the restore process finishes.
-
-In the initial phase, a user can access the empty database and even create tables or load data in this database. This temporary database is dropped when the restore service starts the second phase.
-
-**Workaround**: Don't access the database that you're restoring until you see that restore is completed.
 
 ### Exceeding storage space with small database files
 

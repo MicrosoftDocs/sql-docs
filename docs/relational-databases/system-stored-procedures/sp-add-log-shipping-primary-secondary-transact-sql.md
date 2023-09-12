@@ -52,7 +52,7 @@ The name of the secondary database. *@secondary_database* is **sysname**, with n
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

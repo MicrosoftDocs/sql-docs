@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
+On [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] Basic, S0, and S1 service objectives, and for databases in elastic pools, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account or the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account is required. On all other [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] service objectives, the `VIEW DATABASE STATE` permission is required in the database.   
   
 ### Permissions for SQL Server 2022 and later
 
@@ -155,7 +155,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_SQLQUERYPLAN     |     This memory clerk is used for allocations by [Heap](../indexes/heaps-tables-without-clustered-indexes.md) page management, [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) allocations, and [sp_cursor* stored procedure](../system-stored-procedures/cursor-stored-procedures-transact-sql.md) allocations   |
 |MEMORYCLERK_SQLSERVICEBROKER     |   This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) memory allocations.       |
 |MEMORYCLERK_SQLSERVICEBROKERTRANSPORT     |     This memory clerk is used by [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md) transport memory allocations.    |
-|MEMORYCLERK_SQLSLO_OPERATIONS     |      This memory clerk is used to gather performance statistics <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   |
+|MEMORYCLERK_SQLSLO_OPERATIONS     |      This memory clerk is used to gather performance statistics <br /><br />**Applies to**:  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]   |
 |MEMORYCLERK_SQLSOAP     |     Deprecated    |
 |MEMORYCLERK_SQLSOAPSESSIONSTORE     |    Deprecated     |
 |MEMORYCLERK_SQLSTORENG     |   This memory clerk is used for allocations by multiple storage engine components. Examples of components include structures for database files, database snapshot replica file manager, deadlock monitor, DBTABLE structures, Log manager structures, some tempdb versioning structures, some server startup functionality, execution context for child threads in parallel queries.      |
@@ -169,7 +169,7 @@ The following table lists the memory clerk types:
 |MEMORYCLERK_WRITEPAGERECORDER     |    This memory clerk is used for allocations by Write Page Recorder.   |
 |MEMORYCLERK_XE     |    This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations      |
 |MEMORYCLERK_XE_BUFFER     |      This memory clerk is used for [Extended Events](../extended-events/extended-events.md) memory allocations   |
-|MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
+|MEMORYCLERK_XLOG_SERVER     |   This memory clerk is used for allocations by Xlog used for log file management in SQL Azure Database   <br /><br />**Applies to**:  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] |
 |MEMORYCLERK_XTP     |    This memory clerk is used for [In-Memory OLTP](../in-memory-oltp/overview-and-usage-scenarios.md) memory allocations.     |
 |OBJECTSTORE_LBSS     |    This object store is used to allocate temporary LOBs - variables, parameters, and intermediate results for expressions. An example that uses this store is [table-valued parameters](../../connect/ado-net/sql/table-valued-parameters.md) (TVP) . See the [KB article 4468102](https://support.microsoft.com/topic/kb4468102-fix-excessive-memory-usage-when-you-trace-rpc-events-that-involve-table-valued-parameters-in-sql-server-2016-and-2017-c68aa214-26f1-98de-6b4d-c7dcad82dbd4) and  [KB article 4051359](https://support.microsoft.com/topic/kb4051359-fix-sql-server-runs-out-of-memory-when-table-valued-parameters-are-captured-in-extended-events-sessions-in-sql-server-2016-even-if-collecting-statement-or-data-stream-isn-t-enabled-a3639efa-0618-82a8-f6b1-8cdcba29ce6d) for more information on fixes in this space.     |
 |OBJECTSTORE_LOCK_MANAGER     |      This memory clerk keeps track of allocations made by the [Lock Manager](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   |

@@ -47,7 +47,7 @@ The name of the external data source to get the metadata from. Type is `sysname`
 
 The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
 
-## Result sets
+## Result set
 
 The stored procedure returns the following information:
 
@@ -69,7 +69,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks
 
-The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
+The SQL Server instance must have the [PolyBase](../polybase/polybase-guide.md) feature installed.
 
 This stored procedure supports connectors for:
 
@@ -89,7 +89,7 @@ Due to differences between collations in Hadoop source data and supported collat
 
 Oracle synonyms aren't supported for usage with PolyBase.
 
-## Example
+## Examples
 
 The following example returns the table columns for an external table in a SQL Server named `server`, belonging to a schema named `schema`.
 

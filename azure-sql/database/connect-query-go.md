@@ -2,10 +2,10 @@
 title: Use Go to query
 titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Use Go to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and runs queries.
-author: dzsquared
-ms.author: drskwier
+author: dlevy-msft
+ms.author: dlevy
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/05/2022
+ms.date: 08/29/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -18,14 +18,14 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-In this quickstart, you'll use the Golang programming language to connect to a database in Azure SQL Database or Azure SQL Managed Instance with the [go-mssqldb]((https://github.com/microsoft/go-mssqldb). The sample queries and modifies data with explicit Transact-SQL statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.  
+In this quickstart, you'll use the Golang programming language to connect to an Azure SQL Database or a database in Azure SQL Managed Instance with the [go-mssqldb](https://github.com/microsoft/go-mssqldb) driver. The sample queries and modifies data with explicit Transact-SQL statements. [Golang](https://go.dev/) is an open-source programming language that makes it easy to build simple, reliable, and efficient software.  
 
 ## Prerequisites
 
 To complete this quickstart, you need:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio).
-- A database in Azure SQL Database or Azure SQL Managed Instance. You can use one of these quickstarts to create a database:
+- An Azure SQL Database or a database in Azure SQL Managed Instance. You can use one of these quickstarts to create a database:
 
   || SQL Database | SQL Managed Instance | SQL Server on Azure VM |
   |:--- |:--- |:---|:---|
@@ -34,11 +34,11 @@ To complete this quickstart, you need:
   | **Create** | [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
   | **Configure** | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
   | **Configure** ||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |**Load data**|Adventure Works loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
-  | **Load data** ||Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
+  |**Load data**|AdventureWorks loaded per quickstart|[Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) | [Restore WideWorldImporters](../managed-instance/restore-sample-database-quickstart.md) |
+  | **Load data** ||Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
 
   > [!IMPORTANT]
-  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > The scripts in this article are written to use the AdventureWorks database. With a SQL Managed Instance, you must either import the AdventureWorks database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
 - Golang and related software for your operating system installed:
 
@@ -46,6 +46,8 @@ To complete this quickstart, you need:
   - **Ubuntu**:  Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/ubuntu/).
   - **Windows**: Install Golang. See [Step 1.2](https://www.microsoft.com/sql-server/developer-get-started/go/windows/).
 
+- The [Azure PowerShell Az module](/powershell/azure/install-azure-powershell) for your operating system installed.
+  
 ## Get server connection information
 
 Get the connection information you need to connect to the database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
@@ -59,19 +61,12 @@ Get the connection information you need to connect to the database. You'll need 
 > [!NOTE]
 > For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
-## Create Golang project and dependencies
+## Create a new folder for the Golang project and dependencies
 
 1. From the terminal, create a new project folder called **SqlServerSample**. 
 
    ```bash
    mkdir SqlServerSample
-   ```
-
-2. Navigate to **SqlServerSample** and install the SQL Server driver for Go.
-
-   ```bash
-   cd SqlServerSample
-   go get github.com/microsoft/go-mssqldb
    ```
 
 ## Create sample data
@@ -99,23 +94,24 @@ Get the connection information you need to connect to the database. You'll need 
    GO
    ```
 
-2. Use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server, database, username, and password.
+2. At the command prompt, navigate to **SqlServerSample** and use `sqlcmd` to connect to the database and run your newly created Azure SQL script. Replace the appropriate values for your server and database.
 
    ```bash
-   sqlcmd -S <your_server>.database.windows.net -U <your_username> -P <your_password> -d <your_database> -i ./CreateTestData.sql
+   az login
+   sqlcmd -S <your_server>.database.windows.net -G -d <your_database> -i ./CreateTestData.sql
    ```
 
 ## Insert code to query the database
 
 1. Create a file named **sample.go** in the **SqlServerSample** folder.
 
-2. In the file, paste this code. Add the values for your server, database, username, and password. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
+2. In the file, paste this code. Add the values for your server and database. This example uses the Golang [context methods](https://go.dev/pkg/context/) to make sure there's an active connection.
 
    ```go
    package main
 
    import (
-       _ "github.com/microsoft/go-mssqldb"
+       "github.com/microsoft/go-mssqldb/azuread"
        "database/sql"
        "context"
        "log"
@@ -127,19 +123,16 @@ Get the connection information you need to connect to the database. You'll need 
 
    var server = "<your_server.database.windows.net>"
    var port = 1433
-   var user = "<your_username>"
-   var password = "<your_password>"
    var database = "<your_database>"
 
    func main() {
        // Build connection string
-       connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;",
-           server, user, password, port, database)
+       connString := fmt.Sprintf("server=%s;port=%d;database=%s;fedauth=ActiveDirectoryDefault;", server, port, database)
 
        var err error
 
        // Create connection pool
-       db, err = sql.Open("sqlserver", connString)
+           db, err = sql.Open(azuread.DriverName, connString)
        if err != nil {
            log.Fatal("Error creating connection pool: ", err.Error())
        }
@@ -306,15 +299,23 @@ Get the connection information you need to connect to the database. You'll need 
    }
    ```
 
-## Run the code
+## Get Golang project dependencies and run the code
 
-1. At the command prompt, run the following command.
+1. At the command prompt, navigate to **SqlServerSample** and install the SQL Server driver for Go by running the following commands.
 
    ```bash
+   go mod init SqlServerSample
+   go mod tidy
+   ```
+
+2. At the command prompt, run the following command.
+
+   ```bash
+   az login   
    go run sample.go
    ```
 
-2. Verify the output.
+3. Verify the output.
 
    ```text
    Connected!

@@ -23,7 +23,7 @@ This article compares a single-level FOR XML query to a nested FOR XML query. On
 The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. There is no nested FOR XML in the query.
 
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   ProductCategory.ProductCategoryID,   
          ProductCategory.Name as CategoryName,  

@@ -43,7 +43,7 @@ Integer mapping the locale identifier (LCID) of the language for which you want 
 
 #### [ @loadOnlyIfNotLoaded = ] *loadOnlyIfNotLoaded*
 
-Specifies whether the thesaurus file is loaded into the internal thesaurus tables even if it has already been loaded. *@loadOnlyIfNotLoaded* is **bit**, with a default of `0`, and the following possible values:
+Specifies whether the thesaurus file is loaded into the internal thesaurus tables even if it's already been loaded. *@loadOnlyIfNotLoaded* is **bit**, with a default of `0`, and the following possible values:
 
 | Value | Definition |
 | --- | --- |
@@ -52,9 +52,9 @@ Specifies whether the thesaurus file is loaded into the internal thesaurus table
 
 ## Return code values
 
-None
+None.
 
-## Result sets
+## Result set
 
 None.
 

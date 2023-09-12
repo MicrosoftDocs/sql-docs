@@ -52,7 +52,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
  This example shows you how to use the lower-case function to perform a case insensitive search.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 --WITH XMLNAMESPACES clause specifies the namespace prefix  
 --to use.   

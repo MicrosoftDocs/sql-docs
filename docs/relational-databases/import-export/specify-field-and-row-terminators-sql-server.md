@@ -159,7 +159,7 @@ When you specify `\n` as a row terminator for bulk import, or implicitly use the
 
 ### Examples
 
- The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:
+ The examples in this section bulk import character data form the `Department-c-t.txt` data file created in the preceding example into the `myDepartment` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. Before you can run the examples, you must create this table. To create this table under the **dbo** schema, in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:
 
 ```sql
 USE AdventureWorks;

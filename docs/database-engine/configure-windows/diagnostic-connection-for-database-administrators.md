@@ -105,7 +105,7 @@ sqlcmd -S 127.0.0.1,1434
 ```
 
 > [!TIP]  
-> When connecting to the [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] with the DAC, you must also specify the database name in the connection string by using the `-d` option.
+> When connecting to the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] with the DAC, you must also specify the database name in the connection string by using the `-d` option.
 
 ## Example
 

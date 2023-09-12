@@ -7,6 +7,7 @@ ms.reviewer: mathoma
 ms.date: 04/30/2023
 ms.service: virtual-machines-sql
 ms.subservice: security
+ms.custom: has-azure-ad-ps-ref
 ms.topic: how-to
 ---
 # Enable Azure AD authentication for SQL Server on Azure VMs
@@ -103,7 +104,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 1. Retrieve the managed identity: 
 
    ```powershell
-   $MI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
+   $MSI = Get-AzureADServicePrincipal -Filter "DisplayName eq '<your managed identity display name>'"
    ```
 
 1. Assign the `User.Read.All` role to the identity: 
@@ -125,7 +126,7 @@ You can use [Azure PowerShell](/powershell/azure/install-azure-powershell) to gr
 1. Assign `Application.Read.All` role to the identity: 
 
    ```powershell
-    $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
+   $AAD_AppRole = $AAD_SP.AppRoles | Where-Object {$_.Value -eq "Application.Read.All"}  
    New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId  -PrincipalId $MSI.ObjectId  
    -ResourceId $AAD_SP.ObjectId  -Id $AAD_AppRole.Id 
    ```
@@ -134,6 +135,7 @@ You can validate permissions were assigned to the managed identity by doing the 
 
 1. Go to **Azure Active Directory** in the [Azure portal](https://portal.azure.com). 
 1. Choose **Enterprise applications** and then select **All applications** under **Manage**. 
+1. Filter the **Application type** by `Managed identities`. 
 1. Select the managed identity and then choose **Permissions** under **Security**. You should see the following permissions: `User.Read.All`, `GroupMember.Read.All`, `Application.Read.All`. 
 
 ## Enable outbound communication

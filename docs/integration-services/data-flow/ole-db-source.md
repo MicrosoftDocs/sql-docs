@@ -63,7 +63,7 @@ helpviewer_keywords:
 ### Specifying Parameters by Using Ordinal Positions  
  If no parameter names are returned, the order in which the parameters are listed in the **Parameters** list in the **Set Query Parameter** dialog box governs which parameter marker they are mapped to at run time. The first parameter in the list maps to the first ? in the SQL statement, the second to the second ?, and so on.  
   
- The following SQL statement selects rows from the **Product** table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
+ The following SQL statement selects rows from the **Product** table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -74,7 +74,7 @@ helpviewer_keywords:
 ### Specifying Parameters by Using Names  
  If the actual parameter names are returned from the RDBMS, the parameters used by a SELECT and EXEC statement are mapped by name. The parameter names must match the names that the stored procedure, run by the SELECT statement or the EXEC statement, expects.  
   
- The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.  
+ The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   

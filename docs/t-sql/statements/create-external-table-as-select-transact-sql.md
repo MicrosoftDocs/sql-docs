@@ -4,7 +4,7 @@ description: "CREATE EXTERNAL TABLE AS SELECT (CETAS) creates an external table 
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, wiassaf, mlandzic, nzagorac
-ms.date: 05/18/2023
+ms.date: 07/26/2023
 ms.service: sql
 ms.topic: reference
 f1_keywords:
@@ -246,9 +246,45 @@ In [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INC
 
 To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
 
+## Working with parquet
+
+When working with parquet files, `CREATE EXTERNAL TABLE AS SELECT` will generate one parquet file per available CPU, up to the configured maximum degree of parallelism (MAXDOP). Each file can grow up to 190 GB, after that SQL Server will generate more Parquet files as needed.
+
+The query hint `OPTION (MAXDOP n)` will only affect the SELECT part of `CREATE EXTERNAL TABLE AS SELECT`, it has no influence on the amount of parquet files. Only database-level MAXDOP and instance-level MAXDOP is considered.
+
+
 ## Locking
 
 Takes a shared lock on the SCHEMARESOLUTION object.
+
+## Supported data types
+
+CETAS can be used to store result sets with the following SQL data types:
+
+- binary
+- varbinary
+- char
+- varchar
+- nchar
+- nvarchar
+- smalldate
+- date
+- datetime
+- datetime2
+- datetimeoffset
+- time
+- decimal
+- numeric
+- float
+- real
+- bigint
+- tinyint
+- smallint
+- int
+- bigint
+- bit
+- money
+- smallmoney
 
 ## Examples
 
@@ -341,7 +377,7 @@ GO
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
-The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of `AdventureWorks2019` database. The [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
+The following example creates a new external table named `ext_sales` that uses the data from the table `SalesOrderDetail` of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. The [allow polybase export configuration option](../../database-engine/configure-windows/allow-polybase-export.md) must be enabled.
 
 The result of the SELECT statement will be saved on S3-compatible object storage previously configured and named `s3_eds`, and proper credential created as `s3_dsc`. The parquet file location will be `<ip>:<port>/cetas/sales.parquet` where `cetas` is the previously created storage bucket.
 
@@ -375,7 +411,7 @@ CREATE EXTERNAL TABLE ext_sales
             ) AS
 
 SELECT *
-FROM AdventureWorks2019.[Sales].[SalesOrderDetail];
+FROM AdventureWorks2022.[Sales].[SalesOrderDetail];
 GO
 ```
 
@@ -623,7 +659,6 @@ CETAS stores result sets with following SQL data types:
 - bit
 - money
 - smallmoney
-- uniqueidentifier
 
 > [!NOTE]
 > LOBs larger than 1MB can't be used with CETAS.
@@ -1035,7 +1070,7 @@ GO
 
 ### C. Create an external table into a single parquet file on the storage
 
-The next two examples show how to offload some of the data from a local table into an external table stored as parquet file(s) on Azure Blob storage container. They're designed to work with `AdventureWorks2019` database. This example shows creating an external table as a single parquet file, where the next example shows how to create an external table and partition it into multiple folders with parquet files.
+The next two examples show how to offload some of the data from a local table into an external table stored as parquet file(s) on Azure Blob storage container. They're designed to work with [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This example shows creating an external table as a single parquet file, where the next example shows how to create an external table and partition it into multiple folders with parquet files.
 
 The example below works using Managed Identity for authentication. As such, make sure that your Azure SQL Managed Instance service principal has **Storage Blob Data Contributor** role on your Azure Blob Storage Container. Alternatively, you can modify the example and use Shared Access Secret (SAS) tokens for authentication.
 
@@ -1043,7 +1078,7 @@ The following sample, you create an external table into a single parquet file in
 
 ```sql
 --Example 1: Creating an external table into a single parquet file on the storage, selecting from SalesOrderHeader table for orders older than 1-Jan-2014:
-USE [AdventureWorks2019]
+USE [AdventureWorks2022]
 GO
 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
@@ -1067,7 +1102,7 @@ WITH(
 GO
 
 -- Count how many rows we plan to offload
-SELECT COUNT(*) FROM [AdventureWorks2019].[Sales].[SalesOrderHeader] WHERE
+SELECT COUNT(*) FROM [AdventureWorks2022].[Sales].[SalesOrderHeader] WHERE
         OrderDate < '2013-12-31';
 
 -- CETAS write to a single file, archive all data older than 1-Jan-2014:
@@ -1080,7 +1115,7 @@ AS
     SELECT 
         *
     FROM 
-        [AdventureWorks2019].[Sales].[SalesOrderHeader]
+        [AdventureWorks2022].[Sales].[SalesOrderHeader]
     WHERE
         OrderDate < '2013-12-31';
 
@@ -1112,7 +1147,7 @@ AS
         *,
         YEAR(OrderDate) AS [Year],
         MONTH(OrderDate) AS [Month]
-    FROM [AdventureWorks2019].[Sales].[SalesOrderHeader]
+    FROM [AdventureWorks2022].[Sales].[SalesOrderHeader]
     WHERE
         OrderDate < '2013-12-31';
 GO

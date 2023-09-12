@@ -5,7 +5,7 @@ description: Learn about Azure SQL Managed Instance communication and connectivi
 author: zoran-rilak-msft
 ms.author: zoranrilak
 ms.reviewer: mathoma, bonova
-ms.date: 03/15/2023
+ms.date: 08/02/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -98,7 +98,7 @@ Applications can connect to SQL Managed Instance via three types of endpoints. T
 
 - [VNet-local endpoint](#vnet-local-endpoint)
 - [Public endpoint](#public-endpoint)
-- [Private endpoints (preview)](#private-endpoint-preview)
+- [Private endpoints](#private-endpoints)
 
 :::image type="content" source="media/connectivity-architecture-overview/4-connectivity-architecture-endpoints.png" border="false" alt-text="Diagram that shows the scope of visibility for VNet-local, public, and private endpoints to an Azure SQL Managed Instance.":::
 
@@ -114,17 +114,17 @@ When connecting to the VNet-local endpoint, always use its domain name as the un
 
 The public endpoint is an optional domain name in the form of `<mi_name>.public.<dns_zone>.database.windows.net` that resolves to a public IP address reachable from the Internet. Public endpoint allows TDS traffic only to reach SQL Managed Instance on port 3342 and cannot be used for integration scenarios, such as failover groups, Managed Instance Link, and similar.
 
-When connecting to the VNet-local endpoint, always use its domain name as the underlying IP address may occasionally change.
+When connecting to the public endpoint, always use its domain name as the underlying IP address may occasionally change.
 
 Public endpoint always operates in [proxy connection type](connection-types-overview.md).
 
 Learn how to set up a public endpoint in [Configure public endpoint for Azure SQL Managed Instance](public-endpoint-configure.md).
 
-### Private endpoint (preview)
+### Private endpoints
 
-A private endpoint, currently in preview for Azure SQL Managed Instance, is an optional fixed IP address in another virtual network that conducts traffic to your SQL managed instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance link, and other similar technologies.
+A private endpoint is an optional fixed IP address in another virtual network that conducts traffic to your SQL managed instance. One Azure SQL Managed Instance can have multiple private endpoints in multiple virtual networks. Private endpoints allow TDS traffic only to reach SQL Managed Instance on port 1433 and cannot be used for integration scenarios, such as failover groups, Managed Instance link, and other similar technologies.
 
-When connecting to a private endpoint, always use the domain name since connecting to Azure SQL Managed Instance via its IP address is not supported.
+When connecting to a private endpoint, always use the domain name since connecting to Azure SQL Managed Instance via its IP address is not supported yet.
 
 Private endpoints always operate in [proxy connection type](connection-types-overview.md).
 
@@ -270,8 +270,10 @@ The routes that are described in the following table are necessary to ensure tha
 
 The following virtual network features are currently *not supported* with SQL Managed Instance:
 
+- **Database mail to external SMTP relays on port 25**: Sending [database mail](/sql/relational-databases/database-mail/configure-database-mail) via port 25 to external email services is only available to certain subscription types in Microsoft Azure. Instances on other subscription types should use a different port (for example, 587) to contact external SMTP relays. Otherwise, instances may fail to deliver database mail. For more information, see [Troubleshoot outbound SMTP connectivity problems in Azure](/azure/virtual-network/troubleshoot-outbound-smtp-connectivity).
 - **Microsoft peering**: Enabling [Microsoft peering](/azure/expressroute/expressroute-faqs#microsoft-peering) on ExpressRoute circuits that are peered directly or transitively with a virtual network in which SQL Managed Instance resides affects traffic flow between SQL Managed Instance components inside the virtual network and services it depends on. Availability issues result. SQL Managed Instance deployments to a virtual network that already has Microsoft peering enabled are expected to fail.
-- **Global virtual network peering**: [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) connectivity across Azure regions doesn't work for instances of SQL Managed Instance that are placed in subnets that were created before September 9, 2020.
+- **Virtual network peering – global**: [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) connectivity across Azure regions doesn't work for instances of SQL Managed Instance that are placed in subnets that were created before September 9, 2020.
+- **Virtual network peering – configuration**: When establishing virtual network peering between virtual networks that contain subnets with SQL Managed Instances, such subnets must  use different route tables and network security groups (NSG). Reusing the route table and NSG in two or more subnets participating in virtual network peering will cause connectivity issues in all subnets using those route table or NSG, and cause SQL Managed Instance's management operations to fail.
 - **AzurePlatformDNS**: Using the AzurePlatformDNS [service tag](/azure/virtual-network/service-tags-overview) to block platform DNS resolution would render SQL Managed Instance unavailable. Although SQL Managed Instance supports customer-defined DNS for DNS resolution inside the engine, there's a dependency on platform DNS for platform operations.
 - **NAT gateway**: Using [Azure Virtual Network NAT](/azure/virtual-network/nat-gateway/nat-overview) to control outbound connectivity with a specific public IP address renders SQL Managed Instance unavailable. The SQL Managed Instance service is currently limited to use the basic load balancer, which doesn't provide coexistence of inbound and outbound flows with Azure Virtual Network NAT.
 - **IPv6 for Azure Virtual Network**: Deploying SQL Managed Instance to [dual stack IPv4/IPv6 virtual networks](/azure/virtual-network/ip-services/ipv6-overview) is expected to fail. Associating a network security group or a route table with user-defined routes (UDRs) that contains IPv6 address prefixes to a SQL Managed Instance subnet renders SQL Managed Instance unavailable. Also, adding IPv6 address prefixes to a network security group or UDR that's already associated with a managed instance subnet renders SQL Managed Instance unavailable. SQL Managed Instance deployments to a subnet with a network security group and UDR that already have IPv6 prefixes are expected to fail.

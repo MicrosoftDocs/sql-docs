@@ -10,7 +10,7 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sys.sp_verify_database_ledger (Transact-SQL)
 
@@ -53,7 +53,7 @@ The name of the table that you want to verify.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 One row, with one column called `last_verified_block_id`.
 

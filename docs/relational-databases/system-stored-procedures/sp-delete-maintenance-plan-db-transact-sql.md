@@ -59,10 +59,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  Only members of the **sysadmin** fixed server role can execute **sp_delete_maintenance_plan_db**.  
   
 ## Examples  
- Deletes the maintenance plan in the **AdventureWorks2012** database, previously added by using **sp_add_maintenance_plan_db**.  
+ Deletes the maintenance plan in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, previously added by using **sp_add_maintenance_plan_db**.  
   
 ```  
-EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
+EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2022';  
 ```  
   
 ## See Also  

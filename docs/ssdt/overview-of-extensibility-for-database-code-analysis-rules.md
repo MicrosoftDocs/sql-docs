@@ -11,9 +11,9 @@ ms.topic: conceptual
 
 # Overview of Extensibility for Database Code Analysis Rules
 
-Visual Studio editions containing SQL Server Data Tools include code analysis rules to report on Transact\-SQL design, naming, and performance warnings in your database code. For more information, see [Analyzing Database Code to Improve Code Quality](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  
+Visual Studio editions containing SQL Server Data Tools include code analysis rules to report on Transact-SQL design, naming, and performance warnings in your database code. For more information, see [Analyzing Database Code to Improve Code Quality](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  
   
-If the built-in code analysis rules do not include coverage for a specific Transact\-SQL issue that you want included you can create custom database code analysis rules. For example, you might want to create a custom rule that avoids using the WAITFOR DELAY statement, as demonstrated in [Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). To create custom database code analysis rules, you use the classes in the [CodeAnalysis](/dotnet/api/microsoft.sqlserver.dac.codeanalysis) namespace.  
+If the built-in code analysis rules do not include coverage for a specific Transact-SQL issue that you want included you can create custom database code analysis rules. For example, you might want to create a custom rule that avoids using the WAITFOR DELAY statement, as demonstrated in [Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). To create custom database code analysis rules, you use the classes in the [CodeAnalysis](/dotnet/api/microsoft.sqlserver.dac.codeanalysis) namespace.  
   
 Before you create custom code analysis rules, you should understand the basic architecture among the various components of database code analysis rules.  
   

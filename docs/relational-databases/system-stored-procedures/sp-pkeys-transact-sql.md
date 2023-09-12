@@ -68,10 +68,10 @@ sp_pkeys [ @table_name = ] 'name'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example retrieves the primary key for the `HumanResources.Department` table in the `AdventureWorks2012` database.  
+ The following example retrieves the primary key for the `HumanResources.Department` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
     ,@table_owner = N'HumanResources';  
@@ -81,7 +81,7 @@ EXEC sp_pkeys @table_name = N'Department'
  The following example retrieves the primary key for the `DimAccount` table in the `AdventureWorksPDW2012` database. It returns zero rows indicating that the table does not have a primary key.  
   
 ```sql  
--- Uses AdventureWorks  
+-- Uses AdventureWorksPDW
   
 EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  

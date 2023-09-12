@@ -198,7 +198,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Use one of the following commands to configure the repository of your choice.

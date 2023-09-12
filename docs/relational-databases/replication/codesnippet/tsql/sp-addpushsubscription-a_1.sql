@@ -9,10 +9,10 @@ DECLARE @subscriber AS sysname;
 DECLARE @subscriptionDB AS sysname;
 SET @publication = N'AdvWorksProductTran';
 SET @subscriber = $(SubServer);
-SET @subscriptionDB = N'AdventureWorks2012Replica';
+SET @subscriptionDB = N'AdventureWorks2022Replica';
 
 --Add a push subscription to a transactional publication.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_addsubscription 
   @publication = @publication, 
   @subscriber = @subscriber, 

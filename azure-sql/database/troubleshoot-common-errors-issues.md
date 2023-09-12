@@ -379,13 +379,8 @@ To resolve this issue, try the following methods:
 - The issue can occur because of insert, update, or delete operations.
 Try to reduce the number of rows that are operated on immediately by implementing batching or splitting into multiple smaller transactions.
 - The issue can occur because of index rebuild operations. To work around this issue, make sure the number of rows that are affected in the table * (average size of field that's updated in bytes + 80) < 2 gigabytes (GB).
-
-  > [!NOTE]
-  > For an index rebuild, the average size of the field that's updated should be substituted by the average index size.
-
-  > [!NOTE]
-  > For more information on troubleshooting a full transaction log in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md).
-
+- For an index rebuild, the average size of the field that's updated should be substituted by the average index size.
+- For more information, see [Troubleshooting a full transaction log in Azure SQL Database](troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true) and [Troubleshooting a full transaction log in Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true).
 
 ### Error 40553: The session has been terminated because of excessive memory usage
 
@@ -536,6 +531,7 @@ Learn more about related topics in the following articles:
 
 - [Azure SQL Database connectivity architecture](./connectivity-architecture.md)
 - [Azure SQL Database and Azure Synapse Analytics network access controls](./network-access-controls-overview.md)
-- [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md)
+- [Troubleshooting a full transaction log in Azure SQL Database](troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true)
+- [Troubleshooting a full transaction log in Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true)
 - [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](troubleshoot-common-connectivity-issues.md)
 - [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)

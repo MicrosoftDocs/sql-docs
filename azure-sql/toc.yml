@@ -653,6 +653,8 @@
         href: database/migrate-dtu-to-vcore.md
       - name: Manage SQL Database after migration
         href: database/manage-data-after-migrating-to-database.md
+      - name: Migrate to availability zone
+        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Migrate to passwordless
         items: 
         - name: Migrate a .NET application
@@ -1172,7 +1174,8 @@
         href: managed-instance/management-operations-cancel.md
       - name: API reference
         href: managed-instance/api-references-create-manage-instance.md
-
+      - name: Use Resource Health for connectivity issues
+        href: managed-instance/resource-health-to-troubleshoot-connectivity.md
     - name: Machine Learning Services
       items:
       - name: Overview
@@ -1389,19 +1392,29 @@
     items:
     - name: How-to documentation
       href: managed-instance/how-to-content-reference-guide.md      
-    - name: Start & stop instance
-      href: managed-instance/instance-stop-start-how-to.md
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
-    - name: Copy or move a database
-      href: managed-instance/database-copy-move-how-to.md
-    - name: Job automation with SQL Agent 
-      href: managed-instance/job-automation-managed-instance.md
     - name: Distributed transactions with DTC
       displayName: distributed transaction coordinator 
       href: managed-instance/distributed-transaction-coordinator-dtc.md
     - name: Enroll in November 2022 feature wave
       href: managed-instance/november-2022-feature-wave-enroll.md
+
+    - name: Automation
+      items:
+      - name: Azure Automation
+        href: managed-instance/automation-manage.md
+      - name: Job automation with SQL Agent 
+        href: managed-instance/job-automation-managed-instance.md
+
+    - name: Manage
+      items:
+      - name: Start & stop instance
+        href: managed-instance/instance-stop-start-how-to.md
+      - name: Copy or move a database
+        href: managed-instance/database-copy-move-how-to.md
+      - name: Manage file space
+        href: managed-instance/file-space-manage.md
 
     - name: Monitor & Tune
       items:
@@ -1624,6 +1637,8 @@
           href: virtual-machines/windows/storage-configuration.md
         - name: Azure AD authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
+        - name: Azure Update Manager
+          href: virtual-machines/azure-update-manager-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment
@@ -1941,8 +1956,10 @@
       href: database/troubleshoot-memory-errors-issues.md
     - name: Import/Export service hangs
       href: database/database-import-export-hang.md
-    - name: Transaction log errors
+    - name: Transaction log errors in Azure SQL Database
       href: database/troubleshoot-transaction-log-errors-issues.md
+    - name: Transaction log errors in Azure SQL Managed Instance
+      href: managed-instance/troubleshoot-transaction-log-errors-issues.md
     - name: Request quota increases
       href: database/quota-increase-request.md
   - name: Service updates

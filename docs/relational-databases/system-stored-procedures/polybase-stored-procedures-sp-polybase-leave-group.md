@@ -22,7 +22,7 @@ dev_langs:
 
 Removes a SQL Server instance from a PolyBase group for scale-out computation.
 
-The SQL Server instance must have the [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_join_group](polybase-stored-procedures-sp-polybase-join-group.md).
+The SQL Server instance must have the [PolyBase Guide](../polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure Blob Storage. See also [sp_polybase_join_group](polybase-stored-procedures-sp-polybase-join-group.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -50,7 +50,7 @@ After running the stored procedure, restart the PolyBase engine and PolyBase Dat
 EXEC sys.dm_exec_compute_nodes;
 ```
 
-## Example
+## Examples
 
 The example removes the current machine from a PolyBase group.
 

@@ -58,7 +58,7 @@ Number of seconds between log scan cycles. *@pollinginterval* is **bigint** with
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

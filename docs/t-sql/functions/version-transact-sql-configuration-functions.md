@@ -27,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 > [!IMPORTANT]  
-> The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] bits. For example, version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 16 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] bits. For example, version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 16 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Syntax  
   
@@ -57,7 +57,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Operating system version  
   
- For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsmifull-md.md)], the following information is returned.  
+ For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)], the following information is returned.  
   
 -   Edition- "Microsoft SQL Azure"  
   

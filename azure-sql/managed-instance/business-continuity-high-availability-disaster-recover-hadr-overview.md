@@ -21,8 +21,8 @@ monikerRange: "= azuresql || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md)
-> * [Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md)
+> * [Azure SQL Database](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 
 
 **Business continuity** in Azure SQL Managed Instance refers to the mechanisms, policies, and procedures that enable your business to continue operating in the face of disruption, particularly to its computing infrastructure. In most cases, SQL Managed Instance handles the disruptive events that might happen in the cloud environment and keep your applications and business processes running. However, there are some disruptive events that can't be handled by SQL Managed Instance automatically, such as:

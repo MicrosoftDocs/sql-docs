@@ -320,11 +320,6 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 
 ---
 
-## Limitations
-
-- When restoring from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created.
-- You need to specify the target service level objective, when restoring from an LTR backup, which was created when the database was in an elastic pool. 
-
 ## Best practices
 
 If you use LTR backups to meet compliance or other mission-critical requirements:

@@ -196,7 +196,7 @@ For nonunique service principals, it's important to verify the Azure AD alias is
 
 ### Finding the right Object ID
 
-For information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object). You can locate the Object ID of the service principal listed next to the application name in the Azure portal.
+For information on obtaining the Object ID of a service principal, see [Service principal object](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object). You can locate the Object ID of the service principal listed next to the application name in the Azure portal under **Enterprise applications**.
 
 ## Roles for Azure AD principals
 

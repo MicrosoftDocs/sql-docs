@@ -120,8 +120,8 @@ Determines the default authentication type to use when connecting to Azure resou
 The **Sql: Default Authentication Type** setting (`sql.defaultAuthenticationType` entry in `settings.json`) can have the values:
 
 - `SqlLogin` Uses SQL authentication.
-- `AzureMFA` Uses Azure Active Directory - Universal with MFA Support authentication.
-- `AzureMFAandUser` Uses Azure Active Directory - Password authentication.
+- `AzureMFA` Uses Microsoft Entra ID - Universal with MFA Support authentication.
+- `AzureMFAandUser` Uses Microsoft Entra ID - Password authentication.
 - `Integrated` Uses Windows authentication.
 
 ## Window: Restore Windows

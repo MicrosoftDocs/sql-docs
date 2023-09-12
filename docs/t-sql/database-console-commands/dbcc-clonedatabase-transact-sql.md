@@ -164,6 +164,7 @@ Only the following objects can be cloned in the destination database. Encrypted 
 - COLUMNSTORE INDEX
 - CDB
 - CDC
+- Change Tracking <sup>6, 7, 8</sup>
 - CLR <sup>1, 2</sup>
 - DATABASE PROPERTIES
 - DEFAULT
@@ -204,6 +205,12 @@ Only the following objects can be cloned in the destination database. Encrypted 
 
 <sup>5</sup> Query Store data is copied only if it is enabled on the source database. To copy the latest runtime statistics as part of the Query Store, execute `sp_query_store_flush_db` to flush the runtime statistics to the Query Store before executing `DBCC CLONEDATABASE`.
 
+<sup>6</sup> Starting in [!INCLUDE[ssSQL16-md](../../includes/sssql16-md.md)] Service Pack 2 CU 10.
+
+<sup>7</sup> Starting in [!INCLUDE[ssSQL17-md](../../includes/sssql17-md.md)] Service Pack 2 CU 17.
+
+<sup>8</sup> Starting in [!INCLUDE[ssSQL19-md](../../includes/sssql19-md.md)] CU 1 and later versions.
+
 ## Permissions
 
 Requires membership in the **sysadmin** fixed server role.
@@ -227,6 +234,13 @@ The following messages are an example of the messages logged in the error log du
 
 2018-03-26 15:33:57.92 spid53 Database cloning for 'sourcedb' has finished. Cloned database is 'sourcedb_clone'.
 ```
+
+## About service packs for SQL Server
+
+Service packs are cumulative. Each new service pack contains all the fixes that are in previous service packs, together with any new fixes. Our recommendation is to apply the latest service pack and the latest cumulative update for that service pack. You don't have to install a previous service pack before you install the latest service pack. See **Table 1** in [Latest updates and version history for SQL Server](/troubleshoot/sql/releases/download-and-install-latest-updates) for finding more information about the latest service pack and latest cumulative update.
+
+> [!NOTE]
+> The newly generated database generated from DBCC CLONEDATABASE isn't supported to be used as a production database and is primarily intended for troubleshooting and diagnostic purposes. We recommend detaching the cloned database after the database is created.
 
 ## Database properties
 

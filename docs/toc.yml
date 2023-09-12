@@ -8415,6 +8415,8 @@ items:
       href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
     - name: Edit SQLCMD scripts with Query Editor
       href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
+    - name: Create new local database in a container with sqlcmd
+      href: tools/sqlcmd/quickstart-sqlcmd-create-container.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:

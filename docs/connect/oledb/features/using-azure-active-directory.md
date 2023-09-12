@@ -1,6 +1,6 @@
 ---
-title: Using Microsoft Entra ID
-description: Learn about the Microsoft Entra authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
+title: Using Azure Active Directory
+description: Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases.
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
@@ -9,7 +9,7 @@ ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
 ---
-# Using Microsoft Entra ID
+# Using Azure Active Directory
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
@@ -19,39 +19,39 @@ ms.topic: conceptual
 
 Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
 
-- Microsoft Entra login ID and password
-- Microsoft Entra ID access token
-- Microsoft Entra integrated authentication
+- Azure Active Directory login ID and password
+- Azure Active Directory access token
+- Azure Active Directory integrated authentication
 - SQL login ID and password
 
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
 
-- Microsoft Entra interactive authentication
-- Microsoft Entra managed identity authentication (only from within an [Azure Virtual Machine configured for Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
+- Azure Active Directory interactive authentication
+- Azure Active Directory Managed Identity authentication (only from within an [Azure Virtual Machine configured for Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
 
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 
-- Microsoft Entra service principal authentication
+- Azure Active Directory service principal authentication
 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
 >
-> - Microsoft Entra authentication using login ID and password
-> - Microsoft Entra authentication using access token
-> - Microsoft Entra integrated authentication
-> - Microsoft Entra interactive authentication
-> - Microsoft Entra managed identities authentication
-> - Microsoft Entra service principal authentication
+> - Azure Active Directory authentication using login ID and password
+> - Azure Active Directory authentication using access token
+> - Azure Active Directory integrated authentication
+> - Azure Active Directory interactive authentication
+> - Azure Active Directory managed identities authentication
+> - Azure Active Directory service principal authentication
 
-To use Microsoft Entra authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+To use Azure Active Directory authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Azure AD authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 ## Connection string keywords and properties
 
-The following connection string keywords have been introduced to support Microsoft Entra authentication:
+The following connection string keywords have been introduced to support Azure Active Directory authentication:
 
 |Connection string keyword|Connection property|Description|
 |---               |---                |---        |
-|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Microsoft Entra ID. |
+|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Specifies an access token to authenticate to Azure Active Directory. |
 |Authentication|SSPROP_AUTH_MODE|Specifies authentication method to use.|
 
 For more information about the new keywords/properties, see the following pages:
@@ -65,7 +65,7 @@ See [Encryption and certificate validation](encryption-and-certificate-validatio
 
 ## GUI additions
 
-The driver graphical user interface has been enhanced to allow Microsoft Entra authentication. For more information, see:
+The driver graphical user interface has been enhanced to allow Azure Active Directory authentication. For more information, see:
 
 - [SQL Server Login Dialog](../help-topics/sql-server-login-dialog.md)
 - [Universal Data Link (UDL) Configuration](../help-topics/data-link-pages.md)
@@ -99,45 +99,35 @@ This section shows examples of new and existing connection string keywords to be
     - Deprecated:
         > Server=[server];Database=[database];**Trusted_Connection=yes**;Encrypt=Mandatory
 
-<a name='azure-active-directory-username-and-password-authentication'></a>
-
-### Microsoft Entra username and password authentication
+### Azure Active Directory username and password authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryPassword**;User ID=[username];Password=[password];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryPassword**;UID=[username];PWD=[password];Encrypt=Mandatory
 
-<a name='azure-active-directory-integrated-authentication'></a>
-
-### Microsoft Entra integrated authentication
+### Azure Active Directory integrated authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryIntegrated**;Encrypt=Mandatory
 
-<a name='azure-active-directory-authentication-using-an-access-token'></a>
-
-### Microsoft Entra authentication using an access token
+### Azure Active Directory authentication using an access token
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Access Token=[access token]**;Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Providing access token through `DBPROP_INIT_PROVIDERSTRING` isn't supported
 
-<a name='azure-active-directory-interactive-authentication'></a>
-
-### Microsoft Entra interactive authentication
+### Azure Active Directory interactive authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryInteractive**;User ID=[username];Use Encryption for Data=Mandatory
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=Mandatory
 
-<a name='azure-active-directory-managed-identity-authentication'></a>
-
-### Microsoft Entra managed identity authentication
+### Azure Active Directory Managed Identity authentication
 
 - Using `IDataInitialize::GetDataSource`:
     - User-assigned managed identity:
@@ -150,9 +140,7 @@ This section shows examples of new and existing connection string keywords to be
     - System-assigned managed identity:
         > Server=[server];Database=[database];**Authentication=ActiveDirectoryMSI**;Encrypt=Mandatory
 
-<a name='azure-active-directory-service-principal-authentication'></a>
-
-### Microsoft Entra service principal authentication
+### Azure Active Directory service principal authentication
 
 - Using `IDataInitialize::GetDataSource`:
     > Provider=MSOLEDBSQL19;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=Mandatory
@@ -161,7 +149,7 @@ This section shows examples of new and existing connection string keywords to be
 
 ## Code samples
 
-The following samples show the code required to connect to Microsoft Entra ID with connection keywords. 
+The following samples show the code required to connect to Azure Active Directory with connection keywords. 
 
 ### Access Token
 ```cpp
@@ -275,8 +263,8 @@ Cleanup:
 ```
 
 ## Next steps
-- [Authorize access to Microsoft Entra web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
+- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
 
-- Learn about [Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.
+- Learn about [Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.
 
 - Configure driver connections using [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.

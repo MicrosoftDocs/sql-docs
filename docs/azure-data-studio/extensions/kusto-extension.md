@@ -63,7 +63,7 @@ To set up an Azure Data Explorer cluster to connect to, follow the steps below.
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Kusto*.
     2. For **Cluster**, enter in your Azure Data Explorer cluster address (for example, `https://mydataexplorercluster.kusto.windows.net`).
-    3. For **Authentication Type**, use the default - *Microsoft Entra ID - Universal with MFA account*.
+    3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
     5. For **Database**, use *Default*. If your account does not have access to the *Default* database, you can use any database that you have access to.
     6. For **Server Group**, use *Default*.

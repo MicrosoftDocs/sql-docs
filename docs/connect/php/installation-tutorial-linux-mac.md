@@ -31,7 +31,7 @@ Please refer to [Support Matrix](microsoft-php-drivers-for-sql-server-support-ma
 > [!NOTE]
 > To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
 
-### Step 1. Install PHP (Ubuntu)
+### Step 1: Install PHP (Ubuntu)
 
 ```bash
 sudo su
@@ -40,7 +40,7 @@ apt-get update
 apt-get install php8.1 php8.1-dev php8.1-xml -y --allow-unauthenticated
 ```
 
-### Step 2. Install prerequisites (Ubuntu)
+### Step 2: Install prerequisites (Ubuntu)
 
 Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
@@ -48,7 +48,7 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Install
 sudo apt-get install unixodbc-dev
 ```
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Ubuntu)
 
 ```bash
 sudo pecl install sqlsrv
@@ -62,7 +62,7 @@ sudo phpenmod -v 8.1 sqlsrv pdo_sqlsrv
 
 If there is only one PHP version in the system, then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`.
 
-### Step 4. Install Apache and configure driver loading (Ubuntu)
+### Step 4: Install Apache and configure driver loading (Ubuntu)
 
 ```bash
 sudo su
@@ -73,7 +73,7 @@ a2enmod php8.1
 exit
 ```
 
-### Step 5. Restart Apache and test the sample script (Ubuntu)
+### Step 5: Restart Apache and test the sample script (Ubuntu)
 
 ```bash
 sudo service apache2 restart
@@ -87,7 +87,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > [!NOTE]
 > To install PHP 8.0 or 8.2, replace 8.1 with 8.0 or 8.2 in the following commands.
 
-### Step 1. Install PHP (Ubuntu with PHP-FPM)
+### Step 1: Install PHP (Ubuntu with PHP-FPM)
 
 ```bash
 sudo su
@@ -102,11 +102,11 @@ Verify the status of the PHP-FPM service by running:
 systemctl status php8.1-fpm
 ```
 
-### Step 2. Install prerequisites (Ubuntu with PHP-FPM)
+### Step 2: Install prerequisites (Ubuntu with PHP-FPM)
 
 Install the ODBC driver for Ubuntu by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Ubuntu with PHP-FPM)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Ubuntu with PHP-FPM)
 
 ```bash
 sudo pecl config-set php_ini /etc/php/8.1/fpm/php.ini
@@ -133,7 +133,7 @@ Restart the PHP-FPM service:
 sudo systemctl restart php8.1-fpm
 ```
 
-### Step 4. Install and configure nginx (Ubuntu with PHP-FPM)
+### Step 4: Install and configure nginx (Ubuntu with PHP-FPM)
 
 ```bash
 sudo apt-get update
@@ -159,7 +159,7 @@ location ~ \.php$ {
 }
 ```
 
-### Step 5. Restart nginx and test the sample script (Ubuntu with PHP-FPM)
+### Step 5: Restart nginx and test the sample script (Ubuntu with PHP-FPM)
 
 ```bash
 sudo systemctl restart nginx.service
@@ -170,7 +170,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Installing on Red Hat
 
 
-### Step 1. Install PHP (Red Hat)
+### Step 1: Install PHP (Red Hat)
 
 To install PHP on Red Hat 7, run the following commands:
 > [!NOTE]
@@ -205,11 +205,11 @@ dnf update
 dnf install php-pdo php-pear php-devel
 ```
 
-### Step 2. Install prerequisites (Red Hat)
+### Step 2: Install prerequisites (Red Hat)
 
 Install the ODBC driver for Red Hat 7 or 8 by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Red Hat)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Red Hat)
 
 ```bash
 sudo pecl install sqlsrv
@@ -226,7 +226,7 @@ You can alternatively install from the Remi repo:
 sudo yum install php-sqlsrv
 ```
 
-### Step 4. Install Apache (Red Hat)
+### Step 4: Install Apache (Red Hat)
 
 ```bash
 sudo yum install httpd
@@ -238,7 +238,7 @@ SELinux is installed by default and runs in Enforcing mode. To allow Apache to c
 sudo setsebool -P httpd_can_network_connect_db 1
 ```
 
-### Step 5. Restart Apache and test the sample script (Red Hat)
+### Step 5: Restart Apache and test the sample script (Red Hat)
 
 ```bash
 sudo apachectl restart
@@ -252,7 +252,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > [!NOTE]
 > To install PHP 8.0 or 8.2, replace 8.1 in the following commands with 8.0 or 8.2.
 
-### Step 1. Install PHP (Debian)
+### Step 1: Install PHP (Debian)
 
 ```bash
 sudo su
@@ -263,7 +263,7 @@ apt-get update
 apt-get install -y php8.1 php8.1-dev php8.1-xml php8.1-intl
 ```
 
-### Step 2. Install prerequisites (Debian)
+### Step 2: Install prerequisites (Debian)
 
 Install the ODBC driver for Debian by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
@@ -277,7 +277,7 @@ locale-gen
 
 You may need to add `/usr/sbin` to your `$PATH`, as the `locale-gen` executable is located there.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Debian)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Debian)
 
 ```bash
 sudo pecl install sqlsrv
@@ -291,7 +291,7 @@ sudo phpenmod -v 8.1 sqlsrv pdo_sqlsrv
 
 If there is only one PHP version in the system, then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`. As with `locale-gen`, `phpenmod` is located in `/usr/sbin` so you may need to add this directory to your `$PATH`.
 
-### Step 4. Install Apache and configure driver loading (Debian)
+### Step 4: Install Apache and configure driver loading (Debian)
 
 ```bash
 sudo su
@@ -301,7 +301,7 @@ a2enmod mpm_prefork
 a2enmod php8.1
 ```
 
-### Step 5. Restart Apache and test the sample script (Debian)
+### Step 5: Restart Apache and test the sample script (Debian)
 
 ```bash
 sudo service apache2 restart
@@ -318,7 +318,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > [!NOTE]
 > Packages for PHP 7.4 or above are not available for Suse 12, as of today.
 
-### Step 1. Install PHP (Suse)
+### Step 1: Install PHP (Suse)
 
 ```bash
 sudo su
@@ -327,11 +327,11 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php8 php8-pdo php8-devel php8-openssl
 ```
 
-### Step 2. Install prerequisites (Suse)
+### Step 2: Install prerequisites (Suse)
 
 Install the ODBC driver for Suse by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Suse)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Suse)
 
 ```bash
 sudo pecl install sqlsrv
@@ -342,7 +342,7 @@ echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" |
 exit
 ```
 
-### Step 4. Install Apache and configure driver loading (Suse)
+### Step 4: Install Apache and configure driver loading (Suse)
 
 ```bash
 sudo su
@@ -353,7 +353,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php8/apache2/php.ini
 exit
 ```
 
-### Step 5. Restart Apache and test the sample script (Suse)
+### Step 5: Restart Apache and test the sample script (Suse)
 
 ```bash
 sudo systemctl restart apache2
@@ -367,7 +367,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > [!NOTE]
 > PHP 8.1 or above may be available from testing or edge repositories for Alpine. You can instead compile PHP from source.
 
-### Step 1. Install PHP (Alpine)
+### Step 1: Install PHP (Alpine)
 
 PHP packages for Alpine can be found in the `edge/community` repository. Check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apk/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
 
@@ -392,11 +392,11 @@ ln -s /usr/bin/pecl8 /usr/bin/pecl
 ln -s /usr/bin/php-config8 /usr/bin/php-config
 ```
 
-### Step 2. Install prerequisites (Alpine)
+### Step 2: Install prerequisites (Alpine)
 
 Install the ODBC driver for Alpine by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  Make sure to also install the `unixodbc-dev` package (`sudo apk add unixodbc-dev`). It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Alpine)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (Alpine)
 
 ```bash
 sudo pecl install sqlsrv
@@ -406,7 +406,7 @@ echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini file
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20_sqlsrv.ini
 ```
 
-### Step 4. Install Apache and configure driver loading (Alpine)
+### Step 4: Install Apache and configure driver loading (Alpine)
 
 ```bash
 # For PHP 7.*
@@ -415,7 +415,7 @@ sudo apk add php7-apache2 apache2
 sudo apk add php8-apache2 apache2
 ```
 
-### Step 5. Restart Apache and test the sample script (Alpine)
+### Step 5: Restart Apache and test the sample script (Alpine)
 
 ```bash
 sudo rc-service apache2 restart
@@ -435,7 +435,7 @@ If you do not already have it, install brew as follows:
 > [!NOTE]
 > To install PHP 8.0 or 8.2, replace php@8.1 with php@8.0 or php@8.2 respectively in the following commands.
 
-### Step 1. Install PHP (macOS)
+### Step 1: Install PHP (macOS)
 
 ```bash
 brew tap
@@ -454,7 +454,7 @@ If using Apple M1 ARM64, you might need to set the path:
 export PATH="/opt/homebrew/bin:$PATH"
 ```
 
-### Step 2. Install prerequisites (macOS)
+### Step 2: Install prerequisites (macOS)
 
 Install the ODBC driver for macOS by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (macOS)](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
@@ -467,7 +467,7 @@ In addition, you may need to install the GNU make tools:
 brew install autoconf automake libtool
 ```
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (macOS)
+### Step 3: Install the PHP drivers for Microsoft SQL Server (macOS)
 
 ```bash
 sudo pecl install sqlsrv
@@ -480,7 +480,7 @@ sudo CXXFLAGS="-I/opt/homebrew/opt/unixodbc/include/" LDFLAGS="-L/opt/homebrew/l
 sudo CXXFLAGS="-I/opt/homebrew/opt/unixodbc/include/" LDFLAGS="-L/opt/homebrew/lib/" pecl install pdo_sqlsrv
 ```
 
-### Step 4. Install Apache and configure driver loading (macOS)
+### Step 4: Install Apache and configure driver loading (macOS)
 
 > [!NOTE]
 > The latest macOS 11.0 Big Sur comes with Apache 2.4 pre-installed, but Apple has also removed some required scripts. The solution is to install Apache 2.4 via Homebrew and then configure it, but this is out of scope for this installation guide, so please check Apache or Homebrew for detailed instructions.
@@ -502,7 +502,7 @@ echo "LoadModule php7_module /usr/local/opt/php@8.1/lib/httpd/modules/libphp7.so
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 
-### Step 5. Restart Apache and test the sample script (macOS)
+### Step 5: Restart Apache and test the sample script (macOS)
 
 ```bash
 sudo apachectl restart

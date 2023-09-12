@@ -22,7 +22,7 @@ After a user upgrades to Azure Data Studio 1.44 and higher, the initial launch o
 --change this below
 :::image type="content" source="connect/connect-update-after-upgrade-no-tenant.png" alt-text="Screenshot of message about tenant list box removal after upgrading Azure Data Studio.":::
 
-With the Sql Authentication Provider, selection of a tenant is no longer required.  The Azure AD tenant list box has been removed from the Connection dialog because it's now handled by the underlying driver.  This change also allows for improved token refresh for Azure SQL Database connections.
+With the Sql Authentication Provider, selection of a tenant is no longer required.  The Microsoft Entra tenant list box has been removed from the Connection dialog because it's now handled by the underlying driver.  This change also allows for improved token refresh for Azure SQL Database connections.
 
 The **Mssql: Enable Sql Authentication Provider** option can be disabled within **File** > **Preferences** > **Settings**.
 

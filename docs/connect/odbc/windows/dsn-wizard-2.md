@@ -23,7 +23,7 @@ Optionally, you can specify a service principal name (SPN) for the server.
 
 ### With Active Directory Integrated Authentication
 
-Specifies that the driver authenticate to SQL Server using Azure Active Directory. When selected, SQL Server uses Azure Active Directory integrated login security to establish a connection using this data source, regardless of the current login security mode at the server.
+Specifies that the driver authenticate to SQL Server using Microsoft Entra ID. When selected, SQL Server uses Microsoft Entra integrated login security to establish a connection using this data source, regardless of the current login security mode at the server.
 
 ### With SQL Server authentication
 
@@ -31,11 +31,11 @@ Specifies that the driver authenticate to SQL Server using a login ID and passwo
 
 ### With Active Directory Password authentication
 
-Specifies that the driver authenticate to SQL Server using an Azure Active Directory login ID and password.
+Specifies that the driver authenticate to SQL Server using a Microsoft Entra login ID and password.
 
 ### With Active Directory Interactive authentication
 
-Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This option will trigger the Azure Authentication prompt dialog.
+Specifies that the driver authenticate to SQL Server using Microsoft Entra Interactive mode by providing login ID. This option will trigger the Azure Authentication prompt dialog.
 
 ### With Managed Identity authentication
 
@@ -43,7 +43,7 @@ Specifies that the driver authenticate to SQL Server using a Managed Identity.
 
 ### With Active Directory Service Principal authentication
 
-Specifies that the driver authenticate to SQL Server using an Azure Active Directory Service Principal.
+Specifies that the driver authenticate to SQL Server using a Microsoft Entra service Principal.
 
 ### Login ID
 

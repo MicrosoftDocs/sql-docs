@@ -30,7 +30,7 @@ To retrieve information from these views, specify the fully qualified name of **
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
 |**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **Important:** The only reliable way to find the schema of an object is to query the `sys.objects` catalog view. INFORMATION_SCHEMA views could be incomplete since they are not updated for all new features.|  
-|**TABLE_NAME**|**sysname**|Table or view name.|  
+|**TABLE_NAME**|**nvarchar(128)**|Table or view name.|  
 |**TABLE_TYPE**|**varchar(**10**)**|Type of table. Can be VIEW or BASE TABLE.|  
   
 ## See Also  

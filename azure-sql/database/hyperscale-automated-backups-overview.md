@@ -5,7 +5,7 @@ description: Learn about automated backups for Hyperscale databases in Azure SQL
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 09/08/2022
+ms.date: 09/11/2023
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -41,9 +41,7 @@ Creation of new databases by restoring an existing backup or copying the databas
 
 Default short-term retention of backups for Hyperscale databases is 7 days.
 
-> [!NOTE]
-> - Short-term retention of backups in the range of 1 to 35 days for Hyperscale databases is now in preview.
-> - Long-term backup retention (LTR) capability for Hyperscale databases is now in preview.
+Short-term retention of backups in the range of 1 to 35 days and long-term backup retention (LTR) capability for Hyperscale databases is generally available, as of September 2023.
 
 ## Backup scheduling
 

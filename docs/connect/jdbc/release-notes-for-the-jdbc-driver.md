@@ -28,7 +28,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 12.4. | &bull; &nbsp; [GitHub, 12.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 12.4. | &bull; &nbsp; [GitHub, 12.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.4.0).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 12.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-12.4.0.jre11.jar file from the 12.4 package should be used with Java 11 (or higher). |
 | Compatible with Java Development Kit (JDK) version 20.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.4 for SQL Server is now compatible with Java Development Kit (JDK) version 20.0 in addition to JDK 17.0, 11.0 and 1.8. |
 
@@ -120,7 +120,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 12.2. | &bull; &nbsp; [GitHub, 12.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 12.2. | &bull; &nbsp; [GitHub, 12.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v12.2.0).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 12.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-12.2.0.jre11.jar file from the 12.2 package should be used with Java 11 (or higher). |
 | Compatible with Java Development Kit (JDK) version 19.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 12.2 for SQL Server is now compatible with Java Development Kit (JDK) version 19.0 in addition to JDK 17.0, 11.0 and 1.8. |
 
@@ -189,7 +189,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 11.2. | &bull; &nbsp; [GitHub, 11.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v11.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 11.2. | &bull; &nbsp; [GitHub, 11.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v11.2.0).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 11.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-11.20.jre17.jar file from the 11.2 package should be used with Java 17. |
 | Compatible with Java Development Kit (JDK) version 18.0, 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 11.2 for SQL Server is now compatible with Java Development Kit (JDK) version 18.0 in addition to JDK 17.0, 11.0 and 1.8. |
 
@@ -323,7 +323,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 10.2. | &bull; &nbsp; [GitHub, 10.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v10.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 10.2. | &bull; &nbsp; [GitHub, 10.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v10.2.0).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 10.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-10.20.jre17.jar file from the 10.2 package should be used with Java 17. |
 | Compatible with Java Development Kit (JDK) version 17.0, 11.0, and 1.8. | Microsoft JDBC Driver 10.2 for SQL Server is now compatible with Java Development Kit (JDK) version 17.0 in addition to JDK 11.0 and 1.8. |
 
@@ -412,7 +412,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 9.4. | &bull; &nbsp; [GitHub, 9.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 9.4. | &bull; &nbsp; [GitHub, 9.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.4.0).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 9.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-9.4.0.jre16.jar file from the 9.4 package should be used with Java 16. |
 | Compatible with Java Development Kit (JDK) version 16.0, 11.0, and 1.8. | Microsoft JDBC Driver 9.4 for SQL Server is now compatible with Java Development Kit (JDK) version 16.0 in addition to JDK 11.0 and 1.8. |
 
@@ -482,7 +482,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 9.2. | &bull; &nbsp; [GitHub, 9.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 9.2. | &bull; &nbsp; [GitHub, 9.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.1).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 9.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-9.2.1.jre15.jar file from the 9.2 package should be used with Java 15. |
 | Compatible with Java Development Kit (JDK) version 15.0, 11.0, and 1.8. | Microsoft JDBC Driver 9.2 for SQL Server is now compatible with Java Development Kit (JDK) version 15.0 in addition to JDK 11.0 and 1.8. |
 
@@ -549,7 +549,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.1).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 8.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.4.1.jre14.jar file from the 8.4 package should be used with Java 14. |
 | Compatible with Java Development Kit (JDK) version 14.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8. |
 
@@ -616,7 +616,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 8.2. | &bull; &nbsp; [GitHub, 8.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 8.2. | &bull; &nbsp; [GitHub, 8.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.2).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 8.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.2.2.jre11.jar file from the 8.2 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 13.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development Kit (JDK) version 13.0 in addition to JDK 11.0 and 1.8. |
 
@@ -686,7 +686,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 7.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.1.jre11.jar file from the 7.4 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 12.0, 11.0, and 1.8. | Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8. |
 
@@ -750,7 +750,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 7.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.2.2.jre11.jar file from the 7.2 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. | Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. |
 

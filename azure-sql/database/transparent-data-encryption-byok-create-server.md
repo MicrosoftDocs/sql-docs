@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and customer-
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 10/17/2022
+ms.date: 09/15/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -76,7 +76,7 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
 15. Select **Apply**
 
-16. On the Security tab, under **Transparent data encryption**, select **Configure Transparent data encryption**. Select **Customer-managed key**, and an option to select **Select a key** will appear. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
+16. On the Security tab, under **Transparent data encryption**, select **Configure Transparent data encryption**. Select **Database level Customer-Managed Key**, and an option to select **Select a key** will appear. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-server.png" alt-text="screenshot configuring TDE for server":::
 

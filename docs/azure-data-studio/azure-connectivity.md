@@ -129,6 +129,7 @@ In a proxy environment, user applications may need to allow specific domains use
 
 **Azure Public**
 
+- `https://management.azure.com`
 - `https://login.microsoftonline.com/`
 
 **Azure (US Government)**

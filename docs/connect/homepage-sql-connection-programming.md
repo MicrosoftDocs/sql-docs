@@ -29,7 +29,7 @@ For details about the connection strings for connecting to Azure SQL Database, s
 
 #### Build-an-app webpages
 
-Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the [section labeled *Build-an-app website*](#build-an-app).
+Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the section labeled *Build-an-app website*.
 
 ## Languages and drivers for client programs
 

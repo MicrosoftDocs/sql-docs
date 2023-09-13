@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake
-ms.date: 08/21/2023
+ms.date: 09/11/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -94,17 +94,13 @@ The vCore-based service tiers are differentiated based on database availability,
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | Decoupled storage with local SSD cache (per compute replica)|
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
 | **IOPS** | 500 IOPS per vCore with 7,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload. |
-| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>4</sup>| 
+| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB | 
 | **Availability** | One replica, no read scale-out, zone-redundant HA | Three replicas, one read scale-out, zone-redundant HA | Multiple replicas, up to four read scale-out, zone-redundant HA  |
-| **Backups** |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention, with up to 10 years of long-term retention available |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention, with up to 10 years of long-term retention available |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention <sup>2</sup>, with up to 10 years of long-term retention available <sup>3</sup>| 
+| **Backups** |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention, with up to 10 years of long-term retention available |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention, with up to 10 years of long-term retention available |  A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (seven days by default) retention, with up to 10 years of long-term retention available| 
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |  [vCore for each replica, allocated data storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |
 |**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
 
-
 <sup>1</sup> [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
-<sup>2</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
-<sup>3</sup> Long-term retention for Hyperscale databases is now in preview.   
-<sup>4</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
 
 ## Compute resources
 
@@ -166,8 +162,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 
 | Issue | Description |
 | :---- | :--------- |
-| Short-term backup retention | Short-term backup retention for 1-35 days for Hyperscale databases is now in preview. A non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<BR/><BR/>For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [via the command line](recovery-using-backups.md#point-in-time-restore). You can restore these backups to any non-Hyperscale service tier.|
-| Long-term backup retention | Long-term backup retention for Hyperscale databases is now in preview.|
+| Restore database from other service tiers |  A non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<BR/><BR/>For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [via the command line](recovery-using-backups.md#point-in-time-restore). You can restore these backups to any non-Hyperscale service tier.|
 | Elastic Pools |  [Elastic Pools](hyperscale-elastic-pool-overview.md) are now in preview.|
 | Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory optimized tables aren't currently supported in Hyperscale, and must be changed to disk tables.|
 | Shrink Database | DBCC SHRINKDATABASE, DBCC SHRINKFILE or setting AUTO_SHRINK to ON at the database level, aren't currently supported for Hyperscale databases. |

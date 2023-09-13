@@ -217,60 +217,6 @@ You can use Ruby to interact with SQL Server. The root of our Ruby documentation
 | [Proof of concept connecting to SQL with Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Ruby to query](/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database example. |
 
-## <a id="build-an-app"></a> Build-an-app website, for SQL client development
-
-On our *Build-an-app* webpages, you can choose from a long list of programming languages for connecting to SQL Server. And your client program can run on various operating systems.
-
-*Build-an-app* emphasizes simplicity and completeness for the developer who is just getting started. The steps explain the following tasks:
-
-1. How to install Microsoft SQL Server
-1. How to download and install tools and drivers.
-1. How to make any necessary configurations, as appropriate for your chosen operating system.
-1. How to compile the provided source code.
-1. How to run the program.
-
-Next are a couple approximate outlines of the detail provided on the website:
-
-#### Java on Ubuntu
-
-1. Set up your environment
-   1. Install SQL Server
-   1. Install Java
-   1. Install the Java Development Kit (JDK)
-   1. Install Maven
-1. Create Java application with SQL Server
-   1. Create a Java app that connects to SQL Server and executes queries
-   1. Create a Java app that connects to SQL Server using the popular framework Hibernate
-1. Make your Java app up to 100x faster
-   1. Create a Java app to demonstrate Columnstore indexes
-
-#### Python on Windows
-
-1. Set up your environment
-   1. Install SQL Server
-   1. Install Python
-   1. Install the ODBC Driver and SQL Command Line Utility for SQL Server
-1. Create Python application with SQL Server
-   1. Install the Python driver for SQL Server
-   1. Create a database for your application
-   1. Create a Python app that connects to SQL Server and executes queries
-1. Make your Python app up to 100x faster
-   1. Create a new table with 5 million using sqlcmd
-   1. Create a Python app that queries this table and measures the time taken
-   1. Measure how long it takes to run the query
-   1. Add a columnstore index to your table
-   1. Measure how long it takes to run the query with a columnstore index
-
-The following screenshots give you an idea of what our SQL development documentation website looks like.
-
-#### Choose a language
-
-:::image type="content" source="./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png" alt-text="Screenshot of SQL Developer website, getting started with Java.":::
-
-#### Choose an operating system
-
-:::image type="content" source="./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png" alt-text="Screenshot of SQL Developer website, with Java on Ubuntu.":::
-
 ## Other development
 
 This section provides links about other development options. These include using these same languages for Azure development in general. The information goes beyond targeting just Azure SQL Database and Microsoft SQL Server.

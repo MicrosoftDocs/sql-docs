@@ -8,9 +8,10 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 09/12/2023
 ms.topic: conceptual
 ---
+
 # Configure Azure Arc-enabled SQL Server
 
-Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. The Azure Arc-enabled SQL Server **Overview** reflects how the SQL Server Configuration effects a particular instance.
+Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. In Azure portal, the Azure Arc-enabled SQL Server **Overview** reflects how the SQL Server Configuration effects a particular instance.
 
 Azure portal SQL Server Configuration allows you to perform the following management tasks:
 
@@ -48,6 +49,7 @@ Run:
 ```azurecli
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
+
 
 ---
 
@@ -95,7 +97,6 @@ The billing granularity is one hour. Pay-as-you-go charges are calculated based 
 * If two or more instances of the same edition are installed, the first instance in alphabetical order is billed.
 * The combination of the **Host License Type** and the winning SQL Server edition defines which billing meters will be sent every hour. 
 
-
 The next table shows the meter SKUs that are used for different license types and SQL Server editions:
 
 | Installed edition | Projected edition | License type | AG replica | Meter SKU |
@@ -137,7 +138,7 @@ Extended Security Updates (ESU) is available for qualified SQL Server instances 
 
 You can exclude certain instances from the at-scale onboarding operations driven by Azure policy or by automatic onboarding processes. To exclude specific instances from these operations, add the instance names to the **Skip Instances** list. For details about at-scale onboarding options, see [Alternate deployment options for Azure Arc-enabled SQL Server](deployment-options.md).
 
-## Modifying SQL Server Configuration
+## Modify SQL Server configuration
 
 You can use Azure portal, PowerShell or CLI to change all or some configuration settings on a specific Arc-enabled server to the desired state.
 
@@ -145,6 +146,7 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 
 > [!TIP]  
 > Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
+
 
 
 ### [Azure portal](#tab/azure)
@@ -207,6 +209,8 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 
 
 
+
+
 ### [Azure CLI](#tab/az)
 
 The following command will set the license type to "PAYG":
@@ -218,12 +222,14 @@ az connectedmachine extension update --machine-name "simple-vm" -g "<resource-gr
 > - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
 > - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
+
 ---
 
 
-## Query SQL Server Configuration
 
-You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the SQL Server Configuration settings within a selected scope. See the following examples.
+## Query SQL Server configuration
+
+You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the SQL Server configuration settings within a selected scope. See the following examples.
 
 ### Count by license type
 
@@ -279,4 +285,5 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 - [Frequently asked questions](faq.yml#billing)
 - [Configure automated patching for Arc-enabled SQL Servers](patch.md)
+
 

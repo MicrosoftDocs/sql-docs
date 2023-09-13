@@ -10463,6 +10463,8 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
     - name: Monitor
       items:
+      - name: DMVs
+        href: sql-server/azure-arc/sql-monitoring.md
       - name: Activity Logs
         href: sql-server/azure-arc/activity-logs.md
     - name: Secure

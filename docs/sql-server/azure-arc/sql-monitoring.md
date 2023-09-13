@@ -8,21 +8,27 @@ ms.date: 09/08/2023
 ms.topic: conceptual
 ---
 
-# Monitoring Azure Arc-enabled SQL Servers
+# Monitor Azure Arc-enabled SQL Servers
 
-In a future release, Microsoft Azure Arc-enabled SQL Servers will provide a feature that will automatically collect SQL Server monitoring data from dynamic management views and send it to Azure. You will then be able to see monitoring dashboards in the Azure portal. No setup or configuration will be required.
+In a future release, you will be able to review some data from SQL Server dynamic management views (DMVs) in Azure portal. This capability requires Azure to collect data from instances of Microsoft Azure Arc-enabled SQL Server. This article explains how to configure or prevent this collection and describes what data is collected.
 
-When released, this monitoring feature will be enabled by default and the monitoring data will automatically be collected on Azure Arc-enabled SQL Servers. You can turn off the monitoring data collection at any time. You can also turn collection off in advance of the feature being released. To disable the collection of monitoring data, run the following command in the Azure CLI, replacing the placeholders for subscription ID, resource group, and resource name:
+## Disable or enable collection
+
+When the feature is released for Azure Arc-enabled SQL Server, the data collection will be automatic. You will not be required to set up or configure anything. You can turn off the monitoring data collection at any time. You can also turn collection off before the feature is released.
+
+To disable the collection of monitoring data, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
 
 ```azurecli
 az resource patch --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" -p '{\"monitoring\": {\"enabled\": false}}' --api-version 2023-09-01-preview
 ```
 
-To enable the monitoring data collection for an Azure Arc-enabled SQL Server, customers can run the following command in the Azure CLI, replacing the placeholders for subscription ID, resource group, and resource name:
+To enable the monitoring data collection for an Azure Arc-enabled SQL Server, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
 
 ```azurecli
 az resource patch --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" -p '{\"monitoring\": {\"enabled\": true}}' --api-version 2023-09-01-preview
 ```
+
+## Collected data
 
 Below is a list of monitoring data that will be collected on Azure Arc-enabled SQL Server when this feature is released in the future.  No personally identifiable information (PII), end-user identifiable information, or customer content is collected.
   
@@ -39,11 +45,13 @@ Below is a list of monitoring data that will be collected on Azure Arc-enabled S
 
 ## Limitations
   
-- The monitoring data will be collected only for Enterprise Edition and Standard Edition instances of SQL Server for now.  
-- This feature will also only be enabled for SQL Server instances with Software Assurance or pay-as-you-go licensing.  
-- This feature will work only on SQL Server on Windows initially.  
+Initally, the monitoring data will:
+
+- Be collected only for Enterprise Edition and Standard Edition instances of SQL Server.
+- Only be enabled for SQL Server instances with Software Assurance or pay-as-you-go licensing.  
+- Only work on SQL Server on Windows.  
 
 ## Next steps
   
-- [Learn more about using activity logs to provide insights into Azure Arc-enabled SQL Server events](docs/sql-server/azure-arc/activity-logs.md)
-- [Learn more about Azure Azure Arc-enabled SQL Server data collection and reporting](docs/sql-server/azure-arc/data-collection.md)
+- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [Azure Arc-enabled SQL Server data collection and reporting](data-collection.md)

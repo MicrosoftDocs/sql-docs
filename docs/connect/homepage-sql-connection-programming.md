@@ -27,9 +27,6 @@ For details about the connection strings for connecting to Azure SQL Database, s
 - [Use .NET Core (C#) to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-dotnet-core).
 - Other Azure SQL Database articles that are nearby the preceding article in the table of contents, about other languages. For instance, see [Use PHP to query an Azure SQL database](/azure/sql-database/sql-database-connect-query-php).
 
-#### Build-an-app webpages
-
-Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the section labeled *Build-an-app website*.
 
 ## Languages and drivers for client programs
 

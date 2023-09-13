@@ -4,7 +4,7 @@ description: CREATE EXTERNAL DATA SOURCE creates an external data source used to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, hudequei
-ms.date: 09/11/2023
+ms.date: 09/13/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1091,7 +1091,7 @@ GO
 
 ### H. Create an external data source for bulk operations retrieving data from Azure Storage
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.
+**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
 
@@ -1707,7 +1707,7 @@ For a more detailed example on  how to access delta files stored on Azure Data L
 
 ### H. Create an external data source for bulk operations retrieving data from Azure Storage
 
-**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
 
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].
 
@@ -1720,9 +1720,8 @@ WITH
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 WITH
-  ( LOCATION = 'https://newinvoices.blob.core.windows.net/week3' ,
-    CREDENTIAL = AccessAzureInvoices ,
-    TYPE = BLOB_STORAGE
+  ( LOCATION = 'abs://<container>@<storage_account_name>.blob.core.windows.net/' , 
+    CREDENTIAL = AccessAzureInvoices,
   ) ;
 ```
 

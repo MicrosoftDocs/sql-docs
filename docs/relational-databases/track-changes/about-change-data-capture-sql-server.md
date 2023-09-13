@@ -35,7 +35,7 @@ A good example of a data consumer that this technology targets is an extraction,
 
 The following illustration shows the principal data flow for change data capture.  
   
-:::image type="content" source="media/cd-sql-server-and-mi.png" alt-text="Change data capture data flow diagram." lightbox="media/cd-sql-server-and-mi-highres.png":::
+:::image type="content" source="media/change-data-sql-server-and-mi.png" alt-text="Change data capture data flow diagram." lightbox="media/change-data-sql-server-and-mi-high-res.png":::
   
  The source of change data for change data capture is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log. As inserts, updates, and deletes are applied to tracked source tables, entries that describe those changes are added to the log. The log serves as input to the capture process. Then, it reads the log and adds information about changes to the tracked table's associated change table. Functions are provided to enumerate the changes that appear in the change tables over a specified range, returning the information in the form of a filtered result set. The filtered result set is typically used by an application process to update a representation of the source in some external environment.  
   

@@ -35,7 +35,7 @@ To learn more about Change Data Capture, refer to this Data Exposed episode:
 
 The following illustration shows the principal data flow for change data capture.  
 
-:::image type="content" source="media/change-data-capture-overview/cdc-sql-db.png" alt-text="Flow chart depicts data flow for change data capture." lightbox="media/change-data-capture-overview/cdc-sql-db-highres.png":::
+:::image type="content" source="media/change-data-capture-overview/change-data-capture-sql-db.png" alt-text="Flow chart depicts data flow for change data capture." lightbox="media/change-data-capture-overview/change-data-capture-sql-db-high-res.png":::
 
 ## Prerequisites  
 
@@ -174,7 +174,7 @@ CDC can be enabled only for databases provisioned starting in the **GP_Gen5_4 SL
 
 > [!WARNING]
 > If your Azure SQL Database was provisioned under the DTU-based pricing model. CDC can only be enabled on database tiers **S3 and higher**. Subcore (Basic, S0, S1, S2) Azure SQL Databases aren't supported for CDC. For more information about Azure SQL Database DTU purchasing model, see [**Resource limits for single databases using the DTU purchasing model - Azure SQL Database**](/azure/azure-sql/database/resource-limits-vcore-single-databases).  
-
+>
 > Dbcopy from database tiers higher than S3 having CDC enabled to a subcore SLO presently retains the CDC artifacts, but CDC artifacts may be removed in the future.
 
 ### Azure SQL Database log limits - Single database

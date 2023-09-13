@@ -1,9 +1,9 @@
 ---
 title: "Change data capture and Other Features"
 description: "Learn how change data capture and functions with other features such as change tracking and database mirroring."
-author: MikeRayMSFT
-ms.author: mikeray
-ms.date: "01/02/2019"
+author: croblesm
+ms.author: roblescarlos
+ms.date: "09/11/2023"
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,7 +12,7 @@ helpviewer_keywords:
 # Change data capture and other features
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This topic describes how the following features interact with change data capture:  
+This article describes how the following features interact with change data capture:  
     
 ##  <a name="ChangeTracking"></a> Change tracking  
  Change data capture and [change tracking](../../relational-databases/track-changes/about-change-tracking-sql-server.md) can be enabled on the same database. No special considerations are required. For more information, see [Work with Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
@@ -38,7 +38,7 @@ This topic describes how the following features interact with change data captur
 > [!NOTE]  
 >  When the Log Reader Agent is used for both change data capture and transactional replication, replicated changes are first written to the distribution database. Then, captured changes are written to the change tables. Both operations are committed together. If there is any latency in writing to the distribution database, there will be a corresponding latency before changes appear in the change tables.  
   
- The **proc exec** option of transactional replication is not available when change data capture is enabled.  
+ The **proc exec** option of transactional replication isn't available when change data capture is enabled.  
   
 ##  <a name="RestoreOrAttach"></a> Database restore or attach
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the following logic to determine if change data capture remains enabled after a database is restored or attached:  
@@ -60,10 +60,10 @@ This topic describes how the following features interact with change data captur
  After restoring a database on Azure SQL Managed Instance, CDC will remain enabled, but you must ensure that the scan and cleanup jobs are added and running. You can manually add the jobs by running [sys.sp_cdc_add_job](../system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md). 
   
 ##  <a name="Contained"></a> Contained databases  
- Change data capture is not supported in [contained databases](../../relational-databases/databases/contained-databases.md).
+ Change data capture isn't supported in [contained databases](../../relational-databases/databases/contained-databases.md).
  
 ##  <a name="Serverless"></a> Serverless databases  
-  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC will not run. The CDC scan shall not affect auto-pause. 
+  If a serverless database is enabled for Change Data Capture (CDC) is in pause state, CDC won't run. The CDC scan shall not affect autopause. 
   
 ## <a name="AlwaysOn"></a> Availability groups 
  
@@ -71,17 +71,17 @@ This topic describes how the following features interact with change data captur
 
 ## <a name="FailoverAzureSQLDB"></a> Failover (local & GeoDR) in Azure SQL Database 
  
-In case of local as well as GeoDR failover scenarios, if the database is enabled for change data capture (CDC), capture and cleanup happen automatically on the new primary, following the failover. 
+In case of local and GeoDR failover scenarios, if the database is enabled for change data capture (CDC), capture and cleanup happen automatically on the new primary, following the failover. 
 
 ##  <a name="Point-in-time-restore"></a> Point-in-time-restore (PITR) in Azure SQL Database
 
-If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it is restored to sub-core SLO. If restored to sub-core SLO, CDC artifacts will not be available.
+If you enabled change data capture (CDC) on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC as well in the restored DB, unless it's restored to subcore SLO. If restored to subcore SLO, CDC artifacts won't be available.
 
-If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to sub-core SLO will fail as mentioned under [known limitations and issues](./about-change-data-capture-sql-server.md?#known-limitations-and-issues).
+If you enabled CDC on your Azure SQL Database as an Azure AD user, PITR retains the CDC if restored to same or higher SLO than the source database. PITR to subcore SLO fails as mentioned under [Known issues and limitations](/azure/azure-sql/database/change-data-capture-overview#known-issues-and-limitations).
 
 ##  <a name="AzureActiveDirectory"></a> Azure Active Directory in Azure SQL Database 
 
-If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user (e.g. even sys admin role) will not be able to disable/make changes to change data capture artifacts. However, another Azure AD user will be able to enable/disable change data capture on the same database. 
+If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user (for example, even sys admin role) won't be able to disable/make changes to change data capture artifacts. However, another Azure AD user is able to enable/disable change data capture on the same database. 
 
 Similarly, if you create an Azure SQL Database as a SQL user, enabling/disabling change data capture as an Azure AD user won't work. 
 

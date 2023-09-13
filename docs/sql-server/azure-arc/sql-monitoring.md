@@ -14,7 +14,7 @@ In a future release, you will be able to review some data from SQL Server dynami
 
 ## Disable or enable collection
 
-When the feature is released for Azure Arc-enabled SQL Server, the data collection will be automatic. You will not be required to set up or configure anything. You can turn off the monitoring data collection at any time. You can also turn collection off before the feature is released.
+When the feature is released for Azure Arc-enabled SQL Server, the data collection will be automatic. You will not be required to set up or configure anything. You can turn off the monitoring data collection at any time. You can also disable collection now, before the feature is released.
 
 To disable the collection of monitoring data, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
 
@@ -30,7 +30,7 @@ az resource patch --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>
 
 ## Collected data
 
-Below is a list of monitoring data that will be collected on Azure Arc-enabled SQL Server when this feature is released in the future.  No personally identifiable information (PII), end-user identifiable information, or customer content is collected.
+The following table identifies monitoring data that will be collected on Azure Arc-enabled SQL Server when this feature is released in the future.  No personally identifiable information (PII), end-user identifiable information, or customer content is collected.
   
 |Dataset name|Description|
 |----|----|
@@ -45,7 +45,7 @@ Below is a list of monitoring data that will be collected on Azure Arc-enabled S
 
 ## Limitations
   
-Initally, the monitoring data will:
+Initially, the monitoring data will:
 
 - Be collected only for Enterprise Edition and Standard Edition instances of SQL Server.
 - Only be enabled for SQL Server instances with Software Assurance or pay-as-you-go licensing.  

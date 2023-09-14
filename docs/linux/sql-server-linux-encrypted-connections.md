@@ -8,6 +8,8 @@ ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "Linux, encrypted connections"
 ---

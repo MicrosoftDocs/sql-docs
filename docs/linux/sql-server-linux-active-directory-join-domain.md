@@ -9,6 +9,8 @@ ms.date: 09/27/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Join SQL Server on a Linux host to an Active Directory domain
 

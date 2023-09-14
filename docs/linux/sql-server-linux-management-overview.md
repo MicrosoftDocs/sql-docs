@@ -7,7 +7,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Choose the right tool to manage SQL Server on Linux
 

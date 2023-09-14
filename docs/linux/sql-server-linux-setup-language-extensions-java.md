@@ -8,8 +8,10 @@ ms.date: 08/03/2023
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
-ms.custom: intro-installation
-monikerRange: ">=sql-server-ver15 || >=sql-server-linux-ver15"
+ms.custom:
+  - intro-installation
+  - linux-related-content
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Install SQL Server Java Language Extension on Linux
 

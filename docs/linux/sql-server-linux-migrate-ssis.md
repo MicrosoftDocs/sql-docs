@@ -8,6 +8,8 @@ ms.date: 01/09/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Extract, transform, and load data on Linux with SSIS
 

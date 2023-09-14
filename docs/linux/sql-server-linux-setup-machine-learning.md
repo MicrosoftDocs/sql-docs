@@ -8,7 +8,9 @@ ms.date: 01/27/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server 2019 Machine Learning Services (Python and R) on Linux

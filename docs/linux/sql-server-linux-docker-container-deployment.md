@@ -8,7 +8,9 @@ ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
 monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---

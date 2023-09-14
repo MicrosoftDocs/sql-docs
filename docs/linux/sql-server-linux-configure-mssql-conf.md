@@ -7,6 +7,8 @@ ms.date: 09/06/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 

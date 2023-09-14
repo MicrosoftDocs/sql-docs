@@ -11,6 +11,7 @@ ms.topic: quickstart
 ms.custom:
   - intro-quickstart
   - kr2b-contr-experiment
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
 monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---

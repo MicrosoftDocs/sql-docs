@@ -8,6 +8,8 @@ ms.date: 02/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # Create and configure an availability group for SQL Server on Linux

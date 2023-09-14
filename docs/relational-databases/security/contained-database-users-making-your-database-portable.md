@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
- Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+ Windows Firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows Firewall, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls
 
@@ -65,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |-----------------------|-----------------------------------|  
 |To change password, in context of master DB:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|To change password, in context of user DB:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
 
-### Managed Instance
+### SQL Managed Instance
 
 Azure SQL Managed Instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
 

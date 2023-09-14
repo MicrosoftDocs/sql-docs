@@ -10,7 +10,9 @@ ms.topic: conceptual
 
 # Monitor Azure Arc-enabled SQL Server telemetry
 
-In a future release, you will be able to review some data from SQL Server dynamic management views (DMVs) in Azure portal. This capability requires Azure to collect data from instances of Microsoft Azure Arc-enabled SQL Server. This article explains how to configure or prevent this collection and describes what data is collected.
+In a future release, you will be able to review telemetry in Azure portal for Arc-enabled instances of SQL Server. Initially, telemetry includes data from dynamic management views (DMVs). This capability requires Azure to collect data from instances of Microsoft Azure Arc-enabled SQL Server. The collection will be enabled by default.
+
+This article explains how to configure or prevent this collection and describes what data is collected.
 
 ## Disable or enable collection
 

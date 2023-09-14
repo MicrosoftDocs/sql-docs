@@ -34,8 +34,3 @@ The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server 
   
 ## Samples  
 * [Code Samples for the Microsoft Drivers for PHP for SQL Server](code-samples-for-php-sql-driver.md)
-* [Getting Started with PHP on Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Getting Started with PHP on macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Getting Started with PHP on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Getting Started with PHP on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Getting Started with PHP on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

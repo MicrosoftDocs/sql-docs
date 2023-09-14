@@ -8,6 +8,8 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 monikerRange: ">= sql-server-2017"
 ---
 # Configure SQL Server Always On availability group on Windows and Linux (cross-platform)

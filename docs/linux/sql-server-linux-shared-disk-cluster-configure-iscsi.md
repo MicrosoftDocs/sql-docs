@@ -8,6 +8,8 @@ ms.date: 06/30/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 

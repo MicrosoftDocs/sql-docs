@@ -8,6 +8,8 @@ ms.date: 08/17/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
+ms.custom:
+  - linux-related-content
 ---
 
 # Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts

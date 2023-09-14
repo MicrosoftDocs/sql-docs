@@ -8,6 +8,8 @@ ms.date: 06/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure usage & diagnostic data collection for SQL Server on Linux
 

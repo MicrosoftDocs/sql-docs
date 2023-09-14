@@ -8,6 +8,8 @@ ms.date: 08/18/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # Use Visual Studio to create databases for SQL Server on Linux

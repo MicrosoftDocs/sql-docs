@@ -7,7 +7,9 @@ ms.date: 11/22/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - linux-related-content
 ---
 
 # What's new for SQL Server 2019 on Linux

@@ -10,6 +10,7 @@ ms.topic: quickstart
 ms.custom:
   - template-quickstart
   - intro-deployment
+  - linux-related-content
 ---
 # Quickstart: Deploy a SQL Server container cluster on Azure
 

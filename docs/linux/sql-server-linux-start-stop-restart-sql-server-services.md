@@ -8,6 +8,8 @@ ms.date: 02/24/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "SQL Server on Linux, startup options"
   - "Database Engine [SQL Server], starting and stopping services on Linux"

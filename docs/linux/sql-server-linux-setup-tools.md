@@ -8,7 +8,9 @@ ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Install the SQL Server command-line tools sqlcmd and bcp on Linux
 

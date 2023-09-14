@@ -7,7 +7,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - linux-related-content
 ---
 # Migrate databases and structured data to SQL Server on Linux
 

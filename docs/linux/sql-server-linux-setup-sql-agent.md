@@ -7,7 +7,9 @@ ms.date: 12/05/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 
 # Install SQL Server Agent on Linux

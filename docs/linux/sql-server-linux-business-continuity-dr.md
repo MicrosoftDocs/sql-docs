@@ -8,7 +8,9 @@ ms.date: 11/23/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Business continuity and database recovery - SQL Server on Linux
 

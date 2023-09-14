@@ -9,7 +9,9 @@ ms.date: 04/03/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Linux

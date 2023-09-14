@@ -7,6 +7,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 

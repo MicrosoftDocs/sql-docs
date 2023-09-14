@@ -8,6 +8,8 @@ ms.date: 03/17/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure the time zone for SQL Server 2017 on Linux
 

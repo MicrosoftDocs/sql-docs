@@ -7,6 +7,8 @@ ms.date: 02/20/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 

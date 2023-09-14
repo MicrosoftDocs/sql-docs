@@ -6862,7 +6862,7 @@ items:
           items:
           - name: Hardware for In-Memory
             href: relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
-          - name: In-Memory on Azure SQL Database
+          - name: In-Memory on Azure SQL Database and SQL Managed Instance
             href: /azure/sql-database/sql-database-in-memory
         - name: Administration of In-Memory
           href: relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md

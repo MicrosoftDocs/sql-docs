@@ -31,9 +31,3 @@ Ruby and tiny_tds are community-supported software. This software doesn't come w
 ## Community resources
 
 * [Azure Ruby Developer Center](https://azure.microsoft.com/develop/ruby/)
-  
-## Samples
-
-* [Getting Started with Ruby on macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [Getting Started with Ruby on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [Getting Started with Ruby on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)

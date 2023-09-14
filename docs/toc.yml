@@ -6845,7 +6845,7 @@ items:
           - name: Migrate triggers
             href: relational-databases/in-memory-oltp/migrating-triggers.md
         - name: Natively compiled
-          href: relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+          href: relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
           items:
           - name: Tables and stored procs
             href: relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
@@ -6858,7 +6858,7 @@ items:
           - name: Interpreted access of In-Memory tables
             href: relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
         - name: Performance of In-Memory
-          href: relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+          href: relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
           items:
           - name: Hardware for In-Memory
             href: relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md

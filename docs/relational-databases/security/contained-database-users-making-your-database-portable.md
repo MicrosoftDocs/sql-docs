@@ -3,7 +3,7 @@ title: "Contained user access to contained databases"
 description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model.
 author: VanMSFT
 ms.author: vanto
-ms.date: "01/28/2019"
+ms.date: "09/14/2023"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -73,21 +73,33 @@ Azure SQL Managed Instance behaves like SQL Server on-premises in the context of
 For example:
 
 > [!WARNING]
-> Before you run the following script, be sure that no other connections are active on your Managed Instance database. The script might disrupt other processes that are running on the database.
+> The following sample script uses a `kill` statement to close all user proceses on the database. Make sure that you are aware of the consequences of this action and that it fits your business before running the following script. Be sure that no other connections are active on your SQL Managed Instance database as the script will disrupt other processes that are running on the database.
 
 ```sql
-Use MASTER;
+USE master;
+
+SELECT * FROM sys.dm_exec_sessions
+WHERE database_id  = db_id('Test')
+
+DECLARE @kill_string varchar(8000) = '';
+SELECT @kill_string = @kill_string + 'KILL ' + str(session_id) + '; '  
+FROM sys.dm_exec_sessions
+WHERE database_id  = db_id('Test') and is_user_process = 1;
+
+EXEC(@kill_string);
+GO
+
+sp_configure 'contained database authentication', 1;  
+GO
+ 
+RECONFIGURE;  
 GO 
 
-ALTER DATABASE Test
-SET RESTRICTED_USER
-WITH ROLLBACK IMMEDIATE;
+SELECT * FROM sys.dm_exec_sessions
+WHERE database_id  = db_id('Test')
 
 ALTER DATABASE Test
-SET containment=partial;
-
-ALTER DATABASE Test
-SET MULTI_USER;
+SET containment=partial
 
 USE Test;  
 GO 
@@ -99,7 +111,6 @@ SELECT containment_desc FROM sys.databases
 WHERE name='Test'
 ```
 
-  
 ## Remarks  
   
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contained database users must be enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
@@ -110,7 +121,7 @@ WHERE name='Test'
 - Since contained database users are database level principals, you need to create contained database users in every database that you would use them. The identity is confined to the database and is independent in all aspects from a user with same name and same password in another database in the same server.  
 - Use the same strength passwords that you would normally use for logins.  
   
-## See Also
+## See also
 
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

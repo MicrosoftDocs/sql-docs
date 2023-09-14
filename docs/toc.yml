@@ -1879,17 +1879,19 @@ items:
   - name: Track changes
     href: relational-databases/track-changes/track-data-changes-sql-server.md
     items:
-    - name: Change data capture
+    - name: Change data capture (CDC)
       href: relational-databases/track-changes/about-change-data-capture-sql-server.md
       items:
       - name: Enable & disable
         href: relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md
       - name: Administer & monitor
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
-      - name: Work with
+      - name: Work with change data capture
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
       - name: Interoperability
         href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
+      - name: Known issues and errors
+        href: relational-databases/track-changes/known-issues-and-errors-change-data-capture.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:

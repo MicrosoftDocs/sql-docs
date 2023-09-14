@@ -7,6 +7,8 @@ ms.date: 08/22/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: ld2-linux-distribution
 ---
 # Configure repositories for installing and upgrading SQL Server on Linux

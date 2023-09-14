@@ -8,6 +8,8 @@ ms.date: 06/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Release notes for SQL Server 2017 on Linux
 

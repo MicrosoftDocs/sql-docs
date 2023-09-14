@@ -7,7 +7,9 @@ ms.date: 04/10/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - linux-related-content
 ---
 
 # What's new for SQL Server 2017 on Linux

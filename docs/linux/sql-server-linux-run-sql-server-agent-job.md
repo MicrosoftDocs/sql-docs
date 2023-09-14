@@ -7,6 +7,8 @@ ms.date: 02/20/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Create and run SQL Server Agent jobs on Linux
 

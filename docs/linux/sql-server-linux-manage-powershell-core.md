@@ -8,6 +8,8 @@ ms.date: 04/22/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Manage SQL Server on Linux with PowerShell Core
 

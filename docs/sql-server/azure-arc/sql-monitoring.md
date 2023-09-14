@@ -1,5 +1,5 @@
 ---
-title: Monitoring Azure Arc-enabled SQL Servers
+title: Monitoring Azure Arc-enabled SQL Server telemetry
 description: How to enable or disable monitoring on Azure Arc-enabled SQL Servers
 author: lcwright
 ms.author: lancewright
@@ -8,7 +8,7 @@ ms.date: 09/08/2023
 ms.topic: conceptual
 ---
 
-# Monitor Azure Arc-enabled SQL Servers
+# Monitor Azure Arc-enabled SQL Server telemetry
 
 In a future release, you will be able to review some data from SQL Server dynamic management views (DMVs) in Azure portal. This capability requires Azure to collect data from instances of Microsoft Azure Arc-enabled SQL Server. This article explains how to configure or prevent this collection and describes what data is collected.
 

@@ -9,6 +9,8 @@ ms.date: 09/24/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication with non-default ports (SQL Server Linux)

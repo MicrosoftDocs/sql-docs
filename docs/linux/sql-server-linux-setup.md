@@ -7,7 +7,9 @@ ms.date: 05/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Installation guidance for SQL Server on Linux
 

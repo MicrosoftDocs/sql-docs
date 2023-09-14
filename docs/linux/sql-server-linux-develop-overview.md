@@ -7,6 +7,8 @@ ms.date: 09/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # How to get started developing applications for SQL Server on Linux
 

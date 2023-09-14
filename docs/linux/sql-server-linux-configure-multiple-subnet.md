@@ -8,6 +8,8 @@ ms.date: 04/11/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances

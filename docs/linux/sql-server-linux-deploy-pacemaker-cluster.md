@@ -8,7 +8,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 ---
 # Deploy a Pacemaker cluster for SQL Server on Linux
 

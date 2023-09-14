@@ -7,7 +7,9 @@ ms.date: 07/01/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - linux-related-content
 ---
 # Get started with Log Shipping on Linux
 

@@ -7,6 +7,8 @@ ms.date: 03/31/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use SQL Server Management Studio on Windows to manage SQL Server on Linux
 

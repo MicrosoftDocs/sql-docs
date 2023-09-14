@@ -8,6 +8,8 @@ ms.date: 08/14/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Release notes for SQL Server 2019 on Linux
 

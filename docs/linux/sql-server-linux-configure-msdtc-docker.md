@@ -8,6 +8,8 @@ ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # How to use distributed transactions with SQL Server Linux containers

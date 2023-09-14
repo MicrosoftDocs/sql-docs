@@ -8,7 +8,9 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 ---
 # Deploy availability groups with DH2i DxEnterprise on Kubernetes
 

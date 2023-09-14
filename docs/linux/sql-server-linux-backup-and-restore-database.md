@@ -8,6 +8,8 @@ ms.date: 03/31/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Backup and restore SQL Server databases on Linux
 

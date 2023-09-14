@@ -8,7 +8,9 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Rotate keytabs for SQL Server on Linux

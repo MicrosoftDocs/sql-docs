@@ -14,6 +14,9 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
 ---
 # E-mail delivery in Reporting Services
+
+**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode
+
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. To distribute a report by e-mail, you 1) configure the report server for e-mail delivery and 2) define either a standard subscription or a data-driven subscription. A single subscription cannot deliver multiple reports in a single e-mail message. However you can create multiple subscriptions.  
   
  The report server connects with an e-mail server through a standard connection. It does not use communication that has been encrypted using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The e-mail server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
@@ -23,10 +26,6 @@ helpviewer_keywords:
 -   [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
 -   [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
 ## E-mail delivery options  
  Report server e-mail delivery can deliver reports in the following way  

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "user [SQL Server], about contained database users"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Contained Database Users - Making Your Database Portable
+# Contained database users - Making your database portable
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
@@ -21,13 +21,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 > [!NOTE]  
 > As [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolves the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service and moves towards higher guaranteed SLAs you may be required to switch to the contained database user model and database-scoped firewall rules to attain the higher availability SLA and higher max login rates for a given database. [!INCLUDE[msCoName](../../includes/msconame-md.md)] encourage you to consider such changes today.  
   
-## Traditional Login and User Model
+## Traditional login and user model
 
  In the traditional connection model, Windows users or members of Windows groups connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by providing user or group credentials authenticated by Windows. Or you can provide both a name and password and connects by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. In both cases, the master database must have a login that matches the connecting credentials. After the [!INCLUDE[ssDE](../../includes/ssde-md.md)] confirms the Windows authentication credentials or authenticates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication credentials, the connection typically attempts to connect to a user database. To connect to a user database, the login must be mapped to (that is, associated with) a database user in the user database. The connection string may also specify connecting to a specific database, which is optional in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but required in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 
  The important principal is that both the login (in the master database) and the user (in the user database) must exist and be related to each other. This means that the connection to the user database has a dependency upon the login in the master database, which limits the ability of the database to be moved to a different hosting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] server. And if, for any reason, a connection to the master database is not available (for example, a failover is in progress), the overall connection time will increase or the connection may time out. Consequently this may reduce connection scalability.  
   
-## Contained Database User Model
+## Contained database user model
 
  In the contained database user model, the login in the master database is not present. Instead, the authentication process occurs at the user database, and the database user in the user database does not have an associated login in the master database. The contained database user model supports both Windows authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, and can be used in both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. To connect as a contained database user, the connection string must always contain a parameter for the user database so that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] knows which database is responsible for managing the authentication process. The activity of the contained database user is limited to the authenticating database, so when connecting as a contained database user, the database user account must be independently created in each database that the user needs. To change databases, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] users must create a new connection. Contained database users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change databases if an identical user is present in another database.  
   
@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 - [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
-## Syntax Differences  
+## Syntax differences  
   
 |Traditional model|Contained database user model|  
 |-----------------------|-----------------------------------|  

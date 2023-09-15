@@ -54,7 +54,7 @@ helpviewer_keywords:
   
 |Task|Available settings|  
 |----------|------------------------|  
-|Manage individual subscriptions|Shows fields that enable a user to automate and deliver a report to himself or herself. In this mode, fields that accept e-mail aliases are not available.|  
+|Manage individual subscriptions|Shows fields that enable users to automate and deliver a report to themselves. In this mode, fields that accept e-mail aliases aren't available.|  
 |Manage all subscriptions|Shows fields that support wider distribution, including To:, Cc:, Bcc:, and Reply-To: fields, providing more ways to route a report to more subscribers. The availability of e-mail alias fields is defined through the RSReportServer configuration file settings.| 
 
 ::: moniker range="<=sql-server-2017"
@@ -75,8 +75,8 @@ helpviewer_keywords:
  You can configure a report server to limit e-mail distribution to specific host domains. For example, you can prevent a Native report server from delivering a report to all domains except those listed in the **RSReportServer.config** configuration file.  
   
  You can also set configuration settings to hide the **To** field in a subscription. In this case, reports are delivered only to the user defining the subscription. However, after a report is sent to a user, you cannot explicitly prevent it from being forwarded.  
-  
- The most effective way to control report distribution is to configure a report server to send only a report server URL. The report server uses Windows Authentication and a role-based authorization model to control access to a report. If a user accidentally receives through e-mail a report that he or she is not authorized to view, the report server will not display the report. For more information about subscriptions, see the following.  
+
+ The most effective way to control report distribution is to configure a report server to send only a report server URL. The report server uses Windows Authentication and a role-based authorization model to control access to a report. If users accidentally receive through e-mail a report that they're not authorized to view, the report server won't display the report. For more information about subscriptions, see the following.  
   
 ## Email server configuration  
  For a Native mode report server, the e-mail delivery extension is configured through the Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and by editing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files. For a SharePoint mode report server, the e-mail delivery extension is configured in SharePoint management pages and PowerShell scripts.  

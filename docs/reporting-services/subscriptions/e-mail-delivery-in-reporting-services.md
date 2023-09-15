@@ -83,7 +83,7 @@ helpviewer_keywords:
   
 For information on how to configure a native mode report server, see [email settings - Reporting Services Native mode (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
-For information on how to configure a SharePoint mode report server, see [Create and Manage Subscriptions for SharePoint Mode Report Servers](../create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md).
+For information on how to configure a SharePoint mode report server, see [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md). 
   
 ## See also  
  [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   

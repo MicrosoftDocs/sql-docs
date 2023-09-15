@@ -509,6 +509,10 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 > [!NOTE]
 > The ARM template highlighted in the [Create an Azure SQL Database with database level customer-managed keys as a secondary or copy](#create-an-azure-sql-database-with-database-level-customer-managed-keys-as-a-secondary-or-copy) section can be referenced to restore the database with an ARM template by changing the `createMode` parameter.
 
+## Automatic key rotation option for copied or restored databases
+
+Newly copied or restored databases can be configured to automatically rotate the customer-managed key used for transparent data encryption. For information on how to enable automatic key rotation in the Azure portal or using APIs, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
+
 ## Next steps
 
 Check the following documentation on various database level CMK operations:

@@ -51,11 +51,11 @@ Create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] insta
 
 Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a look at the data.
 
-1. In the same terminal window, run the following command:
+In the same terminal window, run the following command:
 
-   ```bash
-   sqlcmd open ads
-   ```
+```bash
+sqlcmd open ads
+```
 
 1. Now that you have a local copy of your database, you can run a few queries. Here are a few queries you can use to check for data quality issues:
 

@@ -10464,7 +10464,9 @@ items:
         href: sql-server/azure-arc/delete-from-azure-arc.md
     - name: Monitor
       items:
-      - name: Activity Logs
+      - name: Telemetry
+        href: sql-server/azure-arc/sql-monitoring.md
+      - name: Activity logs
         href: sql-server/azure-arc/activity-logs.md
     - name: Secure
       items:

@@ -4,12 +4,11 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 08/14/2023
+ms.date: 09/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - linux-related-content
+ms.custom: linux-related-content
 ---
 # Release notes for SQL Server 2019 on Linux
 

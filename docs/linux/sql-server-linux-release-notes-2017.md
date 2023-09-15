@@ -4,12 +4,11 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 06/15/2023
+ms.date: 09/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - linux-related-content
+ms.custom: linux-related-content
 ---
 # Release notes for SQL Server 2017 on Linux
 
@@ -40,7 +39,6 @@ This section lists the latest versions of each package per distribution, for [!I
 
 > [!IMPORTANT]  
 > This is the final cumulative update for [!INCLUDE [ssSQL17](../includes/sssql17-md.md)].
-
 
 - As of CU 4, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
 - The **mssql-server-is** package isn't supported on SUSE in this release. For more information, see [SQL Server Integration Services (SSIS)](#ssis).

@@ -73,7 +73,7 @@ Azure SQL Managed Instance behaves like SQL Server on-premises in the context of
 For example:
 
 > [!WARNING]
-> The following sample script uses a `kill` statement to close all user proceses on the database. Make sure that you are aware of the consequences of this action and that it fits your business before running the following script. Be sure that no other connections are active on your SQL Managed Instance database as the script will disrupt other processes that are running on the database.
+> The following sample script uses a `kill` statement to close all user processes on the database. Make sure that you are aware of the consequences of this action and that it fits your business before running the following script. Be sure that no other connections are active on your SQL Managed Instance database as the script will disrupt other processes that are running on the database.
 
 ```sql
 USE master;

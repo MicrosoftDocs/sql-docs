@@ -7,7 +7,9 @@ ms.date: 01/30/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - linux-related-content
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant (SSMA)
 

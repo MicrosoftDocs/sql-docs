@@ -8,6 +8,8 @@ ms.date: 06/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Performance best practices and configuration guidelines for SQL Server on Linux
 

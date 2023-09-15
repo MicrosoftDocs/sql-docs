@@ -8,6 +8,8 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # High availability and data protection for availability group configurations
 

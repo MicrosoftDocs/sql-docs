@@ -8,6 +8,8 @@ ms.date: 02/24/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
+ms.custom:
+  - linux-related-content
 ---
 # Troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux
 

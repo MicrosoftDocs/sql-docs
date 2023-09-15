@@ -7,6 +7,8 @@ ms.date: 09/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 

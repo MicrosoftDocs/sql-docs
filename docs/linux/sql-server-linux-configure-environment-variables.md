@@ -7,6 +7,8 @@ ms.date: 08/08/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure SQL Server settings with environment variables on Linux
 

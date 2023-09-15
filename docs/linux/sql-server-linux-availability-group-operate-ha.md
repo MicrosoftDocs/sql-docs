@@ -8,6 +8,8 @@ ms.date: 03/01/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Operate Always On Availability Groups on Linux
 

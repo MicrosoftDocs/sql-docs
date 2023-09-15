@@ -8,6 +8,8 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Always On Availability Group failover on Linux
 

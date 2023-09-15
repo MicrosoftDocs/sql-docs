@@ -190,30 +190,6 @@ The following diagram shows how these tables are related to each other. Some of 
 
    ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/azure-data-studio-tables-created.png)
 
-## Load data into the tables
-
-1. Create a folder called *sampleData* in your Downloads folder to store sample data for your database.
-
-2. Right-click the following links and save them into the *sampleData* folder.
-
-   - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
-   - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
-   - [SampleStudentData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleStudentData)
-   - [SampleCreditData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCreditData)
-
-3. Open a command prompt window and navigate to the *sampleData* folder.
-
-4. Execute the following commands to insert sample data into the tables replacing the values for *server*, *database*, *user*, and *password* with the values for your environment.
-
-   ```cmd
-   bcp Course in SampleCourseData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Person in SamplePersonData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Student in SampleStudentData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Credit in SampleCreditData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   ```
-
-You have now loaded sample data into the tables you created earlier.
-
 ## Query data
 
 Execute the following queries to retrieve information from the database tables. See [Write SQL queries](/previous-versions/sql/sql-server-2005/express-administrator/bb264565(v=sql.90)) to learn more about writing SQL queries. The first query joins all four tables to find the students taught by 'Dominick Pope' who have a grade higher than 75%. The second query joins all four tables and finds the courses in which 'Noe Coleman' has ever enrolled.

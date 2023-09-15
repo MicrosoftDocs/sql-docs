@@ -9,6 +9,8 @@ ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # New to Linux resources for SQL users
 

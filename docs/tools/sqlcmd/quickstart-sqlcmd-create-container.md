@@ -17,9 +17,9 @@ In this quickstart, you'll use a single command in **sqlcmd** to create a new co
 
 ## Prerequisites
 
-- Install the latest **sqlcmd**
 - A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
-- Download and install [[!INCLUDE [name-sos-short](../../includes/name-sos-short.md)]](../../azure-data-studio/download-azure-data-studio)
+- Download and install [[!INCLUDE [name-sos-short](../../includes/name-sos-short.md)]](../../azure-data-studio/download-azure-data-studio.md)
+- - Install the latest **sqlcmd**
 
 ## Remarks
 

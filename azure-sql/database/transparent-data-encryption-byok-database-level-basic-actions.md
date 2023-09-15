@@ -259,10 +259,10 @@ For information on installing the current release of Azure CLI, see [Install the
 
 Update a database configured with user-assigned managed identity and cross-tenant customer-managed TDE using the [az sql db create](/cli/azure/sql/db) command. The **Key Identifier** from the second tenant can be used in the `encryption-protector` field. The **Application ID** of the multi-tenant application can be used in the `federated-client-id` field.
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`. The `--encryption-protector-auto-rotation` parameter can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level.
 
 ```azurecli
-az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove
+az sql db update --resource-group $resourceGroupName --server $serverName --name mySampleDatabase --sample-name AdventureWorksLT --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 2 --assign-identity --user-assigned-identity-id $identityid --encryption-protector $keyid --federated-client-id $federatedclientid --keys $keys --keys-to-remove $keysToRemove --encryption-protector-auto-rotation True
 ```
 
 The list `$keys` are a space separated list of keys that are to be added on the database and `$keysToRemove` is a space separated list of keys that have to be removed from the database
@@ -291,12 +291,12 @@ Replace the following values in the example:
 - `<FederatedClientId>`: The **Application ID** of the multi-tenant application
 - `<ListOfKeys>`: The comma separated list of database level customer-managed keys to be added to the database
 - `<ListOfKeysToRemove>`: The comma separated list of database level customer-managed keys to be removed from the database
+- `-EncryptionProtectorAutoRotation`: Can be used to enable [automatic key rotation](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level) on the database level
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`.
 
 ```powershell
-Set-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId>
--KeyList <ListOfKeys> -KeysToRemove <ListOfKeysToRemove>
+Set-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId> -KeyList <ListOfKeys> -KeysToRemove <ListOfKeysToRemove> -EncryptionProtectorAutoRotation True
 ```
 
 An example of -KeyList and -KeysToRemove is:

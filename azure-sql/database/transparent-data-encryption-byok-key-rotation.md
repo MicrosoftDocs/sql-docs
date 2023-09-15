@@ -146,7 +146,7 @@ Automatic key rotation can also be enabled at the database level for Azure SQL D
 
 # [Portal](#tab/azure-portal)
 
-For Azure portal information on setting up automatic key rotation at the database level, see [Configure automatic key rotation for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md#configure-automatic-key-rotation-for-tde-with-database-level-customer-managed-keys).
+For Azure portal information on setting up automatic key rotation at the database level, see [Update an existing Azure SQL Database with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md#update-an-existing-azure-sql-database-with-database-level-customer-managed-keys).
 
 # [PowerShell](#tab/azure-powershell)
 

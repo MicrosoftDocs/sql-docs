@@ -9,6 +9,8 @@ ms.date: 05/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
 

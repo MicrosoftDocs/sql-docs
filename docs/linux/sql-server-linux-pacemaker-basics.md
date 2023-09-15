@@ -8,6 +8,8 @@ ms.date: 12/29/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Pacemaker for availability groups and failover cluster instances on Linux
 

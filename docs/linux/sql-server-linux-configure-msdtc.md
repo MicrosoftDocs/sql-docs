@@ -7,6 +7,8 @@ ms.date: 08/12/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 

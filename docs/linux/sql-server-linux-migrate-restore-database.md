@@ -8,7 +8,9 @@ ms.date: 04/08/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - linux-related-content
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 

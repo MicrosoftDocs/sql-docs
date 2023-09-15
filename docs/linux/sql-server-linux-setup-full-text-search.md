@@ -7,7 +7,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Install SQL Server Full-Text Search on Linux
 

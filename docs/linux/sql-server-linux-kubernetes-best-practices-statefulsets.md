@@ -8,6 +8,8 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Deploy SQL Server Linux containers on Kubernetes with StatefulSets
 

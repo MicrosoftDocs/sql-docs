@@ -5,6 +5,8 @@ ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 1. **On all SQL Servers, create a Server login for Pacemaker**. The following Transact-SQL creates a login:
 

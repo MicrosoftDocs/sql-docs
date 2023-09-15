@@ -8,6 +8,8 @@ ms.date: 08/31/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use SQL Assessment API for SQL Server on Linux
 

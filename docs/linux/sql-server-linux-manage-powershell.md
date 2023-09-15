@@ -7,6 +7,8 @@ ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use PowerShell on Windows to manage SQL Server on Linux
 

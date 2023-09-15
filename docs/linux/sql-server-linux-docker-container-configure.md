@@ -8,8 +8,10 @@ ms.date: 03/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Configure and customize SQL Server Docker containers
 

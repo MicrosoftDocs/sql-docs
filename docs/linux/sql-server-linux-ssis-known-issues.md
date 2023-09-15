@@ -8,6 +8,8 @@ ms.date: 06/06/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Limitations and known issues for SSIS on Linux
 

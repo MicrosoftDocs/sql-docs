@@ -4,6 +4,8 @@ ms.author: randolphwest
 ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
+ms.custom:
+  - linux-related-content
 ---
 ## Connect locally
 

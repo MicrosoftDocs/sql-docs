@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
+ms.custom:
+  - linux-related-content
 ---
 # Quickstart: Deploy SQL Server on Linux using an Ansible playbook
 

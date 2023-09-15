@@ -41786,6 +41786,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/docs/relational-databases/track-changes/known-issues-and-limitations.md",
+      "redirect_url": "/sql/relational-databases/track-changes/about-change-data-capture-sql-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md",
       "redirect_url": "/sql/integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity",
       "redirect_document_id": false

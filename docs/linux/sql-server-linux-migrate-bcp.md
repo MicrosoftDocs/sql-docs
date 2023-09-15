@@ -7,6 +7,8 @@ ms.date: 01/30/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Bulk copy data with bcp to SQL Server on Linux
 

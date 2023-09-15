@@ -4,7 +4,7 @@ description: A quickstart that walks through using creating a new container and 
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 09/12/2023
+ms.date: 09/15/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: quickstart
@@ -17,8 +17,9 @@ In this quickstart, you'll use a single command in **sqlcmd** to create a new co
 
 ## Prerequisites
 
-- A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
 - Install the latest **sqlcmd**
+- A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
+- Download and install [[!INCLUDE [name-sos-short](../../includes/name-sos-short.md)]](../../azure-data-studio/download-azure-data-studio)
 
 ## Remarks
 

@@ -20,7 +20,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Creates a new profile for a replication agent. This stored procedure is executed at the Distributor on any database.
+Creates a new profile for a replication agent. This stored procedure is executed at the Distributor on any database.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -89,8 +89,8 @@ Only members of the **sysadmin** fixed server role can execute `sp_add_agent_pro
 
 ## See also
 
-- [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)
-- [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)
+- [Work with Replication Agent Profiles](../replication/agents/work-with-replication-agent-profiles.md)
+- [Replication Agent Profiles](../replication/agents/replication-agent-profiles.md)
 - [sp_add_agent_parameter (Transact-SQL)](sp-add-agent-parameter-transact-sql.md)
 - [sp_change_agent_parameter (Transact-SQL)](sp-change-agent-parameter-transact-sql.md)
 - [sp_change_agent_profile (Transact-SQL)](sp-change-agent-profile-transact-sql.md)

@@ -46,7 +46,7 @@ The change tracking-enabled table to be manually cleaned up. The backlogs are le
 
 `0` (success) or `1` (failure).
 
-## Example
+## Examples
 
 ```sql
 DECLARE @DeletedRowCount BIGINT;
@@ -90,8 +90,8 @@ Only a member of the **sysadmin** server role or **db_owner** database role can 
 
 ## See also
 
-- [About change tracking (Transact-SQL)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)
-- [Change tracking cleanup and troubleshooting (Transact-SQL)](../../relational-databases/track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
+- [About change tracking (Transact-SQL)](../track-changes/about-change-tracking-sql-server.md)
+- [Change tracking cleanup and troubleshooting (Transact-SQL)](../track-changes/cleanup-and-troubleshoot-change-tracking-sql-server.md)
 - [Change tracking functions (Transact-SQL)](../system-functions/change-tracking-functions-transact-sql.md)
 - [Change tracking system tables (Transact-SQL)](../system-tables/change-tracking-tables-transact-sql.md)
 - [Change tracking stored procedures (Transact-SQL)](change-tracking-stored-procedures-transact-sql.md)

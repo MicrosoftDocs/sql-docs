@@ -56,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER TABLE Purchasing.PurchaseOrderHeader  
     NOCHECK CONSTRAINT FK_PurchaseOrderHeader_Employee_EmployeeID;  
@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  To re-enable the constraint when desired, copy and paste the following example into the query window and select **Execute**.
 
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER TABLE Purchasing.PurchaseOrderHeader  
     CHECK CONSTRAINT FK_PurchaseOrderHeader_Employee_EmployeeID;  

@@ -83,8 +83,8 @@ USE master;
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
 GRANT VIEW SERVER STATE TO [domain_name\MAX_CPU];  
 GO  
--- Create a SQL Server user in AdventureWorks2012 for this login  
-USE AdventureWorks2012;  
+-- Create a SQL Server user in AdventureWorks2022 for this login  
+USE AdventureWorks2022;  
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
@@ -259,11 +259,11 @@ GO
   
 ```sql  
 --Run backup statement in the gBackup session.  
-BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
+BACKUP DATABASE AdventureWorks2022 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   
-   MEDIADESCRIPTION='AdventureWorks2012 Compressed Data Backups',
-   DESCRIPTION='First database backup on AdventureWorks2012 Compressed Data Backups media set',
+   MEDIADESCRIPTION='AdventureWorks2022 Compressed Data Backups',
+   DESCRIPTION='First database backup on AdventureWorks2022 Compressed Data Backups media set',
    COMPRESSION;  
 GO  
 ```  

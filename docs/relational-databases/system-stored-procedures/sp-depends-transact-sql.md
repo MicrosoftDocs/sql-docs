@@ -80,7 +80,7 @@ sp_depends [ @objname = ] '<object>'
  The following example lists the database objects that depend on the `Sales.Customer` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Both the schema name and table name are specified.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
@@ -89,7 +89,7 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
  The following example lists the database objects on which the trigger `iWorkOrder` depends.  
   
 ```  
-EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
+EXEC sp_depends @objname = N'AdventureWorks2022.Production.iWorkOrder' ;  
 ```  
   
 ## See Also  

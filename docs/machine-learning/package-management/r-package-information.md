@@ -124,8 +124,6 @@ In addition, you can add MicrosoftML and olapR packages to a SQL Server instance
 
 R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt).
 
-The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
-
 For information on which version of R is included with each SQL Server version, see [Python and R versions](../sql-server-machine-learning-services.md#versions).
 
 > [!IMPORTANT]

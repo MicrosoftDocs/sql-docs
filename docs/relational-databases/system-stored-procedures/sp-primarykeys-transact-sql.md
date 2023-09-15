@@ -73,7 +73,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   
    @table_name = N'JobCandidate',  
-   @table_catalog = N'AdventureWorks2012',   
+   @table_catalog = N'AdventureWorks2022',   
    @table_schema = N'HumanResources';  
 ```  
   

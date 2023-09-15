@@ -71,13 +71,13 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;  
 DECLARE @login AS sysname;  
 DECLARE @password AS sysname;  
-SET @publicationDB = N'AdventureWorks2012';   
+SET @publicationDB = N'AdventureWorks2022';   
 SET @publication = N'AdvWorksSalesOrdersMerge'   
 SET @login = $(Login);  
 SET @password = $(Password);  
   
 -- Create a new merge publication.   
-USE [AdventureWorks2012]  
+USE [AdventureWorks2022]  
 EXEC sp_addmergepublication   
 @publication = @publication,   
 -- Set the compatibility level to SQL Server 2014.  

@@ -24,6 +24,9 @@ You can now connect to SQL Server using the following authentication methods usi
 - Azure Active Directory Password
 - Azure Active Directory Integrated
 - Azure Active Directory Universal with Multi-Factor Authentication
+- Azure Active Directory Service Principal
+- Azure Active Directory Managed Identity
+- Azure Active Directory Default
 - Azure Active Directory access token
 
 The current authentication modes, such as [SQL authentication and Windows authentication](../choose-an-authentication-mode.md) remain unchanged.
@@ -48,11 +51,26 @@ Allows specifying the username and password to the client and driver, but this i
 
 ### Azure Active Directory Integrated
 
-When the Windows domain is synchronized with Azure AD, and a user is logged into the Windows domain, the user's Windows credentials are used for Azure AD authentication.
+When the Windows domain is synchronized with Azure AD and a user is logged into the Windows domain, the user's Windows credentials are used for Azure AD authentication.
 
 ### Azure Active Directory Universal with Multi-Factor Authentication
 
 This is the standard interactive method with multi-factor authentication option for Azure AD accounts. This will work in most scenarios.
+
+### Azure Active Directory Service Principal
+
+A service principal is an identity that can be created for use with automated tools, jobs and applications. With the Service Principal authentication method, you can connect to your SQL instance using the client ID and secret of a service principal identity.
+
+### Azure Active Directory Managed Identity
+
+Managed identities are special forms of service principals. There are two types of managed identities: system-assigned and user-assigned. System-assigned managed identities are enabled directly on an Azure resource, whereas user-assigned managed identities are a standalone resource that can be assigned to one or more Azure resources.
+
+> [!Note]
+> In order to use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have an Azure AD client running with the identity's certificate stored in it. This is most commonly achieved through an Azure VM, as the identity can be easily assigned to the machine through the VM's portal blade.
+
+### Azure Active Directory Default
+
+The Default authentication option with Azure Active Directory enables authentication that's performed through password-less and non-interactive mechanisms including Managed Identities, Visual Studio, Visual Studio Code, Azure CLI, and more. 
 
 ### Azure Active Directory access token
 
@@ -68,10 +86,11 @@ Some non-GUI clients such as [Invoke-sqlcmd](/powershell/module/sqlserver/invoke
 
 ## See also
 
-- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
 - [Azure Active Directory (Azure AD) authentication](/azure/active-directory/authentication/overview-authentication)
 - [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
 - [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](azure-ad-authentication-sql-server-automation-setup-tutorial.md)
+- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Rotate certificates - Azure Arc-enabled SQL Server](../../../sql-server/azure-arc/rotate-certificates.md)
 
 ## Next steps
 

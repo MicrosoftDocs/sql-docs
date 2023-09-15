@@ -300,7 +300,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 		}
 		static public void Initialize()
 		{
-			string subscriptionDbName = "AdventureWorks2012Replica";
+			string subscriptionDbName = "AdventureWorks2022Replica";
 			ServerConnection conn = new ServerConnection(publisherInstance);
 			Database newDatabase;
 			Server subServer = new Server(conn);
@@ -318,7 +318,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Set the server and database names
 			string distributionDbName = "distribution";
 			string publisherName = publisherInstance;
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			DistributionDatabase distributionDb;
 			ReplicationServer distributor;
@@ -352,7 +352,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 				publisher.PublisherSecurity.WindowsAuthentication = true;
 				publisher.Create();
 
-				// Enable AdventureWorks2012 as a publication database.
+				// Enable AdventureWorks2022 as a publication database.
 				publicationDb = new ReplicationDatabase(publicationDbName, conn);
 
 				publicationDb.EnabledTransPublishing = true;
@@ -445,7 +445,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publisherName = publisherInstance;
 			string distributorName = publisherInstance;
 			string distributionDbName = "distribution";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Create connections to the Publisher and Distributor
 			// using Windows Authentication.
@@ -467,7 +467,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 				publisherConn.Connect();
 				distributorConn.Connect();
 
-				// Disable all publishing on the AdventureWorks2012 database.
+				// Disable all publishing on the AdventureWorks2022 database.
 				if (publicationDb.LoadProperties())
 				{
 					if (publicationDb.EnabledMergePublishing)
@@ -597,7 +597,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			//<snippetrmo_CreateTranPub>
 			// Set the Publisher, publication database, and publication names.
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string publisherName = publisherInstance;
 
 			ReplicationDatabase publicationDb;
@@ -613,7 +613,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 				// Connect to the Publisher.
 				conn.Connect();
 
-				// Enable the AdventureWorks2012 database for transactional publishing.
+				// Enable the AdventureWorks2022 database for transactional publishing.
 				publicationDb = new ReplicationDatabase(publicationDbName, conn);
 
 				// If the database exists and is not already enabled, 
@@ -710,7 +710,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// and publication names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			TransPublication publication;
 			ReplicationDatabase publicationDb;
@@ -782,7 +782,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Set the Publisher, publication database, and publication names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			ReplicationDatabase publicationDb;
 			MergePublication publication;
@@ -872,7 +872,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the server, database, and publication names
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			MergePublication publication;
 
@@ -930,7 +930,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the server, database, and publication names
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			TransPublication publication;
 
@@ -996,7 +996,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// and publication names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			MergePublication publication;
 			ReplicationDatabase publicationDb;
@@ -1068,7 +1068,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the Publisher, publication, and article names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string articleName = "Product";
 			string schemaOwner = "Production";
 
@@ -1135,7 +1135,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the Publisher and publication names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Specify article names.
 			string articleName1 = "Employee";
@@ -1266,8 +1266,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksProductTran";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -1341,8 +1341,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksProductTran";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create connections to the Publisher and Subscriber.
 			ServerConnection subscriberConn = new ServerConnection(subscriberName);
@@ -1443,8 +1443,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 			string hostname = @"adventure-works\garrett1";
 
 			//Create connections to the Publisher and Subscriber.
@@ -1543,8 +1543,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 			string hostname = @"adventure-works\garrett1";
 
 			//Create a connection to the Publisher.
@@ -1628,8 +1628,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create connections to the Publisher and Subscriber.
 			ServerConnection subscriberConn = new ServerConnection(subscriberName);
@@ -1703,8 +1703,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksProductTran";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create connections to the Publisher and Subscriber.
 			ServerConnection subscriberConn = new ServerConnection(subscriberName);
@@ -1778,8 +1778,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksProductTran";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -1832,8 +1832,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -1886,8 +1886,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
             string subscriberName = subscriberInstance;
             string publisherName = publisherInstance;
             string publicationName = "AdvWorksProductTran";
-            string subscriptionDbName = "AdventureWorks2012Replica";
-            string publicationDbName = "AdventureWorks2012";
+            string subscriptionDbName = "AdventureWorks2022Replica";
+            string publicationDbName = "AdventureWorks2022";
 
             // Create a connection to the Subscriber.
             ServerConnection conn = new ServerConnection(subscriberName);
@@ -1951,8 +1951,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string subscriberName = subscriberInstance;
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -2014,8 +2014,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			String subscriberName = subscriberInstance;
 			String publisherName = publisherInstance;
 			String publicationName = "AdvWorksProductTran";
-			String publicationDbName = "AdventureWorks2012";
-            String subscriptionDbName = "AdventureWorks2012Replica";
+			String publicationDbName = "AdventureWorks2022";
+            String subscriptionDbName = "AdventureWorks2022Replica";
 
 			// Create a connection to the Subscriber.
 			ServerConnection conn = new ServerConnection(subscriberName);
@@ -2066,8 +2066,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string subscriberName = subscriberInstance;
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			/// Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -2119,8 +2119,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			String subscriberName = subscriberInstance;
 			String publisherName = publisherInstance;
 			String publicationName = "AdvWorksSalesOrdersMerge";
-			String publicationDbName = "AdventureWorks2012";
-            String subscriptionDbName = "AdventureWorks2012Replica";
+			String publicationDbName = "AdventureWorks2022";
+            String subscriptionDbName = "AdventureWorks2022Replica";
 
 			// Create a connection to the Subscriber.
 			ServerConnection conn = new ServerConnection(subscriberName);
@@ -2171,8 +2171,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string subscriberName = subscriberInstance;
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Create a connection to the Subscriber.
 			ServerConnection conn = new ServerConnection(subscriberName);
@@ -2236,8 +2236,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string subscriberName = subscriberInstance;
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -2299,8 +2299,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string subscriberName = subscriberInstance;
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			// Create a connection to the Publisher.
 			ServerConnection conn = new ServerConnection(publisherName);
@@ -2351,7 +2351,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Set the Publisher, publication database, and publication names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			ReplicationDatabase publicationDb;
 			MergePublication publication;
@@ -2448,8 +2448,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 			string hostname = @"adventure-works\garrett1";
 			string webSyncUrl = "https://" + publisherInstance + "/WebSync/replisapi.dll";
 
@@ -2563,8 +2563,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publicationName = "AdvWorksSalesOrdersMerge";
 			string publisherName = publisherInstance;
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 
 			//Create connections to the Publisher and Subscriber.
 			ServerConnection subscriberConn = new ServerConnection(subscriberName);
@@ -2661,8 +2661,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			string publisherName = publisherInstance;
             string distributorName = distributorInstance;
             string publicationName = "AdvWorksSalesOrdersMerge";
-			string subscriptionDbName = "AdventureWorks2012Replica";
-			string publicationDbName = "AdventureWorks2012";
+			string subscriptionDbName = "AdventureWorks2022Replica";
+			string publicationDbName = "AdventureWorks2022";
 			string hostname = @"adventure-works\garrett1";
 			string webSyncUrl = "https://" + publisherInstance + "/SalesOrders/replisapi.dll";
 
@@ -2741,7 +2741,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			//<snippetrmo_GenerateSnapshot_WithJob>
 			// Set the Publisher, publication database, and publication names.
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string publisherName = publisherInstance;
 
 			TransPublication publication;
@@ -2790,7 +2790,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			//<snippetrmo_GenerateSnapshot>
 			// Set the Publisher, publication database, and publication names.
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string publisherName = publisherInstance;
 			string distributorName = publisherInstance;
 
@@ -2826,7 +2826,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
             //<snippetrmo_GenerateMergeSnapshot>
             // Set the Publisher, publication database, and publication names.
             string publicationName = "AdvWorksSalesOrdersMerge";
-            string publicationDbName = "AdventureWorks2012";
+            string publicationDbName = "AdventureWorks2022";
             string publisherName = publisherInstance;
             string distributorName = publisherInstance;
 
@@ -2862,7 +2862,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			//<snippetrmo_GenerateFilteredSnapshot>
 			// Set the Publisher, publication database, and publication names.
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string publisherName = publisherInstance;
 			string distributorName = publisherInstance;
 
@@ -2902,7 +2902,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the server, database, and publication names
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string distributorName = publisherInstance;
 
 			MergePublication publication;
@@ -3100,7 +3100,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the Publisher, publication, and article names.
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string articleName = "SalesOrderHeader";
 			
 			// Set the friendly name of the business logic handler.
@@ -3155,8 +3155,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			String subscriberName = subscriberInstance;
 			String publisherName = publisherInstance;
 			String publicationName = "AdvWorksProductTran";
-			String publicationDbName = "AdventureWorks2012";
-            String subscriptionDbName = "AdventureWorks2012Replica";
+			String publicationDbName = "AdventureWorks2022";
+            String subscriptionDbName = "AdventureWorks2022Replica";
 
 			// Create a connection to the Subscriber.
 			ServerConnection conn = new ServerConnection(subscriberName);
@@ -3209,8 +3209,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			String subscriberName = subscriberInstance;
 			String publisherName = publisherInstance;
 			String publicationName = "AdvWorksSalesOrdersMerge";
-			String publicationDbName = "AdventureWorks2012";
-            String subscriptionDbName = "AdventureWorks2012Replica";
+			String publicationDbName = "AdventureWorks2022";
+            String subscriptionDbName = "AdventureWorks2022Replica";
 
 			// Create a connection to the Subscriber.
 			ServerConnection conn = new ServerConnection(subscriberName);
@@ -3327,7 +3327,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the server, database, and publication names
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksProductTran";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 
 			TransPublication publication;
 
@@ -3382,9 +3382,9 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
 			// Define the server, database, and publication names
 			string publisherName = publisherInstance;
 			string publicationName = "AdvWorksSalesOrdersMerge";
-			string publicationDbName = "AdventureWorks2012";
+			string publicationDbName = "AdventureWorks2022";
 			string subscriberName = subscriberInstance;
-			string subscriptionDbName = "AdventureWorks2012Replica";
+			string subscriptionDbName = "AdventureWorks2022Replica";
 
 			MergePublication publication;
 
@@ -3439,7 +3439,7 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
             // Define the Publisher and publication names.
             string publisherName = publisherInstance;
             string publicationName = "AdvWorksSalesOrdersMerge";
-            string publicationDbName = "AdventureWorks2012";
+            string publicationDbName = "AdventureWorks2022";
 
             // Specify article names.
             string articleName1 = "SalesOrderHeader";
@@ -3545,8 +3545,8 @@ namespace Microsoft.Samples.SqlServer.Replication.Rmo
             string publicationName = "AdvWorksSalesOrdersMerge";
             string publisherName = publisherInstance;
             string subscriberName = subscriberInstance;
-            string subscriptionDbName = "AdventureWorks2012Replica";
-            string publicationDbName = "AdventureWorks2012";
+            string subscriptionDbName = "AdventureWorks2022Replica";
+            string publicationDbName = "AdventureWorks2022";
             string hostname = @"adventure-works\garrett1";
             string webSyncUrl = "https://" + publisherInstance + "/WebSync/replisapi.dll";
 

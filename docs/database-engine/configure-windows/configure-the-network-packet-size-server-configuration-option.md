@@ -65,7 +65,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `network packet size` option to `6500` bytes.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 EXEC sp_configure 'show advanced options', 1;
 GO
@@ -81,7 +81,7 @@ For more information, see [Server Configuration Options (SQL Server)](../../data
 
 ### Configure network packet size on the client side
 
-The following table provides examples of some data connection technologies that you can use to connect to SQL Server and how to control the network packet size when using these in client applications. For a complete list of various data connection technologies that you can use to connect to SQL server visit [Homepage for SQL client programming](../../connect/homepage-sql-connection-programming.md):
+The following table provides examples of some data connection technologies that you can use to connect to SQL Server and how to control the network packet size when using these in client applications. For a complete list of various data connection technologies that you can use to connect to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see [Homepage for SQL client programming](../../connect/homepage-sql-connection-programming.md):
 
 | Client library | Option | Default |
 | --- | --- | --- |

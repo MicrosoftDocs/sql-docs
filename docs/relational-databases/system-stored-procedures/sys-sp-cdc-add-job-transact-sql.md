@@ -48,7 +48,7 @@ Type of job to add. *@job_type* is **nvarchar(20)** and can't be NULL. Valid inp
 
 #### [ @start_job = ] *start_job*
 
-Flag indicating whether the job should be started immediately after it is added. *@start_job* is **bit** with a default of `1`.
+Flag indicating whether the job should be started immediately after it's added. *@start_job* is **bit** with a default of `1`.
 
 #### [ @maxtrans ] = *max_trans*
 
@@ -76,7 +76,7 @@ Indicates whether the capture job is to run continuously (`1`), or run only once
 
 Number of seconds between log scan cycles. *@pollinginterval* is **bigint** with a default of `5`.
 
-*@pollinginterval* is valid only for capture jobs when *@continuous* is set to `1`. If specified, the value must be greater than or equal to `0` and less than 24 hours (up to 86399 seconds). If a value of `0` is specified, there is no wait between log scans.
+*@pollinginterval* is valid only for capture jobs when *@continuous* is set to `1`. If specified, the value must be greater than or equal to `0` and less than 24 hours (up to 86399 seconds). If a value of `0` is specified, there's no wait between log scans.
 
 #### [ @retention ] = *retention*
 
@@ -92,7 +92,7 @@ Maximum number of delete entries that can be deleted by using a single statement
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

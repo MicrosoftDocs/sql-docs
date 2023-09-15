@@ -61,7 +61,7 @@ This procedure can be used for starting an on-demand upload for a running collec
 
 Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 Does an on-demand upload of a collection set named `Simple Collection Set`.
 

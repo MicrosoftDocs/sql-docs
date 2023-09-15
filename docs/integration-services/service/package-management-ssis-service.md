@@ -129,7 +129,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
   
 5.  Expand the subfolders to locate the folder into which you want to import a package.  
   
-6.  Right-click the folder, click **Import Package**. and then do one of the following:  
+6.  Right-click the folder, click **Import Package**, and then do one of the following:  
   
     -   To import from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select the **SQL Server** option, and then specify the server and select the authentication mode. If you select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, provide a user name and a password.  
   

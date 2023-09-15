@@ -60,7 +60,7 @@ Your server will open in the **SERVERS** sidebar after you've successfully conne
 ### [API for MongoDB (vCore)](#tab/mongodb-vcore)
 
 1. Open the new Azure Cosmos DB for MongoDB (vCore) account in the Azure Portal.
-2. Navigate to “Settings” > “Connection string”. and copy the shown “Connection string”.
+2. Navigate to "Settings" > "Connection string", and copy the shown "Connection string".
 
     :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-portal.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-portal.png" alt-text="Screenshot of the connection string in the portal.":::
 

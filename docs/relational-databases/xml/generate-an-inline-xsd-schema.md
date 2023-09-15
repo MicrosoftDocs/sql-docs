@@ -40,7 +40,7 @@ For example:
     <xsd:complexType>
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />
       <xsd:attribute name="Name" use="required">
-        <xsd:simpleType sqltypes:sqlTypeAlias="[AdventureWorks2012].[dbo].[Name]">
+        <xsd:simpleType sqltypes:sqlTypeAlias="[AdventureWorks2022].[dbo].[Name]">
           <xsd:restriction base="sqltypes:nvarchar" sqltypes:localeId="1033" sqltypes:sqlCompareOptions="IgnoreCase IgnoreKanaType IgnoreWidth" sqltypes:sqlSortId="52">
             <xsd:maxLength value="50" />
           </xsd:restriction>
@@ -81,7 +81,7 @@ FOR XML AUTO, XMLSCHEMA ('MyURI');
 
 In order to discuss the details of the XSD schema structure generated for the query result, the entity element has to first be described
 
-An entity element in the XML data returned by FOR XML query is an element that is generated from a table and not from a column. For example, the following FOR XML query returns contact information from the `Person` table in the `AdventureWorks2012` database.
+An entity element in the XML data returned by FOR XML query is an element that is generated from a table and not from a column. For example, the following FOR XML query returns contact information from the `Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 SELECT BusinessEntityID, FirstName

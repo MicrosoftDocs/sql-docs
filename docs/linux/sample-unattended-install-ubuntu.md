@@ -44,7 +44,7 @@ The script might fail if SQL Server is slow to start. That's because the script 
 # Password for the SA user (required)
 MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
-# Product ID of the version of SQL server you're installing
+# Product ID of the version of SQL Server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'
@@ -66,7 +66,7 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 repoargs="$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
 sudo add-apt-repository "${repoargs}"
 repoargs="$(curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list)"

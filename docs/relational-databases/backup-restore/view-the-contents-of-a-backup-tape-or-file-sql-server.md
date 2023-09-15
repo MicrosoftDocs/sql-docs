@@ -69,12 +69,12 @@ helpviewer_keywords:
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Use the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
+3.  Use the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement. This example returns information about the file named `AdventureWorks2022-FullBackup.bak`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  
+FROM DISK = N'C:\AdventureWorks2022-FullBackup.bak' ;  
 GO  
 ```  
   

@@ -1,20 +1,20 @@
 ---
 title: TDS 8.0
-description: This article discusses TDS 8.0
+description: This article discusses TDS 8.0, the application layer protocol used by clients to connect to SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 06/06/2023
+ms.date: 08/02/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-current||=azuresqldb-mi-current"
 ---
 # TDS 8.0
 
 [!INCLUDE [SQL Server 2022, Azure SQL Database, Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssazure_md](../../../includes/ssazure_md.md)] and [!INCLUDE [ssazuremi_md](../../../includes/ssazuremi_md.md)] support Tabular Data Stream (TDS) 8.0.
+[!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi_md](../../../includes/ssazuremi_md.md)] support Tabular Data Stream (TDS) 8.0.
 
 The [Tabular Data Stream (TDS)](/openspecs/windows_protocols/ms-tds/b46a581a-39de-4745-b076-ec4dbb7d13ec) protocol is an application layer protocol used by clients to connect to SQL Server, while SQL Server uses Transport Layer Security (TLS) to encrypt data that is transmitted across a network between an instance of SQL Server and a client application.
 
@@ -46,12 +46,12 @@ TCP handshake :arrow_right: TLS handshake :arrow_right: TDS prelogin (encrypted)
 
 To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `strict` as an additional connection encryption type to SQL Server drivers (`Encrypt=strict`). Download the latest version of the .NET, ODBC, OLE DB, JDBC, PHP and Python drivers to use the `strict` connection encryption type.
 
-- [Microsoft ADO.NET for SQL Server and Azure SQL](../../../connect/ado-net/microsoft-ado-net-sql-server.md) version 5.1 or higher
+- [Microsoft ADO.NET for SQL Server and Azure SQL Database](../../../connect/ado-net/microsoft-ado-net-sql-server.md) version 5.1 or higher
 - [ODBC Driver for SQL Server](../../../connect/odbc/download-odbc-driver-for-sql-server.md) version 18.1.2.1 or higher
 - [OLE DB Driver for SQL Server](../../../connect/oledb/download-oledb-driver-for-sql-server.md) version 19.2.0 or higher
 - [Microsoft JDBC Driver for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md) version 11.2.0 or higher
 - [Microsoft Drivers for PHP for SQL Server](../../../connect/php/microsoft-php-driver-for-sql-server.md) version 5.10 or higher
-- [Python SQL Driver - pyodbc](../../../connect/python/pyodbc/python-sql-driver-pyodbc.md) 
+- [Python SQL Driver - pyodbc](../../../connect/python/pyodbc/python-sql-driver-pyodbc.md)
 
 In order to prevent a man-in-the-middle attack with `strict` connection encryption, users aren't able to set the `TrustServerCertificate` option to `true` and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate `ServerName` that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 

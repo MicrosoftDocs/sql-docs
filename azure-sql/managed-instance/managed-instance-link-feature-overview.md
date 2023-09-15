@@ -5,7 +5,7 @@ description: This article describes the link feature of Azure SQL Managed Instan
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma, randolphwest
-ms.date: 04/26/2023
+ms.date: 08/22/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
@@ -20,8 +20,6 @@ This article provides an overview of the Managed Instance link feature, which en
 
 If you have product improvement suggestions or comments, or you want to report issues, contact our team through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
-> [!NOTE]
-> It's possible to automate preparing your environment for the Managed Instance link by using a downloadable script. Review the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961) to learn more. 
 
 ## Overview
 
@@ -55,7 +53,7 @@ The following table lists the functionality of the link feature and the supporte
 
 SQL Server versions prior to SQL Server 2016 (SQL Server 2008 - 2014) aren't supported because the link feature relies on distributed availability group technology, which was introduced in SQL Server 2016. 
 
-In addition to the supported SQL Server version, you'll need:
+In addition to the supported SQL Server version, you need:
 
 - Network connectivity between your SQL Server instance and your managed instance. If SQL Server is running on-premises, use a VPN link or Azure ExpressRoute. If SQL Server is running on an Azure virtual machine (VM), either deploy your VM to the same virtual network as your managed instance or use virtual network peering to connect the two separate subnets. 
 - An Azure SQL Managed Instance deployment, provisioned to any service tier.
@@ -124,14 +122,25 @@ This feature is currently in limited public preview. [You must sign up for limit
 
 ## Use the link feature
 
-After you've created the link, to ensure that you're following the best practices for maintaining the link, see [Best practices for the link feature in Azure SQL Managed Instance](managed-instance-link-best-practices.md).
+To help you set up the initial environment, review the guide to prepare your SQL Server environment to use the link feature with SQL Managed Instance:
 
-When you're ready to migrate a database to Azure with minimal downtime, you can do so by using an automated wizard in SSMS or manually by using scripts.
+- [Prepare environment for the link](managed-instance-link-preparation.md)
+- It's possible to automate preparing your environment for the Managed Instance link by using a downloadable script. Review the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961) to learn more. 
 
-Do either of the following:
+After you've ensured initial environment requirements have been met, you can create the link by using the automated wizard in SSMS, or you can choose to set up the link manually using scripts. Create the link using one of the following instructions:
 
-- [Replicate a database by using the link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md)
-- [Replicate a database by using the Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
+- [Replicate database with link feature in SSMS](managed-instance-link-use-ssms-to-replicate-database.md), or alternatively
+- [Replicate database with Azure SQL Managed Instance link feature with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-replicate-database.md)
+
+After the link has been created ensure that you follow the best practices for maintaining the link by following instructions described at this page:
+
+- [Best practices with link feature for Azure SQL Managed Instance](managed-instance-link-best-practices.md)
+
+If and when you're ready to migrate or fail over a database to Azure with a minimum downtime, you can do this using an automated wizard in SSMS, or you can choose to do this manually with scripts. Migrate database to Azure link using one of the following instructions:
+
+- [Fail over database to SQL MI in SSMS](managed-instance-link-use-ssms-to-failover-database.md), or alternatively
+- [Fail over database to SQL MI with T-SQL and PowerShell scripts](managed-instance-link-use-scripts-to-failover-database.md)
+
 
 ## Limitations
 
@@ -168,7 +177,7 @@ Feature limitations include:
 - If you're using Transparent Data Encryption (TDE) to encrypt SQL Server databases, the database encryption key from SQL Server needs to be exported and uploaded to Azure Key Vault, and you need to also configure the BYOK TDE option on SQL Managed Instance before creating the link.
 - You can't establish a link between SQL Server and SQL Managed Instance if the functionality that's used on the SQL Server instance isn't supported on the managed instance. For example: 
     - Databases with file tables and file streams can't be replicated, because SQL Managed Instance doesn't support file tables or file streams.
-    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can’t be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
+    - Databases that use In-Memory OLTP (Hekaton) can be replicated only to the *Business Critical* service tier for SQL Managed Instance, because the *General Purpose* service tier doesn't support In-Memory OLTP. Databases with multiple Hekaton files can't be replicated to the Business Critical service tier for SQL Managed Instance, as multiple Hekaton files aren't supported.
 
 Trying to add an unsupported functionality to a replicated database in: 
    - SQL Server 2019 and 2022 fails with an error. 
@@ -181,7 +190,7 @@ For the full list of differences between SQL Server and SQL Managed Instance, se
 For more information about the link feature, see:
 
 - [Managed Instance link: Connecting SQL Server to Azure reimagined](https://aka.ms/mi-link-techblog)
-- [Prepare for the Managed Instance link](./managed-instance-link-preparation.md)
+- [Prepare environment for the Managed Instance link](./managed-instance-link-preparation.md)
 - [Use a Managed Instance link via SSMS to replicate a database](./managed-instance-link-use-ssms-to-replicate-database.md)
 - [Use a Managed Instance link via SSMS to migrate a database](./managed-instance-link-use-ssms-to-failover-database.md)
 

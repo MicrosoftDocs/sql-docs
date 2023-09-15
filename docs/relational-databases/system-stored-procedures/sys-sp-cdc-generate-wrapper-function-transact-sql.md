@@ -62,7 +62,7 @@ A list of included columns for which an update flag is included in the result se
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Column type | Description |
 | --- | --- | --- |

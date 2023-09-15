@@ -47,7 +47,7 @@ The name of the server that should be added to the specified group. *@server_nam
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

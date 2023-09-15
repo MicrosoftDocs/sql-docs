@@ -110,7 +110,7 @@ After you successfully create a migration project, under **Assessment tools**, i
 ### Add databases to assess
 
 1. Select **Add Sources** to open the connection fly out menu.
-2. Enter the SQL server instance name, choose the authentication type, set the correct connection properties, and then select **Connect**.
+2. Enter the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance name, choose the authentication type, set the correct connection properties, and then select **Connect**.
 3. Select the databases to assess, and then select **Add**.
 
    > [!NOTE]

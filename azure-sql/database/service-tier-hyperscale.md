@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake
-ms.date: 06/15/2023
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -146,6 +146,8 @@ You can create and manage Hyperscale databases using the Azure portal, Transact-
 
 As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), and on the presence of at least one high-availability replica. In a planned failover (i.e. a maintenance event), the system either creates the new primary replica before initiating a failover, or uses an existing high-availability replica as the failover target. In an unplanned failover (i.e. a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists, or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
 
+You can [choose a maintenance window](maintenance-window.md?view=azuresql-db&preserve-view=true) that allows you to making impactful maintenance events predictable and less disruptive for your workload.
+
 For Hyperscale SLA, see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database).
 
 ## Back up and restore
@@ -173,6 +175,7 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 |Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
 | Hyperscale service tier premium-series hardware | Premium-series and memory optimized premium-series hardware doesn't currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
+| Regional availability | Hyperscale service tier premium-series and premium-series memory optimized hardware is available in limited Azure regions. For a list, see [Hyperscale premium-series availability](service-tiers-sql-database-vcore.md#hyperscale-premium-series-availability).|
 
 ## Next steps
 

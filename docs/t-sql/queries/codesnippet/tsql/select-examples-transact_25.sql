@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT BusinessEntityID, JobTitle, HireDate, VacationHours, SickLeaveHours
 FROM HumanResources.Employee AS e1

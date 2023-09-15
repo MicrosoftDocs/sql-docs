@@ -48,7 +48,7 @@ DROP FULLTEXT INDEX ON table_name
  The following example drops the full-text index that exists on the `JobCandidate` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  
 GO  

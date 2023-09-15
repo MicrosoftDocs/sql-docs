@@ -4,7 +4,7 @@ description: Learn how to configure the amount of memory the SQL Server Memory M
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: 08/01/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -29,7 +29,7 @@ Memory utilization for the [!INCLUDE [ssdenoversion-md](../../includes/ssdenover
 > [!NOTE]  
 > [Columnstore indexes](../../relational-databases/indexes/columnstore-indexes-overview.md) and [In-Memory OLTP](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md) objects have their own memory clerks, which makes it easier to monitor their buffer pool usage. For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md#types).
 
-In older versions of SQL Server, memory utilization was virtually uncapped, indicating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that all system memory was available for use. It is recommended in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to configure an upper limit for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory utilization by configuring the **max server memory (MB)**.
+In older versions of SQL Server, memory utilization was virtually uncapped, indicating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that all system memory was available for use. It's recommended in all versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to configure an upper limit for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory utilization by configuring the **max server memory (MB)**.
 
 - Since [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], SQL Setup in Windows servers provides a recommendation for the **max server memory (MB)** for a standalone SQL Server instance based on a percentage of available system memory at the time of installation.
 - At any time you can reconfigure the bounds of memory (in megabytes) for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via the **min server memory (MB)** and **max server memory (MB)** configuration options.
@@ -104,7 +104,7 @@ RECONFIGURE;
 GO
 ```
 
-The following query returns information about the currently configured values, and the value currently in use. This query will return results regardless of whether the `sp_configure` option 'show advanced options' is enabled.
+The following query returns information about the currently configured values, and the value currently in use. This query returns results regardless of whether the `sp_configure` option 'show advanced options' is enabled.
 
 ```sql
 SELECT [name], [value], [value_in_use]
@@ -132,7 +132,7 @@ Windows-based applications can use Windows Address Windowing Extensions (AWE) AP
 
 To disable the **Lock pages in memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the *Lock pages in memory* user right for the account with privileges to run `sqlservr.exe` (the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup account) startup account.
 
-Using LPIM doesn't affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), allowing it to expand or shrink at the request of other memory clerks. When using the *Lock pages in memory* user right, it is strongly recommended to set an upper limit for **max server memory (MB)**. For more information, see [max server memory (MB)](#max_server_memory).
+Using LPIM doesn't affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), allowing it to expand or shrink at the request of other memory clerks. When using the *Lock pages in memory* user right, it's strongly recommended to set an upper limit for **max server memory (MB)**. For more information, see [max server memory (MB)](#max_server_memory).
 
 LPIM should be used when there are signs that the `sqlservr` process is being paged out. In this case, error 17890 will be reported in the Errorlog, resembling the below example:
 
@@ -140,7 +140,7 @@ LPIM should be used when there are signs that the `sqlservr` process is being pa
 A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.
 ```
 
-Using LPIM with an incorrectly configured **max server memory (MB)** setting that does not account for other memory consumers in the system may cause instability, depending on the amount of memory required by other processes, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory requirements outside the scope of **max server memory (MB)**. For more information, see [max server memory](#max_server_memory). If the **Lock pages in memory** (LPIM) privilege is granted (on 32-bit or 64-bit systems), we strongly recommend that you set **max server memory (MB)** to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB).
+Using LPIM with an incorrectly configured **max server memory (MB)** setting that doesn't account for other memory consumers in the system may cause instability, depending on the amount of memory required by other processes, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory requirements outside the scope of **max server memory (MB)**. For more information, see [max server memory](#max_server_memory). If the **Lock pages in memory** (LPIM) privilege is granted (on 32-bit or 64-bit systems), we strongly recommend that you set **max server memory (MB)** to a specific value, rather than leaving the default of 2,147,483,647 megabytes (MB).
 
 > [!NOTE]  
 > Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [trace flag 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is not needed for Standard Edition to use Locked Pages.
@@ -167,7 +167,7 @@ The following values of `sql_memory_model_desc` indicate the status of LPIM:
 
 Use the following methods to determine whether the SQL Server instance is using locked pages:
 
-- The output of the following Transact-SQL query will indicate nonzero values for `locked_page_allocations_kb`:
+- The output of the following Transact-SQL query indicates nonzero values for `locked_page_allocations_kb`:
 
     ```sql
     SELECT osn.node_id, osn.memory_node_id, osn.node_state_desc, omn.locked_page_allocations_kb 
@@ -176,21 +176,21 @@ Use the following methods to determine whether the SQL Server instance is using 
     WHERE osn.node_state_desc <> 'ONLINE DAC';
     ```
 
-- The current SQL Server error log will report the message, "Using locked pages in the memory manager" during server startup.
+- The current SQL Server error log reports the message, `Using locked pages in the memory manager` during server startup.
 
-- The Memory Manager section of the [DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage#memory-manager) output will show a nonzero value for the `AWE Allocated` item.
+- The Memory Manager section of the [DBCC MEMORYSTATUS](/troubleshoot/sql/performance/dbcc-memorystatus-monitor-memory-usage#memory-manager) output shows a nonzero value for the `AWE Allocated` item.
 
 ## Multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-When you are running multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], there are different approaches you can use to manage memory:
+When you're running multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], there are different approaches you can use to manage memory:
 
 - Use **max server memory (MB)** in each instance to control memory usage, as [detailed above](#max_server_memory). Establish maximum settings for each instance, being careful that the total allowance isn't more than the total physical memory on your machine. You might want to give each instance memory proportional to its expected workload or database size. This approach has the advantage that when new processes or instances start up, free memory will be available to them immediately. The drawback is that if you aren't running all of the instances, none of the running instances will be able to utilize the remaining free memory.
 
-- Use **min server memory (MB)** in each instance to control memory usage, as [detailed above](#min_server_memory). Establish minimum settings for each instance, so that the sum of these minimums is 1 - 2 GB less than the total physical memory on your machine. Again, you may establish these minimums proportionately to the expected load of that instance. This approach has the advantage that if not all instances are running at the same time, the ones that are running can use the remaining free memory. This approach is also useful when there is another memory-intensive process on the computer, since it would ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] would at least get a reasonable amount of memory. The drawback is that when a new instance (or any other process) starts, it may take some time for the running instances to release memory, especially if they must write modified pages back to their databases to do so.
+- Use **min server memory (MB)** in each instance to control memory usage, as [detailed above](#min_server_memory). Establish minimum settings for each instance, so that the sum of these minimums is 1 - 2 GB less than the total physical memory on your machine. Again, you may establish these minimums proportionately to the expected load of that instance. This approach has the advantage that if not all instances are running at the same time, the ones that are running can use the remaining free memory. This approach is also useful when there's another memory-intensive process on the computer, since it would ensure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] would at least get a reasonable amount of memory. The drawback is that when a new instance (or any other process) starts, it may take some time for the running instances to release memory, especially if they must write modified pages back to their databases to do so.
 
 - Use both **max server memory (MB)** and **min server memory (MB)** in each instance to control memory usage, observing and tuning each instance's maximum utilization and minimum memory protection within a wide range of potential memory utilization levels.
 
-- Do nothing (not recommended). The first instances presented with a workload will tend to allocate all of memory. Idle instances, or instances started later, may end up running with only a minimal amount of memory available. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes no attempt to balance memory usage across instances. All instances will, however, respond to Windows Memory Notification signals to adjust the size of their memory footprint. Windows doesn't balance memory across applications with the Memory Notification API. It merely provides global feedback as to the availability of memory on the system.
+- Do nothing (not recommended). The first instances presented with a workload tend to allocate all of memory. Idle instances, or instances started later, may end up running with only a minimal amount of memory available. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] makes no attempt to balance memory usage across instances. All instances will, however, respond to Windows Memory Notification signals to adjust the size of their memory footprint. Windows doesn't balance memory across applications with the Memory Notification API. It merely provides global feedback as to the availability of memory on the system.
 
 You can change these settings without restarting the instances, so you can easily experiment to find the best settings for your usage pattern.
 
@@ -234,7 +234,7 @@ FROM sys.dm_os_process_memory;
 
 ### C. View the value of `max server memory (MB)`
 
-The following query returns information about the currently configured value and the value in use. This query will return results regardless of whether the `sp_configure` option 'show advanced options' is enabled.
+The following query returns information about the currently configured value and the value in use. This query returns results regardless of whether the `sp_configure` option 'show advanced options' is enabled.
 
 ```sql
 SELECT [value], [value_in_use]

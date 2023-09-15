@@ -3,8 +3,8 @@ title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 description: CREATE EXTERNAL DATA SOURCE creates an external data source used to establish connectivity and data virtualization from SQL Server and Azure SQL platforms.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: randolphwest
-ms.date: 05/02/2023
+ms.reviewer: randolphwest, hudequei
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -22,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], or Azure SQL Edge.
+Creates an external data source for querying using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], or Azure SQL Edge.
 
 This article provides the syntax, arguments, remarks, permissions, and examples for whichever SQL product you choose.
 
@@ -716,7 +716,7 @@ Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - Using `wasbs` or `abfss` is optional but recommended in [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] for accessing Azure Storage Accounts as data will be sent using a secure TLS/SSL connection.
 - The `abfs` or `abfss` APIs are supported when accessing Azure Storage Accounts starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU11. For more information, see [the Azure Blob Filesystem driver (ABFS)](/azure/storage/blobs/data-lake-storage-abfs-driver).
@@ -1231,8 +1231,8 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source    | Connector location prefix | Location path                                         | Supported locations by product / service | Authentication |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- | --: |
-| Azure Storage Account(V2) | `abs` | `abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
-| Azure Data Lake Storage Gen2 | `adls`   | `adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
+| Azure Storage Account(V2) | `abs` | `abs://<container_name>@<storage_account_name>.blob.core.windows.net/`<br />or<br />`abs://<storage_account_name>.blob.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Hierarchical Namespace is supported. | Shared access signature (SAS) |
+| Azure Data Lake Storage Gen2 | `adls`   | `adls://<container_name>@<storage_account_name>.dfs.core.windows.net/`<br />or<br />`adls://<storage_account_name>.dfs.core.windows.net/<container_name>` | Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] | Shared access signature (SAS) |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | `sqlserver`|`<server_name>[\<instance_name>][:port]`| Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   | SQL authentication only |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       | Basic authentication only |
@@ -1255,7 +1255,7 @@ Location path:
 Additional notes and guidance when setting the location:
 
 - The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
-- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+- You can use the `sqlserver` connector to connect [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] to another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - The Hierarchical Namespace option for Azure Storage Accounts(V2) using the prefix `adls` is supported via Azure Data Lake Storage Gen2 in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 <!--- - The `sqlhdfs` and `sqldatapool` types are supported for connecting between the master instance and storage pool of SQL Server 2019 Big Data Cluster. For Cloudera CDH or Hortonworks HDP, use `hdfs`. For more information on using `sqlhdfs` for querying [!INCLUDE[ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)] storage pools, see [Query HDFS in SQL Server 2019 Big Data Cluster](../../big-data-cluster/tutorial-query-hdfs-storage-pool.md).
@@ -1266,6 +1266,10 @@ Additional notes and guidance when setting the location:
 - Differing from previous versions, in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the prefix used for Azure Data Lake Storage Gen2 changed from `abfs[s]` to `adls`.
 - For an example using PolyBase to virtualize a CSV file in Azure Storage, see [Virtualize CSV file with PolyBase](../../relational-databases/polybase/virtualize-csv.md).
 - For an example using PolyBase to virtualize a delta table in ADLS Gen2, see [Virtualize delta table with PolyBase](../../relational-databases/polybase/virtualize-delta.md).
+- [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] fully supports two URL formats for both Azure Storage Account v2 (`abs`) and Azure Data Lake Gen2 (`adls`). 
+    - The LOCATION path can use the formats: `<container>@<storage_account_name>..` (recommended) or `<storage_account_name>../<container>`. For example:
+       - Azure Storage Account v2: `abs://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `abs://<storage_account_name>.blob.core.windows.net/<container>`.
+       - Azure Data Lake Gen2 supports: `adls://<container>@<storage_account_name>.blob.core.windows.net` (recommended) or `adls://<storage_account_name>.dfs.core.windows.net/<container>`.
 
 #### CONNECTION_OPTIONS = *key_value_pair*
 
@@ -1672,7 +1676,7 @@ GO
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
-  ( LOCATION = 'abs://<storage_account_name>.blob.core.windows.net/<container>' ,
+  ( LOCATION = 'abs://<container>@<storage_account_name>.blob.core.windows.net/' , 
     CREDENTIAL = AzureStorageCredentialv2,
   ) ;
 ```
@@ -1694,7 +1698,7 @@ GO
 CREATE EXTERNAL DATA SOURCE data_lake_gen2_dfs
 WITH
 (
-LOCATION = 'adls://<storage_account>.dfs.core.windows.net'
+LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
 ,CREDENTIAL = datalakegen2
 )
 ```
@@ -1843,7 +1847,7 @@ Specifies a database-scoped credential for authenticating to the external data s
 
 Additional notes and guidance when creating a credential:
 
-- To load data from Azure Storage into [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use a Shared Access Signature (SAS token).
+- To load data from Azure Storage into [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use a Shared Access Signature (SAS token).
 - `CREDENTIAL` is only required if the data has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
 - When the `TYPE` = `BLOB_STORAGE`, the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. 
 - When connecting to the Azure Storage via the WASB[s] connector, authentication must be done with a storage account key, not with a shared access signature (SAS).
@@ -1900,7 +1904,7 @@ For an example showing how to create an external data source where `TYPE` = `SHA
 
 ## Permissions
 
-Requires `CONTROL` permission on database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Requires `CONTROL` permission on database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Locking
 
@@ -2109,7 +2113,7 @@ WITH
 
 #### data_source_name
 
-Specifies the user-defined name for the data source. The name must be unique within the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+Specifies the user-defined name for the data source. The name must be unique within the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 #### LOCATION = *`'<prefix>://<path>'`*
 

@@ -52,7 +52,7 @@ The contents of sample `Assess-for-AzureSQLMI.xml` define the elements to assess
    <AssessmentTargetPlatform>ManagedSqlServer</AssessmentTargetPlatform>
    <AssessmentDatabases>
       <AssessmentDatabase>Server=ServerName\SQL2017;Integrated Security=true</AssessmentDatabase>
-      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2016</AssessmentDatabase>
+      <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=AdventureWorks2022</AssessmentDatabase>
       <AssessmentDatabase>Server=ServerName\SQL2016;Integrated Security=true;Initial Catalog=TestDB</AssessmentDatabase>
    </AssessmentDatabases>
    <AssessmentResultDma>C:\Demo\ScaleAssessment\AssessmentConfiguration\Scale-Assessment-for-AzureSQLManagedInstance.dma</AssessmentResultDma>

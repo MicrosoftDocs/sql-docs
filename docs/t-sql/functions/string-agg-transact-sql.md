@@ -86,7 +86,7 @@ Most of the examples in this article reference the [AdventureWorks sample databa
 
 The following example produces a list of names in a single result cell, separated with carriage returns.
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG (CONVERT(NVARCHAR(max),FirstName), CHAR(13)) AS csv 
 FROM Person.Person;
@@ -108,7 +108,7 @@ GO
 
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person;
@@ -127,7 +127,7 @@ GO
 ### C. Generate comma-separated values
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), CONCAT(FirstName, ' ', LastName, '(', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person;
@@ -174,7 +174,7 @@ GO
 The following query finds the email addresses of employees and groups them by city:
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 
 SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') AS emails 
@@ -209,7 +209,7 @@ Emails returned in the emails column can be directly used to send emails to grou
 Similar to the previous example, the following query finds the email addresses of employees, groups them by city, and sorts the emails alphabetically:
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 
 SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS Emails 

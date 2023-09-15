@@ -1,75 +1,52 @@
 ---
-title: "Step 1: Configure pymssql environment"
-description: "Step 1 of this getting started guide involves installing Python, the Microsoft ODBC Driver for SQL Server, and pymssql into your development environment."
+title: Step 1 - Configure pymssql environment
+description: Step 1 of this getting started guide involves installing Python, the Microsoft ODBC Driver for SQL Server, and pymssql into your development environment.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: "01/19/2017"
+ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: connectivity
-ms.topic: conceptual
+ms.topic: how-to
+# CustomerIntent: As a developer, I want to install the pymssql package so that I can connect to SQL with Python code.
 ---
+
 # Step 1: Configure development environment for pymssql Python development
-You will need to configure your development environment with the prerequisites in order to develop an application using the Python Driver for SQL Server.    
-  
-The Python SQL Drivers use the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No additional configuration is required.  
-  
-## Windows  
-  
-1. **Install Python runtime and pip package manager.**  
-a. Go to [python.org](https://www.python.org/downloads/)  
-b. Click on the appropriate Windows installer msi link.   
-c. Once downloaded run the msi to install Python runtime  
-  
-2. **Download pymssql module** from [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
-  
-    Make sure you choose the correct `whl` file.  For example: If you are using Python 2.7 on a 64-bit machine choose `pymssql‑2.1.1‑cp27‑none‑win_amd64.whl`. Once you download the `whl` file, place it in the C:\Python27 folder.  
-      
-3. **Open cmd.exe**  
-  
-4. **Install pymssql module.**  
-    For example, if you are using Python 2.7 on a 64-bit machine:  
-```  
-> cd c:\Python27  
-> pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
-```  
-  
-## Ubuntu Linux  
-  
-1. **Install Python runtime and pip package manager.**  Python comes pre-installed on most distributions of Ubuntu.  If your machine does not have python installed, you can either download the source tarball from [python.org](https://www.python.org/downloads/) and build locally, or you can use the package manager:  
-```  
-> sudo apt-get install python   
-```  
-  
-2.  **Open terminal**  
-  
-3.  **Install pymssql module and dependencies**  
-```  
-> sudo apt-get --assume-yes update  
-> sudo apt-get --assume-yes install freetds-dev freetds-bin  
-> sudo apt-get --assume-yes install python-dev python-pip  
-> sudo pip install pymssql  
-```  
-  
-## macOS
-  
-1. **Install Python runtime and pip package manager**  
-a. Go to [python.org](https://www.python.org/downloads/)  
-b. Click on the appropriate macOS installer pkg link.   
-c. Once downloaded run the pkg to install Python runtime  
-  
-2.  **Open terminal**  
-  
-3. **Install Homebrew package manager**  
-```  
-> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
-```  
-  
-4.  **Install FreeTDS module**  
-```  
-> brew install FreeTDS  
-```  
-  
-5.  **Install pymssql module**  
-```  
-> sudo -H pip install pymssql  
-```
+
+You need to configure your development environment with the prerequisites in order to develop an application using the pymssql Python driver for SQL Server.
+
+> [!NOTE]
+> This driver uses the TDS protocol, which is enabled by default in SQL Server and Azure SQL Database.  No extra configuration is required.
+
+## Prerequisites
+
+- Python 3
+  - If you don't already have Python, install the **Python runtime** and **Python Package Index (PyPI) package manager** from [python.org](https://www.python.org/downloads/).  
+  - Prefer to not use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
+    - [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank?quickstart=1).
+
+## Install the pymssql package
+
+Get the [`pymssql` package](https://pypi.org/project/pymssql/) from PyPI.
+
+1. Open a command prompt in an empty directory.
+
+1. Install the [`pymssql` package](https://pypi.org/project/pymssql/).
+
+    ```bash
+    pip install pymssql
+    ```
+
+## Check installed packages
+
+You can use the PyPI command-line tool to verify that your intended packages are installed.
+
+1. Check the list of installed packages with `pip list`.
+
+    ```bash
+    pip list
+    ```
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Step 2: Create an SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)

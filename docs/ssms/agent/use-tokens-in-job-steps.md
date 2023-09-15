@@ -39,9 +39,9 @@ For example, you might use the following statement to print the name of the data
   
 In this example, the **ESCAPE_SQUOTE** macro is inserted with the **A-DBN** token. At run time, the **A-DBN** token will be replaced with the appropriate database name. The escape macro escapes any single quotation marks that may be inadvertently passed in the token replacement string. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent will replace one single quotation mark with two single quotation marks in the final string.  
   
-For example, if the string passed to replace the token is `AdventureWorks2012'SELECT @@VERSION --`, the command executed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step will be:  
+For example, if the string passed to replace the token is `AdventureWorks2022'SELECT @@VERSION --`, the command executed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step will be:  
   
-`PRINT N'Current database name is AdventureWorks2012''SELECT @@VERSION --' ;`  
+`PRINT N'Current database name is AdventureWorks2022''SELECT @@VERSION --' ;`  
   
 In this case, the inserted statement, `SELECT @@VERSION`, does not execute. Instead, the extra single quotation mark causes the server to parse the inserted statement as a string. If the token replacement string does not contain a single quotation mark, no characters are escaped and the job step containing the token executes as intended.  
   

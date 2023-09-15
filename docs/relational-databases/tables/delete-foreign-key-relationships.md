@@ -1,9 +1,9 @@
 ---
-title: "Delete Foreign Key Relationships"
-description: "Delete Foreign Key Relationships"
+title: "Delete foreign key relationships"
+description: "Learn more about how to delete foreign key from tables in the SQL Server Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/25/2017"
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -13,59 +13,50 @@ helpviewer_keywords:
   - "deleting foreign keys"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Delete Foreign Key Relationships
+# Delete foreign key relationships
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  You can delete a foreign key constraint in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Deleting a foreign key constraint removes the requirement to enforce referential integrity.  
+You can delete a foreign key constraint in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)]. Deleting a foreign key constraint removes the requirement to enforce referential integrity.
+
+Foreign keys reference keys in other tables, for more information, see [Primary and Foreign Key Constraints](primary-and-foreign-key-constraints.md).
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Security](#Security)  
-  
--   **To delete a foreign key constraint, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+## <a id="Permissions"></a> Permissions
  Requires ALTER permission on the table.  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+## <a id="SSMSProcedure"></a> Use SQL Server Management Studio
   
-#### To delete a foreign key constraint  
+### To delete a foreign key constraint
   
-1.  In **Object Explorer**, expand the table with the constraint and then expand **Keys**.  
+1. In **Object Explorer**, expand the table with the constraint and then expand **Keys**.  
   
-2.  Right-click the constraint and then click **Delete**.  
+1. Right-click the constraint and then select **Delete**.  
   
-3.  In the **Delete Object** dialog box, click **OK**.  
+1. In the **Delete Object** dialog box, select **OK**.  
 
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+## <a id="TsqlProcedure"></a> Use Transact-SQL
   
-#### To delete a foreign key constraint  
+### To delete a foreign key constraint
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE [ssDE](../../includes/ssde-md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+1. On the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+1. Copy and paste the following example into the query window and select **Execute**.  
   
-    ```  
-    USE AdventureWorks2012;
+    ```sql
+    USE AdventureWorks2022;
     GO
     ALTER TABLE dbo.DocExe
     DROP CONSTRAINT FK_Column_B;
     GO
     ```  
   
- For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
-  
-  
+ For more information, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
+
+## Next steps
+
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
+- [sys.key_constraints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)
+- [Create Foreign Key Relationships](create-foreign-key-relationships.md)
+- [Modify Foreign Key Relationships](modify-foreign-key-relationships.md)

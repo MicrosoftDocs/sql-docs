@@ -72,11 +72,14 @@ Disaster recovery solutions for EOS SQL Server on an Azure VM are as follows:
 
 Extended security updates for SQL Server VMs are delivered through the Microsoft Windows Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
 
-> [!NOTE]
->
-> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for manual installation of extended security updates on Azure virtual machines. Microsoft Update will automatically detect that the VM is running in Azure and present the relevant updates for download even if the extension is not present.
-
 *Automated patching* is enabled by default. Automated patching allows Azure to automatically patch SQL Server and the operating system. You can specify a day of the week, time, and duration for a maintenance window if the SQL Server IaaS extension is installed. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale for time. For more information, see [Automated patching for SQL Server on Azure Virtual Machines](automated-patching.md).
+
+For improved patching management, which also includes Cumulative Updates, try the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience. 
+
+> [!NOTE]
+> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for _manual_ installation of extended security updates on Azure virtual machines. Microsoft Update automaticallys detect the VM is running in Azure and presents relevant updates for download even if the extension is not isntalled.
+
+
 
 [Azure Update management](/azure/automation/update-management/overview) as of today does not detect patches for SQL Server Marketplace images. You should look under Windows Updates to apply SQL Server updates in this case.
 

@@ -8,6 +8,7 @@ ms.reviewer: vanto, wiassaf
 ms.date: 10/11/2022
 ms.service: sql-db-mi
 ms.subservice: security
+ms.custom: has-azure-ad-ps-ref
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

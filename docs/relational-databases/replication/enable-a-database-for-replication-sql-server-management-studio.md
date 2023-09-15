@@ -29,7 +29,7 @@ You can enable a database for replication with the following Transact-SQL code:
 
 ```sql
 USE master
-EXEC sp_replicationdboption @dbname = 'AdventureWorks2017',
+EXEC sp_replicationdboption @dbname = 'AdventureWorks2022',
 @optname = 'publish',
 @value = 'true'
 GO

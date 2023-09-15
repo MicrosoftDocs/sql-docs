@@ -704,16 +704,16 @@ Backup media is formatted by a BACKUP statement if and only if any of the follow
 #### Backup devices in a striped media set (a stripe set)
 A *stripe set* is a set of disk files on which data is divided into blocks and distributed in a fixed order. The number of backup devices used in a stripe set must stay the same (unless the media is reinitialized with `FORMAT`).
 
-The following example writes a backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a new striped media set that uses three disk files.
+The following example writes a backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to a new striped media set that uses three disk files.
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
 TO DISK = 'X:\SQLServerBackups\AdventureWorks1.bak',
 DISK = 'Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK = 'Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2022 database';
 GO
 ```
 
@@ -730,7 +730,7 @@ To back up to a mirrored media set, all of the mirrors must be present. To back 
 For a mirrored media set, each `MIRROR TO` clause must list the same number and type of devices as the TO clause. The following example writes to a mirrored media set that contains two mirrors and uses three devices per mirror:
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
 TO DISK = 'X:\SQLServerBackups\AdventureWorks1a.bak',
   DISK = 'Y:\SQLServerBackups\AdventureWorks2a.bak',
   DISK = 'Z:\SQLServerBackups\AdventureWorks3a.bak'
@@ -792,6 +792,12 @@ BACKUP supports the `RESTART` option to provide backward compatibility with earl
 Database or log backups can be appended to any disk or tape device, allowing a database and its transaction logs to be kept within one physical location.
 
 The BACKUP statement is not allowed in an explicit or implicit transaction.
+
+You can't back up a database in the following states:
+
+* Restoring
+* Standby
+* Read only
 
 Cross-platform backup operations, even between different processor types, can be performed as long as the collation of the database is supported by the operating system.
 
@@ -864,10 +870,10 @@ This section contains the following examples:
 
 ### <a name="backing_up_db"></a> A. Backing up a complete database
 
-The following example backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a disk file.
+The following example backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to a disk file.
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'
     WITH FORMAT;
 GO
@@ -886,7 +892,7 @@ The example then creates a full database backup to `AdvWorksData`, and after a p
 -- to use the full recovery model.
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
     SET RECOVERY FULL;
 GO
 -- Create AdvWorksData and AdvWorksLog logical backup devices.
@@ -899,11 +905,11 @@ EXEC sp_addumpdevice 'disk', 'AdvWorksLog',
 'X:\SQLServerBackups\AdvWorksLog.bak';
 GO
 
--- Back up the full AdventureWorks2012 database.
-BACKUP DATABASE AdventureWorks2012 TO AdvWorksData;
+-- Back up the full AdventureWorks2022 database.
+BACKUP DATABASE AdventureWorks2022 TO AdvWorksData;
 GO
--- Back up the AdventureWorks2012 log.
-BACKUP LOG AdventureWorks2012
+-- Back up the AdventureWorks2022 log.
+BACKUP LOG AdventureWorks2022
     TO AdvWorksLog;
 GO
 ```
@@ -941,10 +947,10 @@ GO
 
 ### <a name="create_single_family_mirrored_media_set"></a> E. Creating and backing up to a single-family mirrored media set
 
-The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to them.
+The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to them.
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
 TO TAPE = '\\.\tape0'
 MIRROR TO TAPE = '\\.\tape1'
 MIRROR TO TAPE = '\\.\tape2'
@@ -956,10 +962,10 @@ WITH
 
 ### <a name="create_multifamily_mirrored_media_set"></a> F. Creating and backing up to a multifamily mirrored media set
 
-The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to both mirrors.
+The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to both mirrors.
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'
 WITH
@@ -972,7 +978,7 @@ WITH
 The following example appends a backup set to the media set created in the preceding example.
 
 ```sql
-BACKUP LOG AdventureWorks2012
+BACKUP LOG AdventureWorks2022
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'
 WITH
@@ -985,10 +991,10 @@ WITH
 
 ### <a name="creating_compressed_backup_new_media_set"></a> H. Creating a compressed backup in a new media set
 
-The following example formats the media, creating a new media set, and performs a compressed full backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.
+The following example formats the media, creating a new media set, and performs a compressed full backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'
+BACKUP DATABASE AdventureWorks2022 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'
 WITH
     FORMAT,
     COMPRESSION;

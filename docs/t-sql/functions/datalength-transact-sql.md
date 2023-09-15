@@ -66,7 +66,7 @@ For a NULL value, `DATALENGTH` returns NULL.
 This example finds the length of the `Name` column in the `Product` table:
   
 ```sql
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  
 FROM dbo.DimProduct  

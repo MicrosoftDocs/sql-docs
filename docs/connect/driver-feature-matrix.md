@@ -4,7 +4,7 @@ description: Learn which SQL Server features are supported in the drivers for .N
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 02/16/2023
+ms.date: 08/30/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -23,9 +23,10 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 - [.NET](#table1)
 - [ODBC](#table2)
 - [OLE DB](#table2)
+- [Go](#table3)
 - [JDBC](#table2)
-- [PHP](#table3)
 - [Node.js / JavaScript](#table3)
+- [PHP](#table3)
 - [Python](#table3)
 
 | <a id="table1"></a>Feature | [Microsoft.<wbr>Data.<wbr>SqlClient (.NET Core)](ado-net/microsoft-ado-net-sql-server.md) | [Microsoft.<wbr>Data.<wbr>SqlClient (.NET Framework)](ado-net/microsoft-ado-net-sql-server.md) | System.<wbr>Data.<wbr>SqlClient (.NET Core) | [System.<wbr>Data.<wbr>SqlClient (.NET Framework)](/dotnet/framework/data/adonet/sql/) |
@@ -38,6 +39,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](ado-net/sql/azure-active-directory-authentication.md) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.1+) | | |
 | [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | [Yes](ado-net/sql/azure-active-directory-authentication.md) (v2.0+) | | |
+| [Azure Active Directory Service Principal Certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
 | [Data Sensitivity and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](ado-net/sql/data-classification.md) | [Yes](ado-net/sql/data-classification.md) | | |
@@ -58,6 +60,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](odbc/using-azure-active-directory.md) (v17.1+) | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |
 | [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](odbc/using-azure-active-directory.md) (v17.3+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v7.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.3+) |
 | [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](odbc/using-azure-active-directory.md) (v17.7+) | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v9.2+) | [Yes](oledb/features/using-azure-active-directory.md) (v18.5+) |
+| [Azure Active Directory Service Principal Certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | [Yes](jdbc/connecting-using-azure-active-directory-authentication.md) (v12.4+) | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | Yes | [Yes](odbc/linux-mac/using-integrated-authentication.md) | [Yes](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Yes |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Yes](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Yes](oledb/features/performing-bulk-copy-operations.md) |
 | [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](odbc/data-classification.md) (v17.2+) | [Yes](jdbc/data-discovery-classification-sample.md) (v7.0+) | [Yes](oledb/features/using-data-classification.md) (v18.5+) |
@@ -68,25 +71,26 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.0+) | [Yes](odbc/using-transparent-network-ip-resolution.md) (v13.1+) | [Yes](jdbc/setting-the-connection-properties.md) (v6.0+) | [Yes](oledb/features/using-transparent-network-ip-resolution.md) (v18.4+) |
 | [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v18.0+) | Yes (v18.0+) | Yes (v11.2+) | Yes (v19.2+) |
 
-| <a id="table3"></a>Feature | [Drivers for PHP for SQL Server on Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Drivers for PHP for SQL Server on Linux and macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
-| :-- | :-- | :-- | :-- | :-- |
-| [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | | Yes |
-| [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | | Yes |
-| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Linux#connecting-to-servers-with-access-tokens) |
-| [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
-| [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |
-| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> |
-| [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
-| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes |
-| [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes |
-| [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | |
-| [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | |
-| [Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | | Yes |
-| [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | | | | |
-| [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes |
-| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) |
-| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) |
-| [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v5.10+) | Yes (v5.10+) | | Yes |
+| <a id="table3"></a>Feature | [Drivers for PHP for SQL Server on Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Drivers for PHP for SQL Server on Linux and macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> | [Go (go-lang)](https://aka.ms/go-mssqldb) |
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | [Yes](php/using-always-encrypted-php-drivers.md) (v5.2+) | | Yes | Yes |
+| [Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | [Yes](php/always-encrypted-secure-enclaves.md) (v5.8+) | | Yes | |
+| [Azure Active Directory Access Token authentication](/azure/active-directory/develop/access-tokens) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | [Yes](https://github.com/mkleehammer/pyodbc/wiki/Connecting-to-SQL-Server-from-Linux#connecting-to-servers-with-access-tokens) | Yes |
+| [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes | Yes |
+| [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | [Yes](php/azure-active-directory.md) (v4.3+) | [Yes](php/azure-active-directory.md) (v4.3+) | | Yes |  |
+| [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | | | | Yes<sup>[2](#note2)</sup> | Yes |
+| [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](php/azure-active-directory.md) (v5.6+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes | Yes |
+| [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](php/azure-active-directory.md) (v5.9+) | [Yes](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Yes | Yes |
+| [Azure Active Directory Service Principal Certificate authentication](/azure/active-directory/develop/app-objects-and-service-principals) | | | | | Yes |
+| [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](php/how-to-connect-using-windows-authentication.md) | [Yes](odbc/linux-mac/using-integrated-authentication.md) | | Yes | Yes |
+| [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | | | [Yes](https://tediousjs.github.io/tedious/bulk-load.html) | | Yes |
+| [Data Discovery and Classification metadata](../relational-databases/security/sql-data-discovery-and-classification.md) | Yes (v5.8+) | Yes (v5.8+) | | | 
+| [Multiple Active Result Sets (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | [Yes](php/how-to-disable-multiple-active-resultsets-mars.md) | | Yes | |
+| [Spatial Data Types](../relational-databases/spatial/spatial-data-sql-server.md) | | | | | |
+| [Table-Valued Parameters (TVP)](../relational-databases/tables/use-table-valued-parameters-database-engine.md) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](php/use-table-valued-parameters.md) (v5.10+) | [Yes](https://tediousjs.github.io/tedious/parameters.html) | Yes | Yes |
+| [MultiSubnetFailover](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md#connecting-with-multisubnetfailover) | Yes (always / not optional) |
+| [Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Yes](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Yes](odbc/using-transparent-network-ip-resolution.md) | Yes |
+| [TDS 8.0 (strict encryption) and TLS 1.3](../relational-databases/security/networking/tds-8.md) | Yes (v5.10+) | Yes (v5.10+) | Yes (v16.3+) | Yes | |
 
 <a id="note1"></a><sup>1</sup> Since these drivers rely on the Microsoft ODBC Driver for SQL Server, a version of that driver that supports the feature must also be used.
 

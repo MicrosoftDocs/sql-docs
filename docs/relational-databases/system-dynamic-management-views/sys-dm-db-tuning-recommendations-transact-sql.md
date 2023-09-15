@@ -29,7 +29,7 @@ Returns detailed information about automatic tuning recommendations. For more in
 
 For more information, see [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview).
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views can't expose information that would affect database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], dynamic management views can't expose information that would affect database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.
 
 ::: moniker-end
 
@@ -189,7 +189,7 @@ For more information about JSON functions that can be used to query values in th
 
 Requires `VIEW SERVER STATE` permission in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
-Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Requires the `VIEW DATABASE STATE` permission for the database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ### Permissions for SQL Server 2022 and later
 

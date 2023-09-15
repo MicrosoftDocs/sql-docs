@@ -100,7 +100,7 @@ GO
 
 ## See also
 
-- [sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)
-- [sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)
-- [sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)
-- [Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)
+- [sysmail_allitems (Transact-SQL)](../system-catalog-views/sysmail-allitems-transact-sql.md)
+- [sysmail_event_log (Transact-SQL)](../system-catalog-views/sysmail-event-log-transact-sql.md)
+- [sysmail_mailattachments (Transact-SQL)](../system-catalog-views/sysmail-mailattachments-transact-sql.md)
+- [Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs](../database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)

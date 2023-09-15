@@ -4,7 +4,7 @@ description: "sp_addlinkedserver (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: wiassaf, randolphwest
-ms.date: 06/13/2023
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -44,13 +44,13 @@ The name of the linked server to create. The argument *server* is **sysname**, w
 
 #### [ @srvproduct = ] '*product_name*'
 
-The product name of the OLE DB data source to add as a linked server. The value *product_name* is **nvarchar(128)**, with a default of NULL. If the value is **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* don't have to be specified.
+The product name of the OLE DB data source to add as a linked server. The value *product_name* is **nvarchar(128)**, with a default of `NULL`. If the value is **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* don't have to be specified.
 
 #### [ @provider = ] '*provider_name*'
 
 The unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. The *provider_name* must be unique for the specified OLE DB provider installed on the current computer. The value *provider_name* is **nvarchar(128)**.
 
-- Prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], if *@provider* is omitted, SQLNCLI is used. Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry. Instead of SQLNCLI, MSOLEDBSQL is recommended.
+- Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], if *@provider* is omitted, SQLNCLI is used. Using SQLNCLI will redirect [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry. Instead of SQLNCLI, MSOLEDBSQL is recommended.
 
 - Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you must specify a provider name. MSOLEDBSQL is recommended.
 
@@ -59,15 +59,15 @@ The unique programmatic identifier (PROGID) of the OLE DB provider that correspo
 
 #### [ @datasrc = ] '*data_source*'
 
-The name of the data source as interpreted by the OLE DB provider. The value *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.
+The name of the data source as interpreted by the OLE DB provider. The value *data_source* is **nvarchar(4000)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.
 
 #### [ @location = ] '*location*'
 
-The location of the database as interpreted by the OLE DB provider. The value *location* is **nvarchar(**4000**)**, with a default of NULL. The argument *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.
+The location of the database as interpreted by the OLE DB provider. The value *location* is **nvarchar(4000)**, with a default of `NULL`. The argument *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.
 
 #### [ @provstr = ] '*provider_string*'
 
-The OLE DB provider-specific connection string that identifies a unique data source. The value *provider_string* is **nvarchar(**4000**)**, with a default of NULL. The argument *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.
+The OLE DB provider-specific connection string that identifies a unique data source. The value *provider_string* is **nvarchar(4000)**, with a default of `NULL`. The argument *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.
 
 When the linked server is created against the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as `SERVER=servername\\instancename` to specify a specific instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. The *servername* is the name of the computer on which [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.
 
@@ -98,13 +98,13 @@ When the linked server is created against the [!INCLUDE [ssNoVersion](../../incl
 
 #### [ @catalog = ] '*catalog*'
 
-The catalog to be used when a connection is made to the OLE DB provider. The value *catalog* is **sysname**, with a default of NULL. The argument *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.
+The catalog to be used when a connection is made to the OLE DB provider. The value *catalog* is **sysname**, with a default of `NULL`. The argument *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -129,9 +129,9 @@ The following table shows the ways that a linked server can be set up for data s
 
 <sup>2</sup> "Any" indicates that the product name can be anything.
 
-The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider is the provider that is used with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] if no provider name is specified or if [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is specified as the product name. Even if you specify the older provider name, SQLOLEDB, it is changed to SQLNCLI when persisted to the catalog.
+The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider is the provider that is used with [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] if no provider name is specified or if [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is specified as the product name. Even if you specify the older provider name, SQLOLEDB, it's changed to SQLNCLI when persisted to the catalog.
 
-The *data_source*, *location*, *provider_string*, and *catalog* parameters identify the database or databases the linked server points to. If any one of these parameters is NULL, the corresponding OLE DB initialization property is not set.
+The *data_source*, *location*, *provider_string*, and *catalog* parameters identify the database or databases the linked server points to. If any one of these parameters is NULL, the corresponding OLE DB initialization property isn't set.
 
 In a clustered environment, when you specify file names to point to OLE DB data sources, use the universal naming convention name (UNC) or a shared drive to specify the location.
 
@@ -141,11 +141,11 @@ The stored procedure `sp_addlinkedserver` can't be executed within a user-define
 > Azure SQL Managed Instance currently supports only SQL Server, SQL Database, and other SQL managed instances as remote data sources.
 
 > [!IMPORTANT]  
-> When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.
+> When a linked server is created by using `sp_addlinkedserver`, a default self-mapping is added for all local logins. For non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] providers, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authenticated logins may be able to gain access to the provider under the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account. Administrators should consider using `sp_droplinkedsrvlogin <linkedserver_name>, NULL` to remove the global mapping.
 
 ## Permissions
 
-The `sp_addlinkedserver` statement requires the **ALTER ANY LINKED SERVER** permission. (The [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the `sysadmin` fixed server role.)
+The `sp_addlinkedserver` statement requires the **ALTER ANY LINKED SERVER** permission. (The [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **New Linked Server** dialog box is implemented in a way that requires membership in the **sysadmin** fixed server role.)
 
 ## Examples
 
@@ -175,7 +175,7 @@ EXEC sp_addlinkedserver
 The following example creates a linked server `S1_instance1` on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.
 
 > [!IMPORTANT]  
-> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it's not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
 
 ```sql
 EXEC sp_addlinkedserver
@@ -239,7 +239,7 @@ SELECT *
 GO
 ```
 
-If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running under a domain account that has access to a remote share, a UNC path can be used instead of a mapped drive.
+If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running under a domain account that's access to a remote share, a UNC path can be used instead of a mapped drive.
 
 ```sql
 EXEC sp_addlinkedserver 'ExcelShare',
@@ -306,9 +306,9 @@ EXEC sp_addlinkedserver @server = N'DB2',
 
 You can add an Azure SQL database as a linked server and then use it with distributed queries that span the on-premises and cloud databases. This is a component for database hybrid solutions spanning on-premises corporate networks and the Azure cloud.
 
-The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every Azure SQL database (except the logical server's `master` database) can be added as an individual linked server and then used directly in your database applications as any other database.
+The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] box product contains the distributed query feature, which allows you to write queries to combine data from local data sources and data from remote sources (including data from non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data sources) defined as linked servers. Every Azure SQL database (except the logical server's `master` database) can be added as an individual linked server and then used directly in your database applications as any other database.
 
-The benefits of using [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] include manageability, high availability, scalability, working with a familiar development model, and a relational data model. The requirements of your database application determine how it would use [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] in the cloud. You can move all of your data at once to [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], or progressively move some of your data while keeping the remaining data on-premises. For such a hybrid database application, [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] can now be added as linked servers and the database application can issue distributed queries to combine data from [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] and on-premises data sources.
+The benefits of using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] include manageability, high availability, scalability, working with a familiar development model, and a relational data model. The requirements of your database application determine how it would use [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] in the cloud. You can move all of your data at once to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], or progressively move some of your data while keeping the remaining data on-premises. For such a hybrid database application, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] can now be added as linked servers and the database application can issue distributed queries to combine data from [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and on-premises data sources.
 
 Here's an example explaining how to connect to an Azure SQL database using distributed queries.
 

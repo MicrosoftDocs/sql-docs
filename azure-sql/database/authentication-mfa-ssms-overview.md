@@ -10,14 +10,13 @@ ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
 ms.custom:
-  - seoapril2019
   - sqldbrb=1
 tags: azure-synapse
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi || >=sql-server-ver16 || >= sql-server-linux-ver16"
 ---
 
 # Using Azure Active Directory Multi-Factor Authentication
-[!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa-asvm-arc.md)]
+[!INCLUDE[appliesto-sqldb-sqlmi-asa-sqlvm-arc](../includes/appliesto-sqldb-sqlmi-asa-sqlvm-arc.md)]
 
 [Azure Active Directory (Azure AD) Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks) is a security feature provided by Microsoft's cloud-based identity and access management service. Multifactor authentication (MFA) enhances the security of user sign-ins by requiring users to provide extra verification steps beyond a password. MFA is a supported authentication method for [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md), [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is), and [SQL Server 2022 (16.x)](/sql/relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview) and later versions.
 

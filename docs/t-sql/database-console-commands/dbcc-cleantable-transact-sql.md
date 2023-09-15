@@ -100,7 +100,7 @@ Caller must own the table or indexed view, or be a member of the **sysadmin** fi
 The following example executes `DBCC CLEANTABLE` for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
 
 ```sql
-DBCC CLEANTABLE (AdventureWorks2019, 'Production.Document', 1000)
+DBCC CLEANTABLE (AdventureWorks2022, 'Production.Document', 1000)
 WITH NO_INFOMSGS;
 GO
 ```

@@ -52,7 +52,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
  The following example uses `sys.fn_cdc_increment_lsn` to generate a new lower bound value for a change data capture query based on the upper bound saved from a previous query and saved in the variable `@save_to_lsn`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10), @save_to_lsn binary(10);  
 SET @save_to_lsn = <previous_upper_bound_value>;  

@@ -63,7 +63,7 @@ The input parameters for the collection item. *@parameters* is **xml**, with a d
 
 ## Return code values
 
-`0` (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -76,12 +76,12 @@ GO
 SELECT cs.collection_set_id,
     collection_set_uid,
     cs.name,
-    'is running' = CASE 
+    'is running' = CASE
         WHEN is_running = 0
             THEN 'No'
         ELSE 'Yes'
         END,
-    'cache mode' = CASE 
+    'cache mode' = CASE
         WHEN collection_mode = 0
             THEN 'Cached mode'
         ELSE 'Non-cached mode'

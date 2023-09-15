@@ -165,7 +165,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  The following example sets the `TRANSACTION ISOLATION LEVEL` for the session. For each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that follows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] holds all of the shared locks until the end of the transaction.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
 GO  

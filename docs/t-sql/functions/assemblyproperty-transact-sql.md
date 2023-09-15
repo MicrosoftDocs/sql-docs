@@ -58,7 +58,7 @@ The name of a property about which to retrieve information. *property_name* can 
 This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  

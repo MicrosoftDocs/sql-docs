@@ -30,7 +30,7 @@ To configure replication with Azure AD authentication, you must meet the followi
 
 - Have [Azure Arc-enabled](../../sql-server/azure-arc/connect.md) SQL Server 2022 starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
 - Configured Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
-- [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio). 
+- [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
 - The connection must be encrypted using a certificate from a trusted Certificate Authority (CA) or a self-signed certificate.
    - If a self-signed certificate is used, it must be imported to the client machine and installed into the Trusted Certificates list for the client to trust the SQL Server. This requirement cannot be bypassed by selecting the **Trust server certificate** option in SQL Server Management Studio (SSMS) as it doesn't work with replication.
@@ -50,7 +50,7 @@ When configuring replication with Azure AD authentication, you first need to [cr
 To create the SQL login from Azure AD, and give it sysadmin permissions, use the following Transact-SQL (T-SQL) command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [login_name] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin' 
 ```
@@ -58,7 +58,7 @@ EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin'
 For example, to add the login name for `newuser@tenant.com`, use this command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [newuser@tenant.com] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='newuser@tenant.com', @rolename='sysadmin' 
 ```

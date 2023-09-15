@@ -111,7 +111,7 @@ The query returns AdventureWorks sales order detail data with sales territory, p
   
 1. **Get the data**.  
   
-     The query in this section is based on the AdventureWorks database, which is available for download from GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+   [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 2. **Create a data source**.  
   
@@ -124,7 +124,7 @@ The query returns AdventureWorks sales order detail data with sales territory, p
     4. Enter the connection string to your server and database. For example:  
   
         ```
-        Data Source=[server name];Initial Catalog=AdventureWorks2016  
+        Data Source=[server name];Initial Catalog=AdventureWorks2022  
         ```  
   
     5. To verify the connection, select the **Test Connection** button, and then select **OK**.  

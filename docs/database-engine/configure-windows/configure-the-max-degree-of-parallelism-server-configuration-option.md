@@ -27,7 +27,7 @@ This article describes how to configure the `max degree of parallelism` (MAXDOP)
 >
 > In Azure SQL Database and Azure SQL Managed Instance, the default MAXDOP setting for each **new** single database, elastic pool database and managed instance is 8. In Azure SQL Database, the **MAXDOP** database-scoped configuration is set to 8. In Azure SQL Managed Instance, the `max degree of parallelism` (MAXDOP) server configuration option is set to 8.
 >
-> For more on MAXDOP in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
+> For more on MAXDOP in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Configure the max degree of parallelism (MAXDOP) in Azure SQL Database](/azure/azure-sql/database/configure-max-degree-of-parallelism).
 
 ## <a id="BeforeYouBegin"></a> Before You Begin
 
@@ -117,7 +117,7 @@ These options change the MAXDOP for the instance.
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to configure the `max degree of parallelism` option to `16`.
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO   
 EXEC sp_configure 'show advanced options', 1;  
 GO  

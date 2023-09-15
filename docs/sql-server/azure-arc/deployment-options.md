@@ -1,5 +1,5 @@
 ---
-title: Alternative deployment options for Azure Arc-enabled SQL Server
+title: Alternate deployment options for Azure Arc-enabled SQL Server
 description: Explains different ways to deploy Azure Arc-enabled SQL Server.
 author: anosov1960
 ms.author: rajpo
@@ -8,14 +8,13 @@ ms.date: 07/18/2023
 ms.topic: conceptual
 ---
 
-# Alternative deployment options for Azure Arc-enabled SQL Server
+# Alternate deployment options for Azure Arc-enabled SQL Server
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure, providing a centralized management platform for all your SQL Servers.
-To automatically connect your SQL Severs, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md)
->
+To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md)
 
 Use the methods below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 

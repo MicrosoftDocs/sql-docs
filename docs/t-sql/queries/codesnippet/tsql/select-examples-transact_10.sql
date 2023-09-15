@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT DISTINCT p.LastName, p.FirstName 
 FROM Person.Person AS p 

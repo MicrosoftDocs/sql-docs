@@ -275,7 +275,7 @@ sections:
         answer: |
           ### Is the backup storage deducted from my managed instance storage?
           
-          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](../database/automated-backups-overview.md).
+          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](automated-backups-overview.md).
           
           ### How can I see when automated backups are made on my managed instance?
           
@@ -324,9 +324,9 @@ sections:
           ### Can I set the NVA or on-premises firewall to filter the outbound management traffic based on FQDNs?
           
           No. This is not supported for several reasons:
-          -    Routing traffic that represent response to inbound management request would be asymmetric and could not work.
-          -    Routing traffic that goes to storage would be affected by throughput constraints and latency so this way we won't be able to provide expected service quality and availability.
-          -    Based on experience, these configurations are error prone and not supportable.
+          -    Routing traffic that represents a response to an inbound management request would be asymmetric and could not work.
+          -    Routing traffic to Azure Storage would be affected by throughput constraints and latency so this way we won't be able to provide expected service quality and availability.
+          -    These configurations are error prone and are not supportable.
           
           ### Can I set the NVA or firewall for the outbound non-management traffic?
           
@@ -370,11 +370,13 @@ sections:
           
           ### Can my managed instance have a static IP address?
           
-          This is currently only supported for [private endpoints](connectivity-architecture-overview.md#private-endpoint-preview).
+          Currently, only [private endpoints](connectivity-architecture-overview.md#private-endpoints) to managed instances guarantee static IP addresses.
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
           For the above reason, VNet-local and public endpoints should only be accessed via their associated domain names. We strongly discourage relying on immutability of their IP address as doing so may lead to prolonged unavailability while the service is healthy.
+          
+          If you require a static IP address that is reachable from outside the virtual network, you can deploy Azure Firewall with a frontend public IP address and configure a NAT rule to translate inbound traffic to a managed instance's private endpoint. Then, set up DNS resolution or configure client aliases so that that SQL clients connect to the firewall's public IP address via managed instance's fully qualified domain name.
           
           ### Does SQL Managed Instance have a public endpoint?
           
@@ -513,7 +515,7 @@ sections:
           
           ### How can I monitor billing cost for my backup storage consumption?
           
-          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](../database/automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
+          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
           
           ### How can I optimize my backup storage costs on the managed instance?
           

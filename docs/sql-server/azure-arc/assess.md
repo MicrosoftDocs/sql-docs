@@ -26,7 +26,7 @@ This article provides instructions for using best practices assessment on an ins
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
->For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
 ## Prerequisites
 
@@ -94,7 +94,7 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 >[!IMPORTANT]
 >The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
->For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
 1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
 1. Search for *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* and select the policy.
@@ -117,7 +117,7 @@ See [Azure Policy documentation](/azure/governance/policy) for general instructi
 
 ### Modify license type
 
-If an instance of SQL Server is configured with a license only type of license, you need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-license-type.md).
+If an instance of SQL Server is configured with a license only type of license, you need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-configuration.md).
 
 :::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of Azure portal change license type.":::
 

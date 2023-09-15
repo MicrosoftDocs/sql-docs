@@ -134,11 +134,11 @@ Here is what the output might look like.  You might notice this output is simila
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
-AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
-AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
-AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
-AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
+AdventureWorks2022   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2022 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2022 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2022 Normal      172.00 MB   74.76 MB Simple       130 sa
+AdventureWorksDW2022 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
 If you need to see all databases on your instance, one option is to use the `Get-SqlDatabase` cmdlet.
@@ -160,11 +160,11 @@ Here is a sample of what might be returned by the Get-SqlDatabase command above:
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
-AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
-AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
-AdventureWorksDW2016 Normal      172.00 MB   74.88 MB Simple       130 sa
-AdventureWorksDW2017 Normal      208.00 MB   40.63 MB Simple       140 sa
+AdventureWorks2022   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2022 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2022 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2022 Normal      172.00 MB   74.88 MB Simple       130 sa
+AdventureWorksDW2022 Normal      208.00 MB   40.63 MB Simple       140 sa
 master               Normal        6.00 MB  600.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.70 MB Full         140 sa
 msdb                 Normal       15.50 MB    1.14 MB Simple       140 sa

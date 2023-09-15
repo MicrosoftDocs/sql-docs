@@ -45,7 +45,7 @@ None.
 
 A return code of `1` indicates success. Any other value indicates failure.
 
-## Result sets
+## Result set
 
 None.
 

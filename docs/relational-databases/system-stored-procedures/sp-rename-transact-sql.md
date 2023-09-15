@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "renaming tables"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest"
 ---
 # sp_rename (Transact-SQL)
 
@@ -34,7 +34,7 @@ Changes the name of a user-created object in the current database. This object c
 [!INCLUDE [synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
 
 > [!CAUTION]  
-> Changing any part of an object name can break scripts and stored procedures. We recommend you do not use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.
+> Changing any part of an object name can break scripts and stored procedures. We recommend you don't use this statement to rename stored procedures, triggers, user-defined functions, or views; instead, drop the object and re-create it with the new name.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,20 +67,20 @@ Quotation marks are only necessary if a qualified object is specified. If a full
 The new name for the specified object. *new_name* must be a one-part name and must follow the rules for identifiers. *newname* is **sysname**, with no default.
 
 > [!NOTE]  
-> Trigger names cannot start with # or ##.
+> Trigger names can't start with # or ##.
 
 #### [ @objtype = ] '*object_type*'
 
-The type of object being renamed. *object_type* is **varchar(13)**, with a default of NULL, and can be one of these values.
+The type of object being renamed. *object_type* is **varchar(13)**, with a default of `NULL`, and can be one of these values.
 
 | Value | Description |
 | --- | --- |
 | COLUMN | A column to be renamed. |
 | DATABASE | A user-defined database. This object type is required when renaming a database. |
 | INDEX | A user-defined index. Renaming an index with statistics, also automatically renames the statistics. |
-| OBJECT | An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
-| STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
-| USERDATATYPE | A [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
+| OBJECT | An item of a type tracked in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules. |
+| STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
+| USERDATATYPE | A [CLR user-defined type](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
 
 #### [ @objtype = ] '*COLUMN*'
 
@@ -100,11 +100,11 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 
 - `sp_rename` can be used to rename primary and secondary XML indexes.
 
-- Renaming a stored procedure, function, view, or trigger won't change the name of the corresponding object either in the definition column of the [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view or obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. Therefore, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name.
+- Renaming a stored procedure, function, view, or trigger won't change the name of the corresponding object either in the definition column of the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view or obtained using the [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) built-in function. Therefore, we recommend that `sp_rename` not be used to rename these object types. Instead, drop and re-create the object with its new name.
 
 **Applies to** SQL Server (all supported versions), Azure SQL Database, and Azure Synapse Analytics:
 
-- Renaming an object such as a table or column won't automatically rename references to that object. You must modify any objects that reference the renamed object manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
+- Renaming an object such as a table or column won't automatically rename references to that object. You must modify any objects that reference the renamed object manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
 
 - Renaming a column doesn't automatically update the metadata for any objects which SELECT all columns (using the `*`) from that table. For example, if you rename a table column and that column is referenced by a non-schema-bound view or function that SELECTs all columns (using the `*`), the metadata for the view or function continues to reflect the original column name. Refresh the metadata using [sp_refreshsqlmodule](sp-refreshsqlmodule-transact-sql.md) or [sp_refreshview](sp-refreshview-transact-sql.md).
 
@@ -114,7 +114,7 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 
 ## Permissions
 
-To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the sysadmin or dbcreator fixed server roles. To rename a ledger table, ALTER LEDGER permission is required.
+To rename objects, columns, and indexes, requires ALTER permission on the object. To rename user types, requires CONTROL permission on the type. To rename a database, requires membership in the **sysadmin** or **dbcreator** fixed server roles. To rename a ledger table, ALTER LEDGER permission is required.
 
 ## Examples
 
@@ -252,7 +252,7 @@ GO
 
 ## See also
 
-- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
-- [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)
+- [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)

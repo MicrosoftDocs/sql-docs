@@ -4,7 +4,7 @@ description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedur
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 10/24/2022
+ms.date: 08/22/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -38,49 +38,49 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 
 ## Arguments
 
-#### [ @publisher = ] 'publisher'
+#### [ @publisher = ] '*publisher*'
 
 The name of the Publisher. *publisher* is **sysname**, with no default.
 
-#### [ @publisher_db = ] 'publisher_db'
+#### [ @publisher_db = ] '*publisher_db*'
 
 The name of the published database. *publisher_db* is **sysname**, with no default.
 
-#### [ @publication = ] 'publication'
+#### [ @publication = ] '*publication*'
 
 The name of the publication. *publication* is **sysname**, with no default.
 
-#### [ @subscriber = ] 'subscriber'
+#### [ @subscriber = ] '*subscriber*'
 
 The name of the Subscriber. *subscriber* is **sysname**, with no default.
 
-#### [ @subscriber_db = ] 'subscriber_db'
+#### [ @subscriber_db = ] '*subscriber_db*'
 
 The name of the subscription database. *subscriber_db* is **sysname**, with no default.
 
-#### [ @subscription_type = ] subscription_type
+#### [ @subscription_type = ] *subscription_type*
 
 The type of subscription. *subscription_type* is **int**, with no default and can be one of these values.
 
-|Value|Description|
-|-----------|-----------------|
-|**0**|Push subscription|
-|**1**|Pull subscription|
+| Value | Description |
+| --- | --- |
+| `0` | Push subscription |
+| `1` | Pull subscription |
 
-#### [ @subdb_version = ] subdb_version
+#### [ @subdb_version = ] *subdb_version*
 
 The `dbversion` of the subscription database. *subdb_version* is an optional parameter of type **int**, with a default value of 0.
 
-## Result sets
+## Result set
 
-|Column name|Data type|Description|
-|-----------------|---------------|-----------------|
-|`pendingcmdcount`|**int**|The number of commands that are pending for the subscription.|
-|`estimatedprocesstime`|**int**|Estimate of the number of seconds required to deliver all of the pending commands to the subscriber.|
+| Column name | Data type | Description |
+| --- | --- | --- |
+| `pendingcmdcount` | **int** | The number of commands that are pending for the subscription. |
+| `estimatedprocesstime` | **int** | Estimate of the number of seconds required to deliver all of the pending commands to the subscriber. |
 
 ## Return code values
 
-**0** (success) or **1** (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 

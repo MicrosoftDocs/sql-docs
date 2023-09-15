@@ -98,7 +98,7 @@ EXEC sp_change_users_login 'Report';
 CREATE LOGIN MaryB WITH PASSWORD = '982734snfdHHkjj3';  
 GO  
 --Map database user MB-Sales to login MaryB.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_change_users_login 'Update_One', 'MB-Sales', 'MaryB';  
 GO  
@@ -108,7 +108,7 @@ GO
  The following example shows how to use `Auto_Fix` to map an existing user to a login of the same name, or to create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Mary` that has the password `B3r12-3x$098f6` if the login `Mary` does not exist.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';  
 GO  

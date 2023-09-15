@@ -77,7 +77,7 @@ The COMPUTE clause generates totals that appear as additional summary columns at
 The T-SQL module needs to be rewritten using the ROLLUP operator instead. The code below demonstrates how COMPUTE can be replaced with ROLLUP: 
 
 ```sql 
-USE AdventureWorks 
+USE AdventureWorks2022;
 GO;  
 
 SELECT SalesOrderID, UnitPrice, UnitPriceDiscount 

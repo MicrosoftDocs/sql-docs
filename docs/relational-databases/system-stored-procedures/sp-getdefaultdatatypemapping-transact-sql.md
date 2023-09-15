@@ -129,7 +129,7 @@ Specifies if the mapping has the potential for data loss. *@dataloss* is **bit**
 
 ## Remarks
 
-`sp_getdefaultdatatypemapping` is used in all types of replication between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.
+`sp_getdefaultdatatypemapping` is used in all types of replication between [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.
 
 `sp_getdefaultdatatypemapping` returns the default destination data type that is the closest match to the specified source data type.
 
@@ -141,6 +141,6 @@ Only members of the **sysadmin** fixed server role can execute `sp_getdefaultdat
 
 - [sp_helpdatatypemap (Transact-SQL)](sp-helpdatatypemap-transact-sql.md)
 - [sp_setdefaultdatatypemapping (Transact-SQL)](sp-setdefaultdatatypemapping-transact-sql.md)
-- [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)
-- [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)
-- [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md)
+- [Data Type Mapping for Oracle Publishers](../replication/non-sql/data-type-mapping-for-oracle-publishers.md)
+- [IBM DB2 Subscribers](../replication/non-sql/ibm-db2-subscribers.md)
+- [Oracle Subscribers](../replication/non-sql/oracle-subscribers.md)

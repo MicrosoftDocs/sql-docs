@@ -18,7 +18,7 @@ In Azure SQL Database, Always Encrypted with secure enclaves can use either Inte
 
 ## Intel SGX enclaves
 
-[Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) is a hardware-based trusted execution environment technology. It's available in databases that use the [vCore purchasing model](service-tiers-sql-database-vcore.md) and the [DC-series](service-tiers-sql-database-vcore.md?#dc-series) hardware configuration. To make an Intel SGX enclave available for your database, you need to either select the DC-series hardware configuration when you create the database, or you can update your existing database to use the DC-series hardware.
+[Intel SGX](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html) is a hardware-based trusted execution environment technology. It's available in databases and elastic pools that use the [vCore purchasing model](service-tiers-sql-database-vcore.md) and the [DC-series](service-tiers-sql-database-vcore.md?#dc-series) hardware configuration. To make an Intel SGX enclave available for your database or elastic pool, you need to either select the DC-series hardware configuration when you create the database or elastic pool, or you can update your existing database or elastic pool to use the DC-series hardware.
 
 > [!NOTE]
 > Intel SGX is not available in hardware other than DC-series. For example, Intel SGX is not available in [standard-series (Gen5)](service-tiers-sql-database-vcore.md#standard-series-gen5) hardware configuration, and it is not available for databases using the [DTU model](service-tiers-dtu.md).
@@ -26,7 +26,7 @@ In Azure SQL Database, Always Encrypted with secure enclaves can use either Inte
 Intel SGX enclaves combined with attestation provided by [Microsoft Azure Attestation](/sql/relational-databases/security/encryption/always-encrypted-enclaves#secure-enclave-attestation) offer a stronger protection against attacks from actors with the OS-level admin access, compared to VBS enclaves. However, before you configure the DC-series hardware for your database, make sure you're aware of its performance properties and limitations:
 
 - Unlike other hardware configurations of the vCore purchasing model, DC-series uses physical processor cores, not logical cores. The [resource limits](service-tiers-vcore.md#resource-limits) of DC-series databases differ from the resource limits of the standard-series (Gen 5) hardware configuration.
-- The maximum number of processor cores you can set for a DC-series database is 8.
+- The maximum number of processor cores you can set for a DC-series database is 40.
 - DC-series doesn't work with [serverless](serverless-tier-overview.md).
 
 Also, check the current regional availability of DC-series and make sure it's available in your preferred regions. For details, see [DC-series](service-tiers-sql-database-vcore.md#dc-series).
@@ -43,7 +43,7 @@ SGX enclaves are recommended for workloads that require the strongest data confi
 > [!NOTE]
 > VBS enclaves are available in all Azure SQL Database regions **except**: Jio India Central.
 
-VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer’s organization, including Database Administrators (DBAs). Without having the cryptographic keys protecting the data, a DBA won't be able to access the data in plaintext.
+VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer's organization, including Database Administrators (DBAs). Without having the cryptographic keys protecting the data, a DBA won't be able to access the data in plaintext.
 
 VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps within a VM hosting your database. The plaintext data processed in an enclave doesn't show up in memory dumps, providing the code inside the enclave and its properties haven't been maliciously altered. However, VBS enclaves in Azure SQL Database can't address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. Also, regardless of attestation, VBS enclaves don't provide any protection from attacks using privileged system accounts originating from the host. It's important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
 

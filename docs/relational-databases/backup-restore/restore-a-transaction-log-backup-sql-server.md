@@ -231,51 +231,51 @@ helpviewer_keywords:
  By default, the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database uses the simple recovery model. The following examples require modifying the database to use the full recovery model, as follows:  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY FULL;  
 ```  
   
 #### A. Applying a single transaction log backup  
- The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies the first transaction log backup that resides on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
+ The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2022_1`. The example then applies the first transaction log backup that resides on a backup device named `AdventureWorks2022_log`. Finally, the example recovers the database.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012  
-   FROM AdventureWorks2012_1  
+RESTORE DATABASE AdventureWorks2022  
+   FROM AdventureWorks2022_1  
    WITH NORECOVERY;  
 GO  
-RESTORE LOG AdventureWorks2012  
-   FROM AdventureWorks2012_log  
+RESTORE LOG AdventureWorks2022  
+   FROM AdventureWorks2022_log  
    WITH FILE = 1,  
    NORECOVERY;  
 GO  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    WITH RECOVERY;  
 GO  
 ```  
   
 #### B. Applying multiple transaction log backups  
- The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies, one by one, the first three transaction log backups that reside on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
+ The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2022_1`. The example then applies, one by one, the first three transaction log backups that reside on a backup device named `AdventureWorks2022_log`. Finally, the example recovers the database.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012  
-   FROM AdventureWorks2012_1  
+RESTORE DATABASE AdventureWorks2022  
+   FROM AdventureWorks2022_1  
    WITH NORECOVERY;  
 GO  
-RESTORE LOG AdventureWorks2012  
-   FROM AdventureWorks2012_log  
+RESTORE LOG AdventureWorks2022  
+   FROM AdventureWorks2022_log  
    WITH FILE = 1,  
    NORECOVERY;  
 GO  
-RESTORE LOG AdventureWorks2012  
-   FROM AdventureWorks2012_log  
+RESTORE LOG AdventureWorks2022  
+   FROM AdventureWorks2022_log  
    WITH FILE = 2,  
    NORECOVERY;  
 GO  
-RESTORE LOG AdventureWorks2012  
-   FROM AdventureWorks2012_log  
+RESTORE LOG AdventureWorks2022  
+   FROM AdventureWorks2022_log  
    WITH FILE = 3,  
    NORECOVERY;  
 GO  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    WITH RECOVERY;  
 GO  
 ```  

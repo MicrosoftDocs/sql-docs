@@ -40,15 +40,15 @@ sysmail_add_principalprofile_sp
 
 #### [ @principal_id = ] *principal_id*
 
-The ID of the database user or role in the `msdb` database for the association. *@principal_id* is **int**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified. A *@principal_id* of `0` makes this profile a public profile, granting access to all principals in the database.
+The ID of the database user or role in the `msdb` database for the association. *@principal_id* is **int**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified. A *@principal_id* of `0` makes this profile a public profile, granting access to all principals in the database.
 
 #### [ @principal_name = ] '*principal_name*'
 
-The name of the database user or role in the `msdb` database for the association. *@principal_name* is **sysname**, with a default of NULL. Either *@principal_id* or *@principal_name* must be specified. A *@principal_name* of `'public'` makes this profile a public profile, granting access to all principals in the database.
+The name of the database user or role in the `msdb` database for the association. *@principal_name* is **sysname**, with a default of `NULL`. Either *@principal_id* or *@principal_name* must be specified. A *@principal_name* of `'public'` makes this profile a public profile, granting access to all principals in the database.
 
 #### [ @profile_id = ] *profile_id*
 
-The ID of the profile for the association. *@profile_id* is **int**, with a default of NULL. Either *@profile_id* or *@profile_name* must be specified.
+The ID of the profile for the association. *@profile_id* is **int**, with a default of `NULL`. Either *@profile_id* or *@profile_name* must be specified.
 
 #### [ @profile_name = ] '*profile_name*'
 
@@ -102,6 +102,6 @@ EXEC msdb.dbo.sysmail_add_principalprofile_sp
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Database Mail Configuration Objects](../database-mail/database-mail-configuration-objects.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

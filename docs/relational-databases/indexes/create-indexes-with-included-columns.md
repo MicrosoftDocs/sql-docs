@@ -106,7 +106,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
     -- index key column is PostalCode and the nonkey columns are  

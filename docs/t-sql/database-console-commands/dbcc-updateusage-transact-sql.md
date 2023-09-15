@@ -126,7 +126,7 @@ GO
 The following example reports updated page or row count information for the `Employee` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-DBCC UPDATEUSAGE (AdventureWorks2019, 'HumanResources.Employee');
+DBCC UPDATEUSAGE (AdventureWorks2022, 'HumanResources.Employee');
 GO
 ```
 

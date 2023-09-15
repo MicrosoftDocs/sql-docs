@@ -147,7 +147,7 @@ For a **float** or **real** *expression*, *style* can have one of the values sho
 | **0** (default) | A maximum of 6 digits. Use in scientific notation, when appropriate. |
 | **1** | Always 8 digits. Always use in scientific notation. |
 | **2** | Always 16 digits. Always use in scientific notation. |
-| **3** | Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br />**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |
+| **3** | Always 17 digits. Use for lossless conversion. With this style, every distinct float or real value is guaranteed to convert to a distinct character string.<br /><br />**Applies to:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
 | **126, 128, 129** | Included for legacy reasons. Don't use these values for new development. |
 
 ## money and smallmoney styles
@@ -271,7 +271,7 @@ GO
 The following example shows a resulting expression that is too small to display.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT p.FirstName,
@@ -389,7 +389,7 @@ These examples retrieve the name of the product, for those products that have a 
 Use `CAST`:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT SUBSTRING(Name, 1, 30) AS ProductName,
@@ -402,7 +402,7 @@ GO
 Use `CONVERT`:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT SUBSTRING(Name, 1, 30) AS ProductName,
@@ -454,7 +454,7 @@ HL Road Tire                   32.60
 This example calculates a single column computation (`Computed`) by dividing the total year-to-date sales (`SalesYTD`) by the commission percentage (`CommissionPCT`). This value is rounded to the nearest whole number and is then `CAST` to an **int** data type.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT CAST(ROUND(SalesYTD / CommissionPCT, 0) AS INT) AS Computed
@@ -488,7 +488,7 @@ Computed
 
 ### C. Use CAST to concatenate
 
-This example concatenates noncharacter expressions by using `CAST`. It uses the `AdventureWorksDW2019` database.
+This example concatenates noncharacter expressions by using `CAST`. It uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT 'The list price is ' + CAST(ListPrice AS VARCHAR(12)) AS ListPrice
@@ -510,7 +510,7 @@ The list price is 364.09
 
 ### D. Use CAST to produce more readable text
 
-This example uses `CAST` in the SELECT list, to convert the `Name` column to a **char(10)** column. It uses the `AdventureWorksDW2019` database.
+This example uses `CAST` in the SELECT list, to convert the `Name` column to a **char(10)** column. It uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS CHAR(10)) AS Name,
@@ -535,7 +535,7 @@ Long-Sleev  49.99
 This example converts the `money` column `SalesYTD` values to data type **int**, and then to data type **char(20)**, so that the `LIKE` clause can use it.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT p.FirstName,
@@ -859,7 +859,7 @@ In this case, the string `'1'` can be converted to the integer value 1, so this 
 
 ### L. Use CAST and CONVERT
 
-This example retrieves the name of the product for those products that have a `3` in the first digit of their list price, and converts the `ListPrice` of these products to **int**. It uses the `AdventureWorksDW2019` database.
+This example retrieves the name of the product for those products that have a `3` in the first digit of their list price, and converts the `ListPrice` of these products to **int**. It uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice
@@ -867,7 +867,7 @@ FROM dbo.DimProduct
 WHERE CAST(ListPrice AS int) LIKE '3%';
 ```
 
-This example shows the same query, using `CONVERT` instead of `CAST`. It uses the `AdventureWorksDW2019` database.
+This example shows the same query, using `CONVERT` instead of `CAST`. It uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice
@@ -877,7 +877,7 @@ WHERE CONVERT(INT, ListPrice) LIKE '3%';
 
 ### M. Use CAST with arithmetic operators
 
-This example calculates a single column value by dividing the product unit price (`UnitPrice`) by the discount percentage (`UnitPriceDiscountPct`). This result is then rounded to the nearest whole number, and finally converted to an **int** data type. This example uses the `AdventureWorksDW2019` database.
+This example calculates a single column value by dividing the product unit price (`UnitPrice`) by the discount percentage (`UnitPriceDiscountPct`). This result is then rounded to the nearest whole number, and finally converted to an **int** data type. This example uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,
@@ -901,7 +901,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 
 ### N. Use CAST with the LIKE clause
 
-This example converts the **money** column `ListPrice` to an **int** type, and then to a **char(20)** type, so that the LIKE clause can use it. This example uses the `AdventureWorksDW2019` database.
+This example converts the **money** column `ListPrice` to an **int** type, and then to a **char(20)** type, so that the LIKE clause can use it. This example uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT EnglishProductName AS Name, ListPrice
@@ -911,7 +911,7 @@ WHERE CAST(CAST(ListPrice AS INT) AS CHAR(20)) LIKE '2%';
 
 ### O. Use CAST and CONVERT with datetime data
 
-This example displays the current date and time, uses `CAST` to change the current date and time to a character data type, and finally uses `CONVERT` display the date and time in the ISO 8601 format. This example uses the `AdventureWorksDW2019` database.
+This example displays the current date and time, uses `CAST` to change the current date and time to a character data type, and finally uses `CONVERT` display the date and time in the ISO 8601 format. This example uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT TOP(1)
@@ -929,7 +929,7 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025
 ```
 
-This example is the rough opposite of the previous example. This example displays a date and time as character data, uses `CAST` to change the character data to the **datetime** data type, and then uses `CONVERT` to change the character data to the **datetime** data type. This example uses the `AdventureWorksDW2019` database.
+This example is the rough opposite of the previous example. This example displays a date and time as character data, uses `CAST` to change the character data to the **datetime** data type, and then uses `CONVERT` to change the character data to the **datetime** data type. This example uses the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 ```sql
 SELECT TOP(1)

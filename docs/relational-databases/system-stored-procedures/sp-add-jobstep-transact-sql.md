@@ -4,7 +4,7 @@ description: "Adds a step (operation) to a SQL Server Agent job."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,61 +20,62 @@ dev_langs:
 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Adds a step (operation) to a SQL Server Agent job.
+Adds a step (operation) to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent job types are supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job types are supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 ## Syntax
 
 ```syntaxsql
 sp_add_jobstep
-    [ @job_id = ] job_id
-        | [ @job_name = ] 'job_name'
+    [ [ @job_id = ] 'job_id' ]
+    [ , [ @job_name = ] N'job_name' ]
     [ , [ @step_id = ] step_id ]
-    { , [ @step_name = ] 'step_name' }
+    , [ @step_name = ] N'step_name'
     [ , [ @subsystem = ] N'subsystem' ]
     [ , [ @command = ] N'command' ]
-    [ , [ @additional_parameters = ] N'parameters' ]
-    [ , [ @cmdexec_success_code = ] code ]
-    [ , [ @on_success_action = ] success_action ]
-    [ , [ @on_success_step_id = ] success_step_id ]
-    [ , [ @on_fail_action = ] fail_action ]
-    [ , [ @on_fail_step_id = ] fail_step_id ]
+    [ , [ @additional_parameters = ] N'additional_parameters' ]
+    [ , [ @cmdexec_success_code = ] cmdexec_success_code ]
+    [ , [ @on_success_action = ] on_success_action ]
+    [ , [ @on_success_step_id = ] on_success_step_id ]
+    [ , [ @on_fail_action = ] on_fail_action ]
+    [ , [ @on_fail_step_id = ] on_fail_step_id ]
     [ , [ @server = ] N'server' ]
-    [ , [ @database_name = ] 'database' ]
-    [ , [ @database_user_name = ] 'user' ]
+    [ , [ @database_name = ] N'database_name' ]
+    [ , [ @database_user_name = ] N'database_user_name' ]
     [ , [ @retry_attempts = ] retry_attempts ]
     [ , [ @retry_interval = ] retry_interval ]
-    [ , [ @os_run_priority = ] run_priority ]
-    [ , [ @output_file_name = ] N'file_name' ]
+    [ , [ @os_run_priority = ] os_run_priority ]
+    [ , [ @output_file_name = ] N'output_file_name' ]
     [ , [ @flags = ] flags ]
-    [ , { [ @proxy_id = ] proxy_id
-        | [ @proxy_name = ] 'proxy_name' } ]
+    [ , [ @proxy_id = ] proxy_id ]
+    [ , [ @proxy_name = ] N'proxy_name' ]
+    [ , [ @step_uid = ] 'step_uid' OUTPUT ]
 [ ; ]
 ```
 
 ## Arguments
 
-#### [ @job_id = ] *job_id*
+#### [ @job_id = ] '*job_id*'
 
-The identification number of the job to which to add the step. *@job_id* is **uniqueidentifier**, with a default of NULL.
+The identification number of the job to which to add the step. *@job_id* is **uniqueidentifier**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
-#### [ @job_name = ] '*job_name*'
+#### [ @job_name = ] N'*job_name*'
 
-The name of the job to which to add the step. *@job_name* is **sysname**, with a default of NULL.
+The name of the job to which to add the step. *@job_name* is **sysname**, with a default of `NULL`.
 
 Either *@job_id* or *@job_name* must be specified, but both can't be specified.
 
 #### [ @step_id = ] *step_id*
 
-The sequence identification number for the job step. Step identification numbers start at `1` and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *@step_id* isn't specified. *@step_id* is **int**, with a default of NULL.
+The sequence identification number for the job step. *@step_id* is **int**, with a default of `NULL`. Step identification numbers start at `1` and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *@step_id* isn't specified.
 
-#### [ @step_name = ] '*step_name*'
+#### [ @step_name = ] N'*step_name*'
 
 The name of the step. *@step_name* is **sysname**, with no default.
 
@@ -99,9 +100,9 @@ The subsystem used by the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.
 
 #### [ @command = ] N'*command*'
 
-The commands to be executed by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service through *@subsystem*. *@command* is **nvarchar(max)**, with a default of NULL. SQL Server Agent provides token substitution, which gives you the same flexibility that variables provide when you write software programs.
+The commands to be executed by the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service through *@subsystem*. *@command* is **nvarchar(max)**, with a default of `NULL`. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent provides token substitution, which gives you the same flexibility that variables provide when you write software programs.
 
-An escape macro must accompany all tokens used in job steps, or else those job steps fail. In addition, you must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example: `$(ESCAPE_` *macro name* `(DATE))`.
+An escape macro must accompany all tokens used in job steps, or else those job steps fail. In addition, you must now enclose token names in parentheses and place a dollar sign (`$`) at the beginning of the token syntax. For example: `$(ESCAPE_<macro name>(DATE))`.
 
 For more information about these tokens and updating your job steps to use the new token syntax, see [Use Tokens in Job Steps](../../ssms/agent/use-tokens-in-job-steps.md).
 
@@ -109,15 +110,15 @@ Any Windows user with write permissions on the Windows Event Log can access job 
 
 If you need to use these tokens, first ensure that only members of trusted Windows security groups, such as the Administrators group, have write permissions on the Event Log of the computer where [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resides. Then, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select **Replace tokens for all job responses to alerts** to enable these tokens.
 
-#### [ @additional_parameters = ] N'*parameters*'
+#### [ @additional_parameters = ] N'*additional_parameters*'
 
-[!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] *@additional_parameters* is **ntext**, with a default of NULL.
+[!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)]
 
-#### [ @cmdexec_success_code = ] *code*
+#### [ @cmdexec_success_code = ] *cmdexec_success_code*
 
 The value returned by a `CmdExec` subsystem command to indicate that *@command* executed successfully. *@cmdexec_success_code* is **int**, with a default of `0`.
 
-#### [ @on_success_action = ] *success_action*
+#### [ @on_success_action = ] *on_success_action*
 
 The action to perform if the step succeeds. *@on_success_action* is **tinyint**, and can be one of these values.
 
@@ -128,11 +129,11 @@ The action to perform if the step succeeds. *@on_success_action* is **tinyint**,
 | `3` | Go to next step |
 | `4` | Go to step *@on_success_step_id* |
 
-#### [ @on_success_step_id = ] *success_step_id*
+#### [ @on_success_step_id = ] *on_success_step_id*
 
 The ID of the step in this job to execute if the step succeeds and *@on_success_action* is `4`. *@on_success_step_id* is **int**, with a default of `0`.
 
-#### [ @on_fail_action = ] *fail_action*
+#### [ @on_fail_action = ] *on_fail_action*
 
 The action to perform if the step fails. *@on_fail_action* is **tinyint**, and can be one of these values.
 
@@ -141,23 +142,23 @@ The action to perform if the step fails. *@on_fail_action* is **tinyint**, and c
 | `1` | Quit with success |
 | `2` (default) | Quit with failure |
 | `3` | Go to next step |
-| `4` | Go to step *on_fail_step_id* |
+| `4` | Go to step *@on_fail_step_id* |
 
-#### [ @on_fail_step_id = ] *fail_step_id*
+#### [ @on_fail_step_id = ] *on_fail_step_id*
 
 The ID of the step in this job to execute if the step fails and *@on_fail_action* is `4`. *@on_fail_step_id* is **int**, with a default of `0`.
 
 #### [ @server = ] N'*server*'
 
-[!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)] *@server* is **nvarchar(30)**, with a default of NULL.
+[!INCLUDE [ssInternalOnly](../../includes/ssinternalonly-md.md)]
 
-#### [ @database_name = ] '*database*'
+#### [ @database_name = ] N'*database_name*'
 
-The name of the database in which to execute a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_name* is **sysname**, with a default of NULL, in which case the `master` database is used. Names that are enclosed in brackets (`[ ]`) aren't allowed. For an ActiveX job step, the *@database_name* is the name of the scripting language that the step uses.
+The name of the database in which to execute a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_name* is **sysname**, with a default of `NULL`, in which case the `master` database is used. Names that are enclosed in brackets (`[]`) aren't allowed. For an ActiveX job step, the *@database_name* is the name of the scripting language that the step uses.
 
-#### [ @database_user_name = ] '*user*'
+#### [ @database_user_name = ] N'*database_user_name*'
 
-The name of the user account to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of NULL. When *@database_user_name* is NULL, the step runs in the job owner's user context on *@database_name*. SQL Server Agent includes this parameter only if the job owner is a SQL Server sysadmin. If so, the given Transact-SQL step is executed in the context of the given SQL Server user name. If the job owner isn't a SQL Server sysadmin, then the Transact-SQL step is always executed in the context of the login that owns this job, and the *@database_user_name* parameter is ignored.
+The name of the user account to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of `NULL`. When *@database_user_name* is NULL, the step runs in the job owner's user context on *@database_name*. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent includes this parameter only if the job owner is a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin. If so, the given Transact-SQL step is executed in the context of the given [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] user name. If the job owner isn't a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] sysadmin, then the Transact-SQL step is always executed in the context of the login that owns this job, and the *@database_user_name* parameter is ignored.
 
 #### [ @retry_attempts = ] *retry_attempts*
 
@@ -167,13 +168,13 @@ The number of retry attempts to use if this step fails. *@retry_attempts* is **i
 
 The amount of time in minutes between retry attempts. *@retry_interval* is **int**, with a default of `0`, which indicates a `0`-minute interval.
 
-#### [ @os_run_priority = ] *run_priority*
+#### [ @os_run_priority = ] *os_run_priority*
 
-Reserved.
+[!INCLUDE [ssinternalonly-md](../../includes/ssinternalonly-md.md)]
 
-#### [ @output_file_name = ] N'*file_name*'
+#### [ @output_file_name = ] N'*output_file_name*'
 
-The name of the file in which the output of this step is saved. *@output_file_name* is **nvarchar(200)**, with a default of NULL. *@output_file_name* can include one or more of the tokens listed under *@command*. This parameter is valid only with commands running on the [!INCLUDE [tsql](../../includes/tsql-md.md)], `CmdExec`, `PowerShell`, [!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.
+The name of the file in which the output of this step is saved. *@output_file_name* is **nvarchar(200)**, with a default of `NULL`. *@output_file_name* can include one or more of the tokens listed under *@command*. This parameter is valid only with commands running on the [!INCLUDE [tsql](../../includes/tsql-md.md)], `CmdExec`, `PowerShell`, [!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.
 
 #### [ @flags = ] *flags*
 
@@ -191,17 +192,21 @@ An option that controls behavior. *@flags* is **int**, and can be one of these v
 
 #### [ @proxy_id = ] *proxy_id*
 
-The ID number of the proxy that the job step runs as. *@proxy_id* is type **int**, with a default of NULL. If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+The ID number of the proxy that the job step runs as. *@proxy_id* is **int**, with a default of `NULL`. If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
 
-#### [ @proxy_name = ] '*proxy_name*'
+#### [ @proxy_name = ] N'*proxy_name*'
 
-The name of the proxy that the job step runs as. *@proxy_name* is type **sysname**, with a default of NULL. If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, with a default of `NULL`.If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+
+#### [ @step_uid = ] '*step_uid*' OUTPUT
+
+*@step_uid* is an OUTPUT parameter of type **uniqueidentifier**.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

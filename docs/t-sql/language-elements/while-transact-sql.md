@@ -70,7 +70,7 @@ WHILE Boolean_expression
  In the following example, if the average list price of a product is less than `$300`, the `WHILE` loop doubles the prices and then selects the maximum price. If the maximum price is less than or equal to `$500`, the `WHILE` loop restarts and doubles the prices again. This loop continues doubling the prices until the maximum price is greater than `$500`, and then exits the `WHILE` loop and prints a message.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
 BEGIN  
@@ -94,7 +94,7 @@ DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
-FROM AdventureWorks2012.HumanResources.Employee  
+FROM AdventureWorks2022.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  

@@ -31,7 +31,7 @@ The present article devotes separate sections to these two kinds of connection d
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) <br /> [Entity Framework Core](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) <br /> [Entity Framework](https://www.nuget.org/packages/EntityFramework) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br />[.NET for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Go | [Go MSSQL driver, install instructions](https://github.com/microsoft/go-mssqldb#readme)<br />[Go download page](https://go.dev/dl/)
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
@@ -48,7 +48,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 
 | Language | ORM driver download |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x or later)](/ef/) |
+| C# | [Entity Framework Core](/ef/core/providers/sql-server)<br />[Entity Framework (6.x or later)](/ef/ef6/fundamentals/install) |
 | Go | [GORM](https://gorm.io/)
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |

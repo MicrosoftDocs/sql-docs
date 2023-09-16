@@ -193,13 +193,16 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
     },
     "location": {
       "type": "String"
+    },
+    "encryption_protector_auto_rotation": {
+      "type": "bool"
     }
   },
   "variables": {},
   "resources": [
     {
       "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
+      "apiVersion": "2023-02-01-preview",
       "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
       "location": "[parameters('location')]",
       "sku": {
@@ -223,7 +226,8 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
         "maintenanceConfigurationId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
         "isLedgerOn": false,
         "encryptionProtector": "[parameters('encryption_protector')]",
-        "federatedClientId": "[parameters('federated_client_id')]"
+        "federatedClientId": "[parameters('federated_client_id')]",
+        "encryptionProtectorAutoRotation": "[parameters('encryption_protector_auto_rotation')]"
       }
     }
   ]
@@ -342,13 +346,16 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
     },
     "keys_to_add": {
       "type": "Object"
+    },
+    "encryption_protector_auto_rotation": {
+      "type": "bool"
     }
   },
   "variables": {},
   "resources": [
     {
       "type": "Microsoft.Sql/servers/databases",
-      "apiVersion": "2022-08-01-preview",
+      "apiVersion": "2023-02-01-preview",
       "name": "[concat(parameters('server_name'), concat('/',parameters('database_name')))]",
       "location": "[parameters('location')]",
       "sku": {
@@ -373,7 +380,8 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
         "isLedgerOn": false,
         "encryptionProtector": "[parameters('encryption_protector')]",
         "keys": "[parameters('keys_to_add')]",
-        "federatedClientId": "[parameters('federated_client_id')]"
+        "federatedClientId": "[parameters('federated_client_id')]",
+        "encryptionProtectorAutoRotation": "[parameters('encryption_protector_auto_rotation')]"
       }
     }
   ]

@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 09/11/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell

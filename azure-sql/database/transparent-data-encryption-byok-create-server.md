@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and customer-
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 09/15/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli

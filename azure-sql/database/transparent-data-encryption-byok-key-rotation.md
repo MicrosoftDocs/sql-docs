@@ -5,7 +5,7 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/15/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -150,18 +150,18 @@ For Azure portal information on setting up automatic key rotation at the databas
 
 # [PowerShell](#tab/azure-powershell)
 
-To enable automatic rotation for the TDE protector at the database level using PowerShell, see the following command.
+To enable automatic rotation for the TDE protector at the database level using PowerShell, see the following command. Use the `-EncryptionProtectorAutoRotation` parameter and set to `$true` to enable automatic key rotation or `$false` to disable automatic key rotation.
 
 ```powershell
-Set-AzSqlDatabase -ResourceGroupName <resource_group_name> -ServerName <server_name> -DatabaseName <database_name> -EncryptionProtectorAutoRotation True
+Set-AzSqlDatabase -ResourceGroupName <resource_group_name> -ServerName <server_name> -DatabaseName <database_name> -EncryptionProtectorAutoRotation:$true
 ```
 
 # [The Azure CLI](#tab/azure-cli)
 
-To enable automatic rotation for the TDE protector at the database level using the Azure CLI, see the following command.
+To enable automatic rotation for the TDE protector at the database level using the Azure CLI, see the following command. Use the `--encryption-protector-auto-rotation` parameter and set to `True` to enable automatic key rotation or `False` to disable automatic key rotation.
 
 ```azurecli
-az sql db update -g <resource_group_name> --server <server_name> --name <database_name> --encryption-protector-auto-rotation True
+az sql db update --resource-group <resource_group_name> --server <server_name> --name <database_name> --encryption-protector-auto-rotation True
 ```
 
 ---

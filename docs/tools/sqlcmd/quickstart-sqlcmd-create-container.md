@@ -4,7 +4,7 @@ description: A quickstart that walks through using creating a new container and 
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 09/12/2023
+ms.date: 09/15/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: quickstart
@@ -18,6 +18,7 @@ In this quickstart, you'll use a single command in **sqlcmd** to create a new co
 ## Prerequisites
 
 - A container runtime installed, such as [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
+- Download and install [[!INCLUDE [name-sos-short](../../includes/name-sos-short.md)]](../../azure-data-studio/download-azure-data-studio.md)
 - Install the latest **sqlcmd**
 
 ## Remarks
@@ -50,11 +51,11 @@ Create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] insta
 
 Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a look at the data.
 
-1. In the same terminal window, run the following command:
+In the same terminal window, run the following command:
 
-   ```bash
-   sqlcmd open ads
-   ```
+```bash
+sqlcmd open ads
+```
 
 1. Now that you have a local copy of your database, you can run a few queries. Here are a few queries you can use to check for data quality issues:
 

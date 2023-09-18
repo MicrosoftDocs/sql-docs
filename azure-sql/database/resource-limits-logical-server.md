@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/12/2023
+ms.date: 09/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -152,6 +152,8 @@ Total CPU and memory consumption by user workloads and internal processes is rep
 
 > [!NOTE]
 > The `sql_instance_cpu_percent` and `sql_instance_memory_percent` Azure Monitor metrics are available since July 2023. They are fully equivalent to the previously available `sqlserver_process_core_percent` and `sqlserver_process_memory_percent` metrics, respectively. The latter two metrics remain available, but will be removed in the future. To avoid an interruption in database monitoring, do not use the older metrics.
+> 
+> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the dynamic management views referenced below.
 
 CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view (for historical reporting scenarios) and in [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database) for real-time monitoring. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 

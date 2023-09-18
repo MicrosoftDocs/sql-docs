@@ -92,7 +92,6 @@ az sql vm update -n <vm name> -g <resource group> --image-sku <edition>
 
 The `image-sku` parameter accepts the following editions: Developer, Express, Standard, Enterprise, Web. When using Web, Express, and Developer, the license-type must be pay-as-you-go (PAYG). 
 
----
 
 ### [PowerShell](#tab/azure-powershell)
 

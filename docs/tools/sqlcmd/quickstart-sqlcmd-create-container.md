@@ -53,9 +53,9 @@ Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a lo
 
 1. In the same terminal window, run the following command:
 
-        ```bash
-        sqlcmd open ads
-        ```
+   ```bash
+   sqlcmd open ads
+   ```
 
 1. Now that you have a local copy of your database, you can run queries. Here is a query you can use to analyze spending by customer:
 

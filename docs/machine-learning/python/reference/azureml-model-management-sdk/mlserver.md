@@ -29,7 +29,7 @@ This module provides a service implementation for the ML Server.
 authentication(context)
 ```
 
-
+[!INCLUDE [entra-id](../../../../includes/entra-id-hard-coded.md)]
 
 
 **Override**
@@ -51,8 +51,7 @@ ML Server supports two forms of authentication contexts:
 
 ### context
 
-The authentication context: LDAP, Azure Active Directory
-(AAD), or existing *access-token* string.
+The authentication context: LDAP, Azure Active Directory (AAD), or existing *access-token* string. 
 
 
 ### HttpException

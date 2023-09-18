@@ -108,6 +108,8 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 ##  <a name="SetUpWeb"></a> Setting up the Database and Website  
  **To set up the database and website using the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
+[!INCLUDE [entra-id](../includes/entra-id-hard-coded.md)]
+
  
 > [!WARNING]
 >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
@@ -128,7 +130,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssnovers
 
     >For [!INCLUDE[sqlv15](../includes/sssql19-md.md)], to connect to the managed instance, use one of the following authentication types:
     >
-    >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
+    >- Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)): **Current User – Active Directory Integrated**
     >- SQL Server Authentication: **SQL Server Account**.
     >
     >In SQL Managed Instance, the user must be a member of the `sysadmin` fixed server role.

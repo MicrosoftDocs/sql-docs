@@ -612,7 +612,7 @@ Supported authentication methods are the managed service identity or a Shared Ac
 - For Azure Blog Storage, the `Allowed Services`: `Blob` checkbox must be selected to generate the SAS token.
 - For Azure Data Lake Gen2, the `Allowed Services`: `Container` and `Object` checkboxes must be selected to generate the SAS token.
 
-A user managed identity is not supported. Azure Active Directory passthrough authentication is not supported.
+A user managed identity is not supported. Microsoft Entra passthrough authentication is not supported.
 
 ### Permissions in the SQL managed instance
 
@@ -711,7 +711,7 @@ CETAS for [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] can only be 
 
 #### Permissions to enable CETAS
 
-To enable via Azure PowerShell, your Azure AD user running the command must have **Contributor** or **SQL Security Manager** Azure RBAC roles for your SQL managed instance. 
+To enable via Azure PowerShell, your Microsoft Entra user running the command must have **Contributor** or **SQL Security Manager** Azure RBAC roles for your SQL managed instance. 
 
 A custom role can be created for this as well, requiring the **Read** and **Write** action for the `Microsoft.Sql/managedInstances/serverConfigurationOptions` action.
 

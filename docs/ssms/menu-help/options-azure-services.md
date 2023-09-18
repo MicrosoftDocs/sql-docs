@@ -1,6 +1,6 @@
 ---
 title: SQL Server Options page - Azure Services
-description: Options (Azure Services)
+description: "Options (Azure Services)"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan

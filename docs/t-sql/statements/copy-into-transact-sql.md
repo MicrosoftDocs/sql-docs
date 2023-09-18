@@ -49,6 +49,8 @@ Visit the following documentation for comprehensive examples and quickstarts usi
 - [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
 - [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 ## Syntax
 
 ```syntaxsql
@@ -161,7 +163,7 @@ Multiple file locations can only be specified from the same storage account and 
 
 > [!NOTE]  
 >  
-> - When authenticating using Azure Active Directory (Azure AD) or to a public storage account, CREDENTIAL does not need to be specified.  
+> - When authenticating using Microsoft Entra ID or to a public storage account, CREDENTIAL does not need to be specified.  
 > - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
@@ -173,7 +175,7 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra Application Service Principal key*
   -  Minimum RBAC roles required: Storage blob data contributor, Storage blob data contributor, Storage blob data owner, or Storage blob data reader
 
 - Authenticating with Storage account key
@@ -184,12 +186,12 @@ Multiple file locations can only be specified from the same storage account and 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
 
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
 
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
 
 #### *ERRORFILE = Directory Location*
 
@@ -216,7 +218,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 - Authenticating with [*Service Principals*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
   - *IDENTITY: \<ClientID\>@<OAuth_2.0_Token_EndPoint>*
-  - *SECRET: Azure AD Application Service Principal key*
+  - *SECRET: Microsoft Entra Application Service Principal key*
   - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner
 
 > [!NOTE]  
@@ -228,11 +230,11 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 - Authenticating with [Managed Identity](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (VNet Service Endpoints)
   - *IDENTITY: A constant with a value of 'Managed Identity'*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD registered SQL Database server
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra registered SQL Database server
 
-- Authenticating with an Azure AD user
+- Authenticating with a Microsoft Entra user
   - *CREDENTIAL isn't required*
-  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Azure AD user
+  - Minimum RBAC roles required: Storage blob data contributor or Storage blob data owner for the Microsoft Entra user
 
 > [!NOTE]  
 > If you are using the same storage account for your ERRORFILE and specifying the ERRORFILE path relative to the root of the container, you do not need to specify the ERROR_CREDENTIAL.

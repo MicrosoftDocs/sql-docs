@@ -16,6 +16,8 @@ ms.custom: intro-quickstart
 
 Get started using SQL Server Management Studio (SSMS) to connect to your Azure SQL Database and run some Transact-SQL (T-SQL) commands.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 The article demonstrates the following steps:
 
 > [!div class="checklist"]
@@ -47,10 +49,10 @@ The article demonstrates the following steps:
    | **Server name** | The fully qualified server name | Enter the name of your *Azure SQL Database* or *Azure SQL Managed Instance* name. |
    | **Authentication** | | |
    | | Azure Active Directory <sup>1</sup> | |
-   | | - Universal with MFA | See [Using multi-factor Azure Active Directory authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
-   | | - Password<br />- Integrated<br />- Service Principal | See [Azure Active Directory service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
-   | | - Managed Identity | See [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
-   | | - Default | The default option can be used when connecting using any Azure AD authentication mode that's passwordless and noninteractive. |
+   | | - Universal with MFA | See [Using multi-factor Microsoft Entra authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
+   | | - Password<br />- Integrated<br />- Service Principal | See [Microsoft Entra service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
+   | | - Managed Identity | See [Managed identities in Microsoft Entra for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
+   | | - Default | The default option can be used when connecting using any Microsoft Entra authentication mode that's passwordless and noninteractive. |
    | | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL to connect. |
    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
    | **Password** | Server account password | The password from the server account used to create the server. |

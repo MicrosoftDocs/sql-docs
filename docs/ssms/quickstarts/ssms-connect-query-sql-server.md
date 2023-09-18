@@ -17,6 +17,8 @@ ms.custom: UpdateFrequency5
 
 Get started using SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some Transact-SQL (T-SQL) commands.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 The article demonstrates how to follow the below steps:
 
 > [!div class="checklist"]
@@ -55,7 +57,7 @@ To connect to your SQL Server instance, follow these steps:
     | --- | --- | --- |
     | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
     | **Server name** | The fully qualified server name | For **Server name**, enter the name of your SQL Server (you can also use *localhost* as the server name if you're connecting locally). If you're NOT using the default instance - ***MSSQLSERVER*** - you must enter in the server name and the instance name.<br /><br />If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name). |
-    | **Authentication** | Windows Authentication<br /><br />SQL Server Authentication<br /><br />Azure Active Directory Authentication | Windows Authentication is set as default.<br /><br />You can also use **SQL Server Authentication** to connect. However, if you select **SQL Server Authentication**, a username and password are required.<br /><br />**Azure AD Authentication** is available for SQL Server 2022 (16.x) and later versions. For step-by-step instructions on how to configure it, see [Set up Azure Active Directory authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)<br /><br />For more information about authentication types, see [Connect to the server (database engine)](../f1-help/connect-to-server-database-engine.md). |
+    | **Authentication** | Windows Authentication<br /><br />SQL Server Authentication<br /><br />Azure Active Directory Authentication | Windows Authentication is set as default.<br /><br />You can also use **SQL Server Authentication** to connect. However, if you select **SQL Server Authentication**, a username and password are required.<br /><br />**Microsoft Entra authentication** is available for SQL Server 2022 (16.x) and later versions. For step-by-step instructions on how to configure it, see [Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)<br /><br />For more information about authentication types, see [Connect to the server (database engine)](../f1-help/connect-to-server-database-engine.md). |
     | **Login** | Server account user ID | The user ID from the server account used to log in to the server. A login is required when using **SQL Server Authentication**. |
     | **Password** | Server account password | The password from the server account used to log in the server. A password is required when using **SQL Server Authentication**. |
 

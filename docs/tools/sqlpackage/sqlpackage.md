@@ -34,6 +34,8 @@ The **SqlPackage** command line tool allows you to specify these actions along w
 
 **[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Command-Line Syntax
 
 **SqlPackage** initiates the actions specified using the [parameters](#parameters), [properties](#properties), and SQLCMD variables specified on the command line.  
@@ -145,7 +147,7 @@ SqlPackage authenticates using methods available in [SqlClient](/dotnet/api/micr
 
 ### Managed identity
 
-In automated environments [Azure Active Directory Managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method.  This method does not require passing credentials to SqlPackage at runtime.  The managed identity is configured for the environment where the SqlPackage action is run and the SqlPackage action will use that identity to authenticate to Azure SQL.  For more information on configuring Managed identity for your environment, please see the [Managed identity documentation](/azure/active-directory/managed-identities-azure-resources/overview).
+In automated environments [Microsoft Entra managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) is the recommended authentication method.  This method does not require passing credentials to SqlPackage at runtime.  The managed identity is configured for the environment where the SqlPackage action is run and the SqlPackage action will use that identity to authenticate to Azure SQL.  For more information on configuring Managed identity for your environment, please see the [Managed identity documentation](/azure/active-directory/managed-identities-azure-resources/overview).
 
 An example connection string using system-assigned managed identity is:
 
@@ -158,7 +160,7 @@ Server=sampleserver.database.windows.net; Authentication=Active Directory Manage
 
 ### Connection pooling
 
-Connection pooling can be enabled for all connections made by SqlPackage by setting the `CONNECTION_POOLING_ENABLED` environment variable to `True`.  This setting is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling.
+Connection pooling can be enabled for all connections made by SqlPackage by setting the `CONNECTION_POOLING_ENABLED` environment variable to `True`.  This setting is recommended for operations with Microsoft Entra username/password connections to avoid MSAL throttling.
 
 
 ### Temporary files

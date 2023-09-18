@@ -79,7 +79,7 @@ The current version of SQL Server Management Studio (SSMS) offers eight authenti
 
 The user name to connect with. This setting is read-only when you select **Windows Authentication** or **Microsoft Entra Integrated** authentication. The setting is prefilled with the Windows user name you're currently logged in with.
 
-If you're connecting with **Microsoft Entra Universal with MFA**, **Microsoft Entra Password**, **Microsoft Entra Service Principal**, or **Microsoft Entra Default**, enter the name of the Microsoft Entra identity you're connecting with.
+If you connect with **Microsoft Entra Universal with MFA**, **Microsoft Entra Password**, **Microsoft Entra Service Principal**, or **Microsoft Entra Default**, enter the name of the Microsoft Entra identity you're connecting with.
 
 #### User assigned identity
 

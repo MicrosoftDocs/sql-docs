@@ -1138,8 +1138,8 @@ Enables or disables Stretch Database for the database. For more info, see [Stret
     You can use a federated service account for the on-premises SQL Server to communicate with the remote Azure server when the following conditions are all true.
 
     - The service account under which the instance of SQL Server is running is a domain account.
-    - The domain account belongs to a domain whose Active Directory is federated with Azure Active Directory.
-    - The remote Azure server is configured to support Azure Active Directory authentication.
+    - The domain account belongs to a domain whose Active Directory is federated with Microsoft Entra ID.
+    - The remote Azure server is configured to support Microsoft Entra authentication.
     - The service account under which the instance of SQL Server is running must be configured as a `dbmanager` or `sysadmin` account on the remote Azure server.
 
     If you specify that the federated service account is ON, you can't also specify the CREDENTIAL argument. Provide the CREDENTIAL argument if you specify OFF.

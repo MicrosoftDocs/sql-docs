@@ -17,6 +17,8 @@ ms.custom: intro-quickstart
 
 Get started using SQL Server Management Studio (SSMS) to connect to your SQL Server instance on an Azure Virtual Machine and run some Transact-SQL (T-SQL) commands.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 > [!div class="checklist"]
 > - Connect to a SQL Server instance
 > - Create a database
@@ -24,6 +26,7 @@ Get started using SQL Server Management Studio (SSMS) to connect to your SQL Ser
 > - Insert rows into your new table
 > - Query the new table and view the results
 > - Use the query window table to verify your connection properties
+
 ## Prerequisites
 
 To complete this article, you need SQL Server Management Studio and access to a data source.
@@ -67,8 +70,8 @@ To connect to the SQL Server Database Engine from the Internet, consider creatin
     |   Setting   |   Suggested Value(s)   |   Description   |
     |--------------|-----------------------|-----------------|
     | **Server type** | Database engine | For **Server type**, select **Database Engine** (usually the default option). |
-    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your Azure SQL VM name. You can also use the Azure SQL VM IP address to connect. | 
-    | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL VM to connect. Also, if you have an Azure Active Directory environment setup, you can use any of the Azure Active Directory options. </br> </br> The **Windows Authentication** method isn't supported for Azure SQL VM. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management).|
+    | **Server name** | The fully qualified server name | For **Server name**, enter the name of your SQL Server VM name. You can also use the SQL Server VM IP address to connect. | 
+    | **Authentication** | SQL Server Authentication | Use **SQL Server Authentication** for SQL Server VM to connect. Also, if you have a Microsoft Entra tenant setup, you can use any of the Azure Active Directory options. </br> </br> The **Windows Authentication** method isn't supported for SQL Server VM. For more information, see [Azure SQL authentication](/azure/sql-database/sql-database-security-overview#access-management).|
     | **Login** | Server account user ID | The user ID from the server account used to create the server. A login is required when using **SQL Server Authentication**. |
     | **Password** | Server account password | The password from the server account used to create the server. A password is required when using **SQL Server Authentication**. |
 

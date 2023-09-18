@@ -16,6 +16,8 @@ ms.custom:
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## SSMA v9.5
 
 The v9.5 release of SSMA for MySQL contains the following changes:
@@ -125,7 +127,7 @@ The v8.16 release of SSMA for MySQL contains the following changes:
 In addition to several accessibility improvements, the v8.15 release of SSMA for MySQL contains the following changes:
 
 - Revamp assessment reports to work in modern browsers
-- Use authority provided by the database for Azure AD authentication
+- Use authority provided by the database for Microsoft Entra/Azure AD authentication
 - Improve naming for statements loaded from files
 
 ## SSMA v8.14
@@ -149,7 +151,7 @@ The v8.12 release of SSMA for MySQL contains the following changes:
 
 The v8.11 release of SSMA for MySQL contains the following changes:
 
-- Use MSAL.NET library for interactive Azure Active Directory authentication
+- Use MSAL.NET library for interactive Microsoft Entra/Azure AD authentication
 
 ## SSMA v8.10
 
@@ -191,7 +193,7 @@ To use this setting, in SSMA for MySQL, navigate to **Tools** > **Project Settin
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for MySQL is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for MySQL is enhanced with support for Microsoft Entra/Azure AD authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 > [!IMPORTANT]  
 > With SSMA v8.5, .NET 4.7.2 is an installation prerequisite. If you need to install this version, you can [download the runtime file](https://dotnet.microsoft.com/download/dotnet-framework/net472).

@@ -61,7 +61,7 @@ Specifies the name of the account to be used when connecting outside the server.
 > The only PolyBase external data source that supports Kerberos authentication is Hadoop. All other external data sources (SQL Server, Oracle, Teradata, MongoDB, generic ODBC) only support Basic Authentication.
 
 - To load data into Azure Synapse Analytics, any valid value can be used for IDENTITY.
-- In an Azure Synapse Analytics serverless SQL pool, database-scoped credentials can specify workspace Managed Identity, service principal name, or shared access signature (SAS) token. Access is also possible via user identity, also known as "Azure AD pass-through" is possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types). 
+- In an Azure Synapse Analytics serverless SQL pool, database-scoped credentials can specify workspace Managed Identity, service principal name, or shared access signature (SAS) token. Access is also possible via user identity, also known as "Microsoft Entra pass-through" is possible in the databased-scoped credential, as is anonymous access to publicly available storage. For more information, see [Supported storage authorization types](/azure/synapse-analytics/sql/develop-storage-files-storage-access-control?tabs=user-identity#supported-storage-authorization-types). 
 - In an Azure Synapse Analytics dedicated SQL pool, database-scoped credentials can specify shared access signature (SAS) token, custom application identity, workspace Managed Identity, or storage access key.
 
 
@@ -142,8 +142,8 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
-Azure Data Lake Store uses an Azure Active Directory Application for Service to Service Authentication.
-Please [create an Azure AD application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
+Azure Data Lake Store uses a Microsoft Entra Application for Service to Service Authentication.
+Please [create a Microsoft Entra application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

@@ -14,7 +14,7 @@ ms.topic: "reference"
 > [!NOTE]
 > This view is introduced in SQL Server 2022 CU1.
 
-Returns information about the Azure cloud certificates used in SQL Server to set up and maintain an Azure AD administrator required to support Azure AD authentication. For more information, see [Set up Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
+Returns information about the Azure cloud certificates used in SQL Server to set up and maintain a Microsoft Entra administrator required to support Microsoft Entra authentication. For more information, see [Set up Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -32,7 +32,7 @@ The visibility of the metadata in catalog views is limited to securables that a 
   
 ## See also
 
-- [Set up Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
-- [Azure Active Directory authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
-- [Linked server for SQL Server with Azure Active Directory authentication](../security/authentication-access/azure-ad-authentication-sql-server-linked-server.md)
-- [Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Set up Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+- [Linked server for SQL Server with Microsoft Entra authentication](../security/authentication-access/azure-ad-authentication-sql-server-linked-server.md)
+- [Tutorial: Using automation to set up the Microsoft Entra admin for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md)

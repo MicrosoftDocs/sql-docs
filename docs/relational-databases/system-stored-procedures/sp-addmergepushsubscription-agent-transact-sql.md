@@ -27,6 +27,9 @@ Adds a new agent job used to schedule synchronization of a push subscription to 
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+
 ## Syntax
 
 ```syntaxsql

@@ -35,17 +35,17 @@ You can reverse the order to make **sqlcmd** (ODBC) the default again.
 
 ## What problem will we solve?
 
-This quickstart walks through the process of creating a local copy of a database, then querying it to check for data quality issues.
+This quickstart walks through the process of creating a local copy of a database, then querying it to analyze spending by customer.
 
-## Create the local copy
+## Create a new container and restore a database
 
 Create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance in a container using the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The command also restores the `WideWorldImporters` database.
 
-1. Open a new terminal window and run the following command:
+Open a new terminal window and run the following command:
 
-    ```bash
-    sqlcmd create mssql --accept-eula --using https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak
-    ```
+```bash
+sqlcmd create mssql --accept-eula --using https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak
+ ```
 
 ## Query the database in Azure Data Studio
 
@@ -57,43 +57,43 @@ In the same terminal window, run the following command:
 sqlcmd open ads
 ```
 
-1. Now that you have a local copy of your database, you can run a few queries. Here are a few queries you can use to check for data quality issues:
+1. Now that you have a local copy of your database, you can run queries. Here is a query you can use to analyze spending by customer:
 
    ```sql
-   --Look for customers that have ordered but not been billed for anything
-   SELECT *
-   FROM Sales.Customers c
-   INNER JOIN Sales.Orders o
-       ON c.CustomerID = o.CustomerID
-   LEFT JOIN Sales.Invoices i
-       ON c.CustomerID = i.CustomerID
-   WHERE i.CustomerID IS NULL;
-
-   --Look for customers that have not been billed for anything
-   SELECT *
-   FROM Sales.Customers c
-   LEFT JOIN Sales.Invoices i
-       ON c.CustomerID = i.CustomerID
-   WHERE i.CustomerID IS NULL;
-
-   --Look for invoices without a customer
-   SELECT *
-   FROM Sales.Customers c
-   RIGHT JOIN Sales.Invoices i
-       ON c.CustomerID = i.CustomerID
-   WHERE c.CustomerID IS NULL;
-
-   --Look for orders without a customer
-   SELECT *
-   FROM Sales.Customers c
-   RIGHT JOIN Sales.Orders o
-       ON c.CustomerID = o.CustomerID
-   WHERE c.CustomerID IS NULL;
+   SELECT       bg.BuyingGroupName
+                ,COUNT(DISTINCT i.InvoiceID) AS InvoiceCount
+                ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
+                ,SUM(il.LineProfit) AS Profit
+                ,SUM(il.ExtendedPrice) AS ExtendedPrice
+    FROM        [Sales].[Invoices] i 
+	            INNER JOIN [Sales].[Customers] c 
+	                ON i.CustomerID = c.CustomerID
+                INNER JOIN Sales.InvoiceLines il 
+                    ON i.InvoiceID = il.InvoiceID
+                INNER JOIN [Sales].[BuyingGroups] bg 
+                    ON c.BuyingGroupID = bg.BuyingGroupID
+    GROUP BY    bg.BuyingGroupName
+    UNION
+    SELECT      c.CustomerName
+                ,COUNT(DISTINCT i.InvoiceID) AS InvoiceCount
+                ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
+                ,SUM(il.LineProfit) AS Profit
+                ,SUM(il.ExtendedPrice) AS ExtendedPrice
+    FROM        [Sales].[Invoices] i 
+	            INNER JOIN [Sales].[Customers] c 
+	                ON i.CustomerID = c.CustomerID
+	            INNER JOIN Sales.InvoiceLines il 
+	                ON i.InvoiceID = il.InvoiceID
+                LEFT JOIN [Sales].[BuyingGroups] bg 
+                    ON c.BuyingGroupID = bg.BuyingGroupID
+    WHERE       bg.BuyingGroupID IS NULL
+    GROUP BY    c.CustomerName
+    ORDER BY    Profit DESC
    ```
 
 ## How did we solve the problem?
 
-You were able to quickly create a local copy of a database for development and testing purposes. With a single command, you created a new local instance and restored the most recent backup to it. You then ran another command to connect to it via Azure Data Studio. You then queried the database using [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] to check for data quality issues.
+You were able to quickly create a local copy of a database for development and testing purposes. With a single command, you created a new local instance and restored the most recent backup to it. You then ran another command to connect to it via Azure Data Studio. You then queried the database using [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] to analyze spending by customer.
 
 ## Clean up resources
 

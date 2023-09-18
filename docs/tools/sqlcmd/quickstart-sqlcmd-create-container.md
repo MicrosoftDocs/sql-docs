@@ -51,11 +51,11 @@ sqlcmd create mssql --accept-eula --using https://github.com/Microsoft/sql-serve
 
 Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a look at the data.
 
-In the same terminal window, run the following command:
+1. In the same terminal window, run the following command:
 
-```bash
-sqlcmd open ads
-```
+	```bash
+	sqlcmd open ads
+	```
 
 1. Now that you have a local copy of your database, you can run queries. Here is a query you can use to analyze spending by customer:
 

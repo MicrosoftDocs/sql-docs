@@ -32,7 +32,7 @@ Named window definition in the WINDOW clause determines the partitioning and ord
 > [!NOTE]
 > The WINDOW clause requires database compatibility level 160 or higher. If your database compatibility level is lower than 160, SQL Server cannot execute queries with the WINDOW clause.
 >
->You can check compatibility level in the sys.databases view or in database properties. You can change the compatibility level of a database with the following command:
+>You can check the compatibility level in the sys.databases view or in database properties. You can change the compatibility level of a database with the following command:
 >
 >```sql
 >ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 160

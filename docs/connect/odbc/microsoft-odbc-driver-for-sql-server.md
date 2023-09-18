@@ -38,7 +38,7 @@ The following sample demonstrates how to use the ODBC APIs to connect to and acc
 - [DSN and Connection String Keywords and Attributes](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (the features available also apply, without OLEDB, to the ODBC Driver for SQL Server)
 - [Using Always Encrypted](using-always-encrypted-with-the-odbc-driver.md)
-- [Using Azure Active Directory](using-azure-active-directory.md)
+- [Using Microsoft Entra ID](using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](using-transparent-network-ip-resolution.md)
 - [Using XA Transactions](use-xa-with-dtc.md)
 - [Connection Troubleshooting](connection-troubleshooting.md)

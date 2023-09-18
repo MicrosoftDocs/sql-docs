@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 
 > [!NOTE]  
->  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).   
+>  For connections to Microsoft Entra authentication for SQL Database install the latest driver, such as [ODBC Driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md).   
 
   
 ## See Also  

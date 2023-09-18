@@ -81,7 +81,7 @@ The following table details the benefits available through the SQL IaaS Agent ex
 
 ## Permissions models
 
-Staring in October 2022, newly deployed SQL Server VMs use the least privilege mode permissions model by deafult. The least privilege permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature. SQL Server VMs deployed prior to October 2022 use the older sysadmin permissions model, where the SQL IaaS Agent extension has sysadmin rights by default. If you have a SQL Server VM using this older permissions model, you can enable the least privilege permissions model in the Azure portal. 
+Starting in October 2022, newly deployed SQL Server VMs use the least privilege mode permissions model by default. The least privilege permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature. SQL Server VMs deployed prior to October 2022 use the older sysadmin permissions model, where the SQL IaaS Agent extension has sysadmin rights by default. If you have a SQL Server VM using this older permissions model, you can enable the least privilege permissions model in the Azure portal. 
 
 The following table defines the permissions and custom roles used by each feature of the extension: 
 

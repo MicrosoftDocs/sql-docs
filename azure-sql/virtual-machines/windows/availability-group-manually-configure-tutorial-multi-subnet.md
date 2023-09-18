@@ -248,9 +248,9 @@ To create the backup file share, follow these steps:
 
 5. In **Name, Description, and Settings** verify the share name and path. Select **Next**.
 
-6. On **Shared Folder Permissions** set **Customize permissions**. Select **Custom...**.
+6. On **Shared Folder Permissions** set **Customize permissions**. Select **Custom**.
 
-7. On **Customize Permissions**, select **Add...**.
+7. On **Customize Permissions**, select **Add**.
 
 8. Check **Full Control** to grant full access to the share the SQL Server service account (`Corp\SQLSvc`):  
 

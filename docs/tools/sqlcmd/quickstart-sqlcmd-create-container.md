@@ -4,7 +4,7 @@ description: A quickstart that walks through using creating a new container and 
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 09/15/2023
+ms.date: 09/18/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: quickstart
@@ -65,12 +65,12 @@ sqlcmd open ads
                 ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
                 ,SUM(il.LineProfit) AS Profit
                 ,SUM(il.ExtendedPrice) AS ExtendedPrice
-    FROM        [Sales].[Invoices] i 
-	            INNER JOIN [Sales].[Customers] c 
+    FROM        Sales.Invoices i 
+	            INNER JOIN Sales.Customers c 
 	                ON i.CustomerID = c.CustomerID
                 INNER JOIN Sales.InvoiceLines il 
                     ON i.InvoiceID = il.InvoiceID
-                INNER JOIN [Sales].[BuyingGroups] bg 
+                INNER JOIN Sales.BuyingGroups bg 
                     ON c.BuyingGroupID = bg.BuyingGroupID
     GROUP BY    bg.BuyingGroupName
     UNION
@@ -79,12 +79,12 @@ sqlcmd open ads
                 ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
                 ,SUM(il.LineProfit) AS Profit
                 ,SUM(il.ExtendedPrice) AS ExtendedPrice
-    FROM        [Sales].[Invoices] i 
-	            INNER JOIN [Sales].[Customers] c 
+    FROM        Sales.Invoices i 
+	            INNER JOIN Sales.Customers c 
 	                ON i.CustomerID = c.CustomerID
 	            INNER JOIN Sales.InvoiceLines il 
 	                ON i.InvoiceID = il.InvoiceID
-                LEFT JOIN [Sales].[BuyingGroups] bg 
+                LEFT JOIN Sales.BuyingGroups bg 
                     ON c.BuyingGroupID = bg.BuyingGroupID
     WHERE       bg.BuyingGroupID IS NULL
     GROUP BY    c.CustomerName

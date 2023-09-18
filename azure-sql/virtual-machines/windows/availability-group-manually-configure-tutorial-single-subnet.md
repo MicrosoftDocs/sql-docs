@@ -263,7 +263,7 @@ On both SQL Server VMs, open the firewall for the TCP port for the database mirr
 
 1. Check **Full Control** to grant full access to the share the SQL Server service account (`Corp\SQLSvc`):
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/68-backup-share-permission.png" alt-text="Make sure that the SQL Server service accounts for both servers have full control.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/68-backup-share-permission.png" alt-text="Screenshot of the Customize Permissions dialog. Make sure that the SQL Server service accounts for both servers have full control.":::
 
 1. Select **OK**.
 

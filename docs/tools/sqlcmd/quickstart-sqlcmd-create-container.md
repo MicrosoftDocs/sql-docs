@@ -53,42 +53,42 @@ Open [!INCLUDE [name-sos-short](../../includes/name-sos-short.md)] and have a lo
 
 1. In the same terminal window, run the following command:
 
-	```bash
-	sqlcmd open ads
-	```
+        ```bash
+        sqlcmd open ads
+        ```
 
 1. Now that you have a local copy of your database, you can run queries. Here is a query you can use to analyze spending by customer:
 
    ```sql
-   SELECT       bg.BuyingGroupName
+   SELECT       bg.BuyingGroupName AS CustomerName
                 ,COUNT(DISTINCT i.InvoiceID) AS InvoiceCount
                 ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
                 ,SUM(il.LineProfit) AS Profit
                 ,SUM(il.ExtendedPrice) AS ExtendedPrice
-    FROM        Sales.Invoices i 
-	            INNER JOIN Sales.Customers c 
-	                ON i.CustomerID = c.CustomerID
+   FROM         Sales.Invoices i
+                INNER JOIN Sales.Customers c 
+                    ON i.CustomerID = c.CustomerID
                 INNER JOIN Sales.InvoiceLines il 
                     ON i.InvoiceID = il.InvoiceID
                 INNER JOIN Sales.BuyingGroups bg 
                     ON c.BuyingGroupID = bg.BuyingGroupID
-    GROUP BY    bg.BuyingGroupName
-    UNION
-    SELECT      c.CustomerName
+   GROUP BY     bg.BuyingGroupName
+   UNION
+   SELECT       c.CustomerName
                 ,COUNT(DISTINCT i.InvoiceID) AS InvoiceCount
                 ,COUNT(il.InvoiceLineID) AS InvoiceLineCount
                 ,SUM(il.LineProfit) AS Profit
                 ,SUM(il.ExtendedPrice) AS ExtendedPrice
-    FROM        Sales.Invoices i 
-	            INNER JOIN Sales.Customers c 
-	                ON i.CustomerID = c.CustomerID
-	            INNER JOIN Sales.InvoiceLines il 
-	                ON i.InvoiceID = il.InvoiceID
-                LEFT JOIN Sales.BuyingGroups bg 
+   FROM         Sales.Invoices i
+                INNER JOIN Sales.Customers c
+                    ON i.CustomerID = c.CustomerID
+                INNER JOIN Sales.InvoiceLines il
+                    ON i.InvoiceID = il.InvoiceID
+                LEFT JOIN Sales.BuyingGroups bg
                     ON c.BuyingGroupID = bg.BuyingGroupID
-    WHERE       bg.BuyingGroupID IS NULL
-    GROUP BY    c.CustomerName
-    ORDER BY    Profit DESC
+   WHERE        bg.BuyingGroupID IS NULL
+   GROUP BY     c.CustomerName
+   ORDER BY     Profit DESC
    ```
 
 ## How did we solve the problem?

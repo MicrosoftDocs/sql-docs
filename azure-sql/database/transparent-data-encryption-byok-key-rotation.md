@@ -5,7 +5,7 @@ description: Learn how to rotate the Transparent data encryption (TDE) protector
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 03/21/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -64,9 +64,9 @@ For installation, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 ## Automatic key rotation
 
-[Automatic rotation](transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) for the TDE protector can be enabled when configuring the TDE protector for the server, from the Azure portal or via the below PowerShell or the Azure CLI commands. Once enabled, the server will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, within 60 minutes the TDE protector on the server will be automatically rotated to the latest key version.
+[Automatic rotation](transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) for the TDE protector can be enabled when configuring the TDE protector for the server or the database, from the Azure portal or using the below PowerShell or the Azure CLI commands. Once enabled, the server or database will continuously check the key vault for any new versions of the key being used as the TDE protector. If a new version of the key is detected, the TDE protector on the server or database will be automatically rotated to the latest key version within **24 hours**.
 
-Automatic rotation in a server or managed instance can be used with automatic key rotation in Azure Key Vault to enable end-to-end zero touch rotation for TDE keys.
+Automatic rotation in a server, database, or managed instance can be used with automatic key rotation in Azure Key Vault to enable end-to-end zero touch rotation for TDE keys.
 
 > [!NOTE]
 > If the server or managed instance has geo-replication configured, prior to enabling automatic rotation, additional guidelines need to be followed as described [here](transparent-data-encryption-byok-overview.md#geo-replication-considerations-when-configuring-automated-rotation-of-the-tde-protector).  
@@ -136,6 +136,32 @@ az sql mi tde-key set --server-key-type AzureKeyVault
                       [--kid] <keyVaultKeyId>
                       [--resource-group] <ManagedInstanceGroupName> 
                       [--managed-instance] <ManagedInstanceName>
+```
+
+---
+
+## Automatic key rotation at the database level
+
+Automatic key rotation can also be enabled at the database level for Azure SQL Database. This is useful when you want to enable automatic key rotation for only one or a subset of databases on a server. For more information, see [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md).
+
+# [Portal](#tab/azure-portal)
+
+For Azure portal information on setting up automatic key rotation at the database level, see [Update an existing Azure SQL Database with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md#update-an-existing-azure-sql-database-with-database-level-customer-managed-keys).
+
+# [PowerShell](#tab/azure-powershell)
+
+To enable automatic rotation for the TDE protector at the database level using PowerShell, see the following command. Use the `-EncryptionProtectorAutoRotation` parameter and set to `$true` to enable automatic key rotation or `$false` to disable automatic key rotation.
+
+```powershell
+Set-AzSqlDatabase -ResourceGroupName <resource_group_name> -ServerName <server_name> -DatabaseName <database_name> -EncryptionProtectorAutoRotation:$true
+```
+
+# [The Azure CLI](#tab/azure-cli)
+
+To enable automatic rotation for the TDE protector at the database level using the Azure CLI, see the following command. Use the `--encryption-protector-auto-rotation` parameter and set to `True` to enable automatic key rotation or `False` to disable automatic key rotation.
+
+```azurecli
+az sql db update --resource-group <resource_group_name> --server <server_name> --name <database_name> --encryption-protector-auto-rotation True
 ```
 
 ---

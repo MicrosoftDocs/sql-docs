@@ -3,7 +3,7 @@ title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/31/2023
+ms.date: 09/19/2023
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: subject-monitoring
@@ -119,7 +119,7 @@ You will need to create one or more Azure virtual machines that will be used to 
 ### Azure virtual machine requirements
 The Azure virtual machine has the following requirements:
 
-- Operating system: Ubuntu 18.04 using Azure Marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). Custom images are not supported.
+- Operating system: Ubuntu 18.04 using the Azure Marketplace image. Custom images are not supported. To obtain Extended Security Maintenance (ESM) for this version of Ubuntu, we recommend using the Ubuntu Pro 18.04 LTS marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). For more information, see [Support for Linux and open-source technology in Azure](/troubleshoot/azure/cloud-services/support-linux-open-source-technology).
 - Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4-GiB memory) 
 - Deployed in any Azure region [supported](/azure/azure-monitor/agents/azure-monitor-agent-overview#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 

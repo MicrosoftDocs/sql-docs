@@ -81,7 +81,7 @@ Hyperscale backup storage cost depends on the choice of region and backup storag
 
 Write-heavy workloads are more likely to change data pages frequently, which results in larger storage snapshots. Such workloads also generate more transaction logs, contributing to the overall backup costs. Backup storage is charged based on gigabytes consumed per month. For pricing details, see the [Azure SQL Database pricing](https://azure.microsoft.com/pricing/details/sql-database/single/) page. 
 
-For Hyperscale, billable backup storage is calculated as follows: 
+For Hyperscale, billable backup storage is calculated as follows:
 
 `Total billable backup storage size = (data backup storage size + log backup storage size)` 
 

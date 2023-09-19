@@ -145,11 +145,13 @@ View the backups that are retained for a specific database with an LTR policy, a
 
 # [Portal](#tab/portal)
 
+<a id="delete-ltr-backups"></a>
+
 1. In the Azure portal, navigate to your server and then select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the Available LTR backups column. A pane will appear with a list of the available LTR backups for the selected database.
 
    :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-tab.png" alt-text="Screenshot of the Azure portal, showing available backups.":::
 
-1. In the **Available LTR backups** pane that appears, review the available backups. You may select a backup to restore from or to delete.
+1. In the **Available LTR backups** pane that appears, review the available backups. You may select a backup to restore from or to delete. 
 
    :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-manage.png" alt-text="Screenshot of the Azure portal where you can view available LTR backups.":::
 

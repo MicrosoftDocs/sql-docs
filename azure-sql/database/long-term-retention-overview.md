@@ -28,7 +28,6 @@ To enable LTR, you can define a policy using a combination of four parameters: w
 
 > [!NOTE]
 > Any change to the LTR policy applies only to future backups. For example, if weekly backup retention (W), monthly backup retention (M), or yearly backup retention (Y) is modified, the new retention setting will only apply to new backups. The retention of existing backups will not be modified. If your intention is to delete old LTR backups before their retention period expires, you will need to [manually delete the backups](./long-term-backup-retention-configure.md#delete-ltr-backups).
-> 
 
 Examples of the LTR policy:
 

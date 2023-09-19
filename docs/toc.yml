@@ -10456,9 +10456,9 @@ items:
         href: sql-server/azure-arc/view-databases.md
       - name: Configure SQL Server
         href: sql-server/azure-arc/manage-configuration.md
-      - name: Automated patching
+      - name: Automate patching
         href: sql-server/azure-arc/patch.md
-      - name: Automated backups
+      - name: Automate backups
         href: sql-server/azure-arc/point-in-time-restore.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md

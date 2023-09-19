@@ -138,7 +138,7 @@ CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER
 
 The prefix of the alias is your service principal, or application display name, and must be a part of the initial `CREATE LOGIN` or `CREATE USER` statement. The alias suffix should be the first few characters of the Object ID.
 
-We recommend this naming convention for the suffix to explicitly associate the application login or user alias with its Object ID.
+This naming convention is recommended to explicitly associate the database user or login back to its object in Azure AD.
 
 > [!NOTE]
 > The application alias adheres to T-SQL syntax, including a max length of up to 128-characters. However we recommend limiting the suffix to the first 5 characters of the Object ID.

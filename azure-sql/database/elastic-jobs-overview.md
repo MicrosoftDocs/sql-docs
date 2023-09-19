@@ -84,6 +84,7 @@ These are the current limitations to the Elastic Jobs service.  We're actively w
 | Private endpoints aren't supported | Elastic Job Agents currently can't connect to Databases and Elastic Pools which restrict connections to private endpoints.|
 | Use of a Hyperscale database as *Job database* | Using a Hyperscale database as a *Job database* isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database.|
 | Serverless DBs and auto-pausing with Elastic Jobs. | Auto-pause enabled serverless database isn't supported as a *Job Database*. Serverless databases targeted by elastic jobs do support auto-pausing, and will be resumed by job connections. 
+| Exporting a *Job Database* to a BACPAC file | Export of a *Job Database* to a BACPAC file is not supported. If the SQL server containing a *Job Database* needs to be exported, *Job Database* should be dropped first before exporting the server.
 
 ## Best practices for creating jobs
 

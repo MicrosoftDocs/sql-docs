@@ -8,11 +8,11 @@ ms.date: 09/08/2023
 ms.topic: conceptual
 ---
 
-# Monitor Azure Arc-enabled SQL Server telemetry
+# Monitor Azure Arc-enabled SQL Server
 
-Microsoft Azure Arc-enabled SQL Server can post telemetry data to Azure. This feature is not currently available, but will be enabled in a future release. When it is available, the feature is automatic in order to allow you to view telemetry data in Azure portal.
+Microsoft Azure Arc-enabled SQL Server can post monitoring data to Azure. This feature is not currently available, but will be enabled in a future release. When it is available, the feature is automatic in order to allow you to view monitoring data in Azure portal.
 
-This article explains how to prevent your Arc-enabled SQL Server instances from posting telemetry data to Azure. It also describes the data that is posted in the future feature.
+This article explains how to prevent your Arc-enabled SQL Server instances from posting monitoring data to Azure. It also describes the data that is posted in the future feature.
 
 ## Disable or enable collection
 

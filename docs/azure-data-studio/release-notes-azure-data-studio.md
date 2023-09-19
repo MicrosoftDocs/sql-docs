@@ -23,7 +23,7 @@ Azure Data Studio 1.46.0 is the latest general availability (GA) release.
 - Release number: 1.46.0
 - Release date: September 20, 2023
 
-#### What's new in 1.45.0
+#### What's new in 1.46.0
 
 | New Item | Details |
 | --- | --- |
@@ -40,7 +40,7 @@ Azure Data Studio 1.46.0 is the latest general availability (GA) release.
 | SQL Database Projects Extension | Released version 1.3.1 |
 | SQL Database Projects Extension | Added support for "Azure Synapse Serverless SQL Pool” target platform |
 | SQL Database Projects Extension | Added support for “Synapse Data Warehouse in Microsoft Fabric” target platform |
-| SQL Database Projects Extension | Updated to Microsoft.Build.Sql SDK version to 0.1.12-preview |
+| SQL Database Projects Extension | Updated to use Microsoft.Build.Sql SDK version 0.1.12-preview |
 
 #### Bug fixes in 1.46.0
 

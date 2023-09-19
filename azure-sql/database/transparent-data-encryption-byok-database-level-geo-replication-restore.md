@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 07/17/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
@@ -44,7 +44,7 @@ Use the following instructions or commands to create a secondary replica or copy
 
 To create a database in Azure SQL Database as a copy with database level customer-managed keys, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** tab of the **Data Encryption** menu and check the list of current keys in use by the database.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
 
@@ -508,6 +508,10 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 > [!NOTE]
 > The ARM template highlighted in the [Create an Azure SQL Database with database level customer-managed keys as a secondary or copy](#create-an-azure-sql-database-with-database-level-customer-managed-keys-as-a-secondary-or-copy) section can be referenced to restore the database with an ARM template by changing the `createMode` parameter.
+
+## Automatic key rotation option for copied or restored databases
+
+Newly copied or restored databases can be configured to automatically rotate the customer-managed key used for transparent data encryption. For information on how to enable automatic key rotation in the Azure portal or using APIs, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
 
 ## Next steps
 

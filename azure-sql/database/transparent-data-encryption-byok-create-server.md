@@ -62,7 +62,7 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
 12. On the Security tab, under **Server Identity**, select **Configure Identities**.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="Screenshot of security settings and configuring identities in the Azure portal.":::
 
 13. On the **Identity** blade, select **Off** for **System assigned managed identity** and then select **Add** under **User assigned managed identity**. Select the desired **Subscription** and then under **User assigned managed identities**, select the desired user-assigned managed identity from the selected subscription. Then select the  **Add** button.
 
@@ -83,7 +83,7 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server/select-key-for-tde.png" alt-text="Screenshot selecting key for use with TDE.":::
 
-    - For For **Database level key**: Select **Configure transparent data encryption**. Select **Database level Customer-Managed Key**, and an option to select configure the **Database Identity** and **Customer-Managed Key** will appear. Select **Configure** to configure a **User-Assigned Managed Identity** for the database, similar to step 13. Select **Change key** to configure a **Customer-Managed Key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. You also have the option to enable **[Auto-rotate key](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation)** in the **Transparent Data Encryption** menu. Select the **Select** button.
+    - For **Database level key**: Select **Configure transparent data encryption**. Select **Database level Customer-Managed Key**, and an option to select configure the **Database Identity** and **Customer-Managed Key** will appear. Select **Configure** to configure a **User-Assigned Managed Identity** for the database, similar to step 13. Select **Change key** to configure a **Customer-Managed Key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. You also have the option to enable **[Auto-rotate key](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation)** in the **Transparent Data Encryption** menu. Select the **Select** button.
 
     :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-database.png" alt-text="Screenshot configuring TDE for a database in Azure SQL.":::
 

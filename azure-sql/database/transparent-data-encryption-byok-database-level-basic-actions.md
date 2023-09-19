@@ -413,7 +413,7 @@ The following are examples of retrieving the database level customer-managed key
 
 # [Portal](#tab/azure-portal2)
 
-To view the database level customer-managed keys in the [Azure portal](https://portal.azure.com), go to the **Data Encrytion** menu of the SQL database resource.
+To view the database level customer-managed keys in the [Azure portal](https://portal.azure.com), go to the **Data Encryption** menu of the SQL database resource.
 
 # [Azure CLI](#tab/azure-cli2)
 

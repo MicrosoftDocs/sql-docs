@@ -10462,11 +10462,9 @@ items:
         href: sql-server/azure-arc/point-in-time-restore.md
       - name: Delete from or restore to Azure Arc
         href: sql-server/azure-arc/delete-from-azure-arc.md
-    - name: Monitor
-      items:
       - name: Monitor
         href: sql-server/azure-arc/sql-monitoring.md
-      - name: Activity logs
+      - name: Review activity logs
         href: sql-server/azure-arc/activity-logs.md
     - name: Secure
       items:

@@ -253,7 +253,7 @@ Specifies that the user is for Azure AD Authentication.
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].   
 Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The user_name must be a unique name in the `sys.database_principals` view.
 
-For more information on using the `WITH OBJECT_ID` option, see [](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
+For more information on using the `WITH OBJECT_ID` option, see [Azure AD logins and users with nonunique display names](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
 
 > [!NOTE]
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.

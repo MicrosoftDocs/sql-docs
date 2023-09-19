@@ -123,7 +123,7 @@ CREATE LOGIN login_name FROM EXTERNAL PROVIDER
 
 ```sql
 CREATE USER [user_name] FROM EXTERNAL PROVIDER 
-  WITH OBJECT_ID='objectid'
+  WITH OBJECT_ID = 'objectid'
 ```
 
 With the T-SQL DDL extension to create logins or users with the Object ID, you can avoid error *33131* and also specify an alias for the login or user created with the Object ID. For example, the following will create a login `myapp4466e` using the application Object ID `4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx`.

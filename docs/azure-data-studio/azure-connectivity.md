@@ -4,7 +4,7 @@ description: Explains the Azure connection options available in Azure Data Studi
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 06/06/2023
+ms.date: 09/20/2023
 ms.service: azure-data-studio
 ms.topic: "overview"
 ---
@@ -143,6 +143,47 @@ In a proxy environment, user applications may need to allow specific domains use
 - https://login.partner.microsoftonline.cn/
 
 The URLs to allow can sometimes vary on a case-by-case basis. In order to verify you aren't blocking any URLs from going through, go to **Help > Toggle Developer Tools** and select the **Network** tab. Any URLs that are blocked are listed, and you may need to allow those URLs to successfully add your account.
+
+## Configuring Custom Cloud Endpoints
+
+Azure Data Studio 1.46 introduces support for adding custom endpoints for non-public clouds.  
+
+### Adding Custom Cloud Endpoints
+
+Open **Settings** in Azure Data Studio (**Ctrl/Cmd + Shift + P**) and enter **Azure: Custom Provider Settings**, then select `Edit in settings.json` which will open the settings.json file automatically and add `azure.customProviderSettings`:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-settings-provider.png" alt-text="Screenshot of azure.customProviderSettings added to settings.json file":::
+
+There are multiple entries that are required for the endpoint to work:
+
+- host
+- clientId
+- scopes
+- sqlResource
+- microsoftResource
+- armResource
+- graphResource
+- azureStorageResource
+
+Additional entries can be added, if available.  An example JSON entry for one provider is presented as a guide:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-json-example.png" alt-text="Screenshot of sample JSON entries for a custom endpoint":::
+
+After adding the endpoint, save the settings.json file.  Azure Data Studio will notify you to reload the application.  After it has been reloaded, you will be notified that the custom endpoints have been loaded:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-endpoints-loaded.png" alt-text="Screenshot after reloading Azure Data Studio indicating custom endpoints have been loaded":::
+
+If this message does not appear, check that all the entries for the endpoint exist and are filled in.
+
+After adding a custom cloud, open the Azure Linked accounts pane and select the add button.  Select the cloud you added, and it will appear in the Azure Custom Cloud list:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-custom-cloud.png" alt-text="Screenshot of a custom cloud provider in the Azure accounts pane":::
+
+### Multiple Custom Cloud Providers
+
+Additional cloud providers can be added to the settings.json file using the same format.  
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-json-example-two.png" alt-text="Screenshot of sample JSON entries for multiple custom endpoints":::
 
 ## Common authentication issues
 

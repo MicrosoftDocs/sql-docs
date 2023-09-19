@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 09/11/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -55,8 +55,9 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | ---| --- |--- |
-| [Hyperscale long-term retention](long-term-retention-overview.md) | September 2023 | Save your Hyperscale database backups for up to 10 years with long-term retention (LTR).  | 
-| [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | September 2023 | In line with other Azure SQL Database tiers, Hyperscale databases now [retain backups from 1 up to 35 days](automated-backups-overview.md). |
+| [Hyperscale long-term retention](long-term-retention-overview.md) | September 2023 | Save your Hyperscale database backups for up to 10 years [with the GA of long-term retention (LTR)](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616). |
+| [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | September 2023 | In line with other Azure SQL Database tiers, Hyperscale databases now [retain backups from 1 up to 35 days](automated-backups-overview.md) [with the GA of short-term retention](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |
+| [External REST Endpoint Invocation is now GA](https://techcommunity.microsoft.com/t5/azure-sql-blog/external-rest-endpoint-invocation-is-now-ga/ba-p/3909108) | August 2023 | [External REST Endpoint Invocation using sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&preserve-view=true) makes it possible for developers to call REST/GraphQL endpoints from other Azure Services from right in the Azure SQL Database.  |
 | [XML compression](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-of-xml-compression-for-azure-sql-database/ba-p/3888861) | August 2023 | XML compression for Azure SQL Database is now generally available. You can use [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresqldb-current&preserve-view=true#xml_compression) to apply XML compression to existing [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server?view=azuresqldb-current&preserve-view=true). |
 | [TDS 8.0 support](/sql/relational-databases/security/networking/tds-8?view=azuresqldb-current&preserve-view=true) | August 2023 | Azure SQL Database now supports TDS 8.0 for strict encryption of data in transit. |
 | [Hyperscale premium-series and premium-series memory optimized hardware](service-tier-hyperscale.md#compute-resources) | July 2023 | Premium-series and premium-series memory optimized hardware is now available for Hyperscale databases.|
@@ -82,14 +83,14 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| **Hyperscale short-term and long-term retention GA**| [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases.|
+| **Hyperscale short-term and long-term retention GA**| [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases. For more information, read about [the GA of long-term retention (LTR) for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616) and [the GA of short-term retention for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640).|
 | **BASE64_ENCODE and BASE64_DECODE support** | The [BASE64_ENCODE](/sql/t-sql/functions/base64-encode-transact-sql) and [BASE64_DECODE](/sql/t-sql/functions/base64-decode-transact-sql) are now available in Azure SQL Database. |
-
 
 ### August 2023
 
 | Changes | Details |
 | --- | --- |
+| [External REST Endpoint Invocation is now GA](https://techcommunity.microsoft.com/t5/azure-sql-blog/external-rest-endpoint-invocation-is-now-ga/ba-p/3909108) | [External REST Endpoint Invocation using sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&preserve-view=true) makes it possible for developers to call REST/GraphQL endpoints from other Azure Services from right in the Azure SQL Database. |
 | **XML compression GA** | [XML compression](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-of-xml-compression-for-azure-sql-database/ba-p/3888861) for Azure SQL Database is now generally available. You can use [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresqldb-current&preserve-view=true#xml_compression) to apply XML compression to existing [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server?view=azuresqldb-current&preserve-view=true). |
 | **TDS 8.0 GA** | Azure SQL Database now supports [TDS 8.0](/sql/relational-databases/security/networking/tds-8?view=azuresqldb-current&preserve-view=true) for strict encryption of data in transit. |
 

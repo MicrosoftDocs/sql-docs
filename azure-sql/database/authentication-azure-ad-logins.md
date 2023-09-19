@@ -130,7 +130,7 @@ With the T-SQL DDL extension to create logins or users with the Object ID, you c
 
 ```sql
 CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER 
-  WITH OBJECT_ID='4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx' 
+  WITH OBJECT_ID = '4466e2f8-0fea-4c61-a470-xxxxxxxxxxxx' 
 ```
 
 - To execute the above query, the specified Object ID must exist in the Azure AD tenant where the Azure SQL resource resides. Otherwise, the `CREATE` command will fail with the error message: `Msg 37545, Level 16, State 1, Line 1 '' is not a valid object id for '' or you do not have permission.`

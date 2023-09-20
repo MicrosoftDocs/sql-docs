@@ -143,7 +143,7 @@ Azure Data Studio 1.46 introduces support for adding custom endpoints for nonpub
 
 Open **Settings** in Azure Data Studio (**Ctrl/Cmd + Shift + P**) and enter **Azure: Custom Provider Settings**, then select `Edit in settings.json`, which opens the settings.json file automatically and add `azure.customProviderSettings`:
 
-:::image type="content" source="media/azure-connectivity/azure-connectivity-settings-provider.png" alt-text="Screenshot of azure.customProviderSettings added to settings.json file":::
+:::image type="content" source="media/azure-connectivity/azure-connectivity-settings-provider.png" alt-text="Screenshot of azure.customProviderSettings added to settings.json file.":::
 
 There are multiple entries that are required for the endpoint to work:
 
@@ -193,13 +193,13 @@ An example JSON entry for one provider is presented as a guide:
 
 After adding the endpoint, save the settings.json file. Azure Data Studio notifies you to reload the application. After it has reloaded, you'll be notified that the custom endpoints have been loaded:
 
-:::image type="content" source="media/azure-connectivity/azure-connectivity-endpoints-loaded.png" alt-text="Screenshot after reloading Azure Data Studio indicating custom endpoints have been loaded":::
+:::image type="content" source="media/azure-connectivity/azure-connectivity-endpoints-loaded.png" alt-text="Screenshot after reloading Azure Data Studio indicating custom endpoints have been loaded.":::
 
 If this message doesn't appear, check that all the entries for the endpoint exist and are filled in.
 
 After adding a custom cloud, open the Azure Linked accounts pane and the custom cloud viewlet appears. Select **Add an account** and choose the authentication mode if prompted, you'll be taken to the host endpoint to authenticate.  
 
-:::image type="content" source="media/azure-connectivity/azure-connectivity-custom-cloud.png" alt-text="Screenshot of a custom cloud provider in the Azure accounts pane":::
+:::image type="content" source="media/azure-connectivity/azure-connectivity-custom-cloud.png" alt-text="Screenshot of a custom cloud provider in the Azure accounts pane.":::
 
 ### Multiple Custom Cloud Providers
 

@@ -87,9 +87,9 @@ If any document map labels exist in the report, they are available to be used as
 1. From the ribbon, select **Insert**
 1. Select **Quick Parts** dropdown
 1. Select **Field** from the dropdown
-1. From Field names, select **TOC**, and click the **Table of Contents** button from the Field properties.
-1. On the popup window, click the Options button, and ensure the **Table entry fields** box is **checked**
-1. Select Ok from both popup windows to complete the process, and the TOC will be created.
+1. From Field names, select **TOC**, and click the **Table of Contents** button from the **Field properties** pane.
+1. On the popup window, click the **Options** button, and ensure the **Table entry fields** box is **checked**
+1. Select OK from both popup windows to complete the process and generate the TOC.
 
 See [Create a document map or table of contents (Report Builder)](../report-design/create-a-document-map-report-builder-and-ssrs.md) for more information about creating document maps.
 

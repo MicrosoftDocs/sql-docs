@@ -191,7 +191,7 @@ For a full list of bug fixes addressed for the July 2023 hotfix release, visit t
 | Object Explorer | Added support for additional Filter options in Object Explorer |
 | Object Explorer | Reduced size of server group color block |
 | Object Explorer | Enabled 'Async Server tree' for the Server tree view |
-| Object Explorer | Added inline actions (e.g. edit, delete, refresh) |
+| Object Explorer | Added inline actions (for example, edit, delete, refresh) |
 | Object Explorer | Introduced an action to collapse all open objects in Object Explorer |
 | Object Explorer | Added ability to use left and right arrows in OE to open or close trees |
 | Object Explorer | Right-click menu options updated and order modified |
@@ -225,7 +225,7 @@ For a full list of bug fixes addressed for the July 2023 hotfix release, visit t
 | General | Fixed error "Cannot read properties of undefined" |
 | Notebooks | Addressed inability to open JSON in a new tab from Notebook results cell |
 | Notebooks | Fixed error "Unable to load and parse grammar for scope markdown.math.inline" when creating a Notebook text cell |
-| Object Explorer | Addressed connection leak which occurred when renaming a table |
+| Object Explorer | Addressed connection leak, which occurred when renaming a table |
 | Object Explorer | Improved error handling in server tree expand requests |
 | Object Explorer | Fixed issue with unexpected connection drops in Object Explorer |
 | Query Editor | Corrected syntax highlighting for nested multi-line comments |
@@ -334,11 +334,11 @@ For a full list of bug fixes addressed for the May 2023 release, visit the [May 
 
 | New Item | Details |
 | --- | --- |
-| Connection | Added notation for required properties (e.g. Attestation protocol and Attestation URL) when Secure Enclaves are enabled |
+| Connection | Added notation for required properties (for example, Attestation protocol and Attestation URL) when Secure Enclaves are enabled |
 | SQL Database Projects extension | General Availability |
 | SQL Database Projects extension | Move and rename files within Database Projects view |
 | SQL Database Projects extension | SQLCMD variables available for editing in Database Projects view |
-| Object Explorer | Double-clicking on a user or table in Object Explorer will open the designer for the object |
+| Object Explorer | Double-clicking on a user or table in Object Explorer opens the designer for the object |
 | Query Editor | Added a Parse button to the Query Editor toolbar for parsing queries before execution |
 | Query Results | Added support to select a row in query results via double click |
 
@@ -375,13 +375,13 @@ For a full list of bug fixes addressed for the April 2023 release, visit the [Ap
 | Connection | Added support for all three connection encryption options: Strict, Mandatory, and Optional. |
 | Connection | Introduced HostNameInCertificate connection property under Security on the Advanced tab, for server with a certificate configured. |
 | Connection | Added new advanced option in the Connection dialog to support Secure Enclaves. |
-| Connection | Introduced a new setting, Mssql Enable Sql Authentication Provider to allow connections to be maintained without the concern of losing access token lifetime or getting dropped by server. Access tokens will be refreshed internally by the SqlClient driver whenever they are found to be expired. This option is disabled by default. |
+| Connection | Introduced a new setting, Mssql Enable Sql Authentication Provider to allow connections to be maintained without the concern of losing access token lifetime or getting dropped by server. Access tokens are refreshed internally by the SqlClient driver when they are expired. This option is disabled by default. |
 | Connection | Added support for connections to Microsoft Dataverse using the TDS endpoint. |
 | Connection | Introduced additional error reporting for Azure connections. |
 | Connection | Introduced support for change password. |
 | Connection | Added support for encryption options for Arc SQL Managed Instance when server certificates aren't installed. |
 | Deployment | Moved the New Deployment option from the Connections breadcrumb to the File Menu. |
-| Object Explorer | Introduced ability to group objects in Object Explorer by database schema. This applies to all MSSQL connections when enabled or disabled. |
+| Object Explorer | Introduced ability to group objects in Object Explorer by database schema. Grouping applies to all MSSQL connections when enabled or disabled. |
 | Object Explorer | Introduced a new option to allow a custom timeout to be configured for Object Explorer. Within Settings, enable Mssql > Object Explorer: Expand Timeout. |
 | Query Results | Added option to disable special handling for JSON strings. |
 
@@ -490,7 +490,7 @@ For a full list of bug fixes addressed for the January 2023 hotfix release, visi
 | Object Explorer | Fixed issue with database list not loading. |
 | Object Explorer | Fixed issue with key binding for objectExplorer.manage not working. |
 | Query Execution | Fixed error generated when executing a query with LEFT JOIN and NULL values. |
-| Query Plan Viewer | When saving query plans (.sqlplan file), the filename will numerically increment to prevent duplicate filenames. |
+| Query Plan Viewer | When saving query plans (.sqlplan file), the filename numerically increments to prevent duplicate filenames. |
 | Query Results | Fixed issue where users were unable to open JSON data as a new file. |
 | Query Results | Provide proper cell selection and navigation in the query results grid. |
 | Query Results | Improved the handling of line breaks when copying cell contents. |

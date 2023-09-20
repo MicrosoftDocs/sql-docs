@@ -1,5 +1,5 @@
 ---
-title: Monitor Azure Arc-enabled SQL Server monitoring data
+title: Monitor Azure Arc-enabled SQL Server in Azure portal
 description: How to enable or disable monitoring on Azure Arc-enabled SQL Servers
 author: lcwright
 ms.author: lancewright

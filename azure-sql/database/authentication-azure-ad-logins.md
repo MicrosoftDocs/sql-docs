@@ -117,7 +117,7 @@ This error occurs because Azure AD allows duplicate display names for [Azure AD 
 ### T-SQL create login/user extension for nonunique display names
 
 ```sql
-CREATE LOGIN login_name FROM EXTERNAL PROVIDER 
+CREATE LOGIN [login_name] FROM EXTERNAL PROVIDER 
   WITH OBJECT_ID = 'objectid'
 ```
 

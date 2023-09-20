@@ -107,10 +107,10 @@ Msg 33131, Level 16, State 1, Line 4
 Principal 'myapp' has a duplicate display name. Make the display name unique in Azure Active Directory and execute this statement again. 
 ```
 
-This error occurs because Azure AD allows duplicate display names for [Azure AD application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Azure AD logins and users. To mitigate this problem, the DDL statements to create logins and users have been extended to include the **Object ID** of the Azure resource.
+This error occurs because Azure AD allows duplicate display names for [Azure AD application (service principal)](authentication-aad-service-principal.md), while Azure SQL requires unique names to create Azure AD logins and users. To mitigate this problem, the DDL statements to create logins and users (`WITH OBJECT_ID`) have been extended to include the **Object ID** of the Azure resource.
 
 > [!NOTE]
-> Most non-unique display names in Azure AD are related to service principals, though occasionally group names can also be non-unique. Azure AD user principal names are unique, as two users cannot have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
+> Most nonunique display names in Azure AD are related to service principals, though occasionally group names can also be non-unique. Azure AD user principal names are unique, as two users cannot have the same user principal. However, an app registration (service principal) can be created with a display name that is the same as a user principal name.
 >
 > If the service principal display name is not a duplicate, the default `CREATE LOGIN` or `CREATE USER` statement should be used. The `WITH OBJECT_ID` extension is in **public preview**, and is a troubleshooting repair item implemented for use with non-unique service principals. Using it with a unique service principal is not necessary. Using the `WITH OBJECT_ID` extension for a service principal without adding a suffix will run successfully, but it will not be obvious which service principal the login or user was created for. It's recommended to create an alias using a suffix to uniquely identify the service principal. The `WITH OBJECT_ID` extension is not supported for Azure SQL Managed Instance or SQL Server, nor is it supported for SQL Server Management Objects (SMO) Framework.
 
@@ -134,9 +134,7 @@ CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER
 ```
 
 - To execute the above query, the specified Object ID must exist in the Azure AD tenant where the Azure SQL resource resides. Otherwise, the `CREATE` command will fail with the error message: `Msg 37545, Level 16, State 1, Line 1 '' is not a valid object id for '' or you do not have permission.`
-- The login name must contain the original service principal name extended by a user-defined suffix. As a best practice, the suffix can include an initial part of its Object ID. For example, `myapp2ba6c` for the Object ID `2ba6c0a3-cda4-4878-a5ca-xxxxxxxxxxxx`.  
-
-The prefix of the alias is your service principal, or application display name, and must be a part of the initial `CREATE LOGIN` or `CREATE USER` statement. The alias suffix should be the first few characters of the Object ID.
+- The login or user name must contain the original service principal name extended by a user-defined suffix when using the `CREATE LOGIN` or `CREATE USER` statement. As a best practice, the suffix can include an initial part of its Object ID. For example, `myapp2ba6c` for the Object ID `2ba6c0a3-cda4-4878-a5ca-xxxxxxxxxxxx`.  
 
 We recommend this naming convention for the suffix to explicitly associate the application login or user alias with its Object ID.
 

@@ -251,7 +251,7 @@ Specifies that the user is for Azure AD Authentication.
 
 #### WITH OBJECT_ID = *'objectid'*
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].   
-Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The user_name must be a unique name in the `sys.database_principals` view.
+Specifies the Azure AD Object ID. If the `OBJECT_ID` is specified, the user_name is not required to match the Azure AD display name. The user_name must be a unique name in the `sys.database_principals` view and adhere to all other `sysname` limitations.
 
 For more information on using the `WITH OBJECT_ID` option, see [Azure AD logins and users with nonunique display names](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-non-unique-display-names).
 

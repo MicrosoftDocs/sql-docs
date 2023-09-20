@@ -356,7 +356,7 @@ Azure AD users and service principals (Azure AD applications) that are members o
 Specifies that the login is for Azure AD Authentication.
 
 #### WITH OBJECT_ID = *'objectid'*   
-Specifies the Azure AD Object ID. In case the `Object_ID` is specified, the Azure Active Directory resource name is not required, and a different alias can be provided. The login_name must be a unique name in the `sys.server_principals` view.
+Specifies the Azure AD Object ID. If the `OBJECT_ID` is specified, the login_name is not required to match the Azure AD display name. The login_name must be a unique name in the `sys.server_principals` view and adhere to all other `sysname` limitations.
 
 For more information on using the `WITH OBJECT_ID` option, see [Azure AD logins and users with nonunique display names](/azure/azure-sql/database/authentication-azure-ad-logins#azure-ad-logins-and-users-with-nonunique-display-names).
 

@@ -14,20 +14,9 @@ Azure Data Studio uses the Microsoft Authentication Library (MSAL) by default to
 
 ## Azure: Authentication library
 
-This setting controls the authentication library used by Azure Data Studio when adding an Azure account. Microsoft Authentication Library (MSAL) offers authentication and authorization services using standard-compliant implementations of OAuth 2.0 and OpenID Connect (OIDC) 1.0. Read more about [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
+This setting is only available in Azure Data Studio 1.41 through 1.45; it is removed in Azure Data Studio 1.46.  
 
-`Settings.json`
-
-```json
-"azure.authenticationLibrary": "MSAL"
-```
-
-:::image type="content" source="media/azure-connectivity/authentication-library.png" alt-text="Screenshot of Azure authentication library.":::
-
-**ADAL (Active Directory Authentication Library)** is now deprecated, but is supported by Azure Data Studio as a fallback for any potential authentication issues with MSAL.
-
-> [!NOTE]  
-> Switching the authentication library requires reloading Azure Data Studio. Existing Azure accounts are marked stale and users must re-authenticate with the selected library.
+This setting controls the authentication library used by Azure Data Studio when adding an Azure account. Microsoft Authentication Library (MSAL) offers authentication and authorization services using standard-compliant implementations of OAuth 2.0 and OpenID Connect (OIDC) 1.0. Read more about [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).  With Azure Data Studio 1.46 and higher, MSAL is the only library in use, as ADAL (Active Directory Authentication Library) is deprecated.
 
 ## Azure authentication method
 
@@ -75,6 +64,8 @@ Azure Data Studio supports Azure Active Directory (Azure AD) authentication with
 ```
 
 :::image type="content" source="media/azure-connectivity/national-clouds.png" alt-text="Screenshot of Azure authentication National Clouds.":::
+
+Custom cloud endpoints can also be defined, see [Configuring Custom Cloud Endpoints](#configuring-custom-cloud-endpoints)
 
 ## Azure resource configuration
 
@@ -165,9 +156,40 @@ There are multiple entries that are required for the endpoint to work:
 - graphResource
 - azureStorageResource
 
-Additional entries can be added, if available.  An example JSON entry for one provider is presented as a guide:
+An example JSON entry for one provider is presented as a guide:
 
-:::image type="content" source="media/azure-connectivity/azure-connectivity-json-example.png" alt-text="Screenshot of sample JSON entries for a custom endpoint":::
+```json
+"azure.customProviderSettings": [
+        {
+            "name": "Azure Custom",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud",
+                    "id": "azure_customCloud",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        }
+    ]
+```
 
 After adding the endpoint, save the settings.json file.  Azure Data Studio will notify you to reload the application.  After it has been reloaded, you will be notified that the custom endpoints have been loaded:
 
@@ -175,7 +197,7 @@ After adding the endpoint, save the settings.json file.  Azure Data Studio will 
 
 If this message does not appear, check that all the entries for the endpoint exist and are filled in.
 
-After adding a custom cloud, open the Azure Linked accounts pane and select the add button.  Select the cloud you added, and it will appear in the Azure Custom Cloud list:
+After adding a custom cloud, open the Azure Linked accounts pane and the custom cloud viewlet appears.  Select Add an Account and choose the authentication mode if prompted, you will then be taken to the host endpoint to authenticate.  
 
 :::image type="content" source="media/azure-connectivity/azure-connectivity-custom-cloud.png" alt-text="Screenshot of a custom cloud provider in the Azure accounts pane":::
 
@@ -183,7 +205,66 @@ After adding a custom cloud, open the Azure Linked accounts pane and select the 
 
 Additional cloud providers can be added to the settings.json file using the same format.  
 
-:::image type="content" source="media/azure-connectivity/azure-connectivity-json-example-two.png" alt-text="Screenshot of sample JSON entries for multiple custom endpoints":::
+```json
+"azure.customProviderSettings": [
+        {
+            "name": "Azure Custom",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud",
+                    "id": "azure_customCloud",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        },
+ {
+            "name": "Azure Custom 2",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud 2",
+                    "id": "azure_customCloud2",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        }
+    ]
+```
 
 ## Common authentication issues
 

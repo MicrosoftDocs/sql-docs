@@ -4,7 +4,7 @@ description: Explains the Azure connection options available in Azure Data Studi
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 06/06/2023
+ms.date: 09/20/2023
 ms.service: azure-data-studio
 ms.topic: "overview"
 ---
@@ -14,20 +14,9 @@ Azure Data Studio uses the Microsoft Authentication Library (MSAL) by default to
 
 ## Azure: Authentication library
 
-This setting controls the authentication library used by Azure Data Studio when adding an Azure account. Microsoft Authentication Library (MSAL) offers authentication and authorization services using standard-compliant implementations of OAuth 2.0 and OpenID Connect (OIDC) 1.0. Read more about [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
+This setting is only available in Azure Data Studio 1.41 through 1.45; it's removed in Azure Data Studio 1.46.  
 
-`Settings.json`
-
-```json
-"azure.authenticationLibrary": "MSAL"
-```
-
-:::image type="content" source="media/azure-connectivity/authentication-library.png" alt-text="Screenshot of Azure authentication library.":::
-
-**ADAL (Active Directory Authentication Library)** is now deprecated, but is supported by Azure Data Studio as a fallback for any potential authentication issues with MSAL.
-
-> [!NOTE]  
-> Switching the authentication library requires reloading Azure Data Studio. Existing Azure accounts are marked stale and users must re-authenticate with the selected library.
+This setting controls the authentication library used by Azure Data Studio when adding an Azure account. Microsoft Authentication Library (MSAL) offers authentication and authorization services using standard-compliant implementations of OAuth 2.0 and OpenID Connect (OIDC) 1.0. Read more about [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview). With Azure Data Studio 1.46 and higher, MSAL is the only library in use, as ADAL (Active Directory Authentication Library) is deprecated.
 
 ## Azure authentication method
 
@@ -76,6 +65,8 @@ Azure Data Studio supports Azure Active Directory (Azure AD) authentication with
 
 :::image type="content" source="media/azure-connectivity/national-clouds.png" alt-text="Screenshot of Azure authentication National Clouds.":::
 
+Custom cloud endpoints can also be defined.  See [Configuring Custom Cloud Endpoints](#configuring-custom-cloud-endpoints).
+
 ## Azure resource configuration
 
 These settings apply filters on Azure resources and tenants.
@@ -98,8 +89,8 @@ These settings apply filters on Azure resources and tenants.
 
 If using Azure Data Studio (ADS) behind a proxy, users must specify proxy settings for ADS to communicate with external endpoints. There are two ways to provide proxy settings for ADS to use:
 
-- Setting proxy configuration in the Azure Data Studio (**Settings > Http: Proxy Settings**), or
-- Setting environment variables for proxy configuration.
+- Setting proxy configuration in the Azure Data Studio (**Settings > Http: Proxy Settings**)
+- Setting environment variables for proxy configuration
 
 Azure Data Studio settings take precedence over environment variables.
 
@@ -144,6 +135,137 @@ In a proxy environment, user applications may need to allow specific domains use
 
 The URLs to allow can sometimes vary on a case-by-case basis. In order to verify you aren't blocking any URLs from going through, go to **Help > Toggle Developer Tools** and select the **Network** tab. Any URLs that are blocked are listed, and you may need to allow those URLs to successfully add your account.
 
+## Configuring Custom Cloud Endpoints
+
+Azure Data Studio 1.46 introduces support for adding custom endpoints for nonpublic clouds.  
+
+### Adding Custom Cloud Endpoints
+
+Open **Settings** in Azure Data Studio (**Ctrl/Cmd + Shift + P**) and enter **Azure: Custom Provider Settings**, then select `Edit in settings.json`, which opens the settings.json file automatically and add `azure.customProviderSettings`:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-settings-provider.png" alt-text="Screenshot of azure.customProviderSettings added to settings.json file.":::
+
+There are multiple entries that are required for the endpoint to work:
+
+- host
+- clientId
+- scopes
+- sqlResource
+- microsoftResource
+- armResource
+- graphResource
+- azureStorageResource
+
+An example JSON entry for one provider is presented as a guide:
+
+```json
+"azure.customProviderSettings": [
+        {
+            "name": "Azure Custom",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud",
+                    "id": "azure_customCloud",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        }
+    ]
+```
+
+After adding the endpoint, save the settings.json file. Azure Data Studio notifies you to reload the application. After it has reloaded, you'll be notified that the custom endpoints have been loaded:
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-endpoints-loaded.png" alt-text="Screenshot after reloading Azure Data Studio indicating custom endpoints have been loaded.":::
+
+If this message doesn't appear, check that all the entries for the endpoint exist and are filled in.
+
+After adding a custom cloud, open the Azure Linked accounts pane and the custom cloud viewlet appears. Select **Add an account** and choose the authentication mode if prompted, you'll be taken to the host endpoint to authenticate.  
+
+:::image type="content" source="media/azure-connectivity/azure-connectivity-custom-cloud.png" alt-text="Screenshot of a custom cloud provider in the Azure accounts pane.":::
+
+### Multiple Custom Cloud Providers
+
+Additional cloud providers can be added to the settings.json file using the same format.  
+
+```json
+"azure.customProviderSettings": [
+        {
+            "name": "Azure Custom",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud",
+                    "id": "azure_customCloud",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        },
+ {
+            "name": "Azure Custom 2",
+            "settings": {
+                "metadata": {
+                    "displayName": "Azure Custom Cloud 2",
+                    "id": "azure_customCloud2",
+                    "endpoints": {
+                        "host": "https://hostendpoint.com/",
+                        "clientId": "test",
+                        "microsoftResource": "https://microsoftresource.com/",
+                        "graphResource": "https://graphresource.com/",
+                        "msGraphResource": "https://msgraphresource.com/",
+                        "armResource": "https://armresource.com/",
+                        "sqlResource": "https://sqlresource.net/",
+                        "azureKeyVaultResource": "https://azurekeyvault.net/",
+                        "azureLogAnalyticsResource": "https://azure.loganalytic.io/",
+                        "azureStorageResource": {
+                            "endpoint": "",
+                            "endpointSuffix": ".azurestorage.net/"
+                        },
+                        "azureKustoResource": "https://kusto.net/",
+                        "powerBiResource": "https://powerbi.net/",
+                        "scopes": "https://management.net/scopes",
+                        "portalEndpoint": "https://portal.azure.com"
+                    }
+                }
+            }
+        }
+    ]
+```
+
 ## Common authentication issues
 
 Possible issues and solutions when adding an Azure account are discussed.
@@ -183,13 +305,13 @@ As a cross-platform application, ADS proxy resolution fetches the proxy from eit
 
 ### Issue: Azure Core extension is disabled
 
-Azure Core extension is `@builtin` extension in Azure Data Studio, please ensure it's not disabled or uninstalled accidentally. This extension is required to be able to authenticate Azure accounts and connect to resources with Azure MFA authentication.
+Azure Core extension is a `@builtin` extension in Azure Data Studio.  Ensure it's not disabled or uninstalled accidentally. This extension is required to authenticate Azure accounts and connect to resources with Azure MFA authentication.
 
 :::image type="content" source="media/azure-connectivity/azure-connectivity-azure-core-extension.png" alt-text="Screenshot of built-in Azure Core extension.":::
 
 ### Issue: System CA certificates are expired
 
-Azure Data Studio's default behavior includes validating system's root CA certificates when making REST API calls using HTTPS Protocol. This is controlled by the below setting that is enabled by default:
+Azure Data Studio's default behavior includes validating system's root CA certificates when making REST API calls using HTTPS Protocol. Validation is controlled with the **http:systemCertificates** setting, which is enabled by default:
 
 :::image type="content" source="media/azure-connectivity/azure-connectivity-system-certificates.png" alt-text="Screenshot of system certificates setting.":::
 
@@ -197,7 +319,7 @@ Azure Data Studio's default behavior includes validating system's root CA certif
 "http.systemCertificates": true
 ```
 
-If a system's Root CA certificate is expired, authentication requests to Azure Active Directory will fail and an error like below would be captured in 'Azure Account' logs:
+If a system's Root CA certificate is expired, authentication requests to Azure Active Directory fail, and an error will be captured in 'Azure Account' logs:
 
 `error: certificate is expired`
 

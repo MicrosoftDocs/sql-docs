@@ -139,7 +139,7 @@ CREATE LOGIN [myapp4466e] FROM EXTERNAL PROVIDER
 This naming convention is recommended to explicitly associate the database user or login back to its object in Azure AD.
 
 > [!NOTE]
-> The application alias adheres to T-SQL syntax, including a max length of up to 128-characters. However we recommend limiting the suffix to the first 5 characters of the Object ID.
+> The alias adheres to the T-SQL specification for `sysname`, including a max length of 128 characters. We recommend limiting the suffix to the first 5 characters of the Object ID.
 >
 > Changing the display name of the service principal in the Azure Portal after running the `CREATE LOGIN` or `CREATE USER` statement with the `WITH OBJECT_ID` extension doesn't affect the new database login or user, as there is no synchronization between Azure AD and Azure SQL after the CREATE statement.
 

@@ -141,7 +141,7 @@ This naming convention is recommended to explicitly associate the database user 
 > [!NOTE]
 > The alias adheres to the T-SQL specification for `sysname`, including a max length of 128 characters. We recommend limiting the suffix to the first 5 characters of the Object ID.
 >
-> Changing the display name of the service principal in the Azure Portal after running the `CREATE LOGIN` or `CREATE USER` statement with the `WITH OBJECT_ID` extension doesn't affect the new database login or user, as there is no synchronization between Azure AD and Azure SQL after the CREATE statement.
+>  The display name of the service principal in Azure AD is not synchronized to the database login or user alias. Running `CREATE LOGIN` or `CREATE USER` will not affect the display name in the Azure Portal. Similarly, modifying the Azure AD display name will not affect the database login or user alias.
 
 ### Identify the user created for the application
 

@@ -83,13 +83,13 @@ To avoid this problem, use multiple text runs instead of one complex expression 
 
 If any document map labels exist in the report, they are available to be used as Word Table of Contents (TOC) labels on the respective report items and groups. The document map label is used as the label text for the TOC labels. The target link is positioned near the item on which the label is set. While a TOC is not created for you on export in the Word document, you can build your own TOC using the document map labels that are rendered in the report with the following steps:
 
-1. In the word document, select the position where the ToC should go.
+1. In the word document, select the position where the TOC should go.
 1. From the ribbon, select **Insert**
 1. Select **Quick Parts** dropdown
 1. Select **Field** from the dropdown
 1. From Field names, select **TOC**, and click the **Table of Contents** button from the Field properties.
 1. On the popup window, click the Options button, and ensure the **Table entry fields** box is **checked**
-1. Select Ok from both popup windows to complete the process, and the ToC will be created.
+1. Select Ok from both popup windows to complete the process, and the TOC will be created.
 
 See [Create a document map or table of contents (Report Builder)](../report-design/create-a-document-map-report-builder-and-ssrs.md) for more information about creating document maps.
 

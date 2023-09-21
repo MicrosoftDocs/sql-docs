@@ -343,6 +343,7 @@ The following example is the simplest form of the COPY command, which loads data
 ```sql
 COPY INTO dbo.[lineitem]
 FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
+WITH (FIELDTERMINATOR = '|')
 ```
 
 The default values of the COPY command are:

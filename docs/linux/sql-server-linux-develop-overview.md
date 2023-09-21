@@ -63,9 +63,7 @@ You can also use command-line tools that are native for Linux. These tools inclu
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## Next steps
-
-To get started, install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux using one of the following quickstarts:
+## Related content
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

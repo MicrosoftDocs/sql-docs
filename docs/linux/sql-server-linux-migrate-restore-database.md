@@ -215,7 +215,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
 
 1. When you are done working in the remote **ssh** session, type `exit` again.
 
-## Next steps
+## Next step
 
 In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server. You learned how to:
 > [!div class="checklist"]
@@ -231,4 +231,4 @@ In this tutorial, you learned how to back up a database on Windows and move it t
 Next, explore other migration scenarios for SQL Server on Linux. 
 
 > [!div class="nextstepaction"]
->[Migrate databases to SQL Server on Linux](sql-server-linux-migrate-overview.md)
+> [Migrate databases to SQL Server on Linux](sql-server-linux-migrate-overview.md)

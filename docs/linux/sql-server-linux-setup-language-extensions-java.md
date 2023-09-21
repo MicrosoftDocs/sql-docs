@@ -273,6 +273,6 @@ There is parity between Linux and Windows for [Resource governance](../t-sql/sta
 | `total_cpu_user_ms` | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the `cpuacct` subsystem, where the value on the system row value is `cpuacct.stat` |
 | `active_processes_count` | The number of external processes running at the moment of the request. | On Linux, this statistic is sourced from the `pids` subsystem, where the value is `pids.current` |
 
-## Next steps
+## Related content
 
 - [Tutorial: Regular expressions with Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

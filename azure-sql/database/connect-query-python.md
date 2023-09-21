@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: This article shows you how to use Python to create a program that connects to a database in Azure SQL Database and query it using Transact-SQL statements.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma
-ms.date: 11/11/2022
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 09/15/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -16,11 +16,11 @@ ms.custom:
   - mode-api
   - py-fresh-zinc
 ms.devlang: python
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Quickstart: Use Python to query a database
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
 In this quickstart, you use Python to connect to Azure SQL Database, Azure SQL Managed Instance, or Synapse SQL database and use T-SQL statements to query data.
 
@@ -32,19 +32,19 @@ To complete this quickstart, you need:
 
 - A database where you'll run a query.
 
-  [!INCLUDE[create-configure-database](../includes/create-configure-database.md)]
+  [!INCLUDE [create-configure-database](../includes/create-configure-database.md)]
 
 - [Python](https://python.org/downloads) 3 and related software
 
-    |**Action**|**macOS**|**Ubuntu**|**Windows**|
-    |----------|-----------|------------|---------|
-    |Install the ODBC driver, SQLCMD, and the Python driver for SQL Server|Use steps **1.2**, **1.3**, and **2.1** in [create Python apps using SQL Server on macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/). These steps will also install Homebrew and Python.<br/><br/>Although the linked article references SQL Server, these steps are also applicable to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. |[Configure an environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development#linux)|[Configure an environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development#windows).|
-    |Install Python and other required packages|    |Use `sudo apt-get install python python-pip gcc g++ build-essential`.|    |
-    |Further information|[Microsoft ODBC driver on macOS](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)  |[Microsoft ODBC driver on Linux](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)|[Microsoft ODBC driver on Linux](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server)|
+    | **Action** | **macOS** | **Linux** | **Windows** |
+    | --- | --- | --- | --- |
+    | Install the ODBC driver, **sqlcmd**, and the Python driver for SQL Server | [Configure an environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?tabs=macos) | [Configure an environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?tabs=linux) | [Configure an environment for pyodbc Python development](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development?tabs=windows). |
+    | Install Python and other required packages | | Use `sudo apt-get install python python-pip gcc g++ build-essential`. | |
+    | Further information | [Microsoft ODBC driver on macOS](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server) | [Microsoft ODBC driver on Linux](/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server) | [Microsoft ODBC driver on Windows](/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 
 To further explore Python and the database in Azure SQL Database, see [Azure SQL Database libraries for Python](/python/api/overview/azure/sql), the [pyodbc repository](https://github.com/mkleehammer/pyodbc/wiki/), and a [pyodbc sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started).
 
-## Create code to query your database 
+## Create code to query your database
 
 1. In a text editor, create a new file named *sqltest.py*.
 
@@ -55,9 +55,9 @@ To further explore Python and the database in Azure SQL Database, see [Azure SQL
    server = '<server>.database.windows.net'
    database = '<database>'
    username = '<username>'
-   password = '{<password>}'   
+   password = '{<password>}'
    driver= '{ODBC Driver 17 for SQL Server}'
-   
+
    with pyodbc.connect('DRIVER='+driver+';SERVER=tcp:'+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password) as conn:
        with conn.cursor() as cursor:
            cursor.execute("SELECT TOP 3 name, collation_name FROM sys.databases")

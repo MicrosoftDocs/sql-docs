@@ -193,7 +193,7 @@ If the **Word 2003** renderer is configured to be visible, both the **Word** and
 
 - SharePoint site when Reporting Services is installed in SharePoint integrated mode.
 
-- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and you preview reports.
+- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] when you preview reports.
 
 - Report Builder connected to a report server.
 

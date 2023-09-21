@@ -508,7 +508,7 @@ Tolerations:               node.kubernetes.io/memory-pressure:NoSchedule op=Exis
 ...
 ```
 
-## Next steps
+## Related content
 
 - [Quickstart: Deploy a SQL Server container cluster on Azure](quickstart-sql-server-containers-azure.md)
 - [Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts](sql-server-linux-containers-deploy-helm-charts-kubernetes.md)

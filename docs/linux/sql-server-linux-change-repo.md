@@ -219,7 +219,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 

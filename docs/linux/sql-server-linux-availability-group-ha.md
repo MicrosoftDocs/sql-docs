@@ -126,6 +126,6 @@ The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The fo
 
 [!INCLUDE [cluster-pacemaker-concepts](includes/cluster-pacemaker-concepts.md)]
 
-## See also
+## Related content
 
 - [Availability groups on Linux](sql-server-linux-availability-group-overview.md)

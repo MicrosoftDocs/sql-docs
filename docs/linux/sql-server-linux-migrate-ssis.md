@@ -106,8 +106,9 @@ To learn more about SSIS, see the following articles:
 - [SQL Server Integration Services (SSIS) Development and Management Tools](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services Tutorials](../integration-services/integration-services-tutorials.md)
 
-## Related content about SSIS on Linux
--   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
--   [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)
--   [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md)
--   [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)
+## Related content
+
+- [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+- [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)
+- [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md)
+- [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)

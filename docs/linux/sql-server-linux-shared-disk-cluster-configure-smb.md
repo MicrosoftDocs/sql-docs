@@ -241,6 +241,6 @@ valid users = SQLSambaUser
 
 You're now ready to configure the FCI.
 
-## Next steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)

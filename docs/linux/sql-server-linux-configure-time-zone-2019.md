@@ -976,7 +976,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Pacific/Wake | UTC+12 |
 | Pacific/Wallis | UTC+12 |
 
-## Next steps
+## Related content
 
 - [SQL Server on Linux](sql-server-linux-overview.md)
 - [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)

@@ -475,7 +475,7 @@ In order to ensure There's enough free physical memory for the Linux OS, the [!I
 
 When changing this setting, be careful not to set this value too high. If you don't leave enough memory, you could experience problems with the Linux OS and other Linux applications.
 
-## Next steps
+## Related content
 
 - [Get started with Performance features](sql-server-linux-performance-get-started.md)
 - [Overview of SQL Server on Linux](sql-server-linux-overview.md)

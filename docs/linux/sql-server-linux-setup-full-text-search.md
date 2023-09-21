@@ -278,6 +278,6 @@ To use Semantic Search, you must first restore the Semantic Language Statistics 
     GO
     ```
 
-## Next steps
+## Related content
 
 - [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md)

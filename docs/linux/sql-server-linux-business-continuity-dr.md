@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 
 [!INCLUDE[business-continuity](../includes/business-continuity/business-continuity.md)]
 
-## Next steps
+## Related content
 
 - [Configure Availability Group on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Availability Group failover on Linux](sql-server-linux-availability-group-failover-ha.md)

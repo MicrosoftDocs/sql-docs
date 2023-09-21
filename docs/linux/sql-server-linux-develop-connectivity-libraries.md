@@ -39,6 +39,6 @@ The following table lists a few examples of Object Relational Mapping (ORM) fram
 | Python | Windows, Linux, macOS | [Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
 
-## Next steps
+## Related content
 
-- [SQL Server Drivers](../connect/sql-connection-libraries.md) for connecting from client applications
+- [SQL Server Drivers](../connect/sql-connection-libraries.md)

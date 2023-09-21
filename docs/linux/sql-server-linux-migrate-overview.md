@@ -44,7 +44,7 @@ You can migrate databases on other database systems to [!INCLUDE [ssnoversion-md
 
 There are also techniques for importing raw data. You might have structured data files that were exported from other databases or data sources. In this case, you can use the bcp tool to bulk insert the data. Or you can run SQL Server Integration Services (SSIS) on Windows to import the data into a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] database on Linux. SSIS enables you to run more complex transformations on the data during the import.
 
-## Next steps
+## Related content
 
 - [Bulk copy data with bcp](sql-server-linux-migrate-bcp.md)
 - [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md)

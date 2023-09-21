@@ -54,8 +54,7 @@ The following features are not supported:
 * Peer-to-Peer replication
 * Oracle publishing
 
-## Next steps
+## Related content
 
-[Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
-
-[Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)
+- [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
+- [Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)

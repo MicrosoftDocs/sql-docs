@@ -83,7 +83,7 @@ Here's a partial example of the output that helps to explain the example in this
 
 :::image type="content" source="media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png" alt-text="Screenshot of a detailed partial description of crontab format.":::
 
-## Next steps
+## Related content
 
 - [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 - [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)

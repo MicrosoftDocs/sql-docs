@@ -127,5 +127,6 @@ sudo systemctl restart mssql-server
 
 If you need an offline installation, locate the SQL Server Agent package download in the [Release notes](sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
 
-## Next steps
-For more information on how to use SQL Server Agent to create, schedule, and run jobs, see [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md).
+## Related content
+
+- [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md)

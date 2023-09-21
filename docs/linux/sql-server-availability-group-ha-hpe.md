@@ -394,6 +394,6 @@ For the automatic failover test, you can bring down the primary replica (power o
 
 For HPE Serviceguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1119C5B1-3DEE-473D-8684-A7816BE12B7D.html)
 
-## Next steps
+## Related content
 
-- Learn more about Always On [Availability Groups on Linux](sql-server-linux-availability-group-overview.md).
+- [Availability Groups on Linux](sql-server-linux-availability-group-overview.md)

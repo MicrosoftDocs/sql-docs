@@ -279,6 +279,6 @@ GO
 
 For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
-## Next steps
+## Related content
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

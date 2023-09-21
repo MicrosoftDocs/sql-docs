@@ -145,6 +145,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## See also
+## Related content
+
 - [SQL Server PowerShell](../powershell/sql-server-powershell.md)
 - [SqlServer cmdlets](/powershell/module/sqlserver)

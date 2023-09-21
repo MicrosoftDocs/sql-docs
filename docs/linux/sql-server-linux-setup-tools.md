@@ -29,7 +29,7 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [Next steps](#next-steps) at the end of this article.
+This article describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [Related content](#related-content) at the end of this article.
 
 > [!IMPORTANT]  
 > **sqlcmd** and **bcp** are available in **mssql-tools18** for `x64` and `arm64` architectures. For a modern alternative across Linux, macOS, and Windows, see [go-sqlcmd utility](../tools/sqlcmd/go-sqlcmd-utility.md).
@@ -166,7 +166,7 @@ sudo ACCEPT_EULA=Y apt-get install mssql-tools18 unixodbc-dev
 
 ---
 
-## Next steps
+## Related content
 
 For an example of how to use **sqlcmd** to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and create a database, see one of the following quickstarts:
 

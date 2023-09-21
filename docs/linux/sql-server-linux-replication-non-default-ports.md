@@ -53,9 +53,7 @@ exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
 ```
 
-## Next steps
+## Related content
 
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
-
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

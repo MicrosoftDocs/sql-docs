@@ -137,7 +137,7 @@ Activity Monitor shows expandable and collapsible panes with the following infor
 
 When a pane is expanded, Activity Monitor queries the instance for information. When a pane is collapsed, all querying activity stops for that pane. You can expand one or more panes at the same time to view different kinds of activity on the instance.
 
-## Next steps
+## Related content
 
 - [What is SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)

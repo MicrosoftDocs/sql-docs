@@ -295,6 +295,9 @@ host <IP address of SQL Server host>
 
 The output of this command should be similar to `<reversed IP address>.in-addr.arpa domain name pointer SqlHost.contoso.com`. If this command does not return your host's FQDN, or if the FQDN is incorrect, add a reverse DNS entry for your SQL Server on Linux host to your DNS server.
 
-## Next steps
+## Next step
 
-This article covers the prerequisite of how to configure a SQL Server on a Linux host machine with Active Directory Authentication. To finish configuring SQL Server on Linux to support Active Directory accounts, follow the instructions at [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
+In this article, you covered how to configure a SQL Server on a Linux host machine with Active Directory Authentication. To finish configuring SQL Server on Linux to support Active Directory accounts, follow these instructions.
+
+> [!div class="nextstepaction"]
+> [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)

@@ -265,6 +265,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## Next steps
+## Related content
 
 - [SUSE Linux Enterprise High Availability Extension - Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)

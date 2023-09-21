@@ -146,7 +146,7 @@ klist -kte /var/opt/mssql/secrets/mssql.keytab
 
 The last step is to update the password of the **network.privilegedadaccount** or the account that owns the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] SPNs in Windows Active Directory. In the previous scenario, we have to update the password for `sqluser@CONTOSO.COM` in Active Directory. Change the password to the `<newpassword>` that you provided in the step 3 in the previous section. Active Directory authentication should continue to work, and without the need for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service to restart.
 
-## Next steps
+## Related content
 
 - [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

@@ -154,7 +154,7 @@ To provide high availability and disaster recovery for your [!INCLUDE [ssnoversi
 | **[HPE Serviceguard](https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html)** | HPE SGLX offers context-sensitive monitoring and recovery options for Failover Cluster Instance and Always On Availability Groups. Maximize uptime with HPE SGLX without compromising data integrity and performance.<br /><br />- [Tutorial: Set up a three node Always On availability group with HPE Serviceguard for Linux](sql-server-availability-group-ha-hpe.md). |
 | **[Pacemaker](https://www.clusterlabs.org/pacemaker/)** | Pacemaker is an open source high-availability cluster resource manager. With Corosync, an open source group communication system, Pacemaker can detect component failures and orchestrate necessary failover procedures to minimize interruptions to applications.<br /><br />- [Pacemaker for AGs and FCIs on Linux](sql-server-linux-pacemaker-basics.md)<br />- [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md) |
 
-## Next steps
+## Related content
 
 - [Pacemaker for availability groups and failover cluster instances on Linux](sql-server-linux-pacemaker-basics.md)
 - [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

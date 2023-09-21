@@ -220,6 +220,6 @@ After installation, you can also install or enable optional [!INCLUDE [ssnoversi
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
-## Next steps
+## Related content
 
 - [SQL Server on Linux Frequently Asked Questions (FAQ)](sql-server-linux-faq.yml)

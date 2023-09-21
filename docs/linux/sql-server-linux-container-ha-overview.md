@@ -36,7 +36,7 @@ Kubernetes orchestrates the resources in the cluster. When a node hosting a SQL 
 
 SQL Server on Linux supports containers on Kubernetes, OpenShift, and D2Hi.
 
-## Next steps
+## Related content
 
 - [Deploy SQL Server in Docker container](sql-server-linux-docker-container-deployment.md)
 - [Quickstart: Deploy a SQL Server container cluster on Azure](quickstart-sql-server-containers-azure.md)

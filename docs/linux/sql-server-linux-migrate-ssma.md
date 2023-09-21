@@ -34,6 +34,7 @@ To get started, download SQL Server Migration Assistant (SSMA) for your source d
 
 Next, follow the [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md) to migrate your source database to SQL Server on Linux.
 
-## See also
+## Related content
+
 - [Microsoft Data Migration blog](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) blog](/archive/blogs/ssma/)

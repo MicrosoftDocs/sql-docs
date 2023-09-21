@@ -801,7 +801,7 @@ After you have tried using the [!INCLUDE [ssnoversion-md](../includes/ssnoversio
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## Next steps
+## Related content
 
 - [Restore a SQL Server database in a Linux container](tutorial-restore-backup-in-sql-server-container.md).
 - Learn about [running multiple containers](sql-server-linux-docker-container-deployment.md#multiple) and [data persistence](sql-server-linux-docker-container-configure.md#persist).

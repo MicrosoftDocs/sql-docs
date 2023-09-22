@@ -41320,9 +41320,6 @@
       "redirect_url": "/sql/dma/dma-consolidatereports",
       "redirect_document_id": false
     },
-
-
-
     {
       "source_path": "docs/sql-server/quick-enabled-sql-server.md",
       "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
@@ -41338,9 +41335,6 @@
       "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
       "redirect_document_id": false
     },
-
-
-
     {
       "source_path": "docs/sql-server/azure-arc/billing.md",
       "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",

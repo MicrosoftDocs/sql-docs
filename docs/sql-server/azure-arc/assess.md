@@ -30,7 +30,7 @@ This article provides instructions for using best practices assessment on an ins
 
 ## Prerequisites
 
-- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions at [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions at [Automatically connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't apply to SQL on Linux machines currently.

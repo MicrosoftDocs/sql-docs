@@ -1,9 +1,9 @@
 ---
-title: "Download Microsoft OLE DB Driver for SQL Server"
-description: "Download the Microsoft OLE DB Driver for SQL Server to develop native Windows applications that connect to SQL Server and Azure SQL Database."
+title: Download Microsoft OLE DB Driver for SQL Server
+description: Download the Microsoft OLE DB Driver for SQL Server to develop native Windows applications that connect to SQL Server and Azure SQL Database.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 06/15/2023
+ms.date: 09/22/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,7 +27,7 @@ Microsoft OLE DB Driver 19.3.1 for SQL Server is the latest general availability
 > [!NOTE]
 > Installation of the [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is a prerequisite,
 > and while the x64 installer for Microsoft OLE DB Driver installs both the 64-bit and 32-bit driver, the x64 installer for the Microsoft Visual C++ Redistributable
-> doesn't install 32-bit binaries. You must install both the x86 and x64 versions of the C++ redistributable package to use the OLE DB  driver with 32-bit programs.
+> doesn't install 32-bit binaries. You must install both the x86 and x64 versions of the C++ redistributable package to install the x64 OLE DB driver package.
 
 ### Version information
 

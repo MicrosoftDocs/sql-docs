@@ -41321,7 +41321,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql-server/quick-enabled-sql-server.md",
+      "source_path": "docs/sql-server/azure-arc/quick-enabled-sql-server.md",
       "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
       "redirect_document_id": false
     },

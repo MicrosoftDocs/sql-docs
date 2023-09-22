@@ -53,7 +53,7 @@ If the Arc-enabled SQL Server resource does not appear in the same resource grou
 
 Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. However, you can use an Azure SQL Virtual machine to evaluate Arc-enabled SQL Server on an Azure VM.
 
-To test Arc-enabled SQL Server on an Azure VM, follow the steps at [Evaluate Arc-enabled servers on Azure virutal machine](/azure/azure-arc/servers/plan-evaluate-on-azure-virtual-machine). For you Azure VM image, use an [available Azure SQL VM image](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart).
+To test Arc-enabled SQL Server on an Azure VM, follow the steps at [Evaluate Arc-enabled servers on an Azure virtual machine](/azure/azure-arc/servers/plan-evaluate-on-azure-virtual-machine). For the Azure VM image, use an [available Azure SQL VM image](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart).
 
 ## Related content
 

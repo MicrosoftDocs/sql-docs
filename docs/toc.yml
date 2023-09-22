@@ -16,9 +16,9 @@ items:
   - name: What's new?
     items:
     - name: SQL Server 2022
-      href: sql-server/what-s-new-in-sql-server-2022.md?view=sql-server-2022&preserve-view=true
+      href: sql-server/what-s-new-in-sql-server-2022.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/what-s-new-in-sql-server-2019.md?view=sql-server-2019&preserve-view=true
+      href: sql-server/what-s-new-in-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
@@ -26,9 +26,9 @@ items:
   - name: Editions and features
     items:
     - name: SQL Server 2022
-      href: sql-server/editions-and-components-of-sql-server-2022.md?view=sql-server-2022&preserve-view=true
+      href: sql-server/editions-and-components-of-sql-server-2022.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-2019.md?view=sql-server-2019&preserve-view=true
+      href: sql-server/editions-and-components-of-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
       href: sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
@@ -36,9 +36,9 @@ items:
   - name: Release notes
     items:
     - name: SQL Server 2022
-      href: sql-server/sql-server-2022-release-notes.md?view=sql-server-2022&preserve-view=true
+      href: sql-server/sql-server-2022-release-notes.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/sql-server-2019-release-notes.md?view=sql-server-2019&preserve-view=true
+      href: sql-server/sql-server-2019-release-notes.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
       href: sql-server/sql-server-2017-release-notes.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016

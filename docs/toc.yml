@@ -16,33 +16,33 @@ items:
   - name: What's new?
     items:
     - name: SQL Server 2022
-      href: sql-server/what-s-new-in-sql-server-2022.md
+      href: sql-server/what-s-new-in-sql-server-2022.md?view=sql-server-2022&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/what-s-new-in-sql-server-2019.md
+      href: sql-server/what-s-new-in-sql-server-2019.md?view=sql-server-2019&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/what-s-new-in-sql-server-2017.md
+      href: sql-server/what-s-new-in-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/what-s-new-in-sql-server-2016.md
+      href: sql-server/what-s-new-in-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Editions and features
     items:
     - name: SQL Server 2022
-      href: sql-server/editions-and-components-of-sql-server-2022.md
+      href: sql-server/editions-and-components-of-sql-server-2022.md?view=sql-server-2022&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-2019.md
+      href: sql-server/editions-and-components-of-sql-server-2019.md?view=sql-server-2019&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/editions-and-components-of-sql-server-2017.md
+      href: sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/editions-and-components-of-sql-server-2016.md
+      href: sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Release notes
     items:
     - name: SQL Server 2022
-      href: sql-server/sql-server-2022-release-notes.md
+      href: sql-server/sql-server-2022-release-notes.md?view=sql-server-2022&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/sql-server-2019-release-notes.md
+      href: sql-server/sql-server-2019-release-notes.md?view=sql-server-2019&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md
+      href: sql-server/sql-server-2017-release-notes.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/sql-server-2016-release-notes.md
+      href: sql-server/sql-server-2016-release-notes.md?view=sql-server-2016&preserve-view=true
     - name: SQL Server 2014
       href: sql-server/sql-server-2014-release-notes.md
     - name: SQL Server 2012 Service Pack release notes

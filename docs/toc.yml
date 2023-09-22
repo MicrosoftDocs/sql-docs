@@ -7995,8 +7995,9 @@ items:
       - name: Azure Active Directory authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md
     - name: Encryption
-      href: relational-databases/security/encryption/sql-server-encryption.md
       items:
+      - name: Overview
+        href: relational-databases/security/encryption/sql-server-encryption.md
       - name: Choose an algorithm
         href: relational-databases/security/encryption/choose-an-encryption-algorithm.md
       - name: Hierarchy

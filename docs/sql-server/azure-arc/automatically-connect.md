@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article explains how to connect your SQL Server instance to Azure Arc. 
+This article explains how to connect your SQL Server instance to Azure Arc.
 
 Before you proceed:
 

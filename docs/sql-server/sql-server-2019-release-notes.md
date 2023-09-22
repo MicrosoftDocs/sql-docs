@@ -7,7 +7,7 @@ ms.date: 11/04/2019
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-monikerRange: "= sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ---
 # [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]

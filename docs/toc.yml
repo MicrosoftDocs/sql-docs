@@ -10416,22 +10416,12 @@ items:
         href: sql-server/azure-arc/overview.md
       - name: Release notes
         href: sql-server/azure-arc/release-notes.md
-    - name: Quickstarts
-      items:
-      - name: Deploy Azure Arc-enabled SQL Server
-        href: sql-server/azure-arc/quick-enabled-sql-server.md
     - name: How-to guides
       items:
-      - name: Test Arc-enabled SQL Server on Azure VM
-        href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
-      - name: Deploy
+      - name: Connect SQL Server to Azure using Arc
+        href: sql-server/azure-arc/automatically-connect.md
+      - name: Alternate methods to connect
         items:
-        - name: Prerequisites
-          href: sql-server/azure-arc/prerequisites.md
-        - name: Connect SQL Server to Azure using Arc
-          href: sql-server/azure-arc/automatically-connect.md
-        - name: Alternate methods to connect
-          items:
             - name: Deployment options
               href: sql-server/azure-arc/deployment-options.md
             - name: Connect when machine not connected to Azure

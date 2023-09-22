@@ -7,7 +7,7 @@ ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-monikerRange: ">= sql-server-2016"
+monikerRange: "<= sql-server-2016"
 ---
 # SQL Server 2012 Service Pack release notes
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]

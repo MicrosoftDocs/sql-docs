@@ -7,7 +7,7 @@ ms.date: "11/01/2017"
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-monikerRange: "= sql-server-2017"
+monikerRange: ">= sql-server-2016"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]

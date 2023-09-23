@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 09/01/2023
+ms.date: 09/22/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 ---
 # sp_rename (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asa-fabricdw](../../includes/applies-to-version/sql-asdb-asa-fabricdw.md)]
+[!INCLUDE [sql-asdb-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asa-fabricse-fabricdw.md)]
 
 Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE [msCoName](../../includes/msconame-md.md)]
 
@@ -92,7 +92,9 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 
 **Applies to**: [!INCLUDE [fabric](../../includes/fabric.md)]
 
-In `sp_rename` for warehouses in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
+In `sp_rename` for the Warehouse in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
+
+In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables cannot be renamed.
 
 ## Return code values
 

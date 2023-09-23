@@ -8,8 +8,10 @@ ms.date: 03/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Troubleshoot SQL Server Docker containers
 
@@ -324,7 +326,7 @@ docker exec -it <Container ID> /bin/bash
 
 Now you can run commands as though you're running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

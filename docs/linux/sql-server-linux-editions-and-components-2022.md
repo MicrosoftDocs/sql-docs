@@ -8,6 +8,8 @@ ms.date: 12/01/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
   - "Developer Edition [SQL Server]"
@@ -230,7 +232,7 @@ The following features and services aren't available for [!INCLUDE[sssql22](../i
 
 <sup>2</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package isn't supported.
 
-## See also
+## Related content
 
 - [Editions and supported features of SQL Server 2022 - Linux](sql-server-linux-editions-and-components-2022.md)
 - [Editions and supported features of SQL Server 2019 - Linux](sql-server-linux-editions-and-components-2019.md)

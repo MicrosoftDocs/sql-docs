@@ -91,3 +91,4 @@ Learn more about related concepts in the following articles:
 - [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
 - [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)
+- [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage)

@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 This walkthrough demonstrates the steps used to create a SQL Server Code Analysis rule. The rule created in this walkthrough is used to avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.  
   
-In this walkthrough, you will create a custom rule for Transact\-SQL static code analysis by using the following processes:  
+In this walkthrough, you will create a custom rule for Transact-SQL static code analysis by using the following processes:  
   
 1. Create a class library, enable signing for that project, and add the necessary references.  
   
@@ -62,7 +62,7 @@ Next you will add supporting classes that will be used by the rule.
 
 Before you create the class for the rule itself, you will add a visitor class and an attribute class to the project. These classes might be useful for creating additional custom rules.  
   
-The first class that you must define is the WaitForDelayVisitor class, derived from [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). This class provides access to the WAITFOR DELAY statements in the model. Visitor classes make use of the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) APIs provided by SQL Server. In this API, Transact\-SQL code is represented as an abstract syntax tree (AST) and visitor classes can be useful when you wish to find specific syntax objects such as WAITFORDELAY statements. These might be difficult to find using the object model since they're not associated to a specific object property or relationship, but it's easy to find them using the visitor pattern and the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API.  
+The first class that you must define is the WaitForDelayVisitor class, derived from [TSqlConcreteFragmentVisitor](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). This class provides access to the WAITFOR DELAY statements in the model. Visitor classes make use of the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) APIs provided by SQL Server. In this API, Transact-SQL code is represented as an abstract syntax tree (AST) and visitor classes can be useful when you wish to find specific syntax objects such as WAITFORDELAY statements. These might be difficult to find using the object model since they're not associated to a specific object property or relationship, but it's easy to find them using the visitor pattern and the [ScriptDom](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom) API.  
   
 ### Defining the WaitForDelayVisitor Class  
   

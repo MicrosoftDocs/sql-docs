@@ -30,7 +30,7 @@ The following restrictions apply to the `max` data types, which do not exist for
   
 - Large `varchar` columns cannot be used as partitioning key columns.  
   
-## Working with large-value types in transact-SQL  
+## Working with large-value types in Transact-SQL  
 The Transact-SQL `OPENROWSET` function is a one-time method of connecting and accessing remote data. `OPENROWSET` can be referenced in the FROM clause of a query as though it were a table name. It can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement.  
   
 The `OPENROWSET` function includes the `BULK` rowset provider, which allows you to read data directly from a file without loading the data into a target table. This enables you to use `OPENROWSET` in a simple INSERT SELECT statement.  

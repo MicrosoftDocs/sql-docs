@@ -9,6 +9,8 @@ ms.date: 12/09/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
@@ -281,12 +283,8 @@ In this tutorial, you configured SQL Server snapshot replication on Linux with t
 > * Configure subscriber 
 > * Run the replication jobs
 
-## See also
+## Related content
 
-For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
-
-## Next steps
-
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+- [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md)
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

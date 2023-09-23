@@ -8,7 +8,9 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 ---
 # Deploy availability groups with DH2i DxEnterprise on Kubernetes
 
@@ -663,7 +665,7 @@ WITH (PRIMARY_ROLE(READ_WRITE_ROUTING_URL = 'TCP://<External IP address of secon
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Deploy SQL Server containers on Azure Kubernetes Service](quickstart-sql-server-containers-kubernetes.md)
 - [Deploy SQL Server Linux containers on Kubernetes with StatefulSets](sql-server-linux-kubernetes-best-practices-statefulsets.md)

@@ -7,7 +7,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Install SQL Server Full-Text Search on Linux
 
@@ -276,6 +278,6 @@ To use Semantic Search, you must first restore the Semantic Language Statistics 
     GO
     ```
 
-## Next steps
+## Related content
 
 - [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md)

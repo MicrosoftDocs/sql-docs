@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "build notes"
   - "release issues"
-monikerRange: "= sql-server-2016"
+monikerRange: ">= sql-server-2016"
 ---
 
 # SQL Server 2016 Release Notes
@@ -179,8 +179,6 @@ Supportability and diagnostics related improvements included in [!INCLUDE[sssql1
 | |The XML deadlock graph is improved for deadlocks involving batch-mode operators, with more attributes added to the SyncPoint resource.| |
 |Dynamic reloading of some replication agent profile parameters   |   In the current implementation of replication agents any change in the agent profile parameter requires the agent to be stopped and restarted. This improvements allows for the parameters to be dynamically reloaded without having to restart the replication agent.   |      |
 
-![Screenshot of a horizontal bar.](media/horizontal-bar.png)
-
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 includes all cumulative updates up to [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016.
 
@@ -226,8 +224,6 @@ The [!INCLUDE[sssql16-md](../includes/sssql16-md.md)] SP1 installation may requi
 - [SQL Server 2016 Service Pack 1 (SP1) Released](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
 - [SQL Server Update Center](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
-
-![Another screenshot of a horizontal bar.](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch)

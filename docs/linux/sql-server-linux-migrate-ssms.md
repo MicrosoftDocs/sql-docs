@@ -7,6 +7,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 
@@ -71,7 +73,7 @@ Use the following command to import database schema and user data from a `.bacpa
 SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<username> /tp:<password> /sf:<path_to_bacpac>
 ```
 
-## Next steps
+## Related content
 
 - [Use SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)
 - [SqlPackage reference documentation](../tools/sqlpackage/sqlpackage.md)

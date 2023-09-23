@@ -4,7 +4,7 @@ description: "This tutorial shows how to create a SQL Server Always On availabil
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 04/18/2023
+ms.date: 09/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: tutorial
@@ -188,6 +188,31 @@ Next, enable Always On availability groups. Complete these steps on both SQL Ser
 
 1. Restart the SQL Server service.
 
+## Enable FILESTREAM feature
+
+If you're not using FILESTREAM for your database in the availability group, skip this step and move to the next step - **Create Database**.
+
+If you plan on adding a database to your availability group that uses [FILESTREAM](/sql/database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server), then FILESTREAM needs to be enabled as the feature is disabled by default. Use the **SQL Server Configuration Manager** to enable the feature on both SQL Server instances. 
+
+To [enable the FILESTREAM feature](/sql/relational-databases/blob/enable-and-configure-filestream), follow these steps:
+
+1. Launch the RDP file to the first SQL Server VM (such as **SQL-VM-1**) with a domain account that is a member of sysadmin fixed server role, such as the **CORP\Install** domain account created in the [prerequisites document](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md)
+1. From the **Start** screen of one your SQL Server VMs, launch **SQL Server Configuration Manager**.
+1. In the browser tree, highlight **SQL Server Services**, right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
+1. Select the **FILESTREAM** tab, then check the box to **Enable FILESTREAM for Transact-SQL access**:
+1. Select **Apply**. Select **OK** in the pop-up dialog.
+1. In SQL Server Management Studio, click **New Query** to display the Query Editor.
+1. In Query Editor, enter the following Transact-SQL code:
+
+   ```sql
+   EXEC sp_configure filestream_access_level, 2  
+   RECONFIGURE
+   ```
+
+1. Click **Execute**.
+1. Restart the SQL Server service.
+1. Repeat these steps for the other SQL Server instance.
+
 <!-----------------
 ## <a name="endpoint-firewall"></a>Open a firewall for the database mirroring endpoint
 
@@ -236,9 +261,9 @@ On both SQL Server VMs, open the firewall for the TCP port for the database mirr
 
 1. In the **Customize Permissions** dialog, select **Add**.
 
-1. Make sure that the accounts for the SQL Server and SQL Server Agent service on both servers have full control.
+1. Check **Full Control** to grant full access to the share the SQL Server service account (`Corp\SQLSvc`):
 
-   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/68-backup-share-permission.png" alt-text="Screenshot of the Customize Permissions dialog with two SQL Server service accounts that have full control of the share.":::
+   :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/68-backup-share-permission.png" alt-text="Screenshot of the Customize Permissions dialog. Make sure that the SQL Server service accounts for both servers have full control.":::
 
 1. Select **OK**.
 
@@ -402,7 +427,7 @@ To configure the load balancer, you need to create a backend pool, create a prob
 
 ### Add a backend pool for the availability group listener
 
-1. In the Azure portal, go to your availability group. You might need to refresh the view to see the newly created load balancer.
+1. In the Azure portal, go to your resource group. You might need to refresh the view to see the newly created load balancer.
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-single-subnet/86-find-load-balancer.png" alt-text="Screenshot of the Azure portal that shows a load balancer in an availability group.":::
 

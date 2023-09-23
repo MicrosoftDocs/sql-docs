@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure SLES shared disk cluster for SQL Server
 
@@ -263,6 +265,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## Next steps
+## Related content
 
 - [SUSE Linux Enterprise High Availability Extension - Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)

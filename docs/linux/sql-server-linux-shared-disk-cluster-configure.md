@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 
@@ -269,6 +271,6 @@ In this tutorial, you completed the following tasks.
 > - Install and configure Pacemaker on each cluster node
 > - Configure the failover cluster instance
 
-## Next steps
+## Related content
 
 - [Operate failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)

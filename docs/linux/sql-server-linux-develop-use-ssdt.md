@@ -8,6 +8,8 @@ ms.date: 08/18/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # Use Visual Studio to create databases for SQL Server on Linux
@@ -98,11 +100,10 @@ SQL Server on Linux is supported by SSDT version 17.0 or later.
 
 You've successfully created a new database on SQL Server instance on Linux and learned the basics of developing a database with a source-controlled database project.
 
-## Next steps
+## Related content
 
 - [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
 - [Download and Install SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [SSDT MSDN articles](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))
-- [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md)

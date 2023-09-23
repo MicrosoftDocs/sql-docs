@@ -9,6 +9,8 @@ ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # New to Linux resources for SQL users
 
@@ -52,7 +54,7 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`.
 
-## Next steps
+## Related content
 
 - [Editions and supported features of SQL Server 2022 on Linux](sql-server-linux-editions-and-components-2022.md)
 - [Release notes for SQL Server 2022 on Linux](sql-server-linux-release-notes-2022.md)

@@ -4,10 +4,11 @@ description: This article contains the release notes and supported features for 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 08/14/2023
+ms.date: 09/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom: linux-related-content
 ---
 # Release notes for SQL Server 2019 on Linux
 
@@ -115,16 +116,12 @@ The following table lists the release history for [!INCLUDE [ssSQL19](../include
 
 [!INCLUDE [linux-known-issues-2019](includes/linux-known-issues-2019.md)]
 
-## See also
+## Related content
 
 - [SQL Server on Linux FAQ](sql-server-linux-faq.yml)
-
-## Next steps
-
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
-

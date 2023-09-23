@@ -8,7 +8,9 @@ ms.date: 03/07/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Configure Active Directory authentication with SQL Server on Linux containers
@@ -267,7 +269,7 @@ sqlcmd -E -S 'sql1.contoso.com, 5433'
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
 - [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
 
-## Next steps
+## Related content
 
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)

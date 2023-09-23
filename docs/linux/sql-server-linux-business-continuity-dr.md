@@ -8,7 +8,9 @@ ms.date: 11/23/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Business continuity and database recovery - SQL Server on Linux
 
@@ -16,7 +18,7 @@ monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
 
 [!INCLUDE[business-continuity](../includes/business-continuity/business-continuity.md)]
 
-## Next steps
+## Related content
 
 - [Configure Availability Group on Linux](sql-server-linux-availability-group-configure-ha.md)
 - [Availability Group failover on Linux](sql-server-linux-availability-group-failover-ha.md)

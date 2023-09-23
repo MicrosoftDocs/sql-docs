@@ -8,6 +8,8 @@ ms.date: 12/01/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
   - "Developer Edition [SQL Server]"
@@ -234,7 +236,7 @@ The following features and services aren't available for SQL Server 2017 on Linu
 
 <sup>1</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
 
-## Next steps
+## Related content
 
 - [Editions and supported features of SQL Server 2022 - Windows](../sql-server/editions-and-components-of-sql-server-2022.md)
 - [Editions and supported features of SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-2019.md)

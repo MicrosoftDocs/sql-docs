@@ -3,7 +3,7 @@ title: CAB download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 06/28/2023
+ms.date: 09/21/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
@@ -52,7 +52,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release | Component | Download link | Issues addressed |
 |------- | --------- | ------------- | ---------------- |
-|**[SQL Server 2019 CU16](https://support.microsoft.com/help/5011644)-[CU20](https://support.microsoft.com/help/5024276)** |  |  |  |
+|**[SQL Server 2019 CU16](https://support.microsoft.com/help/5011644) and later versions** |  |  |  |
 | | Microsoft R Open      | [SRO_3.5.2.777_1033.cab](https://go.microsoft.com/fwlink/?linkid=2134897)  |  |
 | | R Server              | [SRS_9.4.7.2008_1033.cab](https://go.microsoft.com/fwlink/?linkid=2191223)  |  |
 | | Microsoft Python Open | [SPO_4.5.12.479_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2118341) |  |
@@ -251,7 +251,7 @@ GDR releases of SQL Server will require the same component .cab file versions as
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
 - [Apply cumulative updates on computers without internet access](sql-ml-component-install-without-internet-access.md#apply-cu)
 - [Apply cumulative updates on computers having internet connectivity](sql-ml-component-install-without-internet-access.md#apply-cu)

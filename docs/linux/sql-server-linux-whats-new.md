@@ -7,7 +7,9 @@ ms.date: 04/10/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - linux-related-content
 ---
 
 # What's new for SQL Server 2017 on Linux
@@ -57,7 +59,7 @@ Starting with SQL Server 2017 CU20, RHEL 8 is now supported. Check out our Quick
 - Cross-platform script generator, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
 - Cross-platform Dynamic Management View (DMV) monitor, [DBFS tool](https://github.com/Microsoft/dbfs).
 
-## Next steps
+## Related content
 
 To install SQL Server on Linux, use one of the following tutorials:
 

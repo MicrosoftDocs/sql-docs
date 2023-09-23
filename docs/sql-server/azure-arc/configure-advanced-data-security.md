@@ -50,7 +50,7 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 ## Enable Microsoft Defender for Cloud
 
-1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
+1. Go to **Azure Arc > SQL Servers** and open the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource for the instance that you want to protect. 
 
 1. Click on the **Microsoft Defender for Cloud** tile. If Enablement Status shows **Disabled at the subscription-level**, follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#step-3-enable-the-optional-plan-in-defender-for-clouds-environment-settings-page).
 

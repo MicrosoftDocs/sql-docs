@@ -8,8 +8,10 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: engagement-fy23
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.custom:
+  - engagement-fy23
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 
 # Secure SQL Server Linux containers
@@ -180,7 +182,7 @@ Following is an example of how the connection can be encrypted to [!INCLUDE [ssn
 
 Follow the "Register the certificate on your client machine" and "Example connection strings" sections documented in [Client Initiated Encryption](sql-server-linux-encrypted-connections.md#client-initiated-encryption) to start encrypting connections to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

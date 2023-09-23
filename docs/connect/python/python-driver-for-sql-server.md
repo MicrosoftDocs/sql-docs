@@ -34,11 +34,6 @@ For documentation, see [Python documentation at Python.org](https://www.python.o
 Explore samples that use Python to connect to an SQL database in the following articles:
 
 - [Create a Python app in Azure App Service on Linux](/azure/app-service/containers/quickstart-python?tabs=bash)
-- [Getting Started with Python on Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
-- [Getting Started with Python on macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
-- [Getting Started with Python on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
-- [Getting Started with Python on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
-- [Getting Started with Python on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
 
 ## Next steps
 

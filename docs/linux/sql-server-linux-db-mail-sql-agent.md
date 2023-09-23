@@ -7,6 +7,8 @@ ms.date: 02/20/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 
@@ -114,5 +116,6 @@ EXEC msdb.dbo.sp_update_job
 GO
 ```
 
-## Next steps
-For more information on how to use SQL Server Agent to create, schedule, and run jobs, see [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md).
+## Related content
+
+- [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md)

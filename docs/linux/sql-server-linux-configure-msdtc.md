@@ -7,6 +7,8 @@ ms.date: 08/12/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
@@ -202,6 +204,6 @@ If a client on a Windows operating system needs to enlist into distributed trans
 | [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
-## Next steps
+## Related content
 
-For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md).
+- [SQL Server on Linux](sql-server-linux-overview.md)

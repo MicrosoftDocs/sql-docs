@@ -8,6 +8,8 @@ ms.date: 12/06/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Operate failover cluster instance - SQL Server on Linux
 
@@ -70,8 +72,6 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## Next Steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
-
-<!--Image references-->

@@ -8,6 +8,8 @@ ms.date: 10/05/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Always On Availability Group failover on Linux
 
@@ -175,7 +177,7 @@ For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compa
 
 Automatic failover requires at least one synchronous replica.
 
-## Next steps
+## Related content
 
 - [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
 - [Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)

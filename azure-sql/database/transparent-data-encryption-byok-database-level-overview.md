@@ -5,7 +5,7 @@ description: Overview of customer managed keys (CMK) support for transparent dat
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 04/25/2023
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -101,13 +101,29 @@ Rotating the TDE protector for a database means to switch to a new asymmetric ke
 
 New keys can be added and existing keys can be removed from the database using similar requests and modifying the keys property for the database resource. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with the parameter `-KeyList` and `-KeysToRemove` can be used for these operations. To retrieve the encryption protector, identity, and keys setting, [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) can be used. The Azure Resource Manager resource *Microsoft.Sql/servers/databases* by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys, other parameters like `-ExpandKeyList` are needed. Additionally, `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time.
 
+### Automatic key rotation
+
+Automatic key rotation is available at the database level and can be used with Azure Key Vault keys. The rotation is triggered when a new version of the key is detected, and will automatically be rotated within **24 hours**. For information on how to configure automatic key rotation using the Azure portal, PowerShell, or the Azure CLI, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
+
+### Permission for key management
+
+Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment.
+
+#### Access policy permission model
+
 In order for the database to use TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the database user-assigned managed identity using its unique Azure Active Directory (Azure AD) identity:
 
 - **get** - for retrieving the public part and properties of the key in the Azure Key Vault.
 - **wrapKey** - to be able to protect (encrypt) DEK.
 - **unwrapKey** - to be able to unprotect (decrypt) DEK.
 
-[Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client ID for server level CMK. Similar setup needs to be done for database level CMK and the federated client ID must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
+#### Azure RBAC permissions model
+
+In order for the database to use the TDE protector stored in AKV for encryption of the DEK, a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations) must be added for the database user-assigned managed identity using its unique Azure Active Directory (Azure AD) identity.
+
+### Cross-tenant customer-managed keys
+
+[Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to set up a federated client ID for server level CMK. Similar setup needs to be done for database level CMK and the federated client ID must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
 
 > [!NOTE]
 > If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), using an application for identity federation in the Azure portal will show an error. Make sure that the permissions are configured correctly before configuring the federated client identity.
@@ -119,8 +135,6 @@ In case of an inaccessible TDE protector as described in [Transparent data encry
 
 > [!NOTE]
 > [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md) describes the identity and key management operations for database level CMK in detail, along with Powershell, the Azure CLI, and REST API examples.
->
-> Automated rotation of the TDE protector offered at the server level is not available at the database level in public preview.
 
 ### Additional considerations
 

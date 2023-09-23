@@ -8,7 +8,9 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux
@@ -261,13 +263,10 @@ You can also use a tool like [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md) to 
 sqlcmd -E -S 'sql1.contoso.com'
 ```
 
-## See also
+## Related content
 
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
 - [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
-
-## Next steps
-
 - [Join SQL Server on a Linux host to an Active Directory domain](sql-server-linux-active-directory-auth-overview.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)
 - [Rotate SQL Server on Linux keytabs](sql-server-linux-ad-auth-rotate-keytabs.md)

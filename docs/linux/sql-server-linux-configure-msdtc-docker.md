@@ -8,6 +8,8 @@ ms.date: 09/21/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 
 # How to use distributed transactions with SQL Server Linux containers
@@ -314,6 +316,6 @@ COMMIT
 GO
 ```
 
-## Next steps
+## Related content
 
-For more information about MSDTC on Linux, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).
+- [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md)

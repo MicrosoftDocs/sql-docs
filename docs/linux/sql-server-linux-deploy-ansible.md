@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
+ms.custom:
+  - linux-related-content
 ---
 # Quickstart: Deploy SQL Server on Linux using an Ansible playbook
 
@@ -177,12 +179,9 @@ PLAY RECAP *******
 
 If you're not going to continue using your Azure VMs, remember to remove them. If you created the three VMs in a new resource group, you can remove all the resources inside that resource group using [Azure CLI](/cli/azure/manage-azure-groups-azure-cli#clean-up-resources).
 
-## See also
+## Related content
 
 - [Quickstart: Deploy a SQL Server Linux container to Kubernetes using Helm charts](sql-server-linux-containers-deploy-helm-charts-kubernetes.md)
-
-## Next steps
-
 - [Introduction to adutil - Active Directory utility](sql-server-linux-ad-auth-adutil-introduction.md)
 - [Backup and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md)
 - [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md)

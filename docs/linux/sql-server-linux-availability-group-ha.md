@@ -8,6 +8,8 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # High availability and data protection for availability group configurations
 
@@ -124,6 +126,6 @@ The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The fo
 
 [!INCLUDE [cluster-pacemaker-concepts](includes/cluster-pacemaker-concepts.md)]
 
-## See also
+## Related content
 
 - [Availability groups on Linux](sql-server-linux-availability-group-overview.md)

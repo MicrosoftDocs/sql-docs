@@ -96,7 +96,7 @@ During preview, zone redundancy for SQL Managed Instance is available in the Bus
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
 | Brazil South | North Europe | Qatar Central | South Africa North | Australia East |
-| Canada Central | Norway East | UAE North | | Central India |
+| Canada Central | Norway East | UAE North | | India Central |
 | Central US | UK South | | | Japan East |
 | East US | West Europe | | | Korea Central |
 | East US 2 | Sweden Central | | | East Asia |

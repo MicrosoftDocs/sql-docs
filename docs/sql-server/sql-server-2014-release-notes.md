@@ -7,7 +7,7 @@ ms.date: 07/22/2020
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
-monikerRange: "= sql-server-2016"
+monikerRange: "<= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
 
@@ -51,7 +51,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 In addition, note the following fixes:
 - The Xevent call stack now include modules names and offset instead of absolute addresses.
-- Better correlation between diagnostics XE and DMVs - Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
+- Better correlation between diagnostics XE and DMVs - Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
 - Support for UTF-8 in BULK INSERT and BCP - Support for export and import of data encoded in UTF-8 character set is now enabled in BULK INSERT and BCP.
 
 ### Download pages and more information for SP2

@@ -8,7 +8,9 @@ ms.date: 07/11/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
 monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
@@ -533,7 +535,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 1. Optionally, remove the old container with `docker rm`.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

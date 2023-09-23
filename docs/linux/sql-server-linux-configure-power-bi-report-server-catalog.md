@@ -7,6 +7,8 @@ ms.date: 09/05/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure Power BI Report Server catalog databases for SQL Server on Linux
 
@@ -128,7 +130,7 @@ Finally, we can add the `reportuser` as a login on the [!INCLUDE [ssnoversion-md
 
 If you need to set up report subscriptions after reports are deployed, it is a good practice to configure embedded credentials in the PBIRS data sources. All credential options work properly, except for the use of embedded credentials configured with the **impersonate the user viewing the report** option. This step fails when using Windows credentials, because of a limitation within the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux implementation that makes impersonation more difficult.
 
-## Next steps
+## Related content
 
 - [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md)
 - [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)

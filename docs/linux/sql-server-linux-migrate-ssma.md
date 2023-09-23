@@ -7,7 +7,9 @@ ms.date: 01/30/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - linux-related-content
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant (SSMA)
 
@@ -32,6 +34,7 @@ To get started, download SQL Server Migration Assistant (SSMA) for your source d
 
 Next, follow the [SQL Server Migration Assistant (SSMA)](../ssma/sql-server-migration-assistant.md) to migrate your source database to SQL Server on Linux.
 
-## See also
+## Related content
+
 - [Microsoft Data Migration blog](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) blog](/archive/blogs/ssma/)

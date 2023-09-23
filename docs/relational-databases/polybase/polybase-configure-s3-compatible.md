@@ -169,7 +169,7 @@ WITH
 ### Use pass-through (STS) authorization with Active Directory
 
 * Mark SQL Server user accounts properties in AD as non-sensitive to allow pass-through to S3-compatible storage.
-* Allow Kerberos constrained delegation to ADFS services for the user related to SQL server SPN (Service Principal Names).
+* Allow Kerberos constrained delegation to ADFS services for the user related to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] SPN (Service Principal Names).
 
 ### Use pass-through (STS) authorization with Active Directory Federation Service
 

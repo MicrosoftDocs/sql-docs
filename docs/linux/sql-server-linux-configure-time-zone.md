@@ -8,6 +8,8 @@ ms.date: 03/17/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure the time zone for SQL Server 2022 on Linux
 
@@ -980,7 +982,7 @@ Symbolic links in `/usr/share/zoneinfo` and `/usr/lib/zoneinfo` are considered. 
 | Pacific/Wake | UTC+12 |
 | Pacific/Wallis | UTC+12 |
 
-## Next steps
+## Related content
 
 - [SQL Server on Linux](sql-server-linux-overview.md)
 - [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)

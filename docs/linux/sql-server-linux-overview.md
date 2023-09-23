@@ -8,6 +8,8 @@ ms.date: 11/29/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # SQL Server on Linux
 

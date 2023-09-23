@@ -8,6 +8,8 @@ ms.date: 12/14/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 monikerRange: ">= sql-server-2017"
 ---
 # Configure SQL Server Always On availability group on Windows and Linux (cross-platform)
@@ -243,7 +245,7 @@ The steps to create the AG are the same as the steps to create an AG for [read-s
 
 This article reviewed the steps to create a cross-platform AG to support migration or read-scale workloads. It can be used for manual disaster recovery. It also explained how to fail over the AG. A cross-platform AG uses cluster type `NONE` and doesn't support high availability.
 
-## Next steps
+## Related content
 
 - [Overview of Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [SQL Server availability basics for Linux deployments](sql-server-linux-ha-basics.md)

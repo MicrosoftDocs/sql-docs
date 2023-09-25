@@ -28,7 +28,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ## Understand Using Tokens
 
 > [!IMPORTANT]  
-> Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(**_property_**)**. In this release, use of tokens is extended to all alerting.  
+> Any Windows user with write permissions on the Windows Event Log can access job steps that are activated by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent alerts or WMI alerts. To avoid this security risk, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent tokens that can be used in jobs activated by alerts are disabled by default. These tokens are: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, and **WMI(**_property_**)**. In this release, use of tokens is extended to all alerting.  
 >  
 > If you need to use these tokens, first ensure that only members of trusted Windows security groups, such as the Administrators group, have write permissions on the Event Log of the computer where [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] resides. Then, right-click **SQL Server Agent** in Object Explorer, select **Properties**, and on the **Alert System** page, select **Replace tokens for all job responses to alerts** to enable these tokens.
 

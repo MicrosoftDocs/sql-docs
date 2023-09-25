@@ -25,6 +25,9 @@ Version 18.3.1.1 is the latest general availability (GA) version. If you have a 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2242980)**  
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft ODBC Driver 18 for SQL Server (ARM64)](https://go.microsoft.com/fwlink/?linkid=2243268)**  
 
+> [!NOTE]
+> Use the x86 installer for 32-bit machines, or the x64 installer to install both 64-bit and 32-bit drivers on a 64-bit machine.
+
 ### Version information
 
 - Release number: 18.3.1.1

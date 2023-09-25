@@ -84,8 +84,9 @@ MERGE
   
 <target_table> ::=  
 {
-    [ database_name . schema_name . | schema_name . ]  
-  target_table  
+    [ database_name . schema_name . | schema_name . ] [ [ AS ] target_table ]
+    | @variable [ [ AS ] target_table ]
+    | common_table_expression_name [ [ AS ] target_table ]
 }  
   
 <merge_hint>::=  

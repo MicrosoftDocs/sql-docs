@@ -58,7 +58,7 @@ helpviewer_keywords:
 
 The following image shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
 
-![Screenshot of Solution Explorer showing the folders in the project.](media/ssis-solution-explorer.png)
+:::image type="content" source="media/ssis-solution-explorer.png" alt-text="Screenshot of Solution Explorer showing the folders in the project.":::
   
  The following table describes the folders that appear in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
@@ -68,6 +68,7 @@ The following image shows the folders in an [!INCLUDE[ssISnoversion](../includes
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contains packages. For more information, see [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md).|  
 |Package Parts|Contains Package Parts that can be reused or imported. For more information, see [Reuse Control Flow across Packages by Using Control Flow Package Parts](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |Miscellaneous|Contains files other than package files.|  
+
 
 ## Files in Integration Services projects
 
@@ -193,9 +194,9 @@ In Solution Explorer, right-click on an Integration Services project and select 
   
 2.  In Solution Explorer, right-click the project, point to **Add**, and do one of the following:  
   
-    - Click **New Item**, and then select a template from the **Templates** pane in the **Add New Item** dialog box.  
+    - Select **New Item**, and then select a template from the **Templates** pane in the **Add New Item** dialog box.  
   
-    - Click **Existing Item**, browse in the **Add Existing Item** dialog box to locate the item you want to add to the project, and then click **Add**.  
+    - Select **Existing Item**, browse in the **Add Existing Item** dialog box to locate the item you want to add to the project, and then select **Add**.  
   
 3.  The new item appears in the appropriate folder in Solution Explorer.  
 

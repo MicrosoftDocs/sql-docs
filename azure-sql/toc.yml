@@ -277,9 +277,10 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Try for free
-      href: database/free-sql-db-free-account-how-to-deploy.md
-
+    - name: Try Azure SQL Database free
+      href: database/free-offer.md
+    - name: Try Azure SQL Database free FAQ
+      href: database/free-offer-faq.yml
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -611,7 +612,6 @@
     items:
     - name: T-SQL differences
       href: database/transact-sql-tsql-differences-sql-server.md
-
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
@@ -1045,7 +1045,8 @@
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
-
+    - name: Try Azure SQL Database free with Azure free account (old offer)
+      href: database/free-sql-db-free-account-how-to-deploy.md
 - name: Azure SQL Managed Instance (SQL MI)
   items:
   - name: Documentation

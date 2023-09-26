@@ -46,7 +46,6 @@ The following JSON document is an example of the SQL Server - Azure Arc resource
 
 ```json
 {
-
     "name": "SQL22-EE",
     "version": "SQL Server 2022",
     "edition": "Enterprise",
@@ -83,7 +82,7 @@ The following JSON document is an example of the SQL Server - Azure Arc resource
 | Auto create stats enabled | `isAutoCreateStatsOn` | `boolean` |
 | Auto update stats enabled | `isAutoUpdateStatsOn` | `boolean` |
 | Remote data archive enabled | `isRemoteDataArchiveEnabled` | `boolean` |
-! Memory optimization enabled | `isMemoryOptimizationEnabled` | `boolean` |
+| Memory optimization enabled | `isMemoryOptimizationEnabled` | `boolean` |
 | Encryption enabled | `isEncrypted` | `boolean` |
 | Trustworthy mode enabled | `isTrustworthyOn` | `boolean` |
 | Backup information | `backupInformation` | `object` |
@@ -115,9 +114,8 @@ The following JSON document is an example of the SQL Server database - Azure Arc
 }
 ```
 
-## Next steps
+## Related content
 
 - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
-
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 - [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)

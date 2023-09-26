@@ -182,7 +182,7 @@ Here is an example that shows how to expose this endpoint and then add the datab
 
 - Add the database to the availability group.
 
-    For the database to be added to the AG, it has to run in full recovery mode and a log backup has to be taken. Use the IP from the Kubernetes service created above and connect to the SQL Server instance then run the TSQL statements as shown below.
+    For the database to be added to the AG, it has to run in the full recovery model and a log backup has to be taken. Use the IP from the Kubernetes service created above and connect to the SQL Server instance then run the T-SQL statements as shown below.
 
     ```sql
     ALTER DATABASE <databaseName> SET RECOVERY FULL;

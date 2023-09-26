@@ -37,7 +37,7 @@ helpviewer_keywords:
  Windows applications do not understand database transactions, so Windows write operations do not provide the ACID properties of a database transaction. Therefore transactional rollbacks and recovery are not possible with Windows update operations.  
   
  **Transact-SQL applications**  
- For TSQL applications working on the FILESTREAM (file_stream) column in a FileTable, the isolation semantics are the same as with FILESTREAM datatype in a regular user table.  
+ For Transact-SQL applications working on the FILESTREAM (file_stream) column in a FileTable, the isolation semantics are the same as with FILESTREAM datatype in a regular user table.  
   
 ##  <a name="OtherQueryNot"></a> Query Notifications and FileTables  
  The query cannot contain reference to the FILESTREAM column in the FileTable, in the WHERE clause or any other part of the query.  

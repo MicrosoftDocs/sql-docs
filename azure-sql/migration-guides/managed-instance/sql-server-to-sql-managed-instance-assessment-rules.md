@@ -528,7 +528,7 @@ More information: [Discontinued Database Engine Functionality in SQL Server](/pr
 
 
 **Description**   
-It is a job step that runs TSQL scripts at scheduled time. TSQL job step includes unsupported commands which are not supported in Azure SQL Managed Instance.
+It is a job step that runs Transact-SQL scripts at scheduled time. TSQL job step includes unsupported commands which are not supported in Azure SQL Managed Instance.
 
 
 

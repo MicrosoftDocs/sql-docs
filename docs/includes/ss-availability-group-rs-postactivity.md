@@ -1,7 +1,7 @@
 
 ## Add a database to the availability group
 
-Ensure that the database you add to the availability group is in full recovery mode and has a valid log backup. If the database is a test database or a newly created database, take a database backup. To create and back up a database called `db1`, run the following Transact-SQL script on the primary SQL Server instance:
+Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If the database is a test database or a newly created database, take a database backup. To create and back up a database called `db1`, run the following Transact-SQL script on the primary SQL Server instance:
 
 ```sql
 CREATE DATABASE [db1];

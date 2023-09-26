@@ -436,7 +436,7 @@ The following database options are set or overridden and can't be changed later:
 - `NEW_BROKER` if the broker isn't enabled in the .bak file. 
 - `ENABLE_BROKER` if the broker isn't enabled in the .bak file. 
 - `AUTO_CLOSE=OFF` if a database in the .bak file has `AUTO_CLOSE=ON`. 
-- `RECOVERY FULL` if a database in the .bak file has `SIMPLE` or `BULK_LOGGED` recovery mode.
+- `RECOVERY FULL` if a database in the .bak file has `SIMPLE` or `BULK_LOGGED` recovery model.
 - A memory-optimized filegroup is added and called XTP if it wasn't in the source .bak file. 
 - Any existing memory-optimized filegroup is renamed to XTP. 
 - `SINGLE_USER` and `RESTRICTED_USER` options are converted to `MULTI_USER`.

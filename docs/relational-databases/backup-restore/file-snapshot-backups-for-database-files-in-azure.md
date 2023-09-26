@@ -67,7 +67,7 @@ ms.topic: conceptual
 
  **Single storage account:** The file-snapshot and destination blobs must use the same storage account.  
 
- **Bulk recovery model:** When using bulk-logged recovery mode and working with a transaction log backup containing minimally-logged transactions, you cannot do a log restore (including point in time recovery) using the transaction log backup. Rather, you perform a database restore to time of the file-snapshot backup set. This limitation is identical to the limitation with streaming backup.  
+ **Bulk recovery model:** When using the bulk-logged recovery model and working with a transaction log backup containing minimally-logged transactions, you cannot do a log restore (including point in time recovery) using the transaction log backup. Rather, you perform a database restore to time of the file-snapshot backup set. This limitation is identical to the limitation with streaming backup.  
 
  **Online restore:** When using file-snapshot backups, you cannot perform an online restore. For more information about online restore, see [Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
 

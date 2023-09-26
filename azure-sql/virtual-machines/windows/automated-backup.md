@@ -58,7 +58,7 @@ The following table describes the options that can be configured for Automated B
 
 | Setting | Range (Default) | Description |
 | --- | --- | --- |
-| **System Database Backups** | Enable/Disable (Disabled) | When enabled, this feature also backs up the system databases: `master`, `msdb`, and `model`. For the `msdb` and `model` databases, verify that they are in full recovery mode if you want log backups to be taken. Log backups are never taken for `master`, and no backups are taken for `tempdb`. |
+| **System Database Backups** | Enable/Disable (Disabled) | When enabled, this feature also backs up the system databases: `master`, `msdb`, and `model`. For the `msdb` and `model` databases, verify that they are in the full recovery model if you want log backups to be taken. Log backups are never taken for `master`, and no backups are taken for `tempdb`. |
 | **Backup Schedule** | Manual/Automated (Automated) | By default, the backup schedule is automatically determined based on the log growth. Manual backup schedule allows the user to specify the time window for backups. In this case, backups only take place at the specified frequency and during the specified time window of a given day. |
 | **Full backup frequency** | Daily/Weekly | Frequency of full backups. In both cases, full backups begin during the next scheduled time window. When weekly is selected, backups could span multiple days until all databases have successfully backed up. |
 | **Full backup start time** | 00:00 – 23:00 (01:00) | Start time of a given day during which full backups can take place. |

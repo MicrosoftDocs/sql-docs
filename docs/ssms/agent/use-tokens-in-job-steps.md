@@ -128,7 +128,8 @@ SET @msgString = QUOTENAME(@msgString,'''');
 PRINT N'Print ' + @msgString;
 ```
 
-Note also in this example that the QUOTENAME function sets the quote character.
+>[!Note]
+> In this example the QUOTENAME function sets the quote character.
 
 ### C. Use tokens with the ESCAPE_NONE macro
 

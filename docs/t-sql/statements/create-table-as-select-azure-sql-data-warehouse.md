@@ -789,7 +789,7 @@ For example, use CTAS in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [
 - Create a copy of a table with some of the columns of the source table.  
 - Create a table that is the result of a query that joins other tables.
 
-For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql).
 
 > [!NOTE]  
 > Since CTAS adds to the capabilities of creating a table, this topic tries not to repeat the CREATE TABLE topic. Instead, it describes the differences between the CTAS and CREATE TABLE statements. For the CREATE TABLE details, see [CREATE TABLE](create-table-azure-sql-data-warehouse.md?version=fabric&preserve-view=true) statement. 
@@ -866,7 +866,7 @@ For details, see [Limitations and Restrictions](create-table-azure-sql-data-ware
 
 ## Examples for copying a table
 
-For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+For more information on using CTAS on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql).
 
 <a name="ctas-copy-table-bk"></a>
 
@@ -1073,5 +1073,5 @@ You can see therefore that type consistency and maintaining nullability properti
 
 - [Create tables on [!INCLUDE[fabric-data-warehouse](../../includes/fabric-dw.md)] in [!INCLUDE[microsoft-fabric](../../includes/fabric.md)]](/fabric/data-warehouse/create-table)
 - [What is data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)]?](/fabric/data-warehouse/data-warehousing)
-- [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql)
+- [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql)
 ::: moniker-end

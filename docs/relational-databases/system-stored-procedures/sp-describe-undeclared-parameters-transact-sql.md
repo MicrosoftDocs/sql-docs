@@ -105,7 +105,7 @@ Another example is when without user input, an application must loop over the pa
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
 
 > [!Note]
-> You must declare the variable as a scalar TSQL variable, or an error appears.
+> You must declare the variable as a scalar Transact-SQL variable, or an error appears.
 
 ## Parameter Selection Algorithm
 

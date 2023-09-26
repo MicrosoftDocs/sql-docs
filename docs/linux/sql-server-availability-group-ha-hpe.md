@@ -273,7 +273,7 @@ Connect to the primary replica and run the following T-SQL commands to:
 CREATE DATABASE [db1];
 GO
 
--- set the database in full recovery mode
+-- set the database in full recovery model
 ALTER DATABASE [db1] SET RECOVERY FULL; 
 GO
 

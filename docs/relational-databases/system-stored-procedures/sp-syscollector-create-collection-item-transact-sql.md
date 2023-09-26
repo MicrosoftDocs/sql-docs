@@ -113,7 +113,7 @@ DECLARE @params XML = CONVERT(XML, N'\<ns:TSQLQueryCollector xmlns:ns="DataColle
 
 EXEC sp_syscollector_create_collection_item @collection_set_id = @collection_set_id,
     @collector_type_uid = @collector_type_uid,
-    @name = 'My custom TSQL query collector item',
+    @name = 'My custom T-SQL query collector item',
     @frequency = 6000,
     @parameters = @params,
     @collection_item_id = @collection_item_id OUTPUT;

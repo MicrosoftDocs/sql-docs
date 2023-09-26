@@ -34,7 +34,7 @@ You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you
 
 The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:
 
-- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
+- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - SQL Server Management Studio must be running under a Windows account that is a member of the sysadmin fixed server roll.
 

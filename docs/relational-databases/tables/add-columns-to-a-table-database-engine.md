@@ -1,6 +1,6 @@
 ---
 title: "Add Columns to a Table (Database Engine)"
-description: "Learn how to add columns to an existing table in SQL Server and Azure SQL platforms by using SQL Server Management Studio or TSQL."
+description: "Learn how to add columns to an existing table in SQL Server and Azure SQL platforms by using SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 07/18/2023

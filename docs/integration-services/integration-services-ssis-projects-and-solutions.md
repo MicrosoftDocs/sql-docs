@@ -4,7 +4,7 @@ description: "Integration Services (SSIS) Projects and Solutions"
 author: chugugrace
 ms.author: chugu
 ms.reviewer: "vanto"
-ms.date: "09/20/2019"
+ms.date: "09/26/2023"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
 ---
+
 # Integration Services (SSIS) Projects and Solutions
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
@@ -54,8 +55,8 @@ helpviewer_keywords:
  Before you create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, you should become familiar with the basic contents of this kind of project. After you understand what a project contains, you can begin creating and working with an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 ## Folders in Integration Services projects  
- The following diagram shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
-  
+ The following image shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+
 ![Screenshot of Solution Explorer showing the folders in the project.](media/ssis-solution-explorer.png)
   
  The following table describes the folders that appear in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
@@ -66,7 +67,6 @@ helpviewer_keywords:
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contains packages. For more information, see [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md).|  
 |Package Parts|Contains Package Parts that can be reused or imported. For more information, see [Reuse Control Flow across Packages by Using Control Flow Package Parts](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |Miscellaneous|Contains files other than package files.|  
-  
 ## Files in Integration Services projects  
  When you add a new or an existing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to a solution, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates project files that have the extensions .dtproj, .dtproj.user, .database, Project.params. 
   
@@ -79,10 +79,10 @@ helpviewer_keywords:
 -   The Project.params file contains information about the [Project parameters](integration-services-ssis-package-and-project-parameters.md).
   
 ## Version targeting in Integration Services projects  
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create, maintain, and run packages that target SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
-  
- In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property, and then choose SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
-  
+In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create, maintain, and run packages that target specific versions of SQL Server. 
+
+In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property, and then choose the version you want.  
+
  ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
 ## Create a new Integration Services project  
@@ -211,3 +211,4 @@ You can copy objects within an [!INCLUDE[ssISnoversion](../includes/ssisnoversio
 
 - Download and install [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).
 - [SSIS How to Create an ETL Package](ssis-how-to-create-an-etl-package.md)
+

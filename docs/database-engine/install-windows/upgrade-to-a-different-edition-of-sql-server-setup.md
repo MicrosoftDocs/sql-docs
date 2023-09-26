@@ -70,7 +70,7 @@ In addition to the previous steps, you may need to do the following if you upgra
 
 - Users that were provisioned in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] remain provisioned after the upgrade. Specifically, the BUILTIN\Users group remains provisioned. Disable, remove, or reprovision these accounts as needed. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-- Sizes and recovery mode for the `tempdb` and model system databases remain unchanged after the upgrade. Reconfigure these settings as needed. For more information, see [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
+- Sizes and recovery model for the `tempdb` and model system databases remain unchanged after the upgrade. Reconfigure these settings as needed. For more information, see [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
 - Template databases remain on the computer after the upgrade.
 

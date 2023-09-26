@@ -4,7 +4,7 @@ description: "Integration Services (SSIS) Projects and Solutions"
 author: chugugrace
 ms.author: chugu
 ms.reviewer: "vanto"
-ms.date: "09/20/2019"
+ms.date: "09/26/2023"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
 ---
+
 # Integration Services (SSIS) Projects and Solutions
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
@@ -38,11 +39,11 @@ helpviewer_keywords:
   
  Solutions can include different types of projects. If you want to use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package, you work in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in a solution provided by [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- When you create a new solution, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] adds a Solution folder to Solution Explorer, and creates files that have the extensions, .sln and .suo:  
+ When you create a new solution, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] adds a solution folder to Solution Explorer. The solution folder contains these types of files:  
   
--   The *.sln file contains information about the solution configuration and lists the projects in the solution.  
+- `.sln`: contains information about the solution configuration and lists the projects in the solution.  
   
--   The *.suo file contains information about your preferences for working with the solution.  
+- `.suo`: contains information about your preferences for working with the solution.  
   
  While [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] automatically creates a solution when you create a new project, you can also create a blank solution, and then add projects later.  
    
@@ -54,9 +55,10 @@ helpviewer_keywords:
  Before you create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, you should become familiar with the basic contents of this kind of project. After you understand what a project contains, you can begin creating and working with an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 ## Folders in Integration Services projects  
- The following diagram shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
-  
-![Screenshot of Solution Explorer showing the folders in the project.](media/ssis-solution-explorer.png)
+
+The following image shows the folders in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+
+:::image type="content" source="media/ssis-solution-explorer.png" alt-text="Screenshot of Solution Explorer showing the folders in the project.":::
   
  The following table describes the folders that appear in an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
@@ -66,23 +68,24 @@ helpviewer_keywords:
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|Contains packages. For more information, see [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md).|  
 |Package Parts|Contains Package Parts that can be reused or imported. For more information, see [Reuse Control Flow across Packages by Using Control Flow Package Parts](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)
 |Miscellaneous|Contains files other than package files.|  
-  
-## Files in Integration Services projects  
- When you add a new or an existing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to a solution, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates project files that have the extensions .dtproj, .dtproj.user, .database, Project.params. 
-  
--   The *.dtproj file contains information about project configurations and items such as packages.  
-  
--   The *.dtproj.user file contains information about your preferences for working with the project.  
-  
--   The *.database file contains information that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] requires to open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.
 
--   The Project.params file contains information about the [Project parameters](integration-services-ssis-package-and-project-parameters.md).
+## Files in Integration Services projects
+
+ When you add a new or an existing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project to a solution, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates project files. Project files include:
+
+- `.dtproj`: contains information about project configurations and items such as packages.  
+  
+- `*.dtproj.user`: contains information about your preferences for working with the project.  
+  
+- `*.database`: contains information that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] requires to open the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.
+
+- `Project.params`: contains information about the [Project parameters](integration-services-ssis-package-and-project-parameters.md).
   
 ## Version targeting in Integration Services projects  
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create, maintain, and run packages that target SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
-  
- In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property, and then choose SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
-  
+In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create, maintain, and run packages that target specific versions of SQL Server. 
+
+In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property, and then choose the version you want.  
+
  ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
 ## Create a new Integration Services project  
@@ -101,7 +104,7 @@ helpviewer_keywords:
   
      The solution name is automatically updated to match the project name.  
   
-5.  To create a separate folder for the solution file, select **Create directory for solution**. This is the default option.  
+5.  To create a separate folder for the solution file, select the default option, specifically **Create directory for solution**.
   
 6.  If source control software is installed on the computer, select **Add to source control**  to associate the project with source control.  
   
@@ -130,7 +133,7 @@ helpviewer_keywords:
   
 8.  Click **Next** to switch to the **Select Source** page.  
   
-9. If you're importing from an **.ispac** file, type the path including file name in the **Path** text box. Click **Browse** to navigate to the folder where you want the solution to be stored and type file name in the **File name** text box, and click **Open**.  
+9. If you're importing from an `.ispac` file, type the path including file name in the **Path** text box. Click **Browse** to navigate to the folder where you want the solution to be stored and type file name in the **File name** text box, and click **Open**.  
   
      If you're importing from an **Integration Services Catalog**, type the database instance name in the **Server name** text box or click **Browse** and select the database instance that contains the catalog.  
   
@@ -149,11 +152,13 @@ helpviewer_keywords:
   
 ### Add a new project to a solution  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution to which you want to add a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and do one of the following:  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution to which you want to add a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and either:  
   
-    -   Right-click the solution, click **Add**, and then click **New Project**.  
+    - Right-click the solution, click **Add**, and then click **New Project**.  
+
+    or
   
-    -   On the **File** menu, point to **Add**, and then click **New Project**.  
+    - On the **File** menu, point to **Add**, and then click **New Project**.  
   
 2.  In the **Add New Project** dialog box, click **Integration Services Project** in the **Templates** pane.  
   
@@ -165,16 +170,16 @@ helpviewer_keywords:
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution to which you want to add an existing [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, and do one of the following:  
   
-    -   Right-click the solution, point to **Add**, and then click **Existing Project**.  
+    - Right-click the solution, point to **Add**, and then click **Existing Project**.  
   
-    -   On the **File** menu, click **Add**, and then click **Existing Project**.  
+    - On the **File** menu, click **Add**, and then click **Existing Project**.  
   
 2.  In the **Add Existing Project** dialog box, browse to locate the project you want to add, and then click **Open**.  
   
 3.  The project is added to the solution folder in **Solution Explorer**.  
   
 ## Remove a project from a solution
- You can only remove a project from a solution when the solution is visible in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. After the solution is visible, you can remove all except one project. As soon as only one project remains, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no longer displays the solution folder and you cannot remove the last project.  
+ You can only remove a project from a solution when the solution is visible in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. After the solution is visible, you can remove all except one project. As soon as only one project remains, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] no longer displays the solution folder. You can't remove the last project.  
    
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the solution from which you want to remove an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
@@ -188,9 +193,9 @@ helpviewer_keywords:
   
 2.  In Solution Explorer, right-click the project, point to **Add**, and do one of the following:  
   
-    -   Click **New Item**, and then select a template from the **Templates** pane in the **Add New Item** dialog box.  
+    - Select **New Item**, and then select a template from the **Templates** pane in the **Add New Item** dialog box.  
   
-    -   Click **Existing Item**, browse in the **Add Existing Item** dialog box to locate the item you want to add to the project, and then click **Add**.  
+    - Select **Existing Item**, browse in the **Add Existing Item** dialog box to locate the item you want to add to the project, and then select **Add**.  
   
 3.  The new item appears in the appropriate folder in Solution Explorer.  
 
@@ -211,3 +216,4 @@ You can copy objects within an [!INCLUDE[ssISnoversion](../includes/ssisnoversio
 
 - Download and install [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).
 - [SSIS How to Create an ETL Package](ssis-how-to-create-an-etl-package.md)
+

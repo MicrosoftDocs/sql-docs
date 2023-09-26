@@ -3,7 +3,7 @@ title: "Lesson 1: Create a project and basic package with SSIS"
 description: "Lesson 1: Create a project and basic package with SSIS"
 author: chugugrace
 ms.author: chugu
-ms.date: "26/09/2023"
+ms.date: 09/26/2023
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: tutorial

@@ -10396,8 +10396,6 @@ items:
   items:
   - name: Azure Synapse Analytics >
     href: /azure/synapse-analytics/overview-what-is
-  - name: Azure Arc-enabled data services >
-    href: /azure/azure-arc/data/overview
   - name: Azure SQL
     items: 
     - name: Azure SQL >
@@ -10410,6 +10408,8 @@ items:
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
 - name: Azure Arc-enabled SQL Server
   items:
+    - name: Azure Arc-enabled data services >
+      href: /azure/azure-arc/data/overview
     - name: Azure Arc-enabled SQL Server
       href: sql-server/azure-arc/index.yml
     - name: Overview

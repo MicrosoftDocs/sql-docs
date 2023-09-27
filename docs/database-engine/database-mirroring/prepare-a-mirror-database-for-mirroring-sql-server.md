@@ -58,7 +58,7 @@ helpviewer_keywords:
   
 -   You cannot mirror the **master**, **msdb**, **temp**, or **model** system databases.  
   
--   You cannot mirror a database that belongs to an [Always On availability group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   You cannot mirror a database that belongs to an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   

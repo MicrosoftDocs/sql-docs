@@ -4,7 +4,7 @@ description: This overview introduces SQL Data Sync for Azure, which allows you 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, jeschult
-ms.date: 07/15/2022
+ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: sql-data-sync
 ms.topic: conceptual
@@ -22,8 +22,7 @@ SQL Data Sync is a service built on Azure SQL Database that lets you synchronize
 > [!IMPORTANT]
 > Azure SQL Data Sync does not support Azure SQL Managed Instance or Azure Synapse Analytics at this time.
 
-
-## Overview 
+## Overview
 
 Data Sync is based around the concept of a sync group. A sync group is a group of databases that you want to synchronize.
 
@@ -31,7 +30,7 @@ Data Sync uses a hub and spoke topology to synchronize data. You define one of t
 
 - The **Hub Database** must be an Azure SQL Database.
 - The **member databases** can be either databases in Azure SQL Database or in instances of SQL Server.
-- The **Sync Metadata Database** contains the metadata and log for Data Sync. The Sync Metadata Database has to be an Azure SQL Database located in the same region as the Hub Database. The Sync Metadata Database is customer created and customer owned. You can only have one Sync Metadata Database per region and subscription. Sync Metadata Database cannot be deleted or renamed while sync groups or sync agents exist. Microsoft recommends creating a new, empty database for use as the Sync Metadata Database. Data Sync creates tables in this database and runs a frequent workload.
+- The **Sync Metadata Database** contains the metadata and log for Data Sync. The Sync Metadata Database has to be an Azure SQL Database located in the same region as the Hub Database. The Sync Metadata Database is customer created and customer owned. You can only have one Sync Metadata Database per region and subscription. Sync Metadata Database can't be deleted or renamed while sync groups or sync agents exist. Microsoft recommends creating a new, empty database for use as the Sync Metadata Database. Data Sync creates tables in this database and runs a frequent workload.
 
 > [!NOTE]
 > If you're using an on-premises database as a member database, you have to [install and configure a local sync agent](sql-data-sync-sql-server-configure.md#add-on-prem).
@@ -50,7 +49,7 @@ A sync group has the following properties:
 Data Sync is useful in cases where data needs to be kept updated across several databases in Azure SQL Database or SQL Server. Here are the main use cases for Data Sync:
 
 - **Hybrid Data Synchronization:** With Data Sync, you can keep data synchronized between your databases in SQL Server and Azure SQL Database to enable hybrid applications. This capability may appeal to customers who are considering moving to the cloud and would like to put some of their application in Azure.
-- **Distributed Applications:** In many cases, it's beneficial to separate different workloads across different databases. For example, if you have a large production database, but you also need to run a reporting or analytics workload on this data, it's helpful to have a second database for this additional workload. This approach minimizes the performance impact on your production workload. You can use Data Sync to keep these two databases synchronized.
+- **Distributed Applications:** In many cases, it's beneficial to separate different workloads across different databases. For example, if you have a large production database, but you also need to run a reporting or analytics workload on this data, it's helpful to have a second database for this extra workload. This approach minimizes the performance impact on your production workload. You can use Data Sync to keep these two databases synchronized.
 - **Globally Distributed Applications:** Many businesses span several regions and even several countries/regions. To minimize network latency, it's best to have your data in a region close to you. With Data Sync, you can easily keep databases in regions around the world synchronized.
 
 Data Sync isn't the preferred solution for the following scenarios:
@@ -61,7 +60,6 @@ Data Sync isn't the preferred solution for the following scenarios:
 | Read Scale | [Use read-only replicas to load balance read-only query workloads](read-scale-out.md) |
 | ETL (OLTP to OLAP) | [Azure Data Factory](https://azure.microsoft.com/services/data-factory/) or [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services) |
 | Migration from SQL Server to Azure SQL Database. However, SQL Data Sync can be used after the migration is completed, to ensure that the source and target are kept in sync.  | [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) |
-
 
 ## How it works
 
@@ -81,17 +79,18 @@ Data Sync isn't the preferred solution for the following scenarios:
 ## Private link for Data Sync
 
 > [!NOTE]
-> The SQL Data Sync private link is different from the [Azure Private Link](https://azure.microsoft.com/services/private-link/). 
+> The SQL Data Sync private link is different from the [Azure Private Link](https://azure.microsoft.com/services/private-link/).
 
-The new private link feature allows you to choose a service managed private endpoint to establish a secure connection between the sync service and your member/hub databases during the data synchronization process. A service managed private endpoint is a private IP address within a specific virtual network and subnet. Within Data Sync, the service managed private endpoint is created by Microsoft and is exclusively used by the Data Sync service for a given sync operation. 
-Before setting up the private link, read the [general requirements](sql-data-sync-data-sql-server-sql-database.md#general-requirements) for the feature. 
+The new private link feature allows you to choose a service managed private endpoint to establish a secure connection between the sync service and your member/hub databases during the data synchronization process. A service managed private endpoint is a private IP address within a specific virtual network and subnet. Within Data Sync, the service managed private endpoint is created by Microsoft and is exclusively used by the Data Sync service for a given sync operation.
+
+Before setting up the private link, read the [general requirements](sql-data-sync-data-sql-server-sql-database.md#general-requirements) for the feature.
 
 ![Private link for Data Sync](./media/sql-data-sync-data-sql-server-sql-database/sync-private-link-overview.png)
 
 > [!NOTE]
 > You must manually approve the service managed private endpoint in the **Private endpoint connections** page of the Azure portal during the sync group deployment or by using PowerShell.
 
-## Get started 
+## Get started
 
 ### Set up Data Sync in the Azure portal
 
@@ -104,6 +103,7 @@ Before setting up the private link, read the [general requirements](sql-data-syn
 - [Use PowerShell to sync between a database in Azure SQL Database and a databases in a SQL Server instance](scripts/sql-data-sync-sync-data-between-azure-onprem.md)
 
 ### Set up Data Sync with REST API
+
 - [Use REST API to sync between multiple databases in Azure SQL Database](scripts/sql-data-sync-sync-data-between-sql-databases-rest-api.md)
 
 ### Review the best practices for Data Sync
@@ -153,12 +153,12 @@ Provisioning and deprovisioning during sync group creation, update, and deletion
 - Columns with user-defined data types aren't supported.
 - Moving servers between different subscriptions isn't supported. 
 - If two primary keys are only different in case (for example, `Foo` and `foo`), Data Sync won't support this scenario.
-- Truncating tables is not an operation supported by Data Sync (changes won't be tracked).
-- Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database is not supported. However, a Hyperscale database can be a member database in a Data Sync topology.
-- Memory-optimized tables are not supported.
+- Truncating tables isn't an operation supported by Data Sync (changes won't be tracked).
+- Using an Azure SQL Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology.
+- Memory-optimized tables aren't supported.
 - Schema changes aren't automatically replicated. A custom solution can be created to [automate the replication of schema changes](./sql-data-sync-update-sync-schema.md).
-- Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of an index, like IGNORE_DUP_KEY or the WHERE filter predicate, are not supported and the destination index is provisioned without these properties even if the source Index has these properties set.
-- An Azure Elastic jobs database cannot be used as the SQL Data Sync Metadata database, and vice versa.
+- Data Sync supports only the following two index properties: Unique, Clustered/Non-Clustered. Other properties of an index, like IGNORE_DUP_KEY or the WHERE filter predicate, aren't supported and the destination index is provisioned without these properties even if the source Index has these properties set.
+- An Azure Elastic jobs database can't be used as the SQL Data Sync Metadata database, and vice versa.
 
 #### Unsupported data types
 
@@ -176,15 +176,15 @@ Data Sync can't sync read-only or system-generated columns. For example:
 
 #### Limitations on service and database dimensions
 
-| **Dimensions**                                                  | **Limit**              | **Workaround**              |
-|-----------------------------------------------------------------|------------------------|-----------------------------|
-| Maximum number of sync groups any database can belong to.       | 5                      |                             |
-| Maximum number of endpoints in a single sync group              | 30                     |                             |
-| Maximum number of on-premises endpoints in a single sync group. | 5                      | Create multiple sync groups |
-| Database, table, schema, and column names                       | 50 characters per name |                             |
-| Tables in a sync group                                          | 500                    | Create multiple sync groups |
-| Columns in a table in a sync group                              | 1000                   |                             |
-| Data row size on a table                                        | 24 Mb                  |                             |
+| **Dimensions** | **Limit** | **Workaround** |
+|--|--|--|
+| Maximum number of sync groups any database can belong to. | 5 |  |
+| Maximum number of endpoints in a single sync group | 30 |  |
+| Maximum number of on-premises endpoints in a single sync group. | 5 | Create multiple sync groups |
+| Database, table, schema, and column names | 50 characters per name |  |
+| Tables in a sync group | 500 | Create multiple sync groups |
+| Columns in a table in a sync group | 1000 |  |
+| Data row size on a table | 24 Mb |  |
 
 > [!NOTE]
 > There may be up to 30 endpoints in a single sync group if there is only one sync group. If there is more than one sync group, the total number of endpoints across all sync groups cannot exceed 30. If a database belongs to multiple sync groups, it is counted as multiple endpoints, not one.
@@ -196,15 +196,15 @@ Data Sync can't sync read-only or system-generated columns. For example:
 
 When the sync group is established, the Data Sync service needs to connect to the hub database. When establishing the sync group, the Azure SQL server must have the following configuration in its `Firewalls and virtual networks` settings:
 
- * *Deny public network access* must be set to *Off*.
- * *Allow Azure services and resources to access this server* must be set to *Yes*, or you must create IP rules for the [IP addresses used by Data Sync service](network-access-controls-overview.md#data-sync).
+- *Deny public network access* must be set to *Off*.
+- *Allow Azure services and resources to access this server* must be set to *Yes*, or you must create IP rules for the [IP addresses used by Data Sync service](network-access-controls-overview.md#data-sync).
 
 Once the sync group is created and provisioned, you can then disable these settings. The sync agent connects directly to the hub database, and you can use the server's [firewall IP rules](firewall-configure.md) or [private endpoints](private-endpoint-overview.md) to allow the agent to access the hub server.
 
 > [!NOTE]
 > If you change the sync group's schema settings, you will need to allow the Data Sync service to access the server again so that the hub database can be re-provisioned.
 
-### Region data residency 
+### Region data residency
 
 If you synchronize data within the same region, SQL Data Sync doesn't store/process customer data outside that region in which the service instance is deployed. If you synchronize data across different regions, SQL Data Sync replicates customer data to the paired regions.
 
@@ -265,7 +265,7 @@ Federation Root Database can be used in the SQL Data Sync Service without any li
 
 ### Can I use Data Sync to sync data exported from Dynamics 365 using bring your own database (BYOD) feature?
 
-The Dynamics 365 bring your own database feature lets administrators export data entities from the application into their own Microsoft Azure SQL database. Data Sync can be used to sync this data into other databases if data is exported using **incremental push** (full push is not supported) and **enable triggers in target database** is set to **yes**.
+The Dynamics 365 bring your own database feature lets administrators export data entities from the application into their own Microsoft Azure SQL database. Data Sync can be used to sync this data into other databases if data is exported using **incremental push** (full push isn't supported) and **enable triggers in target database** is set to **yes**.
 
 ### How do I create Data Sync in Failover group to support Disaster Recovery?
 

@@ -4,7 +4,7 @@ description: Mark a subnet as a virtual network service endpoint. Then add the e
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, genemi, mathoma
-ms.date: 08/24/2022
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to

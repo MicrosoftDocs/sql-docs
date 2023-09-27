@@ -123,15 +123,20 @@ The zone-redundant version of the high availability architecture for the General
 Consider the following when configuring your General Purpose databases with zone-redundancy: 
 
 - For General Purpose tier the zone-redundant configuration is Generally Available in the following regions: 
+  - (Africa) South Africa North
   - (Asia Pacific) Australia East
   - (Asia Pacific) East Asia
   - (Asia Pacific) Japan East
   - (Asia Pacific) Korea Central
-  - (Asia Pacific) Southeast Asia  
+  - (Asia Pacific) Southeast Asia
+  - (Asia Pacific) Central India
+  - (Asia Pacific) China North 3
   - (Europe) France Central
   - (Europe) North Europe
   - (Europe) West Europe
   - (Europe) UK South
+  - (Europe) Switzerland North
+  - (Europe) Sweden Central
   - (Middle East) Qatar Central
   - (North America) East US
   - (North America) East US 2

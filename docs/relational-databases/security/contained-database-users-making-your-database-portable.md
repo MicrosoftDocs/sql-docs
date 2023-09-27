@@ -13,7 +13,7 @@ helpviewer_keywords:
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Make your database portable by using contained user access to contained databases
+# Make your database portable by using contained databases
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 

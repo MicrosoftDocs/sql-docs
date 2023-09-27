@@ -78,7 +78,8 @@ Choosing a maintenance window other than the default is available on all SLOs **
 - Instance pools
 - Basic, S0 and S1
 - DC, Fsv2, M-series
-- Hyperscale service tier with zone redundancy 
+- Hyperscale service tier with zone redundancy
+- Hyperscale Serverless databases
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

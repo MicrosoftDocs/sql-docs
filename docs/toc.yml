@@ -7,13 +7,11 @@ items:
   href: sql-server/previous-versions-sql-server.md
 - name: Overview
   items:
-  - name: Get started
-    items:
-    - name: What is SQL Server?
-      href: sql-server/what-is-sql-server.md
-    - name: Connect to the Database Engine
-      href: sql-server/connect-to-database-engine.md
-      expanded: true
+  - name: What is SQL Server?
+    href: sql-server/what-is-sql-server.md
+  - name: Connect to the Database Engine
+    href: sql-server/connect-to-database-engine.md
+    expanded: true
   - name: What's new?
     items:
     - name: SQL Server 2022

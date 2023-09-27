@@ -80,7 +80,7 @@ For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewal
 
 |Traditional model|Contained database user model|
 |-----------------------|-----------------------------------|
-|To change a password in the context of the master database:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|To change a password in the context of the user database:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|
+|To change a password in the context of the `master` database:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|To change a password in the context of the user database:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|
 
 ### SQL Managed Instance
 

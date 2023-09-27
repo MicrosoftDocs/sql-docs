@@ -76,7 +76,7 @@ For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewal
 
 |Traditional model|Contained database user model|
 |-----------------------|-----------------------------------|
-|When you're connected to the master database:<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> Then, when you're connected to a user database:<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|When you're connected to a user database:<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|
+|When you're connected to the `master` database:<br /><br /> `CREATE LOGIN login_name  WITH PASSWORD = 'strong_password';`<br /><br /> Then, when you're connected to a user database:<br /><br /> `CREATE USER 'user_name' FOR LOGIN 'login_name';`|When you're connected to a user database:<br /><br /> `CREATE USER user_name  WITH PASSWORD = 'strong_password';`|
 
 |Traditional model|Contained database user model|
 |-----------------------|-----------------------------------|

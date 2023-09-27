@@ -4427,19 +4427,20 @@ items:
     - name: Upgrade edition
       href: database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md
     - name: Upgrade Database Engine
-      href: database-engine/install-windows/upgrade-database-engine.md
       items:
-      - name: Choose a Method
+      - name: Overview
+        href: database-engine/install-windows/upgrade-database-engine.md
+      - name: Choose a method
         href: database-engine/install-windows/choose-a-database-engine-upgrade-method.md
       - name: Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
-      - name: Plan & Test the Upgrade Plan
+      - name: Plan & test the upgrade plan
         href: database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md
-      - name: Complete the Upgrade
+      - name: Complete the upgrade
         href: database-engine/install-windows/complete-the-database-engine-upgrade.md
-      - name: Change the Database Compatibility Mode & use the Query Store
+      - name: Change the database compatibility mode & use the Query Store
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
-      - name: Change the Database Compatibility Mode with Query Tuning Assistant
+      - name: Change the database compatibility mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
         href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json

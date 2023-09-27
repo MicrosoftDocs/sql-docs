@@ -319,7 +319,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
 9. On the **Select Data Synchronization** page, click **Full**, and specify a network share that every node can access. Click **Next** to continue. See Figure 19.
 
-   This network share will be used to store the database backup to create secondary replicas. If this is not available for your organization, choose another data synchronization preference. Refer to [SQL Server 2016 Always On Availability Group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) on how to use other options to create secondary replicas. The figure 17 also lists other options.
+   This network share will be used to store the database backup to create secondary replicas. If this is not available for your organization, choose another data synchronization preference. Refer to [SQL Server 2016 Always On Availability Group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) on how to use other options to create secondary replicas. The figure 17 also lists other options.
 
    ![Configure data synchronization](media/Fig19_AvailabilityGroupDataSync.png)
 
@@ -345,7 +345,7 @@ You should usually enable synchronous commit only when the two nodes are in the 
 
    The AG setup is completed.
 
-For more information about Always On Availability Groups, see [SQL Server 2016 Always On Availability Groups](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).
+For more information about Always On Availability Groups, see [SQL Server 2016 Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
 
 ## Configure MDS to Run on an WSFC Node
 

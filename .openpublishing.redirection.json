@@ -51,6 +51,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md",
+      "redirect_url": "/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/2014/analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md",
       "redirect_url": "/previous-versions/sql/2014/analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy",
       "redirect_document_id": false

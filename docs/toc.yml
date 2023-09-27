@@ -396,8 +396,6 @@ items:
         href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - name: Availability modes
         href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
-      - name: Technology & capabilities
-        href: database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: Prerequisites, restrictions, & recommendations
         href: database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
       - name: Interoperability

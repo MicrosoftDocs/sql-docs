@@ -32,7 +32,7 @@ After the [!INCLUDE[ssDE](../../includes/ssde-md.md)] confirms the Windows authe
 
 The important principle is that both the login (in the `master` database) and the user (in the user database) must exist and be related to each other. The connection to the user database has a dependency upon the login in the `master` database. This dependency limits the ability of the database to be moved to a different hosting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)] server.
 
-If a connection to the master database is not available (for example, a failover is in progress), the overall connection time will increase or the connection might time out. An unavailable connection might reduce connection scalability.
+If a connection to the `master` database is not available (for example, a failover is in progress), the overall connection time will increase, or the connection might time out. An unavailable connection might reduce connection scalability.
 
 ## Contained database user model
 

@@ -36,7 +36,7 @@ If a connection to the `master` database is not available (for example, a failov
 
 ## Contained database user model
 
-In the contained database user model, the login in the master database is not present. Instead, the authentication process occurs at the user database. The database user in the user database doesn't have an associated login in the master database.
+In the contained database user model, the login in the `master` database is not present. Instead, the authentication process occurs at the user database. The database user in the user database doesn't have an associated login in the `master` database.
 
 The contained database user model supports both Windows authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. You can use it in both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
 

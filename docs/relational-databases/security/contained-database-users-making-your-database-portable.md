@@ -23,8 +23,6 @@ Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../includ
 
 This article reviews the benefits of using the contained database model compared to the traditional login/user model and Windows or server-level firewall rules. Specific scenarios, manageability, or application business logic might still require use of the traditional login/user model and server-level firewall rules.
 
-> [!NOTE]
-> As [!INCLUDE[msCoName](../../includes/msconame-md.md)] evolves the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service and moves toward higher guaranteed SLAs, you might be required to switch to the contained database user model and database-scoped firewall rules to attain the higher availability SLA and higher maximum login rates for a database. We encourage you to consider such changes today.
 
 ## Traditional login and user model
 

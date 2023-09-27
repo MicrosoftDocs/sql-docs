@@ -37,7 +37,7 @@ helpviewer_keywords:
  This section describes how asynchronous database mirroring works, when it is appropriate to use high-performance mode, and how to respond if the principal server fails.  
   
 > [!NOTE]  
->  Most editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support only synchronous database mirroring ("Safety Full Only"). For information about editions that fully support database mirroring, see "High Availability (Always On)" in [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+>  Most editions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] support only synchronous database mirroring ("Safety Full Only"). For information about editions that fully support database mirroring, see "High Availability (Always On)" in [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
   
  When transaction safety is set to OFF, the database mirroring session operates asynchronously. Asynchronous operation supports only one operating mode-high-performance mode. This mode enhances performance at the expense of high availability. High-performance mode uses just the principal server and the mirror server. Problems on the mirror server never impact the principal server. On the loss of the principal server, the mirror database is marked DISCONNECTED but is available as a warm standby.  
   

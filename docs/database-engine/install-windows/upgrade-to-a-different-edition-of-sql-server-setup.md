@@ -13,12 +13,12 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. For information about supported edition upgrade paths, see [Supported version and edition upgrades (SQL Server 2022)](supported-version-and-edition-upgrades-2022.md). Before you initiate the edition upgrade of an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], review the following articles:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]. For information about supported edition upgrade paths, see [Supported version and edition upgrades (SQL Server 2022)](supported-version-and-edition-upgrades-2022.md).
 
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
-- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
+
+Before you initiate the edition upgrade of an instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], review the following articles:
+
 - [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)
 - [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

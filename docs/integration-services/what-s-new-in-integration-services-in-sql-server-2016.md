@@ -154,7 +154,7 @@ These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or late
  For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
- The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016, SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   

@@ -63,7 +63,7 @@ For SQL Server, Windows Firewall rules apply to all connections and have the sam
 
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] allows separate firewall rules for server-level connections (logins) and for database-level connections (contained database users). When [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connects to a user database, it first checks database firewall rules. If there's no rule that allows access to the database, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] checks the server-level firewall rules. Checking server-level firewall rules requires access to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server's `master` database.
 
-Database-level firewall rules, combined with contained database users, can eliminate the need to access the master database of the server during the connection. The result is improved connection scalability.
+Database-level firewall rules, combined with contained database users, can eliminate the need to access the `master` database of the server during the connection. The result is improved connection scalability.
 
 For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:
 

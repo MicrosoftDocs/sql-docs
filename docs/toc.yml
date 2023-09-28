@@ -10403,76 +10403,79 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-- name: Azure Arc-enabled SQL
+- name: Azure Arc
   items:
     - name: Azure Arc-enabled SQL Server
       href: sql-server/azure-arc/index.yml
+      items:
+      - name: Overview
+        items:
+        - name: What is Azure Arc-enabled SQL Server?
+          href: sql-server/azure-arc/overview.md
+        - name: Release notes
+          href: sql-server/azure-arc/release-notes.md
+        - name: Prerequisites
+          href: sql-server/azure-arc/prerequisites.md
+      - name: How-to guides
+        items:
+        - name: Connect SQL Server to Azure using Arc
+          href: sql-server/azure-arc/automatically-connect.md
+        - name: Alternate methods to connect
+          items:
+          - name: Deployment options
+            href: sql-server/azure-arc/deployment-options.md
+          - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
+          - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect-already-enabled.md
+          - name: Azure policy
+            href: sql-server/azure-arc/connect-at-scale-policy.md
+          - name: Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Automatically connect
+            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
+      - name: Manage
+        items:
+        - name: Assess
+          href: sql-server/azure-arc/assess.md
+        - name: View databases
+          href: sql-server/azure-arc/view-databases.md
+        - name: Configure SQL Server
+          href: sql-server/azure-arc/manage-configuration.md
+        - name: Automate patching
+          href: sql-server/azure-arc/patch.md
+        - name: Automate backups
+          href: sql-server/azure-arc/point-in-time-restore.md
+        - name: Delete from or restore to Azure Arc
+          href: sql-server/azure-arc/delete-from-azure-arc.md
+        - name: Monitor
+          href: sql-server/azure-arc/sql-monitoring.md
+        - name: Use activity logs
+          href: sql-server/azure-arc/activity-logs.md
+      - name: Secure
+        items:
+        - name: Configure advanced data Security
+          href: sql-server/azure-arc/configure-advanced-data-security.md
+        - name: Certificate rotation
+          href: sql-server/azure-arc/rotate-certificates.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
+      - name: FAQ
+        href: sql-server/azure-arc/faq.yml
+      - name: Data collection and reporting
+        href: sql-server/azure-arc/data-collection.md
+      - name: Troubleshoot
+        items:
+        - name: Troubleshoot deployment
+          href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot best practices assessment
+          href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >
       href: /azure/azure-arc/data/overview
-    - name: Overview
-      items:
-      - name: What is Azure Arc-enabled SQL Server?
-        href: sql-server/azure-arc/overview.md
-      - name: Release notes
-        href: sql-server/azure-arc/release-notes.md
-    - name: How-to guides
-      items:
-      - name: Connect SQL Server to Azure using Arc
-        href: sql-server/azure-arc/automatically-connect.md
-      - name: Alternate methods to connect
-        items:
-            - name: Deployment options
-              href: sql-server/azure-arc/deployment-options.md
-            - name: Connect when machine not connected to Azure
-              href: sql-server/azure-arc/connect.md
-            - name: Connect with installer (.msi)
-              href: sql-server/azure-arc/connect-with-installer.md
-            - name: Connect when machine already connected to Azure
-              href: sql-server/azure-arc/connect-already-enabled.md
-            - name: Azure policy
-              href: sql-server/azure-arc/connect-at-scale-policy.md
-            - name: Script
-              href: sql-server/azure-arc/connect-at-scale-script.md
-            - name: Automatically connect
-              href: sql-server/azure-arc/connect-at-scale-autodeploy.md
-            - name: Connect machines using Configuration Manager custom task sequence
-              href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
-    - name: Manage
-      items:
-      - name: Assess
-        href: sql-server/azure-arc/assess.md
-      - name: View databases
-        href: sql-server/azure-arc/view-databases.md
-      - name: Configure SQL Server
-        href: sql-server/azure-arc/manage-configuration.md
-      - name: Automate patching
-        href: sql-server/azure-arc/patch.md
-      - name: Automate backups
-        href: sql-server/azure-arc/point-in-time-restore.md
-      - name: Delete from or restore to Azure Arc
-        href: sql-server/azure-arc/delete-from-azure-arc.md
-      - name: Monitor
-        href: sql-server/azure-arc/sql-monitoring.md
-      - name: Use activity logs
-        href: sql-server/azure-arc/activity-logs.md
-    - name: Secure
-      items:
-      - name: Configure advanced data Security
-        href: sql-server/azure-arc/configure-advanced-data-security.md
-      - name: Certificate rotation
-        href: sql-server/azure-arc/rotate-certificates.md
-      - name: Extended Security Updates
-        href: sql-server/azure-arc/extended-security-updates.md
-    - name: FAQ
-      href: sql-server/azure-arc/faq.yml
-    - name: Data collection and reporting
-      href: sql-server/azure-arc/data-collection.md
-    - name: Troubleshoot
-      items:
-      - name: Troubleshoot deployment
-        href: sql-server/azure-arc/troubleshoot-deployment.md
-      - name: Troubleshoot best practices assessment
-        href: sql-server/azure-arc/troubleshoot-assessment.md
 
 
 - name: Big Data Clusters

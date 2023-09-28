@@ -906,12 +906,9 @@ For more information about service account configuration, see [Configure Windows
 
 ## <a id="Feature"></a> Feature parameters
 
-To install specific features, use the `/FEATURES` parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
+To install specific features, use the `/FEATURES` parameter and specify the parent feature or feature values in the following table.
 
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
-- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
-- [Editions and Supported Features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
-- [Editions and Supported Features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
 
 |Parent feature parameter|Feature parameter|Description|
 |:---|:---|:---|

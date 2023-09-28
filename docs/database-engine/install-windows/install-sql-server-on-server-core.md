@@ -108,6 +108,8 @@ See the following examples of the usage of feature parameters:
 | `/FEATURES=SQLEngine,AS,IS,Conn` | Installs the [!INCLUDE [ssDE](../../includes/ssde-md.md)], [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE [ssISnoversion](../../includes/ssisnoversion-md.md)], and the connectivity components. |
 | `/FEATURES=SQLENGINE,ADVANCEDANALYTICS /IACCEPTROPENLICENSETERMS` | Installs the [!INCLUDE [ssDE](../../includes/ssde-md.md)] and [!INCLUDE [rsql_productname_md](../../includes/rsql-productname-md.md)]. |
 
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
+
 ### Installation options
 
 The Setup supports the following installation options while installing [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] on a Server Core operating system:
@@ -309,7 +311,6 @@ If you accidentally close the command prompt, you can start a new command prompt
 
 - [Install SQL Server Using a Configuration File](./install-sql-server-using-a-configuration-file.md)
 - [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
 - [Install Server Core](/windows-server/get-started/getting-started-with-server-core)
 - [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)
 - [Failover Cluster Cmdlets in Windows PowerShell](/powershell/module/failoverclusters/)

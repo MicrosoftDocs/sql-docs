@@ -1,10 +1,10 @@
 ---
-title: "Install using graphical user interface"
+title: Install using graphical user interface
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pijocoder
-ms.date: 07/28/2023
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -331,7 +331,7 @@ To continue, select **Next**.
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
 > [!NOTE]  
-> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a License Key that supports the operating system maximum number of processors.
+> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when simultaneous multithreading (SMT) is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a License Key that supports the operating system maximum number of processors.
 
 > [!NOTE]  
 > [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
@@ -514,11 +514,11 @@ The **Ready to Install** page shows a tree view of the installation options that
 
    To continue, select **Install**. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
 
-####  <a id="installation-progress-2019"></a> 21. Installation Progress
+#### <a id="installation-progress-2019"></a> 21. Installation Progress
 
 During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-####  <a id="complete-2019"></a> 22. Complete
+#### <a id="complete-2019"></a> 22. Complete
 
 After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
 
@@ -560,7 +560,7 @@ To continue, select **Next**.
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
 > [!NOTE]  
-> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
+> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when simultaneous multithreading (SMT) is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
 
 > [!NOTE]  
 > [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
@@ -756,16 +756,12 @@ If you're instructed to restart the computer, do so now.
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
-- [Configure your new [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).
-
-- To reduce the attack surface of a system, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).
-
-## See also
-
+- [Database Engine Instances (SQL Server)](../configure-windows/database-engine-instances-sql-server.md)
+- [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)
 - [Validate a SQL Server Installation](validate-a-sql-server-installation.md)
 - [Repair a failed SQL Server installation](repair-a-failed-sql-server-installation.md)
 - [View and read SQL Server Setup log files](view-and-read-sql-server-setup-log-files.md)
 - [Upgrade to SQL Server by using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)
-- [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)
+- [Install SQL Server from the command prompt](install-sql-server-from-the-command-prompt.md)

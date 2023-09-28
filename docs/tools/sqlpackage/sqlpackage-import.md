@@ -28,7 +28,7 @@ SqlPackage /Action:Import {parameters} {properties}
 ### Examples
 
 ```bash
-# example import from Azure SQL Database using SQL authentication and a connection string
+# example import to Azure SQL Database using SQL authentication and a connection string
 SqlPackage /Action:Import /SourceFile:"C:\AdventureWorksLT.bacpac" \
     /TargetConnectionString:"Server=tcp:{yourserver}.database.windows.net,1433;Initial Catalog=AdventureWorksLT;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 

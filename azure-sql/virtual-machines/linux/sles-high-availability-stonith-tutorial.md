@@ -1078,7 +1078,7 @@ The following Transact-SQL commands are used in this step. Run these commands on
 CREATE DATABASE [db1]; -- creates a database named db1
 GO
 
-ALTER DATABASE [db1] SET RECOVERY FULL; -- set the database in full recovery mode
+ALTER DATABASE [db1] SET RECOVERY FULL; -- set the database in full recovery model
 GO
 
 BACKUP DATABASE [db1] -- backs up the database to disk

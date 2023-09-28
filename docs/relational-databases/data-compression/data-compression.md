@@ -51,11 +51,7 @@ When you use row and page compression, be aware the following considerations:
 
 - The details of data compression are subject to change without notice in service packs or subsequent releases.
 - Compression is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
-- Compression isn't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see:
-  - [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-  - [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
-  - [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
-  - [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- Compression isn't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see the list of editions and supported features at the end of this section.
 - Compression isn't available for system tables.
 - Compression can allow more rows to be stored on a page, but doesn't change the maximum row size of a table or index.
 - A table can't be enabled for compression when the maximum row size plus the compression overhead exceeds the maximum row size of 8060 bytes. For example, a table that has the columns `c1 CHAR(8000)` and `c2 CHAR(53)` can't be compressed because of the additional compression overhead. When the **vardecimal** storage format is used, the row-size check is performed when the format is enabled. For row and page compression, the row-size check is performed when the object is initially compressed, and then checked as each row is inserted or modified. Compression enforces the following two rules:
@@ -81,6 +77,8 @@ When you use row and page compression, be aware the following considerations:
 
   > [!NOTE]  
   > All supported versions of [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] support the **vardecimal** storage format; however, because data compression achieves the same goals, the **vardecimal** storage format is deprecated. [!INCLUDE [ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
 
 ## Columnstore and columnstore archive compression
 

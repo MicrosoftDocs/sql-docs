@@ -18,7 +18,9 @@ monikerRange: ">=sql-server-2016"
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) or [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
+This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance SQL Server, along with the shared components of if they are not already installed.
+
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
 
 To add features to an instance of SQL Server from the command prompt, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).
 
@@ -51,7 +53,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 7. On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**, and select the instance you would like to update.
 
-8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and [SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-2019.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
+8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
 
     The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisites that are not already installed during the installation step described later in this procedure.
 

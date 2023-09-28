@@ -53,7 +53,7 @@ For more information on which SQL Server editions support Python and R integrati
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-2019.md).
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md).
 ::: moniker-end
 
 ## Run setup

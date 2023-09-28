@@ -26,7 +26,7 @@ Returns the current size of the requested object and estimates the object size f
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can compress off-row XML data in columns using the `xml` data type, reducing storage and memory requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md). `sp_estimate_data_compression_savings` supports XML compression estimates.
 
 > [!NOTE]  
-> Compression and `sp_estimate_data_compression_savings` aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-2019.md).
+> Compression and `sp_estimate_data_compression_savings` aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 >  
 > The `sys.sp_estimate_data_compression_savings` system stored procedure is available in Azure SQL Database and Azure SQL Managed Instance.
 

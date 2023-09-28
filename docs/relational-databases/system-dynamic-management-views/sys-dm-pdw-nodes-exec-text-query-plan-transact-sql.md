@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_pdw_nodes_exec_text_query_plan (Transact-SQL)"
-description: Dynamic management view that returns the Showplan in text format for a TSQL batch or for a specific statement within the batch.
+description: Dynamic management view that returns the Showplan in text format for a Transact-SQL batch or for a specific statement within the batch.
 author: jacinda-eng
 ms.author: jacindaeng
 ms.reviewer: wiassaf

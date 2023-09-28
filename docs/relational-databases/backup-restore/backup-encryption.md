@@ -97,7 +97,7 @@ The account that does backup operations on an encrypted database requires specif
 1. [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) When you select a backup task, on the **Options** tab of the **Define Backup ()Task** page, you can select **Backup Encryption**, and specify the encryption algorithm and the certificate or key to use for the encryption.  
   
 ### Using Transact-SQL  
- Following is a sample TSQL statement to encrypt the backup file:  
+ Following is a sample Transact-SQL statement to encrypt the backup file:  
   
 ```sql  
 BACKUP DATABASE [MYTestDB]  

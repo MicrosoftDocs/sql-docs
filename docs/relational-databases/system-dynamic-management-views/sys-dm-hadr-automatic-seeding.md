@@ -22,7 +22,7 @@ dev_langs:
 # sys.dm_hadr_automatic_seeding (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Query sys.dm_hadr_automatic_seeding on the primary replica to check the status of the automatic seeding process for an [availability group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md). The view returns one row for each seeding process.
+Query sys.dm_hadr_automatic_seeding on the primary replica to check the status of the automatic seeding process for an [availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). The view returns one row for each seeding process.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

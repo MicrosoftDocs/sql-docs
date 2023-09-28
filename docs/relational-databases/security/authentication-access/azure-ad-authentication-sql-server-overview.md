@@ -41,6 +41,9 @@ For SQL Server to communicate with Azure, both SQL Server and the Windows or Lin
 
 To get started, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
 
+> [!Note]
+> If you are running SQL Server on an Azure VM, you don't need to register the VM with Azure Arc, you must instead register the VM with the [SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm). Once the VM is registered, see [Enable Azure AD authentication for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm) for more details.
+
 ## Authentication methods
 
 The following authentication methods are available when connecting to SQL Server using Azure AD authentication.

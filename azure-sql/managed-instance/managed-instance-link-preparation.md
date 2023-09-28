@@ -52,7 +52,7 @@ To prepare your SQL Server instance, you need to validate that:
 - You're on the minimum supported version.
 - You've enabled the availability groups feature.
 - You've added the proper trace flags at startup.
-- Your databases are in full recovery mode and backed up.
+- Your databases are in the full recovery model and backed up.
 
 You'll need to restart SQL Server for these changes to take effect.
 

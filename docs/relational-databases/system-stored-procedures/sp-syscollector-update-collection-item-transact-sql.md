@@ -113,7 +113,7 @@ USE msdb;
 GO
 
 EXEC sp_syscollector_update_collection_item
-    @name = N'My custom TSQL query collector item',
+    @name = N'My custom T-SQL query collector item',
     @frequency = 3000;
 GO
 ```
@@ -127,8 +127,8 @@ USE msdb;
 GO
 
 EXEC sp_syscollector_update_collection_item
-    @name = N'My custom TSQL query collector item',
-    @new_name = N'My modified TSQL item';
+    @name = N'My custom T-SQL query collector item',
+    @new_name = N'My modified T-SQL item';
 GO
 ```
 

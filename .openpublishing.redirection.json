@@ -41332,7 +41332,7 @@
     },
     {
       "source_path": "docs/sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md",
-      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect#evaluate-azure-arc-enabled-sql-server-on-an-azure-vm",
       "redirect_document_id": false
     },
     {

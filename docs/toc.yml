@@ -10406,16 +10406,15 @@ items:
 - name: Azure Arc
   items:
     - name: Azure Arc-enabled SQL Server
-      href: sql-server/azure-arc/index.yml
       items:
-      - name: Overview
-        items:
-        - name: What is Azure Arc-enabled SQL Server?
-          href: sql-server/azure-arc/overview.md
-        - name: Release notes
-          href: sql-server/azure-arc/release-notes.md
-        - name: Prerequisites
-          href: sql-server/azure-arc/prerequisites.md
+      - name: Documentation
+        href: sql-server/azure-arc/index.yml
+      - name: What is Azure Arc-enabled SQL Server?
+        href: sql-server/azure-arc/overview.md
+      - name: Release notes
+        href: sql-server/azure-arc/release-notes.md
+      - name: Prerequisites
+        href: sql-server/azure-arc/prerequisites.md
       - name: How-to guides
         items:
         - name: Connect SQL Server to Azure using Arc

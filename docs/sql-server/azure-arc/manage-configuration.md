@@ -281,7 +281,7 @@ resources
 //| summarize count()
 ```
 
-This query returns Azure Arc-enabled servers that have SQL Server discovered on them on the left column. In the right column, it shows a value if the extension is also installed. If the extension is not installed, the right column is empty. This query only applies to Windows servers.
+This query returns Azure Arc-enabled servers that have SQL Server, but the Arc SQL Server extension is not installed. This query only applies to Windows servers.
 
 ```kusto
 resources

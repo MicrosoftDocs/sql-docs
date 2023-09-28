@@ -203,7 +203,7 @@ Monitor the copying process by querying the [sys.databases](/sql/relational-data
 > If you decide to cancel the copying while it's in progress, execute the [DROP DATABASE](/sql/t-sql/statements/drop-database-transact-sql) statement on the new database.
 
 > [!IMPORTANT]  
-> If you need to create a copy with a substantially smaller service objective than the source, the target database may not have sufficient resources to complete the seeding process and it can cause the copy operation to fail. In this scenario use a geo-restore request to create a copy in a different server and/or a different region. For more information, ee [Recover an Azure SQL Database using database backups](recovery-using-backups.md#geo-restore).
+> If you need to create a copy with a substantially smaller service objective than the source, the target database may not have sufficient resources to complete the seeding process and it can cause the copy operation to fail. In this scenario use a geo-restore request to create a copy in a different server and/or a different region. For more information, see [Recover an Azure SQL Database using database backups](recovery-using-backups.md#geo-restore).
 
 ## Azure RBAC roles and permissions to manage database copy
 

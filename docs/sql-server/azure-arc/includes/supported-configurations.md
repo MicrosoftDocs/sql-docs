@@ -5,9 +5,9 @@ ms.date: 09/28/2023
 ms.topic: include
 ---
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] supports [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and later versions, running on one of the following versions of the Windows or Linux operating system:
+Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports [!INCLUDE [sssql11-md](../../../includes/sssql11-md.md)] and later versions, running on one of the following versions of the Windows or Linux operating system:
 
-- [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and later versions
+- [!INCLUDE [winserver2012-md](../../../includes/winserver2012-md.md)] and later versions
 - Ubuntu 20.04 (x64)
 - Red Hat Enterprise Linux (RHEL) 8 (x64)
 - SUSE Linux Enterprise Server (SLES) 15 (x64)

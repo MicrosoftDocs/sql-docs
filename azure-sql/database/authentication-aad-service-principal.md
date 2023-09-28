@@ -1,10 +1,10 @@
 ---
 title: Azure Active Directory service principal with Azure SQL
-description: Utilize AD Applications (service principals) support Azure AD user creation in Azure SQL Database and Azure SQL Managed Instance
+description: Utilize AD Applications (service principals) support Azure AD user creation in Azure SQL Database and Azure SQL Managed Instance.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 08/29/2022
+ms.date: 09/26/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -38,7 +38,7 @@ Azure AD users, groups, and applications can all be created on a database using 
 
 ## Functionality of Azure AD user creation using service principals
 
-Supporting this functionality is useful in Azure AD application automation processes where Azure AD objects are created and maintained in SQL Database without human interaction. Service principals can be an Azure AD admin for the SQL logical server, as part of a group or an individual user. The application can automate Azure AD object creation in SQL Database when executed as a system administrator, and does not require any additional SQL privileges. This allows for a full automation of a database user creation. This feature also supports Azure AD system-assigned managed identity and user-assigned managed identity  that can be created as users in SQL Database on behalf of service principals. For more information, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
+Supporting this functionality is useful in Azure AD application automation processes where Azure AD objects are created and maintained in SQL Database without human interaction. Service principals can be an Azure AD admin for the SQL logical server, as part of a group or an individual user. The application can automate Azure AD object creation in SQL Database when executed as a system administrator, and doesn't require any additional SQL privileges. This allows for a full automation of a database user creation. This feature also supports Azure AD system-assigned managed identity and user-assigned managed identity  that can be created as users in SQL Database on behalf of service principals. For more information, see [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview)
 
 ## Enable service principals to create Azure AD users
 
@@ -89,7 +89,7 @@ To enable an Azure AD object creation in SQL Database on behalf of an Azure AD a
       - For the above error, follow the steps to [Assign an identity to the Azure SQL logical server](authentication-aad-service-principal-tutorial.md#assign-an-identity-to-the-azure-sql-logical-server) and [Assign Directory Readers permission to the SQL logical server identity](authentication-aad-service-principal-tutorial.md#assign-directory-readers-permission-to-the-sql-logical-server-identity).
     - Setting the service principal (Azure AD application) as an Azure AD admin for SQL Database is supported using the Azure portal, [PowerShell](authentication-aad-configure.md?tabs=azure-powershell#powershell-for-sql-database-and-azure-synapse), [REST API](/rest/api/sql/2020-08-01-preview/servers), and [CLI](authentication-aad-configure.md?tabs=azure-cli#powershell-for-sql-database-and-azure-synapse) commands.
 - Using an Azure AD application with service principal from another Azure AD tenant will fail when accessing SQL Database or SQL Managed Instance created in a different tenant. A service principal assigned to this application must be from the same tenant as the SQL logical server or SQL Managed Instance.
-- [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is needed when using PowerShell to set up an individual Azure AD application as Azure AD admin for Azure SQL. Ensure you are upgraded to the latest module.
+- [Az.Sql 2.9.0](https://www.powershellgallery.com/packages/Az.Sql/2.9.0) module or higher is needed when using PowerShell to set up an individual Azure AD application as Azure AD admin for Azure SQL. Ensure you're upgraded to the latest module.
 
 ## Next steps
 

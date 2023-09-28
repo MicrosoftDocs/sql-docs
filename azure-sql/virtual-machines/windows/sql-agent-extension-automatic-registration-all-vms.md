@@ -57,11 +57,12 @@ To enable automatic registration of your SQL Server VM with the extension, you'l
 - An [Azure subscription](https://azure.microsoft.com/free/).
 - The client credentials used to register the virtual machines to exist in any of the following Azure roles: **Virtual Machine contributor**, **Contributor**, or **Owner**.
 
-Once automatic registration is enabled, SQL Server VMs are registered if they:
+Once automatic registration is enabled, SQL Server VMs are registered according to these conditions:
 
-- Are deployed using an Azure Resource Model to a [supported](/lifecycle/products/?terms=windows%20server) [Windows Server virtual machine](/azure/virtual-machines/windows/quick-create-portal).
-- Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
-- Are deployed to the public or Azure Government cloud. Other clouds aren't currently supported.
+- VMs are deployed using an Azure Resource Model to a [supported](/lifecycle/products/?terms=windows%20server) [Windows Server virtual machine](/azure/virtual-machines/windows/quick-create-portal).
+- They have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
+- VMs are deployed to the public or Azure Government cloud. Other clouds aren't currently supported.
+- VMs are running.
 
 > [!NOTE]  
 > Automatic registration is supported for Ubuntu Linux VMs in Azure.

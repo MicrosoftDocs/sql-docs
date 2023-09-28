@@ -1,10 +1,10 @@
 ---
 title: "Parse and Transform JSON Data with OPENJSON"
-description: "Parse and Transform JSON Data with OPENJSON (SQL Server)"
+description: "Parse and Transform JSON Data with OPENJSON."
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
-ms.date: 06/03/2020
+ms.date: 09/27/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,28 +13,32 @@ helpviewer_keywords:
   - "importing JSON"
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Parse and Transform JSON Data with OPENJSON (SQL Server)
+# Parse and Transform JSON Data with OPENJSON
+
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table. 
+The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table.
   
 The **OPENJSON** function takes a single JSON object or a collection of JSON objects and transforms them into one or more rows. By default, the **OPENJSON** function returns the following data:
--   From a JSON object, the function returns all the key/value pairs that it finds at the first level.
--   From a JSON array, the function returns all the elements of the array with their indexes.  
+
+- From a JSON object, the function returns all the key/value pairs that it finds at the first level.
+- From a JSON array, the function returns all the elements of the array with their indexes.  
 
 You can add an optional **WITH** clause to provide a schema that explicitly defines the structure of the output.  
   
 ## Option 1 - OPENJSON with the default output
+
 When you use the **OPENJSON** function without providing an explicit schema for the results - that is, without a **WITH** clause after **OPENJSON** - the function returns a table with the following three columns:
-1.  The **name** of the property in the input object (or the index of the element in the input array).
-2.  The **value** of the property or the array element.
-3.  The **type** (for example, string, number, boolean, array, or object).
+
+1. The **name** of the property in the input object (or the index of the element in the input array).
+2. The **value** of the property or the array element.
+3. The **type** (for example, string, number, boolean, array, or object).
 
 **OPENJSON** returns each property of the JSON object, or each element of the array, as a separate row.  
 
 Here's a quick example that uses **OPENJSON** with the default schema - that is, without the optional **WITH** clause - and returns one row for each property of the JSON object.  
 
-**Example**
+**Example**:
 
 ```sql
 DECLARE @json NVARCHAR(MAX)
@@ -45,7 +49,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**Results**
+**Results**:
   
 |key|value|type|  
 |---------|-----------|----------|  
@@ -66,7 +70,7 @@ When you specify a schema for the results by using the **WITH** clause of the **
 
 Here's a quick example that uses **OPENJSON** with a schema for the output that you explicitly specify in the **WITH** clause.  
   
-**Example**
+**Example**:
   
 ```sql  
 DECLARE @json NVARCHAR(MAX)
@@ -106,7 +110,7 @@ WITH (
  ) 
 ```  
   
-**Results**
+**Results**:
   
 |Number|Date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
@@ -115,9 +119,9 @@ WITH (
   
 This function returns and formats the elements of a JSON array.  
   
--   For each element in the JSON array, **OPENJSON** generates a new row in the output table. The two elements in the JSON array are converted into two rows in the returned table.  
+- For each element in the JSON array, **OPENJSON** generates a new row in the output table. The two elements in the JSON array are converted into two rows in the returned table.  
   
--   For each column, specified by using the `colName type json_path` syntax, **OPENJSON** converts the value found in each array element on the specified path to the specified type. In this example, values for the `Date` column are taken from each element on the path `$.Order.Date` and converted to datetime values.  
+- For each column, specified by using the `colName type json_path` syntax, **OPENJSON** converts the value found in each array element on the specified path to the specified type. In this example, values for the `Date` column are taken from each element on the path `$.Order.Date` and converted to datetime values.  
   
 ### More info about OPENJSON with an explicit schema
 
@@ -145,6 +149,6 @@ For a visual introduction to the built-in JSON support in SQL Server and Azure S
 
 - [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven-SQLServer2016/JSON-as-bridge-betwen-NoSQL-relational-worlds)
   
-## See Also  
- [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
+## See also  
+
+- [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

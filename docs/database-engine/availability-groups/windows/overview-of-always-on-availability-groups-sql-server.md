@@ -261,7 +261,6 @@ For more information, see [Automatic Page Repair](../../../sql-server/failover-c
     :::column-end:::
 :::row-end:::
 
-
 ## Related content
 
 - [Prerequisites, Restrictions, and Recommendations for availability groups](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)

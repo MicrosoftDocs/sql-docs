@@ -233,12 +233,11 @@ This release introduces several forward compatibility scenarios for DAC packages
   
 -   All DAC packages created by previous versions of DACFx can be consumed by this release.  
   
-## See Also
+## Related content
+
 - [Install SQL Server 2012 Servicing Updates](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
-- [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185)
 - [Install SQL Server 2012 Servicing Updates](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
-- [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185) 
-- [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)  
-- [Features Supported by the Editions of SQL Server 2014](./editions-and-components-of-sql-server-2016.md)  
+- [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)
+- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

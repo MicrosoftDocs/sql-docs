@@ -20,7 +20,7 @@ This dialog box allows you to create a full-text index, for full-text searches o
 To create a full-text index, you must first create a full-text catalog for the database using an outside tool, such as SQL Server Management Studio or Enterprise Manager.
 
 > [!NOTE]  
-> Full-text index functionality is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Full-text index functionality is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ## Options
 

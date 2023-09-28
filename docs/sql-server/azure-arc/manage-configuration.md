@@ -51,6 +51,8 @@ az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
 
+
+
 ---
 
 ## License types
@@ -149,6 +151,14 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 
 
 
+
+
+
+
+
+
+
+
 ### [Azure portal](#tab/azure)
 
 There are two ways to configure the SQL Server host in Azure portal.
@@ -211,6 +221,42 @@ New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupNam
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### [Azure CLI](#tab/az)
 
 The following command will set the license type to "PAYG":
@@ -223,7 +269,18 @@ az connectedmachine extension update --machine-name "simple-vm" -g "<resource-gr
 > - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
 
+
+
+
 ---
+
+
+
+
+
+
+
+
 
 
 
@@ -274,6 +331,35 @@ resources
     iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
     iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
 
+```
+
+#### List Arc-enabled servers with SQL Server
+
+This query identifies Azure Arc-enabled servers with SQL Server discovered on them.
+
+
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines"
+| where properties.detectedProperties.mssqldiscovered == "true"
+//| summarize count()
+```
+
+This query returns Azure Arc-enabled servers that have SQL Server discovered on them on the left column. In the right column, it shows a value if the extension is also installed. If the extension is not installed, the right column is empty. This query only applies to Windows servers.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines"
+| where properties.detectedProperties.mssqldiscovered == "true"
+| project machineIdHasSQLServerDiscovered = id
+| join kind=leftouter (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"
+    | where properties.type == "WindowsAgent.SqlServer"
+    | project machineIdHasSQLServerExtensionInstalled = substring(id, 0, indexof(id, "/extensions/WindowsAgent.SqlServer")))
+on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
+| order by machineIdHasSQLServerExtensionInstalled desc
 ```
 
 For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).

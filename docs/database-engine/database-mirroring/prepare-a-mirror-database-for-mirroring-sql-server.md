@@ -42,7 +42,7 @@ helpviewer_keywords:
   
 -   The principal and mirror server instances must be running on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. While it is possible for the mirror server to have a higher version of SQL Server, this configuration is only recommended during a carefully planned upgrade process. In such a configuration, you run the risk of an automatic failover, in which data movement is automatically suspended because data cannot move to a lower version of SQL Server. For more information, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   The principal and mirror server instances must be running on the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about support for database mirroring in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Editions and Supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+-   The principal and mirror server instances must be running on the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about support for database mirroring in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
   
 -   The database must use the full recovery model.  
   
@@ -58,7 +58,7 @@ helpviewer_keywords:
   
 -   You cannot mirror the **master**, **msdb**, **temp**, or **model** system databases.  
   
--   You cannot mirror a database that belongs to an [Always On availability group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   You cannot mirror a database that belongs to an [Always On availability group](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   

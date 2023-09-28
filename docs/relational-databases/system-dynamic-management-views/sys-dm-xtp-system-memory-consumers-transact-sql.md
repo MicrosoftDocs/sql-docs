@@ -3,7 +3,7 @@ title: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
 description: Reports system level memory consumers for In-Memory OLTP.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "02/27/2023"
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -21,20 +21,20 @@ dev_langs:
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Reports system level memory consumers for [!INCLUDE[inmemory](../../includes/inmemory-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
+Reports system level memory consumers for [!INCLUDE [inmemory](../../includes/inmemory-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from the internal pool (if the allocation is in the context of a system thread).
 
 ```sql
 SELECT *
 FROM sys.dm_xtp_system_memory_consumers;
 ```
 
-For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/overview-and-usage-scenarios.md).
+For more information, see [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md).
 
 | Column name | Type | Description |
 | --- | --- | --- |
 | memory_consumer_id | **bigint** | Internal ID for memory consumer. |
-| memory_consumer_type | **int** | An integer that represents the type of the memory consumer with one of the following values:<br /><br />0 - Should not be displayed. Aggregates memory usage of two or more consumers.<br /><br />1 - LOOKASIDE: Tracks memory consumption for a system lookaside.<br /><br />2 - VARHEAP: Tracks memory consumption for a variable-length heap.<br /><br />4 - IO page pool: Tracks memory consumption for a system page pool used for IO operations. |
-| memory_consumer_type_desc | **nvarchar(16)** | The description of the type of memory consumer:<br /><br />0 - Should not be displayed<br /><br />1 - LOOKASIDE<br /><br />2 - VARHEAP<br /><br />4 - PGPOOL |
+| memory_consumer_type | **int** | An integer that represents the type of the memory consumer with one of the following values:<br /><br />0 - Shouldn't be displayed. Aggregates memory usage of two or more consumers.<br /><br />1 - LOOKASIDE: Tracks memory consumption for a system lookaside.<br /><br />2 - VARHEAP: Tracks memory consumption for a variable-length heap.<br /><br />4 - IO page pool: Tracks memory consumption for a system page pool used for IO operations. |
+| memory_consumer_type_desc | **nvarchar(16)** | The description of the type of memory consumer:<br /><br />0 - Shouldn't be displayed<br /><br />1 - LOOKASIDE<br /><br />2 - VARHEAP<br /><br />4 - PGPOOL |
 | memory_consumer_desc | **nvarchar(64)** | Description of the memory consumer instance:<br /><br />VARHEAP:<br />System heap. General purpose. Currently only used to allocate garbage collection work items.<br />-OR-<br />Lookaside heap. Used by lookasides when the number of items contained in the lookaside list reaches a predetermined cap (usually around 5,000 items).<br /><br />PGPOOL: For IO system pools there are three different sizes: System 4K page pool, System 64-K page pool, and System 256-K page pool. |
 | lookaside_id | **bigint** | The ID of the thread-local, lookaside memory provider. |
 | pagepool_id | **bigint** | The ID of the thread-local, page pool memory provider. |
@@ -57,9 +57,9 @@ Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 
-In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], this DMV has additional columns specific to memory-optimized `tempdb` metadata memory improvements.
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], this DMV has additional columns specific to Memory-optimized TempDB metadata memory improvements.
 
-## Example
+## Examples
 
 This example outputs the system memory consumers for the SQL Server instance:
 
@@ -72,7 +72,7 @@ SELECT memory_consumer_type_desc,
 FROM sys.dm_xtp_system_memory_consumers;
 ```
 
- The output shows all memory consumers at system level. For example, there are consumers for transaction look aside.
+The output shows all memory consumers at system level. For example, there are consumers for transaction look aside.
 
 ```output
 memory_consumer_type_desc                memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count
@@ -114,13 +114,10 @@ total_allocated_MB   total_used_MB
 2                    2
 ```
 
-## See also
+## Related content
 
 - [Memory-optimized table dynamic management views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 - [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory)
-
-## Next steps
-
 - [sys.sp_xtp_force_gc (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md)
 - [sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)
 - [In-Memory OLTP (In-Memory Optimization)](../in-memory-oltp/overview-and-usage-scenarios.md)

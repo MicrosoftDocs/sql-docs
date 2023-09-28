@@ -91,7 +91,7 @@ helpviewer_keywords:
   
 6.  The System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, select **Next** to continue. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
-7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md).  
   
 8.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Select **Next** to continue. To end Setup, select **Cancel**.  
   
@@ -245,7 +245,7 @@ helpviewer_keywords:
   
      To continue, select **Next**.  
   
-8.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+8.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md).  
   
     > [!NOTE]  
     >  You must specify the same product key on all the nodes that you are preparing for the same failover cluster instance.  

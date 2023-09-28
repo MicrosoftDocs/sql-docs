@@ -1,16 +1,15 @@
 ---
 title: Use Visual Studio Code to connect and query
 titleSuffix: Azure SQL Database & SQL Managed Instance
-description: Learn how to connect to Azure SQL Database or SQL Managed Instance on Azure by using Visual Studio Code. Then, run Transact-SQL (T-SQL) statements to query and edit data.
+description: Learn how to connect to Azure SQL Database or Azure SQL Managed Instance by using Visual Studio Code. Then, run Transact-SQL (T-SQL) statements to query and edit data.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 08/29/2023
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - sqldbrb=2
   - mode-ui
 keywords: connect to sql database
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
@@ -19,7 +18,7 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 [!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-[Visual Studio Code](https://code.visualstudio.com/docs) is a graphical code editor for Linux, macOS, and Windows. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying a SQL Server instance, Azure SQL Database, an Azure SQL Managed Instance, and a database in Azure Synapse Analytics. In this quickstart, you'll use Visual Studio Code to connect to Azure SQL Database or Azure SQL Managed Instance and then run Transact-SQL statements to query, insert, update, and delete data.
+[Visual Studio Code](https://code.visualstudio.com/docs) is a graphical code editor for Linux, macOS, and Windows. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying SQL Server, Azure SQL Database, Azure SQL Managed Instance, and a database in Azure Synapse Analytics. In this quickstart, you use Visual Studio Code to connect to Azure SQL Database or Azure SQL Managed Instance and then run Transact-SQL statements to query, insert, update, and delete data.
 
 ## Prerequisites
 
@@ -40,10 +39,19 @@ monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 
 ## Install Visual Studio Code
 
-Make sure you have installed the latest [Visual Studio Code](https://code.visualstudio.com/Download) and loaded the [mssql extension](https://aka.ms/mssql-marketplace). For guidance on installing the mssql extension, see [Install Visual Studio Code](/sql/linux/sql-server-linux-develop-use-vscode#install-and-start-visual-studio-code) and [mssql for Visual Studio Code
-](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+Make sure you have installed the latest [Visual Studio Code](https://code.visualstudio.com/Download). For installation guidance, see [Install Visual Studio Code](/sql/linux/sql-server-linux-develop-use-vscode#install-and-start-visual-studio-code).
 
 ## Configure Visual Studio Code
+
+### Windows
+
+Load the [mssql extension](https://aka.ms/mssql-marketplace) by following these steps:
+
+1. Open Visual Studio Code.
+1. Open the Extensions pane (or **Ctrl + Shift + X**).
+1. Search for `sql` and then install the **SQL Server (mssql)** extension.
+
+For additional installation guidance, see [mssql for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
 ### macOS
 
@@ -60,15 +68,17 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ### Linux (Ubuntu)
 
-No special configuration needed.
+Load the [mssql extension](https://aka.ms/mssql-marketplace) by following these steps:
 
-### Windows
+1. Open Visual Studio Code.
+1. Open the Extensions pane (or **Ctrl + Shift + X**).
+1. Search for `sql` and then install the **SQL Server (mssql)** extension.
 
-No special configuration needed.
+For additional installation guidance, see [mssql for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
 ## Get server connection information
 
-Get the connection information you need to connect to Azure SQL Database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
+Get the connection information you need to connect to Azure SQL Database. You need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -82,7 +92,7 @@ In Visual Studio Code, set the language mode to **SQL**  to enable mssql command
 
 1. Open a new Visual Studio Code window.
 
-1. Press **Ctrl**+**N**. A new plain text file opens.
+1. Press **Ctrl + N**. A new plain text file opens.
 
 1. Select **Plain Text** in the status bar's lower right-hand corner.
 
@@ -95,13 +105,13 @@ Use Visual Studio Code to establish a connection to your server.
 > [!IMPORTANT]  
 > Before continuing, make sure that you have your server and sign-in information ready. Once you begin entering the connection profile information, if you change your focus from Visual Studio Code, you have to restart creating the profile.
 
-1. In Visual Studio Code, press **Ctrl+Shift+P** (or **F1**) to open the Command Palette.
+1. In Visual Studio Code, press **Ctrl + Shift + P** (or **F1**) to open the Command Palette.
 
-1. Select **MS SQL:Connect** and choose **Enter**.
+1. Type `connect` and then choose **MS SQL:Connect**.
 
-1. Select **Create Connection Profile**.
+1. Select **+ Create Connection Profile**.
 
-1. Follow the prompts to specify the new profile's connection properties. After specifying each value, choose **Enter** to continue.
+1. Follow the prompts to specify the new profile's connection properties. After specifying each value, press **Enter** to continue.
 
    | Property       | Suggested value | Description  |
    | --- | --- | --- |
@@ -129,9 +139,9 @@ Run the following [SELECT](/sql/t-sql/queries/select-transact-sql) Transact-SQL 
        ON pc.ProductCategoryId = p.ProductCategoryId;
    ```
 
-1. Press **Ctrl**+**Shift**+**E** to run the query and display results from the `Product` and `ProductCategory` tables.
+1. Press **Ctrl + Shift + E** to run the query and display results from the `Product` and `ProductCategory` tables.
 
-    :::image type="content" source="./media/connect-query-vscode/query.png" alt-text="Screenshot of query to retrieve data from 2 tables.":::
+    :::image type="content" source="./media/connect-query-vscode/query.png" alt-text="Screenshot of query to retrieve data from 2 tables." lightbox="./media/connect-query-vscode/query.png":::
 
 ## Insert data
 
@@ -160,7 +170,7 @@ Run the following [INSERT](/sql/t-sql/statements/insert-transact-sql) Transact-S
     );
    ```
 
-1. Press **Ctrl**+**Shift**+**E** to insert a new row in the `Product` table.
+1. Press **Ctrl + Shift + E** to insert a new row in the `Product` table.
 
 ## Update data
 
@@ -174,7 +184,7 @@ Run the following [UPDATE](/sql/t-sql/queries/update-transact-sql) Transact-SQL 
    WHERE Name = 'myNewProduct';
    ```
 
-1. Press **Ctrl**+**Shift**+**E** to update the specified row in the `Product` table.
+1. Press **Ctrl + Shift + E** to update the specified row in the `Product` table.
 
 ## Delete data
 
@@ -187,7 +197,7 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql) Transact-S
    WHERE Name = 'myNewProduct';
    ```
 
-1. Press **Ctrl**+**Shift**+**E** to delete the specified row in the `Product` table.
+1. Press **Ctrl + Shift + E** to delete the specified row in the `Product` table.
 
 ## Next steps
 

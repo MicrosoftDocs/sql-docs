@@ -9,6 +9,7 @@ ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
 ---
+
 # AdventureWorks sample databases
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

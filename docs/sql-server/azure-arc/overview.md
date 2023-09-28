@@ -107,11 +107,19 @@ The following diagram illustrates the architecture of Azure Arc-enabled SQL Serv
 | [Automated backups](point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 
+## Supported SQL Server versions and operating systems
+
+[!INCLUDE [supported-configurations](includes/supported-configurations.md)]
+
+## Unsupported configurations
+
+[!INCLUDE [unsupported-configurations](includes/unsupported-configurations.md)]
+
 ## Supported Azure regions
 
 [!INCLUDE [azure-arc-data-regions](includes/azure-arc-data-regions.md)]
 
-## Next steps
+## Related content
 
 - [Learn about the prerequisites to connect your SQL Server to Azure Arc](prerequisites.md)
 - [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)

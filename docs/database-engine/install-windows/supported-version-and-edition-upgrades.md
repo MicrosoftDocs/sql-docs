@@ -164,9 +164,8 @@ Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-m
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] Evaluation to [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] Standard.  
   
-## See Also  
+## Related content
 
-[Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)     
-[Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
-[Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
+- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [SQL Server 2022: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2022.md)
+- [Upgrade SQL Server](upgrade-sql-server.md)

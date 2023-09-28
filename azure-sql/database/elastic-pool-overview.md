@@ -49,7 +49,7 @@ More resources can be added to an existing pool with minimum downtime. If extra 
 > [!NOTE]  
 > When you move databases into or out of an elastic pool, there's no downtime except for a brief period (on the order of seconds) when database connections are dropped at the end of the operation.
 
-## When should you consider a SQL Database elastic pool?
+## When to consider a SQL Database elastic pool?
 
 Pools are well suited for a large number of databases with specific utilization patterns. This pattern is characterized by low average utilization with infrequent utilization spikes for a given database. Conversely, multiple databases with persistent medium-high utilization shouldn't be placed in the same elastic pool.
 

@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server for PHP applications. The drivers are PHP extensions that allow the reading and writing of SQL Server data from within PHP scripts. The drivers provide interfaces for accessing data in Azure SQL Database and in all editions of SQL Server 2005 and later (including Express Editions). The drivers make use of PHP features, including PHP streams, to read and write large objects.  
   
-## Getting Started
+## Getting started
 
 - [Step 1: Configure development environment for PHP development](step-1-configure-development-environment-for-php-development.md)  
 - [Step 2: Create a database for PHP development](step-2-create-a-sql-database-for-php-development.md)  

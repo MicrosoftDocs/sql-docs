@@ -15,10 +15,7 @@ ms.topic: conceptual
 
 This article explains how to connect your SQL Server instance to Azure Arc.
 
-Before you proceed:
-
-- Verify your server meets [prerequisites for the connected machine agent](/azure/azure-arc/servers/prerequisites).
-- Verify your network and firewall meets the [network requirements for connected machine agent](/azure/azure-arc/servers/network-requirements).
+Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
 
 ## Steps
 

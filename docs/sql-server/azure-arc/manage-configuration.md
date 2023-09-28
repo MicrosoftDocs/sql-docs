@@ -50,9 +50,6 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
-
-
-
 ---
 
 ## License types
@@ -149,16 +146,6 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 > [!TIP]  
 > Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
 
-
-
-
-
-
-
-
-
-
-
 ### [Azure portal](#tab/azure)
 
 There are two ways to configure the SQL Server host in Azure portal.
@@ -171,9 +158,9 @@ There are two ways to configure the SQL Server host in Azure portal.
 
 * Open the Arc-enabled SQL Server overview page, and select **Properties**. Under **Host configuration properties**, select the setting you need to modify:
 
-   * **License type**
-   * **ESU Status**
-   * **Automated patching**
+  * **License type**
+  * **ESU Status**
+  * **Automated patching**
 
    :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration."  lightbox="media/billing/sql-server-instance-configuration.png" :::
 
@@ -213,49 +200,11 @@ $Settings = @{
 // Command stays the same as before, only settings is changed above:
 New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
-> [!IMPORTANT]  
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> [!IMPORTANT]
+>  
+> * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+> * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details.
 
 ### [Azure CLI](#tab/az)
 
@@ -264,25 +213,13 @@ The following command will set the license type to "PAYG":
 ```azurecli
 az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
-> [!IMPORTANT]  
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
-
-
-
+> [!IMPORTANT]
+>
+> * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+> * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
 ---
-
-
-
-
-
-
-
-
-
-
 
 ## Query SQL Server configuration
 
@@ -337,8 +274,6 @@ resources
 
 This query identifies Azure Arc-enabled servers with SQL Server discovered on them.
 
-
-
 ```kusto
 resources
 | where type == "microsoft.hybridcompute/machines"
@@ -353,13 +288,15 @@ resources
 | where type == "microsoft.hybridcompute/machines"
 | where properties.detectedProperties.mssqldiscovered == "true"
 | project machineIdHasSQLServerDiscovered = id
-| join kind=leftouter (
+| join kind= leftouter (
     resources
     | where type == "microsoft.hybridcompute/machines/extensions"
     | where properties.type == "WindowsAgent.SqlServer"
     | project machineIdHasSQLServerExtensionInstalled = substring(id, 0, indexof(id, "/extensions/WindowsAgent.SqlServer")))
 on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
-| order by machineIdHasSQLServerExtensionInstalled desc
+| where isempty(machineIdHasSQLServerExtensionInstalled)
+| project machineIdHasSQLServerDiscoveredButNotTheExtension = machineIdHasSQLServerDiscovered
+
 ```
 
 For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).

@@ -153,7 +153,7 @@ Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber
     Run the [Set-AzureAdKerberosServer PowerShell cmdlet](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises#create-a-kerberos-server-object) to add the Trusted Domain Object. Be sure to include `-SetupCloudTrust` parameter. If there's no Azure AD service account, this command creates a new Azure AD service account. This command will only create the requested Trusted Domain object if there's an Azure AD service account.
 
     ```powershell
-    Set-AzureADKerberosServer -Domain $domain -CloudCredential $cloudCred -DomainCredential $domainCred -SetupCloudTrust
+    Set-AzureADKerberosServer -Domain $domain -UserPrincipalName $cloudUserName -DomainCredential $domainCred -SetupCloudTrust
     ```
 
     > [!NOTE]  

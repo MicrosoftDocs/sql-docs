@@ -60,7 +60,7 @@ To enable automatic registration of your SQL Server VM with the extension, you'l
 Once automatic registration is enabled, SQL Server VMs are registered if they:
 
 - Are deployed using an Azure Resource Model to a [supported](/lifecycle/products/?terms=windows%20server) [Windows Server virtual machine](/azure/virtual-machines/windows/quick-create-portal).
-- Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
+- Have [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed and the Azure VM is running.
 - Are deployed to the public or Azure Government cloud. Other clouds aren't currently supported.
 
 > [!NOTE]  

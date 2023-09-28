@@ -41331,11 +41331,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/sql-server/azure-arc/prerequisites.md",
-      "redirect_url": "/azure/azure-arc/servers/prerequisites",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md",
       "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
       "redirect_document_id": false

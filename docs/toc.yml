@@ -10403,12 +10403,12 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-- name: Azure Arc-enabled SQL Server
+- name: Azure Arc-enabled SQL
   items:
-    - name: Azure Arc-enabled data services >
-      href: /azure/azure-arc/data/overview
     - name: Azure Arc-enabled SQL Server
       href: sql-server/azure-arc/index.yml
+    - name: Azure Arc-enabled data services >
+      href: /azure/azure-arc/data/overview
     - name: Overview
       items:
       - name: What is Azure Arc-enabled SQL Server?

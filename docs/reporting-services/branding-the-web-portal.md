@@ -3,7 +3,7 @@ title: "Branding the web portal"
 description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 9/29/2023
+ms.date: 11/23/2021
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual

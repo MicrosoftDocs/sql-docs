@@ -19,9 +19,14 @@ ms.custom:
 
 Azure SQL Database provides several methods for creating a copy of an existing [database](single-database-overview.md) on either the same server or a different server. You can copy a database by using Azure portal, PowerShell, Azure CLI, or Transact-SQL.
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Overview
 
 A database copy is a transactionally consistent snapshot of the source database as of a point in time after the copy request is initiated. You can select the same server or a different server for the copy. Also you can choose to keep the backup redundancy and compute size of the source database, or use a different backup storage redundancy and/or compute size within the same service tier. After the copy is complete, it becomes a fully functional, independent database. The logins, users, and permissions in the copied database are managed independently from the source database. The copy is created using the geo-replication technology. Once replica seeding is complete, the geo-replication link is automatically terminated. All the requirements for using geo-replication apply to the database copy operation. See [Active geo-replication overview](active-geo-replication-overview.md) for details.
+
+> [!NOTE]  
+> The [Azure portal](https://portal.azure.com), PowerShell, and the Azure CLI don't support database copy to a different subscription.
 
 ## Database copy for Azure SQL Hyperscale
 
@@ -185,12 +190,10 @@ CREATE DATABASE new_database_name
 AS COPY OF source_server_name.source_database_name;
 ```
 
-> [!NOTE]  
-> The [Azure portal](https://portal.azure.com), PowerShell, and the Azure CLI don't support database copy to a different subscription.
-
 > [!TIP]  
 > Database copy using T-SQL supports copying a database from a subscription in a different Azure tenant. This is only supported when using a SQL authentication login to log in to the target server.
-> Creating a database copy on a logical server in a different Azure tenant isn't supported when [Azure Active Directory](https://techcommunity.microsoft.com/t5/azure-sql/support-for-azure-ad-user-creation-on-behalf-of-azure-ad/ba-p/2346849) auth is active (enabled) on either source or target logical server.
+> Creating a database copy on a logical server in a different Azure tenant is not supported when [Microsoft Entra](https://techcommunity.microsoft.com/t5/azure-sql/support-for-azure-ad-user-creation-on-behalf-of-azure-ad/ba-p/2346849) authentication is active (enabled) on either source or target logical server.
+
 
 ## Monitor the progress of the copying operation
 

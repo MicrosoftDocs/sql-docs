@@ -14,14 +14,14 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Managed identities for transparent data encryption with customer-managed key
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
-Managed identities in Azure Active Directory (Azure AD) provide Azure services with an automatically managed identity in Azure AD. This identity can be used to authenticate to any service that supports Azure AD authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without any credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
+Microsoft Entra ID [formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name) provides an automatically managed identity to authenticate to any Azure service that supports Microsoft Entra authentication, such as [Azure Key Vault](/azure/key-vault/general/overview), without exposing credentials in the code. For more information, see [Managed identity types](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) in Azure.
 
 Managed Identities can be of two types:
 
 - **System-assigned**
 - **User-assigned**
 
-For more information, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
+For more information, see [Managed identities in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
 For [TDE with customer-managed key (CMK)](transparent-data-encryption-byok-overview.md) in Azure SQL, a managed identity on the server is used for providing access rights to the server on the key vault. For instance, the system-assigned managed identity of the server should be provided with [key vault permissions](transparent-data-encryption-byok-overview.md#how-customer-managed-tde-works) prior to enabling TDE with CMK on the server. 
 

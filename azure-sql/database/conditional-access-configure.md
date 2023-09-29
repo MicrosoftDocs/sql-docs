@@ -24,15 +24,15 @@ The following steps show how to configure Azure SQL Database, Azure SQL Managed 
 
 ## Prerequisites
 
-- You must configure Azure SQL Database, Azure SQL Managed Instance, or dedicated SQL pool in Azure Synapse to support Azure Active Directory (Azure AD) authentication. For specific steps, see [Configure and manage Azure Active Directory authentication with SQL Database or Azure Synapse](authentication-aad-configure.md).  
-- When Multi-Factor Authentication is enabled, you must connect with a supported tool, such as the latest SQL Server Management Studio (SSMS). For more information, see [Using Azure Active Directory Multi-Factor Authentication](./authentication-mfa-ssms-overview.md).
+- You must configure Azure SQL Database, Azure SQL Managed Instance, or dedicated SQL pool in Azure Synapse to support Microsoft Entra authentication. For specific steps, see [Configure and manage Microsoft Entra authentication with SQL Database or Azure Synapse](authentication-aad-configure.md).  
+- When multifactor authentication is enabled, you must connect with a supported tool, such as the latest SQL Server Management Studio (SSMS). For more information, see [Using Microsoft Entra multifactor authentication](./authentication-mfa-ssms-overview.md).
 
 ## Configure conditional access
 
 > [!NOTE]
 > The below example uses Azure SQL Database, but you should select the appropriate product that you want to configure conditional access.
 
-1. Sign in to the Azure portal, select **Azure Active Directory**, and then select **Conditional Access**. For more information, see [Azure Active Directory Conditional Access technical reference](/azure/active-directory/conditional-access/concept-conditional-access-conditions).  
+1. Sign in to the Azure portal, select **Microsoft Entra ID**, and then select **Conditional Access**. For more information, see [Microsoft Entra Conditional Access technical reference](/azure/active-directory/conditional-access/concept-conditional-access-conditions).  
    ![Conditional Access blade](./media/conditional-access-configure/conditional-access-blade.png)
 
 2. In the **Conditional Access-Policies** blade, click **New policy**, provide a name, and then click **Configure rules**.  
@@ -42,18 +42,18 @@ The following steps show how to configure Azure SQL Database, Azure SQL Managed 
 4. Select **Cloud apps**, click **Select apps**. You see all apps available for Conditional Access. Select **Azure SQL Database**, at the bottom click **Select**, and then click **Done**.  
    ![select SQL Database](./media/conditional-access-configure/select-sql-database.png)  
    If you can't find **Azure SQL Database** listed in the following third screenshot, complete the following steps:
-   - Connect to your database in Azure SQL Database by using SSMS with an Azure AD admin account.  
+   - Connect to your database in Azure SQL Database by using SSMS with a Microsoft Entra admin account.  
    - Execute `CREATE USER [user@yourtenant.com] FROM EXTERNAL PROVIDER`.  
-   - Sign into Azure AD and verify that Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse are listed in the applications in your Azure AD instance.  
+   - Sign into Microsoft Entra ID and verify that Azure SQL Database, Azure SQL Managed Instance, or Azure Synapse are listed in the applications in your Microsoft Entra instance.  
 
-5. Select **Access controls**, select **Grant**, and then check the policy you want to apply. For this example, we select **Require multi-factor authentication**.  
+5. Select **Access controls**, select **Grant**, and then check the policy you want to apply. For this example, we select **Require multifactor authentication**.  
    ![select grant access](./media/conditional-access-configure/grant-access.png)  
 
 ## Summary
 
-The selected application (Azure SQL Database) using Azure AD Premium, now enforces the selected Conditional Access policy, **Required multi-factor authentication.**
+The selected application (Azure SQL Database) using Microsoft Entra ID P1 or P2, now enforces the selected Conditional Access policy, **Required multifactor authentication.**
 
-For questions about Azure SQL Database and Azure Synapse regarding multi-factor authentication, contact <MFAforSQLDB@microsoft.com>.  
+For questions about Azure SQL Database and Azure Synapse regarding multifactor authentication, contact <MFAforSQLDB@microsoft.com>.  
 
 ## Next steps  
 

@@ -201,9 +201,11 @@ SQL Database helps secure your data by providing encryption. For data in motion,
 
 [Data discovery and classification](data-discovery-and-classification-overview.md) provides capabilities built into Azure SQL Database for discovering, classifying, labeling, and protecting the sensitive data in your databases. It provides visibility into your database classification state, and tracks the access to sensitive data within the database and beyond its borders.
 
-### Azure Active Directory integration and multi-factor authentication
+<a name='azure-active-directory-integration-and-multi-factor-authentication'></a>
 
-SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Azure Active Directory integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure Active Directory supports [multi-factor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
+### Microsoft Entra integration and multifactor authentication
+
+SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Microsoft Entra integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports [multifactor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
 
 ## Easy-to-use tools
 

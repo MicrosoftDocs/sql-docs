@@ -138,7 +138,7 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an Azure Active Directory identity to a server. (used to grant access to Key Vault)|
+|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a server.|
 |[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a server. |
 |[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a server.|
@@ -149,6 +149,8 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 |[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables TDE for a database.|
 |[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
 |[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/listbyconfiguration)|Gets the encryption result for a database.|
+
+---
 
 ## Next steps
 

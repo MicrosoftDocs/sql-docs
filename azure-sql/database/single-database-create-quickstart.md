@@ -18,6 +18,7 @@ ms.custom:
 In this quickstart, you create a [single database](single-database-overview.md) in Azure SQL Database using either the Azure portal, a PowerShell script, or an Azure CLI script. You then query the database using **Query editor** in the Azure portal.
 
 [!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -55,11 +56,11 @@ To create a single database in the Azure portal, this quickstart starts at the A
 
    The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings.
 
-   - Choosing the **development** workload environment sets a few options, including:
-      - **Backup storage redundancy** option is locally-redundant storage. Locally-redundant storage incurs less cost and is appropriate for pre-production environments that don't require the redundance of zone- or geo-replicated storage.
-      - **Compute + storage** is General Purpose, Serverless with a single vCore. By default, there's a [one-hour auto-pause delay](serverless-tier-overview.md?view=azuresql&preserve-view=true&tabs=general-purpose#performance-configuration).
-   - Choosing the **Production** workload environment sets:
-      - **Backup storage redundancy** is geo-redundant storage, the default.
+   - Choosing the **development** workload environment sets a few options, including: 
+      - **Backup storage redundancy** option is locally redundant storage. Locally redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+      - **Compute + storage** is General Purpose, Serverless with a single vCore. By default, there is a [one-hour auto-pause delay](serverless-tier-overview.md?view=azuresql&preserve-view=true&tabs=general-purpose#performance-configuration).
+   - Choosing the **Production** workload environment sets: 
+      - **Backup storage redundancy** is geo-redundant storage, the default. 
       - **Compute + storage** is General Purpose, Provisioned with 2 vCores and 32 GB of storage. This can be further modified in the next step.
 
 1. Under **Compute + storage**, select **Configure database**.
@@ -292,7 +293,7 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. In the portal, search for and select **SQL databases**, and then select your database from the list.
 1. On the page for your database, select **Query editor (preview)** in the left menu.
-1. Enter your **SQL server authentication** server admin login information or use **Azure Active Directory authentication**.
+1. Enter your **SQL authentication** server admin login information or use **Microsoft Entra authentication**.
 
    :::image type="content" source="media/single-database-create-quickstart/query-editor-login.png" alt-text="A screenshot of the Query editor login page in the Azure portal.":::
 

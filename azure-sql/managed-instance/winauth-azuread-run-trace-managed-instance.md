@@ -1,26 +1,28 @@
 ---
-title: Run a trace against Azure SQL Managed Instance using Windows Authentication for Azure Active Directory principals
-description: Learn how to run a trace against Azure SQL Managed Instance using Authentication for Azure Active Directory principals
+title: Run a trace against Azure SQL Managed Instance using Windows Authentication for Microsoft Entra principals
+description: Learn how to run a trace against Azure SQL Managed Instance using Authentication for Microsoft Entra principals
 author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: mathoma, bonova, urmilano, wiassaf
-ms.date: 03/01/2022
+ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.topic: how-to
 ms.custom: template-how-to
 ---
 
-# Run a trace against Azure SQL Managed Instance using Windows Authentication for Azure Active Directory principals
+# Run a trace against Azure SQL Managed Instance using Windows Authentication for Microsoft Entra principals
 
-This article shows how to connect and run a trace against Azure SQL Managed Instance using Windows Authentication for Azure Active Directory (Azure AD) principals. Windows authentication provides a convenient way for customers to connect to a managed instance, especially for database administrators and developers who are accustomed to launching [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) with their Windows credentials.
+This article shows how to connect and run a trace against Azure SQL Managed Instance using Windows Authentication for principals in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Windows authentication provides a convenient way for customers to connect to a managed instance, especially for database administrators and developers who are accustomed to launching [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) with their Windows credentials.
 
 This article shares two options to run a trace against a managed instance: you can trace with [extended events](/sql/relational-databases/extended-events/extended-events) or with  [SQL Server Profiler](/sql/tools/sql-server-profiler/sql-server-profiler). While SQL Server Profiler may still be used, the trace functionality used by SQL Server Profiler is deprecated and will be removed in a future version of Microsoft SQL Server.
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
 To use Windows Authentication to connect to and run a trace against a managed instance, you must first meet the following prerequisites:
 
-- [Set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md).
+- [Set up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos](winauth-azuread-setup.md).
 - Install [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) on the client that is connecting to the managed instance. The SSMS installation includes SQL Server Profiler and built-in components to create and run extended events traces.
 - Enable tooling on your client machine to connect to the managed instance. This may be done by any of the following:
     - [Configure an Azure VM to connect to Azure SQL Managed Instance](connect-vm-instance-configure.md).
@@ -29,11 +31,9 @@ To use Windows Authentication to connect to and run a trace against a managed in
 - To create or modify extended events sessions, ensure that your account has the [server permission](/sql/t-sql/statements/grant-server-permissions-transact-sql) of ALTER ANY EVENT SESSION on the managed instance.
 - To create or modify traces in SQL Server Profiler, ensure that your account has the [server permission](/sql/t-sql/statements/grant-server-permissions-transact-sql) of ALTER TRACE on the managed instance.
 
-If you have not yet enabled Windows authentication for Azure AD principals against your managed instance, you may run a trace against a managed instance using an [Azure AD Authentication](../database/authentication-aad-overview.md) option, including:
+If you have not yet enabled Windows authentication for Microsoft Entra principals against your managed instance, you may run a trace against a managed instance using a [Microsoft Entra authentication](../database/authentication-aad-overview.md) option, including:
 
-- 'Azure Active Directory - Password'
-- 'Azure Active Directory - Universal with MFA'
-- 'Azure Active Directory – Integrated'
+[!INCLUDE [entra-authentication-options](../includes/entra-authentication-options.md)]
 
 ## Run a trace with extended events
 
@@ -66,9 +66,9 @@ To run a trace with SQL Server Profiler against a managed instance using Windows
 
 ## Next steps
 
-Learn more about Windows Authentication for Azure AD principals with Azure SQL Managed Instance:
+Learn more about Windows Authentication for Microsoft Entra principals with Azure SQL Managed Instance:
 
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
-- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)
-- [How Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](winauth-implementation-aad-kerberos.md)
+- [What is Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How to set up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos](winauth-azuread-setup.md)
+- [How Windows Authentication for Azure SQL Managed Instance is implemented with Microsoft Entra ID and Kerberos](winauth-implementation-aad-kerberos.md)
 - [Extended Events](/sql/relational-databases/extended-events/extended-events)

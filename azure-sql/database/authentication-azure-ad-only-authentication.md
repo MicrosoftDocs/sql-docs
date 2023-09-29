@@ -1,11 +1,11 @@
 ---
-title: Azure Active Directory-only authentication
+title: Microsoft Entra-only authentication
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: This article provides information on the Azure AD-only authentication feature with Azure SQL
+description: This article provides information on the Microsoft Entra-only authentication feature with Azure SQL.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/01/2022
+ms.date: 09/27/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -13,47 +13,51 @@ ms.custom: ignite-fall-2021, devx-track-azurecli, devx-track-azurepowershell
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Azure AD-only authentication with Azure SQL
+# Microsoft Entra-only authentication with Azure SQL
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
-Azure AD-only authentication is a feature within [Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) that allows the service to only support Azure AD authentication, and is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md). 
+Microsoft Entra-only authentication is a feature within [Azure SQL](../azure-sql-iaas-vs-paas-what-is-overview.md) that allows the service to only support Microsoft Entra authentication, and is supported for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md). 
 
-Azure AD-only authentication is also available for dedicated SQL pools (formerly SQL DW) in standalone servers. Azure AD-only authentication can be enabled for the Azure Synapse workspace. For more information, see [Azure AD-only authentication with Azure Synapse workspaces](/azure/synapse-analytics/sql/active-directory-authentication).
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
-SQL authentication is disabled when enabling Azure AD-only authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users using [Azure AD authentication](authentication-aad-overview.md) are authorized to connect to the server or database.
+Microsoft Entra-only authentication is also available for dedicated SQL pools (formerly SQL DW) in standalone servers. Microsoft Entra-only authentication can be enabled for the Azure Synapse workspace. For more information, see [Microsoft Entra-only authentication with Azure Synapse workspaces](/azure/synapse-analytics/sql/active-directory-authentication).
 
-Azure AD-only authentication can be enabled or disabled using the Azure portal, Azure CLI, PowerShell, or REST API. Azure AD-only authentication can also be configured during server creation with an Azure Resource Manager (ARM) template.
+SQL authentication is disabled when enabling Microsoft Entra-only authentication in the Azure SQL environment, including connections from SQL server administrators, logins, and users. Only users using [Microsoft Entra authentication](authentication-aad-overview.md) are authorized to connect to the server or database.
+
+Microsoft Entra-only authentication can be enabled or disabled using the Azure portal, Azure CLI, PowerShell, or REST API. Microsoft Entra-only authentication can also be configured during server creation with an Azure Resource Manager (ARM) template.
 
 For more information on Azure SQL authentication, see [Authentication and authorization](logins-create-manage.md#authentication-and-authorization).
 
 ## Feature description
 
-When enabling Azure AD-only authentication, [SQL authentication](logins-create-manage.md#authentication-and-authorization) is disabled at the server or managed instance level and prevents any authentication based on any SQL authentication credentials. SQL authentication users won't be able to connect to the [logical server](logical-servers.md) for Azure SQL Database or managed instance, including all of its databases. Although SQL authentication is disabled, new SQL authentication logins and users can still be created by Azure AD accounts with proper permissions. Newly created SQL authentication accounts won't be allowed to connect to the server. Enabling Azure AD-only authentication doesn't remove existing SQL authentication login and user accounts. The feature only prevents these accounts from connecting to the server, and any database created for this server.
+When enabling Microsoft Entra-only authentication, [SQL authentication](logins-create-manage.md#authentication-and-authorization) is disabled at the server or managed instance level and prevents any authentication based on any SQL authentication credentials. SQL authentication users won't be able to connect to the [logical server](logical-servers.md) for Azure SQL Database or managed instance, including all of its databases. Although SQL authentication is disabled, new SQL authentication logins and users can still be created by Microsoft Entra accounts with proper permissions. Newly created SQL authentication accounts won't be allowed to connect to the server. Enabling Microsoft Entra-only authentication doesn't remove existing SQL authentication login and user accounts. The feature only prevents these accounts from connecting to the server, and any database created for this server.
 
-You can also force servers to be created with Azure AD-only authentication enabled using Azure Policy. For more information, see [Azure Policy for Azure AD-only authentication](authentication-azure-ad-only-authentication-policy.md).
+You can also force servers to be created with Microsoft Entra-only authentication enabled using Azure Policy. For more information, see [Azure Policy for Microsoft Entra-only authentication](authentication-azure-ad-only-authentication-policy.md).
 
 ## Permissions
 
-Azure AD-only authentication can be enabled or disabled by Azure AD users who are members of high privileged [Azure AD built-in roles](/azure/role-based-access-control/built-in-roles), such as Azure subscription [Owners](/azure/role-based-access-control/built-in-roles#owner), [Contributors](/azure/role-based-access-control/built-in-roles#contributor), and [Global Administrators](/azure/active-directory/roles/permissions-reference#global-administrator). Additionally, the role [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) can also enable or disable the Azure AD-only authentication feature.
+Microsoft Entra-only authentication can be enabled or disabled by Microsoft Entra users who are members of high privileged [Microsoft Entra built-in roles](/azure/role-based-access-control/built-in-roles), such as Azure subscription [Owners](/azure/role-based-access-control/built-in-roles#owner), [Contributors](/azure/role-based-access-control/built-in-roles#contributor), and [Global Administrators](/azure/active-directory/roles/permissions-reference#global-administrator). Additionally, the role [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) can also enable or disable the Microsoft Entra-only authentication feature.
 
-The [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) and [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) roles won't have permissions to enable or disable the Azure AD-only authentication feature. This is consistent with the [Separation of Duties](security-best-practice.md#implement-separation-of-duties) approach, where users who can create an Azure SQL server or create an Azure AD admin, can't enable or disable security features.
+The [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) and [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) roles won't have permissions to enable or disable the Microsoft Entra-only authentication feature. This is consistent with the [Separation of Duties](security-best-practice.md#implement-separation-of-duties) approach, where users who can create an Azure SQL server or create a Microsoft Entra admin, can't enable or disable security features.
 
 ### Actions required
 
-The following actions are added to the [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role to allow management of the Azure AD-only authentication feature.
+The following actions are added to the [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) role to allow management of the Microsoft Entra-only authentication feature.
 
 - Microsoft.Sql/servers/azureADOnlyAuthentications/*
-- Microsoft.Sql/servers/administrators/read - required only for users accessing the Azure portal **Azure Active Directory** menu
+- Microsoft.Sql/servers/administrators/read - required only for users accessing the Azure portal **Microsoft Entra ID** menu
 - Microsoft.Sql/managedInstances/azureADOnlyAuthentications/*
 - Microsoft.Sql/managedInstances/read
 
-The above actions can also be added to a custom role to manage Azure AD-only authentication. For more information, see [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create).
+The above actions can also be added to a custom role to manage Microsoft Entra-only authentication. For more information, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create).
 
-## Managing Azure AD-only authentication using APIs
+<a name='managing-azure-ad-only-authentication-using-apis'></a>
+
+## Managing Microsoft Entra-only authentication using APIs
 
 > [!IMPORTANT]
-> The Azure AD admin must be set before enabling Azure AD-only authentication.
+> The Microsoft Entra admin must be set before enabling Microsoft Entra-only authentication.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -261,14 +265,14 @@ Invoke-RestMethod -Uri "https://management.azure.com/subscriptions/$subscription
 
 # [ARM Template](#tab/arm)
 
-- Input the Azure AD admin for the deployment. You will find the user Object ID by going to the [Azure portal](https://portal.azure.com) and navigating to your **Azure Active Directory** resource. Under **Manage**, select **Users**. Search for the user you want to set as the Azure AD admin for your Azure SQL server. Select the user, and under their **Profile** page, you will see the **Object ID**.
-- The Tenant ID can be found in the **Overview** page of your **Azure Active Directory** resource.
+- Input the Microsoft Entra admin for the deployment. You will find the user Object ID by going to the [Azure portal](https://portal.azure.com) and navigating to your **Microsoft Entra ID** resource. Under **Manage**, select **Users**. Search for the user you want to set as the Microsoft Entra admin for your Azure SQL server. Select the user, and under their **Profile** page, you will see the **Object ID**.
+- The Tenant ID can be found in the **Overview** page of your **Microsoft Entra ID** resource.
 
 ## Azure SQL Database
 
 ### Enable
 
-The below ARM Template enables Azure AD-only authentication in your Azure SQL Database. To disable Azure AD-only authentication, set the `azureADOnlyAuthentication` property to `false`.
+The below ARM Template enables Microsoft Entra-only authentication in your Azure SQL Database. To disable Microsoft Entra-only authentication, set the `azureADOnlyAuthentication` property to `false`.
 
 ```json
 {
@@ -321,7 +325,7 @@ For more information, see [Microsoft.Sql servers/azureADOnlyAuthentications](/az
 
 ### Enable
 
-The below ARM Template enables Azure AD-only authentication in your Azure SQL Managed Instance. To disable Azure AD-only authentication, set the `azureADOnlyAuthentication` property to `false`.
+The below ARM Template enables Microsoft Entra-only authentication in your Azure SQL Managed Instance. To disable Microsoft Entra-only authentication, set the `azureADOnlyAuthentication` property to `false`.
 
 ```json
 {
@@ -373,9 +377,11 @@ For more information, see [Microsoft.Sql managedInstances/azureADOnlyAuthenticat
 
 ---
 
-### Checking Azure AD-only authentication using T-SQL
+<a name='checking-azure-ad-only-authentication-using-t-sql'></a>
 
-The [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Azure AD-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
+### Checking Microsoft Entra-only authentication using T-SQL
+
+The [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) `IsExternalAuthenticationOnly` has been added to check if Microsoft Entra-only authentication is enabled for your server or managed instance. `1` indicates that the feature is enabled, and `0` represents the feature is disabled.
 
 ```sql
 SELECT SERVERPROPERTY('IsExternalAuthenticationOnly') 
@@ -383,45 +389,49 @@ SELECT SERVERPROPERTY('IsExternalAuthenticationOnly')
 
 ## Remarks
 
-- A [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) can set or remove an Azure AD admin, but can't set the **Azure Active Directory authentication only** setting. The [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) can't set or remove an Azure AD admin, but can set the **Azure Active Directory authentication only** setting. Only accounts with higher Azure RBAC roles or custom roles that contain both permissions can set or remove an Azure AD admin and set the **Azure Active Directory authentication only** setting. One such role is the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role.
-- After enabling or disabling **Azure Active Directory authentication only** in the Azure portal, an **Activity log** entry can be seen in the **SQL server** menu.
+- A [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) can set or remove a Microsoft Entra admin, but can't set the **Microsoft Entra authentication only** setting. The [SQL Security Manager](/azure/role-based-access-control/built-in-roles#sql-security-manager) can't set or remove a Microsoft Entra admin, but can set the **Microsoft Entra authentication only** setting. Only accounts with higher Azure RBAC roles or custom roles that contain both permissions can set or remove a Microsoft Entra admin and set the **Microsoft Entra authentication only** setting. One such role is the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role.
+- After enabling or disabling **Microsoft Entra authentication only** in the Azure portal, an **Activity log** entry can be seen in the **SQL server** menu.
     :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-only-authentication-portal-sql-server-activity-log.png" alt-text="Activity log entry in the Azure portal":::
-- The **Azure Active Directory authentication only** setting can only be enabled or disabled by users with the right permissions if the **Azure Active Directory admin** is specified. If the Azure AD admin isn't set, the **Azure Active Directory authentication only** setting remains inactive and cannot be enabled or disabled. Using APIs to enable Azure AD-only authentication will also fail if the Azure AD admin hasn't been set.
-- Changing an Azure AD admin when Azure AD-only authentication is enabled is supported for users with the appropriate permissions.
-- Changing an Azure AD admin and enabling or disabling Azure AD-only authentication is allowed in the Azure portal for users with the appropriate permissions. Both operations can be completed with one **Save** in the Azure portal. The Azure AD admin must be set in order to enable Azure AD-only authentication.
-- Removing an Azure AD admin when the Azure AD-only authentication feature is enabled isn't supported. Using an API to remove an Azure AD admin will fail if Azure AD-only authentication is enabled.
-    - If the **Azure Active Directory authentication only** setting is enabled, the **Remove admin** button is inactive in the Azure portal.
-- Removing an Azure AD admin and disabling the **Azure Active Directory authentication only** setting is allowed, but requires the right user permission to complete the operations. Both operations can be completed with one **Save** in the Azure portal.
-- Azure AD users with proper permissions can impersonate existing SQL users.
-    - Impersonation continues working between SQL authentication users even when the Azure AD-only authentication feature is enabled.
+- The **Microsoft Entra authentication only** setting can only be enabled or disabled by users with the right permissions if the **Microsoft Entra admin** is specified. If the Microsoft Entra admin isn't set, the **Microsoft Entra authentication only** setting remains inactive and cannot be enabled or disabled. Using APIs to enable Microsoft Entra-only authentication will also fail if the Microsoft Entra admin hasn't been set.
+- Changing a Microsoft Entra admin when Microsoft Entra-only authentication is enabled is supported for users with the appropriate permissions.
+- Changing a Microsoft Entra admin and enabling or disabling Microsoft Entra-only authentication is allowed in the Azure portal for users with the appropriate permissions. Both operations can be completed with one **Save** in the Azure portal. The Microsoft Entra admin must be set in order to enable Microsoft Entra-only authentication.
+- Removing a Microsoft Entra admin when the Microsoft Entra-only authentication feature is enabled isn't supported. Using an API to remove a Microsoft Entra admin will fail if Microsoft Entra-only authentication is enabled.
+    - If the **Microsoft Entra authentication only** setting is enabled, the **Remove admin** button is inactive in the Azure portal.
+- Removing a Microsoft Entra admin and disabling the **Microsoft Entra authentication only** setting is allowed, but requires the right user permission to complete the operations. Both operations can be completed with one **Save** in the Azure portal.
+- Microsoft Entra users with proper permissions can impersonate existing SQL users.
+    - Impersonation continues working between SQL authentication users even when the Microsoft Entra-only authentication feature is enabled.
 
-### Limitations for Azure AD-only authentication in SQL Database
+<a name='limitations-for-azure-ad-only-authentication-in-sql-database'></a>
 
-When Azure AD-only authentication is enabled for SQL Database, the following features aren't supported:
+### Limitations for Microsoft Entra-only authentication in SQL Database
 
-- [Azure SQL Database server roles](security-server-roles.md) are supported for [Azure AD server principals](authentication-azure-ad-logins.md), but not if the Azure AD login is a group.
+When Microsoft Entra-only authentication is enabled for SQL Database, the following features aren't supported:
+
+- [Azure SQL Database server roles](security-server-roles.md) are supported for [Microsoft Entra server principals](authentication-azure-ad-logins.md), but not if the Microsoft Entra login is a group.
 - [Elastic jobs](job-automation-overview.md)
 - [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md)
-- [Change data capture (CDC)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) - If you create a database in Azure SQL Database as an Azure AD user and enable change data capture on it, a SQL user will not be able to disable or make changes to CDC artifacts. However, another Azure AD user will be able to enable or disable CDC on the same database. Similarly, if you create an Azure SQL Database as a SQL user, enabling or disabling CDC as an Azure AD user won't work
-- [Transactional replication](../managed-instance/replication-transactional-overview.md) - Since SQL authentication is required for connectivity between replication participants, when Azure AD-only authentication is enabled, transactional replication is not supported for SQL Database for scenarios where transactional replication is used to push changes made in an Azure SQL Managed Instance, on-premises SQL Server, or an Azure VM SQL Server instance to a database in Azure SQL Database
+- [Change data capture (CDC)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server) - If you create a database in Azure SQL Database as a Microsoft Entra user and enable change data capture on it, a SQL user will not be able to disable or make changes to CDC artifacts. However, another Microsoft Entra user will be able to enable or disable CDC on the same database. Similarly, if you create an Azure SQL Database as a SQL user, enabling or disabling CDC as a Microsoft Entra user won't work
+- [Transactional replication](../managed-instance/replication-transactional-overview.md) - Since SQL authentication is required for connectivity between replication participants, when Microsoft Entra-only authentication is enabled, transactional replication is not supported for SQL Database for scenarios where transactional replication is used to push changes made in an Azure SQL Managed Instance, on-premises SQL Server, or an Azure VM SQL Server instance to a database in Azure SQL Database
 - [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
-- EXEC AS statement for Azure AD group member accounts
+- EXEC AS statement for Microsoft Entra group member accounts
 
-### Limitations for Azure AD-only authentication in Managed Instance
+<a name='limitations-for-azure-ad-only-authentication-in-managed-instance'></a>
 
-When Azure AD-only authentication is enabled for Managed Instance, the following features aren't supported:
+### Limitations for Microsoft Entra-only authentication in Managed Instance
+
+When Microsoft Entra-only authentication is enabled for Managed Instance, the following features aren't supported:
 
 - [Transactional replication](../managed-instance/replication-transactional-overview.md) 
-- [SQL Agent Jobs in Managed Instance](../managed-instance/job-automation-managed-instance.md) supports Azure AD-only authentication. However, the Azure AD user who is a member of an Azure AD group that has access to the managed instance cannot own SQL Agent Jobs
+- [SQL Agent Jobs in Managed Instance](../managed-instance/job-automation-managed-instance.md) supports Microsoft Entra-only authentication. However, the Microsoft Entra user who is a member of a Microsoft Entra group that has access to the managed instance cannot own SQL Agent Jobs
 - [SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
-- EXEC AS statement for Azure AD group member accounts
+- EXEC AS statement for Microsoft Entra group member accounts
 
 For more limitations, see [T-SQL differences between SQL Server & Azure SQL Managed Instance](../managed-instance/transact-sql-tsql-differences-sql-server.md#logins-and-users).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Tutorial: Enable Azure Active Directory only authentication with Azure SQL](authentication-azure-ad-only-authentication-tutorial.md)
+> [Tutorial: Enable Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication-tutorial.md)
 
 > [!div class="nextstepaction"]
-> [Create server with Azure AD-only authentication enabled in Azure SQL](authentication-azure-ad-only-authentication-create-server.md)
+> [Create server with Microsoft Entra-only authentication enabled in Azure SQL](authentication-azure-ad-only-authentication-create-server.md)

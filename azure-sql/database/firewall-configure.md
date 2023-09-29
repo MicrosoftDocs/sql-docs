@@ -17,12 +17,9 @@ ms.custom:
 # Azure SQL Database and Azure Synapse IP firewall rules
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
 
-When you create a new server in Azure SQL Database or Azure Synapse Analytics named *mysqlserver*, for example, a server-level firewall blocks all access to the public endpoint for the server (which is accessible at *mysqlserver.database.windows.net*). For simplicity, *SQL Database* is used to refer to both SQL Database and Azure Synapse Analytics.
+When you create a new server in Azure SQL Database or Azure Synapse Analytics named *mysqlserver*, for example, a server-level firewall blocks all access to the public endpoint for the server (which is accessible at *mysqlserver.database.windows.net*). For simplicity, *SQL Database* is used to refer to both SQL Database and Azure Synapse Analytics. This article does *not* apply to *Azure SQL Managed Instance*. For information about network configuration, see [Connect your application to Azure SQL Managed Instance](../managed-instance/connect-application-instance.md).
 
-> [!IMPORTANT]
-> This article does *not* apply to *Azure SQL Managed Instance*. For information about network configuration, see [Connect your application to Azure SQL Managed Instance](../managed-instance/connect-application-instance.md).
->
-> Azure Synapse only supports server-level IP firewall rules. It doesn't support database-level IP firewall rules.
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 
 ## How the firewall works
@@ -30,6 +27,9 @@ When you create a new server in Azure SQL Database or Azure Synapse Analytics na
 Connection attempts from the internet and Azure must pass through the firewall before they reach your server or database, as the following diagram shows.
 
    ![Firewall configuration diagram][1]
+
+> [!IMPORTANT]
+> Azure Synapse only supports server-level IP firewall rules. It doesn't support database-level IP firewall rules.
 
 ### Server-level IP firewall rules
 
@@ -41,7 +41,7 @@ You can configure server-level IP firewall rules by using the Azure portal, Powe
 > The maximum number of server-level IP firewall rules is limited to 128 when configuring using the Azure portal.
 
 - To use the portal or PowerShell, you must be the subscription owner or a subscription contributor.
-- To use Transact-SQL, you must connect to the *master* database as the server-level principal login or as the Azure Active Directory administrator. (A server-level IP firewall rule must first be created by a user who has Azure-level permissions.)
+- To use Transact-SQL, you must connect to the *master* database as the server-level principal login or as the Microsoft Entra administrator. (A server-level IP firewall rule must first be created by a user who has Azure-level permissions.)
 
 > [!NOTE]
 > By default, during creation of a new logical SQL server from the Azure portal, the **Allow Azure Services and resources to access this server** setting is set to **No**.
@@ -144,7 +144,7 @@ To set a server-level IP firewall rule in the Azure portal, go to the overview p
 
 2. Add a rule in the **Firewall rules** section to add the IP address of the computer that you're using, and then select **Save**. A server-level IP firewall rule is created for your current IP address.
 
-    ![Set server-level IP firewall rule](./media/firewall-configure/sql-database-server-firewall-settings.png)
+    :::image type="content" source="./media/firewall-configure/sql-database-server-firewall-settings.png" alt-text="Screenshot shows the Networking page where you can set the server-level IP firewall rules.":::
 
 #### From the server overview page
 

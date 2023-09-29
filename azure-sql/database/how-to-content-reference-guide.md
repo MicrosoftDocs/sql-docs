@@ -26,9 +26,9 @@ In this article you can find a content reference of various guides, scripts, and
 
 ## Configure features
 
-- [Configure Azure Active Directory (Azure AD) auth](authentication-aad-configure.md)
+- [Configure Microsoft Entra auth](authentication-aad-configure.md)
 - [Configure Conditional Access](conditional-access-configure.md)
-- [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md)
+- [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
 - [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 

@@ -58,7 +58,7 @@ SQL Insights (preview) has no support or has limited support for the following:
 - **Azure SQL Database low service tiers**: Metrics can't be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md).
 - **Azure SQL Database serverless tier**: Metrics can be gathered for databases through the serverless compute tier. However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
 - **Secondary replicas**: Metrics can be gathered for only a single secondary replica per database. If a database has more than one secondary replica, only one can be monitored.
-- **Authentication with Azure Active Directory**: The only supported method of [authentication](./logins-create-manage.md#authentication-and-authorization) for monitoring is SQL authentication. For SQL Server on Azure Virtual Machines, authentication through Active Directory on a custom domain controller is not supported.
+- **Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name))**: The only supported method of [authentication](./logins-create-manage.md#authentication-and-authorization) for monitoring is SQL authentication. For SQL Server on Azure Virtual Machines, authentication through Active Directory on a custom domain controller is not supported.
 
 ## Regional availability
 

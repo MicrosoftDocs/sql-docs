@@ -127,8 +127,8 @@ Test failover of your failover group using the Azure portal.
 
 1. Select **Failover groups** under the **Settings** pane and then choose the failover group you just created.
   
-   ![Select the failover group from the portal](./media/auto-failover-group-configure-sql-db/select-failover-group.png)
-
+   :::image type="content" source="./media/auto-failover-group-configure-sql-db/select-failover-group.png" alt-text="Screenshot shows Failover groups where you can select a failover group for your SQL Server.":::
+   
 1. Review which server is primary and which server is secondary.
 1. Select **Failover** from the task pane to fail over your failover group containing your database.
 1. Select **Yes** on the warning that notifies you that TDS sessions will be disconnected.
@@ -294,8 +294,8 @@ Fail your failover group over to the secondary server, and then fail back using 
 
    ![Open server for elastic pool](./media/auto-failover-group-configure-sql-db/server-for-elastic-pool.png)
 1. Select **Failover groups** under the **Settings** pane and then choose the failover group you created in section 2.
-  
-   ![Select the failover group from the portal](./media/auto-failover-group-configure-sql-db/select-failover-group.png)
+
+   :::image type="content" source="./media/auto-failover-group-configure-sql-db/select-failover-group.png" alt-text="Screenshot shows Failover groups where you can select a failover group for your SQL Server.":::
 
 1. Review which server is primary, and which server is secondary.
 1. Select **Failover** from the task pane to fail over your failover group containing your elastic pool.

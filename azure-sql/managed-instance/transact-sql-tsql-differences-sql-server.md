@@ -33,6 +33,8 @@ Most of these features are architectural constraints and represent service featu
 
 Temporary known issues that are discovered in SQL Managed Instance and will be resolved in the future are described in [What's new?](doc-changes-updates-release-notes-whats-new.md).
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Availability
 
 ### <a name="always-on-availability-groups"></a>Always On Availability Groups
@@ -133,45 +135,44 @@ SQL Managed Instance can't access files, so cryptographic providers can't be cre
 ### Logins and users
 
 - SQL logins created by using `FROM CERTIFICATE`, `FROM ASYMMETRIC KEY`, and `FROM SID` are supported. See [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql).
-- Azure Active Directory (Azure AD) server principals (logins) created with the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax or the [CREATE USER FROM LOGIN [Azure AD Login]](/sql/t-sql/statements/create-user-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax are supported. These logins are created at the server level.
+Server principals (logins) are created at the server level, and users (database principals) are created at the database level. Microsoft Entra logins created with the [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax and Microsoft Entra users created with the [CREATE USER FROM LOGIN](/sql/t-sql/statements/create-user-transact-sql?view=azuresqldb-mi-current&preserve-view=true) syntax are supported. When creating a user and specifying `FROM LOGIN`, that user is associated to the login, and inherits the server roles and permissions assigned to it.
 
-    SQL Managed Instance supports Azure AD database principals with the syntax `CREATE USER [AADUser/AAD group] FROM EXTERNAL PROVIDER`. This feature is also known as Azure AD contained database users.
+    SQL Managed Instance supports creating contained database users based on Microsoft Entra identities with the syntax `CREATE USER [AADUser/AAD group] FROM EXTERNAL PROVIDER`.  Users created this way are not associated to server principals, even if a server principal with the same name exists in the `master` database.
 
-- Windows logins created with the `CREATE LOGIN ... FROM WINDOWS` syntax aren't supported. Use Azure Active Directory logins and users.
-- The Azure AD admin for the instance has [unrestricted admin privileges](../database/logins-create-manage.md).
-- Non-administrator Azure AD database-level users can be created by using the `CREATE USER ... FROM EXTERNAL PROVIDER` syntax. See [CREATE USER ... FROM EXTERNAL PROVIDER](../database/authentication-aad-configure.md#create-contained-users-mapped-to-azure-ad-identities).
-- Some features do not support usage of Azure AD server principals (logins) in cross-instance interaction, but within one SQL Managed Instance only. Example of such a feature is SQL replication. Linked server feature though supports cross-instance authentication using Azure AD server principals (logins).
+- Windows logins created with the `CREATE LOGIN ... FROM WINDOWS` syntax aren't supported. Use Microsoft Entra logins and users.
+- The Microsoft Entra admin for the instance has [unrestricted admin privileges](../database/logins-create-manage.md).
+- Some features do not support using Microsoft Entra logins in cross-instance interactions, but only within a single SQL Managed Instance, such as SQL Server replication for example. Linked server feature though supports cross-instance authentication using Microsoft Entra server principals (logins).
 
-- Setting an Azure AD login mapped to an Azure AD group as the database owner isn't supported. A member of the Azure AD group can be a database owner, even if the login hasn't been created in the database.
-- Impersonation of Azure AD server-level principals by using other Azure AD principals is supported, such as the [EXECUTE AS](/sql/t-sql/statements/execute-as-transact-sql) clause. EXECUTE AS limitations are:
+- Setting a Microsoft Entra login mapped to a Microsoft Entra group as the database owner isn't supported. A member of the Microsoft Entra group can be a database owner, even if the login hasn't been created in the database.
+- Impersonation of Microsoft Entra server-level principals by using other Microsoft Entra principals is supported, such as the [EXECUTE AS](/sql/t-sql/statements/execute-as-transact-sql) clause. EXECUTE AS limitations are:
 
-  - EXECUTE AS USER isn't supported for Azure AD users when the name differs from the login name. An example is when the user is created through the syntax `CREATE USER [myAadUser] FROM LOGIN [john@contoso.com]` and impersonation is attempted through `EXEC AS USER = myAadUser`. When you create a **USER** from an Azure AD server principal (login), specify the user_name as the same login_name from **LOGIN**.
-  - Only the SQL Server-level principals (logins) that are part of the `sysadmin` role can execute the following operations that target Azure AD principals:
+  - EXECUTE AS USER isn't supported for Microsoft Entra users when the name differs from the login name. An example is when the user is created through the syntax `CREATE USER [myAadUser] FROM LOGIN [john@contoso.com]` and impersonation is attempted through `EXEC AS USER = myAadUser`. When you create a **USER** from a Microsoft Entra login, specify the user_name as the same login_name from **LOGIN**.
+  - Only SQL Server-level logins that are part of the `sysadmin` role can execute the following operations that target Microsoft Entra principals:
 
     - EXECUTE AS USER
     - EXECUTE AS LOGIN
 
-  - To impersonate a user with EXECUTE AS statement, the user needs to be mapped directly to Azure AD server principal (login). Users that are members of Azure AD groups mapped into Azure AD server principals cannot effectively be impersonated with EXECUTE AS statement, even though the caller has the impersonate permissions on the specified user name.
+  - To impersonate a user with EXECUTE AS statement, the user needs to be mapped directly to Microsoft Entra login. Users that are members of Microsoft Entra groups mapped into Microsoft Entra server principals cannot effectively be impersonated with EXECUTE AS statement, even though the caller has the impersonate permissions on the specified user name.
 
-- Database export/import using bacpac files are supported for Azure AD users in SQL Managed Instance using either [SSMS V18.4 or later](/sql/ssms/download-sql-server-management-studio-ssms), or [SqlPackage](/sql/tools/sqlpackage-download).
+- Database export/import using bacpac files are supported for Microsoft Entra users in SQL Managed Instance using either [SSMS V18.4 or later](/sql/ssms/download-sql-server-management-studio-ssms), or [SqlPackage](/sql/tools/sqlpackage-download).
   - The following configurations are supported using database bacpac file: 
-    - Export/import a database between different manage instances within the same Azure AD domain.
-    - Export a database from SQL Managed Instance and import to SQL Database within the same Azure AD domain. 
-    - Export a database from SQL Database and import to SQL Managed Instance within the same Azure AD domain.
+    - Export/import a database between different manage instances within the same Microsoft Entra domain.
+    - Export a database from SQL Managed Instance and import to SQL Database within the same Microsoft Entra domain. 
+    - Export a database from SQL Database and import to SQL Managed Instance within the same Microsoft Entra domain.
     - Export a database from SQL Managed Instance and import to SQL Server (version 2012 or later).
-      - In this configuration, all Azure AD users are created as SQL Server database principals (users) without logins. The type of users is `SQL` and is visible as `SQL_USER` in `sys.database_principals`. Their permissions and roles remain in the SQL Server database metadata and can be used for impersonation. However, they cannot be used to access and sign in to the SQL Server using their credentials.
+      - In this configuration, all Microsoft Entra users are created as SQL Server database principals (users) without logins. The type of users is `SQL` and is visible as `SQL_USER` in `sys.database_principals`. Their permissions and roles remain in the SQL Server database metadata and can be used for impersonation. However, they cannot be used to access and sign in to the SQL Server using their credentials.
 
-- Only the server-level principal login, which is created by the SQL Managed Instance provisioning process, members of the server roles, such as `securityadmin` or `sysadmin`, or other logins with ALTER ANY LOGIN permission at the server level can create Azure AD server principals (logins) in the `master` database for SQL Managed Instance.
-- If the login is a SQL principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
-- The Azure AD login must be a member of an Azure AD within the same directory used for Azure SQL Managed Instance.
-- Azure AD server principals (logins) are visible in Object Explorer starting with SQL Server Management Studio 18.0 preview 5.
-- A server principal with *sysadmin* access level is automatically created for the Azure AD admin account once it's enabled on an instance.
+- Only the server-level principal login, which is created by the SQL Managed Instance provisioning process, members of the server roles, such as `securityadmin` or `sysadmin`, or other logins with ALTER ANY LOGIN permission at the server level can create Microsoft Entra server principals (logins) in the `master` database for SQL Managed Instance.
+- SQL auth-based logins must be assigned the `sysadmin` role to create logins for Microsoft Entra identities.
+- The login must be a member of the same Microsoft Entra tenant that the Azure SQL Managed Instance is hosted in.
+- Microsoft Entra server principals (logins) are visible in Object Explorer starting with SQL Server Management Studio 18.0 preview 5.
+- A server principal with *sysadmin* access level is automatically created for the Microsoft Entra admin once it's enabled on an instance.
 - During authentication, the following sequence is applied to resolve the authenticating principal:
 
-    1. If the Azure AD account exists as directly mapped to the Azure AD server principal (login), which is present in `sys.server_principals` as type "E," grant access and apply permissions of the Azure AD server principal (login).
-    1. If the Azure AD account is a member of an Azure AD group that's mapped to the Azure AD server principal (login), which is present in `sys.server_principals` as type "X," grant access and apply permissions of the Azure AD group login.
-    1. If the Azure AD account exists as directly mapped to an Azure AD user in a database, which is present in `sys.database_principals` as type "E," grant access and apply permissions of the Azure AD database user.
-    1. If the Azure AD account is a member of an Azure AD group that's mapped to an Azure AD user in a database, which is present in `sys.database_principals` as type "X," grant access and apply permissions of the Azure AD group user.
+    1. If the Microsoft Entra account is directly mapped to a Microsoft Entra login, which is present in `sys.server_principals` as type "E," grant access and apply permissions of that login.
+    1. If the Microsoft Entra account is a member of a group that's mapped to a Microsoft Entra login, which is present in `sys.server_principals` as type "X," grant access and apply permissions of that login.
+    1. If the Microsoft Entra account exists as directly mapped to a Microsoft Entra user in a database, which is present in `sys.database_principals` as type "E," grant access and apply permissions of the Microsoft Entra database user.
+    1. If the Microsoft Entra account is a member of a Microsoft Entra group that's mapped to a Microsoft Entra user in a database, which is present in `sys.database_principals` as type "X," grant access and apply permissions of the Microsoft Entra group user.
 
 ### Service key and service master key
 
@@ -297,7 +298,7 @@ For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-
   - Alerts aren't yet supported.
   - Proxies aren't supported.
 - EventLog isn't supported.
-- User must be directly mapped to Azure AD server principal (login) to create, modify, or execute SQL Agent jobs. Users that are not directly mapped, for example, users that belong to an Azure AD group that has the rights to create, modify or execute SQL Agent jobs, will not effectively be able to perform those actions. This is due to SQL Managed Instance impersonation and [EXECUTE AS limitations](#logins-and-users).
+- User must be directly mapped to the Microsoft Entra server login to create, modify, or execute SQL Agent jobs. Users that are not directly mapped, for example, users that belong to a Microsoft Entra group that has the rights to create, modify or execute SQL Agent jobs, will not effectively be able to perform those actions. This is due to SQL Managed Instance impersonation and [EXECUTE AS limitations](#logins-and-users).
 - The Multi Server Administration feature for master/target (MSX/TSX) jobs are not supported.
 
 For information about SQL Server Agent, see [SQL Server Agent](/sql/ssms/agent/sql-server-agent).
@@ -392,7 +393,7 @@ Operations:
 - The [OPENDATASOURCE](/sql/t-sql/functions/opendatasource-transact-sql) function can be used to execute queries only on SQL Server instances. They can be either managed, on-premises, or in virtual machines. An example is `SELECT * FROM OPENDATASOURCE('SQLNCLI', '...').AdventureWorks2022.HumanResources.Employee`. Only the `SQLNCLI`, `SQLNCLI11`, `SQLOLEDB`, and `MSOLEDBSQL` values are supported as a provider. The [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client) (often abbreviated SNAC) has been removed from SQL Server 2022 and SQL Server Management Studio 19 (SSMS). The SQL Server Native Client (SQLNCLI or SQLNCLI11) and the legacy Microsoft OLE DB Provider for SQL Server (SQLOLEDB) are not recommended for new development. Switch to the new [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server) or the latest [Microsoft ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server) going forward.
 - Linked servers cannot be used to read files (Excel, CSV) from the network shares. Try to use [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql#e-importing-data-from-a-csv-file), [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql#g-accessing-data-from-a-csv-file-with-a-format-file) that reads CSV files from Azure Blob Storage, or a [linked server that references a serverless SQL pool in Synapse Analytics](https://devblogs.microsoft.com/azure-sql/linked-server-to-synapse-sql-to-implement-polybase-like-scenarios-in-managed-instance/). Track this requests on [SQL Managed Instance Feedback item](https://feedback.azure.com/d365community/idea/db80cf6e-3425-ec11-b6e6-000d3a4f0f84)
 
-Linked servers on Azure SQL Managed Instance support SQL authentication and [Azure AD authentication](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#linked-servers-with-azure-sql-managed-instance).
+Linked servers on Azure SQL Managed Instance support SQL authentication and [Microsoft Entra authentication](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#linked-servers-with-azure-sql-managed-instance).
 
 ### PolyBase
 
@@ -495,7 +496,7 @@ The following variables, functions, and views return different results:
 - `@@SERVERNAME` returns a full DNS "connectable" name, for example, `my-managed-instance.wcus17662feb9ce98.database.windows.net`. See [@@SERVERNAME](/sql/t-sql/functions/servername-transact-sql). 
 - `SYS.SERVERS` returns a full DNS "connectable" name, such as `myinstance.domain.database.windows.net` for the properties "name" and "data_source." See [SYS.SERVERS](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql).
 - `@@SERVICENAME` returns NULL because the concept of service as it exists for SQL Server doesn't apply to SQL Managed Instance. See [@@SERVICENAME](/sql/t-sql/functions/servicename-transact-sql).
-- `SUSER_ID` is supported. It returns NULL if the Azure AD login isn't in `sys.syslogins`. See [SUSER_ID](/sql/t-sql/functions/suser-id-transact-sql). 
+- `SUSER_ID` is supported. It returns NULL if the Microsoft Entra login isn't in `sys.syslogins`. See [SUSER_ID](/sql/t-sql/functions/suser-id-transact-sql). 
 - `SUSER_SID` isn't supported. The wrong data is returned, which is a temporary known issue. See [SUSER_SID](/sql/t-sql/functions/suser-sid-transact-sql). 
 
 ## <a name="Environment"></a>Environment constraints

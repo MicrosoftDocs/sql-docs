@@ -18,9 +18,11 @@ In this tutorial you learn how to:
 > [!div class="checklist"]
 >
 > - Create server-level and database-level firewall rules
-> - Configure an Azure Active Directory (Azure AD) administrator
-> - Manage user access with SQL authentication, Azure AD authentication, and secure connection strings
+> - Configure a Microsoft Entra administrator
+> - Manage user access with SQL authentication, Microsoft Entra authentication, and secure connection strings
 > - Enable security features, such as Microsoft Defender for SQL, auditing, data masking, and encryption
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 Azure SQL Database secures data by allowing you to:
 
@@ -103,53 +105,55 @@ To set up a database-level firewall rule:
 > [!NOTE]
 > You can also create a server-level firewall rule in SSMS by using the [sp_set_firewall_rule](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database?view=azuresqldb-current&preserve-view=true) command, though you must be connected to the *master* database.
 
-## Create an Azure AD admin
+<a name='create-an-azure-ad-admin'></a>
 
-Make sure you're using the appropriate Azure Active Directory (AD) managed domain. To select the AD domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Azure AD and the logical SQL server hosting your database or data warehouse.
+## Create a Microsoft Entra admin
+
+Make sure you're using the appropriate Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) managed domain. To select your domain, use the upper-right corner of the Azure portal. This process confirms the same subscription is used for both Microsoft Entra ID and the logical server hosting your database or data warehouse.
 
    :::image type="content" source="./media/secure-database-tutorial/8choose-ad.png" alt-text="A screenshot of the Azure portal showing the Directory + subscription filter page, where you would choose the directory.":::
 
-To set the Azure AD administrator:
+To set the Microsoft Entra administrator:
 
-1. In the Azure portal, on the **SQL server** page, select **Active Directory admin**. Next select **Set admin**.
+1. In the Azure portal, on the **SQL server** page, select **Microsoft Entra ID** from the resource menu, then select **Set admin** to open the **Microsoft Entra ID** pane..
 
-    :::image type="content" source="./media/secure-database-tutorial/admin-settings.png" alt-text="A screenshot of the Azure portal Active Directory admin page for a logical SQL Server. The Set admin button is highlighted. The page shows 'No Active Directory admin'.":::  
+    :::image type="content" source="./media/secure-database-tutorial/admin-settings.png" alt-text="Screenshot of the Azure portal Microsoft Entra ID page for a logical server.":::  
 
     > [!IMPORTANT]
     > You need to be a "Global Administrator" to perform this task.
 
-1. On the **Add admin** page, search and select the AD user or group and choose **Select**. All members and groups of your Active Directory are listed, and entries grayed out are not supported as Azure AD administrators. See [Azure AD features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
+1. On the **Microsoft Entra ID** pane, search and select the Microsoft Entra user or group and choose **Select**. All members and groups of your Microsoft Entra organization are listed, and entries grayed out are not supported as Microsoft Entra administrators. See [Microsoft Entra features and limitations](authentication-aad-overview.md#azure-ad-features-and-limitations).
 
-    :::image type="content" source="./media/secure-database-tutorial/admin-select.png" alt-text="A screenshot of the Azure portal page to add an Active Directory admin.":::
+    :::image type="content" source="./media/secure-database-tutorial/admin-select.png" alt-text="Screenshot of the Azure portal page to add a Microsoft Entra admin.":::
 
     > [!IMPORTANT]
     > Azure role-based access control (Azure RBAC) only applies to the portal and isn't propagated to SQL Server.
 
-1. At the top of the **Active Directory admin** page, select **Save**.
+1. At the top of the **Microsoft Entra admin** page, select **Save**.
 
-    The process of changing an administrator may take several minutes. The new administrator will appear in the **Active Directory admin** box.
+    The process of changing an administrator may take several minutes. The new administrator will appear in the **Microsoft Entra admin** field.
 
 > [!NOTE]
-> When setting an Azure AD admin, the new admin name (user or group) cannot exist as a SQL Server login or user in the *master* database. If present, the setup will fail and roll back changes, indicating that such an admin name already exists. Since the SQL Server login or user is not part of Azure AD, any effort to connect the user using Azure AD authentication fails.
+> When setting a Microsoft Entra admin, the new admin name (user or group) cannot exist as a login or user in the *master* database. If present, the setup will fail and roll back changes, indicating that such an admin name already exists. Since the server login or user is not part of Microsoft Entra ID, any effort to connect the user using Microsoft Entra authentication fails.
 
-For information about configuring Azure AD, see:
+For information about configuring Microsoft Entra ID, see:
 
-- [Integrate your on-premises identities with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity)
-- [Add your own domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain)
-- [Federation with Azure AD](/azure/active-directory/hybrid/connect/whatis-fed)
-- [Administer your Azure AD directory](/azure/active-directory/fundamentals/active-directory-whatis)
-- [Manage Azure AD using PowerShell](/powershell/azure/)
+- [Integrate your on-premises identities with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity)
+- [Add your own domain name to Microsoft Entra ID](/azure/active-directory/fundamentals/add-custom-domain)
+- [Federation with Microsoft Entra ID](/azure/active-directory/hybrid/connect/whatis-fed)
+- [Administer your Microsoft Entra directory](/azure/active-directory/fundamentals/active-directory-whatis)
+- [Manage Microsoft Entra ID using PowerShell](/powershell/azure/)
 - [Hybrid identity required ports and protocols](/azure/active-directory/hybrid/reference-connect-ports)
 
 ## Manage database access
 
-Manage database access by adding users to the database, or allowing user access with secure connection strings. Connection strings are useful for external applications. To learn more, see [Manage logins and user accounts](logins-create-manage.md) and [AD authentication](authentication-aad-overview.md).
+Manage database access by adding users to the database, or allowing user access with secure connection strings. Connection strings are useful for external applications. To learn more, see [Manage logins and user accounts](logins-create-manage.md) and [Microsoft Entra authentication](authentication-aad-overview.md).
 
 To add users, choose the database authentication type:
 
 - **SQL authentication**, use a username and password for logins and are only valid in the context of a specific database within the server
 
-- **Azure AD authentication**, use identities managed by Azure AD
+- **Microsoft Entra authentication**, use identities managed by Microsoft Entra ID
 
 ### SQL authentication
 
@@ -177,32 +181,34 @@ To add a user with SQL authentication:
 > [!NOTE]
 > Create non-administrator accounts at the database level, unless they need to execute administrator tasks like creating new users.
 
-### Azure AD authentication
+<a name='azure-ad-authentication'></a>
 
-Azure Active Directory authentication requires that database users are created as contained. A contained database user maps to an identity in the Azure AD directory associated with the database and has no login in the *master* database. The Azure AD identity can either be for an individual user or a group. For more information, see [Contained database users, make your database portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable) and review the [Azure AD tutorial](authentication-aad-configure.md) on how to authenticate using Azure AD.
+### Microsoft Entra authentication
+
+Because Azure SQL Database doesn't support Microsoft Entra server principals (logins), database users created with Microsoft Entra accounts are created as contained database users. A contained database user is not associated to a login in the `master` database, even if there exists a login with the same name. The Microsoft Entra identity can either be for an individual user or a group. For more information, see [Contained database users, make your database portable](/sql/relational-databases/security/contained-database-users-making-your-database-portable) and review the [Microsoft Entra tutorial](authentication-aad-configure.md) on how to authenticate using Microsoft Entra ID.
 
 > [!NOTE]
-> Database users (excluding administrators) cannot be created using the Azure portal. Azure roles do not propagate to SQL servers, databases, or data warehouses. They are only used to manage Azure resources and do not apply to database permissions.
+> Database users (excluding administrators) cannot be created using the Azure portal. Microsoft Entra roles do not propagate to SQL servers, databases, or data warehouses. They are only used to manage Azure resources and do not apply to database permissions.
 >
 > For example, the *SQL Server Contributor* role does not grant access to connect to a database or data warehouse. This permission must be granted within the database using T-SQL statements.
 
 > [!IMPORTANT]
 > Special characters like colon `:` or ampersand `&` are not supported in user names in the T-SQL `CREATE LOGIN` and `CREATE USER` statements.
 
-To add a user with Azure AD authentication:
+To add a user with Microsoft Entra authentication:
 
-1. Connect to your server in Azure using an Azure AD account with at least the *ALTER ANY USER* permission.
+1. Connect to your server in Azure using a Microsoft Entra account with at least the *ALTER ANY USER* permission.
 
 1. In **Object Explorer**, right-click the database and select **New Query**.
 
-1. In the query window, enter the following command and modify `<Azure_AD_principal_name>` to the principal name of the Azure AD user or the display name of the Azure AD group:
+1. In the query window, enter the following command and modify `<Azure_AD_principal_name>` to the principal name of the Microsoft Entra user or the display name of the Microsoft Entra group:
 
    ```sql
    CREATE USER [<Azure_AD_principal_name>] FROM EXTERNAL PROVIDER;
    ```
 
 > [!NOTE]
-> Azure AD users are marked in the database metadata with type `E (EXTERNAL_USER)` and type `X (EXTERNAL_GROUPS)` for groups. For more information, see [sys.database_principals](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql).
+> Microsoft Entra users are marked in the database metadata with type `E (EXTERNAL_USER)` and type `X (EXTERNAL_GROUPS)` for groups. For more information, see [sys.database_principals](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql).
 
 ### Secure connection strings
 
@@ -340,8 +346,8 @@ In this tutorial, you've learned to improve the security of your database with j
 > [!div class="checklist"]
 >
 > - Create server-level and database-level firewall rules
-> - Configure an Azure Active Directory (AD) administrator
-> - Manage user access with SQL authentication, Azure AD authentication, and secure connection strings
+> - Configure a Microsoft Entra administrator
+> - Manage user access with SQL authentication, Microsoft Entra authentication, and secure connection strings
 > - Enable security features, such as Microsoft Defender for SQL, auditing, data masking, and encryption
 
 Advance to the next tutorial to learn how to implement geo-distribution.

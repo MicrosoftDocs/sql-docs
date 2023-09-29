@@ -25,7 +25,7 @@ You can leverage open-source tools like [cheetah](https://github.com/wunderlist/
 
 ## Authentication
 
-Access to Azure SQL Database is protected with logins and firewalls. Azure SQL Database supports both SQL Server and [Azure Active Directory authentication](authentication-aad-overview.md) users and logins. Azure Active Directory logins are available only in SQL Managed Instance. 
+Access to Azure SQL Database is protected with logins and firewalls. Azure SQL Database and SQL Managed Instance support users and logins for both SQL authentication and [authentication](authentication-aad-overview.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Microsoft Entra logins are generally available in SQL Managed Instance and are in Public Preview for Azure SQL Database.
 
 Learn more about [managing database access and login](logins-create-manage.md).
 
@@ -48,10 +48,10 @@ It's possible to connect your application to your Azure SQL resource by using th
 - [Python](connect-query-python.md)
 - [Ruby](connect-query-ruby.md)
 
-It's possible to configure Azure AD authentication to your Azure SQL resource. Review the following articles for more information: 
+It's possible to configure Microsoft Entra authentication to your Azure SQL resource. Review the following articles for more information: 
 
-- [Connect to Azure SQL with Azure AD authentication and SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication)
-- [Use Managed Identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+- [Connect to Azure SQL with Microsoft Entra authentication and SqlClient](/sql/connect/ado-net/sql/azure-active-directory-authentication)
+- [Use Managed Identities in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 - [Connect to SQL Database from .NET App Service without secrets using a managed identity](/azure/app-service/tutorial-connect-msi-sql-database)
 
 

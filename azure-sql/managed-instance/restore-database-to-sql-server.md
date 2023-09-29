@@ -40,11 +40,11 @@ You can create your credential by using a managed identity or a shared access si
 
 ### [Managed identity](#tab/managed-identity)
 
-A *managed identity* is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Azure AD, the system-assigned managed identity. 
+A *managed identity* is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Microsoft Entra ID, the system-assigned managed identity. 
 
 You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
 
-Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the instance is done the same way as granting permissions to any other Azure AD user. For example:
+Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the instance is done the same way as granting permissions to any other Microsoft Entra user. For example:
 
 1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
 1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.

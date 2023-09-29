@@ -43,7 +43,7 @@ The runbook and module galleries for [Azure Automation](/azure/automation/automa
 
 On 30 September 2023, Azure Automation Classic Run As accounts will be retired. Instead, use managed identities for authentication for existing and new runbooks. Managed identities provide the same functionality as Run As accounts, plus:
 
-- Secure authentication to any Azure service that supports Azure Active Directory (Azure AD) authentication.
+- Secure authentication to any Azure service that supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 - Minimized management overhead with easy access to resources.
 - Simplified runbooks with no requirement to use multi-line code.
 

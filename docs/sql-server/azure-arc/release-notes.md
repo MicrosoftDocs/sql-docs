@@ -12,6 +12,12 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## October 10, 20203
+
+### Extension version
+
+`1.1.2459.60`
+
 ## September 2023
 
 This release is published September 13, 2023.

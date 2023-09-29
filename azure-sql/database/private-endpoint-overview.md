@@ -40,35 +40,37 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
 1. Navigate to the server resource in the Azure portal as per steps shown in the following screenshot.
 
-   - (1) Select the Private endpoint connections in the left pane
-   - (2) Shows a list of all Private Endpoint Connections (PECs)
-   - (3) Corresponding Private Endpoint (PE) created
-
-   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot showing all of the PECs." lightbox="media/private-endpoint/pec-list-before.png":::
+    - (1) Select the Private endpoint connections in the left pane
+    - (2) Shows a list of all Private Endpoint Connections (PECs)
+    - (3) Corresponding Private Endpoint (PE) created
+    
+   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot that shows how to locate the list of private endpoint connections for the server resource." lightbox="media/private-endpoint/pec-list-before.png" border="false":::
 
 1. Choose an individual PEC from the list by selecting it.
 
-   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot showing the selected PEC." lightbox="media/private-endpoint/pec-select.png":::
+   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot that shows how to select a private endpoint connection in the Azure portal." lightbox="media/private-endpoint/pec-select.png":::
 
 1. The SQL admin can choose to approve or reject a PEC and optionally add a short text response.
 
-   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot showing the PEC approval." lightbox="media/private-endpoint/pec-approve.png":::
+   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot that shows how to approve a PEC in the Azure portal." lightbox="media/private-endpoint/pec-approve.png":::
+
 
 1. After approval or rejection, the list will reflect the appropriate state along with the response text.
 
-   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot of all PECs after approval." lightbox="media/private-endpoint/pec-list-after.png":::
+   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot that shows the PEC in the Approved state after approval by the admin." lightbox="media/private-endpoint/pec-list-after.png":::
 
-1. Finally selecting the private endpoint name
+1. Finally selecting the private endpoint name 
 
    :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot showing PEC details with the endpoint name." lightbox="media/private-endpoint/pec-select.png":::
 
    leads to the Network Interface details
-
-   :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot showing the NIC details." lightbox="media/private-endpoint/pec-nic-click.png":::
+   
+   :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot that shows the NIC details for the private endpoint connection." lightbox="media/private-endpoint/pec-nic-click.png":::
 
    which finally leads to the IP address for the private endpoint
 
-   :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot showing the private IP address." lightbox="media/private-endpoint/pec-ip-display.png":::
+   :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot that shows the Private IP address for the private endpoint connection." lightbox="media/private-endpoint/pec-ip-display.png":::
+
 
 > [!IMPORTANT]  
 > When you add a private endpoint connection, public routing to your logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** isn't selected by default. To disable public network access, ensure that you select **Deny public network access**.
@@ -82,7 +84,7 @@ First, ensure that your private endpoint connections are enabled and configured.
 1. Go to the **Networking** page of your logical server.
 1. Select the **Deny public network access** checkbox.
 
-   :::image type="content" source="media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows selecting the Deny public network access option." lightbox="media/private-endpoint/pec-deny-public-access.png":::
+   :::image type="content" source="./media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows how to disable public network access for the private endpoint connection." lightbox="./media/private-endpoint/pec-deny-public-access.png":::
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
 

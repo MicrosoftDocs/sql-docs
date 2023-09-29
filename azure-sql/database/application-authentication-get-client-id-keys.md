@@ -4,7 +4,7 @@ description: Create a service principal for accessing Azure SQL Database from co
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf, mathoma
-ms.date: 03/12/2019
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: how-to
@@ -16,7 +16,8 @@ ms.custom:
 # Get the required values for authenticating an application to access Azure SQL Database from code
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-To create and manage Azure SQL Database from code you must register your app in the Azure Active Directory (Azure AD) domain in the subscription where your Azure resources have been created.
+To create and manage an Azure SQL Database from code, you must register your app with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). The app must be registered in the same Microsoft Entra tenant as your Azure SQL Database resource.
+
 
 ## Create a service principal to access resources from an application
 
@@ -98,4 +99,4 @@ Write-Output "_applicationSecret:" $secret
 ## See also
 
 [Create a database in Azure SQL Database with C#](design-first-database-csharp-tutorial.md)  
-[Connect to Azure SQL Database by using Azure Active Directory Authentication](authentication-aad-overview.md)
+[Connect to Azure SQL Database by using Microsoft Entra authentication](authentication-aad-overview.md)

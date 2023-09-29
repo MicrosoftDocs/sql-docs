@@ -564,13 +564,13 @@ More information: [Trace flags](/sql/t-sql/database-console-commands/dbcc-traceo
 **Description**   
 Azure SQL Managed Instance supports two types of authentication: 
 - SQL Authentication, which uses a username and password
-- Azure Active Directory Authentication, which uses identities managed by Azure Active Directory and is supported for managed and integrated domains. 
+- Microsoft Entra authentication, which uses identities managed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and is supported for managed and integrated domains. 
 
 Database users mapped with Windows authentication (integrated security) are not supported in Azure SQL Managed Instance. 
 
 
 **Recommendation**   
-Federate the local Active Directory with Azure Active Directory. The Windows identity can then be replaced with the equivalent Azure Active Directory identities. Alternatively, migrate to SQL Server on Azure Virtual Machine.
+Federate the local Active Directory with Microsoft Entra ID. The Windows identity can then be replaced with the equivalent Microsoft Entra identities. Alternatively, migrate to SQL Server on Azure Virtual Machine.
 
 More information: [SQL Managed Instance security capabilities](../../database/security-overview.md#authentication)
 

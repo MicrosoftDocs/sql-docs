@@ -21,6 +21,9 @@ Azure SQL Managed Instance is a scalable cloud database service that's always ru
 If you're new to Azure SQL Managed Instance, check out the *Azure SQL Managed Instance* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
 > [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61/player]
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
+
 ## Overview
 
 Azure SQL Managed Instance is a PaaS service that has near 100% compatibility with the latest Enterprise Edition SQL Server database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable to existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance provides all PaaS capabilities (automatic patching and version updates, [automated backups](automated-backups-overview.md), [high availability](../database/high-availability-sla.md)) to drastically reduce management overhead and the total cost of ownership (TCO).
@@ -50,7 +53,7 @@ SQL Managed Instance combines the best features that are available both in Azure
 | --- | --- |
 |No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [Hybrid Disaster recovery with failover (preview)](managed-instance-link-feature-overview.md) between SQL Managed Instance and SQL Server 2022. <br>Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
 |**Security and compliance** | **Management**|
-|Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Azure Active Directory (Azure AD) authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Azure AD server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows Authentication for Azure AD principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
+|Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Microsoft Entra authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Microsoft Entra server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows authentication for Microsoft Entra principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
 
 > [!IMPORTANT]
 > Azure SQL Managed Instance has been certified against a number of compliance standards. For more information, see the [Microsoft Azure Compliance Offerings](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=44bbae63-bf4d-4e3b-9d3d-c96fb25ec363&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_FAQ_and_White_Papers), where you can find the most current list of SQL Managed Instance compliance certifications, listed under **SQL Database**.
@@ -110,7 +113,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     :::column-end:::
     :::column:::
     **Security**
-    - [Integrated authentication with Azure AD](../database/authentication-aad-overview.md)
+    - [Integrated authentication with Microsoft Entra ID](../database/authentication-aad-overview.md)
     - [TDE](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)
     - [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine)
     - [SQL Auditing](auditing-configure.md)
@@ -133,7 +136,7 @@ Some key differences:
 - High availability is built in and preconfigured using technology similar to [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 - There are only automated backups and point-in-time restore. Customers can initiate `copy-only` backups that don't interfere with the automatic backup chain.
 - Specifying full physical paths is unsupported, so all corresponding scenarios have to be supported differently: RESTORE DB doesn't support WITH MOVE, CREATE DB doesn't allow physical paths, BULK INSERT works with Azure blobs only, etc.
-- SQL Managed Instance supports [Azure AD authentication](../database/authentication-aad-overview.md) and [Windows Authentication for Azure Active Directory principals (Preview)](winauth-azuread-overview.md).
+- SQL Managed Instance supports [Microsoft Entra authentication](../database/authentication-aad-overview.md) and [Windows Authentication for Microsoft Entra principals (Preview)](winauth-azuread-overview.md).
 - SQL Managed Instance automatically manages XTP filegroups and files for databases containing In-Memory OLTP objects.
 - SQL Managed Instance supports SQL Server Integration Services (SSIS) and can host an SSIS catalog (SSISDB) that stores SSIS packages, but they're executed on a managed Azure-SSIS Integration Runtime (IR) in Azure Data Factory. See [Create Azure-SSIS IR in Data Factory](/azure/data-factory/create-azure-ssis-integration-runtime). To compare the SSIS features, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance).
 - SQL Managed Instance supports connectivity only through the TCP protocol. It doesn't support connectivity through named pipes.
@@ -238,21 +241,23 @@ Azure SQL Managed Instance provides a set of advanced security features that can
 
 Migration of an encrypted database to SQL Managed Instance is supported via Azure Database Migration Service or native restore. If you plan to migrate an encrypted database using native restore, migration of the existing TDE certificate from the SQL Server instance to SQL Managed Instance is a required step. For more information about migration options, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
-## Azure Active Directory integration
+<a name='azure-active-directory-integration'></a>
 
-SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure Active Directory (Azure AD). Azure AD server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
+## Microsoft Entra integration
 
-SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Azure AD integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure AD supports [multi-factor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
+SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Microsoft Entra server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Microsoft Entra server principals (logins) enable you to specify users and groups from your Microsoft Entra tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
 
-A new syntax is introduced to create Azure AD server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision an Azure Active Directory administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
+SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Microsoft Entra integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID supports [multifactor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
+
+A new syntax is introduced to create Microsoft Entra server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision a Microsoft Entra administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
 
 ## Authentication
 
 SQL Managed Instance authentication refers to how users prove their identity when connecting to the database. SQL Managed Instance supports three types of authentication:  
 
 - **SQL Authentication**: This authentication method uses a username and password.
-- **Azure Active Directory Authentication**: This authentication method uses identities managed by Azure Active Directory and is supported for managed and integrated domains. Use Active Directory authentication (integrated security) [whenever possible](/sql/relational-databases/security/choose-an-authentication-mode).
-- **Windows Authentication for Azure AD Principals**: [Kerberos authentication for Azure AD Principals](../managed-instance/winauth-azuread-overview.md) enables Windows Authentication for Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
+- **Microsoft Entra authentication**: This authentication method uses identities managed by Microsoft Entra ID and is supported for managed and integrated domains. Use Active Directory authentication (integrated security) [whenever possible](/sql/relational-databases/security/choose-an-authentication-mode).
+- **Windows authentication for Microsoft Entra principals**: [Kerberos authentication for Microsoft Entra principals](../managed-instance/winauth-azuread-overview.md) enables Windows authentication for Azure SQL Managed Instance. Windows authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
 
 ### Authorization
 

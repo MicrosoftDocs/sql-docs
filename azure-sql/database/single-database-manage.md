@@ -3,8 +3,8 @@ title: Create & manage servers and single databases
 description: Learn about creating and managing servers and single databases in Azure SQL Database using the Azure portal, PowerShell, the Azure CLI, Transact-SQL (T-SQL), and Rest-API.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, randolphwest
-ms.date: 09/25/2023
+ms.reviewer: mathoma
+ms.date: 09/13/2023
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: conceptual
@@ -22,17 +22,20 @@ You can create and manage servers and single databases in Azure SQL Database usi
 
 You can create the resource group for Azure SQL Database ahead of time or while creating the server itself.
 
+> [!TIP]  
+> For an Azure portal quickstart, see [Create a database in SQL Database in the Azure portal](single-database-create-quickstart.md).
+
 ### Create a server
 
 To create a server using the [Azure portal](https://portal.azure.com), create a new [server](logical-servers.md) resource from Azure Marketplace. Alternatively, you can create the server when you deploy an Azure SQL Database.
 
-  :::image type="content" source="media/single-database-manage/create-logical-sql-server.png" alt-text="A screenshot of the Azure portal resource search for 'sql server', showing 'SQL server (logical server)' as the result.":::
+:::image type="content" source="./media/single-database-manage/create-logical-sql-server.png" alt-text="Screenshot of the Azure portal resource search for sql server showing SQL server logical server as the result.":::
 
 ### Create a blank or sample database
 
 To create a single Azure SQL Database using the [Azure portal](https://portal.azure.com), choose the Azure SQL Database resource in Azure Marketplace. You can create the resource group and server ahead of time or while creating the single database itself. You can create a blank database or create a sample database based on Adventure Works LT.
 
-  :::image type="content" source="media/single-database-manage/create-database-1.png" alt-text="A screenshot of the Azure portal, with the Create a new SQL Database boxed in red.":::
+:::image type="content" source="./media/single-database-manage/create-database-1.png" alt-text="Screenshot of the Azure portal that shows how to locate the option to create a new SQL Database.":::
 
 > [!IMPORTANT]  
 > For information on selecting the pricing tier for your database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
@@ -43,12 +46,10 @@ To manage an existing server, navigate to the server using several methods - suc
 
 To manage an existing database, navigate to the **SQL databases** page and select the database you wish to manage. The following screenshot shows how to begin setting a server-level firewall for a database from the **Overview** page for a database.
 
-   :::image type="content" source="media/single-database-manage/server-firewall-rule.png" alt-text="A screenshot of the Azure portal Set Server firewall rule page for an Azure SQL Database.":::
+:::image type="content" source="./media/single-database-manage/server-firewall-rule.png" alt-text="Screenshot of the Azure portal Set Server firewall rule page for an Azure SQL Database.":::
 
 > [!IMPORTANT]  
 > To configure performance properties for a database, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
-> [!TIP]  
-> For an Azure portal quickstart, see [Create a database in SQL Database in the Azure portal](single-database-create-quickstart.md).
 
 ## PowerShell
 

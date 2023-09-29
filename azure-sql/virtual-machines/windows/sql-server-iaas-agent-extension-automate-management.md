@@ -101,8 +101,7 @@ The following table defines the permissions and custom roles used by each featur
 
 SQL Server VMs deployed after October 2022 no longer have the least privilege mode setting available in the portal. For SQL Server VMs provisioned before October 2022, you can enable the least privilege permissions model by going to your [SQL virtual machines resource](manage-sql-vm-portal.md), choosing **Security Configuration** under **Security** and then checking the box next to **Enable least privilege mode**: 
 
-:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Security Configuration page, enable least privilege highlighted.":::
-
+:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Security Configuration page, with enable least privilege highlighted.":::
 
 
 ## Installation

@@ -80,9 +80,9 @@ A user that is logged into a managed instance must be authorized to access and q
 
 ### [Managed identity](#tab/managed-identity)
 
-A **managed identity** is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services - like Azure SQL Managed Instance - with an automatically managed identity in Azure AD, the system assigned managed identity. This identity can be used to authorize requests for data access in nonpublic storage accounts. Services like Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more user assigned managed identities. You can use either system assigned managed identities or user assigned managed identities for data virtualization with Azure SQL Managed Instance.
+A **managed identity** is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that provides Azure services - like Azure SQL Managed Instance - with an identity managed in Microsoft Entra ID. This identity can be used to authorize requests for data access in nonpublic storage accounts. Services like Azure SQL Managed Instance have a system-assigned managed identity, and can also have one or more user-assigned managed identities. You can use either system-assigned managed identities or user-assigned managed identities for data virtualization with Azure SQL Managed Instance.
 
-Before accessing the data, the Azure storage administrator must grant permissions to managed identity to access the data. Granting permissions to the system assigned managed identity of the managed instance is done the same way as granting permission to any other Azure AD user. For example:
+The Azure storage administrator must first grant permissions to the managed identity to access the data. Grant permissions to the system-assigned managed identity of the managed instance the same way permissions are granted to any other Microsoft Entra user. For example:
 
 1. In the Azure portal, in the **Access Control (IAM)** page of a storage account, select **Add role assignment**.  
 1. Choose the **Storage Blob Data Reader** built-in Azure RBAC role. This provides read access to the managed identity for the necessary Azure Blob Storage containers.
@@ -509,7 +509,7 @@ Issues with query execution are typically caused by managed instance not being a
 - SAS key permissions allowed: **Read** at minimum, and **List** if wildcards are used.
 - Blocked inbound traffic on the storage account. Check [Managing virtual network rules for Azure Storage](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-virtual-network-rules) for more details and make sure that access from managed instance VNet is allowed.
 - Outbound traffic blocked on the managed instance using [storage endpoint policy](service-endpoint-policies-configure.md#configure-policies). Allow outbound traffic to the storage account.
-- Managed Identity access rights: make sure the Azure AD service principal representing managed identity of the instance has access rights granted on the storage account.
+- Managed Identity access rights: make sure the managed identity of the instance is granted access rights to the storage account.
 - Compatibility level of the database must be 130 or higher for data virtualization queries to work.
 
 ## CREATE EXTERNAL TABLE AS SELECT (CETAS)

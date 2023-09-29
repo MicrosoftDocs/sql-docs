@@ -210,7 +210,7 @@ landingContent:
             url: database/connect-query-dotnet-core.md
           - text: Python
             url: database/connect-query-python.md
-          - text: With Azure AD and SqlClient
+          - text: With Microsoft Entra ID (formerly Azure Active Directory) and SqlClient
             url: /sql/connect/ado-net/sql/azure-active-directory-authentication
 
 
@@ -237,10 +237,3 @@ landingContent:
             url: database/design-first-database-tutorial.md
           - text: Design first database (C#)
             url: database/design-first-database-csharp-tutorial.md
-
-
-
-
-
-
-

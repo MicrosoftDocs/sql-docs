@@ -38,7 +38,7 @@ The current implementation of the Azure SQL Database emulator is derived from an
 * Memory-optimized tables in in-memory OLTP
 * HierarchyID data type
 * Full-text search
-* Azure Active Directory Integration
+* Microsoft Entra Integration
 
 While lack of compatibility with some of these features can be impactful, the emulator is still a great tool for local development and testing and supports most of the Azure SQL Database programmability surface.
 

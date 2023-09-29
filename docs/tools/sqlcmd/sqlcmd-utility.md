@@ -49,7 +49,7 @@ There are two versions of **sqlcmd**:
 To determine the version you have installed, run the following statement at the command line:
 
 ```console
-sqlcmd "-?"
+sqlcmd -?
 ```
 
 ### [sqlcmd (ODBC)](#tab/odbc)

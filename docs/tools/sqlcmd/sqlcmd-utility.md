@@ -4,7 +4,7 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 08/15/2023
+ms.date: 09/29/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -25,6 +25,7 @@ helpviewer_keywords:
   - "scripts [SQL Server], command prompt"
   - "RESET command"
   - "GO command"
+zone_pivot_groups: cs1-command-shell
 monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
 # sqlcmd utility
@@ -48,9 +49,29 @@ There are two versions of **sqlcmd**:
 
 To determine the version you have installed, run the following statement at the command line:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd "-?"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd "-?"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -?
+```
+
+::: zone-end
 
 ### [sqlcmd (ODBC)](#tab/odbc)
 
@@ -124,7 +145,7 @@ SSMS uses the Microsoft [!INCLUDE [dnprdnshort_md](../../includes/dnprdnshort-md
 
 ### [sqlcmd (ODBC)](#tab/odbc)
 
-```console
+```output
 sqlcmd
    -a packet_size
    -A (dedicated administrator connection)
@@ -179,7 +200,7 @@ Currently, **sqlcmd** doesn't require a space between the command-line option an
 
 ### [sqlcmd (Go)](#tab/go)
 
-```console
+```output
 Usage:
   sqlcmd [flags]
   sqlcmd [command]
@@ -352,15 +373,32 @@ The `SQLCMDPASSWORD` environment variable lets you set a default password for th
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 SET SQLCMDPASSWORD=p@a$$w0rd
-```
-
-At the following command prompt, type:
-
-```console
 sqlcmd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+SET SQLCMDPASSWORD=p@a$$w0rd
+sqlcmd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+SET SQLCMDPASSWORD=p@a$$w0rd
+sqlcmd
+```
+
+::: zone-end
 
 If the user name and password combination is incorrect, an error message is generated.
 
@@ -399,17 +437,57 @@ If the `-U` option is used with the `-E` option (described later in this article
 
 Change the password:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd
+```
+
+::: zone-end
 
 #### -Z *new_password*
 
 Change the password and exit:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd
+```
+
+::: zone-end
 
 ### Input/output options
 
@@ -435,7 +513,7 @@ Identifies the file that contains a batch of Transact-SQL statements or stored p
 
 Path examples:
 
-```console
+```output
 -i C:\<filename>
 -i \\<Server>\<Share$>\<filename>
 -i "C:\Some Folder\<file name>"
@@ -445,9 +523,29 @@ File paths that contain spaces must be enclosed in quotation marks.
 
 This option may be used more than once:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -i <input_file1> -i <input_file2>
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -i <input_file1> -i <input_file2>
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -i <input_file1> -i <input_file2>
+```
+
+::: zone-end
 
 #### -o *output_file*
 
@@ -457,7 +555,7 @@ If `-u` is specified, the *output_file* is stored in Unicode format. If the file
 
 Path examples:
 
-```console
+```output
 -o C:< filename>
 -o \\<Server>\<Share$>\<filename>
 -o "C:\Some Folder\<file name>"
@@ -506,11 +604,35 @@ Executes a query when **sqlcmd** starts, but doesn't exit **sqlcmd** when the qu
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
 
 sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -d AdventureWorks2022 -q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
 
 > [!IMPORTANT]  
 > Don't use the `GO` terminator in the query.
@@ -525,11 +647,35 @@ Use quotation marks around the query, as shown in the following example.
 
 At the command prompt, type:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
 
 sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -d AdventureWorks2022 -Q "SELECT FirstName, LastName FROM Person.Person WHERE LastName LIKE 'Whi%';"
+
+sqlcmd -d AdventureWorks2022 -Q "SELECT TOP 5 FirstName FROM Person.Person;SELECT TOP 5 LastName FROM Person.Person;"
+```
+
+::: zone-end
 
 > [!IMPORTANT]  
 > Don't use the `GO` terminator in the query.
@@ -547,11 +693,35 @@ Specifies the number of seconds before a command (or Transact-SQL statement) tim
 
 Creates a **sqlcmd** scripting variable that can be used in a **sqlcmd** script. Enclose the value in quotation marks if the value contains spaces. You can specify multiple `<var>="<value>"` values. If there are errors in any of the values specified, **sqlcmd** generates an error message and then exits.
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -v MyVar1=something MyVar2="some thing"
 
 sqlcmd -v MyVar1=something -v MyVar2="some thing"
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -v MyVar1=something MyVar2="some thing"
+
+sqlcmd -v MyVar1=something -v MyVar2="some thing"
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -v MyVar1=something MyVar2="some thing"
+
+sqlcmd -v MyVar1=something -v MyVar2="some thing"
+```
+
+::: zone-end
 
 #### -x
 
@@ -1059,13 +1229,7 @@ Lists **sqlcmd** commands, together with a short description of each command.
 
 **sqlcmd** prints any informational message that is sent by the server. In the following example, after the Transact-SQL statements are executed, an informational message is printed.
 
-At the command prompt, type the command:
-
-```console
-sqlcmd
-```
-
-At the **sqlcmd** prompt type:
+Start **sqlcmd**. At the **sqlcmd** command prompt, type the query:
 
 ```console
 USE AdventureWorks2022;
@@ -1135,11 +1299,35 @@ For more info, see [XML Output Format](#OutputXML) in this article.
 
 Examples using Azure AD authentication:
 
-```console
+::: zone pivot="cs1-bash"
+
+```bash
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
 
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
 ```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```powershell
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
+
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
+
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAzureADPassword -l 30
+```
+
+::: zone-end
 
 ## sqlcmd best practices
 
@@ -1163,18 +1351,15 @@ Use the following practices to help maximize correctness:
 
 Using `-V16` in combination with checking the exit code and `DOS ERRORLEVEL` can help catch errors in automated environments, particularly quality gates before a production release.
 
-## See also
+## Related content
 
 - [Learn more about the new go-sqlcmd utility on GitHub](https://github.com/microsoft/go-sqlcmd)
-- [Run SQL Server on Docker](../../linux/quickstart-install-connect-docker.md)
-
-## Next steps
-
-- [Start the sqlcmd Utility](sqlcmd-start-utility.md)
-- [Run Transact-SQL Script Files Using sqlcmd](sqlcmd-run-transact-sql-script-files.md)
-- [Use the sqlcmd Utility](sqlcmd-use-utility.md)
-- [Use sqlcmd with Scripting Variables](sqlcmd-use-scripting-variables.md)
-- [Connect to the Database Engine With sqlcmd](sqlcmd-connect-database-engine.md)
+- [Quickstart: Run SQL Server Linux container images with Docker](../../linux/quickstart-install-connect-docker.md)
+- [sqlcmd - Start the utility](sqlcmd-start-utility.md)
+- [sqlcmd - Run Transact-SQL script files](sqlcmd-run-transact-sql-script-files.md)
+- [sqlcmd - use the utility](sqlcmd-use-utility.md)
+- [sqlcmd - Use with scripting variables](sqlcmd-use-scripting-variables.md)
+- [sqlcmd - Connect to the database engine](sqlcmd-connect-database-engine.md)
 - [Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-query-editor.md)
 - [Manage Job Steps](../../ssms/agent/manage-job-steps.md)
 - [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)

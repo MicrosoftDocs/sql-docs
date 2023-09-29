@@ -159,7 +159,7 @@ On the **Basics** tab, select the **Configure database** link in the **Compute +
 
 From the SQL Managed Instance page, select **Pricing tier** link placed under the Settings section
 
-:::image type="content" source="../database/media/service-tiers-vcore/change-managed-instance-hardware.png" alt-text="change SQL Managed Instance hardware"  loc-scope="azure-portal":::
+:::image type="content" source="../database/media/service-tiers-vcore/change-managed-instance-hardware.png" alt-text="Screenshot shows Compute + storage page for SQL managed instance."  loc-scope="azure-portal":::
 
 On the Pricing tier page, you will be able to change hardware as described in the previous steps.
 

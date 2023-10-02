@@ -67,10 +67,10 @@ To execute `sp_configure` with both parameters to change a configuration option,
 
 1. From the Standard bar, select **New Query**.
 
-1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote access` option to `0`.
+1. Copy and paste the following example to disable remote access into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `remote access` option to `0`, meaning disable remote access. To enable use value 1 instead of 0.
 
 ```sql
-EXEC sp_configure 'remote access', 0;
+EXEC sp_configure 'remote access', 0; /* disable remote access */
 GO
 RECONFIGURE;
 GO

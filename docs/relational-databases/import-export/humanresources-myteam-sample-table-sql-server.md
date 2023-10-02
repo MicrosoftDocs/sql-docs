@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```sql
     --Create HumanResources.MyTeam:   
-    USE AdventureWorks;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE HumanResources.myTeam   
     (EmployeeID smallint NOT NULL,  
@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Execute following `INSERT` statements to populate the table with two rows:  
   
     ```sql
-    USE AdventureWorks;  
+    USE AdventureWorks2022;  
     GO  
     INSERT INTO HumanResources.myTeam(EmployeeID,Name,Title,Background)  
        VALUES(77,'Mia Doppleganger','Administrative Assistant','Microsoft Office');  

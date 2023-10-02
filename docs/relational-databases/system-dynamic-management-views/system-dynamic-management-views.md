@@ -3,7 +3,7 @@ title: "System dynamic management views (Transact-SQL)"
 description: "Dynamic management views and functions return server state information that can be used to monitor the health of a server instance, diagnose problems, and tune performance."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 06/23/2023
+ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+monikerRange: ">=aps-pdw-2016 || =azuresqldb-current || =azure-sqldw-latest || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =fabric"
 ---
 # System dynamic management views
 
@@ -61,65 +61,65 @@ Dynamic management views and functions have been organized into the following ca
 
 :::row:::
     :::column:::
-        [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](always-on-availability-groups-dynamic-management-views-functions.md)
+        [Always On Availability Groups Dynamic Management Views - Functions](always-on-availability-groups-dynamic-management-views-functions.md)
 
-        [Change Data Capture related dynamic management views (Transact-SQL)](change-data-capture-sys-dm-cdc-errors.md)
+        [Change Data Capture - sys.dm_cdc_errors](change-data-capture-sys-dm-cdc-errors.md)
 
-        [Change Tracking related dynamic management views](change-tracking-sys-dm-tran-commit-table.md)
+        [Change Tracking - sys.dm_tran_commit_table](change-tracking-sys-dm-tran-commit-table.md)
 
-        [Common Language Runtime related dynamic management views (Transact-SQL)](common-language-runtime-related-dynamic-management-views-transact-sql.md)
+        [Common Language Runtime Related Dynamic Management Views (Transact-SQL)](common-language-runtime-related-dynamic-management-views-transact-sql.md)
 
-        [Database Mirroring related dynamic management views (Transact-SQL)](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)
+        [Database Mirroring - sys.dm_db_mirroring_auto_page_repair](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)
 
         [Database related dynamic management views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
 
-        [Execution related dynamic management views and functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Execution Related Dynamic Management Views and Functions (Transact-SQL)](execution-related-dynamic-management-views-and-functions-transact-sql.md)
 
         [Extended Events Dynamic Management Views](extended-events-dynamic-management-views.md)
 
-        [Filestream and FileTable related dynamic management views (Transact-SQL)](filestream-and-filetable-dynamic-management-views-transact-sql.md)
+        [FILESTREAM and FileTable dynamic management views (Transact-SQL)](filestream-and-filetable-dynamic-management-views-transact-sql.md)
 
-        [Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL)](full-text-and-semantic-search-dynamic-management-views-functions.md)
+        [Full-Text and Semantic Search Dynamic Management Views - Functions](full-text-and-semantic-search-dynamic-management-views-functions.md)
 
         [Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)
 
-        [Index related dynamic management views and functions (Transact-SQL)](index-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Index Related Dynamic Management Views and Functions (Transact-SQL)](index-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [I O related dynamic management views and functions (Transact-SQL)](i-o-related-dynamic-management-views-and-functions-transact-sql.md)
+        [I/O Related Dynamic Management Views and Functions (Transact-SQL)](i-o-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [PolyBase Dynamic Management Views](../../relational-databases/polybase/polybase-troubleshooting.md)
+        [Monitor and troubleshoot PolyBase](../polybase/polybase-troubleshooting.md)
     :::column-end:::
     :::column:::
-        [Memory-Optimized Table related dynamic management views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)
+        [Memory-Optimized Table Dynamic Management Views (Transact-SQL)](memory-optimized-table-dynamic-management-views-transact-sql.md)
 
-        [Object related dynamic management views and functions (Transact-SQL)](object-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Object Related Dynamic Management Views and Functions (Transact-SQL)](object-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [Query Notifications related dynamic management views (Transact-SQL)](query-notifications-sys-dm-qn-subscriptions.md)
+        [Query Notifications - sys.dm_qn_subscriptions](query-notifications-sys-dm-qn-subscriptions.md)
 
-        [Replication related dynamic management views (Transact-SQL)](replication-related-dynamic-management-views-transact-sql.md)
+        [Replication Related Dynamic Management Views (Transact-SQL)](replication-related-dynamic-management-views-transact-sql.md)
 
-        [Resource Governor related dynamic management views (Transact-SQL)](resource-governor-related-dynamic-management-views-transact-sql.md)
+        [Resource Governor Related Dynamic Management Views (Transact-SQL)](resource-governor-related-dynamic-management-views-transact-sql.md)
 
-        [Security-related dynamic management views and functions (Transact-SQL)](security-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Security-Related Dynamic Management Views and Functions (Transact-SQL)](security-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [Server-related dynamic management views and functions (Transact-SQL)](server-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Server dynamic management views and functions (Transact-SQL)](server-related-dynamic-management-views-and-functions-transact-sql.md)
 
-        [Service Broker related dynamic management views (Transact-SQL)](service-broker-related-dynamic-management-views-transact-sql.md)
+        [Service Broker Related Dynamic Management Views (Transact-SQL)](service-broker-related-dynamic-management-views-transact-sql.md)
 
-        [Spatial Data related dynamic management views and functions (Transact-SQL)](./spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)
+        [Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change](spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)
 
-        [Azure Synapse Analytics and Parallel Data Warehouse related dynamic management views (Transact-SQL)](sql-and-parallel-data-warehouse-dynamic-management-views.md)
+        [SQL and Parallel Data Warehouse Dynamic Management Views](sql-and-parallel-data-warehouse-dynamic-management-views.md)
 
-        [SQL Server Operating System related dynamic management views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+        [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
         [Stretch Database related dynamic management views (Transact-SQL)](stretch-database-related-dynamic-management-views-transact-sql.md)
 
-        [Transaction related dynamic management views and functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
+        [Transaction Related Dynamic Management Views and Functions (Transact-SQL)](transaction-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
-## Next steps
+## Related content
 
 - [GRANT Server Permissions (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [GRANT Database Permissions (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)
-- [System Views (Transact-SQL)](../../t-sql/language-reference.md)
+- [Transact-SQL reference (Database Engine)](../../t-sql/language-reference.md)

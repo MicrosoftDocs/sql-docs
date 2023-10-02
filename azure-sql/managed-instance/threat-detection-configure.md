@@ -24,7 +24,7 @@ You can receive notifications about the detected threats via [email notification
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Navigate to the configuration page of the instance of SQL Managed Instance you want to protect. Under **Security**, select **Microsoft Defender for Cloud**.
-1. For **Enablement Status**, select **Configure**.
+1. For **Enablement Status**, select **Configure** to open the **Server settings** page.
 
    :::image type="content" source="media/threat-detection-configure/defender-cloud-configure.png" alt-text="Screenshot shows the Microsoft Defender for Cloud page for a SQL managed instance with the option to configure." lightbox="media/threat-detection-configure/defender-cloud-configure.png":::
 

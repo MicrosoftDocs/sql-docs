@@ -32,7 +32,7 @@ Data types that represent monetary or currency values.
 |Data type|Range|Storage|  
 |---|---|---|
 |**money**|-922,337,203,685,477.5808 to 922,337,203,685,477.5807 (-922,337,203,685,477.58<br />to 922,337,203,685,477.58 for Informatica.  Informatica only supports two decimals, not four.)|8 bytes|  
-|**smallmoney**|- 214,748.3648 to 214,748.3647|4 bytes|  
+|**smallmoney**| -214,748.3648 to 214,748.3647|4 bytes|  
   
 The **money** and **smallmoney** data types are accurate to a ten-thousandth of the monetary units that they represent. For Informatica, the **money** and **smallmoney** data types are accurate to a one-hundredth of the monetary units that they represent.
   

@@ -36,7 +36,7 @@ You can receive notifications about the detected threats via [email notification
 1. Under **Advanced Threat Protection Settings**, select **Add your contact details to the subscriptions email settings in Defender for Cloud**.
 1. For **Email recipients**, select users by role or add individual email addresses.
 
-   :::image type="content" source="media/threat-detection-configure/defender-cloud-email-notification.png" alt-text="set up advanced threat protection":::
+   :::image type="content" source="media/threat-detection-configure/defender-cloud-email-notification.png" alt-text="Screenshot shows the Email notifications page where you can specify email recipients and notification types.":::
 
 1. Select the **Notification types** sent by Microsoft Defender for Cloud. Learn more about [Advanced Threat Protection alerts](../database/threat-detection-overview.md).
 1. Select **Save**.

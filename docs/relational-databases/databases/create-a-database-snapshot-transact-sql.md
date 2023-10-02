@@ -4,7 +4,7 @@ description: "Find out how to create a SQL Server database snapshot by using Tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 09/28/2023
+ms.date: 10/02/2023
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
@@ -87,7 +87,7 @@ Any user who can create a database can create a database snapshot; however, to c
 
 1. Based on the current size of the source database, ensure that you have sufficient disk space to hold the database snapshot. The maximum size of a database snapshot is the size of the source database at snapshot creation. For more information, see [View the Size of the Sparse File of a Database Snapshot (Transact-SQL)](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).
 
-1. Issue a CREATE DATABASE statement on the files using the `AS SNAPSHOT OF`` clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
+1. Issue a `CREATE DATABASE` statement on the files using the `AS SNAPSHOT OF` clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:
 
    ```syntaxsql
    CREATE DATABASE database_snapshot_name
@@ -105,10 +105,10 @@ Any user who can create a database can create a database snapshot; however, to c
 
    | Argument | Description |
    | --- | --- |
-   | *database_snapshot_name* | The name of the snapshot to which you want to revert the database. |
-   | *logical_file_name* | The logical name of the source database used in SQL Server when referencing the file. |
-   | '*os_file_name*' | The path and file name used by the operating system when you create the file. |
-   | *source_database_name* | The source database. |
+   | `database_snapshot_name` | The name of the snapshot to which you want to revert the database. |
+   | `logical_file_name` | The logical name the source database uses in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file. |
+   | `os_file_name` | The path and file name used by the operating system when you create the file. |
+   | `source_database_name` | The source database. |
 
    For a full description of this syntax, see [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md#as-snapshot-of-source_database_name).
 
@@ -166,8 +166,8 @@ GO
 
 ## Related content
 
-- [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md)
-- [Database Snapshots (SQL Server)](database-snapshots-sql-server.md)
+- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)
+- [Database snapshots (SQL Server)](database-snapshots-sql-server.md)
 - [View a Database Snapshot (SQL Server)](view-a-database-snapshot-sql-server.md)
 - [Revert a Database to a Database Snapshot](revert-a-database-to-a-database-snapshot.md)
 - [Drop a Database Snapshot (Transact-SQL)](drop-a-database-snapshot-transact-sql.md)

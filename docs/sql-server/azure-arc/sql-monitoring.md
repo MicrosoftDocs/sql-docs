@@ -23,9 +23,17 @@ This article explains how to prevent your Arc-enabled SQL Server instances from 
 
 Prior to disabling or enabling monitoring data collection, you must first enabled the `SqlManagement` feature flag. This is a feature flag that will automatically be enabled in a future release. However, it is required to toggle the `monitoring.enabled` property on your Arc-enabled SQL Server using the Azure CLI.
 
-1. Download the [`set-monitoring.ps1`](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/monitoring/set-monitoring.ps1) PowerShell script from GitHub. 
+1. Download the [`set-feature-flags.ps1`](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/monitoring/set-feature-flags.ps1) PowerShell script from GitHub. 
 
-1. Configure and run `set-monitoring.ps1` in a PowerShell terminal on your Azure Arc-enabled Server.
+1. Configure and run `set-feature-flags.ps1` in a PowerShell terminal on your Azure Arc-enabled Server.
+
+   ```powershell
+   set-feature-flags.ps1 `
+       -Subscription "<Your-subscription-ID>" `
+       -ResourceGroup "contoso-rg" `
+       -MachineName "contoso-sql-host" `
+       -FeatureFlagsToEnable ("SqlManagement")
+   ```
 
 ### Disable monitoring data collection
 

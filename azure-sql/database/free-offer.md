@@ -8,7 +8,7 @@ ms.date: 09/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
-ms.custom: references_regions
+ms.custom: 
 monikerRange: "=azuresql || =azuresql-db"
 ---
 # Try Azure SQL Database for free (preview)
@@ -16,9 +16,6 @@ monikerRange: "=azuresql || =azuresql-db"
 Try Azure SQL Database free of charge and get 100,000 vCore seconds of compute every month. This free offer provides a General Purpose database for the lifetime of your subscription.
 
 The free SQL Database offer is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept.
-
-> [!NOTE]  
-> This offer is rolling out by region, with new regions added every week. The following regions are currently supported: East US, West Central US, UK South.
 
 To learn more about the offer, see this short video:
 

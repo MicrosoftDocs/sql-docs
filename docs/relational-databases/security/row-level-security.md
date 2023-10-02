@@ -86,7 +86,7 @@ Row-level security (RLS) supports two types of security predicates:
 
 - A bank can create a policy to restrict access to financial data rows based on an employee's business division or role in the company.
 
-- A multi-tenant application can create a policy to enforce a logical separation of each tenant's data rows from every other tenant's rows. Efficiencies are achieved by the storage of data for many tenants in a single table. Each tenant can see only its data rows.
+- A multitenant application can create a policy to enforce a logical separation of each tenant's data rows from every other tenant's rows. Efficiencies are achieved by the storage of data for many tenants in a single table. Each tenant can see only its data rows.
 
  RLS filter predicates are functionally equivalent to appending a `WHERE` clause. The predicate can be as sophisticated as business practices dictate, or the clause can be as simple as `WHERE TenantId = 42`.
 

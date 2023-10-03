@@ -4,7 +4,7 @@ description: Explains data that Microsoft collects for reporting for Azure Arc-e
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 07/06/2023
+ms.date: 10/03/2023
 ms.topic: conceptual
 ms.custom: references_regions
 ---
@@ -12,9 +12,12 @@ ms.custom: references_regions
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes the data that Azure Arc-enabled SQL Server transmits to Microsoft.
+This article describes the data that Azure Arc-enabled SQL Server transmits to Microsoft. Azure Arc-enabled SQL server collects usage data as described in this article and at [Monitor Azure Arc-enabled SQL Server](sql-monitoring.md).
 
-Azure Arc-enabled SQL Server, and any of the related Azure Arc-enabled services, don't store any customer data.
+Azure Arc-enabled SQL Server and any of the related Azure Arc-enabled services don't:
+
+- Collect any personally identifiable information (PII) or end-user identifiable information.
+- Store any customer data.
 
 ## Related products
 
@@ -22,7 +25,7 @@ Azure Arc-enabled SQL Server uses the following products:
 
 - Azure Arc-enabled servers
 
-The following data is collected to Azure for Azure Arc-enabled SQL Servers:
+The following data is collected for Azure Arc-enabled SQL Servers:
 
 ## Azure Arc-enabled SQL Server
 

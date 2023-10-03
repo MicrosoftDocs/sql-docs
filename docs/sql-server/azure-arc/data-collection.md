@@ -24,7 +24,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
 
 ## Azure Arc-enabled SQL Server
 
-The following data is collected for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]:
+The following data is collected for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
 
 | Description | Property name | Property type |
 | :-- | :-- | :-- |

@@ -49,7 +49,7 @@ For more information about the Windows permissions required for the [!INCLUDE [s
 
 1. Select the plus sign to expand the **Local Server Groups** folder.
 
-1. Right-click the server instance where you want set up the Service Startup Account, and select **SQL Server Configuration Manager...**.
+1. Right-click the server instance where you want to set up the Service Startup Account, and select **SQL Server Configuration Manager...**.
 
 1. In the **User Account Control** dialog box, select **Yes**.
 

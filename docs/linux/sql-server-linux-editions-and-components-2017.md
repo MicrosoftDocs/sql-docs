@@ -214,7 +214,7 @@ The following features and services aren't available for SQL Server 2017 on Linu
 | | Distributed query with 3rd-party connections |
 | | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |
 | | System extended stored procedures (XP_CMDSHELL, etc.) |
-| | Filetable, FILESTREAM |
+| | FileTable, FILESTREAM |
 | | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | | Buffer Pool Extension |
 | | Backup to URL - page blob <sup>1</sup> |

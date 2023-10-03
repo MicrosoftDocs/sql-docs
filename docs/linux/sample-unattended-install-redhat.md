@@ -31,7 +31,7 @@ This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnovers
 
 This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on RHEL 8.x. If you want to install a different version of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] or RHEL, change the Microsoft repository paths accordingly.
 
-Save the sample script to a file and then to customize it. You need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
+Save the sample script to a file. To customize it, you need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.

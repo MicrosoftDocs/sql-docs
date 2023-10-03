@@ -114,18 +114,7 @@ resources
 | summarize count() by tostring(SQLversion)
 ```
 
-### Scenario 7: SQL Server by version, edition, and license type
-
-```kusto
-resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances'
-| extend SQLversion = properties.version
-| extend SQLedition = properties.edition
-| extend licenseType = properties.licenseType
-| project name, SQLversion, SQLedition, licenseType
-```
-
-### Scenario 8: Show a count of databases by compatibility
+### Scenario 7: Show a count of databases by compatibility
 
 This example returns the number of databases, ordered by the compatibility level:
 

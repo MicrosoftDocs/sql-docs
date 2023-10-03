@@ -1180,20 +1180,20 @@ items:
       href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
     - name: Get Information
       href: relational-databases/service-broker/get-information-about-event-notifications.md
-  - name: Filestream, Filetable & BLOB
+  - name: FILESTREAM, FileTable & BLOB
     href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
     items:
     - name: Overview
       items:
-      - name: Filestream
+      - name: FILESTREAM
         href: relational-databases/blob/filestream-sql-server.md
-      - name: Filetable
+      - name: FileTable
         href: relational-databases/blob/filetables-sql-server.md
       - name: Compare Options for Storing Blobs
         href: relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: Remote Blob Store (RBS)
         href: relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: FILESTREAM
       items:
       - name: Enable & Configure
         href: relational-databases/blob/enable-and-configure-filestream.md
@@ -3020,7 +3020,7 @@ items:
         href: relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
       - name: Fetch rows from a result set
         href: relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-      - name: Filestream & OLE DB
+      - name: FILESTREAM & OLE DB
         href: relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
       - name: Read a FILESTREAM column to file using IBCPSession
         href: relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
@@ -12419,7 +12419,7 @@ items:
         href: relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
       - name: sys.external_file_formats
         href: relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md
       items:
       - name: sys.database_filestream_options
@@ -13273,7 +13273,7 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md
       - name: sys.dm_xe_sessions
         href: relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_filestream_file_io_handles
@@ -13728,7 +13728,7 @@ items:
         href: relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md
       - name: snapshots.fn_trace_getdata
         href: relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md
       items:
       - name: FileTableRootPath

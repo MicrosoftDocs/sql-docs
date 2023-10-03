@@ -148,7 +148,10 @@ You can select hardware configuration at the time of instance creation, or you c
 **To select hardware configuration when creating a SQL Managed Instance**
 
 For detailed information, see [Create a SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
-  
+
+On the **Basics** tab, select the **Configure database** link in the **Compute + storage** section, and then select desired hardware:
+
+:::image type="content" source="../database/media/service-tiers-vcore/configure-managed-instance.png" alt-text="configure SQL Managed Instance"  loc-scope="azure-portal":::
 **To change hardware of an existing SQL Managed Instance**
 
 #### [The Azure portal](#tab/azure-portal)

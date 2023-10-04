@@ -114,7 +114,8 @@ Additionally the following permissions are required for each predicate that is a
   
 ## Examples
 
-The following examples demonstrate the use of the `ALTER SECURITY POLICY` syntax. For an example of a complete security policy scenario, see [Row-Level Security](../../relational-databases/security/row-level-security.md).  
+The following examples demonstrate the use of the `ALTER SECURITY POLICY` syntax. For an example of a complete security policy scenario, see [Row-level security](../../relational-databases/security/row-level-security.md).  
+
   
 ### A. Add an additional predicate to a policy
 

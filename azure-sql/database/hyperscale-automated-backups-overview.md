@@ -17,31 +17,31 @@ monikerRange: "= azuresql || = azuresql-db"
 
 This article explains the [automated backup](automated-backups-overview.md) feature with Hyperscale databases in Azure SQL Database. 
 
-Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot based and are nearly instantaneous. Log backups are stored in long-term Azure storage for the backup retention period. 
+Hyperscale databases use a [unique architecture](service-tier-hyperscale.md#distributed-functions-architecture) with highly scalable storage and compute performance tiers. Hyperscale backups are snapshot-based and are nearly instantaneous. Log backups are stored in long-term Azure storage for the backup retention period. 
 
-A Hyperscale architecture doesn't require full, differential, or log backups. As such, backup frequency, storage costs, scheduling, storage redundancy, and restore capabilities differ from other databases in Azure SQL Database. 
+A Hyperscale architecture doesn't require full, differential, or log backups. As such, backup frequency, storage costs, scheduling, storage redundancy, and restore capabilities differ from other databases in the Azure SQL Database. 
 
 ## Backup and restore performance
 
 Storage and compute separation enables Hyperscale to push down backup and restore operations to the storage layer to eliminate resource consumption on compute replicas. Database backups don't affect the performance of either primary or secondary compute replicas. 
 
-Backup and restore operations for Hyperscale databases are fast regardless of data size, because they use storage snapshots. Backup is virtually instantaneous. 
+Backup and restore operations for Hyperscale databases are fast regardless of data size because they use storage snapshots. Backup is virtually instantaneous. 
 
 You can restore a database to any point in time within its backup retention period by:
 
 1. Reverting to applicable file snapshots.
 1. Applying transaction logs to make the restored database transactionally consistent. 
 
-As such, restore is not a size-of-data operation remains the same. Restore of a Hyperscale database within the same Azure region finishes in minutes instead of hours or days, even for multi-terabyte database. 
-Changing the [storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) when issuing a restore can result in longer restore times as the restore is size of data and hence the time will be proportional to the database size.
+As such, restore is not a size-of-data operation that remains the same. Restore of a Hyperscale database within the same Azure region finishes in minutes instead of hours or days, even for multi-terabyte database. 
+Changing the [storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) when issuing a restore can result in longer restore times as the restore is the size of data, and hence the time will be proportional to the database size.
 
-Creation of new databases by restoring an existing backup or copying the database also takes advantage of compute and storage separation in Hyperscale. Creating copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when you use the same storage type.
+The creation of new databases by restoring an existing backup or copying the database also takes advantage of compute and storage separation in Hyperscale. Creating copies for development or testing purposes, even of multi-terabyte databases, is doable in minutes within the same region when you use the same storage type.
 
 ## Backup retention
 
-Default short-term retention of backups for Hyperscale databases is 7 days.
+The default short-term retention of backups for Hyperscale databases is 7 days.
 
-Short-term retention of backups in the range of 1 to 35 days and long-term backup retention (LTR) capability for Hyperscale databases is generally available, as of September 2023.
+Short-term retention of backups in the range of 1 to 35 days and long-term backup retention (LTR) capability for Hyperscale databases is generally available as of September 2023. 
 
 ## Backup scheduling
 
@@ -117,11 +117,11 @@ The following screenshot shows an example cost analysis.
 
 Hyperscale supports configurable storage redundancy. When you're creating a Hyperscale database, you can choose your preferred storage type:  read-access geo-zone-redundant storage (RA-GZRS), read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), or locally redundant storage (LRS). 
 
-- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS).  In addition,copies your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
+- **Geo-zone-redundant storage**: Copies your backups synchronously across three Azure availability zones in the primary region. similar to zone-redundant storage(ZRS).  In addition, copy your data asynchronously to a single physical location in the [paired](/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies) secondary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#geo-zone-redundant-storage).
 
 To learn how the backups are replicated for other storage types, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy)
 
-Since Hyperscale uses storage snapshots for backups, data and backups share the same storage account. As a result the selected backup storage redundancy is applicable for both data and backups. 
+Since Hyperscale uses storage snapshots for backups, data and backups share the same storage account. As a result, the selected backup storage redundancy is applicable for both data and backups. 
 
 Consider backup storage redundancy carefully when you create a Hyperscale database, because you can set it only during database creation. You can't modify this setting after the resource is provisioned. 
 
@@ -134,7 +134,7 @@ Use [active geo-replication](active-geo-replication-overview.md) to update backu
 
 ## Restore a Hyperscale database to a different region
 
-You might need to restore your Hyperscale database to a region that's different from the current region. Common reasons include a disaster recovery operation or drill, or a relocation. The primary method is to do a geo-restore of the database. You use the same steps that you would use to restore any other database in Azure SQL Database to a different region:
+You might need to restore your Hyperscale database to a region that's different from the current region. Common reasons include a disaster recovery operation or drill or a relocation. The primary method is to do a geo-restore of the database. You use the same steps that you would use to restore any other database in Azure SQL Database to a different region:
 
 1. Create a [server](logical-servers.md) in the target region if you don't already have an appropriate server there. This server should be owned by the same subscription as the original (source) server.
 2. Follow the instructions in the [geo-restore](./recovery-using-backups.md#geo-restore) section of the page on restoring a database in Azure SQL Database from automatic backups.

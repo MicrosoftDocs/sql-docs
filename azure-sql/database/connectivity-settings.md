@@ -9,7 +9,7 @@ ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.devlang: azurecli
 ---
 

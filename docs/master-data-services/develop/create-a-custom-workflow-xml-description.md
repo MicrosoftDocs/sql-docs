@@ -16,7 +16,7 @@ ms.topic: "reference"
   
  The following example shows what the XML that is sent to the workflow handler might look like:  
   
-```scr  
+```xml
 <ExternalAction>  
   <Type>TEST</Type>  
   <SendData>1</SendData>  
@@ -58,15 +58,15 @@ ms.topic: "reference"
   
 |Tag|Description|  
 |---------|-----------------|  
-|\<Type>|The text you entered in the **Workflow type** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to identify which custom workflow assembly to load.|  
-|\<SendData>|A Boolean value controlled by the **Include member data in the message** checkbox in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. A value of 1 means that the \<MemberData> section is sent; otherwise the \<MemberData> section is not sent.|  
-|<Server_URL>|The text you entered in the **Workflow site** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|<Action_ID>|The text you entered in the **Workflow name** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Contains the data of the member that triggered the workflow action. This is included only if the value of \<SendData> is 1.|  
-|\<Enter*xxx*>|This set of tags contains metadata about the creation of the member, such as when it was created and who created it.|  
-|\<LastChg*xxx*>|This set of tags contains metadata about the last change made to the member, such as when the change was made and who made it.|  
-|\<Name>|The first attribute of the member that was changed. This example member contains only Name and Code attributes.|  
-|\<Code>|The next attribute of the member that was changed. If this example member contained more attributes, they would follow this one.|  
+|`<Type>`|The text you entered in the **Workflow type** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] to identify which custom workflow assembly to load.|  
+|`<SendData>`|A Boolean value controlled by the **Include member data in the message** checkbox in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. A value of 1 means that the \<MemberData> section is sent; otherwise the \<MemberData> section is not sent.|  
+|`<Server_URL>`|The text you entered in the **Workflow site** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|`<Action_ID>`|The text you entered in the **Workflow name** text box in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
+|`<MemberData>`|Contains the data of the member that triggered the workflow action. This is included only if the value of \<SendData> is 1.|  
+|`<Enter*>`|This set of tags contains metadata about the creation of the member, such as when it was created and who created it.|  
+|`<LastChg*>`|This set of tags contains metadata about the last change made to the member, such as when the change was made and who made it.|  
+|`<Name>`|The first attribute of the member that was changed. This example member contains only Name and Code attributes.|  
+|`<Code>`|The next attribute of the member that was changed. If this example member contained more attributes, they would follow this one.|  
   
 ## See Also  
  [Create a Custom Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   

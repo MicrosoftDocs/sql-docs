@@ -19,28 +19,24 @@ helpviewer_keywords:
 ## Global Object Collections and Initialization  
  Several collections are available to you for initializing your custom class variables. You can use the **Globals** and **User** collections. The **Parameters**, **Fields** and **ReportItems** collections are not available to you at the point in the report lifecycle when the **OnInit** method is invoked. To use the shared collections, **Globals** or **User**, you need to include the **Report** object reference. For example, to initialize your custom class based on the current language of the user accessing the report, your **Code** element might look like the following:  
   
-```  
-<Code>  
-   Dim m_myClass As MyClass  
-  
-   Protected Overrides Sub OnInit()  
-      m_myClass = new MyClass(Report.User!Language, _  
-         Report.Globals!ExecutionTime)  
-   End Sub  
-</Code>  
+```vbnet
+Dim m_myClass As MyClass  
+
+Protected Overrides Sub OnInit()  
+   m_myClass = new MyClass(Report.User!Language, _  
+      Report.Globals!ExecutionTime)  
+End Sub  
 ```  
   
  One way to initialize the property and field values of a class as shown previously is to declare your class and create a new instance of it by calling an overridden constructor.  
   
  Another way to initialize the property and field values of the classes in your custom assemblies is to call a publicly available method that you define from the **OnInit** method. You first need to add an instance name for your class in the report definition file. Once you have added the appropriate assembly reference and instance name, you can call your initialization method to initialize property and field values for your class. Your **OnInit** method might look like the following:  
   
-```  
-<Code>  
-   Protected Overrides Sub OnInit()  
-      m_myClass.MyInitializationMethod(Report.User!Language, _  
-         Report.Globals!ExecutionTime)  
-   End Sub  
-</Code>  
+```vbnet
+Protected Overrides Sub OnInit()  
+   m_myClass.MyInitializationMethod(Report.User!Language, _  
+      Report.Globals!ExecutionTime)  
+End Sub  
 ```  
   
  For more information about adding an assembly reference and instance name for your custom class, see [Add an Assembly Reference to a Report &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

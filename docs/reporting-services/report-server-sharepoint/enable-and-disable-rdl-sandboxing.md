@@ -28,7 +28,7 @@ The RDL (Report Definition Language) sandboxing feature lets you detect and rest
 
  When RDL Sandboxing is enabled, the following features are disabled:  
   
--   Custom code in the **\<Code>** element of a report definition.  
+-   Custom code in the `<Code>` element of a report definition.  
   
 -   RDL backward compatibility mode for [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] custom report items.  
   

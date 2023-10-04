@@ -79,7 +79,7 @@ GO
   
 In SQL Server, here is the result set for a Microsoft Entra ID authenticated login:
   
-```
+```output
 contoso\username  
 ```
 

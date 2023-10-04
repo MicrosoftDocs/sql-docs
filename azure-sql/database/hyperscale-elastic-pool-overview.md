@@ -15,7 +15,7 @@ ms.custom:
 
 This article provides an overview of Hyperscale elastic pools in Azure SQL Database. 
 
-An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software as a service (SaaS) developers to optimize the price performance ratio for a group of databases within a prescribed budget, while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases. 
+An Azure SQL Database [elastic pool](./elastic-pool-overview.md) enables software-as-a-service (SaaS) developers to optimize the price-performance ratio for a group of databases within a prescribed budget while delivering performance elasticity for each database. Azure SQL Database Hyperscale elastic pools introduces a shared resource model for Hyperscale databases. 
 
 For examples to create, scale, or move databases into a Hyperscale elastic pool by using the Azure CLI or PowerShell, review [Working with Hyperscale elastic pools using command-line tools](./hyperscale-elastic-pool-command-line.md)
 
@@ -40,11 +40,11 @@ Traditionally, the [architecture of a standalone Hyperscale database](service-ti
 
 The following describes the architecture of an elastic pool for Hyperscale databases: 
 
-- A Hyperscale elastic pool consists of a primary pool that hosts primary Hyperscale databases, and, if configured, up to four additional high availability pools. 
+- A Hyperscale elastic pool consists of a primary pool that hosts primary Hyperscale databases and, if configured, up to four additional high-availability pools. 
 - Primary Hyperscale databases hosted in the primary elastic pool share the SQL Server database engine (sqlservr.exe) compute process, vCores, memory, and SSD cache. 
-- Configuring high availability for the primary pool creates additional high availability pools that contain read-only database replicas for the databases in the primary pool. Each primary pool can have a maximum of four high availability replica pools. Each high availability pool shares compute, SSD cache, and memory resources for all the secondary read-only databases in the pool. 
-- Hyperscale databases in the primary elastic pool all share the same log service. Since databases in the high availability pools don't have write workload, they don't utilize the log service. 
-- Each Hyperscale database has its own set of page servers, and these page servers are shared between the primary database in the primary pool, and all secondary replica databases in the high availability pool. 
+- Configuring high availability for the primary pool creates additional high availability pools that contain read-only database replicas for the databases in the primary pool. Each primary pool can have a maximum of four high-availability replica pools. Each high-availability pool shares compute, SSD cache, and memory resources for all the secondary read-only databases in the pool. 
+- Hyperscale databases in the primary elastic pool all share the same log service. Since databases in the high availability pools don't have a write workload, they don't utilize the log service. 
+- Each Hyperscale database has its own set of page servers, and these page servers are shared between the primary database in the primary pool and all secondary replica databases in the high availability pool. 
 - Geo-replicated secondary Hyperscale databases can be placed inside another elastic pool. 
 - Specifying `ApplicationIntent=ReadOnly` in your database connection string routes you to a read-only replica database in one of the high availability pools. 
 
@@ -90,10 +90,10 @@ Consider the following limitations:
 
 - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. Individual databases need to be moved out of their respective existing pool before they can be added to the Hyperscale elastic pool.
 - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported.
-- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale) an eligible database, which is in a  Hyperscale elastic pool, it must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
-- Maintenance of databases in a pool is performed, and maintenance windows are configured, at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools. 
+- In order to [reverse migrate](./manage-hyperscale-database.md#reverse-migrate-from-hyperscale), an eligible database, which is in a  Hyperscale elastic pool, must first be removed from the Hyperscale elastic pool. The standalone Hyperscale database can then be reverse migrated to a General Purpose standalone database.
+- Maintenance of databases in a pool is performed, and maintenance windows are configured at the pool level. It isn't currently possible to configure a maintenance window for Hyperscale elastic pools. 
 - Zone redundancy isn't currently available for Hyperscale elastic pools. Attempting to add a zone-redundant Hyperscale database to a Hyperscale elastic pool results in an error. 
-- Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) into a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in a `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
+- Adding a [named replica](./service-tier-hyperscale-replicas.md#named-replica) into a Hyperscale elastic pool isn't supported. Attempting to add a named replica of a Hyperscale database to a Hyperscale elastic pool results in an `UnsupportedReplicationOperation` error. Instead, create the named replica as a single Hyperscale database.
 
 ## Known issues
 

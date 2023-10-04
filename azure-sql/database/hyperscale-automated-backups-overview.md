@@ -123,7 +123,8 @@ To learn how the backups are replicated for other storage types, see [backup sto
 
 Since Hyperscale uses storage snapshots for backups, data and backups share the same storage account. As a result the selected backup storage redundancy is applicable for both data and backups. 
 
-Consider backup storage redundancy carefully when you create a Hyperscale database, because you can set it only during database creation. You can't modify this setting after the resource is provisioned. 
+> [!NOTE]
+> Consider backup storage redundancy carefully when you create a Hyperscale database, because you can set it only during database creation. You can't modify this setting after the resource is provisioned. 
 
 Use [active geo-replication](active-geo-replication-overview.md) to update backup storage redundancy settings for an existing Hyperscale database with minimum downtime. Alternatively, you can use [database copy](database-copy.md).
 

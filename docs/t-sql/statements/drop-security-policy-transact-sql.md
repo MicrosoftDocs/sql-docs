@@ -42,15 +42,18 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
   
 #### *schema_name*
 
+
  Is the name of the schema to which the security policy belongs.  
   
 #### *security_policy_name*
+
 
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   
 ## Remarks
   
 ## Permissions
+
 
  Requires the ALTER ANY SECURITY POLICY permission and ALTER permission on the schema.  
   

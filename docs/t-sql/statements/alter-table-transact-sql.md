@@ -4,7 +4,7 @@ description: ALTER TABLE modifies a table definition by altering, adding, or dro
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/14/2023
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1139,6 +1139,14 @@ You can change the length, precision, or scale of a column by specifying a new s
 ## Locks and ALTER TABLE
 
 Changes you specify in ALTER TABLE implement immediately. If the changes require modifications of the rows in the table, ALTER TABLE updates the rows. ALTER TABLE acquires a schema modify (SCH-M) lock on the table to make sure that no other connections reference even the metadata for the table during the change, except online index operations that require a short SCH-M lock at the end. In an `ALTER TABLE...SWITCH` operation, the lock is acquired on both the source and target tables. The modifications made to the table are logged and fully recoverable. Changes that affect all the rows in large tables, such as dropping a column or, on some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], adding a NOT NULL column with a default value, can take a long time to complete and generate many log records. Run these ALTER TABLE statements with the same care as any INSERT, UPDATE, or DELETE statement that affects many rows.
+
+### XEvents for partition switch
+
+ The following XEvents are related to `ALTER TABLE ... SWITCH PARTITION` and [online index rebuilds](alter-index-transact-sql.md#online---on--off--as-applies-to-rebuild_index_option).
+  
+-   lock_request_priority_state
+-   process_killed_by_abort_blockers  
+-   ddl_with_wait_at_low_priority  
 
 ### <a id="adding-not-null-columns-as-an-online-operation"></a> Add NOT NULL columns as an online operation
 

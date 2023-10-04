@@ -3,7 +3,7 @@ title: "sys.dm_os_wait_stats (Transact-SQL)"
 description: Returns information about all the waits encountered by threads that executed.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/18/2023
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -31,7 +31,7 @@ Returns information about all the waits encountered by threads that executed. Yo
 | --- | --- | --- |
 | `wait_type` | **nvarchar(60)** | Name of the wait type. For more information, see [Types of waits](#WaitTypes), later in this article. |
 | `waiting_tasks_count` | **bigint** | Number of waits on this wait type. This counter is incremented at the start of each wait. |
-| `wait_time_ms` | **bigint** | Total wait time for this wait type in milliseconds. This time is inclusive of signal_wait_time_ms. |
+| `wait_time_ms` | **bigint** | Total wait time for this wait type in milliseconds. This time is inclusive of `signal_wait_time_ms`. |
 | `max_wait_time_ms` | **bigint** | Maximum wait time on this wait type. |
 | `signal_wait_time_ms` | **bigint** | Difference between the time that the waiting thread was signaled and when it started running. |
 | `pdw_node_id` | **int** | The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE [ssPDW](../../includes/sspdw-md.md)] |
@@ -131,7 +131,7 @@ The following table lists the wait types encountered by tasks.
 | <a id="broker_transmission_object"></a> `BROKER_TRANSMISSION_OBJECT` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="broker_transmission_table"></a> `BROKER_TRANSMISSION_TABLE` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="broker_transmission_work"></a> `BROKER_TRANSMISSION_WORK` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
-| <a id="broker_transmitter"></a> `BROKER_TRANSMITTER` | Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter, which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has two dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of `waiting_tasks_count` for this wait type point to intermittent work for these transmitter threads and aren't indications of any performance problem. If service broker isn't used at all, `waiting_tasks_count` should be 2 (for the 2 transmitter threads), and wait_time_ms should be twice the duration since instance startup. See [Service broker wait stats](/archive/blogs/sql_service_broker/service-broker-wait-types). |
+| <a id="broker_transmitter"></a> `BROKER_TRANSMITTER` | Occurs when the Service Broker transmitter is waiting for work. Service Broker has a component known as the Transmitter, which schedules messages from multiple dialogs to be sent across the wire over one or more connection endpoints. The transmitter has two dedicated threads for this purpose. This wait type is charged when these transmitter threads are waiting for dialog messages to be sent using the transport connections. High values of `waiting_tasks_count` for this wait type point to intermittent work for these transmitter threads and aren't indications of any performance problem. If service broker isn't used at all, `waiting_tasks_count` should be `2` (for the two transmitter threads), and `wait_time_ms` should be twice the duration since instance startup. See [Service broker wait stats](/archive/blogs/sql_service_broker/service-broker-wait-types). |
 | <a id="bufferpool_scan"></a> `BUFFERPOOL_SCAN` | May occur when the buffer pool scan runs in parallel and the main task waits for the scan to complete. For more information, see [Operations that trigger a buffer pool scan may run slowly on large-memory computers](/troubleshoot/sql/performance/buffer-pool-scan-runs-slowly-large-memory-machines).<br /><br />**Applies to**: [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)] and later versions. |
 | <a id="builtin_hashkey_mutex"></a> `BUILTIN_HASHKEY_MUTEX` | May occur after startup of instance, while internal data structures are initializing. Doesn't recur once data structures have initialized. |
 | <a id="change_tracking_waitforchanges"></a> `CHANGE_TRACKING_WAITFORCHANGES` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
@@ -445,6 +445,9 @@ The following table lists the wait types encountered by tasks.
 | <a id="lck_m_rs_s_low_priority"></a> `LCK_M_RS_S_LOW_PRIORITY` | Occurs when a task is waiting to acquire a Shared lock with Low Priority on the current key value, and a Shared Range lock with Low Priority between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="lck_m_rs_u"></a> `LCK_M_RS_U` | Occurs when a task is waiting to acquire an Update lock on the current key value, and an Update Range lock between the current and previous key. |
 | <a id="lck_m_rs_u_abort_blockers"></a> `LCK_M_RS_U_ABORT_BLOCKERS` | Occurs when a task is waiting to acquire an Update lock with Abort Blockers on the current key value, and an Update Range lock with Abort Blockers between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
+| <a id="lck_m_s_xact"></a> `LCK_M_S_XACT` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, where the intent cannot be inferred. Rare. Related to [optimized locking](../performance/optimized-locking.md). |
+| <a id="lck_m_s_xact_read"></a> `LCK_M_S_XACT_READ` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to read. Related to [optimized locking](../performance/optimized-locking.md). |
+| <a id="lck_m_s_xact_modify"></a> `LCK_M_S_XACT_MODIFY` | Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to modify. Related to [optimized locking](../performance/optimized-locking.md). |
 | <a id="lck_m_rs_u_low_priority"></a> `LCK_M_RS_U_LOW_PRIORITY` | Occurs when a task is waiting to acquire an Update lock with Low Priority on the current key value, and an Update Range lock with Low Priority between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="lck_m_rx_s"></a> `LCK_M_RX_S` | Occurs when a task is waiting to acquire a Shared lock on the current key value, and an Exclusive Range lock between the current and previous key. |
 | <a id="lck_m_rx_s_abort_blockers"></a> `LCK_M_RX_S_ABORT_BLOCKERS` | Occurs when a task is waiting to acquire a Shared lock with Abort Blockers on the current key value, and an Exclusive Range with Abort Blockers lock between the current and previous key. (Related to the low priority wait option of `ALTER TABLE` and `ALTER INDEX`.)<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
@@ -716,7 +719,7 @@ The following table lists the wait types encountered by tasks.
 | <a id="preemptive_sniopen"></a> `PREEMPTIVE_SNIOPEN` | Internal use only. |
 | <a id="preemptive_soshost"></a> `PREEMPTIVE_SOSHOST` | Internal use only. |
 | <a id="preemptive_sostesting"></a> `PREEMPTIVE_SOSTESTING` | Identified for informational purposes only. Not supported. Future compatibility isn't guaranteed. |
-| <a id="preemptive_sp_server_diagnostics"></a> `PREEMPTIVE_SP_SERVER_DIAGNOSTICS` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
+| <a id="preemptive_`sp_server_diagnostics`"></a> `PREEMPTIVE_SP_SERVER_DIAGNOSTICS` | Internal use only.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 | <a id="preemptive_startrm"></a> `PREEMPTIVE_STARTRM` | Internal use only. |
 | <a id="preemptive_streamfcb_checkpoint"></a> `PREEMPTIVE_STREAMFCB_CHECKPOINT` | Internal use only. |
 | <a id="preemptive_streamfcb_recover"></a> `PREEMPTIVE_STREAMFCB_RECOVER` | Internal use only. |
@@ -1042,17 +1045,11 @@ The following table lists the wait types encountered by tasks.
 | <a id="xtpproc_cache_access"></a> `XTPPROC_CACHE_ACCESS` | Occurs when for accessing all natively compiled stored procedure cache objects.<br /><br />**Applies to**: [!INCLUDE [ssSQL14-md](../../includes/sssql14-md.md)] and later versions. |
 | <a id="xtpproc_partitioned_stack_create"></a> `XTPPROC_PARTITIONED_STACK_CREATE` | Occurs when allocating per-NUMA node natively compiled stored procedure cache structures (must be done single threaded) for a given procedure.<br /><br />**Applies to**: [!INCLUDE [ssSQL11-md](../../includes/sssql11-md.md)] and later versions. |
 
-The following XEvents are related to partition `SWITCH` and online index rebuild. For information about syntax, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
-
-- `lock_request_priority_state`
-- `process_killed_by_abort_blockers`
-- `ddl_with_wait_at_low_priority`
-
 For a lock compatibility matrix, see [sys.dm_tran_locks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
 
-## See also
+## Related content
 
-- [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
-- [sys.dm_exec_session_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)
-- [sys.dm_db_wait_stats (Azure SQL Database)](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
-- [sys.dm_os_sys_info  (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)
+- [SQL Server Operating System Related Dynamic Management Views (Transact-SQL)](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
+- [sys.dm_exec_session_wait_stats (Transact-SQL)](sys-dm-exec-session-wait-stats-transact-sql.md)
+- [sys.dm_db_wait_stats (Azure SQL Database)](sys-dm-db-wait-stats-azure-sql-database.md)
+- [sys.dm_os_sys_info (Transact-SQL)](sys-dm-os-sys-info-transact-sql.md)

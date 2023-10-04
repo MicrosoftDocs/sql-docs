@@ -3,8 +3,8 @@ title: "ALTER INDEX (Transact-SQL)"
 description: ALTER INDEX (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
-ms.date: 06/06/2023
+ms.reviewer: wiassaf
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -427,6 +427,15 @@ Indexes, including indexes on global temp tables, can be rebuilt online except f
 - **varchar(max)** and **varbinary(max)** columns can't be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the `ONLINE` option. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't permit the `ONLINE` option when the base table contains **varchar(max)** or **varbinary(max)** columns
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
+
+ The following XEvents are related to `ALTER TABLE ... SWITCH PARTITION` and online index rebuild. 
+  
+-   lock_request_priority_state
+-   process_killed_by_abort_blockers  
+-   ddl_with_wait_at_low_priority  
+  
+ The existing XEvent `progress_report_online_index_operation` for online index operations includes `partition_number` and `partition_id`.  
+
 
 #### RESUMABLE = { ON | OFF}
 

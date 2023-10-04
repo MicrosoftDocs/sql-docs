@@ -7,6 +7,7 @@ ms.author: wiassaf
 ms.date: 07/02/2021
 ms.service: sql
 ms.subservice: big-data-cluster
+ms.custom: devx-track-azurecli
 ms.topic: conceptual
 ---
 

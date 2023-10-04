@@ -93,16 +93,9 @@ If you install successfully, but the solution shows **"incompatible"**, and "The
 1. Enable SSIS extension
 1. Relaunch Visual Studio
 
-If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log. You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
-- When the error is "The file {filefullpath} already exists.":
-   1. ```
-      cd C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE
-      rm CommonExtensions\Microsoft\SSIS\* 
-      rm PublicAssemblies\SSIS\* 
-      rm "PublicAssemblies\Microsoft BI\Business Intelligence Projects\Integration Services\"* 
-      ```
-   1. Repair the vs2022
-   1. Restart and reinstall
+If you get an error during installation, and find **"Process returned error: 0x80131500"** in the log. You can open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
+- When the error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
+  - kill MSIExec.exe in task manager, and retry. 
 - When the error is "Object reference not set to an instance of an object.",
   - delete the broken instance folder "%ProgramData%\Microsoft\VisualStudio\Packages\_Instances\<InstallationID>"
 - When the error is "Error 0x80091007: Failed to verify hash of payload",

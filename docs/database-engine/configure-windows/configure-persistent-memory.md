@@ -1,13 +1,13 @@
 ---
 title: Configure persistent memory (PMEM) - Windows
 description: Learn how to configure persistent memory (PMEM) for SQL Server on Windows, and how to create namespaces for PMEM devices.
-author: briancarrig 
+author: briancarrig
 ms.author: brcarrig
 ms.reviewer: mikeray
 ms.date: 09/21/2022
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: configuration
 ---
 
 # Configure persistent memory (PMEM) for SQL Server on Windows
@@ -16,7 +16,7 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 
 ## Overview
 
-[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] has a number of in-memory database features that rely on persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Windows.
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] has several in-memory database features that rely on persistent memory. This document covers the steps required to configure persistent memory for SQL Server on Windows.
 
 > [!NOTE]
 > The term _enlightenment_ was introduced to convey the concept of working with a persistent memory aware file system. Direct access (DAX) extensions to the NTFS file system provide the ability to memory map files from kernel space to user space. When a file is memory mapped into user space the application can issue load/store instructions directly to the memory mapped file, bypassing the kernel I/O stack completely. This is considered an "enlightened" file access method. As of Windows Server 2022, this _enlightenment_ functionality is available on both Windows and Linux platforms.
@@ -25,7 +25,7 @@ This article describes how to configure the persistent memory (PMEM) for [!INCLU
 
 ### Create namespaces for PMEM devices
 
-In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel® Optane™ specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions are at [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more on interleaved sets in Windows see [here](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
+In Windows, use the `ipmctl` utility to configure the PMEM disks (referred to as namespaces in Linux). You can find Intel® Optane™ specific instructions [here](https://www.intel.com/content/www/us/en/developer/articles/guide/qsg-part3-windows-provisioning-with-optane-pmem.html). Details on supported PMEM hardware on different Windows versions are at [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#supported-hardware). PMEM disks should be interleaved across PMEM NVDIMMs and can provide different types of user-space access to memory regions on the device. For more information on interleaved sets in Windows, see [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory#understand-interleaved-sets).
 
 ## PMEM disks
 
@@ -61,7 +61,7 @@ Get-PmemUnusedRegion | New-PmemDisk -Atomicity None
 Get-PmemDisk | Initialize-Disk -PartitionStyle GPT
 
 #Create New Partition(s) and Format the Volume(s) with DAX Mode
-Get-PmemDisk | `
+Get-PmemDisk[0] | `
 New-Partition `
     -UseMaximumSize `
     -AssignDriveLetter `
@@ -80,17 +80,17 @@ Format-Volume `
 Get-Partition | Select-Object DiskNumber, DriveLetter, IsDAX, Offset, Size, PartitionNumber | fl
 ```
 
-Check the file alignment of a particular file using `fsutil`. Note that our file size must be a modulo of 2 MB.
+Check the file alignment of a particular file using `fsutil`. Our file size must be a modulo of 2 MB.
 
 ```bash
-fsutil dax queryFileAlignment A:\AdventureWorks2019_A.mdf
+fsutil dax queryFileAlignment A:\AdventureWorks2022_A.mdf
 ```
 
 ## Replacing PMEM
 
 ### Reprovision PMEM disks
 
-Whenever a PMEM module is replaced, it needs to be re-provisioned.
+Whenever a PMEM module is replaced, it needs to be reprovisioned.
 
 > [!NOTE]
 > Removing a PMEM disk will result in the loss of data on that disk.
@@ -101,7 +101,7 @@ Get-PmemDisk | Remove-PmemDisk -Confirm:$false
 ```
 ### Erase PMEM modules
 
-To permanently erase data from PMEM modules use the `Initialize-PmemPhysicalDevice` PowerShell cmdlet.
+To permanently erase data from PMEM modules, use the `Initialize-PmemPhysicalDevice` PowerShell cmdlet.
 
 ```powershell
 # Reinitialize all PMEM disks
@@ -110,4 +110,4 @@ Get-PmemPhysicalDevice | Initialize-PmemPhysicalDevice -Confirm:$false
 
 ## See also
 
-For other cmdlets for manipulating PMEM see [PersistentMemory](/powershell/module/persistentmemory/) in the PowerShell reference documentation.
+For other cmdlets for manipulating PMEM, see [PersistentMemory](/powershell/module/persistentmemory/) in the PowerShell reference documentation.

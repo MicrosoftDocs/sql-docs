@@ -1,11 +1,14 @@
 ---
 title: "SQL Server Audit Action Groups and Actions"
-description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit. 
-ms.prod: sql
-ms.prod_service: security
-ms.technology: security
+description: Learn about server-level, database-level, and audit-level groups of actions and individual actions in SQL Server Audit.
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: vanto
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "audit actions [SQL Server]"
   - "audits [SQL Server], groups"
   - "server-level audit actions [SQL Server]"
@@ -14,12 +17,6 @@ helpviewer_keywords:
   - "database-level audit actions [SQL Server]"
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
-ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-author: sravanisaluru
-ms.author: srsaluru
-ms.reviewer: vanto
-ms.custom: ""
-ms.date: "03/23/2022"
 ---
 # SQL Server Audit Action Groups and Actions
 
@@ -73,8 +70,8 @@ Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](.
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|This event is raised whenever a password is changed for an application role. Equivalent to the [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|This event is raised whenever any audit is created, modified or deleted. This event is raised whenever any audit specification is created, modified, or deleted. Any change to an audit is audited in that audit. Equivalent to the [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|This event is raised whenever a backup or restore command is issued. Equivalent to the [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result. **Added in SQL Server 2019.**|  
-|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client. **Added in SQL Server 2019.**|  
+|BATCH_COMPLETED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation completes executing. It is raised after the batch completes and will audit the entire batch or stored procedure text, as sent from the client, including the result. **Added in SQL Server 2022.** Equivalent to the [SQL Batch Completed Event Class](../../../relational-databases/event-classes/sql-batchcompleted-event-class.md).|    
+|BATCH_STARTED_GROUP|This event is raised whenever any batch text, stored procedure, or transaction management operation starts to execute. It is raised before execution and will audit the entire batch or stored procedure text, as sent from the client. **Added in SQL Server 2022.** Equivalent to the [SQL Batch Started Event Class](../../../relational-databases/event-classes/sql-batchstarting-event-class.md).|     
 |BROKER_LOGIN_GROUP|This event is raised to report audit messages related to Service Broker transport security. Equivalent to the [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|This event is raised when a database is created, altered, or dropped. This event is raised whenever any database is created, altered or dropped. Equivalent to the [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|This event is raised when a contained database user logs out of a database Equivalent to the [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md).|  
@@ -90,6 +87,7 @@ Server-level audit action groups are actions similar to [!INCLUDE[ssNoVersion](.
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|This event is raised when there is an impersonation operation in the database scope such as EXECUTE AS \<principal> or SETPRINCIPAL. This event is raised for impersonations done in any database. Equivalent to the [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|This event is raised whenever a login is added to or removed from a database role. This event class is raised for the sp_addrolemember, sp_changegroup, and sp_droprolemember stored procedures. This event is raised on any Database role member change in any database. Equivalent to the [Audit Add Member to DB Role Event Class](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|This event is raised whenever a principal issues any DBCC command. Equivalent to the [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
+|EXTGOV_OPERATION_GROUP|This event is raised on external governance feature enablement, external governance feature disablement, external governance policies synchronization, and external governance policies based permissions enforcement.|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Indicates that a principal tried to log on to a contained database and failed. Events in this class are raised by new connections or by connections that are reused from a connection pool. Equivalent to the [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|    
 |FAILED_LOGIN_GROUP|Indicates that a principal tried to log on to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and failed. Events in this class are raised by new connections or by connections that are reused from a connection pool. Equivalent to the [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md). This audit does not apply to Azure SQL Database.| 
 |FULLTEXT_GROUP|Indicates fulltext event occurred. Equivalent to the [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  

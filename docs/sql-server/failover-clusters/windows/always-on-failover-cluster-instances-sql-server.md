@@ -1,14 +1,13 @@
 ---
 title: "Always On failover cluster instances"
 description: Learn how Always On Failover Cluster Instances provide local high availability through redundancy at the server-instance level in SQL Server.
-ms.custom:
-  - seo-lt-2019
-  - intro-overview
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "01/18/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: conceptual
+ms.custom: intro-overview
 helpviewer_keywords:
   - "clustering [SQL Server]"
   - "high availability [SQL Server], failover clustering"
@@ -20,16 +19,13 @@ helpviewer_keywords:
   - "failover clustering [SQL Server]"
   - "AlwaysOn [SQL Server], see failover clustering [SQL Server]"
   - "Always On [SQL Server], see failover clustering [SQL Server]"
-ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Always On Failover Cluster Instances (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   As part of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On offering, Always On Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level-a *failover cluster instance* (FCI). An FCI is a single instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is installed across Windows Server Failover Clustering (WSFC) nodes and, possibly, across multiple subnets. On the network, an FCI appears to be an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable.  
   
- An FCI can leverage  [Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ An FCI can leverage  [Availability Groups](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
  
  > [!NOTE]  
  > Windows Server 2016 Datacenter edition introduces support for Storage Spaces Direct (S2D). SQL Server Failover Cluster Instances support S2D for cluster storage resources. For more information, see [Storage Spaces Direct in Windows Server](/windows-server/storage/storage-spaces/storage-spaces-direct-overview).
@@ -62,7 +58,7 @@ ms.author: mathoma
   
 -   Support for a broad array of storage solutions, including WSFC cluster disks (iSCSI, Fiber Channel, and so on) and server message block (SMB) file shares.  
   
--   Disaster recovery solution using a multi-subnet FCI or running an FCI-hosted database inside an availability group. With the new multi-subnet support in [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a multi-subnet FCI no longer requires a virtual LAN, increasing the manageability and security of a multi-subnet FCI.  
+-   Disaster recovery solution using a multi-subnet FCI or running an FCI-hosted database inside an availability group. With the new multi-subnet support in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a multi-subnet FCI no longer requires a virtual LAN, increasing the manageability and security of a multi-subnet FCI.  
   
 -   Zero reconfiguration of applications and clients during failovers  
   
@@ -109,10 +105,10 @@ ms.author: mathoma
  The FCI is online as long as its underlying WSFC cluster is in good quorum health (the majority of the quorum WSFC nodes are available as automatic failover targets). When the WSFC cluster loses its quorum, whether due to hardware, software, network failure, or improper quorum configuration, the entire WSFC cluster, along with the FCI, is brought offline. Manual intervention is then required in this unplanned failover scenario to reestablish quorum in the remaining available nodes in order to bring the WSFC cluster and FCI back online. For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ### Predictable Failover Time  
- Depending on when your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance last performed a checkpoint operation, there can be a substantial number of dirty pages in the buffer cache. Consequently, failovers last as long as it takes to write the remaining dirty pages to disk, which can lead to long and unpredictable failover time. Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], the FCI can use indirect checkpoints to throttle the number of dirty pages kept in the buffer cache. While this does consume additional resources under regular workload, it makes the failover time more predictable as well as more configurable. This is very useful when the service-level agreement in your organization specifies the recovery time objective (RTO) for your high availability solution. For more information on indirect checkpoints, see [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  
+ Depending on when your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance last performed a checkpoint operation, there can be a substantial number of dirty pages in the buffer cache. Consequently, failovers last as long as it takes to write the remaining dirty pages to disk, which can lead to long and unpredictable failover time. Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], the FCI can use indirect checkpoints to throttle the number of dirty pages kept in the buffer cache. While this does consume additional resources under regular workload, it makes the failover time more predictable as well as more configurable. This is very useful when the service-level agreement in your organization specifies the recovery time objective (RTO) for your high availability solution. For more information on indirect checkpoints, see [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  
   
 ### Reliable Health Monitoring and Flexible Failover Policy  
- After the FCI starts successfully, the WSFC service monitors both the health of the underlying WSFC cluster, as well as the health of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], the WSFC service uses a dedicated connection to poll the active [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance for detailed component diagnostics through a system stored procedure. The implication of this is three-fold:  
+ After the FCI starts successfully, the WSFC service monitors both the health of the underlying WSFC cluster, as well as the health of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], the WSFC service uses a dedicated connection to poll the active [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance for detailed component diagnostics through a system stored procedure. The implication of this is three-fold:  
   
 -   The dedicated connection to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance makes it possible to reliably poll for component diagnostics all the time, even when the FCI is under heavy load. This makes it possible to distinguish between a system that is under heavy load and a system that actually has failure conditions, thus preventing issues such as false failovers.  
   

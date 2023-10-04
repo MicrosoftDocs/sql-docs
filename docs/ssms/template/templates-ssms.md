@@ -1,15 +1,13 @@
 ---
 title: Using templates in SQL Server Management Studio
-description: "Learn about the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS)." 
-keywords: SQL Server, SSMS, SQL Server Management Studio, Templates
+description: "Learn about the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS)."
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 03/13/2018
+ms.service: sql
+ms.subservice: ssms
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: ssms
-ms.prod_service: sql-tools
-ms.reviewer: 
-helpviewer_keywords: 
+helpviewer_keywords:
   - "templates [SQL Server], SQL Server Management Studio"
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"
@@ -17,8 +15,11 @@ helpviewer_keywords:
   - "Transact-SQL tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
-ms.custom: seo-lt-2019
-ms.date: 03/13/2018
+keywords:
+  - SQL Server
+  - SSMS
+  - SQL Server Management Studio
+  - Templates
 ---
 
 # Use templates in SQL Server Management Studio
@@ -27,7 +28,7 @@ This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that
 
 ## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio and access to a SQL server.
+To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server.
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 

@@ -4,11 +4,9 @@ description: Learn how specifying selection predicates in the location path expr
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath queries [SQLXML], predicates"
   - "predicates [SQLXML]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], location paths"
   - "filtering [SQLXML]"
   - "location path for XPath query"
-ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

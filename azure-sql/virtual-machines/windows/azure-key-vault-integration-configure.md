@@ -29,7 +29,7 @@ When this feature is enabled, it automatically installs the SQL Server Connector
 [!INCLUDE [Prepare for Key Vault integration](../../includes/virtual-machines-sql-server-akv-prepare.md)]
 
   >[!NOTE]
-  > Extensible Key Management (EKM) Provider version  1.0.4.0 is installed on the SQL Server VM through the [SQL infrastructure as a service (IaaS) extension](./sql-server-iaas-agent-extension-automate-management.md). Upgrading the SQL IaaS extension will not update the provider version. Please considering manually upgrading the EKM provider version if needed (for example, when migrating to a SQL Managed Instance).
+  > Extensible Key Management (EKM) Provider version  1.0.4.0 is installed on the SQL Server VM through the [SQL infrastructure as a service (IaaS) extension](./sql-server-iaas-agent-extension-automate-management.md). Upgrading the SQL IaaS Agent extension will not update the provider version. Please considering manually upgrading the EKM provider version if needed (for example, when migrating to a SQL Managed Instance).
 
 
 ## Enable and configure Key Vault integration

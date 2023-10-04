@@ -4,14 +4,13 @@ description: Object Related Dynamic Management Views and Functions (Transact-SQL
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "02/10/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management views [SQL Server], object"
 dev_langs:
   - "TSQL"
-ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
 ---
 # Object Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

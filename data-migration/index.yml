@@ -6,8 +6,8 @@ metadata:
    title: Azure Database Migration Guides | Microsoft Docs
    description: "Step-by-step guidance for modernizing your data assets by migrating to SQL Server, Azure SQL Database, Azure SQL Managed Instance, Azure Database, Azure Cosmos DB, SQL Server on Azure VMs and Azure Synapse Analytics. "
    ms.topic: hub-page
-   ms.prod: sql
-   ms.technology: migration-guide
+   ms.service: sql
+   ms.subservice: migration-guide
    author: rwestMSFT
    ms.author: randolphwest
 
@@ -130,6 +130,9 @@ conceptualContent:
           itemType: how-to-guide      
         - text: Azure Table Storage to Azure Cosmos DB
           url: /azure/cosmos-db/table-import
+          itemType: how-to-guide
+        - text: Elasticsearch to Azure Data Explorer
+          url: /azure/data-explorer/migrate-elasticsearch-to-azure-data-explorer
           itemType: how-to-guide
     - title: "Resources"
       links:

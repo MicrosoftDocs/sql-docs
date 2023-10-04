@@ -1,20 +1,17 @@
 ---
-title: "Custom Report Items | Microsoft Docs"
+title: "Custom Report Items"
 description: Learn about custom report items and how they consist of a run-time component and a design-time component.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
+ms.service: reporting-services
+ms.subservice: custom-report-items
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "extending Reporting Services"
   - "Reporting Services, extending"
   - "custom report items"
-ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Custom Report Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a rich set of tools for building and publishing enterprise reports, managing security and subscriptions, and extending the reporting functionality through a comprehensive API. Reports are defined using an XML-based language called Report Definition Language (RDL). RDL provides a set of instructions that describe layout, query information, and item types for a report. It is possible to extend RDL by writing a custom report item. The custom report item consists of a run-time component, which is called by the report processor at run time, and a design-time component, which allows the custom report item to be available in Report Designer.  

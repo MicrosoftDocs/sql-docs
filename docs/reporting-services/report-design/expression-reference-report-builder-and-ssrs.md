@@ -1,16 +1,13 @@
 ---
-title: "Expression reference in a paginated report | Microsoft Docs"
-description: Learn about the syntax required in expressions, before processing or publishing a paginated report, to support references to built-in functions and collections in Report Builder. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
+title: "Expression reference in a paginated report"
+description: Learn about the syntax required in expressions, before processing or publishing a paginated report, to support references to built-in functions and collections in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Expression reference in a paginated report (Report Builder)
 

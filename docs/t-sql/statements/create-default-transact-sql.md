@@ -4,9 +4,8 @@ description: CREATE DEFAULT (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "11/25/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_DEFAULT_TSQL"
@@ -28,7 +27,7 @@ Creates an object called a default. When bound to a column or an alias data type
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Instead, use default definitions created using the DEFAULT keyword of ALTER TABLE or CREATE TABLE.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -87,7 +86,7 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) that 
  The following example creates a character default called `unknown`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
@@ -101,7 +100,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
  Because a default named `phonedflt` doesn't exist, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement fails. This example is for illustration only.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  

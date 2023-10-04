@@ -1,24 +1,22 @@
 ---
 title: "Use AUTO Mode with FOR XML"
 description: Learn how to use AUTO mode with the FOR XML clause to return query results as nested XML elements.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML clause, AUTO mode"
   - "ELEMENTS option"
   - "FOR XML AUTO mode"
   - "AUTO FOR XML mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use AUTO mode with FOR XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 As described in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), AUTO mode returns query results as nested XML elements. This doesn't provide much control over the shape of the XML generated from a query result. The AUTO mode queries are useful if you want to generate simple hierarchies. However, [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) and [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) provide more control and flexibility in deciding the shape of the XML from a query result.
 

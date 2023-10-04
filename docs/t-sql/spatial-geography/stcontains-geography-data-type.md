@@ -1,20 +1,16 @@
 ---
+title: "STContains  (geography Data Type)"
 description: "STContains  (geography Data Type)"
-title: "STContains  (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "STContains method (geography)"
-ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "STContains method (geography)"
+dev_langs:
+  - "TSQL"
 ---
 # STContains  (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

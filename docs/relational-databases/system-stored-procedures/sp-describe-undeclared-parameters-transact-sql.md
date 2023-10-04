@@ -1,34 +1,31 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL)
 description: "sp_describe_undeclared_parameters (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_undeclared_parameters"
-  - "sp_describe_undeclared_parameters_TSQL"
-dev_langs: 
-  - "TSQL"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "07/13/2021"
-monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_undeclared_parameters"
+  - "sp_describe_undeclared_parameters_TSQL"
+dev_langs:
+  - "TSQL"
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||=fabric"
 ---
 
 # sp_describe_undeclared_parameters (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)] 
 
 Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
-```tsql
+```sql
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
@@ -108,7 +105,7 @@ Another example is when without user input, an application must loop over the pa
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
 
 > [!Note]
-> You must declare the variable as a scalar TSQL variable, or an error appears.
+> You must declare the variable as a scalar Transact-SQL variable, or an error appears.
 
 ## Parameter Selection Algorithm
 
@@ -128,7 +125,7 @@ The first step in data type deduction for a query with undeclared parameters is 
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```tsql
+```sql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -263,7 +260,7 @@ Of the candidate data types, any data type that would invalidate the query is re
 
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```tsql
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -272,7 +269,7 @@ WHERE object_id = @id OR name = @name'
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```tsql
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  

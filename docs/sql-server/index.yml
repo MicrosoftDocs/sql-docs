@@ -5,11 +5,11 @@ summary: Technical documentation to help you get started, administer, develop, a
 metadata:
   title: SQL Server technical documentation 
   description: Choose the area of SQL Server you are interested in.
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 12/02/2021
+  ms.date: 09/05/2023
   ms.custom:
   - event-tier1-build-2022
   - event-tier1-build-2022
@@ -21,18 +21,23 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
+      - text: Azure SQL 
+        url: /azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview
       - text: Azure SQL Database
-        url: /azure/sql-database/sql-database-single-database
+        url: /azure/azure-sql/database/sql-database-paas-overview
       - text: Azure SQL Managed Instance
-        url: /azure/sql-database/sql-database-managed-instance
+        url: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
+      - text: Connect to Azure SQL 
+        url: /azure/azure-sql/database/develop-overview#client-connections
+      - text: SQL Server on Azure Windows VMs
+        url:  /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
+      - text: SQL Server on Azure Linux VMs
+        url: /azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview
       - text: Azure Synapse Analytics
-        url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - text: SQL Server on a Windows VM
-        url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-      - text: SQL Server on a Linux VM
-        url: ../linux/quickstart-install-connect-clouds.md
+        url: /azure/synapse-analytics/overview-what-is
       - text: Azure Database Migration Service
         url: /azure/dms/dms-overview
+
 
   - title: Migration
     linkLists:
@@ -41,7 +46,7 @@ landingContent:
       - text: Migration content
         url:  migrate/index.yml
       - text: Data migration guide
-        url:  https://datamigration.microsoft.com/
+        url:  /data-migration/
       - text: Database compatibility certification
         url: ../database-engine/install-windows/compatibility-certification.md
       - text: Data Migration Assistant (DMA)
@@ -54,12 +59,10 @@ landingContent:
     linkLists:
     - linkListType: whats-new
       links:
-      - text: SQL Server 2022 Preview
+      - text: SQL Server 2022
         url: ./what-s-new-in-sql-server-2022.md
       - text: SQL Server 2019 
         url: ./what-s-new-in-sql-server-2019.md
-      - text: SQL Server Big Data Clusters
-        url: ../big-data-cluster/big-data-cluster-overview.md
       - text: Azure Data Studio
         url: ../azure-data-studio/what-is-azure-data-studio.md
       - text: SQL Server on Linux
@@ -68,10 +71,14 @@ landingContent:
         url: azure-arc/overview.md
     - linkListType: quickstart
       links:
-      - text: Connect & query (SSMS)
-        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
-      - text: Connect & query (Azure Data Studio)
+      - text: What is SQL Server?
+        url: what-is-sql-server.md
+      - text: Connect to the Database Engine
+        url: connect-to-database-engine.md
+      - text: Connect & query with Azure Data Studio
         url: ../azure-data-studio/quickstart-sql-server.md
+      - text: Connect & query with SSMS
+        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
     - linkListType: download
       links:
       - text: SQL Server

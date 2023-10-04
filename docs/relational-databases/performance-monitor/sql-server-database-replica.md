@@ -1,20 +1,17 @@
 ---
 title: "SQL Server, Database Replica object"
-description: Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group.
-ms.custom: ""
+description: "Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "SQLServer:Database Replica"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], performance counters"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # SQL Server, Database Replica object
 
@@ -62,4 +59,4 @@ WHERE object_name LIKE '%Database Replica%';
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

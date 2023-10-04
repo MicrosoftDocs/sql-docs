@@ -1,19 +1,16 @@
 ---
-title: "Report Server System Properties | Microsoft Docs"
+title: "Report Server System Properties"
 description: System properties are global for the report server database. You can read or modify many of these properties using the Web service methods.
-ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "report servers [Reporting Services], properties"
-  - "system-specific properties [Reporting Services]"
-ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/06/2017
+ms.service: reporting-services
+ms.subservice: report-server-web-service
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "report servers [Reporting Services], properties"
+  - "system-specific properties [Reporting Services]"
 ---
 # Reporting Services Properties - Report Server System Properties
   The following system property names are reserved. You cannot create user-defined properties of the same name. You can read or modify many of these properties using the Web service methods.  

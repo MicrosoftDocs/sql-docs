@@ -1,24 +1,19 @@
 ---
+title: "MSReportServer_Instance Class"
 description: "MSReportServer_Instance Class"
-title: "MSReportServer_Instance Class | Microsoft Docs"
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "MSReportServer_Instance Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services], MSReportServer_Instance class"
-  - "MSReportServer_Instance class"
-ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services], MSReportServer_Instance class"
+  - "MSReportServer_Instance class"
+apilocation: "reportingservices.mof"
+apiname: "MSReportServer_Instance Class"
+apitype: MOFDef
 ---
 # MSReportServer_Instance Class
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

@@ -1,26 +1,20 @@
 ---
+title: "Calling Methods"
 description: "Calling Methods"
-title: "Calling Methods | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "methods [SMO]"
   - "calling methods"
   - "SQL Server Management Objects, method calling"
   - "SMO [SQL Server], method calling"
-ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Calling Methods
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Methods perform specific tasks related to the object, such as issuing a **Checkpoint** on a database or requesting an enumerated list of logons for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -69,7 +63,7 @@ db.Create();
 Dim srv As Server  
 srv = New Server  
 Dim tb As Table  
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources")  
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources")  
 tb.RebuildIndexes(70)  
 ```  
   
@@ -81,7 +75,7 @@ tb.RebuildIndexes(70)
 Server srv = default(Server);   
 srv = new Server();   
 Table tb = default(Table);   
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources");   
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources");   
 tb.RebuildIndexes(70);   
 }   
 ```  
@@ -159,7 +153,7 @@ Console.WriteLine(d.Name)
 Server srv;   
 srv = new Server();   
 Table tb;   
-tb = srv.Databases("AdventureWorks2012").Tables("Employee", "HumanResources");   
+tb = srv.Databases("AdventureWorks2022").Tables("Employee", "HumanResources");   
 tb.RebuildIndexes(70);   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -181,7 +175,7 @@ Console.WriteLine(d.Name);
 Dim srv1 As Server
 srv1 = New Server()
 'Modify the default database and the timeout period for the connection.
-srv1.ConnectionContext.DatabaseName = "AdventureWorks2012"
+srv1.ConnectionContext.DatabaseName = "AdventureWorks2022"
 srv1.ConnectionContext.ConnectTimeout = 30
 'Make a second connection using a copy of the ConnectionContext property and verify settings.
 Dim srv2 As Server
@@ -198,7 +192,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 Server srv1;   
 srv1 = new Server();   
 //Modify the default database and the timeout period for the connection.   
-srv1.ConnectionContext.DatabaseName = "AdventureWorks2012";   
+srv1.ConnectionContext.DatabaseName = "AdventureWorks2022";   
 srv1.ConnectionContext.ConnectTimeout = 30;   
 //Make a second connection using a copy of the ConnectionContext property and verify settings.   
 Server srv2;   

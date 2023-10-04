@@ -4,8 +4,8 @@ description: "Learn about the system requirements for using the Microsoft Driver
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ms.custom: intro-get-started
 ---

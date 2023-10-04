@@ -1,20 +1,17 @@
 ---
-description: "Manage and Monitor Full-Text Search for a Server Instance"
 title: "Manage & monitor Full-Text Search for a SQL Server instance"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "full-text search [SQL Server], about"
-  - "full-text search [SQL Server], server management"
-ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
+description: "Manage and Monitor Full-Text Search for a Server Instance"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "full-text search [SQL Server], about"
+  - "full-text search [SQL Server], server management"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +43,7 @@ ms.custom: "seo-lt-2019"
          The alternatives are as follows:  
   
          **Import**  
-         Full-text catalogs are imported. Typically, import is significantly faster than rebuild. For example, when using only one CPU, import runs about 10 times faster than rebuild. However, an imported full-text catalog does not use the new and enhanced word breakers introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], so you might want to rebuild your full-text catalogs eventually.  
+         Full-text catalogs are imported. Typically, import is significantly faster than rebuild. For example, when using only one CPU, import runs about 10 times faster than rebuild. However, an imported full-text catalog does not use the new and enhanced word breakers introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], so you might want to rebuild your full-text catalogs eventually.  
   
         > [!NOTE]  
         >  Rebuild can run in multi-threaded mode, and if more than 10 CPUs are available, rebuild might run faster than import if you allow rebuild to use all of the CPUs.  

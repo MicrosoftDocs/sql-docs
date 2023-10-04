@@ -2,15 +2,13 @@
 title: "Python tutorial: Prepare cluster data"
 titleSuffix: SQL machine learning
 description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
-ms.devlang: python
-ms.date: 05/21/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
-ms.custom: seo-lt-2019
+ms.date: 04/17/2023
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorial: Prepare data to categorize customers with SQL machine learning
@@ -120,7 +118,7 @@ column_info = {
 Results from the query are returned to Python using the Pandas **read_sql** function. As part of the process, you'll use the column information you defined in the previous script.
 
 ```python
-customer_data = pandas.read_sql(input_query, conn_str)
+customer_data = pd.read_sql(input_query, conn_str)
 ```
 
 Now display the beginning of the data frame to verify it looks correct.

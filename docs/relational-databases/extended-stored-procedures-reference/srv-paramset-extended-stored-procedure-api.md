@@ -4,9 +4,8 @@ description: Learn how srv_paramset in the Extended Stored Procedure API sets th
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramset"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramset
 apitype: "DLLExport"
-ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 ---
 # srv_paramset (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

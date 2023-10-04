@@ -6,7 +6,7 @@ SET @article = N'Product';
 SET @option = (SELECT CAST(0x0000000002030073 AS int));
 
 -- Change the schema options to replicate schema with XML.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_changearticle 
   @publication = @publication,
   @article = @article, 

@@ -1,32 +1,22 @@
---- 
-
-# required metadata 
-title: "kernel function (MicrosoftML) " 
-description: " Kernels supported for use in computing inner products. " 
-keywords: "(MicrosoftML), kernel, linearKernel, maKernel, polynomialKernel, rbfKernel, sigmoidKernel" 
+---
+title: "kernel function (MicrosoftML)"
+description: "Kernels supported for use in computing inner products."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - kernel
+  - linearKernel
+  - maKernel
+  - polynomialKernel
+  - rbfKernel
+  - sigmoidKernel
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
 

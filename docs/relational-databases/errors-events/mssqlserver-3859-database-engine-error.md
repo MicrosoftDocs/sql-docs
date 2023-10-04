@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_3859"
 title: MSSQLSERVER_3859
-ms.custom: ""
-ms.date: 08/20/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3859 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_3859"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3859 (Database Engine error)"
 ---
 # MSSQLSERVER_3859
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

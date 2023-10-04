@@ -1,34 +1,30 @@
 ---
+title: "TOP (Transact-SQL)"
 description: "TOP (Transact-SQL)"
-title: "TOP (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "TOP_TSQL"
   - "TOP"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "TOP clause"
   - "first set of query result rows [SQL Server]"
   - "TOP clause, about TOP clause"
   - "queries [SQL Server], results"
-ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # TOP (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
  
@@ -41,7 +37,7 @@ Limits the rows returned in a query result set to a specified number of rows or 
 ]  
 ```  
 
-Following is syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
+Following is syntax for [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```syntaxsql  
 [   
@@ -154,9 +150,9 @@ You can't combine TOP with OFFSET and FETCH in the same query expression (in the
   
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
-|[Basic syntax](#BasicSyntax)|TOP • PERCENT|  
+|[Basic syntax](#BasicSyntax)|TOP * PERCENT|  
 |[Including tie values](#tie)|WITH TIES|  
-|[Limiting the rows affected by DELETE, INSERT, or UPDATE](#DML)|DELETE • INSERT • UPDATE|  
+|[Limiting the rows affected by DELETE, INSERT, or UPDATE](#DML)|DELETE * INSERT * UPDATE|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  
 Examples in this section demonstrate the basic functionality of the ORDER BY clause using the minimum required syntax.  
@@ -165,7 +161,7 @@ Examples in this section demonstrate the basic functionality of the ORDER BY cla
 The following examples use a constant value to specify the number of employees that are returned in the query result set. In the first example, the first 10 undefined rows are returned because an ORDER BY clause isn't used. In the second example, an ORDER BY clause is used to return the top 10 recently hired employees.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Select the first 10 random employees.  
 SELECT TOP(10)JobTitle, HireDate  
@@ -182,7 +178,7 @@ GO
 The following example uses a variable to specify the number of employees that are returned in the query result set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
@@ -195,7 +191,7 @@ GO
 The following example uses PERCENT to specify the number of employees that are returned in the query result set. There are 290 employees in the `HumanResources.Employee` table. Because five percent of 290 is a fractional value, the value is rounded up to the next whole number.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TOP(5)PERCENT JobTitle, HireDate  
 FROM HumanResources.Employee  
@@ -209,7 +205,7 @@ GO
 The following example gets the top `10` percent of all employees with the highest salary and returns them in descending order according to their salary. Specifying `WITH TIES` ensures that employees with salaries equal to the lowest salary returned (the last row) are also included in the result set, even if it exceeds `10` percent of employees.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TOP(10) PERCENT WITH TIES  
 pp.FirstName, pp.LastName, e.JobTitle, e.Gender, r.Rate  
@@ -228,7 +224,7 @@ GO
 When you use a TOP (*n*) clause with DELETE, the delete operation is done on an undefined selection of *n* number of rows. That is, the DELETE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example deletes `20` rows from the `PurchaseOrderDetail` table that have due dates earlier than July 1, 2002.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
@@ -239,7 +235,7 @@ GO
 If you want to use TOP to delete rows in a meaningful chronological order, use TOP with ORDER BY in a subselect statement. The following query deletes the 10 rows of the `PurchaseOrderDetail` table that have the earliest due dates. To ensure that only 10 rows are deleted, the column specified in the subselect statement (`PurchaseOrderID`) is the primary key of the table. Using a nonkey column in the subselect statement may result in the deletion of more than 10 rows if the specified column contains duplicate values.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
@@ -253,7 +249,7 @@ GO
 The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top five employees from the table `HumanResources.Employee`. The INSERT statement chooses any five rows returned by the `SELECT` statement that meet the criteria defined in the WHERE clause. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement isn't used to determine the top five employees.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
@@ -294,7 +290,7 @@ GO
 The following example uses the TOP clause to update rows in a table. When you use a TOP (*n*) clause with UPDATE, the update operation runs on an undefined number of rows. That is, the UPDATE statement chooses any (*n*) number of rows that meet the criteria defined in the WHERE clause. The following example assigns 10 customers from one salesperson to another.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 UPDATE TOP (10) Sales.Store  
 SET SalesPersonID = 276  
 WHERE SalesPersonID = 275;  
@@ -312,7 +308,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following example returns the top 31 rows that match the query criteria. The **ORDER BY** clause ensures that the 31 returned rows are the first 31 rows based on an alphabetical ordering of the `LastName` column.  
   
 Using **TOP** without specifying ties.  

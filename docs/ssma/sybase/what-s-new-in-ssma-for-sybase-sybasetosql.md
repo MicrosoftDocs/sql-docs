@@ -1,20 +1,36 @@
 ---
-title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "What's New in SSMA for SAP ASE (SybaseToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Sybase (SybaseToSQL) for each release.
 author: cpichuka
-ms.prod: sql
-ms.custom:
-  - intro-whats-new
-ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
-ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: cpichuka
+ms.date: "04/29/2021"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v9.4
+The v9.4 release of SSMA for SAP ASE contains the following changes:
+
+ * Support for bigdatetime data type
+ * Fix for missing subscriptions in migration through migrationat scale
+ * Improve conversion of Primary and Unique keys present as Index hints
+ * Improve conversion of SELECT statement
+   
+## SSMA v9.3
+The v9.2 release of SSMA for SAP ASE contains the following changes:
+
+ * Added support for SQL Server 2022 target
+
+## SSMA v9.2
+The v9.2 release of SSMA for SAP ASE contains the following changes:
+
+ * Enhanced data movement pipelines at scale monintoring 
+
 
 ## SSMA v9.1
 The v9.1 release of SSMA for SAP ASE contains the following changes:
@@ -160,7 +176,7 @@ To leverage this setting, in SSMA for SAP ASE, navigate to **Tools** > **Project
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for SAP ASE is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for SAP ASE now allows you to hide system tables and views (exclude them from conversion).
 

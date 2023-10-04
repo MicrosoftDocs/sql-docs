@@ -1,22 +1,17 @@
 ---
-description: "Creating, Altering, and Removing Schemas"
 title: "Creating, Altering, and Removing Schemas"
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "schemas [SMO]"
-ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
+description: "Creating, Altering, and Removing Schemas"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "schemas [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Schemas
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The <xref:Microsoft.SqlServer.Management.Smo.Schema> object represents an ownership context for database object. The <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Database> object represents a collection of <xref:Microsoft.SqlServer.Management.Smo.Schema> objects.  
   
@@ -30,9 +25,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012database.
+'Reference the AdventureWorks2022database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a Schema object variable by supplying the parent database and name arguments in the constructor.
 Dim sch As Schema
 sch = New Schema(db, "MySchema1")
@@ -68,8 +63,8 @@ sch.Drop()
 {  
          //Connect to the local, default instance of SQL Server.   
          Server srv = new Server();   
-        //Reference the AdventureWorks2012 database.   
-        Database db = srv.Databases["AdventureWorks2012"];   
+        //Reference the AdventureWorks2022 database.   
+        Database db = srv.Databases["AdventureWorks2022"];   
         //Define a Schema object variable by supplying the parent database and name arguments in the constructor.   
         Schema sch = new Schema(db, "MySchema1");   
         sch.Owner = "dbo";   
@@ -105,9 +100,9 @@ sch.Drop()
  This code example demonstrates how to create a schema and assign it to a database object. The program then grants permission to a user, and then creates a new table in the schema.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 # Define a schema object variable by supplying the parent database and name arguments in the constructor.   
 $sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema `  

@@ -1,19 +1,14 @@
 ---
-description: "Create Queries (Visual Database Tools)"
 title: Create Queries
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "queries [SQL Server], creating"
-ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
+description: "Create Queries (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "queries [SQL Server], creating"
 ---
 # Create Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

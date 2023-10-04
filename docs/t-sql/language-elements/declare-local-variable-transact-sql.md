@@ -4,9 +4,8 @@ description: "Transact-SQL reference for using DECLARE to define local variables
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/18/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DECLARE"
@@ -18,15 +17,15 @@ helpviewer_keywords:
   - "declaring variables"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # DECLARE @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Variables are declared in the body of a batch or procedure with the DECLARE statement and are assigned values by using either a SET or SELECT statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as NULL, unless a value is provided as part of the declaration.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -119,7 +118,7 @@ DECLARE
 }
 ```
 
-The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse:
+The following syntax is for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:
 
 ```syntaxsql
 DECLARE
@@ -238,7 +237,7 @@ For this reason, you should be cautious about using a table variable if you expe
 
  - Temp tables may be a better solution than table variables when it is possible for the rowcount to be larger (greater than 100). 
  - For queries that join the table variable with other tables, use the RECOMPILE hint, which will cause the optimizer to use the correct cardinality for the table variable. 
-- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
+- In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)], the table variable deferred compilation feature will propagate cardinality estimates that are based on actual table variable row counts, providing a more accurate row count for optimizing the execution plan. For more information, see [Intelligent query processing in SQL databases](../../relational-databases/performance/intelligent-query-processing-details.md#table-variable-deferred-compilation).
 
 ## Remarks
 
@@ -278,7 +277,7 @@ A cursor variable:
 The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @find VARCHAR(30);
 /* Also allowed:
@@ -308,7 +307,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 The following example retrieves the names of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sales representatives who are located in the North American sales territory and have at least $2,000,000 in sales for the year.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SET NOCOUNT ON;
 GO
@@ -326,7 +325,7 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 The following example creates a `table` variable that stores the values specified in the OUTPUT clause of the UPDATE statement. Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. The results in the `INSERTED.ModifiedDate` column differ from the values in the `ModifiedDate` column in the `Employee` table. This is because the `AFTER UPDATE` trigger, which updates the value of `ModifiedDate` to the current date, is defined on the `Employee` table. However, the columns returned from `OUTPUT` reflect the data before triggers are fired. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DECLARE @MyTableVar TABLE (
     EmpID INT NOT NULL,
@@ -384,7 +383,7 @@ DECLARE @LocationTVP
 AS LocationTableType;
 ```
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### F. Using DECLARE
 

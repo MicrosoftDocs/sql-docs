@@ -1,12 +1,12 @@
 ---
 title: microsoftml Python package
 description: microsoftml is a Python package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 08/03/2021
-ms.topic: reference
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 08/03/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: reference
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # microsoftml (Python package in SQL Server Machine Learning Services)
@@ -41,7 +41,7 @@ The **microsoftml** module is available only when you install one of the followi
 Algorithms in **microsoftml** depend on [revoscalepy](ref-py-revoscalepy.md) for:
 
 + Data source objects - Data consumed by **microsoftml** functions are created using **revoscalepy** functions.
-+ Remote computing (shifting function execution to a remote SQL Server instance) - The **revoscalepy** package provides functions for creating and activating a remote compute context for SQL server.
++ Remote computing (shifting function execution to a remote SQL Server instance) - The **revoscalepy** package provides functions for creating and activating a remote compute context for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
 
 In most cases, you will load the packages together whenever you are using **microsoftml**.
 

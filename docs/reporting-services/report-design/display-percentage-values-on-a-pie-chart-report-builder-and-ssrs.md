@@ -1,16 +1,13 @@
 ---
-title: "Display percentage values on pie chart in a paginated report | Microsoft Docs"
+title: "Display percentage values on pie chart in a paginated report"
 description: Learn how to display percentage values in a paginated report on a pie chart, in the legend or in the pie slices in Report Builder.
-ms.date: 12/09/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/09/2019
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Display percentage values on pie chart in a paginated report (Report Builder)
 

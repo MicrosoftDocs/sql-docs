@@ -3,12 +3,9 @@ metadata:
   title: SQL Server Big Data Clusters FAQ
   titleSuffix: SQL Server Big Data Clusters
   description: FAQ on SQL Server Big Data Clusters concepts, capabilities, deployment, supportability, and tools
-  services: sql-database
-  ms.service: sql
-  ms.subservice: 
   ms.topic: conceptual
-  ms.prod: sql
-  ms.technology: big-data-cluster
+  ms.service: sql
+  ms.subservice: big-data-cluster
   author: WilliamDAssafMSFT
   ms.author: wiassaf
   ms.reviewer: 
@@ -95,7 +92,7 @@ sections:
           In Big Data Cluster, the HA configuration creates an availability group called containedag which also includes system databases that are replicated across replicas. Databases created as result of a CREATE DATABASE or RESTORE workflows are automatically added to the contained AG and seeded. Prior to SQL Server 2019 (15.0) CU2, you have to connect to the physical instance in Big Data Cluster, restore the database and add it to the containedag. For more information, see [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md).
       - question: Can I configure core/memory resources for components running within Big Data Cluster?
         answer: |
-          At this time, you can set memory for the SQL instances using sp_configure, just like in SQL Server. For cores, you can use `ALTER SERVER CONFIGURATION SET PROCESS AFFINITY`. By default, containers see all CPUs on the host and we don’t have a way to specify resource limits using Kubernetes at this time. For compute pool/data pool/storage pool, the configuration can be done using [EXECUTE AT DATA_SOURCE](../t-sql/language-elements/execute-transact-sql.md) statement from SQL Server master instance.
+          At this time, you can set memory for the SQL instances using sp_configure, just like in SQL Server. For cores, you can use `ALTER SERVER CONFIGURATION SET PROCESS AFFINITY`. By default, containers see all CPUs on the host and we don't have a way to specify resource limits using Kubernetes at this time. For compute pool/data pool/storage pool, the configuration can be done using [EXECUTE AT DATA_SOURCE](../t-sql/language-elements/execute-transact-sql.md) statement from SQL Server master instance.
       - question: What happens when one of the Kubernetes worker nodes shuts down or has an outage?
         answer: |
           Pods that are not affinitized to the respective worker node will be moved to another node in the Kubernetes cluster provided there are sufficient resources. Otherwise, the pod(s) will be unavailable causing outages.
@@ -110,7 +107,7 @@ sections:
           Yes, replication factor is one of the available configurations for HDFS. For more information see [Configure Persistent Volumes](concept-data-persistence.md#configure-persistent-volumes).
       - question: Does Big Data Cluster overlap with Synapse in terms of functionality and integration?
         answer: |
-          It depends on your use cases and requirements. Big Data Cluster provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS, on-premise. Big Data Cluster enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in the cloud, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. Big Data Cluster is aiming to provide in database analytical scenarios, much closer to the operational store.
+          It depends on your use cases and requirements. Big Data Cluster provides a full SQL Server surface area in addition to Microsoft-supported Spark and HDFS, on-premises. Big Data Cluster enables the SQL Server customer to be able to integrate into analytics/big data. Azure Synapse is purely an analytical platform offering a first class experience for customers as a managed service in the cloud, with a focus on scale out analytics. Azure Synapse is not targeting an operational workload as part of that. Big Data Cluster is aiming to provide in database analytical scenarios, much closer to the operational store.
       - question: Is SQL Server using HDFS as its storage in SQL Server Big Data Clusters?
         answer: |
           The SQL Server instance's database files are not stored in HDFS, however, SQL Server can query HDFS using external table interface.
@@ -207,7 +204,7 @@ sections:
           Yes, you can connect to various Big Data Cluster services using integrated authentication (with Active Directory). For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md). Also see [Security concepts for Big Data Clusters](concept-security.md).
       - question: How can I add new users for various services within Big Data Cluster?
         answer: |
-          In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using TSQL as you would for any other SQL Server instance. 
+          In basic authentication mode (username/password), there is no support for adding multiple users for controller or Knox gateway/HDFS endpoints. The only user supported for these endpoints is root. For SQL Server, you can add users using Transact-SQL as you would for any other SQL Server instance. 
           If you deploy Big Data Cluster with AD auth for its endpoints, multiple users are supported. See here for details on how to configure the AD groups at deployment time. For more information, see [Deploy SQL Server Big Data Cluster in Active Directory mode](active-directory-deploy.md).
       - question: For Big Data Cluster to pull the latest container images, is there an outbound IP range I can restrict?
         answer: |

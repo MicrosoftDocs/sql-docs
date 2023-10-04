@@ -1,20 +1,16 @@
 ---
-description: "Approve or Reject a Changeset (Master Data Services)"
 title: Approve or Reject a Changeset
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
+description: "Approve or Reject a Changeset (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Approve or Reject a Changeset (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A changeset is a collection of the pending changes on the master data. If the entity changes require administrator approval and a changeset is submitted for approval, you can review and then approve or reject the changeset.  
   
@@ -36,7 +32,7 @@ ms.author: jiwang6
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to approve or reject.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to approve or reject.  
   
 4.  Click **Apply** to apply the changeset and review the pending changes.  
   

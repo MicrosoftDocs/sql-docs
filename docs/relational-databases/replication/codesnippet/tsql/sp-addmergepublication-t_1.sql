@@ -9,7 +9,7 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;
 DECLARE @login AS sysname;
 DECLARE @password AS sysname;
-SET @publicationDB = N'AdventureWorks2012'; 
+SET @publicationDB = N'AdventureWorks2022'; 
 SET @publication = N'AdvWorksSalesOrdersMerge'; 
 SET @login = $(Login);
 SET @password = $(Password);
@@ -22,12 +22,12 @@ EXEC sp_replicationdboption
   @value = N'true' 
 
 -- Create a new merge publication, explicitly setting the defaults. 
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_addmergepublication 
 -- These parameters are optional.
   @publication = @publication,
   -- optional parameters 
-  @description = N'Merge publication of AdventureWorks2012.',
+  @description = N'Merge publication of AdventureWorks2022.',
   @publication_compatibility_level  = N'120RTM';
 
 -- Create a new snapshot job for the publication.

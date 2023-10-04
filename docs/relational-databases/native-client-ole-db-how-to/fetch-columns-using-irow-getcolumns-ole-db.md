@@ -1,22 +1,18 @@
 ---
+title: "Fetch columns using IRow::GetColumns (Native Client OLE DB provider)"
 description: "Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)"
-title: "Fetch columns using IRow::GetColumns (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IRow interface"
-ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "IRow interface"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  
   
@@ -48,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  In the DBCOLUMNACCESS structure, if pData is NULL and cbMaxLen is 0, the call to IRow->GetColumns returns only the actual column length. In this case IRow->GetColumns can be called again on the same column to retrieve the actual data. This sample is not supported on IA64.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
  The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -57,8 +53,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```  
-use AdventureWorks  
-go  
+USE AdventureWorks2022;
+GO  
   
 if exists (select name from sysobjects where name = 'MyTable')  
      drop table MyTable  
@@ -506,8 +502,8 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```  
-use AdventureWorks  
-go  
+USE AdventureWorks2022;
+GO  
   
 if exists (select name from sysobjects where name = 'MyTable')  
      drop table MyTable  

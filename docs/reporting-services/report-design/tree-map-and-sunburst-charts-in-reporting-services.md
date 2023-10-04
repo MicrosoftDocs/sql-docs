@@ -1,15 +1,13 @@
 ---
-title: "Treemap and sunburst charts in a paginated report in SQL Server Reporting Services | Microsoft Docs"
+title: "Treemap and sunburst charts in a paginated report in SQL Server Reporting Services"
 description: Discover how to visually represent hierarchical data in a paginated report using a treemap or sunburst chart in Report Builder.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-ms.topic: conceptual
-author: maggiesMSFT 
+author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 04/26/2019
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Treemap and sunburst charts in a paginated report in SQL Server Reporting Services (Report Builder)
@@ -113,7 +111,7 @@ The query returns AdventureWorks sales order detail data with sales territory, p
   
 1. **Get the data**.  
   
-     The query in this section is based on the AdventureWorks database, which is available for download from GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+   [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 2. **Create a data source**.  
   
@@ -126,7 +124,7 @@ The query returns AdventureWorks sales order detail data with sales territory, p
     4. Enter the connection string to your server and database. For example:  
   
         ```
-        Data Source=[server name];Initial Catalog=AdventureWorks2016  
+        Data Source=[server name];Initial Catalog=AdventureWorks2022  
         ```  
   
     5. To verify the connection, select the **Test Connection** button, and then select **OK**.  

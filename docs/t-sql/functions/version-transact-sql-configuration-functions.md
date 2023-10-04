@@ -3,13 +3,10 @@ title: "@@VERSION (Transact-SQL)"
 description: "@@VERSION - Transact SQL Configuration Functions"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
-ms.date: "03/20/2018"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.date: "06/20/2023"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "@@VERSION"
   - "@@VERSION_TSQL"
@@ -27,16 +24,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Returns system and build information for the current installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-> [!NOTE]  
-> We are aware of an issue where the product version reported by @@VERSION is incorrect for **Azure SQL Database**, **Azure SQL Managed Instance** and **Azure Synapse Analytics**.
-> 
-> The version of the SQL Server database engine run by Azure SQL Database, Azure SQL Managed Instance and Azure Synapse Analytics is always ahead of the on-premises version of SQL Server, and includes the latest security fixes. This means that the patch level is always on par with or ahead of the on-premises version of SQL Server, and that the latest features available in SQL Server are available in these services.
->
-> To programmatically determine the engine edition, use SELECT SERVERPROPERTY('EngineEdition'). This query will return '5' for Azure SQL Database, '8' for Azure SQL Managed Instance, and '6' or '11' for Azure Synapse.
->
-> We will update the documentation once this issue is resolved.
+> [!IMPORTANT]  
+> The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] bits. For example, version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 16 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ## Syntax  
   
 ```syntaxsql
@@ -65,7 +57,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Operating system version  
   
- For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsmifull-md.md)], the following information is returned.  
+ For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [sssdsmifull-md](../../includes/sssdsmifull-md.md)], the following information is returned.  
   
 -   Edition- "Microsoft SQL Azure"  
   
@@ -86,9 +78,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### B. Return the current version of [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### B. Return the current version of [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]  
   
 ```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  

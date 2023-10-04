@@ -1,30 +1,29 @@
 ---
-title: "Azure Data Lake Analytics connection manager | Microsoft Docs"
+title: "Azure Data Lake Analytics connection manager"
 description: A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Analytics connection manager to connect to a Data Lake Analytics account.
-ms.custom: ""
-ms.date: "05/18/2018"
-ms.prod: sql
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
-  - "sql14.dts.designer.afpadlscm.f1"
-ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: "yanancai"
 ms.author: "yanacai"
 ms.reviewer: maghan
+ms.date: "05/18/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL13.DTS.DESIGNER.AFPADLSCM.F1"
+  - "sql14.dts.designer.afpadlscm.f1"
 ---
 # Azure Data Lake Analytics connection manager
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
 
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Analytics connection manager to connect to a Data Lake Analytics account with one of the two following authentication types:
 -   Azure Active Directory (Azure AD) User Identity
 -   Azure AD Service Identity 
 
 The Data Lake Analytics connection manager is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+
+> [!IMPORTANT]
+> Azure Data Lake Analytics will be retired on **29 February 2024**. Learn more [with this announcement](https://azure.microsoft.com/updates/migrate-to-azure-synapse-analytics/).
  
 ## Configure the connection manager
 

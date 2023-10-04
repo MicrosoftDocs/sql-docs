@@ -1,20 +1,17 @@
 ---
-title: "View Plan Guide Properties | Microsoft Docs"
+title: "View Plan Guide Properties"
 description: Learn how to view the properties of plan guides in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.planguideprop.general.f1"
-helpviewer_keywords: 
-  - "plan guides [SQL Server], view plan guide properties"
-  - "viewing plan guide properties"
-ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.planguideprop.general.f1"
+helpviewer_keywords:
+  - "plan guides [SQL Server], view plan guide properties"
+  - "viewing plan guide properties"
 ---
 # View Plan Guide Properties
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -91,8 +88,8 @@ ms.author: wiassaf
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
-    USE AdventureWorks2012;  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2022 database, delete it.  
+    USE AdventureWorks2022;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
        EXEC sp_control_plan_guide N'DROP', N'Guide1';  

@@ -4,18 +4,15 @@ description: Natively compiled T-SQL modules support CASE expressions in some ve
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "11/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-**Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
+**Applies to:** [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and SQL Server starting [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
 
 CASE expressions are supported in natively compiled T-SQL modules. The following example demonstrates a way to use
 the CASE expression in a query. 

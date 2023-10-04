@@ -2,15 +2,13 @@
 title: "Python tutorial: Deploy cluster model"
 titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL machine learning.
-ms.prod: sql
-ms.technology: machine-learning
-ms.devlang: python
-ms.date: 05/21/2020
-ms.topic: tutorial
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-
-ms.custom: seo-lt-2019
+ms.date: 04/17/2023
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: tutorial
+ms.devlang: python
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current"
 ---
 # Python tutorial: Deploy a model to categorize customers with SQL machine learning
@@ -56,6 +54,9 @@ Run the following T-SQL script to create the stored procedure. The procedure rec
 
 ```sql
 USE [tpcxbb_1gb]
+GO
+
+DROP procedure IF EXISTS [dbo].[py_generate_customer_return_clusters];
 GO
 
 CREATE procedure [dbo].[py_generate_customer_return_clusters]

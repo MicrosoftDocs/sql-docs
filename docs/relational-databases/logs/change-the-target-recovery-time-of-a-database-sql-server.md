@@ -5,10 +5,9 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ms.reviewer: randolphwest
 ms.date: 08/26/2022
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 # Change the target recovery time of a database (SQL Server)
 
@@ -61,7 +60,7 @@ Requires ALTER permission on the database.
    The following example sets the target recovery time of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `60` seconds.
 
    ```sql
-   ALTER DATABASE AdventureWorks2019 SET TARGET_RECOVERY_TIME = 60 SECONDS;
+   ALTER DATABASE AdventureWorks2022 SET TARGET_RECOVERY_TIME = 60 SECONDS;
    ```
 
 ## See also

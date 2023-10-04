@@ -4,8 +4,8 @@ description: "OPENJSON (Transact-SQL)"
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.date: 04/13/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "OPENJSON"
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "JSON, converting from"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 ||=fabric" 
 ---
 # OPENJSON (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 **OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns. In other words, **OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the JSON property paths used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement just as you can use any other table, view, or table-valued function.  
   
@@ -33,7 +33,7 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false":::[Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -99,7 +99,7 @@ SELECT * FROM OpenJson(@json);
 
 Is an optional JSON path expression that references an object or an array within *jsonExpression*. **OPENJSON** seeks into the JSON text at the specified position and parses only the referenced fragment. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can provide a variable as the value of *path*.
   
 The following example returns a nested object by specifying the *path*:  
 
@@ -148,14 +148,14 @@ SELECT * FROM OPENJSON(@array)
 
 **Results**
 
-| month	| temp	| month_id |
+| month    | temp    | month_id |
 | --- | --- | --- |
-| Jan	| 10	| 0 |
-| Feb	| 12	| 1 |
-| Mar	| 15	| 2 |
-| Apr	| 17	| 3 |
-| May	| 23	| 4 |
-| Jun	| 27	| 5 |
+| Jan    | 10    | 0 |
+| Feb    | 12    | 1 |
+| Mar    | 15    | 2 |
+| Apr    | 17    | 3 |
+| May    | 23    | 4 |
+| Jun    | 27    | 5 |
 
 The identity is available only in the serverless SQL pool in Synapse Analytics.
 

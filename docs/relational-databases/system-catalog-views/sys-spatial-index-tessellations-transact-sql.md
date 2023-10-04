@@ -4,9 +4,8 @@ description: sys.spatial_index_tessellations (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "spatial_index_tessellations"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.spatial_index_tessellations catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 ---
 # sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

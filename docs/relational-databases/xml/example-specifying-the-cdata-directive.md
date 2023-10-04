@@ -1,28 +1,26 @@
 ---
 title: "Example: Specifying the CDATA Directive"
 description: View an example of how to specify the CDATA directive to wrap the specified data in a CDATA section.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "CDATA directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the CDATA directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 If the directive is set to **CDATA**, the contained data isn't entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.
 
 The following query wraps the product model summary description in a CDATA section.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

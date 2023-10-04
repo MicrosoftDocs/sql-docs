@@ -1,22 +1,17 @@
 ---
+title: "Writing Pages"
 description: "Writing Pages"
-title: "Writing Pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "pages"
-ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/01/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "pages"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Writing Pages
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The I/O from an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] includes logical and physical writes. A logical write occurs when data is modified in a page in the buffer cache. A physical write occurs when the page is written from the [buffer cache](../relational-databases/memory-management-architecture-guide.md) to disk.
 

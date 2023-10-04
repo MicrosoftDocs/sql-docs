@@ -1,25 +1,23 @@
 ---
+title: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider)"
 description: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider)"
-title: "IBCPSession::BCPWriteFmt (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apiname: 
-  - "IBCPSession::BCPWriteFmt (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "BCPWriteFmt method"
-ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "BCPWriteFmt method"
+apiname: "IBCPSession::BCPWriteFmt (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IBCPSession::BCPWriteFmt (Native Client OLE DB Provider)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
   Writes format information for each column to the format file.  
   

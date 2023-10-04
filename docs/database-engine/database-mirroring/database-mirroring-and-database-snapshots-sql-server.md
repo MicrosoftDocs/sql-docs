@@ -4,8 +4,8 @@ description: Learn about the interoperability of using database snapshots with d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"
@@ -38,7 +38,7 @@ helpviewer_keywords:
     ```  
     CREATE DATABASE AdventureWorks_0600  
     ON (NAME = 'datafile', FILENAME = 'F:\AdventureWorks_0600.SNP')  
-       AS SNAPSHOT OF AdventureWorks2012  
+       AS SNAPSHOT OF AdventureWorks2022  
     ```  
   
 2.  Create the second database snapshot on the mirror of [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Users who are still using `AdventureWorks_0600` can continue to use it.  
@@ -46,7 +46,7 @@ helpviewer_keywords:
     ```  
     CREATE DATABASE AdventureWorks_1200  
     ON (NAME = 'datafile', FILENAME = 'F:\AdventureWorks_1200.SNP')  
-       AS SNAPSHOT OF AdventureWorks2012  
+       AS SNAPSHOT OF AdventureWorks2022  
     ```  
   
      At this point, new client connections can be programmatically directed to the latest snapshot.  
@@ -56,7 +56,7 @@ helpviewer_keywords:
     ```  
     CREATE DATABASE AdventureWorks_1800  
     ON (NAME = 'datafile', FILENAME = 'F:\AdventureWorks_1800.SNP')  
-        AS SNAPSHOT OF AdventureWorks2012  
+        AS SNAPSHOT OF AdventureWorks2022  
     ```  
   
      At this point, new client connections can be programmatically directed to the latest snapshot.  

@@ -1,15 +1,12 @@
 ---
 title: Stopping System-Versioning on a System-Versioned Temporal Table
 description: "Stopping System-Versioning on a System-Versioned Temporal Table"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 04/28/2020
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -30,7 +27,7 @@ Stop system-versioning if you want to perform specific maintenance operations on
 ### Important remarks
 
 - History Table **stops** capturing the updates during **SYSTEM_VERSIONING = OFF**.
-- No data loss happens on the **temporal table** when you set**SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.
+- No data loss happens on the **temporal table** when you set **SYSTEM_VERSIONING = OFF** or drop the **SYSTEM_TIME** period.
 - When you set **SYSTEM_VERSIONING = OFF** and don't remove drop the **SYSTEM_TIME** period, the system continues to update the period columns for every insert and update operation. Deletes on the current table are permanent.
 - Drop the **SYSTEM_TIME** period to delete the period columns.
 - When you set, **SYSTEM_VERSIONING = OFF**, all users with sufficient permissions can modify the schema and content of the history table or even permanently delete the history table.

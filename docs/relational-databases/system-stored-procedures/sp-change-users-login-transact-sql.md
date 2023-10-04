@@ -1,23 +1,19 @@
 ---
+title: "sp_change_users_login (Transact-SQL)"
 description: "sp_change_users_login (Transact-SQL)"
-title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_change_users_login"
-  - "sp_change_users_login_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_change_users_login"
-ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
+ms.date: "12/13/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_change_users_login"
+  - "sp_change_users_login_TSQL"
+helpviewer_keywords:
+  - "sp_change_users_login"
+dev_langs:
+  - "TSQL"
 ---
 # sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +24,7 @@ ms.author: vanto
  > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) instead.  
   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -102,7 +98,7 @@ EXEC sp_change_users_login 'Report';
 CREATE LOGIN MaryB WITH PASSWORD = '982734snfdHHkjj3';  
 GO  
 --Map database user MB-Sales to login MaryB.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_change_users_login 'Update_One', 'MB-Sales', 'MaryB';  
 GO  
@@ -112,7 +108,7 @@ GO
  The following example shows how to use `Auto_Fix` to map an existing user to a login of the same name, or to create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Mary` that has the password `B3r12-3x$098f6` if the login `Mary` does not exist.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';  
 GO  

@@ -1,15 +1,12 @@
 ---
-title: "Remove Data Quality Server Objects | Microsoft Docs"
+title: "Remove Data Quality Server Objects"
 description: If you uninstall Data Quality Server from an instance of SQL Server, some Data Quality Server objects, including the DQS databases, must be deleted manually.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: install
-ms.topic: conceptual
-ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: install
+ms.topic: conceptual
 ---
 # Remove Data Quality Server Objects
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -32,7 +29,7 @@ ms.author: randolphwest
  You can delete these objects in SQL Server Management Studio by right-clicking the object, and clicking **Delete** in the shortcut menu.  
   
 > [!IMPORTANT]  
->  If you just uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from a SQL server instance using the `-uninstall` command line parameter from the command prompt, all the DQS objects are deleted as part of the uninstall process. You do not have to delete them manually after uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. To uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from command prompt, type the following command at the command prompt, and press ENTER:   
+>  If you just uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from a SQL Server instance using the `-uninstall` command line parameter from the command prompt, all the DQS objects are deleted as part of the uninstall process. You do not have to delete them manually after uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. To uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from command prompt, type the following command at the command prompt, and press ENTER:   
 > `dqsinstaller.exe -uninstall`  
   
 ## Uninstall SQL Server Instance Containing Data Quality Server  

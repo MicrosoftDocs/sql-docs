@@ -1,19 +1,19 @@
 ---
 title: Troubleshooting SQL Server Docker containers
 description: Explore the different troubleshooting techniques that you can use to resolve common errors that are seen when using Linux Docker containers with SQL Server images
-author: amvin87
+author: amitkh-msft
 ms.author: amitkh
-ms.reviewer: vanto
-ms.custom: contperf-fy21q1
-ms.date: 03/31/2022
+ms.reviewer: vanto, randolphwest
+ms.date: 03/30/2023
+ms.service: sql
+ms.subservice: linux
 ms.topic: troubleshooting
-ms.prod: sql
-ms.technology: linux
-moniker: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
-
-# Troubleshooting SQL Server Docker containers
+# Troubleshoot SQL Server Docker containers
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
@@ -38,59 +38,103 @@ sudo systemctl start docker
 
 On Windows, verify that you're launching PowerShell or your command-prompt as an Administrator.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
+
 ## SQL Server container startup errors
 
 If the SQL Server container fails to run, try the following tests:
 
-- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, you're attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
+- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, you're attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example:
 
     <!--SQL Server 2017 on Linux -->
     ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-    
+
     ::: zone pivot="cs1-bash"
+
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: zone pivot="cs1-powershell"
+
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: zone pivot="cs1-cmd"
+
     ```cmd
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: moniker-end
-    
+
     <!--SQL Server 2019 on Linux-->
-    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-    
+    ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
+
     ::: zone pivot="cs1-bash"
+
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: zone pivot="cs1-powershell"
+
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: zone pivot="cs1-cmd"
+
     ```cmd
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
     ```
+
     ::: zone-end
-    
+
     ::: moniker-end
 
-- If you get an error such as `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied` when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions. 
+    <!--SQL Server 2022 on Linux-->
+    ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+    ::: zone pivot="cs1-bash"
+
+    ```bash
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+    ```
+
+    ::: zone-end
+
+    ::: zone pivot="cs1-powershell"
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+    ```
+
+    ::: zone-end
+
+    ::: zone pivot="cs1-cmd"
+
+    ```cmd
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2022-latest`.
+    ```
+
+    ::: zone-end
+
+    ::: moniker-end
+
+- If you get an error such as `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied` when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions.
 
    ```bash
     usermod -aG docker $USER
@@ -118,43 +162,84 @@ If the SQL Server process is failing inside the container, you should create a n
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ::: zone pivot="cs1-bash"
+
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
+
 ```PowerShell
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
+
 ```cmd
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
+
 ::: zone-end
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 ::: zone pivot="cs1-bash"
+
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
+
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
+
 ```PowerShell
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
+
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
+
 ```cmd
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
+
+::: zone-end
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+::: zone pivot="cs1-bash"
+
+```bash
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+```
+
+::: zone-end
+
+::: zone pivot="cs1-powershell"
+
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+```
+
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+
+```cmd
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+```
+
 ::: zone-end
 
 ::: moniker-end
@@ -168,21 +253,27 @@ If you can't connect to the SQL Server instance running in your container, try t
 - If you mapped to a non-default host port (not 1433), make sure you're specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
 
     ::: zone pivot="cs1-bash"
+
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
     ```
+
     ::: zone-end
 
     ::: zone pivot="cs1-powershell"
+
     ```PowerShell
     sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
     ```
+
     ::: zone-end
 
     ::: zone pivot="cs1-cmd"
+
     ```cmd
     sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
     ```
+
     ::: zone-end
 
 - If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `MSSQL_SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you're using the SA password associated with the data you're attaching to.
@@ -214,7 +305,7 @@ cat setup*.log
 cat errorlog
 ```
 
-> [!TIP]
+> [!TIP]  
 > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
 
 ## Execute commands in a container
@@ -235,7 +326,7 @@ docker exec -it <Container ID> /bin/bash
 
 Now you can run commands as though you're running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -245,9 +336,16 @@ Now you can run commands as though you're running them at the terminal inside th
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
+::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
 - Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md).
+
+::: moniker-end
+
+<!--SQL Server 2022 on Linux-->
+::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
+
+- Get started with SQL Server 2022 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md).
 
 ::: moniker-end
 
@@ -256,3 +354,5 @@ Now you can run commands as though you're running them at the terminal inside th
 - [Reference additional configuration and customization to Docker containers](sql-server-linux-docker-container-configure.md)
 
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

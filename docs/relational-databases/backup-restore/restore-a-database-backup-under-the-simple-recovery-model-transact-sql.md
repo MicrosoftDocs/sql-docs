@@ -1,22 +1,18 @@
 ---
 title: "Restore database: simple recovery model (Transact-SQL)"
 description: This article explains how to restore a full SQL Server database backup under the simple recovery model using Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full backups [SQL Server]"
   - "database restores [SQL Server], full backups"
   - "backing up databases [SQL Server], full backups"
   - "database backups [SQL Server], full backups"
   - "restoring databases [SQL Server], full backups"
-ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore a database backup under the simple recovery model (Transact-SQL)
 
@@ -73,7 +69,7 @@ ms.author: mathoma
 ```  
 USE master;  
 GO  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    FROM TAPE = '\\.\Tape0';  
 GO  
 ```  

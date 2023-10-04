@@ -1,14 +1,13 @@
 ---
-title: "Add a Snapshot to Report History - Reporting Services | Microsoft Docs"
+title: "Add a Snapshot to Report History - Reporting Services"
 description: Learn details about how to manually add a snapshot to report history in SQL Server Reporting Services (SSRS).
-ms.prod: reporting-services
-ms.technology: reporting-services
-ms.topic: conceptual
-author: maggiesMSFT 
+author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 06/26/2019
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Add a Snapshot to Report History

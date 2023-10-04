@@ -1,19 +1,15 @@
 ---
+title: "Copy Columns from One Table to Another (Database Engine)"
 description: "Copy Columns from One Table to Another (Database Engine)"
-title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "copying columns"
-  - "columns [SQL Server], copying"
-ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "09/01/2016"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "copying columns"
+  - "columns [SQL Server], copying"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)
@@ -98,7 +94,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE dbo.EmployeeSales  
     ( BusinessEntityID   varchar(11) NOT NULL,  

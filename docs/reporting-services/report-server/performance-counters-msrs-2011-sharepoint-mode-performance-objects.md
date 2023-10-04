@@ -1,25 +1,21 @@
 ---
-title: "Performance Counters MSRS 2016 SharePoint Mode, Performance Objects | Microsoft Docs"
+title: "Performance Counters MSRS 2016 SharePoint Mode, Performance Objects"
 description: Learn about performance counters for the MSRS 2016 Web Service SharePoint Mode and MSRS 2016 Windows Service SharePoint Mode performance objects.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/17/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "performance counters [Reporting Services]"
   - "counters [Reporting Services]"
   - "Report Server Windows service, performance counters"
   - "RS Windows Service performance object"
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
-ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: maggiesMSFT
-ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
-
 ---
 # Performance Counters MSRS 2016 SharePoint Mode, Performance Objects
   This topic describes performance counters for the **MSRS 2016 Web Service SharePoint Mode** and **MSRS 2016 Windows Service SharePoint Mode** performance objects that are part of a SQL Server 2016 Reporting Services SharePoint mode deployment.  

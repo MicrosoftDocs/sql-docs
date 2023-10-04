@@ -1,23 +1,20 @@
 ---
-title: "Report Server Database (Native Mode) | Microsoft Docs"
+title: "Report Server Database (Native Mode)"
 description: Learn how a native mode Reporting Services installation separates persistent data storage and temporary data storage into two databases.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/06/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "databases [Reporting Services]"
   - "report servers [Reporting Services], databases"
   - "temporary databases [Reporting Services]"
   - "report server database"
   - "reportservertempdb"
   - "reportserver database"
-ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Database (SSRS Native Mode)
   A report server is a stateless server that uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to store metadata and object definitions. A native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation uses two databases to separate persistent data storage from temporary storage requirements. The databases are created together and bound by name. By default, the database names are **ReportServer** and **ReportServerTempDB**, respectively.  

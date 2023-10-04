@@ -1,32 +1,17 @@
---- 
- 
-# required metadata 
-title: "logisticRegression function (MicrosoftML) " 
-description: " Creates a list containing the function name and arguments to train a  logistic regression model with [rxEnsemble](rxEnsemble.md). " 
-keywords: "(MicrosoftML), logisticRegression" 
+---
+title: "logisticRegression function (MicrosoftML)"
+description: "Creates a list containing the function name and arguments to train a logistic regression model with rxEnsemble."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
- 
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - logisticRegression
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
- 
- 
+---
  
  
  # logisticRegression: logisticRegression 

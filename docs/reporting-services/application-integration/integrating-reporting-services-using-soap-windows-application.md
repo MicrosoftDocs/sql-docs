@@ -1,21 +1,18 @@
 ---
 title: "Use SOAP API in Windows Applications"
-description: You can access functionality of the report server with the Reporting Services SOAP API. Access the Web service in a Windows app by making calls to the service. 
+description: You can access functionality of the report server with the Reporting Services SOAP API. Access the Web service in a Windows app by making calls to the service.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: application-integration
-
-ms.custom: seo-lt-2019
+ms.service: reporting-services
+ms.subservice: application-integration
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "rendered reports [Reporting Services]"
   - "Windows applications [Reporting Services]"
   - "Windows Forms [Reporting Services]"
   - "SOAP [Reporting Services], Windows applications"
-ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Integrating Reporting Services Using SOAP - Windows Application
   You can access the full functionality of the report server through the Reporting Services SOAP API. The SOAP API is a Web service and, as such, can be easily accessed to provide enterprise reporting features to your custom business applications. You can access the Web service in a Windows application simply by writing code that makes calls to the service. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Web service and enables you to use a familiar infrastructure and tools to build business applications built on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
@@ -33,7 +30,7 @@ Private Sub listReportsButton_Click(sender As Object, e As System.EventArgs)
    rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
   
    ' Return the list of items in My Reports  
-   Dim items As CatalogItem() = rs.ListChildren("/Adventureworks 2008 Sample Reports", False)  
+   Dim items As CatalogItem() = rs.ListChildren("/Adventureworks Sample Reports", False)  
   
    Dim ci As CatalogItem  
    For Each ci In  items  
@@ -57,7 +54,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
    rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
    // Return the list of items in My Reports  
-   CatalogItem[] items = rs.ListChildren("/Adventureworks 2008 Sample Reports", false);  
+   CatalogItem[] items = rs.ListChildren("/Adventureworks Sample Reports", false);  
   
    foreach (CatalogItem ci in items)  
    {  

@@ -1,18 +1,15 @@
 ---
-title: "Job Properties (Management Studio) | Microsoft Docs"
+title: "Job Properties (Management Studio)"
 description: Learn about the Job Properties page in SQL Server Management Studio where you view information about jobs on the report server.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.jobproperties.f1"
-ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.jobproperties.f1"
 ---
 # Job Properties (Management Studio)
   Use the **Job Properties** page to view information about an in-progress report or subscription before you cancel it.  

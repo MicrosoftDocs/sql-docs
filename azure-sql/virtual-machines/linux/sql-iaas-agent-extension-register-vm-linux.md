@@ -28,7 +28,7 @@ Register your SQL Server VM with the [SQL IaaS Agent extension](sql-server-iaas-
 
 Registering with the [SQL Server IaaS Agent extension](sql-server-iaas-agent-extension-linux.md) creates the **SQL virtual machine** _resource_ within your subscription, which is a _separate_ resource from the virtual machine resource. Unregistering your SQL Server VM from the extension removes the **SQL virtual machine** _resource_ but will not drop the actual virtual machine.
 
-To utilize the SQL IaaS Agent extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-subscription-with-rp), which gives the SQL IaaS extension the ability to create resources within that specific subscription.
+To utilize the SQL IaaS Agent extension, you must first [register your subscription with the **Microsoft.SqlVirtualMachine** provider](#register-subscription-with-rp), which gives the SQL IaaS Agent extension the ability to create resources within that specific subscription.
 
 > [!IMPORTANT]
 > The SQL IaaS Agent extension collects data for the express purpose of giving customers optional benefits when using SQL Server within Azure Virtual Machines. Microsoft will not use this data for licensing audits without the customer's advance consent. See the [SQL Server privacy supplement](/sql/sql-server/sql-server-privacy#non-personal-data) for more information.
@@ -104,9 +104,9 @@ Register a SQL Server VM in lightweight mode with Azure PowerShell:
 ```powershell-interactive
 # Get the existing compute VM
 $vm = Get-AzVM -Name <vm_name> -ResourceGroupName <resource_group_name>
-# Register SQL VM with 'Lightweight' SQL IaaS agent
+# Register SQL VM with SQL IaaS Agent extension
 New-AzSqlVM -Name $vm.Name -ResourceGroupName $vm.ResourceGroupName -Location $vm.Location `
-  -LicenseType <license_type>  -SqlManagementType LightWeight  
+  -LicenseType <license_type> 
 ```
 
 ---
@@ -147,6 +147,10 @@ Get-AzSqlVM -Name <vm_name> -ResourceGroupName <resource_group>
 ---
 
 An error indicates that the SQL Server VM has not been registered with the extension.
+
+## Automatic registration
+
+[Automatic registration](../windows/sql-agent-extension-automatic-registration-all-vms.md) is supported for Ubuntu Linux VMs. 
 
 
 ## Next steps

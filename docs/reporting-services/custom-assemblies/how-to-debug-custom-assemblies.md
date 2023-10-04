@@ -1,20 +1,17 @@
 ---
-title: "How to: Debug Custom Assemblies | Microsoft Docs"
+title: "How to: Debug Custom Assemblies"
 description: Learn how to use Microsoft .NET Framework debugging tools to help you analyze your custom assembly code and locate errors in it.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-assemblies
-
-
+ms.service: reporting-services
+ms.subservice: custom-assemblies
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "custom assemblies [Reporting Services], debugging"
   - "debugging custom assemblies [Reporting Services]"
   - "troubleshooting [Reporting Services], custom assemblies"
-ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # How to: Debug Custom Assemblies
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../includes/vsprvs2008-md.md)].  

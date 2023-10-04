@@ -3,11 +3,10 @@ title: "JSON_OBJECT (Transact-SQL)"
 description: "JSON_OBJECT (Transact-SQL)"
 author: "uc-msft"
 ms.author: "umajay"
-ms.date: 05/24/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 09/05/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "JSON_OBJECT"
   - "JSON_OBJECT_TSQL"
@@ -20,7 +19,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver
 ---
 # JSON_OBJECT (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Constructs JSON object text from zero or more expressions.
 

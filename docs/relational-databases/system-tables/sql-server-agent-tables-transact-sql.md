@@ -4,16 +4,14 @@ description: SQL Server Agent Tables (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "SQL Server Agent, system tables"
   - "system tables [SQL Server], SQL Server Agent"
 dev_langs:
   - "TSQL"
-ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 ---
 # SQL Server Agent Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

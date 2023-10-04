@@ -1,14 +1,13 @@
 ---
 title: "Troubleshoot orphaned users"
-description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users. 
-ms.custom: "seo-lt-2019"
+description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users.
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/14/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: high-availability
+ms.service: sql
+ms.subservice: high-availability
 ms.topic: troubleshooting
-helpviewer_keywords: 
+helpviewer_keywords:
   - "orphaned users [SQL Server]"
   - "logins [SQL Server], orphaned users"
   - "troubleshooting [SQL Server], user accounts"
@@ -16,13 +15,10 @@ helpviewer_keywords:
   - "failover [SQL Server], managing metadata"
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
-ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MashaMSFT
-ms.author: mathoma
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016"
 ---
 # Troubleshoot orphaned users (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   

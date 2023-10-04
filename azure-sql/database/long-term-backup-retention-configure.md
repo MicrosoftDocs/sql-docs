@@ -1,16 +1,16 @@
 ---
 title: "Azure SQL Database: Manage long-term backup retention"
 description: Learn how to store and restore automated backups for Azure SQL Database in Azure storage (for up to 10 years) using the Azure portal, Azure CLI, and PowerShell.
-author: SudhirRaparla
-ms.author: nvraparl
+author: grrlgeek
+ms.author: jeschult
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/4/2022
+ms.date: 09/11/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
 ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+  - devx-track-azurepowershell
+  - devx-track-azurecli
 monikerRange: "= azuresql || = azuresql-db"
 ---
 
@@ -29,7 +29,7 @@ An active Azure subscription.
 
 Prepare your environment for the Azure CLI.
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 # [PowerShell](#tab/powershell)
 
@@ -320,19 +320,11 @@ Restore-AzSqlDatabase -FromLongTermRetentionBackup -ResourceId $ltrBackup.Resour
 
 ---
 
-## Limitations
-- When restoring from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created.
-- You need to specify the target service level objective, when restoring from an LTR backup, which was created when the database was in an elastic pool. 
-- LTR in the Hyperscale service tier is in limited public preview
-
-> [!NOTE]
-> LTR can be enabled for Hyperscale databases created or migrated from other service tiers after June 2022. LTR support for all other Hyperscale databases will be added over the next several weeks. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you will receive the following error: “Long Term Retention is not supported: Long-term retention on Hyperscale is currently in limited preview and cannot be enabled as yet for your database. To enable long-term retention please reach out to Microsoft support.” Please create a support ticket to resolve this, or wait until LTR support is enabled for your database.
-
-
-
 ## Best practices
+
 If you use LTR backups to meet compliance or other mission-critical requirements:
-- Verify the LTR backups are taken as per the configured policy by following steps outlined in [view backups](/azure-sql/database/long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup) section either using Portal, Azure CLI or PowerShell. 
+
+- Verify the LTR backups are taken as per the configured policy by following steps outlined in [view backups](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup) section either using Portal, Azure CLI or PowerShell. 
 - Consider conducting periodic recovery drills to verify that restore of LTR backups results in expected database state.
 
  

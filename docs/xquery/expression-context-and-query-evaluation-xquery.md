@@ -1,27 +1,23 @@
 ---
-title: "Expression Context and Query Evaluation (XQuery) | Microsoft Docs"
+title: "Expression Context and Query Evaluation (XQuery)"
 description: Learn how information from the static and dynamic context of an XQuery expression is used to analyze and evaluate it.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "expression context [XQuery]"
   - "XQuery, expression context"
   - "XQuery, query evaluation"
   - "static context"
   - "dynamic context [XQuery]"
-ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Expression Context and Query Evaluation (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The context of an expression is the information that is used to analyze and evaluate it. Following are the two phases in which XQuery is evaluated:  
   

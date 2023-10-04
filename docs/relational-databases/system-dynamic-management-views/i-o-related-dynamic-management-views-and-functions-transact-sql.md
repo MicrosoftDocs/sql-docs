@@ -4,8 +4,8 @@ description: I/O Related Dynamic Management Views and Functions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "I/O [SQL Server], dynamic management objects"
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], I/O"
 dev_langs:
   - "TSQL"
-ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 ---
 # I/O Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

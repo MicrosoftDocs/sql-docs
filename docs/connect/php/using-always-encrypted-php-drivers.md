@@ -3,10 +3,9 @@ title: Using Always Encrypted
 description: Learn how to use Always Encrypted with the PHP Drivers for SQL Server to protect sensitive data in your application.
 author: David-Engel
 ms.author: v-davidengel
-manager: v-mabarw
 ms.date: 12/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
@@ -25,7 +24,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 
 ## Prerequisites
 
-- Configure Always Encrypted in your database. This configuration involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
+- Configure Always Encrypted in your database. This configuration involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Tutorial: Getting started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-tutorial-getting-started.md). In particular, your database should contain the metadata definitions for a Column Master Key (CMK), a Column Encryption Key (CEK), and a table containing one or more columns encrypted using that CEK.
 - Make sure ODBC Driver for SQL Server version 17 or higher is installed on your development machine. For details, see [ODBC Driver for SQL Server](../odbc/microsoft-odbc-driver-for-sql-server.md).
 
 ## Enabling Always Encrypted in a PHP application
@@ -112,7 +111,7 @@ $firstName = "Catherine";
 $lastName = "Abel;
 $birthDate = "1996-10-19";
 $params = array($ssn, $firstName, $lastName, $birthDate);
-// during sqlsrv_prepare, the driver determines the SQL types for each parameter and pass them to SQL server
+// during sqlsrv_prepare, the driver determines the SQL types for each parameter and pass them to SQL Server
 $stmt = sqlsrv_prepare($conn, $query, $params);
 sqlsrv_execute($stmt);
 ```
@@ -144,7 +143,7 @@ $ssn = "795-73-9838";
 $firstName = "Catherine";
 $lastName = "Able";
 $birthDate = "1996-10-19";
-// during PDO::prepare, the driver determines the SQL types for each parameter and pass them to SQL server
+// during PDO::prepare, the driver determines the SQL types for each parameter and pass them to SQL Server
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $ssn);
 $stmt->bindParam(2, $firstName);
@@ -162,7 +161,7 @@ The following examples demonstrate filtering data based on encrypted values, and
 - All values printed by the program are in plaintext, since the driver transparently decrypts the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]
-> Queries can perform equality comparisons on encrypted columns only if the encryption is deterministic. For more information, see [Selecting Deterministic or Randomized encryption](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> Queries can perform equality comparisons on encrypted columns only if the encryption is [deterministic](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV:
 
@@ -350,7 +349,7 @@ PDO_SQLSRV only:
 - `PDO::ATTR_EMULATE_PREPARE` statement attribute specified in a parameterized query
 - binding parameters in a batch of SQL statements
 
-The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](../odbc/using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).
+The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](../odbc/using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted limitations](../../relational-databases/security/encryption/always-encrypted-database-engine.md#limitations).
 
 ## See also
 

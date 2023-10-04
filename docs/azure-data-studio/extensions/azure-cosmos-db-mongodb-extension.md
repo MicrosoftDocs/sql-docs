@@ -5,9 +5,8 @@ author: seesharprun
 ms.author: sidandrews
 ms.reviewer: esarroyo
 ms.date: 05/10/2022
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 ---
 
 # Azure Cosmos DB API for MongoDB extension (Preview)

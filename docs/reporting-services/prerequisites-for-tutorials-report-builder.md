@@ -1,15 +1,13 @@
 ---
-title: "Prerequisites for Tutorials (Report Builder) | Microsoft Docs"
+title: "Prerequisites for Tutorials (Report Builder)"
 description: Learn about the prerequisites that you must have in place to complete the Report Builder tutorials.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Prerequisites for Tutorials (Report Builder)

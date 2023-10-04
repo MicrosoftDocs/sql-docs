@@ -1,12 +1,11 @@
 ---
 title: "sys.database_permissions (Transact-SQL)"
-description: sys.database_permissions (Transact-SQL)
+description: sys.database_permissions returns a row for every permission or column-exception permission in the database. 
 author: VanMSFT
 ms.author: vanto
-ms.date: "08/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.date: 06/16/2023
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_permissions"
@@ -17,23 +16,22 @@ helpviewer_keywords:
   - "sys.database_permissions catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sys.database_permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Returns a row for every permission or column-exception permission in the database. For columns, there is a row for every permission that is different from the corresponding object-level permission. If the column permission is the same as the corresponding object permission, there is no row for it and the permission applied is that of the object.  
   
 > [!IMPORTANT]  
->  Column-level permissions override object-level permissions on the same entity.  
+> Column-level permissions override object-level permissions on the same entity.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifies class on which permission exists. For more information, see [sys.securable_classes (Transact-SQL)](sys-securable-classes-transact-sql.md).<br /><br /> 0 = Database<br />1 = Object or Column<br />3 = Schema<br />4 = Database Principal<br />5 = Assembly - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />6 = Type<br />10 = XML Schema Collection - <br />                      **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />15 = Message Type - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />16 = Service Contract - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />17 = Service - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />18 = Remote Service Binding - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />19 = Route - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />23 =Full-Text Catalog - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />24 = Symmetric Key - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />25 = Certificate - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />26 = Asymmetric Key - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />29 = Fulltext Stoplist - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />31 = Search Property List - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />32 = Database Scoped Credential - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br />34 = External Language - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
+|**class**|**tinyint**|Identifies class on which permission exists. For more information, see [sys.securable_classes (Transact-SQL)](sys-securable-classes-transact-sql.md).<br /><br /> 0 = Database<br />1 = Object or Column<br />3 = Schema<br />4 = Database Principal<br />5 = Assembly - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />6 = Type<br />10 = XML Schema Collection - <br />                      **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />15 = Message Type - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />16 = Service Contract - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />17 = Service - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />18 = Remote Service Binding - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />19 = Route - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />23 =Full-Text Catalog - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />24 = Symmetric Key - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />25 = Certificate - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />26 = Asymmetric Key - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />29 = Fulltext Stoplist - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />31 = Search Property List - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />32 = Database Scoped Credential - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br />34 = External Language - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.|  
 |**class_desc**|**nvarchar(60)**|Description of class on which permission exists.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY<br /><br /> FULLTEXT STOPLIST<br /><br /> SEARCH PROPERTY LIST<br /><br /> DATABASE SCOPED CREDENTIAL<br /><br /> EXTERNAL LANGUAGE|  
-|**major_id**|**int**|ID of thing on which permission exists, interpreted according to class. Usually, the **major_id** is simply the kind of ID that applies to what the class represents. <br /><br /> 0 = The database itself <br /><br /> >0 = Object-IDs for user objects <br /><br /> \<0 = Object-IDs for system objects |  
-|**minor_id**|**int**|Secondary-ID of thing on which permission exists, interpreted according to class. Often, the **minor_id** is zero, because there is no subcategory available for the class of object. Otherwise, it is the Column-ID of a table.|  
+|**major_id**|**int**|ID of thing on which permission exists, interpreted according to class. Usually, the `major_id` simply the kind of ID that applies to what the class represents. <br /><br /> 0 = The database itself <br /><br /> >0 = Object-IDs for user objects <br /><br /> \<0 = Object-IDs for system objects |  
+|**minor_id**|**int**|Secondary-ID of thing on which permission exists, interpreted according to class. Often, the `minor_id` is zero, because there is no subcategory available for the class of object. Otherwise, it is the Column-ID of a table.|  
 |**grantee_principal_id**|**int**|Database principal ID to which the permissions are granted.|  
 |**grantor_principal_id**|**int**|Database principal ID of the grantor of these permissions.|  
 |**type**|**char(4)**|Database permission type. For a list of permission types, see the next table.|  
@@ -41,7 +39,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**state**|**char(1)**|Permission state:<br /><br /> D = Deny<br /><br /> R = Revoke<br /><br /> G = Grant<br /><br /> W = Grant With Grant Option|  
 |**state_desc**|**nvarchar(60)**|Description of permission state:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
-## Database Permissions   
+## Database Permissions
+
 The following types of permissions are possible.
   
 |Permission type|Permission name|Applies to securable|  
@@ -95,12 +94,12 @@ The following types of permissions are possible.
 |CRSK|CREATE SYMMETRIC KEY|DATABASE|  
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
-|CRSO|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> CREATE SEQUENCE|DATABASE|  
+|CRSO|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions.<br /><br /> CREATE SEQUENCE|DATABASE|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
-|CRXS|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
+|CRXS|**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
 |DL|DELETE|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
@@ -121,50 +120,93 @@ The following types of permissions are possible.
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## Permissions  
+## Permissions
+
  Any user can see their own permissions. To see permissions for other users, requires VIEW DEFINITION, ALTER ANY USER, or any permission on a user. To see user-defined roles, requires ALTER ANY ROLE, or membership in the role (such as public).  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## Examples  
-  
-### A: Listing all the permissions of database principals  
+## Examples
+
+### <a id="a-listing-all-the-permissions-of-database-principals"></a> A. List all the permissions of database principals
+
  The following query lists the permissions explicitly granted or denied to database principals.  
   
 > [!IMPORTANT]  
->  The permissions of fixed database roles do not appear in sys.database_permissions. Therefore, database principals may have additional permissions not listed here.  
+> The permissions of fixed database roles do not appear in `sys.database_permissions`. Therefore, database principals may have additional permissions not listed here.  
   
-```  
-SELECT pr.principal_id, pr.name, pr.type_desc,   
-    pr.authentication_type_desc, pe.state_desc, pe.permission_name  
+```sql
+SELECT pr.principal_id
+    ,pr.name
+    ,pr.type_desc
+    ,pr.authentication_type_desc
+    ,pe.state_desc
+    ,pe.permission_name  
 FROM sys.database_principals AS pr  
-JOIN sys.database_permissions AS pe  
-    ON pe.grantee_principal_id = pr.principal_id;  
+INNER JOIN sys.database_permissions AS pe ON pe.grantee_principal_id = pr.principal_id;  
 ```  
-  
-### B: Listing permissions on schema objects within a database  
- The following query joins sys.database_principals and sys.database_permissions to sys.objects and sys.schemas to list permissions granted or denied to specific schema objects.  
-  
-```  
-SELECT pr.principal_id, pr.name, pr.type_desc,   
-    pr.authentication_type_desc, pe.state_desc,   
-    pe.permission_name, s.name + '.' + o.name AS ObjectName  
-FROM sys.database_principals AS pr  
-JOIN sys.database_permissions AS pe  
-    ON pe.grantee_principal_id = pr.principal_id  
-JOIN sys.objects AS o  
-    ON pe.major_id = o.object_id  
-JOIN sys.schemas AS s  
-    ON o.schema_id = s.schema_id;  
-```  
-    
-  
-## See Also  
- [Securables](../../relational-databases/security/securables.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
-  
 
+### <a id="b-listing-permissions-on-schema-objects-within-a-database"></a> B. List permissions on schema objects within a database
 
+ The following query joins [sys.database_principals](sys-database-principals-transact-sql.md) and `sys.database_permissions` to [sys.objects](sys-objects-transact-sql.md) and [sys.schemas](schemas-catalog-views-sys-schemas.md) to list permissions granted or denied to specific schema objects.  
+  
+```sql
+SELECT pr.principal_id
+    ,pr.name
+    ,pr.type_desc
+    ,pr.authentication_type_desc
+    ,pe.state_desc
+    ,pe.permission_name
+    ,s.name + '.' + o.name AS ObjectName
+FROM sys.database_principals AS pr
+INNER JOIN sys.database_permissions AS pe ON pe.grantee_principal_id = pr.principal_id
+INNER JOIN sys.objects AS o ON pe.major_id = o.object_id
+INNER JOIN sys.schemas AS s ON o.schema_id = s.schema_id;
+```  
+
+### C. List permissions for a specific object
+
+You can use the previous example to query permissions specific to a single database object.
+
+For example, consider the following granular permissions granted to a database user `test` in the [sample database](../../samples/adventureworks-install-configure.md) [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)]:
+
+```sql
+GRANT SELECT ON dbo.vAssocSeqOrders TO [test];
+```
+
+Find the granular permissions assigned to `dbo.vAssocSeqOrders`:
+
+```sql
+SELECT pr.principal_id
+    ,pr.name
+    ,pr.type_desc
+    ,pr.authentication_type_desc
+    ,pe.state_desc
+    ,pe.permission_name
+    ,s.name + '.' + o.name AS ObjectName
+FROM sys.database_principals AS pr
+INNER JOIN sys.database_permissions AS pe ON pe.grantee_principal_id = pr.principal_id
+INNER JOIN sys.objects AS o ON pe.major_id = o.object_id
+INNER JOIN sys.schemas AS s ON o.schema_id = s.schema_id
+WHERE o.name = 'vAssocSeqOrders'
+    AND s.name = 'dbo';
+```
+
+Returns the output:
+
+```output
+principal_id    name    type_desc    authentication_type_desc    state_desc    permission_name    ObjectName
+5    test    SQL_USER    INSTANCE    GRANT    SELECT    dbo.vAssocSeqOrders
+```
+
+## See also
+
+- [Securables](../../relational-databases/security/securables.md)
+- [Permissions Hierarchy (Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)
+- [Security Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+- [Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+
+## Next steps
+
+- [Grant a Permission to a Principal](../security/authentication-access/grant-a-permission-to-a-principal.md)
+- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)

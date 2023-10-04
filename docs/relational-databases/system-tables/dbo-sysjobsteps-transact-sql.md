@@ -4,9 +4,8 @@ description: dbo.sysjobsteps (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysjobsteps"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysjobsteps system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 ---
 # dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

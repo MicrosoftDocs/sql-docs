@@ -1,30 +1,26 @@
 ---
+title: "sp_changemergepublication (Transact-SQL)"
 description: "sp_changemergepublication (Transact-SQL)"
-title: "sp_changemergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_changemergepublication_TSQL"
-  - "sp_changemergepublication"
-helpviewer_keywords: 
-  - "sp_changemergepublication"
-ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_changemergepublication_TSQL"
+  - "sp_changemergepublication"
+helpviewer_keywords:
+  - "sp_changemergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the properties of a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -95,7 +91,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**max_concurrent_dynamic_snapshots**||This is an **int** that represents the maximum number of snapshot sessions to generate a filtered data snapshot that can concurrently run against a merge publication that uses parameterized row filters. If **0**, there is no limit. If more than this number of snapshot processes are scheduled to run at the same time, the excess jobs are put into a queue until a current merge process finishes.|  
 |**post_snapshot_script**||Specifies a pointer to an **.sql** file location. The Distribution Agent or Merge Agent runs the post-snapshot script after all the other replicated object scripts and data have been applied during an initial synchronization. Changing this property requires a new snapshot.|  
 |**pre_snapshot_script**||Specifies a pointer to an **.sql** file location. The Merge Agent runs the pre-snapshot script before any of the replicated object scripts when applying a snapshot at a Subscriber. Changing this property requires a new snapshot.|  
-|**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|**publication_compatibility_level**|**100RTM**|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|This parameter has been deprecated and is only supported for the backward compatibility of scripts. You can no longer add publication information to Active Directory.|  
 ||**false**|Removes the publication information from Active Directory.|  

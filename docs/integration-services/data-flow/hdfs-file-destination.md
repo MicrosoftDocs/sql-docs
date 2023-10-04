@@ -1,18 +1,14 @@
 ---
+title: "HDFS File Destination"
 description: "HDFS File Destination"
-title: "HDFS File Destination | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: 01/09/2019
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.ssis.designer.hdfsfiledest.f1"
-ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: chugugrace
-ms.author: chugu
 ---
 # HDFS File Destination
 

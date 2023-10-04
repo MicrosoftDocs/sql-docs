@@ -4,9 +4,8 @@ description: ALTER AVAILABILITY GROUP (Transact-SQL)
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ms.date: "01/02/2018"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_AVAILABILITY_GROUP_TSQL"
@@ -21,12 +20,13 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
+
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters an existing Always On availability group in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most ALTER AVAILABILITY GROUP arguments are supported only the current primary replica. However the JOIN, FAILOVER, and FORCE_FAILOVER_ALLOW_DATA_LOSS arguments are supported only on secondary replicas.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -224,12 +224,33 @@ Specifies whether distributed transactions are enabled for this Availability Gro
  
 > [!NOTE]
 > Support for changing the DTC_SUPPORT setting of an Availability Group was introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2. This option cannot be used with earlier versions. To change this setting in earlier versions of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], you must DROP and CREATE the availability group again.
- 
- REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduced in SQL Server 2017. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
-ROLE
-The only valid parameter is 'SECONDARY', and this SET option is only valid in Distributed Availability Groups.  It is used to fail over a distributed availability group as documented here: [ALTER AVAILABILITY GROUP](../../database-engine/availability-groups/windows/configure-distributed-availability-groups.md) 
+>[!IMPORTANT]
+>DTC has a limit of 32 enlistments per distributed transaction. Because each database within an availability group enlists with the DTC separately, if your transaction involves more than 32 databases, you may get the following error when [!INCLUDE[SQLServer](../../includes/ssnoversion-md.md)] attempts to enlist the 33rd database:
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
+
+For more detail on distributed transactions in [!INCLUDE[SQLServer](../../includes/ssnoversion-md.md)], see [Distributed transactions](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#distTran)
+ 
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+
+Introduced in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Sets a minimum number of synchronous secondary replicas required to commit before the primary replica commits a transaction. Guarantees that SQL Server transactions wait until the transaction logs are updated on the minimum number of secondary replicas. 
+
+- Default: 0. Provides same behavior as [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)]. 
+- Minimum: 0.
+- Maximum: Number of replicas minus 1. 
+
+REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on synchronous replicas commit to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceeds. When the unresponsive database comes back online it will be in a "not synced" state and the replica is marked as unhealthy until the primary can synchronize it again. This setting guarantees that the primary replica does not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available, then commits on the primary fail. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+
+Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT on a distributed availability group. This setting is not supported for CREATE AVAILABILITY GROUP. You can use ALTER AVAILABILITY GROUP to set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. For example:
+
+   ```sql
+   ALTER AVAILABILITY GROUP [<name>] 
+     SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = <integer>);
+   ```
+
+ ROLE  
+ The only valid parameter is 'SECONDARY', and this SET option is only valid in Distributed Availability Groups.  It is used to fail over a distributed availability group as documented here: [ALTER AVAILABILITY GROUP](../../database-engine/availability-groups/windows/configure-distributed-availability-groups.md) 
   
  ADD DATABASE *database_name*  
  Specifies a list of one or more user databases that you want to add to the availability group. These databases must reside on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the current primary replica. You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
@@ -245,7 +266,7 @@ The only valid parameter is 'SECONDARY', and this SET option is only valid in Di
  For information about the recommended follow up after removing an availability database from an availability group, see [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
  ADD REPLICA ON  
- Specifies from one to eight SQL server instances to host secondary replicas in an availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause.  
+ Specifies from one to eight SQL Server instances to host secondary replicas in an availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause.  
   
  Supported only on the primary replica.  
   

@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 04/07/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ms.custom: intro-installation
 ---
@@ -36,9 +36,7 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 2. Import the Microsoft repository key.
 
    ```bash
-   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-   gpg --dearmor |
-   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 3. Create local repository information.

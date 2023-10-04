@@ -1,23 +1,19 @@
 ---
-description: "Create an Explicit Hierarchy (Master Data Services)"
 title: Create an Explicit Hierarchy
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "creating explicit hierarchies [Master Data Services]"
-  - "explicit hierarchies, creating"
-ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
+description: "Create an Explicit Hierarchy (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "creating explicit hierarchies [Master Data Services]"
+  - "explicit hierarchies, creating"
 ---
 # Create an Explicit Hierarchy (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create an explicit hierarchy when you need a ragged hierarchy in which members can exist at any level. Explicit hierarchies contain members from a single entity.  
   

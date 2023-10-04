@@ -4,8 +4,8 @@ description: "The tedious module is an open source, JavaScript implementation of
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "10/06/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Node.js Driver for SQL Server
@@ -36,11 +36,3 @@ To get help, file an [issue in the tedious GitHub repository](https://github.com
 
 * [Azure Node.js Developer Center](https://azure.microsoft.com/develop/nodejs/)  
 * [Get Involved at nodejs.org](https://nodejs.org/en/get-involved/)
-
-## Code examples
-
-* [Getting Started with Node.js on Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [Getting Started with Node.js on macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
-* [Getting Started with Node.js on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
-* [Getting Started with Node.js on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
-* [Getting Started with Node.js on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

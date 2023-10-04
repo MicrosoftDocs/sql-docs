@@ -1,15 +1,11 @@
 ---
+title: "Query Spatial Data for Nearest Neighbor"
 description: "Query Spatial Data for Nearest Neighbor"
-title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Spatial Data for Nearest Neighbor
@@ -71,10 +67,10 @@ SELECT TOP ( number )
  It is recommended that the new spatial index tessellations be used for indexes used in Nearest Neighbor queries. For more information on spatial index tessellations, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## Example 1  
- The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2016` database.  
+ The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
@@ -88,7 +84,7 @@ ORDER BY SpatialLocation.STDistance(@g);
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
 ```sql  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  

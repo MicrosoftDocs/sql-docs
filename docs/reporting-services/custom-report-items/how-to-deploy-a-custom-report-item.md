@@ -1,18 +1,15 @@
 ---
-title: "How to: Deploy a Custom Report Item | Microsoft Docs"
+title: "How to: Deploy a Custom Report Item"
 description: Learn how to deploy a custom report item. You'll modify the report server configuration files and copy the component assemblies to the appropriate folders.
-ms.date: 03/18/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "custom report items, deploying"
-ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/18/2017
+ms.service: reporting-services
+ms.subservice: custom-report-items
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "custom report items, deploying"
 ---
 # How to: Deploy a Custom Report Item
   To deploy a custom report item in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you must modify the report server configuration files and copy the design-time and run-time component assemblies into the appropriate application folders for both Report Designer and the report server.  

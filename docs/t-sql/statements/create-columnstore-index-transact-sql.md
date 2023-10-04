@@ -1,11 +1,12 @@
 ---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
-description: "CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index."
+description: CREATE COLUMNSTORE INDEX converts a rowstore table to a clustered columnstore index, or creates a nonclustered columnstore index.
 author: markingmyname
 ms.author: maghan
-ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.reviewer: randolphwest
+ms.date: 12/12/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_COLUMNSTORE_INDEX_TSQL"
@@ -35,61 +36,61 @@ Convert a rowstore table to a clustered columnstore index, or create a noncluste
 
 Follow [What's new in columnstore indexes](../../relational-databases/indexes/columnstore-indexes-what-s-new.md) for the latest improvements to this feature.
 
- - Ordered clustered columnstore indexes were introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order).
+- Ordered clustered columnstore indexes were introduced in [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]. For more information, see [CREATE COLUMNSTORE INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md#order).
 
- - Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.
+- Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. It's no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.
 
- - For information on columnstore index design guidelines, see [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
+- For information on columnstore index design guidelines, see [Columnstore indexes - Design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
+Syntax for SQL Server and Azure SQL Database:
+
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
-  
 -- Create a clustered columnstore index on disk-based table.
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    [ WITH ( < with_option> [ ,...n ] ) ]
+    [ WITH ( <with_option> [ , ...n ] ) ]
     [ ON <on_option> ] | [ ORDER <on_option> ]
-    
+
 [ ; ]
-  
---Create a nonclustered columnstore index on a disk-based table.
-CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
+
+-- Create a nonclustered columnstore index on a disk-based table.
+CREATE [ NONCLUSTERED ]  COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
-        ( column  [ ,...n ] )
+        ( column  [ , ...n ] )
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
-    [ WITH ( < with_option> [ ,...n ] ) ]
+    [ WITH ( <with_option> [ , ...n ] ) ]
     [ ON <on_option> ]
 [ ; ]
-  
+
 <with_option> ::=
-      DROP_EXISTING = { ON | **OFF** } -- default is OFF
+      DROP_EXISTING = { ON | OFF } -- default is OFF
     | MAXDOP = max_degree_of_parallelism
     | ONLINE = { ON | OFF }
-    | COMPRESSION_DELAY  = { 0 | delay [ Minutes ] }
+    | COMPRESSION_DELAY  = { 0 | delay [ MINUTES ] }
     | DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
-      [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]
-  
+      [ ON PARTITIONS ( { partition_number_expression | range } [ , ...n ] ) ]
+
 <on_option>::=
       partition_scheme_name ( column_name )
     | filegroup_name
     | "default"
-  
+
 <filter_expression> ::=
-      column_name IN ( constant [ ,...n ]
+      column_name IN ( constant [ , ...n ]
     | column_name { IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !< } constant
 ```
 
+Syntax for Azure Synapse Analytics, Parallel Data Warehouse, [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions:
+
 ```syntaxsql
--- Syntax for Azure Synapse Analytics, Parallel Data Warehouse, [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later
-  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    [ ORDER (column [,...n] ) ]
-    [ WITH ( DROP_EXISTING = { ON | **OFF** } ) ] -- default is OFF
+    [ ORDER (column [ , ...n ] ) ]
+    [ WITH ( DROP_EXISTING = { ON | OFF } ) ] -- default is OFF
 [;]
 ```
 
@@ -99,8 +100,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 Some of the options aren't available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
 
-|Option| CLUSTERED | NONCLUSTERED |
-|---|---|---|
+| Option | CLUSTERED | NONCLUSTERED |
+| --- | --- | --- |
 | COMPRESSION_DELAY | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
@@ -124,15 +125,15 @@ Specifies the one-, two-, or three-part name of the table to be stored as a clus
 
 #### ORDER
 
-*Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later*
+*Applies to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later*
 
 Use the `column_store_order_ordinal` column in [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md) to determine the order of the column(s) for a clustered columnstore index. This aids with [segment elimination](../../relational-databases/indexes/columnstore-indexes-query-performance.md#segment-elimination), especially with string data. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci) and [Columnstore indexes design guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md).
 
 To convert to an ordered clustered column store index, the existing index must be a clustered columnstore index. Use the `DROP_EXISTING` option.
 
-LOB data types (the (max) length data types) cannot be the key of an ordered clustered columnstore index.
+LOB data types (the (max) length data types) can't be the key of an ordered clustered columnstore index.
 
-When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, do not limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
+When creating an ordered clustered columnstore index, use `OPTION(MAXDOP = 1)` for the highest quality sorting with the `CREATE INDEX` statement, in exchange for a significantly longer duration of the `CREATE INDEX` statement. To create the index as fast as possible, don't limit MAXDOP, and use all the parallel threading the server can provide. The highest quality of compression and sorting could aid queries on the columnstore index.
 
 When an ordered clustered columnstore index is created, the key columns are indicated by the `column_store_order_ordinal` column in `sys.index_columns`.
 
@@ -155,8 +156,8 @@ This option can override the existing maximum degree of parallelism server confi
 
 *max_degree_of_parallelism* values can be:
 
-- 1, which means to suppress parallel plan generation.  
-- \>1, which means to restrict the maximum number of processors used in a parallel index operation to the specified number, or fewer, based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
+- 1, which means to suppress parallel plan generation.
+- \>1, which means to restrict the maximum number of processors used in a parallel index operation to the specified number, or fewer, based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.
 - 0 (default), which means to use the actual number of processors, or fewer, based on the current system workload.
 
 ```sql
@@ -166,7 +167,7 @@ WITH (MAXDOP = 2);
 
 For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
-###### COMPRESSION_DELAY = 0 | *delay* [ Minutes ]
+###### COMPRESSION_DELAY = 0 | *delay* [ MINUTES ]
 
 For a disk-based table, *delay* specifies the minimum number of minutes that a delta rowgroup in the closed state must remain in the delta rowgroup. SQL Server can then compress it into the compressed rowgroup. Because disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to delta rowgroups in the closed state.
 
@@ -183,13 +184,14 @@ For recommendations on when to use COMPRESSION_DELAY, see [Get started with Colu
 
 Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:
 
-- `COLUMNSTORE` is the default, and specifies to compress with the most performant columnstore compression. This option is the typical choice.  
+- `COLUMNSTORE` is the default, and specifies to compress with the most performant columnstore compression. This option is the typical choice.
 - `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. Use this option for situations such as archival, which requires a smaller storage size and can afford more time for storage and retrieval.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
 ```
+
 For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
 
 ###### ONLINE = [ON | OFF]
@@ -206,7 +208,7 @@ WITH ( ONLINE = ON );
 
 With these options, you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option isn't specified, the index uses the settings partition or filegroup settings of the existing table.
 
-*partition_scheme_name* **(** _column_name_ **)** specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).
+*partition_scheme_name* ( *column_name* ) specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).
 
 *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.
 
@@ -247,14 +249,14 @@ Overrides the [Configure the max degree of parallelism Server Configuration Opti
 
 *max_degree_of_parallelism* values can be:
 
-- 1, which means to suppress parallel plan generation.  
-- \>1, which means to restrict the maximum number of processors used in a parallel index operation to the specified number, or fewer, based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
+- 1, which means to suppress parallel plan generation.
+- \>1, which means to restrict the maximum number of processors used in a parallel index operation to the specified number, or fewer, based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.
 - 0 (default), which means to use the actual number of processors or fewer based on the current system workload.
 
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations aren't available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ##### ONLINE = [ON | OFF]
 
@@ -266,7 +268,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 WITH ( ONLINE = ON );
 ```
 
-##### COMPRESSION_DELAY = 0 | \<delay>[Minutes]
+##### COMPRESSION_DELAY = 0 | *delay* [ MINUTES ]
 
 Specifies a lower bound on how long a row should stay in a delta rowgroup, before it's eligible for migration to a compressed rowgroup. For example, you can say that if a row is unchanged for 120 minutes, that row is eligible for compressing into columnar storage format.
 
@@ -276,7 +278,7 @@ For a columnstore index on disk-based tables, the time when a row was inserted o
 
 Specifies the data compression option for the specified table, partition number, or range of partitions. Applies only to columnstore indexes, including both nonclustered and clustered. The options are as follows:
 
-- `COLUMNSTORE` is the default, and specifies to compress with the most performant columnstore compression. This option is the typical choice.  
+- `COLUMNSTORE` is the default, and specifies to compress with the most performant columnstore compression. This option is the typical choice.
 - `COLUMNSTORE_ARCHIVE` further compresses the table or partition to a smaller size. You can use this option for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.
 
 For more information about compression, see [Data compression](../../relational-databases/data-compression/data-compression.md).
@@ -316,7 +318,7 @@ Specifies a filegroup name on which to create the index. If *filegroup_name* isn
 
 Creates the specified index on the default filegroup.
 
-The term default, in this context, isn't a keyword. It's an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session, which is the default setting. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+The term default, in this context, isn't a keyword. It's an identifier for the default filegroup and must be delimited, as in `ON "default"` or `ON [default]`. If `"default"` is specified, the QUOTED_IDENTIFIER option must be ON for the current session, which is the default setting. For more information, see [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 ## Permissions
 
@@ -334,21 +336,21 @@ A *filtered index* is an optimized, nonclustered index, suited for queries that 
 
 The SET options in the required value column are required whenever any of the following conditions occur:
 
-- You create a filtered index.  
-- An INSERT, UPDATE, DELETE, or MERGE operation modifies the data in a filtered index.  
+- You create a filtered index.
+- An INSERT, UPDATE, DELETE, or MERGE operation modifies the data in a filtered index.
 - The query optimizer uses the filtered index to produce the query plan.
 
-|SET options|Required value|Default server value|Default OLE DB and ODBC value|Default DB-Library value|
-|-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS*|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
-|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+| SET options | Required value | Default server value | Default OLE DB and ODBC value | Default DB-Library value |
+| --- | --- | --- | --- | --- |
+| ANSI_NULLS | ON | ON | ON | OFF |
+| ANSI_PADDING | ON | ON | ON | OFF |
+| ANSI_WARNINGS <sup>1</sup> | ON | ON | ON | OFF |
+| ARITHABORT | ON | ON | OFF | OFF |
+| CONCAT_NULL_YIELDS_NULL | ON | ON | ON | OFF |
+| NUMERIC_ROUNDABORT | OFF | OFF | OFF | OFF |
+| QUOTED_IDENTIFIER | ON | ON | ON | OFF |
 
-*Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or later. If the database compatibility level is set to 80 or earlier, you must explicitly set the ARITHABORT option to ON.
+<sup>1</sup> Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or later. If the database compatibility level is set to 80 or earlier, you must explicitly set the ARITHABORT option to ON.
 
 If the SET options are incorrect, the following conditions can occur:
 
@@ -364,33 +366,37 @@ For more information about filtered indexes, see [Create filtered indexes](../..
 
 Each column in a columnstore index must be of one of the following common business data types:
 
-- datetimeoffset [ ( *n* ) ]  
-- datetime2 [ ( *n* ) ]  
-- datetime  
-- smalldatetime  
-- date  
-- time [ ( *n* ) ]  
-- float [ ( *n* ) ]  
-- real [ ( *n* ) ]  
-- decimal [ ( *precision* [ *, scale* ] ) ]
-- numeric [ ( *precision* [ *, scale* ] ) ]    
-- money  
-- smallmoney  
-- bigint  
-- int  
-- smallint  
-- tinyint  
-- bit  
-- nvarchar [ ( *n* ) ]
-- nvarchar(max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)  
-- nchar [ ( *n* ) ]  
-- varchar [ ( *n* ) ]  
-- varchar(max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)
-- char [ ( *n* ) ]  
-- varbinary [ ( *n* ) ]
-- varbinary (max) (Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and Azure SQL Database at Premium tier, Standard tier [S3 and above], and all vCore offerings tiers, in clustered columnstore indexes only.)
-- binary [ ( *n* ) ]  
-- uniqueidentifier (Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.)
+- **datetimeoffset** [ ( *n* ) ]
+- **datetime2** [ ( *n* ) ]
+- **datetime**
+- **smalldatetime**
+- **date**
+- **time** [ ( *n* ) ]
+- **float** [ ( *n* ) ]
+- **real** [ ( *n* ) ]
+- **decimal** [ ( *precision* [ *, scale* ] ) ]
+- **numeric** [ ( *precision* [ *, scale* ] ) ]
+- **money**
+- **smallmoney**
+- **bigint**
+- **int**
+- **smallint**
+- **tinyint**
+- **bit**
+- **nvarchar** [ ( *n* ) ]
+- **nvarchar(max)** <sup>1</sup>
+- **nchar** [ ( *n* ) ]
+- **varchar** [ ( *n* ) ]
+- **varchar(max)** <sup>1</sup>
+- **char** [ ( *n* ) ]
+- **varbinary** [ ( *n* ) ]
+- **varbinary(max)** <sup>1</sup>
+- **binary** [ ( *n* ) ]
+- **uniqueidentifier** <sup>2</sup>
+
+<sup>1</sup> Applies to [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], and Azure SQL Database at Premium tier, Standard tier (S3 and above), and all vCore offerings tiers, in clustered columnstore indexes only.
+
+<sup>2</sup> Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later versions.
 
 If the underlying table has a column of a data type that isn't supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.
 
@@ -398,30 +404,34 @@ Large object (LOB) data greater than 8 kilobytes is stored in off-row, LOB stora
 
 Columns that use any of the following data types can't be included in a columnstore index:
 
-- ntext, text, and image  
-- nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and prior versions, and nonclustered columnstore indexes.)
-- rowversion (and timestamp)  
-- sql_variant  
-- CLR types (hierarchyid and spatial types)  
-- xml  
-- uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].)
+- **ntext**, **text**, and **image**
+- **nvarchar(max)**, **varchar(max)**, and **varbinary(max)** <sup>1</sup>
+- **rowversion** (and **timestamp**)
+- **sql_variant**
+- CLR types (**hierarchyid** and spatial types)
+- **xml**
+- **uniqueidentifier** <sup>2</sup>
+
+<sup>1</sup> Applies to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and prior versions, and nonclustered columnstore indexes.
+
+<sup>2</sup> Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
 **Nonclustered columnstore indexes:**
 
 - Can't have more than 1024 columns.
 - Can't be created as a constraint-based index. It's possible to have unique constraints, primary key constraints, and foreign key constraints on a table with a columnstore index. Constraints are always enforced with a row-store index. Constraints can't be enforced with a columnstore (clustered or nonclustered) index.
-- Can't include a sparse column.  
-- Can't be changed by using the ALTER INDEX statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use ALTER INDEX to disable and rebuild a columnstore index.  
-- Can't be created by using the INCLUDE keyword.  
-- Can't include the ASC or DESC keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits. In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can specify an order for the columns in a columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
+- Can't include a sparse column.
+- Can't be changed by using the ALTER INDEX statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use ALTER INDEX to disable and rebuild a columnstore index.
+- Can't be created by using the INCLUDE keyword.
+- Can't include the ASC or DESC keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can specify an order for the columns in a columnstore index. For more information, see [Performance tuning with ordered clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
 - Can't include LOB columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered columnstore indexes. Only clustered columnstore indexes support LOB types, beginning in the  [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] version, Azure SQL Database (configured at Premium tier, Standard tier [S3 and above], and all vCore offerings tiers). Note that prior versions don't support LOB types in clustered and nonclustered columnstore indexes.
 - Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create a nonclustered columnstore index on an indexed view.
 
 **Columnstore indexes can't be combined with the following features:**
 
 - Computed columns. Starting with SQL Server 2017, a clustered columnstore index can contain a non-persisted computed column. However, in SQL Server 2017, clustered columnstore indexes can't contain persisted computed columns, and you can't create nonclustered indexes on computed columns.
-- Page and row compression, and the vardecimal storage format. (A columnstore index is already compressed in a different format.)  
-- Replication.  
+- Page and row compression, and the vardecimal storage format. (A columnstore index is already compressed in a different format.)
+- Replication.
 - Filestream.
 
 You can't use cursors or triggers on a table with a clustered columnstore index. This restriction doesn't apply to nonclustered columnstore indexes. You can use cursors and triggers on a table with a nonclustered columnstore index.
@@ -430,10 +440,10 @@ You can't use cursors or triggers on a table with a clustered columnstore index.
 
 The following limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. In this release, you can use updateable, clustered columnstore indexes. Nonclustered columnstore indexes are still read-only.
 
-- Change tracking. You can't use change tracking with columnstore indexes.  
-- Change data capture. This feature can't be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, change data capture can be enabled on tables with a nonclustered columnstore index.  
-- Readable secondary. You can't access a clustered columnstore index (CCI) from a readable secondary of an Always On readable availability group. You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
-- Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses this feature for read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] doesn't support this feature for concurrent data manipulation language (DML) operations on a table with a columnstore index. If you try to use the feature for this purpose, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and cancels the transactions.  
+- Change tracking. You can't use change tracking with columnstore indexes.
+- Change data capture. This feature can't be enabled on tables with a clustered columnstore index. Starting with SQL Server 2016, change data capture can be enabled on tables with a nonclustered columnstore index.
+- Readable secondary. You can't access a clustered columnstore index (CCI) from a readable secondary of an Always On readable availability group. You can access a nonclustered columnstore index (NCCI) from a readable secondary.
+- Multiple Active Result Sets (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] uses this feature for read-only connections to tables with a columnstore index. However, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] doesn't support this feature for concurrent data manipulation language (DML) operations on a table with a columnstore index. If you try to use the feature for this purpose, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminates the connections and cancels the transactions.
 - Nonclustered columnstore indexes can't be created on a view or indexed view.
 
 For information about the performance benefits and limitations of columnstore indexes, see [Columnstore indexes overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
@@ -507,7 +517,7 @@ CREATE INDEX nc2_simple ON dbo.SimpleTable (DueDateKey);
 GO
 ```
 
-Note that only for [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], you must drop the nonclustered indexes in order to create the columnstore index.
+Only for [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] and [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], you must drop the nonclustered indexes in order to create the columnstore index.
 
 ```sql
 DROP INDEX dbo.SimpleTable.nc1_simple;
@@ -593,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
 
 ### F. Convert a columnstore table to a rowstore heap
 
-To convert a columnstore table to a rowstore heap, simply drop the clustered columnstore index. This isn't typically recommended, but can some have narrow uses. For more information about heaps, see [Heaps (tables without clustered indexes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md).
+To convert a columnstore table to a rowstore heap, drop the clustered columnstore index. This isn't typically recommended, but can some have narrow uses. For more information about heaps, see [Heaps (tables without clustered indexes)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md).
 
 ```sql
 DROP INDEX [IDX_CL_MyFactTable]
@@ -647,7 +657,7 @@ ON dbo.SimpleTable (OrderDateKey, DueDateKey, ShipDateKey);
 GO
 ```
 
-### B. Create a simple, nonclustered columnstore index by using all options
+### B. Create a basic nonclustered columnstore index by using all options
 
 The following example demonstrates the syntax of creating a nonclustered columnstore index on the DEFAULT filegroup, specifying the maximum degrees of parallelism (MAXDOP) as 2.
 
@@ -662,7 +672,7 @@ GO
 
 ### C. Create a nonclustered columnstore index with a filtered predicate
 
-The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the `AdventureWorks2019` sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
+The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
 
 ```sql
 IF EXISTS (SELECT name FROM sys.indexes
@@ -694,7 +704,7 @@ Prior to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], after you create 
 
 - Switch a partition from the table with the columnstore index into an empty staging table. If there is a columnstore index on the staging table, disable the columnstore index. Perform any updates. Build (or rebuild) the columnstore index. Switch the staging table back into the (now empty) partition of the main table.
 
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### A. Change a clustered index to a clustered columnstore index
 
@@ -733,7 +743,7 @@ AND t.name = 'xdimProduct';
 
 Now, you can choose to:
 
-1. Drop the existing clustered columnstore index with an automatically created name, then create a new clustered columnstore index with a user-defined name. 
+1. Drop the existing clustered columnstore index with an automatically created name, then create a new clustered columnstore index with a user-defined name.
 1. Drop and replace the existing index with a clustered columnstore index, keeping the same system-generated name, such as `ClusteredIndex_1bd8af8797f7453182903cc68df48541`.
 
 For example:
@@ -810,7 +820,7 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 An unordered columnstore index covers all columns by default, without needing to specify a column list. An ordered columnstore index allows you to specify the order of the columns. The list doesn't need to include all columns.
 
-Ordered columnstore indexes are available in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Performance tuning with ordered, clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
+Ordered columnstore indexes are available in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. For more information, see [Performance tuning with ordered, clustered columnstore index](/azure/synapse-analytics/sql-data-warehouse/performance-tuning-ordered-cci).
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -827,7 +837,7 @@ WITH (DROP_EXISTING = ON);
 
 ### H. Add a column to the ordering of an ordered clustered columnstore index
 
-In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can specify an order for the columns in a columnstore index. The original ordered, clustered columnstore index was ordered on the `SHIPDATE` column only. The following example adds the `PRODUCTKEY` column to the ordering.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can specify an order for the columns in a columnstore index. The original ordered, clustered columnstore index was ordered on the `SHIPDATE` column only. The following example adds the `PRODUCTKEY` column to the ordering.
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -847,7 +857,7 @@ WITH (DROP_EXISTING = ON);
 
 ### J. Create an ordered clustered columnstore index
 
-***Applies to:*** [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+***Applies to:*** [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
 
 You can create a clustered columnstore index with ordering keys. When creating an ordered clustered columnstore index, it is recommended to apply the query hint `MAXDOP = 1` for maximum quality of sorting and shortest duration.
 

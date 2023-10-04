@@ -4,9 +4,8 @@ description: backupfilegroup (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "backupfilegroup_TSQL"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "backupfilegroup system table"
 dev_langs:
   - "TSQL"
-ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 ---
 # backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

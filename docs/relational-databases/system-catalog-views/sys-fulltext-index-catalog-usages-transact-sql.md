@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.fulltext_index_catalog_usages"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.fulltext_index_catalog_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d095ab62-270b-484b-a541-9f9e7c951cf0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_catalog_usages (Transact-SQL)

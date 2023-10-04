@@ -4,9 +4,8 @@ description: MSdbms_datatype (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdbms_datatype"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdbms_datatype system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 ---
 # MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

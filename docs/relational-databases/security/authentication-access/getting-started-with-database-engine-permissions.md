@@ -5,8 +5,8 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: quickstart
 ms.custom: intro-quickstart
 helpviewer_keywords:
@@ -168,11 +168,11 @@ GRANT CONTROL ON DATABASE::SalesDB TO Jae;
 The first permission listed above (`GRANT SELECT ON OBJECT::Region TO Jae;`) is the most granular, that is, that statement is the least permission possible that grants the `SELECT`. No permissions to subordinate objects come with it. It's a good principle to always grant the least permission possible (you can read more about the [Principle of Least Privilege](https://techcommunity.microsoft.com/t5/azure-sql/security-the-principle-of-least-privilege-polp/ba-p/2067390)), but at the same time (contradicting that) try to grant at higher levels in order to simplify the granting system. So if Jae needs permissions to the entire schema, grant `SELECT` once at the schema level, instead of granting `SELECT` at the table or view level many times. The design of the database can dramatically affect how successful this strategy can be. This strategy will work best when your database is designed so that objects needing identical permissions are included in a single schema.
 
 > [!TIP]  
-> When designing a database and its objects, from the beginning, plan who or which applications will access which objects and based on that place objects, namely tables but also views, functions and stored procedures in schemas according to buckets of access type as much as possible. You can read more about this approach in this blog post by Andreas Wolter [Schema-design for SQL Server: recommendations for Schema design with security in mind](http://andreas-wolter.com/en/schema-design-for-sql-server-recommendations-for-schema-design-with-security-in-mind/).
+> When designing a database and its objects, from the beginning, plan who or which applications will access which objects and based on that place objects, namely tables but also views, functions and stored procedures in schemas according to buckets of access type as much as possible.
 
 ## Diagram of permissions
 
-[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../../includes/database-engine-permissions.md)]
 
 For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] principals and server and database objects, see [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).
 
@@ -192,11 +192,11 @@ For a graphic showing the relationships among the [!INCLUDE[ssDE](../../../inclu
 
 - The permissions granted to users and user-defined fixed database roles can be examined by using the `sys.database_permissions` view.
 
-- Database role membership can be examined by using the `sys. sys.database_role_members` view.
+- Database role membership can be examined by using the `sys.database_role_members` view.
 
 - Server role membership can be examined by using the `sys.server_role_members` view. This view isn't available in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].
 
-- For additional security related views, see [Security Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) .
+- For additional security related views, see [Security Catalog Views (Transact-SQL)](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md).
 
 ## Examples
 

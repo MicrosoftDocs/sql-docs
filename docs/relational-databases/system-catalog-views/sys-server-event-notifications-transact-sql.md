@@ -4,9 +4,8 @@ description: sys.server_event_notifications (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_event_notifications"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.server_event_notifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 ---
 # sys.server_event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

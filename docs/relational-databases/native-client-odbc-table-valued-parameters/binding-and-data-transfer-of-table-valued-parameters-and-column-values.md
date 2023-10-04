@@ -1,26 +1,22 @@
 ---
 title: Data Transfer of Table-Valued Parameters
 description: Describe Data Transfer of Table-Valued Parameters
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: ""
 ms.date: 07/01/2020
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Binding and Data Transfer of Table-Valued Parameters and Column Values
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Table-valued parameters (TVP), like other parameters, must be bound before they're passed to the server. The application binds table-valued parameters the same way it binds other parameters: using SQLBindParameter or equivalent calls to SQLSetDescField or SQLSetDescRec. The server data type for a table-valued parameter is SQL_SS_TABLE. The C type can be specified either as SQL_C_DEFAULT or SQL_C_BINARY.  
 
-In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later, only input table-valued parameters are supported. Therefore, any attempt to set SQL_DESC_PARAMETER_TYPE to a value other than SQL_PARAM_INPUT returns SQL_ERROR with SQLSTATE = HY105 and the message "Invalid parameter type".  
+In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later, only input table-valued parameters are supported. Therefore, any attempt to set SQL_DESC_PARAMETER_TYPE to a value other than SQL_PARAM_INPUT returns SQL_ERROR with SQLSTATE = HY105 and the message "Invalid parameter type".  
 
 Entire table-valued parameter columns can be assigned default values by using the attribute SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Individual table-valued parameter column values, however, can't be assigned default values by using SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* with SQLBindParameter. Table-valued parameters as a whole can't be set to a default value by using SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* with SQLBindParameter. If these rules aren't followed, SQLExecute or SQLExecDirect returns SQL_ERROR. A diagnostic record is generated with SQLSTATE=07S01 and the message "Invalid use of default parameter for parameter \<p>," where \<p> is the ordinal of the TVP in the query statement.  
 

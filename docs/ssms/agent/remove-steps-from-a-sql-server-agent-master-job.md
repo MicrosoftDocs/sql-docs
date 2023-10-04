@@ -1,20 +1,16 @@
 ---
-description: "Remove Steps from a SQL Server Agent Master Job"
 title: "Remove Steps from a SQL Server Agent Master Job"
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
+description: "Remove Steps from a SQL Server Agent Master Job"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Remove Steps from a SQL Server Agent Master Job
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -53,7 +49,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 #### To remove steps from a SQL Server Agent master job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

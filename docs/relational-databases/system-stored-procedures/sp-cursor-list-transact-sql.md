@@ -1,30 +1,26 @@
 ---
+title: "sp_cursor_list (Transact-SQL)"
 description: "sp_cursor_list (Transact-SQL)"
-title: "sp_cursor_list (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_cursor_list"
-  - "sp_cursor_list_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_cursor_list"
-ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_cursor_list"
+  - "sp_cursor_list_TSQL"
+helpviewer_keywords:
+  - "sp_cursor_list"
+dev_langs:
+  - "TSQL"
 ---
 # sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the attributes of server cursors currently open for the connection.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -89,7 +85,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  The following example opens a global cursor and uses `sp_cursor_list` to report on the attributes of the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a keyset-driven cursor.  
 DECLARE abc CURSOR KEYSET FOR  

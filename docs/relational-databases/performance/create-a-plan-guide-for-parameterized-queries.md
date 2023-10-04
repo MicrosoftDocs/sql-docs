@@ -1,18 +1,15 @@
 ---
-title: "Create a Plan Guide for Parameterized Queries | Microsoft Docs"
+title: "Create a Plan Guide for Parameterized Queries"
 description: Learn how to create a plan guide that matches any query that parameterizes to a specified form and directs SQL Server to force parameterization of the query.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "parameterized queries, plan guides for"
-  - "plan guides [SQL Server], parameterized queries"
-ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "parameterized queries, plan guides for"
+  - "plan guides [SQL Server], parameterized queries"
 ---
 # Create a Plan Guide for Parameterized Queries
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -21,13 +18,13 @@ ms.author: wiassaf
  The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  
   
 ```  
-SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
     ON h.SalesOrderID = d.SalesOrderID  
 WHERE h.SalesOrderID = 45639;  
   
-SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
     ON h.SalesOrderID = d.SalesOrderID  
 WHERE h.SalesOrderID = 45640;  
 ```  
@@ -37,8 +34,8 @@ WHERE h.SalesOrderID = 45640;
 ```  
 EXEC sp_create_plan_guide   
     @name = N'TemplateGuide1',  
-    @stmt = N'SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-              INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+    @stmt = N'SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+              INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
                   ON h.SalesOrderID = d.SalesOrderID  
               WHERE h.SalesOrderID = @0',  
     @type = N'TEMPLATE',  
@@ -53,8 +50,8 @@ EXEC sp_create_plan_guide
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
-    N'SELECT * FROM AdventureWorks2012.Sales.SalesOrderHeader AS h  
-      INNER JOIN AdventureWorks2012.Sales.SalesOrderDetail AS d   
+    N'SELECT * FROM AdventureWorks2022.Sales.SalesOrderHeader AS h  
+      INNER JOIN AdventureWorks2022.Sales.SalesOrderDetail AS d   
           ON h.SalesOrderID = d.SalesOrderID  
       WHERE h.SalesOrderID = 45639;',  
     @stmt OUTPUT,   

@@ -1,18 +1,16 @@
 ---
-title: "OVER Clause (Transact-SQL) | Microsoft Docs"
+title: "OVER Clause (Transact-SQL)"
 description: "Transact-SQL reference for the OVER clause, which defines a user-specified set of rows within a query result set."
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/11/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "OVER_TSQL"
   - "OVER"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "order of rowsets [SQL Server]"
   - "rowsets [SQL Server], windowing"
   - "window function"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "rowsets [SQL Server], partitioning"
   - "rowsets [SQL Server], ordering"
   - "OVER clause"
-ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SELECT - OVER Clause (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Determines the partitioning and ordering of a rowset before the associated window function is applied. That is, the OVER clause defines a window or user-specified set of rows within a query result set. A window function then computes a value for each row in the window. You can use the OVER clause with functions to compute aggregated values such as moving averages, cumulative aggregates, running totals, or a top N per group results.  
   
@@ -39,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [NEXT VALUE FOR function](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -113,19 +110,19 @@ Window functions might have the following arguments in their `OVER` clause:
 If you don't specify any argument, the window functions will be applied on the entire result set.
 ```sql
 select 
-	  object_id
-	, [min]	= min(object_id) over()
-	, [max]	= max(object_id) over()
+      object_id
+    , [min]    = min(object_id) over()
+    , [max]    = max(object_id) over()
 from sys.objects
 ```
  
 |object_id | min | max |
 |---|---|---|
-| 3	| 3 | 2139154666 |
-| 5	| 3 | 2139154666 |
+| 3    | 3 | 2139154666 |
+| 5    | 3 | 2139154666 |
 | ... | ... | ... |
-| 2123154609 |	3 | 2139154666 |
-| 2139154666 |	3 | 2139154666 |
+| 2123154609 |    3 | 2139154666 |
+| 2139154666 |    3 | 2139154666 |
 
 ### PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
@@ -142,23 +139,23 @@ PARTITION BY *value_expression*
  
  ```sql
  select 
-	  object_id, type
-	, [min]	= min(object_id) over(partition by type)
-	, [max]	= max(object_id) over(partition by type)
+      object_id, type
+    , [min]    = min(object_id) over(partition by type)
+    , [max]    = max(object_id) over(partition by type)
 from sys.objects
 ```
 
 |object_id | type | min | max |
 |---|---|---|---|
-| 68195293	| PK	| 68195293	| 711673583 |
-| 631673298	| PK	| 68195293	| 711673583 |
-| 711673583	| PK	| 68195293	| 711673583 |
-| ... | ...	| ... |
-| 3	| S | 3	| 98 |
-| 5	| S |	3	| 98 |
-| ... | ...	| ... |
-| 98	| S |	3	| 98 |
-| ... | ...	| ... |
+| 68195293    | PK    | 68195293    | 711673583 |
+| 631673298    | PK    | 68195293    | 711673583 |
+| 711673583    | PK    | 68195293    | 711673583 |
+| ... | ...    | ... |
+| 3    | S | 3    | 98 |
+| 5    | S |    3    | 98 |
+| ... | ...    | ... |
+| 98    | S |    3    | 98 |
+| ... | ...    | ... |
   
 ### ORDER BY  
 
@@ -172,25 +169,25 @@ ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]
  
 ```sql
 select 
-	  object_id, type
-	, [min]	= min(object_id) over(partition by type order by object_id)
-	, [max]	= max(object_id) over(partition by type order by object_id)
+      object_id, type
+    , [min]    = min(object_id) over(partition by type order by object_id)
+    , [max]    = max(object_id) over(partition by type order by object_id)
 from sys.objects
 ```
 
 |object_id | type | min | max |
 |---|---|---|---|
-| 68195293	| PK	| 68195293	| 68195293 |
-| 631673298	| PK	| 68195293	| 631673298 |
-| 711673583	| PK	| 68195293	| 711673583 |
-| ... | ...	| ... |
-| 3	| S | 3	| 3 |
-| 5	| S |	3 | 5 |
-| 6	| S |	3 | 6 |
-| ... | ...	| ... |
-| 97	| S |	3 | 97 |
-| 98	| S |	3 | 98 |
-| ... | ...	| ... |
+| 68195293    | PK    | 68195293    | 68195293 |
+| 631673298    | PK    | 68195293    | 631673298 |
+| 711673583    | PK    | 68195293    | 711673583 |
+| ... | ...    | ... |
+| 3    | S | 3    | 3 |
+| 5    | S |    3 | 5 |
+| 6    | S |    3 | 6 |
+| ... | ...    | ... |
+| 97    | S |    3 | 97 |
+| 98    | S |    3 | 98 |
+| ... | ...    | ... |
 
 
  *order_by_expression*  
@@ -211,26 +208,26 @@ from sys.objects
  
 ```sql
 select
-	  object_id
-	, [preceding]	= count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
-	, [central]	= count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
-	, [following]	= count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+      object_id
+    , [preceding]    = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central]    = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]    = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
 from sys.objects
 order by object_id asc
 ```
 
 |object_id | preceding | central | following |
 |---|---|---|---|
-| 3	| 1	| 3	| 156 |
-| 5	| 2	| 4	| 155 |
-| 6	| 3	| 5	| 154 |
-| 7	| 4	| 5	| 153 |
-| 8	| 5	| 5	| 152 |
-| ...   | ...	| ...   | ... |
-| 2112726579	| 153	| 5	| 4 |
-| 2119678599	| 154	| 5	| 3 |
-| 2123154609	| 155	| 4	| 2 |
-| 2139154666	| 156	| 3	| 1 | 
+| 3    | 1    | 3    | 156 |
+| 5    | 2    | 4    | 155 |
+| 6    | 3    | 5    | 154 |
+| 7    | 4    | 5    | 153 |
+| 8    | 5    | 5    | 152 |
+| ...   | ...    | ...   | ... |
+| 2112726579    | 153    | 5    | 4 |
+| 2119678599    | 154    | 5    | 3 |
+| 2123154609    | 155    | 4    | 2 |
+| 2139154666    | 156    | 3    | 1 | 
   
 > [!NOTE]  
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  
@@ -293,7 +290,7 @@ BETWEEN <window frame bound > AND <window frame bound >
  The following example shows using the OVER clause with ROW_NUMBER function to display a row number for each row within a partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition by the column `SalesYTD`. The ORDER BY clause in the SELECT statement determines the order in which the entire query result set is returned.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
     p.LastName, s.SalesYTD, a.PostalCode  
@@ -333,7 +330,7 @@ GO
  The following example uses the `OVER` clause with aggregate functions over all rows returned by the query. In this example, using the `OVER` clause is more efficient than using subqueries to derive the aggregate values.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
     ,SUM(OrderQty) OVER(PARTITION BY SalesOrderID) AS Total  
@@ -376,7 +373,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
  The following example shows using the `OVER` clause with an aggregate function in a calculated value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
     ,SUM(OrderQty) OVER(PARTITION BY SalesOrderID) AS Total  
@@ -420,7 +417,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
  The following example uses the AVG and SUM functions with the OVER clause to provide a moving average and cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The average sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -619,7 +616,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  The following example shows using the OVER clause with an aggregate function in a calculated value. Notice that the aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.  
   
 ```sql  
--- Uses AdventureWorksDW2019
+-- Uses AdventureWorksDW2022
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
        OrderQuantity AS Qty,   

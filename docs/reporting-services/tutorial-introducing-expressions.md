@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Introducing Expressions | Microsoft Docs"
+title: "Tutorial: Introducing Expressions"
 description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
-ms.date: 09/16/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/16/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Introducing Expressions
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. 

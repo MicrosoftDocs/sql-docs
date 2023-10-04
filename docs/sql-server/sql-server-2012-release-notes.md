@@ -1,21 +1,18 @@
 ---
-title: "SQL Server 2012 Release Notes | Microsoft Docs"
+title: "SQL Server 2012 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012.
-ms.prod: sql
-ms.technology: release-landing
-ms.custom: ""
-ms.date: 07/22/2020
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Release Notes, SQL Server"
-ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2016"
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Release Notes, SQL Server"
+monikerRange: "<= sql-server-2016"
 ---
 # SQL Server 2012 Release Notes
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
 For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
@@ -186,7 +183,7 @@ The following items describe the prerequisite installation behavior during SQL S
   
     -   If you install SQL Server 2012 on a computer with the Windows 7 SP1 or Windows Server 2008 R2 SP1 operating system, this update is already installed on the computer.  
   
--   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. If PowerShell 2.0 is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://mskb.pkisolutions.com/kb/968929) page. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
+-   Windows PowerShell 2.0 is a prerequisite for installing SQL Server 2012 Database Engine components and SQL Server Management Studio, but Windows PowerShell is no longer installed by SQL Server Setup. How you get Windows PowerShell 2.0 depends on which operating system you are running:  
   
     -   Windows Server 2008 - Windows PowerShell 1.0 is a feature and can be added. Windows PowerShell 2.0 versions are downloaded and installed (effectively as an OS Patch).  
   
@@ -200,7 +197,7 @@ SQL Server 2012 is supported on the Windows Vista SP2, Windows Server 2008 SP2, 
 ### 1.9 Sync Framework Is Not Included in the Installation Package  
 **Issue:** Sync Framework is not included in the SQL Server 2012 installation package.  
   
-**Workaround:** Download the appropriate version of Sync Framework from [this Microsoft Download Center page](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
+**Workaround:** Download the appropriate version of Sync Framework from [this Microsoft Download Center page](https://www.microsoft.com/download/details.aspx?id=19502).  
   
 ### 1.10 If Visual Studio 2010 Service Pack 1 is uninstalled, the SQL Server 2012 instance must be repaired to restore certain components  
 **Issue:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] installation is dependent on some components of the Visual Studio 2010 Service Pack 1. If you uninstall Service Pack 1, some of the shared components are downgraded to their original versions, and a few other components are completely removed from the machine.  
@@ -247,8 +244,6 @@ For more information on how to repair an instance of SQL Server, see [Repair a F
   
 **Workaround:** To resolve this issue, use a different instance name during the reinstallation, or manually delete the resource group before reinstalling. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="AS"></a>2.0 Analysis Services  
   
 ### 2.1 SQL editor and AS editor cannot connect to their respective server instances in the same SSMS instance  
@@ -294,8 +289,6 @@ There are problems with the AS Processing Task when you work with tabular models
   
 **Workaround:** None  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="BOL"></a>3.0 Books Online  
   
 ### 3.1 Help Viewer for SQL Server Crashes in Environments Configured to Run Only IPv6  
@@ -315,8 +308,6 @@ There are problems with the AS Processing Task when you work with tabular models
     ```  
     netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
-  
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="DQS"></a>4.0 Data Quality Services  
   
@@ -430,8 +421,6 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
 > [!NOTE]  
 > To avoid this issue, use consistent capitalization rules to specify your user account while logging on the Data Quality Client computer.  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="DE"></a>5.0 Database Engine  
   
 ### 5.1 Use of Distributed Replay Controller and Distributed Replay Client Features  
@@ -446,7 +435,7 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
   
 -   Help information displayed when trying to run ssms.exe with the /? switch will be incorrect.  
   
--   For every file that is opened by double clicking on it in Windows Explorer, a new instance of SSMS will be launched to open the file.  
+-   For every file that is opened by double-clicking on it in Windows Explorer, a new instance of SSMS will be launched to open the file.  
   
 -   Queries cannot be debugged in the normal user mode.  
   
@@ -578,8 +567,6 @@ This is due to a limitation in the CTP3 build. Future builds will not have this 
 #### 5.7.7 NetBIOS Conflicts Because Availability Group Listener Names Use an Identical 15-Character Prefix  
 If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731265(v=ws.10))  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="IS"></a>6.0 Integration Services  
   
 ### 6.1 The Change Data Capture Service for Oracle and the Change Data Capture Designer Console for Oracle  
@@ -594,8 +581,6 @@ The CDC Service for Oracle is a Windows service that scans Oracle transaction lo
 **Issue:** You cannot access the correct Help documentation by using either the F1 Help drop-down list or by clicking the "?" in the Attunity Consoles. These methods point to incorrect chm files.  
   
 **Workaround:** The correct chm files are installed when the CDC Service for Oracle and CDC Designer for Oracle are installed. To view the correct Help content, launch the chm files directly from this location: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
-  
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="MDS"></a>7.0 Master Data Services  
   
@@ -615,19 +600,13 @@ For more information about the issues, and information about how to perform the 
 ### 7.2 Microsoft Silverlight 5 Required  
 To work in the Master Data Manager web application, Silverlight 5.0 must be installed on the client computer. If you do not have the required version of Silverlight, you will be prompted to install it when you navigate to an area of the web application that requires it. You can install Silverlight 5 from [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096).  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="RS"></a>8.0 Reporting Services  
   
 ### 8.1 Reporting Services Connectivity to SQL Server PDW Requires Updated Drivers  
 Connectivity from SQL Server 2012 Reporting Services to Microsoft SQL Server PDW Appliance Update 2 and higher requires an update to the PDW connectivity drivers. For more information, SQL Server PDW customers should contact Microsoft support.  
   
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  
 ## <a name="SI"></a>9.0 StreamInsight  
 SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microsoft SQL Server 2012 license and .NET Framework 4.0. It includes a number of performance improvements along with few bug fixes. For more information, see the [Microsoft StreamInsight 2.1 Release Notes](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). In order to download StreamInsight 2.1 separately, please visit the [Microsoft StreamInsight 2.1 download page](https://www.microsoft.com/download/details.aspx?id=30149) on the Microsoft Download Center.  
-  
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
@@ -635,5 +614,3 @@ SQL Server 2012 includes StreamInsight 2.1. StreamInsight 2.1 requires a Microso
 Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong SAR) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
   
 **Workaround**: Locate the **SQLUA.msi** file on your SQL Server 2012 media at `\1028_CHT_LP\x64\redist\Upgrade Advisor` or at `\1028_CHT_LP\x86\redist\Upgrade Advisor`, depending on your operating system architecture.  
-  
-![horizontal_bar](media/horizontal-bar.png "horizontal_bar")

@@ -1,18 +1,18 @@
 ---
-title: "affinity64 mask Server Configuration Option"
+title: "affinity64 mask (server configuration option)"
 description: Find out about the affinity64 mask option. See when to use it in SQL Server to bind processors to specific threads.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "processor affinity [SQL Server]"
   - "affinity64 mask option"
   - "binding processors [SQL Server]"
 ---
-# affinity64 mask Server Configuration Option
+# affinity64 mask (server configuration option)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The affinity64 mask binds processors to specific threads, similar to the affinity mask option. Use affinity mask to bind the first 32 processors, and use affinity64 mask to bind the remaining processors on the computer. This option is only visible on the 64-bit version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,14 +1,14 @@
 ---
+title: "Grant permissions on a native mode report server"
 description: "Grant permissions on a native mode report server"
-title: "Grant permissions on a native mode report server | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "authorization [Reporting Services]"
   - "server security [Reporting Services]"
@@ -20,9 +20,6 @@ helpviewer_keywords:
   - "report items [Reporting Services], security"
   - "role-based security [Reporting Services], about role-based security"
   - "security [Reporting Services], role-based"
-ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Grant permissions on a native mode report server
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based authorization and an authentication subsystem to determine who can perform operations and access items on a report server. Role-based authorization categorizes into roles the set of actions that a user or group can perform. Authentication is based on built-in Windows Authentication or a custom authentication module that you provide. You can use predefined or custom roles with either authentication type.

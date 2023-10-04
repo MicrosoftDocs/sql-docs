@@ -4,10 +4,9 @@ description: "Identify possible causes for why a replica is disconnected within 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "07/28/2022"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: troubleshooting
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.agdashboard.arp2connected.issues.f1"
 helpviewer_keywords:

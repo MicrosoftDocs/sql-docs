@@ -1,23 +1,20 @@
 ---
-description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
 title: "sp_spaceused (Transact-SQL)"
-ms.custom: ""
-ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: randolphwest
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_spaceused_TSQL"
-  - "sp_spaceused"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_spaceused"
-ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
+description: "sp_spaceused displays the number of rows, disk space reserved, and disk space used by objects in the database."
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_spaceused_TSQL"
+  - "sp_spaceused"
+helpviewer_keywords:
+  - "sp_spaceused"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
@@ -25,7 +22,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Displays the number of rows, disk space reserved, and disk space used by a table, indexed view, or [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue in the current database, or displays the disk space reserved and used by the whole database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -42,7 +39,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## Arguments  
 
-For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
 
 `[ @objname = ] 'objname'`
    
@@ -50,7 +47,7 @@ For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../
 If *objname* is not specified, results are returned for the whole database.  
 *objname* is **nvarchar(776)**, with a default of NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
+> [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
   
 `[ @updateusage = ] 'updateusage'`
  Indicates DBCC UPDATEUSAGE should be run to update space usage information. When *objname* is not specified, the statement is run on the whole database; otherwise, the statement is run on *objname*. Values can be **true** or **false**. *updateusage* is **varchar(5)**, with a default of **false**.  
@@ -189,7 +186,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
 ```sql  
-USE AdventureWorks2016;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
 GO  
@@ -199,7 +196,7 @@ GO
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
 ```sql  
-USE AdventureWorks2016;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
 GO  
@@ -209,7 +206,7 @@ GO
  The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **\@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
-USE StretchedAdventureWorks2016  
+USE StretchedAdventureWorks2022  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'  
 ```  
@@ -218,7 +215,7 @@ EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'
  The following example summarizes space usage for the current database in a single result set.  
   
 ```sql  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO  
 EXEC sp_spaceused @oneresultset = 1  
 ```  

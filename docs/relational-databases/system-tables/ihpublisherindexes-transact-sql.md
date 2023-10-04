@@ -4,9 +4,8 @@ description: IHpublisherindexes (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHpublisherindexes"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHpublisherindexes system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 ---
 # IHpublisherindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

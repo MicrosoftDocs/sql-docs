@@ -3,7 +3,7 @@ title: In-Memory sample
 description: Try Azure SQL Database In-Memory technologies with OLTP and columnstore sample.
 author: srinia
 ms.author: srinia
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 12/18/2018
 ms.service: sql-database
 ms.subservice: performance
@@ -63,7 +63,7 @@ If you get error 40536 when you run the T-SQL script, run the following T-SQL sc
 SELECT DatabasePropertyEx(DB_Name(), 'IsXTPSupported');
 ```
 
-A result of **0** means that In-Memory isn't supported, and **1** means that it is supported. To diagnose the problem, ensure that the database is at the Premium service tier.
+A result of **0** means that In-Memory isn't supported, and **1** means that it is supported. In-memory technologies are available in Azure SQL Database Premium (DTU) and Business Critical (vCores) tiers.
 
 ### About the created memory-optimized items
 

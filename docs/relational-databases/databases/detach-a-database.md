@@ -1,20 +1,17 @@
 ---
 title: "Detach a database"
 description: Learn how to detach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Files can be reattached or attached to another server.
-ms.custom: ""
-ms.date: "01/31/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.detachdatabase.f1"
-helpviewer_keywords: 
-  - "database detaching [SQL Server]"
-  - "detaching databases [SQL Server]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/31/2022"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.detachdatabase.f1"
+helpviewer_keywords:
+  - "database detaching [SQL Server]"
+  - "detaching databases [SQL Server]"
 ---
 # Detach a database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -108,10 +105,10 @@ Be sure to account for all files associated with the database before you detach,
   
 2.  From the Standard bar, select **New Query**.  
   
-3.  Copy and paste the following example into the query window and select **Execute**. This example detaches the AdventureWorks2012 database with the `skipchecks` option set to `true`. For more information, see [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
+3.  Copy and paste the following example into the query window and select **Execute**. This example detaches the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with the `skipchecks` option set to `true`. For more information, see [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
   
 ```sql  
-EXEC sp_detach_db 'AdventureWorks2012', 'true';  
+EXEC sp_detach_db 'AdventureWorks2022', 'true';  
 ```  
   
 ## See also  

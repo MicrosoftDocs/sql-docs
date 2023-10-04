@@ -4,8 +4,8 @@ description: sys.dm_db_incremental_stats_properties (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/18/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_incremental_stats_properties"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_incremental_stats_properties"
 dev_langs:
   - "TSQL"
-ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

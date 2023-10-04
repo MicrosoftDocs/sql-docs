@@ -3,31 +3,31 @@ title: "Create Clustered DTC resource for an availability group"
 description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "09/24/2021"
-ms.prod: sql
-ms.technology: availability-groups
+ms.date: 04/20/2023
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 monikerRange: ">=sql-server-2016"
 ---
 # Create Clustered DTC resource for an Always On availability group
 
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-This article walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
+This article walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete.
 
 The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md).  The PowerShell module **FailoverClusters** must be imported.  For more information about importing a PowerShell module, see [Importing a PowerShell Module](/powershell/scripting/developer/module/importing-a-powershell-module).  This walkthrough is based on the following:
+The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts. Many of the T-SQL scripts require **SQLCMD Mode** to be enabled. For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](../../../tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md).  The PowerShell module **FailoverClusters** must be imported. For more information about importing a PowerShell module, see [Importing a PowerShell Module](/powershell/scripting/developer/module/importing-a-powershell-module). This walkthrough is based on the following:
+
 - All requirements from [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) have been met.  
 - The domain is `contoso.lab`.
 - The user has the Create Computer objects permission in the OU where the DTC Network Name resource will be created.
-- The user is a domain user who has administrator rights on all nodes in the cluster.
+- The user is a domain user with administrator rights on all nodes in the cluster.
 - A file share called `sqlbackups` has been created for backups.
 - The default instances of SQL Server are named `SQLNODE1` and `SQLNODE2`.
 - The same service account is used on all instances of SQL Server.
 - The user is a member of the fixed SQL Server role sysadmin on all instances of SQL Server.
-- The default outcome of transactions that DTC is unable to resolve will be set to `presume commit`.
+- The default outcome of transactions that DTC cannot resolve will be set to `presume commit`.
 - The mirroring endpoint will use port `5022`.
 - No other Availability Groups or clustered DTC resources exist.
 - Cluster details (Existing):
@@ -43,7 +43,8 @@ The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T
   - DTC IP resource: `DTCIP1`
 
 ## 1. Check operating system
-For supported distributed transactions, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973).  This script will check the operating system version and whether hotfix 3090973 needs to be installed.  Run the following PowerShell Script on `SQLNODE1`.
+
+For supported distributed transactions, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] must be running on Windows Server 2012 R2 or later. For Windows Server 2012 R2, you must install the update in KB3090973, available at [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973). This script will check the operating system version and whether hotfix 3090973 needs to be installed. Run the following PowerShell Script on `SQLNODE1`.
 
 ```powershell  
 # A few OS checks
@@ -60,13 +61,13 @@ foreach ($node in $nodes) {
 
     # At least 2012 R2
     $os = (Get-WmiObject -class Win32_OperatingSystem -ComputerName $node).caption;
-    IF($os -like "*2012 R2*" -or $os -like "*2016*")
+    IF($os -like "*2012 R2*" -or $os -like "*2016*" -or $os -like "*2019*" -or $os -like "*2022*")
     {
         Write-Host "$os is supported on $node.";
     }
     ELSE
     {
-        Write-Host "STOP!  $os is not supported on $node.";
+        Write-Host "STOP! $os is not supported on $node.";
     }
     
     # KB 3090973
@@ -79,17 +80,19 @@ foreach ($node in $nodes) {
         }
         ELSE
         {
-            Write-Host "HotFixID KB3090973 must be applied on $node.  See https://support.microsoft.com/kb/3090973 for additional information and to download the hotfix.";
+            Write-Host "HotFixID KB3090973 must be applied on $node. See https://support.microsoft.com/kb/3090973 for additional information and to download the hotfix.";
         }
     }
     ELSE
     {
-        Write-Host "KB3090973 is not applicable to $os on $node."
+        Write-Host "KB3090973 does not apply to $os on $node."
     }
 }
 ```  
+
 ## 2.   Configure firewall rules
-This script will configure the firewall to allow DTC traffic, on each SQL Server hosting an availability group replica, as well as any other server engaging in the distributed transaction.  The script will also configure the firewall to allow connections for the database mirroring endpoint.  Run the following PowerShell Script on `SQLNODE1`.
+
+This script will configure the firewall to allow DTC traffic on each SQL Server hosting an availability group replica, and any other server engaging in the distributed transaction. The script will also configure the firewall to allow connections for the database mirroring endpoint. Run the following PowerShell Script on `SQLNODE1`.
 
 ```powershell  
 # Configure Firewall
@@ -107,8 +110,10 @@ foreach ($node in $nodes) {
     New-NetFirewallRule -CimSession $node -DisplayName 'SQL Server Mirroring' -Description 'Port 5022 for SQL Server Mirroring' -Action Allow -Direction Inbound -Protocol TCP -LocalPort 5022 -RemotePort Any -LocalAddress Any -RemoteAddress Any;
     };
 ```  
-## 3.  Configure **in-doubt xact resolution** 
-This script will configure the **in-doubt xact resolution** server configuration option to "presume commit" for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
+
+## 3. Configure **in-doubt xact resolution**
+
+This script will configure the **in-doubt xact resolution** server configuration option to "presume commit" for in-doubt transactions. Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
@@ -149,7 +154,8 @@ GO
 ```
 
 ## 4. Create test databases
-The script will create a database named `AG1` on `SQLNODE1` and a database named `dtcDemoAG1` on `SQLNODE2`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
+
+The script will create a database named `AG1` on `SQLNODE1` and a database named `dtcDemoAG1` on `SQLNODE2`. Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
@@ -206,15 +212,17 @@ CREATE TABLE [dbo].[Names] (
 GO    
 ----------------------------------------------------------------
 ```
+
 ## 5.    Create Endpoints
-This script will create an endpoint called `AG1_endpoint` that listens on TCP port `5022`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
+
+This script will create an endpoint called `AG1_endpoint` that listens on TCP port `5022`. Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
 
--- Create endpoint on server instance that hosts the primary replica:
+-- Create endpoint on the server instance that hosts the primary replica:
 IF NOT EXISTS (SELECT * FROM sys.database_mirroring_endpoints)
 BEGIN
     CREATE ENDPOINT AG1_endpoint
@@ -240,7 +248,8 @@ GO
 ```
 
 ## 6.    Prepare databases for Availability Group
-The script will back up `AG1` on `SQLNODE1` and restore it to `SQLNODE2`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
+
+The script will back up `AG1` on `SQLNODE1` and restore it to `SQLNODE2`. Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
@@ -273,11 +282,12 @@ GO
 ```
 
 ## 7.    Create Availability Group
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause.  You cannot currently alter an existing Availability Group.  The New Availability Group wizard does not allow you to enable DTC support for a new Availability Group.  The following script will create the new Availability Group and join the secondary.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
+
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause.  You cannot currently alter an existing Availability Group. The New Availability Group wizard does not allow you to enable DTC support for a new Availability Group. The following script will create the new Availability Group and join the secondary. Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
-    Execute script in its entirety on SQLNODE1 in SQLCMD mode
+    Execute the script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
 
 --  Create Availability Group on SQLNODE1 
@@ -302,31 +312,31 @@ GO
 
 
 -- SQLNODE2
--- Join secondary replica to the Availability Group 
+-- Join a secondary replica to the Availability Group 
 :connect SQLNODE2
 ALTER AVAILABILITY GROUP DTCag1 JOIN;
 
--- Join database to the Availability Group
+-- Join the database to the Availability Group
 ALTER DATABASE AG1 SET HADR AVAILABILITY GROUP = DTCAG1;
 GO
 ```
 
 > [!IMPORTANT]
-> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
-> 
-> USE master;    
+> Starting with [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, you cannot enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+>
+> USE master;
 > ALTER AVAILABILITY GROUP \<availability_group\>  
 > SET (DTC_Support = Per_DB)  
-> 
-> However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
-> 
+>
+> However, no configuration change will be made. You can confirm the **dtc_support** configuration with the following T-SQL query:  
+>
 > SELECT name, dtc_support FROM sys.availability_groups  
-> 
-> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
- 
+>
+> The only way to enable DTC support on an Availability Group for versions before [!INCLUDE [sssql16-md](../../../includes/sssql16-md.md)] versions before Service Pack 2, is by creating an Availability Group using Transact-SQL.
+
 ## <a name="ClusterDTC"></a>8.    Prepare cluster resources
 
-This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`. Thanks [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) for the script!
+This script will prepare the DTC dependent resources: Disk and IP. The shared storage will be added to the Windows Cluster. Network resources will be created and then the DTC will be created and made as a resource to the Availability Group. Run the following PowerShell Script on `SQLNODE1`. Thanks [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) for the script!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -337,7 +347,7 @@ $AGgrp = "DTCag1";                            # Name of the WSFC resource group 
 $WSFC = (Get-Cluster).Name;                    # Windows Failover Cluster name
 $DTCnetwk = "Cluster Network 1"                # WSFC Network to use for the DTC IP address
 
-$ClusterAvailableDisk = "Cluster Disk 3";    # Designated disk that can support failover clustering and is visible to all nodes, but not yet part of the set of clustered disks
+$ClusterAvailableDisk = "Cluster Disk 3";    # Designated disk that can support failover clustering and is visible to all nodes but not yet part of the set of clustered disks
 $DTCdisk = "DTCDisk1";                        # Name of the disk to be used with DTC
 
 $DTCipresnm = "DTCIP1";                        # WSFC Friendly Name of the DTC's IP resource 
@@ -379,13 +389,13 @@ Add-ClusterResourceDependency $DTCnetnm $DTCipresnm;
 # Create the Distributed Transaction Coordinator resource
 Add-ClusterResource $DTCresnm -ResourceType "Distributed Transaction Coordinator" -Group $AGgrp;
 
-# Add the Network Name as a depenency of the DTC resource
+# Add the Network Name as a dependency of the DTC resource
 Add-ClusterResourceDependency $DTCresnm $DTCnetnm;
 
 # Move the disk into the resource group with SQL Server
 Move-ClusterResource -Name $DTCdisk -Group $AGgrp;
 
-# Add the disk as a depenency of the DTC resource
+# Add the disk as a dependency of the DTC resource
 Add-ClusterResourceDependency $DTCresnm $DTCdisk;
 
 # Bring the IP resource online
@@ -398,9 +408,9 @@ Start-ClusterResource $DTCnetnm;
 Start-ClusterResource $DTCresnm;
 ```  
 
-## 9.    Enable Network DTC 
+## 9.    Enable Network DTC
 
-The following script will enable Network DTC Access for the clustered DTC service to allow remote computers to enlist in distributed transactions over the network.  Run the following PowerShell Script on `SQLNODE1`.
+The following script will enable Network DTC Access for the clustered DTC service to allow remote computers to enlist in distributed transactions over the network. Run the following PowerShell Script on `SQLNODE1`.
 
 ```powershell  
 # Enable Network DTC access for the clustered DTC service
@@ -412,7 +422,7 @@ Script:
     3) will execute against every node in the cluster
 #>
 
-# Enter Name of DTC resource
+# Enter the Name of DTC resource
 
 $DtcName = "DTC1";
 \<# ------- End of User Input ------- #>
@@ -442,7 +452,8 @@ IF ($restart -eq 1)
 
 ## 10.    Disable and stop the local DTC service on each node
 
-In order to guarantee that distributed transactions use the clustered DTC resource, disable the local DTC on both nodes.  The following script will disable and stop the local DTC service on each node.  Run the following PowerShell Script on `SQLNODE1`.
+Disable the local DTC on both nodes to guarantee that distributed transactions use the clustered DTC resource. The following script will disable and stop the local DTC service on each node. Run the following PowerShell Script on `SQLNODE1`.
+
 ```powershell  
 # Disable local DTC service
 
@@ -475,21 +486,22 @@ $nodes = (Get-ClusterNode).Name;
 
 With the clustered DTC service completely configured, you need to stop and restart each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the Availability Group in order to make sure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is enrolled to use this DTC service.
 
-The first time [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service requires a distributed transaction, it enrolls with a DTC service. SQL Server service will continue to use that DTC service until it is restarted. If a clustered DTC service is available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the clustered DTC service. If a clustered DTC service is not available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the local DTC service. In order to verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enrolls with the clustered DTC service, stop and restart each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+The first time [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service requires a distributed transaction. It enrolls with a DTC service. SQL Server service will continue to use that DTC service until it's restarted. If a clustered DTC service is available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the clustered DTC service. If a clustered DTC service is not available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the local DTC service. To verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enrolls with the clustered DTC service, stop and restart each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Follow the steps contained in the T-SQL script below:
+
 ```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
-    a.    On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
+    a.    On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manager
 
-    b.    On SQLNODE2 failover the Availability Group to SQLNODE2
-        Execute T-SQL script, below, on SQLNODE2 (Use Results to Text)
+    b.    On SQLNODE2 failover, the Availability Group to SQLNODE2
+        Execute the T-SQL script below on SQLNODE2 (Use Results to Text)
 
-    c.    On SQLNODE1, cycle the SQL Server service from SQL Server Configuration Manger
+    c.    On SQLNODE1, cycle the SQL Server service from SQL Server Configuration Manager
 
-    d.    On SQLNODE1 failover the Availability Group to SQLNODE1 once the databases are back in sync.
-        Execute T-SQL script, below, on SQLNODE1 (Use Results to Text)
+    d.    On SQLNODE1, failover the Availability Group to SQLNODE1 once the databases are back in sync.
+        Execute the T-SQL script below on SQLNODE1 (Use Results to Text)
 */
 
 SET NOCOUNT ON;
@@ -524,20 +536,21 @@ BEGIN
     SELECT 'Failover complete' AS [Sucess]
 END
 ELSE BEGIN
-    SELECT 'This instance is the primary replica.  Connect to the secondary replica and try again.' AS [Error]
+    SELECT 'This instance is the primary replica. Connect to the secondary replica and try again.' AS [Error]
 END
 
 ```
 
 ## 12.    Test Configuration
 
-This test uses a linked server from `SQLNODE1` to `SQLNODE2` to create a distributed transaction.  Ensure the Availability Group primary replica is on `SQLNODE1`. To test the configuration you will:
+This test uses a linked server from `SQLNODE1` to `SQLNODE2` to create a distributed transaction. Ensure the Availability Group primary replica is on `SQLNODE1`. To test the configuration, you will:
 
 - Create linked servers
 - Execute a distributed transaction
 
 ### Create linked servers  
-The following script will create two linked servers on `SQLNODE1`.  Run the following T-SQL script in SSMS against `SQLNODE1`.
+
+The following script will create two linked servers on `SQLNODE1`. Run the following T-SQL script in SSMS against `SQLNODE1`.
 
 ```sql  
 -- SQLNODE1
@@ -553,11 +566,12 @@ END
  ```
 
 ### Execute a distributed transaction
-This script will first return the current DTC transaction statistics.  Then the script will execute a distributed transaction utilizing databases on `SQLNODE1` and `SQLNODE2`.  Then the script will again return the DTC transaction statics, which will now should an increased count.  Physically connect to `SQLNODE1` and run the following T-SQL Script in SSSMS against `SQLNODE1` in **SQLCMD mode**.
+
+This script will first return the current DTC transaction statistics. Then the script will execute a distributed transaction utilizing databases on `SQLNODE1` and `SQLNODE2`. Then the script will return the DTC transaction statics, which should now increase the count. Physically connect to `SQLNODE1` and run the following T-SQL Script in SSSMS against `SQLNODE1` in **SQLCMD mode**.
 
 ```sql  
 /*******************************************************************
-    Execute script in its entirety on SQLNODE1 in SQLCMD mode
+    Execute the script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1
 *******************************************************************/
 
@@ -579,4 +593,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: "Transaction context in use by another session."
+> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`. Otherwise, you will receive the following error message: "Transaction context in use by another session."

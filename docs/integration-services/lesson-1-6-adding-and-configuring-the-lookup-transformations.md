@@ -1,15 +1,12 @@
 ---
+title: "Step 6: Add and configure the Lookup transformations"
 description: "Lesson 1-6: Add and configure the Lookup transformations"
-title: "Step 6: Add and configure the Lookup transformations | Microsoft Docs"
-ms.custom: ""
-ms.date: 03/19/2019
-ms.prod: sql
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: chugugrace
 ms.author: chugu
-ms.reviewer: ""
+ms.date: 03/19/2019
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-6: Add and configure the Lookup transformations
 
@@ -48,7 +45,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 6.  On the **Connection** page, make the following selections:  
   
-    1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2012** is displayed.  
+    1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2022** is displayed.  
   
     2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
   
@@ -89,7 +86,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 7.  On the **Connection** page, make the following selections:  
   
-    1.  In the **OLEDB connection manager** dialog, ensure that **localhost.AdventureWorksDW2012** is displayed.  
+    1.  In the **OLEDB connection manager** dialog, ensure that **localhost.AdventureWorksDW2022** is displayed.  
   
     2.  In the **Use a table or view** box, enter or select **[dbo].[DimDate]**.  
   

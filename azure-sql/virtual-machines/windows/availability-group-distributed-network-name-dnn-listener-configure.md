@@ -4,7 +4,7 @@ description: Learn how to configure a distributed network name (DNN) listener to
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 04/18/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: how-to
@@ -13,13 +13,11 @@ tags: azure-resource-manager
 # Configure a DNN listener for an availability group
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> Eliminate the need for a distributed network name for your Always On availability (AG) group by creating your SQL Server VMs in [multiple subnets](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md) within the same Azure virtual network.
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
 With SQL Server on Azure VMs in a single subnet, the distributed network name (DNN) routes traffic to the appropriate clustered resource. It provides an easier way to connect to an Always On availability group (AG) than the virtual network name (VNN) listener, without the need for an Azure Load Balancer.
 
 This article teaches you to configure a DNN listener to replace the VNN listener and route traffic to your availability group with SQL Server on Azure VMs for high availability and disaster recovery (HADR).
-
 
 For an alternative connectivity option, consider a [VNN listener and Azure Load Balancer](availability-group-vnn-azure-load-balancer-configure.md) instead.
 
@@ -38,10 +36,9 @@ Before you complete the steps in this article, you should already have:
 
 - SQL Server starting with either [SQL Server 2019 CU8](https://support.microsoft.com/topic/cumulative-update-8-for-sql-server-2019-ed7f79d9-a3f0-a5c2-0bef-d0b7961d2d72) and later, [SQL Server 2017 CU25](https://support.microsoft.com/topic/kb5003830-cumulative-update-25-for-sql-server-2017-357b80dc-43b5-447c-b544-7503eee189e9) and later, or [SQL Server 2016 SP3](https://support.microsoft.com/topic/kb5003279-sql-server-2016-service-pack-3-release-information-46ab9543-5cf9-464d-bd63-796279591c31) and later on Windows Server 2016 and later.
 - Decided that the distributed network name is the appropriate [connectivity option for your HADR solution](hadr-cluster-best-practices.md#connectivity).
-- Configured your [Always On availability group](availability-group-overview.md). 
-- Installed the latest version of [PowerShell](/powershell/azure/install-az-ps). 
+- Configured your [Always On availability group](availability-group-overview.md).
+- Installed the latest version of [PowerShell](/powershell/azure/install-az-ps).
 - Identified the unique port that you will use for the DNN listener. The port used for a DNN listener must be unique across all replicas of the availability group or failover cluster instance.  No other connection can share the same port.
-
 
 
 ## Create script
@@ -108,7 +105,7 @@ For example, assuming an availability group name of `ag1`, listener name of `dnn
 1. Execute the script: ```add_dnn_listener.ps1 <ag name> <listener-name> <listener port>```. For example:
 
    ```console
-   c:\Documents> add_dnn_listener.ps1 ag1 dnnlsnr 6789
+   c:\Documents> .\add_dnn_listener.ps1 ag1 dnnlsnr 6789
    ```
 
 ## Verify listener
@@ -137,7 +134,7 @@ A value of `1` for `is_distributed_network_name` indicates the listener is a dis
 
 Update the connection string for any application that needs to connect to the DNN listener. The connection string to the DNN listener must provide the DNN port number, and specify `MultiSubnetFailover=True` in the connection string. If the SQL client does not support the `MultiSubnetFailover=True` parameter, then it is not compatible with a DNN listener.  
 
-The following is an example of a connection string for listener name **DNN_Listener** and port 6789: 
+The following is an example of a connection string for listener name **DNN_Listener** and port 6789:
 
 `DataSource=DNN_Listener,6789;MultiSubnetFailover=True`
 
@@ -167,22 +164,21 @@ Test the connectivity to your DNN listener with these steps:
 ## Limitations
 
 - DNN Listeners **MUST** be configured with a unique port.  The port cannot be shared with any other connection on any replica.
-- The client connecting to the DNN listener must support the `MultiSubnetFailover=True` parameter in the connection string. 
-- There might be additional considerations when you're working with other SQL Server features and an availability group with a DNN. For more information, see [AG with DNN interoperability](availability-group-dnn-interoperability.md). 
+- The client connecting to the DNN listener must support the `MultiSubnetFailover=True` parameter in the connection string.
+- There might be additional considerations when you're working with other SQL Server features and an availability group with a DNN. For more information, see [AG with DNN interoperability](availability-group-dnn-interoperability.md).
 
 ## Port considerations
 
-DNN listeners are designed to listen on all IP addresses, but on a specific, unique port. The DNS entry for the listener name should resolve to the addresses of all replicas in the availability group. This is done automatically with the PowerShell script provided in the [Create Script](#create-script) section. Since DNN listeners accept connections on all IP addresses, it is critical that the listener port be unique, and not in use by any other replica in the availability group. Since SQL Server listens on port 1433 by default, either directly or via the SQL Browser service, using port 1433 for the DNN listener is strongly discouraged. 
+DNN listeners are designed to listen on all IP addresses, but on a specific, unique port. The DNS entry for the listener name should resolve to the addresses of all replicas in the availability group. This is done automatically with the PowerShell script provided in the [Create Script](#create-script) section. Since DNN listeners accept connections on all IP addresses, it is critical that the listener port be unique, and not in use by any other replica in the availability group. Since SQL Server listens on port 1433 by default, either directly or via the SQL Browser service, using port 1433 for the DNN listener is strongly discouraged.
 
-If the listener port chosen for the VNN listener is between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip), add an exclusion for this. Doing so will prevent other systems from being dynamically assigned the same port. 
+If the listener port chosen for the VNN listener is between 49,152 and 65,536 (the [default dynamic port range for TCP/IP](/windows/client-management/troubleshoot-tcpip-port-exhaust#default-dynamic-port-range-for-tcpip), add an exclusion for this. Doing so will prevent other systems from being dynamically assigned the same port.
 
 You can add a port exclusion with the following command:
 `netsh int ipv4 add excludedportrange tcp startport=<Listener Port> numberofports=1 store=persistent`
 
 ## Next steps
 
-Once the availability group is deployed, consider optimizing the [HADR settings for SQL Server on Azure VMs](hadr-cluster-best-practices.md). 
-
+Once the availability group is deployed, consider optimizing the [HADR settings for SQL Server on Azure VMs](hadr-cluster-best-practices.md).
 
 To learn more, see:
 

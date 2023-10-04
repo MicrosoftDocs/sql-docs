@@ -4,9 +4,8 @@ description: MSsnapshotdeliveryprogress (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSsnapshotdeliveryprogress_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSsnapshotdeliveryprogress system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

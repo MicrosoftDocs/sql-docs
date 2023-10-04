@@ -1,16 +1,13 @@
 ---
-title: "Add sparklines and data bars in a paginated report | Microsoft Docs"
+title: "Add sparklines and data bars in a paginated report"
 description: "Add sparklines and data bars in a paginated report."
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add sparklines and data bars in a paginated report (Report Builder)
 

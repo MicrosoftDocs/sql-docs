@@ -1,22 +1,17 @@
 ---
+title: "Sequence Numbers"
 description: "Sequence Numbers"
-title: "Sequence Numbers | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence number object, overview"
   - "sequence [Database Engine]"
   - "autonumbers, sequences"
   - "sequence numbers [SQL Server]"
   - "sequence number object"
-ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Numbers
@@ -47,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ## Limitations  
  Unlike identity columns, whose values cannot be changed, sequence values are not automatically protected after insertion into the table. To prevent sequence values from being changed, use an update trigger on the table to roll back changes.  
   
- Uniqueness is not automatically enforced for sequence values. The ability to reuse sequence values is by design. If sequence values in a table are required to be unique, create a unique index on the column. If sequence values in a table are required to be unique throughout a group of tables, create triggers to prevent duplicates caused by update statements or sequence number cycling.  
+ Uniqueness is not automatically enforced for sequence values. The ability to reuse sequence values is by design. If sequence values in a table are required to be unique, create a unique constraint on the column. If sequence values in a table are required to be unique throughout a group of tables, create triggers to prevent duplicates caused by update statements or sequence number cycling.  
   
  The sequence object generates numbers according to its definition, but the sequence object does not control how the numbers are used. Sequence numbers inserted into a table can have gaps when a transaction is rolled back, when a sequence object is shared by multiple tables, or when sequence numbers are allocated without using them in tables. When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   
@@ -249,7 +244,7 @@ GO
  The following example uses the `OVER` clause to sort the result set by `Name` before it adds the sequence number column.  
   
 ```  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE SCHEMA Samples ;  
@@ -266,7 +261,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### F. Resetting the sequence number  
- Example E consumed the first 79 of the `Samples.IDLabel` sequence numbers. (Your version of `AdventureWorks2012` may return a different number of results.) Execute the following to consume the next 79 sequence numbers (80 though 158).  
+ Example E consumed the first 79 of the `Samples.IDLabel` sequence numbers. (Your version of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] may return a different number of results.) Execute the following to consume the next 79 sequence numbers (80 though 158).  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

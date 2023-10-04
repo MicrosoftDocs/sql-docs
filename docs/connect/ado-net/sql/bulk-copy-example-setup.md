@@ -5,8 +5,8 @@ author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
 ms.date: "09/30/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "sql"
@@ -28,7 +28,8 @@ A few of the code samples demonstrate how to use one <xref:Microsoft.Data.SqlCli
 To create the tables necessary for the code samples to run correctly, you must run the following Transact-SQL statements in a SQL Server database.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
+GO
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
  WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')  

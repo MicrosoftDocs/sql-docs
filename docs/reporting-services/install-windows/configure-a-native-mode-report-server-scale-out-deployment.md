@@ -1,18 +1,16 @@
 ---
+title: "Configure a Native Mode Report Server Scale-Out Deployment"
 description: "Configure a Native Mode Report Server Scale-Out Deployment"
-title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/26/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report servers [Reporting Services], deployments"
   - "deploying [Reporting Services], scale-out deployment model"
   - "scale-out deployments [Reporting Services]"
-ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Configure a Native Mode Report Server Scale-Out Deployment

@@ -4,9 +4,8 @@ description: sys.tcp_endpoints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.tcp_endpoints"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.tcp_endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 ---
 # sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

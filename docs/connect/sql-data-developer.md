@@ -4,8 +4,8 @@ description: "Use Microsoft's SQL data platform to create data-centric solutions
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/05/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # SQL Data Developer

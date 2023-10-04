@@ -4,18 +4,15 @@ description: Learn how to use Boolean operators in SQLXML 4.0 XPath queries.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "XPath operators [SQLXML]"
   - "OR operator"
   - "Boolean operators"
   - "XPath queries [SQLXML], Boolean operators"
   - "operators [SQLXML]"
-ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Boolean Operators in XPath Queries (SQLXML 4.0)

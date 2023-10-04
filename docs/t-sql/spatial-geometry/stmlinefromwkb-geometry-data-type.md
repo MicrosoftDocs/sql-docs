@@ -1,23 +1,19 @@
 ---
+title: "STMLineFromWKB (geometry Data Type)"
 description: "STMLineFromWKB (geometry Data Type)"
-title: "STMLineFromWKB (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "STMLineFromWKB (geometry Data Type)"
   - "STMLineFromWKB_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "STMLineFromWKB (geometry Data Type)"
-ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # STMLineFromWKB (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

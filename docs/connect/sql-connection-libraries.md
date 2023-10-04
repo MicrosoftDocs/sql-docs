@@ -1,16 +1,17 @@
 ---
-title: "Connection libraries for Microsoft SQL Database"
-description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
+title: Connection libraries for Microsoft SQL Database
+description: Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from various client programming languages.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 03/06/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 08/21/2023
+ms.reviewer: vanto
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: article
 ---
 # Connection modules for Microsoft SQL Database
 
-This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/databases/databases.md), and with its twin in the cloud [Azure SQL Database](/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
+This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/databases/databases.md), [Azure SQL Database](/azure/sql-database/), and Azure SQL Managed Instance. Drivers are available for a variety of programming languages, running on the following operating systems:
 
 - Linux
 - macOS
@@ -30,8 +31,9 @@ The present article devotes separate sections to these two kinds of connection d
 
 | Language | Download the SQL driver |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br />[.NET for: Linux-Ubuntu, macOS, Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
+| Go | [Go MSSQL driver, install instructions](https://github.com/microsoft/go-mssqldb#readme)<br />[Go download page](https://go.dev/dl/)
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, install instructions](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
@@ -46,44 +48,14 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 
 | Language | ORM driver download |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x or later)](/ef/) |
+| C# | [Entity Framework Core](/ef/core/providers/sql-server)<br />[Entity Framework (6.x or later)](/ef/ef6/fundamentals/install) |
+| Go | [GORM](https://gorm.io/)
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/)<br/>[Prisma](https://www.prisma.io/) |
-| Python | [Django](https://www.djangoproject.com/) |
+| Python | [Django](https://www.djangoproject.com/)<br/>[SQL Server backend for Django](https://github.com/Microsoft/mssql-django) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
-<a name="anchor-60-build-an-app-webpages" />
-
-## Build-an-app webpages
-
-**[https://aka.ms/sqldev](https://aka.ms/sqldev)** takes you to a set of *Build-an-app* webpages. The webpages provide information about numerous combinations of programming language, operating system, and SQL connection driver. Among the information provided by the Build-an-app webpages are the following items:
-
-- Details about how to get started from the very beginning, for each combination of language + operating system + driver.
-  - Instructions for installing the latest SQL connection drivers.
-- Code examples for each of the following items:
-  - Object-relational code examples.
-  - ORM code examples.
-  - Columnstore index demonstrations for much faster performance.
-
-**First page, of Build-an-app webpages:**  
-![Build-an-app webpages, first page screenshot](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
-
-**Menu for Java - Ubuntu, of Build-an-app webpages**  
-![Build-an-app webpages, menu Java Ubuntu](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png)
-
-&nbsp;
-
-## Related links
+## See also
 
 - [Code examples for connecting to Azure SQL Database in the cloud, with Java and other languages](/azure/sql-database/sql-database-connect-query-java).
-
-<!--
-Image references, **obsolete** markdown syntax alternative:
-
-![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
-![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
-
-[image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
-[image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
--->

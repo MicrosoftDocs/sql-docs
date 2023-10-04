@@ -1,61 +1,29 @@
 ---
 title: Development SQL Server partners
 description: Lists of third-party partners with development solutions for Server.
-ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.date: 09/17/2017    
-ms.prod: sql
-ms.technology: release-landing
-ms.author: mikeray
 author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 12/09/2022
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
 ---
 # SQL Server development partners
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-For support developing SQL Server database solutions, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with development solutions for Microsoft SQL Server.
 
-## Our development partners
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
+For support developing [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] database solutions, choose from a wide variety of industry-leading tools. This article highlights [!INCLUDE[msconame-md](../includes/msconame-md.md)] partner companies with development solutions for [!INCLUDE[msconame-md](../includes/msconame-md.md)] [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+
+## Development partners
 
 | Partner | Description | Links |
-| --- | --- | --- |
-|![idera][1] |**IDERA**<br>Rapid SQL is an intelligent SQL integrated development environment empowering database developers and database administrators to create high-performing SQL code on all major database platforms including SQL Server from a single interface.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. enables developer community with the flexibility in choosing programming languages, frameworks and services with use of proper toolset. Using Click2Cloud's toolkit, developers can create 'SQL on Linux' containers and attach it to an application, while still enabling the secure, multi-tenant architecture. The containers can be independently deployed on any cloud based container platform.|[Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube] |
+| :---: | --- | --- |
+| :::image type="icon" source="media/partner-hadr-sql-server/idera-logo.png" border="false":::<br />**IDERA** | Rapid SQL is an intelligent SQL integrated development environment empowering database developers and database administrators to create high-performing SQL code on all major database platforms including [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] from a single interface.<br /><br />- [System requirements](https://www.idera.com/productssolutions/freetools/rapid-database-extractor/systemrequirements/) | -&nbsp;[Website](https://www.idera.com/rapid-sql-ide)<br />- [Twitter](https://twitter.com/Idera_Software)<br />- [Video](https://www.idera.com/resourcecentral/videos/rapid-sql-overview) |
+| :::image type="icon" source="media/partner-hadr-sql-server/click2cloud-logo.png" border="false":::<br />**Click2Cloud Inc.** | Click2Cloud Inc. enables developer community with the flexibility in choosing programming languages, frameworks and services with use of proper toolset.<br /><br />Using Click2Cloud's toolkit, developers can create [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers and attach it to an application, while still enabling the secure, multi-tenant architecture. The containers can be independently deployed on any cloud based container platform. | -&nbsp;[Marketplace](https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio)<br />-&nbsp;[Website](https://www.click2cloud.com/)<br />- [Twitter](https://twitter.com/click2cloudinc)<br />- [Video](https://www.youtube.com/channel/UCjVgly_5QMuNZQh2I2FkHQQ) |
 
 ## Next steps
-To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [monitoring partners][monitor_partners].
 
-<!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera-logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
-
-<!--Article links-->
-[hadr_partners]: ./partner-hadr-sql-server.md
-[management_partners]: ./partner-management-sql-server.md
-[monitor_partners]: ./partner-monitor-sql-server.md
-
-<!--Website links -->
-
-[idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.com/
-<!--Get Started Links-->
-
-<!--Datasheet Links-->
-
-<!--Marketplace Links -->
-
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/ -->
-
-[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
-
-<!--Press links-->
-<!--[idera_press]:-->
-
-<!--YouTube links-->
-[idera_youtube]:https://www.idera.com/resourcecentral/videos/rapid-sql-overview
-[click2cloud_youtube]:https://www.youtube.com/channel/UCjVgly_5QMuNZQh2I2FkHQQ
-
-<!--Twitter links-->
-[idera_twitter]:https://twitter.com/Idera_Software
-[click2cloud_twitter]:https://twitter.com/click2cloudinc 
-
-<!--Supported Systems-->
-[idera_requirements]:https://www.idera.com/productssolutions/freetools/rapid-database-extractor/systemrequirements/
+- [SQL Server high availability and disaster recovery partners](partner-hadr-sql-server.md)
+- [SQL Server managing partners](partner-management-sql-server.md)
+- [SQL Server monitoring partners](partner-monitor-sql-server.md)

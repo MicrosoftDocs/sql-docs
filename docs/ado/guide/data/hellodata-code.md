@@ -4,8 +4,8 @@ description: "HelloData Code"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "HelloData sample application [ADO], sample code"
@@ -129,7 +129,7 @@ Private Sub ExamineData()
             m_oRecordset.AbsolutePosition & " using bookmark.", , _  
             "Hello Data"  
   
-    ' Display meta-data about each field. See WalkFields() sub.  
+    ' Display metadata about each field. See WalkFields() sub.  
     Call WalkFields  
   
     ' Apply a filter on the type field.  

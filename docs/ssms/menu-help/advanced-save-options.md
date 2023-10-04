@@ -1,20 +1,16 @@
 ---
-description: "Advanced Save Options"
 title: "Advanced Save Options"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "vs.advancedsaveoptions"
-helpviewer_keywords: 
-  - "Advanced Save Options dialog box"
-ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
+description: "Advanced Save Options"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "vs.advancedsaveoptions"
+helpviewer_keywords:
+  - "Advanced Save Options dialog box"
 ---
 # Advanced Save Options
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

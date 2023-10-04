@@ -4,10 +4,9 @@ description: "Identify possible causes for why the data synchronization state of
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: end-user-help
-ms.custom: seodec18
 f1_keywords:
   - "sql13.swb.agdashboard.drp3datasynchealthy.issues.f1"
 helpviewer_keywords:

@@ -3,7 +3,7 @@ title: "Db2 to Azure SQL Database: Migration guide"
 description: This guide teaches you to migrate your IMB Db2 databases to Azure SQL Database, by using the SQL Server Migration Assistant for Db2 (SSMA for Db2).
 author: croblesm
 ms.author: roblescarlos
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 05/14/2021
 ms.service: sql-database
 ms.subservice: migration-guide
@@ -74,7 +74,7 @@ Validate the default data type mappings, and change them based on requirements i
 
 To convert the schema, follow these steps:
 
-1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then choose **Add statements**. 
+1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then choose **Add statements**. 
 1. Select **Connect to Azure SQL Database**. 
     1. Enter connection details to connect your database in Azure SQL Database.
     1. Choose your target SQL Database from the drop-down list, or provide a new name, in which case a database will be created on the target server. 

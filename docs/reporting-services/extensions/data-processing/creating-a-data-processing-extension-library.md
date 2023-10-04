@@ -1,20 +1,17 @@
 ---
-title: "Creating a Data Processing Extension Library | Microsoft Docs"
+title: "Creating a Data Processing Extension Library"
 description: Learn how to create a Reporting Services data processing extension. View sample code, and see which namespace and library file requirements you need to meet.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "data processing extensions [Reporting Services], namespace assignments"
   - "library [Reporting Services]"
   - "assigning namespaces to extensions"
-ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Creating a Data Processing Extension Library
   Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension you create should be assigned to a unique namespace and built into a library or assembly file. The exact name of the namespace is not important, but it must be unique and not shared with any other extension. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] uses the namespace <xref:Microsoft.ReportingServices.DataProcessing> for the data processing extensions that ship with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. You should create your own unique namespaces for your company's data processing extensions.  

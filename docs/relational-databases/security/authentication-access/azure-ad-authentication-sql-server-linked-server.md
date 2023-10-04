@@ -5,10 +5,9 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 ---
 
@@ -21,7 +20,7 @@ monikerRange: ">=sql-server-ver15||>= sql-server-linux-ver16"
 - Password
 - Access token
 
-For this article, it's assumed that there are two SQL Server instances (`S1` and `S2`). Both have been configured to support Azure AD authentication, and they trust each other’s SSL/TLS certificate. The examples below will be run on server `S1` to create a linked server to server `S2`.
+For this article, it's assumed that there are two SQL Server instances (`S1` and `S2`). Both have been configured to support Azure AD authentication, and they trust each other's SSL/TLS certificate. The examples below will be run on server `S1` to create a linked server to server `S2`.
 
 > [!NOTE]
 > The subject name of the SSL/TLS certificate used by `S2` must match the server name provided in the [`provstr`](../../system-stored-procedures/sp-addlinkedserver-transact-sql.md) attribute. This should either be the Fully Qualified Domain Name (**FQDN**) or **hostname** of `S2`.

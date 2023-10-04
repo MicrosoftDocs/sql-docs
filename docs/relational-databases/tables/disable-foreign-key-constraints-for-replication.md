@@ -1,19 +1,16 @@
 ---
-description: "Disable Foreign Key Constraints for Replication"
 title: "Disable Foreign Key Constraints for Replication"
-ms.custom: ""
+description: "Disable Foreign Key Constraints for Replication"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "constraints [SQL Server], foreign keys"
   - "foreign keys [SQL Server], disabling constraints"
   - "disabling constraints"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable foreign key constraints for replication
@@ -45,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  To perform this task in [!INCLUDE[tsql](../../includes/tsql-md.md)], script out the foreign key constraint. In **Object Explorer**, expand the table with the foreign key constraint you want to modify, and then expand the **Keys** folder.  
 
-2. Right-click the foreign key constraint, select **Script Key As**, then select **DROP and CREATE To**, then select **New Query Editor Window**. The resulting script should look similar the following example from the `AdventureWorks2019` sample database:
+2. Right-click the foreign key constraint, select **Script Key As**, then select **DROP and CREATE To**, then select **New Query Editor Window**. The resulting script should look similar the following example from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database:
 
     ```sql
     ALTER TABLE [Sales].[SalesTerritoryHistory] 

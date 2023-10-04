@@ -1,22 +1,19 @@
 ---
-description: "sp_db_selective_xml_index (Transact-SQL)"
 title: "sp_db_selective_xml_index (Transact-SQL)"
-ms.custom: ""
-ms.date: "02/11/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_db_selective_xml_index_TSQL"
-  - "sp_db_selective_xml_index"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_db_selective_xml_index procedure"
+description: "sp_db_selective_xml_index (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.date: "02/11/2021"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_db_selective_xml_index_TSQL"
+  - "sp_db_selective_xml_index"
+helpviewer_keywords:
+  - "sp_db_selective_xml_index procedure"
+dev_langs:
+  - "TSQL"
 ---
 # sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 > Starting with [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)], the Selective XML Index functionality cannot be disabled. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)], in order to disable the Selective XML Index feature using this stored procedure, the database must be put in the SIMPLE recovery model by using the [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) command.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,11 +57,11 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
- The following example enables Selective XML Index on the AdventureWorks2012 database.  
+ The following example enables Selective XML Index on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @dbname = N'AdventureWorks2012'  
+    @dbname = N'AdventureWorks2022'  
   , @selective_xml_index = N'true';  
 GO  
 ```  
@@ -79,11 +76,11 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
- The following example disables Selective XML Index on the AdventureWorks2012 database.  
+ The following example disables Selective XML Index on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
 EXECUTE sys.sp_db_selective_xml_index  
-    @dbname = N'AdventureWorks2012'  
+    @dbname = N'AdventureWorks2022'  
   , @selective_xml_index = N'false';  
 GO  
 ```  

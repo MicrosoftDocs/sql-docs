@@ -4,9 +4,8 @@ description: MSdbms (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdbms_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdbms system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 ---
 # MSdbms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

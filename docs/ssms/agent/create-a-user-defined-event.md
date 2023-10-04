@@ -1,13 +1,13 @@
 ---
-description: "Create a User-Defined Event"
 title: "Create a User-Defined Event"
-ms.custom: seo-lt-2019
+description: "Create a User-Defined Event"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent alerts, user-defined events"
   - "user-defined events [SQL Server]"
   - "multiple language support [SQL Server], alerts"
@@ -20,10 +20,6 @@ helpviewer_keywords:
   - "alerts [SQL Server], multiple-language environments"
   - "custom events [SQL Server Agent]"
   - "international considerations [SQL Server], alerts"
-ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Create a User-Defined Event

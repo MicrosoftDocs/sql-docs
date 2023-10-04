@@ -1,16 +1,13 @@
 ---
-title: "Specifying Axis in a Path Expression Step | Microsoft Docs"
+title: "Specifying Axis in a Path Expression Step"
 description: Learn how to specify an axis step in an XQuery path expression.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "attribute axis [SQL Server]"
   - "axis step [XQuery]"
   - "descendant axis"
@@ -19,12 +16,11 @@ helpviewer_keywords:
   - "child axis"
   - "descendant-or-self axis"
   - "parent axis"
-ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

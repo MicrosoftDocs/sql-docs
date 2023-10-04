@@ -4,10 +4,9 @@ description: Learn how to pause and resume a SQL Server database mirroring sessi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "resuming database mirroring"
   - "database mirroring [SQL Server], sessions"
@@ -80,7 +79,7 @@ helpviewer_keywords:
      The following example pauses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
+    ALTER DATABASE AdventureWorks2022 SET PARTNER SUSPEND;  
     ```  
   
 ##### To resume database mirroring  
@@ -98,7 +97,7 @@ helpviewer_keywords:
      The following example pauses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
+    ALTER DATABASE AdventureWorks2022 SET PARTNER RESUME;  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Pausing or Resuming Database Mirroring  

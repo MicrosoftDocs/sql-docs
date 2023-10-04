@@ -4,10 +4,9 @@ description: "sys.database_query_store_internal_state contains information about
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 09/19/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "QUERY_STORE_INTERNAL_STATE"
   - "SYS.QUERY_STORE_INTERNAL_STATE_TSQL"
@@ -24,7 +23,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
-Contains information about queue length and memory usage for the Query Store when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled.
+Contains information about queue length and memory usage for the Query Store when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled.
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
@@ -44,9 +43,9 @@ Contains information about queue length and memory usage for the Query Store whe
 Learn more about Query Store and related concepts in the following articles:
 
 - [Monitor performance by using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)
-- [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)
+- [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
 - [sp_query_store_clear_message_queues (Transact-SQL)](../system-stored-procedures/sp-query-store-clear-message-queues-transact-sql.md)
 - [sys.query_store_wait_stats (Transact-SQL)](sys-query-store-wait-stats-transact-sql.md)
 - [sys.query_store_runtime_stats (Transact-SQL)](sys-query-store-runtime-stats-transact-sql.md)
 - [sys.query_store_replicas (Transact-SQL)](sys-query-store-replicas.md)
-- [sys.plan_forcing_locations (Transact-SQL)](sys-plan-forcing-locations.md)
+- [sys.query_store_plan_forcing_locations (Transact-SQL)](sys-query-store-plan-forcing-locations-transact-sql.md)

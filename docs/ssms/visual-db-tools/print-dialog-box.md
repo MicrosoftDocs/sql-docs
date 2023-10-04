@@ -1,19 +1,14 @@
 ---
-description: "Print Dialog Box"
 title: Print Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vs.Print"
-ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
+description: "Print Dialog Box"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vs.Print"
 ---
 # Print Dialog Box
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

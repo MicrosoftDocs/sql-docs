@@ -1,16 +1,13 @@
 ---
-title: "Multiple series on a paginated report chart | Microsoft Docs"
+title: "Multiple series on a paginated report chart"
 description: Find out how to use multiple series on a paginated report chart when showing two related series of data like price and volume, or income and tax in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Multiple series on a paginated report chart (Report Builder)
 

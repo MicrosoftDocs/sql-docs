@@ -1,15 +1,13 @@
 ---
 title: "Scale Out Support for High Availability via SQL Server Failover Cluster Instance| Microsoft Docs"
 description: "This article describes how to configure SSIS Scale Out for high availability with SQL Server failover cluster instance"
-ms.custom: performance
-ms.date: "04/10/2018"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
+ms.date: "04/10/2018"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: performance
 ---
 # Scale Out support for high availability via SQL Server failover cluster instance
 

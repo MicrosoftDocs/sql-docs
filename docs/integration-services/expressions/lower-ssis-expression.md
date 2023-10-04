@@ -1,21 +1,17 @@
 ---
+title: "LOWER (SSIS Expression)"
 description: "LOWER (SSIS Expression)"
-title: "LOWER (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting uppercase to lowercase"
   - "LOWER function"
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
-ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: chugugrace
-ms.author: chugu
 ---
 # LOWER (SSIS Expression)
 

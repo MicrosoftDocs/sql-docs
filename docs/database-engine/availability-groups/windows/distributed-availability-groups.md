@@ -5,12 +5,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 09/15/2022
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - seodec18
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "Availability Groups [SQL Server], distributed"
 ---
@@ -30,7 +28,7 @@ A traditional availability group has resources configured in a Windows Server Fa
 
 A distributed availability group requires that the underlying availability groups have a listener. Rather than provide the underlying server name for a standalone instance (or in the case of a SQL Server failover cluster instance [FCI], the value associated with the network name resource) as you would with a traditional availability group, you specify the configured listener for the distributed availability group with the parameter ENDPOINT_URL when you create it. Although each underlying availability group of the distributed availability group has a listener, a distributed availability group has no listener.
 
-The following figure shows a high-level view of a distributed availability group that spans two availability groups (AG 1 and AG 2), each configured on its own WSFC. The distributed availability group has a total of four replicas, with two in each availability group. Each availability group can support up to the maximum number of replicas, so a distributed availability can have up to 18 total replicas.
+The following figure shows a high-level view of a distributed availability group that spans two availability groups (AG 1 and AG 2), each configured on its own WSFC. The distributed availability group has a total of four replicas, with two in each availability group. Each availability group can support up to the maximum number of replicas, so a distributed availability group can have up to 18 total replicas.
 
 :::image type="content" source="./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png" alt-text="Diagram showing a high-level view of a distributed availability group.":::
 
@@ -53,7 +51,7 @@ Distributed availability groups in SQL Server 2017 or later can mix major versio
 Because the distributed availability groups feature didn't exist in SQL Server 2012 or 2014, availability groups that were created with these versions can't participate in distributed availability groups.
 
 > [!NOTE]  
-> Prior to [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] with CU 17, distributed availability groups can't be configured with Standard edition, or a mix of Standard and Enterprise editions.
+> Depending on the version of SQL Server, when connecting to Azure services (such as the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview)), it's possible to configure a distributed availability group with Standard edition, or a mix of Standard and Enterprise editions. Review [KB5016729](https://support.microsoft.com/topic/kb5016729-improvement-enable-distributed-availability-groups-on-sql-server-standard-editions-40d5724d-f459-4240-8bae-f8c075a7e2a5) to learn more. 
 
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 
@@ -120,7 +118,7 @@ Post-migration, where the second availability group is now the new primary avail
 
 During a migration scenario, while it's possible to configure a distributed AG to migrate your databases to a SQL Server target that is a higher version than the source, there are a few limitations.
 
-When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, autoseeding isn't supported so the seeding mode must be set to `MANUAL`. You must then manually perform a full and transaction log back up of the source database from the primary AG and then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG, and scripts to back up and restore your database from the primary AG to the secondary AG.
+When you configure the distributed AG with a SQL Server migration target that is a higher version than the source, autoseeding isn't supported so the seeding mode must be set to `MANUAL`. If you don't disable AUTO-SEEDING, your migration will fail and you'll see error 946 "Cannot open database 'DistributionAG' version xxx. Upgrade the database to the latest version" in the error log. You must set seeding mode to MANUAL and manually perform a full and transaction log backup of the source database from the primary AG. Then manually restore it, along with the transaction log, to the secondary AG. To learn more, review the [manual seeding](configure-distributed-availability-groups.md?tabs=manual#create-distributed-availability-group-on-first-cluster) steps to configure your distributed AG, and scripts to back up and restore your database from the primary AG to the secondary AG.
 
 Assuming the secondary AG (AG2) is the migration target and is a higher version than the primary AG (AG1), consider the following limitations:
 
@@ -344,7 +342,7 @@ GO
 
 ### DMVs to view metadata of distributed AG
 
-The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below queries will display information about endpoint URLs used by the availability groups, including the distributed availability group. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows endpoint url and sync state for ag, and dag
@@ -368,7 +366,7 @@ GO
 
 ### DMV to show current state of seeding
 
-The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/).)*
+The below query displays information about the current state of seeding. This is useful for troubleshooting synchronization errors between replicas. *(Reproduced with permission from [David Barbarin](https://www.dbi-services.com/blog/sql-server-2016-alwayson-distributed-availability-groups/).)*
 
 ```sql
 -- shows current_state of seeding

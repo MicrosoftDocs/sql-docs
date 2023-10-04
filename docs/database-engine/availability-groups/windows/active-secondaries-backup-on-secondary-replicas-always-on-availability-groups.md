@@ -4,10 +4,9 @@ description: "Learn about the different supported backup types when offloading b
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "09/01/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "backup priority"
   - "backup on secondary replicas"

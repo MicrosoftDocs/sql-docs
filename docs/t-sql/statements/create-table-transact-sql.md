@@ -4,11 +4,10 @@ description: CREATE TABLE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 09/06/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 06/06/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "FILESTREAM_TSQL"
   - "TABLE"
@@ -49,14 +48,14 @@ dev_langs:
 ---
 # CREATE TABLE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 > [!NOTE]  
-> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] syntax, see [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+> For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] syntax, see [CREATE TABLE ([!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax options
 
@@ -209,6 +208,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     | INDEX index_name CLUSTERED COLUMNSTORE
     | INDEX index_name [ NONCLUSTERED ] COLUMNSTORE ( column_name [ ,... n ] )
     }
+    [ INCLUDE ( column_name [ ,... n ] ) ]
     [ WHERE <filter_predicate> ]
     [ WITH ( <index_option> [ ,... n ] ) ]
     [ ON { partition_scheme_name ( column_name )
@@ -321,10 +321,8 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
     [ NULL | NOT NULL ]
-[
-    [ CONSTRAINT constraint_name ] DEFAULT memory_optimized_constant_expression ]
-    | [ IDENTITY [ ( 1, 1 ) ]
-]
+    [ [ CONSTRAINT constraint_name ] DEFAULT memory_optimized_constant_expression ]
+    | [ IDENTITY [ ( 1, 1 ) ] ]
     [ <column_constraint> ]
     [ <column_index> ]
 
@@ -446,13 +444,13 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 > [!NOTE]  
 > **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes, and as long as the value can fit the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
 >
-> `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row.
+> `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of `sp_tableoption` to store the entire LOB value out of the row.
 >
 > In this context, *default* is not a keyword. It is an identifier for the default filegroup and must be delimited, as in `TEXTIMAGE_ON "default"` or `TEXTIMAGE_ON [default]`. If `"default"` is specified, the `QUOTED_IDENTIFIER` option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 #### FILESTREAM_ON { *partition_scheme_name* | filegroup | "default" }
 
-**Applies to**: [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILESTREAM`.
+**Applies to**: [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)] and later. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILESTREAM`.
 
 Specifies the filegroup for FILESTREAM data.
 
@@ -539,14 +537,14 @@ Indicates that the new column is an identity column. When a new row is added to 
 
 In the `CREATE TABLE` statement, the `NOT FOR REPLICATION` clause can be specified for the IDENTITY property, FOREIGN KEY constraints, and CHECK constraints. If this clause is specified for the `IDENTITY` property, values aren't incremented in identity columns when replication agents perform inserts. If this clause is specified for a constraint, the constraint isn't enforced when replication agents perform insert, update, or delete operations.
 
-#### GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER  } { START | END } [ HIDDEN ] [ NOT NULL ]
+#### GENERATED ALWAYS AS { ROW | TRANSACTION_ID | SEQUENCE_NUMBER } { START | END } [ HIDDEN ] [ NOT NULL ]
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Specifies a column used by the system to automatically record information about row versions in the table and its history table (if the table is system versioned and has a history table). Use this argument with the `WITH SYSTEM_VERSIONING = ON` parameter to create system-versioned tables: temporal or ledger tables. For more information, see [updateable ledger tables](/azure/azure-sql/database/ledger-updatable-ledger-tables#updateable-ledger-tables-vs-temporal-tables) and [temporal tables](../../relational-databases/tables/temporal-tables.md).
 
 | Parameter | Required data type | Required nullability | Description |
-|--|--|--|--|
+| -- | -- | -- | -- |
 | ROW | datetime2 | START: `NOT NULL`<br />END: `NOT NULL` | Either the start time for which a row version is valid (START) or the end time for which a row version is valid (END). Use this argument with the `PERIOD FOR SYSTEM_TIME` argument to create a temporal table. |
 | TRANSACTION_ID | bigint | START: `NOT NULL`<br />END: `NULL` | **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and Azure SQL Database.<br /><br />The ID of the transaction that creates (START) or invalidates (END) a row version. If the table is a ledger table, the ID references a row in the [sys.database_ledger_transactions](../../relational-databases/system-stored-procedures/sys-sp-verify-database-ledger-transact-sql.md) view |
 | SEQUENCE_NUMBER | bigint | START: `NOT NULL`<br />END: `NULL` | **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, and Azure SQL Database.<br /><br />The sequence number of an operation that creates (START) or deletes (END) a row version. This value is unique within the transaction. |
@@ -557,19 +555,19 @@ You can mark one or both period columns with `HIDDEN` flag to implicitly hide th
 
 #### INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] ( *column_name* [ ASC | DESC ] [ ,... *n* ] )
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies to create an index on the table. This can be a clustered index, or a nonclustered index. The index will contain the columns listed, and will sort the data in either ascending or descending order.
 
 #### INDEX *index_name* CLUSTERED COLUMNSTORE
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies to store the entire table in columnar format with a clustered columnstore index. This always includes all columns in the table. The data isn't sorted in alphabetical or numeric order since the rows are organized to gain columnstore compression benefits.
 
 #### INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE ( *column_name* [ ,... *n* ] )
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies to create a nonclustered columnstore index on the table. The underlying table can be a rowstore heap or clustered index, or it can be a clustered columnstore index. In all cases, creating a nonclustered columnstore index on a table stores a second copy of the data for the columns in the index.
 
@@ -745,9 +743,9 @@ An optional keyword that indicates the start of the definition of a PRIMARY KEY,
 
 - SET DEFAULT
 
-  All the values that make up the foreign key are set to their default values if the corresponding row in the parent table is deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
+  All the values that make up the foreign key are set to their default values when the corresponding row in the parent table is deleted. For this constraint to execute, all foreign key columns must have default definitions. If a column is nullable, and there is no explicit default value set, NULL becomes the implicit default value of the column.
 
-  Don't specify CASCADE if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
+  Don't specify `CASCADE` if the table will be included in a merge publication that uses logical records. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).
 
   `ON DELETE CASCADE` can't be defined if an `INSTEAD OF` trigger `ON DELETE` already exists on the table.
 
@@ -827,13 +825,13 @@ The name of the column set. A column set is an untyped XML representation that c
 
 #### PERIOD FOR SYSTEM_TIME ( *system_start_time_column_name* , *system_end_time_column_name* )
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies the names of the columns that the system will use to record the period for which a record is valid. Use this argument with the `GENERATED ALWAYS AS ROW { START | END }` and `WITH SYSTEM_VERSIONING = ON` arguments to create a temporal table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 #### COMPRESSION_DELAY
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 For a memory-optimized, delay specifies the minimum number of minutes a row must remain in the table, unchanged, before it is eligible for compression into the columnstore index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selects specific rows to compress according to their last update time. For example, if rows are changing frequently during a two-hour period of time, you could set `COMPRESSION_DELAY = 120 Minutes` to ensure updates are completed before SQL Server compresses the row.
 
@@ -865,13 +863,13 @@ Specifies the data compression option for the specified table, partition number,
 
 - COLUMNSTORE
 
-  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE specifies to compress with the most performant columnstore compression. This is the typical choice.
 
 - COLUMNSTORE_ARCHIVE
 
-  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+  **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.
 
@@ -879,7 +877,7 @@ For more information, see [Data Compression](../../relational-databases/data-com
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Specifies the XML compression option for any **xml** data type columns in the table. The options are as follows:
 
@@ -894,9 +892,6 @@ Specifies the XML compression option for any **xml** data type columns in the ta
 #### ON PARTITIONS ( { <partition_number_expression> | [ ,... *n* ] )
 
 Specifies the partitions to which the `DATA_COMPRESSION` or `XML_COMPRESSION` settings apply. If the table isn't partitioned, the `ON PARTITIONS` argument will generate an error. If the `ON PARTITIONS` clause isn't provided, the `DATA_COMPRESSION` option will apply to all partitions of a partitioned table.
-
-> [!NOTE]  
-> `XML_COMPRESSION` is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 *partition_number_expression* can be specified in the following ways:
 
@@ -972,7 +967,7 @@ When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](.
 
 #### OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
 
-**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
 
@@ -984,7 +979,7 @@ Specifies the windows-compatible FileTable directory name. This name should be u
 
 #### FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
 
 Specifies the name of the collation to be applied to the `Name` column in the FileTable. The collation must be case-insensitive to comply with Windows operating system file naming semantics. If this value isn't specified, the database default collation is used. If the database default collation is case-sensitive, an error is raised, and the CREATE TABLE operation fails.
 
@@ -998,25 +993,25 @@ Specifies the name of the collation to be applied to the `Name` column in the Fi
 
 #### FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*
 
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
 
 Specifies the name to be used for the primary key constraint that is automatically created on the FileTable. If this value isn't specified, the system generates a name for the constraint.
 
 #### FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
 
 Specifies the name to be used for the unique constraint that is automatically created on the **stream_id** column in the FileTable. If this value isn't specified, the system generates a name for the constraint.
 
 #### FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*
 
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] do not support `FILETABLE`.
 
 Specifies the name to be used for the unique constraint that is automatically created on the **parent_path_locator** and **name** columns in the FileTable. If this value isn't specified, the system generates a name for the constraint.
 
 #### SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = *schema_name*.*history_table_name* [ , DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. The system will record the history of each record in the system-versioned table in a separate history table. If the `HISTORY_TABLE` argument isn't used, the name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If the name of a history table is specified during history table creation, you must specify the schema and table name.
 
@@ -1058,10 +1053,10 @@ When you specify a filter predicate, you also have to specify *MIGRATION_STATE*.
 
 #### MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
-- Specify `OUTBOUND` to migrate data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-- Specify `INBOUND` to copy the remote data for the table from [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
+- Specify `OUTBOUND` to migrate data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+- Specify `INBOUND` to copy the remote data for the table from [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to disable Stretch for the table. For more info, see [Disable Stretch Database and bring back remote data](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 
   This operation incurs data transfer costs, and it can't be canceled.
 
@@ -1089,7 +1084,7 @@ Enables retention policy based cleanup of old or aged data from tables within a 
 
 #### MEMORY_OPTIMIZED
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] does not support memory optimized tables in General Purpose tier.
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] does not support memory optimized tables in General Purpose tier.
 
 The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimize the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables, see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md).
 
@@ -1097,7 +1092,7 @@ The default value OFF indicates that the table is disk-based.
 
 #### DURABILITY
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 The value of `SCHEMA_AND_DATA` indicates that the table is durable, meaning that changes are persisted on disk and survive restart or failover. SCHEMA_AND_DATA is the default value.
 
@@ -1108,7 +1103,7 @@ The value of `SCHEMA_ONLY` indicates that the table is non-durable. The table sc
 
 #### BUCKET_COUNT
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
@@ -1116,13 +1111,13 @@ Bucket_count is a required argument.
 
 #### INDEX
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 Column and table indexes can be specified as part of the CREATE TABLE statement. For details about adding and removing indexes on memory-optimized tables, see [Altering Memory-Optimized Tables](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
 - HASH
 
-  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
   Indicates that a HASH index is created.
 
@@ -1130,7 +1125,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
 
 #### <a id="generate-always-columns"></a> LEDGER = ON ( <ledger_option> [ ,... *n* ] ) | OFF
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 > [!NOTE]  
 > If the statement creates a ledger table, the `ENABLE LEDGER` permission is required.
@@ -1179,7 +1174,7 @@ Specifies a ledger option.
 
 #### [ LEDGER_VIEW = *schema_name*.*ledger_view_name* [ ( *<ledger_view_option>* [ ,... *n* ] ) ]
 
-Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view. 
+Specifies the name of the ledger view and the names of additional columns the system adds to the ledger view.
 
 #### [ APPEND_ONLY = ON | OFF ]
 
@@ -1292,19 +1287,19 @@ If a temporary table is created with a named constraint and the temporary table 
 
 Global temporary tables for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (initiated with ## table name) are stored in `tempdb` and shared among all users' sessions across the whole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For information on SQL table types, see the above section on Create Tables.
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports global temporary tables that are also stored in `tempdb` and scoped to the database level. This means that global temporary tables are shared for all users' sessions within the same [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. User sessions from other databases can't access global temporary tables.
+[!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports global temporary tables that are also stored in `tempdb` and scoped to the database level. This means that global temporary tables are shared for all users' sessions within the same [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. User sessions from other databases can't access global temporary tables.
 
-Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for temporary tables. Similarly, global temporary stored procedures are also scoped to the database level in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Local temporary tables (initiated with # table name) are also supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses. See the above section on [Temporary Tables](#temporary-tables).
+Global temporary tables for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for temporary tables. Similarly, global temporary stored procedures are also scoped to the database level in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Local temporary tables (initiated with # table name) are also supported for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and follow the same syntax and semantics that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses. See the above section on [Temporary Tables](#temporary-tables).
 
 > [!IMPORTANT]  
-> This feature is available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> This feature is available for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ### Troubleshoot global temporary tables for Azure SQL Database
 
 For troubleshooting `tempdb`, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use).
 
 > [!NOTE]  
-> Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Only a server admin can access the troubleshooting DMVs in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ### Permissions
 
@@ -1367,13 +1362,13 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - A column can have only one DEFAULT definition.
 - A DEFAULT definition can contain constant values, functions, SQL standard niladic functions, or NULL. The following table shows the niladic functions and the values they return for the default during an INSERT statement.
 
-    |SQL-92 niladic function|Value returned|
-    |------------------------------|--------------------|
-    |CURRENT_TIMESTAMP|Current date and time.|
-    |CURRENT_USER|Name of user performing an insert.|
-    |SESSION_USER|Name of user performing an insert.|
-    |SYSTEM_USER|Name of user performing an insert.|
-    |USER|Name of user performing an insert.|
+    | SQL-92 niladic function | Value returned |
+    | --- | --- |
+    | CURRENT_TIMESTAMP | Current date and time. |
+    | CURRENT_USER | Name of user performing an insert. |
+    | SESSION_USER | Name of user performing an insert. |
+    | SYSTEM_USER | Name of user performing an insert. |
+    | USER | Name of user performing an insert. |
 - *constant_expression* in a DEFAULT definition can't refer to another column in the table, or to other tables, views, or stored procedures.
 - DEFAULT definitions can't be created on columns with a **timestamp** data type or columns with an IDENTITY property.
 - DEFAULT definitions can't be created for columns with alias data types if the alias data type is bound to a default object.
@@ -1410,11 +1405,11 @@ When you use `CREATE TABLE` or `ALTER TABLE` to create or alter a table, databas
 
 When column nullability isn't explicitly specified, column nullability follows the rules shown in the following table.
 
-|Column data type|Rule|
-|----------------------|----------|
-|Alias data type|The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`.|
-|CLR user-defined type|Nullability is determined according to the column definition.|
-|System-supplied data type|If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using `SET`:<br />`ANSI_NULL_DFLT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DFLT_OFF = ON`, NOT NULL is assigned.<br /><br />When any database settings are configured by using `ALTER DATABASE`:<br />`ANSI_NULL_DEFAULT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DEFAULT_OFF = ON`, NOT NULL is assigned.<br /><br />To view the database setting for `ANSI_NULL_DEFAULT`, use the `sys.databases` catalog view|
+| Column data type | Rule |
+| --- | --- |
+| Alias data type | The [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses the nullability that is specified when the data type was created. To determine the default nullability of the data type, use `sp_help`. |
+| CLR user-defined type | Nullability is determined according to the column definition. |
+| System-supplied data type | If the system-supplied data type has only one option, it takes precedence. **timestamp** data types must be NOT NULL. When any session settings are set ON by using `SET`:<br />`ANSI_NULL_DFLT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DFLT_OFF = ON`, NOT NULL is assigned.<br /><br />When any database settings are configured by using `ALTER DATABASE`:<br />`ANSI_NULL_DEFAULT_ON = ON`, NULL is assigned.<br />`ANSI_NULL_DEFAULT_OFF = ON`, NOT NULL is assigned.<br /><br />To view the database setting for `ANSI_NULL_DEFAULT`, use the `sys.databases` catalog view |
 
 When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.
 
@@ -1596,10 +1591,10 @@ GO
 
 Based on the values of column `col1` of `PartitionTable`, the partitions are assigned in the following ways.
 
-|Filegroup|test1fg|test2fg|test3fg|test4fg|
-|---------------|-------------|-------------|-------------|-------------|
-|**Partition**|1|2|3|4|
-|**Values**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1,000|col1 > 1000|
+| Filegroup | test1fg | test2fg | test3fg | test4fg |
+| --- | --- | --- | --- | --- |
+| **Partition** | 1 | 2 | 3 | 4 |
+| **Values** | `col 1 <= 1` | `col1 > 1 AND col1 <= 100` | `col1 > 100 AND col1 <= 1,000` | `col1 > 1000` |
 
 ### I. Use the UNIQUEIDENTIFIER data type in a column
 
@@ -1631,7 +1626,7 @@ CREATE TABLE dbo.mytable
 
 ### K. Create a computed column based on a user-defined type column
 
-The following example creates a table with one column defined as user-defined type `utf8string`, assuming that the type's assembly, and the type itself, have already been created in the current database. A second column is defined based on `utf8string`, and uses method `ToString()` of **type(class)**`utf8string` to compute a value for the column.
+The following example creates a table with one column defined as user-defined type `utf8string`, assuming that the type's assembly, and the type itself, have already been created in the current database. A second column is defined based on `utf8string`, and uses method `ToString()` of **type(class)** `utf8string` to compute a value for the column.
 
 ```sql
 CREATE TABLE UDTypeTable
@@ -1684,9 +1679,9 @@ For additional data compression examples, see [Data Compression](../../relationa
 
 ### O. Create a table that uses XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
-The following example creates a table that uses row compression.
+The following example creates a table that uses XML compression.
 
 ```sql
 CREATE TABLE dbo.T1
@@ -1725,7 +1720,7 @@ CREATE TABLE T1
 
 ### Q. Create a system-versioned disk-based temporal table
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 The following examples show how to create a temporal table linked to a new history table, and how to create a temporal table linked to an existing history table. The temporal table must have a primary key defined to be enabled for the table to be enabled for system versioning. For examples showing how to add or remove system versioning on an existing table, see System Versioning in [Examples](../../t-sql/statements/alter-table-transact-sql.md#Example_Top). For use cases, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1775,7 +1770,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 
 ### R. Create a system-versioned memory-optimized temporal table
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 The following example shows how to create a system-versioned memory-optimized temporal table linked to a new disk-based history table.
 
@@ -1920,7 +1915,7 @@ The problem arises from the fact that while the temp table name is unique, the c
 
 ### W. Use global temporary tables in Azure SQL Database
 
-Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds one row
+Session A creates a global temp table ##test in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] testdb1 and adds one row
 
 ```sql
 CREATE TABLE ##test (
@@ -1953,7 +1948,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504;
 ##test
 ```
 
-Session B connects to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and can access table ##test created by session A
+Session B connects to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] testdb1 and can access table ##test created by session A
 
 ```sql
 SELECT * FROM ##test;
@@ -1965,7 +1960,7 @@ SELECT * FROM ##test;
 1, 1
 ```
 
-Session C connects to another database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables
+Session C connects to another database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables
 
 ```sql
 SELECT * FROM ##test
@@ -1978,7 +1973,7 @@ Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
 
-Addressing system object in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] `tempdb` from current user database testdb1
+Addressing system object in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] `tempdb` from current user database testdb1
 
 ```sql
 SELECT * FROM tempdb.sys.objects;

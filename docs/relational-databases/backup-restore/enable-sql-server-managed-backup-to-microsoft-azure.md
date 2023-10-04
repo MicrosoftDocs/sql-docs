@@ -1,16 +1,13 @@
 ---
 title: Use managed backup to Azure
 description: Learn how to enable SQL Server Managed Backup to Microsoft Azure at the database and instance level, and enable notifications and monitor backup activity.
-ms.custom: seo-lt-2019, devx-track-azurecli
-ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
-ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "12/17/2019"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+ms.custom: devx-track-azurecli, devx-track-azurepowershell
 ---
 
 # Enable SQL Server managed backup to Azure
@@ -23,7 +20,7 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## Create the Azure Blob Container
+## Create the Azure Blob Storage container
 
 The process requires an Azure account. If you already have an account, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).
 
@@ -134,7 +131,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
   
-5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following transact-SQL statement.  
+5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following Transact-SQL statement.  
   
     ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  

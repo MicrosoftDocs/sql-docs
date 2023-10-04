@@ -1,17 +1,15 @@
 ---
 title: "Restore a database master key"
 description: Learn how to restore the database master key in SQL Server by using SQL Server Management Studio with Transact-SQL.
-ms.custom: ""
-ms.date: "12/16/2021"
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database master key [SQL Server], importing"
-ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "12/16/2021"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database master key [SQL Server], importing"
 ---
 # Restore a database master key
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +45,11 @@ Requires CONTROL permission on the database.
 4. Copy and paste the following example into the query window and click **Execute**.  
 
     ```sql
-    -- Restores the database master key of the AdventureWorks2012 database.  
-    USE AdventureWorks2012;  
+    -- Restores the database master key of the AdventureWorks2022 database.  
+    USE AdventureWorks2022;  
     GO  
     RESTORE MASTER KEY   
-        FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   
+        FROM FILE = 'c:\backups\keys\AdventureWorks2022_master_key'   
         DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
         ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
     GO  

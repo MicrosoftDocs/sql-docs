@@ -7,7 +7,7 @@ summary: Technical documentation to help you migrate to SQL Server on-premises a
 metadata:
   title: SQL Server migration documentation 
   description: Choose the SQL Server migration path you're interested in. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: cawrites
   ms.author: chadam
@@ -80,7 +80,7 @@ landingContent:
       - text: SQL Server Migration Center
         url: https://azure.microsoft.com/migration/sql-server/
       - text: Database migration guide
-        url: https://datamigration.microsoft.com/
+        url: /data-migration/
       - text: Azure Migration Service
         url: https://azure.microsoft.com/services/azure-migrate/
       - text: Data migration blog
@@ -96,12 +96,14 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: Overview
+      - text: End of support options
         url: ../end-of-support/sql-server-end-of-support-overview.md
-      - text: SQL Server 2008 & R2
+      - text: SQL Server 2012
         url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
       - text: Extended Support Updates (ESUs) 
         url: ../end-of-support/sql-server-extended-security-updates.md
+      - text: ESU frequently asked questions
+        url: ../end-of-support/extended-security-updates-frequently-asked-questions.md
       - text: Free ESUs with Azure VM
         url: /azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support
     - linkListType: download

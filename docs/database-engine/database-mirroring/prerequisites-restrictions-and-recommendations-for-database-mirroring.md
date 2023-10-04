@@ -4,10 +4,9 @@ description: Learn about the prerequisites, restrictions, and recommendations fo
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
   - "partners [SQL Server]"
@@ -27,7 +26,8 @@ helpviewer_keywords:
   
   
 ##  <a name="DbmSupport"></a> Support For Database Mirroring  
- For information about support for database mirroring in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see   [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
   
  Note that database mirroring works with any supported database compatibility level. For information about the supported compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   

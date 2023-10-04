@@ -1,21 +1,18 @@
 ---
 title: "Define & modify join filter between Merge articles"
 description: Learn how to define and modify the join filter used between Merge articles using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "filters [SQL Server replication], join"
   - "merge replication join filters [SQL Server replication]"
   - "modifying filters, join"
   - "join filters"
-ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Define and Modify a Join Filter Between Merge Articles
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

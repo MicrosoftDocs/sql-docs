@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "registered_search_property_lists_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "search property lists [SQL Server], viewing"
 dev_langs:
   - "TSQL"
-ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 ---
 # sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +46,7 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
  The following example displays the ID and name of the search property lists in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT property_list_id, name FROM sys.registered_search_property_lists;  
 GO  

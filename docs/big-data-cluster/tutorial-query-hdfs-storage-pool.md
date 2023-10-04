@@ -6,10 +6,9 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 12/13/2019
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: tutorial
-ms.metadata: seo-lt-2019
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster

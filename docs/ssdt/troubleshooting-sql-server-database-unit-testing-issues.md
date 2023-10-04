@@ -1,15 +1,12 @@
 ---
 title: Troubleshooting SQL Server Database Unit Testing Issues
 description: View troubleshooting tips for issues that you might see with SQL Server unit tests, such as timeout failures and database deployment to unexpected targets.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Troubleshooting SQL Server Database Unit Testing Issues
@@ -29,7 +26,7 @@ If you modify the App.Config file in the test project, you must rebuild the test
 If you deploy a database from a database project when you run unit tests, the database is deployed by using the connection string information that is specified in your unit test configuration. The connection information that is specified in the database project Debug properties is not used for this task, which allows you to run SQL Server unit tests against different instances of the same database.  
   
 ## <a name="TimeoutsDuringUnitTests"></a>Timeouts when You Run Database Unit Tests  
-If your database unit tests are failing because of a timeout, you can increase the time-out period by updating the app.config file in your test project. The connect time-out, defined on the connection string, specifies how long to wait when the unit test connects to the server. The command timeout, which must be defined directly in the app.config file specifies how long to wait when the unit test executes the Transact\-SQL script. If you have problems with long running unit tests, try increasing the command timeout value in the appropriate context element. For example, to specify a command timeout of 120 seconds for the **PrivilegedContext** element, update the app.config as follows:  
+If your database unit tests are failing because of a timeout, you can increase the time-out period by updating the app.config file in your test project. The connect time-out, defined on the connection string, specifies how long to wait when the unit test connects to the server. The command timeout, which must be defined directly in the app.config file specifies how long to wait when the unit test executes the Transact-SQL script. If you have problems with long running unit tests, try increasing the command timeout value in the appropriate context element. For example, to specify a command timeout of 120 seconds for the **PrivilegedContext** element, update the app.config as follows:  
   
 ```  
 <SqlUnitTesting_VS2010>  

@@ -4,8 +4,8 @@ description: Learn to configure common language runtime (CLR) strict security in
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/20/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "clr strict security"

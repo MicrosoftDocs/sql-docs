@@ -1,14 +1,13 @@
 ---
-title: "Recovery Models (SQL Server) | Microsoft Docs"
+title: "Recovery Models (SQL Server)"
 description: In SQL Server, a recovery model controls how to log transactions, whether the transaction log requires backing up, and what restore operations are available.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "07/16/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database backups [SQL Server], recovery models"
   - "bulk-logged recovery model [SQL Server]"
   - "recovery [SQL Server], recovery model"
@@ -26,9 +25,6 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], recovery models"
   - "full recovery model [SQL Server]"
   - "backing up transaction logs [SQL Server], recovery models"
-ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Recovery Models (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +41,7 @@ ms.author: mathoma
   
 |Recovery model|Description|Work loss exposure|Recover to point in time?|  
 |--------------------|-----------------|------------------------|-------------------------------|  
-|**Simple**|No log backups.<br /><br /> Automatically reclaims log space to keep space requirements small, essentially eliminating the need to manage the transaction log space. For information about database backups under the simple recovery model, see [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Operations that require transaction log backups are not supported by the simple recovery model. The following features cannot be used in simple recovery mode:<br /><br /> -Log shipping<br /><br /> -Always On or Database mirroring<br /><br /> -Media recovery without data loss<br /><br /> -Point-in-time restores|Changes since the most recent backup are unprotected. In the event of a disaster, those changes must be redone.|Can recover only to the end of a backup. For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> For a more in depth explanation of the Simple recovery model, see [SQL Server Simple Recovery Model](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com)|  
+|**Simple**|No log backups.<br /><br /> Automatically reclaims log space to keep space requirements small, essentially eliminating the need to manage the transaction log space. For information about database backups under the simple recovery model, see [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Operations that require transaction log backups are not supported by the simple recovery model. The following features cannot be used in the simple recovery model:<br /><br /> -Log shipping<br /><br /> -Always On or Database mirroring<br /><br /> -Media recovery without data loss<br /><br /> -Point-in-time restores|Changes since the most recent backup are unprotected. In the event of a disaster, those changes must be redone.|Can recover only to the end of a backup. For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> For a more in depth explanation of the Simple recovery model, see [SQL Server Simple Recovery Model](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com)|  
 |**Full**|Requires log backups.<br /><br /> No work is lost due to a lost or damaged data file.<br /><br /> Can recover to an arbitrary point in time (for example, prior to application or user error). For information about database backups under the full recovery model, see [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) and [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Normally none.<br /><br /> If the tail of the log is damaged, changes since the most recent log backup must be redone.|Can recover to a specific point in time, assuming that your backups are complete up to that point in time. For information about using log backups to restore to the point of failure, see [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Note: If you have two or more full-recovery-model databases that must be logically consistent, you may have to implement special procedures to make sure the recoverability of these databases. For more information, see [Recovery of Related  Databases That Contain Marked Transaction](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  
 |**Bulk logged**|Requires log backups.<br /><br /> An adjunct of the full recovery model that permits high-performance bulk copy operations.<br /><br /> Reduces log space usage by using minimal logging for most bulk operations. For information about operations that can be minimally logged, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).<br /><br /> Log backups may be of a significant size because the minimally-logged operations are captured in the log backup. For information about database backups under the bulk-logged recovery model, see [Full Database Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) and [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|If the log is damaged or bulk-logged operations occurred since the most recent log backup, changes since that last backup must be redone.<br /><br /> Otherwise, no work is lost.|Can recover to the end of any backup. Point-in-time recovery is not supported.|  
   

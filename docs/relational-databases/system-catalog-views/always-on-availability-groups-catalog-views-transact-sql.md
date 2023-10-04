@@ -4,9 +4,8 @@ description: Always On Availability Groups Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
@@ -14,11 +13,10 @@ helpviewer_keywords:
   - "YY"
 dev_langs:
   - "TSQL"
-ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This section contains catalog views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
 
@@ -40,6 +38,6 @@ This section contains catalog views and functions that are related to [!INCLUDE[
 
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)
-- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
 - [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  

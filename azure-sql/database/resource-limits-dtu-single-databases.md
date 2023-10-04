@@ -4,14 +4,13 @@ description: This page describes some common DTU resource limits for single data
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 01/31/2022
+ms.date: 05/19/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
 ms.custom:
-  - "references_regions"
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+  - references_regions
+  - sqldbrb=1
 ---
 # Resource limits for single databases using the DTU purchasing model - Azure SQL Database
 
@@ -49,13 +48,16 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 2 |
 | Max in-memory OLTP storage (GB) |N/A |
 | Max concurrent workers | 30 |
+| Max concurrent logins | 30 |
+| Max concurrent external connections <sup>1</sup>|3|
 | Max concurrent sessions | 300 |
 
+<sup>1</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 > [!IMPORTANT]
-> The Basic service tier provides less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended. 
+> The Basic service tier provides less than one vCore (CPU).  For resource-intensive workloads, a service tier of S3 or greater is recommended. 
 > 
-> Database restore operations can be CPU-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
+> Database restore operations can be resource-intensive and may require a service objective of S3 or greater. Once restored, a database can be scaled down to a lower service objective if required.
 >
 >Regarding data storage, the Basic service tier is placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >
@@ -69,15 +71,18 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 250 | 250 | 250 | 1024 |
 | Max in-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |
 | Max concurrent workers | 60 | 90 | 120 | 200 |
+| Max concurrent logins | 60 | 90 | 120 | 200 |
+| Max concurrent external connections <sup>2</sup>|6|9|12|20|
 | Max concurrent sessions |600 | 900 | 1200 | 2400 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/single/) for details on additional cost incurred due to any extra storage provisioned.
 
+<sup>2</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
+
 > [!IMPORTANT]
-> The Standard S0, S1 and S2 tiers provide less than one vCore (CPU).  For CPU-intensive workloads, a service tier of S3 or greater is recommended.
+> The Standard S0, S1 and S2 tiers provide less than one vCore (CPU).  For resource-intensive workloads, a service tier of S3 or greater is recommended.
 >
-> Restoration operations can be CPU-intensive and often require a service tier of S3 or greater. 
+> Restoration operations can be resource-intensive and often require a service tier of S3 or greater. 
 >
 >Regarding data storage, the Standard S0 and S1 service tiers are placed on Standard Page Blobs. Standard Page Blobs use hard disk drive (HDD)-based storage media and are best suited for development, testing, and other infrequently accessed workloads that are less sensitive to performance variability.
 >
@@ -91,10 +96,13 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 1024 | 1024 | 1024 | 1024 | 1024 |
 | Max in-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |N/A |
 | Max concurrent workers | 400 | 800 | 1600 | 3200 |6000 |
+| Max concurrent logins | 400 | 800 | 1600 | 3200 |6000 |
+| Max concurrent external connections <sup>2</sup>|40|80|150|150|150|
 | Max concurrent sessions |4800 | 9600 | 19200 | 30000 |30000 |
 
-
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/single/) for details on additional cost incurred due to any extra storage provisioned.
+
+<sup>2</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 ### Premium service tier
 
@@ -105,12 +113,15 @@ The following tables show the resources available for a single database at each 
 | Max storage (GB) | 1024 | 1024 | 1024 | 1024 | 4096 <sup>2</sup> | 4096 <sup>2</sup> |
 | Max in-memory OLTP storage (GB) | 1 | 2 | 4 | 8 | 14 | 32 |
 | Max concurrent workers | 200 | 400 | 800 | 1600 | 2800 | 6400 |
+| Max concurrent logins | 200 | 400 | 800 | 1600 | 2800 | 6400 |
+| Max concurrent external connections <sup>3</sup>|20|40|80|150|150|150|
 | Max concurrent sessions | 30000 | 30000 | 30000 | 30000 | 30000 | 30000 |
-
 
 <sup>1</sup> See [SQL Database pricing options](https://azure.microsoft.com/pricing/details/sql-database/single/) for details on additional cost incurred due to any extra storage provisioned.
 
 <sup>2</sup> From 1024 GB up to 4096 GB in increments of 256 GB.
+
+<sup>3</sup> See [External Connections](resource-limits-logical-server.md#external-connections) for additional details on what counts as an external connection.
 
 > [!IMPORTANT]
 > More than 1 TB of storage in the Premium tier is currently available in all regions except: China East, China North, Germany Central, and Germany Northeast. In these regions, the storage max in the Premium tier is limited to 1 TB.  For more information, see [P11-P15 current limitations](single-database-scale.md#p11-and-p15-constraints-when-max-size-greater-than-1-tb).
@@ -120,7 +131,7 @@ The following tables show the resources available for a single database at each 
 
 ## Tempdb sizes
 
-The following table lists tempdb sizes for single databases in Azure SQL Database: 
+The following table lists `tempdb` sizes for single databases in Azure SQL Database: 
 
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|

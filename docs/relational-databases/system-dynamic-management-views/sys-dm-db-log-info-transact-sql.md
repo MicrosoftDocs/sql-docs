@@ -4,10 +4,9 @@ description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function 
 author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
-manager: ajayj
-ms.date: 06/20/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "06/19/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: conceptual
 f1_keywords:
   - "sys.dm_db_log_info"
@@ -22,7 +21,7 @@ dev_langs:
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-asdbmi.md)]
 
 Returns [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) information of the transaction log. Note all transaction log files are combined in the table output. Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
 
@@ -45,7 +44,7 @@ sys.dm_db_log_info ( database_id )
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Database ID.|
+|database_id|**int**|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 |file_id|**smallint**|The file ID of the transaction log.|  
 |vlf_begin_offset|**bigint** |Offset location of the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) from the beginning of the transaction log file.|
 |vlf_size_mb |**float** |[virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) size in MB, rounded to two decimal places.|
@@ -63,7 +62,11 @@ The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO`
 The formula for how many VLFs are created based on a growth event is detailed in the [SQL Server Transaction Log Architecture and Management Guide](../sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs). This formula changed slightly starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Permissions  
-Requires the `VIEW DATABASE STATE` permission in the database.  
+Requires the `VIEW SERVER STATE` permission in the database.  
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 
 ## Examples  
   
@@ -83,7 +86,7 @@ HAVING COUNT(l.database_id) > 100;
 The following query can be used to determine the position of the last active VLF before running SHRINK FILE on transaction log to determine if transaction log can shrink.
 
 ```sql
-USE AdventureWorks2016
+USE AdventureWorks2022;
 GO
 
 ;WITH cte_vlf AS (

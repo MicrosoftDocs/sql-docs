@@ -1,30 +1,26 @@
 ---
+title: "sp_table_privileges_ex (Transact-SQL)"
 description: "sp_table_privileges_ex (Transact-SQL)"
-title: "sp_table_privileges_ex (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_table_privileges_ex"
-  - "sp_table_privileges_ex_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_table_privileges_ex"
-ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_table_privileges_ex"
+  - "sp_table_privileges_ex_TSQL"
+helpviewer_keywords:
+  - "sp_table_privileges_ex"
+dev_langs:
+  - "TSQL"
 ---
 # sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns privilege information about the specified table from the specified linked server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -81,7 +77,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   
    @table_name = 'Product%',   
    @table_schema = 'Production',  
-   @table_catalog ='AdventureWorks2012';  
+   @table_catalog ='AdventureWorks2022';  
 ```  
   
 ## See Also  

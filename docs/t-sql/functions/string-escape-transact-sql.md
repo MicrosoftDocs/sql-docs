@@ -3,13 +3,10 @@ title: "STRING_ESCAPE (Transact-SQL)"
 description: "STRING_ESCAPE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "02/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "STRING_ESCAPE"
   - "STRING_ESCAPE_TSQL"
@@ -26,7 +23,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 
 Escapes special characters in texts and returns text with escaped characters. **STRING_ESCAPE** is a deterministic function, introduced in SQL Server 2016. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -37,7 +34,7 @@ STRING_ESCAPE( text , type )
 ## Arguments
 
  *text*  
- Is a **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) expression representing the object that should be escaped.  
+ Is a **nvarchar** [expression](../../t-sql/language-elements/expressions-transact-sql.md) representing the object that should be escaped.  
   
  *type*  
  Escaping rules that will be applied. Currently the value supported is `'json'`.  

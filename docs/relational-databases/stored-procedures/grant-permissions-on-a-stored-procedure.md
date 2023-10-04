@@ -1,20 +1,19 @@
 ---
 title: "Grant Permissions on a Stored Procedure"
 description: Learn how to grant permissions on a stored procedure in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: FY22Q2Fresh
-ms.date: "10/21/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: stored-procedures
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "stored procedures [SQL Server], permissions"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "08/09/2023"
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: conceptual
+ms.custom: "UpdateFrequency5"
+helpviewer_keywords:
+  - "stored procedures [SQL Server], permissions"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Grant Permissions on a Stored Procedure
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This article describes how to grant permissions on a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Permissions can be granted to an existing user, database role, or application role in the database.  
   
 ##  <a name="Restrictions"></a> Limitations and restrictions  
@@ -57,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**. This example grants `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role named `Recruiting11`.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO  
@@ -72,7 +71,7 @@ GO
 3.  Copy and paste the following example into the query window and select **Execute**. This example grants `EXECUTE` permission to all stored procedures that exist, or will exist, in the `HumanResources` schema, to an application role named `Recruiting11`. 
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GRANT EXECUTE ON SCHEMA::HumanResources
     TO Recruiting11;  
 GO  

@@ -4,9 +4,8 @@ description: MSrepl_backup_lsns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSrepl_backup_lsns_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSrepl_backup_Isns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 ---
 # MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

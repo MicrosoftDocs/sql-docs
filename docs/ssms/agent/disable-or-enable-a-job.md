@@ -1,21 +1,17 @@
 ---
-description: "Disable or Enable a Job"
 title: "Disable or Enable a Job"
-ms.custom: seo-lt-2019
+description: "Disable or Enable a Job"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "stopping jobs"
   - "disabling jobs"
   - "SQL Server Agent jobs, disabling"
   - "jobs [SQL Server Agent], disabling"
-ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Disable or Enable a Job
@@ -47,7 +43,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To disable or enable a job  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

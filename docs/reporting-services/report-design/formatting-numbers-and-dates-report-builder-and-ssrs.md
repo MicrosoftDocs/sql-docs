@@ -1,15 +1,14 @@
 ---
-title: "Formatting numbers and dates in paginated reports | Microsoft Docs"
-
+title: "Formatting numbers and dates in paginated reports"
 description: Learn how to format numbers and dates in Report Builder data regions in a paginated report by selecting a format from the Number page of the data region's Properties dialog box.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
   - "10127"
   - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
@@ -18,9 +17,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
   - "10285"
   - "sql13.rtp.rptdesigner.axisproperties.number.f1"
-ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting numbers and dates in paginated reports (Report Builder)
 

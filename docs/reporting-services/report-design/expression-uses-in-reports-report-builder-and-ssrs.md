@@ -1,18 +1,15 @@
 ---
-title: "Expression uses in paginated reports | Microsoft Docs"
+title: "Expression uses in paginated reports"
 description: Specify or calculate values with paginated report expressions for parameters, queries, filters, and text box properties in Report Builder.
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Reporting Services], about expressions"
-ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "expressions [Reporting Services], about expressions"
 ---
 # Expression uses in paginated reports (Report Builder)
 
@@ -59,7 +56,7 @@ In paginated reports, expressions are used throughout the report definition to s
 |Include specific values for more than one field from a dataset.|Filter equation for a group in a tablix. Use **Tablix Properties Dialog Box, Filters**.|For data type, select **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
 |Hide a text box on the design surface, that can be toggled by the user using a Boolean parameter named *Show*.|Hiddenproperty on a text box. Use **Text Box Properties Dialog Box, Visibility**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |Specify dynamic page header or footer content.|Value for a placeholder inside of a text box that is placed in the page header or footer.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
-|Specify a data source dynamically by using a parameter.|Connection string on the Data source. Use **Data Source Properties Dialog Box, General**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
+|Specify a data source dynamically by using a parameter.|Connection string on the Data source. Use **Data Source Properties Dialog Box, General**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2022"`|  
 |Identify all the values for a multivalue parameter chosen by the user.|Value for a placeholder inside of a text box. Use **Tablix Properties Dialog Box, Filters**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
 |Specify page breaks for every 20 rows in a tablix with no other groups.|Group expression for a group in a tablix. Use **Group Properties Dialog Box, Page Breaks**. Select the option **Between each instance of a group**.|`=Ceiling(RowNumber(Nothing)/20)`|  
 |Specify conditional visibility based on a parameter.|Hidden property for a tablix. Use **Tablix Properties Dialog Box, Visibility**.|`=Not Parameters!<` *boolean parameter* `>.Value`|  

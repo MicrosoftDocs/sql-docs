@@ -4,9 +4,8 @@ description: sys.availability_group_listener_ip_addresses (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "availability_group_listener_ip_addresses"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "sys.availability_group_listener_ip_addresses catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 ---
 # sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

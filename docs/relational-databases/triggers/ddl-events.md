@@ -1,23 +1,19 @@
 ---
+title: "DDL Events"
 description: "DDL Events"
-title: "DDL Events | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "11/01/2016"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DDL events"
   - "DDL triggers, events"
   - "events [SQL Server], DDL"
-ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Events
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   The following tables list the DDL events that can be used to fire a DDL trigger or event notification. Note that each event corresponds to a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure, with the statement syntax modified to include an underscore character (_) between keywords.  
   
 > [!IMPORTANT]  
@@ -423,13 +419,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 :::row-end:::  
 :::row:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        CREATE_SEQUENCE
     :::column-end:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        ALTER_SEQUENCE
     :::column-end:::
     :::column:::
-        CREATE_SEQUENCE_EVENTS
+        DROP_SEQUENCE
     :::column-end:::
 :::row-end:::  
 :::row:::

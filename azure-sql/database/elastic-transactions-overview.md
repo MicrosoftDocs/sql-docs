@@ -4,25 +4,32 @@ description: Overview of Elastic Database Transactions with Azure SQL Database a
 author: scoriani
 ms.author: scoriani
 ms.reviewer: wiassaf, mathoma
-ms.date: 11/02/2021
+ms.date: 11/16/2022
 ms.service: sql-database
 ms.subservice: scale-out
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "ignite-fall-2021"
+  - sqldbrb=1
+  - ignite-fall-2021
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Distributed transactions across cloud databases
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
+This article describes using elastic database transactions which allow you to run distributed transactions across cloud databases for Azure SQL Database and Azure SQL Managed Instance.  In this article, the terms "distributed transactions" and "elastic database transactions" are considered synonyms and are used interchangeably.
+
+> [!NOTE]
+> You can also use the [Distributed Transaction Coordinator for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions in mixed environments.
+
+## Overview
 
 Elastic database transactions for Azure SQL Database and Azure SQL Managed Instance allow you to run transactions that span several databases. Elastic database transactions are available for .NET applications using ADO.NET and integrate with the familiar programming experience using the [System.Transaction](/dotnet/api/system.transactions) classes. To get the library, see [.NET Framework 4.6.1 (Web Installer)](https://www.microsoft.com/download/details.aspx?id=49981).
 Additionally, for managed instance distributed transactions are available in [Transact-SQL](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql).
 
-On premises, such a scenario usually requires running Microsoft Distributed Transaction Coordinator (MSDTC). Since MSDTC isn't available for Platform-as-a-Service application in Azure, the ability to coordinate distributed transactions has now been directly integrated into SQL Database or SQL Managed Instance. Applications can connect to any database to launch distributed transactions, and one of the databases or servers will transparently coordinate the distributed transaction, as shown in the following figure.
+On-premises, such a scenario usually requires running Microsoft Distributed Transaction Coordinator (MSDTC). Since MSDTC isn't available for Azure SQL Database, the ability to coordinate distributed transactions has been directly integrated into SQL Database and SQL Managed Instance. However, for SQL Managed Instance, you can also use the [Distributed Transaction Coordinator](../managed-instance/distributed-transaction-coordinator-dtc.md) to run distributed transactions across a number of mixed environments, such as across managed instances, SQL Servers, other relational database management systems (RDBMSs), custom applications and other transaction participants hosted in any environment that can establish network connectivity to Azure. 
 
-In this document terms "distributed transactions" and "elastic database transactions" are considered synonyms and will be used interchangeably.
+
+Applications can connect to any database to launch distributed transactions, and one of the databases or servers will transparently coordinate the distributed transaction, as shown in the following figure. 
 
   ![Distributed transactions with Azure SQL Database using elastic database transactions ][1]
 
@@ -129,7 +136,7 @@ using (var scope = new TransactionScope())
 
 ## Transact-SQL development experience
 
-A server-side distributed transactions using Transact-SQL are available only for Azure SQL Managed Instance. Distributed transaction can be executed only between Managed Instances that belong to the same [Server trust group](../managed-instance/server-trust-group-overview.md). In this scenario, Managed Instances need to use [linked server](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#TsqlProcedure) to reference each other.
+A server-side distributed transactions using Transact-SQL are available only for Azure SQL Managed Instance. Distributed transaction can be executed only between instances that belong to the same [Server trust group](../managed-instance/server-trust-group-overview.md). In this scenario, managed instances need to use [linked server](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine#TsqlProcedure) to reference each other.
 
 The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql) to start distributed transaction.
 
@@ -139,7 +146,7 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
     EXEC sp_addlinkedserver
         @server='RemoteServer', -- Linked server name
         @srvproduct='',
-        @provider='sqlncli', -- SQL Server Native Client
+        @provider='MSOLEDBSQL', -- Microsoft OLE DB Driver for SQL Server
         @datasrc='managed-instance-server.46e7afd5bc81.database.windows.net' -- SQL Managed Instance endpoint
 
     -- Add credentials and options to this Linked Server
@@ -149,16 +156,16 @@ The following sample Transact-SQL code uses [BEGIN DISTRIBUTED TRANSACTION](/sql
         @rmtuser = '<login_name>',         -- login
         @rmtpassword = '<secure_password>' -- password
 
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     SET XACT_ABORT ON;
     GO
     BEGIN DISTRIBUTED TRANSACTION;
     -- Delete candidate from local instance.
-    DELETE AdventureWorks2012.HumanResources.JobCandidate
+    DELETE AdventureWorks2022.HumanResources.JobCandidate
         WHERE JobCandidateID = 13;
     -- Delete candidate from remote instance.
-    DELETE RemoteServer.AdventureWorks2012.HumanResources.JobCandidate
+    DELETE RemoteServer.AdventureWorks2022.HumanResources.JobCandidate
         WHERE JobCandidateID = 13;
     COMMIT TRANSACTION;
     GO
@@ -254,13 +261,13 @@ These DMVs are particularly useful:
 
 The following limitations currently apply to elastic database transactions in *SQL Database*:
 
-* Only transactions across databases in SQL Database are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of SQL Database can't participate in elastic database transactions. That means that elastic database transactions can't stretch across on premises SQL Server and Azure SQL Database. For distributed transactions on premises, continue to use MSDTC.
+* Only transactions across databases in SQL Database are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of SQL Database can't participate in elastic database transactions. That means that elastic database transactions can't stretch across on-premises SQL Server and Azure SQL Database. For distributed transactions on premises, continue to use MSDTC.
 * Only client-coordinated transactions from a .NET application are supported. Server-side support for T-SQL such as BEGIN DISTRIBUTED TRANSACTION is planned, but not yet available.
 * Transactions across WCF services aren't supported. For example, you have a WCF service method that executes a transaction. Enclosing the call within a transaction scope will fail as a [System.ServiceModel.ProtocolException](/dotnet/api/system.servicemodel.protocolexception).
 
-The following limitations currently apply to distributed transactions in *SQL Managed Instance*:
+The following limitations currently apply to distributed transactions (also known as elastic transactions or natively supported distributed transactions) in *SQL Managed Instance*:
 
-* Only transactions across databases in managed instances are supported. Other [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of Azure SQL Managed Instance can't participate in distributed transactions. That means that distributed transactions can't stretch across on-premises SQL Server and Azure SQL Managed Instance. For distributed transactions on premises, continue to use MSDTC.
+* With this technology, only transactions across databases in managed instances are supported. For all other scenarios that may include [X/Open XA](https://en.wikipedia.org/wiki/X/Open_XA) resource providers and databases outside of Azure SQL Managed Instance you should configure [DTC for Azure SQL Managed Instance](../managed-instance/distributed-transaction-coordinator-dtc.md).
 * Transactions across WCF services aren't supported. For example, you have a WCF service method that executes a transaction. Enclosing the call within a transaction scope will fail as a [System.ServiceModel.ProtocolException](/dotnet/api/system.servicemodel.protocolexception).
 * Azure SQL Managed Instance must be part of a [Server trust group](../managed-instance/server-trust-group-overview.md) in order to participate in distributed transaction.
 * Limitations of [Server trust groups](../managed-instance/server-trust-group-overview.md) affect distributed transactions.

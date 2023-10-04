@@ -4,9 +4,8 @@ description: sysmail_mailattachments (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sysmail_mailattachments_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmail_mailattachments database mail view"
 dev_langs:
   - "TSQL"
-ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 ---
 # sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

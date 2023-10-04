@@ -481,8 +481,23 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-enclaves-enable-sgx.md",
+      "redirect_url": "/azure/azure-sql/database/always-encrypted-enclaves-enable",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/machine-learning-services-add-r-packages.md",
       "redirect_url": "/sql/machine-learning/package-management/install-additional-r-packages-on-sql-server?context=/azure/azure-sql/managed-instance/context/ml-context&view=azuresqldb-mi-current",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-azure-key-vault-configure.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/always-encrypted-certificate-store-configure.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started",
       "redirect_document_id": false
     },
     {
@@ -553,6 +568,71 @@
     {
       "source_path_from_root": "/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server.md",
       "redirect_url": "/azure/azure-sql/migration-guides/virtual-machines/sql-server-to-sql-on-azure-vm-individual-databases-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/migrate-to-database-from-sql-server.md",
+      "redirect_url": "/azure/azure-sql/migration-guides/database/sql-server-to-sql-database-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-find-ip-address.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/service-tier-general-purpose.md",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/service-tier-business-critical.md",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/service-tiers-vcore.md",
+      "redirect_url": "/azure/azure-sql/database/service-tiers-sql-database-vcore",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/management-endpoint-verify-built-in-firewall.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/scripts/restore-geo-backup-cli.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/scripts/restore-geo-backup",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path_from_root": "/azure-sql/database/elastic-jobs-migrate.md",
+      "redirect_url": "/azure/azure-sql/database/job-automation-overview",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path_from_root": "/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md#repair-extension",
+      "redirect_url": "/azure/azure-sql/virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues#repair-extension",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules.md",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/sql-database-vulnerability-assessment-rules-changelog.md",
+      "redirect_url": "/azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/authentication-mfa-ssms-configure.md",
+      "redirect_url": "/azure/azure-sql/database/authentication-mfa-ssms-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/database/change-data-capture-overview.md",
+      "redirect_url": "/sql/relational-databases/track-changes/about-change-data-capture-sql-server",
       "redirect_document_id": false
     }
   ]

@@ -1,23 +1,19 @@
 ---
+title: "sp_addrolemember (Transact-SQL)"
 description: "sp_addrolemember (Transact-SQL)"
-title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/30/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_addrolemember_TSQL"
-  - "sp_addrolemember"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_addrolemember"
-ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
+ms.date: "01/30/2019"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addrolemember_TSQL"
+  - "sp_addrolemember"
+helpviewer_keywords:
+  - "sp_addrolemember"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addrolemember (Transact-SQL)
@@ -28,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,13 +69,13 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## Examples  
   
 ### A. Adding a Windows login  
- The following example adds the Windows login `Contoso\Mary5` to the `AdventureWorks2012` database as user `Mary5`. The user `Mary5` is then added to the `Production` role.  
+ The following example adds the Windows login `Contoso\Mary5` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database as user `Mary5`. The user `Mary5` is then added to the `Production` role.  
   
 > [!NOTE]  
->  Because `Contoso\Mary5` is known as the database user `Mary5` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `Mary5` must be specified. The statement will fail unless a `Contoso\Mary5` login exists. Test by using a login from your domain.  
+>  Because `Contoso\Mary5` is known as the database user `Mary5` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, the user name `Mary5` must be specified. The statement will fail unless a `Contoso\Mary5` login exists. Test by using a login from your domain.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
 GO  
@@ -95,13 +91,13 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Adding a Windows login  
- The following example adds the login `LoginMary` to the `AdventureWorks2008R2` database as user `UserMary`. The user `UserMary` is then added to the `Production` role.  
+ The following example adds the login `LoginMary` to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database as user `UserMary`. The user `UserMary` is then added to the `Production` role.  
   
 > [!NOTE]  
->  Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.  
+>  Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.  
   
 ```sql  
--- Uses AdventureWorks  
+-- Uses AdventureWorks2022
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
 GO  

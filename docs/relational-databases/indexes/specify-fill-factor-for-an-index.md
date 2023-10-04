@@ -4,18 +4,16 @@ description: Specify Fill Factor for an Index
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "fill factor [SQL Server]"
   - "page splits [SQL Server]"
-ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Specify Fill Factor for an Index
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes what fill factor is and how to specify a fill factor value on an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -45,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ###  <a name="Performance"></a> Performance Considerations  
   
 #### Page Splits  
- A correctly chosen fill-factor value can reduce potential page splits by providing enough space for index expansion as data is added to the underlying table.When a new row is added to a full index page, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves approximately half the rows to a new page to make room for the new row. This reorganization is known as a page split. A page split makes room for new records, but can take time to perform and is a resource intensive operation. Also, it can cause fragmentation that causes increased I/O operations. When frequent page splits occur, the index can be rebuilt by using a new or existing fill-factor value to redistribute the data. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+ A correctly chosen fill-factor value can reduce potential page splits by providing enough space for index expansion as data is added to the underlying table. When a new row is added to a full index page, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] moves approximately half the rows to a new page to make room for the new row. This reorganization is known as a page split. A page split makes room for new records, but can take time to perform and is a resource intensive operation. Also, it can cause fragmentation that causes increased I/O operations. When frequent page splits occur, the index can be rebuilt by using a new or existing fill-factor value to redistribute the data. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  Although a low, nonzero fill-factor value may reduce the requirement to split pages as the index grows, the index will require more storage space and can decrease read performance. Even for an application oriented for many insert and update operations, the number of database reads typically outnumber database writes by a factor of 5 to 10. Therefore, specifying a fill factor other than the default can decrease database read performance by an amount inversely proportional to the fill-factor setting. For example, a fill-factor value of 50 can cause database read performance to decrease by two times. Read performance is decreased because the index contains more pages, therefore increasing the disk IO operations required to retrieve the data.  
   
@@ -106,7 +104,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 3.  Copy and paste the following example into the query window and click **Execute**. The example rebuilds an existing index and applies the specified fill factor during the rebuild operation.  
   
     ```sql
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Rebuilds the IX_Employee_OrganizationLevel_OrganizationNode index   
     -- with a fill factor of 80 on the HumanResources.Employee table.  
@@ -125,7 +123,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Drops and re-creates the IX_Employee_OrganizationLevel_OrganizationNode index
     -- on the HumanResources.Employee table with a fill factor of 80.   

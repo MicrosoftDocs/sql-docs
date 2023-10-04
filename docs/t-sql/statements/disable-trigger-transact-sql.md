@@ -4,9 +4,8 @@ description: DISABLE TRIGGER (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/10/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DISABLE_TSQL"
@@ -27,7 +26,7 @@ dev_langs:
 
   Disables a trigger.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +57,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
  ALL SERVER  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -76,7 +75,8 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  To disable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a user must have CONTROL SERVER permission on the server. To disable a DDL trigger with database scope (ON DATABASE), at a minimum, a user must have ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
-The following examples are described in the AdventureWorks2012 database.
+
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
 ### A. Disabling a DML trigger on a table  
  The following example disables trigger `uAddress` that was created on table `Person`.  

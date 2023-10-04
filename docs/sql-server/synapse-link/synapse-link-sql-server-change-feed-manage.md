@@ -1,16 +1,13 @@
 ---
 title: "Manage Azure Synapse Link for SQL Server and Azure SQL Database"
 description: Learn about managing the Azure Synapse Link change feed with T-SQL.
-ms.date: 05/24/2022
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: data-movement
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: data-movement
+ms.topic: conceptual
 monikerRange: ">=sql-server-ver16 || =azuresqldb-current"
-ms.custom:
-- event-tier1-build-2022
 ---
 
 # Manage Azure Synapse Link for SQL Server and Azure SQL Database
@@ -24,8 +21,8 @@ This article provides details on monitoring and managing [Azure Synapse Link for
     - [Azure Synapse Link for SQL Server](/azure/synapse-analytics/synapse-link/sql-server-2022-synapse-link).
     - [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link).
 - To get started quickly, see: 
-    - [Get started with Azure Synapse Link for SQL Server 2022 (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
-    - [Get started with Azure Synapse Link for Azure SQL Database (Preview)](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
+    - [Get started with Azure Synapse Link for SQL Server 2022](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-server-2022) 
+    - [Get started with Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/connect-synapse-link-sql-database)
 
 The Azure Synapse Link for Azure SQL Database is entirely managed, including provisioning of the landing zone, and uses similar change detection processes as described in this article. For more information, see [Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-database-synapse-link). 
 
@@ -40,7 +37,7 @@ The SQL Server or the Azure SQL Database will maintain metadata specific to each
 
 ## Monitor Azure Synapse Link for SQL Server and Azure SQL Database
 
-The following system objects allow for querying the state of the Synapse Link feature from the source database.
+The following system objects allow for querying the state of the Azure Synapse Link for SQL feature from the source database.
 
 ### View configuration
 

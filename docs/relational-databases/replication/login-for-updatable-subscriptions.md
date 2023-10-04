@@ -1,18 +1,15 @@
 ---
+title: "Login for Updatable Subscriptions"
 description: "Login for Updatable Subscriptions"
-title: "Login for Updatable Subscriptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
-ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "08/25/2016"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newsubwizard.updatablesubscriptionslogin.f1"
 ---
 # Login for Updatable Subscriptions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

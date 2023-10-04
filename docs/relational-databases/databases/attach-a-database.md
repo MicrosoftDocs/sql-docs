@@ -1,20 +1,17 @@
 ---
 title: "Attach a Database"
 description: Learn how to attach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Use this feature to copy, move, or upgrade a database.
-ms.custom: ""
-ms.date: "01/31/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.attachdatabase.f1"
-helpviewer_keywords: 
-  - "database attaching [SQL Server]"
-  - "attaching databases [SQL Server]"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "01/31/2022"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.attachdatabase.f1"
+helpviewer_keywords:
+  - "database attaching [SQL Server]"
+  - "attaching databases [SQL Server]"
 ---
 # Attach a Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +83,7 @@ Be sure to account for all files associated with the database before you detach,
   
 3.  In the **Attach Databases** dialog box, to specify the database to be attached, select **Add**. In the **Locate Database Files** dialog box, select the location where the database resides and expand the directory tree to find and select the .mdf file of the database; for example:
 
-     `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
+     `C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022_Data.mdf`  
   
     > [!IMPORTANT]  
     > Trying to select a database that is already attached generates an error.  

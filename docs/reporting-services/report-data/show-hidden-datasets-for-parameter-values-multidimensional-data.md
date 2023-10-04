@@ -1,16 +1,13 @@
 ---
-title: "Show Hidden Datasets for Parameter Values - Multidimensional Data | Microsoft Docs"
+title: "Show Hidden Datasets for Parameter Values - Multidimensional Data"
 description: Learn how to show hidden datasets for parameter values so you can display all datasets in a report.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Show Hidden Datasets for Parameter Values - Multidimensional Data
   Your report might include automatically-generated datasets (also known as hidden datasets) that do not appear by default in the Report Data pane. These datasets are created in the following ways:  

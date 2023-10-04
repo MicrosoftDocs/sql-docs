@@ -6,7 +6,7 @@ ms.author: wiassaf
 ms.date: 01/14/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
-ms.topic: guide
+ms.topic: conceptual
 ms.custom: sqldbrb=1
 ---
 # Configure and manage content reference - Azure SQL Database
@@ -26,13 +26,12 @@ In this article you can find a content reference of various guides, scripts, and
 
 ## Configure features
 
-- [Configure Azure Active Directory (Azure AD) auth](authentication-aad-configure.md)
+- [Configure Microsoft Entra auth](authentication-aad-configure.md)
 - [Configure Conditional Access](conditional-access-configure.md)
-- [Multi-factor Azure AD auth](authentication-mfa-ssms-overview.md)
-- [Configure Multi-Factor Authentication](authentication-mfa-ssms-configure.md)
+- [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
-- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically failover a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
+- [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
 - [Configure temporal retention policy](temporal-tables-retention-policy.md)
 - [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md)
 - [Rotate TDE BYOK keys](transparent-data-encryption-byok-key-rotation.md)
@@ -53,7 +52,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Enable e-mail notifications for automatic tuning](automatic-tuning-email-notifications-configure.md) to get information about tuning recommendations.
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
 - [Create alerts](alerts-insights-configure-portal.md) to get notifications from Azure SQL Database.
-- [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md).
+- [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
 - [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
 - [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)
@@ -84,7 +83,6 @@ In this article you can find a content reference of various guides, scripts, and
 
 - [Create and manage](elastic-jobs-powershell-create.md) Elastic Database Jobs using PowerShell.
 - [Create and manage](elastic-jobs-tsql-create-manage.md) Elastic Database Jobs using Transact-SQL.
-- [Migrate from old Elastic job](elastic-jobs-migrate.md).
 
 ## Database sharding
 

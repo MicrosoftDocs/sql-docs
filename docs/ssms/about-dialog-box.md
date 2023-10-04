@@ -1,18 +1,15 @@
 ---
 title: "About Dialog Box"
 description: "About Dialog Box"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "status information [SQL Server Management Studio]"
-  - "About dialog box"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "status information [SQL Server Management Studio]"
+  - "About dialog box"
 ---
 
 # About Dialog Box

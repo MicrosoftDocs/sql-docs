@@ -22,7 +22,7 @@ To create a DNS Label, first select **Virtual machines** in the portal. Select y
 
 1. Enter a DNS Label name. This name is an A Record that can be used to connect to your SQL Server VM by name instead of by IP Address directly.
 
-1. Click the **Save** button.
+1. Select the **Save** button.
 
     ![dns label](./media/virtual-machines-sql-server-connection-steps/rm-dns-label.png)
 
@@ -30,7 +30,7 @@ To create a DNS Label, first select **Virtual machines** in the portal. Select y
 
 1. On a computer connected to the internet, open SQL Server Management Studio (SSMS). If you do not have SQL Server Management Studio, you can download it [here](/sql/ssms/download-sql-server-management-studio-ssms).
 
-1. In the **Connect to Server** or **Connect to Database Engine** dialog box, edit the **Server name** value. Enter the IP address or full DNS name of the virtual machine (determined in the previous task). You can also add a comma and provide SQL Server's TCP port. For example, `mysqlvmlabel.eastus.cloudapp.azure.com,1433`.
+1. In the **Connect to Server** or **Connect to Database Engine** dialog box, edit the **Server name** value. Enter the IP address or full DNS name of the virtual machine (determined in the previous task). You can also add a comma and provide SQL Server's TCP port. For example, `tutorial-sqlvm1.westus2.cloudapp.azure.com,1433`.
 
 1. In the **Authentication** box, select **SQL Server Authentication**.
 
@@ -38,6 +38,6 @@ To create a DNS Label, first select **Virtual machines** in the portal. Select y
 
 1. In the **Password** box, type the password of the login.
 
-1. Click **Connect**.
+1. Select **Connect**.
 
     ![ssms connect](./media/virtual-machines-sql-server-connection-steps/rm-ssms-connect.png)

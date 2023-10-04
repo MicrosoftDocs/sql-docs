@@ -4,8 +4,8 @@ description: Discover the four scenarios for upgrading Microsoft SQL Server Mast
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/21/2017"
-ms.prod: sql
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---
@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016"
 > [!IMPORTANT]  
 > -   Back up your database before performing any upgrade.  
 > -   The upgrade process recreates stored procedures and upgrades tables used by [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Any customizations you have made to either of these components may be lost.  
-> -   Model deployment packages can be used only in the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they were created in. You cannot deploy model deployment packages created in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
+> -   Model deployment packages can be used only in the edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they were created in. You cannot deploy model deployment packages created in [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
 > -   After upgrading Data Quality Services and Master Data Services to the latest version of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], any earlier version of the Master Data Services Add-In for Excel will no longer work. You can download the [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Services Add-In for Excel from [Master Data Services Add-in for Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
 ##  <a name="fileLocation"></a> File Location  
@@ -39,10 +39,10 @@ monikerRange: ">=sql-server-2016"
   
 -   In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\110\Master Data Services.  
   
--   In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\Master Data Services.  
+-   In [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\Master Data Services.  
   
 ##  <a name="noengine"></a> Upgrade without Database Engine Upgrade  
- In this scenario you continue to use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a current [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] web application to access the MDS database. After the upgrade, the MDS database can no longer be accessed by the earlier web application.  
+ In this scenario you continue to use [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a current [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] web application to access the MDS database. After the upgrade, the MDS database can no longer be accessed by the earlier web application.  
   
  You can install the current [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and an earlier version of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on the same computer. The files are installed in different locations, as shown in [File Location](#fileLocation).  
   
@@ -69,7 +69,7 @@ monikerRange: ">=sql-server-2016"
   
     2.  In the left pane, click **Database Configuration**.  
   
-    3.  In the right pane, click **Select Database** and specify the information for your [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  database instance.  
+    3.  In the right pane, click **Select Database** and specify the information for your [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  database instance.  
   
     4.  Click **Upgrade Database** to start the **Upgrade Database Wizard**. For more information, see [Upgrade Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
@@ -86,9 +86,9 @@ monikerRange: ">=sql-server-2016"
         -   **Create new site**. A new web application is automatically created when the website is created.  
   
         > [!IMPORTANT]  
-        >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) is available for selection in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
+        >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) is available for selection in the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) and [Remove an Application Pool (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10)).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) and [Remove an Application Pool (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10)).  
   
 4.  Associate the new web application with the upgraded MDS database.  
   
@@ -103,7 +103,7 @@ monikerRange: ">=sql-server-2016"
   
  **To upgrade with Database Engine upgrade**  
   
-1.  **For [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] only**: Open **Control Panel** > **Programs and Features** and uninstall Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **For [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] only**: Open **Control Panel** > **Programs and Features** and uninstall Microsoft [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Upgrade the database engine to [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)]. For more information, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
@@ -140,9 +140,9 @@ monikerRange: ">=sql-server-2016"
 3.  Upgrade the MDS database schema, create a web application, and associate the new web application with the upgraded MDS database. For the instructions, see steps 2 - 4 in [Upgrade without Database Engine Upgrade](#noengine)  
   
 ## Troubleshooting  
- **Issue:** When you open the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
+ **Issue:** When you open the [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] web application, a "client version is not compatible with the database version" error message is displayed.  
   
- **Solution:** This issue occurs when a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Manager web application tries to access a database that has been upgraded to  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] Master Data Services. You must use a  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] web application instead.  
+ **Solution:** This issue occurs when a [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Master Data Manager web application tries to access a database that has been upgraded to  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] Master Data Services. You must use a  or [!INCLUDE[ssSQL16](../../includes/sssql17-md.md)] web application instead.  
   
  This issue may also occur if you did not stop and restart the **MDS Application Pool** in IIS when upgrading the MDS database schema. Restart the **MDS Application Pool** to correct the issue.  
   

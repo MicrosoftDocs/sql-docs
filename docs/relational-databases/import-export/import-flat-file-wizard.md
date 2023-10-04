@@ -4,10 +4,9 @@ description: Import Flat File Wizard is a simple way to copy data from a .csv or
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: "09/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: data-movement
+ms.date: "07/26/2023"
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.importflatfile.f1"
@@ -23,10 +22,6 @@ Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .tx
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
 
 PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so users don't have to.
-
-To further understand the user experience improvement of the Import Flat File Wizard, check out this video:
-
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Prerequisites
 This feature is available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](../../ssms/download-sql-server-management-studio-ssms.md)
@@ -112,6 +107,7 @@ The given value of type String from the data source cannot be converted to type 
 Failed to convert parameter value from a String to a Double. (System.Data)
 ```
 
+Currently, the importer uses encoding based on the system's active code page.  On most machines this defaults to ANSI.
 
 ## Learn More
 

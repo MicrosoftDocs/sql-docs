@@ -1,23 +1,19 @@
 ---
+title: "sp_depends (Transact-SQL)"
 description: "sp_depends (Transact-SQL)"
-title: "sp_depends (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_depends"
-  - "sp_depends_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_depends"
-ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_depends"
+  - "sp_depends_TSQL"
+helpviewer_keywords:
+  - "sp_depends"
+dev_langs:
+  - "TSQL"
 ---
 # sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) and [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -84,7 +80,7 @@ sp_depends [ @objname = ] '<object>'
  The following example lists the database objects that depend on the `Sales.Customer` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Both the schema name and table name are specified.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
@@ -93,7 +89,7 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
  The following example lists the database objects on which the trigger `iWorkOrder` depends.  
   
 ```  
-EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
+EXEC sp_depends @objname = N'AdventureWorks2022.Production.iWorkOrder' ;  
 ```  
   
 ## See Also  

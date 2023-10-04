@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_4186"
 description: "MSSQLSERVER_4186"
-title: "MSSQLSERVER_4186 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "4186 (Database Engine error)"
-ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "4186 (Database Engine error)"
 ---
 # MSSQLSERVER_4186
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +39,7 @@ To prevent nondeterministic behavior, the OUTPUT clause cannot reference a colum
 The following example creates a view that uses a subquery in the select list to define the column `State`. An UPDATE statement then references the `State` column in the OUTPUT clause and fails because ob the subquery in the select list.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW dbo.V1  
 AS  
@@ -65,7 +62,7 @@ GO
 The following example creates a view that uses the data accessing, scalar function `dbo.ufnGetStock` in the select list to define the column `CurrentInventory`. An UPDATE statement then references the `CurrentInventory` column in the OUTPUT clause .  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW Production.ReorderLevels  
 AS  
@@ -87,7 +84,7 @@ Error 4186 can be corrected in one of the following ways:
 -   Use joins instead of subqueries to define the column in the view or function. For example, you can rewrite the view `dbo.V1` as follows.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE VIEW dbo.V1  
     AS  

@@ -4,8 +4,8 @@ description: Become familiar with read-only properties in SQL Server. Examples i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/25/2016"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.serverproperties.setsapassword.f1"

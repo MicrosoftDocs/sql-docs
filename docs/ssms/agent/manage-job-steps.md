@@ -1,13 +1,13 @@
 ---
-description: "Manage Job Steps"
 title: "Manage Job Steps"
-ms.custom: seo-lt-2019
+description: "Manage Job Steps"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "job steps [SQL Server replication]"
   - "job steps [SQL Server Agent]"
   - "jobs [SQL Server Agent], Integration Services package step"
@@ -21,10 +21,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, job steps"
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
-ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Manage Job Steps
@@ -45,7 +41,7 @@ A job step is an action that the job takes on a database or a server. Every job 
   
 -   Replication tasks.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tasks.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
@@ -60,7 +56,7 @@ Because job steps run in the context of a specific [!INCLUDE[msCoName](../../inc
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tasks.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tasks.  
   
 Only job steps that are executed by users who are members of the sysadmin fixed server role can write job step output to operating system files. If job steps are executed by users who are members of the SQLAgentUserRole, SQLAgentReaderRole, or the SQLAgentOperatorRole fixed database roles in the msdb database, then the output from these job steps can be written only to the sysjobstepslogs table.  
   
@@ -107,7 +103,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell s
 ## ActiveX Scripting Job Steps  
   
 > [!IMPORTANT]
-> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
+> The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 When you create an ActiveX scripting job step, you must:  
   
@@ -153,14 +149,14 @@ When replication is set up, you can specify to run the replication agents in one
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports two distinct types of Analysis Services job steps, command job steps, and query job steps.  
   
 ### Analysis Services Command Job Steps  
-When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] command job step, you must:  
+When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] command job step, you must:  
   
 -   Identify the database OLAP server in which to run the job step.  
   
--   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** method. Notice that, while SQL Server Management Studio supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
+-   Type the statement to execute. The statement must be an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** method. The statement may not contain a complete SOAP envelope or an XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** method. Notice that, while SQL Server Management Studio supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not.  
   
 ### Analysis Services Query Job Steps  
-When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] query job step, you must:  
+When you create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] query job step, you must:  
   
 -   Identify the database OLAP server in which to run the job step.  
   

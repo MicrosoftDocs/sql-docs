@@ -1,20 +1,17 @@
 ---
-title: "Using the RenderedOutputFile Class for a Delivery Extension | Microsoft Docs"
+title: "Using the RenderedOutputFile Class for a Delivery Extension"
 description: Learn how delivery extensions can use the RenderedOutputFile class, which stores a rendered report or report resources.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "RenderedOutputFile class"
   - "data streams [Reporting Services]"
   - "delivery extensions [Reporting Services], data streams"
-ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Using the RenderedOutputFile Class for a Delivery Extension
   The <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> class represents a data stream and information about the data stream's associated properties. The **Data** property of the <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> class is used to represent a rendered report or report resource as a **Stream** object.  

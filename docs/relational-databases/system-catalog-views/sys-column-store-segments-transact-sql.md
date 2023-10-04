@@ -4,8 +4,8 @@ description: "sys.column_store_segments returns one row for each column segment 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "column_store_segments"
@@ -18,8 +18,7 @@ dev_langs:
   - "TSQL"
 ---
 # sys.column_store_segments (Transact-SQL)
-
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server 2012 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2012-asdbmi.md)]
 
 Returns one row for each column segment in a columnstore index. There is one column segment per column per rowgroup. For example, a table with 10 rowgroups and 34 columns returns 340 rows.
 
@@ -49,7 +48,7 @@ Returns one row for each column segment in a columnstore index. There is one col
 
 ## Remarks
 
-The columnstore segment encoding type is selected by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses value-based encoding. If data is mostly not distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
+The columnstore segment encoding type is selected by the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] uses value-based encoding. If data is mostly not distinct, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] uses hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
 
 Columnstore segment elimination applies to numeric, date, and time data types, and the datetimeoffset data type with scale less than or equal to two. Beginning in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], segment elimination capabilities extend to string, binary, guid data types, and the datetimeoffset data type for scale greater than two. Segment elimination does not apply to LOB data types such as the (max) data type lengths.
 

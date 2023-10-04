@@ -1,22 +1,19 @@
 ---
-title: "Implementing a Rendering Extension | Microsoft Docs"
+title: "Implementing a Rendering Extension"
 description: Find out how to transform Reporting Services report data and layout information into device-specific formats by implementing rendering extensions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "rendering extensions [Reporting Services]"
   - "custom rendering extensions [Reporting Services]"
   - "transformations [Reporting Services]"
   - "extensions [Reporting Services], rendering"
   - "rendering extensions [Reporting Services], implementing"
-ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Implementing a Rendering Extension
   A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. SQL Server Reporting Services includes six rendering extensions: HTML, Excel, Word, CSV or Text, XML, Image, and PDF. You can create additional rendering extensions to generate reports in other formats.  

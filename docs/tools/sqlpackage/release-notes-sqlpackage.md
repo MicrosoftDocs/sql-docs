@@ -1,14 +1,13 @@
 ---
 title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft SqlPackage.
-ms.custom: "tools|sos"
-ms.date: 09/22/2022
-ms.prod: sql
-ms.reviewer: "llali"
-ms.prod_service: sql-tools
-ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
+ms.reviewer: "llali"
+ms.date: 5/10/2023
+ms.service: sql
+ms.topic: conceptual
+ms.custom: tools|sos
 ---
 # Release notes for SqlPackage
 
@@ -17,14 +16,148 @@ ms.author: drskwier
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
 
+## 162.0.52 SqlPackage
+
+**Release date:** May 11, 2023
+
+|Platform|Download|Version|
+|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236505)|162.0.52|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2236347)|162.0.52|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236426)|162.0.52|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2236425)|162.0.52|
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|SqlPackage now collects usage data, including anonymous feature usage and diagnostic data. For more information, see [Usage data collection](sqlpackage.md#usage-data-collection).|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.0) v5.1.0|
+|Azure Synapse Analytics|Adds support for [DW_COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dw_compatibility_level---auto--10--20--30--40--50--9000-).|
+|ScriptDOM|ScriptDOM is now available as a standalone package on [NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.TransactSql.ScriptDom) and is open source on [GitHub](https://github.com/microsoft/SqlScriptDOM).|
+|System dacpacs|The `master` and `msdb` system dacpacs are now available on NuGet as [Microsoft.SqlServer.Dacpacs.Master](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Master) and [Microsoft.SqlServer.Dacpacs.Msdb](https://www.nuget.org/packages/Microsoft.SqlServer.Dacpacs.Msdb). More information on the system dacpacs and consuming dacpacs as a package reference is available in the [DacFx GitHub repository](https://github.com/microsoft/DacFx).|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+|Azure Synapse Analytics|Fixes an issue where the default command timeout was not set properly when connecting to Azure Synapse Analytics serverless SQL pools.|
+|Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default data and log paths.|
+|Azure Synapse Analytics|Fixes an issue where Azure Synapse Analytics serverless SQL pools would incorrectly determine the default login, user and schema.|
+|Azure SQL Database|Fixes an issue where temporal history retention was not correctly recognized as not configured (null).|
+|Deployment|Fixes an issue where the deployment plan fails to detect a dependency on a table/view in subqueries within FROM VALUES clause. [GitHub issue](https://github.com/microsoft/DacFx/issues/156)|
+|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column.|
+|Deployment|Fixes an issue where deployment would fail when the target database contains a rule bound to a column with a user-defined type. [GitHub issue](https://github.com/microsoft/DacFx/issues/245)|
+|Deployment|Fixes an issue where the retention period on a temporal table would be reset to the default value when another change is made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/258)|
+|Deployment|Fixes an issue where updates to a primary key is not included in the deployment when the table has compression options specified.|
+|Deployment|Fixes an issue where a non-clustered index on a partitioned table is rebuilt even when no changes are made to the table. [GitHub issue](https://github.com/microsoft/DacFx/issues/202)|
+|Deployment|Fixes an issue where ignorecolumnorder property is not honored by a history table when no changes are made to a system-versioned table except the columns are reordered.|
+|Deployment|Fixes an issue where external tables would be dropped and redeployed despite no changes when the table definition contained SQLCMD variables. [GitHub issue](https://github.com/microsoft/DacFx/issues/249)|
+|Export|Fixes an issue where the diagnostic information provided during an export operation incorrectly reports the size of a table in KB instead of Bytes. [GitHub issue](https://github.com/microsoft/DacFx/issues/209)|
+|Import|Fixes an issue where an Azure Active Directory user cannot be created during import to Azure SQL Database, causing the import to fail. [GitHub issue](https://github.com/microsoft/DacFx/issues/260)|
+|Ledger|Fixes an issue where SqlPackage was not correctly identifying the error when the Ledger history table or view have an invalid two-part name.|
+|Permissions|Fixes an issue where permissions assigned to a user in the database model are not recognized, causing the project build or SqlPackage operation to fail.|
+|Query Store|Fixes an issue where the `flush_interval_seconds` [Query Store option](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) was not correctly validated with a minimum value of 60 seconds.|
+|SQL Server 2022|Fixes an issue where the function `DATETRUNC` was not recognized as a built-in function. [Developer Community report](https://developercommunity.visualstudio.com/t/Visual-Studio-build-solution-not-recogni/10333180)|
+|SQL Server 2022|Fixes an issue where the function `DATE_BUCKET` was not recognized as a built-in function.|
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
+## 161.8089.0 SqlPackage
+
+**Release date:** February 13, 2023
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2224909)|161.8089.0|16.1.8089.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2224908)|161.8089.0|16.1.8089.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225106)|161.8089.0|16.1.8089.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2225105)|161.8089.0|16.1.8089.0|
+
+> [!IMPORTANT]
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Deployment|Adds the ability for the `GenerateSmartDefaults` property on publish to populate values from a default constraint when set to `true`. [GitHub issue](https://github.com/microsoft/DacFx/issues/38)|
+|Azure Synapse Analytics|Adds support for [serverless SQL pools](./sqlpackage-for-azure-synapse-analytics.md#support-for-serverless-sql-pools) in Extract and Publish operations.|
+|SQL Server 2022|Adds support for [ordered clustered columnstore indexes](../../relational-databases/indexes/columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).|
+
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+|Deployment|Fixes an issue where publish to SQL on Linux would fail due to the default data and log paths being empty. [GitHub issue](https://github.com/microsoft/DacFx/issues/136)|
+|Deployment|Fixes an issue where publishing an external table with file format changes would result in an error. [GitHub issue](https://github.com/microsoft/DacFx/issues/120)|
+|Deployment|Fixes an issue where publish with a column encrypted with randomized encryption would not fail immediately if the column encryption key (CEK) was inaccessible, delaying the deployment error until the column encryption step.|
+|Refactor|Fixes an issue where a renamed column on a system versioned table would result in the system versioning being turned off and not turned back on. [GitHub issue](https://github.com/microsoft/DacFx/issues/203)|
+|Platform|Fixes an issue where SqlPackage operations would fail on RHEL 9 due to an encryption error. Moves to use the 6.0.10 version of the .NET 6 runtime. [GitHub issue](https://github.com/microsoft/DacFx/issues/168)|
+|Schema compare|Fixes an issue where the `DoNotEvaluateSqlCmdVariables` property for *Publish* and *Script* would result in the SqlCmd variables also not being evaluated on both the source and target instead of only the source.|
+|ScriptDOM|Fixes external table support for `REJECT_SAMPLE_VALUE`.|
+|ScriptDOM|Fixes an issue where compression options could not be applied to a table with a clustered index.|
+|SQL projects|Fixes an issue where valid options for the `QueryStoreFlushInterval` are incorrectly reported as invalid. [Developer Community report](https://developercommunity.visualstudio.com/t/SQL72003:-The-value-300-for-property-Que/10210937)|
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
+## 161.6374.0 SqlPackage
+
+**Release date:** November 9, 2022
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215400)|161.6374.0|16.1.6374.0|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2215326)|161.6374.0|16.1.6374.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215401)|161.6374.0|16.1.6374.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2215501)|161.6374.0|16.1.6374.0|
+
+> [!IMPORTANT]
+> Version 161 of SqlPackage encrypts database connections by default. Previously successful connections with self-signed certificates or without encryption may not connect with v161 without updating the SqlPackage parameters.  For more information, see [https://aka.ms/dacfx-connection](https://aka.ms/dacfx-connection).
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+|Platform|Changes connections to use encryption and not trust the server certificate by default. This is a breaking change for connections using self-signed certificates or without encryption by default.  For more information, see [this dedicated article](https://aka.ms/dacfx-connection).|
+|Platform|References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.0.1) v5.0.1|
+|Platform|SqlPackage is now available for [installation](sqlpackage-download.md) as a `dotnet tool` for Windows, macOS, and Linux platforms.|
+|Always Encrypted|Adds support for VBS (Virtualization-based security) with [secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|
+|Connectivity|Adds support for TDS 8.0 and parameters for `/SourceHostNameInCertificate` and `/TargetHostNameInCertificate` to SqlPackage operations.|
+|Replication|Adds support for [sp_addpublication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md#automatically-handle-conflicts-with-last-write-wins) with peer-to-peer replication.|
+|ScriptDOM|Adds support for IS NOT DISTINCT FROM syntax with predicate subqueries.|
+|Server-level roles|Adds support for additional [fixed server roles](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles-introduced-in-sql-server-2022): MS_DatabaseConnector, MS_LoginManager, MS_DatabaseManager, MS_ServerStateManager, MS_ServerStateReader, MS_ServerPerformanceStateReader, MS_ServerSecurityStateReader, MS_DefinitionReader, MS_PerformanceDefinitionReader, MS_SecurityDefinitionReader.|
+|SQL Server 2022|Adds support for [T-SQL function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): GREATEST(), LEAST(), STRING_SPLIT(), DATETRUNC(), LTRIM(), RTRIM(), and TRIM().|
+|SQL Server 2022|Adds support for [JSON function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): ISJSON(), JSON_PATH_EXISTS(), JSON_OBJECT(), and JSON_ARRAY().|
+|SQL Server 2022|Adds support for [bit manipulation functions associated with SQL Server 2022](../../t-sql/functions/bit-manipulation-functions-overview.md): LEFT_SHIFT(), RIGHT_SHIFT(), BIT_COUNT(), GET_BIT(), and SET_BIT().|
+|SQL Server 2022|Adds support for [time series function changes associated with SQL Server 2022](../../sql-server/what-s-new-in-sql-server-2022.md#language): DATE_BUCKET(), GENERATE_SERIES(), FIRST_VALUE(), and LAST_VALUE().|
+|Statistics|Adds support for [STATISTICS AUTO_DROP option](../../t-sql/statements/create-statistics-transact-sql.md).|
+|XML compression|Adds support for XML compression on [XML indexes](../../relational-databases/xml/xml-indexes-sql-server.md#xml-compression).|
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
 ## 19.2 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|September 22, 2022|19.2|16.0.6296.0|
-|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)|September 22, 2022| 19.2|16.0.6296.0|
-|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)|September 22, 2022| 19.2|16.0.6296.0|
-|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)|September 22, 2022| 19.2|16.0.6296.0|
+**Release date:** September 22, 2022
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2209512)|19.2|16.0.6296.0|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209610)| 19.2|16.0.6296.0|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209513)| 19.2|16.0.6296.0|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2209609)| 19.2|16.0.6296.0|
 
 
 ### Features
@@ -32,11 +165,11 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |
 | Connection pooling | Enables connection pooling for all connections if the environment variable `CONNECTION_POOLING_ENABLED` is set to True.  This is recommended for operations with Azure Active Directory username/password connections to avoid MSAL throttling. |
 | Deployment options | Surfaces friendly names for deployment options in DacFx .NET APIs. |
-| Dynamic Data Masking | Adds support for [granular UNMASK permissions](/sql/relational-databases/security/dynamic-data-masking#granular) in Import/Export and Extract/Publish.|
+| Dynamic Data Masking | Adds support for [granular UNMASK permissions](../../relational-databases/security/dynamic-data-masking.md#granular) in Import/Export and Extract/Publish.|
 | Ledger | Adds SQL Ledger history table in schema model for validation and export/extract, does not import or publish the history table to a database. |
 | Platform | SqlPackage is now built with .NET 6 |
-| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](/sql/relational-databases/security/permissions-database-engine).|
-| XML compression | [XML compression](/sql/t-sql/statements/create-table-transact-sql#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](/sql/relational-databases/xml/xml-data-sql-server). |
+| SQL Server 2022 | Adds support for permissions ALTER LEDGER CONFIGURATION, VIEW PERFORMANCE DEFINITION, VIEW ANY PERFORMANCE DEFINITION. Learn more about the permission definitions available in the [permissions documentation](../../relational-databases/security/permissions-database-engine.md).|
+| XML compression | [XML compression](../../t-sql/statements/create-table-transact-sql.md#xml_compression) support in ScriptDOM, Import/Export, and Extract/Publish. More information on XML data and XML compression is available in the [XML data documentation](../../relational-databases/xml/xml-data-sql-server.md). |
 
 
 ### Fixes
@@ -56,12 +189,14 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 19.1 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|May 24, 2022|19.1|16.0.6161.0|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)|May 24, 2022| 19.1|16.0.6161.0|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)|May 24, 2022| 19.1|16.0.6161.0|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)|May 24, 2022| 19.1|16.0.6161.0|
+**Release date:** May 24, 2022
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2196438)|19.1|16.0.6161.0|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196439)| 19.1|16.0.6161.0|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196335)| 19.1|16.0.6161.0|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2196334)| 19.1|16.0.6161.0|
 
 
 ### Features
@@ -92,18 +227,20 @@ This article lists the features and fixes delivered by the released versions of 
 | :------ | :------ |:------ |
 | Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
 | Deployment | Increased deployment time when deploying using Azure Active Directory user/password authentication due to MSAL throttling. [More Information on GitHub](https://github.com/microsoft/DacFx/issues/92) | Use an alternative authentication method, such as [Azure Active Directory Service Principal](/azure/azure-sql/database/authentication-aad-service-principal)|
-|Deployment|SqlPackage.exe on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
+|Deployment|SqlPackage on .NET Core for Windows, macOS, and Linux fails during a publish operation with an error message "Unrecognized configuration section system.diagnostics" when in-place encryption is used for Always Encrypted with secure enclaves.|Remove the file `sqlpackage.dll.config` from the SqlPackage folder.|
 | ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
 
 
 ## 19.0 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|January 25, 2022|19.0|16.0.5400.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)|January 25, 2022| 19.0|16.0.5400.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)|January 25, 2022| 19.0|16.0.5400.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)|January 25, 2022| 19.0|16.0.5400.1|
+**Release date:** January 25, 2022
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2185764)|19.0|16.0.5400.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185765)| 19.0|16.0.5400.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185670)| 19.0|16.0.5400.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2185669)| 19.0|16.0.5400.1|
 
 
 ### Features
@@ -142,12 +279,14 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.8 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2164920)|October 4, 2021|18.8|15.0.5282.3|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165009)|October 4, 2021| 18.8|15.0.5282.3|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165008)|October 4, 2021| 18.8|15.0.5282.3|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165007)|October 4, 2021| 18.8|15.0.5282.3|
+**Release date:** October 4, 2021
+
+|Platform|Download|Version|Build
+|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2164920)|18.8|15.0.5282.3|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165009)| 18.8|15.0.5282.3|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165008)| 18.8|15.0.5282.3|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165007)| 18.8|15.0.5282.3|
 
 
 ### Features
@@ -168,7 +307,7 @@ This article lists the features and fixes delivered by the released versions of 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Fixed an issue where external user deployment to Managed Instance would fail |
+| Deployment | Fixed an issue where external user deployment to Azure SQL Managed Instance would fail |
 | Deployment | Fix for deployment order involving temporal tables to drop dependencies before turning system versioning off |
 | Deployment | Fix for Always Encrypted deployment bug with error "Invalid object name '#tmpErrors'"  |
 | Export | Validation for SqlPackage parameters ExcludeObjectType(s) and DoNotDropObjectType(s) |
@@ -193,12 +332,9 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.7.1 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2165211)|June 2, 2021|18.7.1|15.0.5164.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165132)|June 2, 2021| 18.7.1|15.0.5164.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165213)|June 2, 2021| 18.7.1|15.0.5164.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2165212)|June 2, 2021| 18.7.1|15.0.5164.1|
+**Release date:** June 2, 2021
+
+**Build:** 15.0.5164.1
 
 ### Features
 | Feature | Details |
@@ -215,12 +351,9 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.7 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2157201)|March 10, 2021|18.7|15.0.5084.2|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157203)|March 10, 2021| 18.7|15.0.5084.2|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157202)|March 10, 2021| 18.7|15.0.5084.2|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2157302)|March 10, 2021| 18.7|15.0.5084.2|
+**Release date:** March 10, 2021
+
+**Build:** 15.0.5084.2
 
 ### Features
 | Feature | Details |
@@ -263,12 +396,9 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.6 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|September 18, 2020|18.6|15.0.4897.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|September 18, 2020| 18.6|15.0.4897.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|September 18, 2020| 18.6|15.0.4897.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|September 18, 2020| 18.6|15.0.4897.1|
+**Release date:** September 18, 2020
+
+**Build:** 15.0.4897.1
 
 ### Features
 | Feature | Details |
@@ -298,26 +428,22 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.5.1 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|June 24, 2020|18.5.1|15.0.4826.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|June 24, 2020| 18.5.1|15.0.4826.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|June 24, 2020| 18.5.1|15.0.4826.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|June 24, 2020| 18.5.1|15.0.4826.1|
+**Release date:** June 24, 2020
+
+**Build:** 15.0.4826.1
+
 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premises | 
 
 ## 18.5 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2128142)|April 28, 2020|18.5|15.0.4769.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128145)|April 28, 2020| 18.5|15.0.4769.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128144)|April 28, 2020| 18.5|15.0.4769.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128143)|April 28, 2020| 18.5|15.0.4769.1|
+**Release date:** April 28, 2020
+
+**Build:** 15.0.4769.1
+
 
 ### Features
 | Feature | Details |
@@ -327,7 +453,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
 | Deployment | Add support for External Data Source (Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
-| Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
+| Deployment | Support Azure SQL Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
 | Deployment | Add support for copy command in Azure Synapse Analytics |
 | Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure Synapse Analytics |
 | .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of SqlPackage |
@@ -349,17 +475,15 @@ This article lists the features and fixes delivered by the released versions of 
 ### Known Issues
 | Feature | Details |
 | :------ | :------ |
-| Deployment |  A regression was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use SqlPackage 18.4 and it will be fixed in the next SqlPackage release. | 
+| Deployment |  A regression was introduced in 18.5 causing there to be an "Incorrect syntax near 'type'" error when deploying a dacpac or importing a bacpac with a user with external login to on premises. Workaround is to use SqlPackage 18.4 and it will be fixed in the next SqlPackage release. | 
 | .NET Core | Importing bacpacs with sensitivity classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next SqlPackage release. |
 
 ## 18.4.1 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2113703)|December 13, 2019|18.4.1|15.0.4630.1|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113705)|December 13, 2019| 18.4.1|15.0.4630.1|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113331)|December 13, 2019| 18.4.1|15.0.4630.1|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113704)|December 13, 2019| 18.4.1|15.0.4630.1|
+**Release date:** December 13, 2019
+
+**Build:** 15.0.4630.1
+
 
 ### Fixes
 | Fix | Details |
@@ -374,12 +498,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.4 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2108813)|October 29, 2019|18.4|15.0.4573.2|
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108815)|October 29, 2019| 18.4|15.0.4573.2|
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108814)|October 29, 2019| 18.4|15.0.4573.2|
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2109019)|October 29, 2019| 18.4|15.0.4573.2|
+**Release date:** October 29, 2019
+
+**Build:** 15.0.4573.2
+
 
 ### Features
 
@@ -389,7 +511,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Platform | SqlPackage .NET Core generally available for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
-| Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
+| Deployment | Add Azure SQL Managed Instance support for Azure Active Directory user and groups. |
 | Deployment | Support the /AccessToken parameter for SqlPackage on .NET Core. |
 
 ### Known Issues 
@@ -410,12 +532,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.3.1 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2102893)|September 13, 2019|18.3.1|15.0.4538.1|
-|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102894)|September 13, 2019| 18.3.1|15.0.4538.1|
-|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102978)|September 13, 2019| 18.3.1|15.0.4538.1|
-|Windows .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2102979)|September 13, 2019| 18.13.1|15.0.4538.1|
+**Release date:** September 13, 2019
+
+**Build:** 15.0.4538.1
+
 
 ### Features
 
@@ -425,7 +545,7 @@ This article lists the features and fixes delivered by the released versions of 
 | Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to SqlPackage. | 
 | Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to SqlPackage. |
 | Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to SqlPackage. |
-| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the SqlPackage.exe binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to SqlPackage where additional directory locations can be specified. |
+| Deployment | Allow deployment contributors to be loaded from additional locations. Deployment contributors will be loaded from the same directory as the target .dacpac being deployed, the Extensions directory relative to the SqlPackage binary, and the /p:AdditionalDeploymentContributorPaths=(STRING) parameter added to SqlPackage where additional directory locations can be specified. |
 | Deployment | Add support for OPTIMIZE_FOR_SEQUENTIAL_KEY. |
 
 ### Fixes
@@ -444,11 +564,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.2 SqlPackage
 
-|Platform|Download|Release date|Version|Build
-|:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2087429)|April 15, 2019|18.2|15.0.4384.2|
-|macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087247)|April 15, 2019 | 18.2 |15.0.4384.2|
-|Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2087431)|April 15, 2019 | 18.2 |15.0.4384.2|
+**Release date:** April 15, 2019
+
+**Build:** 15.0.4384.2
+
 
 ### Features
 
@@ -469,8 +588,10 @@ This article lists the features and fixes delivered by the released versions of 
 
 ## 18.1 SqlPackage
 
-Release date: &nbsp; February 1, 2019  
-Build: &nbsp; 15.0.4316.1  
+**Release date:** February 1, 2019
+
+**Build:** 15.0.4316.1
+
 Preview release.
 
 ### Features
@@ -504,15 +625,16 @@ This release includes cross-platform preview builds of SqlPackage that target .N
 
 ## 18.0 SqlPackage
 
-Release date: &nbsp; October 24, 2018  
-Build: &nbsp; 15.0.4200.1
+**Release date:** October 24, 2018
+
+**Build:** 15.0.4200.1
 
 ### Features
 
 | Feature | Details |
 | :------ | :------ |
 | Deployment | Added support for database compatibility level 150. | 
-| Deployment | Added support for Managed Instances. | 
+| Deployment | Added support for Azure SQL Managed Instances. | 
 | Performance | Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations. | 
 | Security | Added AccessToken command-line parameter to specify an authentication token when connecting to SQL Server. | 
 | Import | Added support to stream BLOB/CLOB data types for imports. | 
@@ -529,8 +651,9 @@ Build: &nbsp; 15.0.4200.1
 
 ## 17.8 SqlPackage
 
-Release date: &nbsp; June 22, 2018  
-Build: &nbsp; 14.0.4079.2
+**Release date:** June 22, 2018
+
+**Build:** 14.0.4079.2
 
 ### Features
 
@@ -548,8 +671,9 @@ Build: &nbsp; 14.0.4079.2
 
 ## 17.4.1 SqlPackage
 
-Release date: &nbsp; January 25, 2018  
-Build: &nbsp; 14.0.3917.1
+**Release date:** January 25, 2018
+
+**Build:** 14.0.3917.1
 
 ### Features
 
@@ -568,8 +692,9 @@ Build: &nbsp; 14.0.3917.1
 
 ## 17.4.0 SqlPackage
 
-Release date: &nbsp; December 12, 2017  
-Build: &nbsp; 14.0.3881.1
+**Release date:** December 12, 2017
+
+**Build:** 14.0.3881.1
 
 ### Features
 

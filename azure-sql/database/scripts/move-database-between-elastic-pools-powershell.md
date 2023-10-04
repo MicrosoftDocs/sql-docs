@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurepowershell
 ms.devlang: PowerShell
 ---
 

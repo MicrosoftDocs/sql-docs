@@ -1,14 +1,14 @@
 ---
+title: "Avg (MDX)"
 description: "Avg (MDX)"
-title: "Avg (MDX) | Microsoft Docs"
-ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # Avg (MDX)
 

@@ -1,19 +1,16 @@
 ---
+title: "Set Permissions for Report Server Items on a SharePoint Site"
 description: "Set Permissions for Report Server Items on a SharePoint Site"
-title: "Set Permissions for Report Server Items on a SharePoint Site | Microsoft Docs"
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "permissions [Reporting Services], SharePoint integrated mode"
-  - "SharePoint integration [Reporting Services], permissions"
-ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "permissions [Reporting Services], SharePoint integrated mode"
+  - "SharePoint integration [Reporting Services], permissions"
 ---
 # Set Permissions for Report Server Items on a SharePoint Site
   If default security settings do not provide the level of access that you require, you can create new permission levels to provide access to specific report server items or operations. Custom security settings can be useful if you want to restrict access to a particular report.  

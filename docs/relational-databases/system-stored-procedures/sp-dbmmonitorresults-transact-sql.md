@@ -1,31 +1,27 @@
 ---
+title: "sp_dbmmonitorresults (Transact-SQL)"
 description: "sp_dbmmonitorresults (Transact-SQL)"
-title: "sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorresults"
-  - "sp_dbmmonitorresults_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorresults"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorresults"
+  - "sp_dbmmonitorresults_TSQL"
+helpviewer_keywords:
+  - "sp_dbmmonitorresults"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns status rows for a monitored database from the status table in which database mirroring monitoring history is stored and allows you to choose whether the procedure obtains the latest status beforehand.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -108,7 +104,7 @@ sp_dbmmonitorresults database_name
   
 ```  
 USE msdb;  
-EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
+EXEC sp_dbmmonitorresults AdventureWorks2022, 2, 0;  
 ```  
   
 ## See Also  

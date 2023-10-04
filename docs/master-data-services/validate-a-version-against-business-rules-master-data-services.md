@@ -1,25 +1,21 @@
 ---
-description: "Validate a Version against Business Rules (Master Data Services)"
 title: Validate a Version against Business Rules
-ms.custom: ""
+description: "Validate a Version against Business Rules (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "validating versions [Master Data Services]"
   - "validating versions [Master Data Services], about validating versions"
   - "versions [Master Data Services], validating"
   - "business rules [Master Data Services], applying to all members"
-ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Validate a Version against Business Rules (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], validate a version to apply business rules to all members in the model version.  
   

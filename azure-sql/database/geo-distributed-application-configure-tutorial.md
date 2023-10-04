@@ -1,17 +1,17 @@
 ---
 title: Implement a geo-distributed solution
 description: Learn to configure your database in Azure SQL Database and client application for failover to a replicated database, and test failover.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
 ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
-  - "devx-track-azurepowershell"
+  - sqldbrb=1
+  - devx-track-azurecli
+  - devx-track-azurepowershell
 ---
 # Tutorial: Implement a geo-distributed database (Azure SQL Database)
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -43,8 +43,6 @@ To complete the tutorial, make sure you've installed the following items:
 
   > [!NOTE]
   > The tutorial uses the *AdventureWorksLT* sample database.
-
-- Java and Maven, see [Build an app using SQL Server](https://www.microsoft.com/sql-server/developer-get-started/), highlight **Java** and select your environment, then follow the steps.
 
 > [!IMPORTANT]
 > Be sure to set up firewall rules to use the public IP address of the computer on which you're performing the steps in this tutorial. Database-level firewall rules will replicate automatically to the secondary server.

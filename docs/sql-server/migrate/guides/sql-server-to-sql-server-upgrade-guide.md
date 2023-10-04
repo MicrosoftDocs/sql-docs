@@ -1,13 +1,13 @@
 ---
 title: Upgrade SQL Server to SQL Server 2019
 description: Step-by-step guidance for modernizing your data assets
-ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: migration-guide
-ms.topic: how-to
-author: MashaMSFT
-ms.author: mathoma
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
+ms.date: 07/25/2022
+ms.service: sql
+ms.subservice: migration-guide
+ms.topic: how-to
 ---
 
 # Upgrade SQL Server to SQL Server
@@ -33,7 +33,7 @@ Confirm source environment is supported  and you've addressed any prerequisites,
 
 ### Discover
 
-The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization’s SQL instances together with the version and features in use.
+The discover stage identifies existing data sources and details about the features that are being used. It's helpful to get a better understanding of and plan for the migration. This process involves scanning the network to identify all your organization's SQL instances together with the version and features in use.
 
 To use the MAP Toolkit to create an inventory scan, complete the following steps.
 
@@ -105,7 +105,7 @@ To use DMA to create an assessment, complete the following steps.
    1. Select the New (+) icon, select the **Assessment** project type, specify a project name, select **SQL Server** as the source and target, and then select **Create**.
 
       ![New Assessment](./media/sql-server-to-sql-server-upgrade-guide/dma-new-project.png)
-   1. Select the target SQL Server version that you plan to migrate to and against which you need to run an assessment, select one or both of the assessment report types (**Compatibility Issues** and **New features’ recommendation**), and then select **Next**.
+   1. Select the target SQL Server version that you plan to migrate to and against which you need to run an assessment, select one or both of the assessment report types (**Compatibility Issues** and **New features' recommendation**), and then select **Next**.
 
       ![Report Types](./media/sql-server-to-sql-server-upgrade-guide/dma-assessment.png)
 
@@ -172,7 +172,7 @@ which the experiment was run displays.
 
       > [!NOTE]
       > By default, threshold is set to 5%; any performance improvement that is \>= 5% is 
-categorized as ‘Improved’. The drop-down selector allows you to evaluate the report using different performance thresholds.
+categorized as 'Improved'. The drop-down selector allows you to evaluate the report using different performance thresholds.
 
 
    1. Select the individual slices of the pie chart to view detailed metrics on performance.
@@ -202,21 +202,14 @@ Preserve backup logs, maintenance plans, and other automated tasks, including jo
 
 View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list.
 
-Additional considerations may be needed 
-based on the complexity of your data and 
-environment.
+Additional considerations may be needed based on the complexity of your data and environment.
 
-[Troubleshoot orphaned users.](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
-
-[Migrating-triggers.](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
-
-[Migrate system objects using scripts wizard.](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
-
-[Mirrored backup media sets.](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
-
-[Backup overview of SQL Server.](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
-
-[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-2019.md)
+- [Troubleshoot orphaned users](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+- [Migrating Triggers](../../../relational-databases/in-memory-oltp/migrating-triggers.md)
+- [Generate and Publish Scripts Wizard](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
+- [Mirrored Backup Media Sets](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
+- [Backup Overview (SQL Server)](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
+- [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md)
 
 ### Migrate schema and data
 
@@ -230,7 +223,7 @@ To use DMA to create a migration project, complete the following steps.
    1. Select the New icon, select the **Migration** project type, select **SQL Server** as source and target types, and then select **Create**.
 
       ![New Migration](./media/sql-server-to-sql-server-upgrade-guide/dma-migrate.png)
-   1. Provide source and target SQL server connection details, and then select **Next**.
+   1. Provide source and target SQL Server connection details, and then select **Next**.
 
       ![Source & Target details](./media/sql-server-to-sql-server-upgrade-guide/dma-source-target.png)
    1. Select databases from the source to migrate, and then specify the **Shared location accessible by source and target SQL servers for backup operation**.
@@ -271,6 +264,6 @@ After the data is migrated to the target environment, all the applications that 
 For a matrix of Microsoft and third-party services and tools that are available to assist you 
 with various database and data migration scenarios and specialty tasks, see [Services and tools for data migration](/azure/dms/dms-tools-matrix).
 
-For other migration guides see [Azure Database Migration Guide](https://datamigration.microsoft.com).
+For other migration guides see [Azure Database Migration Guide](/data-migration/).
 
 For migration videos, see [Overview of the migration journey](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).

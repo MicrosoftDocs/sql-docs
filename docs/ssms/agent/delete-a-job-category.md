@@ -1,22 +1,18 @@
 ---
-description: "Delete a Job Category"
 title: "Delete a Job Category"
-ms.custom: seo-lt-2019
+description: "Delete a Job Category"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, categories"
   - "deleting job category"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
   - "removing job category"
-ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete a Job Category
@@ -59,7 +55,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To delete a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

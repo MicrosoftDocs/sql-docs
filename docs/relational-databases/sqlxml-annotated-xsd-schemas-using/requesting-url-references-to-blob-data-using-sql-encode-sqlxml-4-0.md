@@ -4,12 +4,9 @@ description: "Learn how to request an URL reference to BLOB data by specifying t
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
-ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requesting URL References to BLOB Data Using sql:encode (SQLXML 4.0)

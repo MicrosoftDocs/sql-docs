@@ -1,11 +1,11 @@
 ---
 title: "DBCC FREESYSTEMCACHE (Transact-SQL)"
-description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
+description: "DBCC FREESYSTEMCACHE releases all unused cache entries from all caches."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/08/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 12/05/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "FREESYSTEMCACHE_TSQL"
@@ -28,14 +28,14 @@ dev_langs:
 
 Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
 DBCC FREESYSTEMCACHE
-    ( 'ALL' [, pool_name ] )
-    [WITH
+    ( 'ALL' [ , pool_name ] )
+    [ WITH
     { [ MARK_IN_USE_FOR_REMOVAL ] , [ NO_INFOMSGS ]  }
     ]
 ```
@@ -44,11 +44,11 @@ DBCC FREESYSTEMCACHE
 
 ## Arguments
 
-#### ( 'ALL' [, *pool_name* ] )
+#### ( 'ALL' [ , *pool_name* ] )
 
 - ALL
 
-  Specifies all supported caches.  
+  Specifies all supported caches.
 
 - *pool_name*
 

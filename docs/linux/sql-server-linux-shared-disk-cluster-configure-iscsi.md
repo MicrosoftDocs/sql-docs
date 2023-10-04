@@ -1,14 +1,15 @@
 ---
 title: Configure iSCSI FCI storage  - SQL Server on Linux
-description: Learn to configure a failover cluster instance (FCI) using iSCSI for SQL Server on Linux. 
-ms.custom: seo-lt-2019
-author: VanMSFT
-ms.author: vanto
+description: Learn to configure a failover cluster instance (FCI) using iSCSI for SQL Server on Linux.
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 06/30/2020
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 
@@ -359,7 +360,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
     ```
 
-18.	Reboot the server.
+18.	Restart the server.
 
 19.	On another server that will participate in the FCI, perform Steps 1 - 6. This will present the iSCSI target to the SQL Server. 
  
@@ -392,9 +393,9 @@ You are now ready to configure the FCI.
 | Red Hat Enterprise Linux with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
 | SUSE Linux Enterprise Server with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
-## Next steps
+## Related content
 
-[Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

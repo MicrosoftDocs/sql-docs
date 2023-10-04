@@ -4,9 +4,8 @@ description: MSagent_parameters (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSagent_parameters_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSagent_parameters system table"
 dev_langs:
   - "TSQL"
-ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 ---
 # MSagent_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

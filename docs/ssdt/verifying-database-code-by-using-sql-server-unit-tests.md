@@ -1,24 +1,21 @@
 ---
 title: Verifying Database Code by Using SQL Server Unit Tests
 description: Learn about SQL Server unit tests. See which Visual Studio editions provide support for the tests, and view resources on using tests to verify database code.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Verifying Database Code by Using SQL Server Unit Tests
 
 You can use SQL Server unit tests to establish a baseline state for your database and then to verify any subsequent changes that you make to database objects.  
   
-To establish a baseline state for a database, you create a test project and write sets of Transact\-SQL that operate on your database objects. By using these tests, you can verify in an isolated development environment whether those objects function as expected. SQL Server unit testing works well in combination with offline database development using SQL Server database projects (see [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) for more information). Once you have a baseline set of SQL Server unit tests, you can use these tests to verify that the database is working correctly before checking in changes to version control.  
+To establish a baseline state for a database, you create a test project and write sets of Transact-SQL that operate on your database objects. By using these tests, you can verify in an isolated development environment whether those objects function as expected. SQL Server unit testing works well in combination with offline database development using SQL Server database projects (see [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) for more information). Once you have a baseline set of SQL Server unit tests, you can use these tests to verify that the database is working correctly before checking in changes to version control.  
   
-You can create tests that verify changes to any database object. In addition, you can automatically generate stubs of Transact\-SQL code that test database functions, triggers, and stored procedures.  
+You can create tests that verify changes to any database object. In addition, you can automatically generate stubs of Transact-SQL code that test database functions, triggers, and stored procedures.  
   
 > [!NOTE]  
 > You can create and run SQL Server unit tests without having a database project open. However, if you want to auto-generate test scripts to test specific database objects from your project, you must open the database project that contains the objects that you want to test.  

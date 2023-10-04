@@ -5,7 +5,7 @@ author: tdoshin
 ms.author: timioshin
 ms.reviewer: maghan
 ms.date: "10/4/2021"
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

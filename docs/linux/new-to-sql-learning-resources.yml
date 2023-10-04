@@ -6,7 +6,7 @@ summary: Tutorials, quickstarts, and other educational resources meant to teach 
 metadata:
   title: "New to SQL Server: Learning resources" 
   description: A collection of resources meant to teach you to use SQL Server on Linux for Linux users. 
-  ms.prod: sql
+  ms.service: sql
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
@@ -44,7 +44,7 @@ landingContent:
     linkLists:
     - linkListType: learn
       links:
-      - text: Redhat
+      - text: Red Hat
         url: quickstart-install-connect-red-hat.md
       - text: SUSE
         url: quickstart-install-connect-suse.md

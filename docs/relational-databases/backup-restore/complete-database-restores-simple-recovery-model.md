@@ -1,22 +1,18 @@
 ---
 title: "Restore database - simple recovery model"
 description: Learn about a complete database restore in SQL Server that restores all data to the point in time that the backup was made.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "complete database restores"
   - "database restores [SQL Server], complete database"
   - "restoring databases [SQL Server], complete database"
   - "simple recovery model [SQL Server]"
   - "restoring [SQL Server], database"
-ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Complete Database Restores (Simple Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,25 +68,25 @@ ms.author: mathoma
 ```  
 USE master;  
 --Make sure the database is using the simple recovery model.  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY SIMPLE;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY SIMPLE;  
 GO  
--- Back up the full AdventureWorks2012 database.  
-BACKUP DATABASE AdventureWorks2012   
-TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'   
+-- Back up the full AdventureWorks2022 database.  
+BACKUP DATABASE AdventureWorks2022   
+TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'   
   WITH FORMAT;  
 GO  
 --Create a differential database backup.  
-BACKUP DATABASE AdventureWorks2012   
-TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'  
+BACKUP DATABASE AdventureWorks2022   
+TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'  
    WITH DIFFERENTIAL;  
 GO  
 --Restore the full database backup (from backup set 1).  
-RESTORE DATABASE AdventureWorks2012   
-FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'   
+RESTORE DATABASE AdventureWorks2022   
+FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'   
    WITH FILE=1, NORECOVERY;  
 --Restore the differential backup (from backup set 2).  
-RESTORE DATABASE AdventureWorks2012   
-FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'   
+RESTORE DATABASE AdventureWorks2022   
+FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'   
    WITH FILE=2, RECOVERY;  
 GO  
 ```  

@@ -1,14 +1,14 @@
 ---
-title: "Accessing the SOAP API | Microsoft Docs"
+title: "Accessing the SOAP API"
 description: The Report Server Web service uses SOAP over HTTP and acts as a communications interface between clients and the report server. Use WSDL to call the service.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "XML Web service [Reporting Services], WSDL"
   - "Web service [Reporting Services], SOAP"
   - "calling Web service"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
   - "Report Server Web service, WSDL"
   - "referencing WSDL"
-ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Accessing the SOAP API
   The Report Server Web service uses Simple Object Access Protocol (SOAP) over HTTP and acts as a communications interface between client programs and the report server. The Web service provides two endpoints - one for report execution and one for report management - and consists of methods and a set of complex type objects that you can use to access the complete functionality of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To call the service, you must reference the Reporting Services Web Services Description Language (WSDL).  
@@ -32,7 +29,7 @@ ms.author: maggies
  The Report Server Web services are exposed in three different endpoints. The name of the WSDL file is different for each endpoint. The <xref:ReportService2010> endpoint contains methods for managing objects in a Report Server in either native or SharePoint integrated mode. The WSDL for this endpoint is accessed through `ReportService2010.asmx?wsdl.`  
   
 > [!NOTE]  
->  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
+>  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
   
 -   The <xref:ReportExecution2005> endpoint allows developers to programmatically process and render reports in a Report Server. The WSDL for this endpoint is accessed through `ReportExecution2005.asmx?wsdl`.  
   

@@ -1,18 +1,15 @@
 ---
+title: "GetReportServerUrls Method (WMI MSReportServer_Instance)"
 description: "GetReportServerUrls Method (WMI MSReportServer_Instance)"
-title: "GetReportServerUrls Method (WMI MSReportServer_Instance) | Microsoft Docs"
-ms.date: 06/09/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "GetReportServerUrls method"
-ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/09/2016
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "GetReportServerUrls method"
 ---
 # MSReportServer_Instance Methods - GetReportServerUrls
   Returns a list of URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  

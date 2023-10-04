@@ -4,9 +4,8 @@ description: sys.xml_schema_wildcards (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_wildcards"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.xml_schema_wildcards catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 ---
 # sys.xml_schema_wildcards (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

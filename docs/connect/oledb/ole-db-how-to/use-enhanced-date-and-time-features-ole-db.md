@@ -4,8 +4,8 @@ description: Learn how to use the date/time features date, time, datetime2, and 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Use Enhanced Date and Time Features (OLE DB)
@@ -13,9 +13,9 @@ ms.topic: "reference"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This sample shows how to use the date/time features that were introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. The sample uses the four new date and time types (**date**, **time**, **datetime2**, and **datetimeoffset**) to execute commands with parameters and retrieve rowset results.  
+  This sample shows how to use the date/time features that were introduced in [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)]. The sample uses the four new date and time types (**date**, **time**, **datetime2**, and **datetimeoffset**) to execute commands with parameters and retrieve rowset results.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+  [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  

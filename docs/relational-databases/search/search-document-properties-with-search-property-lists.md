@@ -1,12 +1,14 @@
 ---
-description: "Search Document Properties with Search Property Lists"
 title: "Search document properties with search property lists"
+description: "Search Document Properties with Search Property Lists"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "full-text search [SQL Server], properties"
   - "search property lists [SQL Server]"
@@ -14,12 +16,7 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], search property lists"
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
-ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Search Document Properties with Search Property Lists
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -162,7 +159,7 @@ SELECT column_name FROM table_name
  For example, the following query searches on an indexed property, `Title`, in the `Document` column of the `Production.Document` table of the `AdventureWorks` database. The query returns only documents whose `Title` property contains the string `Maintenance` or `Repair`  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 SELECT Document FROM Production.Document  
   WHERE CONTAINS ( PROPERTY ( Document, 'Title' ), 'Maintenance OR Repair')  

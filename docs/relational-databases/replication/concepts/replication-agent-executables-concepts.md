@@ -1,22 +1,19 @@
 ---
+title: "Replication Agent Executables Concepts"
 description: "Replication Agent Executables Concepts"
-title: "Replication Agent Executables Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "programming interfaces [SQL Server replication]"
   - "programming [SQL Server replication], agents"
   - "replication [SQL Server], agents and profiles"
   - "agents [SQL Server replication], executables"
   - "command prompt [SQL Server replication]"
-ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Agent Executables Concepts
@@ -56,7 +53,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ```  
 REM -- Declare variables  
 SET Publisher=%InstanceName%;  
-SET PublicationDB=AdventureWorks2012;   
+SET PublicationDB=AdventureWorks2022;   
 SET Publication=AdvWorksSalesOrdersMerge;   
   
 REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersMerge.  
@@ -73,8 +70,8 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
 REM -- Declare the variables.  
 SET Publisher=%instancename%;  
 SET Subscriber=%instancename%;  
-SET PublicationDB=AdventureWorks2012;  
-SET SubscriptionDB=AdventureWorks2012Replica;   
+SET PublicationDB=AdventureWorks2022;  
+SET SubscriptionDB=AdventureWorks2022Replica;   
 SET Publication=AdvWorksProductsTran;  
   
 REM -- Start the Distribution Agent with four subscription streams.  
@@ -93,8 +90,8 @@ REM -- The following command must be supplied without line breaks.
 REM -- Declare the variables.  
 SET Publisher=%instancename%;  
 SET Subscriber=%instancename%;  
-SET PublicationDB=AdventureWorks2012;  
-SET SubscriptionDB=AdventureWorks2012Replica;   
+SET PublicationDB=AdventureWorks2022;  
+SET SubscriptionDB=AdventureWorks2022Replica;   
 SET Publication=AdvWorksSalesOrdersMerge;  
   
 REM --Start the Merge Agent with concurrent upload and download processes.  

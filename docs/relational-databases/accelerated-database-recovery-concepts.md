@@ -1,28 +1,28 @@
 ---
-description: "Accelerated database recovery"
 title: "Accelerated database recovery"
-ms.date: 07/14/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
-ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-helpviewer_keywords: 
-  - "accelerated database recovery [SQL Server], recovery-only"
-  - "database recovery [SQL Server]"
+description: "Accelerated database recovery"
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee, wiassaf
+ms.date: 02/28/2023
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+helpviewer_keywords:
+  - "accelerated database recovery [SQL Server], recovery-only"
+  - "database recovery [SQL Server]"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Accelerated database recovery
 
-[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2019, ASDB, ASDBMI, ASDW](../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
-Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is introduced in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and improved in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)].
+Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. 
 
-ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. For more about ADR in Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
+ADR was introduced in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and improved in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]. ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and can't be disabled. For more about ADR in Azure SQL, see [Accelerated Database Recovery in Azure SQL](/azure/azure-sql/accelerated-database-recovery).
+
+This article provides an overview of the ADR feature. To work with ADR, review [Manage accelerated database recovery](accelerated-database-recovery-management.md). 
+
 
 ## Overview
 
@@ -30,7 +30,7 @@ The primary benefits of ADR are:
 
 - **Fast and consistent database recovery**
 
-  With ADR, long running transactions do not impact the overall recovery time, enabling fast and consistent database recovery irrespective of the number of active transactions in the system or their sizes.
+  With ADR, long running transactions don't impact the overall recovery time, enabling fast and consistent database recovery irrespective of the number of active transactions in the system or their sizes.
 
 - **Instantaneous transaction rollback**
 
@@ -62,14 +62,14 @@ Based on this design, the time it takes the database engine to recover from an u
 
 Also, canceling, or rolling back, a large transaction based on this design can also take a long time as it is using the same undo recovery phase as described above.
 
-In addition, the database engine cannot truncate the transaction log when there are long running transactions because their corresponding log records are needed for the recovery and rollback processes. As a result, some transaction logs grow very large and consume huge amounts of drive space.
+In addition, the database engine can't truncate the transaction log when there are long running transactions because their corresponding log records are needed for the recovery and rollback processes. As a result, some transaction logs grow very large and consume huge amounts of drive space.
 
 ## The accelerated database recovery process
 
 ADR addresses the above issues by completely redesigning the database engine recovery process to:
 
-- Make it constant time/instant by avoiding having to scan the log from/to the beginning of the oldest active transaction. With ADR, the transaction log is only processed from the last successful checkpoint (or oldest dirty page log sequence number (LSN)). As a result, recovery time is not impacted by long running transactions.
-- Minimize the required transaction log space since there is no longer a need to process the log for the whole transaction. As a result, the transaction log can be truncated aggressively as checkpoints and backups occur.
+- Make it constant time/instant by avoiding having to scan the log from/to the beginning of the oldest active transaction. With ADR, the transaction log is only processed from the last successful checkpoint (or oldest dirty page log sequence number (LSN)). As a result, recovery time isn't impacted by long running transactions.
+- Minimize the required transaction log space since there's no longer a need to process the log for the whole transaction. As a result, the transaction log can be truncated aggressively as checkpoints and backups occur.
 
 At a high level, ADR achieves fast database recovery by versioning all physical database modifications and only undoing logical operations, which are limited and can be undone almost instantly. Any transactions that were active at the time of a crash are marked as aborted and, therefore, any versions generated by these transactions can be ignored by concurrent user queries.
 
@@ -79,7 +79,7 @@ The ADR recovery process has the same three phases as the current recovery proce
 
 - **Analysis phase**
 
-  The process remains the same as today with the addition of reconstructing the SLOG (system log stream) and copying log records for non-versioned operations.
+  The process remains the same as today with the addition of reconstructing the SLOG (system log stream) and copying log records for nonversioned operations.
   
 - **Redo** phase
 
@@ -94,7 +94,7 @@ The ADR recovery process has the same three phases as the current recovery proce
      
 - **Undo phase**
 
-   The undo phase with ADR completes almost instantaneously by using SLOG to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
+   The undo phase with ADR completes almost instantaneously by using SLOG to undo nonversioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
 
 You can also watch this eight-minute video that explains Accelerated Database Recovery:
 
@@ -106,7 +106,7 @@ The four key components of ADR are:
 
 - **Persisted version store (PVS)**
 
-  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There is one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], there is one PVS cleaner thread per database.
+  The persisted version store is a database engine mechanism for persisting the row versions generated in the database itself instead of the traditional `tempdb` version store. PVS enables resource isolation and improves availability of readable secondaries. There's one PVS thread per instance in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]. Starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], SQL Server has one PVS cleaner thread per database.
 
 - **Logical Revert**
 
@@ -118,17 +118,17 @@ The four key components of ADR are:
 
 - **SLOG**
 
-  The SLOG is a secondary in-memory log stream that stores log records for non-versioned operations (such as metadata cache invalidation, lock acquisitions, and so on). The SLOG is:
+  The SLOG is a secondary in-memory log stream that stores log records for nonversioned operations (such as metadata cache invalidation, lock acquisitions, and so on). The SLOG is:
 
   - Low volume and in-memory
   - Persisted on disk by being serialized during the checkpoint process
   - Periodically truncated as transactions commit
-  - Accelerates redo and undo by processing only the non-versioned operations  
+  - Accelerates redo and undo by processing only the nonversioned operations  
   - Enables aggressive transaction log truncation by preserving only the required log records
 
 - **Cleaner**
 
-  The cleaner is the asynchronous process that wakes up periodically and cleans page versions that are not needed.
+  The cleaner is the asynchronous process that wakes up periodically and cleans page versions that aren't needed.
 
 ## ADR improvements in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]
 
@@ -136,9 +136,9 @@ There are several improvements to address persistent version store (PVS) storage
 
 - **User transaction cleanup** 
 
-  Clear pages that could not be cleaned by the regular process due to lock failure. 
+  Clear pages that couldn't be cleaned by the regular process due to lock failure. 
 
-  This feature allows user transactions to run cleanup on pages that could not be addressed by the regular cleanup process due to table level lock conflicts. This improvement will help ensure that the ADR cleanup process does not fail indefinitely because user workloads cannot acquire table level locks.
+  This feature allows user transactions to run cleanup on pages that couldn't be addressed by the regular cleanup process due to table level lock conflicts. This improvement helps ensure that the ADR cleanup process doesn't fail indefinitely because user workloads can't acquire table level locks.
 
 - **Reducing memory footprint for PVS page tracker**
   
@@ -150,26 +150,21 @@ There are several improvements to address persistent version store (PVS) storage
  
 - **Transaction-level persisted version store (PVS)** 
   
-  This improvement allows ADR to clean up versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup cannot complete a successful sweep in order to trim the aborted transaction map. 
+  This improvement allows ADR to clean up versions belonging to committed transactions independent of whether there are aborted transactions in the system. With this improvement persisted version store (PVS) pages can be deallocated, even if the cleanup can't complete a successful sweep in order to trim the aborted transaction map. 
   
   The result of this improvement is reduced persisted version store (PVS) growth even if ADR cleanup is slow or fails.
- 
+
 - **Multi-threaded version cleanup**  
   
-  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance. 
+  In [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], the cleanup process is single threaded within a SQL Server instance.
   
-  In [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], CTP 2.0, you can also enable multi-threaded version cleanup at the database level with trace flag 3515. This allows multiple threads for cleanup per database. This improvement is valuable when you have multiple large databases.
+  Beginning with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)], this process uses multi-threaded version cleanup. This allows multiple databases in the same SQL Server instance to be cleaned in parallel. This improvement is valuable when you have multiple large databases.
 
-  To enable trace flag 3515 for the instance, run the following command:
+  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`. The thread count is capped at the number of cores for the instance.
 
-   ```sql
-   DBCC TRACEON(3515, -1)
-   GO 
-   ```
+  As a best practice, we recommend using the same number of ADR cleaner threads as the number of your databases. For instance, if you configure the `ADR Cleaner Thread Count` to be `4` on a SQL Server instance with two databases, the ADR cleaner will still only allocate one thread per database, leaving the remaining two threads idle.
 
-  To adjust the number of threads for version cleanup scalability, set `ADR Cleaner Thread Count` with `sp_configure`.   
-
-  The example below changes the thread count to 4: 
+  The example below changes the thread count to `4`:
 
   ```sql
   EXEC sp_configure 'ADR Cleaner Thread Count', '4'
@@ -182,7 +177,7 @@ There are several improvements to address persistent version store (PVS) storage
 
 ## Best practices and guidance
 
-For guidance on workloads that are and are not recommended for ADR, see [Manage accelerated database recovery](accelerated-database-recovery-management.md).
+For guidance on workloads that are and aren't recommended for ADR, see [Manage accelerated database recovery](accelerated-database-recovery-management.md).
 
 ## Next steps 
 

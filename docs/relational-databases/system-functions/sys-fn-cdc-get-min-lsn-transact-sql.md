@@ -1,33 +1,29 @@
 ---
+title: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
 description: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
-title: "sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_get_min_lsn"
   - "fn_cdc_get_min_lsn"
   - "fn_cdc_get_min_lsn_TSQL"
   - "sys.fn_cdc_get_min_lsn_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_min_lsn"
   - "sys.fn_cdc_get_min_lsn"
-ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the start_lsn column value for the specified capture instance from the [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) system table. This value represents the low endpoint of the validity interval for the capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +63,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
  The following example uses the minimum LSN value returned by `sys.fn_cdc_get_min_lsn` to verify that the proposed low endpoint for a change data query is valid for the current timeline for the capture instance `HumanResources_Employee`. This example assumes that the previous high endpoint LSN for the capture instance was saved and is available to set the `@save_to_lsn` variable. For the purposes of this example, `@save_to_lsn` is set to 0x000000000000000000 to force the error-handling section to run.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @min_lsn binary(10), @from_lsn binary(10),@save_to_lsn binary(10), @to_lsn binary(10);  
 -- Sets @save_to_lsn to the previous high endpoint saved from the last change data request.  

@@ -1,23 +1,20 @@
 ---
-title: "URL Access | Microsoft Docs"
+title: "URL Access"
 description: Learn how URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "URL access [Reporting Services]"
   - "links [Reporting Services], URL access"
   - "URL access [Reporting Services], about URL access"
   - "parameters [Reporting Services], URL access"
   - "report servers [Reporting Services], URL access"
   - "hyperlinks [Reporting Services]"
-ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: maggiesMSFT
-ms.author: maggies
 ---
 # URL Access (SSRS)
   URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You may have viewed the report using a specific set of report parameter values, or you may have been viewing a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others to access your report in the same manner in the browser.  
@@ -75,13 +72,13 @@ https://myspsite/subsite/_vti_bin/reportserver
  The path of the catalog item. For native mode, it is the relative path of the item in the report server database, beginning with a slash (**/**). For example:  
   
 ```  
-/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
+/AdventureWorks2022/Employee_Sales_Summary_2022  
 ```  
   
  For SharePoint integrated mode, it is the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
   
 ```  
-https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl  
 ```  
   
  **&**  

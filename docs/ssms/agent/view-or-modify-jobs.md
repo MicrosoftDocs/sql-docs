@@ -1,13 +1,13 @@
 ---
-description: "View or Modify Jobs"
 title: "View or Modify Jobs"
-ms.custom: seo-lt-2019
+description: "View or Modify Jobs"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], modifying"
   - "jobs [SQL Server Agent], viewing"
   - "modifying jobs"
@@ -15,10 +15,6 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "SQL Server Agent jobs, modifying"
   - "displaying jobs"
-ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # View or Modify Jobs
@@ -60,11 +56,11 @@ Members of the **sysadmin** fixed server role can view the definition or history
   
 |Description|Topic|  
 |-|-|  
-|Describes how to view [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[View a Job](../../ssms/agent/view-a-job.md)|  
-|Describes how to view the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
-|Describes how to delete the contents of the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
-|Describes how to set size limits for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history logs.|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
-|Describes how to change the properties of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
+|Describes how to view [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[View a Job](../../ssms/agent/view-a-job.md)|  
+|Describes how to view the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[View the Job History](../../ssms/agent/view-the-job-history.md)|  
+|Describes how to delete the contents of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[Clear the Job History Log](../../ssms/agent/clear-the-job-history-log.md)|  
+|Describes how to set size limits for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history logs.|[Resize the Job History Log](../../ssms/agent/resize-the-job-history-log.md)|  
+|Describes how to change the properties of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[Modify a Job](../../ssms/agent/modify-a-job.md)|  
   
 ## See Also  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  

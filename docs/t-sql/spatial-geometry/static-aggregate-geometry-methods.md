@@ -1,20 +1,16 @@
 ---
+title: "Static Aggregate Geometry Methods"
 description: "Static Aggregate Geometry Methods"
-title: "Static Aggregate Geometry Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Aggregate Geometry Methods [SQL Server]"
-ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "Aggregate Geometry Methods [SQL Server]"
+dev_langs:
+  - "TSQL"
 ---
 # Static Aggregate Geometry Methods
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

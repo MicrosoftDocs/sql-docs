@@ -8,9 +8,9 @@ ms.service: sql-database
 ms.subservice: development
 ms.topic: quickstart
 ms.custom:
-  - "devx-track-java"
-  - "devx-track-azurecli"
-  - "mode-api"
+  - devx-track-java
+  - devx-track-azurecli
+  - mode-api
 ms.devlang: java
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---

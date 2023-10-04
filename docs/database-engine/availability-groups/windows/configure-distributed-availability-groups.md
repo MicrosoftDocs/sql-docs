@@ -4,10 +4,9 @@ description: "Learn how to configure a distributed availability group by using a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "01/28/2020"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 ---
 # Configure an Always On distributed availability group  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -302,15 +301,47 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [distributedag]
 
 ---
 
+## <a name="join_secondary"></a> Join the database on the secondary of the second availability group
 
-## <a name="failover"></a> Join the database on the secondary of the second availability group
-After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
+If the second availability group was set up to use automatic seeding, then move to step 2.
 
-```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```
-  
-## <a name="failover"></a> Fail over to a secondary availability group  
+1. If the second availability group is using manual seeding, then restore the backup you took on the global primary to the secondary of the second availability group:
+
+  ```sql
+  RESTORE DATABASE [db1] 
+  FROM DISK = '<full backup location>' WITH NORECOVERY
+  RESTORE LOG [db1] FROM DISK = '<log backup location>' WITH NORECOVERY
+  ```
+
+2. After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
+
+  ```sql  
+  ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
+  ```
+
+## <a name="failover"></a> Fail over to a secondary availability group
+
+There are two different sets of instructions to fail over to a secondary availability group. Use the instructions appropriate for your version and configuration.
+
+::: moniker range=">=sql-server-ver16"
+
+The instructions below apply to [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later, if REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is set.
+
+For other configurations, see [Fail over to secondary (prior to SQL Server 2022)](configure-distributed-availability-groups.md?view=sql-server-ver15&preserve-view=true#failover).
+
+::: moniker-end
+
+::: moniker range="<=sql-server-ver15"
+
+The instructions below apply if REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT is not set for the distributed availability group. This includes versions before [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] because this setting is not supported for distributed availability groups.
+
+On [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later you can set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. If this setting is configured, follow the instructions for [Fail over to a secondary availability group (SQL Server 2022 and later)](configure-distributed-availability-groups.md?view=sql-server-ver16&preserve-view=true#failover).
+
+::: moniker-end
+
+::: moniker range="<=sql-server-ver15"
+
+### Fail over to secondary (prior to SQL Server 2022)
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
@@ -323,7 +354,7 @@ Only manual failover is supported at this time. To manually fail over a distribu
 The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
 
 1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group). Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.   
-    
+
       ```sql  
       -- sets the distributed availability group to synchronous commit 
        ALTER AVAILABILITY GROUP [distributedag] 
@@ -346,14 +377,13 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
        on ars.replica_id=ar.replica_id
        where ag.is_distributed=1
        GO
+      ```
 
-      ```  
    > [!NOTE]
    > In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
 
-
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
-    
+
       ```sql  
       -- Run this query on the Global Primary and the forwarder
       -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
@@ -407,7 +437,6 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```
 
-
 1. Fail over from the primary availability group to the secondary availability group. Run the following command on the forwarder, the SQL Server that hosts the primary replica of the secondary availability group. 
 
     ```sql
@@ -419,10 +448,149 @@ The following Transact-SQL examples demonstrate the detailed steps to fail over 
     ```  
 
     After this step, the distributed availability group is available.
-      
+
 After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
-  
-## Remove a distributed availability group  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-ver16"
+
+### <a name="failover_2022"></a> Fail over to a secondary availability group (SQL Server 2022 and later)
+
+The steps in this section are designed to guarantee no data loss when a distributed availability group fails over. The steps include setting REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. Support for this setting for distributed availability groups begins with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)].
+
+Only manual failover is supported at this time. To manually fail over a distributed availability group:
+
+1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group), then set the distributed availability group to synchronous commit.
+1. Wait until the distributed availability group is synchronized and has the same last_hardened_lsn per database.
+1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
+
+> [!IMPORTANT]
+> At this point the distributed availability group is not available.
+
+1. Set distributed availability group REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT to 1.
+1. Test failover readiness.
+1. Fail over the primary availability group.
+1. Set distributed availability group REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT to 0.
+
+The following Transact-SQL examples demonstrate the detailed steps to fail over the distributed availability group named `distributedag`:
+
+1. To ensure that no data is lost, stop all transactions on the global primary databases (that is, databases of the primary availability group). Then set the distributed availability group to synchronous commit by running the following code on *both* the global primary and the forwarder.
+
+      ```sql  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
+       
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
+      ```
+
+   > [!NOTE]
+   > In a distributed availability group, the synchronization status between the two availability groups depends on the availability mode of both replicas. For synchronous commit mode, both the current primary availability group, and the current secondary availability group must have `SYNCHRONOUS_COMMIT` availability mode. For this reason, you must run the script above on both the global primary replica, and the forwarder.
+
+1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED` and all replicas have the same last_hardened_lsn (per database). Run the following query on both the global primary, which is the primary replica of the primary availability group, and the forwarder to check the synchronization_state_desc and last_hardened_lsn: 
+
+      ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
+      SELECT ag.name
+             , drs.database_id
+             , db_name(drs.database_id) as database_name
+             , drs.group_id
+             , drs.replica_id
+             , drs.synchronization_state_desc
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
+      ```  
+
+    Proceed after the availability group **synchronization_state_desc** is `SYNCHRONIZED`, and the last_hardened_lsn is the same per database on both the global primary and forwarder.  If **synchronization_state_desc** is not `SYNCHRONIZED` or last_hardened_lsn is not the same, run the command every five seconds until it changes. Do not proceed until the **synchronization_state_desc** = `SYNCHRONIZED` and last_hardened_lsn is the same per database. 
+
+1. On the global primary, set the distributed availability group role to `SECONDARY`.
+
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
+    ```  
+
+    At this point, the distributed availability group is not available.
+
+1. For [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later, on the global primary, set REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT.
+
+   ```sql
+   ALTER AVAILABILITY GROUP distributedag 
+     SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
+   ```
+
+1. Test the failover readiness. Run the following query on both the global primary and the forwarder:
+
+    ```sql
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
+    ```  
+
+    The availability group is ready to fail over when the **last_hardened_lsn** is the same for both availability groups per database. If the last_hardened_lsn is not the same after a period of time, to avoid data loss, fail back to the global primary by running this command on the global primary and then start over from the second step: 
+
+    ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+1. Fail over from the primary availability group to the secondary availability group. Run the following command on the forwarder, the SQL Server that hosts the primary replica of the secondary availability group.
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```  
+
+    After this step, the distributed availability group is available.
+
+1. For [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and later, clear distributed availability group REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT.
+
+   ```sql
+   ALTER AVAILABILITY GROUP distributedag 
+     SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 0);
+   ```
+
+After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT.
+
+::: moniker-end  
+
+## Remove a distributed availability group
  The following Transact-SQL statement removes a distributed availability group named `distributedag`:  
   
 ```sql  

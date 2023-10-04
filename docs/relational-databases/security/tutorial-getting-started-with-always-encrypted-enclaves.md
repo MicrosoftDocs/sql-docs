@@ -1,163 +1,75 @@
 ---
-title: "Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server"
-description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using Virtualization Based Security (VBS) enclaves and Host Guardian Service (HGS) for attestation. You'll also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
-ms.custom:
-- seo-lt-2019
-- intro-get-started
-- event-tier1-build-2022
-ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: vanto
-ms.suite: "sql"
-ms.technology: security
-ms.tgt_pltfrm: ""
-ms.topic: tutorial
+title: "Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server"
+description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using virtualization based security (VBS) enclaves and no enclave attestation. You'll also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: 02/15/2023
+ms.service: sql
+ms.subservice: security
+ms.topic: tutorial
+ms.custom: intro-get-started
 monikerRange: ">= sql-server-ver15"
 ---
-# Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
+# Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server
+
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. It will show you:
 
 > [!div class="checklist"]
-> - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
+>
+> - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves with no attestation configured for enclaves.
 > - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+
+If you want to learn how to set up Always Encrypted with secure enclaves using Host Guardian Service for enclave attestation, see [Tutorial: Getting started using Always Encrypted with secure enclaves in SQL Server with attestation using HGS](tutorial-getting-started-with-always-encrypted-enclaves-hgs.md)
 
 ## Prerequisites
 
-To get started with Always Encrypted with secure enclaves, you need at least two computers (they can be virtual machines):
-
-- The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer to host [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and SSMS.
-- The HGS computer to run Host Guardian Service, which is needed for enclave attestation.
-
-### SQL Server computer requirements
+The computer hosting your SQL Server instance (referred to as SQL Server computer) needs to meet the following requirements:
 
 - [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] or later.
-- Windows 10, version 1809 or later - Enterprise edition, Windows 11 or later - Enterprise edition, Windows Server 2019 or later - Datacenter edition. Other editions of Windows 10/11 and Windows Server don't support attestation with HGS.
+- Windows 10 or later, Windows Server 2019 or later.
 - CPU support for virtualization technologies:
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
   - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM:
     - In Azure, use a [Generation 2 VM size](/azure/virtual-machines/generation-2#generation-2-vm-sizes) (recommended) or use a Generation 1 VM size with nested virtualization enabled. Check the [individual VM sizes documentation](/azure/virtual-machines/sizes) to determine which Generation 1 VM sizes support nested virtualization.
-    - On Hyper-V 2016 or later (outside of Azure), make sure your VM is a Generation 2 VM (recommended) or it's a Generation 1 VM with nested virtualization enabled. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) and [Configure nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - On Hyper-V 2016 or later (outside of Azure), make sure your VM is a Generation 2 VM (recommended) or that it's a Generation 1 VM with nested virtualization enabled. For more information, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) and [Configure nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - On VMware vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
-- [SQL Server Management Studio (SSMS) 18.3 or later](../../ssms/download-sql-server-management-studio-ssms.md).
-
-As an alternative, you can install SSMS on another machine.
+- The latest version of [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). As an alternative, you can install SSMS on another machine.
 
 > [!WARNING]
-> In production environments,  running SSMS or other key management tools on the SQL Server computer may reduce the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
+> In production environments, running SSMS or other key management tools on the SQL Server computer may reduce the security benefits of using Always Encrypted. In general, running such tools on a different machine is recommended. For more information, see [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-### HGS computer requirements
+## Step 1: Make sure virtualization-based security (VBS) is enabled
 
-- Windows Server 2019 Standard or Datacenter edition
-- 2 CPUs
-- 8 GB RAM
-- 100 GB storage
+1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and run msinfo32.exe. Check if VBS is running. If VBS is running, skip the remaining steps in this section and go to the next section.
 
-> [!NOTE]
-> The HGS computer should not be joined to a domain before you start.
+   ![Screenshot of the System Information virtualization-based security details.](./encryption/media/always-encrypted-enclaves/msinfo32-vbs-status.png)
 
-## Step 1: Configure the HGS computer
-
-In this step, you'll configure the HGS computer to run Host Guardian Service supporting host key attestation.
-
-1. Sign in to the HGS computer as an administrator (local admin), open an elevated Windows PowerShell console and add the Host Guardian Service role by running the following command:
+2. Enable VBS by running the following cmdlet in the PowerShell session.
 
    ```powershell
-   Install-WindowsFeature -Name HostGuardianServiceRole -IncludeManagementTools -Restart
+   Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1
    ```
 
-2. After the HGS computer reboots, sign in with your admin account again, open an elevated Windows PowerShell console and run the following commands to install the Host Guardian Service and configure its domain. The password you specify here will only apply to the Directory Services Repair Mode password for Active Directory; it will not change your admin account's login password. You may provide any domain name of your choosing for -HgsDomainName.
+3. If your SQL Server computer is a virtual machine, a physical machine that doesn't support UEFI Secure Boot, or a physical machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
-   ```powershell
-   $adminPassword = ConvertTo-SecureString -AsPlainText '<password>' -Force
-   Install-HgsServer -HgsDomainName 'bastion.local' -SafeModeAdministratorPassword $adminPassword -Restart
-   ```
+    ```powershell
+    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+    ```
 
-3. After the computer reboots again, sign in with your admin account (which is now also a Domain Admin), open an elevated Windows PowerShell console, and configure host key attestation for your HGS instance. 
+4. Restart the SQL Server computer again to get VBS to come online.
 
-   ```powershell
-   Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey  
-   ```
+    ```powershell
+    Restart-Computer
+    ```
 
-4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.
+5. Repeat step 1 to check if VBS is running.
 
-   ```powershell
-   Get-NetIPAddress  
-   ```
-
-> [!NOTE]
-> Alternatively, if you want to reference your HGS computer by a DNS name, you can set up a forwarder from your corporate DNS servers to the new HGS domain controller.  
-
-## Step 2: Configure the SQL Server computer as a guarded host
-In this step, you'll configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
-
-> [!WARNING]
-> Host key attestation is considered a weaker attestation mode. If possible, you should use TPM attestation for production environments. For more information, see [Attestation modes](encryption/always-encrypted-enclaves-host-guardian-service-plan.md#attestation-modes).
-
-1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
-
-   ```powershell
-   $env:computername 
-   ```
-
-2. Install the Guarded Host feature, which will also install Hyper-V (if it isn't installed already).
-
-   ```powershell
-   Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
-   ```
-
-3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
-
-4. If your SQL Server computer is a virtual machine, a physical machine that doesn't support UEFI Secure Boot, or a physical machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
-    1. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
-
-        ```powershell
-       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
-       ```
-
-    1. Restart the SQL Server computer again to get VBS to come online with the lowered requirements.
-
-        ```powershell
-       Restart-Computer
-       ```
-
-5. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
-
-   ```powershell
-   Set-HgsClientHostKey 
-   Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
-   ```
-
-6. Manually copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is `hostkey.cer` and you're copying it to your Desktop on the HGS machine.
-
-7. On the HGS computer, open an elevated Windows PowerShell console and register the host key of your SQL Server computer with HGS:
-
-   ```powershell
-   Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
-   ```
-
-8. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer in both address locations. 
-
-   ```powershell
-   # use http, and not https
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
-   ```
-
-The result of the above command should show that AttestationStatus = Passed.
-
-If you get a HostUnreachable error, that means your SQL Server computer can't communicate with HGS. Ensure that you can ping the HGS computer.
-
-An UnauthorizedHost error indicates that the public key wasn't registered with the HGS server - repeat steps 5 and 6 to resolve the error.
-
-If all else fails, run Remove-HgsClientHostKey and repeat steps 4-7.
-
-## Step 3: Enable Always Encrypted with secure enclaves in SQL Server
+## Step 2: Enable Always Encrypted with secure enclaves in SQL Server
 
 In this step, you'll enable the functionality of Always Encrypted using enclaves in your SQL Server instance.
 
@@ -167,11 +79,11 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
     1. Select **Options >>** and select the **Always Encrypted** tab.
     1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
 
-          ![Connect to server without Always Encrypted](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+       :::image type="content" source="./encryption/media/always-encrypted-database-engine/always-encrypted-ssms-connect-disabled.png" alt-text="Screenshot of the SSMS connection option for Always Encrypted disabled.":::
 
     1. Select **Connect**.
 
-2. Open a new query window, and execute the below statement to set the secure enclave type to Virtualization Based Security (VBS).
+2. Open a new query window, and execute the below statement to set the secure enclave type to virtualization based security (VBS).
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -193,7 +105,8 @@ In this step, you'll enable the functionality of Always Encrypted using enclaves
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
-## Step 4: Create a sample database
+## Step 3: Create a sample database
+
 In this step, you'll create a database with some sample data, which you'll encrypt later.
 
 1. Using the SSMS instance from the previous step, execute the below statement in a query window to create a new database, named **ContosoHR**.
@@ -250,7 +163,7 @@ In this step, you'll create a database with some sample data, which you'll encry
             , $55415);
     ```
 
-## Step 5: Provision enclave-enabled keys
+## Step 4: Provision enclave-enabled keys
 
 In this step, you'll create a column master key and a column encryption key that allow enclave computations.
 
@@ -264,7 +177,7 @@ In this step, you'll create a column master key and a column encryption key that
     6. Select your certificate or Azure Key Value key if it already exists, or select the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 
-        ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
+        ![Screenshot of the allow enclave computations selection in SSMS when creating a new column master key.](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 1. Create a new enclave-enabled column encryption key:
 
@@ -273,7 +186,7 @@ In this step, you'll create a column master key and a column encryption key that
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
     4. Select **OK**.
 
-## Step 6: Encrypt some columns in place
+## Step 5: Encrypt some columns in place
 
 In this step, you'll encrypt the data stored in the **SSN** and **Salary** columns inside the server-side enclave, and then test a SELECT query on the data.
 
@@ -281,9 +194,11 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     1. Start a new instance of SSMS.
     1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
     1. Select **Options >>** and select the **Always Encrypted** tab.
-    1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Select the **Enable Always Encrypted (column encryption)** checkbox.
+    1. Select **Enable secure enclaves**.
+    1. Set **Protocol** to **None**.
 
-          ![Connect to server with attestation using SSMS](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+          ![Screenshot of the connect to server Always Encrypted tab without attestation using SSMS.](./encryption/media/always-encrypted-enclaves/ssms-connect-none.png)
 
     1. Select **Connect**.
     1. If you're prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
@@ -318,7 +233,7 @@ In this step, you'll encrypt the data stored in the **SSN** and **Salary** colum
     SELECT * FROM [HR].[Employees];
     ```
 
-## Step 7: Run rich queries against encrypted columns
+## Step 6: Run rich queries against encrypted columns
 
 Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 
@@ -339,7 +254,7 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 3. Try the same query again in the SSMS instance that doesn't have Always Encrypted enabled, and note the failure that occurs.
 
-## Next Steps
+## Next steps
 
 After completing this tutorial, you can go to one of the following tutorials:
 
@@ -347,7 +262,7 @@ After completing this tutorial, you can go to one of the following tutorials:
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-## See Also
+## See also
 
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
-- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

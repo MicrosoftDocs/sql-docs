@@ -1,19 +1,15 @@
 ---
+title: "Syntax (SSIS)"
 description: "Syntax (SSIS)"
-title: "Syntax (SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "expressions [Integration Services], syntax"
-  - "syntax [Integration Services]"
-ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "expressions [Integration Services], syntax"
+  - "syntax [Integration Services]"
 ---
 # Syntax (SSIS)
 
@@ -79,7 +75,7 @@ ms.author: chugu
   
 ## Related Content  
   
--   Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+-   Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
   
 -   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   

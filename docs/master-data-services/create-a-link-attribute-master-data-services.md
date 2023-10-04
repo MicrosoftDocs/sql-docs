@@ -1,23 +1,19 @@
 ---
-description: "Create a Link Attribute (Master Data Services)"
 title: Create a Link Attribute
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "attributes [Master Data Services], creating link attributes"
-  - "creating link attributes [Master Data Services]"
-ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
+description: "Create a Link Attribute (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/15/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "attributes [Master Data Services], creating link attributes"
+  - "creating link attributes [Master Data Services]"
 ---
 # Create a Link Attribute (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a link attribute when you want users to enter a hyperlink as an attribute value, such as `https://www.contoso.com`.  
   

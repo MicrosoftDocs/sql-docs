@@ -4,9 +4,8 @@ description: Create Clustered Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index creation [SQL Server], clustered indexes"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "clustered indexes, PRIMARY KEY constraint"
   - "clustered indexes, UNIQUE constraint"
   - "indexes [SQL Server], clustered"
-ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Clustered Indexes
@@ -82,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 4.  Under **Index key columns**, click **Add...**.  
   
-5.  In the **Select Columns from**_table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
+5.  In the **Select Columns from** _table\_name_ dialog box, select the check box of the table column to be added to the clustered index.  
   
 6.  Click **OK**.  
   
@@ -121,7 +119,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Create a new table with three columns.  
     CREATE TABLE dbo.TestTable  

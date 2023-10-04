@@ -1,31 +1,49 @@
 ---
-title: Prepare environment for Managed Instance link
+title: Prepare environment for Azure SQL Managed Instance link
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to prepare your environment for using a Managed Instance link to replicate and fail over your database to SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
-ms.date: 08/30/2022
+ms.date: 04/26/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.topic: guide
+ms.topic: how-to
 ---
 
 # Prepare your environment for a link - Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you how to prepare your environment for a [Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
+This article teaches you how to prepare your environment for a [SQL Managed Instance link](managed-instance-link-feature-overview.md) so that you can replicate databases from SQL Server to Azure SQL Managed Instance.
 
 > [!NOTE]
-> The link is a feature of Azure SQL Managed Instance and is currently in preview. 
+> It's possible to automate preparing your environment for the Managed Instance link by using a downloadable script. Review the [Automating link setup blog](https://techcommunity.microsoft.com/t5/modernization-best-practices-and/automating-the-setup-of-azure-sql-managed-instance-link/ba-p/3696961) to learn more. 
 
 ## Prerequisites 
 
 To use the link with Azure SQL Managed Instance, you need the following prerequisites: 
 
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
-- [Supported version of SQL Server](managed-instance-link-feature-overview.md#requirements) with required service update installed.
+- [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with required service update installed.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
+
+## Permissions
+
+For SQL Server, you should have **sysadmin** permissions. 
+
+For Azure SQL Managed Instance, you should be a member of the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor), or have the following permissions for a custom role: 
+
+|Microsoft.Sql/ resource|Necessary permissions| 
+|---- | ---- | 
+|Microsoft.Sql/managedInstances| /read, /write|
+|Microsoft.Sql/managedInstances/hybridCertificate | /action |
+|Microsoft.Sql/managedInstances/databases| /read, /delete, /write, /completeRestore/action, /readBackups/action, /restoreDetails/read| 
+|Microsoft.Sql/managedInstances/distributedAvailabilityGroups| /read, /write, /delete, /setRole/action| 
+|Microsoft.Sql/managedInstances/endpointCertificates| /read|
+|Microsoft.Sql/managedInstances/hybridLink| /read, /write, /delete|
+|Microsoft.Sql/managedInstances/serverTrustCertificates | /write, /delete, /read | 
+
+
 
 ## Prepare your SQL Server instance
 
@@ -34,7 +52,7 @@ To prepare your SQL Server instance, you need to validate that:
 - You're on the minimum supported version.
 - You've enabled the availability groups feature.
 - You've added the proper trace flags at startup.
-- Your databases are in full recovery mode and backed up.
+- Your databases are in the full recovery model and backed up.
 
 You'll need to restart SQL Server for these changes to take effect.
 
@@ -48,17 +66,18 @@ To check your SQL Server version, run the following Transact-SQL (T-SQL) script 
 SELECT @@VERSION as 'SQL Server version'
 ```
 
-Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. You must restart your SQL Server instance during the update. 
+Ensure that your SQL Server version has the appropriate servicing update installed, as listed below. If you need to install any updates, you must restart your SQL Server instance during the update. 
 
-| SQL Server Version  | Editions  | Host OS | Servicing update requirement |
+| SQL Server Version  |  Operating system (OS) | Servicing update requirement |
 |---------|---------|---------|
-|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Evaluation Edition | Windows Server | Must sign up at [https://aka.ms/mi-link-2022-signup](https://aka.ms/mi-link-2022-signup) to participate in preview experience.| 
-|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2019 CU15 (KB5008996)](https://support.microsoft.com/en-us/topic/kb5008996-cumulative-update-15-for-sql-server-2019-4b6a8ee9-1c61-482d-914f-36e429901fb6), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
-|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Enterprise, Standard, or Developer |  Windows Server | [SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
+|[!INCLUDE [sssql22-md](../../docs/includes/sssql22-md.md)] | Windows Server & Linux | SQL Server 2022 RTM | 
+|[!INCLUDE [sssql19-md](../../docs/includes/sssql19-md.md)] | Windows Server |  [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2), or above for Enterprise and Developer editions, and [CU17 (KB5016394)](https://support.microsoft.com/topic/kb5016394-cumulative-update-17-for-sql-server-2019-3033f654-b09d-41aa-8e49-e9d0c353c5f7), or above, for Standard editions. |
+|[!INCLUDE [sssql17-md](../../docs/includes/sssql17-md.md)] | N/A | Not supported | 
+|[!INCLUDE [sssql16-md](../../docs/includes/sssql16-md.md)] | Windows Server |[SQL Server 2016 SP3 (KB 5003279)](https://support.microsoft.com/help/5003279) and [SQL Server 2016 Azure Connect pack (KB 5014242)](https://support.microsoft.com/help/5014242) |
 
 ### Create a database master key in the master database
 
-Create database master key in the master database, if not already present. Insert your password in place of `<strong_password>` in the script below, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
+Create database master key in the `master` database, if not already present. Insert your password in place of `<strong_password>` in the script below, and keep it in a confidential and secure place. Run this T-SQL script on SQL Server:
 
 ```sql
 -- Run on SQL Server
@@ -197,17 +216,18 @@ If your SQL Server instance is hosted outside Azure, establish a VPN connection 
 
 ### Network ports between the environments
 
-Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the  environments:
+Regardless of the connectivity mechanism, there are requirements that must be met for the network traffic to flow between the environments:
 
 The Network Security Group (NSG) rules on the subnet hosting managed instance needs to allow:
-- Inbound traffic on port 5022 and port range 11000-11999 from the network hosting SQL Server
+- Inbound port 5022 and port range 11000-11999 to receive traffic from the source SQL Server IP 
+- Outbound port 5022 to send traffic to the destination SQL Server IP
 
-Firewall on the network hosting SQL Server, and the host OS needs to allow:
-- Inbound traffic on port 5022 from the entire subnet range hosting SQL Managed Instance
+All firewalls on the network hosting SQL Server, and the host OS needs to allow:
+- Inbound port 5022 opened to receive traffic from the source IP range of the MI subnet /24 (for example 10.0.0.0/24)
+- Outbound ports 5022, and the port range 11000-11999 opened to send traffic to the destination IP range of MI subnet (example 10.0.0.0/24)
 
 :::image type="content" source="./media/managed-instance-link-preparation/link-networking-requirements.png" alt-text="Diagram showing network requirements to set up the link between SQL Server and managed instance.":::
 
-Port numbers can't be changed or customized. IP address ranges of subnets hosting managed instance, and SQL Server must not overlap.
 
 The following table describes port actions for each environment: 
 
@@ -217,6 +237,8 @@ The following table describes port actions for each environment:
 |SQL Server (outside Azure) | Open both inbound and outbound traffic on port 5022 for the network firewall to the entire subnet IP range of SQL Managed Instance. If necessary, do the same on the SQL Server host OS (Windows/Linux) firewall. |
 |SQL Managed Instance |[Create an NSG rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) in Azure portal to allow inbound and outbound traffic from the IP address and the networking hosting SQL Server on port 5022 and port range 11000-11999. |
 
+
+
 Use the following PowerShell script on the Windows host OS of the SQL Server instance to open ports in the Windows firewall: 
 
 ```powershell
@@ -224,25 +246,128 @@ New-NetFirewallRule -DisplayName "Allow TCP port 5022 inbound" -Direction inboun
 New-NetFirewallRule -DisplayName "Allow TCP port 5022 outbound" -Direction outbound -Profile Any -Action Allow -LocalPort 5022 -Protocol TCP
 ```
 
+The following diagram shows an example of an on-premises network environment, indicating that _all firewalls in the environment need to have open ports_, including the OS firewall hosting the SQL Server, as well as any corporate firewalls and/or gateways: 
+
+:::image type="content" source="./media/managed-instance-link-preparation/link-networking-infrastructure.png" alt-text="Diagram showing network infrastructure to set up the link between SQL Server and managed instance.":::
+
+
+> [!IMPORTANT]
+> - Ports need to be open in every firewall in the networking environment, including the host server, as well as any corporate firewalls or gateways on the network. In corporate environments, you may need to show your network administrator the information in this section to help open additional ports in the corporate networking layer. 
+> - While you can choose to customize the endpoint on the SQL Server side, port numbers for SQL Managed Instance can't be changed or customized. 
+> - IP address ranges of subnets hosting managed instances, and SQL Server must not overlap.
+
 ## Test bidirectional network connectivity
 
 Bidirectional network connectivity between SQL Server and SQL Managed Instance is necessary for the link to work. After you open ports on the SQL Server side and configure an NSG rule on the SQL Managed Instance side, test connectivity. 
 
 ### Test the connection from SQL Server to SQL Managed Instance 
 
-To check if SQL Server can reach SQL Managed Instance, use the following `tnc` command in PowerShell from the SQL Server host machine. Replace `<ManagedInstanceFQDN>` with the fully qualified domain name (FQDN) of the managed instance. You can copy the FQDN from the managed instance's overview page in the Azure portal.
+We will use SQL Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
-```powershell
-tnc <ManagedInstanceFQDN> -port 5022
-```
+1. Connect to SQL Managed Instance and run the following script to generate some parameters we will need later:
 
-A successful test shows `TcpTestSucceeded : True`. 
+   ```sql
+   SELECT 'DECLARE @serverName NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name = 'DnsRecordName'
+   UNION
+   SELECT 'DECLARE @node NVARCHAR(512) = N'''+ NodeName + '.' + Cluster + ''''
+   FROM 
+   (SELECT SUBSTRING(replica_address,0, CHARINDEX('\', replica_address)) as NodeName
+   , RIGHT(service_name,CHARINDEX('/', REVERSE(service_name))-1) AppName, JoinCol = 1
+   FROM sys.dm_hadr_fabric_partitions fp
+   JOIN sys.dm_hadr_fabric_replicas fr ON fp.partition_id = fr.partition_id
+   JOIN sys.dm_hadr_fabric_nodes fn ON fr.node_name = fn.node_name
+   WHERE service_name like '%ManagedServer%' and replica_role = 2) t1
+   LEFT JOIN
+   (SELECT value as Cluster, JoinCol = 1
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name  = 'ClusterName') t2
+   ON (t1.JoinCol = t2.JoinCol)
+   INNER JOIN
+   (SELECT [value] AS AppName
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE section_name = 'SQL' and parameter_name = 'InstanceName') t3 
+   ON (t1.AppName = t3.AppName)
+   UNION
+   SELECT 'DECLARE @port NVARCHAR(512) = N'''+ value + ''''
+   FROM sys.dm_hadr_fabric_config_parameters
+   WHERE parameter_name = 'HadrPort';
+   ```
 
-:::image type="content" source="./media/managed-instance-link-preparation/powershell-output-tnc-command.png" alt-text="Screenshot that shows the output of the command for testing a network connection in PowerShell.":::
+   You will get something like:
 
-If the response is unsuccessful, verify the following network settings:
-- There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
-- There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-parameters-output.png" alt-text="Screenshot that shows the output of the script that generates parameter values for testing connectivity in SSMS.":::
+
+   Save the result to be used in the next steps. Note that the parameters we just generated may change after any failover on SQL Managed Instance, be sure to generate them again if needed.
+
+1. Connect to SQL Server
+
+1. Open a new query window and paste the following:
+
+   ```sql
+   --START
+   -- Parameters section
+   DECLARE @node NVARCHAR(512) = N''
+   DECLARE @port NVARCHAR(512) = N''
+   DECLARE @serverName NVARCHAR(512) = N''
+   
+   --Script section
+   IF EXISTS (SELECT job_id FROM msdb.dbo.sysjobs_view WHERE name = N'TestMILinkConnection')
+   EXEC msdb.dbo.sp_delete_job @job_name = N'TestMILinkConnection', @delete_unused_schedule=1
+   
+   DECLARE @jobId BINARY(16), @cmd NVARCHAR(MAX)
+   
+   EXEC  msdb.dbo.sp_add_job @job_name=N'TestMILinkConnection', @enabled=1, @job_id = @jobId OUTPUT
+   
+   SET @cmd = (N'tnc ' + @serverName + N' -port 5022 | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test Port 5022'
+   , @step_id = 1, @cmdexec_success_code = 0, @on_success_action = 3, @on_fail_action = 3
+   , @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   SET @cmd = (N'tnc ' + @node + N' -port ' + @port +' | select ComputerName, RemoteAddress, TcpTestSucceeded | Format-List')
+   EXEC msdb.dbo.sp_add_jobstep @job_id = @jobId, @step_name = N'Test HADR Port'
+   , @step_id = 2, @cmdexec_success_code = 0, @subsystem = N'PowerShell', @command = @cmd, @database_name = N'master'
+   
+   EXEC msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)'
+   GO
+   EXEC msdb.dbo.sp_start_job @job_name = N'TestMILinkConnection'
+   GO
+   --Check status every 5 seconds
+   DECLARE @RunStatus INT 
+   SET @RunStatus=10
+   WHILE ( @RunStatus >= 4)
+   BEGIN
+   SELECT distinct @RunStatus = run_status
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id = J.job_id 
+   WHERE J.name=N'TestMILinkConnection' and step_id = 0
+   WAITFOR DELAY '00:00:05'; 
+   END
+   
+   --Get logs once job completes
+   SELECT [step_name]
+   ,SUBSTRING([message], CHARINDEX('TcpTestSucceeded',[message]), CHARINDEX('Process Exit', [message])-CHARINDEX('TcpTestSucceeded',[message])) as TcpTestResult
+   ,SUBSTRING([message], CHARINDEX('RemoteAddress',[message]), CHARINDEX ('TcpTestSucceeded',[message])-CHARINDEX('RemoteAddress',[message])) as RemoteAddressResult
+   ,[run_status] ,[run_duration], [message]
+   FROM [msdb].[dbo].[sysjobhistory] JH JOIN [msdb].[dbo].[sysjobs] J ON JH.job_id= J.job_id
+   WHERE J.name = N'TestMILinkConnection' and step_id <> 0
+   --END
+   ```
+
+1. Replace the *@node*, *@port* and *@serverName* parameters with the values you got from Step 1.
+
+1. Run the script and check the results, you will get something like:
+
+   :::image type="content" source="./media/managed-instance-link-preparation/test-connectivity-results.png" alt-text="Screenshot that shows the output with the test results in SSMS.":::
+
+1. Verify the results:
+
+   - The outcome of each test at TcpTestSucceeded should be `TcpTestSucceeded : True`.
+   - The RemoteAddresses should belong to the IP range for the SQL Managed Instance subnet.
+
+   If the response is unsuccessful, verify the following network settings:
+   - There are rules in both the network firewall *and* the SQL Server host OS (Windows/Linux) firewall that allows traffic to the entire *subnet IP range* of SQL Managed Instance. 
+   - There's an NSG rule that allows communication on port 5022 for the virtual network that hosts SQL Managed Instance. 
 
 ### Test the connection from SQL Managed Instance to SQL Server
 
@@ -403,11 +528,27 @@ If you're migrating a SQL Server database protected by Transparent Data Encrypti
 
 ## Install SSMS
 
-SQL Server Management Studio (SSMS) is the easiest way to use a SQL Managed Instance link. [Download SSMS version 18.12.1, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
+SQL Server Management Studio (SSMS) is the easiest way to use the Managed Instance link. [Download SSMS version 19.0, or later](/sql/ssms/download-sql-server-management-studio-ssms) and install it to your client machine. 
 
 After installation finishes, open SSMS and connect to your supported SQL Server instance. Right-click a user database and validate that the **Azure SQL Managed Instance link** option appears on the menu. 
 
 :::image type="content" source="./media/managed-instance-link-preparation/ssms-database-context-menu-managed-instance-link.png" alt-text="Screenshot that shows the Azure SQL Managed Instance link option on the context menu.":::
+
+## Configure SSMS for government clouds
+
+If you want to deploy your SQL Managed Instance to a government cloud, you'll need to modify your SQL Server Management Studio (SSMS) settings to use the correct cloud. If you're not deploying your SQL Managed Instance to a government cloud, skip this step. 
+
+To update your SSMS settings, follow these steps: 
+
+1. Open SSMS. 
+1. From the menu, select **Tools** and then choose **Options**. 
+1. Expand **Azure Services** and select **Azure Cloud**. 
+1. Under **Select an Azure Cloud**, use the drop-down to choose **AzureUSGovernment**, or another government cloud, such as **AzureChinaCloud**: 
+
+  :::image type="content" source="media/managed-instance-link-preparation/ssms-for-government-cloud.png" alt-text="Screenshot of SSMS UI, options page, Azure services, with Azure cloud highlighted. ":::
+
+If you want to go back to the public cloud, choose **AzureCloud** from the drop-down menu. 
+
 
 ## Next steps
 

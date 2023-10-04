@@ -1,18 +1,15 @@
 ---
-title: "Report Server in Management Studio F1 Help | Microsoft Docs"
+title: "Report Server in Management Studio F1 Help"
 description: View information about the features for managing report servers in SQL Server Management Studio.
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "Object Explorer, help"
-ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Object Explorer, help"
 ---
 # Report Server in Management Studio F1 Help
   This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  

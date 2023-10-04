@@ -1,0 +1,4 @@
+No additional steps are required to connect the App Service to Azure SQL Database using SQL Authentication. The connection string you configured in the `appsettings.json` file includes the necessary credentials to authenticate.
+
+> [!WARNING]
+> Use caution when managing connection strings that contain secrets such as usernames, passwords, or access keys. These secrets shouldn't be committed to source control or placed in unsecure locations where they might be accessed by unintended users. For a real application in a production-grade Azure environment, you can store connection strings in a secure location such as App Service configuration settings or Azure Key Vault. During local development, you'll generally connect to a local database that doesn't require storing secrets or connecting directly to Azure.

@@ -1,58 +1,56 @@
 ---
+title: "Catalog stored procedures (Transact-SQL)"
 description: "An index of catalog stored procedures in SQL Server Transact-SQL."
-title: "Catalog Stored Procedures (Transact-SQL)"
-ms.custom: ""
-ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 05/24/2023
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC applications, catalog stored procedures"
   - "isolating ODBC applications from changes"
   - "ODBC data dictionary functions"
   - "system stored procedures [SQL Server], catalog"
   - "catalog system stored procedures [SQL Server]"
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
-# Catalog Stored Procedures (Transact-SQL)
+# Catalog stored procedures (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.  
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement ODBC data dictionary functions and isolate ODBC applications from changes to underlying system tables.
 
 :::row:::
     :::column:::
-        [sp_column_privileges](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)
+        [sp_column_privileges](sp-column-privileges-transact-sql.md)
 
-        [sp_columns](../../relational-databases/system-stored-procedures/sp-columns-transact-sql.md)
+        [sp_columns](sp-columns-transact-sql.md)
 
-        [sp_databases](../../relational-databases/system-stored-procedures/sp-databases-transact-sql.md)
+        [sp_databases](sp-databases-transact-sql.md)
 
-        [sp_fkeys](../../relational-databases/system-stored-procedures/sp-fkeys-transact-sql.md)
+        [sp_fkeys](sp-fkeys-transact-sql.md)
 
-        [sp_pkeys](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)
+        [sp_pkeys](sp-pkeys-transact-sql.md)
 
-        [sp_server_info](../../relational-databases/system-stored-procedures/sp-server-info-transact-sql.md)
+        [sp_server_info](sp-server-info-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sp_special_columns](../../relational-databases/system-stored-procedures/sp-special-columns-transact-sql.md)
+        [sp_special_columns](sp-special-columns-transact-sql.md)
 
-        [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md)
+        [sp_sproc_columns](sp-sproc-columns-transact-sql.md)
 
-        [sp_statistics](../../relational-databases/system-stored-procedures/sp-statistics-transact-sql.md)
+        [sp_statistics](sp-statistics-transact-sql.md)
 
-        [sp_stored_procedures](../../relational-databases/system-stored-procedures/sp-stored-procedures-transact-sql.md)
+        [sp_stored_procedures](sp-stored-procedures-transact-sql.md)
 
-        [sp_table_privileges](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)
+        [sp_table_privileges](sp-table-privileges-transact-sql.md)
 
-        [sp_tables](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)
+        [sp_tables](sp-tables-transact-sql.md)
     :::column-end:::
 :::row-end:::
-<BR>
 
 Stored procedures for certain platforms only as specified, including Azure Synapse Analytics:
 
@@ -65,9 +63,6 @@ Stored procedures for certain platforms only as specified, including Azure Synap
     :::column-end:::
 :::row-end:::
 
+## See also
 
-
-## See also  
- - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

@@ -4,9 +4,8 @@ description: sysmergeschemaarticles (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "sysmergeschemaarticles_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "sysmergeschemaarticles system table"
 dev_langs:
   - "TSQL"
-ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 ---
 # sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

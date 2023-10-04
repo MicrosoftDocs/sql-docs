@@ -4,9 +4,8 @@ description: sys.database_mirroring (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_mirroring"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_mirroring catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 ---
 # sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

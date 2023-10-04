@@ -1,11 +1,12 @@
 ---
 title: "Use RAW Mode with FOR XML"
 description: Learn how using RAW mode with the FOR XML clause in an SQL query transforms the resulting XML data.
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML RAW mode"
@@ -15,13 +16,10 @@ helpviewer_keywords:
   - "ELEMENTS directive"
   - "RAW mode"
   - "XMLDATA option"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Use RAW mode with FOR XML
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, `xsi:nil="true"`.
 

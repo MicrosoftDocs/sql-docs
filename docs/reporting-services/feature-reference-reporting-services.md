@@ -1,21 +1,18 @@
 ---
-title: "Feature Reference (Reporting Services) | Microsoft Docs"
+title: "Feature Reference (Reporting Services)"
 description: Learn about SQL Server Reporting Services tools and applications that you can use to create, manage, and view reports.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Report Builder 2.0, F1 help"
   - "Reporting Services, getting assistance"
   - "tools [Reporting Services]"
   - "F1 Help [Reporting Services]"
-ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Feature Reference (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  

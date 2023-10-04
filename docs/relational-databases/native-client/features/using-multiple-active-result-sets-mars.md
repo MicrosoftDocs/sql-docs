@@ -1,13 +1,13 @@
 ---
-title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
+title: "Using Multiple Active Result Sets (MARS)"
 description: SQL Server supports multiple active result sets. Applications can have more than one pending request and active default result set per connection.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "08/08/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, MARS"
   - "SQLNCLI, MARS"
   - "data access [SQL Server Native Client], MARS"
@@ -15,14 +15,14 @@ helpviewer_keywords:
   - "SQL Server Native Client, MARS"
   - "MARS [SQL Server]"
   - "SQL Server Native Client ODBC driver, MARS"
-ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Multiple Active Result Sets (MARS) in SQL Server Native Client
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced support for multiple active result sets (MARS) in applications accessing the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. In earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], database applications could not maintain multiple active statements on a connection. When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] default result sets, the application had to process or cancel all result sets from one batch before it could execute any other batch on that connection. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced a new connection attribute that allows applications to have more than one pending request per connection, and in particular, to have more than one active default result set per connection.  
   

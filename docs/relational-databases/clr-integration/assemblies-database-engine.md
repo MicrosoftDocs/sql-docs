@@ -4,14 +4,13 @@ description: A SQL Server instance can host assemblies that deploy functions, pr
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "assemblies [CLR integration]"
   - "assemblies [CLR integration], about assemblies"
   - "managed code [SQL Server], assemblies"
-ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 ---
 # Assemblies (Database Engine)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

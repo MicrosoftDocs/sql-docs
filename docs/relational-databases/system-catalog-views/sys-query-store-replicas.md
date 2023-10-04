@@ -4,10 +4,9 @@ description: "The sys.query_store_replicas system view contains information abou
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/11/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom:
 f1_keywords:
   - "SYS.QUERY_STORE_REPLICAS_TSQL"
   - "QUERY_STORE_REPLICAS_TSQL"
@@ -24,13 +23,13 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-curr
 
 [!INCLUDE [sqlserver2022-asmi](../../includes/applies-to-version/sqlserver2022-asmi.md)]
 
-Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica with [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
+Contains information about Query Store replicas, when [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md) is enabled. You can use this information to determine what `replica_group_id` to use when using Query Store to force or un-force a plan on a secondary replica with [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
 |Column name|Data type|Description|
 |-----------------|---------------|-----------------|
 |**replica_group_id**|**bigint**|Identifies the replica set number for this replica.|
 |**role_id**|**tinyint**|1 = Primary<BR />2= Secondary<BR />3=Geo-Primary<BR />4=Geo-Secondary |
-|**replica_name**|**nvarchar(max)**|Provided at the time of configuration of the availability group. `NULL` for replicas in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |
+|**replica_name**|**nvarchar(max)**|Instance name of the replica in the availability group. `NULL` for replicas in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] or [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. |
 
 ## Remarks
 
@@ -42,6 +41,7 @@ Requires the `VIEW DATABASE STATE` permission.
 
 ## Next steps 
 
+- [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)
 - [sys.database_query_store_internal_state (Transact-SQL)](sys-database-query-store-internal-state-transact-sql.md)
 - [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
 - [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)

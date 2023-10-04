@@ -1,20 +1,15 @@
 ---
-description: "Object Already Exists"
 title: Object Already Exists
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdtsql.chm:98827"
-  - "vdtsql.chm:98845"
-ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
+description: "Object Already Exists"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdtsql.chm:98827"
+  - "vdtsql.chm:98845"
 ---
 # Object Already Exists
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

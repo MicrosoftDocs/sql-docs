@@ -1,16 +1,12 @@
 ---
-title: "Back Up to a Mirrored Media Set (Transact-SQL) | Microsoft Docs"
-description: This article describes how to use the Transact-SQL BACKUP statement to specify a mirrored media set when backing up a SQL Server database. 
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
-ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
+title: "Back Up to a Mirrored Media Set (Transact-SQL)"
+description: This article describes how to use the Transact-SQL BACKUP statement to specify a mirrored media set when backing up a SQL Server database.
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
 ---
 # Back Up to a Mirrored Media Set (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -20,12 +16,12 @@ ms.author: mathoma
  The following example creates the mirrored media set illustrated in the previous illustration and backs up the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to both mirrors.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
 WITH  
     FORMAT,  
-    MEDIANAME = 'AdventureWorks2012Set1';  
+    MEDIANAME = 'AdventureWorks2022Set1';  
 GO  
 ```  
   

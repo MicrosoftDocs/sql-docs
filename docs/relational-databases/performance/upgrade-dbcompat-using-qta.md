@@ -1,15 +1,16 @@
 ---
 title: "Upgrade databases using Query Tuning Assistant"
 description: Learn how the Query Tuning Assistant guides you through the recommended workflow to keep performance stability during upgrades to newer SQL Server versions.
-ms.custom: seo-dt-2019
-ms.date: "02/13/2019"
-ms.prod: sql
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.technology: performance
+ms.date: "02/13/2019"
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-f1_keywords: 
-  - sql13.swb.querytuning.f1
-helpviewer_keywords: 
+f1_keywords:
+  - "sql13.swb.querytuning.f1"
+helpviewer_keywords:
   - "query statistics [SQL Server] live query stats"
   - "live query statistics"
   - "debugging [SQL Server], live query stats"
@@ -17,13 +18,9 @@ helpviewer_keywords:
   - "query profiling"
   - "lightweight query profiling"
   - "lightweight profiling"
-ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
-author: rwestMSFT
-ms.author: randolphwest
-manager: amitban
 ---
 
-# Upgrading Databases by using the Query Tuning Assistant
+# Upgrade databases using the Query Tuning Assistant
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
@@ -35,7 +32,7 @@ This gating capability provided by the database compatibility level, in combinat
 
 ![Recommended database upgrade workflow using Query Store](../../relational-databases/performance/media/query-store-usage-5.png "Recommended database upgrade workflow using Query Store") 
 
-This control over upgrades was further improved with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] where [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) was introduced and allows automating the last step in the recommended workflow above.
+This control over upgrades was further improved with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] where [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) was introduced and allows automating the last step in the recommended workflow above.
 
 Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, the new **Query Tuning Assistant (QTA)** feature will guide users through the recommended workflow to keep performance stability during upgrades to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, as documented in the section *Keep performance stability during the upgrade to newer SQL Server* of [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). However, QTA doesn't roll back to a previously known good plan as seen in the last step of the recommended workflow. Instead, QTA will track any regressions found in the [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, and iterate through possible permutations of applicable optimizer model variations so that a new better plan can be produced.
 
@@ -63,13 +60,13 @@ See below how QTA only changes the last steps of the recommended workflow for up
 
 QTA targets only `SELECT` queries that can be executed from Query Store. Parameterized queries are eligible if the compiled parameter is known. Queries that depend on runtime constructs  such as temporary tables or table variables aren't eligible at this time.
 
-QTA targets known possible patterns of query regressions due to changes in [Cardinality Estimator (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) versions. For example, when upgrading a database from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and database compatibility level 110, to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and database compatibility level 140, some queries may regress because they were designed specifically to work with the CE version that existed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70). This doesn't mean that reverting from CE 140 to CE 70 is the only option. If only a specific change in the newer version is introducing the regression, then it is possible to hint that query to use just the relevant part of the previous CE version that was working better for the specific query, while still leveraging all other improvements of newer CE versions. And also allow other queries in the workload that have not regressed to benefit from newer CE improvements.
+QTA targets known possible patterns of query regressions due to changes in [Cardinality Estimator (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) versions. For example, when upgrading a database from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and database compatibility level 110, to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and database compatibility level 140, some queries may regress because they were designed specifically to work with the CE version that existed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70). This doesn't mean that reverting from CE 140 to CE 70 is the only option. If only a specific change in the newer version is introducing the regression, then it is possible to hint that query to use just the relevant part of the previous CE version that was working better for the specific query, while still using all other improvements of newer CE versions. And also allow other queries in the workload that haven't regressed to benefit from newer CE improvements.
 
 The CE patterns searched by QTA are the following:
 
 - **Independence vs. Correlation**: If independence assumption provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
 - **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
-- **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows doesn't result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+- **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows doesn't result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > As a last resort, if the narrow scoped hints aren't yielding good enough results for the eligible query patterns, then full use of CE 70 is also considered, by using the query hint `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` to generate an execution plan.
@@ -77,11 +74,11 @@ The CE patterns searched by QTA are the following:
 > [!IMPORTANT]
 > Any hint forces certain behaviors that may be addressed in future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates. We recommend you only apply hints when no other option exists, and plan to revisit hinted code with every new upgrade. By forcing behaviors, you may be precluding your workload from benefiting of enhancements introduced in newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## Starting Query Tuning Assistant for database upgrades
+## Start Query Tuning Assistant for database upgrades
 
 QTA is a session-based feature that stores session state in the `msqta` schema of the user database where a session is created for the first time. Multiple tuning sessions can be created on a single database over time, but only one active session can exist for any given database.
 
-### Creating a database upgrade session
+### Create a database upgrade session
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open the Object Explorer and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
@@ -98,7 +95,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
   
     2. In the **Settings** window, two columns show the **Current** state of Query Store in the targeted database, as well as the **Recommended** settings. 
         - The Recommended settings are selected by default, but selecting the radio button over the Current column accepts current settings, and also allows fine-tuning the current Query Store configuration.
-        - The proposed *Stale Query Threshold* setting is twice the number of expected workload duration in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
+        - The proposed *Stale Query Threshold* setting is twice the number of expected workload duration, in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
         Once complete, select **Next**.
 
        ![New database upgrade settings window](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
@@ -115,7 +112,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 > [!NOTE]
 > A possible alternative scenario starts by restoring a database backup from the production server where a database has already gone through the recommended database compatibility upgrade workflow, to a test server.
 
-### Executing the database upgrade workflow
+### Execute the database upgrade workflow
 
 1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **Monitor Sessions**.
 
@@ -216,7 +213,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 Requires membership of **db_owner** role.
   
-## See Also
+## See also
 
 - [Compatibility Levels and Database Engine Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)
 - [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
@@ -225,5 +222,5 @@ Requires membership of **db_owner** role.
 - [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
 - [Use the SQL Server Query Tuning Assistant](/training/modules/use-sql-server-query-tuning-assistant/)

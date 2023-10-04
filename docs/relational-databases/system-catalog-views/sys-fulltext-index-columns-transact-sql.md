@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.fulltext_index_columns"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], properties"
 dev_langs:
   - "TSQL"
-ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_columns (Transact-SQL)

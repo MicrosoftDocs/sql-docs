@@ -1,12 +1,12 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) Creates an external file format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with external streams."
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/05/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 03/28/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE EXTERNAL FILE FORMAT"
@@ -31,11 +31,11 @@ The following file formats are supported:
 
 - **Hive RCFile**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
-
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
+  
 - **Hive ORC**
 
-  Does not apply to [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+  Doesn't apply to [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], or [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] .
 
 - **Parquet**
 
@@ -49,7 +49,7 @@ The following file formats are supported:
 
 ## Syntax
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ### [Delimited text](#tab/delimited)
 
@@ -61,7 +61,6 @@ WITH (
     [ , FORMAT_OPTIONS ( <format_options> [ ,...n  ] ) ]
     [ , DATA_COMPRESSION = {
            'org.apache.hadoop.io.compress.GzipCodec'
-         | 'org.apache.hadoop.io.compress.DefaultCodec'
         }
      ]);
 
@@ -69,13 +68,15 @@ WITH (
 {
     FIELD_TERMINATOR = field_terminator
     | STRING_DELIMITER = string_delimiter
-    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
+    | FIRST_ROW = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format
     | USE_TYPE_DEFAULT = { TRUE | FALSE }
-    | Encoding = {'UTF8' | 'UTF16'}
+    | ENCODING = {'UTF8' | 'UTF16'}
+    | PARSER_VERSION = {'parser_version'}
+
 }
 ```
-
+<!---'org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 ### [RC](#tab/rc)
 
 ```syntaxsql
@@ -139,7 +140,7 @@ WITH (
 ### [Delta table](#tab/delta)
 
 ```syntaxsql
--- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]).
+-- Create an external file format for delta table files (serverless SQL pools in Synapse analytics and SQL Server 2022).
 CREATE EXTERNAL FILE FORMAT file_format_name
 WITH (
          FORMAT_TYPE = DELTA
@@ -154,39 +155,45 @@ WITH (
 
 Specifies a name for the external file format.
 
-### FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT | DELTA ]
+### FORMAT_TYPE 
 
 Specifies the format of the external data.
 
-- PARQUET
+- FORMAT_TYPE = PARQUET
 
   Specifies a Parquet format.
 
-- ORC
+- FORMAT_TYPE = ORC
 
   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
 
-- RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
+- FORMAT_TYPE = RCFILE, SERDE_METHOD = *SERDE_method*
 
   Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
 
   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
+  - `FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'`
+  - `FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'`
 
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe`
-
-  - FORMAT_TYPE = RCFILE, SERDE_METHOD = `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe`
-
-- DELIMITEDTEXT
+- FORMAT_TYPE = DELIMITEDTEXT
 
   Specifies a text format with column delimiters, also called field terminators.
 
-- JSON
+- FORMAT_TYPE = JSON
 
   Specifies a JSON format. Applies to Azure SQL Edge only.
 
-- DELTA
+- FORMAT_TYPE = DELTA
 
-  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]
+  Specifies a Delta Lake format. Applies to serverless SQL pools in Azure Synapse Analytics and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+
+### FORMAT_OPTIONS
+
+Optional. Only for delimited text data types.
+
+Only serverless SQL pools in Azure Synapse Analytics support `PARSER_VERSION`.
+
+Serverless SQL pools do not support the `DATE_FORMAT` option. 
 
 ### DATA_COMPRESSION = *data_compression_method*
 
@@ -196,38 +203,38 @@ To work properly, Gzip compressed files must have the ".gz" file extension.
 
 #### [Delimited text](#tab/delimited)
 
-The DELIMITEDTEXT format type supports these compression methods:
+The DELIMITEDTEXT format type supports this compression method:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+<!--- - DATA COMPRESSION ='org.apache.hadoop.io.compress.DefaultCodec' removed from delimited text -->
 
 #### [RC](#tab/rc)
 
 The RCFILE format type supports this compression method:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
 
 #### [ORC](#tab/orc)
 
 The ORC file format type supports these compression methods:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [Parquet](#tab/parquet)
 
 The PARQUET file format type supports the following compression methods:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
 
 #### [JSON](#tab/json)
 
 The JSON file format type supports the following compression methods:
 
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
-- DATA COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.GzipCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.SnappyCodec`
+- DATA_COMPRESSION = `org.apache.hadoop.io.compress.DefaultCodec`
 
 ### [Delta table](#tab/delta)
 
@@ -361,11 +368,13 @@ Details:
 
   When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:
 
-  - 0 if the column is defined as a numeric column. Decimal columns aren't supported and will error.
+  - `0` if the column is defined as a numeric column. Decimal columns aren't supported and will error.
 
   - Empty string "" if the column is a string column.
 
   - 1900-01-01 if the column is a date column.
+
+  - In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], `USE_TYPE_DEFAULT=true` is not supported for `FORMAT_TYPE = DELIMITEDTEXT, PARSER_VERSION = '2.0'`.
 
 - FALSE
 
@@ -373,7 +382,9 @@ Details:
 
 #### ENCODING = {'UTF8' | 'UTF16'}
 
-In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. 
+
+In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions
 
@@ -381,7 +392,7 @@ In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../
 
 ## Remarks
 
- The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ The external file format is database-scoped in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)]. It is server-scoped in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
  The format options are all optional and only apply to delimited text files.
 
@@ -407,7 +418,7 @@ Takes a shared lock on the EXTERNAL FILE FORMAT object.
 
 Using compressed files always comes with the tradeoff between transferring less data between the external data source and SQL Server while increasing the CPU usage to compress and decompress the data.
 
-Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
+Gzip compressed text files aren't splittable. To improve performance for Gzip compressed text files, we recommend generating multiple files that are all stored in the same directory within the external data source. This file structure allows PolyBase to read and decompress the data faster by using multiple reader and decompression processes. The ideal number of compressed files is the maximum number of data reader processes per compute node. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the maximum number of data reader processes is 8 per node except [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] Gen2, which is 20 readers per node. In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the maximum number of data reader processes per node varies by SLO. See [[!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) for details.
 
 ## Examples
 
@@ -479,7 +490,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           STRING_DELIMITER = '"',
           FIRST_ROW = 2,
           USE_TYPE_DEFAULT = True)
-)
+);
 ```
 
 ### F. Create a JSON external file format
@@ -502,9 +513,9 @@ This example creates an external file format for Delta table type file format. T
 
 ```sql
 CREATE EXTERNAL FILE FORMAT DeltaFileFormat
-WITH(
+WITH (
     FORMAT_TYPE = DELTA
-    );
+);
 ```
 
 ## Next steps

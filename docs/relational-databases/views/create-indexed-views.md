@@ -4,9 +4,9 @@ description: "This article describes how to create indexes on a view."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 10/04/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.date: 08/18/2023
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "indexed views [SQL Server], creating"
@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-This article describes how to create indexes on a view. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view doesn't have to be referenced in the query for the optimizer to consider that view for a substitution.
+This article describes how to create indexes on a view. The first index created on a view must be a unique clustered index. After the unique clustered index has been created, you can create more nonclustered indexes. Creating a unique clustered index on a view improves query performance, because the view is stored in the database in the same way a table with a clustered index is stored. The query optimizer may use indexed views to speed up the query execution. The view doesn't have to be referenced in the query for the optimizer to consider that view for a substitution.
 
 ## Steps
 
@@ -40,24 +40,24 @@ The following steps are required to create an indexed view and are critical to t
 
 ## <a id="Restrictions"></a> Required SET options for indexed views
 
-Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
+Evaluating the same expression can produce different results in the [!INCLUDE [ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
 
-To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required Value** column whenever the following conditions occur:
+To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required value** column whenever the following conditions occur:
 
 - The view and subsequent indexes on the view are created.
 - The base tables referenced in the view at the time the view is created.
 - There is any insert, update, or delete operation performed on any table that participates in the indexed view. This requirement includes operations such as bulk copy, replication, and distributed queries.
 - The indexed view is used by the query optimizer to produce the query plan.
 
-|SET options|Required value|Default server value|Default<br /><br />OLE DB and ODBC value|Default<br /><br />DB-Library value|
+| SET options | Required value | Default server value | Default<br /><br />OLE DB and ODBC value | Default<br /><br />DB-Library value |
 | --- | --- | --- | --- | --- |
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
-|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+| ANSI_NULLS | ON | ON | ON | OFF |
+| ANSI_PADDING | ON | ON | ON | OFF |
+| ANSI_WARNINGS <sup>1</sup> | ON | ON | ON | OFF |
+| ARITHABORT | ON | ON | OFF | OFF |
+| CONCAT_NULL_YIELDS_NULL | ON | ON | ON | OFF |
+| NUMERIC_ROUNDABORT | OFF | OFF | OFF | OFF |
+| QUOTED_IDENTIFIER | ON | ON | ON | OFF |
 
 <sup>1</sup> Setting `ANSI_WARNINGS` to ON implicitly sets `ARITHABORT` to ON.
 
@@ -72,7 +72,7 @@ The definition of an indexed view must be *deterministic*. A view is determinist
 
 To determine whether a view column is deterministic, use the `IsDeterministic` property of the [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) function. To determine if a deterministic column in a view with schema binding is precise, use the `IsPrecise` property of the `COLUMNPROPERTY` function. `COLUMNPROPERTY` returns `1` if `TRUE`, `0` if `FALSE`, and `NULL` for input that isn't valid. This means the column isn't deterministic or not precise.
 
-Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that do not contain float expressions are called precise. Only precise deterministic expressions can participate in key columns and in `WHERE` or `GROUP BY` clauses of indexed views.
+Even if an expression is deterministic, if it contains float expressions, the exact result may depend on the processor architecture or version of microcode. To ensure data integrity, such expressions can participate only as non-key columns of indexed views. Deterministic expressions that don't contain float expressions are called *precise*. Only precise deterministic expressions can participate in key columns and in `WHERE` or `GROUP BY` clauses of indexed views.
 
 ## Additional requirements
 
@@ -87,33 +87,63 @@ The following requirements must also be met, in addition to the `SET` options an
 - Common language runtime (CLR) functions can appear in the select list of the view, but can't be part of the definition of the clustered index key. CLR functions can't appear in the WHERE clause of the view or the ON clause of a JOIN operation in the view.
 - CLR functions and methods of CLR user-defined types used in the view definition must have the properties set as shown in the following table.
 
-  |Property|Note|
+  | Property | Note |
   | --- | --- |
-  |DETERMINISTIC = TRUE|Must be declared explicitly as an attribute of the Microsoft .NET Framework method.|
-  |PRECISE = TRUE|Must be declared explicitly as an attribute of the .NET Framework method.|
-  |DATA ACCESS = NO SQL|Determined by setting DataAccess attribute to DataAccessKind.None and SystemDataAccess attribute to SystemDataAccessKind.None.|
-  |EXTERNAL ACCESS = NO|This property defaults to NO for CLR routines.|
+  | DETERMINISTIC = TRUE | Must be declared explicitly as an attribute of the Microsoft .NET Framework method. |
+  | PRECISE = TRUE | Must be declared explicitly as an attribute of the .NET Framework method. |
+  | DATA ACCESS = NO SQL | Determined by setting the `DataAccess` attribute to `DataAccessKind.None` and `SystemDataAccess` attribute to `SystemDataAccessKind.None`. |
+  | EXTERNAL ACCESS = NO | This property defaults to NO for CLR routines. |
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view can't reference other views.
-
 - If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it doesn't satisfy these `GROUP BY` restrictions.
 - If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+- The SELECT statement in the view definition must not contain the following Transact-SQL syntax:
 
-- The SELECT statement in the view definition must not contain the following Transact-SQL elements:
+  | Transact-SQL function | Possible alternatives |
+  | --- | --- |
+  | `COUNT` | Use `COUNT_BIG` |
+  | ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, and `OPENXML`) | |
+  | Arithmetic mean `AVG` | Use `COUNT_BIG` and `SUM` as separate columns |
+  | Statistical aggregate functions (`STDEV`, `STDEVP`, `VAR`, and `VARP`) | |
+  | `SUM` function that references a nullable expression | Use `ISNULL` inside `SUM()` to make the expression non-nullable |
+  | Other aggregate functions (`MIN`, `MAX`, `CHECKSUM_AGG`, and `STRING_AGG`) | |
+  | User-defined aggregate functions (SQL CLR) | |
 
-  | Transact-SQL elements | (continued) | (continued) |
-  | --------------------- | ----------- | ----------- |
-  |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
-  |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
-  |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
-  |**float**<sup>1</sup>, **text**, **ntext**, **image**, **XML**, or **filestream** columns|Subquery|`OVER` clause, which includes ranking or aggregate window functions|
-  |Full-text predicates (`CONTAINS`, `FREETEXT`)|`SUM` function that references a nullable expression|`ORDER BY`|
-  |CLR user-defined aggregate function|`TOP`|`CUBE`, `ROLLUP`, or `GROUPING SETS` operators|
-  |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
-  |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
-  |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-  |`CHECKSUM_AGG`|`STRING_AGG`||
+  | SELECT clause | Transact-SQL element | Possible alternative |
+  | --- | --- | --- |
+  | `WITH cte AS` | Common table expressions (CTE) `WITH` | |
+  | `SELECT` | Subqueries | |
+  | `SELECT` | `SELECT [ <table>. ] *` | Explicitly name columns |
+  | `SELECT` | `SELECT DISTINCT` | Use `GROUP BY` |
+  | `SELECT` | `SELECT TOP` | |
+  | `SELECT` | `OVER` clause, which includes ranking or aggregate window functions | |
+  | `FROM` | `LEFT OUTER JOIN` | |
+  | `FROM` | `RIGHT OUTER JOIN` | |
+  | `FROM` | `FULL OUTER JOIN` | |
+  | `FROM` | `OUTER APPLY` | |
+  | `FROM` | `CROSS APPLY` | |
+  | `FROM` | Derived table expressions (that is, using `SELECT` in the `FROM` clause) | |
+  | `FROM` | Self-joins | |
+  | `FROM` | Table variables | |
+  | `FROM` | Inline table-valued function | |
+  | `FROM` | Multi-statement table-valued function | |
+  | `FROM` | `PIVOT`, `UNPIVOT` | |
+  | `FROM` | `TABLESAMPLE` | |
+  | `FROM` | `FOR SYSTEM_TIME` | Query the temporal history table directly |
+  | `WHERE` | Full-text predicates (`CONTAINS`, `FREETEXT`, `CONTAINSTABLE`, `FREETEXTTABLE`) | |
+  | `GROUP BY` | `CUBE`, `ROLLUP`, or `GROUPING SETS` operators | Define separate indexed views for each combination of `GROUP BY` columns |
+  | `GROUP BY` | `HAVING` | |
+  | Set operators | `UNION`, `UNION ALL`, `EXCEPT`, `INTERSECT` | Use `OR`, `AND NOT`, and `AND` in the `WHERE` clause respectively |
+  | `ORDER BY` | `ORDER BY` | |
+  | `ORDER BY` | `OFFSET` | |
+
+  | Source column type | Possible alternative |
+  | --- | --- |
+  | Deprecated large value column types **text**, **ntext**, and **image** | Migrate columns to **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** respectively. |
+  | **xml** or FILESTREAM columns | |
+  | **float** <sup>1</sup> columns in index key | |
+  | Sparse column sets | |
 
   <sup>1</sup> The indexed view can contain **float** columns; however, such columns can't be included in the clustered index key.
 
@@ -124,13 +154,13 @@ The following requirements must also be met, in addition to the `SET` options an
 
 When you refer to **datetime** and **smalldatetime** string literals in indexed views, we recommend that you explicitly convert the literal to the date type you want by using a deterministic date format style. For a list of the date format styles that are deterministic, see [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). For more information about deterministic and nondeterministic expressions, see the [Considerations](#nondeterministic) section in this page.
 
-<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+<a id="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
 ## Performance considerations with indexed views
 
 When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referenced by a large number of indexed views, or fewer but complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan can't even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
 
-To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the [`OPTION (EXPAND VIEWS)`](../../t-sql/queries/hints-transact-sql-query.md#expand-views) hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).
+To prevent the [!INCLUDE [ssDE](../../includes/ssde-md.md)] from using indexed views, include the [`OPTION (EXPAND VIEWS)`](../../t-sql/queries/hints-transact-sql-query.md#expand-views) hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).
 
 ## Various additional considerations
 
@@ -144,10 +174,9 @@ To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed vi
 
 ## <a id="Permissions"></a> Permissions
 
-To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the User creating the Index differs from the Users who created the View, for the Index creation alone the **ALTER**-permission on the View is required (covered by ALTER on the schema).
+To create the view, a user needs to hold the **CREATE VIEW** permission in the database and **ALTER** permission on the schema in which the view is being created. If the base table resides within a different schema, the **REFERENCES** permission on the table is required as a minimum. If the user creating the index differs from the users who created the view, for the index creation alone the **ALTER** permission on the view is required (covered by ALTER on the schema).
 
-> [!NOTE]  
-> Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. Therefore it's possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The column **principal_id** in `sys.tables` contains a value if the owner is different from the schema-owner.
+Indexes can only be created on views that have the same owner as the referenced table or tables. This is also called an intact *ownership chain* between the view and the table(s). Typically, when table and view reside within the same schema, the same schema owner applies to all objects within the schema. Therefore it's possible to create a view and not be the owner of the view. On the other hand is also possible that individual objects within a schema have different explicit owners. The `principal_id` column in `sys.tables` contains a value if the owner is different from the schema owner.
 
 ## <a id="TsqlProcedure"></a> Create an indexed view: a T-SQL example
 
@@ -206,7 +235,7 @@ JOIN Sales.SalesOrderHeader AS o
     ORDER BY OrderDate ASC;
 ```
 
-Finally, this example shows querying directly from the indexed view. On [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Standard edition, you must use the `NOEXPAND` query hint to query the indexed view directly.
+Finally, this example shows querying directly from the indexed view. Prior to [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. On [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Standard edition, you must use the `NOEXPAND` query hint to query the indexed view directly. Since [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, all editions support automatic use of an indexed view. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] also support automatic use of indexed views without specifying the `NOEXPAND` hint. For more information, see [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).
 
 ```sql
 --This query uses the indexed view directly, on Enterprise edition.
@@ -226,7 +255,7 @@ ORDER BY OrderDate ASC;
 
 For more information, see [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).
 
-## See also
+## Next steps
 
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)

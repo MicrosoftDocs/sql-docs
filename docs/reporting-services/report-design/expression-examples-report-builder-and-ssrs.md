@@ -1,14 +1,14 @@
 ---
-title: "Expression examples in paginated reports | Microsoft Docs"
+title: "Expression examples in paginated reports"
 description: Control content and paginated report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 04/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "page breaks [Reporting Services], expressions"
   - "green-bar reports [Reporting Services]"
   - "Visual Basic [Reporting Services]"
@@ -23,9 +23,6 @@ helpviewer_keywords:
   - "page footers [Reporting Services]"
   - "dates [Reporting Services], expressions"
   - "expressions [Reporting Services], examples"
-ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Expression examples in paginated reports (Report Builder)
 

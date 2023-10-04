@@ -1,24 +1,20 @@
 ---
-description: "Overview: Exporting Data (Master Data Services)"
 title: Exporting Data
-ms.custom: ""
+description: "Overview: Exporting Data (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "exporting data [Master Data Services]"
   - "subscription views [Master Data Services]"
   - "subscription views [Master Data Services], about subscription views"
-ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Overview: Exporting Data (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  
   

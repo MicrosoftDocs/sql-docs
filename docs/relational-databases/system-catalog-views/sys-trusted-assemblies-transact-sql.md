@@ -4,8 +4,8 @@ description: sys.trusted_assemblies (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/14/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trusted_assemblies_TSQL"
@@ -19,11 +19,11 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trusted_assemblies (Transact-SQL)  
-[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Contains a row for each trusted assembly for the server.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 |Column name |Data type |Description |

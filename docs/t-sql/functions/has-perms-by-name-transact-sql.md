@@ -4,8 +4,8 @@ description: "HAS_PERMS_BY_NAME (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/29/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "HAS_PERMS_BY_NAME"
@@ -25,7 +25,7 @@ dev_langs:
 
   Evaluates the effective permission of the current user on a securable. A related function is [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  Is the name of the class of securable against which the permission is tested. *securable_class* is a scalar expression of type **nvarchar(60)**.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the securable_class argument must be set to one of the following: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, or **USER**.  
   
  *permission*  
  A nonnull scalar expression of type **sysname** that represents the permission name to be checked. There is no default. The permission name ANY is a wildcard.  
@@ -57,7 +57,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the sub-securable_class argument is valid only if the securable_class argument is set to **OBJECT**. If the securable_class argument is set to **OBJECT**, the sub-securable_class argument must be set to **COLUMN**.  
   
 ## Return Types  
  **int**  
@@ -97,7 +97,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### A. Do I have the server-level VIEW SERVER STATE permission?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -105,7 +105,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### B. Am I able to IMPERSONATE server principal Ps?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
@@ -147,8 +147,8 @@ SELECT HAS_PERMS_BY_NAME
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
 ```  
   
-### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2012?  
- The following example assumes `AdventureWorks2012` is my current database context, and uses a two-part name.  
+### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2022?  
+ The following example assumes [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] is my current database context, and uses a two-part name.  
   
 ```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
@@ -157,7 +157,7 @@ SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');
  The following example makes no assumptions about my current database context, and uses a three-part name.  
   
 ```sql  
-SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
+SELECT HAS_PERMS_BY_NAME('AdventureWorks2022.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   

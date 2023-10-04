@@ -1,23 +1,19 @@
 ---
 title: "Local audit usage and diagnostic data collection"
 description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
-ms.custom: seo-lt-2019
-ms.date: 04/12/2022
-ms.prod: sql
-ms.prod_service: security
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Local Audit"
-ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 04/12/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Local Audit"
 monikerRange: ">=sql-server-2016"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ## Introduction
 

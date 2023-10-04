@@ -1,12 +1,12 @@
 ---
-title: Server Configuration Options (SQL Server)
+title: Server configuration options (SQL Server)
 description: Find out how to manage and optimize SQL Server resources. View available configuration options, possible settings, default values, and restart requirements.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
-ms.date: 09/14/2022
-ms.prod: sql
-ms.technology: configuration
+ms.date: 05/12/2023
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "surface area configuration [SQL Server], sp_configure"
@@ -27,12 +27,11 @@ helpviewer_keywords:
   - "administering SQL Server, configuration options"
 keywords: server configuration (SQL Server)
 ---
-
 # Server configuration options (SQL Server)
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-You can manage and optimize SQL Server resources through configuration options by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the `sp_configure` system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through `sp_configure`. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).
+You can manage and optimize SQL Server resources through configuration options by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the `sp_configure` system stored procedure. The most commonly used server configuration options are available through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; all configuration options are accessible through `sp_configure`. Consider the effects on your system carefully before setting these options. For more information, see [View or Change Server Properties (SQL Server)](view-or-change-server-properties-sql-server.md).
 
 > [!IMPORTANT]  
 > Advanced options should be changed only by an experienced database administrator or certified SQL Server technician.
@@ -41,13 +40,7 @@ You can manage and optimize SQL Server resources through configuration options b
 
 If you don't see the effect of a configuration change, it may not be installed. Check to see that the `run_value` of the configuration option has changed.
 
-Configuration options take effect either:
-
-- Immediately after setting the option and issuing the `RECONFIGURE` (or in some cases, `RECONFIGURE WITH OVERRIDE`) statement. Reconfiguring certain options will invalidate plans in the plan cache, causing new plans to be compiled. For more information, see [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
-
-  \- or -
-
-- After performing the above actions and restarting the instance of SQL Server.
+Configuration options take effect immediately after setting the option and issuing the `RECONFIGURE` (or in some cases, `RECONFIGURE WITH OVERRIDE`) statement. Reconfiguring certain options will invalidate plans in the plan cache, causing new plans to be compiled. For more information, see [DBCC FREEPROCCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
 
 You can use the `sys.configurations` catalog view to determine the `config_value` (the `value` column) and the `run_value` (the `value_in_use` column), and whether the configuration option requires a [!INCLUDE [ssde-md](../../includes/ssde-md.md)] restart (the `is_dynamic` column).
 
@@ -93,27 +86,27 @@ The following table lists all available configuration options, the range of poss
 - **SC** = Self-configuring options.
 
 | Configuration&nbsp;option | Minimum value | Maximum value | Default |
-|--|--|--|--|
+| --- | --- | --- | --- |
 | [access check cache bucket count](access-check-cache-server-configuration-options.md) (A) | 0 | 16384 | 0 |
 | [access check cache quota](access-check-cache-server-configuration-options.md) (A) | 0 | 2147483647 | 0 |
 | [ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A) | 0 | 1 | 0 |
-| [ADR cleaner retry timeout (min)](adr-cleaner-retry-timeout-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later.| 0 | 32767 | 15 |
-| [ADR Preallocation Factor](adr-preallocation-factor-server-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later.| 0 | 32767 | 4 |
+| [ADR cleaner retry timeout (min)](adr-cleaner-retry-timeout-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 32767 | 120 |
+| [ADR Preallocation Factor](adr-preallocation-factor-server-configuration-option.md)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 32767 | 4 |
 | [affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR) | -2147483648 | 2147483647 | 0 |
 | [affinity mask](affinity-mask-server-configuration-option.md) (A) | -2147483648 | 2147483647 | 0 |
 | [affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A, only available on 64-bit version of SQL Server) | -2147483648 | 2147483647 | 0 |
 | [affinity64 mask](affinity64-mask-server-configuration-option.md) (A, RR), only available on 64-bit version of SQL Server | -2147483648 | 2147483647 | 0 |
-| [Agent XPs](agent-xps-server-configuration-option.md) (A) | 0 | 1 | 0<br /><br />(Changes to 1 when SQL Server Agent is started. Default value is 0 if SQL Server Agent is set to automatic start during Setup.) |
-| [allow polybase export](allow-polybase-export.md)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later.| 0 | 1 | 0 |
+| [Agent XPs](agent-xps-server-configuration-option.md) (A) | 0 | 1 | 0<br /><br />Changes to 1 when SQL Server Agent is started. Default value is 0 if SQL Server Agent is set to automatic start during Setup. |
+| [allow polybase export](allow-polybase-export.md)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions. | 0 | 1 | 0 |
 | [allow updates](allow-updates-server-configuration-option.md) (Obsolete. Don't use. Will cause an error during reconfigure.) | 0 | 1 | 0 |
 | [automatic soft-NUMA disabled](soft-numa-sql-server.md) | 0 | 1 | 0 |
 | [backup checksum default](backup-checksum-default.md) | 0 | 1 | 0 |
-| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 - versions prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]<br /><br />2 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later | 0 |
-| [backup compression algorithm](view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later. | 0 | 1 | 0 |
+| [backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md) | 0 | 1 - versions prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]<br /><br />2 - [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions | 0 |
+| [backup compression algorithm](view-or-configure-the-backup-compression-algorithm-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. | 0 | 1 | 0 |
 | [blocked process threshold](blocked-process-threshold-server-configuration-option.md) (A) | 5 | 86400 | 0 |
 | [c2 audit mode](c2-audit-mode-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [clr enabled](clr-enabled-server-configuration-option.md) | 0 | 1 | 0 |
-| [clr strict security](clr-strict-security.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later.| 0 | 1 | 0 |
+| [clr strict security](clr-strict-security.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions. | 0 | 1 | 0 |
 | [column encryption enclave type](configure-column-encryption-enclave-type.md) (A, RR) | 0 | 2 | 0 |
 | [common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [contained database authentication](contained-database-authentication-server-configuration-option.md) | 0 | 1 | 0 |
@@ -126,14 +119,15 @@ The following table lists all available configuration options, the range of poss
 | [default trace enabled](default-trace-enabled-server-configuration-option.md) (A) | 0 | 1 | 1 |
 | [disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [EKM provider enabled](ekm-provider-enabled-server-configuration-option.md) | 0 | 1 | 0 |
-| [external scripts enabled](external-scripts-enabled-server-configuration-option.md) (SC) (RR)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later.| 0 | 1 | 0 |
+| [external scripts enabled](external-scripts-enabled-server-configuration-option.md) (SC) (RR)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions. | 0 | 1 | 0 |
 | [filestream access level](filestream-access-level-server-configuration-option.md) | 0 | 2 | 0 |
 | [fill factor](configure-the-fill-factor-server-configuration-option.md) (A, RR) | 0 | 100 | 0 |
 | [ft crawl bandwidth (max)](ft-crawl-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 100 |
 | [ft crawl bandwidth (min)](ft-crawl-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 0 |
 | [ft notify bandwidth (max)](ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 100 |
 | [ft notify bandwidth (min)](ft-notify-bandwidth-server-configuration-option.md)(A) | 0 | 32767 | 0 |
-| [hadoop connectivity](polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later.| 0 | 7 | 0 |
+| [hardware offload enabled](hardware-offload-enable-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions. | 0 | 1 | 0 |
+| [hadoop connectivity](polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br />**Applies to:** [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions. | 0 | 7 | 0 |
 | [in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A) | 0 | 2 | 0 |
 | [index create memory](configure-the-index-create-memory-server-configuration-option.md) (A, SC) | 704 | 2147483647 | 0 |
 | [lightweight pooling](lightweight-pooling-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
@@ -152,13 +146,13 @@ The following table lists all available configuration options, the range of poss
 | [open objects](open-objects-server-configuration-option.md) (A, RR, obsolete) | 0 | 2147483647 | 0 |
 | [optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [PH_timeout](ph-timeout-server-configuration-option.md) (A) | 1 | 3600 | 60 |
-| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later.| 0 | 1 | 0 |
+| [polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 1 | 0 |
 | [polybase network encryption](../../relational-databases/polybase/polybase-installation.md#enable) | 0 | 1 | 1 |
 | [precompute rank](../discontinued-database-engine-functionality-in-sql-server.md) (A) | 0 | 1 | 0 |
 | [priority boost](configure-the-priority-boost-server-configuration-option.md) (A, RR) | 0 | 1 | 0 |
 | [query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A) | 0 | 2147483647 | 0 |
 | [query wait](configure-the-query-wait-server-configuration-option.md) (A) | -1 | 2147483647 | -1 |
-| [recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A, SC) | 0 | 32767 | 0 |
+| [recovery interval (min)](configure-the-recovery-interval-server-configuration-option.md) (A, SC) | 0 | 32767 | 0 |
 | [remote access](configure-the-remote-access-server-configuration-option.md) (RR) | 0 | 1 | 1 |
 | [remote admin connections](remote-admin-connections-server-configuration-option.md) | 0 | 1 | 0 |
 | [remote data archive](configure-the-remote-data-archive-server-configuration-option.md) | 0 | 1 | 0 |
@@ -171,8 +165,8 @@ The following table lists all available configuration options, the range of poss
 | [set working set size](set-working-set-size-server-configuration-option.md) (A, RR, obsolete) | 0 | 1 | 0 |
 | [show advanced options](show-advanced-options-server-configuration-option.md) | 0 | 1 | 0 |
 | [SMO and DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A) | 0 | 1 | 1 |
-| [suppress recovery model errors](suppress-recovery-model-errors-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)].| 0 | 1 | 0 |
-| [tempdb metadata memory-optimized](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) (A)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later.| 0 | 1 | 0 |
+| [suppress recovery model errors](suppress-recovery-model-errors-server-configuration-option.md) (A)<br /><br />**Applies to:** [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)]. | 0 | 1 | 0 |
+| [tempdb metadata memory-optimized](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) (A)<br /><br />**Applies to:** [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] and later versions. | 0 | 1 | 0 |
 | [transform noise words](transform-noise-words-server-configuration-option.md) (A) | 0 | 1 | 0 |
 | [two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A) | 1753 | 9999 | 2049 |
 | [user connections](configure-the-user-connections-server-configuration-option.md) (A, RR, SC) | 0 | 32767 | 0 |
@@ -181,6 +175,6 @@ The following table lists all available configuration options, the range of poss
 
 ## See also
 
-- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
-- [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
+- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+- [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
+- [DBCC FREEPROCCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)

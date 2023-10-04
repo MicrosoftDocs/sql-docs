@@ -1,24 +1,20 @@
 ---
-title: "upper-case  Function (XQuery) | Microsoft Docs"
+title: "upper-case  Function (XQuery)"
 description: Learn how to use the XQuery function upper-case(), that converts characters to their upper case equivalent.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "upper-case"
-  - "upper-case Function (XQuery)"
-ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "upper-case"
+  - "upper-case Function (XQuery)"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - upper-case
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This function converts each character in *$arg* to its upper case equivalent. The Microsoft Windows binary case conversion for Unicode code points specifies how characters are converted to upper case. This standard is different than the mapping for Unicode standard code point standard.  
   
@@ -52,7 +48,7 @@ SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');
  This example shows how to use the upper-case function to perform a case-insensitive search.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 --WITH XMLNAMESPACES clause specifies the namespace prefix  
 --to use.   

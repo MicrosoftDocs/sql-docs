@@ -4,8 +4,8 @@ description: SQL Server CLR integration allows you to create custom aggregate fu
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "aggregate functions [CLR integration]"
@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "custom aggregates [CLR integration]"
   - "user-defined functions [CLR integration]"
   - "UDTs [CLR integration], user-defined aggregates"
-ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 ---
 # CLR User-Defined Aggregates - Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,18 +1,14 @@
 ---
-description: "Customize (Commands Page)"
 title: "Customize (Commands Page)"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: ui-reference
-f1_keywords: 
-  - "sql13.swb.vs.customizecom.f1"
-ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
+description: "Customize (Commands Page)"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: ui-reference
+f1_keywords:
+  - "sql13.swb.vs.customizecom.f1"
 ---
 # Customize (Commands Page)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

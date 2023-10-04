@@ -1,21 +1,18 @@
 ---
-title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
+title: "Connecting to SQL Server (MySQLToSQL)"
 description: Learn how to connect to a target instance of SQL Server to migrate MySQL databases. SSMA obtains metadata about databases in SQL Server.
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "11/16/2020"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-helpviewer_keywords: 
+f1_keywords:
+  - "ssma.mysql.connecttotarget.f1"
+  - "ssma.mysql.connectmssqlform.f1"
+helpviewer_keywords:
   - "connecting to SQL Server 2008, SQL Server permission"
   - "connecting to SQL Server 2008, synchronization"
-ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: cpichuka 
-ms.author: cpichuka
-f1_keywords: 
-    - "ssma.mysql.connecttotarget.f1" 
-    - "ssma.mysql.connectmssqlform.f1"
 ---
 
 # Connecting to SQL Server (MySQLToSQL)
@@ -92,4 +89,4 @@ The next step in the migration depends on your project needs:
 
 ## See Also
 
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

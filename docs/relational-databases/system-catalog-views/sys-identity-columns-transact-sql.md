@@ -4,9 +4,8 @@ description: sys.identity_columns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "identity_columns"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.identity_columns catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.identity_columns (Transact-SQL)

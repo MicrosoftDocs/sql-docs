@@ -1,16 +1,13 @@
 ---
-title: "Add a multi-value parameter to a paginated report | Microsoft Docs"
+title: "Add a multi-value parameter to a paginated report"
 description: Learn how to add a parameter to a paginated report that allows the user to select more than one value for the parameter in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a multi-value parameter to a paginated report
 

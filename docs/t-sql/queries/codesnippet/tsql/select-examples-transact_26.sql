@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL
 DROP TABLE dbo.Gloves;
@@ -11,7 +11,7 @@ WHERE ProductModelID IN (3, 4);
 GO
 
 -- Here is the simple union.
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel

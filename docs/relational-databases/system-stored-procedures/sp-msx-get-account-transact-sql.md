@@ -1,30 +1,26 @@
 ---
+title: "sp_msx_get_account (Transact-SQL)"
 description: "sp_msx_get_account (Transact-SQL)"
-title: "sp_msx_get_account (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_msx_get_account_TSQL"
-  - "sp_msx_get_account"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_msx_get_account"
-ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_msx_get_account_TSQL"
+  - "sp_msx_get_account"
+helpviewer_keywords:
+  - "sp_msx_get_account"
+dev_langs:
+  - "TSQL"
 ---
 # sp_msx_get_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information on the credential that the target server uses to log in to the master server.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -69,7 +65,7 @@ GO
   
  `-------------- ----------------- -------------------- ------------------------------`  
   
- `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
+ `1              65538             MsxAccount           AdventureWorks2022\MsxAccount`  
   
 ## See Also  
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   

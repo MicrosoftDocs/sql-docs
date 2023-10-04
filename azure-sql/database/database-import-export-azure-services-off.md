@@ -3,7 +3,7 @@ title: Import or export an Azure SQL Database without allowing Azure services to
 description: Import or export an Azure SQL Database without allowing Azure services to access the server.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
+ms.reviewer: mathoma, jeschult
 ms.date: 01/08/2020
 ms.service: sql-database
 ms.subservice: migration
@@ -36,13 +36,13 @@ The following steps show you how to connect to your virtual machine using a remo
 
 1. After deployment completes, go to the virtual machine resource.
 
-   ![Screenshot shows a virtual machine Overview page with a Connect button.](./media/database-import-export-azure-services-off/vm.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/vm.png" alt-text="Screenshot shows a virtual machine Overview page with a Connect button.":::
 
 2. Select **Connect**.
 
    A Remote Desktop Protocol file (.rdp file) form appears with the public IP address and port number for the virtual machine.
 
-   ![RDP form](./media/database-import-export-azure-services-off/rdp.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/rdp.png" alt-text="Screenshot of Azure portal, connect to VM, with download RDP highlighted.":::
 
 3. Select **Download RDP File**.
 
@@ -61,7 +61,7 @@ The following steps show you how to connect to your virtual machine using a remo
 
 [Download and install the latest version of SqlPackage](/sql/tools/sqlpackage-download).
 
-For additional information, see [SqlPackage.exe](/sql/tools/sqlpackage).
+For additional information, see [SqlPackage](/sql/tools/sqlpackage).
 
 ## Create a firewall rule to allow the VM access to the database
 
@@ -73,11 +73,11 @@ The following steps create a server-level IP firewall rule for your virtual mach
 
 2. Copy this fully qualified server name to use when connecting to your server and its databases.
 
-   ![server name](./media/database-import-export-azure-services-off/server-name.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-name.png" alt-text="Screenshot of the Azure portal, database overview page, with the server name highlighted.":::
 
 3. Select **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
 
-   ![server-level IP firewall rule](./media/database-import-export-azure-services-off/server-firewall-rule.png)
+   :::image type="content" source="./media/database-import-export-azure-services-off/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, showing the firewall page, with server-level IP firewall rule highlighted.":::
 
 4. Choose **Add client IP** on the toolbar to add your virtual machine's public IP address to a new server-level IP firewall rule. A server-level IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
@@ -91,10 +91,10 @@ To export an Azure SQL Database using the [SqlPackage](/sql/tools/sqlpackage) co
 
 We recommend the use of the SqlPackage utility for scale and performance in most production environments. For a SQL Server Customer Advisory Team blog about migrating using BACPAC files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
-This example shows how to export a database using SqlPackage.exe with Active Directory Universal Authentication. Replace with values that are specific to your environment.
+This example shows how to export a database using SqlPackage with Active Directory Universal Authentication. Replace with values that are specific to your environment.
 
 ```cmd
-SqlPackage.exe /a:Export /tf:testExport.bacpac /scs:"Data Source=<servername>.database.windows.net;Initial Catalog=MyDB;" /ua:True /tid:"apptest.onmicrosoft.com"
+SqlPackage /a:Export /tf:testExport.bacpac /scs:"Data Source=<servername>.database.windows.net;Initial Catalog=MyDB;" /ua:True /tid:"apptest.onmicrosoft.com"
 ```
 
 ## Import a database using SqlPackage
@@ -103,10 +103,10 @@ To import a SQL Server database using the [SqlPackage](/sql/tools/sqlpackage) co
 
 For scale and performance, we recommend using SqlPackage in most production environments rather than using the Azure portal. For a SQL Server Customer Advisory Team blog about migrating using `BACPAC` files, see [migrating from SQL Server to Azure SQL Database using BACPAC Files](/archive/blogs/sqlcat/migrating-from-sql-server-to-azure-sql-database-using-bacpac-files).
 
-The following SqlPackage command imports the **AdventureWorks2017** database from local storage to an Azure SQL Database. It creates a new database called **myMigratedDatabase** with a **Premium** service tier and a **P6** Service Objective. Change these values as appropriate for your environment.
+The following SqlPackage command imports the `AdventureWorks2022` database from local storage to an Azure SQL Database. It creates a new database called `myMigratedDatabase` with a **Premium** service tier and a **P6** Service Objective. Change these values as appropriate for your environment.
 
 ```cmd
-sqlpackage.exe /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2017.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
+SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial Catalog=myMigratedDatabase>;User Id=<userId>;Password=<password>" /sf:AdventureWorks2022.bacpac /p:DatabaseEdition=Premium /p:DatabaseServiceObjective=P6
 ```
 
 > [!IMPORTANT]
@@ -115,7 +115,7 @@ sqlpackage.exe /a:import /tcs:"Data Source=<serverName>.database.windows.net;Ini
 This example shows how to import a database using SqlPackage with Active Directory Universal Authentication.
 
 ```cmd
-sqlpackage.exe /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
+SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
 ```
 
 ## Performance considerations
@@ -137,7 +137,7 @@ The .BACPAC file can be stored in [Azure Blobs](/azure/storage/blobs/storage-blo
 
 To achieve the best performance, use Azure Files. SqlPackage operates with the filesystem so it can access Azure Files directly.
 
-To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the the blob and the local file system before the import or export operation. As a result the process will take longer.
+To reduce cost, use Azure Blobs, which cost less than a premium Azure file share. However, it will require you to copy the [.BACPAC file](/sql/relational-databases/data-tier-applications/data-tier-applications#bacpac) between the blob and the local file system before the import or export operation. As a result the process will take longer.
 
 To upload or download .BACPAC files, see [Transfer data with AzCopy and Blob storage](/azure/storage/common/storage-use-azcopy-v10#transfer-data), and [Transfer data with AzCopy and file storage](/azure/storage/common/storage-use-azcopy-files).
 

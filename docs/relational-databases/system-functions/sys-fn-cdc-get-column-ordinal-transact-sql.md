@@ -1,33 +1,29 @@
 ---
+title: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
 description: "sys.fn_cdc_get_column_ordinal (Transact-SQL)"
-title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "01/25/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_get_column_ordinal"
   - "fn_cdc_get_column_ordinal_TSQL"
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_column_ordinal"
   - "sys.fn_cdc_get_column_ordinal"
-ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the column ordinal of the specified column as it appears in the [change table](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associated with the specified capture instance.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,7 +52,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  The following example obtains the ordinal position of the `VacationHours` column in the update mask for the `HumanResources_Employee` capture instance. That value is then used in the call to `sys.fn_cdc_is_bit_set` to extract information from the returned update mask.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10),  @VacationHoursOrdinal int;  
 SET @from_lsn = sys.fn_cdc_get_min_lsn('HumanResources_Employee');  

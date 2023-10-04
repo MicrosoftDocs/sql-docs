@@ -6,10 +6,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
@@ -32,10 +31,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The values of these counters are also available by executing the following statement:
 
-```sql
-SELECT * FROM sys.dm_os_performance_counters
-WHERE object_name = 'SQLServer:Deprecated Features';
-```
+[!INCLUDE [deprecated-os-performance-counters](../includes/deprecated-os-performance-counters.md)]
 
 > [!NOTE]  
 > This list is identical to the [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] list. There are no new deprecated or discontinued Database Engine features announced for [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
@@ -54,7 +50,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Levels are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
+Upgrade from version 100 ([!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]). | When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Levels are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 
@@ -203,7 +199,7 @@ The following SQL Server Database Engine features are supported in the next vers
 
 | Deprecated feature | Replacement | Feature name |
 |--------------------|-------------|--------------|
-| Specifying the SQLOLEDB provider for linked servers. | SQL Server Native Client (SQLNCLI) | SQLOLEDDB for linked servers |
+| Specifying the SQLOLEDB provider for linked servers. | [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](../connect/oledb/oledb-driver-for-sql-server.md)  | SQLOLEDB for linked servers |
 
 ### Metadata
 

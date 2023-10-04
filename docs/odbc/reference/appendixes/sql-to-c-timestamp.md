@@ -1,20 +1,16 @@
 ---
+title: "SQL to C: Timestamp"
 description: "SQL to C: Timestamp"
-title: "SQL to C: Timestamp | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2019"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "timestamp data type [ODBC]"
   - "converting data from SQL to C types [ODBC], timestamp"
   - "data conversions from SQL to C types [ODBC], timestamp"
-ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-author: David-Engel
-ms.author: v-davidengel
 ---
 # SQL to C: Timestamp
 
@@ -45,4 +41,4 @@ The following table shows the ODBC C data types to which timestamp SQL data can 
   
  [f]   This is the size of the corresponding C data type.  
 
-When timestamp SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*]" format, where up to nine digits can be used for fractional seconds. This format is not affected by the Windows® country setting. (Except for the decimal point and fractional seconds, the entire format must be used, regardless of the precision of the timestamp SQL data type.)
+When timestamp SQL data is converted to character C data, the resulting string is in the "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*]" format, where up to nine digits can be used for fractional seconds. This format is not affected by the Windows® country/region setting. (Except for the decimal point and fractional seconds, the entire format must be used, regardless of the precision of the timestamp SQL data type.)

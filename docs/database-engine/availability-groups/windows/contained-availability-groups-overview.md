@@ -5,10 +5,9 @@ author: kfarlee
 ms.author: kfarlee
 ms.reviewer: mathoma
 ms.date: "05/11/2020"
-ms.prod: sql
-ms.technology: high-availability
+ms.service: sql
+ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "availability groups [SQL Server], contained availability groups"
   - "availability groups [SQL Server], configuring"

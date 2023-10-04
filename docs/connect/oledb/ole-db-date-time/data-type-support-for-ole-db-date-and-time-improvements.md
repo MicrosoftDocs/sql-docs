@@ -4,8 +4,8 @@ description: Learn about OLE DB types that support SQL Server date/time data typ
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "date/time [OLE DB], data type support"

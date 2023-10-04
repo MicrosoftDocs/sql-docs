@@ -1,32 +1,19 @@
---- 
-
-# required metadata 
-title: "rxLogisticRegression function (MicrosoftML) " 
-description: " Machine Learning Logistic Regression " 
-keywords: "(MicrosoftML), rxLogisticRegression, classification, models" 
+---
+title: "rxLogisticRegression function (MicrosoftML)"
+description: "Machine Learning Logistic Regression (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - rxLogisticRegression
+  - classification
+  - models
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # rxLogisticRegression: Logistic Regression 

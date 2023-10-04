@@ -4,8 +4,8 @@ description: Learn about the advantages of calling a stored procedure on the dat
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "stored procedures [OLE DB], executing"

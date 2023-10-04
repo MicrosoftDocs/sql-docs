@@ -4,8 +4,8 @@ description: Using Microsoft Visual Studio, you can develop CLR database objects
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 ms.custom: intro-deployment
 helpviewer_keywords:
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], deploying"
   - "deploying assemblies [CLR integration]"
   - "deploying [CLR integration]"
-ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 ---
 # Deploying CLR Database Objects
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +94,7 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 ## Post Deployment Scripts  
  You can run a post deployment script.  
   
- To add a post deployment script, add a file called postdeployscript.sql in your Visual Studio project directory. For example, right click your project in **Solution Explorer** and select **Add Existing Item**. Add the file in the root of the project, rather than in the Test Scripts folder.  
+ To add a post deployment script, add a file called postdeployscript.sql in your Visual Studio project directory. For example, right-click your project in **Solution Explorer** and select **Add Existing Item**. Add the file in the root of the project, rather than in the Test Scripts folder.  
   
  When you click deploy, Visual Studio will run this script after the deployment of your project.  
   

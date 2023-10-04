@@ -1,19 +1,16 @@
 ---
+title: "CONTAINSTABLE (Transact-SQL)"
 description: "CONTAINSTABLE (Transact-SQL)"
-title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/24/2015"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "CONTAINSTABLE"
   - "CONTAINSTABLE_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "precise or fuzzy (less precise) matches [full-text search]"
   - "fuzzy (less precise) word or phrase search [full-text search]"
   - "word searches [full-text search]"
@@ -30,9 +27,8 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "rankings [full-text search]"
   - "less precise (fuzzy) searches [full-text search]"
-ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONTAINSTABLE (Transact-SQL)
@@ -44,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
  Unlike CONTAINS, however, queries using CONTAINSTABLE return a relevance ranking value (RANK) and full-text key (KEY) for each row.  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -189,7 +185,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK 
  The following example searches for all product names containing the words "frame," "wheel," or "tire," and different weights are given to each word. For each returned row matching these search criteria, the relative closeness (ranking value) of the match is shown. In addition, the highest ranking rows are returned first.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.Name, KEY_TBL.RANK  
@@ -211,7 +207,7 @@ GO
  The following example uses NEAR to search for "`bracket`" and "`reflector`" close to each other in the `Production.Document` table. Only rows with a rank value of 50 or higher are returned.  
   
 ```  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 SELECT DocumentNode, Title, DocumentSummary  
@@ -231,7 +227,7 @@ GO
  The following example returns the description of the top 5 products where the `Description` column contains the word "aluminum" near either the word "light" or the word "lightweight".  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.ProductDescriptionID,  
@@ -254,7 +250,7 @@ GO
  The following example shows using the `LANGUAGE` argument.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT FT_TBL.ProductDescriptionID,  

@@ -4,7 +4,7 @@ description: Learn how to run a SQL Server VM on an Azure Dedicated Host.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 08/12/2019
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
@@ -58,7 +58,7 @@ Because since it's your host, you are eligible to set the virtualization with a 
 
 **Q: How does the Azure Hybrid Benefit work for Windows Server/SQL Server licenses on Azure Dedicated Host?**
 
-A: Customers can use the value of their existing Windows Server and SQL Server licenses with Software Assurance, or qualifying subscription licenses, to pay a reduced rate on Azure Dedicated Host using Azure Hybrid Benefit. Windows Server Datacenter and SQL Server Enterprise Edition customers get unlimited virtualization (deploy as many Windows Server virtual machines as possible on the host subject to the physical capacity of the underlying server) when they license the entire host and use Azure Hybrid Benefit.  All Windows Server and SQL Server workloads in Azure Dedicated Host are also eligible for Extended Security Updates for Windows Server and SQL Server 2008/R2 at no additional charge. 
+A: Customers can use the value of their existing Windows Server and SQL Server licenses with Software Assurance, or qualifying subscription licenses, to pay a reduced rate on Azure Dedicated Host using Azure Hybrid Benefit. Windows Server Datacenter and SQL Server Enterprise Edition customers get unlimited virtualization (deploy as many Windows Server virtual machines as possible on the host subject to the physical capacity of the underlying server) when they license the entire host and use Azure Hybrid Benefit.  All Windows Server and SQL Server workloads in Azure Dedicated Host are also eligible for Extended Security Updates for Windows Server and SQL Server 2012 at no additional charge. 
 
 ## Next steps
 

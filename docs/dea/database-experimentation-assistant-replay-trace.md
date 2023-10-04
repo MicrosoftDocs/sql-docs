@@ -1,14 +1,13 @@
 ---
 title: Replay a trace for SQL Server upgrades
 description: Learn how to replay a captured trace with Database Experimentation Assistant for SQL Server upgrades.
-author: pochiraju
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: mathoma
 ms.date: 12/12/2019
-ms.prod: sql
-ms.technology: dea
+ms.service: sql
+ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Replay a trace in Database Experimentation Assistant
@@ -40,13 +39,13 @@ First, you need to perform a trace replay against target 1, which represents you
     - **Replay Trace Location**: Specify the path to store trace files/XEvents associated with the trace replay.
 
         > [!NOTE]
-        > For an Azure SQL Database or an Azure SQL Managed Instance, you need to provide the SAS URI of the Azure blob storage account.
+        > For an Azure SQL Database or an Azure SQL Managed Instance, you need to provide the SAS URI of the Azure Blob Storage account.
 
 3. Verify that you have restored the database(s) by selecting the **Yes, I have manually restored the database(s)** check box.
 
 4. Under **SQL Server connection details**, enter or select the following information:
 
-    - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Server Type**: Specify the type of the SQL Server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Server name**: Specify the server name or IP address of your SQL Server.
     - **Authentication Type**: For the authentication type, select **Windows**.
     - **Database name**: Enter a name for a database on which to start a server-side trace. If you don't specify a database, trace is captured on all the databases on the server.

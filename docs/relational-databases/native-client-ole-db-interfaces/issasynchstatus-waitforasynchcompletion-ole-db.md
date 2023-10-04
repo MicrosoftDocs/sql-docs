@@ -1,25 +1,23 @@
 ---
+title: "ISSAsynchStatus::WaitForAsynchCompletion (Native Client OLE DB provider)"
 description: "ISSAsynchStatus::WaitForAsynchCompletion in SQL Server Native Client (OLE DB)"
-title: "ISSAsynchStatus::WaitForAsynchCompletion (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apiname: 
-  - "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "WaitForAsynchCompletion method"
-ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "WaitForAsynchCompletion method"
+apiname: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
   Waits until the asynchronously executing operation is complete or until a time-out occurs.  
   

@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_1785"
 title: MSSQLSERVER_1785
-ms.custom: ""
-ms.date: 12/25/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, vencher, tejasaks, docast
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "1785 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_1785"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: vencher, tejasaks, docast
+ms.date: 12/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "1785 (Database Engine error)"
 ---
 # MSSQLSERVER_1785
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

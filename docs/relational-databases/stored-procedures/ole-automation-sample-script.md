@@ -1,16 +1,14 @@
 ---
 title: "OLE Automation Sample Script"
 description: Learn how to use an example of a Transact-SQL statement batch that uses the OLE Automation stored procedures to create and use an SQL-DMO SQLServer object.
-ms.custom: ""
-ms.date: "03/10/2022"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: stored-procedures
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "OLE Automation [SQL Server], examples"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/10/2022"
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: conceptual
+helpviewer_keywords:
+  - "OLE Automation [SQL Server], examples"
 monikerRange: ">=sql-server-2016"
 ---
 # OLE Automation Sample Script
@@ -19,7 +17,7 @@ monikerRange: ">=sql-server-2016"
   This article contains an example of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement batch that uses the OLE Automation stored procedures to create and use a SQL-DMO SQLServer object in the local instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Parts of the code are used as examples in the reference articles for the OLE Automation system stored procedures.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @Object int;  
 DECLARE @HR int;  

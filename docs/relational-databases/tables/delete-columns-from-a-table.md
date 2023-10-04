@@ -1,21 +1,18 @@
 ---
 title: "Delete columns from a table"
 description: "Delete columns from a table"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "08/21/2023"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: how-to
+ms.custom: UpdateFrequency5
+helpviewer_keywords:
   - "columns [SQL Server], deleting"
   - "removing columns"
   - "deleting columns"
   - "dropping columns"
-ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "12/15/2021"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete columns from a table
@@ -31,7 +28,8 @@ This article describes how to delete table columns in [!INCLUDE[ssnoversion](../
 
 You can't delete a column that has a CHECK constraint. You must first delete the constraint.
 
-You can't delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the [Table Designer](../../ssms/visual-db-tools/visual-database-tool-designers.md#table-designer) in SSMS. When using [Object Explorer](../../ssms/object/object-explorer.md) or [!INCLUDE[tsql](../../includes/tsql-md.md)], you must first remove all dependencies on the column.
+You can't delete a column that has PRIMARY KEY or FOREIGN KEY constraints or other dependencies except when using the [Table Designer](../../ssms/visual-db-tools/visual-database-tool-designers.md#table-designer) in SSMS. When using [Object Explorer](../../ssms/object/object-explorer.md) in SSMS or [!INCLUDE[tsql](../../includes/tsql-md.md)], you must first remove all dependencies on the column.
+
 ## <a name="Permissions"></a> Permissions
 
 Requires ALTER permission on the table.
@@ -40,12 +38,12 @@ Requires ALTER permission on the table.
 
 The following steps explain how to delete columns with Object Explorer in SSMS:
 
-1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
-2. In **Object Explorer**, locate the table from which you want to delete columns, and expand to expose the column names.
+1. Connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+2. In **Object Explorer**, locate the table from which you want to delete columns, and expand the table to expose the column names.
 3. Right-click the column that you want to delete, and choose **Delete**.
-4. In **Delete Object** dialog box, click **OK**.
+4. In the **Delete Object** dialog box, click **OK**.
 
-If the column contains constraints or other dependencies, an error message will display in the **Delete Object** dialog box. Resolve the error by deleting the referenced constraints.
+If the column contains constraints or other dependencies, an error message displays in the **Delete Object** dialog box. Resolve the error by deleting the referenced constraints.
 
 ## Delete columns using Table Designer
 
@@ -57,7 +55,7 @@ The following steps explain how to delete columns with Table Designer in SSMS:
 
 ## <a name="TsqlProcedure"></a> Delete columns using Transact-SQL
 
-You can delete columns using Transact-SQL in SSMS, [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), or command-line tools such as the [sqlcmd utility](../../tools/sqlcmd-utility.md).
+You can delete columns using Transact-SQL in SSMS, [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md), or command-line tools such as the [sqlcmd utility](../../tools/sqlcmd/sqlcmd-utility.md).
 
 The following example shows you how to delete a column.
 

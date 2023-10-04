@@ -4,15 +4,15 @@ description: Use these settings for PolyBase connectivity to Hadoop, including H
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/04/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 monikerRange: "=sql-server-2016||=sql-server-2017||=sql-server-ver15||=azuresqldb-mi-current"
 ---
 
 # PolyBase configuration and security for Hadoop
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article provides a reference for various configuration settings that affect PolyBase connectivity to Hadoop. For a walkthrough on how to use PolyBase with Hadoop, see [Configure PolyBase to access external data in Hadoop](polybase-configure-hadoop.md).
 

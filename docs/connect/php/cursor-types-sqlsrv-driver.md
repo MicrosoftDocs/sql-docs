@@ -4,8 +4,8 @@ description: "Learn how to use cursor types to create a result set that you can 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/11/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Cursor Types (SQLSRV Driver)

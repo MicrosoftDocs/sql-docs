@@ -5,11 +5,9 @@ description: Create a database audit specification object using the SQL Server a
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "CREATE DATABASE AUDIT"
   - "DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -24,11 +22,11 @@ dev_langs:
   - "TSQL"
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -88,7 +86,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples
 
 ### A. Audit SELECT and INSERT on a table for any database principal 
- The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any member of the `public` database role, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database. This has the effect that every user is audited as every user is always member of the `public` role.
+ The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any member of the `public` database role, for the `HumanResources.EmployeePayHistory` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This has the effect that every user is audited as every user is always member of the `public` role.
   
 ```sql  
 USE master ;  
@@ -103,7 +101,7 @@ ALTER SERVER AUDIT Payrole_Security_Audit
 WITH (STATE = ON) ;  
 GO  
 -- Move to the target database.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 -- Create the database audit specification.  
 CREATE DATABASE AUDIT SPECIFICATION Audit_Pay_Tables  
@@ -115,7 +113,7 @@ GO
 ``` 
 
 ### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
- The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
+ The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE master ;  
@@ -131,7 +129,7 @@ ALTER SERVER AUDIT DataModification_Security_Audit
 WITH (STATE = ON) ;  
 GO  
 -- Move to the target database.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE ROLE SalesUK
 GO

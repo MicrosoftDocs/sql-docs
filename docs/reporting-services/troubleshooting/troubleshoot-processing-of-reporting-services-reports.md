@@ -1,16 +1,13 @@
 ---
 title: "Troubleshoot Processing of Reporting Services Reports"
 description: In this article, troubleshoot issues occurring when the report processor combines data and layout information and evaluates report item property expressions.
-ms.date: 08/26/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
-ms.topic: conceptual
-ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/26/2016
+ms.service: reporting-services
+ms.subservice: troubleshooting
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot Processing of Reporting Services Reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this topic to help troubleshoot these issues.   
@@ -41,7 +38,7 @@ A data type error usually means the default or the specified data type is not su
   
 To eliminate the #Error message, you must rewrite the expression that causes it. To determine more details about the issue, view the detailed error message.   
   
-In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)], view the Output window. On the report server, view the call stack. 
+In preview, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], view the Output window. On the report server, view the call stack. 
   
   
 ## See Also  

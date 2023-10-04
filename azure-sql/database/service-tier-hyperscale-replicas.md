@@ -4,7 +4,7 @@ description: This article describes the different types of secondary replicas av
 author: yorek
 ms.author: damauri
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/04/2022
+ms.date: 02/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: overview
@@ -25,7 +25,7 @@ Secondary replicas are always read-only, and can be of three different types:
 - Geo-replica
 - Named replica
 
-Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together.
+Each type has a different architecture, feature set, purpose, and cost. Based on the features you need, you may use just one or even all of the three together. Secondary replicas are supported by both [serverless](serverless-tier-overview.md) and provisioned compute tiers.
 
 ## High Availability replica
 
@@ -77,10 +77,10 @@ The following example creates a named replica `WideWorldImporters_NamedReplica` 
 # [Portal](#tab/portal)
 
 1. In the [Azure portal](https://portal.azure.com), browse to the database for which you want to create the named replica.
-1. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
+1. On the **SQL Database** page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
     :::image type="content" source="./media/named-replicas-configure-portal\azure-create-named-replicas.png" alt-text="Screenshot that shows create named replica step.":::
-1. Choose Named replica under Replica configuration, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
+1. Choose **Named replica** under **Replica configuration**, select or create the server for the named replica, enter named replica database name and configure the **Compute + storage** options if necessary.
 
     :::image type="content" source="./media/named-replicas-configure-portal/azure-choose-named-replica.png" alt-text="Screenshot that shows configuration of named replica.":::
 
@@ -136,14 +136,19 @@ Open named replica database page, and then select **Compute + storage**. Update 
 :::image type="content" source="./media/named-replicas-configure-portal/azure-update-named-replica.png" alt-text="Screenshot that shows named replica service level objective update.":::
 
 # [T-SQL](#tab/tsql)
+
 ```sql
 ALTER DATABASE [WideWorldImporters_NamedReplica] MODIFY (SERVICE_OBJECTIVE = 'HS_Gen5_4')
 ```
+
 # [PowerShell](#tab/azure-powershell)
+
 ```azurepowershell
 Set-AzSqlDatabase -ResourceGroup "MyResourceGroup" -ServerName "contosoeast" -DatabaseName "WideWorldImporters_NamedReplica" -RequestedServiceObjectiveName "HS_Gen5_4"
 ```
+
 # [Azure CLI](#tab/azure-cli)
+
 ```azurecli
 az sql db update -g MyResourceGroup -s contosoeast -n WideWorldImporters_NamedReplica --service-objective HS_Gen5_4
 ```
@@ -196,7 +201,7 @@ Geo-replication for Hyperscale database has following current limitations:
 
 - Only one geo-replica can be created (in the same or different region).
 - Point in time restore of the geo-replica is not supported.
-- Secondary of a secondary (also known as "geo-replica chaining") is not supported.
+- Creating geo-replica of a geo-replica (also known as "geo-replica chaining") is not supported.
 
 ## Next steps
 

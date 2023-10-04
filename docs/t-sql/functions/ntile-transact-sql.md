@@ -4,8 +4,8 @@ description: "NTILE (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "NTILE_TSQL"
@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 
   Distributes the rows in an ordered partition into a specified number of groups. The groups are numbered, starting at one. For each row, NTILE returns the number of the group to which the row belongs.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  The following example divides rows into four groups of employees based on their year-to-date sales. Because the total number of rows is not divisible by the number of groups, the first two groups have four rows and the remaining groups have three rows each.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
@@ -102,7 +102,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
  The following example adds the `PARTITION BY` argument to the code in example A. The rows are first partitioned by `PostalCode` and then divided into four groups within each `PostalCode`. The example also declares a variable `@NTILE_Var` and uses that variable to specify the value for the *integer_expression* parameter.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @NTILE_Var INT = 4;  
   
@@ -143,7 +143,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Dividing rows into groups  
  The following example uses the NTILE function to divide a set of salespersons into four groups based on their assigned sales quota for the year 2003. Because the total number of rows is not divisible by the number of groups, the first group has five rows and the remaining groups have four rows each.  

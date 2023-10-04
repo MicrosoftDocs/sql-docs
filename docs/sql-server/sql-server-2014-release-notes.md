@@ -1,19 +1,18 @@
 ---
-title: "SQL Server 2014 Release Notes | Microsoft Docs"
+title: "SQL Server 2014 Release Notes"
 description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2014 (12.x) releases.
-ms.custom: ""
-ms.date: 07/22/2020
-ms.prod: sql
-ms.technology: release-landing
-ms.reviewer: ""
-ms.topic: conceptual
-ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2016"
+ms.date: 07/22/2020
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
+monikerRange: "<= sql-server-2016"
 ---
 # SQL Server 2014 Release Notes
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+
 This article describes known issues with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] releases, including related service packs.
 
 ## SQL Server 2014 Service Pack 2 (SP2)
@@ -52,7 +51,7 @@ SQL Server 2014 SP2 contains rollups of released hotfixes for SQL Server 2014 SP
 
 In addition, note the following fixes:
 - The Xevent call stack now include modules names and offset instead of absolute addresses.
-- Better correlation between diagnostics XE and DMVs - Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since SQL server does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
+- Better correlation between diagnostics XE and DMVs - Query_hash and query_plan_hash are used for identifying a query uniquely. DMV defines them as varbinary(8), while XEvent defines them as UINT64. Since [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] does not have "unsigned bigint", casting does not always work. This improvement introduces new XEvent action/filter columns equivalent to query_hash and query_plan_hash except when they are defined as INT64. This fix helps correlating queries between XE and DMVs.
 - Support for UTF-8 in BULK INSERT and BCP - Support for export and import of data encoded in UTF-8 character set is now enabled in BULK INSERT and BCP.
 
 ### Download pages and more information for SP2
@@ -261,7 +260,7 @@ DATEPART(weekday, @d)
   
 **Workaround:** None.  
   
-#### Register through SSMS adds DAC meta-data with mismatched instance IDs  
+#### Register through SSMS adds DAC metadata with mismatched instance IDs  
 **Issue:** When registering or deleting a Data-Tier Application package (.dacpac) through SQL Server Management Studio, the sysdac* tables are not updated correctly to allow a user to query dacpac history for the database.  The instance_id for sysdac_history_internal and sysdac_instances_internal do not match to allow for a join.  
   
 **Workaround:** This issue is fixed with the feature pack redistribution of the [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=100297).  After the update is applied, all new history entries will use the value listed for the instance_id in the sysdac_instances_internal table.  
@@ -359,7 +358,7 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 **More Information:**  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] includes MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[power-pivot-md](../includes/power-pivot-md.md)] workbooks use MSOLAP.5. If MSOLAP.5 is not installed on the computer running Excel Services, Excel Services cannot load the data models.  
   
 #### MSOLAP.5 must be downloaded, installed and registered for a SharePoint 2013 new farm configured with SQL Server 2014  
 **Issue:**  

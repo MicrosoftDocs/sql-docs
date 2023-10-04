@@ -5,9 +5,11 @@ author: ninarn
 ms.author: ninarn
 ms.reviewer: alayu, markingmyname
 ms.date: 10/16/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: tutorial
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Create an Azure SQL Database using Azure Data Studio

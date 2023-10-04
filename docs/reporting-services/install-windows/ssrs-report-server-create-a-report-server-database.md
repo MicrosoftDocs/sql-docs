@@ -1,13 +1,12 @@
 ---
-title: "Create a report server database, Configuration Manager | Microsoft Docs"
+title: "Create a report server database, Configuration Manager"
 description: "SQL Server Reporting Services native mode uses two SQL Server relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data."
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
+ms.date: 02/13/2023
+ms.service: reporting-services
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 11/04/2021
+ms.custom: updatefrequency5
 ---
 
 # Create a report server database, Report Server Configuration Manager  
@@ -65,6 +64,8 @@ The **Report Server Installation Options** page has only one option for SharePoi
 ::: moniker range=">=sql-server-ver15"
 
 - Azure SQL Managed Instance
+
+- SQL Server 2022
 
 - SQL Server 2019
 

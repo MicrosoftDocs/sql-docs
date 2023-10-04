@@ -1,19 +1,14 @@
 ---
-description: "Partition Column List Dialog Box (Visual Database Tools)"
 title: Partition Column List Dialog Box
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "vdt.dlgbox.partitioncolumnlist"
-ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
+description: "Partition Column List Dialog Box (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "vdt.dlgbox.partitioncolumnlist"
 ---
 # Partition Column List Dialog Box (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,17 @@
 ---
-title: "Publish a Shared Data Source to a SharePoint Library | Microsoft Docs"
+title: "Publish a Shared Data Source to a SharePoint Library"
 description: Learn how to publish a shared data source to a report server that is running in SharePoint integrated mode.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
+ms.service: reporting-services
+ms.subservice: reports
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "data sources [Reporting Services], publishing to a SharePoint library"
   - "SharePoint integration [Reporting Services], publishing to a library"
   - "publishing reports [Reporting Services], to a SharePoint library"
-ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Publish a Shared Data Source to a SharePoint Library
   To publish a shared data source to a report server that is running in SharePoint integrated mode, you must set the report project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs.  

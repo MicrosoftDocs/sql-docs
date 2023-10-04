@@ -4,8 +4,8 @@ description: Learn how metadata discovery improvements allow OLE DB Driver for S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Metadata Discovery

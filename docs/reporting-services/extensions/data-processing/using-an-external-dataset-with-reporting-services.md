@@ -1,21 +1,18 @@
 ---
-title: "Using an External Dataset with Reporting Services | Microsoft Docs"
+title: "Using an External Dataset with Reporting Services"
 description: Create custom data processing extensions in Reporting Services so that you can integrate custom DataSet objects that are created by external applications.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "DataSet objects [Reporting Services]"
   - "data processing extensions [Reporting Services], custom DataSet objects"
   - "custom DataSet objects [Reporting Services]"
   - "external DataSet objects [Reporting Services]"
-ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Using an External Dataset with Reporting Services
   The **DataSet** object is central to supporting disconnected, distributed data scenarios with [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. The **DataSet** object is a memory-resident representation of data that provides a consistent relational programming model regardless of the data source. It can be used with multiple different data sources, with XML data, or to manage data local to the application. The **DataSet** object represents a complete set of data, including related tables, constraints, and relationships among the tables. Because of the **DataSet** object's versatility in storing and exposing data, your data may often be processed and transformed into a **DataSet** object before any reporting on that data occurs.  

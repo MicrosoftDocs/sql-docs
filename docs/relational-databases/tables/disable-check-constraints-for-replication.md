@@ -1,21 +1,17 @@
 ---
+title: "Disable Check Constraints for Replication"
 description: "Disable Check Constraints for Replication"
-title: "Disable Check Constraints for Replication | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints, disabling"
   - "constraints [SQL Server], disabling"
   - "disabling constraints"
   - "constraints [SQL Server], check"
-ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Check Constraints for Replication
@@ -56,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates a table with an IDENTITY column and a CHECK constraint on the table. The example then drops the constraint and recreates it specifying the NOT FOR REPLICATION clause.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TABLE dbo.doc_exd (column_a int IDENTITY (1,1)   
     CONSTRAINT exd_check CHECK (column_a > 1))   

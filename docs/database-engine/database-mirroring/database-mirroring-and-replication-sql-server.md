@@ -4,8 +4,8 @@ description: Learn how to use database mirroring in conjunction with replication
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "database mirroring [SQL Server], interoperability"

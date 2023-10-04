@@ -1,26 +1,22 @@
 ---
+title: "sys.sysprotects (Transact-SQL)"
 description: "sys.sysprotects (Transact-SQL)"
-title: "sys.sysprotects (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sysprotects"
   - "sys.sysprotects_TSQL"
   - "sys.sysprotects"
   - "sysprotects_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.sysprotects compatibility view"
   - "sysprotects system table"
-ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.sysprotects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

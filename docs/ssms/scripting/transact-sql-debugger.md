@@ -1,19 +1,17 @@
 ---
 title: Transact-SQL debugger
-description: Learn how to step through code and view the execution state using the Transact-SQL debugger, and how to do various other debugging tasks. 
 titleSuffix: T-SQL debugger
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Transact-SQL debugger, introduction"
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
+description: Learn how to step through code and view the execution state using the Transact-SQL debugger, and how to do various other debugging tasks.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: drskwier
-ms.custom: seo-lt-2019
 ms.date: 10/16/2021
-monikerRange: ">= sql-server-2016" 
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Transact-SQL debugger, introduction"
+monikerRange: ">= sql-server-2016"
 ---
 
 # Transact-SQL debugger
@@ -64,7 +62,7 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](./run-the-transact-sql-debugger.md)|  
 |Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](./step-through-transact-sql-code.md)|  
 |Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](./transact-sql-debugger-information.md)|  

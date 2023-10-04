@@ -1,18 +1,14 @@
 ---
+title: "Data Streaming Destination"
 description: "Data Streaming Destination"
-title: "Data Streaming Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
-ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
 ---
 # Data Streaming Destination
 
@@ -48,7 +44,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 >  For detailed steps, see [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## Configure Data Streaming Destination
-  Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.  
+  Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double-clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.  
   
  This dialog box has three tabs: **Component Properties**, **Input Columns**, and **Input and Output Properties**.  
   

@@ -4,9 +4,8 @@ description: sys.database_mirroring_endpoints (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_mirroring_endpoints_TSQL"
@@ -20,7 +19,6 @@ helpviewer_keywords:
   - "sys.database_mirroring_endpoints catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

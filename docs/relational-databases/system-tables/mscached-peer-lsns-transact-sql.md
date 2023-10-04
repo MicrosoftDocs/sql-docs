@@ -4,9 +4,8 @@ description: MScached_peer_lsns (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MScached_peer_lsns_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MScached_peer_lsns system table"
 dev_langs:
   - "TSQL"
-ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 ---
 # MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

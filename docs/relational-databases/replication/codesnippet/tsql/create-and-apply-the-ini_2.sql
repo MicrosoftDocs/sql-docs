@@ -8,7 +8,7 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;
 DECLARE @login AS sysname;
 DECLARE @password AS sysname;
-SET @publicationDB = N'AdventureWorks2012'; 
+SET @publicationDB = N'AdventureWorks2022'; 
 SET @publication = N'AdvWorksSalesOrdersMerge'; 
 SET @login = $(Login);
 SET @password = $(Password);

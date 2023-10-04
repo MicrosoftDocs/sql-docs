@@ -1,19 +1,15 @@
 ---
+title: "CEILING (SSIS Expression)"
 description: "CEILING (SSIS Expression)"
-title: "CEILING (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "smallest integer great than or equal to expression"
-  - "CEILING function [SSIS]"
-ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "smallest integer great than or equal to expression"
+  - "CEILING function [SSIS]"
 ---
 # CEILING (SSIS Expression)
 

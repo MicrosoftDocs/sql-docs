@@ -4,9 +4,8 @@ description: sys.server_assembly_modules (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "server_assembly_modules_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.server_assembly_modules catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 ---
 # sys.server_assembly_modules (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each assembly module for the server-level triggers of type TA. This view maps assembly triggers to the underlying CLR implementation. You can join this relation to **sys.server_triggers**. The assembly must be loaded into the **master** database. The tuple (object_id) is the key for the relation.  
   

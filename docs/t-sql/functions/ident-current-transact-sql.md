@@ -4,8 +4,8 @@ description: "IDENT_CURRENT (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "IDENT_CURRENT"
@@ -23,7 +23,7 @@ dev_langs:
 
 Returns the last identity value generated for a specified table or view. The last identity value generated can be for any session and any scope.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -64,10 +64,10 @@ When using IDENT_CURRENT on a view that contains joins, NULL is returned. This i
 ## Examples  
   
 ### A. Returning the last identity value generated for a specified table  
- The following example returns the last identity value generated for the `Person.Address` table in the `AdventureWorks2012` database.  
+ The following example returns the last identity value generated for the `Person.Address` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;  
 GO  
@@ -77,7 +77,7 @@ GO
  The following example shows the different identity values that are returned by `IDENT_CURRENT`, `@@IDENTITY`, and `SCOPE_IDENTITY`.  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N't6', N'U') IS NOT NULL   
     DROP TABLE t6;  

@@ -4,8 +4,8 @@ description: "API reference for the sqlsrv_fetch_array function in the Driver fo
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "sqlsrv_fetch_array"

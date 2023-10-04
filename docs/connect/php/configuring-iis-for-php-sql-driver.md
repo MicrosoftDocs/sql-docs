@@ -4,8 +4,8 @@ description: "Learn how to configure IIS to host PHP applications that use the D
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "03/26/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "configuring, Internet Information Services"

@@ -3,13 +3,10 @@ title: "USER_ID (Transact-SQL)"
 description: "USER_ID (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "USER_ID"
   - "USER_ID_TSQL"
@@ -31,7 +28,7 @@ dev_langs:
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DATABASE_PRINCIPAL_ID](../../t-sql/functions/database-principal-id-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -56,10 +53,10 @@ USER_ID ( [ 'user' ] )
  USER_ID can be used in a select list, in a WHERE clause, and anywhere an expression is allowed. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## Examples  
- The following example returns the identification number for the `AdventureWorks2012` user `Harold`.  
+ The following example returns the identification number for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] user `Harold`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT USER_ID('Harold');  
 GO  
 ```  

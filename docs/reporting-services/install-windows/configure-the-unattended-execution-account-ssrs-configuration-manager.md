@@ -1,13 +1,13 @@
 ---
-title: "Configure the Unattended Execution Account (Configuration Manager) | Microsoft Docs"
+title: "Configure the Unattended Execution Account (Configuration Manager)"
 description: "Reporting Services provides a special account that is used for unattended report processing and for sending connection requests across the network."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/04/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "no credentials option [Reporting Services]"
   - "security [Reporting Services], unattended report processing"
   - "unattended report processing [Reporting Services]"
@@ -15,9 +15,6 @@ helpviewer_keywords:
   - "external data sources [Reporting Services]"
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
-ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Configure the Unattended Execution Account (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  

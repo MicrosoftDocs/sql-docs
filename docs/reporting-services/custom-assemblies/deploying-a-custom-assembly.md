@@ -1,21 +1,20 @@
 ---
-title: "Deploying a Custom Assembly | Microsoft Docs"
+title: "Deploying a Custom Assembly"
 description: Learn to deploy a custom assembly in SQL Server Reporting Services. Also learn how to grant custom assemblies privileges beyond Execute permissions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/23/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-assemblies
+ms.service: reporting-services
+ms.subservice: custom-assemblies
 ms.topic: reference
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 helpviewer_keywords:
   - "deploying custom assemblies [Reporting Services]"
   - "custom assemblies [Reporting Services], deploying"
   - "custom assemblies [Reporting Services], updating"
   - "updating custom assemblies"
-ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-author: maggiesMSFT
-ms.author: maggies
-ms.custom:
-  - intro-deployment
 ---
 # Deploying a Custom Assembly
   To deploy a custom assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], place the assembly in the application folders of both Report Designer and the report server. By default, custom assemblies are granted **Execution** permission in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To grant custom assemblies privileges beyond Execute permission, you will need to edit the rssrvpolicy.config configuration file for the report server and the rspreviewpolicy.config configuration file for the Report Designer preview window. Alternatively, you can install your custom assembly in the global assembly cache (GAC).  

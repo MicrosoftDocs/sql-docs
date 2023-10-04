@@ -1,28 +1,24 @@
 ---
-title: "Restore a Backup from a Device (SQL Server) | Microsoft Docs"
+title: "Restore a Backup from a Device (SQL Server)"
 description: This article describes how to restore a backup from a device in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "restoring databases [SQL Server], device restores"
   - "backup devices [SQL Server], restoring from"
   - "database restores [SQL Server], device restores"
   - "devices [SQL Server]"
-ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Restore a Backup from a Device (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to restore a backup from a device in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  For information on SQL Server backup to the Azure Blob storage service, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  For information on SQL Server backup to Azure Blob Storage, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **In This Topic**  
   
@@ -73,11 +69,11 @@ ms.author: mathoma
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify a logical or physical backup device to use for the backup operation. This example restores from a disk file that has the physical name `Z:\SQLServerBackups\AdventureWorks2012.bak`.  
+3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify a logical or physical backup device to use for the backup operation. This example restores from a disk file that has the physical name `Z:\SQLServerBackups\AdventureWorks2022.bak`.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012  
-   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
+RESTORE DATABASE AdventureWorks2022  
+   FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak' ;  
   
 ```  
   

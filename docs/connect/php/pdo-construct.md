@@ -4,8 +4,8 @@ description: "API reference for the PDO::__construct function in the Microsoft P
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # PDO::__construct
@@ -67,7 +67,7 @@ This example shows how to connect to a server, specifying the database later.
 <?php  
    $c = new PDO( "sqlsrv:server=(local)");  
   
-   $c->exec( "USE AdventureWorks");  
+   $c->exec( "USE AdventureWorks2022" );  
    $query = 'SELECT * FROM Person.ContactType';  
    $stmt = $c->query( $query );  
    while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  

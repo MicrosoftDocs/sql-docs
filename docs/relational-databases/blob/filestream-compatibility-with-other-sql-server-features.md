@@ -1,19 +1,15 @@
 ---
-title: "FILESTREAM compatibility | Microsoft Docs"
+title: "FILESTREAM compatibility"
 description: FILESTREAM stores data in the file system. Read about guidelines, limitations, and tips to keep in mind when using FILESTREAM with various SQL Server features.
-ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: filestream
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], other SQL Server features and"
-  - "FILESTREAM [SQL Server], limitations"
-ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: filestream
+ms.topic: conceptual
+helpviewer_keywords:
+  - "FILESTREAM [SQL Server], other SQL Server features and"
+  - "FILESTREAM [SQL Server], limitations"
 ---
 # FILESTREAM compatibility with other SQL Server features
 
@@ -95,7 +91,7 @@ ms.author: mikeray
 -   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
   
 ##  <a name="LogShipping"></a> Log Shipping  
- [Log shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
+ [Log shipping](../../database-engine/log-shipping/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], or a later version, and have FILESTREAM enabled.  
   
 ##  <a name="DatabaseMirroring"></a> Database Mirroring  
  Database mirroring does not support FILESTREAM. A FILESTREAM filegroup cannot be created on the principal server. Database mirroring cannot be configured for a database that contains FILESTREAM filegroups.  

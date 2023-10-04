@@ -1,21 +1,19 @@
 ---
+title: "Verify a Reporting Services Installation"
 description: "Verify a Reporting Services Installation"
-title: "Verify a Reporting Services Installation | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/03/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "checking report server installations"
   - "verifying report server installations"
   - "Report Designer [Reporting Services], verifying installations"
   - "installing Reporting Services, verifying installations"
   - "report servers [Reporting Services], verifying installations"
   - "Setup [Reporting Services], verifying installations"
-ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  

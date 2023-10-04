@@ -1,38 +1,35 @@
 ---
-description: "sys.fn_validate_plan_guide (Transact-SQL)"
 title: "sys.fn_validate_plan_guide (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_validate_plan_guide (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/22/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_validate_plan_guide"
   - "sys.fn_validate_plan_guide_TSQL"
   - "fn_validate_plan_guide"
   - "fn_validate_plan_guide_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_validate_plan_guide function"
   - "sys.fn_validate_plan_guide function"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Verifies the validity of the specified plan guide. The `sys.fn_validate_plan_guide` function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
   
  By validating a plan guide, you can determine whether the guide can be used by the optimizer without modification. Based on the results of the function, you can decide to drop the plan guide and retune the query or modify the database design, for example, by re-creating the index specified in the plan guide.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```tsql  
+```syntaxsql
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
@@ -56,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 
 ## Remarks
 
-The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Examples  
   
@@ -64,7 +61,7 @@ The `sys.fn_validate_plan_guide` function is not available in [!INCLUDE[ssSDSful
  The following example checks the validity of all plan guides in the current database. If an empty result set is returned, all plan guides are valid.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
 FROM sys.plan_guides  
@@ -76,7 +73,7 @@ GO
  The following example uses an explicit transaction to drop an index. The `sys.fn_validate_plan_guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
 DROP INDEX IX_SalesOrderHeader_CustomerID ON Sales.SalesOrderHeader;  

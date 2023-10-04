@@ -3,9 +3,9 @@ title: "sys.dm_db_log_stats (Transact-SQL)"
 description: sys.dm_db_log_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/17/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_db_log_stats_TSQL"
@@ -19,11 +19,11 @@ dev_langs:
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
-[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-asdbmi.md)]
 
 Returns summary level attributes and information on transaction log files of databases. Use this information for monitoring and diagnostics of transaction log health.   
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can b
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|database_id	|**int**	|Database ID |  
+|database_id	|**int**	|Database ID. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |recovery_model	|**nvarchar(60)**	|	Recovery model of the database. Possible values include: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn	|**nvarchar(24)**	|	Current start [log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) in the transaction log.|  
 |log_end_lsn	|**nvarchar(24)**	|	[log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the last log record in the transaction log.|  
@@ -68,8 +68,12 @@ The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can b
 When running `sys.dm_db_log_stats` against a database that is participating in an Availability Group as a secondary replica, only a subset of the fields described above will be returned.  Currently, only `database_id`, `recovery_model`, and `log_backup_time` will be returned when run against a secondary database.   
 
 ## Permissions  
-Requires the `VIEW DATABASE STATE` permission in the database.   
+Requires the `VIEW SERVER STATE` permission in the database.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
 
 ### A. Determining databases in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with high number of VLFs   

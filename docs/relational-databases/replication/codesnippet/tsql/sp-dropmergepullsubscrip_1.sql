@@ -11,9 +11,9 @@ DECLARE @publisher AS sysname;
 DECLARE @publication_db AS sysname;
 SET @publication = N'AdvWorksSalesOrdersMerge';
 SET @publisher = $(PubServer);
-SET @publication_db = N'AdventureWorks2012';
+SET @publication_db = N'AdventureWorks2022';
 
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 EXEC sp_dropmergepullsubscription 
   @publisher = @publisher, 
   @publisher_db = @publication_db, 

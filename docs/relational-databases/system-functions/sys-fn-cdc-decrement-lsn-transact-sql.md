@@ -1,32 +1,29 @@
 ---
-description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
 title: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
-ms.custom: ""
+description: "sys.fn_cdc_decrement_lsn (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn_TSQL"
   - "sys.fn_cdc_decrement_lsn"
   - "fn_cdc_decrement_lsn_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_decrement_lsn"
   - "sys.fn_cdc_decrement_lsn"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the previous log sequence number (LSN) in the sequence based upon the specified LSN.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +50,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  The following example uses `sys.fn_cdc_decrement_lsn` to set the upper LSN boundary in a query that returns change data rows that have LSN values less than the maximum LSN value.  
   
 ```sql  
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  
 SET @from_lsn = sys.fn_cdc_get_min_lsn('HumanResources_Employee');  

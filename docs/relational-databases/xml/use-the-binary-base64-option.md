@@ -1,22 +1,19 @@
 ---
 title: "Use the BINARY BASE64 Option"
 description: Learn how to use the BINARY BASE64 option in an SQL query to return binary data in the base64 encoding format.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, BINARY BASE64 option"
-author: MikeRayMSFT
-ms.author: mikeray
-# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # Use the BINARY BASE64 option
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 If the BINARY BASE64 option is specified in the query, the binary data is returned in base64 encoding format.
 

@@ -1,23 +1,19 @@
 ---
+title: "sp_attach_db (Transact-SQL)"
 description: "sp_attach_db (Transact-SQL)"
-title: "sp_attach_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_attach_db_TSQL"
-  - "sp_attach_db"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_attach_db"
-ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
+ms.date: "08/01/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_attach_db_TSQL"
+  - "sp_attach_db"
+helpviewer_keywords:
+  - "sp_attach_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,11 +82,11 @@ sp_attach_db [ @dbname= ] 'dbname'
  The following example attaches files from [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] to the current server.  
   
 ```  
-EXEC sp_attach_db @dbname = N'AdventureWorks2012',   
+EXEC sp_attach_db @dbname = N'AdventureWorks2022',   
     @filename1 =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf',   
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_Data.mdf',   
     @filename2 =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_log.ldf';  
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_log.ldf';  
 ```  
   
 ## See Also  

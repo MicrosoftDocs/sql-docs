@@ -1,12 +1,12 @@
 ---
 title: "Use XML Data in Applications"
 description: Learn about the options that are available for working with the xml data type in your applications.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "parameters [XML in SQL Server]"
@@ -23,12 +23,10 @@ helpviewer_keywords:
   - "columns [XML in SQL Server], ADO"
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Use XML data in applications
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes the options that are available to you for working with the **xml** data type in your application. The article includes information about the following:
 
@@ -42,11 +40,11 @@ This article describes the options that are available to you for working with th
 
 To use MDAC components to access the types and features that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], you must set the DataTypeCompatibility initialization property in the ADO connection string.
 
-For example, the following Visual Basic Scripting Edition (VBScript) sample shows the results of querying an **xml** data type column, `Demographics`, in the `Sales.Store` table of the `AdventureWorks2012` sample database. Specifically, the query looks for the instance value of this column for the row where the `CustomerID` is equal to `3`.
+For example, the following Visual Basic Scripting Edition (VBScript) sample shows the results of querying an **xml** data type column, `Demographics`, in the `Sales.Store` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. Specifically, the query looks for the instance value of this column for the row where the `CustomerID` is equal to `3`.
 
 ```vb
 Const DS = "MyServer"
-Const DB = "AdventureWorks2012"
+Const DB = "AdventureWorks2022"
 
 Set objConn = CreateObject("ADODB.Connection")
 Set objRs = CreateObject("ADODB.Recordset")
@@ -58,7 +56,7 @@ CommandText = "SELECT Demographics" & _
               " WHERE Sales.Customer.CustomerID = 3" & _
               " OR Sales.Customer.CustomerID = 4"
 
-ConnectionString = "Provider=SQLNCLI11" & _
+ConnectionString = "Provider=MSOLEDBSQL" & _
                    ";Data Source=" & DS & _
                    ";Initial Catalog=" & DB & _
                    ";Integrated Security=SSPI;" & _
@@ -88,7 +86,8 @@ Set objConn = Nothing
 
 This example shows how to set the data type compatibility property. By default, this is set to 0 when you're using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. If you set the value to 80, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider will make **xml** and user-defined type columns appear as [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] data types. This would be DBTYPE_WSTR and DBTYPE_BYTES, respectively.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client must also be installed on the client computer and the connection string must specify it for use as the data provider with "`Provider=SQLNCLI11;...`".
+> [!NOTE]
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
 
 ### Test this example
 
@@ -113,7 +112,7 @@ The results should be similar to the following sample output:
 ```xml
 Row 1
 
-<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
+<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
   <AnnualSales>1500000</AnnualSales>
   <AnnualRevenue>150000</AnnualRevenue>
   <BankName>Primary International</BankName>
@@ -128,7 +127,7 @@ Row 1
 
 Row 2
 
-<StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
+<StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">
   <AnnualSales>300000</AnnualSales>
   <AnnualRevenue>30000</AnnualRevenue>
   <BankName>United Security</BankName>

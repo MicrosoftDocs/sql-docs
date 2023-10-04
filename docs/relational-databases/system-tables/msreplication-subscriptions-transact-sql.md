@@ -4,9 +4,8 @@ description: MSreplication_subscriptions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSreplication_subscriptions"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSreplication_subscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 ---
 # MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

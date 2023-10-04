@@ -1,27 +1,28 @@
 ---
-title: Create an Azure SQL logical server using a user-assigned managed identity
+title: Create a logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
 description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
-author: GithubMirek
-ms.author: mireks
-ms.reviewer: vanto
-ms.date: 06/30/2022
+author: nofield
+ms.author: nofield
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Create an Azure SQL Database server with a user-assigned managed identity
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
+
+This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
 To retrieve the system-assigned managed identity (SMI) or user-assigned managed identity or identities (UMI) of an Azure SQL Database, see [Get or set a managed identity for a logical server or managed instance](authentication-azure-ad-user-assigned-managed-identity.md#get-or-set-a-managed-identity-for-a-logical-server-or-managed-instance).
 
-> [!NOTE]
-> If you're looking for a guide on Azure SQL Managed Instance, see [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).
-
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -30,7 +31,7 @@ To retrieve the system-assigned managed identity (SMI) or user-assigned managed 
 - Create a user-assigned managed identity and assign it the necessary permission to be a server or managed instance identity. For more information, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) and [user-assigned managed identity permissions for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#permissions).
 - [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or higher is required when using PowerShell for user-assigned managed identities.
 - [The Azure CLI 2.26.0](/cli/azure/install-azure-cli) or higher is required to use the Azure CLI with user-assigned managed identities.
-- For a list of limitations and known issues with using user-assigned managed identity, see [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#limitations-and-known-issues)
+- For a list of limitations and known issues with using user-assigned managed identity, see [User-assigned managed identity in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#limitations-and-known-issues)
 
 ## Create server configured with a user-assigned managed identity
 
@@ -93,11 +94,11 @@ The following steps outline the process of creating a new Azure SQL Database log
 
 # [The Azure CLI](#tab/azure-cli)
 
-The Azure CLI command `az sql server create` is used to provision a new logical server. The below command will provision a new server with a user-assigned managed identity. The example will also enable [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), and set an Azure AD admin for the server.
+The Azure CLI command `az sql server create` is used to provision a new logical server. The below command will provision a new server with a user-assigned managed identity. The example will also enable [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md), and set a Microsoft Entra admin for the server.
 
 The server SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this server creation, the SQL Administrator login won't be used.
 
-The server Azure AD admin will be the account you set for `<AzureADAccount>`, and can be used to manage the server.
+The server Microsoft Entra admin will be the account you set for `<AzureADAccount>`, and can be used to manage the server.
 
 Replace the following values in the example:
 
@@ -105,8 +106,8 @@ Replace the following values in the example:
 - `<ResourceGroupName>`: Name of the resource group for your logical server
 - `<managedIdentity>`: The user-assigned managed identity. Can also be used as the primary identity.
 - `<primaryIdentity>`: The primary identity you want to use as the server identity
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
-- `<AzureADAccountSID>`: The Azure AD Object ID for the user
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
+- `<AzureADAccountSID>`: The Microsoft Entra Object ID for the user
 - `<ServerName>`: Use a unique logical server name
 - `<Location>`: Location of the server, such as `westus`, or `centralus`
 
@@ -127,11 +128,11 @@ az sql server show --name <ServerName> --resource-group <ResourceGroupName> --ex
 
 # [PowerShell](#tab/azure-powershell)
 
-The PowerShell command `New-AzSqlServer` is used to provision a new Azure SQL logical server. The below command will provision a new server with a user-assigned managed identity. The example will also enable [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), and set an Azure AD admin for the server.
+The PowerShell command `New-AzSqlServer` is used to provision a new Azure SQL logical server. The below command will provision a new server with a user-assigned managed identity. The example will also enable [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md), and set a Microsoft Entra admin for the server.
 
 The server SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this server creation, the SQL Administrator login won't be used.
 
-The server Azure AD admin will be the account you set for `<AzureADAccount>`, and can be used to manage the server.
+The server Microsoft Entra admin will be the account you set for `<AzureADAccount>`, and can be used to manage the server.
 
 Replace the following values in the example:
 
@@ -141,7 +142,7 @@ Replace the following values in the example:
 - `<subscriptionId>`: Your subscription ID can be found in the Azure portal
 - `<managedIdentity>`: The user-assigned managed identity. Can also be used as the primary identity
 - `<primaryIdentity>`: The primary identity you want to use as the server identity
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 
 ```powershell
 New-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -Location "<Location>" -ServerName "<ServerName>" -ServerVersion "12.0" -AssignIdentity -IdentityType "UserAssigned" -UserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>" -PrimaryUserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication
@@ -162,19 +163,19 @@ Get-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -ServerName "<ServerNam
 
 The [Servers - Create Or Update](/rest/api/sql/2020-11-01-preview/servers/create-or-update) REST API can be used to create a logical server with a user-assigned managed identity.
 
-The script below will provision a logical server, set the Azure AD admin as `<AzureADAccount>`, and enable [Azure AD-only authentication](authentication-azure-ad-only-authentication.md). The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
+The script below will provision a logical server, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 
-The Azure AD admin, `<AzureADAccount>` can be used to manage the server when the provisioning is complete.
+The Microsoft Entra admin, `<AzureADAccount>` can be used to manage the server when the provisioning is complete.
 
 Replace the following values in the example:
 
-- `<tenantId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**
+- `<tenantId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**
 - `<subscriptionId>`: Your subscription ID can be found in the Azure portal
 - `<ServerName>`: Use a unique logical server name
 - `<ResourceGroupName>`: Name of the resource group for your logical server
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 - `<Location>`: Location of the server, such as `westus2`, or `centralus`
-- `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **User** pane, search for the Azure AD user and find their **Object ID**
+- `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **User** pane, search for the Microsoft Entra user and find their **Object ID**
 - `<managedIdentity>`: The user-assigned managed identity. Can also be used as the primary identity
 - `<primaryIdentity>`: The primary identity you want to use as the server identity
 
@@ -239,7 +240,7 @@ $responce.content
 
 # [ARM Template](#tab/arm-template)
 
-Here's an example of an ARM template that creates an Azure SQL Database logical server with a user-assigned managed identity. The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
+Here's an example of an ARM template that creates an Azure SQL Database logical server with a user-assigned managed identity. The template also adds a Microsoft Entra admin set for the server and enables [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
 
 For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance](arm-templates-content-guide.md).
 
@@ -347,5 +348,5 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ## Next steps
 
-- [User-assigned managed identity in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+- [User-assigned managed identity in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 - [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).

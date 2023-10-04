@@ -1,13 +1,14 @@
 ---
 title: "Configure distribution database in availability group"
-description: Configure the distribution database for SQL Server replication with an Always On availability group. 
-ms.custom: seo-lt-2019
+description: Configure the distribution database for SQL Server replication with an Always On availability group.
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/16/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "replication [SQL Server], distribution"
   - "distribution configuration [SQL Server replication]"
   - "remote Distributors [SQL Server replication]"
@@ -17,9 +18,6 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication], about distribution databases"
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
-ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Set up replication distribution database in Always On availability group
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,15 +47,17 @@ After a distribution database in the AG is configured based on the steps describ
 
 ## Limitations or exclusions
 
-- Local distributor is not supported. For example, publisher and distributor must be different SQL Server instances. These instances can be hosted on the same sets of nodes.  A publisher using itself as distributor (a.k.a. local distributor) cannot support distribution databases in an AG.
+- Local Distributor (where the Publisher server is also the Distributor) is not supported. The Publisher and Distributor must be separate SQL Server instances. These instances can be hosted on the same sets of nodes.  A local Distributor is not supported for the following reasons: 
+	- If the Distributor is configured locally, you can't use the availability group listener to route traffic to the Distributor, which causes replication agents to fail after failover. 
+	- If a local Distributor is configured and then the Distributor availability group fails over to the original secondary, the Publisher connection to the Distributor changes from local to remote, which causes replication stored procedures and agents to fail.
 - Oracle publisher is not supported.
 - Merge replication is not supported.
 - Transactional replication with immediate or queued updating subscriber is not supported.
-- Peer to peer replication is not supported.
+- Peer to peer replication is not supported prior to SQL Server 2019 (15.x) CU 17
 - All SQL Server 2017 instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
 - All SQL Server 2016 instances hosting distribution database replicas must be SQL Server 2016 SP2-CU3 or later.
 - All SQL Server instances hosting distribution database replicas must be the same version, except during the narrow timeframe when upgrade takes place.
-- The distribution database must be in full recovery mode.
+- The distribution database must be in the full recovery model.
 - For recovery and to allow transaction log truncation, configure full and transaction log backups.
 - The distribution database AG must have a listener configured.
 - Secondary replicas in a distribution database AG can be synchronous or asynchronous. Synchronous mode is recommended and preferred.
@@ -93,7 +93,7 @@ This example configures a new distributor and publisher and puts the distributio
 ### Distributors workflow
 
 1. Configure DIST1, DIST2, DIST3 as distributor with `sp_adddistributor @@servername`. Specify the password for `distributor_admin` through the `@password`. The `@password` should be identical across DIST1, DIST2, DIST3.
-2. Create the distribution database on DIST1 with `sp_adddistributiondb`. The name of the distribution database is `distribution`. Change the recovery mode of `distribution` database from simple to full.
+2. Create the distribution database on DIST1 with `sp_adddistributiondb`. The name of the distribution database is `distribution`. Change the recovery model of `distribution` database from simple to full.
 3. Create an AG for `distribution` database with replicas on DIST1, DIST2, and DIST3. Preferably all the replicas are synchronous. Configure secondary replicas to be readable or allow read. At this time, the distribution databases are the AG, DIST1 is the primary replica, and DIST2 and DIST3 are secondary replicas.
 4. Configure a listener named `DISTLISTENER` for the AG.
 5. For recovery and to allow transaction log truncation, configure full and transaction log backups.

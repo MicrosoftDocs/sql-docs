@@ -1,22 +1,18 @@
 ---
-title: "Delete a Backup Device (SQL Server) | Microsoft Docs"
+title: "Delete a Backup Device (SQL Server)"
 description: This article shows you how to delete a backup device in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database backups [SQL Server], deleting devices"
   - "backup devices [SQL Server], deleting"
   - "deleting backup devices"
   - "removing backup devices"
   - "backing up databases [SQL Server], backup devices"
-ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Delete a Backup Device (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,12 +63,12 @@ ms.author: mathoma
   
 ```sql  
 --Define a backup device and physical name.   
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_addumpdevice 'disk', 'mybackupdisk', 'c:\backup\backup1.bak' ;  
 GO  
 --Delete the backup device and the physical name.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_dropdevice ' mybackupdisk ', 'delfile' ;  
 GO  

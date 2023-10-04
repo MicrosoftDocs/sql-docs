@@ -3,16 +3,16 @@ title: Connection resiliency
 description: Connection resiliency can transparently restore broken connections. This feature improves application behavior when the server closes idle connections.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/23/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 02/09/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connection resiliency in the ODBC driver
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-To ensure that applications remain connected to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], the ODBC driver on Windows can restore idle connections.
+To ensure that applications remain connected to an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the ODBC driver can restore idle connections.
 
 > [!IMPORTANT]
 > The connection resiliency feature is supported on Microsoft Azure SQL Database and SQL Server 2014 (and later) server versions.
@@ -21,7 +21,7 @@ To ensure that applications remain connected to an [!INCLUDE[ssAzure](../../incl
 
 For more information about idle connection resiliency, see [Technical Article - Idle Connection Resiliency](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
 
-To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows has two options:
+To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has two options:
 
 - Connection retry count.
 

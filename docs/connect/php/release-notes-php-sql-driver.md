@@ -4,9 +4,9 @@ description: This page discusses what was changed in each version of the Microso
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 06/16/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 09/06/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "what's new in version 1.1"
@@ -15,42 +15,48 @@ helpviewer_keywords:
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-<!--
-Hello, We are standardizing the format of content inside our Release Notes (or What's New) articles.
-Instead of bullets (or paragraphs), we have shifted to the 2-column format you see for H2 **What's New in Version 5.6**.
-It is not necessary to reformat all the older H2 sections in this Release Notes file, but.....
+## 5.11.1
 
-Going forward, please be sure to use the 2-column format.
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  
+[GitHub Release Tag v5.11.1 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.1)
 
-Also, all Release Notes .md file names now must begin with 'release-notes-*.md'.  And no filler words.
-The 5.6 edition of this file is being renamed.....
-FROM:  'release-notes-for-the-php-sql-driver.md'
-TO  :  'release-notes-php-sql-driver.md'
+- Release number: 5.11.1
+- Released: September 7, 2023
 
-For any questions, ask GeneMi or CraigG.
-Thanks a lot.  2019-03-28  (DevO= 1467988)
--->
+### What's new in 5.11.1
+
+| New item | Details |
+| :------- | :------ | 
+| Reset type after bind param. | &nbsp; |
+| Fixed error when using PDO::ATTR_STRINGIFY_FETCHES. | &nbsp; |
+| Change connection options to case insensitive. | &nbsp; |
+| Bugfix for 1465 Adding a NULL check. | &nbsp; |
+
+## Previous releases
+
+## 5.11.0
+
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2226724)**  
+[GitHub Release Tag v5.11.0 (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/v5.11.0)
+
+- Release number: 5.11.0
+- Released: February 28, 2023
+
+### What's new in 5.11.0
+
+| New item |
+| :------- |
+| Added support for PHP 8.2. |
+| Dropped support for PHP 7.4. |
+| Dropped support for Debian 9, macOS 10.15, and Alpine 3.13. |
 
 ## 5.10
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
-[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
-
-- Release number: 5.10.1
-- Released: June 14, 2022
-
-Fixed issues in 5.10.1:
-
-- Fixed User-Assigned Managed Identity (ActiveDirectoryMsi) Authentication when specifying UID
-- Removed block on ActiveDirectoryIntegrated authentication
-
-### Previous 5.10 releases
-
-- Release number: 5.10.0<sup>1</sup>
+- Release number: 5.10.1<sup>1</sup>
 - Released: January 31, 2022
 
-:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2185805)  
-[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.0)
+:::image type="icon" source="../../includes/media/download.svg" border="false"::: [Download Windows Package](https://go.microsoft.com/fwlink/?linkid=2199011)  
+[GitHub Release Tag (Linux and macOS packages are available here)](https://github.com/Microsoft/msphpsql/releases/tag/v5.10.1)
 
 ### What's new in 5.10
 
@@ -68,7 +74,9 @@ Fixed issues in 5.10.1:
 
 <sup>1</sup> This release requires ODBC Driver 17.4.2 or above. Otherwise, a warning about failing to set an attribute will occur. This warning may be suppressed when using an older ODBC driver. If using SQLSRV, check [How to: Configure Error and Warning Handling Using the SQLSRV Driver](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). If using PDO_SQLSRV, warnings are by default suppressed but can be logged. Check [Logging Activity](./logging-activity.md) for details.
 
-## Previous releases
+### Known issues
+
+- If string parameters are bound as short string and later reused to bind longer strings, a string truncation error will occur.
 
 ## 5.9
 

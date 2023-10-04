@@ -10,16 +10,16 @@ ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
 ms.custom:
-  - "azure-sql-split"
-  - "sqldbrb=2"
+  - azure-sql-split
+  - sqldbrb=2
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/monitoring-with-dmvs.md)
-> * [Azure SQL Managed Instance](monitoring-with-dmvs.md)
+> * [Azure SQL Database](../database/monitoring-with-dmvs.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](monitoring-with-dmvs.md?view=azuresql-mi&preserve-view=true)
 
 Microsoft Azure SQL Managed Instance enables a subset of dynamic management views (DMVs) to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
 
@@ -589,8 +589,6 @@ WHERE D.name = 'MyDatabase';
 
 Again, these queries return a point-in-time count. If you collect multiple samples over time, you'll have the best understanding of your session use.
 
-You can get historical statistics on sessions by querying the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) view and reviewing the `active_session_count` column.
-
 ## Monitoring query performance
 
 Slow or long running queries can consume significant system resources. This section demonstrates how to use dynamic management views to detect a few common query performance problems.
@@ -626,7 +624,7 @@ In some cases, two or more queries may mutually block one another, resulting in 
 
 You can create an Extended Events trace a database to capture deadlock events, then find related queries and their execution plans in Query Store. 
 
-For Azure SQL Managed Instance, refer to the [Deadlocks](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools) in the [Transaction locking and row versioning guide](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+For Azure SQL Managed Instance, refer to the [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools) in the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide).
 
 ### Monitoring query plans
 
@@ -672,5 +670,5 @@ Azure Monitor provides a variety of diagnostic data collection groups, metrics, 
 - [Introduction to Azure SQL Database and Azure SQL Managed Instance](../database/sql-database-paas-overview.md)
 - [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](../database/performance-guidance.md)
 - [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
-- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#deadlock_tools)
+- [Analyze and prevent deadlocks in Azure SQL Managed Instance](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools)
 - [sys.server_resource_stats (Azure SQL Managed Instance)](/sql/relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database)

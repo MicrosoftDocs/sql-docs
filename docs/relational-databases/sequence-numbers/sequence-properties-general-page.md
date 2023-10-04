@@ -1,18 +1,13 @@
 ---
+title: "Sequence Properties (General Page)"
 description: "Sequence Properties (General Page)"
-title: "Sequence Properties (General Page) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.sequence.general.f1"
-ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.sequence.general.f1"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Properties (General Page)

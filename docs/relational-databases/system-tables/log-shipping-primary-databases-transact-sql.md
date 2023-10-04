@@ -4,9 +4,8 @@ description: log_shipping_primary_databases (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "log_shipping_primary_databases"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_primary_databases system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 ---
 # log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

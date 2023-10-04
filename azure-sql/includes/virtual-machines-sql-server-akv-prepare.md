@@ -3,7 +3,6 @@ title: "include file"
 description: "include file"
 author: rothja
 ms.author: jroth
-manager: craigg
 ms.date: 04/30/2018
 ms.service: virtual-machines-sql
 ms.topic: "include"

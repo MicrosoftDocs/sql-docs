@@ -1,19 +1,16 @@
 ---
 title: Delete Objects and Resolve Dependencies
 description: Find out how to rename or delete database objects. See which dependent objects SSDT automatically updates, and which dependencies you need to update.
-ms.prod: sql
-ms.technology: ssdt
+author: markingmyname
+ms.author: maghan
+ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog"
   - "sql.data.tools.dropdatabaseconfirmation.dialog"
   - "sql.data.tools.dropmultipledatabasesconfirmation.dialog"
-ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Delete Objects and Resolve Dependencies
@@ -31,7 +28,7 @@ When you rename or delete an object in **SQL Server Object Explorer**, SQL Serve
   
 ### To rename a table  
   
-1.  Make sure that the `Customer` table is not opened in either the Table Designer or the Transact\-SQL Editor.  
+1.  Make sure that the `Customer` table is not opened in either the Table Designer or the Transact-SQL Editor.  
   
 2.  Expand the **Tables** node in **SQL Server Object Explorer**. Right-click the **Customer** table and select **Rename**.  
   
@@ -59,5 +56,5 @@ When you rename or delete an object in **SQL Server Object Explorer**, SQL Serve
 4.  Right-click the **Products** table in **SQL Server Object Explorer**, and select **View Code**. Notice that the foreign key reference to the `Customers` table is gone.  
   
     > [!WARNING]  
-    > If you already have the **Products** table opened in Table Designer or Transact\-SQL Editor when the delete operation occurs, it will not automatically refresh to show the deletion of the foreign key reference. In addition, errors about unresolved references may show up in the **Error List**. To resolve this issue, close the Table Designer or Transact\-SQL Editor, and reopen the Products table.  
+    > If you already have the **Products** table opened in Table Designer or Transact-SQL Editor when the delete operation occurs, it will not automatically refresh to show the deletion of the foreign key reference. In addition, errors about unresolved references may show up in the **Error List**. To resolve this issue, close the Table Designer or Transact-SQL Editor, and reopen the Products table.  
   

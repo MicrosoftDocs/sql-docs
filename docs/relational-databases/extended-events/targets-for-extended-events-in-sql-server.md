@@ -4,9 +4,8 @@ description: This article explains package0 targets for Extended Events in SQL S
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 08/29/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
@@ -64,7 +63,7 @@ This ETW target processes *synchronously* the data it receives, whereas most tar
 
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 > [!NOTE]
-> [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] do not support the `etw_classic_sync_target` target. Instead, use event_file .xel files, stored in Azure Blob Storage.
+> [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] do not support the `etw_classic_sync_target` target. Instead, use event_file .xel files, stored in Azure Blob Storage.
 ::: moniker-end
 
 <a name="h2_target_event_counter"></a>
@@ -117,7 +116,7 @@ The **event_file** target writes event session output from buffer to a disk file
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current "
 
 > [!NOTE]
-> [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] only support storing `xel` files on Azure Blob Storage. 
+> [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] only support storing `xel` files on Azure Blob Storage. 
 >
 > For an **event_file** code example specific to SQL Database or SQL Managed Instance, see [Event File target code for Extended Events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 

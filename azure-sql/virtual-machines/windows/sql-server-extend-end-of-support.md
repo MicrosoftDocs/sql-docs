@@ -1,14 +1,13 @@
 ---
 title: Extend support for SQL Server
-description: Extend support for SQL Server 2008, 2008 R2, and 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
+description: Extend support for SQL Server 2012 by migrating your SQL Server instance to Azure, or purchasing extended support to keep instances on-premises.
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/24/2022
+ms.date: 07/10/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 tags: azure-service-management
 ---
 # Extend support for SQL Server with Azure
@@ -16,9 +15,6 @@ tags: azure-service-management
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 SQL Server 2012 has reached the [end of its support (EOS) life cycle](/lifecycle/products/microsoft-sql-server-2012). Because many customers are still using this version, we're providing several options to continue getting support. You can migrate your on-premises SQL Server instances to Azure virtual machines (VMs), migrate to Azure SQL Database, or stay on-premises and purchase extended security updates.
-
-> [!TIP]  
-> Customers on SQL Server 2008 and SQL Server 2008 R2 can migrate to Azure SQL Server VMs if they wish to continue receiving Extended Security Updates, until [July 12, 2023](https://www.microsoft.com/windows-server/extended-security-updates).
 
 Unlike with a managed instance, migrating to an Azure VM does not require recertifying your applications. And unlike with staying on-premises, you'll receive free extended security patches by migrating to an Azure VM.
 
@@ -30,9 +26,11 @@ For more information about end of support options, see [End of support](/sql/sql
 
 There is a pay-as-you-go **SQL Server 2012 on Windows Server 2012 R2** image available on Azure Marketplace.
 
+[!INCLUDE[appliesto-sqlvm](../../includes/virtual-machines-2008-end-of-support.md)]
+
 Customers who are on an earlier version of SQL Server will need to either self-install or upgrade to SQL Server 2012. Likewise, customers on an earlier version of Windows Server will need to either deploy their VM from a custom VHD or upgrade to Windows Server 2012 R2.
 
-Images deployed through Azure Marketplace come with the SQL IaaS extension pre-installed. The SQL IaaS extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS extension.
+Images deployed through Azure Marketplace come with the SQL IaaS Agent extension pre-installed. The SQL IaaS Agent extension is a requirement for flexible licensing and automated patching. Customers who deploy self-installed VMs will need to manually install the SQL IaaS Agent extension.
 
 > [!NOTE]
 >  
@@ -72,13 +70,18 @@ Disaster recovery solutions for EOS SQL Server on an Azure VM are as follows:
 
 ## Security patching
 
-Extended security updates for SQL Server VMs are delivered through the Microsoft Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
-
-> [!NOTE]
->
-> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for manual installation of extended security updates on Azure virtual machines. Microsoft Update will automatically detect that the VM is running in Azure and present the relevant updates for download even if the extension is not present.
+Extended security updates for SQL Server VMs are delivered through the Microsoft Windows Update channels after the SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). Patches can be downloaded manually or automatically.
 
 *Automated patching* is enabled by default. Automated patching allows Azure to automatically patch SQL Server and the operating system. You can specify a day of the week, time, and duration for a maintenance window if the SQL Server IaaS extension is installed. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale for time. For more information, see [Automated patching for SQL Server on Azure Virtual Machines](automated-patching.md).
+
+For improved patching management, which also includes Cumulative Updates, try the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience. 
+
+> [!NOTE]
+> Registration with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md) is not required for _manual_ installation of extended security updates on Azure virtual machines. Microsoft Update automaticallys detect the VM is running in Azure and presents relevant updates for download even if the extension is not isntalled.
+
+
+
+[Azure Update management](/azure/automation/update-management/overview) as of today does not detect patches for SQL Server Marketplace images. You should look under Windows Updates to apply SQL Server updates in this case.
 
 ## Next steps
 

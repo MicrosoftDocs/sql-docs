@@ -1,14 +1,15 @@
 ---
 title: Availability groups for SQL Server on Linux
 description: Learn about the characteristics of availability groups for SQL Server on Linux.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: linux
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.custom: seo-lt-2019
+ms.custom:
+  - linux-related-content
 ---
 
 # Availability groups for SQL Server on Linux
@@ -150,16 +151,11 @@ A distributed AG can also cross OS boundaries. The underlying AGs are bound by t
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
 
-## Next steps
+## Related content
 
 - [Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
-
 - [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
-
 - [Add availability group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
-
 - [Add availability group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
-
 - [Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)
-
 - [Configure a cross-platform availability group](sql-server-linux-availability-group-cross-platform.md)

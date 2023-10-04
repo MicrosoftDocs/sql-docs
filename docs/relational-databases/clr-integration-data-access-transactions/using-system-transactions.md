@@ -4,8 +4,8 @@ description: The System.Transactions namespace provides a transaction framework 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "TransactionScope class"
@@ -14,7 +14,6 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 ---
 # Using System.Transactions
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

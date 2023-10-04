@@ -4,8 +4,8 @@ description: This article provides performance best practices and guidelines for
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/30/2020
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 
@@ -152,13 +152,11 @@ done
 
 ```
 
-## Next steps
+## Related content
 
 For more resources including reference architectures for SQL Server Big Data Clusters, see:
 
 * [Case Study: SQL Workloads running on Apache Spark in MS SQL Server 2019 Big Data Cluster](https://aka.ms/sql-bdc-spark-perf/)
-
-* [HPE Reference Architecture for delivering insight across all your data with Microsoft SQL Server 2019 Big Data Clusters](https://h20195.www2.hpe.com/V2/GetDocument.aspx?docname=a50001963enw)
 
 * [Dell EMC PowerStore: Microsoft SQL Server 2019 Big Data Clusters](https://www.dellemc.com/resources/en-us/asset/white-papers/products/storage/h18231-dell-emc-powerstore-sql-server-big-data-clusters.pdf)
 

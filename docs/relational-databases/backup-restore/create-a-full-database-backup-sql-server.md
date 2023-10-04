@@ -1,20 +1,17 @@
 ---
-title: "Create a Full Database Backup | Microsoft Docs"
+title: "Create a Full Database Backup"
 description: This article shows you how to create a full database backup in SQL Server using SQL Server Management Studio, Transact-SQL, or PowerShell.
-ms.custom: "contperf-fy21q4-portal"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "05/12/2021"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backing up databases [SQL Server], full backups"
   - "backing up databases [SQL Server], SQL Server Management Studio"
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
-ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Create a Full Database Backup
 
@@ -22,7 +19,7 @@ ms.author: mathoma
 
 This topic describes how to create a full database backup in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
-For more information, see [SQL Server Backup and Restore with Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
+For more information, see [SQL Server Backup and Restore with Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="Restrictions"></a> Limitations and restrictions
 
@@ -198,11 +195,11 @@ In this example, the `SQLTestDB` database will be backed up with encryption to t
 
 ![Encrypted backup](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
-#### D. Back up to the Azure Blob storage service
+#### D. Back up to Azure Blob Storage
 
-The example creates a full database backup of `SQLTestDB` to the Azure Blob storage service. The example assumes that you already have a storage account with a blob container. The example creates a shared access signature for you; this example fails if the container has an existing shared access signature.
+The example creates a full database backup of `SQLTestDB` to Azure Blob Storage. The example assumes that you already have a storage account with a blob container. The example creates a shared access signature for you; this example fails if the container has an existing shared access signature.
 
-If you don't have an Azure blob container in a storage account, create one before continuing. See [Create a general purpose storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+If you don't have an Azure Blob Storage container in a storage account, create one before continuing. See [Create a general purpose storage account](/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) and [Create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in **Object Explorer**, expand the server tree.
 
@@ -384,7 +381,7 @@ Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -B
 
 #### B. Full backup to Azure
 
-The following example creates a full backup of the database `<myDatabase>` on the `<myServer>` instance to the Azure Blob Storage service. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
+The following example creates a full backup of the database `<myDatabase>` on the `<myServer>` instance to the Azure Blob Storage. A stored access policy has been created with read, write, and list rights. The SQL Server credential, `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`, was created using a Shared Access Signature that is associated with the Stored Access Policy. The PowerShell command uses the **BackupFile** parameter to specify the location (URL) and the backup file name.
 
 ```powershell
 $credential = Get-Credential

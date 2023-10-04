@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_35250"
 description: "MSSQLSERVER_35250"
-title: "MSSQLSERVER_35250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/06/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "35250 (Database Engine error)"
-ms.assetid: 
 author: pijocoder
 ms.author: jopilov
+ms.date: "05/06/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "35250 (Database Engine error)"
 ---
 # MSSQLSERVER_35250
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -176,7 +173,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 - Compare endpoint_url and port from each query and ensure the port from the endpoint_url matches the port defined for the endpoint on each respective replica
 
   > [!NOTE]  
-  > If you are using specific IP addresses for the endpoint to listen on, versus the default of “listen all”, then you may have to define URLs that use the specific IP address rather than the FQDN.
+  > If you are using specific IP addresses for the endpoint to listen on, versus the default of "listen all", then you may have to define URLs that use the specific IP address rather than the FQDN.
 
 #### 5. Check whether the network service account has CONNECT permission to the endpoint
 
@@ -237,7 +234,7 @@ This message occurs when attempting to join secondary databases to an Always On 
 
 - Check if there are [Server Aliases for Use by a Client](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md) defined on the replicas
   
-#### 7. Ensure your SQL Server is running a recent build (preferably the [latest build](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) )
+#### 7. Ensure your SQL Server is running a recent build (preferably the [latest build](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server))
 
 - Update SQL Server versions to protect from running into issues like [KB3213703](https://support.microsoft.com/topic/kb3213703-fix-an-always-on-secondary-replica-goes-into-a-disconnecting-state-10131118-b63a-f49f-b140-907f77774dc2).
 

@@ -1,17 +1,15 @@
 ---
 title: "Back up a database master key"
 description: Learn how to back up a database master key in SQL Server by using Transact-SQL. This essential key encrypts other keys and certificates.
-ms.custom: ""
-ms.date: "12/16/2021"
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database master key [SQL Server], exporting"
-ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "12/16/2021"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database master key [SQL Server], exporting"
 ---
 
 # Back up a database master key
@@ -51,8 +49,8 @@ Requires CONTROL permission on the database.
 7. Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql
-    -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2012;   
+    -- Creates a backup of the "AdventureWorks2022" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
+    USE AdventureWorks2022;   
     GO  
     OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';   
   

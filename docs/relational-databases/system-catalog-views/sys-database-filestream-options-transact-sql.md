@@ -4,9 +4,8 @@ description: sys.database_filestream_options (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_filestream_options"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_filestream_options catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 ---
 # sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,20 +1,17 @@
 ---
 title: "Tutorial: Prepare for replication"
 description: In this tutorial, learn how to prepare your publisher, distributor, and subscriber for replication by creating Windows accounts, preparing the snapshot folder, and configuring distribution.
-ms.custom:
-  - seo-lt-2019
-  - intro-quickstart
-ms.date: "04/02/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: quickstart
-helpviewer_keywords:
-  - "replication [SQL Server], tutorials"
-ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "04/02/2018"
+ms.service: sql
+ms.subservice: replication
+ms.topic: quickstart
+ms.custom:
+  - intro-quickstart
+  - updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], tutorials"
 ---
 # Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +37,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
 - At the publisher server (source), install:  
   
    - Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Server Compact. These editions cannot be replication publishers.   
-   - The [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - The [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   

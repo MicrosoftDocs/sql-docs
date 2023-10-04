@@ -4,13 +4,13 @@ description: Use Azure Data Studio to connect to a MySQL server (hosted on-premi
 author: shreyaaithal
 ms.author: shaithal
 ms.reviewer: erinstellato
-ms.date: 10/12/2022
-ms.prod: azure-data-studio
+ms.date: 07/04/2023
+ms.service: azure-data-studio
 ms.topic: quickstart
-ms.custom: intro-quickstart, ignite-2022
+ms.custom: intro-quickstart
 ---
 
-# Quickstart: Use Azure Data Studio to connect and query MySQL (Preview)
+# Quickstart: Use Azure Data Studio to connect and query MySQL
 
 This quickstart shows how to use Azure Data Studio to connect to a MySQL server (hosted on-premises, on VMs, on managed MySQL in other clouds or on Azure Database for MySQL - Flexible Server), create a database, and use SQL statements to insert and query data in the database.
 
@@ -22,9 +22,6 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
 - [Install the MySQL extension for Azure Data Studio](./extensions/mysql-extension.md).
 - A MySQL server. You can either create a managed MySQL server on Azure using [Azure Database for MySQL - Flexible Server](/azure/mysql/flexible-server/quickstart-create-server-portal) or [install MySQL locally](https://dev.mysql.com/downloads/mysql/).
 
-> [!NOTE]
-> The extension is currently available in Azure Data Studio (ADS) insider build only. It will be available in the next ADS stable build soon.
-
 ## Connect to MySQL
 
 1. Start **Azure Data Studio**.
@@ -35,15 +32,16 @@ To complete this quickstart, you need Azure Data Studio, the MySQL extension for
 
 3. In the dialog window that pops up, go to **Connection type** and select **MySQL** from the drop-down.
 
-4. Enter your MySQL server name, user name, and password for authentication:
+4. Enter your MySQL server name, select your preferred authentication method and enter the credentials to connect to your MySQL server:
 
     :::image type="content" source="media/quickstart-mysql/new-connection-screen.png" alt-text="Screenshot of new connection screen to connect to MySQL server.":::
 
    | Setting       | Example value | Description |
    | ------------ | ------------------ | ------------------------------------------------- |
    | **Server name** | localhost / exampleserver.mysql.database.azure.con | The fully qualified server name. |
-   | **User name** | mysqluser | The user name you want to sign in with. |
-   | **Password (SQL Login)** | *password* | The password for the user account you're logging in with. |
+   | **Authentication type** | Password | The authentication method for accessing your MySQL server. This option lets you choose between MySQL native authentication (Password) and Azure Active Directory authentication.|
+   | **User name** | exampleuser | The user name you want to sign in with. |
+   | **Password** | *password* | The password for the account you're logging in with. |
    | **Remember Password** | *Check* | Check this box if you don't want to enter the password each time you connect. |
    | **Database name** | \<Default\> | Enter a database name if you want the connection to specify a database. |
    | **Server group** | \<Default\> | This option lets you assign this connection to a specific server group you create. |

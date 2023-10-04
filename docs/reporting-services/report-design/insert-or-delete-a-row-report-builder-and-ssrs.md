@@ -1,16 +1,13 @@
 ---
-title: "Insert or delete a row in a paginated report | Microsoft Docs"
+title: "Insert or delete a row in a paginated report"
 description: Find out about adding or deleting rows in a tablix data region in a paginated report in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Insert or delete a row in a paginated report (Report Builder)
 

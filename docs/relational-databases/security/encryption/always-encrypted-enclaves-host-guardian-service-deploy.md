@@ -1,16 +1,14 @@
 ---
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
-ms.custom:
-- intro-deployment
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: vanto
+ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+ms.custom: intro-deployment
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -236,7 +234,7 @@ It's recommended that all production instances of HGS use an HTTPS binding.
 
 ## Step 6: Determine and share the HGS attestation URL
 
-As the HGS administrator you need share the attestation URL of HGS with both SQL server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
+As the HGS administrator you need share the attestation URL of HGS with both SQL Server computer administrators and application administrators in your organization. The SQL Server computers administrators will need the attestation URL to verify SQL Server computers can attest with HGS. Application administrators will need the attestation URL to configure how their apps connect to SQL Server.
 
 To determine the attestation URL, run the following cmdlet.
 

@@ -1,23 +1,19 @@
 ---
+title: "sp_releaseapplock (Transact-SQL)"
 description: "sp_releaseapplock (Transact-SQL)"
-title: "sp_releaseapplock (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_releaseapplock_TSQL"
-  - "sp_releaseapplock"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_releaseapplock"
-ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_releaseapplock_TSQL"
+  - "sp_releaseapplock"
+helpviewer_keywords:
+  - "sp_releaseapplock"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_releaseapplock (Transact-SQL)
@@ -25,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Releases a lock on an application resource.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -64,10 +60,10 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  Requires membership in the public role.  
   
 ## Examples  
- The following example releases the lock associated with the current transaction on the resource `Form1` in the `AdventureWorks2012` database.  
+ The following example releases the lock associated with the current transaction on the resource `Form1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_getapplock @DbPrincipal = 'dbo', @Resource = 'Form1',   
      @LockMode = 'Shared';  

@@ -5,7 +5,7 @@ author: "SQLvariant"
 ms.author: "aanelson"
 ms.reviewer: "alayu, maghan"
 ms.date: "04/19/2019"
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 
@@ -21,7 +21,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 - Syntax highlighting
 - Code snippets
 - IntelliSense for cmdlets and more
-- Rule-based analysis provided by [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer)
+- Rule-based analysis provided by [PowerShell Script Analyzer](https://github.com/PowerShell/PSScriptAnalyzer)
 - Go to Definition of cmdlets and variables
 - Find References of cmdlets and variables
 - Document and workspace symbol discovery
@@ -176,7 +176,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa
@@ -221,7 +221,7 @@ Here is a sample of what that output will look like:
 Name                 Status           Size  Space     Recovery Compat. Owner
                                             Available Model    Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+AdventureWorks2022   Normal      336.00 MB   57.01 MB Simple       140 sa
 master               Normal        6.00 MB  368.00 KB Simple       140 sa
 model                Normal       16.00 MB    5.53 MB Full         140 sa
 msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa

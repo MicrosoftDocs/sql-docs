@@ -1,15 +1,12 @@
 ---
 title: Required Permissions
 description: Learn about the permissions that you need for various tasks in SQL Server Data Tools, such as creating a database, running unit tests, and comparing schemas.
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
+ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Required Permissions for SQL Server Data Tools
@@ -38,7 +35,7 @@ You must have the following permissions to create or deploy a database.
 |Import database objects and settings|You must be able to connect to the source database.<br /><br />If the source database is based on SQL Server 2005, you must also own or have the **VIEW DEFINITION** permission on each object.<br /><br />If the source database is based on SQL Server 2008 or later, you must also own or have the **VIEW DEFINITION** permission on each object. Your login must have the **VIEW SERVER STATE** permission (for database encryption keys).|  
 |Import server objects and settings|You must be able to connect to the master database on the specified server.<br /><br />If the server is running SQL Server 2005, you must have the **VIEW ANY DEFINITION** permission on the server.<br /><br />If the source database is based on SQL Server 2008 or later, you must have the **VIEW ANY DEFINITION** permission on the server. Your login must have the **VIEW SERVER STATE** permission (for database encryption keys).|  
 |Create or update a database project|You do not require any database permissions to create or modify a database project.|  
-|Deploy new database or deploy with **Always Re-create Database** option set|You must either have the **CREATE DATABASE** permission or be a member of the **dbcreator** role on the target server.<br /><br />When you create a database, Visual Studio connects to the model database and copies its contents. The initial login (for example, *yourLogin*) that you use to connect to the target database must have **db_creator** and **CONNECT SQL** permissions. This login must have a user mapping on the model database. If you have **sysadmin** permissions, you can create the mapping by issuing the following Transact\-SQL statements:<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />The user (in this example, yourUser) must have **CONNECT** and **VIEW DEFINITION** permissions on the model database. If you have **sysadmin** permissions, you can grant these permissions by issuing the following Transact\-SQL statements:<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />If you deploy a database that contains unnamed constraints and the **CheckNewContraints** option is enabled (it is enabled by default), you must have **db_owner** or **sysadmin** permissions or deployment will fail. This is only true for unnamed constraints. For more information about the **CheckNewConstraints** option, see [Database Project Settings](../ssdt/database-project-settings.md).|  
+|Deploy new database or deploy with **Always Re-create Database** option set|You must either have the **CREATE DATABASE** permission or be a member of the **dbcreator** role on the target server.<br /><br />When you create a database, Visual Studio connects to the model database and copies its contents. The initial login (for example, *yourLogin*) that you use to connect to the target database must have **db_creator** and **CONNECT SQL** permissions. This login must have a user mapping on the model database. If you have **sysadmin** permissions, you can create the mapping by issuing the following Transact-SQL statements:<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />The user (in this example, yourUser) must have **CONNECT** and **VIEW DEFINITION** permissions on the model database. If you have **sysadmin** permissions, you can grant these permissions by issuing the following Transact-SQL statements:<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />If you deploy a database that contains unnamed constraints and the **CheckNewContraints** option is enabled (it is enabled by default), you must have **db_owner** or **sysadmin** permissions or deployment will fail. This is only true for unnamed constraints. For more information about the **CheckNewConstraints** option, see [Database Project Settings](../ssdt/database-project-settings.md).|  
 |Deploy updates to an existing database|You must be a valid database user. You must also be a member of the **db_ddladmin** role, own the schema, or own the objects that you want to create or modify on the target database. You need additional permissions to work with more advanced concepts such as logins or linked servers in your pre-deployment or post-deployment scripts.<br /><br />**NOTE:** If you deploy to the master database, you must also have the **VIEW ANY DEFINITION** permission on the server to which you deploy.|  
 |Use an assembly with the EXTERNAL_ACCESS option in a database project|You must set the TRUSTWORTHY property for your database project. You must have the EXTERNAL ACCESS ASSEMBLY permission for your SQL Server login.|  
 |Deploy assemblies to a new or existing database|You must be a member of the sysadmin role on the target deployment server.|  
@@ -74,8 +71,8 @@ You must have the following permissions to compare schemas or data.
   
 For more information, see SQL Server Books Online.  
   
-## <a name="Transact-SQLEditorPermissions"></a>Permissions to Run the Transact\-SQL Editor  
-What you can do within the Transact\-SQL editor is determined by your execution context to the target database.  
+## <a name="Transact-SQLEditorPermissions"></a>Permissions to Run the Transact-SQL Editor  
+What you can do within the Transact-SQL editor is determined by your execution context to the target database.  
   
 ## <a name="SQLCLRPermissions"></a>Permissions for SQL Server Common Language Run-time Projects  
 The following table lists the permissions that you must have to deploy or debug CLR projects:  

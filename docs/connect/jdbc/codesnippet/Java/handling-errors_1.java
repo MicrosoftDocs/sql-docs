@@ -13,7 +13,6 @@ public static void executeSQLException(Connection con) {
             System.out.println("ERROR CODE: " + se.getErrorCode());
             System.out.println("MESSAGE: " + se.getMessage());
             System.out.println();
-            se = se.getNextException();
         }
         while (se != null);
     }

@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 03/22/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
-ms.topic: guide
+ms.topic: conceptual
 ms.custom:
   - sqldbrb=1
   - ignite-fall-2021
@@ -48,10 +48,9 @@ In this article you can find a content reference to various guides, scripts, and
 
 ## Feature configuration
 
-- [Configure Azure AD auth](../database/authentication-aad-configure.md)
+- [Configure authentication with Microsoft Entra ID (formerly Azure Active Directory)](../database/authentication-aad-configure.md)
 - [Configure conditional access](../database/conditional-access-configure.md)
-- [Multi-factor Azure AD auth](../database/authentication-mfa-ssms-overview.md)
-- [Configure multi-factor auth](../database/authentication-mfa-ssms-configure.md)
+- [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md)
 - [Configure auto-failover group](auto-failover-group-configure-sql-mi.md) to automatically failover all databases on an instance to a secondary instance in another region in the event of a disaster. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
 - [Configure In-Memory OLTP](../in-memory-oltp-configure.md)

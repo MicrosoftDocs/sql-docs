@@ -1,25 +1,23 @@
 ---
-description: "ISSCommandWithParameters::GetParameterProperties in SQL Server Native Client (OLE DB)"
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apiname: 
-  - "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
-apitype: "COM"
-helpviewer_keywords: 
-  - "GetParameterProperties method"
-ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
+description: "ISSCommandWithParameters::GetParameterProperties in SQL Server Native Client (OLE DB)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "GetParameterProperties method"
+apiname: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+apitype: "COM"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSCommandWithParameters::GetParameterProperties in SQL Server Native Client (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE[snac-removed-oledb-only](../../includes/snac-removed-oledb-only.md)]
 
   Returns an array of SSPARAMPROPS property set structures, one SSPARAMPROPS property set for each UDT or XML parameter.  
   

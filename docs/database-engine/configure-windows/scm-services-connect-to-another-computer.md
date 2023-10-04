@@ -4,8 +4,8 @@ description: "Find out how to manage a remote computer's services. See how to us
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/19/2019"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "connections [SQL Server], other computers"

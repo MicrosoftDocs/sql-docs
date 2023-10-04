@@ -5,8 +5,8 @@ author: minewiskan
 ms.author: owend
 ms.reviewer: owend
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.topic: reference
 ms.custom: dmx
 ---
@@ -42,7 +42,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
 OPENROWSET  
 (  
 'SQLOLEDB.1',  
-'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2012;Data Source=localhost',  
+'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security     Info=False;Initial Catalog=AdventureWorksDW2022;Data Source=localhost',  
 'SELECT TOP 1000 * FROM vTargetMail'  
 )  
 ```  

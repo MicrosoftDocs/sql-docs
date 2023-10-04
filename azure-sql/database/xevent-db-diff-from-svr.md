@@ -4,7 +4,7 @@ description: Describes extended events (XEvents) in Azure SQL Database, and how 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 04/27/2022
+ms.date: 01/30/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: reference
@@ -171,6 +171,14 @@ If you receive an error message that says a memory maximum was enforced, some co
 
 - Run fewer concurrent event sessions.
 - Through your **CREATE** and **ALTER** statements for event sessions, reduce the amount of memory you specify on the **MAX\_MEMORY** clause.
+
+There is a cap on number of started XEvent sessions in Azure SQL Database:
+  - In a single Azure SQL Database, the limit is 100.
+  - In an elastic pool, the limit is 100 database-scoped sessions per pool.
+ 
+In [dense elastic pools](elastic-pool-resource-management.md), starting a new extended event session may fail due to memory constraints even when the total number of started sessions is below 100.
+  
+
 
 ### Network latency
 

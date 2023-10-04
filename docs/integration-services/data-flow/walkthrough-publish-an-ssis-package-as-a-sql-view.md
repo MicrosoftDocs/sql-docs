@@ -1,18 +1,14 @@
 ---
+title: "Walkthrough: Publish an SSIS Package as a SQL View"
 description: "Walkthrough: Publish an SSIS Package as a SQL View"
-title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.packagepublishwizard.f1"
-ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.packagepublishwizard.f1"
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
 
@@ -24,7 +20,7 @@ ms.author: chugu
 ## Prerequisites  
  You must have the following software installed on your computer to perform this walkthrough.  
   
-1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -216,7 +212,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  Update folder name, project name, and package name if needed. If the OPENQUERY function fails, in the **SQL Server Management Studio**, expand **Server Objects**, expand **Linked Servers**, expand **Providers**, and double click **SSISOLEDB** provider, and ensure that the **Allow inprocess** option is enabled.  
+    >  Update folder name, project name, and package name if needed. If the OPENQUERY function fails, in the **SQL Server Management Studio**, expand **Server Objects**, expand **Linked Servers**, expand **Providers**, and double-click **SSISOLEDB** provider, and ensure that the **Allow inprocess** option is enabled.  
   
 2.  Create a view in the database **TestDB** for the purpose of this walkthrough) by running the following query.  
   

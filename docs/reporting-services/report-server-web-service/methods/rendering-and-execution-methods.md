@@ -1,21 +1,18 @@
 ---
-title: "Rendering and Execution Methods | Microsoft Docs"
+title: "Rendering and Execution Methods"
 description: In Reporting Services, you can use these methods to manage item execution and caching, and report rendering.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "rendered reports [Reporting Services]"
   - "reports [Reporting Services], execution options"
   - "methods [Reporting Services], execution options"
   - "methods [Reporting Services], rendering"
-ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Rendering and Execution Methods
   You can use these methods to manage item execution and caching, and report rendering.  

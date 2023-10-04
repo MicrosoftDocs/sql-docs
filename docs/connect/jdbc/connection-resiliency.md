@@ -4,15 +4,15 @@ description: Connection resiliency can transparently restore broken idle connect
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/30/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connection resiliency (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Connection resiliency allows a broken idle connection to be reestablished, within limitations. If an initial connection fails, connection resiliency also allows the driver to automatically try to reconnect. Only SQL Server 2014 and later and Azure SQL Database support reconnecting a broken idle connection. This feature is available starting with Microsoft JDBC Driver 10.2.0 for SQL Server.
+Connection resiliency allows a broken idle connection to be reestablished, within limitations. If an initial connection fails, connection resiliency also allows the driver to automatically retry the connection. Only SQL Server 2014 and later and Azure SQL Database support reconnecting a broken idle connection. This feature is available starting with Microsoft JDBC Driver 10.2.0 for SQL Server.
 
 ## Connection retry
 

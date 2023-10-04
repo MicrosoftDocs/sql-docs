@@ -4,12 +4,9 @@ description: This code sample demonstrates the fast performance of memory-optimi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "08/19/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
@@ -27,7 +24,7 @@ To see a more comprehensive demonstration of the potential performance improveme
  The following subsections describe each step.  
   
 ### Step 1a: Prerequisite If Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- The steps in this first subsection apply only if you're running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and doesn't apply if you're running in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Do the following:  
+ The steps in this first subsection apply only if you're running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and doesn't apply if you're running in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Do the following:  
   
 1.  Use SQL Server Management Studio (SSMS.exe) to connect to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Or any tool similar to SSMS.exe is fine.  
   
@@ -52,8 +49,8 @@ USE imoltp;
 go  
 ```  
   
-### Step 1b: Prerequisite If Using [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- This subsection applies only if you're using [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Do the following:  
+### Step 1b: Prerequisite If Using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]  
+ This subsection applies only if you're using [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Do the following:  
   
 1.  Decide which existing test database you'll use for the code example.  
   

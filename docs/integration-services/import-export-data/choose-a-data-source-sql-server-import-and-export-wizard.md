@@ -1,17 +1,14 @@
 ---
+title: "Choose a Data Source (SQL Server Import and Export Wizard)"
 description: "Choose a Data Source (SQL Server Import and Export Wizard)"
-title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/28/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.impexpwizard.chooseadatasource.f1"
-ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
+ms.date: "01/28/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.impexpwizard.chooseadatasource.f1"
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
 
@@ -73,5 +70,3 @@ For info about how to connect to a data source that's not listed here, see [The 
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

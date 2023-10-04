@@ -1,16 +1,13 @@
 ---
-title: "Change row height or column width in a paginated report | Microsoft Docs"
-description: Learn about setting a a column width or a fixed row height with text box properties for rendered paginated reports in Report Builder. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
+title: "Change row height or column width in a paginated report"
+description: Learn about setting a a column width or a fixed row height with text box properties for rendered paginated reports in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Change row height or column width in a paginated report (Report Builder)
 

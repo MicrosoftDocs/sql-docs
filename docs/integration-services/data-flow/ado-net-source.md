@@ -1,27 +1,23 @@
 ---
+title: "ADO NET Source"
 description: "ADO NET Source"
-title: "ADO NET Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.adonetsource.f1"
   - "sql13.dts.designer.adonetsource.connection.f1"
   - "sql13.dts.designer.adonetsource.columns.f1"
   - "sql13.dts.designer.adonetsource.erroroutput.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ADO.NET source"
   - "sources [Integration Services], ADO.NET"
   - "sources [Integration Services], DataReader"
   - ".NET Framework [Integration Services]"
   - "DataReader source"
-ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: chugugrace
-ms.author: chugu
 ---
 # ADO NET Source
 
@@ -30,7 +26,7 @@ ms.author: chugu
 
   The ADO NET source consumes data from a .NET provider and makes the data available to the data flow.  
   
- You can use the ADO NET source to connect to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Connecting to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] by using OLE DB is not supported. For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [General Guidelines and Limitations (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100)).  
+ You can use the ADO NET source to connect to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Connecting to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] by using OLE DB is not supported. For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [General Guidelines and Limitations (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100)).  
   
 ## Data Type Support  
  The source converts any data type that does not map to a specific [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type to the DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. This conversion occurs even if the data type is **System.Object**.  
@@ -63,7 +59,7 @@ ms.author: chugu
  You can log the calls that the ADO NET source makes to external data providers. You can use this logging capability to troubleshoot the loading of data from external data sources that the ADO NET source performs. To log the calls that the ADO NET source makes to external data providers, enable package logging and select the **Diagnostic** event at the package level. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## ADO NET Source Configuration  
- You configure the ADO NET source by providing the SQL statement that defines the result set. For example, an ADO NET source that connects to the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database and uses the SQL statement `SELECT * FROM Production.Product` extracts all the rows from the **Production.Product** table and provides the dataset to a downstream component.  
+ You configure the ADO NET source by providing the SQL statement that defines the result set. For example, an ADO NET source that connects to the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database and uses the SQL statement `SELECT * FROM Production.Product` extracts all the rows from the **Production.Product** table and provides the dataset to a downstream component.  
   
 > [!NOTE]  
 >  When you use an SQL statement to invoke a stored procedure that returns results from a temporary table, use the WITH RESULT SETS option to define metadata for the result set.  

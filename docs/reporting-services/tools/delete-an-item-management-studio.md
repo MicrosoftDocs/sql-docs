@@ -1,20 +1,17 @@
 ---
-title: "Delete an Item (Management Studio) | Microsoft Docs"
+title: "Delete an Item (Management Studio)"
 description: Learn how to delete role definitions and shared schedules in SQL Management Studio.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "items [Reporting Services], deleting"
   - "deleting report items"
   - "report items [Reporting Services], deleting"
-ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Delete an Item (Management Studio)
   When connected to a report server instance in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can delete role definitions and shared schedules. You cannot delete reports, models, or other items on a report server. To delete report server content, use Report Manager instead. Or, if the report server is configured for SharePoint integrated mode, use the item management features in the SharePoint library that contains your content.  

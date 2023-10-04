@@ -2,21 +2,17 @@
 title: Correlate a Trace with Windows Performance Log Data
 titleSuffix: SQL Server Profiler
 description: Find out how to correlate Windows performance logs with a trace so that you can view data from System Monitor objects and counters in SQL Server Profiler.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ""
-ms.technology: profiler
-ms.topic: conceptual
-ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 author: markingmyname
 ms.author: maghan
-ms.custom: seo-lt-2019
 ms.date: 07/12/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Correlate a trace with Windows Performance Log data
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can open a Microsoft Windows performance log, choose the counters you want to correlate with a trace, and display the selected performance counters alongside the trace in the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] graphical user interface. When you select an event in the trace window, a vertical red bar in the System Monitor data window pane of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indicates the performance log data that correlates with the selected trace event.  
   
@@ -38,7 +34,7 @@ Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can ope
   
 ### To create performance logs that can be shared among different versions of Windows  
   
-1.  In Control Panel, open **Administrative Tools**, and then double click **Performance**.  
+1.  In Control Panel, open **Administrative Tools**, and then double-click **Performance**.  
   
 2.  In the **Performance** dialog box, expand **Performance Logs and Alerts**, right-click **Counter Logs**, and then click **New Log Settings**.  
   

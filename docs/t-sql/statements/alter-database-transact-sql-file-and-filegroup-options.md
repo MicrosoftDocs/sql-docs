@@ -5,11 +5,9 @@ description: Update a database's files and filegroups using Transact-SQL.
 author: markingmyname
 ms.author: maghan
 ms.date: "09/15/2021"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 f1_keywords:
   - "ADD FILE"
   - "ADD_FILE_TSQL"
@@ -47,7 +45,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-201
 
 Modifies the files and filegroups associated with the database. Adds or removes files and filegroups from a database, and changes the attributes of a database or its files and filegroups. For other ALTER DATABASE options, see [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
@@ -137,7 +135,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.
 
 > [!WARNING]
-> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later).
 
 MODIFY FILE
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.
@@ -409,7 +407,7 @@ The following example adds a 5-MB data file to the [!INCLUDE[ssSampleDBnormal](.
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILE
 (
     NAME = Test1dat2,
@@ -428,10 +426,10 @@ The following example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSample
 ```sql
 USE master
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILEGROUP Test1FG1;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILE
 (
     NAME = test1dat3,
@@ -458,7 +456,7 @@ The following example adds two 5-MB log files to the [!INCLUDE[ssSampleDBnormal]
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD LOG FILE
 (
     NAME = test1log2,
@@ -484,7 +482,7 @@ The following example removes one of the files added in example B.
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 REMOVE FILE test1dat4;
 GO
 ```
@@ -498,7 +496,7 @@ The ALTER DATABASE with MODIFY FILE command can only make a file size bigger, so
 USE master;
 GO
 
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILE
 (NAME = test1dat3,
 SIZE = 200MB);
@@ -508,15 +506,15 @@ GO
 This example shrinks the size of a data file to 100 MB, and then specifies the size at that amount.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
-DBCC SHRINKFILE (AdventureWorks2012_data, 100);
+DBCC SHRINKFILE (AdventureWorks2022_data, 100);
 GO
 
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILE
 (NAME = test1dat3,
 SIZE = 200MB);
@@ -533,7 +531,7 @@ The following example moves the `Test1dat2` file created in example A to a new d
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILE
 (
     NAME = Test1dat2,
@@ -587,10 +585,10 @@ The following example makes the `Test1FG1` filegroup created in example B the de
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILEGROUP Test1FG1 DEFAULT;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILEGROUP [PRIMARY] DEFAULT;
 GO
 ```
@@ -921,7 +919,7 @@ The following example adds a 5-MB data file to the [!INCLUDE[ssSampleDBnormal](.
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILE
 (
   NAME = Test1dat2,
@@ -939,10 +937,10 @@ The following example creates the filegroup `Test1FG1` in the [!INCLUDE[ssSample
 ```sql
 USE master
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILEGROUP Test1FG1;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 ADD FILE
 (
     NAME = test1dat3,
@@ -967,7 +965,7 @@ The following example removes one of the files added in example B.
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 REMOVE FILE test1dat4;
 GO
 ```
@@ -981,7 +979,7 @@ The ALTER DATABASE with MODIFY FILE command can only make a file size bigger, so
 USE master;
 GO
 
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILE
 (NAME = test1dat3,
 SIZE = 200MB);
@@ -991,16 +989,16 @@ GO
 This example shrinks the size of a data file to 100 MB, and then specifies the size at that amount.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 
-DBCC SHRINKFILE (AdventureWorks2012_data, 100);
+DBCC SHRINKFILE (AdventureWorks2022_data, 100);
 GO
 
 USE master;
 GO
 
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILE
 (NAME = test1dat3,
 SIZE = 200MB);
@@ -1014,10 +1012,10 @@ The following example makes the `Test1FG1` filegroup created in example B the de
 ```sql
 USE master;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILEGROUP Test1FG1 DEFAULT;
 GO
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorks2022
 MODIFY FILEGROUP [PRIMARY] DEFAULT;
 GO
 ```

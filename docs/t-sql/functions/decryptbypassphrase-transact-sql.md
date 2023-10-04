@@ -4,8 +4,8 @@ description: "DECRYPTBYPASSPHRASE (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DECRYPTBYPASSPHRASE"
@@ -22,7 +22,7 @@ dev_langs:
 
 This function decrypts data originally encrypted with a passphrase.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -74,7 +74,7 @@ If an authenticator was included at the time of the ciphertext encryption, `DECR
 This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 -- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   

@@ -4,8 +4,8 @@ description: This article describes how to access UDTs in a SQL Server database.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SqlDataReader object"
@@ -19,7 +19,6 @@ helpviewer_keywords:
 dev_langs:
   - "VB"
   - "CSharp"
-ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

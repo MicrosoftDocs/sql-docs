@@ -1,32 +1,23 @@
---- 
-
-# required metadata 
-title: "rxFastLinear function (MicrosoftML) " 
-description: " A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer  for linear binary classification and regression.    rxFastLinear is a trainer based on the Stochastic Dual Coordinate Ascent (SDCA) method, a state-of-the-art optimization technique for convex objective functions. The algorithm can be scaled for use on large out-of-memory data  sets due to a semi-asynchronized implementation that supports multi-threading. primal and dual updates in a separate thread. Several choices of loss functions are also provided. The SDCA method combines several of the  best properties and capabilities of logistic regression and SVM algorithms.  For more information on SDCA, see the citations in the reference section.  Traditional optimization algorithms, such as stochastic gradient descent  (SGD), optimize the empirical loss function directly. The SDCA chooses a different approach that optimizes the dual problem instead. The dual loss function is parametrized by per-example weights. In each iteration, when a training example from the training data set is read, the corresponding example weight is adjusted so that the dual loss function is optimized with respect to the current example. No learning rate is needed by SDCA to  determine step size as is required by various gradient descent methods.  rxFastLinear supports binary classification with three types of loss functions currently: Log loss, hinge loss, and smoothed hinge loss.  Linear regression also supports with squared loss function. Elastic net regularization can be specified by the l2Weight and l1Weight parameters. Note that the l2Weight has an effect on the rate of convergence. In general, the larger the l2Weight, the faster  SDCA converges.  Note that rxFastLinear is a stochastic and streaming optimization algorithm. The results depends on the order of the training data. For reproducible results, it is recommended that one sets shuffle to FALSE and trainThreads to 1. " 
-keywords: "(MicrosoftML), rxFastLinear, classification, fast, linear, regression, sdca, stochastic" 
+---
+title: "rxFastLinear function (MicrosoftML) "
+description: "A Stochastic Dual Coordinate Ascent (SDCA) optimization trainer  for linear binary classification and regression (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - rxFastLinear
+  - classification
+  - fast
+  - linear
+  - regression
+  - sdca
+  - stochastic
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # rxFastLinear: Fast Linear Model -- Stochastic Dual Coordinate Ascent 

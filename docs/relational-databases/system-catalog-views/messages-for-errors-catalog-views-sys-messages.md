@@ -4,9 +4,8 @@ description: Messages (for errors) Catalog Views - sys.messages
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "messages_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "error numbers [SQL Server]"
 dev_langs:
   - "TSQL"
-ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 ---
 # Messages (for errors) Catalog Views - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +28,7 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|ID of the message. Is unique across server. Message IDs less than 50000 are system messages.|  
 |**language_id**|**smallint**|Language ID for which the text in **text** is used, as defined in **syslanguages**. This is unique for a specified **message_id**.|  
-|**severity**|**tinyint**|Severity level of the message, between 1 and 25. This is the same for all message languages within a **message_id**.|  
+|**severity**|**tinyint**|Severity level of the message, between 0 and 25. This is the same for all message languages within a **message_id**.|  
 |**is_event_logged**|**bit**|1 = Message is event-logged when an error is raised. This is the same for all message languages within a **message_id**.|  
 |**text**|**nvarchar(2048)**|Text of the message used when the corresponding **language_id** is active.|  
   

@@ -1,19 +1,15 @@
 ---
+title: "Azure HDInsight Create Cluster Task"
 description: "Azure HDInsight Create Cluster Task"
-title: "Azure HDInsight Create Cluster Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.afpcreatecltask.f1"
-  - "sql14.dts.designer.afpcreatecltask.f1"
-ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
+ms.date: "02/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.afpcreatecltask.f1"
+  - "sql14.dts.designer.afpcreatecltask.f1"
 ---
 # Azure HDInsight Create Cluster Task
 

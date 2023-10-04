@@ -1,14 +1,12 @@
 ---
-title: 'Isolation changes for Windows'
+title: "Isolation changes for Windows"
 description: This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect SQLRUserGroup, firewall rules, file permission, and implied authentication.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 05/24/2022
-ms.topic: how-to
-ms.custom:
-- event-tier1-build-2022
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-ver15"
 ---
 # SQL Server on Windows: Isolation changes for Machine Learning Services
@@ -59,7 +57,7 @@ If your Python or R scripts need access to any other directory, you need give ei
 
 Follow the steps below to grant access.
 
-1. In File Explorer, right click on the folder you want to use as working directory, and select **Properties**.
+1. In File Explorer, right-click on the folder you want to use as working directory, and select **Properties**.
 1. Select **Security** and click **Edit...** to change permissions.
 1. Click **Add...**
 1. Make sure the **From this location** is the local computer name.

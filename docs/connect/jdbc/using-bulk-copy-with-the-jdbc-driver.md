@@ -4,8 +4,8 @@ description: "The SQLServerBulkCopy class allows you to write data load solution
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/24/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using bulk copy with the JDBC driver
@@ -43,7 +43,8 @@ A few of the code samples demonstrate how to use one `SQLServerBulkCopy` class t
 To create the tables necessary for the code samples to run correctly, you must run the following Transact-SQL statements in a SQL Server database.  
 
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
+GO
   
 IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')
@@ -599,7 +600,7 @@ public class BulkCopyExistingTransactions {
   
 5. Select **Write a query to specify the data to transfer** and **Next**.  Enter your **SQL Statement** `SELECT ProductID, Name, ProductNumber FROM Production.Product`, and **Next**  
   
-6. Check the configuration: You can leave the Row delimiter as `{CR}{LF}` and Column Delimiter as Comma `{,}`.  Select **Edit Mappings**... and check that the data **Type** is correct for each column (for example, integer for `ProductID` and Unicode string for the others).  
+6. Check the configuration: You can leave the Row delimiter as `{CR}{LF}` and Column Delimiter as Comma `{,}`.  Select **Edit Mappings...** and check that the data **Type** is correct for each column (for example, integer for `ProductID` and Unicode string for the others).  
   
 7. Skip ahead to **Finish** and run the export.  
 

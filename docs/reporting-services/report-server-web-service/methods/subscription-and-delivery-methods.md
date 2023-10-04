@@ -1,21 +1,18 @@
 ---
-title: "Subscription and Delivery Methods | Microsoft Docs"
+title: "Subscription and Delivery Methods"
 description: In Reporting Services, you can use these methods to create and manage subscriptions and delivery of catalog items.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "reports [Reporting Services], delivering"
   - "delivery [Reporting Services]"
   - "methods [Reporting Services], subscription and delivery"
   - "subscriptions [Reporting Services], about subscriptions"
-ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Subscription and Delivery Methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  

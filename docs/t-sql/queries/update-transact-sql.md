@@ -1,19 +1,16 @@
 ---
+title: "UPDATE (Transact-SQL)"
 description: "UPDATE (Transact-SQL)"
-title: "UPDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "05/19/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "UPDATE_TSQL"
   - "UPDATE"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DML [SQL Server], UPDATE statement"
   - "data updates [SQL Server], UPDATE statement"
   - "updating data [SQL Server]"
@@ -35,17 +32,16 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server]"
   - "FROM clause, UPDATE statement"
   - "WHERE clause, UPDATE statement"
-ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-author: VanMSFT
-ms.author: vanto
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -99,7 +95,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -146,7 +142,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Parentheses delimiting *expression* in TOP are required in INSERT, UPDATE, and DELETE statements. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  *table_alias*  
- The alias specified in the FROM clause representing the table or view from which the rows are to be updated.  
+ The alias specified in the UPDATE clause representing the table or view from which the rows are to be updated.  
   
  *server_name*  
  Is the name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  
@@ -164,7 +160,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
  WITH **(** \<Table_Hint_Limited> **)**  
- Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, and NOEXPAND are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK, READUNCOMMITTED, NOEXPAND, and several others are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
  Specifies a [table](../../t-sql/data-types/table-transact-sql.md) variable as a table source.  
@@ -268,7 +264,7 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
  Use caution when specifying the FROM clause to provide the criteria for the update operation. The results of an UPDATE statement are undefined if the statement includes a FROM clause that is not specified in such a way that only one value is available for each column occurrence that is updated, that is if the UPDATE statement is not deterministic. For example, in the UPDATE statement in the following script, both rows in `Table1` meet the qualifications of the FROM clause in the UPDATE statement; but it is undefined which row from `Table1` is used to update the row in `Table2.`  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.Table1', 'U') IS NOT NULL  
     DROP TABLE dbo.Table1;  
@@ -298,7 +294,7 @@ FROM dbo.Table2;
  The same problem can occur when the `FROM` and `WHERE CURRENT OF` clauses are combined. In the following example, both rows in `Table2` meet the qualifications of the `FROM` clause in the `UPDATE` statement. It is undefined which row from `Table2` is to be used to update the row in `Table1`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.Table1', 'U') IS NOT NULL  
     DROP TABLE dbo.Table1;  
@@ -412,7 +408,9 @@ To achieve the same functionality of **\.WRITE** with other character or binary 
  UPDATE statements are allowed in the body of user-defined functions only if the table being modified is a table variable.  
   
  When an `INSTEAD OF` trigger is defined on UPDATE actions against a table, the trigger is running instead of the UPDATE statement. Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only support AFTER triggers defined on UPDATE and other data modification statements. The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
-  
+
+ Currently, the FROM clause cannot be specified in an UPDATE statement on [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]. Single-table UPDATE statements are supported.
+
 ## Limitations and restrictions  
  The FROM clause cannot be specified in an UPDATE statement that references, either directly or indirectly, a view that has an `INSTEAD OF` trigger defined on it. For more information about `INSTEAD OF` triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -476,7 +474,7 @@ ID     Value
 ```  
 
 ## Locking behavior  
- An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) for more details on locking mechanics in SQL Server.  
+ An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_engine) for more details on locking mechanics in SQL Server.  
   
 ## Logging behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **\.WRITE** clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  
@@ -493,16 +491,16 @@ ID     Value
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic Syntax](#BasicSyntax)|UPDATE|  
-|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE • TOP • WITH common table expression • WHERE CURRENT OF|  
-|[Setting Column Values](#ColumnValues)|computed values • compound operators • default values • subqueries|  
-|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views • table variables • table aliases|  
+|[Limiting the Rows that Are Updated](#LimitingValues)|WHERE * TOP * WITH common table expression * WHERE CURRENT OF|  
+|[Setting Column Values](#ColumnValues)|computed values * compound operators * default values * subqueries|  
+|[Specifying Target Objects Other than Standard Tables](#TargetObjects)|views * table variables * table aliases|  
 |[Updating Data Based on Data From Other Tables](#OtherTables)|FROM|  
-|[Updating Rows in a Remote Table](#RemoteTables)|linked server • OPENQUERY • OPENDATASOURCE|  
-|[Updating Large Object Data Types](#LOBValues)|.WRITE • OPENROWSET|  
+|[Updating Rows in a Remote Table](#RemoteTables)|linked server * OPENQUERY * OPENDATASOURCE|  
+|[Updating Large Object Data Types](#LOBValues)|.WRITE * OPENROWSET|  
 |[Updating User-defined Types](#UDTs)|user-defined types|  
-|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints • query hints|  
+|[Overriding the Default Behavior of the Query Optimizer by Using Hints](#TableHints)|table hints * query hints|  
 |[Capturing the Results of the UPDATE Statement](#CaptureResults)|OUTPUT clause|  
-|[Using UPDATE in Other Statements](#Other)|Stored Procedures • TRY...CATCH|  
+|[Using UPDATE in Other Statements](#Other)|Stored Procedures * TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> Basic syntax  
  Examples in this section demonstrate the basic functionality of the UPDATE statement using the minimum required syntax.  
@@ -511,7 +509,7 @@ ID     Value
  The following example updates a single column for all rows in the `Person.Address` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Person.Address  
 SET ModifiedDate = GETDATE();  
@@ -521,7 +519,7 @@ SET ModifiedDate = GETDATE();
  The following example updates the values in the `Bonus`, `CommissionPct`, and `SalesQuota` columns for all rows in the `SalesPerson` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;  
@@ -535,7 +533,7 @@ GO
  The following example uses the WHERE clause to specify which rows to update. The statement updates the value in the `Color` column of the `Production.Product` table for all rows that have an existing value of 'Red' in the `Color` column and have a value in the `Name` column that starts with 'Road-250'.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 SET Color = N'Metallic Red'  
@@ -547,7 +545,7 @@ GO
  The following examples use the TOP clause to limit the number of rows that are modified in an UPDATE statement. When a TOP (*n*) clause is used with UPDATE, the update operation is performed on a random selection of '*n*' number of rows. The following example updates the `VacationHours` column by 25 percent for 10 random rows in the `Employee` table.  
   
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 UPDATE TOP (10) HumanResources.Employee
 SET VacationHours = VacationHours * 1.25 ;
@@ -569,7 +567,7 @@ GO
  The following example updates the `PerAssemblyQty` value for all parts and components that are used directly or indirectly to create the `ProductAssemblyID 800`. The common table expression returns a hierarchical list of parts that are used directly to build `ProductAssemblyID 800` and parts that are used to build those components, and so on. Only the rows returned by the common table expression are modified.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
 (  
@@ -597,7 +595,7 @@ WHERE d.ComponentLevel = 0;
  The following example uses the WHERE CURRENT OF clause to update only the row on which the cursor is positioned. When a cursor is based on a join, only the `table_name` specified in the UPDATE statement is modified. Other tables participating in the cursor are not affected.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
@@ -623,7 +621,7 @@ GO
  The following examples uses computed values in an UPDATE statement. The example doubles the value in the `ListPrice` column for all rows in the `Product` table.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 SET ListPrice = ListPrice * 2;  
@@ -634,7 +632,7 @@ GO
  The following example uses the variable `@NewPrice` to increment the price of all red bicycles by taking the current price and adding 10 to it.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @NewPrice INT = 10;  
 UPDATE Production.Product  
@@ -646,7 +644,7 @@ GO
  The following example uses the compound operator += to append the data `' - tool malfunction'` to the existing value in the column `Name` for rows that have a `ScrapReasonID` between 10 and 12.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.ScrapReason   
 SET Name += ' - tool malfunction'  
@@ -657,7 +655,7 @@ WHERE ScrapReasonID BETWEEN 10 and 12;
  The following example uses a subquery in the SET clause to determine the value that is used to update the column. The subquery must return only a scalar value (that is, a single value per row). The example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table. The subquery aggregates the sales for each salesperson in the `UPDATE` statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD +   
@@ -675,7 +673,7 @@ GO
  The following example sets the `CostRate` column to its default value (0.00) for all rows that have a `CostRate` value greater than `20.00`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Location  
 SET CostRate = DEFAULT  
@@ -689,7 +687,7 @@ WHERE CostRate > 20.00;
  The following example updates rows in a table by specifying a view as the target object. The view definition references multiple tables, however, the UPDATE statement succeeds because it references columns from only one of the underlying tables. The UPDATE statement would fail if columns from both tables were specified. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Person.vStateProvinceCountryRegion  
 SET CountryRegionName = 'United States of America'  
@@ -700,7 +698,7 @@ WHERE CountryRegionName = 'United States';
  The follow example updates rows in the table `Production.ScrapReason`. The table alias assigned to `ScrapReason` in the FROM clause is specified as the target object in the UPDATE clause.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE sr  
 SET sr.Name += ' - tool malfunction'  
@@ -714,7 +712,7 @@ JOIN Production.WorkOrder AS wo
  The following example updates rows in a table variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create the table variable.  
 DECLARE @MyTableVar TABLE (  
@@ -746,7 +744,7 @@ GO
  The following example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD + SubTotal  
@@ -764,7 +762,7 @@ GO
  In the situation in which more than one sale for a specified salesperson can occur on the same day, all the sales for each sales person must be aggregated together within the `UPDATE` statement, as shown in the following example:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD +   
@@ -794,14 +792,14 @@ EXEC sp_addlinkedserver @server = N'MyLinkedServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2022.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -818,7 +816,7 @@ SET GroupName = 'Sales and Marketing';
  The following example updates a row in a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*. You may need to configure the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Ad Hoc Distributed Queries. For more information, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
 
 ```sql
-UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2022.HumanResources.Department
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
@@ -829,7 +827,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  The following example uses the .WRITE clause to update a partial value in `DocumentSummary`, an **nvarchar(max)** column in the `Production.Document` table. The word `components` is replaced with the word `features` by specifying the replacement word, the starting location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example also uses the OUTPUT clause to return the before and after images of the `DocumentSummary` column to the `@MyTableVar` table variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @MyTableVar TABLE (  
     SummaryBefore NVARCHAR(max),  
@@ -849,7 +847,7 @@ GO
  The following examples add and remove data from an **nvarchar(max)** column that has a value currently set to NULL. Because the .WRITE clause cannot be used to modify a NULL column, the column is first populated with temporary data. This data is then replaced with the correct data by using the .WRITE clause. The additional examples append data to the end of the column value, remove (truncate) data from the column and, finally, remove partial data from the column. The SELECT statements display the data modification generated by each UPDATE statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Replacing NULL value with temporary data.  
 UPDATE Production.Document  
@@ -906,7 +904,7 @@ GO
  The following example replaces an existing image stored in a **varbinary(max)** column with a new image. The [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function is used with the BULK option to load the image into the column. This example assumes that a file named `Tires.jpg` exists in the specified file path.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.ProductPhoto  
 SET ThumbNailPhoto = (  
@@ -965,7 +963,7 @@ WHERE Name = 'Anchorage';
  The following example specifies the [table hint](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. This hint specifies that a shared lock is taken on the table `Production.Product` and held until the end of the UPDATE statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 WITH (TABLOCK)  
@@ -978,7 +976,7 @@ GO
  The following example specifies the [query hint](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` in the UPDATE statement. This hint instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE PROCEDURE Production.uspProductUpdate  
 @Product NVARCHAR(25)  
@@ -1002,7 +1000,7 @@ EXEC Production.uspProductUpdate 'BK-%';
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. For more examples using the OUTPUT clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 
 --Display the initial data of the table to be updated.  
@@ -1024,7 +1022,7 @@ OUTPUT inserted.BusinessEntityID,
       inserted.VacationHours,  
       inserted.ModifiedDate  
 INTO @MyTableVar
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 --Display the result set of the table variable.  
 SELECT EmpID, OldVacationHours
 , NewVacationHours, ModifiedDate  
@@ -1034,7 +1032,7 @@ GO
 --Display the result set of the table.  
 SELECT BusinessEntityID, VacationHours, ModifiedDate, HireDate  
 FROM HumanResources.Employee
-	WHERE VacationHours < 10  
+    WHERE VacationHours < 10  
 GO  
 ```  
   
@@ -1045,7 +1043,7 @@ GO
  The following example uses an UPDATE statement in a stored procedure. The procedure takes one input parameter, `@NewHours` and one output parameter `@RowCount`. The `@NewHours` parameter value is used in the UPDATE statement to update the column `VacationHours` in the table `HumanResources.Employee`. The `@RowCount` output parameter is used to return the number of rows affected to a local variable. The CASE expression is used in the SET clause to conditionally determine the value that is set for `VacationHours`. When the employee is paid hourly (`SalariedFlag` = 0), `VacationHours` is set to the current number of hours plus the value specified in `@NewHours`; otherwise, `VacationHours` is set to the value specified in `@NewHours`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
 @NewHours SMALLINT  
@@ -1068,7 +1066,7 @@ EXEC HumanResources.Update_VacationHours 40;
  The following example uses an UPDATE statement in a TRY...CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
   
@@ -1096,7 +1094,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### AD. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause is not used to specify the row (or rows) to update.  

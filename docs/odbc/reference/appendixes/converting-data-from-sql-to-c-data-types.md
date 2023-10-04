@@ -1,14 +1,13 @@
 ---
+title: "Converting Data from SQL to C Data Types"
 description: "Converting Data from SQL to C Data Types"
-title: "Converting Data from SQL to C Data Types | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data conversions from SQL to C types [ODBC]"
   - "data conversions from SQL to C types [ODBC], about converting"
   - "data types [ODBC], C data types"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "converting data from SQL to c types [ODBC]"
   - "converting data from SQL to c types [ODBC], about converting"
   - "C data types [ODBC], converting from SQL types"
-ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Converting Data from SQL to C Data Types
 When an application calls **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**, the driver retrieves the data from the data source. If necessary, it converts the data from the data type in which the driver retrieved it to the data type specified by the *TargetType* argument in **SQLBindCol** or **SQLGetData.** Finally, it stores the data in the location pointed to by the *TargetValuePtr* argument in **SQLBindCol** or **SQLGetData** (and the SQL_DESC_DATA_PTR field of the ARD).  
@@ -29,7 +25,7 @@ When an application calls **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**, t
   
  For an ODBC *3.x* application working with an ODBC *2.x* driver, conversion from driver-specific data types might not be supported.  
   
- The format of the converted data is not affected by the Windows® country setting.  
+ The format of the converted data is not affected by the Windows® country/region setting.  
   
  The tables in the following sections describe how the driver or data source converts data retrieved from the data source; drivers are required to support conversions to all ODBC C data types from the ODBC SQL data types that they support. For a given ODBC SQL data type, the first column of the table lists the legal input values of the *TargetType* argument in **SQLBindCol** and **SQLGetData**. The second column lists the outcomes of a test, often using the *BufferLength* argument specified in **SQLBindCol** or **SQLGetData**, which the driver performs to determine whether it can convert the data. For each outcome, the third and fourth columns list the values placed in the buffers specified by the *TargetValuePtr* and *StrLen_or_IndPtr* arguments specified in **SQLBindCol** or **SQLGetData** after the driver has attempted to convert the data. (The *StrLen_or_IndPtr* argument corresponds to the SQL_DESC_OCTET_LENGTH_PTR field of the ARD.) The last column lists the SQLSTATE returned for each outcome by **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**.  
   

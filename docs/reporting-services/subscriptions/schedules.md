@@ -1,23 +1,20 @@
 ---
-title: "Schedules | Microsoft Docs"
+title: "Schedules"
 description: In this overview, learn how you can use shared schedules and report-specific schedules to control the processing and distribution of reports.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/01/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "schedules [Reporting Services]"
   - "schedules [Reporting Services], about schedules"
   - "published reports [Reporting Services], schedules"
   - "reports [Reporting Services], scheduling"
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
-ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides **shared schedules** and **report-specific schedules** to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.
@@ -51,7 +48,7 @@ ms.author: maggies
  For details on how to create and manage schedules, see [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+>  Schedule operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).  
   
 ##  <a name="bkmk_compare"></a> Comparing Shared and Report-Specific Schedules  
  Both types of schedules yield the same output:.  

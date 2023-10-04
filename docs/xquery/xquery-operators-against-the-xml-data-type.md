@@ -1,25 +1,21 @@
 ---
-title: "XQuery Operators Against the xml Data Type | Microsoft Docs"
-description: Learn about the XQuery operators that can be used against the xml data type. 
-ms.custom: ""
+title: "XQuery Operators Against the xml Data Type"
+description: Learn about the XQuery operators that can be used against the xml data type.
+author: rothja
+ms.author: jroth
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XQuery, operators"
   - "operators [XQuery]"
   - "xml data type [SQL Server], XQuery"
-ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: rothja
-ms.author: jroth
+dev_langs:
+  - "XML"
 ---
 # XQuery Operators Against the xml Data Type
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the following operators:  
   

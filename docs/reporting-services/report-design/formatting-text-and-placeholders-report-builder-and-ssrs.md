@@ -1,23 +1,20 @@
 ---
-title: "Format text and placeholders in paginated reports | Microsoft Docs"
+title: "Format text and placeholders in paginated reports"
 description: Improve readability of your paginated reports with format choices for fonts, styles, colors, and alignment within text or a data region in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql11.rtp.rptdesigner.placeholderproperties.font.f1"
   - "10118"
   - "10135"
   - "sql11.rtp.rptdesigner.textboxproperties.font.f1"
   - "10132"
   - "sql11.rtp.rptdesigner.textproperties.font.f1"
-ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Format text and placeholders in paginated reports (Report Builder)
 

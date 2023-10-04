@@ -4,8 +4,7 @@ description: "Modify User-defined Functions"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/28/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.service: sql
 ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -61,7 +60,7 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
    ```sql
    -- Scalar-Valued Function
-   USE [AdventureWorks2012]
+   USE [AdventureWorks2022]
    GO
    ALTER FUNCTION [dbo].[ufnGetAccountingEndDate]()
    RETURNS [datetime]
@@ -75,7 +74,7 @@ Requires ALTER permission on the function or on the schema. If the function spec
 
    ```sql
    -- Table-Valued Function
-   USE [AdventureWorks2012]
+   USE [AdventureWorks2022]
    GO
    ALTER FUNCTION [dbo].[ufnGetContactInformation](@PersonID int)
    RETURNS @retContactInformation TABLE

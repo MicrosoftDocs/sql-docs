@@ -4,9 +4,8 @@ description: Learn how srv_convert in the Extended Stored Procedure API changes 
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_convert"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_convert
 apitype: "DLLExport"
-ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 ---
 # srv_convert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

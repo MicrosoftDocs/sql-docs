@@ -1,38 +1,24 @@
 ---
-title: "Recompile a Stored Procedure | Microsoft Docs"
-description: Learn details about how to recompile a stored procedure in SQL Server 2019 (15.x) by using Transact-SQL.
-ms.custom: ""
-ms.date: "10/28/2019"
-ms.prod: sql
-ms.technology: stored-procedures
-ms.reviewer: ""
+title: "Recompile a Stored Procedure"
+description: Learn details about how to recompile a stored procedure by using Transact-SQL.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: "12/01/2022"
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_recompile"
   - "WITH RECOMPILE clause"
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
-ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Recompile a Stored Procedure
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  This topic describes how to recompile a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: **WITH RECOMPILE** option in the procedure definition or when the procedure is called, the **RECOMPILE** query hint on individual statements, or by using the **sp_recompile** system stored procedure. This topic describes using the WITH RECOMPILE option when creating a procedure definition and executing an existing procedure. It also describes using the sp_recompile system stored procedure to recompile an existing procedure.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To recompile a stored procedure, using:**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+
+This article describes how to recompile a stored procedure in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: `WITH RECOMPILE` option in the procedure definition or when the procedure is called, the RECOMPILE query hint on individual statements, or by using the `sp_recompile` system stored procedure. 
+
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Recommendations"></a> Recommendations  
@@ -47,30 +33,37 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   If certain queries in a procedure regularly use atypical or temporary values, procedure performance can be improved by using the RECOMPILE query hint inside those queries. Since only the queries using the query hint will be recompiled instead of the complete procedure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'s statement-level recompilation behavior is mimicked. But in addition to using the procedure's current parameter values, the RECOMPILE query hint also uses the values of any local variables inside the stored procedure when you compile the statement. For more information, see [Query Hint (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
+> [!NOTE]
+> In Azure Synapse Analytics dedicated and serverless pools, stored procedures are not pre-compiled code, and so cannot be recompiled. For more information, see [Using stored procedures for dedicated SQL pools in Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-develop-stored-procedures).
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- **WITH RECOMPILE** Option  
- If this option is used when the procedure definition is created, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
+
+#### WITH RECOMPILE option  
+
+If this option is used when the procedure definition is created, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
- If this option is used in an EXECUTE statement, it requires EXECUTE permissions on the procedure. Permissions are not required on the EXECUTE statement itself but execute permissions are required on the procedure referenced in the EXECUTE statement. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
+If this option is used in an EXECUTE statement, it requires EXECUTE permissions on the procedure. Permissions are not required on the EXECUTE statement itself but execute permissions are required on the procedure referenced in the EXECUTE statement. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- **RECOMPILE** Query Hint  
+#### RECOMPILE query hint  
+
  This feature is used when the procedure is created and the hint is included in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the procedure. Therefore, it requires CREATE PROCEDURE permission in the database and ALTER permission on the schema in which the procedure is being created.  
   
- **sp_recompile** System Stored Procedure  
+#### sp_recompile system stored procedure  
+
  Requires ALTER permission on the specified procedure.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
 
 1. Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-1. From the Standard bar, click **New Query**.  
+1. From the **Standard** bar, select **New Query**.  
   
-1. Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
+1. Copy and paste the following example into the query window and select **Execute**. This example creates the procedure definition.  
 
    ```sql
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
        DROP PROCEDURE dbo.uspProductByVendor;  
@@ -90,10 +83,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ### To recompile a stored procedure by using the WITH RECOMPILE option   
   
-Select **New Query**, then copy and paste the following code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
+Select **New Query**, then copy and paste the following code example into the query window and select **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
 GO
@@ -101,16 +94,17 @@ GO
   
 ### To recompile a stored procedure by using sp_recompile  
 
-Select **New Query**, then copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
+Select **New Query**, then copy and paste the following example into the query window and select **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
 
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_recompile N'dbo.uspProductByVendor';   
 GO
 ```  
   
-## See Also  
+## Next steps
+
  [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Rename a Stored Procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

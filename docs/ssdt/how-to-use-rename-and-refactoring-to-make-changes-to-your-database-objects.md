@@ -1,35 +1,32 @@
 ---
 title: Rename and Refactoring to Make Changes to your Database Objects
 description: Learn about the Rename and Refactor menus in the Transact-SQL Editor. See how to rename types, switch object schemas, expand wildcards, and fully qualify names.
-ms.prod: sql
-ms.technology: ssdt
+author: subhojit-msft
+ms.author: subasak
+ms.date: 05/07/2023
+ms.service: sql
+ms.subservice: ssdt
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql.data.tools.dbrefactoring.previewdialog"
   - "sql.data.tools.editor.howto.refactoring"
   - "sql.data.tools.dbrefactoring.renamedialog"
   - "sql.data.tools.dbrefactoring.moveschemadialog"
   - "sql.data.tools.dbrefactoring.renameserverdatabasedialog"
-ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: markingmyname
-ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
-ms.date: 02/09/2017
 ---
 
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects
 
-The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or move an object to a different schema, and do a preview of all affected areas before committing the change. You can also use the Refactor menu to fully qualify all references to database objects, or expand any wildcard characters in `SELECT` statements in your database project.  
+The Refactor contextual menu in the Transact-SQL Editor allows you to rename or move an object to a different schema, and do a preview of all affected areas before committing the change. You can also use the Refactor menu to fully qualify all references to database objects, or expand any wildcard characters in `SELECT` statements in your database project.  
   
 > [!NOTE]  
 > The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
   
 ### To rename a type  
   
-1.  Right-click the **Products** table (Products.sql) in **Solution Explorer** and select **View Code** to open the script in Transact\-SQL editor.  
+1.  Right-click the **Products** table (Products.sql) in **Solution Explorer** and select **View Code** to open the script in Transact-SQL editor.  
   
-2.  Right click `[Products]` in the script, select **Refactor**, and **Rename**.  
+2.  Right-click `[Products]` in the script, select **Refactor**, and **Rename**.  
   
 3.  In the **New Name** field, change it to **Product**. Leave the **Preview Changes** option checked and click **OK**.  
   
@@ -37,7 +34,7 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
   
 5.  Click **Apply**.  
   
-6.  For script files that are already opened in Table Designer or Transact\-SQL Editor, notice that the Transact\-SQL Editor has highlighted locations where changes have taken place with a green bar on the left.  
+6.  For script files that are already opened in Table Designer or Transact-SQL Editor, notice that the Transact-SQL Editor has highlighted locations where changes have taken place with a green bar on the left.  
   
 7.  Notice the addition of **TradeDev.refactorlog** in **Solution Explorer**. Double-click to open it. It contains an XML representation of all the changes in this session.  
   
@@ -48,6 +45,9 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
 10. Expand **Tables**, and notice that the **Products** table has been renamed.  
   
 11. Right-click **Product** and select **View Data**. Notice that existing data is kept intact regardless of the rename operation.  
+
+> [!WARNING]  
+> If a refactor log is deleted, the complete history of the refactoring will be deleted. When the project is published to a database where prior refactor operations haven't been applied, any refactor operations completed before the refactor file was deleted, will be published as drop and create operations. As a result, data loss may occur.
   
 ### To expand wildcards  
   
@@ -71,7 +71,7 @@ The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or
   
 ### To fully qualify database object names  
   
-1.  Make sure **GetProductsBySupplier.sql** is still open in Transact\-SQL Editor.  
+1.  Make sure **GetProductsBySupplier.sql** is still open in Transact-SQL Editor.  
   
 2.  Place the cursor on `Product` in this line and right-click. Select **Refactor**, and **Fully-Qualify Names**.  
   

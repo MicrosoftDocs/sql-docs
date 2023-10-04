@@ -1,24 +1,22 @@
 ---
+title: "MATCH (SQL Graph)"
 description: "MATCH (Transact-SQL)"
-title: "MATCH (SQL Graph) | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "06/26/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "MATCH"
   - "MATCH_TSQL"
   - "SHORTEST_PATH"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
   - "Shortest Path, shortest_path"
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)
@@ -26,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 
   Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of  WHERE clause. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -129,7 +127,7 @@ Specifies the nodes and edges that must be traversed repeatedly until the desire
 *al_pattern_quantifier*   
 The arbitrary length pattern takes regular expression style pattern quantifiers in order to specify the number of times a given search pattern is repeated. The supported search pattern quantifiers are:   
 * **+**: Repeat the pattern 1 or more times. Terminate as soon as a shortest path is found.    
-* **{1,n}**: Repeat the pattern 1 to ‘n’ times. Terminate as soon as a shortest path is found.     
+* **{1,n}**: Repeat the pattern 1 to *n* times. Terminate as soon as a shortest path is found.     
 
 ## Remarks  
 The node names inside MATCH can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same query.  

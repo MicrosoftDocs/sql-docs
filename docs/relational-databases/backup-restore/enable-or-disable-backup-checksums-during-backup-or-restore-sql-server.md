@@ -1,20 +1,16 @@
 ---
-title: "Enable | disable backup checksums"
+title: "Enable or disable backup checksums during backup or restore (SQL Server)"
 description: This article shows you how to enable or disable backup checksums for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backup checksums [SQL Server]"
   - "disabling checksums"
   - "checksums [SQL Server]"
-ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Enable or disable backup checksums during backup or restore (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +63,7 @@ ms.author: mathoma
 3.  To enable backup checksums in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the WITH CHECKSUM option. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that checksums be performed.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
 GO  
@@ -82,7 +78,7 @@ GO
 3.  To enable backup checksums in a [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify the WITH CHECKSUM option. This is the default behavior for a compressed backup. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that backup checksums be performed.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
 GO  

@@ -1,20 +1,16 @@
 ---
+title: "Parse (geometry Data Type)"
 description: "Parse (geometry Data Type)"
-title: "Parse (geometry Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Parse (geometry Data Type)"
-ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "Parse (geometry Data Type)"
+dev_langs:
+  - "TSQL"
 ---
 # Parse (geometry Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

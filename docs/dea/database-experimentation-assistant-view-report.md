@@ -1,14 +1,13 @@
 ---
 title: View analysis reports for SQL Server upgrades
 description: Learn how to view and understand analysis reports for performance insights in Database Experimentation Assistant (DEA).
-author: pochiraju
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: mathoma
 ms.date: 02/04/2020
-ms.prod: sql
-ms.technology: dea
+ms.service: sql
+ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # View analysis reports in Database Experimentation Assistant
@@ -29,7 +28,7 @@ After you use Database Experimentation Assistant (DEA) to [create an analysis re
 
 This section walks you through the analysis report.
 
-On the first page of your report, information about the version and build information for the target servers on which the experiment was run appears. Threshold allows you to adjust the sensitivity or tolerance of your A/B Test analysis. By default, threshold is set at 5%; any improvement in performance that is >= 5% is categorized as ‘Improved’.  The dropdown allows you to evaluate the report with different performance thresholds.
+On the first page of your report, information about the version and build information for the target servers on which the experiment was run appears. Threshold allows you to adjust the sensitivity or tolerance of your A/B Test analysis. By default, threshold is set at 5%; any improvement in performance that is >= 5% is categorized as 'Improved'.  The dropdown allows you to evaluate the report with different performance thresholds.
 
 You can export the data in the report to a CSV file be selecting **Export** button.  On any page of the analysis report, you can select **Print** to print what is visible on the screen at that moment.
 
@@ -73,7 +72,7 @@ You can select query template links for more detailed information about specific
    You can find summary statistics for that query, such as the number of executions, mean duration, mean CPU, mean reads/writes, and error count.  If the query is an error query, the **Error Information** tab shows you more detail about the error.  On the **Query Plan Information** tab, you can find information about the query plans used for the query on Target 1 and Target 2.
 
    > [!NOTE]
-   > If you are analyzing extended event (.XEL) files, query plan information isn't collected to limit the memory pressure on the user’s computer.
+   > If you are analyzing extended event (.XEL) files, query plan information isn't collected to limit the memory pressure on the user's computer.
 
 ## See also
 

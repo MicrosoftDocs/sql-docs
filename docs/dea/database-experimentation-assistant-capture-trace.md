@@ -1,14 +1,13 @@
 ---
 title: Capture a trace for SQL Server upgrades
 description: Use Database Experimentation Assistant (DEA) to create a trace file with a log of captured server events.
-author: pochiraju
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: mathoma
 ms.date: 12/12/2019
-ms.prod: sql
-ms.technology: dea
+ms.service: sql
+ms.subservice: dea
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 ---
 
 # Capture a trace in Database Experimentation Assistant
@@ -39,7 +38,7 @@ Query caching in SQL Server might affect evaluation results. We recommend that y
 
 4. Under **Capture details**, enter or select the following information:
 
-    - **Server Type**: Specify the type of the SQL server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
+    - **Server Type**: Specify the type of the SQL Server (**SqlServer**, **AzureSqlDb**, **AzureSqlManagedInstance**).
     - **Server name**: Specify the server name or IP address of your SQL Server.
     - **Authentication Type**: For the authentication type, select **Windows**.
     - **Database name**: Enter a name for a database on which to start a database trace. If you don't specify a database, trace is captured on all the databases on the server.

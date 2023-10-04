@@ -1,13 +1,13 @@
 ---
-description: "Delete an Operator"
 title: "Delete an Operator"
-ms.custom: seo-lt-2019
+description: "Delete an Operator"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent jobs, operators"
   - "canceling operators"
   - "removing operators"
@@ -15,10 +15,6 @@ helpviewer_keywords:
   - "dropping operators"
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], deleting with Management Studio"
-ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Delete an Operator
@@ -57,7 +53,7 @@ Members of the **sysadmin** fixed server role can delete operators.
   
 #### To delete an operator  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

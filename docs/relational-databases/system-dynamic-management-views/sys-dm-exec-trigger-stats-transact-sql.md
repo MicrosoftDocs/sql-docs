@@ -3,10 +3,9 @@ title: "sys.dm_exec_trigger_stats (Transact-SQL)"
 description: sys.dm_exec_trigger_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/03/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_exec_trigger_stats"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_trigger_stats dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 863498b4-849c-434d-b748-837411458738
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_trigger_stats (Transact-SQL)
@@ -27,7 +25,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Database ID in which the trigger resides.|  
+|**database_id**|**int**|Database ID in which the trigger resides. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|  
 |**object_id**|**int**|Object identification number of the trigger.|  
 |**type**|**char(2)**|Type of the object:<br /><br /> TA = Assembly (CLR) trigger<br /><br /> TR = SQL trigger|  
 |**Type_desc**|**nvarchar(60)**|Description of the object type:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
@@ -77,6 +75,10 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and SQL Managed 
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.   
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
  The following example returns information about the top five triggers identified by average elapsed time.  
   

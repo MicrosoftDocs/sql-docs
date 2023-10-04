@@ -1,22 +1,19 @@
 ---
-title: "Reporting Services Extensions | Microsoft Docs"
+title: "Reporting Services Extensions"
 description: Find out how to extend data processing capabilities in Reporting Services by customizing report data, notification mechanisms, and security systems.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "SQL Server Reporting Services, extending"
   - "extensions [Reporting Services], about extensions"
   - "SSIS, extending"
   - "Reporting Services, extending"
   - "extensions [Reporting Services]"
-ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Extensions
   The modular architecture of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is designed for extensibility. A managed code API is available so that you can easily develop, install, and manage extensions consumed by many [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components. You can create private or shared assemblies using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] and add new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality to meet your evolving business needs.  

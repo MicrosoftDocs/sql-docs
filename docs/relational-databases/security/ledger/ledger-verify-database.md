@@ -1,35 +1,32 @@
 ---
 title: Verify a ledger table to detect tampering
 description: This article discusses how to verify if a table was tampered with.
-ms.service: sql-database
-ms.subservice: security
-ms.devlang:
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
+ms.reviewer: mathoma
 ms.date: "05/24/2022"
+ms.service: sql-database
+ms.subservice: security
+ms.topic: how-to
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Verify a ledger table to detect tampering
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
-In this article, you'll verify the integrity of the data in your ledger tables. If you've enabled the setting **Enable automatic digest storage** on your Azure SQL Database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-the-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-the-database)* section.
+In this article, you'll verify the integrity of the data in your ledger tables. If you've configured the **Automatic digest storage** on your database, follow the *[T-SQL using automatic digest storage](#run-ledger-verification-for-the-database)* section. Otherwise, follow the *[T-SQL using a manual generated digest](#run-ledger-verification-for-the-database)* section.
 
 ## Prerequisites
 
-- Have an active Azure subscription if you're using Azure SQL Database. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- Have an active Azure subscription if you're using Azure SQL Database or Azure SQL Managed Instance. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Create and use updatable ledger tables](ledger-how-to-updatable-ledger-tables.md) or [create and use append-only ledger tables](ledger-how-to-append-only-ledger-tables.md).
 - [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+- The database option [ALLOW_SNAPSHOT_ISOLATION](../../../t-sql/statements/alter-database-transact-sql-set-options.md) has to be enabled on the database before you can run the verifcation stored procedures.
 
 ## Run ledger verification for the database
 
 # [T-SQL using automatic digest storage](#tab/t-sql-automatic)
-
-> [!NOTE]
-> Automatic digest storage is only applicable to Azure SQL Database. If you are using SQL Server, switch over to the *T-SQL using a manual generated digest* tab.
 
 1. Connect to your database by using [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
 
@@ -118,7 +115,7 @@ In this article, you'll verify the integrity of the data in your ledger tables. 
 
    > [!TIP]
    > Running ledger verification with the latest digest will only verify the database from the time the digest was generated until the time the verification was run. To verify that the historical data in your database wasn't tampered with, run verification by using multiple database digest files. Start with the point in time for which you want to verify the database. An example of a verification passing multiple digests would look similar to the following query.
-
+   
    ```sql
    EXECUTE sp_verify_database_ledger N'
    [

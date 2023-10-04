@@ -3,7 +3,6 @@ title: Obtain the connection string from the Azure portal
 description: Obtain the connection string from the Azure portal
 author: dalechen
 ms.author: ninarn
-manager: craigg
 ms.date: 07/13/2018
 ms.service: sql-database
 ms.topic: include

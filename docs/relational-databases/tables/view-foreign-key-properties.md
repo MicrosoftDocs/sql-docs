@@ -1,19 +1,16 @@
 ---
-description: "You can view the foreign key attributes of a relationship with SQL Server Management Studio or T-SQL queries."
 title: "View Foreign Key Properties"
-ms.custom: ""
+description: "You can view the foreign key attributes of a relationship with SQL Server Management Studio or T-SQL queries."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "foreign keys [SQL Server], attributes"
   - "displaying foreign keys attributes"
   - "viewing foreign keys attributes"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View foreign key properties
@@ -46,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**. The example returns all foreign keys and their properties for the table `HumanResources.Employee` in the sample database.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT   
         f.name AS foreign_key_name  

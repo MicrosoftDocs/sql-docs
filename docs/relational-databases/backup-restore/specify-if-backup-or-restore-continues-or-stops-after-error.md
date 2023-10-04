@@ -1,21 +1,17 @@
 ---
 title: "Set backup or restore after error"
 description: Learn to specify if a backup or restore operation continues after it encounters an error in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: seo-lt-2019
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "12/17/2019"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "errors [SQL Server], backups"
   - "backing up databases [SQL Server], errors"
   - "backups [SQL Server], errors"
   - "database backups [SQL Server], errors"
-ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Specify backup or restore to continue or stop after error
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +64,7 @@ ms.author: mathoma
 3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the backup operation to continue despite encountering an error.  
   
 ```sql  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
 GO  
@@ -83,7 +79,7 @@ GO
 3.  In the [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the restore operation to continue despite encountering an error.  
   
 ```sql  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
 GO  

@@ -1,29 +1,25 @@
 ---
-description: "Database Object Security (Master Data Services)"
 title: Database Object Security
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database [Master Data Services], object security"
-  - "security [Master Data Services], database objects"
-ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
+description: "Database Object Security (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database [Master Data Services], object security"
+  - "security [Master Data Services], database objects"
 ---
 # Database Object Security (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, data is stored in multiple database tables and is visible in views. Information that you might have secured in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web application is visible to users with access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
  Specifically, employee salary information might be contained in an Employee model, or company financial information might be in an Account model. You can deny a user access to these models in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface, but users with access to the database can view this data.  
   
- You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../t-sql/statements/grant-object-permissions-transact-sql.md). For more information about securing SQL server, see [Securing SQL Server](../relational-databases/security/securing-sql-server.md).  
+ You can grant permissions to database objects to make specific data available to users. For more information on granting permissions, see [GRANT Object Permissions &#40;Transact-SQL&#41;](../t-sql/statements/grant-object-permissions-transact-sql.md). For more information about securing [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see [Securing SQL Server](../relational-databases/security/securing-sql-server.md).  
   
  The following tasks require access to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database:  
   

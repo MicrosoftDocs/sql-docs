@@ -1,13 +1,12 @@
 ---
-description: Use inserted and deleted tables with DML triggers
 title: Learn how to use the inserted and deleted tables with DML triggers to inspect changes.
-ms.custom: ""
+description: Use inserted and deleted tables with DML triggers
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 12/10/2021
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "inserted tables"
   - "UPDATE statement [SQL Server], DML triggers"
   - "DELETE statement [SQL Server], DML triggers"
@@ -15,9 +14,6 @@ helpviewer_keywords:
   - "deleted tables"
   - "INSERT statement [SQL Server], DML triggers"
   - "DML triggers, deleted or inserted tables"
-ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -85,7 +81,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  The format of the inserted and deleted tables passed to an INSTEAD OF trigger defined on a view matches the select list of the SELECT statement defined for the view. For example:  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW dbo.EmployeeNames (BusinessEntityID, LName, FName)  
 AS  

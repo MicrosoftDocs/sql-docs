@@ -1,13 +1,12 @@
 ---
-title: "Type mapping with PolyBase | Microsoft Docs"
+title: "Type mapping with PolyBase"
 description: Refer to these tables for mapping between PolyBase external data sources and SQL Server. Define external tables with Transact-SQL CREATE EXTERNAL TABLE.
-ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: polybase
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 08/30/2022
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ""
 ---
 # Type mapping with PolyBase
 
@@ -17,8 +16,8 @@ This article describes the mapping between PolyBase external data sources and SQ
 
 ## Overview
 
-When creating and external table with PolyBase, the column definitions, including the data types and number of columns, must match the data in the external files. If there is a mismatch, the file rows are rejected when querying the actual data.  
-  
+When you are creating an external table with PolyBase, the column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows are rejected when querying the actual data.
+
 For external tables that reference files in external data sources, the column and type definitions must map to the exact schema of the external file. When defining data types that reference data stored in Hadoop/Hive, use the following mappings between SQL and Hive data types and cast the type into a SQL data type when selecting from it. The types include all versions of Hive unless stated otherwise.
 
 > [!NOTE]  
@@ -26,7 +25,7 @@ For external tables that reference files in external data sources, the column an
 
 ## Hadoop Type mapping reference
 
-| SQL Data Type | .NET Data Type            | Hive Data Type | Hadoop/Java Data Type | Comments                       |
+| SQL Data Type | .NET Data Type            | Hive Data Type | Hadoop/Java Data Type<sup>1</sup> | Comments                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | tinyint       | Byte                      | tinyint        | ByteWritable          | For unsigned numbers only.     |
 | smallint      | Int16                     | smallint       | ShortWritable         |
@@ -50,41 +49,41 @@ For external tables that reference files in external data sources, the column an
 | time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
+<sup>1</sup> Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported.
+
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 "
 
 ## Oracle Type mapping reference
 
-| Oracle data type | SQL Server type | 
+| Oracle data type | SQL Server type |  
 | -------------    | --------------- |
 |Float             |Float            |
 |NUMBER            |Float            |
 |NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |Nvarchar         |
-|BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |Float            | 
+|BINARY_FLOAT      |Real             |  
+|BINARY_DOUBLE     |Float            |  
 |CHAR              |Char             |
-|VARCHAR2          |Varchar          | 
-|NVARCHAR2         |Nvarchar         | 
+|VARCHAR2          |Varchar          |  
+|NVARCHAR2         |Nvarchar         |  
 |RAW               |Varbinary        |
-|LONG RAW          |Varbinary        | 
+|LONG RAW          |Varbinary        |  
 |BLOB              |Varbinary        |
 |CLOB              |Varchar          |
-|NCLOB             | Nvarchar        | 
+|NCLOB             |Nvarchar         |  
 |ROWID             |Varchar          |
-|UROWID            |Varchar          | 
+|UROWID            |Varchar          |  
 |DATE              |Datetime2        |
-|TIMESTAMP         |Datetime2        | 
+|TIMESTAMP         |Datetime2        |
 
-**Type mismatch** 
+**Type mismatch**
 
 **Float:**
-Oracle supports floating point precision of 126, which is lower than what SQL server supports (53). Therefore, **Float (1-53)** can be mapped directly, but beyond that, there is data loss due to truncation.
+Oracle supports floating point precision of 126, which is lower than what SQL Server supports (53). Therefore, **Float (1-53)** can be mapped directly, but beyond that, there is data loss due to truncation.
 
-**Timestamp:** 
-Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seconds precision whereas, SQL server DateTime2 supports only 7 fractional seconds precision. 
-
-
+**Timestamp:**  
+Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seconds precision whereas, SQL Server DateTime2 supports only 7 fractional seconds precision.
 
 
 ## MongoDB Type Mapping
@@ -100,22 +99,20 @@ Timestamp and Timestamp with local timezone in Oracle supports 9 fractional seco
 | 32-bit integer     | Int             |
 | Timestamp          | Nvarchar        |
 | 64-bit integer     | BigInt          |
-|Decimal 128         | Decimal         | 
+| Decimal 128        | Decimal         |  
 | DBPointer          | Nvarchar        |
-| Javascript         | Nvarchar        |
+| JavaScript         | Nvarchar        |
 | Max Key            | Nvarchar        |
 | Min Key            | Nvarchar        |
 | Symbol             | Nvarchar        |
 | Regular Expression | Nvarchar        |
 | Undefined/NULL     | Nvarchar        |
 
-
-MongoDB uses BSON documents to store data records. Unlike the previous scenarios, BSON is schema-less and supports embedding of documents and arrays within other documents. This provides flexibility to the user. 
-
+MongoDB uses BSON documents to store data records. Unlike the previous scenarios, BSON is schema-less and supports embedding of documents and arrays within other documents. This provides flexibility to the user.
 
 ## Teradata Type mapping reference
 
-| Teradata data type | SQL Server type | 
+| Teradata data type | SQL Server type |  
 | -------------      | -------------   |
 |INTEGER             |Int              |
 |SMALLINT            |SmallInt         |

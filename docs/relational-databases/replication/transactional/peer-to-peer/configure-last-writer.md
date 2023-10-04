@@ -3,17 +3,19 @@ title: Configure last writer conflict detection & resolution
 description: Describes how to configure last writer conflict detection and resolution for peer-to-peer replication.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.prod: sql
-ms.topic: how-to
 ms.date: 11/1/2021
-ms.custom: template-how-to 
+ms.service: sql
+ms.topic: how-to
+ms.custom:
+  - template-how-to
+  - updatefrequency5
 ---
 
 # Configure last writer conflict detection & resolution
 
 Beginning with [!INCLUDE [sssql19-md](../../../../includes/sssql19-md.md)] CU 13, you can configure peer-to-peer replication to automatically resolve conflicts by allowing the most recent insert or update to win the conflict. If either write deletes the row, SQL Server allows the delete to win the conflict. This method is known as last write wins.
 
-Use stored procedures to configure last write wins.
+Use stored procedures to configure last write wins. Do not use Peer-to-Peer Topology Wizard to add or remove nodes when you use last writer.
 
 ## Important configuration considerations
 
@@ -35,7 +37,7 @@ When you configure peer-to-peer replication with automatic conflict discovery an
 - When you add an article (`sp_addarticle`) in a publication with a last writer conflict detection policy, USE `CALL` or `SCALL` as command type for `@upd_cmd` parameter, `CALL` is default.
 
    > [!NOTE]
-   > SQL Server supports `SCALL` for `@upd_cmd`. With `SCALL`, when a transaction updates a value to the same value, it is not considered as a change and `SCALL` format doesn’t supply the value for columns that are not updated or modified. Please review the following for details about SCALL call format - [Call syntax for stored procedures](../transactional-articles-specify-how-changes-are-propagated.md#call-syntax-for-stored-procedures).
+   > SQL Server supports `SCALL` for `@upd_cmd`. With `SCALL`, when a transaction updates a value to the same value, it is not considered as a change and `SCALL` format doesn't supply the value for columns that are not updated or modified. Please review the following for details about SCALL call format - [Call syntax for stored procedures](../transactional-articles-specify-how-changes-are-propagated.md#call-syntax-for-stored-procedures).
 
 - You can use peer-to-peer publication with last writer conflict detection and resolution in an availability group. See:
   - [Configure peer-to-peer with one peer as a publication database in an availability group](single-availability-group.md)
@@ -62,7 +64,7 @@ The following table compares how conflicts are detected and resolved with tradit
 |Update-Update |Occurs when the same row was updated at more than one node. |If the incoming row is the winner, then we modify ONLY the changed columns.  |If the incoming row is the winner, then we modify all the columns at the destination (if `@upd_cmd` is set to `default` – CALL).|
 |Update-Insert  |Occurs if a row was updated at one node, but the same row was deleted and then reinserted on another node. |If the incoming row is the winner, then we modify ONLY the changed columns. |This occurs when a row is updated on peer1 and the same row is delete and re-inserted on peer2. When the sync occurs, the row on peer1 is deleted as delete always wins and then same row is inserted, whereas the row is updated on peer2 as updated happened at a later time. This will lead to nonconvergence.|
 |Insert- Update |Occurs if a row was deleted and then reinserted at one node and the same row was updated on another node.  |If the incoming row is the winner then we update all the columns. |This occurs when a row is delete and re-inserted on peer1 and the same row is updated on peer2. When the sync occurs, the row is deleted on peer2 as delete always wins and then it is inserted again. On peer1, the update is skipped. |
-|Delete-Insert <br><br> Insert-Delete|Occurs if a row was deleted at one node, but the same row was deleted and then reinserted at another node. |We currently think this as D-U conflict and if the incoming row is then winner then we delete the row from destination. |This occurs when a row is deleted on peer1 and the same row is delete + re-inserted on peer2. When the sync occurs, the row on peer2 is deleted, whereas the row is inserted on peer1. This occurs because we don't store information about the deleted row, so we don’t know whether the row was deleted or was not present on the peer. This will lead to nonconvergence. |
+|Delete-Insert <br><br> Insert-Delete|Occurs if a row was deleted at one node, but the same row was deleted and then reinserted at another node. |We currently think this as D-U conflict and if the incoming row is then winner then we delete the row from destination. |This occurs when a row is deleted on peer1 and the same row is delete + re-inserted on peer2. When the sync occurs, the row on peer2 is deleted, whereas the row is inserted on peer1. This occurs because we don't store information about the deleted row, so we don't know whether the row was deleted or was not present on the peer. This will lead to nonconvergence. |
 |Delete-Update |Occurs if a row was deleted at one node, but the same row was updated at another node. |We currently think this as D-U conflict and if the incoming row is the winner then we delete the row from the destination.  |This is a D-U conflict. As delete always wins, incoming delete will be the winner and we delete the row from destination.  |
 | Update-Delete| Occurs if a row was updated at one node, but the same row was deleted at another node.  | In the peer-to-peer Update stored procedure, if there is an U-D conflict then we print the following message and don't resolve it. </br> </br> `An update-delete conflict was detected and unresolved. The row could not be updated since the row does not exist. `| This is a U-D conflict. As delete always wins, incoming update is skipped.   | 
 | Delete-Delete |  Occurs when a row was deleted at more than one node.  | In the peer-to-peer Delete stored procedure, if there is D-D conflict then we don't process any change, just record it. | If there is D-D conflict then we don't process any change, just record it. |

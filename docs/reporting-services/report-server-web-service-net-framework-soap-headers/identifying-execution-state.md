@@ -1,21 +1,18 @@
 ---
-title: "Identifying Execution State | Microsoft Docs"
+title: "Identifying Execution State"
 description: Learn to use Reporting Services to identify the execution state so that you can interact with the report in several ways.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service-net-framework-soap-headers
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "session states [Reporting Services]"
   - "lifetimes [Reporting Services]"
   - "sessions [Reporting Services]"
   - "SessionHeader SOAP header"
-ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Identifying Execution State
   Hypertext Transfer Protocol (HTTP) is a connectionless and stateless protocol, which means that it does not automatically indicate whether different requests come from the same client or even whether a single browser instance is still actively viewing a page or site. Sessions create a logical connection to maintain state between server and client over HTTP. The user-specific information relevant to a particular session is known as the session state.  

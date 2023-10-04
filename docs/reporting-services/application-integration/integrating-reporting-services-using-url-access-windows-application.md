@@ -1,22 +1,19 @@
 ---
 title: "Use URL Access in Windows Applications"
 description: URL access to a report server is optimized for a Web environment, but you can also use URL access to embed Reporting Services reports in a Windows application.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: application-integration
-
-ms.custom: seo-lt-2019
+ms.service: reporting-services
+ms.subservice: application-integration
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Windows applications [Reporting Services]"
   - "Web Browser controls [Reporting Services]"
   - "Windows Forms [Reporting Services]"
   - "browser controls [Reporting Services]"
   - "URL access [Reporting Services], Windows applications"
-ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Integrating Reporting Services Using URL Access - Windows Application
   Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
@@ -96,14 +93,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  
-                    "AdventureWorks2012 Sample Reports/" & _  
+                    "AdventureWorks Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
 string url = "https://localhost/reportserver?/" +  
-             "AdventureWorks2012 Sample Reports/" +  
+             "AdventureWorks Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  
 ```  

@@ -1,31 +1,27 @@
 ---
+title: "sp_dbmmonitorhelpalert (Transact-SQL)"
 description: "sp_dbmmonitorhelpalert (Transact-SQL)"
-title: "sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorhelpalert_TSQL"
-  - "sp_dbmmonitorhelpalert"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorhelpalert"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: markingmyname
 ms.author: maghan
+ms.date: "08/09/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorhelpalert_TSQL"
+  - "sp_dbmmonitorhelpalert"
+helpviewer_keywords:
+  - "sp_dbmmonitorhelpalert"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.  
  
-  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -81,13 +77,13 @@ sp_dbmmonitorhelpalert database_name
  The following example returns a row that indicates whether a warning is enabled for the oldest unsent transaction performance metric on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitorhelpalert AdventureWorks2012, 1 ;  
+EXEC sp_dbmmonitorhelpalert AdventureWorks2022, 1 ;  
 ```  
   
  The following example returns a row for each performance metric that indicates whether it is enabled on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitorhelpalert AdventureWorks2012;  
+EXEC sp_dbmmonitorhelpalert AdventureWorks2022;  
 ```  
   
 ## See Also  

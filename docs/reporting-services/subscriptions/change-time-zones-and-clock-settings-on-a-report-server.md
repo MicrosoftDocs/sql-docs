@@ -1,26 +1,27 @@
 ---
-title: "Change Time Zones and Clock Settings on a Report Server | Microsoft Docs"
+title: "Change Time Zones and Clock Settings on a Report Server"
 description: Change time zones & clock settings for a report server. You can't set a report server time zone, so set the computer's time zone or SharePoint region settings.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 08/19/2023
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "time zones [Reporting Services]"
   - "clocks [Reporting Services]"
   - "schedules [Reporting Services], clock settings"
   - "schedules [Reporting Services], time zones"
-ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: maggiesMSFT
-ms.author: maggies
 ---
+
 # Change Time Zones and Clock Settings on a Report Server
   A report server always uses the local time of the computer on which it is installed. You cannot configure it to use a different time zone. If a client application points to a report server in a different time zone, the report server time zone is used to execute a scheduled operation. In Report Manager and SharePoint management pages, the time zone is indicated on each scheduling page so that you know exactly when a scheduled operation will occur. For example, the page for creating custom schedules will note "Times are expressed in (UTC-08:00) Pacific time (US and Canada)."
   The report server creates a SQL Server Agent job that is used to trigger the schedule. When the Report Server and the SQL Server Agent are located on separate servers, the time zone must be the same on all servers.
   
+> [!NOTE]
+> The Report Server web portal shows all times it displays in the client's time zone regardless of the Report Server's clock settings.
+
 ## Changing the Time Zone (Native Mode)  
  If you change the time zone on a computer hosting a report server, you must restart the Report Server service in order for the time zone change to take effect.  
   
@@ -35,8 +36,9 @@ ms.author: maggies
   
 ## Changing the Clock Settings  
  Changing the computer clock has no effect on existing timestamp values (for example, if you move the clock forward an hour, the timestamps of report history snapshots do not change). There may be a delay of 10 seconds before the Scheduling and Delivery Processor uses the new setting. The actual delay may vary if you modified polling interval settings in the configuration files.  
-  
+
 ## See Also  
  [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)  
   
+

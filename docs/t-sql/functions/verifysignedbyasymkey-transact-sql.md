@@ -3,13 +3,10 @@ title: "VERIFYSIGNEDBYASYMKEY (Transact-SQL)"
 description: "VERIFYSIGNEDBYASYMKEY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: ""
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "VERIFYSIGNEDBYASYMKEY_TSQL"
   - "VERIFYSIGNEDBYASYMKEY"
@@ -28,7 +25,7 @@ dev_langs:
 
   Tests whether digitally signed data has been changed since it was signed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +65,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE Description = N'data encrypted by asymmetric key ''WillisKey74''';  
 GO  
 RETURN;  
@@ -79,7 +76,7 @@ RETURN;
   
 ```sql
 SELECT Data   
-FROM [AdventureWorks2012].[SignedData04]   
+FROM [AdventureWorks2022].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  
      DataSignature ) = 1  
 AND Description = N'data encrypted by asymmetric key ''WillisKey74''';  

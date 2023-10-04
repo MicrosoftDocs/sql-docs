@@ -3,7 +3,7 @@ title: "Oracle to Azure SQL Database: Migration guide"
 description: In this guide, you learn how to migrate your Oracle schema to Azure SQL Database by using SQL Server Migration Assistant for Oracle.
 author: croblesm
 ms.author: roblescarlos
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 08/25/2020
 ms.service: sql-database
 ms.subservice: migration-guide
@@ -77,7 +77,7 @@ Validate the default data type mappings and change them based on requirements if
 
 To convert the schema:
 
-1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then select **Add statements**.
+1. (Optional) Add dynamic or ad hoc queries to statements. Right-click the node, and then select **Add statements**.
 1. Select the **Connect to Azure SQL Database** tab.
     1. In **SQL Database**, enter connection details to connect your database.
     1. Select your target SQL Database instance from the drop-down list, or enter a new name, in which case a database will be created on the target server.

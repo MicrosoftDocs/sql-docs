@@ -1,16 +1,13 @@
 ---
+title: "Replication Language Reference"
 description: "Replication Language Reference"
-title: "Replication Language Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "language-reference"
-ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "language-reference"
+ms.custom: updatefrequency5
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Language Reference

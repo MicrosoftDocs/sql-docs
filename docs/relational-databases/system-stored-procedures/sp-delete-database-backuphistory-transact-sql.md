@@ -1,30 +1,26 @@
 ---
+title: "sp_delete_database_backuphistory (Transact-SQL)"
 description: "sp_delete_database_backuphistory (Transact-SQL)"
-title: "sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_delete_database_backuphistory"
-  - "sp_delete_database_backuphistory_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_delete_database_backuphistory"
-ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_delete_database_backuphistory"
+  - "sp_delete_database_backuphistory_TSQL"
+helpviewer_keywords:
+  - "sp_delete_database_backuphistory"
+dev_langs:
+  - "TSQL"
 ---
 # sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes information about the specified database from the backup and restore history tables.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -73,7 +69,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
 USE msdb;  
 GO  
-EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';  
+EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2022';  
   
 ```  
   

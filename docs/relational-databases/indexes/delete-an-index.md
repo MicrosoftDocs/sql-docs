@@ -4,9 +4,8 @@ description: Delete an Index
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "removing indexes"
@@ -14,11 +13,10 @@ helpviewer_keywords:
   - "dropping indexes"
   - "indexes [SQL Server], dropping"
   - "index deletions [SQL Server]"
-ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Delete an Index
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   This topic describes how to delete (drop) an index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -91,7 +89,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016"
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- delete the IX_ProductVendor_BusinessEntityID index  
     -- from the Purchasing.ProductVendor table  

@@ -1,20 +1,16 @@
 ---
+title: "String Padding (SSIS)"
 description: "String Padding (SSIS)"
-title: "String Padding (SSIS) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "padding strings [Integration Services]"
   - "expressions [Integration Services], string padding"
   - "string padding"
-ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: chugugrace
-ms.author: chugu
 ---
 # String Padding (SSIS)
 
@@ -29,6 +25,6 @@ ms.author: chugu
 >  The LEN function includes leading and trailing blanks in its count.  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
   
   

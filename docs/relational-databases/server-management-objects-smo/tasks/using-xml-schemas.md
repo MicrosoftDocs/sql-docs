@@ -1,24 +1,18 @@
 ---
+title: "Using XML Schemas"
 description: "Using XML Schemas"
-title: "Using XML Schemas | Microsoft Docs"
-ms.custom: ""
-ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "XML [SMO]"
-ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: 01/11/2019
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "XML [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Schemas
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   XML programming in SMO is limited to providing XML data types, XML namespaces, and simple indexing on XML data type columns.  
   
@@ -34,9 +28,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server()
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define an XmlSchemaCollection object by supplying the parent database and name arguments in the constructor.
 Dim xsc As XmlSchemaCollection
 xsc = New XmlSchemaCollection(db, "MySampleCollection")
@@ -53,9 +47,9 @@ xsc.Create()
             //Connect to the local, default instance of SQL Server.   
             Server srv = default(Server);  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db = default(Database);  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Define an XmlSchemaCollection object by supplying the parent  
             // database and name arguments in the constructor.   
             XmlSchemaCollection xsc = default(XmlSchemaCollection);  
@@ -75,7 +69,7 @@ cd \sql\LocalHost
 $srv = get-item default  
   
 #Reference the AdventureWorks database.  
-$db = $srv.Databases["AdventureWorks2012"]  
+$db = $srv.Databases["AdventureWorks2022"]  
   
 #Create a new schema collection  
 $xsc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.XmlSchemaCollection `  

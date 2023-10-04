@@ -1,11 +1,11 @@
 ---
 title: "DBCC FREESESSIONCACHE (Transact-SQL)"
-description: "DBCC FREESESSIONCACHE (Transact-SQL)"
+description: DBCC FREESESSIONCACHE flushes the distributed query connection cache used by distributed queries against an instance of SQL Server.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "07/16/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 12/05/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "FREESESSIONCACHE"
@@ -21,37 +21,42 @@ dev_langs:
   - "TSQL"
 ---
 # DBCC FREESESSIONCACHE (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-  
-## Syntax  
+Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
-```  
-  
+DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- WITH NO_INFOMSGS  
- Suppresses all informational messages.  
-  
-## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
-  
-## Examples  
+
+#### WITH NO_INFOMSGS
+
+Suppresses all informational messages.
+
+## Permissions
+
+Requires membership in the **sysadmin** fixed server role.
+
+## Examples
+
 The following example flushes the distributed query cache.
-  
+
 ```sql
-USE AdventureWorks2012;  
-GO  
-DBCC FREESESSIONCACHE WITH NO_INFOMSGS;  
-GO  
-```  
-  
-## See Also  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-  
-  
+USE AdventureWorks2022;
+GO
+DBCC FREESESSIONCACHE WITH NO_INFOMSGS;
+GO
+```
+
+## See also
+
+- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

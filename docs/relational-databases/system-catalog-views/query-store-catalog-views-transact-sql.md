@@ -4,11 +4,9 @@ description: Query Store catalog views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/09/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "query store [SQL Server], catalog views"
   - "catalog views [SQL Server], query store"
@@ -49,4 +47,4 @@ Learn more about Query Store in the following articles:
 
  - [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  - [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
- - [Query Store for secondary replicas](../performance/monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas)
+ - [Query Store for secondary replicas](../performance/query-store-for-secondary-replicas.md)

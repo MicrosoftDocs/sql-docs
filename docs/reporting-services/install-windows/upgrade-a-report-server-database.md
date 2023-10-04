@@ -1,19 +1,16 @@
 ---
+title: "Upgrade a Report Server Database"
 description: "Upgrade a Report Server Database"
-title: "Upgrade a Report Server Database | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "upgrading databases"
   - "report server database"
   - "upgrading Reporting Services"
-ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Upgrade a Report Server Database
@@ -38,7 +35,7 @@ The report server database provides storage for one or more report server instan
   
 -   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager upgrades a local or remote report server database when you select an older version to use with a newer report server instance. In this case, you must confirm the upgrade action before it happens.  
   
-     The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager no longer provides a separate Upgrade button or upgrade script. Those features are obsolete starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] due to the automatic upgrade feature of the Report Server service.  
+     The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager no longer provides a separate Upgrade button or upgrade script. Those features are obsolete starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] due to the automatic upgrade feature of the Report Server service.  
   
  After the schema is updated, you cannot roll back the upgrade to an earlier version. Always back up the report server database in case you need to recreate a previous installation.  
   

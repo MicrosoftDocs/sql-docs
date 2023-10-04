@@ -5,8 +5,8 @@ description: Learn the role of the SQL Server storage pool in a SQL Server 2019 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/01/2020
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 

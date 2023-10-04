@@ -1,24 +1,20 @@
 ---
+title: "sp_dbmmonitorupdate (Transact-SQL)"
 description: "sp_dbmmonitorupdate (Transact-SQL)"
-title: "sp_dbmmonitorupdate (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dbmmonitorupdate"
-  - "sp_dbmmonitorupdate_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dbmmonitorupdate"
-  - "database mirroring [SQL Server], monitoring"
-ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dbmmonitorupdate"
+  - "sp_dbmmonitorupdate_TSQL"
+helpviewer_keywords:
+  - "sp_dbmmonitorupdate"
+  - "database mirroring [SQL Server], monitoring"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +24,7 @@ ms.author: maghan
 > [!NOTE]  
 >  The first time **sp_dbmmonitorupdate** runs, it creates the database mirroring status table and the **dbm_monitor** fixed database role in the **msdb** database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -64,7 +60,7 @@ sp_dbmmonitorupdate [ database_name ]
   
 ```  
 USE msdb;  
-EXEC sp_dbmmonitorupdate AdventureWorks2012 ;  
+EXEC sp_dbmmonitorupdate AdventureWorks2022 ;  
 ```  
   
 ## See Also  

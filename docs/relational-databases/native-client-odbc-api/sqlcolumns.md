@@ -1,23 +1,19 @@
 ---
+title: "SQLColumns"
 description: "SQLColumns"
-title: "SQLColumns | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-apitype: "DLLExport"
-helpviewer_keywords: 
-  - "SQLColumns function"
-ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "SQLColumns function"
+apitype: "DLLExport"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLColumns
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLColumns** returns SQL_SUCCESS whether or not values exist for the *CatalogName*, *TableName*, or *ColumnName* parameters. **SQLFetch** returns SQL_NO_DATA when invalid values are used in these parameters.  
   
@@ -79,7 +75,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SS_IS_SPARSE|**Smallint**|If the column is a sparse column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|If the column is the **column_set** column, this is SQL_TRUE; otherwise, SQL_FALSE.|  
   
- In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and after all columns mandated by ODBC itself.  
+ In conformance with the ODBC specification, SS_IS_SPARSE and SS_IS_COLUMN_SET appear before all driver-specific columns that were added to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], and after all columns mandated by ODBC itself.  
   
  The result set returned by SQLColumns depends on the setting of SQL_SOPT_SS_NAME_SCOPE. For more information, see [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   

@@ -5,13 +5,11 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 ms.reviewer: wiassaf
 ms.date: "07/03/2019"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 dev_langs:
   - "TSQL"
-ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 monikerRange: "=azure-sqldw-latest"
 ---
 # sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) 

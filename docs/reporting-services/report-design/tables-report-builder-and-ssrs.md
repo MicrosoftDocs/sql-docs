@@ -1,16 +1,13 @@
 ---
-title: "Tables in paginated reports | Microsoft Docs"
+title: "Tables in paginated reports"
 description: Display detail data or grouped data by using a single field or multiple fields, or by writing your own expression in a paginated report in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tables in paginated reports (Report Builder)
 
@@ -23,7 +20,7 @@ ms.author: maggies
  To quickly get started with tables, see [Tutorial: Creating a Basic Table Report &#40;Report Builder&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) or [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
->  You can publish tables separately from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+>  You can publish tables separately from a report as report parts. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md). However, report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
   
 ##  <a name="AddingTable"></a> Adding a Table to Display Detail Data  
@@ -57,7 +54,7 @@ ms.author: maggies
   
  ![Total row added to table](../../reporting-services/report-design/media/rs-basictabledetailstotaldesign.gif "Total row added to table")  
   
- In Preview, the report displays the header row and the details row once for every row in the dataset query result set, and it displays the totals row. The follow figure shows the last few rows of the table including the total row.  
+ In Preview, the report displays the header row and the details row once for every row in the dataset query result set, and it displays the totals row. The following figure shows the last few rows of the table including the total row.  
   
  ![Preview with table and total row](../../reporting-services/report-design/media/rs-basictabledetailstotalpreview.gif "Preview with table and total row")  
   
@@ -70,7 +67,7 @@ ms.author: maggies
   
  ![Table grouped by Date and Order](../../reporting-services/report-design/media/rs-basictablegroupsdesign.gif "Table grouped by Date and Order")  
   
- In Preview, the report displays the order data grouped first by date, and then by order, as shown in the follow figure.  
+ In Preview, the report displays the order data grouped first by date, and then by order, as shown in the following figure.  
   
  ![Table grouped by date and then order](../../reporting-services/media/rs-basictablegroupspreview.png "Table grouped by date and then order")  
   

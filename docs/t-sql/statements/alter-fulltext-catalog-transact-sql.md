@@ -4,9 +4,8 @@ description: ALTER FULLTEXT CATALOG (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_FULLEXT_CATALOG_TSQL"
@@ -26,7 +25,7 @@ dev_langs:
 
   Changes the properties of a full-text catalog.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -75,7 +74,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ```sql  
 --Change to accent insensitive  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER FULLTEXT CATALOG ftCatalog   
 REBUILD WITH ACCENT_SENSITIVITY=OFF;  

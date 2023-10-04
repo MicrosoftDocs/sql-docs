@@ -1,14 +1,13 @@
 ---
+title: "Scrolling and Fetching Rows"
 description: "Scrolling and Fetching Rows"
-title: "Scrolling and Fetching Rows | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "scrollable cursors [SQL Server]"
   - "SQL Server Native Client ODBC driver, cursors"
   - "SQLFetchScroll function"
@@ -18,13 +17,10 @@ helpviewer_keywords:
   - "cursors [ODBC], scrolling rows"
   - "fetching [ODBC]"
   - "ODBC cursors, scrolling rows"
-ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scrolling and Fetching Rows
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   To use a scrollable cursor, an ODBC application must:  
   

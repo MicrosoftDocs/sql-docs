@@ -10,11 +10,11 @@ DECLARE @publisher AS sysname;
 DECLARE @publicationDB AS sysname;
 SET @publication = N'AdvWorksProductTran';
 SET @publisher = $(PubServer);
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 
 -- At the subscription database, create a pull subscription 
 -- to a transactional publication.
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 EXEC sp_addpullsubscription 
   @publisher = @publisher, 
   @publication = @publication, 

@@ -1,16 +1,13 @@
 ---
-title: "CountDistinct function in a paginated report | Microsoft Docs"
-description: Get a count of all distinct non-null values that are specified by an expression in a paginated report in the context of a given scope. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
+title: "CountDistinct function in a paginated report"
+description: Get a count of all distinct non-null values that are specified by an expression in a paginated report in the context of a given scope.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - CountDistinct function in a paginated report (Report Builder)
 

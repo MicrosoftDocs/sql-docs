@@ -2,22 +2,22 @@
 title: Create server configured with user-assigned managed identity and customer-managed TDE
 titleSuffix: Azure SQL Database & Azure Synapse Analytics
 description: Learn how to configure user-assigned managed identity and customer-managed transparent data encryption (TDE) while creating an Azure SQL Database logical server using the Azure portal, PowerShell, or Azure CLI.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: vanto
-ms.date: 12/16/2021
+ms.date: 09/19/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: devx-track-azurecli
 ms.topic: how-to
 ---
 # Create server configured with user-assigned managed identity and customer-managed TDE
 
-> [!NOTE]
-> Assigning a user-assigned managed identity for Azure SQL logical servers and Managed Instances is in **public preview**.
-
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This how-to guide outlines the steps to create an Azure SQL logical [server](logical-servers.md) configured with transparent data encryption (TDE) with customer-managed keys (CMK) using a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). 
+This how-to guide outlines the steps to create a logical [server in Azure](logical-servers.md) configured with transparent data encryption (TDE) with customer-managed keys (CMK) using a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -52,8 +52,6 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
     - **Password**: Enter a password that meets the password requirements, and enter it again in the **Confirm password** field.
     - **Location**: Select a location from the dropdown list
 
-        :::image type="content" source="media/transparent-data-encryption-byok-create-server/create-server.png" alt-text="Create sql server menu in Azure portal":::
-    
 8. Select **Next: Networking** at the bottom of the page.
 
 9. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
@@ -64,34 +62,38 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
 11. Select **Next: Security** at the bottom of the page.
 
-12. On the Security tab, under **Identity (preview)**, select **Configure Identities**.
+12. On the Security tab, under **Server Identity**, select **Configure Identities**.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="Screenshot of security settings and configuring identities in the Azure portal.":::
 
-13. On the **Identity (preview)** blade, select **User assigned managed identity** and then select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user-assigned managed identity from the selected subscription. Then select the  **Select** button. 
+13. On the **Identity** blade, select **Off** for **System assigned managed identity** and then select **Add** under **User assigned managed identity**. Select the desired **Subscription** and then under **User assigned managed identities**, select the desired user-assigned managed identity from the selected subscription. Then select the  **Add** button.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/identity-configuration-managed-identity.png" alt-text="screenshot of adding user assigned managed identity when configuring server identity":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/identity-configuration-managed-identity.png" alt-text="Screenshot of adding user assigned managed identity when configuring server identity.":::
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-user-assigned-managed-identity.png" alt-text="screenshot of user assigned managed identity when configuring server identity":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-user-assigned-managed-identity.png" alt-text="Screenshot of user assigned managed identity when configuring server identity.":::
 
 14. Under **Primary identity**, select the same user-assigned managed identity selected in the previous step.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-primary-identity-for-server.png" alt-text="screenshot of selecting primary identity for server":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-primary-identity-for-server.png" alt-text="Screenshot of selecting primary identity for server.":::
 
 15. Select **Apply**
 
-16. On the Security tab, under **Transparent data encryption**, select **Configure Transparent data encryption**. Then select **Select a key** and select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
+16. On the Security tab, under **Transparent Data Encryption Key Management**, you have the option to configure transparent data encryption for the server or database.
+    - For **Server level key**: Select **Configure transparent data encryption**. Select **Customer-Managed Key**, and an option to select **Select a key** will appear. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-server.png" alt-text="screenshot configuring TDE for server":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-server.png" alt-text="Screenshot of configuring TDE for the server in Azure SQL.":::
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/select-key-for-tde.png" alt-text="screenshot selecting key for use with TDE":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/select-key-for-tde.png" alt-text="Screenshot selecting key for use with TDE.":::
 
-17. Select **Apply** 
+    - For **Database level key**: Select **Configure transparent data encryption**. Select **Database level Customer-Managed Key**, and an option to configure the **Database Identity** and **Customer-Managed Key** will appear. Select **Configure** to configure a **User-Assigned Managed Identity** for the database, similar to step 13. Select **Change key** to configure a **Customer-Managed Key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. You also have the option to enable **[Auto-rotate key](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation)** in the **Transparent Data Encryption** menu. Select the **Select** button.
+
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-database.png" alt-text="Screenshot configuring TDE for a database in Azure SQL.":::
+
+17. Select **Apply**
 
 18. Select **Review + create** at the bottom of the page
 
 19. On the **Review + create** page, after reviewing, select **Create**.
-
 
 # [The Azure CLI](#tab/azure-cli)
 
@@ -105,15 +107,16 @@ az sql server create \
     --resource-group $resourceGroupName \
     --location $location  \
     --admin-user $adminlogin \
-    --admin-password $password
-    --assign-identity
-    --identity-type $identitytype
-    --user-assigned-identity-id $identityid
-    --primary-user-assigned-identity-id $primaryidentityid
+    --admin-password $password \
+    --assign-identity \
+    --identity-type $identitytype \
+    --user-assigned-identity-id $identityid \
+    --primary-user-assigned-identity-id $primaryidentityid \
     --key-id $keyid
  
 ```
-Create a database with the [az sql db create](/cli/azure/sql/db) command. 
+
+Create a database with the [az sql db create](/cli/azure/sql/db) command.
 
 ```azurecli
 az sql db create \
@@ -131,7 +134,7 @@ az sql db create \
 
 Create a server configured with user-assigned managed identity and customer-managed TDE using PowerShell.
 
-For Az module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
+For Az PowerShell module installation instructions, see [Install Azure PowerShell](/powershell/azure/install-az-ps). For specific cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/).
 
 Use the [New-AzSqlServer](/powershell/module/az.sql/New-AzSqlServer) cmdlet.
 
@@ -145,9 +148,9 @@ Replace the following values in the example:
 - `<IdentityType>`: Type of identity to be assigned to the server. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned,UserAssigned` and None
 - `<UserAssignedIdentityId>`: The list of user-assigned managed identities to be assigned to the server (can be one or multiple)
 - `<PrimaryUserAssignedIdentityId>`: The user-assigned managed identity that should be used as the primary or default on this server
-- `<CustomerManagedKeyId>`: The Azure Key Vault URI that is used for encryption
+- `<CustomerManagedKeyId>`: **Key Identifier** and can be [retrieved from the key in Key Vault](/azure/key-vault/keys/quick-create-portal#retrieve-a-key-from-key-vault)
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** will look like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`
 
 ```powershell
 # create a server with user-assigned managed identity and customer-managed TDE
@@ -157,13 +160,13 @@ New-AzSqlServer -ResourceGroupName <ResourceGroupName> -Location <Location> -Ser
 
 # [ARM Template](#tab/arm-template)
 
-Here's an example of an ARM template that creates an Azure SQL logical server with a user-assigned managed identity and customer-managed TDE. The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
+Here's an example of an ARM template that creates a logical server in Azure with a user-assigned managed identity and customer-managed TDE. The template also adds a Microsoft Entra admin set for the server and enables [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
 
 For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance](arm-templates-content-guide.md).
 
 Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/Microsoft.Template), and **Build your own template in the editor**. Next, **Save** the configuration once you pasted in the example.
 
-To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** will look like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`.
+To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`.
 
 ```json
 {

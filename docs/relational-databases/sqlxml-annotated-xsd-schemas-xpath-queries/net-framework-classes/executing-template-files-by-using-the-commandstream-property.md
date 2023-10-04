@@ -4,17 +4,14 @@ description: Learn how to execute template files that consist of SQL or XPath qu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "Managed Classes [SQLXML], executing template files"
   - "SQLXML Managed Classes, executing template files"
   - "templates [SQLXML], SQLXML Managed Classes"
   - "CommandStream property"
-ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandStream Property

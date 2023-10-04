@@ -1,14 +1,14 @@
 ---
+title: "Migrate a Reporting Services Installation (Native Mode)"
 description: "Migrate a Reporting Services Installation (Native Mode)"
-title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
+ms.service: reporting-services
+ms.topic: conceptual
 ms.custom:
   - intro-migration
+  - updatefrequency5
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
@@ -22,9 +22,9 @@ This topic provides step-by-step instructions for migrating one of the following
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-* [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+* [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
-* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+* [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -32,9 +32,9 @@ This topic provides step-by-step instructions for migrating one of the following
   
 * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-* [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+* [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
-* [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+* [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
 
 For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
 
@@ -97,19 +97,19 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
 
 * The new [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] has replaced Report Manager.
   
-* Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS is no longer a prerequisite. If you are migrating a report server installation to a new computer, you do not need to add the Web server role. In addition, steps for configuring URLs and authentication are different from the previous release, as are techniques and tools for diagnosing and troubleshooting problems.  
+* Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], IIS is no longer a prerequisite. If you are migrating a report server installation to a new computer, you do not need to add the Web server role. In addition, steps for configuring URLs and authentication are different from the previous release, as are techniques and tools for diagnosing and troubleshooting problems.  
   
 * Report Server Web service, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and the Report Server Windows service run under the same account. All three applications read configuration settings from RSReportServer.config file.
   
 * The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and SQL Server Management Studio are designed to remove overlapping features. Each tool supports a distinct set of tasks.
   
-* ISAPI filters are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use ISAPI filters, you must redesign your reporting solution prior to migration.  
+* ISAPI filters are not supported in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use ISAPI filters, you must redesign your reporting solution prior to migration.  
   
-* IP address restrictions are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use IP address restrictions, you must redesign your reporting solution prior to migration or use a technology such as a firewall, router, or Network Address Translation (NAT) to configure addresses that are restricted from accessing the report server.  
+* IP address restrictions are not supported in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use IP address restrictions, you must redesign your reporting solution prior to migration or use a technology such as a firewall, router, or Network Address Translation (NAT) to configure addresses that are restricted from accessing the report server.  
   
-* Client Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client TLS certificates, you must redesign your reporting solution prior to migration.  
+* Client Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificates are not supported in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client TLS certificates, you must redesign your reporting solution prior to migration.  
   
-* If you use an authentication type other than Windows-Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
+* If you use an authentication type other than Windows-Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
   
 * If you use custom cascading style sheets in your reporting environment, they can't be migrated. Manually move them following migration.
   
@@ -145,7 +145,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41; ](install-reporting-services-native-mode-report-server.md) 
+* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41;](install-reporting-services-native-mode-report-server.md) 
   
 * [Install SQL Server Reporting Services 2016 and older from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
@@ -168,9 +168,9 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
-    * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+    * [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
   
-    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+    * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
     ::: moniker-end
 
     ::: moniker range="=sql-server-2016"
@@ -178,9 +178,9 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 
     * [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-    * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+    * [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)]  
 
-    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
+    * [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]
     ::: moniker-end
   
 2. Start [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -201,9 +201,9 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 
     * Custom security extensions must be rewritten using the [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) interface.
   
-    * Custom rendering extensions for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be rewritten using the Rendering Object Model (ROM).  
+    * Custom rendering extensions for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be rewritten using the Rendering Object Model (ROM).  
   
-    * HTML 3.2 and HTML OWC renderers are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
+    * HTML 3.2 and HTML OWC renderers are not supported in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
   
     * Other custom assemblies should not require recompilation.  
   
@@ -269,7 +269,7 @@ If you modified the RSReportServer.config file or RSWebApplication.config file i
 
 1. Test the report server and [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] virtual directories by opening a browser and typing in the URL address. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
-2. Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the report object model when processing and rendering reports, but it does not replace [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a new version of your report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+2. Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the report object model when processing and rendering reports, but it does not replace [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a new version of your report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
 
 ## <a name="bkmk_remove_unused"></a> Remove Unused Programs and Files
 

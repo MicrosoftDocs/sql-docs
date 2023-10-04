@@ -1,23 +1,19 @@
 ---
 title: Recursive Hierarchies
 description: In Master Data Services, a recursive hierarchy includes a recursive relationship, which exists when an entity has a domain-based attribute based on the entity.
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "recursive hierarchies [Master Data Services]"
-  - "hierarchies [Master Data Services], recursive hierarchies"
-ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "recursive hierarchies [Master Data Services]"
+  - "hierarchies [Master Data Services], recursive hierarchies"
 ---
 # Recursive Hierarchies (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a recursive hierarchy is a derived hierarchy that includes a recursive relationship. A recursive relationship exists when an entity has a domain-based attribute based on the entity itself.  
   
@@ -42,7 +38,7 @@ ms.author: jiwang6
   
 ## Rules  
   
--   A derived hierarchy cannot contain more than one recursive relationship. It can, however, have other derived relationships (for example, a derived hierarchy that contains a recursive Manager to Employee relationship can also have Country to Manager and Employee to Store relationships).  
+-   A derived hierarchy cannot contain more than one recursive relationship. It can, however, have other derived relationships (for example, a derived hierarchy that contains a recursive Manager to Employee relationship can also have Country/Region to Manager and Employee to Store relationships).  
   
 -   You cannot assign member permissions (on the **Hierarchy Members** tab) to members in a recursive hierarchy.  
   

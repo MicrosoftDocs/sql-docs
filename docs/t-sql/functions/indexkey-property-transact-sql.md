@@ -4,8 +4,8 @@ description: "INDEXKEY_PROPERTY (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "INDEXKEY_PROPERTY_TSQL"
@@ -27,7 +27,7 @@ dev_langs:
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Instead, use [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  In the following example, both properties are returned for index ID `1`, key column `1` in the `Production.Location` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   
     INDEXKEY_PROPERTY(OBJECT_ID('Production.Location', 'U'),  

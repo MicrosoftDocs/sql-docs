@@ -4,8 +4,8 @@ description: The SqlTypes library is part of the Microsoft .NET Framework. It pr
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "System.Data library"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], data types"
   - "building database objects [CLR integration], data types"
   - "mapping data types [CLR integration]"
-ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 ---
 # SQL Server Data Types in the .NET Framework
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

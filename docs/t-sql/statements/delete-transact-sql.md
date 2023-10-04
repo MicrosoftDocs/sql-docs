@@ -4,8 +4,8 @@ description: DELETE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "11/19/2021"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DELETE"
@@ -22,15 +22,15 @@ helpviewer_keywords:
   - "deleting data"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # DELETE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics
+-- Syntax for Azure Synapse Analytics and Microsoft Fabric
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
@@ -119,7 +119,7 @@ DELETE
  The alias specified in the FROM *table_source* clause representing the table or view from which the rows are to be deleted.  
   
  *server_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  The name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  
   
@@ -137,7 +137,7 @@ DELETE
  The view referenced by *table_or_view_name* must be updatable and reference exactly one base table in the FROM clause of the view definition. For more information about updatable views, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
@@ -200,6 +200,8 @@ DELETE
   
  The FROM clause cannot be specified in a DELETE statement that references, either directly or indirectly, a view with an `INSTEAD OF` trigger defined on it. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
+ Currently, the FROM clause cannot be specified in a DELETE statement on [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+
 ## Limitations and Restrictions  
 When `TOP` is used with `DELETE`, the referenced rows are not arranged in any order and the `ORDER BY` clause can not be directly specified in this statement. If you need to use TOP to delete rows in a meaningful chronological order, you must use `TOP` together with an `ORDER BY` clause in a subselect statement. See the Examples section that follows in this topic.  
   
@@ -238,8 +240,8 @@ The DELETE statement is always fully logged.
 |Category|Featured syntax elements|  
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|DELETE|  
-|[Limiting the rows deleted](#LimitRows)|WHERE • FROM • cursor •|  
-|[Deleting rows from a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
+|[Limiting the rows deleted](#LimitRows)|WHERE * FROM * cursor *|  
+|[Deleting rows from a remote table](#RemoteTables)|Linked server * OPENQUERY rowset function * OPENDATASOURCE rowset function|  
 |[Capturing the results of the DELETE statement](#CaptureResults)|OUTPUT clause|  
   
 ###  <a name="BasicSyntax"></a> Basic Syntax  
@@ -354,7 +356,7 @@ GO
 ###  <a name="RemoteTables"></a> Deleting Rows From a Remote Table  
  Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 #### F. Deleting data from a remote table by using a linked server  
  The following example deletes rows from a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
@@ -369,7 +371,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 ```  
   
@@ -377,7 +379,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-DELETE MyLinkServer.AdventureWorks2012.HumanResources.Department 
+DELETE MyLinkServer.AdventureWorks2022.HumanResources.Department 
 WHERE DepartmentID > 16;  
 GO  
 ```  
@@ -387,7 +389,7 @@ GO
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
-FROM AdventureWorks2012.HumanResources.Department  
+FROM AdventureWorks2022.HumanResources.Department  
 WHERE DepartmentID = 18');  
 GO  
 ```  
@@ -398,7 +400,7 @@ GO
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department   
+    .AdventureWorks2022.HumanResources.Department   
 WHERE DepartmentID = 17;
 ```  
   
@@ -447,7 +449,7 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### K. Delete all rows from a table  
  The following example deletes all rows from the `Table1` table because a WHERE clause is not used to limit the number of rows deleted.  
@@ -503,7 +505,7 @@ SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 
 ### P. Delete based on the result of joining with another table
 
-This example shows how to delete from a table based on the result from joining wiht another table.
+This example shows how to delete from a table based on the result from joining with another table.
 
 ```sql
 CREATE TABLE dbo.Table1   

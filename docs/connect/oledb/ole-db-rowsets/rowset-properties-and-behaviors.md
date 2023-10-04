@@ -4,8 +4,8 @@ description: These are the OLE DB Driver for SQL Server rowset properties, inclu
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "09/30/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "rowsets [OLE DB], properties"

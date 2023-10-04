@@ -5,8 +5,8 @@ author: lilgreenbird
 ms.author: v-susanh
 ms.reviewer: v-davidengel
 ms.date: 01/31/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Azure Key Vault sample version 9.2

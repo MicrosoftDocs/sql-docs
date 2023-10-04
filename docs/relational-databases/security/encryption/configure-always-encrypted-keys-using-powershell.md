@@ -1,15 +1,14 @@
 ---
-title: "Provision Always Encrypted keys using PowerShell | Microsoft Docs"
+title: "Provision Always Encrypted keys using PowerShell"
 description: Learn how to provision keys for Always Encrypted using the SqlServer PowerShell module to provide control access to the encryption keys and the database.
-ms.custom: ""
-ms.date: 04/15/2021
-ms.prod: sql
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.technology: security
+ms.date: 04/05/2023
+ms.service: sql
+ms.subservice: security
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
-ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Provision Always Encrypted keys using PowerShell
@@ -22,7 +21,7 @@ For an overview of Always Encrypted key management, including some high-level be
 For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
 
-## <a name="KeyProvisionWithoutRoles"></a> Key Provisioning without Role Separation
+## Key Provisioning without Role Separation
 
 The key provisioning method described in this section doesn't support role separation between Security Administrators and DBAs. Some of the below steps combine operations on physical keys with operations on key metadata. Therefore, this method of provisioning the keys is recommended for organizations using the DevOps model, or if the database is hosted in the cloud and the primary goal is to restrict cloud administrators (but not on-premises DBAs) from accessing sensitive data. It is not recommended if potential adversaries include DBAs, or if DBAs shouldn't have access to sensitive data.
 
@@ -36,8 +35,9 @@ Step 2.  Start a PowerShell environment and import the SqlServer PowerShell modu
 Step 3.  Connect to your server and database.     |     [Connect to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    No     | Yes         
 Step 4.  Create a *SqlColumnMasterKeySettings* object that contains information about the location of your column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). Use the cmdlet that is specific to your key store.   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   No      | No         
 Step 5.  Create the metadata about the column master key in your database.      |    [New-SqlColumnMasterKey](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Note:** under the covers, the cmdlet issues the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement to create key metadata.|    No     |    Yes
-Step 6.  Authenticate to Azure, if your column master key is stored in Azure Key Vault. | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  Yes   | No         
-Step 7.  Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.     |    [New-SqlColumnEncryptionKey](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Note:** Use a variation of the cmdlet that internally generates and encrypts a column encryption key.<br><br>**Note:** Under the covers, the cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create key metadata.  | Yes | Yes
+Step 6.  Authenticate to Azure, if your column master key is stored in Azure Key Vault. | [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)    |  Yes   | No
+Step 7. Obtain an access token for Azure Key Vaults, if your column master key is stored in Azure Key Vault. | [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) | No | No         
+Step 8.  Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.     |    [New-SqlColumnEncryptionKey](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Note:** Use a variation of the cmdlet that internally generates and encrypts a column encryption key.<br><br>**Note:** Under the covers, the cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create key metadata.  | Yes | Yes
   
 
 ## Windows Certificate Store without Role Separation (Example)
@@ -94,6 +94,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "
 
 # Connect to your database (Azure SQL database).
 Import-Module "SqlServer"
+
 $serverName = "<Azure SQL server name>.database.windows.net"
 $databaseName = "<database name>"
 # Change the authentication method in the connection string, if needed.
@@ -105,14 +106,14 @@ $cmkSettings = New-SqlAzureKeyVaultColumnMasterKeySettings -KeyURL $akvKey.Key.K
 
 # Create column master key metadata in the database.
 $cmkName = "CMK1"
-New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySettings $cmkSettings
+New-SqlColumnMasterKey -Name $cmkName -InputObject $database -ColumnMasterKeySettings $cmkSettings -KeyVaultAccessToken $keyVaultAccessToken
 
-# Authenticate to Azure
-Add-SqlAzureAuthenticationContext -Interactive
+# Obtain an access token for key vaults.
+$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token 
 
 # Generate a column encryption key, encrypt it with the column master key and create column encryption key metadata in the database. 
 $cekName = "CEK1"
-New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
+New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -KeyVaultAccessToken $keyVaultAccessToken
 ```
 
 ## CNG/KSP without Role Separation (Example)
@@ -159,7 +160,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="KeyProvisionWithRoles"></a> Key Provisioning With Role Separation
+## Key Provisioning With Role Separation
 
 This section provides the steps to configure encryption where security administrators don't have access to the database, and database administrators don't have access to the key store or plaintext keys.
 
@@ -178,13 +179,14 @@ Task  |Article  |Accesses plaintext keys/key store  |Accesses database
 Step 1. Create a column master key in a key store.<br><br>**Note:** The SqlServer module doesn't support this step. To accomplish this task from a command-line, you need to use the tools that are specific the type of your key store.     | [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    Yes    | No 
 Step 2.  Start a PowerShell session and import the SqlServer module.      |     [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | No | No         
 Step 3.  Create a *SqlColumnMasterKeySettings* object that contains information about the location of your column master key. *SqlColumnMasterKeySettings* is an object that exists in memory (in PowerShell). Use the cmdlet that is specific to your key store. |      [New-SqlAzureKeyVaultColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | No         | No         
-Step 4.  Authenticate to Azure, if your column master key is stored in Azure Key Vault |    [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |Yes|No         
-Step 5.  Generate a column encryption key, encrypt it with the column master key to produce an encrypted value of the column encryption key.     |   [New-SqlColumnEncryptionKeyEncryptedValue](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    Yes    | No        
-Step 6.  Provide the location of the column master key (the provider name and a key path of the column master key) and an encrypted value of the column encryption key to the DBA.  | See the examples below.        |   No      | No         
+Step 4.  Authenticate to Azure, if your column master key is stored in Azure Key Vault. | [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount)    |  Yes   | No
+Step 5. Obtain an access token for Azure Key Vaults, if your column master key is stored in Azure Key Vault. | [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) | No | No          
+Step 6.  Generate a column encryption key, encrypt it with the column master key to produce an encrypted value of the column encryption key.     |   [New-SqlColumnEncryptionKeyEncryptedValue](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    Yes    | No        
+Step 7.  Provide the location of the column master key (the provider name and a key path of the column master key) and an encrypted value of the column encryption key to the DBA.  | See the examples below.        |   No      | No         
 
 ### DBA 
 
-DBAs use the information they receive from the Security Admin (step 6 above) to create and manage the Always Encrypted key metadata in the database.
+DBAs use the information they receive from the Security Admin (step 7 above) to create and manage the Always Encrypted key metadata in the database.
 
 Task  |Article  |Accesses plaintext keys  |Accesses database   
 ---------|---------|---------|---------

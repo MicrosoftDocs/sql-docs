@@ -1,15 +1,12 @@
 ---
 title: Clone an Existing Database
 description: Learn how to clone a database. View the steps that are involved with creating a new database, duplicating its schema, and replicating its data.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Clone an Existing Database
@@ -39,9 +36,9 @@ By using these steps, you can easily create a development or test database from 
   
 2.  Click the **Script** button next to **Max Rows** in the toolbar.  
   
-3.  When the script window opens, make sure Connected is shown in the status bar below the Transact\-SQL script pane. If Disconnected is shown, click the **Connect** button (the leftmost one in the toolbar) and enter your server information and credentials.  
+3.  When the script window opens, make sure Connected is shown in the status bar below the Transact-SQL script pane. If Disconnected is shown, click the **Connect** button (the leftmost one in the toolbar) and enter your server information and credentials.  
   
-4.  In the **Database** dropdown menu next to the **Connect**/**Disconnect** buttons, select **TradeDev**. This is similar to the Transact\-SQL`USE` statement, and will ensure that the script in the code editor will be executed against the **TradeDev** database.  
+4.  In the **Database** dropdown menu next to the **Connect**/**Disconnect** buttons, select **TradeDev**. This is similar to the Transact-SQL`USE` statement, and will ensure that the script in the code editor will be executed against the **TradeDev** database.  
   
 5.  Click the **Execute Query** button to execute the `INSERT` statements. This will insert all the rows from the `Suppliers` table of the `Trade` database to the `Suppliers` table in the `TradeDev` database.  
   

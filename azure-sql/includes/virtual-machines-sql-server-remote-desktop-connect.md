@@ -6,11 +6,9 @@ ms.service: virtual-machines-sql
 ms.topic: include
 ---
 
-1. After the Azure virtual machine is created and running, click the Virtual Machines icon in the Azure portal to view your VMs.
+1. After the Azure virtual machine is created and running, select **Virtual machine**, and then choose your new VM. 
 
-1. Click the ellipsis, **...**, for your new VM.
-
-1. Click **Connect**.
+1. Select **Connect** and then choose **RDP** from the drop-down to download your RDP file. 
 
    ![Connect to VM in portal](./media/virtual-machines-sql-server-remote-desktop-connect/azure-virtual-machine-connect.png)
 

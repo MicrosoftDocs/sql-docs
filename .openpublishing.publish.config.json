@@ -67,6 +67,12 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "terraform_samples",
+      "url": "https://github.com/Azure/terraform",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "azure",
       "url": "https://github.com/MicrosoftDocs/azure-docs-pr",
       "branch": "main",
@@ -79,11 +85,23 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "azure-dev-docs-pr",
+      "url": "https://github.com/MicrosoftDocs/azure-dev-docs-pr",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "terraform_scripts",
+      "url": "https://github.com/Azure/terraform/",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
       "path_to_root": "powershell_scripts",
       "url": "https://github.com/Azure/azure-docs-powershell-samples",
       "branch": "master",
       "branch_mapping": {}
-    },
+    },    
     {
       "path_to_root": "quickstart-templates",
       "url": "https://github.com/Azure/azure-quickstart-templates",
@@ -114,6 +132,12 @@
       "path_to_root": "sql-server-samples",
       "url": "https://github.com/Microsoft/sql-server-samples",
       "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-sql/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],

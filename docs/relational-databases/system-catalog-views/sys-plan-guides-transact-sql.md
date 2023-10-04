@@ -4,9 +4,8 @@ description: sys.plan_guides (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.planguides_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.plan_guides catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.plan_guides (Transact-SQL)

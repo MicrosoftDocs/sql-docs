@@ -1,14 +1,13 @@
 ---
 title: "Restore databases to marked transaction"
 description: When you make related updates to two or more related databases, use transaction marks in SQL Server to recover them to a logically consistent point.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction marks [SQL Server]"
   - "marked transactions [SQL Server]"
   - "database restores [SQL Server], inserting transaction marks for"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], creating"
   - "BEGIN TRAN...WITH MARK statement"
   - "two-phase commit"
-ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
 
@@ -88,7 +84,7 @@ ms.author: mathoma
  The following example restores the transaction log to the mark in the marked transaction named `ListPriceUpdate`.  
   
 ```sql  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
    WITH MARK 'UPDATE Product list prices';  
@@ -117,7 +113,7 @@ RESTORE LOG AdventureWorks
    FROM AdventureWorksBackups   
    WITH FILE = 4,  
    RECOVERY,   
-   STOPATMARK = 'ListPriceUpdate';  
+   STOPATMARK = 'UPDATE Product list prices';  
 ```  
   
 ## Forcing a Mark to Spread to Other Servers  

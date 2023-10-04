@@ -4,15 +4,14 @@ description: Always On Availability Groups Dynamic Management Views - Functions
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 04/11/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
   - "dynamic management views [SQL Server], Always On Availability Groups"
 dev_langs:
   - "TSQL"
-ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
 
@@ -42,6 +41,6 @@ This section contains the dynamic management views and functions that are relate
 
 ## See also
 
-- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)
 - [Monitor Availability Groups &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

@@ -1,20 +1,16 @@
 ---
+title: "C to SQL: Timestamp"
 description: "C to SQL: Timestamp"
-title: "C to SQL: Timestamp | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "data conversions from C to SQL types [ODBC], timestamp"
   - "timestamp data type [ODBC]"
   - "converting data from c to SQL types [ODBC], timestamp"
-ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-author: David-Engel
-ms.author: v-davidengel
 ---
 # C to SQL: Timestamp
 The identifier for the timestamp ODBC C data type is:  

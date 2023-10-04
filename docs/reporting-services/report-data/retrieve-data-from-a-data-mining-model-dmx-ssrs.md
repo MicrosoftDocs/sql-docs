@@ -1,21 +1,18 @@
 ---
-title: "Retrieve Data from a Data Mining Model (DMX) | Microsoft Docs"
+title: "Retrieve Data from a Data Mining Model (DMX)"
 description: Learn how to use the data from a SQL Server Analysis Services (SSAS) data mining model in your report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "retrieving report data"
   - "datasets [Reporting Services], with DMX queries"
   - "datasets [Reporting Services], Analysis Services"
   - "queries [Reporting Services], data mining prediction"
-ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Retrieve Data from a Data Mining Model (DMX) (SSRS)
   To use data from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining model in your report, you must define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source and one or more report datasets. When you create the data source definition, you must specify a connection string and credentials so that you can access the data source from your client computer.  
@@ -43,7 +40,7 @@ ms.author: maggies
      Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies the sample [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] database on the local client.  
   
     ```  
-    Data Source=localhost;Initial Catalog=AdventureWorksDW2012  
+    Data Source=localhost;Initial Catalog=AdventureWorksDW2022  
     ```  
   
 6.  Click **Credentials**.  

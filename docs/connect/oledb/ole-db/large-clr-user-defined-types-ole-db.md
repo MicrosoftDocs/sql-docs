@@ -4,8 +4,8 @@ description: Learn about the changes to OLE DB in OLE DB Driver for SQL Server t
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/12/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "large CLR user-defined types [OLE DB]"

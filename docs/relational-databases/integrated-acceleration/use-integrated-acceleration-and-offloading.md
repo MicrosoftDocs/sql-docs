@@ -1,13 +1,13 @@
 ---
 title: Configure integrated acceleration and offloading
 description: Describes how to use integrated acceleration and offloading solution for an instance of SQL Server.
-ms.date: 08/16/2022
-ms.prod: sql
-ms.reviewer: david.pless, wiassaf 
-ms.technology: configuration
-ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: david.pless, wiassaf
+ms.date: 08/16/2022
+ms.service: sql
+ms.subservice: configuration
+ms.topic: conceptual
 ---
 
 # Configure integrated acceleration and offloading
@@ -24,7 +24,7 @@ This article demonstrates how to configure an integrated acceleration and offloa
 
 2. Follow the instructions from the vendor to install the drivers on your server.
 
-3. Reboot the server after you install the drivers.
+3. Restart the server after you install the drivers.
 
 ## Verify installed components
 
@@ -209,7 +209,7 @@ Use RESTORE HEADERONLY to view the compression algorithm. See [RESTORE Statement
 > [!NOTE]
 > If the server-scope configuration `HARDWARE_OFFLOAD` option is not enabled, and/or the Intel&reg; QAT drivers have not been installed, SQL Server returns error 17441, (`Msg 17441, Level 16, State 1, Line 175 This operation requires Intel(R) QuickAssist Technology (QAT) libraries to be loaded.`)
 
-To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It’s not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
+To restore an Intel&reg; QAT compressed backup, the correct assemblies must be loaded on the SQL Server instance initiating the restore operation. It's not required to have QAT hardware to restore QAT compressed backups. However, to restore QAT backups requires the following:
 
 - QAT driver needs to be installed on the machine
 - Hardware offloading needs to be enabled (`sp_configure 'hardware offload enabled', 1;`)

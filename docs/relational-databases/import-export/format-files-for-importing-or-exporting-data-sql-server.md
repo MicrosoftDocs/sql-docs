@@ -4,10 +4,9 @@ description: When you bulk import to a SQL Server table or bulk export from a ta
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 08/29/2022
-ms.prod: sql
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk exporting [SQL Server], format files"
   - "bulk importing [SQL Server], format files"
@@ -16,14 +15,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-ser
 ---
 # Format files to import or export data (SQL Server)
 
-[!INCLUDE[SQL Server Azure SQL Database PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database PDW](../../includes/applies-to-version/sql-asdb-asdbmi-pdw.md)]
 
 When you bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a *format file* to store all the format information that is required to bulk export or bulk import data. This includes format information for each field in a data file relative to that table.
 
 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] supports two types of format files: XML formats and non-XML format files. Both non-XML format files and XML format files contain descriptions of every field in a data file, and XML format files also contain descriptions of the corresponding table columns. Generally, XML and non-XML format files are interchangeable. However, we recommend that you use the XML syntax for new format files because they provide several advantages over non-XML format files. For more information, see [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
 > [!NOTE]  
-> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE[Use ADF or PolyBase instead of Synapse Bulk Insert](../../includes/paragraph-content/bulk-insert-synapse.md)]
+> This syntax, including bulk insert, is not supported in Azure Synapse Analytics. [!INCLUDE [Use ADF or PolyBase instead of Synapse Bulk Insert](includes/bulk-insert-synapse.md)]
 
 ## <a id="Benefits"></a> Benefits of format files
 
@@ -42,13 +41,13 @@ The following examples show the layout of a non-XML format file and of an XML fo
 The following non-XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Fmt -n -T
 ```
 
 The `bcp` command defaults to a local, default instance of SQL Server with Windows Authentication. You can specify other instance and login information as desired, for more information see [bcp Utility](../../tools/bcp-utility.md). For example, to specify a remote server named instance with Windows Authentication, use:
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T -S servername/instancename
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Fmt -n -T -S servername/instancename
 ```
 
 The contents of this format file are as follows, starting with the major version number of SQL Server, and the table metadata information.
@@ -69,14 +68,14 @@ For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../../rela
 The following XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 ```
 
 The format file contains:
 
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <RECORD>
   <FIELD ID="1" xsi:type="NativePrefix" LENGTH="1"/>
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="2" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>

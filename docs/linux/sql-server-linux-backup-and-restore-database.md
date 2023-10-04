@@ -1,20 +1,21 @@
 ---
 title: Backup and restore SQL Server databases on Linux
 description: Learn how to backup and restore SQL Server databases on Linux. Also learn how to backup and restore with SQL Server Management Studio (SSMS).
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 03/31/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
+ms.custom:
+  - linux-related-content
 ---
 # Backup and restore SQL Server databases on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-You can take backups of databases from SQL Server on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+You can take backups of databases from SQL Server on Linux with many different options. On a Linux server, you can use **sqlcmd** to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 > [!IMPORTANT]
 > SQL Server on Linux only supports backing up to Azure Blob storage using block blobs. Using a storage key for backup and restore will result in a page blog being used, which isn't supported. Use a Shared Access Signature instead. For information on block blogs versus page blogs, see [Backup to block blob vs. page blob](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
@@ -104,9 +105,11 @@ The following steps walk you through restoring a database with SSMS.
 
 1. SQL Server restores the database. 
 
-## See also
+## Related content
 
-* [Create a Full Database Backup (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
-* [Back up a Transaction Log (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
-* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+- [Create a Full Database Backup (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+- [Back up a Transaction Log (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+- [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+- [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

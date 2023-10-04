@@ -4,7 +4,7 @@ description: Start here to learn how to monitor Azure SQL Database with Azure Mo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 07/29/2022
+ms.date: 08/10/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -27,7 +27,7 @@ View your Azure Monitor metrics for all connected resources by going to the Azur
 
 Some services in Azure have a focused, pre-built monitoring dashboard in the Azure portal that can be enabled to provide a starting point for monitoring your service. These special dashboards are called "insights" and are not enabled by default. For more on using Azure Monitor SQL Insights for all products in the [Azure SQL family](index.yml), see [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview). 
 
-After creating a monitoring profile, you can configure your Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Database, SQL Managed Instance, and SQL Server on Azure VMs.
+After creating a monitoring profile, you can configure your Azure Monitor SQL Insights for SQL-specific metrics for Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure VMs.
 
 > [!NOTE]
 > Azure SQL Analytics (preview) is an integration with Azure Monitor, where many monitoring solutions are no longer in active development. For more monitoring options, see [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md).
@@ -54,6 +54,8 @@ Diagnostic settings available include:
 For more information on the resource logs and diagnostics available, see [Diagnostic telemetry for export](metrics-diagnostic-telemetry-logging-streaming-export-configure.md?tabs=azure-portal#diagnostic-telemetry-for-export). 
 
 See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, CLI, or PowerShell. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Database are listed in [Azure SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
+
+Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and may change over time as new resource logs become available and are added to the category group. Note that this may incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
 
 ## Analyzing metrics
 
@@ -83,7 +85,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Use the following queries to monitor your database. You may see different options available depending on your purchase model.
+Use the following queries to monitor your database. You may see different options available depending on your purchasing model.
 
 Example A: **Log_write_percent** from the past hour
 
@@ -136,7 +138,7 @@ If you are creating or running an application in Azure, [Azure Monitor Applicati
 
 You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
-The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchase model.
+The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|

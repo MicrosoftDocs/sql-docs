@@ -1,14 +1,13 @@
 ---
+title: "Foreach Loop Container"
 description: "Foreach Loop Container"
-title: "Foreach Loop Container | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "05/22/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.foreachloopcontainer.f1"
   - "sql13.dts.designer.foreachloopcontainer.general.f1"
   - "sql13.dts.designer.foreachloopcontainer.collection.f1"
@@ -23,14 +22,11 @@ f1_keywords:
   - "sql14.dts.designer.schemarestrictions.f1"
   - "sql14.dts.designer.foreachitemcolumns.f1"
   - "sql14.dts.designer.selectsmoenumeration.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "repeating control flow"
   - "Foreach Loop containers"
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
-ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: chugugrace
-ms.author: chugu
 ---
 # Foreach Loop Container
 
@@ -92,7 +88,7 @@ ms.author: chugu
 |Foreach Nodelist|Specify the source of the XML document and configure the XPath operation.|  
 |Foreach SMO|Specify the connection to a database and the SMO objects to enumerate.|  
 |Foreach HDFS File Enumerator|Specify a folder and the files to enumerate, the format of the file name of the retrieved files, and whether to traverse subfolders.|  
-|Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
+|Foreach Azure Blob|Specify the Azure Blob Storage container that contains blobs to be enumerated.|  
 |Foreach ADLS File|Specify the Azure Data Lake Store directory that contains the files to be enumerated.|
 |Foreach Data Lake Storage Gen2 File|Specify the Azure Data Lake Storage Gen2 directory that contains the files to be enumerated, along with other options.|
 

@@ -4,13 +4,11 @@ description: Spatial Data Catalog Views
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 ---
 # Spatial Data Catalog Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

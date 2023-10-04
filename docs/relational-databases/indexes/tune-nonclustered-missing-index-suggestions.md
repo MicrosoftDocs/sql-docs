@@ -3,12 +3,10 @@ title: Tune nonclustered indexes with missing index suggestions
 description: How to use missing index suggestions to create and tune nonclustered indexes.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 3/15/2022
-ms.prod: sql
-ms.service:
-ms.prod_service: "database-engine, sql-database"
+ms.date: 08/08/2023
+ms.service: sql
 ms.topic: how-to
-ms.custom: "template-how-to #Required; leave this attribute/value as-is."
+ms.custom: template-how-to
 ---
 
 # Tune nonclustered indexes with missing index suggestions
@@ -29,7 +27,7 @@ Query optimization is a time sensitive process, so there are limitations to the 
 - Missing index requests may offer similar variations of indexes on the same table and column(s) across queries. It's important to [review index suggestions and combine where possible](#review-indexes-and-combine-where-possible).
 - Suggestions aren't made for trivial query plans.
 - Cost information is less accurate for queries involving only inequality predicates.
-- Suggestions are gathered for a maximum of 500 missing index groups. After this threshold is reached, no more missing index group data is gathered.
+- Suggestions are gathered for a maximum of 600 missing index groups. After this threshold is reached, no more missing index group data is gathered.
 
 Due to these limitations, missing index suggestions are best treated as one of several sources of information when performing index analysis, design, tuning, and testing. Missing index suggestions are not prescriptions to create indexes exactly as suggested.
 
@@ -77,7 +75,7 @@ To generate and view the missing index requests:
 
 1. Right-click on the execution plan and select **Show Execution Plan XML...** from the menu.
     
-    :::image type="content" source="media/missing-index-graphic-execution-plan-show-xml.png" alt-text="Screenshot showing the menu that appears after right clicking on an execution plan.":::
+    :::image type="content" source="media/missing-index-graphic-execution-plan-show-xml.png" alt-text="Screenshot showing the menu that appears after right-clicking on an execution plan.":::
     
     The execution plan XML will open as a new tab inside SSMS.
 

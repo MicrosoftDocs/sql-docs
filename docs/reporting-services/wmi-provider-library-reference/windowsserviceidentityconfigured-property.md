@@ -1,23 +1,18 @@
 ---
+title: "WindowsServiceIdentityConfigured Property"
 description: "WindowsServiceIdentityConfigured Property"
-title: "WindowsServiceIdentityConfigured Property | Microsoft Docs"
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "WindowsServiceIdentityConfigured"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "WindowsServiceIdentityConfigured property"
-ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WindowsServiceIdentityConfigured property"
+apilocation: "reportingservices.mof"
+apiname: "WindowsServiceIdentityConfigured"
+apitype: MOFDef
 ---
 # WindowsServiceIdentityConfigured Property
   Returns the identity that the Report Server Windows service was last configured to run under. Read-only.  

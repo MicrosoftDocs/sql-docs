@@ -1,17 +1,16 @@
 ---
 title: sp_refreshsqlmodule (Transact-SQL)
-description: "sp_refreshsqlmodule (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+description: "sp_refreshsqlmodule updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database."
+author: markingmyname
+ms.author: maghan
+ms.date: 01/03/2023
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_refreshsqlmodule_TSQL"
   - "sp_refreshsqlmodule"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], stored procedures"
   - "metadata [SQL Server], triggers"
   - "metadata [SQL Server], views"
@@ -21,25 +20,22 @@ helpviewer_keywords:
   - "metadata [SQL Server], functions"
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
-author: markingmyname
-ms.author: maghan
-ms.custom: ""
-ms.date: "07/25/2018"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+dev_langs:
+  - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 
 # sp_refreshsqlmodule (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-dedicated-poolonly](../../includes/applies-to-version/sql-asdb-asdbmi-asa-dedicated-poolonly.md)]
 
 Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects. For example, you might see an error like `The definition for user-defined data type 'typename' has changed`. Refreshing the metadata for the module that uses the type specified in the error might resolve the problem.
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 sys.sp_refreshsqlmodule [ @name = ] 'module_name'   
     [ , [ @namespace = ] ' <class> ' ]  
   
@@ -52,28 +48,31 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## Arguments  
-`[ @name = ] 'module\_name'`
+
+#### @name
+
  Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is **nvarchar**, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.  
   
-`[ , @namespace = ] ' \<class> '`
+#### @namespace 
+
  Is the class of the specified module. When *module_name* is a DDL trigger, \<class> is required. *\<class>* is **nvarchar**(20). Valid inputs are:  
 
 * DATABASE_DDL_TRIGGER
 
-* SERVER_DDL_TRIGGER - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+* SERVER_DDL_TRIGGER - **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
   
 ## Remarks  
- **sp_refreshsqlmodule** should be run when changes are made to the objects underlying the module that affect its definition. Otherwise, the module might produce unexpected results when it is queried or invoked. To refresh a view, you can use either **sp_refreshsqlmodule** or **sp_refreshview** with the same results.  
+The system stored procedure `sp_refreshsqlmodule` should be run when changes are made to the objects underlying the module that affect its definition. Otherwise, the module might produce unexpected results when it is queried or invoked. To refresh a view, you can use either `sp_refreshsqlmodule` or `sp_refreshview` with the same results.  
   
- **sp_refreshsqlmodule** does not affect any permissions, extended properties, or SET options that are associated with the object.  
+ `sp_refreshsqlmodule` does not affect any permissions, extended properties, or SET options that are associated with the object.  
   
  To refresh a server-level DDL trigger, execute this stored procedure from the context of any database.  
   
 > [!NOTE]  
->  Any signatures that are associated with the object are dropped when you run **sp_refreshsqlmodule**.  
+>  Any signatures that are associated with the object are dropped when you run `sp_refreshsqlmodule`.  
   
 ## Permissions  
  Requires ALTER permission on the module and REFERENCES permission on any CLR user-defined types and XML schema collections that are referenced by the object. Requires ALTER ANY DATABASE DDL TRIGGER permission in the current database when the specified module is a database-level DDL trigger. Requires CONTROL SERVER permission when the specified module is a server-level DDL trigger.  
@@ -85,9 +84,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ### A. Refreshing a user-defined function  
  The following example refreshes a user-defined function. The example creates an alias data type, `mytype`, and a user-defined function, `to_upper`, that uses `mytype`. Then, `mytype` is renamed to `myoldtype`, and a new `mytype` is created that has a different definition. The `dbo.to_upper` function is refreshed so that it references the new implementation of `mytype`, instead of the old one.  
   
-```  
+```sql
 -- Create an alias type.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF EXISTS (SELECT 'mytype' FROM sys.types WHERE name = 'mytype')  
 DROP TYPE mytype;  
@@ -143,8 +142,8 @@ GO
 ### B. Refreshing a database-level DDL trigger  
  The following example refreshes a database-level DDL trigger.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2022;  
 GO  
 EXEC sys.sp_refreshsqlmodule @name = 'ddlDatabaseTriggerLog' , @namespace = 'DATABASE_DDL_TRIGGER';  
 GO  
@@ -153,20 +152,16 @@ GO
 ### C. Refreshing a server-level DDL trigger  
  The following example refreshes a server-level DDL trigger.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
   
-```  
+```sql
 USE master;  
 GO  
 EXEC sys.sp_refreshsqlmodule @name = 'ddl_trig_database' , @namespace = 'SERVER_DDL_TRIGGER';  
 GO  
-  
 ```  
   
-## See Also  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
-  
-  
+## Next steps
+
+- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)

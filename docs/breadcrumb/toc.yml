@@ -1,4 +1,4 @@
-- name: Docs
+- name: Learn
   tocHref: /
   topicHref: /
   items:
@@ -7,27 +7,115 @@
     tocHref: /sql/
     topicHref: /sql/index
     items:
-
-    - name: APS
+   
+    - name: Analytics Platform System
       tocHref: /sql/analytics-platform-system/
       topicHref: /sql/analytics-platform-system/index
+      
+    - name: Data Mining Extensions
+      tocHref: /sql/mdx/
+      topicHref: /sql/mdx/multidimensional-expressions-mdx-reference
+      
+    - name: Multidimensional Expressions
+      tocHref: /sql/dmx/
+      topicHref: /sql/dmx/data-mining-extensions-dmx-reference
 
-    - name: ML
-      tocHref: /sql/machine-learning/
-      topicHref: /sql/machine-learning/
+    - name: SQL Server
+      tocHref: /sql/ado/
+      topicHref: /sql/sql-server/index
 
-    - name: Connect
+    - name: SQL Server
+      tocHref: /sql/azdata/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/big-data-cluster/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
       tocHref: /sql/connect/
-      topicHref: /sql/connect/sql-server-drivers
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/data-quality-services/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/database-engine/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/dea/
+      topicHref: /sql/sql-server/index
 
-    - name: SSIS
+    - name: SQL Server
+      tocHref: /sql/dma/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/language-extensions/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/linux/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/master-data-services/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/native-interfaces/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/odbc/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/powershell/
+      topicHref: /sql/sql-server/index
+      
+    - name: SQL Server
+      tocHref: /sql/relational-databases/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/sql-server/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/ssdt/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/ssma/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/ssms/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/t-sql/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/tools/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server
+      tocHref: /sql/xquery/
+      topicHref: /sql/sql-server/index
+
+    - name: SQL Server Integration Services
       tocHref: /sql/integration-services/
       topicHref: /sql/integration-services/sql-server-integration-services
 
-    - name: SSRS
+    - name: SQL Server Reporting Services
       tocHref: /sql/reporting-services/
       topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
-
+      
   - name: Azure Data Studio
     tocHref: /sql/azure-data-studio/
     topicHref: /sql/azure-data-studio/index

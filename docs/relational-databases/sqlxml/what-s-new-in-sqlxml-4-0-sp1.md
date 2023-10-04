@@ -1,12 +1,11 @@
 ---
-title: "What&#39;s New in SQLXML 4.0 SP1"
+title: "What's New in SQLXML 4.0 SP1"
 description: View a summary of the updates and enhancements in SQLXML 4.0 SP1 with links to more detailed information.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 ms.custom: intro-whats-new
 helpviewer_keywords:
@@ -18,12 +17,11 @@ helpviewer_keywords:
   - "redistributing SQLXML"
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
-ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# What&#39;s New in SQLXML 4.0 SP1
+# What's New in SQLXML 4.0 SP1
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 includes various updates and enhancements. This topic summarizes the updates and provides links to more detailed information, where available. SQLXML 4.0 SP1 provides additional enhancements to support the new data types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This topic includes the following subjects:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 includes various updates and enhancements. This topic summarizes the updates and provides links to more detailed information, where available. SQLXML 4.0 SP1 provides additional enhancements to support the new data types introduced in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]. This topic includes the following subjects:  
   
 -   Installing SQLXML 4.0 SP1  
   
@@ -44,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   Migration Issues  
   
 ## Installing SQLXML 4.0 SP1  
- Before [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 was released with SQL Server and was part of the default installation of all SQL Server versions except for SQL Server Express. Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the latest version of SQLXML (SQLXML 4.0 SP1) is no longer included in SQL Server. To install SQLXML 4.0 SP1, download it from [Install Location for SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
+ Before [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], SQLXML 4.0 was released with SQL Server and was part of the default installation of all SQL Server versions except for SQL Server Express. Starting with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], the latest version of SQLXML (SQLXML 4.0 SP1) is no longer included in SQL Server. To install SQLXML 4.0 SP1, download it from [Install Location for SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  The SQLXML 4.0 SP1 files are installed in the following location:  
   
@@ -78,7 +76,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  You will also need to redistribute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client if you are using it as the data provider with your application. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## Support for SQL Server Native Client  
- SQLXML 4.0 supports both the SQLOLEDB and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client providers. It is recommended that you use the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is developed to support any new data types that ship in the server, such as the **Date, Time**, **DateTime2**, and **dateTimeOffset** data types in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and supported by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client.  
+ SQLXML 4.0 supports both the SQLOLEDB and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client providers. It is recommended that you use the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is developed to support any new data types that ship in the server, such as the **Date, Time**, **DateTime2**, and **dateTimeOffset** data types in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and supported by [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client.  
 
  > [!NOTE]  
  > [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client has been removed in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
@@ -101,7 +99,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 -   [Examples of Bulk Loading XML Documents](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced the **Date, Time**, **DateTime2**, and **DateTimeOffset** data types. SQLXML 4.0 SP1 will enable these four new data types as built-in scalar types when used with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (SQLNCLI11), which ships in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)].  
+ [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] introduced the **Date, Time**, **DateTime2**, and **DateTimeOffset** data types. SQLXML 4.0 SP1 will enable these four new data types as built-in scalar types when used with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (SQLNCLI11), which ships in [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)].  
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
   
 ## XML Bulk Load Changes for SQLXML 4.0 SP1  
   
@@ -198,7 +199,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ### Supportability for SQLXML 3.0 ISAPI and Data Types Introduced in SQL Server 2005  
  Because ISAPI support has been removed from SQLXML 4.0, if your solution requires the enhanced data typing features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] such as the [xml data type](../../t-sql/xml/xml-transact-sql.md) or [user-defined data types (UDTs)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) and Web-based access, you will need to use another solution such as [SQLXML managed classes](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) or another type of HTTP handler, such as Native XML Web Services for SQL Server 2005.  
   
- Alternately, if you do not require these type extensions, you can continue to use SQLXML 3.0 to connect to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] installations. The SQLXML 3.0 ISAPI support will work against these later versions but does not support or recognize the **xml** data type or UDT type support introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ Alternately, if you do not require these type extensions, you can continue to use SQLXML 3.0 to connect to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] installations. The SQLXML 3.0 ISAPI support will work against these later versions but does not support or recognize the **xml** data type or UDT type support introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ### XML Bulk Load Security Changes for Temporary Files  
  For SQLXML 4.0 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XML Bulk Load file permissions are granted to the user executing the bulk load operation. Read and Write permissions are inherited from the file system. In previous releases of SQLXML and SQL Server, XML Bulk Load under SQLXML would create temporary files that were not secured and could be readable by anyone.  

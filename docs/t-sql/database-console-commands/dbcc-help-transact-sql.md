@@ -1,11 +1,11 @@
 ---
 title: "DBCC HELP (Transact-SQL)"
-description: "DBCC HELP (Transact-SQL)"
+description: DBCC HELP returns syntax information for the specified DBCC command.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "07/16/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 12/05/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "DBCC HELP"
@@ -17,57 +17,66 @@ dev_langs:
   - "TSQL"
 ---
 # DBCC HELP (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Returns syntax information for the specified DBCC command.
-  
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-  
-## Syntax  
-  
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
 ```syntaxsql
-DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
-[ WITH NO_INFOMSGS ]  
-```  
-  
+DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
+[ WITH NO_INFOMSGS ]
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
- *dbcc_statement* | *\@dbcc_statement_var*  
- Is the name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, CHECKDB instead of DBCC CHECKDB.  
-  
- ?  
- Returns all DBCC commands for which Help is available.  
-  
- WITH NO_INFOMSGS  
- Suppresses all informational messages that have severity levels from 0 through 10.  
-  
-## Result Sets  
-DBCC HELP returns a result set displaying the syntax for the specified DBCC command.
-  
-## Permissions  
+
+#### *dbcc_statement* | *@dbcc_statement_var*
+
+The name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, `CHECKDB` instead of `DBCC CHECKDB`.
+
+#### `'?'`
+
+Returns all DBCC commands for which help is available.
+
+#### WITH NO_INFOMSGS
+
+Suppresses all informational messages that have severity levels from 0 through 10.
+
+## Result sets
+
+`DBCC HELP` returns a result set displaying the syntax for the specified DBCC command.
+
+## Permissions
+
 Requires membership in the **sysadmin** fixed server role.
-  
-## Examples  
-### A. Using DBCC HELP with a variable  
-The following example returns syntax information for DBCC `CHECKDB`.
-  
-```sql  
-DECLARE @dbcc_stmt sysname;  
-SET @dbcc_stmt = 'CHECKDB';  
-DBCC HELP (@dbcc_stmt);  
-GO  
-```  
-  
-### B. Using DBCC HELP with the ? option  
-The following example returns all DBCC statements for which Help is available.
-  
-```sql  
-DBCC HELP ('?');  
-GO  
-```  
-  
-## See Also  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-  
-  
+
+## Examples
+
+### A. Use DBCC HELP with a variable
+
+The following example returns syntax information for `DBCC CHECKDB`:
+
+```sql
+DECLARE @dbcc_stmt sysname;
+SET @dbcc_stmt = 'CHECKDB';
+DBCC HELP (@dbcc_stmt);
+GO
+```
+
+### B. Use DBCC HELP with the '?' option
+
+The following example returns all DBCC statements for which help is available.
+
+```sql
+DBCC HELP ('?');
+GO
+```
+
+## See also
+
+- [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

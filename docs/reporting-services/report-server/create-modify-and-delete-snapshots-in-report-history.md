@@ -1,19 +1,16 @@
 ---
-title: "Create, Modify, and Delete Snapshots in Report History | Microsoft Docs"
+title: "Create, Modify, and Delete Snapshots in Report History"
 description: Learn how to maintain report history in Reporting Services by adding and deleting snapshots, or by modifying properties that affect report history storage.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "snapshots [Reporting Services]"
-  - "report snapshots [Reporting Services]"
-ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "snapshots [Reporting Services]"
+  - "report snapshots [Reporting Services]"
 ---
 # Create, Modify, and Delete Snapshots in Report History
   Report history is a collection of report snapshots. You can maintain report history by adding and deleting snapshots, or by modifying properties that affect report history storage. You can create report history manually or on a schedule.  

@@ -4,9 +4,8 @@ description: syspolicy_policy_category_subscriptions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syspolicy_policy_category_subscriptions_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_policy_group_subscriptions view"
 dev_langs:
   - "TSQL"
-ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 ---
 # syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

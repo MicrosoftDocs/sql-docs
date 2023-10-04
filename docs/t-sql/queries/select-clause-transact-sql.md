@@ -1,20 +1,17 @@
 ---
+title: "SELECT Clause (Transact-SQL)"
 description: "SELECT Clause (Transact-SQL)"
-title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "SELECT Clause"
   - "SELECT_Clause_TSQL"
   - "DISTINCT_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "parentheses [SQL Server]"
   - "identity columns [SQL Server], SELECT clause"
   - "SELECT clause"
@@ -24,16 +21,15 @@ helpviewer_keywords:
   - "clauses [SQL Server], SELECT"
   - "$ROWGUID keyword"
   - "queries [SQL Server], results"
-ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
   Specifies the columns to be returned by the query.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -134,7 +130,7 @@ FROM Cities;
  Aliases are used also to specify names for the results of expressions, for example:  
   
  ```sql
- USE AdventureWorks2012;  
+ USE AdventureWorks2022;  
  GO  
  SELECT AVG(UnitPrice) AS [Average Price]  
  FROM Sales.SalesOrderDetail;

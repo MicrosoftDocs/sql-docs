@@ -1,14 +1,14 @@
 ---
+title: "Roles and Permissions (Reporting Services)"
 description: "Roles and Permissions (Reporting Services)"
-title: "Roles and Permissions (Reporting Services) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "access controls [Reporting Services]"
   - "permissions [Reporting Services], about permissions"
   - "security [Reporting Services], identity and access control"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "permissions [Reporting Services]"
   - "security [Reporting Services], role-based"
   - "identity [Reporting Services]"
-ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Roles and Permissions (Reporting Services)
   Reporting Services provides an authentication subsystem and role-based authorization model. Authentication and authorization models vary depending on whether the report server runs in native mode or SharePoint mode. If the report server is part of a SharePoint deployment, SharePoint permissions determine who has access to the report server.  

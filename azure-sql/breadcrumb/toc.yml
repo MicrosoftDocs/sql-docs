@@ -1,3 +1,16 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
+  items:
+  - name: Azure SQL
+    tocHref: /azure/azure-sql/
+    topicHref: /azure/azure-sql/index
+    items:
+    - name: Azure SQL Managed Instance
+      tocHref: /azure/azure-sql/managed-instance/
+      topicHref: /azure/azure-sql/managed-instance/index
+    - name: Azure SQL Database
+      tocHref: /azure/azure-sql/database/
+      topicHref: /azure/azure-sql/database/index
+    - name: SQL Server on Azure Virtual Machines
+      tocHref: /azure/azure-sql/virtual-machines/ 

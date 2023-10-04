@@ -1,18 +1,15 @@
 ---
+title: "Generate Filters"
 description: "Generate Filters"
-title: "Generate Filters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.newpubwizard.generatefilters.f1"
-ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.newpubwizard.generatefilters.f1"
 ---
 # Generate Filters
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,11 +1,11 @@
 ---
 title: Enable and disable usage and diagnostic data collection
 description: Learn how to enable and disable usage and diagnostic data collection in Database Migration Assistant.
-author: aciortea
-ms.author: "aciortea"
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "04/23/2021"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: how-to
 ---
 

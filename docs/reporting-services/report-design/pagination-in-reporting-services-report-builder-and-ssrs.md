@@ -1,15 +1,13 @@
 ---
-title: "Pagination in paginated reports | Microsoft Docs"
+title: "Pagination in paginated reports"
 description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Report Builder.
-ms.date: 12/16/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-ms.topic: conceptual
-ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/16/2019
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Pagination in paginated reports (Report Builder)
 

@@ -4,12 +4,11 @@ description: sys.dm_pdw_network_credentials (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

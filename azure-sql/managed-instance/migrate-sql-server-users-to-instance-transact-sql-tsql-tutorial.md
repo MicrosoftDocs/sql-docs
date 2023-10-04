@@ -8,9 +8,7 @@ ms.date: 05/10/2021
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: tutorial
-ms.custom:
-  - seo-lt-2019
-  - sqldbrb=1
+ms.custom: sqldbrb=1
 ---
 
 # Tutorial: Migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance using T-SQL DDL syntax
@@ -29,16 +27,19 @@ In this tutorial, you learn how to:
 > - Manually migrate users to MI using ALTER USER syntax
 > - Testing authentication with the new mapped users
 
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Prerequisites
 
 To complete this tutorial, the following prerequisites apply:
 
-- The Windows domain is federated with Azure Active Directory (Azure AD).
+- The Windows domain is federated with Microsoft Entra ID.
 - Access to Active Directory to create users/groups.
 - An existing SQL Server in your on-premises environment.
 - An existing SQL Managed Instance. See [Quickstart: Create a SQL Managed Instance](instance-create-quickstart.md).
-  - A `sysadmin` in the SQL Managed Instance must be used to create Azure AD logins.
-- [Create an Azure AD admin for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
+  - A `sysadmin` in the SQL Managed Instance must be used to create Microsoft Entra logins.
+- [Create a Microsoft Entra admin for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
 - You can connect to your SQL Managed Instance within your network. See the following articles for additional information:
   - [Connect your application to Azure SQL Managed Instance](connect-application-instance.md)
   - [Quickstart: Configure a point-to-site connection to an Azure SQL Managed Instance from on-premises](point-to-site-p2s-configure.md)
@@ -46,7 +47,7 @@ To complete this tutorial, the following prerequisites apply:
 
 ## T-SQL DDL syntax
 
-Below are the T-SQL DDL syntax used to support the migration of Windows users and groups from a SQL Server instance to SQL Managed Instance with Azure AD authentication.
+Below are the T-SQL DDL syntax used to support the migration of Windows users and groups from a SQL Server instance to SQL Managed Instance with Microsoft Entra authentication.
 
 ```sql
 -- For individual Windows users with logins
@@ -65,7 +66,7 @@ _userName_</br>
 Specifies the name of the user identified inside the database.
 
 _= loginName\@domainName.com_</br>
-Remaps a user to the Azure AD login
+Remaps a user to the Microsoft Entra login
 
 _groupName_</br>
 Specifies the name of the group identified inside the database.
@@ -212,7 +213,7 @@ Follow our [Quickstart: Restore a database to a SQL Managed Instance](restore-sa
 
 Execute the ALTER USER command to complete the migration process on SQL Managed Instance.
 
-1. Sign into your SQL Managed Instance using the Azure AD admin account for SQL Managed Instance. Then create your Azure AD login in the SQL Managed Instance using the following syntax. For more information, see [Tutorial: SQL Managed Instance security in Azure SQL Database using Azure AD server principals (logins)](aad-security-configure-tutorial.md).
+1. Sign into your SQL Managed Instance using the Microsoft Entra admin account for SQL Managed Instance. Then create your Microsoft Entra login in the SQL Managed Instance using the following syntax. For more information, see [Tutorial: SQL Managed Instance security in Azure SQL Database using Microsoft Entra server principals (logins)](aad-security-configure-tutorial.md).
 
     ```sql
     use master
@@ -249,7 +250,7 @@ Execute the ALTER USER command to complete the migration process on SQL Managed 
     -- the old group aadsqlmi\migration should be there
     ```
 
-1. Use the ALTER USER syntax to map the on-premises user to the Azure AD login.
+1. Use the ALTER USER syntax to map the on-premises user to the Microsoft Entra login.
 
     ```sql
     /** Execute the ALTER USER command to alter the Windows user [aadsqlmi\testUser1]
@@ -279,7 +280,7 @@ Execute the ALTER USER command to complete the migration process on SQL Managed 
     ORDER BY DP1.name;
     ```
 
-1. Use the ALTER USER syntax to map the on-premises group to the Azure AD login.
+1. Use the ALTER USER syntax to map the on-premises group to the Microsoft Entra login.
 
     ```sql
     /** Execute ALTER USER command to alter the Windows group [aadsqlmi\migration]
@@ -303,9 +304,11 @@ Execute the ALTER USER command to complete the migration process on SQL Managed 
     -- Output 1 means 'YES'
     ```
 
-## Part 5: Testing Azure AD user or group authentication
+<a name='part-5-testing-azure-ad-user-or-group-authentication'></a>
 
-Test authenticating to SQL Managed Instance using the user previously mapped to the Azure AD login using the ALTER USER syntax.
+## Part 5: Testing Microsoft Entra user or group authentication
+
+Test authenticating to SQL Managed Instance using the user previously mapped to the Microsoft Entra login using the ALTER USER syntax.
 
 1. Log into the federated VM using your Azure SQL Managed Instance subscription as `aadsqlmi\testUser1`
 1. Using SQL Server Management Studio (SSMS), sign into your SQL Managed Instance using **Active Directory Integrated** authentication, connecting

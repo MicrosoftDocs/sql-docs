@@ -4,9 +4,8 @@ description: Learn about srv_setutype. srv_setutype sets the user-defined data t
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_setutype"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_setutype
 apitype: "DLLExport"
-ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 ---
 # srv_setutype (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

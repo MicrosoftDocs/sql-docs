@@ -4,8 +4,8 @@ description: After you register the assembly that contains a UDT definition, you
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "user-defined types [CLR integration], columns"
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "indexes [CLR integration]"
 dev_langs:
   - "TSQL"
-ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

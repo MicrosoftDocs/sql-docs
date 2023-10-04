@@ -1,23 +1,18 @@
 ---
+title: "Hierarchical Data (SQL Server)"
 description: "Hierarchical Data (SQL Server)"
-title: "Hierarchical Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/04/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "hierarchies [SQL Server], tables to support"
   - "hierarchyid [Database Engine], concepts"
   - "hierarchical tables [Database Engine]"
   - "SqlHierarchyId"
   - "hierarchyid [Database Engine]"
   - "hierarchical queries [SQL Server], using hierarchyid data type"
-ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hierarchical Data (SQL Server)
@@ -79,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  When you use the Parent/Child approach, each row contains a reference to the parent. The following table defines a typical table used to contain the parent and the child rows in a Parent/Child relationship:  
   
 ```sql
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TABLE ParentChildOrg  
@@ -165,7 +160,7 @@ GO
  The GetLevel() method can be used to create a breadth first ordering. In the following example, both breadth-first and depth-first indexes are created:  
   
 ```sql
-USE AdventureWorks2012 ;   -- wmimof
+USE AdventureWorks2022;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -200,7 +195,7 @@ CREATE TABLE SimpleDemo
 );
 ```  
   
- Now insert data for some continents, countries, states, and cities.  
+ Now insert data for some continents, countries/regions, states, and cities.  
   
 ```sql
 INSERT SimpleDemo  
@@ -244,7 +239,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notice that the hierarchy has a valid structure, even though it isn't internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
+ Notice that the hierarchy has a valid structure, even though it isn't internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country or region. Users must decide if this type of hierarchy is appropriate for their use.  
   
  Add another row and select the results.  
   

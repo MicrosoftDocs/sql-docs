@@ -1,30 +1,26 @@
 ---
+title: "sp_helpdb (Transact-SQL)"
 description: "sp_helpdb (Transact-SQL)"
-title: "sp_helpdb (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpdb"
-  - "sp_helpdb_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpdb"
-ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpdb"
+  - "sp_helpdb_TSQL"
+helpviewer_keywords:
+  - "sp_helpdb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about a specified database or all databases.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -79,7 +75,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
  The following example displays information about the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-EXEC sp_helpdb N'AdventureWorks2012';  
+EXEC sp_helpdb N'AdventureWorks2022';  
 ```  
   
 ### B. Returning information about all databases  

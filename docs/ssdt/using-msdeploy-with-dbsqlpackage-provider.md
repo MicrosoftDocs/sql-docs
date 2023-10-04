@@ -1,15 +1,12 @@
 ---
 title: Using MSDeploy with dbSqlPackage Provider
 description: Learn about the obsolete MSDeploy provider DbSqlPackage. View parameters, examples, and alternative SQL Server and Azure SQL Database publishing tools.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 04/26/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # Using MSDeploy with dbSqlPackage Provider
@@ -22,7 +19,7 @@ ms.date: 04/26/2017
   
 -   **DeployReport**: Creates an XML report of the changes that would be made by a publish action.  
   
--   **Script**: Creates a Transact\-SQL script equivalent to the script executed by the Publish Action.  
+-   **Script**: Creates a Transact-SQL script equivalent to the script executed by the Publish Action.  
   
 For more information regarding DACFx, please see the DACFx managed API documentation at [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) or [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) (DACFx command-line tool).  
   

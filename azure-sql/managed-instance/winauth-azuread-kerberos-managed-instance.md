@@ -1,33 +1,39 @@
 ---
-title: Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
+title: Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory.
-author: srdan-bozovic-msft
-ms.author: srbozovi
-ms.reviewer: mathoma, bonova, urmilano, wiassaf, kendralittle
-ms.date: 03/01/2022
+description: Learn how to configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID.
+author: sravanisaluru
+ms.author: srsaluru
+ms.reviewer: mathoma, bonova, urmilano, wiassaf
+ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
+ms.custom: has-azure-ad-ps-ref
 ms.topic: how-to
 ---
 
-# Configure Azure SQL Managed Instance for Windows Authentication for Azure Active Directory
+# Configure Azure SQL Managed Instance for Windows Authentication for Microsoft Entra ID
 
-This article describes how to configure a managed instance to support [Windows Authentication for Azure AD principals](winauth-azuread-overview.md). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
+This article describes how to configure a managed instance to support [Windows Authentication for principals](winauth-azuread-overview.md) in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). The steps to set up Azure SQL Managed Instance are the same for both the [incoming trust-based authentication flow](winauth-azuread-setup-incoming-trust-based-flow.md) and the [modern interactive authentication flow](winauth-azuread-setup-modern-interactive-flow.md). 
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
-The following prerequisites are required to configure a managed instance for Windows Authentication for Azure AD principals:
+The following prerequisites are required to configure a managed instance for Windows Authentication for Microsoft Entra principals:
 
 |Prerequisite  | Description  |
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
-|Azure Active Directory PowerShell Module  | This module provides management cmdlets for Azure AD administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
-| A managed instance | You may [create a new managed instance](/azure/azure-arc/data/create-sql-managed-instance) or use an existing managed instance. You must [enable Azure AD authentication](../database/authentication-aad-configure.md) on the managed instance. |
+|Azure Active Directory PowerShell Module  | This module provides management cmdlets for Microsoft Entra administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
+| A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Microsoft Entra authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
-## Configure Azure AD Authentication for Azure SQL Managed Instance
+<a name='configure-azure-ad-authentication-for-azure-sql-managed-instance'></a>
 
-To enable Windows Authentication for Azure AD Principals, you need to enable a system assigned service principal on each managed instance. The system assigned service principal allows managed instance users to authenticate using the Kerberos protocol. You also need to grant admin consent to each service principal.
+## Configure Microsoft Entra authentication for Azure SQL Managed Instance
+
+To enable Windows Authentication for Microsoft Entra principals, you need to enable a system-assigned service principal on each managed instance. The system-assigned service principal allows managed instance users to authenticate using the Kerberos protocol. You also need to grant admin consent to each service principal.
+
 ### Enable a system assigned service principal
 
 To enable a system assigned service principal for a managed instance:
@@ -36,16 +42,16 @@ To enable a system assigned service principal for a managed instance:
 1. Navigate to your managed instance
 1. Select **Identity**.
 1. Set **System assigned service principal** to **On**.
-    :::image type="content" source="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png" alt-text="Screenshot of the identity pane for a managed instance in the Azure portal. Under 'System assigned service principal' the radio button next to the 'Status' label has been set to 'On'."  lightbox="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png":::
+    :::image type="content" source="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png" alt-text="Screenshot of the identity pane for a managed instance in the Azure portal, with 'System assigned service principal' set to 'On'."  lightbox="media/winauth-azuread/azure-portal-managed-instance-identity-enable-system-assigned-service-principal.png":::
 1. Select **Save**.
 
 ### Grant admin consent to a system assigned service principal
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Open Azure Active Directory.
+1. Open Microsoft Entra ID.
 1. Select **App registrations**.
 1. Select **All applications**.
-    :::image type="content" source="media/winauth-azuread/azure-portal-azuread-app-registrations.png" alt-text="Screenshot of the Azure portal. Azure Active Directory is open. App registrations is selected in the left pane. App applications is highlighted in the right pane."  lightbox="media/winauth-azuread/azure-portal-azuread-app-registrations.png":::
+   :::image type="content" source="media/winauth-azuread/azure-portal-azuread-app-registrations.png" alt-text="Screenshot of the Microsoft Entra ID resource in the Azure portal with App registrations selected in the left pane."  lightbox="media/winauth-azuread/azure-portal-azuread-app-registrations.png":::
 1. Select the application with the display name matching your managed instance. The name will be in the format: `<managedinstancename> principal`.
 1. Select **API permissions**.
 1. Select **Grant admin consent**.
@@ -63,8 +69,8 @@ To test the connection with [SQL Server Management Studio](/sql/ssms/download-sq
 
 ## Next steps
 
-Learn more about implementing Windows Authentication for Azure AD principals on Azure SQL Managed Instance:
+Learn more about implementing Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance:
 
-- [Troubleshoot Windows Authentication for Azure AD principals on Azure SQL Managed Instance](winauth-azuread-troubleshoot.md)
-- [What is Windows Authentication for Azure Active Directory principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
-- [How to set up Windows Authentication for Azure SQL Managed Instance using Azure Active Directory and Kerberos](winauth-azuread-setup.md)
+- [Troubleshoot Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance](winauth-azuread-troubleshoot.md)
+- [What is Windows Authentication for Microsoft Entra principals on Azure SQL Managed Instance?](winauth-azuread-overview.md)
+- [How to set up Windows Authentication for Azure SQL Managed Instance using Microsoft Entra ID and Kerberos](winauth-azuread-setup.md)

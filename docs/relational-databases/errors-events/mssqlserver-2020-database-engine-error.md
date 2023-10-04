@@ -1,17 +1,14 @@
 ---
+title: "MSSQLSERVER_2020"
 description: "MSSQLSERVER_2020"
-title: "MSSQLSERVER_2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "2020 (Database Engine error)"
-ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "2020 (Database Engine error)"
 ---
 # MSSQLSERVER_2020
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +31,7 @@ The **sys.dm_sql_referenced_entities** system function will report any column-le
 Correct any errors identified in the message before error 2020. For example, in the following code example the view `Production.ApprovedDocuments` is defined on the columns `Title`, `ChangeNumber`, and `Status` in the `Production.Document` table. The **sys.dm_sql_referenced_entities** system function is queried for the objects and columns on which the `ApprovedDocuments` view depends. Because the view is not created using the WITH SCHEMA_BINDING clause, the columns referenced in the view can be modified in the referenced table. The example alters the column `ChangeNumber` in the `Production.Document` table by renaming it to `TrackingNumber`. The catalog view is queried again for the `ApprovedDocuments` view; however it cannot bind to all the columns defined in the view. Errors 207 and 2020 are returned identifying the problem. To resolve the problem, the view must be altered to reflect the new name of the column.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE VIEW Production.ApprovedDocuments  
 AS  
@@ -74,7 +71,7 @@ objects referenced by the entity exist.
 The following example corrects the column name in the view.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER VIEW Production.ApprovedDocuments  
 AS  

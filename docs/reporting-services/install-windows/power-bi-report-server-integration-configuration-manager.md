@@ -1,12 +1,12 @@
 ---
+title: "Power BI Report Server Integration (Configuration Manager)"
 description: "Power BI Report Server Integration (Configuration Manager)"
-title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
 ms.date: 09/17/2017
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Power BI Report Server Integration (Configuration Manager)
@@ -143,7 +143,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 ![Diagram showing what happens when a subscription fires to refresh a dashboard tile.](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   > [!VIDEO https://www.youtube-nocookie.com/embed/QhPQObqmMPc]
 
 ## Considerations and limitations
 

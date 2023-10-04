@@ -6,10 +6,11 @@ author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/12/2022
-ms.prod: sql
 ms.topic: conceptual
 ---
 # Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud 
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 You can configure your instance connected to Azure with Microsoft Defender for Cloud by following these steps.
 
@@ -49,7 +50,7 @@ For more information, see [Extension management with Azure Arc](/azure/azure-arc
 
 ## Enable Microsoft Defender for Cloud
 
-1. Go to **Azure Arc > SQL Servers** and open  the Azure Arc-enabled SQL server resource for the instance that you want to protect. 
+1. Go to **Azure Arc > SQL Servers** and open the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] resource for the instance that you want to protect. 
 
 1. Click on the **Microsoft Defender for Cloud** tile. If Enablement Status shows **Disabled at the subscription-level**, follow the steps documented in [Enable Microsoft Defender for SQL servers on machines](/azure/defender-for-cloud/defender-for-sql-usage#step-3-enable-the-optional-plan-in-defender-for-clouds-environment-settings-page).
 
@@ -77,5 +78,5 @@ Explore security anomalies and threats in Azure Security Center.
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Screenshot showing alert mitigation.":::
 
 ## Next steps
-
+- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
 - You can further investigate the security alerts and attacks using [Azure Sentinel](/azure/sentinel/overview). For details, see [on-board Azure Sentinel](/azure/sentinel/connect-data-sources).

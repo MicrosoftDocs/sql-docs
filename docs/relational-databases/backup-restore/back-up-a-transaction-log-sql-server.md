@@ -1,20 +1,16 @@
 ---
-title: "Back Up a Transaction Log | Microsoft Docs"
+title: "Back Up a Transaction Log"
 description: This article describes how to back up a transaction log in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "02/02/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "transaction log backups [SQL Server], SQL Server Management Studio"
   - "backups [SQL Server], creating"
   - "backing up transaction logs [SQL Server], SQL Server Management Studio"
-ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Back Up a Transaction Log
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -140,7 +136,7 @@ Execute the BACKUP LOG statement to back up the transaction log, specifying the 
  This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
   
 ```sql  
-BACKUP LOG AdventureWorks2012  
+BACKUP LOG AdventureWorks2022  
    TO MyAdvWorks_FullRM_log1;  
 GO  
 ```  

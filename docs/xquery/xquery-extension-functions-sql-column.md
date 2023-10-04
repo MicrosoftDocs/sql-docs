@@ -1,24 +1,20 @@
 ---
-title: "sql:column() Function (XQuery) | Microsoft Docs"
-description: Learn how the XQuery function sql:column() can be used to bind non-XML relational data inside XML and bring relational and XML data together.
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "sql:column function"
-  - "sql:column() function"
-ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
+title: "sql:column() Function (XQuery)"
+description: "Learn how the XQuery function sql:column() can be used to bind non-XML relational data inside XML and bring relational and XML data together."
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "sql:column function"
+  - "sql:column() function"
+dev_langs:
+  - "XML"
 ---
 # XQuery Extension Functions - sql:column()
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   As described in the topic, [Binding Relational Data Inside XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), you can use the **sql:column(()** function when you use [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md) to expose a relational value inside XQuery.  
   

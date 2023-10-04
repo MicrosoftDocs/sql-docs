@@ -1,18 +1,16 @@
 ---
 title: "FOR XML Query Compared to Nested FOR XML Query"
 description: Learn about the benefits of nested FOR XML queries by viewing an example that compares a single-level FOR XML query to a nested FOR XML query.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "FOR XML query"
   - "queries [XML in SQL Server], comparing query types"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # FOR XML Query Compared to Nested FOR XML Query
 
@@ -25,7 +23,7 @@ This article compares a single-level FOR XML query to a nested FOR XML query. On
 The following `SELECT` query retrieves product category and subcategory information in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. There is no nested FOR XML in the query.
 
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   ProductCategory.ProductCategoryID,   
          ProductCategory.Name as CategoryName,  

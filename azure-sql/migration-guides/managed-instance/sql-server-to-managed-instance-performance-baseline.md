@@ -22,7 +22,7 @@ Select a set of queries that are important to, and representative of your busine
 
 The following resources can help define a performance baseline: 
 
-   - [Monitor CPU usage ](https://techcommunity.microsoft.com/t5/azure-sql-database/monitor-cpu-usage-on-sql-server-and-azure-sql/ba-p/680777#M131)
+   - [Monitor CPU usage](https://techcommunity.microsoft.com/t5/azure-sql-database/monitor-cpu-usage-on-sql-server-and-azure-sql/ba-p/680777#M131)
    - [Monitor memory usage](/sql/relational-databases/performance-monitor/monitor-memory-usage) and determine the amount of memory used by different components such as buffer pool, plan cache, column-store pool, [In-Memory OLTP](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage), etc. In addition, you should find average and peak values of the Page Life Expectancy memory performance counter. 
    - Monitor disk IO usage on the source SQL Server instance using the [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) view or [performance counters](/sql/relational-databases/performance-monitor/monitor-disk-usage). 
    - Monitor workload and query performance by examining Dynamic Management Views (or Query Store if you are migrating from SQL Server 2016 and later). Identify average duration and CPU usage of the most important queries in your workload. 
@@ -34,7 +34,7 @@ Any performance issues on the source SQL Server should be addressed prior to mig
 
 After you have defined a baseline, compare similar workload performance on the target SQL Managed Instance. For accuracy, it is important that the SQL Managed Instance environment is comparable to the SQL Server environment as much as possible. 
 
-There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don’t match your original performance. 
+There are SQL Managed Instance infrastructure differences that make matching performance exactly unlikely. Some queries may run faster than expected, while others may be slower. The goal of this comparison is to verify that workload performance in the managed instance matches the performance on SQL Server (on average) and to identify any critical queries with performance that don't match your original performance. 
 
 Performance comparison is likely to result in the following outcomes: 
 
@@ -61,7 +61,7 @@ SQL Managed Instance provides advanced tools for monitoring and troubleshooting,
 
 When comparing performance, consider the following: 
 
-- Settings match between source and target. Validate that various instance, database, and tempdb settings are equivalent between the two environments. Differences in configuration, compatibility levels, encryption settings, trace flags etc., can all skew performance. 
+- Settings match between source and target. Validate that various instance, database, and `tempdb` settings are equivalent between the two environments. Differences in configuration, compatibility levels, encryption settings, trace flags, etc., can all skew performance. 
 
 - Storage is configured according to [best practices](https://techcommunity.microsoft.com/t5/datacat/storage-performance-best-practices-and-considerations-for-azure/ba-p/305525). For example, for General Purpose, you may need to pre-allocate the size of the files to improve performance. 
 

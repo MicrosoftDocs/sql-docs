@@ -1,21 +1,19 @@
 ---
-title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
+title: "Configure Always Encrypted using PowerShell"
 description: Learn how to import and use the SqlServer PowerShell module, which provides cmdlets for configuring Always Encrypted in both Azure SQL Database and SQL Server.
-ms.custom: ""
-ms.date: 04/12/2022
-ms.prod: sql
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.technology: security
+ms.date: 04/05/2023
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using PowerShell
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in both [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in both [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 ## Security Considerations when using PowerShell to Configure Always Encrypted
 
@@ -27,10 +25,10 @@ You can use PowerShell to manage Always Encrypted keys both with and without rol
 
 ## Prerequisites
 
-Install the [SqlServer module](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
+Install the [SqlServer PowerShell module version 22.0.50 or later](/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../powershell/download-sql-server-ps-module.md) instructions for more details.
 
 
-## <a name="importsqlservermodule"></a> Importing the SqlServer Module 
+## <a name="importsqlservermodule"></a> Importing the SqlServer module 
 
 To load the SqlServer module:
 
@@ -39,30 +37,25 @@ To load the SqlServer module:
 
 This example loads the SqlServer module.
 
-```
+```PowerShell
 # Import the SQL Server Module.  
-Import-Module "SqlServer" 
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 ```
 
-> [!NOTE]
-> This example does not work when using Azure AD multi-factor authentication (MFA). In order to use MFA, the authentication needs to be `Active Directory Interactive` authentication, and the library [System.Data.SqlClient](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring) used in PowerShell does not support the `Active Directory Interactive` authentication method.
-
-## <a name="connectingtodatabase"></a> Connecting to a Database
+## <a name="connectingtodatabase"></a> Connecting to a database
 
 Some of the Always Encrypted cmdlets work with data or metadata in the database and require that you connect to the database first. There are two recommended methods of connecting to a database when configuring Always Encrypted using the SqlServer module: 
 1. Connect using the **Get-SqlDatabase** cmdlet.
 2. Connect using SQL Server PowerShell Provider.
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### Using Get-SqlDatabase
 The **Get-SqlDatabase** cmdlet allows you to connect to a database in SQL Server or in Azure SQL Database. It returns a database object, which you can then pass using the **InputObject** parameter of a cmdlet that connects to the database. 
 
 ### Using SQL Server PowerShell
 
-```
+```PowerShell
 # Import the SqlServer module
-Import-Module "SqlServer"  
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 
 # Connect to your database
 # Set the valid server name, database name and authentication keywords in the connection string
@@ -78,7 +71,7 @@ Get-SqlColumnMasterKey -InputObject $database
 Alternatively, you can use piping:
 
 
-```
+```PowerShell
 $database | Get-SqlColumnMasterKey
 ```
 
@@ -88,9 +81,9 @@ The [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-p
 > [!NOTE]
 > This method of connecting to a database works only for SQL Server (it is not supported in Azure SQL Database).
 
-```
+```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 # Navigate to the database in the remote instance.
 cd SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 # List column master keys in the above database.
@@ -101,9 +94,9 @@ Get-SqlColumnMasterKey
 Alternatively, you can specify a database path using the generic **Path** parameter, instead of navigating to the database.
 
 
-```
+```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer" 
+Import-Module "SqlServer" -MinimumVersion 22.0.50
 # List column master keys for the specified database.
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
@@ -115,7 +108,7 @@ Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\you
 - [Encrypt, Re-Encrypt, or Decrypt Columns with Always Encrypted using PowerShell](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Always Encrypted Cmdlet Reference
+##  Always Encrypted Cmdlet Reference
 
 The following PowerShell cmdlets are available for Always Encrypted:
 

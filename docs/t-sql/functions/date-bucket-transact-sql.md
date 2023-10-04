@@ -5,10 +5,9 @@ author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
 ms.date: 05/09/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "DATE_BUCKET"
   - "DATE_BUCKET_TSQL"
@@ -20,13 +19,13 @@ dev_langs:
 ---
 # DATE_BUCKET (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asde.md)]
+[!INCLUDE [sqlserver2022-asde](../../includes/applies-to-version/sqlserver2022-asdb-asmi-asde.md)]
 
 This function returns the date-time value corresponding to the start of each date-time bucket from the timestamp defined by the `origin` parameter, or the default origin value of `1900-01-01 00:00:00.000` if the origin parameter isn't specified.
 
 See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all Transact-SQL date and time data types and functions.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -201,7 +200,7 @@ Seconds 2020-04-30 21:21:21.0000000
 
 These examples use different types of expressions as arguments for the *number* and *date* parameters.
 
-These examples are built using the `AdventureWorksDW2017` database.
+These examples are built using the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 #### Specify user-defined variables as number and date
 

@@ -1,18 +1,14 @@
 ---
 title: "Subscribe or unsubscribe a database to a policy category"
 description: Describes how to subscribe or unsubscribe a database to a policy category for Policy-Based Management using SQL Server Management Studio and Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
-ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.groupsubscription.f1"
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,8 +81,8 @@ ms.author: vanto
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
-    -- Adds a subscription to the 'Finance' policy category for the AdventureWorks2012 database.  
+    USE AdventureWorks2022;  
+    -- Adds a subscription to the 'Finance' policy category for the AdventureWorks2022 database.  
     EXEC sys.sp_syspolicy_subscribe_to_policy_category @policy_category = N'Finance';  
     GO  
     ```  
@@ -102,8 +98,8 @@ ms.author: vanto
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
-    -- Deletes a subscription to the 'Finance' policy category for the AdventureWorks2012 database.  
+    USE AdventureWorks2022;  
+    -- Deletes a subscription to the 'Finance' policy category for the AdventureWorks2022 database.  
     EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Finance';  
     GO  
     ```  

@@ -1,18 +1,15 @@
 ---
-title: "Configure Data Source Properties for a Paginated Report - SSRS | Microsoft Docs"
+title: "Configure Data Source Properties for a Paginated Report - SSRS"
 description: Learn to configure data source properties in Reporting Services for a paginated report. Also set the properties to vary the data source connection information.
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data sources [Reporting Services], embedded"
-ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/24/2018
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "data sources [Reporting Services], embedded"
 ---
 # Configure Data Source Properties for a Paginated Report
   When you run a paginated report, the report server retrieves property information to determine how to connect to a data source. The data source type, connection string, and credential information are specified in the Data Source property pages of the published report. You can set the properties to vary the data source connection information from the original values that were specified when the report was created.  
@@ -36,7 +33,7 @@ ms.author: maggies
      The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2022  
     ```  
   
 8.  For **Connect using**, specify how credentials are obtained when the report runs:  

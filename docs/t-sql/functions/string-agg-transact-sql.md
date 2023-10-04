@@ -3,13 +3,10 @@ title: "STRING_AGG (Transact-SQL)"
 description: "STRING_AGG (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "01/26/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "STRING_AGG"
   - "STRING_AGG_TSQL"
@@ -17,17 +14,15 @@ helpviewer_keywords:
   - "STRING_AGG function"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2017 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # STRING_AGG (Transact-SQL)
 
-<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
-
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator isn't added at the end of string. 
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -91,7 +86,7 @@ Most of the examples in this article reference the [AdventureWorks sample databa
 
 The following example produces a list of names in a single result cell, separated with carriage returns.
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG (CONVERT(NVARCHAR(max),FirstName), CHAR(13)) AS csv 
 FROM Person.Person;
@@ -113,7 +108,7 @@ GO
 
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person;
@@ -132,7 +127,7 @@ GO
 ### C. Generate comma-separated values
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 SELECT STRING_AGG(CONVERT(NVARCHAR(max), CONCAT(FirstName, ' ', LastName, '(', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person;
@@ -179,7 +174,7 @@ GO
 The following query finds the email addresses of employees and groups them by city:
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 
 SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') AS emails 
@@ -214,7 +209,7 @@ Emails returned in the emails column can be directly used to send emails to grou
 Similar to the previous example, the following query finds the email addresses of employees, groups them by city, and sorts the emails alphabetically:
 
 ```sql
-USE AdventureWorks2019
+USE AdventureWorks2022;
 GO
 
 SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS Emails 

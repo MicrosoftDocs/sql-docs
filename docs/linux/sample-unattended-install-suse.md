@@ -2,13 +2,15 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: Use a sample bash script to install SQL Server on SUSE Linux Enterprise Server (SLES) without interactive input.
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: randolphwest
 ms.date: 05/20/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
@@ -34,6 +36,9 @@ This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on SLES
 
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
+> [!IMPORTANT]  
+> The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
+
 ```bash
 #!/bin/bash -e
 
@@ -42,13 +47,13 @@ Save the sample script to a file and then to customize it. You'll need to replac
 # Password for the SA user (required)
 MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
-# Product ID of the version of SQL server you're installing
+# Product ID of the version of SQL Server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
 # Defaults to developer
 MSSQL_PID='evaluation'
 
-# Install SQL Server Agent (recommended)
-SQL_INSTALL_AGENT='y'
+# Enable SQL Server Agent (recommended)
+SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
@@ -88,11 +93,11 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional SQL Server Agent installation:
-if [ ! -z $SQL_INSTALL_AGENT ]
+# Optional Enable SQL Server Agent:
+if [ ! -z $SQL_ENABLE_AGENT ]
 then
-  echo Installing SQL Server Agent...
-  sudo zypper install -y mssql-server-agent
+  echo Enable SQL Server Agent...
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -188,11 +193,11 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Configure SQL Server with the `MSSQL_SA_PASSWORD` and automatically accept the End-User License Agreement.
 
-1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixodbc-dev` package.
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the `unixODBC-devel` package.
 
 1. Add the SQL Server command-line tools to the path for ease of use.
 
-1. Install the SQL Server Agent if the scripting variable `SQL_INSTALL_AGENT` is set, on by default.
+1. Enable the SQL Server Agent if the scripting variable `SQL_ENABLE_AGENT` is set, on by default.
 
 1. Optionally install SQL Server Full-Text search, if the variable `SQL_INSTALL_FULLTEXT` is set.
 
@@ -206,7 +211,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 
-## Next steps
+## Unattended install
 
 Simplify multiple unattended installs and create a stand-alone bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own bash script.
 
@@ -214,10 +219,9 @@ Simplify multiple unattended installs and create a stand-alone bash script that 
 #!/bin/bash
 export MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 export MSSQL_PID='evaluation'
-export SQL_INSTALL_AGENT='y'
+export SQL_ENABLE_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
-export SQL_INSTALL_AGENT='y'
 ```
 
 Then run the bash script as follows:
@@ -226,4 +230,6 @@ Then run the bash script as follows:
 . ./my_script_name.sh
 ```
 
-For more information about SQL Server on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).
+## Related content
+
+- [SQL Server on Linux overview](sql-server-linux-overview.md)

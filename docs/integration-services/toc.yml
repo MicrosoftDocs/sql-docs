@@ -1338,6 +1338,8 @@
     href: ../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md
   - name: Querying the Active Directory with the Script Task
     href: ../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
+  - name: Write to event log
+    href: ../integration-services/extending-packages-scripting-task-examples/write-event-log-script-task.md
   - name: Sending an HTML Mail Message with the Script Task
     href: ../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
   - name: Sending to a Remote Private Message Queue with the Script Task

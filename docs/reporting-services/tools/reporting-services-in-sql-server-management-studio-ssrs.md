@@ -1,18 +1,15 @@
 ---
-title: "Reporting Services in SQL Server Management Studio | Microsoft Docs"
-description: View information about how to perform reporting tasks and how to create and manage shared schedules in the web portal using SQL Server Management Studio. 
-ms.date: 06/10/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "report servers [Reporting Services], how-to topics"
-ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
+title: "Reporting Services in SQL Server Management Studio"
+description: View information about how to perform reporting tasks and how to create and manage shared schedules in the web portal using SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/10/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "report servers [Reporting Services], how-to topics"
 ---
 # Reporting Services in SQL Server Management Studio (SSRS)
   Report server administrators can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to:  

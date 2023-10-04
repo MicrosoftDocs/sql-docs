@@ -1,26 +1,23 @@
 ---
-title: "Distributor and Publisher Information Script | Microsoft Docs"
+title: "Distributor and Publisher Information Script"
 description: Use this script to answer commonly asked questions about objects at the Distributor and Publisher in SQL Server.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Publishers [SQL Server replication], information scripts"
-  - "Distributors [SQL Server replication], information scripts"
-ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Publishers [SQL Server replication], information scripts"
+  - "Distributors [SQL Server replication], information scripts"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Distributor and Publisher Information Script
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This script uses system tables and replication stored procedures to answer questions commonly asked about objects at the Distributor and Publisher. The script can be used "as-is" and can also provide the basis for customized scripts. The script might require two modifications to run in your environment:  
   
--   Change the line `use AdventureWorks2012` to use the name of your publication database.  
+-   Change the line `use AdventureWorks2022` to use the name of your publication database.  
   
 -   Remove the comments (`--`) from the line `exec sp_helparticle @publication='<PublicationName>'` and replace \<PublicationName> with the name of a publication.  
   
@@ -61,7 +58,7 @@ EXEC sp_helpsubscriberinfo;
   
 --********** Execute at the Publisher in the publication database **********--  
   
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 go  
   
 --What are the snapshot and transactional publications in this database?   

@@ -1,23 +1,19 @@
 ---
+title: "sp_getbindtoken (Transact-SQL)"
 description: "sp_getbindtoken (Transact-SQL)"
-title: "sp_getbindtoken (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_getbindtoken"
-  - "sp_getbindtoken_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_getbindtoken"
-ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getbindtoken"
+  - "sp_getbindtoken_TSQL"
+helpviewer_keywords:
+  - "sp_getbindtoken"
+dev_langs:
+  - "TSQL"
 ---
 # sp_getbindtoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Multiple Active Results Sets (MARS) or distributed transactions instead. For more information, see [Using Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,7 +59,7 @@ Reissue the statement after a transaction has been started.
  When sp_getbindtoken is used to enlist a distributed transaction connection inside an open transaction, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns the same token. For example:  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @bind_token varchar(255);  
   

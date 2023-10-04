@@ -1,18 +1,16 @@
 ---
+title: "Manage and Monitor Semantic Search"
 description: "Manage and Monitor Semantic Search"
-title: "Manage and Monitor Semantic Search | Microsoft Docs"
-ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "semantic search [SQL Server], managing"
-  - "semantic search [SQL Server], monitoring"
-ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "03/20/2017"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "semantic search [SQL Server], managing"
+  - "semantic search [SQL Server], monitoring"
 ---
 # Manage and Monitor Semantic Search
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,10 +80,10 @@ GO
   
  **Example: Start a full population of full-text and semantic indexes**  
   
- The following example starts full population of both full-text and semantic indexes by altering an existing full-text index on the **Production.Document** table in the AdventureWorks2012 sample database.  
+ The following example starts full population of both full-text and semantic indexes by altering an existing full-text index on the **Production.Document** table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```vb  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 ALTER FULLTEXT INDEX ON Production.Document  

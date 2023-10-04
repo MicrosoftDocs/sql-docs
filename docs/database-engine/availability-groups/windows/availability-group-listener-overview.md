@@ -4,12 +4,10 @@ description: "An overview of the Always On availability group listener and how i
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/23/2022"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom:
-  - seodec18
-  - intro-overview
+ms.custom: intro-overview
 helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "read-only routing"

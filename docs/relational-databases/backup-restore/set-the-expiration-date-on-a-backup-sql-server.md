@@ -1,20 +1,16 @@
 ---
-title: "Set the Expiration Date on a Backup (SQL Server) | Microsoft Docs"
+title: "Set the Expiration Date on a Backup (SQL Server)"
 description: This article shows you how to set the expiration date on a backup in SQL Server by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "backing up databases [SQL Server], expiration dates"
   - "expiration [SQL Server]"
   - "database backups [SQL Server], expiration dates"
-ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Set the Expiration Date on a Backup (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,10 +67,10 @@ ms.author: mathoma
 3.  In the [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement, specify either the EXPIREDATE or RETAINDAYS option to determine when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can overwrite the backup. If neither option is specified, the expiration date is determined by the [media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) server configuration setting. This example uses the `EXPIREDATE` option to specify an expiration date of June 30, 2015 (`6/30/2015`).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-BACKUP DATABASE AdventureWorks2012  
- TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'  
+BACKUP DATABASE AdventureWorks2022  
+ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022.Bak'  
    WITH EXPIREDATE = '6/30/2015' ;  
 GO  
 ```  

@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "fulltext_index_fragments"
@@ -21,7 +20,6 @@ helpviewer_keywords:
   - "sys.fulltext_index_fragments catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_fragments (Transact-SQL)
@@ -48,10 +46,10 @@ SELECT table_id, status FROM sys.fulltext_index_fragments
    WHERE status=4 OR status=6;  
 ```  
   
- If many queryable fragments exist, Microsoft recommends that you reorganize the full-text catalog that contains the full-text index to merge the fragments together. To reorganize a of full-text catalog use [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. For example, to reorganize a full-text catalog named `ftCatalog` in the `AdventureWorks2012` database, enter:  
+ If many queryable fragments exist, Microsoft recommends that you reorganize the full-text catalog that contains the full-text index to merge the fragments together. To reorganize a of full-text catalog use [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REORGANIZE. For example, to reorganize a full-text catalog named `ftCatalog` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, enter:  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER FULLTEXT CATALOG ftCatalog REORGANIZE;  
 GO  

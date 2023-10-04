@@ -4,9 +4,8 @@ description: MSpeer_request (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_request"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_request system table"
 dev_langs:
   - "TSQL"
-ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 ---
 # MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

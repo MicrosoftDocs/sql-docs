@@ -1,15 +1,12 @@
 ---
 title: Add Test Conditions to SQL Server Unit Tests
 description: Find out how to add test conditions to a SQL Server unit. See how to use the SQL Server Unit Test Designer for this task.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Add Test Conditions to SQL Server Unit Tests
@@ -27,9 +24,9 @@ You can add test conditions to a SQL Server unit test by using the **SQL Server 
     > [!NOTE]  
     > Common scripts do not belong to a particular unit test. Rather, they precede or follow unit tests in the test class. For more information, see [Scripts in SQL Server Unit Tests](../ssdt/scripts-in-sql-server-unit-tests.md).  
   
-3.  In the navigation bar, click the Transact\-SQL script to which you want to add test conditions. You can add test conditions to the pre-test, test, or post-test script.  
+3.  In the navigation bar, click the Transact-SQL script to which you want to add test conditions. You can add test conditions to the pre-test, test, or post-test script.  
   
-    The Transact\-SQL script for that test appears in the Transact\-SQL editor and its test conditions appear in the **Test Conditions** pane.  
+    The Transact-SQL script for that test appears in the Transact-SQL editor and its test conditions appear in the **Test Conditions** pane.  
   
 4.  In the **Test Conditions** selection list, click a test condition and then click **Add Test Condition** (+).  
   
@@ -40,7 +37,7 @@ You can add test conditions to a SQL Server unit test by using the **SQL Server 
   
 5.  Select the test condition you just added and view the **Properties** window.  
   
-    Configure the test condition in the Properties window. For example, you can change the **Execution Time** property of an Execution Time test condition. If you set this property, you cause your test to fail if the Transact\-SQL script does not execute within the time that you specified.  
+    Configure the test condition in the Properties window. For example, you can change the **Execution Time** property of an Execution Time test condition. If you set this property, you cause your test to fail if the Transact-SQL script does not execute within the time that you specified.  
   
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

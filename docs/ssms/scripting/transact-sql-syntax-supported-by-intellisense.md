@@ -1,20 +1,17 @@
 ---
 title: Transact-SQL Syntax Supported by IntelliSense
 description: Learn which Transact-SQL statements and syntax elements are supported by SQL Server Management Studio IntelliSense in SQL Server 2019 (15.x).
-ms.prod: sql
-ms.technology: ssms
-ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], Transact-SQL syntax"
-ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Transact-SQL IntelliSense"
+  - "IntelliSense [SQL Server], Transact-SQL syntax"
+dev_langs:
+  - "TSQL"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -127,7 +124,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Within a [!INCLUDE[tsql](../../includes/tsql-md.md)] script or batch, IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports only the statements and syntax that are listed in this topic. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code examples show what statements and syntax elements IntelliSense supports. For example, in the following batch, IntelliSense is available for the `SELECT` statement when it is coded by itself, but not when the `SELECT` is contained in a `CREATE FUNCTION` statement.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name  
 FROM Production.Product  
@@ -139,7 +136,7 @@ AS
 RETURN   
 (  
     SELECT Name  
-    FROM AdventureWorks2012.Production.Product  
+    FROM AdventureWorks2022.Production.Product  
     WHERE Name LIKE N'Road-250%'  
       AND Color = N'Red'  
 );GO  

@@ -1,30 +1,26 @@
 ---
+title: "sp_indexes (Transact-SQL)"
 description: "sp_indexes (Transact-SQL)"
-title: "sp_indexes (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_indexes_TSQL"
-  - "sp_indexes"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_indexes"
-ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_indexes_TSQL"
+  - "sp_indexes"
+helpviewer_keywords:
+  - "sp_indexes"
+dev_langs:
+  - "TSQL"
 ---
 # sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns index information for the specified remote table.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -85,13 +81,13 @@ sp_indexes [ @table_server = ] 'table_server'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example returns all index information from the `Employees` table of the `AdventureWorks2012` database on the `Seattle1` linked server.  
+ The following example returns all index information from the `Employees` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database on the `Seattle1` linked server.  
   
 ```  
 EXEC sp_indexes @table_server = 'Seattle1',   
    @table_name = 'Employee',   
    @table_schema = 'HumanResources',  
-   @table_catalog = 'AdventureWorks2012';  
+   @table_catalog = 'AdventureWorks2022';  
 ```  
   
 ## See Also  

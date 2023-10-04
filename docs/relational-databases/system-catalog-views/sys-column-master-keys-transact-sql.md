@@ -4,9 +4,8 @@ description: sys.column_master_keys (Transact-SQL)
 author: jaszymas
 ms.author: jaszymas
 ms.date: "10/15/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "column_master_key_definitions_TSQL"
@@ -22,7 +21,6 @@ helpviewer_keywords:
   - "sys.column_master_keys catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_master_keys (Transact-SQL)

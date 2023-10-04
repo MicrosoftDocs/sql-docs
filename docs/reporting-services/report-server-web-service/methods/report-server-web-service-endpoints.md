@@ -1,22 +1,19 @@
 ---
-title: "Report Server Web Service Endpoints | Microsoft Docs"
+title: "Report Server Web Service Endpoints"
 description: The Report Server Web service provides three endpoints for managing a report server as well as executing and navigating reports.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "management endpoints [Reporting Services]"
   - "Web service [Reporting Services], endpoints"
   - "endpoints [Reporting Services]"
   - "execution endpoints [Reporting Services]"
   - "Report Server Web service, endpoints"
-ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Server Web Service Endpoints
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  
@@ -28,7 +25,7 @@ ms.author: maggies
 >  When a report server is configured for SharePoint integrated mode, the <xref:ReportService2005> APIs will return an **rsOperationNotSupportedSharePointMode** error. If the report server is configured for native mode, the <xref:ReportService2006> APIs will return an **rsOperationNotSupportedNativeMode** error. Similarly, when mode-specific APIs in <xref:ReportService2010> are used on unintended modes, the APIs will return the respective errors.  
   
 > [!NOTE]  
->  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
+>  The <xref:ReportService2005> and <xref:ReportService2006> endpoints are deprecated in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)]. The <xref:ReportService2010> endpoint includes the functionalities of both endpoints and contains additional management features.  
   
  If the report server is configured for native mode or SharePoint integrate mode, the WSDL for the management endpoint can be accessed using one of the following URL:  
   
@@ -60,7 +57,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
   
 |Proxy Endpoint|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Provides the APIs for managing a report server that is configured for SharePoint integrate mode.<br /><br /> Note: This endpoint is deprecated in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Provides the APIs for managing a report server that is configured for SharePoint integrate mode.<br /><br /> Note: This endpoint is deprecated in [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)].|  
 |<xref:ReportService2010>|Provides the APIs for managing a report server that is configured for either native or SharePoint integrated mode.|  
 |<xref:ReportExecution2005>|Provides the APIs for running and navigating reports.|  
 |<xref:ReportServiceAuthentication>|Provides the APIs for authenticating users against a report server when the SharePoint Web application is configured for Forms Authentication.|  

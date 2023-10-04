@@ -1,21 +1,17 @@
 ---
+title: "Errors and Events Reference (Integration Services)"
 description: "Errors and Events Reference (Integration Services)"
-title: "Errors and Events Reference (Integration Services) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Integration Services packages, events"
   - "events [Integration Services]"
   - "errors [Integration Services]"
   - "Integration Services, errors"
-ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: chugugrace
-ms.author: chugu
 ---
 # Errors and Events Reference (Integration Services)
 

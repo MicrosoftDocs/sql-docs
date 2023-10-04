@@ -4,9 +4,8 @@ description: sys.column_type_usages (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "column_type_usages"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.column_type_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 ---
 # sys.column_type_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

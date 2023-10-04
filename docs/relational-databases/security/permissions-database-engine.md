@@ -4,9 +4,9 @@ description: Consult this complete list of SQL Server permissions to find out wh
 author: AndreasWolter
 ms.author: anwolter
 ms.reviewer: randolphwest
-ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: security
+ms.date: 02/27/2023
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
@@ -22,10 +22,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] has the same system for the  database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] securable has associated permissions that can be granted to a principal. Permissions in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are managed at the server level assigned to logins and server roles, and at the database level assigned to database users and database roles. The model for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] has the same system for the  database permissions, but the server level permissions aren't available. This article contains the complete list of permissions. For a typical implementation of the permissions, see [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-The total number of permissions for [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] is 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] exposes 254 permissions. Most permissions apply to all platforms, but some don't. For example [server level permissions](authentication-access/server-level-roles.md) can't be granted on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and a few permissions only make sense on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-New permissions are being introduced gradually with new releases. [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) article specifies which permissions are new in recent versions.
+The total number of permissions for [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] is 292. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] exposes 292 permissions. Most permissions apply to all platforms, but some don't. For example, most [server level permissions](authentication-access/server-level-roles.md) can't be granted on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and a few permissions only make sense on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+New permissions are being introduced gradually with new releases. [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] exposes 248 permissions.[!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] exposed 238 permissions. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) article specifies which permissions are new in recent versions.
 
 Once you understand the permissions, apply server level permissions to logins or server roles and database level permissions users or database roles with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:
 
@@ -92,7 +92,7 @@ The following describes the general conventions that are followed for naming per
 
 ## Chart of SQL Server permissions
 
-[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
+[!INCLUDE[database-engine-permissions](../includes/database-engine-permissions.md)]
 
 ## Permissions applicable to specific securables
 
@@ -101,13 +101,13 @@ The following table lists major classes of permissions and the kinds of securabl
 |Permission|Applies to|
 |----------------|----------------|
 |ALTER|All classes of objects except TYPE.|
-|CONTROL|All classes of objects:<br /><br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|
+|CONTROL|All classes of objects:<br /><br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS,<br /> DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />USER,<br />VIEW, and<br />XML SCHEMA COLLECTION|
 |DELETE|All classes of objects except DATABASE SCOPED CONFIGURATION, SERVER, and TYPE.|
 |EXECUTE|CLR types, external scripts, procedures ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), scalar and aggregate functions ([!INCLUDE[tsql](../../includes/tsql-md.md)] and CLR), and synonyms|
 |IMPERSONATE|Logins and users|
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] queues|
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT,<br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIAL (applies to [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)] and later),<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT,<br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|
 |SELECT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|
 |TAKE OWNERSHIP|All classes of objects except DATABASE SCOPED CONFIGURATION, LOGIN, SERVER, and USER.|
 |UPDATE|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|
@@ -119,7 +119,7 @@ The following table lists major classes of permissions and the kinds of securabl
 
 ## SQL Server permissions
 
- The following table provides a complete list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permissions are only available for base securables that are supported. Server level permissions can't be granted in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], however in some cases database permissions are available instead.
+ The following table provides a complete list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] permissions are only available for base securables that are supported. Server level permissions can't be granted in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], however in some cases database permissions are available instead.
 
 |Base securable|Granular permissions on base securable|Permission type code|Securable that contains base securable|Permission on container securable that implies granular permission on base securable|
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|
@@ -150,36 +150,50 @@ The following table lists major classes of permissions and the kinds of securabl
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|
 |CONTRACT|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
+|CREDENTIAL|CONTROL|CL|SERVER|CONTROL SERVER|
+|CREDENTIAL|REFERENCES|RF|SERVER|ALTER ANY CREDENTIAL|
 |DATABASE|ADMINISTER DATABASE BULK OPERATIONS|DABO|SERVER|CONTROL SERVER|
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|
 |DATABASE|ALTER ANY APPLICATION ROLE|ALAR|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br />Applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|ALTER ANY EVENT SESSION|
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS|SERVER|ALTER ANY EVENT SESSION|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION ADD EVENT|LDAE|SERVER|ALTER ANY EVENT SESSION ADD EVENT|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION ADD TARGET|LDAT|SERVER|ALTER ANY EVENT SESSION ADD TARGET|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION DISABLE|DDES|SERVER|ALTER ANY EVENT SESSION DISABLE|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION DROP EVENT|LDDE|SERVER|ALTER ANY EVENT SESSION DROP EVENT|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION DROP TARGET|LDDT|SERVER|ALTER ANY EVENT SESSION DROP TARGET|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION ENABLE|EDES|SERVER|ALTER ANY EVENT SESSION ENABLE|
+|DATABASE|ALTER ANY DATABASE EVENT SESSION OPTION|LDSO|SERVER|ALTER ANY EVENT SESSION OPTION|
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY EXTERNAL JOB|AESJ|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY EXTERNAL LANGUAGE|ALLA|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY EXTERNAL LIBRARY|ALEL|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY EXTERNAL STREAM|AEST|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY MASK|AAMK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY MASK|AAMK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|AASC<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|AASC<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|
 |DATABASE|ALTER LEDGER|ALR|SERVER|CONTROL|
+|DATABASE|ALTER LEDGER CONFIGURATION|ALC|SERVER|CONTROL SERVER|
 |DATABASE|AUTHENTICATE|AUTH|SERVER|AUTHENTICATE SERVER|
 |DATABASE|BACKUP DATABASE|BADB|SERVER|CONTROL SERVER|
 |DATABASE|BACKUP LOG|BALO|SERVER|CONTROL SERVER|
@@ -188,6 +202,7 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|CONNECT REPLICATION|CORP|SERVER|CONTROL SERVER|
 |DATABASE|CONTROL|CL|SERVER|CONTROL SERVER|
 |DATABASE|CREATE AGGREGATE|CRAG|SERVER|CONTROL SERVER|
+|DATABASE|CREATE ANY DATABASE EVENT SESSION|CRDS|SERVER|CREATE ANY EVENT SESSION|
 |DATABASE|CREATE ASSEMBLY|CRAS|SERVER|CONTROL SERVER|
 |DATABASE|CREATE ASYMMETRIC KEY|CRAK|SERVER|CONTROL SERVER|
 |DATABASE|CREATE CERTIFICATE|CRCF|SERVER|CONTROL SERVER|
@@ -195,6 +210,8 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|CREATE DATABASE|CRDB|SERVER|CREATE ANY DATABASE|
 |DATABASE|CREATE DATABASE DDL EVENT NOTIFICATION|CRED|SERVER|CREATE DDL EVENT NOTIFICATION|
 |DATABASE|CREATE DEFAULT|CRDF|SERVER|CONTROL SERVER|
+|DATABASE|CREATE EXTERNAL LANGUAGE|CRLA|SERVER|CONTROL SERVER|
+|DATABASE|CREATE EXTERNAL LIBRARY|CREL|SERVER|CONTROL SERVER|
 |DATABASE|CREATE FULLTEXT CATALOG|CRFT|SERVER|CONTROL SERVER|
 |DATABASE|CREATE FUNCTION|CRFN|SERVER|CONTROL SERVER|
 |DATABASE|CREATE MESSAGE TYPE|CRMT|SERVER|CONTROL SERVER|
@@ -210,31 +227,36 @@ The following table lists major classes of permissions and the kinds of securabl
 |DATABASE|CREATE SYNONYM|CRSN|SERVER|CONTROL SERVER|
 |DATABASE|CREATE TABLE|CRTB|SERVER|CONTROL SERVER|
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|
+|DATABASE|CREATE USER|CUSR|SERVER|CONTROL SERVER|
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|
+|DATABASE|DROP ANY DATABASE EVENT SESSION|DRDS|SERVER|DROP ANY EVENT SESSION|
 |DATABASE|ENABLE LEDGER|EL|SERVER|CONTROL|
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|
+|DATABASE|EXECUTE ANY EXTERNAL ENDPOINT|EAEE|SERVER|CONTROL SERVER|
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current).|SERVER|CONTROL SERVER|
-|DATABASE|GENERATE LEDGER DIGEST|GLD|SERVER|CONTROL|
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br />Only applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br />Only applies to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Use ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|
-|DATABASE|UNMASK|UMSK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|
+|DATABASE|UNMASK|UMSK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|CONTROL SERVER|
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|
-|DATABASE|VIEW DATABASE SECURITY STATE|VDS|SERVER|VIEW SERVER SECURITY STATE|
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|VWCM<br /><br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] through current), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW ANY SENSITIVITY CLASSIFICATION|VASC|SERVER|CONTROL SERVER|
+|DATABASE|VIEW CRYPTOGRAPHICALLY SECURED DEFINITION|VCD|SERVER|VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION|
 |DATABASE|VIEW DATABASE PERFORMANCE STATE|VDP|SERVER|VIEW SERVER PERFORMANCE STATE|
+|DATABASE|VIEW DATABASE SECURITY AUDIT|VDSA|SERVER|CONTROL SERVER|
+|DATABASE|VIEW DATABASE SECURITY STATE|VDS|SERVER|VIEW SERVER SECURITY STATE|
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|
+|DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|
 |DATABASE|VIEW LEDGER CONTENT|VLC|SERVER|CONTROL|
 |DATABASE|VIEW SECURITY DEFINITION|VWS|SERVER|VIEW ANY SECURITY DEFINITION|
 |DATABASE|VIEW PERFORMANCE DEFINITION|VWP|SERVER|VIEW ANY PERFORMANCE DEFINITION|
-|DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|CONTROL|CL|DATABASE|CONTROL|
 |DATABASE SCOPED CREDENTIAL|REFERENCES|RF|DATABASE|REFERENCES|
@@ -273,6 +295,7 @@ The following table lists major classes of permissions and the kinds of securabl
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|
 |OBJECT|SELECT|SL|SCHEMA|SELECT|
 |OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|
+|OBJECT|UNMASK|UMSK|SCHEMA|UNMASK|
 |OBJECT|UPDATE|UP|SCHEMA|UPDATE|
 |OBJECT|VIEW CHANGE TRACKING|VWCT|SCHEMA|VIEW CHANGE TRACKING|
 |OBJECT|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|
@@ -288,11 +311,6 @@ The following table lists major classes of permissions and the kinds of securabl
 |ROUTE|CONTROL|CL|DATABASE|CONTROL|
 |ROUTE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
-|SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|
-|SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|
-|SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|
-|SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|
-|SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|
@@ -302,9 +320,15 @@ The following table lists major classes of permissions and the kinds of securabl
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|
 |SCHEMA|SELECT|SL|DATABASE|SELECT|
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|
+|SCHEMA|UNMASK|UMSK|DATABASE|UNMASK|
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|
+|SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|
+|SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|
+|SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|
+|SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|
+|SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|
 |SERVER|ADMINISTER BULK OPERATIONS|ADBO|Not applicable|Not applicable|
 |SERVER|ALTER ANY AVAILABILITY GROUP|ALAG|Not applicable|Not applicable|
 |SERVER|ALTER ANY CONNECTION|ALCO|Not applicable|Not applicable|
@@ -313,6 +337,13 @@ The following table lists major classes of permissions and the kinds of securabl
 |SERVER|ALTER ANY ENDPOINT|ALHE|Not applicable|Not applicable|
 |SERVER|ALTER ANY EVENT NOTIFICATION|ALES|Not applicable|Not applicable|
 |SERVER|ALTER ANY EVENT SESSION|AAES|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION ADD EVENT|LSAE|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION ADD TARGET|LSAT|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION DISABLE|DES|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION DROP EVENT|LSDE|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION DROP TARGET|LSDT|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION ENABLE|EES|Not applicable|Not applicable|
+|SERVER|ALTER ANY EVENT SESSION OPTION|LESO|Not applicable|Not applicable|
 |SERVER|ALTER ANY LINKED SERVER|ALLS|Not applicable|Not applicable|
 |SERVER|ALTER ANY LOGIN|ALLG|Not applicable|Not applicable|
 |SERVER|ALTER ANY SERVER AUDIT|ALAA|Not applicable|Not applicable|
@@ -368,6 +399,92 @@ The following table lists major classes of permissions and the kinds of securabl
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|
+
+### New granular permissions added to SQL Server 2022
+
+The following permissions are added to SQL Server 2022:
+
+- 10 new permissions have been added to allow access to system metadata.
+- 18 new permissions have been added for extended events.
+- 9 new permissions have been added with regard to security-related objects.
+
+- 4 permissions have been added for Ledger.
+- 3 additional database permissions.
+
+For more information, see [New granular permissions for SQL Server 2022 and Azure SQL to improve adherence with PoLP](https://techcommunity.microsoft.com/t5/sql-server-blog/new-granular-permissions-for-sql-server-2022-and-azure-sql-to/ba-p/3607507).
+
+#### Access to system metadata permissions
+
+Server level:
+
+- VIEW ANY SECURITY DEFINITION
+- VIEW ANY PERFORMANCE DEFINITION
+- VIEW SERVER SECURITY STATE
+- VIEW SERVER PERFORMANCE STATE
+- VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION
+
+Database level:
+
+- VIEW DATABASE SECURITY STATE
+- VIEW DATABASE PERFORMANCE STATE
+- VIEW SECURITY DEFINITION
+- VIEW PERFORMANCE DEFINITION
+- VIEW CRYPTOGRAPHICALLY SECURED DEFINITION
+
+#### Extended events permissions
+
+Server level:
+
+- CREATE ANY EVENT SESSION
+- DROP ANY EVENT SESSION
+- ALTER ANY EVENT SESSION OPTION
+- ALTER ANY EVENT SESSION ADD EVENT
+- ALTER ANY EVENT SESSION DROP EVENT
+- ALTER ANY EVENT SESSION ENABLE
+- ALTER ANY EVENT SESSION DISABLE
+- ALTER ANY EVENT SESSION ADD TARGET
+- ALTER ANY EVENT SESSION DROP TARGET
+
+All of these permissions are under the same parent-permission: **ALTER ANY EVENT SESSION**
+
+Database level:
+
+- CREATE ANY DATABASE EVENT SESSION
+- DROP ANY DATABASE EVENT SESSION
+- ALTER ANY DATABASE EVENT SESSION OPTION
+- ALTER ANY DATABASE EVENT SESSION ADD EVENT
+- ALTER ANY DATABASE EVENT SESSION DROP EVENT
+- ALTER ANY DATABASE EVENT SESSION ENABLE
+- ALTER ANY DATABASE EVENT SESSION DISABLE
+- ALTER ANY DATABASE EVENT SESSION ADD TARGET
+- ALTER ANY DATABASE EVENT SESSION DROP TARGET
+
+All these permissions are under the same parent-permission: **ALTER ANY DATABASE EVENT SESSION**
+
+#### Security-related object permissions
+
+- CONTROL (CREDENTIAL)
+- CREATE LOGIN
+- CREATE USER
+- REFERENCES (CREDENTIAL)
+- UNMASK (OBJECT)
+- UNMASK (SCHEMA)
+- VIEW ANY ERROR LOG
+- VIEW SERVER SECURITY AUDIT
+- VIEW DATABASE SECURITY AUDIT
+
+#### Ledger permissions
+
+- ALTER LEDGER
+- ALTER LEDGER CONFIGURATION
+- ENABLE LEDGER
+- VIEW LEDGER CONTENT
+
+#### Other database permissions
+
+- ALTER ANY EXTERNAL JOB
+- ALTER ANY EXTERNAL STREAM
+- EXECUTE ANY EXTERNAL ENDPOINT
 
 ## Summary of the permission check algorithm
 

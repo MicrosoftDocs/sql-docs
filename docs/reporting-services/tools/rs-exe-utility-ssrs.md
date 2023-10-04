@@ -1,14 +1,14 @@
 ---
-title: "RS.exe Utility | Microsoft Docs"
+title: "RS.exe Utility"
 description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
-ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 08/17/2023
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "automatic report server tasks"
   - "rs utility"
   - "command prompt utilities [Reporting Services]"
@@ -16,15 +16,12 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], rs"
   - "scripts [Reporting Services], command prompt"
   - "deploying reports [Reporting Services]"
-ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: maggiesMSFT
-ms.author: maggies
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
   
 > [!NOTE]  
->  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
+>  Beginning with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
   
 ## Syntax  
   
@@ -43,7 +40,26 @@ rs {-?}
 ```  
   
 ##  <a name="bkmk_filelocation"></a> File Location  
- **RS.exe** is located at **\Program Files\Microsoft SQL Server\110\Tools\Binn**. You can run the utility from any folder on your file system.  
+ **RS.exe** is located in the following folders, depending on the report server version. You can run the utility from any folder on your file system.
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
+```  
+C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn  
+```
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)]
+
+```  
+C:\Program Files\Microsoft SQL Server Reporting Services\Shared Tools
+```  
+
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+```  
+C:\Program Files\Microsoft Power BI Report Server\Shared Tools
+```  
+ 
   
 ##  <a name="bkmk_arguments"></a> Arguments  
  **-?**  

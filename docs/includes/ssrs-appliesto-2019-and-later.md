@@ -1,14 +1,9 @@
 ---
-title: include file
-description: include file
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/19/2019
-ms.prod: reporting-services
-ms.technology: reporting-services
+ms.reviewer: randolphwest
+ms.date: 01/12/2023
+ms.service: reporting-services
 ms.topic: include
-ms.custom: include file
 ---
-
-
-✔️&nbsp;SQL&nbsp;Server&nbsp;Reporting&nbsp;Services (2019 and later)
+:::image type="icon" source="media/yes-icon.svg" border="false"::: SQL Server Reporting Services (2019 and later)

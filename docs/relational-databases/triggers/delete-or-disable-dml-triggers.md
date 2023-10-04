@@ -1,22 +1,18 @@
 ---
+title: "Delete or Disable DML Triggers"
 description: "Delete or Disable DML Triggers"
-title: "Delete or Disable DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "DML triggers, disabling"
   - "removing DML triggers"
   - "disabling DML triggers"
   - "dropping DML triggers"
   - "deleting DML triggers"
   - "DML triggers, removing"
-ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete or Disable DML Triggers
@@ -88,7 +84,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 ```sql  
 --Create the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
     DROP TRIGGER Sales.bonus_reminder;  
@@ -104,7 +100,7 @@ GO
   
 ```sql  
 --Delete the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('Sales.bonus_reminder', 'TR') IS NOT NULL  
    DROP TRIGGER Sales.bonus_reminder;  
@@ -122,7 +118,7 @@ GO
   
 ```sql  
 --Create the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
     DROP TRIGGER Sales.bonus_reminder;  
@@ -138,7 +134,7 @@ GO
   
 ```sql  
 --Disable the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DISABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;  
 GO  
@@ -147,7 +143,7 @@ GO
   
 ```sql  
 --Enable the trigger.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;  
 GO  

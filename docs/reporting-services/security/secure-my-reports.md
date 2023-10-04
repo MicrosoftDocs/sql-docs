@@ -1,28 +1,25 @@
 ---
+title: "Secure My Reports"
 description: "Secure My Reports"
-title: "Secure My Reports | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "denying My Reports folder access"
   - "private folders [Reporting Services]"
   - "user workspace [Reporting Services]"
   - "security [Reporting Services], My Reports folder"
   - "My Reports folder [Reporting Services]"
-ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Secure My Reports
   The My Reports feature provides a user-managed workspace for working with reports. In order to serve its intended purpose, the My Reports folder requires less restrictive permissions than other folders that are available for general use. Users who have permissions to only view and run reports in other folders might require an expanded set of permissions to manage their My Reports folders and content that they own. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a specialized role assignment and role definition for this purpose.  
   
 > [!NOTE]
->  My Reports is available only in Report Manager. It is not available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>  My Reports is available only in Report Manager. It is not available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Role Assignment for My Reports  
  The role assignment for My Reports has preset elements and is automatically created for each user who activates a My Reports folder. Having the report server automatically assign security is especially useful for organizations that use My Reports widely because administrators do not have to enable access for each My Reports user.  

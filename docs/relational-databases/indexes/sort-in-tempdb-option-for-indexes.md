@@ -4,9 +4,8 @@ description: SORT_IN_TEMPDB Option For Indexes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "04/24/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "SORT_IN_TEMPDB option"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "tempdb database [SQL Server], indexes"
   - "indexes [SQL Server], tempdb database"
   - "index creation [SQL Server], tempdb database"
-ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SORT_IN_TEMPDB Option For Indexes

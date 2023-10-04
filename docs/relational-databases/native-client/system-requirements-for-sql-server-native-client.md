@@ -1,23 +1,25 @@
 ---
-description: "System Requirements for SQL Server Native Client"
 title: "System Requirements"
-ms.custom: ""
+description: "System Requirements for SQL Server Native Client"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "system requirements [SQL Server Native Client]"
   - "data access [SQL Server Native Client], system requirements"
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
-ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Requirements for SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
 
   To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] such as MARS, you must have the following software installed:  
   
@@ -54,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Data Type Compatibility for Client Versions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client map new data types to older datatypes that are compatible with down-level clients, as shown in the table below.  
   
- OLE DB and ADO applications can use the **DataTypeCompatibility** connection string keyword with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to operate with older data types. When **DataTypeCompatibility=80**, OLE DB clients will connect using the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular data stream (TDS) version, rather than the  TDS version. This means that for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later data types, down-level conversion will be performed by the server, rather than by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. It also means that the features available on the connection will be limited to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] feature set. Attempts to use new datatypes or features are detected as early as possible on API calls and errors are returned to the calling application, rather than attempting to pass invalid requests to the server.  
+ OLE DB and ADO applications can use the **DataTypeCompatibility** connection string keyword with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to operate with older data types. When **DataTypeCompatibility=80**, OLE DB clients will connect using the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tabular data stream (TDS) version, rather than the  TDS version. This means that for [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later data types, down-level conversion will be performed by the server, rather than by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. It also means that the features available on the connection will be limited to the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] feature set. Attempts to use new datatypes or features are detected as early as possible on API calls and errors are returned to the calling application, rather than attempting to pass invalid requests to the server.  
   
  There is no **DataTypeCompatibility** control for ODBC.  
   

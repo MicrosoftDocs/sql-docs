@@ -10,6 +10,8 @@
   items:
   - name: Azure Data Studio
     href: what-is-azure-data-studio.md
+  - name: Azure connectivity
+    href: azure-connectivity.md
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server
@@ -24,8 +26,8 @@
     href: quickstart-mysql.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md
-  - name: Connect & explore Oracle
-    href: quickstart-oracle.md
+  - name: Connect and query Managed Service for TimescaleDB
+    href: quickstart-timescaledb.md
 - name: Tutorials
   items:
   - name: T-SQL Editor
@@ -38,6 +40,18 @@
     href: tutorial-build-custom-insight-sql-server.md
   - name: Back up & restore
     href: tutorial-backup-restore-sql-server.md
+  - name: Overview of the Table Designer in Azure Data Studio
+    items:
+    - name: Creating and managing tables using the Table Designer
+      href: overview-of-the-table-designer-in-azure-data-studio.md
+    - name: Create graph tables in Azure Data Studio
+      href: create-graph-tables-in-azure-data-studio.md
+    - name: Create memory-optimized tables in Azure Data Studio
+      href: create-memory-optimized-tables-in-azure-data-studio.md
+    - name: Create system-versioned tables in Azure Data Studio
+      href: create-temporal-tables-in-azure-data-studio.md
+    - name: Using SQL Database Projects to build and deploy changes to tables
+      href: build-and-publish-changes-to-table-using-sql-projects.md
 - name: Concepts
   items:
   - name: Extensions
@@ -46,6 +60,12 @@
       href: extensions/add-extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
+    - name: Azure PostgreSQL migration extension
+      items:
+      - name: Azure PostgreSQL migration extension
+        href: extensions/azure-postgresql-migration-extension.md
+      - name: Troubleshoot
+        href: extensions/azure-postgresql-migration-extension-troubleshoot.md
     - name: Azure SQL migration extension
       href: extensions/azure-sql-migration-extension.md
     - name: Azure Monitor Logs extension
@@ -53,13 +73,25 @@
     - name: Azure Cosmos DB API for MongoDB extension
       href: extensions/azure-cosmos-db-mongodb-extension.md
     - name: Database Migration Assessment for Oracle extension
-      href: extensions/database-migration-assessment-for-oracle-extension.md
+      items:
+      - name: Overview
+        href: extensions/database-migration-assessment-for-oracle-extension.md
+      - name: Troubleshoot
+        href: extensions/database-migration-assessment-for-oracle-extension-troubleshoot.md
+    - name: Azure Cosmos DB migration for MongoDB extension
+      items:
+      - name: Overview
+        href: extensions/database-migration-for-mongo-extension.md
+      - name: FAQ
+        href: extensions/database-migration-for-mongodb-extension-faq.md
     - name: Database Schema Conversion Toolkit
       href: extensions/dsct/toc.yml
     - name: Data Virtualization extension
       href: extensions/data-virtualization-extension.md
     - name: Extension for Oracle
       href: extensions/extension-for-oracle.md
+    - name: GitHub Copilot extension
+      href: extensions/github-copilot-extension.md
     - name: Kusto extension
       href: extensions/kusto-extension.md
     - name: Machine Learning extension
@@ -124,6 +156,8 @@
       href: extensions/jupyter-book-extension.md
     - name: Wizard extension
       href: extensions/wizard-extension.md
+  - name: Command line interface
+    href: command-line.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Preview features
@@ -132,8 +166,8 @@
     href: server-groups.md
   - name: Source control
     href: source-control.md
-  - name: Table designer
-    href: table-designer-azure-data-studio.md
+  - name: Query Plan Viewer
+    href: query-plan-viewer.md
 - name: How-to guides
   items:
   - name: Notebooks
@@ -172,20 +206,26 @@
       href: deploy-azure-sql-server-vm.md
     - name: Deploy SQL Server in a container
       href: deploy-sql-container.md
+  - name: Connect
+    href: connect.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets
     href: code-snippets.md
   - name: Explore Azure SQL resources
-    href: azure-resource-explorer.md
+    href: azure-view.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
   - name: Usage data collection
     href: usage-data-collection.md
   - name: Windows authentication (Kerberos)
     href: enable-kerberos.md
-  - name: Workspace & user settings
-    href: settings.md
+  - name: User and Workspace settings
+    items:
+    - name: Modify User and Workspace settings
+      href: settings.md
+    - name: User and Workspace settings
+      href: settings-list.md
 - name: References
   items:
   - name: SQL tools

@@ -5,9 +5,8 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: mathoma
 ms.date: "09/05/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE TRIGGER"
@@ -31,7 +30,7 @@ dev_langs:
 
 # CREATE TRIGGER (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]    
 
 Creates a DML, DDL, or logon trigger. A trigger is a special type of stored procedure that automatically runs when an event occurs in the database server. DML triggers run when a user tries to modify data through a data manipulation language (DML) event. DML events are INSERT, UPDATE, or DELETE statements on a table or view. These triggers fire when any valid event fires, whether table rows are affected or not. For more information, see [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -45,7 +44,7 @@ Logon triggers fire in response to the LOGON event that's raised when a user's s
 > [!NOTE]  
 >  The integration of .NET Framework CLR into SQL Server is discussed in this article. CLR integration does not apply to Azure SQL Database.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## SQL Server Syntax  
   
@@ -175,12 +174,12 @@ DATABASE
 Applies the scope of a DDL trigger to the current database. If specified, the trigger fires whenever *event_type* or *event_group* occurs in the current database.  
   
 ALL SERVER  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 Applies the scope of a DDL or logon trigger to the current server. If specified, the trigger fires whenever *event_type* or *event_group* occurs anywhere in the current server.  
   
 WITH ENCRYPTION  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 Obscures the text of the CREATE TRIGGER statement. Using WITH ENCRYPTION prevents the trigger from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. WITH ENCRYPTION can't be specified for CLR triggers.  
   
@@ -189,7 +188,7 @@ Specifies the security context under which the trigger is executed. Enables you 
   
 This option is required for triggers on memory-optimized tables.  
   
-For more information, see[EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
 NATIVE_COMPILATION  
 Indicates that the trigger is natively compiled.  
@@ -219,7 +218,7 @@ Specifies the data modification statements that activate the DML trigger when it
 For INSTEAD OF triggers, you can't use the DELETE option on tables that have a referential relationship, specifying a cascade action ON DELETE. Similarly, the UPDATE option isn't allowed on tables that have a referential relationship, specifying a cascade action ON UPDATE.  
   
 WITH APPEND  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] through [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)].  
   
 Specifies that an additional trigger of an existing type should be added. WITH APPEND can't be used with INSTEAD OF triggers or if an AFTER trigger is explicitly stated. For backward compatibility, only use WITH APPEND when FOR is specified, without INSTEAD OF or AFTER. You can't specify WITH APPEND if using EXTERNAL NAME (that is, if the trigger is a CLR trigger).  
   
@@ -232,7 +231,7 @@ The name of a predefined grouping of [!INCLUDE[tsql](../../includes/tsql-md.md)]
 After the CREATE TRIGGER has finished running, *event_group* also acts as a macro by adding the event types it covers to the sys.trigger_events catalog view.  
   
 NOT FOR REPLICATION  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 Indicates that the trigger shouldn't be run when a replication agent modifies the table that's involved in the trigger.  
   
@@ -261,7 +260,7 @@ DDL and logon triggers capture information about the triggering event by using t
 For triggers on memory-optimized tables, the only *sql_statement* allowed at the top level is an ATOMIC block. The T-SQL allowed inside the ATOMIC block is limited by the T-SQL allowed inside native procs.  
   
 \< method_specifier > 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 For a CLR trigger, specifies the method of an assembly to bind with the trigger. The method must take no arguments and return void. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly with assembly visibility. If the class has a namespace-qualified name that uses '.' to separate namespace parts, the class name must be delimited by using [ ] or " " delimiters. The class can't be a nested class.  
   
@@ -437,7 +436,7 @@ ON Sales.Customer
 AFTER INSERT, UPDATE, DELETE   
 AS  
    EXEC msdb.dbo.sp_send_dbmail  
-        @profile_name = 'AdventureWorks2012 Administrator',  
+        @profile_name = 'AdventureWorks2022 Administrator',  
         @recipients = 'danw@Adventure-Works.com',  
         @body = 'Don''t forget to print a report for the sales force.',  
         @subject = 'Reminder';  
@@ -447,7 +446,7 @@ GO
 ### C. Using a DML AFTER trigger to enforce a business rule between the PurchaseOrderHeader and Vendor tables  
 Because CHECK constraints reference only the columns on which the column-level or table-level constraint is defined, you must define any cross-table constraints (in this case, business rules) as triggers.  
   
-The following example creates a DML trigger in the AdventureWorks2012 database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.  
+The following example creates a DML trigger in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This trigger checks to make sure the credit rating for the vendor is good (not 5) when there's an attempt to insert a new purchase order into the `PurchaseOrderHeader` table. To get the credit rating of the vendor, the `Vendor` table must be referenced. If the credit rating is too low, a message appears and the insertion doesn't happen.  
   
 :::code language="sql" source="../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql":::
 
@@ -473,7 +472,7 @@ GO
 ### E. Using a server-scoped DDL trigger  
 The following example uses a DDL trigger to print a message if any CREATE DATABASE event occurs on the current server instance, and uses the `EVENTDATA` function to retrieve the text of the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more examples that use EVENTDATA in DDL triggers, see [Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -491,7 +490,7 @@ GO
 ### F. Using a logon trigger  
 The following logon trigger example denies an attempt to log in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the *login_test* login if there are already three user sessions running under that login.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
 ```sql  
 USE master;  

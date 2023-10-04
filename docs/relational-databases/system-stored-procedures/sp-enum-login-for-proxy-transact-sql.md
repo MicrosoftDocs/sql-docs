@@ -1,23 +1,19 @@
 ---
+title: "sp_enum_login_for_proxy (Transact-SQL)"
 description: "sp_enum_login_for_proxy (Transact-SQL)"
-title: "sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_enum_login_for_proxy_TSQL"
   - "sp_enum_login_for_proxy"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_enum_login_for_proxy"
-ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
 
@@ -25,7 +21,7 @@ author: VanMSFT
 
   Lists associations between security principals and proxies.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,10 +50,12 @@ sp_enum_login_for_proxy
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Proxy identification number.|  
-|**proxy_name**|**sysname**|The name of the proxy.|  
-|**name**|**sysname**|Name of the security principal for the association.|  
+|**proxy_name**|**nvarchar(128)**|The name of the proxy.|  
 |**flags**|**int**|Type of the security principal.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = Fixed system role<br /><br /> **2** = Database role in **msdb**|  
-  
+|**name**|**nvarchar(128)**|Name of the security principal for the association.|  
+|**sid**|**varbinary(85)**|SID of the security principal for the association.|  
+|**principal_id**|**int**|Principal ID of the security principal for the association.| 
+
 ## Remarks  
  When no parameters are provided, **sp_enum_login_for_proxy** lists information about all logins in the instance for every proxy.  
   

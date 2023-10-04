@@ -4,9 +4,8 @@ description: syscollector_collector_types (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syscollector_collector_types"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "syscollector_collector_types view"
 dev_langs:
   - "TSQL"
-ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 ---
 # syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

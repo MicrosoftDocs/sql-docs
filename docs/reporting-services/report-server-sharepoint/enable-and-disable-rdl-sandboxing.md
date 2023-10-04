@@ -1,15 +1,13 @@
 ---
-title: "Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode | Microsoft Docs"
+title: "Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode"
 description: With RDL sandboxing, you can detect and restrict the usage of types of resources by tenants where multiple tenants use a single web farm of report servers.
-ms.date: 09/25/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-sharepoint
-
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 09/25/2017
+ms.service: reporting-services
+ms.subservice: report-server-sharepoint
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode
 
@@ -30,7 +28,7 @@ The RDL (Report Definition Language) sandboxing feature lets you detect and rest
 
  When RDL Sandboxing is enabled, the following features are disabled:  
   
--   Custom code in the **\<Code>** element of a report definition.  
+-   Custom code in the `<Code>` element of a report definition.  
   
 -   RDL backward compatibility mode for [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] custom report items.  
   

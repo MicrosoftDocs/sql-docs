@@ -8,10 +8,7 @@ ms.date: 06/29/2020
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom:
-  - subject-armqs
-  - devx-track-azurepowershell
-  - mode-arm
+ms.custom: subject-armqs, mode-arm, devx-track-arm-template
 ---
 
 # Quickstart: Create SQL Server VM using an ARM template

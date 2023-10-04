@@ -1,21 +1,17 @@
 ---
+title: "Examples of Advanced Integration Services Expressions"
 description: "Examples of Advanced Integration Services Expressions"
-title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "functions [Integration Services]"
   - "operators [Integration Services]"
   - "expressions [Integration Services], examples"
   - "examples [Integration Services]"
-ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: chugugrace
-ms.author: chugu
 ---
 # Examples of Advanced Integration Services Expressions
 
@@ -24,7 +20,7 @@ ms.author: chugu
 
   This section provides examples of advanced expressions that combine multiple operators and functions. If an expression is used in a precedence constraint or the Conditional Split transformation, it must evaluate to a Boolean. That restriction, however, does not apply to expressions used in property expressions, variables, the Derived Column transformation, or the For Loop container.  
   
- The following examples use the **AdventureWorks** and the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. Each example identifies the tables it uses.  
+ The following examples use the **AdventureWorks** and the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. Each example identifies the tables it uses.  
   
 ## Boolean Expressions  
   
@@ -102,5 +98,5 @@ ms.author: chugu
  [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
   

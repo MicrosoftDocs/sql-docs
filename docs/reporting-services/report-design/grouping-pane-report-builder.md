@@ -1,20 +1,17 @@
 ---
-title: "Grouping pane in a paginated report | Microsoft Docs"
-description: Display row groups and column groups for a currently selected tablix data region in a paginated report. Find out about the grouping pane in Report Builder. 
-ms.date: 08/17/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10033"
-helpviewer_keywords: 
-  - "Grouping Pane dialog box"
-ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
+title: "Grouping pane in a paginated report"
+description: Display row groups and column groups for a currently selected tablix data region in a paginated report. Find out about the grouping pane in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 08/17/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10033"
+helpviewer_keywords:
+  - "Grouping Pane dialog box"
 ---
 # Grouping pane in a paginated report (Report Builder)
 

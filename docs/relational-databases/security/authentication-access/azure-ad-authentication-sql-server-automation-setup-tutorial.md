@@ -4,11 +4,11 @@ description: Tutorial on how to set up Azure Active Directory authentication tha
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
-ms.date: 08/25/2022
-ms.prod: sql
-ms.technology: security
+ms.date: 10/20/2022
+ms.service: sql
+ms.subservice: security
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: tutorial
-ms.custom:
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
@@ -22,16 +22,15 @@ In this article, we'll go over how to set up the Azure Active Directory (Azure A
 - The Azure CLI
 - ARM Template
 
-We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
+We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL Server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 > [!NOTE]
-> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts. Azure Virtual Machines aren't supported.
+> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
 
 ## Prerequisites
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- Azure extension for SQL Server version 1.1.1795.50 or higher for Windows, or version 1.0.2018.1 or higher for Linux, is installed.
 - Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
 - An [Azure Key Vault](/azure/key-vault/general/quick-create-portal) is required.
 
@@ -61,7 +60,7 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
 1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
 1. Select **Add Access Policy**.
-1. For **Key permissions**, use **0 selected**.
+1. For **Key permissions**, use **Sign**.
 1. For **Secret permissions**, select **Get** and **List**.
 1. For **Certificate permissions**, select **Get** and **List**.
 1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.

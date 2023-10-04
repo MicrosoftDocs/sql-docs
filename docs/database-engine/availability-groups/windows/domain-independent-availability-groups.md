@@ -4,10 +4,9 @@ description: "Steps to create an availability group that uses a Workgroup Cluste
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "09/25/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: how-to
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], domain independent"
 ---
@@ -60,7 +59,7 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 8. You will be prompted to restart the server for the changes to take effect. Click OK to close the Computer Name/Domain Changes dialog.
 9. Click Close to close the System Properties dialog.
 10. You will be prompted to restart. If you do not want to restart immediately, click Restart Later, otherwise click Restart Now.
-11. After the server has rebooted, verify that the common DNS suffix is configured by looking at System again.
+11. After the server has restarted, verify that the common DNS suffix is configured by looking at System again.
 
 ![Successful configuration of DNS suffix][4]
 

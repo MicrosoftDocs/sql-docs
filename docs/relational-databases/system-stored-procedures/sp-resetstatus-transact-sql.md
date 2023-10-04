@@ -1,23 +1,19 @@
 ---
+title: "sp_resetstatus (Transact-SQL)"
 description: "sp_resetstatus (Transact-SQL)"
-title: "sp_resetstatus (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_resetstatus"
-  - "sp_resetstatus_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_resetstatus"
-ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_resetstatus"
+  - "sp_resetstatus_TSQL"
+helpviewer_keywords:
+  - "sp_resetstatus"
+dev_langs:
+  - "TSQL"
 ---
 # sp_resetstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -52,10 +48,10 @@ sp_resetstatus [ @dbname = ] 'database'
  Requires membership in the sysadmin fixed server role.  
   
 ## Examples  
- The following example resets the status of the `AdventureWorks2012` database.  
+ The following example resets the status of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_resetstatus 'AdventureWorks2012';  
+EXEC sp_resetstatus 'AdventureWorks2022';  
 ```  
   
 ## See Also  

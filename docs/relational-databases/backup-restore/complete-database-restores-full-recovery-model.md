@@ -1,23 +1,19 @@
 ---
-title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
+title: "Complete Database Restores (Full Recovery Model)"
 description: Learn about a complete SQL Server database restore, where all data is recovered to a consistent point in time.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "complete database restores"
   - "database restores [SQL Server], complete database"
   - "restoring databases [SQL Server], complete database"
   - "restoring [SQL Server], database"
   - "full recovery model [SQL Server], performing restores"
   - "log backups [SQL Server["
-ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Complete Database Restores (Full Recovery Model)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,30 +82,30 @@ For information about support for backups from earlier versions of [!INCLUDE[ssN
 ```  
 USE master;  
 --Create tail-log backup.  
-BACKUP LOG AdventureWorks2012   
+BACKUP LOG AdventureWorks2022   
 TO DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'    
    WITH NORECOVERY;   
 GO  
 --Restore the full database backup (from backup set 1).  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'   
   WITH FILE=1,   
     NORECOVERY;  
   
 --Restore the regular log backup (from backup set 2).  
-RESTORE LOG AdventureWorks2012   
+RESTORE LOG AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'   
   WITH FILE=2,   
     NORECOVERY;  
   
 --Restore the tail-log backup (from backup set 3).  
-RESTORE LOG AdventureWorks2012   
+RESTORE LOG AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'  
   WITH FILE=3,   
     NORECOVERY;  
 GO  
 --recover the database:  
-RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;  
+RESTORE DATABASE AdventureWorks2022 WITH RECOVERY;  
 GO  
 ```  
   

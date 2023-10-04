@@ -1,19 +1,15 @@
 ---
+title: "Bulk Copy by Using a Format File (ODBC)"
 description: "Bulk Copy by Using a Format File (ODBC)"
-title: "Bulk Copy by Using a Format File (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "bulk copy using format file [ODBC]"
-  - "ODBC, bulk copy operations"
-ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bulk copy using format file [ODBC]"
+  - "ODBC, bulk copy operations"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy by Using a Format File (ODBC)
@@ -61,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the fifth ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table that the sample used.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 CREATE TABLE BCPDate (cola int, colb datetime)  
 ```  
   
@@ -176,7 +172,7 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
      DROP TABLE BCPDate  
 GO  

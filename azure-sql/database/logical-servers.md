@@ -1,6 +1,6 @@
 ---
 title: What is a server in Azure SQL Database and Azure Synapse Analytics?
-description: Learn about logical SQL servers used by Azure SQL Database and Azure Synapse Analytics, and how to manage them.
+description: Learn about logical servers used by Azure SQL Database and Azure Synapse Analytics, and how to manage them.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -8,38 +8,38 @@ ms.date: 03/12/2019
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: devx-track-azurecli
 ---
-# What is a logical SQL server in Azure SQL Database and Azure Synapse?
+# What is a logical server in Azure SQL Database and Azure Synapse?
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]
+
+This article describes the logical server in Azure used by databases in Azure SQL Database and Azure Synapse Analytics. In the Azure portal, the logical server is named SQL server and is different to the SQL Server product. 
 
 In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md). A logical server can be in a different region than its resource group. The logical server must exist before you can create a database in Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. All databases managed by a single logical server are created within the same region as the logical server.
 
-This logical server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or dedicated SQL pool in relation to the server that manages them. Furthermore, neither Azure SQL Database nor Azure Synapse expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
+This logical server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or dedicated SQL pool in relation to the server that manages them. Azure SQL Database and Azure Synapse don't expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
 
-When you create a logical server, you provide a server login account and password that has administrative rights to the master database on that server and all databases created on that server. This initial account is a SQL login account. Azure SQL Database and Azure Synapse Analytics support SQL authentication and Azure Active Directory Authentication for authentication. For information about logins and authentication, see [Managing Databases and Logins in Azure SQL Database](logins-create-manage.md). Windows Authentication is not supported.
+When you create a logical server, you provide a server login account and password that has administrative rights to the `master` database on that server and all databases created on that server. This initial account is a SQL login account. Azure SQL Database and Azure Synapse Analytics support both SQL authentication and Microsoft Entra authentication. For information about logins and authentication, see [Managing Databases and Logins in Azure SQL Database](logins-create-manage.md). Windows Authentication is not supported.
 
 A logical server in SQL Database and Azure Synapse Analytics:
 
 - Is created within an Azure subscription, but can be moved with its contained resources to another subscription
 - Is the parent resource for databases, elastic pools, and dedicated SQL pools
 - Provides a namespace for databases, elastic pools, and dedicated SQL pools
-- Is a logical container with strong lifetime semantics - delete a server and it deletes its databases, elastic pools, and SQK pools
+- Is a logical container with strong lifetime semantics - delete a server and it deletes its databases, elastic pools, and SQL pools
 - Participates in [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/overview) - databases, elastic pools, and dedicated SQL pools within a server inherit access rights from the server
 - Is a high-order element of the identity of databases, elastic pools, and dedicated SQL pools for Azure resource management purposes (see the URL scheme for databases and pools)
 - Collocates resources in a region
 - Provides a connection endpoint for database access (`<serverName>`.database.windows.net)
-- Provides access to metadata regarding contained resources via DMVs by connecting to a master database
+- Provides access to metadata regarding contained resources via DMVs by connecting to a `master` database
 - Provides the scope for management policies that apply to its databases - logins, firewall, audit, threat detection, and such
-- Is restricted by a quota within the parent subscription (six servers per subscription by default - [see Subscription limits here](/azure/azure-resource-manager/management/azure-subscription-service-limits))
+- Is restricted by a quota within the parent subscription (six servers per subscription by default, for more information, refer to [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits))
 - Provides the scope for database quota and DTU or vCore quota for the resources it contains (such as 45,000 DTU)
 - Is the versioning scope for capabilities enabled on contained resources
-- Server-level principal logins can manage all databases on a server
-- Can contain logins similar to those in instances of SQL Server in your on-premises environment that are granted access to one or more databases on the server, and can be granted limited administrative rights. For more information, see [Logins](logins-create-manage.md).
+- Server-level principal logins can manage all databases on a server.
+- The `master` database of a logical server contains logins similar to those in instances of SQL Server that are granted access to one or more databases on the server, and can be granted limited administrative rights. For more information, see [logins](logins-create-manage.md).
 - The default collation for all databases created on a server is `SQL_LATIN1_GENERAL_CP1_CI_AS`, where `LATIN1_GENERAL` is English (United States), `CP1` is code page 1252, `CI` is case-insensitive, and `AS` is accent-sensitive.
 
-
-To create a managed instance, see [Create a managed instance](../managed-instance/instance-create-quickstart.md)
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Manage servers, databases, and firewalls
 
@@ -156,20 +156,20 @@ To create and manage servers, databases, and firewalls with Transact-SQL, use th
 
 | Command | Description |
 | --- | --- |
-|[CREATE DATABASE (Azure SQL Database)](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true) | Creates a new database in Azure SQL Database. You must be connected to the master database to create a new database.|
-|[CREATE DATABASE (Azure Synapse)](/sql/t-sql/statements/create-database-transact-sql?view=azure-sqldw-latest&preserve-view=true) | Creates a new dedicated SQL pool in Azure Synapse. You must be connected to the master database to create a new database.|
+|[CREATE DATABASE (Azure SQL Database)](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true) | Creates a new database in Azure SQL Database. You must be connected to the `master` database to create a new database.|
+|[CREATE DATABASE (Azure Synapse)](/sql/t-sql/statements/create-database-transact-sql?view=azure-sqldw-latest&preserve-view=true) | Creates a new dedicated SQL pool in Azure Synapse. You must be connected to the `master` database to create a new database.|
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true) |Modifies database or elastic pool. |
 |[ALTER DATABASE (Azure Synapse Analytics)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest&preserve-view=true&tabs=sqlpool)|Modifies a dedicated SQL pool in Azure Synapse.|
 |[DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Deletes a database.|
-|[sys.database_service_objectives (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for a database. If logged on to the master database for a server, returns information on all databases. For Azure Synapse, you must be connected to the master database.|
+|[sys.database_service_objectives (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)|Returns the edition (service tier), service objective (pricing tier), and elastic pool name, if any, for a database. If logged on to the `master` database for a server, returns information on all databases. For Azure Synapse, you must be connected to the `master` database.|
 |[sys.dm_db_resource_stats (Azure SQL Database)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database)| Returns CPU, IO, and memory consumption for a database in Azure SQL Database. One row exists for every 15 seconds, even if there is no activity in the database.|
 |[sys.resource_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database)|Returns CPU usage and storage data for a database in Azure SQL Database. The data is collected and aggregated within five-minute intervals.|
 |[sys.database_connection_stats (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database)|Contains statistics for database connectivity events for Azure SQL Database, providing an overview of database connection successes and failures. |
 |[sys.event_log (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-event-log-azure-sql-database)|Returns successful database connections and connection failures for Azure SQL Database. You can use this information to track or troubleshoot your database activity.|
-|[sp_set_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)|Creates or updates the server-level firewall settings for your server. This stored procedure is only available in the master database to the server-level principal login. A server-level firewall rule can only be created using Transact-SQL after the first server-level firewall rule has been created by a user with Azure-level permissions|
+|[sp_set_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)|Creates or updates the server-level firewall settings for your server. This stored procedure is only available in the `master` database to the server-level principal login. A server-level firewall rule can only be created using Transact-SQL after the first server-level firewall rule has been created by a user with Azure-level permissions|
 |[sys.firewall_rules (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database)|Returns information about the server-level firewall settings associated with a server.|
-|[sp_delete_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database)|Removes server-level firewall settings from a server. This stored procedure is only available in the master database to the server-level principal login.|
-|[sp_set_database_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)|Creates or updates the database-level firewall rules for a database in Azure SQL Database. Database firewall rules can be configured for the master database, and for user databases in SQL Database. Database firewall rules are useful when using contained database users. Database firewall rules are not supported in Azure Synapse.|
+|[sp_delete_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database)|Removes server-level firewall settings from a server. This stored procedure is only available in the `master` database to the server-level principal login.|
+|[sp_set_database_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)|Creates or updates the database-level firewall rules for a database in Azure SQL Database. Database firewall rules can be configured for the `master` database, and for user databases in SQL Database. Database firewall rules are useful when using contained database users. Database firewall rules are not supported in Azure Synapse.|
 |[sys.database_firewall_rules (Azure SQL Database)](/sql/relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database)|Returns information about the database-level firewall settings for a database in Azure SQL Database. |
 |[sp_delete_database_firewall_rule (Azure SQL Database)](/sql/relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database)|Removes database-level firewall setting for a database of yours in Azure SQL Database. |
 
@@ -188,11 +188,11 @@ To create and manage servers, databases, and firewalls, use these REST API reque
 |[Servers - List](/rest/api/sql/servers/list)|Returns a list of servers.|
 |[Servers - List by resource group](/rest/api/sql/servers/listbyresourcegroup)|Returns a list of servers in a resource group.|
 |[Servers - Update](/rest/api/sql/servers/update)|Updates an existing server.|
-|[Databases - Create or update](/rest/api/sql/databases/createorupdate)|Creates a new database or updates an existing database.|
+|[Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update)|Creates a new database or updates an existing database.|
 |[Databases - Delete](/rest/api/sql/databases/delete)|Deletes a database.|
 |[Databases - Get](/rest/api/sql/databases/get)|Gets a database.|
-|[Databases - List by elastic pool](/rest/api/sql/databases/listbyelasticpool)|Returns a list of databases in an elastic pool.|
-|[Databases - List by server](/rest/api/sql/databases/listbyserver)|Returns a list of databases in a server.|
+|[Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
+|[Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
 |[Firewall rules - Create or update](/rest/api/sql/firewallrules/createorupdate)|Creates or updates a firewall rule.|
 |[Firewall rules - Delete](/rest/api/sql/firewallrules/delete)|Deletes a firewall rule.|
@@ -205,4 +205,4 @@ To create and manage servers, databases, and firewalls, use these REST API reque
 ## Next steps
 
 - To learn about migrating a SQL Server database to Azure SQL Database, see [Migrate to Azure SQL Database](migrate-to-database-from-sql-server.md).
-- - For information about supported features, see [Features](features-comparison.md).
+- For information about supported features, see [Features](features-comparison.md).

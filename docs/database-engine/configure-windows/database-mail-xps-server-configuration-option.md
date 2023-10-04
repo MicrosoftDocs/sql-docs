@@ -1,17 +1,17 @@
 ---
-title: "Database Mail XPs Server Configuration Option"
+title: "Database Mail XPs (server configuration option)"
 description: "Learn about the DatabaseMail XPs option. View different ways of turning on this option so that you can use Database Mail in SQL Server."
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "11/27/2018"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Database Mail XPs option"
   - "Database Mail [SQL Server], enabling"
 ---
-# Database Mail XPs Server Configuration Option
+# Database Mail XPs (server configuration option)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -1,21 +1,18 @@
 ---
-title: "Reporting Services Extension Library | Microsoft Docs"
+title: "Reporting Services Extension Library"
 description: Learn about the Reporting Services extension library, a set of classes, interfaces, and value types that provide access to system functionality.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "namespaces [Reporting Services]"
   - "Reporting Services, extending"
   - "extensions [Reporting Services], library"
   - "library [Reporting Services]"
-ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Extension Library
   The Reporting Services Extension Library is a set of classes, interfaces, and value types that are included in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This library provides access to system functionality and is designed to be the foundation on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] applications can be used to extend [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.  

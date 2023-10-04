@@ -3,13 +3,10 @@ title: "System Statistical Functions (Transact-SQL)"
 description: "System Statistical Functions (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "statistical functions [SQL Server]"
   - "system statistical functions [SQL Server]"

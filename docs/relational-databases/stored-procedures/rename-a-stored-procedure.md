@@ -1,18 +1,15 @@
 ---
-title: "Rename a Stored Procedure | Microsoft Docs"
+title: "Rename a Stored Procedure"
 description: Learn how to rename a stored procedure in SQL Server 2019 (15.x) by using SQL Server Management Studio or Transact-SQL.
-ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: sql
-ms.technology: stored-procedures
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "stored procedures [SQL Server], renaming"
-  - "renaming stored procedures"
-ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/06/2017"
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: conceptual
+helpviewer_keywords:
+  - "stored procedures [SQL Server], renaming"
+  - "renaming stored procedures"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Stored Procedure
@@ -77,7 +74,7 @@ This topic describes how to rename a stored procedure in [!INCLUDE[ssnoversion](
   
 ```sql  
 --Create the stored procedure.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  

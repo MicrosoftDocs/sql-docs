@@ -1,14 +1,14 @@
 ---
-title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
+title: "Disable or Pause Report and Subscription Processing"
 description: Manage subscriptions, pause shared schedules, disable shared data sources, block report access, manage subscription permissions, & remove delivery extensions.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/19/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "pausing schedules"
   - "subscriptions [Reporting Services], pausing"
   - "report processing [Reporting Services], pausing"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "disabling shared data sources"
   - "roles [Reporting Services], modifying"
   - "shared schedules [Reporting Services], pausing"
-ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Disable or Pause Report and Subscription Processing  
 There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following table summarizes the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
@@ -42,7 +39,7 @@ There are several approaches you can use to disable or pause [!INCLUDE[ssRSnover
 >[!TIP]  
 >New in SQL 2016 Reporting Services, *enable and disable subscriptions*. New user interface options allow you to quickly enable and disable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily re-enabled. You can also programmatically enable and disable subscriptions, or audit which subscriptions are disabled.  
   
-  ![The Enable and Disable buttons of the Subscriptions page ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
+  ![The Enable and Disable buttons of the Subscriptions page](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
   
 In the web portal, browse to the subscription from either the **My Subscriptions** page or the **Subscriptions** page of an individual subscription. Select one or more subscriptions and then click either the disable button or enable button on the ribbon (see above image). The status column will change to either "Disabled" or "Enabled" respectively.  
   

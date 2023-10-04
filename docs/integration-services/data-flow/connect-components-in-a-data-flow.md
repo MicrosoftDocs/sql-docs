@@ -1,19 +1,15 @@
 ---
+title: "Connect Components in a Data Flow"
 description: "Connect Components in a Data Flow"
-title: "Connect Components in a Data Flow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "components [Integration Services], connections"
-  - "connections [Integration Services], data flow components"
-ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "components [Integration Services], connections"
+  - "connections [Integration Services], data flow components"
 ---
 # Connect Components in a Data Flow
 

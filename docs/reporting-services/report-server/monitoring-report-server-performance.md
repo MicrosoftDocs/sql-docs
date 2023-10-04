@@ -1,14 +1,14 @@
 ---
-title: "Monitoring Report Server Performance | Microsoft Docs"
+title: "Monitoring Report Server Performance"
 description: Learn how to monitor report server performance to evaluate server activity, watch trends, diagnose bottlenecks, and gather data about system configuration.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/12/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "performance counters [Reporting Services]"
   - "report servers [Reporting Services], performance"
   - "counters [Reporting Services]"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, performance"
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
-ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Monitoring Report Server Performance
 

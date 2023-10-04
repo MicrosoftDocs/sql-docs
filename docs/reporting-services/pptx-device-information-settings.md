@@ -1,21 +1,18 @@
 ---
-title: "PPTX Device Information Settings | Microsoft Docs"
-description: Learn details about the device information settings for rendering Reporting Services reports in the PPTX format. 
+title: "PPTX Device Information Settings"
+description: Learn details about the device information settings for rendering Reporting Services reports in the PPTX format.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 09/11/2015
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "render"
   - "powerpoint"
   - "pptx"
   - "export"
-ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # PPTX Device Information Settings
   The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports in the PPTX format.  

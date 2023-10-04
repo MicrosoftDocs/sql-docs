@@ -1,11 +1,11 @@
 ---
 title: "Monitor backup activity"
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to monitor Azure SQL Managed Instance backup activity using extended events.
-author: MilanMSFT
-ms.author: mlazic
+description: Learn how to monitor Azure SQL Managed Instance backup activity by querying the `msdb` database, and by using extended events.
+author: Stralle
+ms.author: strrodic
 ms.reviewer: mathoma, nvraparl
-ms.date: 12/14/2018
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -14,13 +14,34 @@ ms.custom: mode-other
 # Monitor backup activity for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article teaches you to configure extended event (XEvent) sessions to monitor backup activity for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). 
+This article teaches you how to monitor backup activity for [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) by either querying the `msdb` database or by configuring extended event (XEvent) sessions.
 
 ## Overview
 
-Azure SQL Managed Instance emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the msdb database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
+Azure SQL Managed Instance stores backup information in the [msdb database](backup-transparency.md) and also emits events (also known as [Extended Events or XEvents](../database/xevent-db-diff-from-svr.md)) during backup activity for the purpose of reporting. Configure an XEvent session to track information such as backup status, backup type, size, time, and location within the `msdb` database. This information can be integrated with backup monitoring software and also used for the purpose of Enterprise Audit. 
 
 Enterprise Audits may require proof of successful backups, time of backup, and duration of the backup.
+
+## Query msdb database
+
+To view backup activity, run the following query from user-defined database: 
+
+```sql
+SELECT TOP (30) bs.machine_name, bs.server_name, DB_NAME(DB_ID(bs.database_name)) AS [Database Name], bs.recovery_model,
+CONVERT (BIGINT, bs.backup_size / 1048576 ) AS [Uncompressed Backup Size (MB)],
+CONVERT (BIGINT, bs.compressed_backup_size / 1048576 ) AS [Compressed Backup Size (MB)],
+CONVERT (NUMERIC (20,2), (CONVERT (FLOAT, bs.backup_size) /
+CONVERT (FLOAT, bs.compressed_backup_size))) AS [Compression Ratio], bs.has_backup_checksums, bs.is_copy_only, bs.encryptor_type,
+DATEDIFF (SECOND, bs.backup_start_date, bs.backup_finish_date) AS [Backup Elapsed Time (sec)],
+bs.backup_finish_date AS [Backup Finish Date], bmf.physical_device_name AS [Backup Location], bmf.physical_block_size
+FROM msdb.dbo.backupset AS bs WITH (NOLOCK)
+INNER JOIN msdb.dbo.backupmediafamily AS bmf WITH (NOLOCK)
+ON bs.media_set_id = bmf.media_set_id  
+WHERE DB_ID(bs.database_name) = DB_ID()
+AND bs.[type] = 'D' 
+ORDER BY bs.backup_finish_date DESC OPTION (RECOMPILE);
+
+```
 
 ## Configure XEvent session
 
@@ -139,4 +160,4 @@ The following screenshot shows an example of an output of a differential backup 
 
 Once your backup has completed, you can then [restore to a point in time](point-in-time-restore.md) or [configure a long-term retention policy](long-term-backup-retention-configure.md). 
 
-To learn more, see [automated backups](../database/automated-backups-overview.md). 
+To learn more, see [automated backups](automated-backups-overview.md).

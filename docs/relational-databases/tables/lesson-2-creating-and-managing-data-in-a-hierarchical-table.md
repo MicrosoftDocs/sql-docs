@@ -1,18 +1,14 @@
 ---
+title: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
 description: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
-title: "Lesson 2: Creating and Managing Data in a Hierarchical Table | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: table-view-index
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "HierarchyID"
-ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
+helpviewer_keywords:
+  - "HierarchyID"
 ---
 # Lesson 2: Create and Manage Data in a Hierarchical Table
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -23,12 +19,12 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
 
 - Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md).
+- Download [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 Instructions for restoring databases in SSMS are here: [Restore a database](../backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## Create a table using the hierarchyid data type
-The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the AdventureWorks2017 database, but that is optional. To keep the example simple, this table includes only five columns:  
+The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, but that is optional. To keep the example simple, this table includes only five columns:  
   
 -   OrgNode is a **hierarchyid** column that stores the hierarchical relationship.   
 -   OrgLevel is a computed column, based on the OrgNode column that stores each nodes level in the hierarchy. It will be used for a breadth-first index.  
@@ -41,7 +37,7 @@ The following example creates a table named EmployeeOrg, which includes employee
 1.  In a Query Editor window, run the following code to create the `EmployeeOrg` table. Specifying the `OrgNode` column as the primary key with a clustered index will create a depth-first index:  
   
     ```sql  
-    USE AdventureWorks2017 ;  
+    USE AdventureWorks2022;  
     GO  
     
     if OBJECT_ID('HumanResources.EmployeeOrg') is not null
@@ -69,7 +65,7 @@ The following example creates a table named EmployeeOrg, which includes employee
 The table is now ready for data. The next task will populate the table by using hierarchical methods.   
 
 ## Populate a Hierarchical Table Using Hierarchical Methods
-AdventureWorks2017 has 8 employees working in the Marketing department. The employee hierarchy looks like this:  
+AdventureWorks2022 has 8 employees working in the Marketing department. The employee hierarchy looks like this:  
   
 **David**, **EmployeeID** 6, is the Marketing Manager. Three Marketing Specialists report to **David**:  
   

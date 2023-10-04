@@ -4,8 +4,8 @@ description: Learn how to use Azure Active Directory authentication with the Mic
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 12/14/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "azure active directory, authentication, access token"

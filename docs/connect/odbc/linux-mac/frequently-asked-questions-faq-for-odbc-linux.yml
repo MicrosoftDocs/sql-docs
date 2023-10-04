@@ -4,10 +4,10 @@ metadata:
   description: "Find answers to common questions about the Microsoft ODBC Driver for SQL Server on Linux and macOS."
   ms.custom: ""
   ms.date: "05/06/2020"
-  ms.prod: sql
+  ms.service: sql
   ms.prod_service: connectivity
   ms.reviewer: ""
-  ms.technology: connectivity
+  ms.subservice: connectivity
   ms.topic: conceptual
   ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
   author: David-Engel

@@ -4,10 +4,9 @@ description: View the Transaction Log Shipping Status report in SQL Server Manag
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "viewing log shipping reports"
   - "displaying log shipping reports"

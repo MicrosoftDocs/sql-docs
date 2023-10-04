@@ -5,9 +5,11 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.date: 09/22/2020
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - updatefrequency5
 ---
 
 # Deploy Azure SQL Edge with Azure Data Studio (Preview)
@@ -33,7 +35,7 @@ The following scenarios are supported by the deployment wizard in Azure Data Stu
 > [!NOTE]
 > Azure SQL Edge deployment (preview) is available through the extension "Azure SQL Edge Deployment Extension" while these features are in preview. To make the features available to you, please install the extension in Azure Data Studio.
 
-To begin a deployment in Azure Data Studio, open the menu in the **Connections** view and select the **New Deployment...** option.  For all Azure SQL Edge scenarios, select **Azure SQL Edge** on the following screen and the desired scenario from the **Deployment target** drop-down. The deployment wizard generates a TSQL notebook that can be executed to complete the deployment. It should be noted that connection information, including the SQL admin password, is contained in the notebook by default.
+To begin a deployment in Azure Data Studio, open the menu in the **Connections** view and select the **New Deployment...** option.  For all Azure SQL Edge scenarios, select **Azure SQL Edge** on the following screen and the desired scenario from the **Deployment target** drop-down. The deployment wizard generates a Transact-SQL notebook that can be executed to complete the deployment. It should be noted that connection information, including the SQL admin password, is contained in the notebook by default.
 
 ![deployment overview](media/deploy-azure-sql-edge/deploy-overview.png)
 

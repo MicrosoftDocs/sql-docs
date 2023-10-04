@@ -1,18 +1,14 @@
 ---
+title: "Creating a Custom Task"
 description: "Creating a Custom Task"
-title: "Creating a Custom Task | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "custom tasks [Integration Services], creating"
-ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "reference"
+helpviewer_keywords:
+  - "custom tasks [Integration Services], creating"
 ---
 # Creating a Custom Task
 

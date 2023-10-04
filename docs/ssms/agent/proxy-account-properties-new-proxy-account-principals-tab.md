@@ -1,18 +1,14 @@
 ---
-description: "Proxy Account Properties - New Proxy Account (Principals Tab)"
 title: New Proxy Account (Principals Tab)
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ag.proxy.permissions.f1"
-ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
+description: "Proxy Account Properties - New Proxy Account (Principals Tab)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ag.proxy.permissions.f1"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 

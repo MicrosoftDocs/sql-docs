@@ -4,17 +4,14 @@ description: "Learn how the SQLXML annotation sql:mapped is interpreted during t
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "mapped annotation"
   - "element mapping [SQLXML], XML Bulk Load"
   - "attribute mapping [SQLXML], XML Bulk Load"
   - "overflow data [SQLXML]"
-ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - sql:mapped

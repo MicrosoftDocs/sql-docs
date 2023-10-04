@@ -1,15 +1,13 @@
 ---
-title: "Report Builder Tutorials | Microsoft Docs"
+title: "Report Builder Tutorials"
 description: Learn how to create basic SQL Server Reporting Services (SSRS) paginated reports, including ways to connect to data sources and add charts to reports.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder Tutorials
 

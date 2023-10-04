@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "filtered indexes [SQL Server], about filtered indexes"
@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 ---
 # Create filtered indexes
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to create a filtered index using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A filtered index is an optimized disk-based rowstore nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance and reduce index maintenance and storage costs compared with full-table indexes.
 
@@ -40,7 +40,7 @@ Filtered indexes can provide the following advantages over full-table indexes:
 
 When a column only has a few relevant values for queries, you can create a filtered index on the subset of values.  The resulting index will be smaller and cost less to maintain than a full-table nonclustered index defined on the same key columns.
 
-For example, consider a filtered index in the following data scenarios. In each case, the `WHERE` clause of the filtered index should be a subset of the `WHERE` clause of a query to benefit from the filtered index.
+For example, consider a filtered index in the following data scenarios. In each case, the `WHERE` clause of the query should be a subset of the `WHERE` clause of the filtered index, to benefit from the filtered index.
 
 - When the values in a column are mostly NULL and the query selects only from the non-NULL values. You can create a filtered index for the non-NULL data rows.
 - When rows in a table are marked as processed by a recurring workflow or queue process. Over time, most rows in the table will be marked as processed. A filtered index on rows that aren't yet processed would benefit the recurring query that looks for rows that aren't yet processed.
@@ -98,7 +98,7 @@ Requires ALTER permission on the table or view. The user must be a member of the
 
 1. Under **Index key columns**, select **Add...**.
 
-1. In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.
+1. In the **Select Columns from** _table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.
 
 1. Select **OK**.
 
@@ -108,7 +108,7 @@ Requires ALTER permission on the table or view. The user must be a member of the
 
 ## <a id="TsqlProcedure"></a> Create a filtered index with Transact-SQL
 
-This example uses the `AdventureWorks2019` database, available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
@@ -117,7 +117,7 @@ This example uses the `AdventureWorks2019` database, available for download at [
 1. Copy and paste the following example into the query window and select **Execute**.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 DROP INDEX IF EXISTS FIBillOfMaterialsWithEndDate
@@ -133,7 +133,7 @@ GO
 The filtered index `FIBillOfMaterialsWithEndDate` is valid for the following query. [You can display the query execution plan](../performance/display-an-actual-execution-plan.md) to determine if the query optimizer used the filtered index.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT ProductAssemblyID, ComponentID, StartDate

@@ -1,10 +1,13 @@
 ---
 title: Run the Transact-SQL Debugger
 description: Learn how customize the Transact-SQL debugger, and how to use it to debug your Transact-SQL code. You can run the debugger on an instance of the Database Engine that is on another computer.
-ms.prod: sql
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL debugger, sysadmin requirement"
   - "Transact-SQL debugger, supported versions"
   - "Query Editor [Database Engine], right-click menu"
@@ -16,12 +19,6 @@ helpviewer_keywords:
   - "Transact-SQL debugger, Debug toolbar"
   - "Transact-SQL debugger, keyboard shortcuts"
   - "Transact-SQL debugger, starting"
-ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -37,7 +34,7 @@ You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you
 
 The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:
 
-- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
+- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - SQL Server Management Studio must be running under a Windows account that is a member of the sysadmin fixed server roll.
 

@@ -5,12 +5,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: martinle
 ms.date: 06/23/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom:
-  - seo-dt-2019
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Appliance management tasks for Analytics Platform System

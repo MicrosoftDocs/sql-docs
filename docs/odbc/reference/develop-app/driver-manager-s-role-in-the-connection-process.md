@@ -1,23 +1,19 @@
 ---
-description: "Driver Manager&#39;s Role in the Connection Process"
-title: "Driver Manager&#39;s Role in the Connection Process | Microsoft Docs"
-ms.custom: ""
+title: "Driver Manager's Role in the Connection Process"
+description: "Driver Manager's Role in the Connection Process"
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "driver manager [ODBC], role in connection process"
   - "connecting to data source [ODBC], driver manager"
   - "connecting to driver [ODBC], driver manager"
   - "ODBC driver manager [ODBC]"
-ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-author: David-Engel
-ms.author: v-davidengel
 ---
-# Driver Manager&#39;s Role in the Connection Process
+# Driver Manager's Role in the Connection Process
 Remember that applications do not call driver functions directly. Instead, they call Driver Manager functions with the same name and the Driver Manager calls the driver functions. Usually, this happens almost immediately. For example, the application calls **SQLExecute** in the Driver Manager and after a few error checks, the Driver Manager calls **SQLExecute** in the driver.  
   
  The connection process is different. When the application calls **SQLAllocHandle** with the SQL_HANDLE_ENV and SQL_HANDLE_DBC options, the function allocates handles only in the Driver Manager. The Driver Manager does not call this function in the driver because it does not know which driver to call. Similarly, if the application passes the handle of an unconnected connection to **SQLSetConnectAttr** or **SQLGetConnectAttr**, only the Driver Manager executes the function. It stores or gets the attribute value from its connection handle and returns SQLSTATE 08003 (Connection not open) when getting a value for an attribute that has not been set and for which ODBC does not define a default value.  

@@ -1,14 +1,12 @@
 ---
 title: Azure Active Directory in SSDT
 description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure Synapse Analytics."
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 10/28/2019
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 
@@ -72,7 +70,7 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 
 ## Known issues and limitations
 
-- *Active Directory Interactive Authentication* is only supported when connecting to the Azure SQL products that were listed at the start of this article. It is not supported for SQL Server (on-prem or on a VM).
+- *Active Directory Interactive Authentication* is only supported when connecting to the Azure SQL products that were listed at the start of this article. It is not supported for SQL Server (on-premises or on a VM).
 - *Active Directory Interactive Authentication* is not supported in the connection dialog in *Server Explorer*. You must connect by using SSDT with *SQL Server Object Explorer*.
 - Single sign-on integration with the currently logged in Visual Studio account is not supported for SSDT.
 - The SQLPackage.exe that is installed into the Extensions directory during Visual Studio installation is not meant to be used from that location. To use SQLPackage.exe with Azure AD, go to [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=55088) 

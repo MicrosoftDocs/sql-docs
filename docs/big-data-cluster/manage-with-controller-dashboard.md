@@ -6,8 +6,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: erinstellato
 ms.date: 11/04/2019
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 
@@ -50,7 +50,7 @@ In addition to above, SQL Server 2019 Big Data Cluster also requires:
 ## Launch controller dashboard
 
 1. When you successfully add your controller, you can view it under SQL Server Big Data Clusters.
-2. To launch the dashboard, right click on the controller and click **Manage**.
+2. To launch the dashboard, right-click on the controller and click **Manage**.
 
 ## Controller Dashboard
 

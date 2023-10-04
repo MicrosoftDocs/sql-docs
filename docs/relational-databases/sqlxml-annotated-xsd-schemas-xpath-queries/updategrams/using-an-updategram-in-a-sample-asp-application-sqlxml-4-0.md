@@ -4,16 +4,13 @@ description: View an example of using an SQLXML updategram in an Active Server P
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "ASP applications [SQLXML]"
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
-ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using an Updategram in a Sample ASP Application (SQLXML 4.0)

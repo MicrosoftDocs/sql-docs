@@ -1,17 +1,14 @@
 ---
 title: Create an Empty SQL Server Unit Test
 description: Learn how to create SQL Server unit tests. See how to use the same TestInitialize and TestCleanup scripts that other tests use and how to use different scripts.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-f1_keywords: 
-  - "sql.data.tools.unittesting.createtest"
-ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
+f1_keywords:
+  - "sql.data.tools.unittesting.createtest"
 ---
 
 # How to: Create an Empty SQL Server Unit Test
@@ -66,7 +63,7 @@ You have two options for creating a SQL Server unit test:
   
     You can also add additional tests by:.  
   
-    -   Right clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
+    -   Right-clicking on a test project in **Solution Explorer**, selecting **Add**, **New Test**, and then **SQL Server Unit Test**.  
   
     -   In SQL Server Object Explorer, select Create Unit Tests.  
   
@@ -74,7 +71,7 @@ You have two options for creating a SQL Server unit test:
   
 ### To create a SQL Server unit test inside an existing test class  
   
-1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double clicking the unit test source code file in **Solution Explorer**.  
+1.  Open an existing SQL Server unit test class in the **SQL Server Unit Test Designer**. You can access the **SQL Server Unit Test Designer** by double-clicking the unit test source code file in **Solution Explorer**.  
   
 2.  Click the plus (**+**) sign in the navigation bar to display the **Specify a unit test name** dialog box.  
   
@@ -84,7 +81,7 @@ You have two options for creating a SQL Server unit test:
   
 After you have configured the test project and created the unit test, the next steps are:  
   
--   Add a Transact\-SQL test script.  
+-   Add a Transact-SQL test script.  
   
 -   Define pre-test and post-test actions.  
   

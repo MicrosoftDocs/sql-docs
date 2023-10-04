@@ -1,22 +1,19 @@
 ---
+title: "Create and Manage Role Assignments"
 description: "Create and Manage Role Assignments"
-title: "Create and Manage Role Assignments | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "removing role assignments"
   - "roles [Reporting Services], assignments"
   - "security [Reporting Services], role assignments"
   - "modifying role assignments"
   - "deleting role assignments"
-ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create and Manage Role Assignments
 

@@ -4,7 +4,7 @@ description: "Learn about the differences with the Windows Server Failover Clust
 author: tarynpratt
 ms.author: tarynpratt
 ms.reviewer: mathoma
-ms.date: 11/10/2021
+ms.date: 03/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
 ms.topic: conceptual
@@ -162,7 +162,6 @@ On Azure Virtual Machines, MSDTC isn't supported for Windows Server 2016 or earl
 
 - The clustered MSDTC resource can't be configured to use shared storage. On Windows Server 2016, if you create an MSDTC resource, it won't show any shared storage available for use, even if storage is available. This issue has been fixed in Windows Server 2019.
 - The basic load balancer doesn't handle RPC ports.
-
 
 
 ## Next steps

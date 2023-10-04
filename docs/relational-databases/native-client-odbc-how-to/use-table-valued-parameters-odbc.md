@@ -1,20 +1,16 @@
 ---
+title: "Use Table-Valued Parameters (ODBC)"
 description: "Use Table-Valued Parameters (ODBC)"
-title: "Use Table-Valued Parameters (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: markingmyname
 ms.author: maghan
+ms.date: "06/30/2023"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Table-Valued Parameters (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to use table-valued parameters to insert multiple rows, with multiple columns, with one call to the server.  
   
@@ -456,7 +452,7 @@ void OrdEntry_TVP (OrdEntryData& order){
       SQL_C_DEFAULT,// ValueType   
       SQL_SS_TABLE,// Parametertype  
       ITEM_ARRAY_SIZE,// ColumnSize - for a TVP this the row array size  
-      0,// DecimalDigits - for a TVP this is the number of columns in the TVP   
+      0,// DecimalDigits - DecimalDigits: For a table-valued parameter this must always be 0.
       NULL,// ParameterValuePtr - for a TVP this is the type name of the TVP  
                         // (not needed with stored proc)  
       NULL,// BufferLength - for a TVP this is the length of the type name or SQL_NTS  
@@ -651,7 +647,7 @@ void demo_fixed_TVP_binding (SQLHANDLE hstmt){
    // Flush rowcounts  
    do {  
       r = SQLMoreResults(hstmt);  
-      if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
+      if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO && r != SQL_NO_DATA) {  
          ODBCError(henv, hdbc, hstmt, NULL, true);   
          exit(-1);  
       }  
@@ -810,8 +806,8 @@ void demo_variable_TVP_binding (SQLHANDLE hstmt) {
                    break;  
   
                 default:  
-                   // Sending 0 indicates that now more TVP rows are available  
-                   r = SQLPutData(hstmt, SQLPOINTER(1), 0);  
+                   // Set StrLenOrIndPtr and DataPtr to 0, and send to indicate no more TVP rows are available
+                   r = SQLPutData(hstmt, 0, 0);  
                    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
                       ODBCError(henv, hdbc, hstmt, NULL, true);   
                       exit(-1);  
@@ -824,7 +820,7 @@ void demo_variable_TVP_binding (SQLHANDLE hstmt) {
          if (ParamId == &Qty) {  
             Qty = 2;  
             // For a character or binary parameter, SQLPutData can be called multiple times to pass the value in pieces  
-            SQLPutData(hstmt, &Qty, sizeof(SQLINTEGER));  
+            r = SQLPutData(hstmt, &Qty, sizeof(SQLINTEGER));  
             if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
                ODBCError(henv, hdbc, hstmt, NULL, true);   
                exit(-1);  

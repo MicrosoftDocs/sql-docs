@@ -4,10 +4,9 @@ description: Use Azure Data Studio to connect to Azure Cosmos DB for MongoDB API
 author: seesharprun
 ms.author: sidandrews
 ms.reviewer: esarroyo
-ms.date: 05/10/2022
-ms.prod: azure-data-studio
+ms.date: 05/10/2023
+ms.service: azure-data-studio
 ms.topic: quickstart
-ms.custom: event-tier1-build-2022
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query Azure Cosmos DB API for MongoDB (Preview)
@@ -18,17 +17,19 @@ This quickstart shows how to use Azure Data Studio to connect to the Azure Cosmo
 
 To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB API account.
 
-- [Install Azure Data Studio](download-azure-data-studio.md). 
+- [Install Azure Data Studio](./download-azure-data-studio.md).
 - [Install the Azure Cosmos DB API for MongoDB extension for Azure Data Studio](./extensions/azure-cosmos-db-mongodb-extension.md).
 - [Create an Azure Cosmos DB API for MongoDB account](/azure/cosmos-db/mongodb/mongodb-introduction).
 
-## Connect to an Azure Cosmos DB API for MongoDB account
+## Connect to an Azure Cosmos DB for MongoDB account
+
+### [API for MongoDB (RU-based)](#tab/mongodb-ru)
 
 1. Start **Azure Data Studio**.
 
 1. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon in the **SERVERS** page:
 
-    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" alt-text="Screenshot of new connection icon in the Servers sidebar.":::
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" alt-text="Screenshot of new connection icon for servers.":::
 
 1. In the dialog that appears, select **Browse**, and then select the **+** icon to sign in to Azure.
 
@@ -55,6 +56,27 @@ To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB A
     > If you selected *Azure Active Directory* authentication, you may be prompted to select a MongoDB connection string value to use for your connection.
 
 Your server will open in the **SERVERS** sidebar after you've successfully connected.
+
+### [API for MongoDB (vCore)](#tab/mongodb-vcore)
+
+1. Open the new Azure Cosmos DB for MongoDB (vCore) account in the Azure Portal.
+2. Navigate to "Settings" > "Connection string", and copy the shown "Connection string".
+
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-portal.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-portal.png" alt-text="Screenshot of the connection string in the portal.":::
+
+3. Start **Azure Data Studio**.
+
+4. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, select the **New Connection** icon in the **SERVERS** page:
+
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/new-connection-icon.png" alt-text="Screenshot of new connection icon in the Servers sidebar.":::
+
+5. In the dialog that appears, select **Mongo account**  > **Connection String**. Paste the Connection string from the Azure Portal into the Connection String field. Make sure to replace the **user** and **password** tokens inside the string with your admin username and password (found in Azure Portal).
+
+    :::image type="content" source="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-azure-data-studio.png" lightbox="media/quickstart-azure-cosmos-db-mongodb/connection-string-in-azure-data-studio.png" alt-text="Screenshot of connection pane dialog box.":::
+
+6.Select **Connect**.
+
+---
 
 ## Create a database and collection
 

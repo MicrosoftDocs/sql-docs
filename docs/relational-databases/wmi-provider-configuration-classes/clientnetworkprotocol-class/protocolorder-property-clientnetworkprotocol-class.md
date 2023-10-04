@@ -1,23 +1,17 @@
 ---
-description: "ProtocolOrder Property (ClientNetworkProtocol Class)"
 title: "ProtocolOrder Property (ClientNetworkProtocol)"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "ProtocolOrder Property (ClientNetworkProtocol Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "ProtocolOrder property"
-ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
+description: "ProtocolOrder Property (ClientNetworkProtocol Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ProtocolOrder property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "ProtocolOrder Property (ClientNetworkProtocol Class)"
+apitype: "MOFDef"
 ---
 # ProtocolOrder Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

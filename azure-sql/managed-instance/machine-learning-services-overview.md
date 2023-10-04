@@ -3,7 +3,6 @@ title: Machine Learning Services in Azure SQL Managed Instance
 description: This article provides an overview or Machine Learning Services in Azure SQL Managed Instance.
 author: MashaMSFT
 ms.author: mathoma
-manager: cgronlun
 ms.reviewer: mathoma, davidph
 ms.date: 03/17/2021
 ms.service: sql-managed-instance
@@ -54,7 +53,7 @@ If the SQL Managed Instance you're using is part of a failover group, do the fol
 
 - Run the `sp_configure` and `RECONFIGURE` commands on each instance of the failover group to enable Machine Learning Services.
 
-- Install the R/Python libraries on a user database rather than the master database.
+- Install the R/Python libraries on a user database rather than the `master` database.
 
 ## Next steps
 

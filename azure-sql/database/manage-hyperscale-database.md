@@ -7,6 +7,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 09/26/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: conceptual
 ---
 
@@ -22,9 +23,9 @@ Learn how to create a new Hyperscale database in [Quickstart: Create a Hyperscal
 
 You can migrate existing databases in Azure SQL Database to Hyperscale using the Azure portal, the Azure CLI, PowerShell, or Transact-SQL.
 
-The time required to move an existing database to Hyperscale consists of the time to copy data and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. We recommend migrating to Hyperscale during a lower write activity period so that the time to replay accumulated changes to replay will be shorter.
+The time required to move an existing database to Hyperscale consists of the time to copy data and the time to replay the changes made in the source database while copying data. The data copy time is proportional to data size. We recommend migrating to Hyperscale during a lower write activity period so that the time to replay accumulated changes is shorter.
 
-You will only experience a short period of downtime, generally a few minutes, during the final cutover to the Hyperscale service tier.
+You'll only experience a short period of downtime, generally a few minutes, during the final cutover to the Hyperscale service tier.
 
 ### Prerequisites
 
@@ -34,7 +35,7 @@ Once a database has been moved to Hyperscale, you can create a new Hyperscale ge
 
 ### How to migrate a database to the Hyperscale service tier
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you will be able to [adjust this later with minimal downtime](scale-resources.md).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier, first identify your target service objective. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database. In many cases, you can choose a service objective with the same number of vCores and the same hardware generation as the original database. If needed, you are able to [change the service objective](scale-resources.md) with minimal downtime.
 
 Select the tab for your preferred tool to migrate your database:
 
@@ -120,36 +121,39 @@ Reverse migration to the General Purpose service tier allows customers who have 
 Reverse migration is available under the following conditions:
 
 - Reverse migration is only available within 45 days of the original migration to Hyperscale.
-- Databases originally created in the Hyperscale service tier are not eligible for reverse migration.
+- Databases originally created in the Hyperscale service tier aren't eligible for reverse migration.
 - You may reverse migrate to the [General Purpose](service-tier-general-purpose.md) service tier only. Your migration from Hyperscale to General Purpose can target either the serverless or provisioned compute tiers. If you wish to migrate the database to another service tier, such as [Business Critical](service-tier-business-critical.md) or a [DTU based service tier](service-tiers-dtu.md), first reverse migrate to the General Purpose service tier, then change the service tier.
-- Direct reverse migration to an elastic pool is not supported. If you wish to migrate your Hyperscale database to an elastic pool, first migrate it to a General Purpose single database, and then move this database to the target elastic pool.
+- Direct reverse migration from, or to, an elastic pool isn't supported. You can reverse migrate only a Hyperscale single database to a General Purpose single database.
+    - If the Hyperscale database is part of a [Hyperscale elastic pool (preview)](./hyperscale-elastic-pool-overview.md), you have to first remove it from the Hyperscale elastic pool prior to reverse migration.
+    - After reverse migration is complete, you can then optionally add the General Purpose single database to a General Purpose elastic pool if needed.
+- For databases that don't qualify for reverse migration, the only way to migrate from Hyperscale to a non-Hyperscale service tier is to export/import using a bacpac file or other data movement technologies (Bulk Copy, Azure Data Factory, Azure Databricks, SSIS, etc.) Bacpac export/import from Azure portal, from PowerShell using New-AzSqlDatabaseExport or New-AzSqlDatabaseImport, from Azure CLI using az sql db export and az sql db import, and from REST API isn't supported. Bacpac import/export for smaller Hyperscale databases (up to 200 GB) is supported using SSMS and SqlPackage version 18.4 and later. For larger databases, bacpac export/import may take a long time, and may fail for various reasons.
 
 ### Duration and downtime
 
 Unlike regular service level objective change operations in Hyperscale, migrating to Hyperscale and reverse migration to General Purpose are size-of-data operations.
 
-The duration of a reverse migration depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database will also impact the duration of the reverse migration. We recommend that the target General Purpose database be provisioned with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
+The duration of a reverse migration operation depends mainly on the size of the database and concurrent write activities happening during the migration. The number of vCores you assign to the target General Purpose database also impacts the duration of the reverse migration. We recommend that you provision the target General Purpose database with a number of vCores greater than or equal to the number of vCores assigned to the source Hyperscale database to sustain similar workloads.
 
 During reverse migration, the source Hyperscale database may experience performance degradation if under substantial load. Specifically, transaction log rate may be reduced (throttled) to ensure that reverse migration is making progress.
 
-You will only experience a short period of downtime, generally a few minutes, during the final cutover to the new target General Purpose database.
+You'll experience a short period of downtime, generally a few minutes, during the final cutover to the new target General Purpose database.
 
 ### Prerequisites
 
 Before you initiate a reverse migration from Hyperscale to the General Purpose service tier, you must ensure that your database meets the [limitations for reverse migration](#limitations-for-reverse-migration) and:
 
-- Your database does not have Geo Replication enabled.
-- Your database does not have named replicas.
+- Your database doesn't have Geo Replication enabled.
+- Your database doesn't have named replicas.
 - Your database (allocated size) is small enough to fit into the target service tier.
 - If you specify max database size for the target General Purpose database, ensure the allocated size of the database is small enough to fit into that maximum size.
 
-Prerequisite checks will occur before a reverse migration starts. If prerequisites are not met, the reverse migration will fail immediately.
+Prerequisite checks occur before a reverse migration operation starts. If prerequisites aren't met, the reverse migration operation fails immediately.
 
 ### Backup policies
 
-You will be [billed using the regular pricing](automated-backups-overview.md?tabs=single-database#backup-storage-costs) for all existing database backups within the [configured retention period](automated-backups-overview.md#backup-retention). You will be billed for the Hyperscale backup storage snapshots and for size-of-data storage blobs that must be retained to be able to restore the backup.
+You are [billed using the regular pricing](automated-backups-overview.md?tabs=single-database#backup-storage-costs) for all existing database backups within the [configured retention period](automated-backups-overview.md#backup-retention). You are billed for the Hyperscale backup storage snapshots and for size-of-data storage blobs that must be retained to be able to restore the backup.
 
-You can migrate a database to Hyperscale and reverse migrate back to General Purpose multiple times. Only backups from the current and once-previous tier of your database will be available for restore. If you have moved from the General Purpose service tier to Hyperscale and back to General Purpose, the only backups available are the ones from the current General Purpose database and the immediately previous Hyperscale database. These retained backups are billed as per Azure SQL Database billing. Any previous tiers tried won't have backups available and will not be billed.
+You can migrate a database to Hyperscale and reverse migrate back to General Purpose multiple times. Only backups from the current and once-previous tier of your database are available for restore. If you have moved from the General Purpose service tier to Hyperscale and back to General Purpose, the only backups available are the ones from the current General Purpose database and the immediately previous Hyperscale database. These retained backups are billed as per Azure SQL Database billing. Any previous tiers tried won't have backups available and will not be billed.
 
 For example, you could migrate between Hyperscale and non-Hyperscale service tiers:
 
@@ -160,11 +164,11 @@ For example, you could migrate between Hyperscale and non-Hyperscale service tie
 1. Migrate to Hyperscale
 1. Reverse migrate to General Purpose
 
-In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. This should be a careful consideration when attempting multiple reverse migrations from Hyperscale to the General Purpose tier.
+In this case, the only backups available would be from steps 5 and 6 of the timeline, if they are still within the [configured retention period](automated-backups-overview.md#backup-retention). Any backups from previous steps would be unavailable. Carefully consider the availability of backups when attempting multiple reverse migrations from Hyperscale to the General Purpose tier.
 
 ### How to reverse migrate a Hyperscale database to the General Purpose service tier
 
-To reverse migrate an existing Hyperscale database in Azure SQL Database to the General Purpose service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md#gen5-hardware-part-1) if you aren't sure which service objective is right for your database.
+To reverse migrate an existing Hyperscale database in Azure SQL Database to the General Purpose service tier, first identify your target service objective in the General Purpose service tier and whether you wish to migrate to the provisioned or serverless compute tiers. Review [resource limits for single databases](resource-limits-vcore-single-databases.md) if you aren't sure which service objective is right for your database.
 
 If you wish to perform an additional service tier change after reverse migrating to General Purpose, identify your eventual target service objective as well and ensure that your database's allocated size is small enough to fit in that service objective.
 
@@ -203,7 +207,7 @@ az sql db update -g $resourceGroupName -s $serverName -n $databaseName \
     --compute-model $computeModel
 ```
 
-You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error will be returned. If the `maxsize` argument is not specified, the operation will default to the maximum size available for the given service objective. The following example specifies `maxsize`:
+You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error is returned. If the `maxsize` argument isn't specified, the operation defaults to the maximum size available for the given service objective. The following example specifies `maxsize`:
 
 ```azurecli-interactive
 resourceGroupName="myResourceGroup"
@@ -238,7 +242,7 @@ Set-AzSqlDatabase -ResourceGroupName $resourceGroupName -ServerName $serverName 
     -RequestedServiceObjectiveName $serviceObjective
 ```
 
-You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error will be returned. If the `maxsize` argument is not specified, the operation will default to the maximum size available for the given service objective. The following example specifies `maxsize`:
+You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error is returned. If the `maxsize` argument isn't specified, the operation defaults to the maximum size available for the given service objective. The following example specifies `maxsize`:
 
 ```powershell-interactive
 $resourceGroupName = "myResourceGroup"
@@ -269,7 +273,7 @@ ALTER DATABASE [mySampleDatabase]
 GO
 ```
 
-You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error will be returned. If the `maxsize` argument is not specified, the operation will default to the maximum size available for the given service objective. The following example specifies `maxsize`:
+You can optionally include the `maxsize` argument. If the `maxsize` value exceeds the valid maximum size for the target service objective, an error is returned. If the `maxsize` argument isn't specified, the operation defaults to the maximum size available for the given service objective. The following example specifies `maxsize`:
 
 ```sql
 ALTER DATABASE [mySampleDatabase]
@@ -295,9 +299,9 @@ The Azure portal shows a notification for a database in Azure SQL Database when 
 
 1. Navigate to the database in the Azure portal.
 1. In the left navigation bar, select **Overview**.
-1. Review the **Notifications** section at the bottom of the right pane. If operations are ongoing, a notification box will appear.
+1. Review the **Notifications** section at the bottom of the right pane. If operations are ongoing, a notification box appears.
 1. Select the notification box to view details.
-1. The **Ongoing operations** pane will open. Review the details of the ongoing operations.
+1. The **Ongoing operations** pane opens. Review the details of the ongoing operations.
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -353,11 +357,11 @@ After migrating a database to Hyperscale or reconfiguring a database within the 
 
 The Azure portal shows a list of all databases on a [logical server](logical-servers.md). The **Pricing tier** column includes the service tier for each database.
 
-:::image type="content" source="media/manage-hyperscale-database/database-list-azure-portal.png" alt-text="Screenshot of the overview panel of a logical server in Azure SQL Database. A list of databases appears at the bottom of the panel." lightbox="media/manage-hyperscale-database/database-list-azure-portal.png":::
+:::image type="content" source="media/manage-hyperscale-database/database-list-azure-portal.png" alt-text="Screenshot of the overview panel of a logical server in Azure SQL Database, databases at the bottom of the panel." lightbox="media/manage-hyperscale-database/database-list-azure-portal.png":::
 
 1. Navigate to your [logical server](logical-servers.md) in the Azure portal.
 1. In the left navigation bar, select **Overview**.
-1. Scroll to the list of resources at the bottom of the pane. The window will display SQL elastic pools and databases on the logical server.
+1. Scroll to the list of resources at the bottom of the pane. The window displays the SQL elastic pools and databases on the logical server.
 1. Review the **Pricing tier** column to identify databases in the Hyperscale service tier.
 
 # [Azure CLI](#tab/azure-cli)

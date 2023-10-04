@@ -1,16 +1,13 @@
 ---
-title: "Rendering behaviors in a paginated report | Microsoft Docs"
+title: "Rendering behaviors in a paginated report"
 description: Learn about the rules that are applied to the paginated report body and its contents when rendering a report in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Rendering behaviors in a paginated report (Report Builder)
 

@@ -44,15 +44,22 @@
     "globalMetadata": {
       "layout": "Conceptual",
       "uhfHeaderId": "MSDocsHeader-DocsSQL",
-      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
-      "searchScope": ["sql"],
+      "contributors_to_exclude": [
+        "hexiaokai",
+        "openpublishingbuild",
+        "sudeepku",
+        "saldana",
+        "iRaindrop"
+      ],
+      "searchScope": [
+        "sql"
+      ],
       "_op_documentIdPathDepotMapping": {
         "linux/": {
           "depot_name": "SQL.linux",
           "folder_relative_path_in_docset": "."
         }
       },
-      "extendBreadcrumb": true,
       "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
@@ -140,9 +147,7 @@
 
       "manager": {
         "**/*.md": "jroth",
-        "machine-learning/**/*.md": "cgronlun",
         "dmx/**/*.md": "kfollis",
-        "language-extensions/**/*.md": "cgronlun",
         "mdx/**/*.md": "kfollis",
         "reporting-services/**/*.md": "kfollis"
       },
@@ -203,10 +208,10 @@
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016",
         "azdata/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15",
-        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "big-data-cluster/**/*.md": "= sql-server-ver15 || = sql-server-linux-ver15",
         "big-data-cluster/**/*.yml": "= sql-server-ver15 || = sql-server-linux-ver15",
-        "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "data-quality-services/**/*.md": ">= sql-server-2016",
         "dea/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
@@ -218,20 +223,21 @@
         "machine-learning/**/*.md": ">= sql-server-2017",
         "master-data-services/**/*.md": ">= sql-server-2016",
         "mdx/**/*.md": ">= sql-server-2016",
-        "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
-        "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
+        "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
+        "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
+        "relational-databases/system-dynamic-management-views/*.md": "= azuresqldb-current",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
-        "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017",
+        "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "relational-databases/xml/**/*.md": "azuresqldb-current || azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "reporting-services/**/*.md": ">= sql-server-2016",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017",
         "samples/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017",
         "sql-server/**/*.md": ">= sql-server-2016",
-        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
+        "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = fabric",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016",
-        "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016",
-        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017",
+        "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = fabric",
+        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017 || = fabric",
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017",
         "tools/distributed-replay/*.md": "= sql-server-2016 || = sql-server-2017 || = sql-server-ver15 || = sql-server-linux-2017 || = sql-server-linux-ver15",
         "t-sql/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current",
@@ -256,8 +262,132 @@
 
       "ms.topic": {
         "azdata/**/*.md": "reference"
-      }
+      },
 
+      "ms.service": {
+        "sql-server/azure-arc**/*.md": "sql"
+      },
+
+      "ms.subservice": {
+        "sql-server/azure-arc/**/*.md": "azure-arc-sql-server"
+      },
+
+      "ms.custom": {
+        "ado/*.md": "UpdateFrequency5",
+        "ado/guide/appendixes/*.md": "UpdateFrequency5",
+        "ado/guide/data/*.md": "UpdateFrequency5",
+        "ado/guide/extensions/*.md": "UpdateFrequency5",
+        "ado/guide/multidimensional/*.md": "UpdateFrequency5",
+        "ado/guide/remote-data-service/*.md": "UpdateFrequency5",
+        "azdata/install/*.md": "UpdateFrequency5",
+        "big-data-cluster/*.md": "UpdateFrequency5",
+        "connect/*.md": "UpdateFrequency5",
+        "connect/ado-net/*.md": "UpdateFrequency5",
+        "connect/ado-net/sql/*.md": "UpdateFrequency5",
+        "connect/jdbc/*.md": "UpdateFrequency5",
+        "connect/node-js/*.md": "UpdateFrequency5",
+        "connect/odbc/*.md": "UpdateFrequency5",
+        "connect/odbc/linux-mac/*.md": "UpdateFrequency5",
+        "connect/odbc/windows/*.md": "UpdateFrequency5",
+        "connect/oledb/*.md": "UpdateFrequency5",
+        "connect/oledb/applications/*.md": "UpdateFrequency5",
+        "connect/oledb/features/*.md": "UpdateFrequency5",
+        "connect/oledb/help-topics/*.md": "UpdateFrequency5",
+        "connect/php/*.md": "UpdateFrequency5",
+        "connect/python/*.md": "UpdateFrequency5",
+        "connect/python/pymssql/*.md": "UpdateFrequency5",
+        "connect/python/pyodbc/*.md": "UpdateFrequency5",
+        "connect/ruby/*.md": "UpdateFrequency5",
+        "connect/spark/*.md": "UpdateFrequency5",
+        "database-engine/database-mirroring/*.md": "UpdateFrequency5",
+        "database-engine/log-shipping/*.md": "UpdateFrequency5",
+        "database-engine/service-broker/*.md": "UpdateFrequency5",
+        "data-quality-services/*.md": "UpdateFrequency5",
+        "data-quality-services/install-windows/*.md": "UpdateFrequency5",
+        "dea/*.md": "UpdateFrequency5",
+        "integration-services/**/*.md": "UpdateFrequency5",
+        "integration-services/catalog/*.md": "UpdateFrequency5",
+        "integration-services/change-data-capture/*.md": "UpdateFrequency5",
+        "integration-services/connection-manager/*.md": "UpdateFrequency5",
+        "integration-services/control-flow/*.md": "UpdateFrequency5",
+        "integration-services/data-flow/*.md": "UpdateFrequency5",
+        "integration-services/data-flow/transformations/*.md": "UpdateFrequency5",
+        "integration-services/devops/*.md": "UpdateFrequency5",
+        "integration-services/expressions/*.md": "UpdateFrequency5",
+        "integration-services/extending-packages-custom-objects/*.md": "UpdateFrequency5",
+        "integration-services/import-export-data/*.md": "UpdateFrequency5",
+        "integration-services/install-windows/*.md": "UpdateFrequency5",
+        "integration-services/lift-shift/*.md": "UpdateFrequency5",
+        "integration-services/packages/*.md": "UpdateFrequency5",
+        "integration-services/performance/*.md": "UpdateFrequency5",
+        "integration-services/scale-out/*.md": "UpdateFrequency5",
+        "integration-services/security/*.md": "UpdateFrequency5",
+        "integration-services/service/*.md": "UpdateFrequency5",
+        "integration-services/system-stored-procedures/*.md": "UpdateFrequency5",
+        "integration-services/system-views/*.md": "UpdateFrequency5",
+        "integration-services/troubleshooting/*.md": "UpdateFrequency5",
+        "language-extensions/concepts/*.md": "UpdateFrequency5",
+        "language-extensions/how-to/*.md": "UpdateFrequency5",
+        "language-extensions/install/*.md": "UpdateFrequency5",
+        "language-extensions/tutorials/*.md": "UpdateFrequency5",
+        "machine-learning/r/reference/sqlrutils/*.md": "UpdateFrequency5",
+        "master-data-services/*.md": "UpdateFrequency5",
+        "master-data-services/install-windows/*.md": "UpdateFrequency5",
+        "master-data-services/microsoft-excel-add-in/*.md": "UpdateFrequency5",
+        "odbc/*.md": "UpdateFrequency5",
+        "odbc/admin/*.md": "UpdateFrequency5",
+        "odbc/microsoft/*.md": "UpdateFrequency5",
+        "odbc/reference/*.md": "UpdateFrequency5",
+        "odbc/reference/develop-app/*.md": "UpdateFrequency5",
+        "odbc/reference/develop-driver/*.md": "UpdateFrequency5",
+        "odbc/reference/install/*.md": "UpdateFrequency5",
+        "powershell/*.md": "UpdateFrequency5",
+        "relational-databases/blob/*.md": "UpdateFrequency5",
+        "relational-databases/clr-integration/*.md": "UpdateFrequency5",
+        "relational-databases/clr-integration/database-objects/*.md": "UpdateFrequency5",
+        "relational-databases/collations/*.md": "UpdateFrequency5",
+        "relational-databases/database-mail/*.md": "UpdateFrequency5",
+        "relational-databases/databases/*.md": "UpdateFrequency5",
+        "relational-databases/data-collection/*.md": "UpdateFrequency5",
+        "relational-databases/data-tier-applications/*.md": "UpdateFrequency5",
+        "relational-databases/linked-servers/*.md": "UpdateFrequency5",
+        "relational-databases/logs/*.md": "UpdateFrequency5",
+        "relational-databases/manage/*.md": "UpdateFrequency5",
+        "relational-databases/native-client/*.md": "UpdateFrequency5",
+        "relational-databases/partitions/*.md": "UpdateFrequency5",
+        "relational-databases/resource-governor/*.md": "UpdateFrequency5",
+        "relational-databases/sequence-numbers/*.md": "UpdateFrequency5",
+        "relational-databases/server-management-objects-smo/*.md": "UpdateFrequency5",
+        "relational-databases/service-broker/*.md": "UpdateFrequency5",
+        "relational-databases/spatial/*.md": "UpdateFrequency5",
+        "relational-databases/sql-trace/*.md": "UpdateFrequency5",
+        "relational-databases/sqlxml/*.md": "UpdateFrequency5",
+        "relational-databases/statistics/*.md": "UpdateFrequency5",
+        "relational-databases/stored-procedures/*.md": "UpdateFrequency5",
+        "relational-databases/synonyms/*.md": "UpdateFrequency5",
+        "relational-databases/system-catalog-views/*.md": "UpdateFrequency5",
+        "relational-databases/system-dynamic-management-views/*.md": "UpdateFrequency5",
+        "relational-databases/system-stored-procedures/*.md": "UpdateFrequency5",
+        "relational-databases/tables/*.md": "UpdateFrequency5",
+        "relational-databases/triggers/*.md": "UpdateFrequency5",
+        "relational-databases/user-defined-functions/*.md": "UpdateFrequency5",
+        "relational-databases/views/*.md": "UpdateFrequency5",
+        "sql-server/failover-clusters/install/*.md": "UpdateFrequency5",
+        "sql-server/failover-clusters/windows/*.md": "UpdateFrequency5",
+        "ssdt/*.md": "UpdateFrequency5",
+        "ssma/*.md": "UpdateFrequency5",
+        "ssma/access/*.md": "UpdateFrequency5",
+        "ssma/db2/*.md": "UpdateFrequency5",
+        "ssma/db2/messages/*.md": "UpdateFrequency5",
+        "ssma/mysql/*.md": "UpdateFrequency5",
+        "ssma/oracle/*.md": "UpdateFrequency5",
+        "ssma/sybase/*.md": "UpdateFrequency5",
+        "ssma/sybase/messages/*.md": "UpdateFrequency5",
+        "tools/distributed-replay/*.md": "UpdateFrequency5",
+        "tools/dta/*.md": "UpdateFrequency5",
+        "tools/sql-server-profiler/*.md": "UpdateFrequency5",
+        "tools/ssbdiagnose/*.md": "UpdateFrequency5"
+      }
     },
 
     "template": [],
@@ -265,7 +395,7 @@
 
     "groups": {
       "gr-sql-2016-a": {
-        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = fabric",
         "dest": "temp2016a"
       }
     },
@@ -288,7 +418,7 @@
         "exclude": [
           "linux/sql-server-linux-availability-group-cluster-sles.md",
           "linux/sql-server-linux-create-availability-group.md",
-          "linux/sql-server-linux-ha-basics.md",
+          "linux/sql-server-linux-pacemaker-basics.md",
           "relational-databases/errors-events/database-engine-events-and-errors.md",
           "relational-databases/maintenance-plans/**/*.md",
           "relational-databases/system-stored-procedures/sp-help-job-transact-sql.md",
@@ -303,18 +433,20 @@
           "database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md",
           "sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md",
           "ssms/agent/**/*.md",
-          "database-engine/install-windows/**/*.md"        ]
+          "database-engine/install-windows/**/*.md"
+        ]
       },
       "sensitive-language-sl": {
         "exclude": [
           "linux/sql-server-linux-availability-group-cluster-pacemaker.md",
           "linux/sql-server-linux-create-availability-group.md",
-          "linux/sql-server-linux-ha-basics.md"
+          "linux/sql-server-linux-pacemaker-basics.md"
         ]
       },
       "sensitive-language-wl": {
         "exclude": [
-          "big-data-cluster/reference-config-spark-hadoop.md"
+          "big-data-cluster/reference-config-spark-hadoop.md",
+          "relational-databases/errors-events/**/*.md"
         ]
       },
       "sensitive-language-bl": {

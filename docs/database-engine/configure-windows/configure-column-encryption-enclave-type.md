@@ -1,15 +1,15 @@
 ---
-title: "Configure the enclave type for Always Encrypted Server Configuration Option"
+title: "Configure the enclave type for Always Encrypted (server configuration option)"
 description: Find out how to enable or disable a secure enclave for Always Encrypted. Learn how to confirm whether an enclave has been correctly initialized.
 author: jaszymas
 ms.author: jaszymas
 ms.date: "01/15/2021"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---
-# Configure the enclave type for Always Encrypted Server Configuration Option
+# Configure the enclave type for Always Encrypted (server configuration option)
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
@@ -32,9 +32,10 @@ To confirm an enclave of the type (greater than 0) that is currently in effect h
  - If the view contains exactly one row, the enclave is correctly initialized. 
  - If the view contains no rows, check the SQL Server error log for enclave initialization errors - see [View the SQL Server error log (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
 
-For step-by-step instructions on how to configure a VBS enclave, see [Enable Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server).
+For step-by-step instructions on how to configure a VBS enclave, see [Step 2: Enable Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-2-enable-always-encrypted-with-secure-enclaves-in-sql-server).
 
-## Examples  
+
+## Examples
  The following example enables the secure enclave and sets the enclave type to VBS:
 
 ```sql  

@@ -1,26 +1,22 @@
 ---
-title: "Specifying Predicates in a Path Expression Step | Microsoft Docs"
+title: "Specifying Predicates in a Path Expression Step"
 description: Learn about specifying predicates in the axis step of an XQuery PATH expression to filter an XML node sequence.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "axis step [XQuery]"
   - "predicates [XQuery]"
   - "qualifiers [XQuery]"
   - "path expressions [XQuery]"
-ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Path Expressions - Specifying Predicates
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   As described in the topic, [Path Expressions in XQuery](../xquery/path-expressions-xquery.md), an axis step in a path expression includes the following components:  
   

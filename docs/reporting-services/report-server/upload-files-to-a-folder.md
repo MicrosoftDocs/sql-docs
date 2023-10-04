@@ -1,14 +1,14 @@
 ---
-title: "Upload Files to a Folder | Microsoft Docs"
-description: Learn what happens when you upload different file types from the file system and store them as managed items in a report server database in Reporting Services. 
+title: "Upload Files to a Folder"
+description: Learn what happens when you upload different file types from the file system and store them as managed items in a report server database in Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 06/17/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual  
-helpviewer_keywords: 
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publishing reports [Reporting Services], uploading files"
   - "reports [Reporting Services], publishing"
   - "uploading reports [Reporting Services]"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "files [Reporting Services], uploading"
   - "files [Reporting Services]"
   - "folders [Reporting Services], uploading files to"
-ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Upload Files to a Folder
   You can upload files from the file system and store them as managed items in a report server database. What happens when you upload a file depends on the file type.  

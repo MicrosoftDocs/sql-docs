@@ -4,8 +4,8 @@ description: "ODBC Scalar Functions (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "CURDATE ODBC function"
@@ -48,10 +48,10 @@ helpviewer_keywords:
   - "HOUR ODBC function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # ODBC Scalar Functions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   You can use [ODBC Scalar Functions](../../odbc/reference/appendixes/appendix-e-scalar-functions.md) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
@@ -94,7 +94,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |MONTHNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data-source-specific name of the month for the month part of date_exp. For example, the name is January through December or Jan. through Dec. for a data source that uses English. The name is Januar through Dezember for a data source that uses German.|  
 |QUARTER( date_exp ) (ODBC 1.0)|Returns the quarter in date_exp as an integer value in the range of 1-4, where 1 represents January 1 through March 31.|  
 |WEEK( date_exp ) (ODBC 1.0)|Returns the week of the year, based on the week field in date_exp, as an integer value in the range of 1-53.|  
-  
+
 ## Examples  
   
 ### A. Using an ODBC function in a stored procedure  
@@ -129,6 +129,9 @@ GO
 SELECT dbo.ODBCudf('Returns the length.');  
 --Returns 38  
 ```  
+
+> [!NOTE]
+> [!INCLUDE [fabric](../../includes/fabric.md)] does support ODBC scalar functions, but does not currently support user-defined functions that return values, as shown in Example B.
   
 ### C. Using an ODBC functions in SELECT statements  
  The following SELECT statements use ODBC functions:  
@@ -170,7 +173,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  

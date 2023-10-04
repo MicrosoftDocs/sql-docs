@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Add a Sparkline to Your Report (Report Builder)"
 description: Learn how to use the Report Builder to create a basic table with a sparkline chart in a Reporting Services paginated report.
-ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2017
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
@@ -207,7 +205,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 7.  Click the plus (+) sign in the Values box, then click **Sales**. 
 
-    ![Screenshot showing how to add values to the report builder sparkline. ](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![Screenshot showing how to add values to the report builder sparkline.](../reporting-services/media/report-builder-sparkline-values.png) 
   
     The values in the **Sales** field are now the values for the sparkline.  
   

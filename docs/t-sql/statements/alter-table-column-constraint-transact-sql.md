@@ -4,9 +4,8 @@ description: ALTER TABLE column_constraint (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/05/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "column_constraint"
@@ -18,13 +17,20 @@ helpviewer_keywords:
   - "column_constraint"
 dev_langs:
   - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ALTER TABLE column_constraint (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+::: moniker range="=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the properties of a PRIMARY KEY, FOREIGN KEY, UNIQUE, or CHECK constraint that is part of a new column definition added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+> [!NOTE]
+> For [!INCLUDE [fabric](../../includes/fabric.md)], visit [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md?view=fabric&preserve-view=true) and select your desired product version.
+
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -86,7 +92,7 @@ dev_langs:
 >  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) clause of ALTER TABLE.  
   
  ON { _partition_scheme_name_**(**_partition_column_name_**)** | *filegroup* | **"**default**"** } 
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Specifies the storage location of the index created for the constraint. If *partition_scheme_name* is specified, the index is partitioned and the partitions are mapped to the filegroups that are specified by *partition_scheme_name*. If *filegroup* is specified, the index is created in the named filegroup. If **"**default**"** is specified or if ON is not specified at all, the index is created in the same filegroup as the table. If ON is specified when a clustered index is added for a PRIMARY KEY or UNIQUE constraint, the whole table is moved to the specified filegroup when the clustered index is created.  
   
@@ -155,7 +161,7 @@ dev_langs:
  Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
  NOT FOR REPLICATION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.  
   
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
   
@@ -177,4 +183,76 @@ dev_langs:
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)  
   
-  
+::: moniker-end
+::: moniker range="=fabric"
+
+[!INCLUDE[applies-to-version/fabric-dw-only](../../includes/applies-to-version/fabric-dw.md)]
+
+  Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, a CHECK constraint, or a DEFAULT definition added to a table by using [ALTER TABLE](alter-table-transact-sql.md?version=fabric&preserve-view=true) in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
+ 
+> [!NOTE]
+> For SQL Server and Azure SQL platforms, visit [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md?view=azuresqldb-current&preserve-view=true) and select your desired product version.
+
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ 
+## Syntax  
+ 
+```syntaxsql
+[ CONSTRAINT constraint_name ]  
+{  
+    { PRIMARY KEY | UNIQUE }  
+       NONCLUSTERED    
+        (column [ ASC | DESC ] [ ,...n ] )  
+NOT ENFORCED
+    | FOREIGN KEY  
+        ( column [ ,...n ] )  
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]  
+NOT ENFORCED
+}  
+```  
+ 
+## Arguments
+
+#### CONSTRAINT  
+ Specifies the start of a definition for a PRIMARY KEY, UNIQUE, or FOREIGN KEY.  
+ 
+ *constraint_name*  
+ Is the name of the constraint. Constraint names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md?version=fabric&preserve-view=true), except that the name cannot start with a number sign (#). If constraint_name is not supplied, a system-generated name is assigned to the constraint.  
+ 
+#### PRIMARY KEY  
+ Users need to manually ensure that entity integrity for a specified column or columns are unique to avoid incorrect query results. Only one PRIMARY KEY constraint can be created for each table.  
+ 
+#### UNIQUE  
+ Users need to manually ensure that entity integrity for a specified column or columns are unique to avoid incorrect query results.  
+ 
+#### NONCLUSTERED  
+ Required for migration syntax compatibility but has no effect in the Warehouse.
+ 
+ *column*  
+ Is a column or list of columns specified in parentheses that are used in a new constraint.  
+ 
+ [ **ASC** | DESC ]  
+ Specifies the order in which the column or columns participating in table constraints are sorted. The default is ASC.  
+
+#### NOT ENFORCED
+
+ In [!INCLUDE [fabric](../../includes/fabric.md)], primary key, unique key, and foreign key constraints require NOT ENFORCED. Integrity of the constraints must be maintained by the application.
+
+#### FOREIGN KEY REFERENCES  
+ Users need to manually ensure FOREIGN KEY constraints have each value in the column, also exist in the specified column in the referenced table to avoid incorrect query results.  
+ 
+ *referenced_table_name*  
+ Is the table referenced by the FOREIGN KEY constraint.  
+ 
+ *ref_column*  
+ Is a column or list of columns in parentheses referenced by the new FOREIGN KEY constraint.  
+ 
+ For example, in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the `ProductVendor` table has a referential relationship with the `Vendor` table. The `ProductVendor.VendorID` foreign key references the `Vendor.VendorID` primary key.  
+   
+## Next steps
+
+- [ALTER TABLE (Transact-SQL)](alter-table-transact-sql.md?version=fabric&preserve-view=true)  
+- [Create tables on [!INCLUDE[fabric-data-warehouse](../../includes/fabric-dw.md)] in [!INCLUDE[microsoft-fabric](../../includes/fabric.md)]](/fabric/data-warehouse/create-table)
+- [What is data warehousing in [!INCLUDE [fabric](../../includes/fabric.md)]?](/fabric/data-warehouse/data-warehousing)
+
+::: moniker-end

@@ -4,8 +4,8 @@ description: Learn about enhancements made to driver-aware connection pooling in
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 02/15/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server

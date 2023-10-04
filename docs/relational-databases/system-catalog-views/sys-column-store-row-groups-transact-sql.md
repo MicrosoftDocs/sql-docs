@@ -4,9 +4,8 @@ description: sys.column_store_row_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/28/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.column_store_row_groups_TSQL"
@@ -18,10 +17,9 @@ helpviewer_keywords:
   - "sys.column_store_row_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 ---
 # sys.column_store_row_groups (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server 2012 Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2012-asdbmi.md)]
 
   Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions. **sys.column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
    

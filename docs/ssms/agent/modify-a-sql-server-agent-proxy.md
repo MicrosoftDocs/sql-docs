@@ -1,19 +1,15 @@
 ---
-description: "Modify a SQL Server Agent Proxy"
 title: "Modify a SQL Server Agent Proxy"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "proxies [SQL Server Agent], modifying"
-  - "modifying SQL Server Agent proxy"
-ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
+description: "Modify a SQL Server Agent Proxy"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "proxies [SQL Server Agent], modifying"
+  - "modifying SQL Server Agent proxy"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -63,7 +59,7 @@ Only members of the **sysadmin** fixed server role can create, modify, or delete
   
 #### To modify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

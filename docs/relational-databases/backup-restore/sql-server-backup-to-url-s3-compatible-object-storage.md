@@ -3,11 +3,11 @@ title: "SQL Server backup to URL for S3-compatible object storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the S3-compatible object storage as a backup destination.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/15/2022
-ms.prod: sql
-ms.technology: backup-restore
+ms.reviewer: hudequei
+ms.date: 07/24/2022
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # SQL Server backup to URL for S3-compatible object storage
@@ -18,20 +18,17 @@ This article introduces the concepts, requirements and components necessary to [
 
 For information on supported platforms, see [providers of S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md#providers-of-s3-compatible-object-storage).
 
-> [!NOTE]  
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3 compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API.
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API.
 
-URLs pointing to S3-compatible resources are prefixed with `s3://` to denote that the S3 connector is being used. URLs beginning with `s3://` will always assume that the underlying protocol will be `https`.
+URLs pointing to S3-compatible resources are prefixed with `s3://` to denote that the S3 connector is being used. URLs beginning with `s3://` always assume that the underlying protocol is `https`.
 
 ## Part numbers and file size limitations
 
 To store data, the S3-compatible object storage provider must split files in multiple blocks called parts. This is similar to [block blobs](/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs) in Azure Blob Storage.
 
-Each file can be split up to 10,000 parts, each part size will range from 5 MB to 20 MB, this range is controlled by the T-SQL BACKUP command through the parameter [MAXTRANSFERSIZE](../../t-sql/statements/backup-transact-sql.md#with-options). The default value of `MAXTRANSFERSIZE` is 10 MB, therefore the default size of each part is 10 MB.
+Each file can be split up to 10,000 parts, each part size ranges from 5 MB to 20 MB, this range is controlled by the T-SQL BACKUP command through the parameter [MAXTRANSFERSIZE](../../t-sql/statements/backup-transact-sql.md#with-options). The default value of `MAXTRANSFERSIZE` is 10 MB, therefore the default size of each part is 10 MB.
 
 The maximum supported size of a single file is the result of *10,000 parts \* `MAXTRANSFERSIZE`*, if it is required to backup a bigger file it must split/striped up to 64 URLs. The final maximum supported size of a file is *10,000 parts \* `MAXTRANSFERSIZE` \* URLs*.
 
@@ -42,15 +39,15 @@ The maximum supported size of a single file is the result of *10,000 parts \* `M
 
 The S3 endpoint must have been configured as follows:
 
-- TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint will be validated by a certificate installed on the SQL Server OS Host.
-- Credentials created on the S3-compatible object storage with proper permissions to perform the operation. The user and password created on the storage layer are named the `Access Key ID` and `Secret Key ID`. You will need both to authenticate against the S3 endpoint.
+- TLS must be configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. The endpoint is validated by a certificate installed on the SQL Server OS Host.
+- Credentials created on the S3-compatible object storage with proper permissions to perform the operation. The user and password created on the storage layer are named the `Access Key ID` and `Secret Key ID`. You need both to authenticate against the S3 endpoint.
 - At least one bucket has been configured. Buckets cannot be created or configured from [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Security
 
 ### Backup Permissions
 
-To connect SQL Server to an S3-compatible object storage, two sets of permissions need to be established, one on SQL Server and also on the storage layer.
+To connect SQL Server to S3-compatible object storage, two sets of permissions need to be established, one on SQL Server and also on the storage layer.
 
 On SQL Server the user account that is used to issue BACKUP or RESTORE commands should be in the **db_backupoperator** database role with **Alter any credential** permissions.
 
@@ -74,17 +71,17 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`:
 1. Compression is supported and recommended.
 1. Encryption is supported.
 1. Restore from URL with S3-compatible object storage has no size limitation.
-1. When restoring a database, the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
+1. When you are restoring a database, the `MAXTRANSFERSIZE` is determined by value assigned during the backup phase.
 1. URLs can be specified either in virtual host or path style format.
 1. `WITH CREDENTIAL` is supported.
 1. `REGION` is supported and the default value is `us-east-1`.
-1. `MAXTRANSFERSIZE` will range from 5 MB to 20 MB. 10 MB is the default value for the S3 connector.
+1. `MAXTRANSFERSIZE` ranges from 5 MB to 20 MB. 10 MB is the default value for the S3 connector.
 
 ### Supported arguments for backup
 
 | WITH options | S3 Endpoint | Notes |
 | --- | --- | --- |
-| BLOCKSIZE | Y | `MAXTRANSFERSIZE` will determine the Part size |
+| BLOCKSIZE | Y | `MAXTRANSFERSIZE` determines the Part size. |
 | BUFFERCOUNT | Y | |
 | COMPRESSION | Y | |
 | COPY\_ONLY | Y |  |
@@ -93,40 +90,40 @@ High-level overview of the supported features for `BACKUP` and `RESTORE`:
 | DIFFERENTIAL | Y |  |
 | ENCRYPTION | Y |  |
 | FILE\_SNAPSHOT | N | |
-| MAXTRANSFERSIZE | Y | From 5 MB (5,242,880 Bytes) to 20 MB (20,971,520 Bytes), default value is 10 MB (10,485,760 Bytes)|
+| MAXTRANSFERSIZE | Y | From 5 MB (5,242,880 Bytes) to 20 MB (20,971,520 Bytes), default value is 10 MB (10,485,760 Bytes).|
 | MEDIADESCRIPTION | Y |  |
 | MEDIANAME | Y |  |
-| MIRROR TO | Y | Only works with another URL, MIRROR with URL and DISK is not supported |
+| MIRROR TO | Y | Only works with another URL, `MIRROR` with `URL` and `DISK` is not supported. |
 | NAME | Y |  |
 | NOFORMAT/FORMAT |  Y |  |
-| NOINIT/INIT | N | Appending is not supported. To overwrite a backup use `WITH FORMAT`. |
+| NOINIT/INIT | N | Appending is not supported. To overwrite a backup, use `WITH FORMAT`. |
 | NO\_CHECKSUM/CHECKSUM | Y |  |
 | NO\_TRUNCATE | Y |  |
-| REGION | Y | Default value is *'us-east-1'*, must be used with *`BACKUP_OPTIONS`*|
+| REGION | Y | Default value is `us-east-1`, must be used with `BACKUP_OPTIONS`.|
 | STATS | Y |  |
 
 ### Supported arguments for restore
 
 | WITH options | S3 Endpoint | Notes |
 | --- | --- | --- |
-| BLOCKSIZE | Y | `MAXTRANSFERSIZE` will determine the Part size |
+| BLOCKSIZE | Y | `MAXTRANSFERSIZE` determines the Part size. |
 | BUFFERCOUNT | **N** |   |
 | CHECKSUM \| NO\_CHECKSUM | Y |   |
 | CREDENTIAL | Y |  |
 | ENABLE\_BROKER \| ERROR\_BROKER\_CONVERSATIONS \| NEW\_BROKER | Y |  |
-| FILE | **N** | Logical names not supported with `RESTORE FROM URL` |
+| FILE | **N** | Logical names not supported with `RESTORE FROM URL`. |
 | FILESTREAM | Y |  |
 | KEEP\_CDC | Y |  |
 | KEEP\_REPLICATION | Y |  |
 | LOADHISTORY | Y |  |
 | MAXTRANSFERSIZE | **Y** |   |
 | MEDIANAME | Y |  |
-| MEDIAPASSWORD | **N** | Required for some backups taken prior to SQL Server 2012 |
+| MEDIAPASSWORD | **N** | Required for some backups taken prior to SQL Server 2012. |
 | MOVE | Y |  |
 | PARTIAL | Y |  |
-| PASSWORD | **N** | Required for some backups taken prior to SQL Server 2012 |
+| PASSWORD | **N** | Required for some backups taken prior to SQL Server 2012. |
 | RECOVERY \| NORECOVERY \| STANDBY | Y |  |
-| REGION | Y | Default value is *'us-east-1'*, must be used with *`RESTORE_OPTIONS`*|
+| REGION | Y | Default value is `us-east-1`, must be used with `RESTORE_OPTIONS`.|
 | REPLACE | Y |  |
 | RESTART | Y |  |
 | RESTRICTED\_USER | Y |  |
@@ -177,34 +174,35 @@ For more information see [SQL Server back up to URL for S3-compatible storage be
 
 ### Region
 
-Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTION` or `RESTORE_OPTION`. These options require the value to be declared in JSON format.
+Your S3-compatible object storage provider can offer the ability to determine a specific region for the bucket location. The use of this optional parameter can provide more flexibility by specifying which region that particular bucket belongs to. This parameter requires the use of `WITH` together with either `BACKUP_OPTIONS` or `RESTORE_OPTIONS`. These options require the value to be declared in JSON format. This allows scenarios in which an S3-compatible storage provider can have the same universal URL but be distributed across several regions. In this case, the backup or restore command will point to the specified regions without the need to change the URL.
 
-If no value is declared *us-east-1* will be assigned as default.
+If no value is declared, `us-east-1` is assigned as default.
 
 Backup example:
+
 ```sql
 WITH
-    BACKUP_OPTION = '{"s3": {"region":"us-west-1"}}'
+    BACKUP_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 Restore example:
 
 ```sql
 WITH
-    RESTORE_OPTION = '{"s3": {"region":"us-west-1"}}'
+    RESTORE_OPTIONS = '{"s3": {"region":"us-west-1"}}'
 ```
 
 ### Linux support
 
 SQL Server uses `WinHttp` to implement client of HTTP REST APIs it uses. It relies on OS certificate store for validations of the TLS certificates being presented by HTTP(s) endpoint. However, SQL Server on Linux the CA must be placed on a predefined location to be created at `/var/opt/mssql/security/ca-certificates`, only the first 50 certificates can be stored and supported in this folder.
 
-SQL Server will read the certificates from the folder during startup and add them to the trust store.
+SQL Server reads the certificates from the folder during startup and adds them to the trust store.
 
 Only super user should be able to write in the folder, while the `mssql` user must be able to read.
 
 ## Unsupported features
 
-- Backup to S3-compatible object storage with a non-secure HTTP URL is not supported. Customers are responsible for setting up their S3 host with an HTTPS URL and this endpoint will be validated by a certificate installed on the SQL Server OS host.
+- Backup to S3-compatible object storage with a nonsecure HTTP URL is not supported. Customers are responsible for setting up their S3 host with an HTTPS URL and this endpoint is validated by a certificate installed on the SQL Server OS host.
 - Backup to S3-compatible object storage is not supported in SQL Server Express and SQL Server Express with Advanced Services editions.
 
 <!-- ## Notebooks
@@ -217,10 +215,10 @@ Only super user should be able to write in the folder, while the `mssql` user mu
 
 The following are the current limitations of backup and restore with S3-compatible object storage:
 
-1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compliant object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks will continue to persist in the S3-compliant object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-providers will handle this through their garbage collector system.
-1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. Consequently, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
+1. Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files that are created in the customer's S3-compatible object store (due to an ongoing multipart upload operation) while the BACKUP T-SQL command is running, are not removed in case of failures. These uncommitted data blocks continue to persist in S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are automatically removed by the object store to form the final backup file. Some S3-compatible storage providers handle this through their garbage collector system.
+1. The total URL length is limited to 259 characters. The full string is counted in this limitation, including the `s3://` connector name. So, the usable limit is 254 characters. However, we recommend sticking to a limit of 200 characters to allow for possible introduction of query parameters.
 1. The SQL credential name is limited by 128 characters in UTF-16 format.
-1. Secret key ID only supports alphanumeric values.
+1. Secret key ID must not have `:` character.
 
 ### Path style and virtual host style
 
@@ -236,7 +234,7 @@ Virtual host example: `s3://<bucket>.<domain>/<backup_file_name>`
 
 <!-- The name of the credential must include the bucket name. -->
 - The IDENTITY should always be `'S3 Access Key'` when using the S3 connector.
-- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compliant object storage.
+- The Access Key ID and Secret Key ID must not contain a colon. Access Key ID and Secret Key ID is the user and password created on the S3-compatible object storage.
 - Only alphanumeric values are allowed.
 - The Access Key ID must have proper permissions on the S3-compatible object storage.
 
@@ -282,43 +280,43 @@ WITH    REPLACE -- overwrite
 
 ### Options for encryption and compression
 
-The following example shows how to back up and restore the `AdventureWorks2019` database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database with encryption, `MAXTRANSFERSIZE` as 20 MB and compression:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = <password>;
 GO
 
-CREATE CERTIFICATE AdventureWorks2019Cert
-    WITH SUBJECT = 'AdventureWorks2019 Backup Certificate';
+CREATE CERTIFICATE AdventureWorks2022Cert
+    WITH SUBJECT = 'AdventureWorks2022 Backup Certificate';
 GO
 -- Backup database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH FORMAT, MAXTRANSFERSIZE = 20971520, COMPRESSION,
-ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2019Cert)
+ENCRYPTION (ALGORITHM = AES_256, SERVER CERTIFICATE = AdventureWorks2022Cert)
 GO
 
 -- Restore database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019_Encrypt.bak'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022_Encrypt.bak'
 WITH REPLACE
 ```
 
 ### Use region for backup and restore
 
-The following example shows how to back up and restore the AdventureWorks2019 database using `REGION_OPTIONS`:
+The following example shows how to back up and restore the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using `REGION_OPTIONS`:
 
 ```sql
 -- Backup Database
-BACKUP DATABASE AdventureWorks2019
-TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
+BACKUP DATABASE AdventureWorks2022
+TO URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
 WITH BACKUP_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 
 -- Restore Database
-RESTORE DATABASE AdventureWorks2019
-FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2019.bak'
-WITH MOVE 'AdventureWorks2019' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.mdf'
-, MOVE 'AdventureWorks2019_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.ldf'
+RESTORE DATABASE AdventureWorks2022
+FROM URL = 's3://<endpoint>:<port>/<bucket>/AdventureWorks2022.bak'
+WITH MOVE 'AdventureWorks2022' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.mdf'
+, MOVE 'AdventureWorks2022_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\AdventureWorks2022.ldf'
 , RESTORE_OPTIONS = '{"s3": {"region":"us-east-1"}}'
 ```
 

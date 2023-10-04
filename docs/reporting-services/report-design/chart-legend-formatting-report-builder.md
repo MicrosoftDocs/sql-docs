@@ -1,14 +1,14 @@
 ---
-title: "Formatting the legend on a paginated report chart | Microsoft Docs"
+title: "Formatting the legend on a paginated report chart"
 description: Learn how to format a legend on a paginated report chart in Report Builder with the Legend Properties dialog box or by using the Properties pane.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.calculatedseriesproperties.legend.f1"
   - "10183"
   - "10189"
@@ -25,9 +25,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.legendtitleproperties.font.f1"
   - "sql13.rtp.rptdesigner.legendtitleproperties.general.f1"
   - "sql13.rtp.rptdesigner.legendproperties.font.f1"
-ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Chart legend - formatting the legend on a paginated report chart (Report Builder)
 

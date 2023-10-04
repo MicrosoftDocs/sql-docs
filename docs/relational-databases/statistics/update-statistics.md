@@ -1,24 +1,22 @@
 ---
 title: Update Statistics
-description: Learn how to update query optimization statistics on a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL. 
-ms.prod: sql
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "updating statistics"
-  - "statistics [SQL Server], updating"
+description: Learn how to update query optimization statistics on a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.custom:
-- event-tier1-build-2022
 ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "updating statistics"
+  - "statistics [SQL Server], updating"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Update Statistics
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can update query optimization statistics on a table or indexed view in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using UPDATE STATISTICS or the stored procedure `sp_updatestats` to update statistics more frequently than the default updates. 
   
@@ -71,7 +69,7 @@ If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](
 3. Copy and paste the following example into the query window and click **Execute**. 
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- The following example updates the statistics for the AK_SalesOrderDetail_rowguid index of the SalesOrderDetail table.  
     UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;   
@@ -87,7 +85,7 @@ If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](
 3. Copy and paste the following example into the query window and click **Execute**.
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- The following example updates the statistics for all indexes on the SalesOrderDetail table.
     UPDATE STATISTICS Sales.SalesOrderDetail;   
@@ -105,7 +103,7 @@ For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql
 3. Copy and paste the following example into the query window and click **Execute**.
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- The following example updates the statistics for all tables in the database.  
     EXEC sp_updatestats;  

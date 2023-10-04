@@ -1,16 +1,13 @@
 ---
-title: "Aggregate function in a paginated report | Microsoft Docs"
+title: "Aggregate function in a paginated report"
 description: The Aggregate Function returns a custom aggregate of a specified expression in a paginated report as the expression is defined by the data provider.
-ms.date: 03/15/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/15/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - Aggregate function in a paginated report (Report Builder)
 
@@ -48,7 +45,7 @@ Aggregate(expression, scope)
  You can change this default behavior by changing the value of the **Interpret subtotals as details** option on the **Dataset Properties** dialog box. When this option is set to **True**, all data, including server aggregates, appears as detail data. When set to **False**, server aggregates appear as totals. The setting for this property affects all data regions that are linked to this dataset.  
   
 > [!NOTE]
->  All containing groups for the report item that references **Aggregate** must have simple field references for their group expressions, for example, `[FieldName]`. You cannot use **Aggregate** in a data region that uses complex group expressions. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension, your query must include MDX fields of type **LevelProperty** (not **MemberProperty**) to support aggregation using the **Aggregate**function.  
+>  All containing groups for the report item that references **Aggregate** must have simple field references for their group expressions, for example, `[FieldName]`. You cannot use **Aggregate** in a data region that uses complex group expressions. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension, your query must include MDX fields of type **LevelProperty** (not **MemberProperty**) to support aggregation using the **Aggregate**function.  
   
  *Expression* can contain calls to nested aggregate functions with the following exceptions and conditions:  
   

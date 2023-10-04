@@ -4,14 +4,13 @@ description: In SQL Server CLR integration, the SqlTriggerContext class provides
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "SqlTriggerContext object"
   - "triggers [CLR integration]"
   - "context [CLR integration]"
-ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 ---
 # SqlTriggerContext Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

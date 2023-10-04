@@ -1,24 +1,20 @@
 ---
-description: "Deploy a Model Deployment Package by Using the Wizard"
 title: Deploy a Model Deployment Package (Wizard)
-ms.custom:
-  - intro-deployment
+description: "Deploy a Model Deployment Package by Using the Wizard"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
+ms.custom: intro-deployment
 helpviewer_keywords:
   - "deployment packages [Master Data Services], deploying"
   - "models [Master Data Services], deploying a package"
-ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Deploy a Model Deployment Package by Using the Wizard
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] model deployment wizard to deploy packages that contain model objects only. If you need to deploy a package with data, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   

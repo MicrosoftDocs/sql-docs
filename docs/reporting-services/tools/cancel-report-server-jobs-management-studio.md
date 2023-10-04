@@ -1,18 +1,15 @@
 ---
-title: "Cancel Report Server Jobs (Management Studio) | Microsoft Docs"
+title: "Cancel Report Server Jobs (Management Studio)"
 description: Learn how to use the options in the Cancel Report Server Jobs dialog box to view or cancel in-progress reports.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.cancelreportserverjobs.f1"
-ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.cancelreportserverjobs.f1"
 ---
 # Cancel Report Server Jobs (Management Studio)
   Use the **Cancel Report Server Jobs** dialog box to view or cancel in-progress reports. This dialog box shows all jobs that are currently running on the report server. Although you cannot pause or restart jobs that are currently processing, you can cancel all jobs or individual jobs if they are taking too long to complete.  

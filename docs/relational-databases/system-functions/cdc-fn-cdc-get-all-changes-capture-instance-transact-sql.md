@@ -1,21 +1,18 @@
 ---
-description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
 title: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
-ms.custom: ""
+description: "cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "09/29/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_cdc_get_all_changes_<capture_instance>"
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_all_changes_<capture_instance>"
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +21,7 @@ ms.author: randolphwest
   
  This enumeration function is created at the time that a source table is enabled for change data capture. The function name is derived and uses the format `cdc.fn_cdc_get_all_changes_<capture_instance>` where *capture_instance* is the value specified for the capture instance when the source table is enabled for change data capture.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -89,7 +86,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 -- ========  
 -- Enumerate All Changes for Valid Range Template  
 -- ========  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  

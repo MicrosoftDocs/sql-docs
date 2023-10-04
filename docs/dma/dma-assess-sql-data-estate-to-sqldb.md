@@ -2,13 +2,12 @@
 title: "Assess SQL Server readiness to migrate to Azure SQL Database"
 titleSuffix: Data Migration Assistant
 description: "Learn how to use Data Migration Assistant to migrate a SQL Server data estate for migration to Azure SQL Database"
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.date: "12/19/2019"
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ---
@@ -41,7 +40,7 @@ An Azure Migrate project is used to store discovery, assessment, and migration m
 
    ![Azure Migrate - add tools](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
-5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don’t already have a resource group, create one).
+5. On the **Migrate project** tab, select your Azure subscription and resource group (if you don't already have a resource group, create one).
 6. Under **Project Details**, specify the project name and the geography in which you want to create the project.
 
     ![Azure Migrate - add a tool dialog box](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
@@ -111,7 +110,7 @@ After you successfully create a migration project, under **Assessment tools**, i
 ### Add databases to assess
 
 1. Select **Add Sources** to open the connection fly out menu.
-2. Enter the SQL server instance name, choose the authentication type, set the correct connection properties, and then select **Connect**.
+2. Enter the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance name, choose the authentication type, set the correct connection properties, and then select **Connect**.
 3. Select the databases to assess, and then select **Add**.
 
    > [!NOTE]

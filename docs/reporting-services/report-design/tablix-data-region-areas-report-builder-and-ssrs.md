@@ -1,16 +1,13 @@
 ---
-title: "Tablix data region areas in a paginated report | Microsoft Docs"
+title: "Tablix data region areas in a paginated report"
 description: "Learn about tablix data region areas in a paginated report."
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tablix data region areas in a paginated report (Report Builder)
 

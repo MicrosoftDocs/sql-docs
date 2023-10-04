@@ -4,9 +4,8 @@ description: MSmerge_settingshistory (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSmerge_settingshistory"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_settingshistory system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 ---
 # MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,21 +1,19 @@
 ---
+title: "Store Encrypted Report Server Data (Configuration Manager)"
 description: "Store Encrypted Report Server Data (Configuration Manager)"
-title: "Store Encrypted Report Server Data (Configuration Manager) | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 10/24/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "report servers [Reporting Services], encryption"
   - "credentials [Reporting Services]"
   - "cryptography [Reporting Services]"
   - "confidential reports [Reporting Services]"
   - "encryption [Reporting Services]"
   - "databases [Reporting Services], encryption"
-ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-author: maggiesMSFT
-ms.author: maggies
 ---
 # SSRS Encryption Keys - Store Encrypted Report Server Data
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stores encrypted values in the report server database and in configuration files. Most encrypted values are credentials that are used for accessing external data sources that provide data to reports. This topic describes which values are encrypted, the encryption functionality used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and other kinds of stored confidential data that you should know about.  

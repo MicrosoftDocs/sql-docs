@@ -1,20 +1,17 @@
 ---
-title: "Add, change, or delete default values for a paginated report parameter | Microsoft Docs"
+title: "Add, change, or delete default values for a paginated report parameter"
 description: Use these steps to customize your reports with added, changed, or deleted  default values for paginated report parameters.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10460"
   - "sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1"
   - "10072"
-ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Add, change, or delete default values for a paginated report parameter (Report Builder)

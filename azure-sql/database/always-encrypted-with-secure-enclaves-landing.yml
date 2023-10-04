@@ -13,8 +13,8 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: kendralittle, mathoma
-  ms.date: 07/14/2021
+  ms.reviewer: mathoma
+  ms.date: 04/05/2023
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -39,10 +39,10 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Plan for Intel SGX enclaves and attestation in Azure SQL Database
+          - text: Plan for secure enclaves in Azure SQL Database
             url: always-encrypted-enclaves-plan.md
-          - text: Enable Intel SGX for your Azure SQL Database
-            url: always-encrypted-enclaves-enable-sgx.md
+          - text: Enable Always Encrypted with secure enclaves for your Azure SQL Database
+            url: always-encrypted-enclaves-enable.md
           - text: Configure attestation for Always Encrypted using Azure Attestation 
             url: always-encrypted-enclaves-configure-attestation.md
 
@@ -51,6 +51,8 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
+          - text: Plan for Always Encrypted with secure enclaves without attestation
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-no-attestation-plan
           - text: Plan for Host Guardian Service attestation
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan
           - text: Deploy the Host Guardian Service for SQL Server
@@ -70,9 +72,7 @@ landingContent:
             url: https://github.com/microsoft/sql-server-samples/tree/master/samples/features/security/always-encrypted-with-secure-enclaves
       - linkListType: tutorial
         links:
-          - text: Getting started with Always Encrypted with secure enclaves in SQL Server
-            url: /sql/relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves
-          - text: Getting started with Always Encrypted with secure enclaves in Azure SQL Database
+          - text: Getting started using Always Encrypted with secure enclaves tutorials
             url: always-encrypted-enclaves-getting-started.md
           - text: Create and use indexes on enclave-enabled columns using randomized encryption 
             url: /sql/relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption
@@ -100,10 +100,17 @@ landingContent:
         links:
           - text: Configure column encryption in-place using Always Encrypted with secure enclaves
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption
+          - text: Configure column encryption in-place with the Always Encrypted wizard in SSMS
+            url: /sql/relational-databases/security/encryption/always-encrypted-wizard
+          - text : Configure column encryption in-place with DACPAC
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-dacpac
+          - text: Configure column encryption in-place with PowerShell
+            url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-powershell
           - text: Configure column encryption in-place with Transact-SQL
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql
           - text: Enable Always Encrypted with secure enclaves for existing encrypted columns
             url: /sql/relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns
+          
             
   # Card
   - title: Videos

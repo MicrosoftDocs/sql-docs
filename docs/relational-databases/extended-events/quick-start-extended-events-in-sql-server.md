@@ -5,9 +5,8 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: maghan
 ms.date: "04/16/2020"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: quickstart
 ms.custom: intro-quickstart
 f1_keywords:
@@ -15,7 +14,6 @@ f1_keywords:
   - "sql11.ssms.XeNewEventSession.Events.f1"
   - "sql11.ssms.XeNewEventSession.Targets.f1"
   - "sql11.ssms.XeNewEventSession.Advanced.f1"
-ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 

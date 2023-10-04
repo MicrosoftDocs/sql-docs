@@ -1,15 +1,12 @@
 ---
+title: "Global Settings (Dialogs)  (SybaseToSQL)"
 description: "Global Settings (Dialogs)  (SybaseToSQL)"
-title: "Global Settings (Dialogs)  (SybaseToSQL) | Microsoft Docs"
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
-author: cpichuka 
-ms.author: cpichuka 
 ---
 # Global Settings (Dialogs)  (SybaseToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

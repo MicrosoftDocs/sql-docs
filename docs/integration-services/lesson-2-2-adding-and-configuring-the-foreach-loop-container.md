@@ -1,16 +1,12 @@
 ---
+title: "Step 2: Add and configure the Foreach Loop container"
 description: "Lesson 2-2: Add and configure the Foreach Loop container"
-title: "Step 2: Add and configure the Foreach Loop container | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 2-2: Add and configure the Foreach Loop container
 
@@ -33,7 +29,7 @@ The procedures in this task show you how to create and modify the Foreach Loop c
 After you have made these modifications to the package, when the package is run, the Foreach Loop Container iterates through all files in the Sample Data folder. Each time a file is found that matches the criterion, the Foreach Loop Container populates the new variable with the file name, maps that variable to the **ConnectionString** property of the Sample Currency Data Flat File connection manager, and then runs the data flow against that file. In this way, each iteration of the Foreach Loop the Data Flow task consumes a different flat file.  
   
 > [!NOTE]  
-> Because [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow won't require modification to the data flow. Therefore, the Lesson 1 data flow does not have to be changed.  
+> Because [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separates control flow from data flow, any looping that you add to the control flow won't require modification to the data flow. Therefore, the Lesson 1 data flow does not have to be changed.  
   
 ## Add a Foreach Loop container  
   

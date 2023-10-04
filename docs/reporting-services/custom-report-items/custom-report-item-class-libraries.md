@@ -1,19 +1,16 @@
 ---
-title: "Custom Report Item Class Libraries | Microsoft Docs"
+title: "Custom Report Item Class Libraries"
 description: Learn about the custom report item class libraries and use code samples to understand how to use these classes.
-ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: custom-report-items
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "custom report items, RDL"
-  - "RDL [Reporting Services], custom report items"
-ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/03/2017
+ms.service: reporting-services
+ms.subservice: custom-report-items
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "custom report items, RDL"
+  - "RDL [Reporting Services], custom report items"
 ---
 # Custom Report Item Class Libraries
   Custom report items use classes from the **Microsoft.ReportDesigner** namespace. The classes used to implement a custom report item can be grouped into two main categories: unique classes designed to support custom report item infrastructure, and managed wrapper classes that encapsulate the functionality of relevant Report Definition Language (RDL) elements. For a code sample on how to use these classes, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  

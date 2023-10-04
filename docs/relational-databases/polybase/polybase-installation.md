@@ -4,8 +4,8 @@ description: Learn to install PolyBase as a single node or PolyBase scale-out gr
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/01/2022
-ms.prod: sql
-ms.technology: polybase
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:
@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-2016"
 ---
 # Install PolyBase on Windows
 
-[!INCLUDE [SQL Server Windows Only ](../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [SQL Server Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 To install a trial version of SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).
 

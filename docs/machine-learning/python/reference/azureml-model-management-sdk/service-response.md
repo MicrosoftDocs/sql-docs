@@ -1,32 +1,15 @@
---- 
- 
-# required metadata 
-title: "ServiceResponse class"
-description: "The ServiceResponse class is for SQL Machine Learning Services and Machine Learning Server for managing web services." 
-keywords: "" 
-author: WilliamDAssafMSFT
-ms.author: wiassaf 
-manager: "cgronlun" 
-ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "sql"
-ms.technology: "machine-learning-services" 
-ms.service: "" 
-ms.assetid: "" 
- 
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "Python" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: ""
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
- 
 ---
-
+title: "ServiceResponse class"
+description: "The ServiceResponse class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.date: 07/15/2019
+ms.service: sql
+ms.subservice: "machine-learning-services"
+ms.topic: "reference"
+ms.devlang: Python
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
+---
 # Class ServiceResponse
 
 
@@ -163,7 +146,7 @@ The name of the output.
 
 ### Returns
 
-The service output’s value.
+The service output's value.
 
 
 

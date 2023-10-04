@@ -4,9 +4,8 @@ description: Windows Collation Name (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "Windows collations [SQL Server]"
@@ -15,15 +14,15 @@ helpviewer_keywords:
   - "Collation Designator"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Windows Collation Name (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -224,14 +223,14 @@ The following table lists all Windows collations supported in [!INCLUDE[ssnovers
 |Yi (PRC)|Latin1_General_100_|Not available|
 |Yoruba (Nigeria)|Latin1_General_100_|Not available|
 |Zulu/isiZulu (South Africa)|Latin1_General_100_|Not available|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Hindi|Hindi|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
-|Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Hindi|Hindi|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
+|Deprecated, not available at server level in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later|Macedonian|Macedonian|
 
 <sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao SAR) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

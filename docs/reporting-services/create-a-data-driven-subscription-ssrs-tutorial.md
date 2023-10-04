@@ -1,19 +1,17 @@
 ---
-title: "Create a Data-Driven Subscription (SSRS Tutorial) | Microsoft Docs"
+title: "Create a Data-Driven Subscription (SSRS Tutorial)"
 description: Learn about data-driven subscriptions through a simple example that creates a data-driven subscription to generate and save filtered report output to a file share.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/26/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [Reporting Services], tutorials"
   - "walkthroughs [Reporting Services]"
   - "data-driven subscriptions"
-ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)
 This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches you the concepts of data-driven subscriptions by walking you through a simple example that creates a data-driven subscription to generate and save filtered report output to a file share. 
@@ -49,11 +47,11 @@ The following diagram illustrates the basic workflow of the tutorial:
 ## Requirements  
 Data-driven subscriptions are typically created and maintained by report server administrators. The steps to create data-driven subscriptions require building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  
   
-The tutorial uses the *Sales order* report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) and data from the sample database **AdventureWorks2014**.  
+The tutorial uses the *Sales order* report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) and data from the sample database **AdventureWorks2022**.  
   
 Your computer must have the following installed to use this tutorial:  
   
--   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Features of SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
+-   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and supported features of SQL Server 2022](../sql-server/editions-and-components-of-sql-server-2022.md).
   
 -   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
   
@@ -61,7 +59,7 @@ Your computer must have the following installed to use this tutorial:
   
 -   A report that includes parameters. This tutorial assumes the sample report, `Sales Orders` you create using the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
--   The **AdventureWorks2014** sample database, which provides data to the sample report.  
+-   The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database, which provides data to the sample report.  
   
 -   A [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] role assignment that includes the Manage all subscriptions task on the sample report. This task is required for defining a data-driven subscription. If you are an administrator on the computer, the default role assignment for local administrators provides the permissions necessary for creating data-driven subscriptions. For more information, see [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   

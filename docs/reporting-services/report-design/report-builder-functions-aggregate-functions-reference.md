@@ -1,16 +1,13 @@
 ---
-title: "Aggregate functions reference for paginated reports | Microsoft Docs"
-description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your paginated report. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
+title: "Aggregate functions reference for paginated reports"
+description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your paginated report.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - aggregate functions reference in paginated reports (Report Builder)
 

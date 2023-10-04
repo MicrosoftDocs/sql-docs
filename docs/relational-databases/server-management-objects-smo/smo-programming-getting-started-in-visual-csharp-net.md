@@ -1,21 +1,18 @@
 ---
+title: "Getting Started in Visual C# .NET"
 description: "SMO Programming - Getting Started in Visual C# .NET"
-title: "Getting Started in Visual C# .NET | Microsoft Docs"
-ms.custom:
-  - intro-quickstart
-ms.date: "08/02/2016"
-ms.prod: sql
-ms.technology: 
-ms.topic: quickstart
-helpviewer_keywords:
-  - "Visual C# [SMO]"
-ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/02/2016"
+ms.service: sql
+ms.topic: quickstart
+ms.custom: intro-quickstart
+helpviewer_keywords:
+  - "Visual C# [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Programming - Getting Started in Visual C# .NET
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET is one of the managed programming languages that are supported by the common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Many For more information about the C# language, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET documentation. You can use [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)] and [!INCLUDE[vsprvs2008](../../includes/vsprvs2008-md.md)] to develop SMO applications.  
   

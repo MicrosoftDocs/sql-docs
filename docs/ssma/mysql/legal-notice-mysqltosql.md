@@ -1,17 +1,14 @@
 ---
-description: "Legal Notice (MySQLToSql)"
-title: "Legal Notice (MySQLToSql) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+title: "Legal Notice (MySQLToSQL)"
+description: "Legal Notice (MySQLToSQL)"
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
-author: cpichuka 
-ms.author: cpichuka 
 ---
-# Legal Notice (MySQLToSql)
+# Legal Notice (MySQLToSQL)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
   
 The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  

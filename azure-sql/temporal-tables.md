@@ -3,7 +3,7 @@ title: Getting started with temporal tables
 description: Learn how to get started with using temporal tables in Azure SQL Database and Azure SQL Managed Instance.
 author: MladjoA
 ms.author: mlandzic
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 10/18/2021
 ms.service: sql-db-mi
 ms.subservice: performance

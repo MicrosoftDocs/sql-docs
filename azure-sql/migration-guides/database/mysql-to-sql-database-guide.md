@@ -3,7 +3,7 @@ title: "MySQL to Azure SQL Database:  Migration guide"
 description: In this guide, you learn how to migrate your MySQL databases to an Azure SQL database by using SQL Server Migration Assistant for MySQL (SSMA for MySQL).
 author: croblesm
 ms.author: roblescarlos
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 03/19/2021
 ms.service: sql-database
 ms.subservice: migration-guide
@@ -21,7 +21,7 @@ For other migration guides, see [Azure Database Migration Guide](/data-migration
 
 Before you begin migrating your MySQL database to a SQL database, do the following:
 
-- Verify that your source environment is supported. Currently, MySQL 5.6 and 5.7 are supported. 
+- Verify that your source environment is supported. Currently, MySQL 4.1 and above is supported. 
 - Download and install [SQL Server Migration Assistant for MySQL](https://www.microsoft.com/download/details.aspx?id=54257).
 - Ensure that you have connectivity and sufficient permissions to access both the source and the target.
 
@@ -159,7 +159,7 @@ For more assistance with completing this migration scenario, see the following r
 
 | Title | Description |
 | --- | --- |
-| [Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130) | Provides suggested “best fit” target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
+| [Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130) | Provides suggested "best fit" target platforms, cloud readiness, and application/database remediation levels for specified workloads. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated, uniform target-platform decision process. |
 |[MySQL to SQL DB - Database Compare utility](https://www.microsoft.com/download/details.aspx?id=103016)|The Database Compare utility is a Windows console application that you can use to verify that the data is identical both on source and target platforms. You can use the tool to efficiently compare data down to the row or column level in all or selected tables, rows, and columns.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.
@@ -170,7 +170,7 @@ The Data SQL Engineering team developed these resources. This team's core charte
 
 - For a matrix of Microsoft and third-party services and tools that are available to assist you with various database and data migration scenarios and specialty tasks, see [Service and tools for data migration](/azure/dms/dms-tools-matrix).
 
-- For other migration guides, see [Azure Database Migration Guide](https://datamigration.microsoft.com/). 
+- For other migration guides, see [Azure Database Migration Guide](/data-migration/).
 
 - For migration videos, see [Overview of the migration journey and recommended migration and assessment tools and services](https://azure.microsoft.com/resources/videos/overview-of-migration-and-recommended-tools-services/).
 

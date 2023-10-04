@@ -15,18 +15,18 @@ ms.custom: sqldbrb=1
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Cloud (Azure). In this tutorial, you learn how to use the Azure portal and [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) (ADS) to:
+Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Cloud (Azure). In this tutorial, you learn how to use the Azure portal and [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio) (ADS) to:
 
 > [!div class="checklist"]
 >
-> - Create a database using the Azure portal*
+> - Create a database using the Azure portal <sup>1</sup>
 > - Configure a server-level IP firewall rule using the Azure portal
 > - Connect to the database with Azure Data Studio
 > - Create tables with Azure Data Studio
 > - Bulk load data with BCP
 > - Query data with Azure Data Studio
 
-*If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
+<sup>1</sup> If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/) before you begin.
 
 > [!TIP]
 > This free Learn module shows you how to [Develop and configure an ASP.NET application that queries an Azure SQL Database](/learn/modules/develop-app-that-queries-azure-sql/), including the creation of a simple database.
@@ -38,7 +38,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 
 To complete this tutorial, make sure you've installed:
 
-- [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio.md) (latest version)
+- [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) (latest version)
 - [BCP and SQLCMD](https://www.microsoft.com/download/details.aspx?id=36433) (latest version)
 
 ## Sign in to the Azure portal
@@ -63,7 +63,7 @@ Follow these steps to create a blank database.
     | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
     | **Database name** | *yourDatabase* | For valid database names, see [Database identifiers](/sql/relational-databases/databases/database-identifiers). |
 
-4. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](\sql-docs-pr\azure-sql\database\elastic-pool-overview.md)
+4. Choose whether or not you want to use SQL elastic pool. For more details, visit [the SQL elastic pools documentation](elastic-pool-overview.md)
 
 5. Choose the type of environment you would like your workload to be on. This will determine the compute + storage as well as backup redundancy recommendations for your workload.
 
@@ -113,7 +113,7 @@ Your IP address can now pass through the IP firewall. You can now connect to you
 
 ## Connect to the database
 
-Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to establish a connection to your database.
+Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio) to establish a connection to your database.
 
 1. Open Azure Data Studio.
 2. In the **New Connection** from the Object Explorer to create a new connection and enter the following information:
@@ -136,7 +136,7 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio.md) to 
 
 ## Create tables in your database
 
-Create a database schema with four tables that model a student management system for universities using [the Table Designer](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md):
+Create a database schema with four tables that model a student management system for universities using [the Table Designer](/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio):
 
 - Person
 - Course
@@ -147,9 +147,9 @@ The following diagram shows how these tables are related to each other. Some of 
 
 ![Screenshot of Table relationships.](./media/design-first-database-tutorial/tutorial-database-tables.png)  
 
-1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-Select the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
+1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
-2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](\sql-docs-pr\docs\azure-data-studio\table-designer-azure-data-studio.md) :
+2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio) :
 
     - Person Table
 
@@ -190,35 +190,11 @@ The following diagram shows how these tables are related to each other. Some of 
 
    ![Screenshot of created tables in ADS.](./media/design-first-database-tutorial/azure-data-studio-tables-created.png)
 
-## Load data into the tables
-
-1. Create a folder called *sampleData* in your Downloads folder to store sample data for your database.
-
-2. Right-Select the following links and save them into the *sampleData* folder.
-
-   - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
-   - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
-   - [SampleStudentData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleStudentData)
-   - [SampleCreditData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCreditData)
-
-3. Open a command prompt window and navigate to the *sampleData* folder.
-
-4. Execute the following commands to insert sample data into the tables replacing the values for *server*, *database*, *user*, and *password* with the values for your environment.
-
-   ```cmd
-   bcp Course in SampleCourseData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Person in SamplePersonData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Student in SampleStudentData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   bcp Credit in SampleCreditData -S <server>.database.windows.net -d <database> -U <user> -P <password> -q -c -t ","
-   ```
-
-You have now loaded sample data into the tables you created earlier.
-
 ## Query data
 
 Execute the following queries to retrieve information from the database tables. See [Write SQL queries](/previous-versions/sql/sql-server-2005/express-administrator/bb264565(v=sql.90)) to learn more about writing SQL queries. The first query joins all four tables to find the students taught by 'Dominick Pope' who have a grade higher than 75%. The second query joins all four tables and finds the courses in which 'Noe Coleman' has ever enrolled.
 
-1. In the Azure Data Studio Object Explorer, right-Select on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
+1. In the Azure Data Studio Object Explorer, right-click on your server connection, then select *New Query* to open up the Query Window. Then, execute the queries below:
 
    ```sql
    -- Find the students taught by Dominick Pope who have a grade higher than 75%

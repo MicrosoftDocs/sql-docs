@@ -4,9 +4,8 @@ description: Learn how srv_senddone in the Extended Stored Procedure API sends a
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_senddone"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_senddone
 apitype: "DLLExport"
-ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 ---
 # srv_senddone (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

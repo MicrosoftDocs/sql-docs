@@ -1,14 +1,14 @@
 ---
-title: "Query Design Tools | Microsoft Docs"
+title: "Query Design Tools"
 description: Learn about query design tools and also learn the type of data source each query design tool supports.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "graphical query designer [Reporting Services]"
   - "MDX query designer [Reporting Services]"
   - "text-based query designer [Reporting Services]"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "Reporting Services, query designers"
   - "semantic queries [Reporting Services]"
   - "Report Model Query Designer"
-ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Query Design Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a variety of query design tools that you can use to create dataset queries in Report Designer. Some query designers provide alternate modes so that you can choose whether to work in visual mode or directly in the query language. This topic introduces each tool and describes the type of data source each one supports. The following tools are described in this topic:  

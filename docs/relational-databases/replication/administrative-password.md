@@ -1,18 +1,15 @@
 ---
+title: "Administrative Password"
 description: "Administrative Password"
-title: "Administrative Password | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.replicationutilities.administrativepassword.f1"
-ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.replicationutilities.administrativepassword.f1"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Administrative Password

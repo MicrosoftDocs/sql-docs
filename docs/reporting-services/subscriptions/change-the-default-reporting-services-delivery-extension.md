@@ -1,18 +1,15 @@
 ---
-title: "Change the Default Reporting Services Delivery Extension | Microsoft Docs"
-description: 'Learn to configure Reporting Services settings to re-order the delivery extensions shown in the "Delivered by" list, and to set the default delivery extension.'
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Report Manager [Reporting Services], default delivery extension"
-ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
+title: "Change the Default Reporting Services Delivery Extension"
+description: "Learn to configure Reporting Services settings to re-order the delivery extensions shown in the Delivered by list, and to set the default delivery extension."
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: subscriptions
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Report Manager [Reporting Services], default delivery extension"
 ---
 # Change the Default Reporting Services Delivery Extension
   You can modify [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration settings to change the default delivery extension that appears in the **Delivered by** list of a subscription definition page. For example you can modify the configuration so that when users create a new subscription, file share delivery is selected by default instead of e-mail delivery. You can also change the order the delivery extensions are listed in the user interface.  

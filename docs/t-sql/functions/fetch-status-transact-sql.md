@@ -4,8 +4,8 @@ description: "@@FETCH_STATUS (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "09/18/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "@@FETCH_STATUS"
@@ -23,7 +23,7 @@ dev_langs:
 
 This function returns the status of the last cursor FETCH statement issued against any cursor currently opened by the connection.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +58,7 @@ This example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loo
 ```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT BusinessEntityID, JobTitle  
-FROM AdventureWorks2012.HumanResources.Employee;  
+FROM AdventureWorks2022.HumanResources.Employee;  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
 WHILE @@FETCH_STATUS = 0  

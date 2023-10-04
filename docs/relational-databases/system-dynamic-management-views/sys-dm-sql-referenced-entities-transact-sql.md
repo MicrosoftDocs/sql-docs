@@ -4,9 +4,8 @@ description: sys.dm_sql_referenced_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "05/01/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_sql_referenced_entities_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_sql_referenced_entities dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referenced_entities (Transact-SQL)
@@ -73,7 +71,7 @@ sys.dm_sql_referenced_entities (
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Column ID when the referencing entity is a column; otherwise 0. Is not nullable.|  
-|referenced_server_name|**sysname**|Name of the server of the referenced entity.<br /><br /> This column is populated for cross-server dependencies that are made by specifying a valid four-part name. For information about multipart names, see [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL for non-schema-bound dependencies for which the entity was referenced without specifying a four-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
+|referenced_server_name|**sysname**|Name of the server of the referenced entity.<br /><br /> This column is populated for cross-server dependencies that are made by specifying a valid four-part name. For information about multipart names, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL for non-schema-bound dependencies for which the entity was referenced without specifying a four-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
 |referenced_database_name|**sysname**|Name of the database of the referenced entity.<br /><br /> This column is populated for cross-database or cross-server references that are made by specifying a valid three-part or four-part name.<br /><br /> NULL for non-schema-bound references when specified using a one-part or two-part name.<br /><br /> NULL for schema-bound entities because they must be in the same database and therefore can only be defined using a two-part (*schema.object*) name.|  
 |referenced_schema_name|**sysname**|Schema in which the referenced entity belongs.<br /><br /> NULL for non-schema-bound references in which the entity was referenced without specifying the schema name.<br /><br /> Never NULL for schema-bound references.|  
 |referenced_entity_name|**sysname**|Name of the referenced entity. Is not nullable.|  
@@ -143,7 +141,7 @@ sys.dm_sql_referenced_entities (
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
         referenced_schema_name,
@@ -163,7 +161,7 @@ GO
  The following example returns the entities that are referenced by the user-defined function `dbo.ufnGetContactInformation`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT
         referenced_schema_name,
@@ -298,7 +296,7 @@ GO
  The following example returns the objects and column dependencies of the stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. This procedure updates the columns `NationalIDNumber`, `BirthDate,``MaritalStatus`, and `Gender` of the `Employee` table based on a specified `BusinessEntityID` value. Another stored procedure, `upsLogError` is defined in a TRY...CATCH block to capture any execution errors. The `is_selected`, `is_updated`, and `is_select_all` columns return information about how these objects and columns are used within the referencing object. The table and columns that are modified are indicated by a 1 in the is_updated column. The `BusinessEntityID` column is only selected and the stored procedure `uspLogError` is neither selected nor modified.  
 
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT
         referenced_entity_name AS table_name,

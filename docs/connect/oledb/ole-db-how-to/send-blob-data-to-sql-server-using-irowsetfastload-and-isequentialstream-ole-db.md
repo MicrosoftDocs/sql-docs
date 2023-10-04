@@ -4,8 +4,8 @@ description: Learn how to use IRowsetFastLoad to stream varying length BLOB data
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "05/25/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
@@ -19,7 +19,7 @@ ms.topic: "reference"
   
  In the source code, when you uncomment `#define USE_ISEQSTREAM`, the sample will use ISequentialStream. The stream implementation is defined in the sample, and can send any size BLOB data simply by changing MAX_BLOB. Stream data does not have to fit in memory or be available in one block. You call this provider by using IRowsetFastLoad::InsertRow. Pass a pointer using IRowsetFastLoad::InsertRow to the stream implementation in the data buffer (rgBinding.obValue offset) along with the amount of data available to read from the stream. Some providers might not have to know the length of the data when binding occurs. In this case, the length can be omitted from the binding.  
   
- The sample doesn't use the provider's stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB, SQLNCLI, and MSOLEDBSQL) will read data in 1024-byte chunks. Providers read from the object until all data has been processed. None of SQLOLEDB, SQLNCLI, and MSOLEDBSQL have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object.  
+ The sample doesn't use the provider's stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB, SQLNCLI, and MSOLEDBSQL) will read data in 1024-byte chunks. Providers read from the object until all data has been processed. None of SQLOLEDB, SQLNCLI, and MSOLEDBSQL have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object. Only the [Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](../oledb-driver-for-sql-server.md) is recommended for new development.
   
  The consumer-implemented ISequentialStream object can be used with rowset data (IRowsetChange::InsertRow, IRowsetChange::SetData). Also, it can be used with parameters by binding a parameter as DBTYPE_IUNKNOWN.  
   

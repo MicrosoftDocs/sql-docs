@@ -7,10 +7,7 @@ ms.date: 06/17/2022
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: quickstart
-ms.custom:
-  - subject-armqs
-  - devx-track-azurepowershell
-  - mode-arm
+ms.custom: subject-armqs, mode-arm, devx-track-bicep
 ---
 
 # Quickstart: Create SQL Server VM using Bicep

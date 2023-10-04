@@ -1,21 +1,18 @@
 ---
-title: "Implementing a Delivery Extension | Microsoft Docs"
+title: "Implementing a Delivery Extension"
 description: Read an overview of how you can extend the functionality of delivery in Reporting Services by implementing a custom delivery extension.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/16/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "delivery [Reporting Services]"
   - "custom delivery extensions [Reporting Services]"
   - "extensions [Reporting Services], delivery"
   - "delivery extensions [Reporting Services]"
-ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Implementing a Delivery Extension
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enables users to create and publish reports that, once created and published, can be delivered to various locations. In addition, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and a delivery API that enable developers to create additional delivery extensions to further extend the functionality of delivery in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

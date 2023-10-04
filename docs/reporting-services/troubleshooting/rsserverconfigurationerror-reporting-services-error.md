@@ -1,18 +1,15 @@
 ---
-title: "rsServerConfigurationError - Reporting Services Error | Microsoft Docs"
+title: "rsServerConfigurationError - Reporting Services Error"
 description: "In this error reference page, learn about event ID 'rsServerConfigurationError': The report server has encountered a configuration error."
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "rsServerConfigurationError"
-ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/20/2017
+ms.service: reporting-services
+ms.subservice: troubleshooting
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "rsServerConfigurationError"
 ---
 # rsServerConfigurationError - Reporting Services Error
     

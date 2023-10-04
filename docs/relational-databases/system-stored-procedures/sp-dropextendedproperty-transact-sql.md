@@ -1,30 +1,26 @@
 ---
+title: "sp_dropextendedproperty (Transact-SQL)"
 description: "sp_dropextendedproperty (Transact-SQL)"
-title: "sp_dropextendedproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_dropextendedproperty_TSQL"
-  - "sp_dropextendedproperty"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_dropextendedproperty"
-ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_dropextendedproperty_TSQL"
+  - "sp_dropextendedproperty"
+helpviewer_keywords:
+  - "sp_dropextendedproperty"
+dev_langs:
+  - "TSQL"
 ---
 # sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops an existing extended property.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -119,7 +115,7 @@ GO
  The following example removes the property named `MS_Description` from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. Because the property is on the database itself, no object types and names are specified.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_dropextendedproperty   
 @name = N'MS_Description';  

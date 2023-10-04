@@ -1,10 +1,10 @@
 ---
 title: Automated Backup for SQL Server 2014 Azure virtual machines
 description: Explains the Automated Backup feature for SQL Server 2014 VMs running in Azure. This article is specific to VMs using the Resource Manager.
-author: bluefooted
-ms.author: pamela
-ms.reviewer: pamela
-ms.date: 05/03/2018
+author: tarynpratt
+ms.author: tarynpratt
+ms.reviewer: mathoma
+ms.date: 09/12/2023
 ms.service: virtual-machines-sql
 ms.subservice: backup
 ms.topic: how-to
@@ -41,9 +41,8 @@ To use Automated Backup, consider the following prerequisites:
 
 **Database configuration**:
 
-- Target _user_ databases must use the full recovery model. System databases do not have to use the full recovery model. However, if you require log backups to be taken for Model or MSDB, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
-- The SQL Server VM has been registered with the SQL IaaS Agent extension in [full management mode](sql-agent-extension-manually-register-single-vm.md#upgrade-to-full). 
--  Automated backup relies on the full [SQL Server IaaS Agent Extension](sql-server-iaas-agent-extension-automate-management.md). As such, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS extension fails and automated backup will not work. 
+- Target _user_ databases must use the full recovery model. System databases do not have to use the full recovery model. However, if you require log backups to be taken for `model` or `msdb`, you must use the full recovery model. For more information about the impact of the full recovery model on backups, see [Backup under the full recovery model](/previous-versions/sql/sql-server-2008-r2/ms190217(v=sql.105)). 
+- The SQL Server VM has been registered with the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md) and the **automated backup** feature is enabled. Since automated backup relies on the extension, automated backup is only supported on target databases from the default instance, or a single named instance. If there is no default instance, and multiple named instances, the SQL IaaS Agent extension fails and automated backup won't work. 
 
 ## Settings
 
@@ -54,7 +53,7 @@ The following table describes the options that can be configured for Automated B
 | **Automated Backup** | Enable/Disable (Disabled) | Enables or disables Automated Backup for an Azure VM running SQL Server 2014 Standard or Enterprise. |
 | **Retention Period** | 1-90 days (90 days) | The number of days to retain a backup. |
 | **Storage Account** | Azure storage account | An Azure storage account to use for storing Automated Backup files in blob storage. A container is created at this location to store all backup files. The backup file naming convention includes the date, time, and machine name. |
-| **Encryption** | Enable/Disable (Disabled) | Enables or disables encryption. When encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
+| **Encryption** | Enable/Disable (Disabled) | Enables or disables backup encryption. When backup encryption is enabled, the certificates used to restore the backup are located in the specified storage account in the same `automaticbackup` container using the same naming convention. If the password changes, a new certificate is generated with that password, but the old certificate remains to restore prior backups. |
 | **Password** | Password text | A password for encryption keys. This is only required if encryption is enabled. In order to restore an encrypted backup, you must have the correct password and related certificate that was used at the time the backup was taken. |
 
 
@@ -96,6 +95,9 @@ You can use PowerShell to configure Automated Backup. Before you begin, you must
 If you enabled automated backup during provisioning, you can use PowerShell to check your current configuration. Run the **Get-AzVMSqlServerExtension** command and examine the **AutoBackupSettings** property:
 
 ```powershell
+$vmname = "yourvmname"
+$resourcegroupname = "yourresourcegroupname"
+
 (Get-AzVMSqlServerExtension -VMName $vmname -ResourceGroupName $resourcegroupname).AutoBackupSettings
 ```
 
@@ -127,61 +129,81 @@ You can use PowerShell to enable Automated Backup as well as to modify its confi
 First, select or create a storage account for the backup files. The following script selects a storage account or creates it if it does not exist.
 
 ```powershell
+$vmname = "yourvmname"
+$resourcegroupname = "yourresourcegroupname"
 $storage_accountname = "yourstorageaccount"
-$storage_resourcegroupname = $resourcegroupname
+$storage_url = "https://yourstorageaccount.blob.core.windows.net/"
 
 $storage = Get-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -ErrorAction SilentlyContinue
 If (-Not $storage)
-    { $storage = New-AzStorageAccount -ResourceGroupName $storage_resourcegroupname `
+    { $storage = New-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -SkuName Standard_GRS -Location $region }
 ```
 
 > [!NOTE]
 > Automated Backup does not support storing backups in premium storage, but it can take backups from VM disks which use Premium Storage.
 
-Then use the **New-AzVMSqlServerAutoBackupConfig** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are retained for 10 days. The second command, **Set-AzVMSqlServerExtension**, updates the specified Azure VM with these settings.
+If you want to use a custom container in the storage account for the backups, use the following script to check for the container or create it if it doesn't exist. 
 
 ```powershell
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -RetentionPeriodInDays 10 -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname
+$storage_container = "backupcontainer"
 
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+New-AzStorageContainer -Name $storage_container -Context $storage.Context
+
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
+} `
+ else `
+{ `
+	Write-Warning "Container $storage_container already exists." `
+}
+```
+
+Next, use the following script to get the Access key for the storage account:
+
+```powershell
+$accesskey = (Get-AzStorageAccountKey -ResourceGroupName $resourcegroupname  -Name $storage_accountname)[0].value
+```
+
+Then use the **Update-AzSqlVM** command to enable and configure the Automated Backup settings to store backups in the Azure storage account. In this example, the backups are set to be retained for 10 days. 
+
+```powershell
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod 10 `
+-AutoBackupSettingStorageContainerName $storage_container 
 ```
 
 It could take several minutes to install and configure the SQL Server IaaS Agent.
 
 > [!NOTE]
-> There are other settings for **New-AzVMSqlServerAutoBackupConfig** that apply only to SQL Server 2016 and Automated Backup v2. SQL Server 2014 does not support the following settings: **BackupSystemDbs**, **BackupScheduleType**, **FullBackupFrequency**, **FullBackupStartHour**, **FullBackupWindowInHours**, and **LogBackupFrequencyInMinutes**. If you attempt to configure these settings on a SQL Server 2014 virtual machine, there is no error, but the settings do not get applied. If you want to use these settings on a SQL Server 2016 virtual machine, see [Automated Backup v2 for SQL Server 2016 Azure virtual machines](automated-backup.md).
+> There are other settings for *Update-AzSqlVM** that apply only to SQL Server 2016 and Automated Backup. SQL Server 2014 does not support the following settings: **-AutoBackupSettingBackupSystemDb**, **-AutoBackupSettingBackupScheduleType**, **-AutoBackupSettingFullBackupFrequency**, **-AutoBackupSettingFullBackupStartTime**, **-AutoBackupSettingFullBackupWindowHour**, and **-AutoBackupSettingLogBackupFrequency**. If you attempt to configure these settings on a SQL Server 2014 virtual machine, there is no error, but the settings do not get applied. If you want to use these settings on a SQL Server 2016 virtual machine, see [Automated Backup for SQL Server 2016 Azure virtual machines](automated-backup.md).
 
-To enable encryption, modify the previous script to pass the **EnableEncryption** parameter along with a password (secure string) for the **CertificatePassword** parameter. The following script enables the Automated Backup settings in the previous example and adds encryption.
+To enable encryption, modify the previous script to pass the **-AutoBackupSettingEnableEncryption** parameter along with a password (secure string) for the **-AutoBackupSettingPassword** parameter. The following script enables the Automated Backup settings in the previous example and adds encryption.
 
 ```powershell
-$password = "P@ssw0rd"
-$encryptionpassword = $password | ConvertTo-SecureString -AsPlainText -Force
+$password = "r@ndom Va1ue"
+$encryptionpassword = $password | ConvertTo-SecureString -AsPlainText -Force  
 
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -EnableEncryption -CertificatePassword $encryptionpassword `
-    -RetentionPeriodInDays 10 -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod 10 `
+-AutoBackupSettingEnableEncryption `
+-AutoBackupSettingPassword $encryptionpassword `
+-AutoBackupSettingStorageContainerName $storage_container 
 ```
 
 To confirm your settings are applied, [verify the Automated Backup configuration](#verifysettings).
 
 ### Disable Automated Backup
 
-To disable Automated Backup, run the same script without the **-Enable** parameter to the **New-AzVMSqlServerAutoBackupConfig** command. The absence of the **-Enable** parameter signals the command to disable the feature. As with installation, it can take several minutes to disable Automated Backup.
+To disable Automated Backup, run the same script with the **-AutoBackupSettingEnable** parameter set to **$false** in the **Update-AzSqlVM** command. By setting the value to **$false** the feature is disabled. As with installation, it can take several minutes to disable Automated Backup.
 
 ```powershell
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -ResourceGroupName $storage_resourcegroupname
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable:$false
 ```
 
 ### Example script
@@ -190,10 +212,10 @@ The following script provides a set of variables that you can customize to enabl
 
 ```powershell
 $vmname = "yourvmname"
-$resourcegroupname = "vmresourcegroupname"
+$resourcegroupname = "yourresourcegroupname"
 $region = "Azure region name such as EASTUS2"
-$storage_accountname = "storageaccountname"
-$storage_resourcegroupname = $resourcegroupname
+$storage_accountname = "yourstorageaccount"
+$storage_url = "https://yourstorageaccount.blob.core.windows.net/"
 $retentionperiod = 10
 
 # ResourceGroupName is the resource group which is hosting the VM where you are deploying the SQL Server IaaS Extension
@@ -207,19 +229,31 @@ Set-AzVMSqlServerExtension -VMName $vmname `
 $storage = Get-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -ErrorAction SilentlyContinue
 If (-Not $storage)
-    { $storage = New-AzStorageAccount -ResourceGroupName $storage_resourcegroupname `
+    { $storage = New-AzStorageAccount -ResourceGroupName $resourcegroupname `
     -Name $storage_accountname -SkuName Standard_GRS -Location $region }
+
+# Creates/uses a custom storage account container
+
+$storage_container = "yourbackupcontainer"
+
+if (!(Get-AzStorageAccount -StorageAccountName $storage_accountname -ResourceGroupName $resourcegroupname | Get-AzStorageContainer | Where-Object { $_.Name -eq $storage_container })){ `
+	New-AzStorageContainer -Name $storage_container -Context $storage.Context `
+} `
+ else `
+{ `
+	Write-Warning "Container $storage_container already exists." `
+}
+
+# Get storage account access key
+$accesskey = (Get-AzStorageAccountKey -ResourceGroupName $resourcegroupname  -Name $storage_accountname)[0].value
 
 # Configure Automated Backup settings
 
-$autobackupconfig = New-AzVMSqlServerAutoBackupConfig -Enable `
-    -RetentionPeriodInDays $retentionperiod -StorageContext $storage.Context `
-    -ResourceGroupName $storage_resourcegroupname
-
-# Apply the Automated Backup settings to the VM
-
-Set-AzVMSqlServerExtension -AutoBackupSettings $autobackupconfig `
-    -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName $resourcegroupname -Name $vmname -AutoBackupSettingEnable `
+-AutoBackupSettingStorageAccessKey $accesskey `
+-AutoBackupSettingStorageAccountUrl $storage_url `
+-AutoBackupSettingRetentionPeriod $retentionperiod `
+-AutoBackupSettingStorageContainerName $storage_container 
 ```
 
 ## Monitoring

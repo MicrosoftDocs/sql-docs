@@ -4,9 +4,8 @@ description: CREATE FUNCTION (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: 03/16/2020
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "FUNCTION"
@@ -63,17 +62,17 @@ Creates a user-defined function. A user-defined function is a [!INCLUDE[tsql](..
 
 > [!NOTE]
 >
-> - The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (Azure Synapse Analytics)](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+> - For [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] or [!INCLUDE [fabric](../../includes/fabric.md)], see [CREATE FUNCTION (Azure Synapse Analytics and Microsoft Fabric)](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
 -- Transact-SQL Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type [ NULL ]
  [ = default ] [ READONLY ] }
     [ ,...n ]
   ]
@@ -91,7 +90,7 @@ RETURNS return_data_type
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] [ READONLY ] }
     [ ,...n ]
   ]
@@ -106,7 +105,7 @@ RETURNS TABLE
 ```syntaxsql
 -- Transact-SQL Multi-Statement Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] [READONLY] }
     [ ,...n ]
   ]
@@ -186,7 +185,7 @@ column_name AS computed_column_expression
 ```syntaxsql
 -- CLR Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] }
     [ ,...n ]
 )
@@ -199,7 +198,7 @@ RETURNS { return_data_type }
 ```syntaxsql
 -- CLR Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
-( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ NULL ]
     [ = default ] }
     [ ,...n ]
 )
@@ -262,7 +261,7 @@ RETURNS return_data_type
 ## Arguments
 
 *OR ALTER*   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Conditionally alters the function only if it already exists.
 
@@ -335,7 +334,7 @@ ORDER (\<order_clause>)
 Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "[Using Sort Order in CLR Table-valued Functions](#using-sort-order-in-clr-table-valued-functions)", later in this topic.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 Specifies the assembly and method to which the created function name shall refer.
 
@@ -361,7 +360,7 @@ In a typical example, for MyFood.DLL, in which all types are in the MyFood names
 Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.
 
 *\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] )   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] ([Preview in some regions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.
 
@@ -384,7 +383,7 @@ EXECUTE AS is required for natively compiled, scalar user-defined functions.
 Specifies that the function will have one or more of the following options.
 
 ENCRYPTION   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
 
@@ -420,7 +419,7 @@ Specifies the security context under which the user-defined function is executed
 For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 
 INLINE = { ON | OFF }   
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Specifies whether this scalar UDF should be inlined or not. This clause applies only to scalar user-defined functions. The `INLINE` clause is not mandatory. If `INLINE` clause is not specified, it is automatically set to ON or OFF based on whether the UDF is inlineable. If `INLINE = ON` is specified but the UDF is found to be non-inlineable, an error will be thrown. For more information, see [Scalar UDF Inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
@@ -713,7 +712,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 
 ### C. Creating a multi-statement table-valued function
 
-The following example creates the table-valued function `fn_FindReports(InEmpID)` in the AdventureWorks2012 database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).
+The following example creates the table-valued function `fn_FindReports(InEmpID)` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).
 
 ```sql
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)
@@ -765,7 +764,7 @@ GO
 
 The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] SP1 and later)
 
 ```sql
 DECLARE @SamplesPath nvarchar(1024);

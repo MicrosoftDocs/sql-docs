@@ -1,26 +1,22 @@
 ---
-title: "Sequence and QNames (XQuery) | Microsoft Docs"
+title: "Sequence and QNames (XQuery)"
 description: Learn about the fundamental concepts of sequences and QNames in XQuery.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sequence [XQuery]"
   - "XQuery, sequence"
   - "QName [XQuery]"
   - "predefined namespaces [XML in SQL Server]"
-ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Sequence and QNames (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the following fundamental concepts of XQuery:  
   

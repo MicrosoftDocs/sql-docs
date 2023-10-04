@@ -1,23 +1,20 @@
 ---
-title: "Set the Language for Report Parameters in a URL | Microsoft Docs"
+title: "Set the Language for Report Parameters in a URL"
 description: "Learn how to set the language for report parameters in a URL by using the rs:ParameterLanguage URL access parameter."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "overriding report language settings"
   - "report servers [Reporting Services], language settings"
   - "languages [Reporting Services]"
   - "URL access [Reporting Services], language overrides"
   - "international considerations [Reporting Services]"
   - "global considerations [Reporting Services]"
-ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Set the Language for Report Parameters in a URL
   The *rs:ParameterLanguage* URL access parameter alleviates a problem in which culture-sensitive report parameters, such as dates, times, currency, and numbers, are interpreted using the browser language. With *rs:ParameterLanguage*, the URL is now interpreted independently of the browser. For example, if the report server is set to a regional setting of German, but a user is accessing a report via a URL using a browser that is set to English-United States, parameter values that are passed to a report server will be misinterpreted.  

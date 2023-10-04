@@ -4,9 +4,8 @@ description: MSqreader_agents (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSqreader_agents_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSqreader_agents system table"
 dev_langs:
   - "TSQL"
-ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 ---
 # MSqreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

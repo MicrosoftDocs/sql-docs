@@ -4,9 +4,8 @@ description: "SELECT @local_variable sets a local variable to the value of an ex
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/18/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "variable_TSQL"
@@ -22,17 +21,17 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = azure-sqldw-latest || >= sql-server-linux-2017||=fabric"
 ---
 # SELECT @local_variable (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Sets a local variable to the value of an expression.
 
 For assigning variables, we recommend that you use [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) instead of SELECT @*local_variable*.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -87,10 +86,10 @@ One SELECT statement can initialize multiple local variables.
 
 In the following example, the variable `@var1` is assigned "Generic Name" as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` doesn't exist in the table. The variable retains the "Generic Name" value.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the `AdventureWorksLT` sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The `AdventureWorksLT` database is used as the sample database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
--- Uses AdventureWorks2019LT
+-- Uses AdventureWorks2022LT
 DECLARE @var1 VARCHAR(30);
 SELECT @var1 = 'Generic Name';
 
@@ -112,10 +111,10 @@ Generic Name
 
 In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` doesn't exist, the subquery returns no value, and the variable is set to `NULL`.
 
-This example uses the AdventureWorks2019LT sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The AdventureWorksLT database is used as the `sample` database for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+This example uses the `AdventureWorksLT` sample database, for more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md). The `AdventureWorksLT` database is used as the sample database for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ```sql
--- Uses AdventureWorks2019
+-- Uses AdventureWorksLT
 DECLARE @var1 VARCHAR(30);
 SELECT @var1 = 'Generic Name';
 
@@ -146,7 +145,9 @@ FROM
 
 In this case, it isn't guaranteed that `@Var` would be updated on a row by row basis. For example, `@Var` may be set to initial value of `@Var` for all rows. This is because the order and frequency in which the assignments are processed is nondeterminant. This applies to expressions containing variables string concatenation, as demonstrated below, but also to expressions with non-string variables or += style operators. Use aggregation functions instead for a set-based operation instead of a row-by-row operation.
 
-For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md). This example uses the AdventureWorks2016 or AdventureWorks2019 sample database. For more information, see [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+For string concatenation, instead consider the `STRING_AGG` function, introduced in [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], for scenarios where ordered string concatenation is desired. For more information, see [STRING_AGG (Transact-SQL)](../functions/string-agg-transact-sql.md).
+
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 An example to avoid, where using ORDER BY in attempt to order concatenation causes list to be incomplete:
 

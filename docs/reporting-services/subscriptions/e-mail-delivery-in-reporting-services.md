@@ -1,20 +1,17 @@
 ---
-title: "E-Mail Delivery in Reporting Services | Microsoft Docs"
+title: "E-Mail Delivery in Reporting Services"
 description: In this article, learn to use the e-mail delivery extension, which provides a way to e-mail a report to individual users or groups.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [Reporting Services], e-mail"
   - "e-mail [Reporting Services]"
   - "mail [Reporting Services]"
-ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # E-Mail Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an e-mail delivery extension that provides a way to e-mail a report to individual users or groups. To distribute a report by e-mail, you 1) configure the report server for e-mail delivery and 2) define either a standard subscription or a data-driven subscription. A single subscription cannot deliver multiple reports in a single e-mail message. However you can create multiple subscriptions.  

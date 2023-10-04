@@ -1,24 +1,20 @@
 ---
-description: "Create and update statistics"
 title: Create and update statistics
-ms.prod: sql
-ms.prod_service: database-engine
-ms.technology: 
-ms.topic: reference
-helpviewer_keywords:
-  - "statistical information [SMO]"
-ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
+description: "Create and update statistics"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot
-ms.custom: seo-dt-2019
 ms.date: 06/04/2020
+ms.service: sql
+ms.topic: reference
+helpviewer_keywords:
+  - "statistical information [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Create and update statistics
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 In SMO, statistical information about processing queries in the database can be collected by using the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object.
 
@@ -36,9 +32,9 @@ This code example creates a new table on an existing database for which the <xre
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Reference the CreditCard table.
 Dim tb As Table
 tb = db.Tables("CreditCard", "Sales")
@@ -63,7 +59,7 @@ public static void CreatingAndUpdatingStatistics()
     // Connect to the local, default instance of SQL Server.
     var srv = new Server();
 
-    // Reference the AdventureWorks2012 database.
+    // Reference the AdventureWorks2022 database.
     var db = srv.Databases["AdventureWorks"];
 
     // Reference the CreditCard table.

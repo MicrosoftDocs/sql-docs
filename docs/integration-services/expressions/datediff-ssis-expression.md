@@ -1,19 +1,15 @@
 ---
+title: "DATEDIFF (SSIS Expression)"
 description: "DATEDIFF (SSIS Expression)"
-title: "DATEDIFF (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "DATEDIFF statement"
-  - "dates [Integration Services], DATEDIFF"
-ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "DATEDIFF statement"
+  - "dates [Integration Services], DATEDIFF"
 ---
 # DATEDIFF (SSIS Expression)
 

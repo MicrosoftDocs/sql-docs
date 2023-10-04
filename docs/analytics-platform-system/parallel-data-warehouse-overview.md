@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Parallel Data Warehouse components - Analytics Platform System
@@ -133,7 +132,7 @@ PolyBase technology integrates SQL Server PDW data with external Hadoop data. Th
   
 ## Query Tools   
   
-Queries are written with Transact\-SQL modified to fit the MPP nature of the queries. All queries are submitted to the Control node, which generates a parallel query plan to run the query across the Compute nodes.  
+Queries are written with Transact-SQL modified to fit the MPP nature of the queries. All queries are submitted to the Control node, which generates a parallel query plan to run the query across the Compute nodes.  
   
 ### SQL Server Data Tools (SSDT)  
 SQL Server Data Tools runs inside of Visual Studio and is our recommended GUI tool for submitting queries to SQL Server PDW. It is similar to SQL Server Management Studio by allowing you to navigate through an object explorer.  
@@ -144,7 +143,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### sqlcmd Command-Line Query Tool  
-sqlcmd is the SQL Server command-line tool for running Transact\-SQL statements and system commands. It works with SQL Server PDW and is our recommended command-line tool for querying SQL Server PDW. With sqlcmd you can run Transact\-SQL statements interactively from the command-line, as a batch file, or from Windows PowerShell.  
+sqlcmd is the SQL Server command-line tool for running Transact-SQL statements and system commands. It works with SQL Server PDW and is our recommended command-line tool for querying SQL Server PDW. With sqlcmd you can run Transact-SQL statements interactively from the command-line, as a batch file, or from Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -160,7 +159,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### Linked Server  
-By using a SQL Server linked server connection, you can use SQL Server to submit Transact\-SQL statements to SQL Server PDW. 
+By using a SQL Server linked server connection, you can use SQL Server to submit Transact-SQL statements to SQL Server PDW. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
@@ -210,7 +209,7 @@ For more information, see [Install dwloader Command-Line Loader &#40;SQL Server 
 -->
   
 ### PolyBase for Hadoop Integration  
-With PolyBase technology, you can load non-relational data from a Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in an Azure Storage Blob.  
+With PolyBase technology, you can load non-relational data from a Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster or in Azure Blob Storage.  
 
 <!-- MISSING LINKS
 For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).

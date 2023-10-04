@@ -1,14 +1,14 @@
 ---
-title: "Report Definition Language | Microsoft Docs"
+title: "Report Definition Language"
 description: Learn details about Report Definition Language (RDL). You'll learn that RDL is an XML representation of a SQL Server Reporting Services report definition.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 01/24/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
+ms.service: reporting-services
+ms.subservice: reports
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "SQL Server Reporting Services, RDL"
   - "Reporting Services, RDL"
   - "RDL [Reporting Services], about Report Definition Language"
@@ -17,9 +17,6 @@ helpviewer_keywords:
   - "Report Definition Language"
   - "RDL [Reporting Services]"
   - "reports [Reporting Services], definitions"
-ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Report Definition Language (SSRS)
   Report Definition Language (RDL) is an XML representation of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report definition. A report definition contains data retrieval and layout information for a report. RDL is composed of XML elements that match an XML grammar created for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You can add your own custom functions for controlling report item values, styles, and formatting by accessing code assemblies within report definition files.  

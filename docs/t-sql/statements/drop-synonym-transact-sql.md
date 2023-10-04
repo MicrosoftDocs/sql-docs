@@ -4,9 +4,8 @@ description: DROP SYNONYM (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP SYNONYM"
@@ -25,7 +24,7 @@ dev_langs:
 
   Removes a synonym from a specified schema.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,9 +66,9 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```sql  
 USE tempdb;  
 GO  
--- Create a synonym for the Product table in AdventureWorks2012.  
+-- Create a synonym for the Product table in AdventureWorks2022.  
 CREATE SYNONYM MyProduct  
-FOR AdventureWorks2012.Production.Product;  
+FOR AdventureWorks2022.Production.Product;  
 GO  
 -- Drop synonym MyProduct.  
 USE tempdb;  

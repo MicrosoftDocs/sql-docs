@@ -144,10 +144,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 ## Register with SQL VM RP 
 
-To get portal integration and SQL VM features, you must register with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
-
-To get full functionality, you need to register with the extension in [full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). Otherwise, register in lightweight mode. 
-
+To get portal integration and SQL VM features, you must [register](sql-agent-extension-manually-register-single-vm.md#register-with-extension) with the [SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md).
 
 ## Remote desktop into the VM
 

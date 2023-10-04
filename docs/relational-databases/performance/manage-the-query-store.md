@@ -4,10 +4,9 @@ description: Learn best practices for managing the SQL Server Query Store, inclu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-ms.custom: event-tier1-build-2022
 helpviewer_keywords:
   - "Query Store, best practices"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -24,7 +23,7 @@ This article outlines the management of the [!INCLUDE[ssNoVersion](../../include
 > [!NOTE]  
 > In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Query Store is now enabled by default for all newly created SQL Server databases to help better track performance history, troubleshoot query plan–related issues, and enable new query processor capabilities.
 
-### <a id="QueryStoreOptions"></a> Query Store defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### <a id="QueryStoreOptions"></a> Query Store defaults in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_store_option-).
 
@@ -38,10 +37,10 @@ This section describes optimal configuration defaults in Azure SQL Database that
 | DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
 
 > [!IMPORTANT]  
-> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. After it's enabled, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
+> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. After it's enabled, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
 
 > [!NOTE]  
-> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`
+> Query Store cannot be disabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`
 
 If you want to stay with your custom settings, use [ALTER DATABASE with Query Store options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) to revert configuration to the previous state. Check out [Best Practices with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) in order to learn how to choose optimal configuration parameters.
 
@@ -51,7 +50,7 @@ Keep the most relevant data in Query Store. The following table describes typica
 
 |Query Store Capture Mode|Scenario|
 |------------------------|--------------|
-|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br />Identify new queries in your workload.<br /><br />Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**All**|Analyze your workload thoroughly in terms of all queries' shapes and their execution frequencies and other statistics.<br /><br />Identify new queries in your workload.<br /><br />Detect if ad hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />Note: This is the default capture mode in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
 |**Auto**|Focus your attention on relevant and actionable queries. An example is those queries that execute regularly or that have significant resource consumption.<br /><br />Note: Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], this is the default capture mode.|
 |**None**|You've already captured the query set that you want to monitor in runtime and you want to eliminate the distractions that other queries might introduce.<br /><br />None is suitable for testing and benchmarking environments.<br /><br />None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br />None should be used with caution because you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduced a custom capture mode under the `ALTER DATABASE ... SET QUERY_STORE` command. While Auto is default and recommended, if there is still any concern about the overhead Query Store may introduce, database administrators can leverage custom capture policies to further tune the Query Store capture behavior. For more information and recommendations, see [Custom capture policies](#custom-capture-policies) later in this article. For more information on this syntax, see [ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_capture_mode--all--auto--custom--none-).|
@@ -394,11 +393,11 @@ Query Store internal tables are created in the PRIMARY filegroup during database
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 ```
 
-Alternatively, you might want to clear up only ad-hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space.
+Alternatively, you might want to clear up only ad hoc query data, since it is less relevant for query optimizations and plan analysis but takes up just as much space.
 
 In Azure Synapse Analytics, clearing the query store is not available. Data is automatically retained for the past seven days.
 
-#### Delete ad-hoc queries
+#### Delete ad hoc queries
 
 This purges adhoc and internal queries from the Query Store so that the Query Store does not run out of space and remove queries we really need to track.
 

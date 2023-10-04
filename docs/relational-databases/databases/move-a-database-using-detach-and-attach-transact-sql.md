@@ -1,23 +1,18 @@
 ---
-description: "Move a database using detach and attach (Transact-SQL)"
 title: "Move Database using detach & attach (Transact-SQL)"
+description: "Move a database using detach and attach (Transact-SQL)"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: 06/03/2020
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "database attaching [SQL Server]"
   - "moving databases [SQL Server]"
   - "database detaching [SQL Server]"
   - "relocating databases [SQL Server]"
   - "detaching databases [SQL Server]"
   - "attaching databases [SQL Server]"
-ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.custom: seo-dt-2019
 ---
 # Move a database using detach and attach (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +44,7 @@ ms.custom: seo-dt-2019
     ```sql
     USE master;  
     GO  
-    EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
+    EXEC sp_detach_db @dbname = N'AdventureWorks2022';  
     GO  
     ```  
   
@@ -66,8 +61,8 @@ ms.custom: seo-dt-2019
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   
-        ON (FILENAME = 'C:\MySQLServer\AdventureWorks2012_Data.mdf'),  
-        (FILENAME = 'C:\MySQLServer\AdventureWorks2012_Log.ldf')  
+        ON (FILENAME = 'C:\MySQLServer\AdventureWorks2022_Data.mdf'),  
+        (FILENAME = 'C:\MySQLServer\AdventureWorks2022_Log.ldf')  
         FOR ATTACH;  
     GO  
     ```  

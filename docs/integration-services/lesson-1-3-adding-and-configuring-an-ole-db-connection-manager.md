@@ -1,16 +1,12 @@
 ---
+title: "Step 3: Add and configure an OLE DB connection manager"
 description: "Lesson 1-3: Add and configure an OLE DB connection manager"
-title: "Step 3: Add and configure an OLE DB connection manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-3: Add and configure an OLE DB connection manager
 
@@ -20,7 +16,7 @@ ms.author: chugu
 
 After you add a Flat File connection manager to connect to the data source, you add an OLE DB connection manager to connect to the data destination. An OLE DB connection manager enables a package to extract data from or load data into any OLE DB-compliant data source. Using an OLE DB connection manager, you can specify the server, the authentication method, and the default database for the connection.  
   
-In this task, you create an OLE DB connection manager that uses Windows Authentication to connect to the local instance of **AdventureWorksDW2012**. This OLE DB connection manager is also referenced by other components that you create later in this tutorial, such as the Lookup transformation and the OLE DB destination.  
+In this task, you create an OLE DB connection manager that uses Windows Authentication to connect to the local instance of [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)]. This OLE DB connection manager is also referenced by other components that you create later in this tutorial, such as the Lookup transformation and the OLE DB destination.  
   
 ## Add and configure an OLE DB connection manager
 
@@ -36,7 +32,7 @@ In this task, you create an OLE DB connection manager that uses Windows Authenti
   
 4. In the **Log on to the server** group, verify that **Use Windows Authentication** is selected.  
   
-5. In the **Connect to a database** group, in the **Select or enter a database name** box, type or select **AdventureWorksDW2012**.  
+5. In the **Connect to a database** group, in the **Select or enter a database name** box, type or select [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)].  
   
 6. Select **Test Connection** to verify that the connection settings you have specified are valid.  
   
@@ -44,7 +40,7 @@ In this task, you create an OLE DB connection manager that uses Windows Authenti
   
 8. Select **OK**.  
   
-9. In the **Connection Managers** pane, verify that **localhost.AdventureWorksDW2012** is selected.  
+9. In the **Connection Managers** pane, verify that **localhost.AdventureWorksDW2022** is selected.  
   
 
 ## Go to next task

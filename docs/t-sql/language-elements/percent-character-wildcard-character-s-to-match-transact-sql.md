@@ -3,13 +3,10 @@ title: "Wildcard search (%)"
 description: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
-ms.date: "12/06/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.date: 12/19/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: "seo-lt-2019"
 f1_keywords:
   - "%"
   - "%_TSQL"
@@ -23,29 +20,41 @@ helpviewer_keywords:
 dev_langs:
   - "TSQL"
 ---
-# Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
+# Percent character (wildcard - character(s) to match) (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
-  
-## Examples  
- The following example returns all the first names of people in the `Person` table of `AdventureWorks2012` that start with `Dan`.  
-  
-```syntaxsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName  
-FROM Person.Person  
-WHERE FirstName LIKE 'Dan%';  
-GO  
-```  
-  
-## See Also  
- [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91;^&#93; (Wildcard - Character(s) Not to Match)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [_ (Wildcard - Match One Character)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
-    
-  
+Matches any string of zero or more characters. This wildcard character can be used as a prefix, a suffix, or in the middle of the string. The pattern string can contain more than one `%` wildcard.
+
+## Examples
+
+### Example A: Match end of string
+
+The following example returns the first and last names of people in the `Person.Person` table of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], where the first name starts with `Dan`.
+
+```sql
+SELECT FirstName, LastName
+FROM Person.Person
+WHERE FirstName LIKE 'Dan%';
+GO
+```
+
+### Example B: Match middle of string
+
+The following example returns the first and last names of people in the `Person.Person` table of [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)], where the first name starts with `J` and ends with `n`.
+
+```sql
+SELECT FirstName, LastName
+FROM Person.Person
+WHERE FirstName LIKE 'J%n';
+GO
+```
+
+## See also
+
+- [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)
+- [Operators (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)
+- [Expressions (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)
+- [&#91; &#93; (Wildcard - Character(s) to Match)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)
+- [&#91;^&#93; (Wildcard - Character(s) Not to Match)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)
+- [_ (Wildcard - Match One Character)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)

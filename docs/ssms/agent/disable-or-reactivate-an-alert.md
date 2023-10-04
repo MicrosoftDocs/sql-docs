@@ -1,13 +1,13 @@
 ---
-description: "Disable or Reactivate an Alert"
 title: "Disable or Reactivate an Alert"
-ms.custom: seo-lt-2019
+description: "Disable or Reactivate an Alert"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Agent, alerts"
   - "alerts [SQL Server], reactivating"
   - "deleting alerts"
@@ -17,10 +17,6 @@ helpviewer_keywords:
   - "alerts [SQL Server], disabling"
   - "reactivating alerts"
   - "removing alerts"
-ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Disable or Reactivate an Alert
@@ -55,7 +51,7 @@ By default, members of the **sysadmin** fixed server role can edit information i
   
 #### To disable or reactivate an alert  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

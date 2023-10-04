@@ -4,9 +4,8 @@ description: sys.conversation_groups (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "conversation_groups_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.conversation_groups catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

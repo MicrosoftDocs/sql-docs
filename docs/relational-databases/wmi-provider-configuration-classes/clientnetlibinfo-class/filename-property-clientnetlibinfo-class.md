@@ -1,23 +1,17 @@
 ---
-description: "FileName Property (ClientNetLibInfo Class)"
 title: "FileName Property (ClientNetLibInfo)"
-ms.custom: seo-lt-2019
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
-ms.topic: "reference"
-apiname: 
-  - "FileName Property (ClientNetLibInfo Class)"
-apilocation: 
-  - "sqlmgmproviderxpsp2up.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "FileName property"
-ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
+description: "FileName Property (ClientNetLibInfo Class)"
 author: markingmyname
 ms.author: maghan
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: wmi
+ms.topic: "reference"
+helpviewer_keywords:
+  - "FileName property"
+apilocation: "sqlmgmproviderxpsp2up.mof"
+apiname: "FileName Property (ClientNetLibInfo Class)"
+apitype: "MOFDef"
 ---
 # FileName Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

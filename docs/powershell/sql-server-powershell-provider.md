@@ -1,26 +1,25 @@
 ---
 title: SQL Server PowerShell Provider
 description: Learn about the SQL Server provider for Windows PowerShell, which provides access to SQL Server objects by means of paths similar to file system paths.
-ms.prod: sql
-ms.technology: sql-server-powershell
+author: markingmyname
+ms.author: maghan
+ms.reviewer: matteot, drskwier
+ms.date: "07/31/2019"
+ms.service: sql
+ms.subservice: sql-server-powershell
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PowerShell [SQL Server], provider"
   - "PowerShell [SQL Server], SQL Server PowerShell Provider"
   - "Providers [PowerShell]"
   - "SMO [SQL Server], PowerShell"
   - "PowerShell [SQL Server], SMO"
   - "SQL Server Management Objects, PowerShell"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: matteot, drskwier
-ms.custom: ""
-ms.date: "07/31/2019"
 ---
 
 # SQL Server PowerShell Provider
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell exposes the hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects in paths similar to file system paths. You can use the paths to locate an object, and then use methods from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models to perform actions on the objects.  
 
@@ -49,12 +48,12 @@ Products whose data or object models can be represented in a hierarchy use Windo
 |`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|SQL Server Extended Events|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects such as cubes, aggregations, and dimensions.|  
   
- For example, you can use the SQLSERVER:\SQL folder to start paths that can represent any object that is supported by the SMO object model. The leading part of a SQLSERVER:\SQL path is SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. The nodes after the instance name alternate between object collections (such as *Databases* or *Views*) and object names (such as AdventureWorks2012). Schemas are not represented as object classes. When you specify the node for a top-level object in a schema, such as a table or view, you must specify the object name in the format *SchemaName.ObjectName*.  
+ For example, you can use the SQLSERVER:\SQL folder to start paths that can represent any object that is supported by the SMO object model. The leading part of a SQLSERVER:\SQL path is SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. The nodes after the instance name alternate between object collections (such as *Databases* or *Views*) and object names (such as [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]). Schemas are not represented as object classes. When you specify the node for a top-level object in a schema, such as a table or view, you must specify the object name in the format *SchemaName.ObjectName*.  
   
- The following example shows the path of the Vendor table in the Purchasing schema of the AdventureWorks2012 database in a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer:  
+ The following example shows the path of the Vendor table in the Purchasing schema of the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database in a default instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer:  
   
 ```powershell
-SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
+SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022\Tables\Purchasing.Vendor  
 ```
   
  For more information about the SMO object model hierarchy, see [SMO Object Model Diagram](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
@@ -64,7 +63,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Path|SMO class|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2022`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## SQL Server Provider Tasks  
   

@@ -1,20 +1,17 @@
 ---
-title: "Publishing Data Sources and Reports | Microsoft Docs"
+title: "Publishing Data Sources and Reports"
 description: Learn how to publish data sources and reports so that individuals who have permissions to the report server or the SharePoint site can run your report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reports
-
-
+ms.service: reporting-services
+ms.subservice: reports
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "publishing data sources [Reporting Services]"
   - "publishing reports [Reporting Services]"
   - "data sources [Reporting Services], managing"
-ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Publishing Data Sources and Reports
   Before publishing your report, you should preview the report to see how it will look when it is run. You can continue to refine the design until you are satisfied with the results.  

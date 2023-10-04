@@ -13,8 +13,7 @@ tags: azure-resource-manager
 # Configure a DNN for failover cluster instance
 [!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
-> [!TIP]
-> Eliminate the need for a distributed network name (DNN) for failover cluster instance by creating your SQL Server VMs in multiple subnets within the same Azure virtual network.
+[!INCLUDE[tip-for-multi-subnet-ag](../../includes/virtual-machines-ag-listener-multi-subnet.md)]
 
 On Azure Virtual Machines, the distributed network name (DNN) routes traffic to the appropriate clustered resource. It provides an easier way to connect to the SQL Server failover cluster instance (FCI) than the virtual network name (VNN), without the need for an Azure Load Balancer. 
 
@@ -49,7 +48,7 @@ The `-Group` value must be the name of the cluster group that corresponds to the
 
 ```powershell
 Add-ClusterResource -Name <dnnResourceName> `
--ResourceType "Distributed Network Name" -Group "<WSFC role of SQL server instance>"
+-ResourceType "Distributed Network Name" -Group "<WSFC role of SQL Server instance>"
 ```
 
 For example, to create your DNN resource `dnn-demo` for a default SQL Server FCI, use the following PowerShell command:
@@ -181,7 +180,7 @@ To avoid using duplicate IP addresses, configure an APIPA address (also known as
 
 ```powershell
 Get-ClusterResource "virtual IP address" | Set-ClusterParameter 
-    –Multiple @{"Address”=”169.254.1.1”;”SubnetMask”=”255.255.0.0”;"OverrideAddressMatch"=1;”EnableDhcp”=0}
+    –Multiple @{"Address"="169.254.1.1";"SubnetMask"="255.255.0.0";"OverrideAddressMatch"=1;"EnableDhcp"=0}
 ```
 
 In this command, "virtual IP address" is the name of the clustered VIP address resource, and "169.254.1.1" is the APIPA address chosen for the VIP address. Choose the address that best suits your business. Set `OverrideAddressMatch=1` to allow the IP address to be on any network, including the APIPA address space. 

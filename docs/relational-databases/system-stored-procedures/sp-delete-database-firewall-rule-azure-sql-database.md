@@ -1,29 +1,26 @@
 ---
+title: "sp_delete_database_firewall_rule (Azure SQL Database)"
 description: "sp_delete_database_firewall_rule (Azure SQL Database)"
-title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/04/2017"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_delete_database_firewall_rule"
   - "sp_delete_database_firewall_rule_TSQL"
   - "sys.sp_delete_database_firewall_rule"
   - "sys.sp_delete_database_firewall_rule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_delete_database_firewall_rule procedure"
-ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current"
 ---
 # sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Removes database-level firewall setting from your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured and deleted for the master database, and for user databases on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Removes database-level firewall setting from your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. Database firewall rules can be configured and deleted for the master database, and for user databases on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## Syntax  

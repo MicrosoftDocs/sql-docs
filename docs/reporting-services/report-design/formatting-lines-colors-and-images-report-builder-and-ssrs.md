@@ -1,14 +1,14 @@
 ---
-title: "Formatting lines, colors, and images in a paginated report | Microsoft Docs"
+title: "Formatting lines, colors, and images in a paginated report"
 description: Explore ways to use lines, colors, data regions, and images in a paginated report. Visually tie items together to improve readability in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.textboxproperties.border.f1"
   - "10502"
   - "10094"
@@ -21,9 +21,6 @@ f1_keywords:
   - "10126"
   - "10066"
   - "sql13.rtp.rptdesigner.subreportproperties.border.f1"
-ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting lines, colors, and images in a paginated report (Report Builder)
 

@@ -1,18 +1,15 @@
 ---
 title: "Tutorial: Database Engine Tuning Advisor"
 description: Database Engine Tuning Advisor examines how queries are processed and recommends how to improve query processing performance by modifying database structures.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Engine Tuning Advisor [SQL Server], tutorials"
-  - "tutorials [Database Engine Tuning Advisor]"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 05/11/2021
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Database Engine Tuning Advisor [SQL Server], tutorials"
+  - "tutorials [Database Engine Tuning Advisor]"
 ---
 
 # Tutorial: Database Engine Tuning Advisor
@@ -24,7 +21,7 @@ Welcome to the Database Engine Tuning Advisor tutorial. Database Engine Tuning A
 Database Engine Tuning Advisor provides two user interfaces: a graphical user interface (GUI) and the **dta** command prompt utility. The GUI makes it easy to quickly view the results of tuning sessions, and the **dta** utility makes it easy to incorporate Database Engine Tuning Advisor functionality into scripts for automated tuning. In addition, Database Engine Tuning Advisor can take XML input, which offers more control over the tuning process.  
   
 > [!NOTE]
-> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
   
 ## What you will learn  
 This tutorial will teach you how to navigate the Database Engine Tuning Advisor GUI, and how to perform some basic tasks with both the GUI and the **dta** utility. It contains the following lessons:  

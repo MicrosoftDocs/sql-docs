@@ -1,20 +1,15 @@
 ---
-description: "Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)"
 title: Summarize or Aggregate Values Using Custom Expressions
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "summarizing query results"
-  - "custom expressions to aggregate values [SQL Server]"
-ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
+description: "Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "summarizing query results"
+  - "custom expressions to aggregate values [SQL Server]"
 ---
 # Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

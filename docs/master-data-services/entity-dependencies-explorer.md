@@ -1,22 +1,17 @@
 ---
-description: "Entity Dependencies Explorer"
 title: Entity Dependencies Explorer
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-keywords: 
-  - "master data services"
-ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
+description: "Entity Dependencies Explorer"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/06/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+keywords: master data services
 ---
 # Entity Dependencies Explorer
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 adds a new explorer page, Entity Dependencies, that provides an alternate way to visualize relationships between entity members within a model, as specified by their domain-based attribute (DBA) values, but without having to first define a Derived Hierarchy.   

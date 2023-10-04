@@ -4,9 +4,8 @@ description: MStracer_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MStracer_history"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MStracer_history system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 ---
 # MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

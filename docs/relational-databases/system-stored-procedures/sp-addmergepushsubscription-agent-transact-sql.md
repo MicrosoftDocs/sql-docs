@@ -1,23 +1,19 @@
 ---
+title: "sp_addmergepushsubscription_agent (Transact-SQL)"
 description: "sp_addmergepushsubscription_agent (Transact-SQL)"
-title: "sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepushsubscription_agent_TSQL"
-  - "sp_addmergepushsubscription_agent"
-helpviewer_keywords: 
-  - "sp_addmergepushsubscription_agent"
-ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: markingmyname
 ms.author: maghan
+ms.date: 07/15/2023
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepushsubscription_agent_TSQL"
+  - "sp_addmergepushsubscription_agent"
+helpviewer_keywords:
+  - "sp_addmergepushsubscription_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -25,9 +21,9 @@ ms.author: maghan
   Adds a new agent job used to schedule synchronization of a push subscription to a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   
 > [!IMPORTANT]  
->  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-sql-server-encryption.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -69,7 +65,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL.  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`
- Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. If **0**, specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If **1**, specifies Windows Authentication.  
+ Is the security mode to use when connecting to a Subscriber when synchronizing. *subscriber_security_mode* is **int**, with a default of 1. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. 
+- **1** specifies Windows authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6.  
   
 `[ @subscriber_login = ] 'subscriber_login'`
  Is the Subscriber login to use when connecting to a Subscriber when synchronizing. *subscriber_login* is required if *subscriber_security_mode* is set to **0**. *subscriber_login* is **sysname**, with a default of NULL.  
@@ -81,7 +81,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. If **0**, specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If **1**, specifies Windows Authentication.  
+ Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
   
 `[ @publisher_login = ] 'publisher_login'`
  Is the login to use when connecting to a Publisher when synchronizing. *publisher_login* is **sysname**, with a default of NULL.  
@@ -202,5 +207,3 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
-  
-  

@@ -1,22 +1,19 @@
 ---
-title: "Stored Procedures (Database Engine) | Microsoft Docs"
+title: "Stored Procedures (Database Engine)"
 description: Learn how a stored procedure in SQL Server is a group of one or more Transact-SQL statements or a reference to a .NET Framework common runtime language method.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: stored-procedures
-ms.reviewer: ""
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "storing programs as stored procedures"
-  - "stored procedures [SQL Server], about stored procedures"
-ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: stored-procedures
+ms.topic: conceptual
+helpviewer_keywords:
+  - "storing programs as stored procedures"
+  - "stored procedures [SQL Server], about stored procedures"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures (Database Engine)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:  
   
 -   Accept input parameters and return multiple values in the form of output parameters to the calling program.  

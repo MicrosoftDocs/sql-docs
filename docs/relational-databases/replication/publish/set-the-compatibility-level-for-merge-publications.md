@@ -1,20 +1,17 @@
 ---
 title: "Set compatibility level for Merge Publications"
 description: Learn how to set the compatibility level for Merge Publications using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
-ms.custom: seo-lt-2019
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "compatibility [SQL Server], replication"
   - "backward compatibility [SQL Server], replication"
   - "publications [SQL Server replication], backward compatibility"
-ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Set the Compatibility Level for Merge Publications
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -74,13 +71,13 @@ DECLARE @publicationDB AS sysname;
 DECLARE @publication AS sysname;  
 DECLARE @login AS sysname;  
 DECLARE @password AS sysname;  
-SET @publicationDB = N'AdventureWorks2012';   
+SET @publicationDB = N'AdventureWorks2022';   
 SET @publication = N'AdvWorksSalesOrdersMerge'   
 SET @login = $(Login);  
 SET @password = $(Password);  
   
 -- Create a new merge publication.   
-USE [AdventureWorks2012]  
+USE [AdventureWorks2022]  
 EXEC sp_addmergepublication   
 @publication = @publication,   
 -- Set the compatibility level to SQL Server 2014.  

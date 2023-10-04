@@ -4,9 +4,8 @@ description: CREATE FULLTEXT CATALOG (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CATALOG_TSQL"
@@ -26,9 +25,9 @@ Creates a full-text catalog for a database. One full-text catalog can have sever
 You cannot create full-text catalogs in the **master**, **model**, or **tempdb** databases.  
   
 > [!IMPORTANT]  
->  Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a full-text catalog is a virtual object and does not belong to any filegroup. A full-text catalog is a logical concept that refers to a group of full-text indexes.  
+>  Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], a full-text catalog is a virtual object and does not belong to any filegroup. A full-text catalog is a logical concept that refers to a group of full-text indexes.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,14 +56,14 @@ Is the name of the new catalog. The catalog name must be unique among all catalo
 The length of the catalog name cannot exceed 120 characters.  
   
 ON FILEGROUP *filegroup*  
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this clause has no effect.  
+Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this clause has no effect.  
   
 IN PATH **'**_rootpath_**'**
 
 > [!NOTE]  
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this clause has no effect.  
+Beginning with [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)], this clause has no effect.  
   
 ACCENT_SENSITIVITY = {ON|OFF}  
 Specifies that the catalog is accent sensitive or accent insensitive for full-text indexing. When this property is changed, the index must be rebuilt. The default is to use the accent-sensitivity specified in the database collation. To display the database collation, use the **sys.databases** catalog view.  
@@ -100,7 +99,7 @@ User must have CREATE FULLTEXT CATALOG permission on the database, or be a membe
 The following example creates a full-text catalog and also a full-text index.
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
 GO  

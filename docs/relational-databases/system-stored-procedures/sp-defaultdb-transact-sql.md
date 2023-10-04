@@ -1,23 +1,19 @@
 ---
+title: "sp_defaultdb (Transact-SQL)"
 description: "sp_defaultdb (Transact-SQL)"
-title: "sp_defaultdb (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_defaultdb_TSQL"
-  - "sp_defaultdb"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_defaultdb"
-ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_defaultdb_TSQL"
+  - "sp_defaultdb"
+helpviewer_keywords:
+  - "sp_defaultdb"
+dev_langs:
+  - "TSQL"
 ---
 # sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -58,7 +54,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
  The following example sets [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] as the default database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Victoria`.  
   
 ```  
-EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';  
+EXEC sp_defaultdb 'Victoria', 'AdventureWorks2022';  
 ```  
   
 ## See Also  

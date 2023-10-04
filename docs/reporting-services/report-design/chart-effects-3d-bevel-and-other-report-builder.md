@@ -1,18 +1,15 @@
 ---
-title: "3D, bevel, and other effects in a paginated report chart | Microsoft Docs"
-description: Discover how 3D effects in paginated reports can be used to provide depth and add visual impact to charts in Report Builder. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10156"
-ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
+title: "3D, bevel, and other effects in a paginated report chart"
+description: Discover how 3D effects in paginated reports can be used to provide depth and add visual impact to charts in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10156"
 ---
 # Chart effects - 3D, bevel, and others in a paginated report (Report Builder)
 

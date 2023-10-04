@@ -1,12 +1,12 @@
 ---
 title: "Compare Typed XML to Untyped XML"
 description: Learn about the differences between typed and untyped XML.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "xml data type [SQL Server], variables"
@@ -23,8 +23,6 @@ helpviewer_keywords:
   - "document mode processing [SQL Server]"
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Compare typed XML to untyped XML
 
@@ -148,7 +146,7 @@ You can convert DTDs to XML schema documents by using third-party tools, and loa
 
 ## Upgrading typed XML from SQL Server 2005
 
-[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes don't affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] made several extensions to the XML Schema support, including support for lax validation, improved handling of **xs:date**, **xs:time** and **xs:dateTime** instance data, and added support for list and union types. In most cases the changes don't affect the upgrade experience. However if you used an XML Schema collection in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] that allowed values of type **xs:date**, **xs:time**, or **xs:dateTime** (or any subtype) then the following upgrade steps occur when you attach your [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to a later version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 1. For every XML column, that is typed with an XML Schema Collection that contains elements or attributes that are typed as either **xs:anyType**, **xs:anySimpleType**, **xs:date** or any of its subtypes, **xs:time** or any subtype thereof, or **xs:dateTime** or any of its subtypes, or are union or list types containing any of these types the following occurs:
 

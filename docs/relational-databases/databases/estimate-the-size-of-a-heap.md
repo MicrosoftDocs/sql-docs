@@ -1,26 +1,22 @@
 ---
-title: "Estimate the Size of a Heap | Microsoft Docs"
+title: "Estimate the Size of a Heap"
 description: Use this procedure to estimate the amount of space that is required to store data in a heap in SQL Server.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "disk space [SQL Server], indexes"
   - "estimating heap size"
   - "size [SQL Server], heap"
   - "space [SQL Server], indexes"
   - "heaps"
-ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Heap
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can use the following steps to estimate the amount of space that is required to store data in a heap:  
   
 1.  Specify the number of rows that will be present in the table:  

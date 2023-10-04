@@ -4,8 +4,8 @@ description: "Find out how to view or change the default locations for SQL Serve
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/13/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "log files [SQL Server], changing default location"

@@ -1,24 +1,21 @@
 ---
 title: "CLOSE (Transact-SQL)"
 description: "CLOSE (Transact-SQL)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+author: rwestMSFT
+ms.author: randolphwest
+ms.date: "03/06/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CLOSE_TSQL"
   - "CLOSE"
-dev_langs:
-  - "TSQL"
 helpviewer_keywords:
   - "closing cursors"
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "03/06/2017"
+dev_langs:
+  - "TSQL"
 ---
 
 # CLOSE (Transact-SQL)
@@ -27,7 +24,7 @@ ms.date: "03/06/2017"
 
 Closes an open cursor by releasing the current result set and freeing any cursor locks held on the rows on which the cursor is positioned. `CLOSE` leaves the data structures available for reopening, but fetches and positioned updates are not allowed until the cursor is reopened. CLOSE must be issued on an open cursor; `CLOSE` is not allowed on cursors that have only been declared or are already closed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -54,7 +51,7 @@ The following example shows the correct placement of the `CLOSE` statement in a 
   
 ```sql  
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title FROM AdventureWorks2012.HumanResources.Employee;  
+SELECT EmployeeID, Title FROM AdventureWorks2022.HumanResources.Employee;  
 OPEN Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor;  
 WHILE @@FETCH_STATUS = 0  

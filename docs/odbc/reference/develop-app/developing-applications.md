@@ -1,20 +1,16 @@
 ---
+title: "Developing Applications"
 description: "Developing Applications"
-title: "Developing Applications | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "application development [ODBC]"
   - "ODBC [ODBC], application development"
   - "application development [ODBC], about application development"
-ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Developing Applications
 This section contains information about developing applications that use the ODBC interface and drivers that implement it.  

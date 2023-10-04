@@ -1,15 +1,12 @@
 ---
 title: Build and Deploy to a Local Database
 description: Learn about the local server instance that SQL Server 2012 provides. See how to use this instance for building, testing, and debugging development projects.
-ms.prod: sql
-ms.technology: ssdt
-ms.topic: conceptual
-ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.reviewer: “”
-ms.custom: seo-lt-2019
 ms.date: 02/09/2017
+ms.service: sql
+ms.subservice: ssdt
+ms.topic: conceptual
 ---
 
 # How to: Build and Deploy to a Local Database
@@ -70,5 +67,5 @@ Microsoft SQL Server 2012 provides a local on-demand server instance, called SQL
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. In the **Results** pane below the Transact\-SQL Editor pane, you will see that the Apples and Potato Chips rows of the `Products` table are returned.  
+9. In the **Results** pane below the Transact-SQL Editor pane, you will see that the Apples and Potato Chips rows of the `Products` table are returned.  
   

@@ -4,8 +4,8 @@ description: Learn about failures in database mirroring sessions caused by physi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "time-out period [SQL Server database mirroring]"
@@ -61,7 +61,7 @@ helpviewer_keywords:
   
 -   A Windows-based server is renamed.  
   
--   A Windows-based server is rebooted.  
+-   A Windows-based server is restarted.  
   
 > [!NOTE]  
 >  Mirroring does not protect against problems specific to client accessing the servers. For example, consider a case in which a public network adapter handles client connections to the principal server instance, while a private network interface card handles all mirroring traffic among server instances. In this case, failure of the public network adapter would prevent clients from accessing the database, though the database would continue to be mirrored.  

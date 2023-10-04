@@ -1,24 +1,20 @@
 ---
+title: "sp_getapplock (Transact-SQL)"
 description: "sp_getapplock (Transact-SQL)"
-title: "sp_getapplock (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_getapplock_TSQL"
-  - "sp_getapplock"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "application locks"
-  - "sp_getapplock"
-ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_getapplock_TSQL"
+  - "sp_getapplock"
+helpviewer_keywords:
+  - "application locks"
+  - "sp_getapplock"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_getapplock (Transact-SQL)
@@ -26,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Places a lock on an application resource.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -91,7 +87,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  If sp_getapplock is called multiple times for the same lock resource, but the lock mode that is specified in any of the requests is not the same as the existing mode, the effect on the resource is a union of the two lock modes. In most cases, this means the lock mode is promoted to the stronger of the lock modes, the existing mode, or the newly requested mode. This stronger lock mode is held until the lock is ultimately released even if lock release calls have occurred before that time. For example, in the following sequence of calls, the resource is held in `Exclusive` mode instead of in `Shared` mode.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
 DECLARE @result int;  
@@ -109,7 +105,7 @@ GO
  Here is an example:  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
 DECLARE @result int;  
@@ -135,10 +131,10 @@ GO
  Requires membership in the public role.  
   
 ## Examples  
- The following example places a shared lock, which is associated with the current transaction, on the resource `Form1` in the `AdventureWorks2012` database.  
+ The following example places a shared lock, which is associated with the current transaction, on the resource `Form1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRAN;  
 DECLARE @result int;  
@@ -152,7 +148,7 @@ GO
   
 ```  
 BEGIN TRAN;  
-EXEC sp_getapplock @DbPrincipal = 'dbo', @Resource = 'AdventureWorks2012',   
+EXEC sp_getapplock @DbPrincipal = 'dbo', @Resource = 'AdventureWorks2022',   
      @LockMode = 'Shared';  
 COMMIT TRAN;  
 GO  

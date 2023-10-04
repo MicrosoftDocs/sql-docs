@@ -4,10 +4,9 @@ description: Learn how to remove a log shipping secondary partner by using SQL S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deleting secondary databases"
   - "secondary databases [SQL Server], in log shipping"

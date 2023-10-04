@@ -4,16 +4,13 @@ description: Learn how to cache XSL style sheets and set the XSL cache size to i
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "registry keys [SQLXML]"
   - "cache [SQLXML]"
   - "XSL caching [SQLXML]"
-ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XSL Caching (SQLXML 4.0)

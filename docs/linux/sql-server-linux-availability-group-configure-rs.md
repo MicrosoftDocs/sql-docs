@@ -1,14 +1,15 @@
 ---
 title: Configure a read-scale availability group (SQL Server on Linux)
 description: Learn about configuring a SQL Server Always On Availability Group (AG) for read-scale workloads on Linux.
-ms.custom: seo-lt-2019
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto, randolphwest
 ms.date: 04/11/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 ---
 # Configure a SQL Server Availability Group for read-scale on Linux
 
@@ -20,7 +21,7 @@ There are two types of architectures for AGs. An architecture for *high availabi
 
 An availability group with `CLUSTER_TYPE = NONE` can include replicas hosted on different operating system platforms. It can't support high availability.
 
-[!INCLUDE [Create prerequisites](includes/ss-linux-cluster-availability-group-create-prereq.md)]
+[!INCLUDE [Create prerequisites](includes/cluster-availability-group-create-prereq.md)]
 
 ## Create the availability group
 
@@ -60,7 +61,7 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
 
-[!INCLUDE [Create post](includes/ss-linux-cluster-availability-group-create-post.md)]
+[!INCLUDE [Create post](includes/cluster-availability-group-create-post.md)]
 
 This AG isn't a high-availability configuration. If you need high availability, follow the instructions at [Configure an Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the AG with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux). You can then integrate with a cluster manager, by using either Windows Server failover clustering on Windows, or Pacemaker on Linux.
 
@@ -75,7 +76,7 @@ There are two ways to connect to read-only secondary replicas. Applications can 
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## Next steps
+## Related content
 
 - [Configure a distributed Availability Group](../database-engine/availability-groups/windows/distributed-availability-groups.md)
 - [Learn more about availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

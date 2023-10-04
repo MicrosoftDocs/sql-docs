@@ -9,8 +9,8 @@ ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: sample
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ms.devlang: azurecli
 ---
 
@@ -22,7 +22,7 @@ This Azure CLI script example creates two elastic pools, moves a pooled database
 
 [!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 ## Sample script
 

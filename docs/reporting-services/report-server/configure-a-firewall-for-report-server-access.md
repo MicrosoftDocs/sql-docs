@@ -1,19 +1,16 @@
 ---
-title: "Configure a Firewall for Report Server Access | Microsoft Docs"
+title: "Configure a Firewall for Report Server Access"
 description: Learn how to configure Windows Firewall to allow access to Report Server applications and published reports that are accessed through URLs.
-ms.date: 05/14/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "firewall systems [Reporting Services]"
-  - "configuring servers [Reporting Services]"
-ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/14/2019
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "firewall systems [Reporting Services]"
+  - "configuring servers [Reporting Services]"
 ---
 # Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report server applications and published reports are accessed through URLs that specify an IP address, port, and virtual directory. If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. Indications that a port might be closed are receiving a blank page when you attempt to open the web portal from a remote client computer, or a blank Web page after requesting a report.  

@@ -1,14 +1,13 @@
 ---
 title: "Working with the WMI Provider for Server Events"
 description: Consider these guidelines to program using the WMI Provider for Server Events. Learn about enabling Service Broker, connection strings, and permissions.
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: wmi
+ms.service: sql
+ms.subservice: wmi
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "event notifications [WMI]"
   - "permissions [WMI]"
   - "connection strings [WMI]"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "WMI Provider for Server Events, Service Broker"
   - "notifications [WMI]"
   - "WMI Provider for Server Events, security"
-ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-author: markingmyname
-ms.author: maghan
 ---
 # Working with the WMI Provider for Server Events
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +60,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 ```  
 SELECT * FROM ALTER_TABLE  
-WHERE DatabaseName = "AdventureWorks2012"   
+WHERE DatabaseName = "AdventureWorks2022"   
     AND SchemaName = "Person"  
     AND ObjectName = "Person"  
     AND ObjectType = "TABLE";  

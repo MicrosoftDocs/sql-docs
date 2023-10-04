@@ -1,21 +1,19 @@
 ---
-title: "Technical Reference | Microsoft Docs"
+title: "Technical Reference"
 description: Learn about the tools and PowerShell reference documentation for using or administering SQL Server Reporting Services.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/30/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Reporting Services, technical reference"
   - "technical reference [Reporting Services]"
   - "languages [Reporting Services]"
   - "tools [Reporting Services]"
   - "user interface reference [Reporting Services]"
-ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: maggiesMSFT
-ms.author: maggies
 ---
 
 # Technical Reference (SSRS)

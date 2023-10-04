@@ -1,15 +1,14 @@
 ---
 title: Install Python packages with sqlmlutils
 description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/26/2020
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 08/26/2020
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: how-to
+ms.custom: intro-installation
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current"
-ms.custom:
-  - intro-installation
 ---
 
 # Install Python packages with sqlmlutils
@@ -76,7 +75,7 @@ For more information about package location and installation paths, see [Get Pyt
     + Packages that require elevated file system access
     + Packages used for web development or other tasks that don't benefit by running inside SQL Server
 
-  + The Python package **tensorflow** cannot be installed using sqlmlutils. For more information and a workaround, see [Known issues in SQL Server Machine Learning Services](../troubleshooting/known-issues-for-sql-server-machine-learning-services.md#9-cannot-install-tensorflow-package-using-sqlmlutils).
+  + The Python package **tensorflow** cannot be installed using sqlmlutils. For more information and a workaround, see [Known issues in SQL Server Machine Learning Services](../troubleshooting/known-issues-for-sql-server-machine-learning-services.md#tensorflow).
 
 ## Install sqlmlutils on the client computer
 

@@ -1,11 +1,11 @@
 ---
 title: DBCC CHECKCONSTRAINTS (Transact-SQL)
-description: "Checks the integrity of a specified constraint or all constraints on a specified table in the current database."
+description: DBCC CHECKCONSTRAINTS checks the integrity of a specified constraint or all constraints on a specified table in the current database.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/13/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 12/05/2022
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "language-reference"
 f1_keywords:
   - "DBCC CHECKCONSTRAINTS"
@@ -28,7 +28,7 @@ dev_langs:
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -61,13 +61,13 @@ Enables options to be specified.
 
 - ALL_CONSTRAINTS
 
-  Checks all enabled and disabled constraints on the table if the table name is specified or if all tables are checked; otherwise, checks only the enabled constraint. ALL_CONSTRAINTS has no effect when a constraint name is specified.
+  Checks all enabled and disabled constraints on the table if the table name is specified or if all tables are checked; otherwise, checks only the enabled constraint. `ALL_CONSTRAINTS` has no effect when a constraint name is specified.
 
 - ALL_ERRORMSGS
 
   Returns all rows that violate constraints in the table that is checked. The default is the first 200 rows.
 
-- NO_INFOMSGS  
+- NO_INFOMSGS
 
   Suppresses all informational messages.
 
@@ -92,17 +92,17 @@ The query data is stored in a temp table. After all requested tables or constrai
 
 `DBCC CHECKCONSTRAINTS` checks the integrity of FOREIGN KEY and CHECK constraints but doesn't check the integrity of the on-disk data structures of a table. These data structure checks can be performed by using [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
 
-**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later
+**Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later versions
 
-If *table_name* or *table_id* is specified and it is enabled for system versioning, `DBCC CHECKCONSTRAINTS` also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* isn't specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
+If *table_name* or *table_id* is specified and it is enabled for system versioning, `DBCC CHECKCONSTRAINTS` also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* isn't specified, this command will return each consistency violation in the output on a separate line. The format of the output will be `([pkcol1], [pkcol2]..) = (<pkcol1_value>, <pkcol2_value>...)` AND `<what is wrong with temporal table record>`.
 
-|Check|Additional info in output if check failed|
-|-----------|-----------------------------------------------|
-|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|
-|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|
-|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|
-|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|
-|Overlaps|(sys_start1, sys_end1), (sys_start2, sys_end2) for two overlapping records.<br /><br />If there are more than two overlapping records, output will have multiple rows each showing a pair of overlaps.|
+| Check | Additional info in output if check failed |
+| --- | --- |
+| PeriodEndColumn >= PeriodStartColumn (current) | [sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999' |
+| PeriodEndColumn >= PeriodStartColumn (current, history) | [sys_start] = '{0}' AND [sys_end] = '{1}' |
+| PeriodStartColumn < current_utc_time (current) | [sys_start] = '{0}' AND SYSUTCTIME |
+| PeriodEndColumn < current_utc_time (history) | [sys_end] = '{0}' AND SYSUTCTIME |
+| Overlaps | (sys_start1, sys_end1), (sys_start2, sys_end2) for two overlapping records.<br /><br />If there are more than two overlapping records, output will have multiple rows each showing a pair of overlaps. |
 
 You can't specify `constraint_name` or `constraint_id` in order to run only temporal consistency checks.
 
@@ -110,11 +110,11 @@ You can't specify `constraint_name` or `constraint_id` in order to run only temp
 
 `DBCC CHECKCONSTRAINTS` return a rowset with the following columns.
 
-|Column name|Data type|Description|
-|-----------------|---------------|-----------------|
-|Table Name|**varchar**|Name of the table.|
-|Constraint Name|**varchar**|Name of the constraint that is violated.|
-|Where|**varchar**|Column value assignments that identify the row or rows violating the constraint.<br /><br />The value in this column can be used in a WHERE clause of a SELECT statement querying for rows that violate the constraint.|
+| Column name | Data type | Description |
+| --- | --- | --- |
+| Table Name | **varchar** | Name of the table. |
+| Constraint Name | **varchar** | Name of the constraint that is violated. |
+| Where | **varchar** | Column value assignments that identify the row or rows violating the constraint.<br /><br />The value in this column can be used in a WHERE clause of a SELECT statement querying for rows that violate the constraint. |
 
 `DBCC CHECKCONSTRAINTS` isn't guaranteed to find *all* constraint violations. If a single row violates multiple constraints, only the `WHERE` clause for the first violation is listed. Unless another row exists with the same combination of values that produce the violation, and has that violation as the first violation found, the combination of values will be missing from the returned result set. You may have to run `DBCC CHECKCONSTRAINTS` and fix problems several times before finding all constraint violations in the database.
 
@@ -126,10 +126,10 @@ Requires membership in the **sysadmin** fixed server role or the **db_owner** fi
 
 ### A. Check a table
 
-The following example checks the constraint integrity of the table `Table1` in the `AdventureWorks` database.
+The following example checks the constraint integrity of the table `Table1` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));
 GO
@@ -137,7 +137,7 @@ INSERT INTO Table1 VALUES (100, 'Hello');
 GO
 ALTER TABLE Table1 WITH NOCHECK ADD CONSTRAINT chkTab1 CHECK (Col1 > 100);
 GO
-DBCC CHECKCONSTRAINTS(Table1);
+DBCC CHECKCONSTRAINTS (Table1);
 GO
 ```
 
@@ -146,7 +146,7 @@ GO
 The following example checks the integrity of the `CK_ProductCostHistory_EndDate` constraint.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 DBCC CHECKCONSTRAINTS ('Production.CK_ProductCostHistory_EndDate');
 GO

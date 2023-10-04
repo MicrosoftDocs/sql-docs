@@ -4,8 +4,8 @@ description: "APP_NAME (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "APP_NAME_TSQL"
@@ -27,7 +27,7 @@ This function returns the application name for the current session, if the appli
 > [!IMPORTANT]  
 >  The client provides the application name, and `APP_NAME` does not verify the application name value in any way. Do not use `APP_NAME` as part of a security check.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -49,7 +49,7 @@ To set an application name in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-
 This example checks whether the client application that initiated this process is a `SQL Server Management Studio` session. It then provides a date value in either US or ANSI format.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF APP_NAME() = 'Microsoft SQL Server Management Studio - Query'  
 PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 101) + '.';  

@@ -4,11 +4,9 @@ description: Learn about BEGIN ATOMIC, part of the ANSI SQL standard. SQL Server
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/26/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Atomic Blocks in Native Procedures

@@ -1,16 +1,15 @@
 ---
 title: "Find errors with transactional replication"
 description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
-ms.custom: seo-lt-2019
-ms.date: 07/01/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
+ms.date: 07/01/2020
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "replication [SQL Server], tutorials"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
@@ -116,13 +115,13 @@ The Log Reader Agent connects to your publisher database and scans the transacti
 
     a. Expand **Databases** in Object Explorer.
 
-    b. Right-click **AdventureWorks2012** > **Properties**. 
+    b. Right-click **[!INCLUDE [sssampledbnormal-md](../../includes/sssampledbnormal-md.md)]** > **Properties**. 
 
     c. Verify that an owner exists under the **Files** page. If this box is blank, this is the likely cause of your issue. 
 
    !["Files" page in the database properties, with a blank "Owner" box](media/troubleshooting-tran-repl-errors/db-properties.png)
 
-7. If the owner is blank on the **Files** page, open a **New Query** window within the context of the AdventureWorks2012 database. Run the following T-SQL code:
+7. If the owner is blank on the **Files** page, open a **New Query** window within the context of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Run the following T-SQL code:
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
@@ -160,7 +159,7 @@ The Distribution Agent finds data in the distribution database and then applies 
 
     ```console
     Error messages:
-    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    Agent 'NODE1\SQL2016-AdventureWorks2022-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
     ```
 
 3. The error indicates that the Distribution Agent is retrying. To find more information, check the job history for the Distribution Agent: 

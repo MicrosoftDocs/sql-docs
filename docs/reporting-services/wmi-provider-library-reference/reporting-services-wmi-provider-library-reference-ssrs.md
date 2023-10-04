@@ -1,22 +1,17 @@
 ---
+title: "Reporting Services WMI Provider Library Reference"
 description: "Reporting Services WMI Provider Library Reference (SSRS)"
-title: "Reporting Services WMI Provider Library Reference | Microsoft Docs"
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "Reporting Services WMI Provider Library"
-apilocation: 
-  - "reportingservices.mof"
-helpviewer_keywords: 
-  - "WMI provider [Reporting Services], library"
-ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "WMI provider [Reporting Services], library"
+apilocation: "reportingservices.mof"
+apiname: "Reporting Services WMI Provider Library"
 ---
 # Reporting Services WMI Provider Library Reference (SSRS)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider supports WMI operations that enable you to write scripts and code to modify settings of the report server and Report Manager.  

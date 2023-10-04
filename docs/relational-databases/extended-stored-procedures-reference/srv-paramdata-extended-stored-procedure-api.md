@@ -4,9 +4,8 @@ description: Learn about srv_paramdata. srv_paramdata returns the value of a rem
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_paramdata"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_paramdata
 apitype: "DLLExport"
-ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 ---
 # srv_paramdata (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

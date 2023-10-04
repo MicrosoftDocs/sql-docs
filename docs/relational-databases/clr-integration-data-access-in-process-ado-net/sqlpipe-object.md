@@ -4,15 +4,13 @@ description: For CLR database objects running in SQL Server, you can send result
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "custom result sets [CLR integration]"
   - "SqlPipe object"
   - "tabular results"
-ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 ---
 # SqlPipe Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

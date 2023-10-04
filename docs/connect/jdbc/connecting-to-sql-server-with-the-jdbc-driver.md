@@ -4,8 +4,8 @@ description: When connecting to the database using the Microsoft JDBC Driver for
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 08/12/2019
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Connecting to SQL Server with the JDBC driver

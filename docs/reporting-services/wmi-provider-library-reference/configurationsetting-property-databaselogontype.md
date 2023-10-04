@@ -1,23 +1,18 @@
 ---
+title: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)"
 description: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)"
-title: "DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: wmi-provider-library-reference
-
-
-ms.topic: conceptual
-apiname: 
-  - "DatabaseLogonType"
-apilocation: 
-  - "reportingservices.mof"
-apitype: MOFDef
-helpviewer_keywords: 
-  - "DatabaseLogonType property"
-ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: wmi-provider-library-reference
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "DatabaseLogonType property"
+apilocation: "reportingservices.mof"
+apiname: "DatabaseLogonType"
+apitype: MOFDef
 ---
 # ConfigurationSetting Property - DatabaseLogonType
   Specifies whether the report server uses a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows service account, a Windows user account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to access the report server database. Read-only.  

@@ -4,12 +4,9 @@ description: Learn about memory use and management scenarios for memory-optimize
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
@@ -169,7 +166,7 @@ The number of extra rows can be estimated by computing the peak number of row up
   
 That value is then multiplied by the row size to get the number of bytes you need for row versioning.  
   
-`rowVersions = durationOfLongestTransctoinInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
+`rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
 Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row (See [Memory for the table](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForTable) above).  
   

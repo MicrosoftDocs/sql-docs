@@ -4,8 +4,8 @@ description: "Cleanse Data Using DQS (Internal) Knowledge"
 author: swinarko
 ms.author: sawinark
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: data-quality-services
+ms.service: sql
+ms.subservice: data-quality-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dqs.dqproject.interactivecleansing.f1"
@@ -15,7 +15,7 @@ f1_keywords:
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to cleanse your data by using a data quality project in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Data cleansing is performed on your source data using a knowledge base that has been built in DQS against a high-quality data set. For more information, see [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
   

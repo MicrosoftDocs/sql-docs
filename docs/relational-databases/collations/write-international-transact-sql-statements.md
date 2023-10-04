@@ -1,13 +1,12 @@
 ---
+title: "Write International Transact-SQL Statements"
 description: "Write International Transact-SQL Statements"
-title: "Write International Transact-SQL Statements | Microsoft Docs"
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "04/24/2019"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "writing international statements"
   - "Transact-SQL international considerations"
   - "international considerations [SQL Server], Transact-SQL"
@@ -15,16 +14,13 @@ helpviewer_keywords:
   - "statements [SQL Server], international"
   - "database international considerations [SQL Server], Transact-SQL"
   - "dates [SQL Server], international considerations"
-ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Databases and database applications that use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
 
--   Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use either:
+-   Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], use either:
     -   The **char**, **varchar**, and **varchar(max)** data types with a [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) enabled collation, and data is encoded using UTF-8.
     -   The **nchar**, **nvarchar**, and **nvarchar(max)** data types with [supplementary character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collation, and data is encoded using UTF-16. Using a non-SC collation results in data being encoded using UCS-2.      
 
@@ -53,7 +49,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
         ```sql  
         SELECT *  
-        FROM AdventureWorks2012.Sales.SalesOrderHeader  
+        FROM AdventureWorks2022.Sales.SalesOrderHeader  
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   

@@ -4,8 +4,8 @@ description: Learn how sys.dm_db_rda_migration_status contains one row for each 
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_rda_migration_status"

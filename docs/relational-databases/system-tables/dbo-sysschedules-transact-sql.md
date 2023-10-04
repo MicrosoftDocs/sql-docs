@@ -4,9 +4,8 @@ description: dbo.sysschedules (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.sysschedules_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sysschedules system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 ---
 # dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

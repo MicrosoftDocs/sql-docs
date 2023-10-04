@@ -2,20 +2,17 @@
 title: Permissions Required
 titleSuffix: SQL Server Profiler
 description: Find out which permissions you need to run SQL Server Profiler and replay traces, and learn which checks are performed during replays.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: profiler
-ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: profiler
+ms.topic: conceptual
 ---
 
 # Permissions Required to Run SQL Server Profiler
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
 By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requires the same user permissions as the Transact-SQL stored procedures that are used to create traces. To run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must be granted the ALTER TRACE permission. For more information, see [GRANT Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).
 
@@ -33,7 +30,7 @@ By default, running [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
 
 > [!NOTE]
-> When you try to connect to a Azure SQL Database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+> When you try to connect to a Azure SQL Database from SQL Server Profiler, it incorrectly throws a misleading error message as follows:
 >
 > - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
 >

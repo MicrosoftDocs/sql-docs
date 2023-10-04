@@ -3,9 +3,9 @@ title: Introduction to Microsoft.Data.SqlClient namespace
 description: Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 07/26/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 04/19/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Introduction to Microsoft.Data.SqlClient namespace
@@ -14,11 +14,38 @@ ms.topic: conceptual
 
 The Microsoft.Data.SqlClient namespace is essentially a new version of the System.Data.SqlClient namespace. Microsoft.Data.SqlClient generally maintains the same API and backwards compatibility with System.Data.SqlClient. To migrate from System.Data.SqlClient to Microsoft.Data.SqlClient, for most applications, it's simple. Add a NuGet dependency on Microsoft.Data.SqlClient and update references and `using` statements to Microsoft.Data.SqlClient.
 
-There are a few differences in less-used APIs compared to System.Data.SqlClient that may affect some applications. For those differences, see this useful [porting cheat sheet](https://github.com/dotnet/SqlClient/blob/main/porting-cheat-sheet.md).
+There are a few differences in less-used APIs compared to System.Data.SqlClient that may affect some applications. For those differences, refer to the useful [porting cheat sheet](https://github.com/dotnet/SqlClient/blob/main/porting-cheat-sheet.md).
 
 ## API reference
 
 The Microsoft.Data.SqlClient API details can be found in the [.NET API Browser](/dotnet/api/microsoft.data.sqlclient).
+
+### Breaking changes in 5.1
+
+- Dropped support for .NET Core 3.1. [#1704](https://github.com/dotnet/SqlClient/pull/1704) [#1823](https://github.com/dotnet/SqlClient/pull/1823)
+
+### New features in 5.1
+
+- Added support for `DateOnly` and `TimeOnly` for `SqlParameter` value and `GetFieldValue`. [#1813](https://github.com/dotnet/SqlClient/pull/1813)
+- Added support for TLS 1.3 for .NET Core and SNI Native. [#1821](https://github.com/dotnet/SqlClient/pull/1821)
+- Added `ServerCertificate` setting for `Encrypt=Mandatory` or `Encrypt=Strict`. [#1822](https://github.com/dotnet/SqlClient/pull/1822) [Read more](#server-certificate)
+- Added Windows ARM64 support when targeting .NET Framework. [#1828](https://github.com/dotnet/SqlClient/pull/1828)
+
+### Server Certificate
+
+The default value of the `ServerCertificate` connection setting is an empty string.  When `Encrypt` is set to `Mandatory` or `Strict`, `ServerCertificate` can be used to specify a path on the file system to a certificate file to match against the server's TLS/SSL certificate. The certificate specified must be an exact match to be valid. The accepted certificate formats are `PEM`, `DER`, and `CER`. Here's a usage example:
+
+ ```cs
+ "Data Source=...;Encrypt=Strict;ServerCertificate=C:\\certificates\\server.cer"
+ ```
+
+## 5.1 Target platform support
+
+- .NET Framework 4.6.2+ (Windows x86, Windows x64)
+- .NET 6.0+ (Windows x86, Windows x64, Windows ARM64, Windows Azure Resource Manager, Linux, macOS)
+- .NET Standard 2.0+ (Windows x86, Windows x64, Windows ARM64, Windows ARM, Linux, macOS)
+
+Full release notes, including dependencies, are available in the GitHub Repository: [5.1 Release Notes](https://github.com/dotnet/SqlClient/tree/main/release-notes/5.1).
 
 ## Release notes for Microsoft.Data.SqlClient 5.0
 
@@ -53,11 +80,13 @@ To use TDS 8, specify Encrypt=Strict in the connection string. Strict mode disab
 
 New Encrypt values have been added to clarify connection encryption behavior. `Encrypt=Mandatory` is equivalent to `Encrypt=True` and encrypts connections during the TDS connection negotiation. `Encrypt=Optional` is equivalent to `Encrypt=False` and only encrypts the connection if the server tells the client that encryption is required during the TDS connection negotiation.
 
+For more information on encrypting connections to the server, see [Encryption and certificate validation](encryption-and-certificate-validation.md).
+
 `HostNameInCertificate` can be specified in the connection string when using aliases to connect with encryption to a server that has a server certificate with a different name or alternate subject name than the name used by the client to identify the server (DNS aliases, for example). Example usage: `HostNameInCertificate=MyDnsAliasName`
 
 ### Server SPN
 
-When connecting in an environment that has unique domain/forest topography, you might have specific requirements for Server SPNs. The ServerSPN/Server SPN and FailoverServerSPN/Failover Server SPN connection string settings can be used to override the auto-generated server SPNs used during integrated authentication in a domain environment
+When connecting in an environment that has unique domain/forest topography, you might have specific requirements for Server SPNs. The ServerSPN/Server SPN and FailoverServerSPN/Failover Server SPN connection string settings can be used to override the autogenerated server SPNs used during integrated authentication in a domain environment
 
 ### Support for SQL aliases
 
@@ -120,7 +149,7 @@ Full release notes, including dependencies, are available in the GitHub Reposito
 
 ### Introduce Attestation Protocol None
 
-A new attestation protocol called `None` will be allowed in the connection string. This protocol will allow users to forgo enclave attestation for `VBS` enclaves. When this protocol is set, the enclave attestation URL property is optional.  
+A new attestation protocol called `None` is allowed in the connection string. This protocol allows users to forgo enclave attestation for `VBS` enclaves. When this protocol is set, the enclave attestation URL property is optional.  
 
 Connection string example:
 
@@ -147,7 +176,7 @@ Full release notes, including dependencies, are available in the GitHub Reposito
 - Dropped obsolete `Asynchronous Processing` connection property from .NET Framework. [#1148](https://github.com/dotnet/SqlClient/pull/1148)
 - Removed `Configurable Retry Logic` safety switch. [#1254](https://github.com/dotnet/SqlClient/pull/1254) [Read more](#remove-configurable-retry-logic-safety-switch)
 - Dropped support for .NET Core 2.1 [#1272](https://github.com/dotnet/SqlClient/pull/1272)
-- [.NET Framework] Exception won't be thrown if a User ID is provided in the connection string when using `Active Directory Integrated` authentication [#1359](https://github.com/dotnet/SqlClient/pull/1359)
+- [.NET Framework] Exception isn't thrown if a User ID is provided in the connection string when using `Active Directory Integrated` authentication [#1359](https://github.com/dotnet/SqlClient/pull/1359)
 
 ### New features in 4.0
 
@@ -161,13 +190,13 @@ In scenarios where client encryption libraries were disabled or unavailable, it 
 
 ### App Context Switch for using System default protocols
 
-TLS 1.3 isn't supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the App Context switch below:
+TLS 1.3 isn't supported by the driver; therefore, it has been removed from the supported protocols list by default. Users can switch back to forcing use of the Operating System's client protocols, by enabling the following App Context switch:
 
  `Switch.Microsoft.Data.SqlClient.UseSystemDefaultSecureProtocols`
 
 ### Enable optimized parameter binding
 
-Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names won't be sent to the SQL server when the command is executed.
+Microsoft.Data.SqlClient introduces a new `SqlCommand` API, `EnableOptimizedParameterBinding` to improve performance of queries with large number of parameters. This property is disabled by default. When set to `true`, parameter names aren't sent to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance when the command is executed.
 
 ```cs
 public class SqlCommand
@@ -178,7 +207,7 @@ public class SqlCommand
 
 ### Remove configurable retry logic safety switch
 
-The App Context switch "Switch.Microsoft.Data.SqlClient.EnableRetryLogic" will no longer be required to use the configurable retry logic feature. The feature is now supported in production. The default behavior of the feature will continue to be a non-retry policy, which will need to be overridden by client applications to enable retries.
+The App Context switch "Switch.Microsoft.Data.SqlClient.EnableRetryLogic" is no longer required to use the configurable retry logic feature. The feature is now supported in production. The default behavior of the feature continues to be a non-retry policy, which client applications need to override to enable retries.
 
 ### SqlLocalDb shared instance support
 
@@ -271,7 +300,7 @@ New configuration sections have also been introduced to do the same registration
             type="Microsoft.Data.SqlClient.SqlConfigurableRetryCommandSection, Microsoft.Data.SqlClient"/>
 ```
 
-A simple example of using the new configuration sections in configuration files is below:
+Here's a simple example of using the new configuration sections in configuration files:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -307,22 +336,22 @@ The following counters are now available for applications targeting .NET Core 3.
 
 |Name|Display name|Description|  
 |-------------------------|-----------------|-----------------|  
-|**active-hard-connections**|Actual active connections currently made to servers|The number of connections that are currently open to database servers.|
-|**hard-connects**|Actual connection rate to servers|The number of connections per second that are being opened to database servers.|
-|**hard-disconnects**|Actual disconnection rate from servers|The number of disconnects per second that are being made to database servers.|
+|**active-hard-connections**|Actual active connections currently made to servers|The number of connections currently open to database servers.|
+|**hard-connects**|Actual connection rate to servers|The number of connections per second being opened to database servers.|
+|**hard-disconnects**|Actual disconnection rate from servers|The number of disconnects per second being made to database servers.|
 |**active-soft-connects**|Active connections retrieved from the connection pool|The number of already-open connections being consumed from the connection pool.|
-|**soft-connects**|Rate of connections retrieved from the connection pool|The number of connections per second that are being consumed from the connection pool.|
-|**soft-disconnects**|Rate of connections returned to the connection pool|The number of connections per second that are being returned to the connection pool.|
+|**soft-connects**|Rate of connections retrieved from the connection pool|The number of connections per second being consumed from the connection pool.|
+|**soft-disconnects**|Rate of connections returned to the connection pool|The number of connections per second being returned to the connection pool.|
 |**number-of-non-pooled-connections**|Number of connections not using connection pooling|The number of active connections that aren't pooled.|
-|**number-of-pooled-connections**|Number of connections managed by the connection pool|The number of active connections that are being managed by the connection pooling infrastructure.|
-|**number-of-active-connection-pool-groups**|Number of active unique connection strings|The number of unique connection pool groups that are active. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|
-|**number-of-inactive-connection-pool-groups**|Number of unique connection strings waiting for pruning|The number of unique connection pool groups that are marked for pruning. This counter is controlled by the number of unique connection strings that are found in the AppDomain.|
+|**number-of-pooled-connections**|Number of connections managed by the connection pool|The number of active connections managed the connection pooling infrastructure.|
+|**number-of-active-connection-pool-groups**|Number of active unique connection strings|The number of active, unique connection pool groups. This counter is based on the number of unique connection strings found in the AppDomain.|
+|**number-of-inactive-connection-pool-groups**|Number of unique connection strings waiting for pruning|The number of unique connection pool groups marked for pruning. This counter is based on the number of unique connection strings found in the AppDomain.|
 |**number-of-active-connection-pools**|Number of active connection pools|The total number of connection pools.|
-|**number-of-inactive-connection-pools**|Number of inactive connection pools|The number of inactive connection pools that haven't had any recent activity and are waiting to be disposed.|
-|**number-of-active-connections**|Number of active connections|The number of active connections that are currently in use.|
+|**number-of-inactive-connection-pools**|Number of inactive connection pools|The number of inactive connection pools with no recent activity and waiting to be disposed.|
+|**number-of-active-connections**|Number of active connections|The number of active connections currently in use.|
 |**number-of-free-connections**|Number of ready connections in the connection pool|The number of open connections available for use in the connection pools.|
 |**number-of-stasis-connections**|Number of connections currently waiting to be ready|The number of connections currently awaiting completion of an action and which are unavailable for use by the application.|
-|**number-of-reclaimed-connections**|Number of reclaimed connections from GC|The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` wasn't called by the application. **Note** Not explicitly closing or disposing connections hurts performance.|
+|**number-of-reclaimed-connections**|Number of reclaimed connections from GC|The number of connections reclaimed through garbage collection where `Close` or `Dispose` wasn't called by the application. **Note** Not explicitly closing or disposing connections hurts performance.|
 
 These counters can be used with .NET Core global CLI tools: `dotnet-counters` and `dotnet-trace` in Windows or Linux and PerfView in Windows, using `Microsoft.Data.SqlClient.EventSource` as the provider name. For more information, see [Retrieve event counter values](event-counters.md#retrieve-event-counter-values).
 
@@ -344,7 +373,7 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
 
 ### Event tracing improvements in SNI.dll
 
-`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll will no longer be enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like `xperf` or `perfview` will be sufficient. For more information, see [Event tracing support in Native SNI](enable-eventsource-tracing.md#event-tracing-support-in-native-sni).
+`Microsoft.Data.SqlClient.SNI` (.NET Framework dependency) and `Microsoft.Data.SqlClient.SNI.runtime` (.NET Core/Standard dependency) versions have been updated to `v3.0.0-preview1.21104.2`. Event tracing in SNI.dll is no longer enabled through a client application. Subscribing a session to the **Microsoft.Data.SqlClient.EventSource** provider through tools like `xperf` or `perfview` is sufficient. For more information, see [Event tracing support in Native SNI](enable-eventsource-tracing.md#event-tracing-support-in-native-sni).
 
 ### Enabling row version null behavior
 
@@ -393,21 +422,21 @@ The static API on `SqlConnection`, `SqlConnection.RegisterColumnEncryptionKeySto
 
 #### Column master key store provider registration precedence
 
-The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are pre-registered. No providers should be registered on the connection or command instances if one of the built-in column master key store providers is needed.
+The built-in column master key store providers that are available for the Windows Certificate Store, CNG Store and CSP are preregistered. No providers should be registered on the connection or command instances if one of the built-in column master key store providers is needed.
 
-Custom master key store providers can be registered with the driver at three different layers. The global level is as it currently is. The new per-connection and per-command level registrations will be empty initially and can be set more than once.
+Custom master key store providers can be registered with the driver at three different layers. The global level is as it currently is. The new per-connection and per-command level registrations are empty initially and can be set more than once.
 
 The precedences of the three registrations are as follows:
 
-- The per-command registration will be checked if it isn't empty.
-- If the per-command registration is empty, the per-connection registration will be checked if it isn't empty.
-- If the per-connection registration is empty, the global registration will be checked.
+- The per-command registration is checked if it isn't empty.
+- If the per-command registration is empty, the per-connection registration is checked if it isn't empty.
+- If the per-connection registration is empty, the global registration is checked.
 
-Once any key store provider is found at a registration level, the driver will **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider isn't found at a level, an exception will be thrown containing only the registered providers in the registration that was checked.
+Once any key store provider is found at a registration level, the driver does **NOT** fall back to the other registrations to search for a provider. If providers are registered but the proper provider isn't found at a level, an exception is thrown containing only the registered providers in the registration checked.
 
 #### Column encryption key cache precedence
 
-The column encryption keys (CEKs) for custom key store providers registered using the new instance-level APIs won't be cached by the driver. The key store providers need to implement their own cache to gain performance. This local cache of column encryption keys implemented by custom key store providers will be disabled by the driver if the key store provider instance is registered in the driver at the global level.
+The driver doesn't cache the column encryption keys (CEKs) for custom key store providers registered using the new instance-level APIs. The key store providers need to implement their own cache to gain performance. The driver disables the local cache of column encryption keys implemented by custom key store providers if the key store provider instance is registered in the driver at the global level.
 
 A new API has also been introduced on the `SqlColumnEncryptionKeyStoreProvider` base class to set the cache time to live:
 
@@ -423,16 +452,16 @@ public abstract class SqlColumnEncryptionKeyStoreProvider
 
 ### IP Address preference
 
-A new connection property `IPAddressPreference` is introduced to specify the IP address family preference to the driver when establishing TCP connections. If `Transparent Network IP Resolution` (in .NET Framework) or `Multi Subnet Failover` is set to `true`, this setting has no effect. Below are the three accepted values for this property:
+A new connection property `IPAddressPreference` is introduced to specify the IP address family preference to the driver when establishing TCP connections. If `Transparent Network IP Resolution` (in .NET Framework) or `Multi Subnet Failover` is set to `true`, this setting has no effect. There are the three accepted values for this property:
 
 - **IPv4First**
-  - This value is the default. The driver will use resolved IPv4 addresses first. If none of them can be connected to successfully, it will try resolved IPv6 addresses.
+  - This value is the default. The driver uses resolved IPv4 addresses first. If none of them can be connected to successfully, it tries resolved IPv6 addresses.
 
 - **IPv6First**
-  - The driver will use resolved IPv6 addresses first. If none of them can be connected to successfully, it will try resolved IPv4 addresses.
+  - The driver uses resolved IPv6 addresses first. If none of them can be connected to successfully, it tries resolved IPv4 addresses.
 
 - **UsePlatformDefault**
-  - The driver will try IP addresses in the order received from the DNS resolution response.
+  - The driver tries IP addresses in the order received from the DNS resolution response.
 
 ### 3.0 Target Platform Support
 
@@ -638,7 +667,7 @@ public class SqlConnection
 
 Microsoft.Data.SqlClient v2.1 extends the existing `SqlClientEventSource` implementation to enable event tracing in SNI.dll. Events must be captured using a tool like Xperf.
 
-Tracing can be enabled by sending a command to `SqlClientEventSource` as illustrated below:
+Tracing can be enabled by sending a command to `SqlClientEventSource` as illustrated:
 
 ```csharp
 // Enables trace events:
@@ -681,11 +710,11 @@ Full release notes, including dependencies, are available in the GitHub Reposito
 
 - The access modifier for the enclave provider interface `SqlColumnEncryptionEnclaveProvider` has been changed from `public` to `internal`.
 - Constants in the `SqlClientMetaDataCollectionNames` class have been updated to reflect changes in SQL Server.
-- The driver will now perform Server Certificate validation when the target SQL Server enforces TLS encryption, which is the default for Azure connections.
+- The driver now performs Server Certificate validation when the target SQL Server enforces TLS encryption, which is the default for Azure connections.
 - `SqlDataReader.GetSchemaTable()` now returns an empty `DataTable` instead `null`.
 - The driver now performs decimal scale rounding to match SQL Server behavior. For backwards compatibility, the previous behavior of truncation can be enabled using an AppContext switch.
-- For .NET Framework applications consuming **Microsoft.Data.SqlClient**, the SNI.dll files previously downloaded to the `bin\x64` and `bin\x86` folders are now named `Microsoft.Data.SqlClient.SNI.x64.dll` and `Microsoft.Data.SqlClient.SNI.x86.dll` and will be downloaded to the `bin` directory.
-- New connection string property synonyms will replace old properties when fetching connection string from `SqlConnectionStringBuilder` for consistency. [Read More](#new-connection-string-property-synonyms)
+- For .NET Framework applications consuming **Microsoft.Data.SqlClient**, the SNI.dll files previously downloaded to the `bin\x64` and `bin\x86` folders are now named `Microsoft.Data.SqlClient.SNI.x64.dll` and `Microsoft.Data.SqlClient.SNI.x86.dll` and are downloaded to the `bin` directory.
+- New connection string property synonyms replace old properties when fetching connection string from `SqlConnectionStringBuilder` for consistency. [Read More](#new-connection-string-property-synonyms)
 
 ### New features in 2.0
 
@@ -693,7 +722,7 @@ The following new features have been introduced in Microsoft.Data.SqlClient 2.0.
 
 #### DNS failure resiliency
 
-The driver will now cache IP addresses from every successful connection to a SQL Server endpoint that supports the feature. If a DNS resolution failure occurs during a connection attempt, the driver will try establishing a connection using a cached IP address for that server, if any exists.
+The driver now caches IP addresses from every successful connection to a SQL Server endpoint that supports the feature. If a DNS resolution failure occurs during a connection attempt, the driver tries establishing a connection using a cached IP address for that server, if any exists.
 
 #### EventSource tracing
 
@@ -707,7 +736,7 @@ For more information, see how to [Enable event tracing in SqlClient](enable-even
 
 #### Enabling managed networking on Windows
 
-A new AppContext switch, **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"**, enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
+A new AppContext switch, **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"**, enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch toggles the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -717,7 +746,7 @@ See [AppContext Switches in SqlClient](appcontext-switches.md) for a full list o
 
 #### Enabling decimal truncation behavior
 
-The decimal data scale will be rounded by the driver by default as is done by SQL Server. For backwards compatibility, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to **true**.
+The driver rounds the decimal data scale, by default, as is done by SQL Server. For backwards compatibility, you can set the AppContext switch **"Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal"** to **true**.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", true);
@@ -725,7 +754,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### New connection string property synonyms
 
-New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties with more than one word. Old property names will continue to be supported for backwards compatibility but the new connection string properties will now be included when fetching connection string from [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
+New synonyms have been added for the following existing connection string properties to avoid spacing confusion around properties with more than one word. Old property names continue to be supported for backwards compatibility. But the new connection string properties are now included when fetching the connection string from [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
 
 |Existing connection string property|New Synonym|
 |-----------------------------------|-----------|

@@ -4,17 +4,14 @@ description: This article shows how to find objects that have the most locks. Da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "10/18/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "objects [SQL Server], extended events"
   - "xe"
   - "extended events [SQL Server], locks"
   - "objects [SQL Server], locks"
-ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find the Objects That Have the Most Locks Taken on Them
@@ -33,7 +30,7 @@ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmans
 
     ```sql
     -- Find objects in a particular database that have the most
-    -- lock acquired. This sample uses AdventureWorksDW2012.
+    -- lock acquired. This sample uses AdventureWorksDW2022.
     -- Create the session and add an event and target.
     
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='LockCounts')
@@ -41,7 +38,7 @@ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmans
     GO
     DECLARE @dbid int;
   
-    SELECT @dbid = db_id('AdventureWorksDW2012');
+    SELECT @dbid = db_id('AdventureWorksDW2022');
   
     DECLARE @sql nvarchar(1024);
     SET @sql = '
@@ -59,7 +56,7 @@ To do this, use Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmans
     GO
     -- Create a simple workload that takes locks.
     
-    USE AdventureWorksDW2012;
+    USE AdventureWorksDW2022;
     GO
     SELECT TOP 1 * FROM dbo.vAssocSeqLineItems;
     GO

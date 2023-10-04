@@ -4,9 +4,8 @@ description: IHpublications (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHpublications_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHpublications system table"
 dev_langs:
   - "TSQL"
-ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 ---
 # IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +50,7 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 |**conflict_policy**|**int**|Specifies the conflict resolution policy followed when the queued updating subscriber option is used. Can be one of these values:<br /><br /> **1** = Publisher wins the conflict.<br /><br /> **2** = Subscriber wins the conflict.<br /><br /> **3** = Subscription is reinitialized.<br /><br /> *Not supported for non-SQL Publishers.*|  
 |**queue_type**|**int**|Specifies which type of queue is used. Can be one of these values:<br /><br /> **1** = msmq, which uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing to store transactions.<br /><br /> **2** = sql, which uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store transactions.<br /><br /> This column is not used by non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.<br /><br /> Note: Using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing has been deprecated and is no longer supported.<br /><br /> *This column is not supported for non-SQL Publishers.*|  
 |**ad_guidname**|**sysname**|Specifies whether the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. A valid globally unique identifier (GUID) specifies that the publication is published in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, and the GUID is the corresponding Active Directory publication object **objectGUID**. If NULL, the publication is not published in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Not supported for non-SQL Publishers.*|  
-|**backward_comp_level**|**int**|Database compatibility level, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Not supported for non-SQL Publishers.*|  
+|**backward_comp_level**|**int**|Database compatibility level, which can be one of the following values:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].<br /><br /> *Not supported for non-SQL Publishers.*|  
 |**description**|**nvarchar(255)**|Descriptive entry for the publication.|  
 |**independent_agent**|**bit**|Specifies whether there is a stand-alone Distribution Agent for this publication.<br /><br /> **0** = The publication uses a shared Distribution Agent, and each Publisher database/Subscriber database pair has a single, shared Agent.<br /><br /> **1** = There is a stand-alone Distribution Agent for this publication.|  
 |**immediate_sync**|**bit**|Indicates whether the synchronization files are created or recreated each time the Snapshot Agent runs, where **1** means that they are created every time the agent runs.|  

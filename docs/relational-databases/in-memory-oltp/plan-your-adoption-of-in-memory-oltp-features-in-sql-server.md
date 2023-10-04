@@ -4,12 +4,9 @@ description: Learn how the adoption of In-Memory OLTP features in SQL Server aff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "01/28/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.custom: seo-dt-2019
-ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
@@ -33,10 +30,9 @@ The following subsections discuss factors you must consider when you plan to ado
 
 One prerequisite for using the In-Memory features can involve the edition or service tier of the SQL product. For this and other prerequisites, see:
 
-- [Requirements for Using Memory-Optimized Tables](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
-	- [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-	- [SQL Database pricing tier recommendations](/azure/azure-sql/database/service-tiers-vcore)
-
+- [Requirements for Using Memory-Optimized Tables](requirements-for-using-memory-optimized-tables.md)
+- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [SQL Database pricing tier recommendations](/azure/azure-sql/database/service-tiers-vcore)
 
 ### A.2 Forecast the amount of active memory
 
@@ -175,7 +171,7 @@ The [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-s
 
 2. Back up the files in the memory-optimized FILEGROUP to a null device. The backup process invokes a checksum validation.
 
-	If corruption is found, proceed with the next steps.
+    If corruption is found, proceed with the next steps.
 
 3. Copy data from your memory-optimized tables into disk-based tables, for temporary storage.
 
@@ -216,7 +212,7 @@ Hash indexes can be the fastest format for accessing one specific row by its exa
 - A hash index might not be the best choice if the rate of key value duplication becomes too high.
 
 - Guard against underestimating how many *buckets* your hash index might need, to avoid long chains within individual buckets. For details, see:
-	- [Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
+    - [Hash Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
 
 
 #### Nonclustered columnstore indexes
@@ -231,7 +227,7 @@ Memory-optimized tables deliver high throughput of typical business transactiona
 
 
 - No ALTER TABLE statement can be executed against a memory-optimized table while a columnstore index exists on the table.
-	- As of August 2016, Microsoft has near-term plans to improve the performance of re-creating the columnstore index.
+    - As of August 2016, Microsoft has near-term plans to improve the performance of re-creating the columnstore index.
 
 
 

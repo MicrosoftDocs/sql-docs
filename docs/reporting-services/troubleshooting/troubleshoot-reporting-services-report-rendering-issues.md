@@ -1,16 +1,13 @@
 ---
 title: "Troubleshoot Reporting Services Report Rendering Issues"
 description: In this article, diagnose and fix display problems when the compiled report and layout data is sent to a report renderer in SQL Server Reporting Services.
-ms.date: 02/27/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
-ms.topic: conceptual
-ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 02/27/2016
+ms.service: reporting-services
+ms.subservice: troubleshooting
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot Reporting Services Report Rendering Issues
 After the report data and layout information is combined, the compiled report is sent to a report renderer. For example, when you preview a report locally, you are using the HTML renderer to view the compiled report. Use this topic to help troubleshoot issues specific to report rendering.   

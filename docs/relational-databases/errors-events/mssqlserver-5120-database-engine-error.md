@@ -1,17 +1,14 @@
 ---
-description: "MSSQLSERVER_5120"
 title: MSSQLSERVER_5120
-ms.custom: ""
-ms.date: 07/25/2020
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "5120 (Database Engine error)"
-ms.assetid: 
-author: PijoCoder
+description: "MSSQLSERVER_5120"
+author: pijocoder
 ms.author: jopilov
+ms.date: 07/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "5120 (Database Engine error)"
 ---
 # MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,14 +1,12 @@
 ---
 title: Create MDX queries in R using olapR
 description: Learn how to use the olapR package library in SQL Server to write MDX queries or execute an existing MDX query in R language script.
-ms.prod: sql
-ms.technology: machine-learning-services
-
-ms.date: 05/04/2021
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 05/04/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # How to create MDX queries in R using olapR
@@ -88,7 +86,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + On columns, you can specify multiple measures as elements of a comma-separated string.
 + The Row axis uses all possible values (all MEMBERS) of the "Product Line" dimension. 
-+ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries.
++ This query would return a table with three columns, containing a _rollup_ summary of Internet sales from all countries/regions.
 + The WHERE clause specifies the _slicer axis_. In this example, the slicer uses a member of the **SalesTerritory** dimension to filter the query so that only the sales from Australia are used in calculations.
 
 #### To build this query using the functions provided in olapR

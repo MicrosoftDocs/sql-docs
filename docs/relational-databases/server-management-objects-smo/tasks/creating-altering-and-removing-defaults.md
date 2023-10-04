@@ -1,23 +1,17 @@
 ---
-description: "Creating, Altering, and Removing Defaults"
 title: "Creating, Altering, and Removing Defaults"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "defaults [SMO]"
-ms.assetid: c30ac3b9-8150-4264-ba4c-c549f44261ab
+description: "Creating, Altering, and Removing Defaults"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "defaults [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Defaults
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), the default constraint is represented by the <xref:Microsoft.SqlServer.Management.Smo.Default> object.  
   
@@ -33,9 +27,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a Default object variable by supplying the parent database and the default name 
 'in the constructor.
 Dim def As [Default]
@@ -45,7 +39,7 @@ def.TextHeader = "CREATE DEFAULT [Test_Default2] AS"
 def.TextBody = "GetDate()"
 'Create the default on the instance of SQL Server.
 def.Create()
-'Declare a Column object variable and reference a column in the AdventureWorks2012 database.
+'Declare a Column object variable and reference a column in the AdventureWorks2022 database.
 Dim col As Column
 col = db.Tables("SpecialOffer", "Sales").Columns("StartDate")
 'Bind the default to the column.
@@ -63,8 +57,8 @@ def.Drop()
   
           Server srv = new Server();  
   
-            //Reference the AdventureWorks2012 database.   
-            Database  db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+            Database  db = srv.Databases["AdventureWorks2022"];  
   
             //Define a Default object variable by supplying the parent database and the default name   
             //in the constructor.   
@@ -77,7 +71,7 @@ def.Drop()
             //Create the default on the instance of SQL Server.   
             def.Create();  
   
-            //Bind the default to a column in a table in AdventureWorks2012  
+            //Bind the default to a column in a table in AdventureWorks2022  
             def.BindToColumn("SpecialOffer", "StartDate", "Sales");  
   
             //Unbind the default from the column and remove it from the database.   
@@ -90,9 +84,9 @@ def.Drop()
  This code example shows how to create one default that is simple text, and another default that is a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The default must be attached to the column by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.BindToColumn%2A> method and detached by using the <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.UnbindFromColumn%2A> method.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 #Define a Default object variable by supplying the parent database and the default name in the constructor.  
 $def = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Default `  

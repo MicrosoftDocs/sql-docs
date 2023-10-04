@@ -1,17 +1,13 @@
 ---
-title: "Constants in expressions in paginated reports | Microsoft Docs"
-
+title: "Constants in expressions in paginated reports"
 description: Learn about the literal text or predefined text of constants in expressions for your paginated reports in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Constants in expressions in paginated reports (Report Builder)
 

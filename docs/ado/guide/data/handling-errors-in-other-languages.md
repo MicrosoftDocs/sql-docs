@@ -4,8 +4,8 @@ description: "Handling Errors In Other Languages"
 author: rothja
 ms.author: jroth
 ms.date: "02/14/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 ---
 # Handling Errors In Other Languages

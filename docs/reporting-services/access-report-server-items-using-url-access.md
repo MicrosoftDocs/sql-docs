@@ -1,19 +1,16 @@
 ---
-title: "Access Report Server Items Using URL Access | Microsoft Docs"
+title: "Access Report Server Items Using URL Access"
 description: "Learn how to access catalog items of different types in a report server database or in a SharePoint site using rs:Command=Value."
-ms.date: 05/08/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "referencing URL items for report server access"
-  - "URL access [Reporting Services], report servers"
-ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/08/2019
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "referencing URL items for report server access"
+  - "URL access [Reporting Services], report servers"
 ---
 # Access Report Server Items Using URL Access
   This topic describes how to access catalog items of different types in a report server database or in a SharePoint site using *rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
@@ -51,11 +48,11 @@ ms.author: maggies
 ## Access a Data Source  
  To access a data source, use the *rs:Command*=*GetDataSourceContents* parameter. If your browser supports XML, the data source definition is displayed if you are an authenticated user with **Read Contents** permission on the data source. For example:  
   
- **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016"
   
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
   
  The XML structure might look similar to the following example:  
 
@@ -64,7 +61,7 @@ ms.author: maggies
 ```  
 <DataSourceDefinition>  
    <Extension>SQL</Extension>  
-   <ConnectString>Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AdventureWorks2012;Data Source=MYSERVER1;</ConnectString>  
+   <ConnectString>Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AdventureWorks2022;Data Source=MYSERVER1;</ConnectString>  
    <CredentialRetrieval>Integrated</CredentialRetrieval>  
    <WindowsCredentials>False</WindowsCredentials>  
    <ImpersonateUser>False</ImpersonateUser>  

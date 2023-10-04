@@ -4,9 +4,8 @@ description: sys.trace_events (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "trace_events_TSQL"
@@ -17,10 +16,9 @@ helpviewer_keywords:
   - "sys.trace_events catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 ---
 # sys.trace_events (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   The **sys.trace_events** catalog view contains a list of all SQL trace events. These trace events do not change for a given version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

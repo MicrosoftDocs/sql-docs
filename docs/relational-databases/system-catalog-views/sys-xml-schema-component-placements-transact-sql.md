@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.xml_schema_component_placements"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.xml_schema_component_placements catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 ---
 # sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

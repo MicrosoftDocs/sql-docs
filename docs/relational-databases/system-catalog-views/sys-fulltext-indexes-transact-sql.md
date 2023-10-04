@@ -5,9 +5,8 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "fulltext_indexes"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], properties"
 dev_langs:
   - "TSQL"
-ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_indexes (Transact-SQL)
@@ -49,13 +47,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## Examples  
- The following example uses a full-text index on the `HumanResources.JobCandidate` table of the `AdventureWorks2012` sample database. The example returns the object ID of the table, the search property list ID, and the stoplist ID of the stoplist used by the full-text index.  
+ The following example uses a full-text index on the `HumanResources.JobCandidate` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The example returns the object ID of the table, the search property list ID, and the stoplist ID of the stoplist used by the full-text index.  
   
 > [!NOTE]  
 >  For the code example that creates this full-text index, see the "Examples" section of [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT object_id, property_list_id, stoplist_id FROM sys.fulltext_indexes  
     where object_id = object_id('HumanResources.JobCandidate');   

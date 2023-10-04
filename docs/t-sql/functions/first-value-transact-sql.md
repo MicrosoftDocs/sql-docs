@@ -4,11 +4,10 @@ description: "FIRST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 05/09/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 07/26/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "FIRST_VALUE_TSQL"
   - "FIRST_VALUE"
@@ -17,15 +16,15 @@ helpviewer_keywords:
   - "analytic functions, FIRST_VALUE"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # FIRST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw.md)]
 
 Returns the first value in an ordered set of values.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -45,13 +44,13 @@ The value to be returned. *scalar_expression* can be a column, subquery, or othe
 
 #### [ IGNORE NULLS | RESPECT NULLS ]
 
-**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
 
 IGNORE NULLS - Ignore null values in the dataset when computing the first value over a partition.
 
 RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.
 
-For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
 #### OVER ( [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] )
 
@@ -78,7 +77,7 @@ The same type as *scalar_expression*.
 The following example uses `FIRST_VALUE` to return the name of the product that is the least expensive in a given product category.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Name, ListPrice,
        FIRST_VALUE(Name) OVER (ORDER BY ListPrice ASC) AS LeastExpensive
@@ -109,7 +108,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 The following example uses `FIRST_VALUE` to return the employee with the fewest number of vacation hours compared to other employees with the same job title. The `PARTITION BY` clause partitions the employees by job title and the `FIRST_VALUE` function is applied to each partition independently. The `ORDER BY` clause specified in the `OVER` clause determines the logical order in which the `FIRST_VALUE` function is applied to the rows in each partition. The `ROWS UNBOUNDED PRECEDING` clause specifies the starting point of the window is the first row of each partition.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT JobTitle, LastName, VacationHours,
        FIRST_VALUE(LastName) OVER (PARTITION BY JobTitle
@@ -137,7 +136,7 @@ Accounts Receivable Specialist      Spoon                     61            Poe
 Accounts Receivable Specialist      Walton                    62            Poe
 ```
 
-## See also
+## Next steps
 
-- [LAST_VALUE &#40;Transact-SQL&#41;](last-value-transact-sql.md)
-- [SELECT - OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md)
+- [LAST_VALUE (Transact-SQL)](last-value-transact-sql.md)
+- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

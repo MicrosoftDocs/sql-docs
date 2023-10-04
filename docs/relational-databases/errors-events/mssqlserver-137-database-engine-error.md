@@ -1,20 +1,17 @@
 ---
+title: "MSSQLSERVER_137"
 description: "MSSQLSERVER_137"
-title: "MSSQLSERVER_137 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "137 (Database Engine error)"
-ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "137 (Database Engine error)"
 ---
 # MSSQLSERVER_137
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 ## Details  
   
@@ -39,7 +36,7 @@ SELECT @mycol;
 One of the more complicated causes of this error includes the use of a variable that is declared outside the EXECUTE statement. For example, the variable **\@mycol** specified in the SELECT statement is local to the SELECT statement; thus it is outside the EXECUTE statement.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 GO  
   
@@ -56,7 +53,7 @@ Verify that any variables used in a SQL script are declared before being used el
 Rewrite the script so that it does not reference variables in the EXECUTE statement that are declared outside of it. For example:  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 GO  
   

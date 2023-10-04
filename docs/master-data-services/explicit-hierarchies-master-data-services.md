@@ -1,24 +1,20 @@
 ---
 title: Explicit Hierarchies
 description: Use an explicit hierarchy to organize members from a Master Data Services entity any way you want, instead of based on domain-based attribute relationships.
-ms.custom: ""
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "explicit hierarchies, about explicit hierarchies"
   - "hierarchies [Master Data Services], explicit hierarchies"
   - "explicit hierarchies"
-ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Explicit Hierarchies (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], an explicit hierarchy organizes members from a single entity in any way you specify. The structure can be ragged and unlike derived hierarchies, explicit hierarchies are not based on domain-based attribute relationships.  
   

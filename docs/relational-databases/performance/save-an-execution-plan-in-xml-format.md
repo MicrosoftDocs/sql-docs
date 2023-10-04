@@ -1,22 +1,18 @@
 ---
-title: "Save an Execution Plan in XML Format | Microsoft Docs"
+title: "Save an Execution Plan in XML Format"
 description: Learn how to use SQL Server Management Studio to save execution plans in XML format and to open them for viewing. You must have appropriate permissions.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/21/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: performance
+ms.service: sql
+ms.subservice: performance
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML query plans [SQL Server]"
   - "opening execution plans"
   - "XML Showplans [SQL Server]"
   - "execution plans [SQL Server], saving"
   - "saving execution plans"
-ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Save an Execution Plan in XML Format
@@ -50,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Execute a query. Example:  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SET SHOWPLAN_XML ON;  
     GO  

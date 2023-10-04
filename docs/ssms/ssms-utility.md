@@ -1,21 +1,18 @@
 ---
 title: SSMS Utility
 description: "SSMS Utility"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+author: markingmyname
+ms.author: maghan
+ms.date: 07/24/2020
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], opening"
   - "command prompt utilities [SQL Server], sqlwb"
   - "sqlwb utility"
   - "Management Studio command line"
   - "opening SQL Server Management Studio"
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 07/24/2020
 ---
 
 # SSMS Utility
@@ -109,10 +106,10 @@ The following scripts opens SQL Server Management Studio from a command prompt u
 Ssms.exe -S servername.database.windows.net -G
 ```
 
-The following script opens SQL Server Management Studio from a command prompt, with Windows Authentication, with the Code Editor set to the server `ACCTG and the database AdventureWorks2012,` without showing the splash screen:
+The following script opens SQL Server Management Studio from a command prompt, with Windows Authentication, with the Code Editor set to the server `ACCTG` and the database [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)], without showing the splash screen:
 
 ```console
-Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
+Ssms -E -S ACCTG -d AdventureWorks2022 -nosplash
 ```
 
 The following script opens SQL Server Management Studio from a command prompt, and opens the MonthEndQuery script.

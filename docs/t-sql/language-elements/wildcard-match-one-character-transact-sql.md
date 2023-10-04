@@ -3,13 +3,10 @@ title: "_ (Wildcard - Match One Character) (Transact-SQL)"
 description: "_ (Wildcard - Match One Character) (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "12/06/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "Match"
   - "wildcard"
@@ -52,7 +49,7 @@ You can use multiple underscores to represent multiple characters. Changing the 
  The following example uses the _ operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
   
 ```sql  
--- USE AdventureWorks2012
+-- USE AdventureWorks2022;
   
 SELECT FirstName, LastName  
 FROM Person.Person  

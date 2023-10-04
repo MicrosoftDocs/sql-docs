@@ -1,18 +1,14 @@
 ---
 title: "Basic navigation in DTA"
 description: Database Engine Tuning Advisor (DTA) provides a graphical user interface (GUI) based way to view tuning sessions and tuning recommendation reports.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Database Engine Tuning Advisor [SQL Server], tutorials"
-ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-dt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Database Engine Tuning Advisor [SQL Server], tutorials"
 ---
 
 # Lesson 1: Basic Navigation in Database Engine Tuning Advisor (DTA)
@@ -23,11 +19,11 @@ Database Engine Tuning Advisor provides a graphical user interface (GUI) based w
 
 ## Prerequisites 
 
-To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
+To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
-- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
-- Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample databases.](../../samples/adventureworks-install-configure.md)
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
+- Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
 
 
 Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)

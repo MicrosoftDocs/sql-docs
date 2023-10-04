@@ -1,23 +1,19 @@
 ---
+title: "semanticsimilaritytable (Transact-SQL)"
 description: "semanticsimilaritytable (Transact-SQL)"
-title: "semanticsimilaritytable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "semanticsimilaritytable"
-  - "semanticsimilaritytable_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "semanticsimilaritytable function"
-ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
+ms.date: "06/10/2016"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "semanticsimilaritytable"
+  - "semanticsimilaritytable_TSQL"
+helpviewer_keywords:
+  - "semanticsimilaritytable function"
+dev_langs:
+  - "TSQL"
 ---
 # semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +22,7 @@ ms.author: mikeray
   
  This rowset function can be referenced in the FROM clause of a SELECT statement like a regular table name.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -90,11 +86,11 @@ SEMANTICSIMILARITYTABLE
  Requires SELECT permissions on the base table on which the full-text and semantic indexes were created.  
   
 ## Examples  
- The following example retrieves the top 10 candidates who are similar to a specified candidate from the HumanResources.JobCandidate table in the AdventureWorks2012 sample database.  
+ The following example retrieves the top 10 candidates who are similar to a specified candidate from the HumanResources.JobCandidate table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
-FROMSEMANTICSIMILARITYTABLE  
+FROM SEMANTICSIMILARITYTABLE  
     (  
     HumanResources.JobCandidate,  
     Resume,  

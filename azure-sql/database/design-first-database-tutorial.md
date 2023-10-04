@@ -50,11 +50,11 @@ A database in Azure SQL Database is created with a defined set of compute and st
 Follow these steps to create a blank database.
 
 1. On the Azure portal menu or from the **Home** page, select **Create a resource**.
-2. On the **New** page, select **Databases** in the Azure Marketplace section, and then click **SQL Database** in the **Featured** section.
+1. On the **New** page, select **Databases** in the Azure Marketplace section, and then click **SQL Database** in the **Featured** section.
 
-   ![create empty-database](./media/design-first-database-tutorial/create-empty-database.png)
+   :::image type="content" source="./media/design-first-database-tutorial/create-empty-database.png" alt-text="Screenshot of the Azure portal, selecting a SQL Database from Azure Marketplace.":::
 
-3. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
+1. Fill out the **SQL Database** form with the following information, as shown on the preceding image:
 
     | Setting       | Suggested value | Description |
     | ------------ | ------------------ | ------------------------------------------------- |
@@ -63,7 +63,7 @@ Follow these steps to create a blank database.
     | **Resource group** | *yourResourceGroup* | For valid resource group names, see [Naming rules and restrictions](/azure/architecture/best-practices/resource-naming). |
     | **Select source** | Blank database | Specifies that a blank database should be created. |
 
-4. Click **Server** to use an existing server or create and configure a new server. Either select an existing server or click **Create a new server** and fill out the **New server** form with the following information:
+1. Choose a server from the drop-down to use an existing server or select **Create new** to create and configure a new server. Either select an existing server or click **Create a new server** and fill out the **New server** form with the following information:
 
     | Setting       | Suggested value | Description |
     | ------------ | ------------------ | ------------------------------------------------- |
@@ -72,20 +72,20 @@ Follow these steps to create a blank database.
     | **Password** | Any valid password | Your password must have at least eight characters and must use characters from three of the following categories: upper case characters, lower case characters, numbers, and non-alphanumeric characters. |
     | **Location** | Any valid location | For information about regions, see [Azure Regions](https://azure.microsoft.com/regions/). |
 
-    ![create database-server](./media/design-first-database-tutorial/create-database-server.png)
+    :::image type="content" source="./media/design-first-database-tutorial/create-database-server.png" alt-text="Screenshot of the Azure portal, creating a logical server for Azure. ":::
 
-5. Click **Select**.
-6. Click **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
+1. Click **Select**.
+1. Click **Pricing tier** to specify the service tier, the number of DTUs or vCores, and the amount of storage. You may explore the options for the number of DTUs/vCores and storage that is available to you for each service tier.
 
     After selecting the service tier, the number of DTUs or vCores, and the amount of storage, click **Apply**.
 
-7. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
+1. Enter a **Collation** for the blank database (for this tutorial, use the default value). For more information about collations, see [Collations](/sql/t-sql/statements/collations)
 
-8. Now that you've completed the **SQL Database** form, click **Create** to provision the database. This step may take a few minutes.
+1. Now that you've completed the **SQL Database** form, click **Create** to provision the database. This step may take a few minutes.
 
-9. On the toolbar, click **Notifications** to monitor the deployment process.
+1. On the toolbar, click **Notifications** to monitor the deployment process.
 
-   ![Screenshot shows the Notifications menu with Deployment in progress.](./media/design-first-database-tutorial/notification.png)
+   :::image type="content" source="./media/design-first-database-tutorial/notification.png" alt-text="Screenshot shows the Notifications menu with Deployment in progress.":::
 
 ## Create a server-level IP firewall rule
 
@@ -98,19 +98,19 @@ Azure SQL Database creates an IP firewall at the server-level. This firewall pre
 
 1. Select *yourDatabase* on the **SQL databases** page. The overview page for your database opens, showing you the fully qualified **Server name** (such as `contosodatabaseserver01.database.windows.net`) and provides options for further configuration.
 
-   ![server name](./media/design-first-database-tutorial/server-name.png)
+   :::image type="content" source="./media/design-first-database-tutorial/server-name.png" alt-text="Screenshot of the Azure portal, database overview page with the server name highlighted.":::
 
 1. Copy this fully qualified server name for use to connect to your server and databases from SQL Server Management Studio.
 
-1. Click **Set server firewall** on the toolbar. The **Firewall settings** page for the server opens.
+1. Select **Networking** under **Settings**. Choose the **Public Access** tab, and then select **Selected networks** under **Public network access** to display the **Firewall rules** section. 
 
-   ![server-level IP firewall rule](./media/design-first-database-tutorial/server-firewall-rule.png)
+   :::image type="content" source="./media/design-first-database-tutorial/server-firewall-rule.png" alt-text="Screenshot of the Azure portal, networking page, showing where to set the server-level IP firewall rule.":::
 
-1. Click **Add client IP** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
+1. Select **Add your client IPv4** on the toolbar to add your current IP address to a new IP firewall rule. An IP firewall rule can open port 1433 for a single IP address or a range of IP addresses.
 
-1. Click **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
+1. Select **Save**. A server-level IP firewall rule is created for your current IP address opening port 1433 on the server.
 
-1. Click **OK** and then close the **Firewall settings** page.
+1. Select **OK** and then close the **Firewall settings** page.
 
 Your IP address can now pass through the IP firewall. You can now connect to your database using SQL Server Management Studio or another tool of your choice. Be sure to use the server admin account you created previously.
 
@@ -132,17 +132,17 @@ Use [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) 
    | **Login** | The server admin account | The account that you specified when you created the server. |
    | **Password** | The password for your server admin account | The password that you specified when you created the server. |
 
-   ![connect to server](./media/design-first-database-tutorial/connect.png)
+   :::image type="content" source="./media/design-first-database-tutorial/connect.png" alt-text="Screenshot of the connect to server dialog box in SQL Server Management Studio (SSMS).":::
 
 3. Click **Options** in the **Connect to server** dialog box. In the **Connect to database** section, enter *yourDatabase* to connect to this database.
 
-    ![connect to db on server](./media/design-first-database-tutorial/options-connect-to-db.png)  
+    :::image type="content" source="./media/design-first-database-tutorial/options-connect-to-db.png" alt-text="Screenshot of the options tab of the connect to server dialog box in SQL Server Management Studio (SSMS). ":::  
 
 4. Click **Connect**. The **Object Explorer** window opens in SSMS.
 
 5. In **Object Explorer**, expand **Databases** and then expand *yourDatabase* to view the objects in the sample database.
 
-   ![database objects](./media/design-first-database-tutorial/connected.png)  
+   :::image type="content" source="./media/design-first-database-tutorial/connected.png" alt-text="Screenshot of SQL Server Management Studio (SSMS) showing database objects in object explorer.":::  
 
 ## Create tables in your database
 
@@ -158,7 +158,7 @@ The following diagram shows how these tables are related to each other. Some of 
 > [!NOTE]
 > You can also use the [table designer in SQL Server Management Studio](/sql/ssms/visual-db-tools/design-database-diagrams-visual-database-tools) to create and design your tables.
 
-![Table relationships](./media/design-first-database-tutorial/tutorial-database-tables.png)
+:::image type="content" source="./media/design-first-database-tutorial/tutorial-database-tables.png" alt-text="Screenshot of the table designer in SQL Server Management Studio (SSMS) showing the table relationships.":::
 
 1. In **Object Explorer**, right-click *yourDatabase* and select **New Query**. A blank query window opens that is connected to your database.
 
@@ -205,11 +205,11 @@ The following diagram shows how these tables are related to each other. Some of 
    )
    ```
 
-   ![Create tables](./media/design-first-database-tutorial/create-tables.png)
+   :::image type="content" source="./media/design-first-database-tutorial/create-tables.png" alt-text="Create tables":::
 
 3. Expand the **Tables** node under *yourDatabase* in the **Object Explorer** to see the tables you created.
 
-   ![ssms tables-created](./media/design-first-database-tutorial/ssms-tables-created.png)
+   :::image type="content" source="./media/design-first-database-tutorial/ssms-tables-created.png" alt-text="Screenshot of Query editor in SQL Server Management Studio (SSMS) with successful create table query.":::
 
 ## Load data into the tables
 
@@ -217,10 +217,10 @@ The following diagram shows how these tables are related to each other. Some of 
 
 2. Right-click the following links and save them into the *sampleData* folder.
 
-   - [SampleCourseData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCourseData)
-   - [SamplePersonData](https://sqldbtutorial.blob.core.windows.net/tutorials/SamplePersonData)
-   - [SampleStudentData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleStudentData)
-   - [SampleCreditData](https://sqldbtutorial.blob.core.windows.net/tutorials/SampleCreditData)
+   - [SampleCourseData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleCourseData)
+   - [SamplePersonData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SamplePersonData)
+   - [SampleStudentData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleStudentData)
+   - [SampleCreditData](https://github.com/microsoft/sql-server-samples/releases/download/sqldbtutorial/SampleCreditData)
 
 3. Open a command prompt window and navigate to the *sampleData* folder.
 

@@ -1,26 +1,22 @@
 ---
-description: "Modify the Target Servers for a Job"
 title: "Modify the Target Servers for a Job"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Modify the Target Servers for a Job"
+author: markingmyname
+ms.author: maghan
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "modifying target servers"
   - "SQL Server Agent jobs, target servers"
   - "target servers [SQL Server], modifying"
-ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
 # Modify the Target Servers for a Job
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -56,7 +52,7 @@ By default, members of the sysadmin fixed server role can execute this stored pr
   
 #### To modify the target servers for a job  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

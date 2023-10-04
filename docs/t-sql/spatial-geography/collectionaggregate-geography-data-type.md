@@ -1,20 +1,16 @@
 ---
+title: "CollectionAggregate (geography Data Type)"
 description: "CollectionAggregate (geography Data Type)"
-title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "CollectionAggregate method (geography)"
-ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "05/18/2021"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "CollectionAggregate method (geography)"
+dev_langs:
+  - "TSQL"
 ---
 # CollectionAggregate (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -52,7 +48,7 @@ CollectionAggregate ( geography_operand )
  The following example returns a `GeometryCollection` instance that contains a set of **geography** objects.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation  
  FROM Person.Address  

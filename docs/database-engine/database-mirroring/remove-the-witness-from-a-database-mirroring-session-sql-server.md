@@ -4,10 +4,9 @@ description: "Describes how to remove a witness from a database mirroring sessio
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "witness [SQL Server], turning off"
   - "witness [SQL Server], removing"
@@ -70,7 +69,7 @@ helpviewer_keywords:
      The following example removes the witness from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
+    ALTER DATABASE AdventureWorks2022 SET WITNESS OFF ;  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Removing the Witness  

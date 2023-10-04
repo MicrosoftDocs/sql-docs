@@ -4,12 +4,10 @@ description: "Install SQL Server by using PowerShell DSC and learn about the ini
 author: randomnote1
 ms.author: dareist
 ms.date: "09/17/2021"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
+ms.custom: intro-installation
 ms.devlang: PowerShell
 monikerRange: ">=sql-server-2016"
 ---

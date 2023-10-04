@@ -2,10 +2,10 @@
 title: Configure replication between managed instances
 titleSuffix: Azure SQL Managed Instance
 description: This tutorial teaches you to configure transactional replication between an Azure SQL Managed Instance publisher/distributor and a SQL Managed Instance subscriber.
-author: ferno-ms
-ms.author: ferno
+author: sasapopo
+ms.author: sasapopo
 ms.reviewer: mathoma
-ms.date: 04/28/2020
+ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: replication
 ms.topic: tutorial
@@ -16,8 +16,6 @@ ms.custom: sqldbrb=1
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 Transactional replication allows you to replicate data from one database to another hosted on either SQL Server or [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md). SQL Managed Instance can be a publisher, distributor or subscriber in the replication topology. See [transactional replication configurations](replication-transactional-overview.md#common-configurations) for available configurations. 
-
-Transactional replication is currently in public preview for SQL Managed Instance. 
 
 In this tutorial, you learn how to:
 
@@ -40,7 +38,7 @@ This tutorial is intended for an experienced audience and assumes that the user 
 
 Configuring SQL Managed Instance to function as a publisher and/or a distributor requires:
 
-- That the publisher managed instance is on the same virtual network as the distributor and the subscriber, or [VPN gateways](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal) have been configured between the virtual networks of all three entities. 
+- That the publisher managed instance is on the same virtual network as the distributor and the subscriber, or [VNet peering](/azure/virtual-network/tutorial-connect-virtual-networks-portal) or [VPN gateways](/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal) have been configured between the virtual networks of all three entities.
 - Connectivity uses SQL Authentication between replication participants.
 - An Azure storage account share for the replication working directory.
 - Port 445 (TCP outbound) is open in the security rules of NSG for the managed instances to access the Azure file share.  If you encounter the error `failed to connect to azure storage <storage account name> with os error 53`, you will need to add an outbound rule to the NSG of the appropriate SQL Managed Instance subnet.

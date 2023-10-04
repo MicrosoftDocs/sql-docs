@@ -1,20 +1,16 @@
 ---
+title: "SIGN (SSIS Expression)"
 description: "SIGN (SSIS Expression)"
-title: "SIGN (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "positive values [Integration Services]"
   - "SIGN function"
   - "negative values"
-ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: chugugrace
-ms.author: chugu
 ---
 # SIGN (SSIS Expression)
 

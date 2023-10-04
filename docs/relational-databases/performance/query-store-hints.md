@@ -1,19 +1,16 @@
 ---
 title: "Query Store hints"
 description: "Learn about the Query Store hints feature, which can be used to shape query plans without changing application code."
-ms.custom:
-- event-tier1-build-2022
-ms.date: 10/11/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Query Store hints"
-dev_langs:
- - "TSQL"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 04/28/2023
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Query Store hints"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 
@@ -22,7 +19,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 
 This article outlines how to apply query hints using the Query Store. Query Store hints provide an easy-to-use method for shaping query plans without changing application code. 
 
-Query Store hints are available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
+Query Store hints are available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Query Store hints are also a feature introduced to SQL Server in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 - For more information on configuring and administering with the Query Store, see [Monitoring performance by using the Query Store](monitoring-performance-by-using-the-query-store.md).
 - For information on discovering actionable information and tune performance with the Query Store, see [Tuning performance by using the Query Store](tune-performance-with-the-query-store.md).
@@ -39,30 +36,30 @@ For information on which query hints can be applied, see [Supported query hints]
 
 ## When to use Query Store hints
 
-As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and on-by-default in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Query Store greatly simplifies the overall performance tuning customer experience.  
+As the name suggests, this feature extends and depends on the [Query Store](monitoring-performance-by-using-the-query-store.md). Query Store enables the capturing of queries, execution plans, and associated runtime statistics. Introduced in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and on-by-default in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], Query Store greatly simplifies the overall performance tuning customer experience.  
 
 :::image type="complex" source="media/query-store-hints.png" alt-text="The workflow for Query Store Hints.":::
       First the query is executed, then captured by Query Store. Then the DBA creates a Query Store hint on a query. Thereafter, the query is executed using the Query Store hint.
 :::image-end:::
 
 Examples where Query Store hints can help with query-level performance issues:
-*    Recompile a query on each execution.
-*    Cap the memory grant size for a bulk insert operation.
-*    Limit the maximum degree of parallelism when updating statistics.
-*    Use a Hash join instead of a Nested Loops join.
-*    Use [compatibility level](../databases/view-or-change-the-compatibility-level-of-a-database.md) 110 for a specific query while keeping everything else in the database at compatibility level 150.
-*    Disable row goal optimization for a SELECT TOP query.
+-    Recompile a query on each execution.
+-    Cap the memory grant size for a bulk insert operation.
+-    Limit the maximum degree of parallelism when updating statistics.
+-    Use a Hash join instead of a Nested Loops join.
+-    Use [compatibility level](../databases/view-or-change-the-compatibility-level-of-a-database.md) 110 for a specific query while keeping everything else in the database at compatibility level 150.
+-    Disable row goal optimization for a SELECT TOP query.
 
 To use Query Store hints:
-1.    Identify the Query Store `query_id` of the query statement you wish to modify. You can do this in various ways: 
+1. Identify the Query Store `query_id` of the query statement you wish to modify. You can do this in various ways: 
     1.1. Querying the [Query Store catalog views](../system-catalog-views/query-store-catalog-views-transact-sql.md).
     1.2. Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] built-in Query Store reports.
-    1.3. Using Azure portal Query Performance Insight for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-1.    Execute `sys.sp_query_store_set_hints` with the `query_id` and query hint string you wish to apply to the query.  This string can contain one or more query hints. For complete information, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
+    1.3. Using Azure portal Query Performance Insight for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
+1. Execute `sys.sp_query_store_set_hints` with the `query_id` and query hint string you wish to apply to the query.  This string can contain one or more query hints. For complete information, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
 
 Once created, Query Store hints are persisted and survive restarts and failovers. Query Store hints override hard-coded statement-level hints and existing plan guide hints. 
 
-If a query hint contradicts what is possible for query optimization, the hint won't block query execution and the hint won't be applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
+If a query hint contradicts what is possible for query optimization, query execution is not blocked and the hint isn't applied. In the cases where a hint would cause a query to fail, the hint is ignored and the latest failure details can be viewed in [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md).
 
 Watch this video for an overview of Query Store hints:
 
@@ -72,9 +69,9 @@ Watch this video for an overview of Query Store hints:
 
 To create or update hints, use [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md). Hints are specified in a valid string format N'OPTION (...)'. 
 
-* When creating a Query Store hint, if no Query Store hint exists for a specific `query_id`, a new Query Store hint will be created.
-* When creating or updating a Query Store hint, if a Query Store hint already exists for a specific `query_id`, the last value provided will override previously specified values for the associated query.
-* If a `query_id` doesn't exist, an error will be raised. 
+- When creating a Query Store hint, if no Query Store hint exists for a specific `query_id`, a new Query Store hint will be created.
+- When creating or updating a Query Store hint, if a Query Store hint already exists for a specific `query_id`, the last value provided overrides previously specified values for the associated query.
+- If a `query_id` doesn't exist, an error is raised.
 
 > [!Note]
 > For a complete list of hints that are supported, see [sys.sp_query_store_set_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md).
@@ -97,38 +94,38 @@ When hints are applied, the following result set appears in the `StmtSimple` ele
 
 ## Query Store hints and feature interoperability
 
-*   Query Store hints will override other hard-coded statement level hints and plan guides.
-*   Queries will always execute where any opposing Query Store hints, that would otherwise cause an error, will be ignored.
-*   If Query Store hints contradict, SQL Server will not block query execution and Query Store hint will not be applied.
-*   Simple parameterization - Query Store hints are not supported for statements that qualify for simple parameterization.
-*   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are applied.
+-   Query Store hints will override other hard-coded statement level hints and plan guides.
+-   Queries will always execute and opposing Query Store hints are ignored that would otherwise cause an error.
+-   If Query Store hints contradict, SQL Server does not block query execution, and Query Store hint is not applied.
+-   Simple parameterization - Query Store hints are not supported for statements that qualify for simple parameterization.
+-   Forced parameterization - The RECOMPILE hint is not compatible with forced parameterization set at the database level. If the database has forced parameterization set, and the RECOMPILE hint is part of the hints string set in Query Store for a query, SQL Server will ignore the RECOMPILE hint and will apply any other hints if they are applied.
     *    Additionally, SQL Server will issue a warning (error code 12461) stating that the RECOMPILE hint was ignored.
     *    For more information on forced parameterization use case considerations, see [Guidelines for Using Forced Parameterization](../query-processing-architecture-guide.md#forced-parameterization).
-*   Manually created Query Store hints are exempt from cleanup. The hint and the query will not be cleaned up from Query Store by the automatic retention of the capture policy. 
+-   Manually created Query Store hints are exempt from cleanup. The hint and the query will not be cleaned up from Query Store by the automatic retention of the capture policy.
     *   Queries can be [manually removed by users](../system-stored-procedures/sp-query-store-remove-query-transact-sql.md), which would also remove the associated Query Store hint.
     *   Query Store hints automatically generated by the [CE Feedback](intelligent-query-processing-details.md#cardinality-estimation-ce-feedback) are subject to clean up by the automatic retention of the capture policy. 
-    *   [DOP feedback](intelligent-query-processing-details.md#dop-feedback) and [memory grant feedback](intelligent-query-processing-details.md#memory-grant-feedback) shape query behavior without using Query Store hints. When queries are cleanup by automatic retention of the capture policy, DOP feedback and memory grant feedback data is also cleaned up. 
+    *   [DOP feedback](intelligent-query-processing-feedback.md#degree-of-parallelism-dop-feedback) and [memory grant feedback](intelligent-query-processing-details.md#memory-grant-feedback) shape query behavior without using Query Store hints. When queries are cleanup by automatic retention of the capture policy, DOP feedback and memory grant feedback data is also cleaned up. 
     *   You can manually create the same Query Store hint that CE feedback implemented, and then the query with the hint would no longer be subject to clean up by the automatic retention of the capture policy.
 
 ### Query Store hints and availability groups
 
-For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
-*   Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store hints can be applied against the primary replica of an availability group.
-*   Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, Query Store hints are also replica-aware for secondary replicas in availability groups.
-*   You can add a Query Store hint to a specific replica or replica set when you have Query Store for secondary replicas enabled. In [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md), this is set by the `@query_hint_scope` parameter, which was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-*   Find the available replica sets by querying [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
-
+-   Prior to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], Query Store hints can be applied against the primary replica of an availability group.
+-   Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, Query Store hints are also replica-aware for secondary replicas in availability groups.
+-   You can add a Query Store hint to a specific replica or replica set when you have Query Store for secondary replicas enabled. In [sys.sp_query_store_set_query_hints](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md), this is set by the `@query_hint_scope` parameter, which was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+-   Find the available replica sets by querying [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md).
+-   Find plans forced on secondary replicas with [sys.query_store_plan_forcing_locations](../system-catalog-views/sys-query-store-plan-forcing-locations-transact-sql.md).
 
 ## Query Store hints best practices
 
-*    Complete index and statistics maintenance before evaluating queries for potential new Query Store hints.
-*    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) before using Query Store hints.
+-    Complete index and statistics maintenance before evaluating queries for potential new Query Store hints.
+-    Test your application database on the latest [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) before using Query Store hints.
      * For example, Parameter Sensitive Plan (PSP) optimization was introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] (compatibility level 160), which leverages multiple active plans per query to address non-uniform data distributions. If your environment cannot use the latest compatibility level, Query Store hints using the RECOMPILE hint can be leveraged on any supporting compatibility level.
-*    Query Store hints override SQL Server query plan behavior. It is recommended to only leverage Query Store hints when it is necessary to address performance related issues.
-*    It is recommended to reevaluate Query Store hints, statement level hints, plan guides, and Query Store forced plans any time data distributions change and during database migrations projects. Changes in data distribution may cause Query Store hints to generate suboptimal execution plans.
+-    Query Store hints override SQL Server query plan behavior. It is recommended to only leverage Query Store hints when it is necessary to address performance related issues.
+-    It is recommended to reevaluate Query Store hints, statement level hints, plan guides, and Query Store forced plans any time data distributions change and during database migrations projects. Changes in data distribution may cause Query Store hints to generate suboptimal execution plans.
 
-## Examples  
+## Examples
 
 ### A. Query Store hints demo
 The following walk-through of Query Store hints in Azure SQL Database uses an imported database via a BACPAC file (.bacpac). Learn how to import a new database to an Azure SQL Database server, see [Quickstart: Import a BACPAC file to a database](/azure/azure-sql/database/database-import).
@@ -148,7 +145,7 @@ on A.AddressID = CA.AddressID
 WHERE PostalCode = '98052' ORDER BY A.ModifiedDate DESC;
 ```
 
-Note that Query Store doesn't immediately reflect query data to its system views.
+Query Store doesn't immediately reflect query data to its system views.
 
 Identify the query in the query store system catalog views:
 
@@ -198,12 +195,12 @@ EXEC sys.sp_query_store_clear_hints @query_id = 39;
 
 ## See also
 
-- [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)   
-- [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)   
-- [sys.sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)   
+- [sys.query_store_query_hints (Transact-SQL)](../system-catalog-views/sys-query-store-query-hints-transact-sql.md)
+- [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md)
+- [sys.sp_query_store_clear_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md)
 - [Save an Execution Plan in XML Format](save-an-execution-plan-in-xml-format.md)
 - [Display and Save Execution Plans](display-and-save-execution-plans.md)
-- [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)  
+- [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md)
 
 ## Next steps
 

@@ -1,23 +1,19 @@
 ---
+title: "sp_helpindex (Transact-SQL)"
 description: "sp_helpindex (Transact-SQL)"
-title: "sp_helpindex (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpindex_TSQL"
-  - "sp_helpindex"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpindex"
-ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpindex_TSQL"
+  - "sp_helpindex"
+helpviewer_keywords:
+  - "sp_helpindex"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpindex (Transact-SQL)
@@ -25,7 +21,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
   Reports information about the indexes on a table or view.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -63,7 +59,7 @@ sp_helpindex [ @objname = ] 'name'
  The following example reports on the types of indexes on the `Customer` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpindex N'Sales.Customer';  
 GO  

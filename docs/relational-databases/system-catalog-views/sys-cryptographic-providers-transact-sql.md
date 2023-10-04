@@ -4,9 +4,8 @@ description: sys.cryptographic_providers (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "cryptographic_providers"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.cryptographic_providers catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.cryptographic_providers (Transact-SQL)

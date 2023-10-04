@@ -4,11 +4,11 @@ description: Migrate a certificate protecting the database encryption key of a d
 author: MladjoA
 ms.author: mlandzic
 ms.reviewer: mathoma, jovanpop
-ms.date: 06/01/2021
+ms.date: 04/06/2023
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, devx-track-azurepowershell
 ---
 
 # Migrate a certificate of a TDE-protected database to Azure SQL Managed Instance
@@ -52,10 +52,6 @@ Run the following commands in PowerShell to install/update the module:
 Install-Module -Name Az.Sql
 Update-Module -Name Az.Sql
 ```
-
-# [Azure CLI](#tab/azure-cli)
-
-If you need to install or upgrade, see [Install the Azure CLI](/cli/azure/install-azure-cli).
 
 * * *
 
@@ -154,33 +150,12 @@ If the certificate is kept in the SQL Server local machine certificate store, it
        -ManagedInstanceName "<managedInstanceName>" -PrivateBlob $securePrivateBlob -Password $securePassword
    ```
 
-# [Azure CLI](#tab/azure-cli)
-
-You need to first [set up an Azure key vault](/azure/key-vault/general/manage-with-cli2) with your *.pfx* file.
-
-1. Start with preparation steps in PowerShell:
-
-   ```azurecli
-   # connect to Azure with an interactive dialog for sign-in
-   az login
-
-   # list subscriptions available and copy id of the subscription target the managed instance belongs to
-   az account list
-
-   # set subscription for the session
-   az account set --subscription <subscriptionId>
-   ```
-
-1. Once all preparation steps are done, run the following commands to upload the base-64 encoded certificate to the target managed instance:
-
-   ```azurecli
-   az sql mi tde-key set --server-key-type AzureKeyVault --kid "<keyVaultId>" `
-       --managed-instance "<managedInstanceName>" --resource-group "<resourceGroupName>"
-   ```
-
 * * *
 
 The certificate is now available to the specified managed instance, and the backup of the corresponding TDE-protected database can be restored successfully.
+
+> [!NOTE]
+> Uploaded certificate is not visible in the sys.certificates catalog view. To confirm successful upload of the certificate you can run [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) command.
 
 ## Next steps
 

@@ -1,13 +1,12 @@
 ---
 title: Python language extension
 description: Learn about the Python extension for running external Python scripts with SQL Server Machine Learning Services.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 07/14/2020
-ms.topic: conceptual
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.custom: seo-lt-2019
+ms.date: 07/14/2020
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: conceptual
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 # Python language extension in SQL Server Machine Learning Services
@@ -74,7 +73,7 @@ In Linux, SQL uses a **launchpadd** service to communicate with a separate launc
 
 ### Python scripts executed from a remote client
 
-You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
+You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQL Server computer, if these conditions are met:
 
 + You design the scripts appropriately
 + The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/ref-py-revoscalepy.md) package is required to use remote compute contexts.

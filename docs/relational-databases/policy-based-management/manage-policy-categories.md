@@ -1,18 +1,14 @@
 ---
+title: "Manage Policy Categories"
 description: "Manage Policy Categories"
-title: "Manage Policy Categories | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
-ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.dmf.policycategories.f1"
 ---
 # Manage Policy Categories
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +78,7 @@ ms.author: vanto
     GO  
     -- configures the specified database to subscribe to a policy category that is named 'Table Naming Policies'.  
     EXEC dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DATABASE'  
-    , @target_object = N'AdventureWorks2012'  
+    , @target_object = N'AdventureWorks2022'  
     , @policy_category = N'Table Naming Policies';  
     GO  
     ```  

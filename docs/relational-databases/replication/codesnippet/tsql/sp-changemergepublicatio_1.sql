@@ -2,7 +2,7 @@ DECLARE @publication AS sysname;
 SET @publication = N'AdvWorksSalesOrdersMerge'; 
 
 -- Disable DDL replication for the publication.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_changemergepublication 
   @publication = @publication, 
   @property = N'replicate_ddl', 

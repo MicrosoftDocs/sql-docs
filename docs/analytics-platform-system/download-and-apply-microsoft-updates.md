@@ -5,10 +5,9 @@ author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
 ms.date: 04/17/2018
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: conceptual
-ms.custom: seo-dt-2019
 ---
 
 # Download and apply Microsoft updates for Analytics Platform System
@@ -19,7 +18,7 @@ This topic discusses how to download updates from the Microsoft Update Catalog t
 > [!WARNING]  
 > Do not attempt to apply updates if your appliance or any appliance component is down or in a failed over state. In that case, contact support for assistance.  
 >   
-> Do not apply Microsoft Updates while the appliance is in use. Applying updates can cause appliance nodes to reboot. The updates should be applied during a maintenance window when the appliance is not being used.  
+> Do not apply Microsoft Updates while the appliance is in use. Applying updates can cause appliance nodes to restart. The updates should be applied during a maintenance window when the appliance is not being used.  
   
 ### Prerequisites  
 Before performing these steps, you need to:  

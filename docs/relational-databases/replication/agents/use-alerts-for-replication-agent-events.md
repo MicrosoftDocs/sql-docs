@@ -1,14 +1,14 @@
 ---
+title: "Use Alerts for Replication Agent Events"
 description: "Use Alerts for Replication Agent Events"
-title: "Use Alerts for Replication Agent Events | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "viewing alerts"
   - "Queue Reader Agent, alerts"
   - "alerts [SQL Server replication]"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "agents [SQL Server replication], alerts"
   - "displaying alerts"
   - "Snapshot Agent, alerts"
-ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Use Alerts for Replication Agent Events
@@ -39,7 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 |20572|**Replication: Subscription reinitialized after validation failure**|Response job 'Reinitialize subscriptions on data validation failure' reinitializes a subscription successfully.|No|  
 |20574|**Replication: Subscriber has failed data validation**|Distribution or Merge Agent fails data validation.|Yes|  
 |20575|**Replication: Subscriber has passed data validation**|Distribution or Merge Agent passes data validation.|Yes|  
-|20578|**Replication: agent custom shutdown**|||  
+|20578|**Replication: agent custom shutdown**|When data validation is invoked through [sp_publication_validation](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) and `@shutdown_agent` is set to `1`, the distribution agent is shut down after validation completes. |Yes|  
 |22815|**Peer-to-peer conflict detection alert**|Distribution Agent detected a conflict when it tries to apply a change at a peer-to-peer node.|Yes|  
   
  In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](../../../ssms/agent/create-a-user-defined-event.md).  

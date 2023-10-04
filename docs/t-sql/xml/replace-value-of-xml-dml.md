@@ -1,23 +1,20 @@
 ---
-description: "replace value of (XML DML)"
 title: replace value of (XML DML)
-ms.custom: ""
+description: "replace value of (XML DML)"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "XML DML [SQL Server]"
   - "update keyword"
   - "replacement values [XML DML]"
   - "updating node values"
   - "replace value of XML DML statement"
-ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-author: MikeRayMSFT
-ms.author: mikeray
+dev_langs:
+  - "TSQL"
 ---
 # replace value of (XML DML)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -137,7 +134,7 @@ This example replaces values in a manufacturing instructions document stored in 
 In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 DROP TABLE T  
 GO  

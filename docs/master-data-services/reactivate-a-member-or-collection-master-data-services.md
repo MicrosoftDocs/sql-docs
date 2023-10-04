@@ -1,27 +1,23 @@
 ---
-description: "Reactivate a Member or Collection (Master Data Services)"
 title: Reactivate a Member or Collection
-ms.custom: ""
+description: "Reactivate a Member or Collection (Master Data Services)"
+author: CordeliaGrey
+ms.author: jiwang6
 ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
+ms.service: sql
+ms.subservice: master-data-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "collections [Master Data Services], reactivating"
   - "consolidated members [Master Data Services], reactivating"
   - "reactivating members [Master Data Services]"
   - "members [Master Data Services], reactivating"
   - "reactivating collections [Master Data Services]"
   - "leaf members [Master Data Services], reactivating"
-ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-author: CordeliaGrey
-ms.author: jiwang6
 ---
 # Reactivate a Member or Collection (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can reactivate a member that was either:  
   

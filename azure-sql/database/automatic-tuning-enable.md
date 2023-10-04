@@ -64,7 +64,7 @@ Once you have selected your desired configuration, click **Apply**.
 
 ### REST API
 
-To find out more about using a REST API to enable automatic tuning on a single database, see [Azure SQL Database automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/databaseautomatictuning).
+To find out more about using a REST API to enable automatic tuning on a single database, see [Azure SQL Database automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/2022-02-01-preview/database-automatic-tuning).
 
 ### T-SQL
 
@@ -103,7 +103,7 @@ The following steps can be considered to rectify this issue:
 - Clean up the Query Store, or modify the data retention period to "auto" by using T-SQL, or increase Query Store maximum size. See how to [configure recommended retention and capture policy for Query Store](./query-performance-insight-use.md#recommended-retention-and-capture-policy).
 - Use SQL Server Management Studio (SSMS) and follow these steps:
   - Connect to the Azure SQL Database
-  - Right click on the database
+  - Right-click on the database
   - Go to Properties and click on Query Store
   - Change the Operation Mode to Read-Write
   - Change the Store Capture Mode to Auto

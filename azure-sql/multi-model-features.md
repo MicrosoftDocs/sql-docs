@@ -3,7 +3,7 @@ title: Multi-model capabilities
 description: Microsoft Azure SQL enables you to work with multiple data models in the same database.
 author: yorek
 ms.author: damauri
-ms.reviewer: mathoma, urmilano, kendralittle
+ms.reviewer: mathoma, urmilano
 ms.date: 12/17/2018
 ms.service: sql-db-mi
 ms.subservice: service-overview
@@ -66,7 +66,7 @@ If you have JSON text, you can extract data from JSON or verify that JSON is pro
 - [OPENJSON](/sql/t-sql/functions/openjson-transact-sql): Can transform an array of JSON objects into a set of rows, for more advanced querying and analysis. Any SQL query can be executed on the returned result set. 
 - [FOR JSON](/sql/relational-databases/json/format-query-results-as-json-with-for-json-sql-server): Lets you format data stored in your relational tables as JSON text.
 
-![Diagram that illustrates JSON functions.](./media/multi-model-features/image_1.png)
+![Diagram that illustrates JSON functions.](./media/multi-model-features/json-diagram.png)
 
 For more information, see [How to work with JSON data](database/json-features.md). 
 

@@ -1,20 +1,16 @@
 ---
-description: "Commit or Submit a Changeset (Master Data Services)"
 title: Commit or Submit a Changeset
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
+description: "Commit or Submit a Changeset (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Commit or Submit a Changeset (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A changeset is a collection of the pending changes on the master data. If entity changes don't require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  
   
@@ -33,7 +29,7 @@ ms.author: jiwang6
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to commit.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to commit.  
   
 4.  Click **Commit**.  
   
@@ -44,7 +40,7 @@ ms.author: jiwang6
   
 2.  Click an entity on the **Entities** menu.  
   
-3.  In the right pane, select **Changesets** and double click the changeset you want to submit.  
+3.  In the right pane, select **Changesets** and double-click the changeset you want to submit.  
   
 4.  Click **Submit**.  
   

@@ -4,8 +4,8 @@ description: sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_cryptographic_provider_algorithms_TSQL"
@@ -16,14 +16,13 @@ helpviewer_keywords:
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the algorithms supported by an Extensible Key Management (EKM) provider.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   

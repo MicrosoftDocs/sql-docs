@@ -1,26 +1,20 @@
 ---
+title: "Scripting"
 description: "Scripting"
-title: "Scripting | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "dependencies [SMO]"
-  - "scripts [SMO]"
-ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "dependencies [SMO]"
+  - "scripts [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scripting
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Scripting in SMO is controlled by the <xref:Microsoft.SqlServer.Management.Smo.Scripter> object and its child objects, or the **Script** method on individual objects. The <xref:Microsoft.SqlServer.Management.Smo.Scripter> object controls the mapping out of dependency relationships for objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Scripting in SMO is controlled by the <xref:Microsoft.SqlServer.Management.Smo.Scripter> object and its child objects, or the **Script** method on individual objects. The <xref:Microsoft.SqlServer.Management.Smo.Scripter> object controls the mapping out of dependency relationships for objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Advanced scripting by using the <xref:Microsoft.SqlServer.Management.Smo.Scripter> object and its child objects is a three phase process:  
   
@@ -158,9 +152,9 @@ $scrp.Options.ScriptDrops = $false
 $scrp.Options.WithDependencies = $true  
 $scrp.Options.IncludeIfNotExists = $true  
   
-# Set the path context to the tables in AdventureWorks2012.  
+# Set the path context to the tables in AdventureWorks2022.  
   
-CD Databases\AdventureWorks2012\Tables  
+CD Databases\AdventureWorks2022\Tables  
   
 foreach ($Item in Get-ChildItem)  
  {    

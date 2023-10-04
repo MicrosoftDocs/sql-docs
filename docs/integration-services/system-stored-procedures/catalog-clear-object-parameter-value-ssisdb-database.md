@@ -1,16 +1,12 @@
 ---
+title: "catalog.clear_object_parameter_value (SSISDB Database)"
 description: "catalog.clear_object_parameter_value (SSISDB Database)"
-title: "catalog.clear_object_parameter_value (SSISDB Database) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: "language-reference"
-ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: "language-reference"
 ---
 # catalog.clear_object_parameter_value (SSISDB Database)
 

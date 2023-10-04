@@ -1,15 +1,14 @@
 ---
 title: mssql-cli
-description: 'mssql-cli is an interactive command-line query tool for SQL Server that runs on Windows, macOS, or Linux.'
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
+description: "mssql-cli is an interactive command-line query tool for SQL Server that runs on Windows, macOS, or Linux."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan
-ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+ms.custom: tools|mssql-cli
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
@@ -37,9 +36,9 @@ After registering the Microsoft repository, mssql-cli can be installed and upgra
 
 The following example applies to Ubuntu 18.04 (Bionic), more information and examples for other distributions can be found in the [Installation Guide](https://github.com/dbcli/mssql-cli/tree/master/doc/installation).
 
-```
+```bash
 # Import the public repository GPG keys
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 # Register the Microsoft Ubuntu repository
 sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod

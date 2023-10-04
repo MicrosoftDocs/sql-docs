@@ -6,7 +6,7 @@ metadata:
    title: Microsoft SQL documentation | Microsoft Docs
    description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
    ms.topic: hub-page
-   ms.prod: sql
+   ms.service: sql
    ms.custom: FY22Q2Fresh
    date: 03/15/2022
 
@@ -14,7 +14,7 @@ metadata:
 
 highlightedContent:
   items:
-   - title: Try SQL Server 2022 Preview
+   - title: Try SQL Server 2022
      itemType: download
      url: https://aka.ms/getsqlserver2022
    - title: Get an Azure VM with SQL Server
@@ -23,9 +23,9 @@ highlightedContent:
    - title: SQL tools
      itemType: overview
      url: tools/overview-sql-tools.md
-   - title: Educational SQL resources 
-     itemType: learn
-     url: sql-server/educational-sql-resources.yml
+   - title: Troubleshoot
+     itemType: reference
+     url: /troubleshoot/sql/welcome-sql-server
 
 productDirectory:
   items:
@@ -37,7 +37,7 @@ productDirectory:
       - url: /azure/azure-sql/virtual-machines/windows/
         text: On an Azure VM
       - url: /previous-versions/sql/
-        text: Previous Versions (SQL 2005-2012)  
+        text: Previous Versions (SQL 2005-2012) 
   - title: SQL on Azure 
     imageSrc: media/index/azure.svg
     links:
@@ -47,7 +47,7 @@ productDirectory:
         text: Azure SQL Managed Instance      
       - url: /azure/azure-sql-edge/overview
         text: Azure SQL Edge       
-      - url: /azure/synapse-analytics/overview-what-is/
+      - url: /azure/synapse-analytics/overview-what-is
         text: Azure Synapse Analytics
   - title: SQL Server on Linux
     imageSrc: media/index/linux.svg
@@ -62,24 +62,31 @@ conceptualContent:
   items:
     - title: Getting started 
       links:
-        - text: Connect & query (Azure Data Studio)
-          url: azure-data-studio/quickstart-sql-server.md
+        - text: What is SQL Server?
+          url: sql-server/what-is-sql-server.md
           itemType: quickstart
-        - text: Connect & query (SSMS)
+        - text: Connect to the Database Engine
+          url: sql-server/connect-to-database-engine.md
+          itemType: quickstart
+        - text: Connect & query with SSMS
           url: ssms/quickstarts/ssms-connect-query-sql-server.md
           itemType: quickstart
-        - text: Writing Transact-SQL
+        - text: Write Transact-SQL
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: quickstart
-        - text: SQL Server Docker container
+        - text: SQL Server in a Linux container
           url: linux/quickstart-install-connect-docker.md
           itemType: quickstart
         - text: SQL Docs navigation tips
           url: sql-server/sql-docs-navigation-guide.md
           itemType: get-started
+        - text: Educational SQL resources 
+          url: sql-server/educational-sql-resources.yml
+          itemType: learn
+
     - title: What's new
       links:
-        - text: SQL Server 2022 Preview
+        - text: SQL Server 2022
           url: ./sql-server/what-s-new-in-sql-server-2022.md
           itemType: whats-new
         - text: Azure SQL Database
@@ -123,7 +130,7 @@ conceptualContent:
     - title: Migrate
       links:
         - text: Data Migration Guide 
-          url: https://datamigration.microsoft.com/
+          url: /data-migration/
           itemType: overview
         - text: Database Compatibility Certification 
           url: ./database-engine/install-windows/compatibility-certification.md
@@ -150,12 +157,8 @@ additionalContent:
     - items:
       - title: Development
         links:
-          - text: Build an app using SQL Server
-            url: https://www.microsoft.com/sql-server/developer-get-started/
           - text: SQL Server client connectivity
             url: connect/homepage-sql-connection-programming.md
-          - text: DevOps using SQL Server 
-            url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
           - text: Azure SQL Database applications
             url: /azure/sql-database/sql-database-develop-overview
           - text: Azure SQL Database connectivity libraries

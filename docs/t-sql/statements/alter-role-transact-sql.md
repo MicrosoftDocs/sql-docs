@@ -4,9 +4,8 @@ description: ALTER ROLE (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "09/08/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_ROLE_TSQL"
@@ -19,23 +18,23 @@ helpviewer_keywords:
   - "names [SQL Server], database roles"
 dev_langs:
   - "TSQL"
-monikerRange: ">=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # ALTER ROLE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
   Adds or removes members to or from a database role, or changes the name of a user-defined database role.  
   
 > [!NOTE]  
->  To alter roles adding or dropping members in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  To add or drop members from roles in [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```syntaxsql
--- Syntax for SQL Server (starting with 2012), Azure SQL Managed Instance, and Azure SQL Database  
-  
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [fabric](../../includes/fabric.md)].
+
+```syntaxsql 
 ALTER ROLE  role_name  
 {  
        ADD MEMBER database_principal  
@@ -43,12 +42,11 @@ ALTER ROLE  role_name
     |  WITH NAME = new_name  
 }  
 [;]  
-```  
+```
   
- 
-```syntaxsql
--- Syntax for SQL Server 2008
-  
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to 2012.
+
+```syntaxsql 
 -- Change the name of a user-defined database role  
 ALTER ROLE role_name   
     WITH NAME = new_name  

@@ -1,21 +1,18 @@
 ---
-title: "Manage Report Data Sources | Microsoft Docs"
+title: "Manage Report Data Sources"
 description: Learn about managing report data sources, including how to connect to external data sources that are referenced in a report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "reports [Reporting Services], data"
   - "published reports [Reporting Services], data source connections"
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], managing"
-ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Manage Report Data Sources
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  

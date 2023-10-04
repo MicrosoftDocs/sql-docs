@@ -4,9 +4,8 @@ description: CREATE LOGIN (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/14/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "CREATE_LOGIN_TSQL"
@@ -32,7 +31,7 @@ Creates a login for SQL Server, SQL Database, Azure Synapse Analytics, or Analyt
 
 CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
 
-For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 [!INCLUDE [select-product](../includes/select-product.md)]
 
@@ -187,7 +186,7 @@ GO
 
 The following example creates a login for a particular user and assigns a password. The `MUST_CHANGE` option requires users to change this password the first time they connect to the server.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -202,7 +201,7 @@ GO
 
 The following example creates the login for a particular user, using the user. This login is mapped to the credential.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -214,7 +213,7 @@ GO
 
 The following example creates login for a particular user from a certificate in master.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 USE MASTER;
@@ -230,7 +229,7 @@ GO
 
 The following example creates a login from a Windows domain account.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later.
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;
@@ -352,7 +351,7 @@ CREATE LOGIN login_name
 
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
@@ -489,7 +488,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 #### *login_name*
 When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Azure Active Directory (AD) principal, which is an Azure AD user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
 
-Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, Managed Instance, or Azure Synapse.
+Azure AD users and service principals (Azure AD applications) that are members of more than 2048 Azure AD security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
 
 #### FROM EXTERNAL PROVIDER </br>
 Specifies that the login is for Azure AD Authentication.
@@ -551,7 +550,7 @@ After creating a login, the login can connect to a managed instance, but only ha
 
 - Setting an Azure AD login mapped to an Azure AD group as the database owner is not supported.
 - Impersonation of Azure AD server-level principals using other Azure AD principals is supported, such as the [EXECUTE AS](execute-as-transact-sql.md) clause.
-- Only SQL server-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Azure AD principals:
+- Only instance-level principals (logins) that are part of the `sysadmin` role can execute the following operations targeting Azure AD principals:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
 - External (guest) users imported from another Azure AD directory cannot be directly configured as an Azure AD admin for SQL Managed Instance using the Azure portal. Instead, join external user to an Azure AD security-enabled group and configure the group as the instance administrator. You can use PowerShell or Azure CLI to set individual guest users as the instance administrator.

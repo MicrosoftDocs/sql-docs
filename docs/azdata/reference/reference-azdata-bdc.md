@@ -6,14 +6,14 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: cloudmelon, seanw, danibunny
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: big-data-cluster
+ms.service: sql
+ms.subservice: big-data-cluster
 ms.topic: reference
 ---
 
 # azdata bdc
 
-Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 

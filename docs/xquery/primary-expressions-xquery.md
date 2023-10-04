@@ -1,28 +1,24 @@
 ---
-title: "Primary Expressions (XQuery) | Microsoft Docs"
+title: "Primary Expressions (XQuery)"
 description: Learn about XQuery primary expressions that include literals, variable references, context item expressions, constructors, and function calls.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "variable references [XQuery]"
   - "primary expressions [XQuery]"
   - "function calls [XQuery]"
   - "expressions [XQuery], primary"
   - "literals [XQuery]"
   - "context item expressions [XQuery]"
-ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # Primary Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   The XQuery primary expressions include literals, variable references, context item expressions, constructors, and function calls.  
   

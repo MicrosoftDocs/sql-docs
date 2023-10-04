@@ -4,9 +4,8 @@ description: ALTER QUEUE (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "05/01/2016"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_QUEUE_TSQL"
@@ -27,7 +26,7 @@ dev_langs:
 
   Changes the properties of a queue.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -197,7 +196,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;
 ```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
-        PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
+        PROCEDURE_NAME = AdventureWorks2022.dbo.new_stored_proc ,  
         EXECUTE AS 'SecurityAccount') ;  
 ```  
   

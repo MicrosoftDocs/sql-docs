@@ -4,9 +4,8 @@ description: ALTER SERVER CONFIGURATION (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: 05/22/2019
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER SERVER CONFIGURATION"
@@ -24,7 +23,7 @@ dev_langs:
 
 Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 
@@ -43,6 +42,7 @@ SET <optionspec>
    | <soft_numa>  
    | <memory_optimized>
    | <hardware_offload>
+   | <suspend_for_snapshot_backup>
 }  
   
 <process_affinity> ::=   
@@ -109,6 +109,10 @@ SET <optionspec>
      ON 
    | OFF
    }
+
+<suspend_for_snapshot_backup> ::=
+    SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | OFF } [ ( GROUP = ( <database>,...n) [ , MODE = COPY_ONLY ] ) ]
+
 ```  
   
 
@@ -226,7 +230,7 @@ For more information, see [Change the HADR Cluster Context of Server Instance &#
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ON  
-Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage. Nonvolatile storage such as solid-state drives (SSD) persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension isn't available in every SQL Server edition. For more information, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+Enables the buffer pool extension option. This option extends the size of the buffer pool by using nonvolatile storage. Nonvolatile storage such as solid-state drives (SSD) persist clean data pages in the pool. For more information about this feature, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).The buffer pool extension isn't available in every SQL Server edition. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).  
   
 FILENAME = 'os_file_path_and_name'  
 Defines the directory path and name of the buffer pool extension cache file. The file extension must be specified as .BPE. Turn off BUFFER POOL EXTENSION before you modify FILENAME.  
@@ -293,6 +297,24 @@ Disables all instance-level use of integrated acceleration and offloading. Requi
 
 For more information, see [Integrated acceleration and offloading](../../relational-databases/integrated-acceleration/overview.md).
 
+**\<suspend_for_snapshot_backup> ::=**
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)])
+
+Suspends databases for snapshot backup. May define a group of one or more databases. May designate copy only mode.
+
+SET SUSPEND_FOR_SNAPSHOT_BACKUP = { ON | **OFF** }
+
+Suspends, or un-suspends databases. Default OFF.
+
+GROUP = ( \<database>,...n)
+
+Optional. Defines a group of one or more databases to suspend. If not specified, the setting applies to all databases.
+
+MODE = COPY_ONLY
+
+Optional. Uses COPY_ONLY mode for all database backups.
+
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  
   
@@ -306,7 +328,7 @@ Requires:
 - `CONTROL SERVER` permission for the HADR cluster context option.  
 - `ALTER SERVER STATE` permission for the buffer pool extension option.  
   
-The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] resource DLL runs under the Local System account. As such, the Local System account must have read and write access to the specified path in the Diagnostic Log option.  
   
 ## Examples  
   

@@ -1,18 +1,19 @@
 ---
-description: "Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log"
 title: "Diagnostic Info in Extended Events log"
-ms.date: 03/14/2017
-ms.reviewer: ""
-ms.prod: sql
-ms.technology: native-client
-ms.topic: "reference"
-ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
+description: "Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log"
 author: markingmyname
 ms.author: maghan
+ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../../includes/snac-removed-oledb-and-odbc.md)]
 
   Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and data access tracing ([Data Access Tracing](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) have been updated to make it easier to get diagnostic information about connection failures from the connectivity ring buffer and application performance information from the extended events log.  
   

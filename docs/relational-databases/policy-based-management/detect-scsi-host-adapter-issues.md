@@ -1,18 +1,14 @@
 ---
+title: "Detect SCSI Host Adapter Issues"
 description: "Detect SCSI Host Adapter Issues"
-title: "Detect SCSI Host Adapter Issues | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Best Practices [Database Engine]"
-ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Best Practices [Database Engine]"
 ---
 # Detect SCSI Host Adapter Issues
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

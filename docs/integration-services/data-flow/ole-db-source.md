@@ -1,24 +1,20 @@
 ---
+title: "OLE DB Source"
 description: "OLE DB Source"
-title: "OLE DB Source | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.oledbsource.f1"
   - "sql13.dts.designer.oledbsourceadapter.connection.f1"
   - "sql13.dts.designer.oledbsourceadapter.columns.f1"
   - "sql13.dts.designer.oledbsourceadapter.errorhandling.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
-ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: chugugrace
-ms.author: chugu
 ---
 # OLE DB Source
 
@@ -67,7 +63,7 @@ ms.author: chugu
 ### Specifying Parameters by Using Ordinal Positions  
  If no parameter names are returned, the order in which the parameters are listed in the **Parameters** list in the **Set Query Parameter** dialog box governs which parameter marker they are mapped to at run time. The first parameter in the list maps to the first ? in the SQL statement, the second to the second ?, and so on.  
   
- The following SQL statement selects rows from the **Product** table in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
+ The following SQL statement selects rows from the **Product** table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The first parameter in the **Mappings** list maps to the first parameter to the **Color** column, the second parameter to the **Size** column.  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -78,7 +74,7 @@ ms.author: chugu
 ### Specifying Parameters by Using Names  
  If the actual parameter names are returned from the RDBMS, the parameters used by a SELECT and EXEC statement are mapped by name. The parameter names must match the names that the stored procedure, run by the SELECT statement or the EXEC statement, expects.  
   
- The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.  
+ The following SQL statement runs the **uspGetWhereUsedProductID** stored procedure, available in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   

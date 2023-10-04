@@ -1,18 +1,14 @@
 ---
+title: "Specify an Interval of Change Data"
 description: "Specify an Interval of Change Data"
-title: "Specify an Interval of Change Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "incremental load [Integration Services],specifying interval"
-ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
+ms.date: "03/13/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "incremental load [Integration Services],specifying interval"
 ---
 # Specify an Interval of Change Data
 

@@ -4,8 +4,8 @@ description: This article describes how to insert, select, and update data in UD
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/05/2019"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "CAST function"
@@ -26,7 +26,6 @@ helpviewer_keywords:
   - "inserting data"
 dev_langs:
   - "TSQL"
-ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 ---
 # Working with User-Defined Types - Manipulating UDT Data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

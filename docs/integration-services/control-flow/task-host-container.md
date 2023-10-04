@@ -1,21 +1,17 @@
 ---
+title: "Task Host Container"
 description: "Task Host Container"
-title: "Task Host Container | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.dts.designer.taskhostcontainer.f1"
-helpviewer_keywords: 
-  - "containers [Integration Services], Task Host"
-  - "Task Host container"
-ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.dts.designer.taskhostcontainer.f1"
+helpviewer_keywords:
+  - "containers [Integration Services], Task Host"
+  - "Task Host container"
 ---
 # Task Host Container
 

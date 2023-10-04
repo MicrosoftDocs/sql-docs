@@ -1,19 +1,18 @@
 ---
-title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
+title: "Set Deployment Properties (Reporting Services)"
 description: Learn how to set the deployment properties that are used by SQL Server Data Tools (SSDT) or Visual Studio to build, preview, and deploy reports.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 05/15/2019
+ms.service: reporting-services
+ms.subservice: tools
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "reports [Reporting Services], deploying"
   - "publishing reports [Reporting Services]"
   - "properties [Reporting Services], deployment"
   - "deploying reports [Reporting Services]"
-ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-author: maggiesMSFT
-ms.author: maggies
-ms.date: 05/15/2019
 ---
 
 # Set Deployment Properties (Reporting Services)
@@ -41,7 +40,7 @@ ms.date: 05/15/2019
   
 4. In the **ErrorLevel**  text box, type the severity of the build issues that are reported as errors. Issues occurring when building reports, data sources, or other project resources with severity levels less than or equal to the value of **ErrorLevel**  are reported as errors; otherwise, the issues are reported as warnings. Any error will cause the build task to fail. The valid severity levels are 0 through 4 inclusive. The default value is 2.  
   
-     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
+     **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
   
 5. In the **StartItem**  list, select a report to display in the preview window or in a browser window when the report project is run.  
   

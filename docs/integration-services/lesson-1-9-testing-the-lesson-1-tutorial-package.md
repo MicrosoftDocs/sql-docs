@@ -1,16 +1,12 @@
 ---
+title: "Step 9: Test the Lesson 1 tutorial package"
 description: "Step 9: Test the Lesson 1 tutorial package"
-title: "Step 9: Test the Lesson 1 tutorial package | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2019"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: tutorial
-ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
+ms.date: "01/03/2019"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: tutorial
 ---
 # Lesson 1-9: Test the Lesson 1 package
 
@@ -44,7 +40,7 @@ Before you test the package, verify that the control and data flows in the Lesso
   
 1.  On the **Debug** menu, select **Start Debugging**.  
   
-    The package runs, resulting in 1,097 rows successfully added into the **NewFactCurrencyRate** fact table in **AdventureWorksDW2012**. To verify this result, select the **Data Flow** tab.
+    The package runs, resulting in 1,097 rows successfully added into the **NewFactCurrencyRate** fact table in [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)]. To verify this result, select the **Data Flow** tab.
   
 2.  After the package has completed running, on the **Debug** menu, select **Stop Debugging**.  
   

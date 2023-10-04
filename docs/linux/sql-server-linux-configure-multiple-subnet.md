@@ -1,14 +1,15 @@
 ---
-title: Configure multiple-subnet availability group & FCI (Linux) 
-description: Learn to configure multiple-subnet Always On availability groups and failover cluster instances (FCI) for SQL Server on Linux. 
-ms.custom: seo-lt-2019
+title: Configure multiple-subnet availability group & FCI (Linux)
+description: Learn to configure multiple-subnet Always On availability groups and failover cluster instances (FCI) for SQL Server on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto, randolphwest
 ms.date: 04/11/2022
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 ---
 
 # Configure multiple-subnet Always On Availability Groups and failover cluster instances
@@ -121,6 +122,6 @@ On Windows, a Windows Server Failover Cluster (WSFC) natively supports multiple 
 
 4. If desired, fail the AG or FCI back to the original subnet.
 
-## See also
+## Related content
 
-- [Configure multiple-subnet Always On Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).
+- [Configure multiple-subnet Always On Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838)

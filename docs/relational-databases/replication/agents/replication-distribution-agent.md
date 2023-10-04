@@ -1,21 +1,18 @@
 ---
-title: "Replication Distribution Agent | Microsoft Docs"
+title: "Replication Distribution Agent"
 description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "10/29/2018"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distribution Agent, executables"
   - "agents [SQL Server replication], Distribution Agent"
   - "Distribution Agent, parameter reference"
   - "command prompt [SQL Server replication]"
-ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016"
 ---
 # Replication Distribution Agent
@@ -140,7 +137,7 @@ distrib [-?]
 |**2**|Specifies that TLS is used, and that the certificate is verified.|  
  
  > [!NOTE]  
- >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The 'Alias Name' parameter should be the server name and the 'Server' parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
@@ -286,7 +283,13 @@ distrib [-?]
  Improves the performance of the initial snapshot by causing the Distribution Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots or non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the agent (for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) or the ODBC driver loaded by the agent (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers) reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
   
  **-UseOledbStreaming**  
- When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder.  
+ When specified, enables the binding of binary large object data as a stream. Use **-OledbStreamThreshold** to specify the size, in bytes, above which a stream will be used. **UseOledbStreaming** is enabled by default. 
+ 
+> [!Note]
+>   Starting with SQL 2017 CU22 and later versions (including SQL 2019 RTM), **UseOledbStreaming** writes to the **c:\Users\\<DistributionAgentAccount\>\AppData\Temp** folder. 
+> 
+>   Prior to SQL 2017 CU22, **UseOledbStreaming** writes to the **C:\Program Files\Microsoft SQL Server\\<version\>\COM** folder. 
+
   
 ## Remarks  
   

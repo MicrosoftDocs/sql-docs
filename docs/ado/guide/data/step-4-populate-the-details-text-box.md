@@ -4,8 +4,8 @@ description: "Step 4: Populate the Details Text Box"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 ---
 # Step 4: Populate the Details Text Box

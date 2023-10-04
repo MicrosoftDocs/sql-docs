@@ -1,14 +1,14 @@
 ---
-title: "Vary polygon, line, and point display in a paginated report by rules and analytical data | Microsoft Docs"
-description:  Control display for polygons, lines, and points in a paginated report by setting options and rules, or by overriding options for embedded map elements in Report Builder.
+title: "Vary polygon, line, and point display in a paginated report by rules and analytical data"
+description: Control display for polygons, lines, and points in a paginated report by setting options and rules, or by overriding options for embedded map elements in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10538"
   - "10537"
   - "sql13.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1"
@@ -18,9 +18,6 @@ f1_keywords:
   - "10531"
   - "10536"
   - "sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1"
-ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)
 

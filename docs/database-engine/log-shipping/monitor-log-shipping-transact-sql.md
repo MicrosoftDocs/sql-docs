@@ -4,8 +4,8 @@ description: Learn which tables store history containing monitoring information 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
 helpviewer_keywords:
   - "log shipping [SQL Server], status"

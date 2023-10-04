@@ -4,8 +4,8 @@ description: "Learn how to use the IBCPSession2::BCPSetBulkMode method to create
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 helpviewer_keywords:
   - "BCPSetBulkMode function"
@@ -325,7 +325,7 @@ BOOL BCPSetBulkMode(LPWSTR pszServer, LPTSTR pszQureryOut, char BCPType, LPWSTR 
                return false;  
             }  
   
-            // set queryout TSQL statement  
+            // set queryout T-SQL statement  
             hr = g_pIBcpSession->BCPControl(BCP_OPTION_HINTS, pszQureryOut);  
             if (FAILED(hr)) {  
                printf("BCPControl failed\n");  

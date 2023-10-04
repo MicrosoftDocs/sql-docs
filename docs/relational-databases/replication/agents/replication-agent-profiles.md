@@ -1,14 +1,14 @@
 ---
+title: "Replication Agent Profiles"
 description: "Replication Agent Profiles"
-title: "Replication Agent Profiles | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Distribution Agent, profiles"
   - "replication [SQL Server], agents and profiles"
   - "replication agent profiles [SQL Server]"
@@ -18,9 +18,6 @@ helpviewer_keywords:
   - "profiles [SQL Server], replication agents"
   - "Snapshot Agent, profiles"
   - "Log Reader Agent, profiles"
-ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
-author: "MashaMSFT"
-ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication Agent Profiles

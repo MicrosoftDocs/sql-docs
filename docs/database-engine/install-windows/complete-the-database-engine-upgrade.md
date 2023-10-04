@@ -4,8 +4,8 @@ description: This article describes some additional steps you might have to take
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "10/23/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 monikerRange: ">=sql-server-2016"
 ---

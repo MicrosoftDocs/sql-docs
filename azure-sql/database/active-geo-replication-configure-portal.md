@@ -1,16 +1,16 @@
 ---
 title: "Tutorial: Geo-replication & failover in portal"
 description: Learn how to configure geo-replication for an SQL database using the Azure portal or Azure CLI, and initiate failover.
-author: AbdullahMSFT
-ms.author: amamun
+author: rajeshsetlem
+ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/20/2021
+ms.date: 06/29/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom:
-  - "sqldbrb=1"
-  - "devx-track-azurecli"
+  - sqldbrb=1
+  - devx-track-azurecli
 ---
 # Tutorial: Configure active geo-replication and failover (Azure SQL Database)
 
@@ -18,30 +18,11 @@ ms.custom:
 
 This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
 
-For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md). 
-
-
+For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
 
 ## Prerequisites
 
-# [Portal](#tab/portal)
-
-To configure active geo-replication by using the Azure portal, you need the following resource:
-
-* A database in Azure SQL Database: The primary database that you want to replicate to a different geographical region.
-
-> [!Note]
-> When using Azure portal, you can only create a secondary database within the same subscription as the primary. If a secondary database is required to be in a different subscription, use [Create Database REST API](/rest/api/sql/databases/createorupdate) or [ALTER DATABASE Transact-SQL API](/sql/t-sql/statements/alter-database-transact-sql).
-
-# [Azure CLI](#tab/azure-cli)
-
-To configure active geo-replication, you need a database in Azure SQL Database. It's the primary database that you want to replicate to a different geographical region.
-
-Prepare your environment for the Azure CLI.
-
-[!INCLUDE [azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
-
----
+This tutorial shows you how to configure a database for active geo-replication. To learn how to create a single database with Azure portal, Azure CLI, Azure CLI (sql up), or PowerShell, see [Quickstart: Create a single database - Azure SQL Database](single-database-create-quickstart.md?view=azuresql&preserve-view=true&tabs=azure-powershell).
 
 ## Add a secondary database
 
@@ -58,6 +39,7 @@ After the secondary is created and seeded, data begins replicating from the prim
 # [Portal](#tab/portal)
 
 1. In the [Azure portal](https://portal.azure.com), browse to the database that you want to set up for geo-replication.
+
 2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-cli-create-geo-replica.png" alt-text="Configure geo-replication":::
@@ -69,6 +51,7 @@ After the secondary is created and seeded, data begins replicating from the prim
     Optionally, you can add a secondary database to an elastic pool. To create the secondary database in a pool, select **Yes** next to **Want to use SQL elastic pool?** and select a pool on the target server. A pool must already exist on the target server. This workflow doesn't create a pool.
 
 4. Click **Review + create**, review the information, and then click **Create**.
+
 5. The secondary database is created and the deployment process begins.
 
     :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-geo-replica-deployment.png" alt-text="Screenshot that shows the deployment status of the secondary database.":::
@@ -84,6 +67,7 @@ After the secondary is created and seeded, data begins replicating from the prim
 # [Azure CLI](#tab/azure-cli)
 
 Select the database you want to set up for geo-replication. You'll need the following information:
+
 - Your original Azure SQL database name.
 - The Azure SQL server name.
 - Your resource group name.
@@ -105,11 +89,57 @@ Optionally, you can add a secondary database to an elastic pool. To create the s
 The secondary database is created and the deployment process begins.
 
 When the deployment is complete, you can check the status of the secondary database by running the [az sql db replica list-links](/cli/azure/sql/db/replica#az-sql-db-replica-list-links) command:
-    
+
 ```azurecli
 az sql db replica list-links --name guestlist --resource-group ContosoHotel --server contosowest
 ```
 
+# [PowerShell](#tab/powershell)
+
+Select the database you want to set up for geo-replication. You'll need the following information:
+
+- Your original Azure SQL database name.
+- The Azure SQL server name.
+- Your resource group name.
+- The name of the server to create the new replica in.
+
+> [!NOTE]
+> The secondary database must have the same service tier as the primary.
+
+You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
+
+As usual, begin your PowerShell session with the following cmdlets to connect your Azure account and set the subscription context:
+
+```powershell
+Connect-AzAccount
+$subscriptionid = <your subscription id here>
+Set-AzContext -SubscriptionId $subscriptionid
+
+$parameters = @{
+    ResourceGroupName = 'PrimaryRG'
+    ServerName = 'PrimaryServer' 
+    DatabaseName = 'TestDB' 
+    PartnerResourceGroupName = 'SecondaryRG'
+    PartnerServerName = 'SecondaryServer'
+    PartnerDatabaseName = 'TestDB'
+}
+
+New-AzSqlDatabaseSecondary @parameters
+
+```
+
+When the deployment is complete, you can check the status of the secondary database by running the `Get-AzSqlDatabaseReplicationLink`  command:
+
+```powershell
+$parameters = @{
+    ResourceGroupName = 'PrimaryRG'
+    ServerName = 'PrimaryServer'
+    DatabaseName = 'TestDB'
+    PartnerResourceGroupName = 'SecondaryRG'
+}
+
+Get-AzSqlDatabaseReplicationLink @parameters
+```
 ---
 
 ## Initiate a failover
@@ -133,6 +163,22 @@ Run the [az sql db replica set-primary](/cli/azure/sql/db/replica#az-sql-db-repl
 az sql db replica set-primary --name guestlist --resource-group ContosoHotel --server contosowest
 ```
 
+# [PowerShell](#tab/powershell)
+
+Run the following command:
+
+```powershell
+$parameters = @{
+    ResourceGroupName = 'SecondaryRG'
+    ServerName = 'SecondaryServer'
+    DatabaseName = 'TestDB'
+    PartnerResourceGroupName = 'PrimaryServer'
+}
+
+Set-AzSqlDatabaseSecondary @parameters -Failover
+```
+
+---
 ---
 
 The command immediately switches the secondary database into the primary role. This process normally should complete within 30 seconds or less.
@@ -151,8 +197,6 @@ This operation permanently stops the replication to the secondary database, and 
 1. In the [Azure portal](https://portal.azure.com), browse to the primary database in the geo-replication partnership.
 2. Select **Replicas**.
 3. In the **Geo replicas** list, select the database you want to remove from the geo-replication partnership, select the ellipsis, and then select **Stop replication**.
-
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-select-stop-replication.png" alt-text="Screenshot that shows selecting stop replication from the drop-down.":::
 5. A confirmation window opens. Click **Yes** to remove the database from the geo-replication partnership. (Set it to a read-write database not part of any replication.)
  
 # [Azure CLI](#tab/azure-cli)
@@ -164,6 +208,21 @@ az sql db replica delete-link --name guestlist --resource-group ContosoHotel --s
 ```
 
 Confirm that you want to perform the operation.
+
+# [PowerShell](#tab/powershell)
+
+Run the following command:
+
+```powershell
+$parameters = @{
+    ResourceGroupName = 'SecondaryRG'
+    ServerName = 'SecondaryServer'
+    DatabaseName = 'TestDB'
+    PartnerResourceGroupName = 'PrimaryRG'
+    PartnerServerName = 'PrimaryServer'
+}
+Remove-AzSqlDatabaseSecondary @parameters
+```
 
 ---
 

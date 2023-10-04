@@ -14,6 +14,8 @@ ms.custom: sqldbrb=1
 
 When [migrating your database](migrate-to-database-from-sql-server.md) from SQL Server to Azure SQL Database, you may discover that your SQL Server databases require some re-engineering before they can be migrated. This article provides guidance to assist you in both performing this re-engineering and understanding the underlying reasons why the re-engineering is necessary. To detect incompatibilities and migrate databases to Azure SQL Database, use [Data Migration Assistant (DMA)](/sql/dma/dma-overview).
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Overview
 
 Most T-SQL features that applications use are fully supported in both Microsoft SQL Server and Azure SQL Database. For example, the core SQL components such as data types, operators, string, arithmetic, logical, and cursor functions work identically in SQL Server and SQL Database. There are, however, a few T-SQL differences in DDL (data definition language) and DML (data manipulation language) elements resulting in T-SQL statements and queries that are only partially supported (which we discuss later in this article).
@@ -37,7 +39,7 @@ The core DDL statements are available, but DDL statement extensions related to u
 In addition to T-SQL statements related to the unsupported features described in [Azure SQL Database feature comparison](features-comparison.md), the following statements and groups of statements aren't supported. As such, if your database to be migrated is using any of the following features, re-engineer your application to eliminate these T-SQL features and statements.
 
 - Collation of system objects.
-- Connection related: Endpoint statements. SQL Database doesn't support Windows authentication, but does support Azure Active Directory authentication. This includes authentication of Active Directory principals federated with Azure Active Directory. For more information, see [Connecting to SQL Database or Azure Azure Synapse Analytics By Using Azure Active Directory Authentication](authentication-aad-overview.md).
+- Connection related: Endpoint statements. SQL Database doesn't support Windows authentication, but does support Microsoft Entra authentication. This includes authentication of Active Directory principals federated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). For more information, see [Connecting to SQL Database or Azure Azure Synapse Analytics By Using Microsoft Entra authentication](authentication-aad-overview.md).
 - Cross-database and cross-instance queries using three or four part names. Three part names referencing the `tempdb` database and the current database are supported. [Elastic query](elastic-query-overview.md) supports read-only references to tables in other MSSQL databases.
 - Cross database ownership chaining and the `TRUSTWORTHY` database property.
 - `EXECUTE AS LOGIN`. Use `EXECUTE AS USER` instead.
@@ -52,7 +54,7 @@ In addition to T-SQL statements related to the unsupported features described in
 - `OPENQUERY`, `OPENDATASOURCE`, and four-part names.
 - .NET Framework: CLR integration
 - Semantic search
-- Server credentials: Use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-SQL) instead.
+- Server credentials: Use [database scoped credentials](/sql/t-sql/statements/create-database-scoped-credential-transact-sql) instead.
 - Server-level permissions: `GRANT`, `REVOKE`, and `DENY` of server level permissions are not supported. Some server-level permissions are replaced by database-level permissions, or granted implicitly by built-in server roles. Some server-level DMVs and catalog views have similar database-level views.
 - `SET REMOTE_PROC_TRANSACTIONS`
 - `SHUTDOWN`
@@ -60,7 +62,7 @@ In addition to T-SQL statements related to the unsupported features described in
 - `sp_configure` and `RECONFIGURE`. [ALTER DATABASE SCOPED CONFIGURATION](/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql) is supported.
 - `sp_helpuser`
 - `sp_migrate_user_to_contained`
-- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the MSDB database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
+- SQL Server Agent: Syntax that relies upon the SQL Server Agent or the `msdb` database: alerts, operators, central management servers. Use scripting, such as PowerShell, instead.
 - SQL Server audit: Use SQL Database [auditing](auditing-overview.md) instead.
 - SQL Server trace.
 - Trace flags.

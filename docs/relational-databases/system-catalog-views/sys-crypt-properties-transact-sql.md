@@ -4,9 +4,8 @@ description: sys.crypt_properties (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "crypt_properties"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.crypt_properties catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.crypt_properties (Transact-SQL)

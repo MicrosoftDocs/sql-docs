@@ -5,7 +5,7 @@ description: Learn about point-in-time restore, which enables you to roll back a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: wiassaf, mathoma, danil
-ms.date: 07/20/2022
+ms.date: 08/21/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -21,8 +21,8 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](recovery-using-backups.md)
-> * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md)
+> * [Azure SQL Database](recovery-using-backups.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md?view=azuresql-mi&preserve-view=true)
 
 This article provides steps to recover any database from a backup in Azure SQL Database, including Hyperscale databases. For Azure SQL Managed Instance, see [Restore a database from a backup in Azure SQL Managed Instance](../managed-instance/recovery-using-backups.md).
 
@@ -83,7 +83,7 @@ When the restore is complete, it creates a new database on the same server as th
 You generally restore a database to an earlier point for recovery purposes. You can treat the restored database as a replacement for the original database or use it as a data source to update the original database.
 
 > [!IMPORTANT]
-> - You can run a restore only on the same server. Point-in-time restore doesn't support cross-server restoration.
+> - You can perform a point-in-time restore of a database to the same server. Cross-server, cross-subscription and cross-geo point-in-time restore is not currently supported. To restore a database to a different region using geo-replicated backups see [Geo-restore](#geo-restore).
 > - You can't perform a point-in-time restore on a geo-secondary database. You can do so only on a primary database.
 > - The `BackupFrequency` parameter isn't supported for Hyperscale databases. 
 > - Database restore operations are resource-intensive and may require a service tier of S3 or greater for the restoring (target) database. Once restore completes, the database or elastic pool may be scaled down, if required.
@@ -96,7 +96,7 @@ You generally restore a database to an earlier point for recovery purposes. You 
 
   If you plan to retrieve data from the restored database to recover from a user or application error, you need to write and run a data recovery script that extracts data from the restored database and applies to the original database. Although the restore operation might take a long time to complete, the restoring database is visible in the database list throughout the restore process. 
   
-  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that did not complete the restore.
+  If you delete the database during the restore, the restore operation will be canceled. You won't be charged for the database that didn't complete the restore.
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -125,7 +125,7 @@ To restore a database by using PowerShell, use the following cmdlets:
 
 For a sample PowerShell script that shows how to perform a point-in-time restore of a database, see [Restore a database by using PowerShell](scripts/restore-database-powershell.md).
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
 To restore a database by using the REST API:
 
@@ -138,7 +138,7 @@ To restore a database by using the REST API:
 
 ## Long-term backup restore
 
-To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention is not applicable to Hyperscale databases. 
+To perform a restore operation on a long-term backup, you can use the Azure portal, the Azure CLI, Azure PowerShell, or the REST API. For more information, see [Restore a long-term backup](long-term-backup-retention-configure.md#view-backups-and-restore-from-a-backup). Long-term retention isn't applicable to Hyperscale databases. 
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -164,7 +164,7 @@ To restore a database by using PowerShell, use the following cmdlets:
 For more information, see [Restore-AzSqlDatabase](/powershell/module/az.sql/restore-azsqldatabase).
 
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
 To restore a database by using the REST API:
 
@@ -177,10 +177,10 @@ To restore a database by using the REST API:
 
 ## Deleted database restore
 
-You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.
+You can restore a deleted database to the deletion time, or an earlier point in time, on the same server by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
 
 > [!IMPORTANT]
-> If you delete a server, all its databases are also deleted and can't be recovered. You can't restore a deleted server.
+> If you delete a server, all of its databases and their PITR backups are also deleted. You can't restore a deleted server, and you can't restore the deleted databases from PITR backups. If you had configured LTR backups forthose database, you can use those backups to restore the databases to a different server. 
 
 ### [Azure portal](#tab/azure-portal)
 
@@ -207,7 +207,7 @@ To restore a deleted database by using PowerShell, use the following cmdlets:
 
 For a sample PowerShell script that shows how to restore a deleted database in Azure SQL Database, see [Restore a database by using PowerShell](scripts/restore-database-powershell.md).
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
 To restore a database by using the REST API:
 
@@ -220,7 +220,7 @@ To restore a database by using the REST API:
 
 ## Geo-restore
 
-You can use geo-restore to restore a deleted database by using the Azure portal, the Azure CLI, Azure PowerShell, and the Rest API.
+You can use geo-restore to restore a deleted database by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
 
 > [!IMPORTANT]
 > - Geo-restore is available only for databases configured with geo-redundant [backup storage](automated-backups-overview.md#backup-storage-redundancy). If you're not currently using geo-replicated backups for a database, you can change this by [configuring backup storage redundancy](automated-backups-change-settings.md#configure-backup-storage-redundancy).
@@ -265,7 +265,7 @@ To geo-restore a database by using PowerShell, use the following cmdlets:
 
 For a PowerShell script that shows how to perform geo-restore for a single database, see [Use PowerShell to restore a single database to an earlier point in time](scripts/restore-database-powershell.md).
 
-### [Rest API](#tab/rest-api)
+### [REST API](#tab/rest-api)
 
 To restore a database by using the REST API:
 
@@ -278,9 +278,12 @@ To restore a database by using the REST API:
 
 ### Geo-restore considerations
 
-For detailed information about using geo-restore to recover from an outage, see [Recover from an outage](disaster-recovery-guidance.md#recover-using-geo-restore).
+For more information on using geo-restore, see [Recovery using Geo-restore](recovery-using-backups.md#geo-restore).
 
-Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and is not critical to the business, geo-restore is an appropriate disaster-recovery solution. 
+> [!NOTE]
+> For detailed information about recover from an outage, see [Azure SQL Database disaster recovery guidance](disaster-recovery-guidance.md) and the [Azure SQL Database high availability and disaster recovery checklist](high-availability-disaster-recovery-checklist.md). 
+
+Geo-restore is the most basic disaster-recovery solution available in SQL Database. It relies on automatically created geo-replicated backups with a recovery point objective (RPO) of up to 1 hour and an estimated recovery time objective (RTO) of up to 12 hours. It doesn't guarantee that the target region will have the capacity to restore your databases after a regional outage, because a sharp increase of demand is likely. If your application uses relatively small databases and isn't critical to the business, geo-restore is an appropriate disaster-recovery solution. 
 
 For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-db.md). That feature offers a much lower RPO and RTO, and the capacity is always guaranteed. 
 

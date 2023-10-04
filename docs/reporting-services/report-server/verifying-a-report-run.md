@@ -1,14 +1,14 @@
 ---
-title: "Verifying a Report Run | Microsoft Docs"
+title: "Verifying a Report Run"
 description: Learn how to use log files or refer to status information that is displayed with a report to verify a report run in Report Manager.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "auditing [Reporting Services]"
   - "verifying report execution"
   - "logs [Reporting Services], verifying report run"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "status information [Reporting Services]"
   - "report processing [Reporting Services], verifying execution"
   - "checking report execution"
-ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Verifying a Report Run
   To view information about the status of report processing, you can use log files or refer to status information that is displayed with the report in Report Manager.  

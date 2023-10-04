@@ -1,26 +1,22 @@
 ---
-description: "Execute SQL Task"
 title: Execute SQL Task
-ms.custom: ""
+description: "Execute SQL Task"
+author: chugugrace
+ms.author: chugu
 ms.date: "03/13/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 f1_keywords:
   - "sql13.dts.designer.executesqltask.f1"
   - "sql13.dts.designer.executesqltask.general.f1"
   - "sql13.dts.designer.executesqltask.parametermapping.f1"
   - "sql13.dts.designer.executesqltask.resultset.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Transact-SQL statements, SSIS"
   - "statements [Integration Services]"
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
-ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: chugugrace
-ms.author: chugu
 ---
 
 # Execute SQL Task
@@ -356,7 +352,7 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
   
  You can use parameter markers to dynamically provide parameter values. The rules for which parameter markers and parameter names can be used in the SQL statement depend on the type of connection manager that the Execute SQL uses.  
   
- The following table lists examples of the SELECT command by connection manager type. The INSERT, UPDATE, and DELETE statements are similar. The examples use SELECT to return products from the **Product** table in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
+ The following table lists examples of the SELECT command by connection manager type. The INSERT, UPDATE, and DELETE statements are similar. The examples use SELECT to return products from the **Product** table in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
   
 |Connection type|SELECT syntax|  
 |---------------------|-------------------|  
@@ -375,7 +371,7 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
 ###  <a name="Stored_procedures"></a> Use parameters with stored procedures  
  SQL commands that run stored procedures can also use parameter mapping. The rules for how to use parameter markers and parameter names depends on the type of connection manager that the Execute SQL uses, just like the rules for parameterized queries.  
   
- The following table lists examples of the EXEC command by connection manager type. The examples run the **uspGetBillOfMaterials** stored procedure in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. The stored procedure uses the `@StartProductID` and `@CheckDate` **input** parameters.  
+ The following table lists examples of the EXEC command by connection manager type. The examples run the **uspGetBillOfMaterials** stored procedure in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)]. The stored procedure uses the `@StartProductID` and `@CheckDate` **input** parameters.  
   
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
@@ -420,7 +416,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
     |ODBC|?|  
     |EXCEL and OLE DB|?|  
   
-     The following table lists examples of the SELECT command by connection manager type. Parameters provide the filter values in the WHERE clauses. The examples use SELECT to return products from the **Product** table in [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
+     The following table lists examples of the SELECT command by connection manager type. Parameters provide the filter values in the WHERE clauses. The examples use SELECT to return products from the **Product** table in [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] that have a **ProductID** greater than and less than the values specified by two parameters.  
   
     |Connection type|SELECT syntax|  
     |---------------------|-------------------|  

@@ -4,9 +4,8 @@ description: SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ANSI_NULL_DFLT_OFF_TSQL"
@@ -21,19 +20,19 @@ helpviewer_keywords:
   - "SET ANSI_NULL_DFLT_OFF statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Alters the behavior of the session to override default nullability of new columns when the ANSI null default option for the database is **true**. For more information about setting the value for ANSI null default, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server and Azure SQL Database and Microsoft Fabric
   
 SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```
@@ -70,13 +69,13 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
  The following example shows the effects of `SET ANSI_NULL_DFLT_OFF` with both settings for the ANSI null default database option.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Set the 'ANSI null default' database option to true by executing   
 -- ALTER DATABASE.  
 GO  
-ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT ON;  
+ALTER DATABASE AdventureWorks2022 SET ANSI_NULL_DEFAULT ON;  
 GO  
 -- Create table t1.  
 CREATE TABLE t1 (a TINYINT);  
@@ -106,7 +105,7 @@ GO
 -- This illustrates the effect of having both the database  
 -- option and SET option disabled.  
 -- Set the 'ANSI null default' database option to false.  
-ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
+ALTER DATABASE AdventureWorks2022 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
 CREATE TABLE t4 (a TINYINT) ;  

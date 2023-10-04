@@ -1,18 +1,15 @@
 ---
-title: "Add custom locations to a map in a paginated report | Microsoft Docs"
-description:  Learn how to add custom locations to a map you have added to a paginated report in Report Builder. 
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
-ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
+title: "Add custom locations to a map in a paginated report"
+description: Learn how to add custom locations to a map you have added to a paginated report in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ---
 # Add custom locations to a map in a paginated report (Report Builder)
 

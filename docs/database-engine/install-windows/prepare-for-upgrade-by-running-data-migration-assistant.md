@@ -4,10 +4,9 @@ description: Prepare to upgrade your OLTP databases and to adopt new features in
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "12/13/2019"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Prepare for upgrade by running Data Migration Assistant

@@ -1,30 +1,26 @@
 ---
+title: "sp_describe_cursor (Transact-SQL)"
 description: "sp_describe_cursor (Transact-SQL)"
-title: "sp_describe_cursor (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_describe_cursor"
-  - "sp_describe_cursor_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_describe_cursor"
-ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: markingmyname
 ms.author: maghan
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_describe_cursor"
+  - "sp_describe_cursor_TSQL"
+helpviewer_keywords:
+  - "sp_describe_cursor"
+dev_langs:
+  - "TSQL"
 ---
 # sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the attributes of a server cursor.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -96,7 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  The following example opens a global cursor and uses `sp_describe_cursor` to report on the attributes of the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a global cursor.  
 DECLARE abc CURSOR STATIC FOR  

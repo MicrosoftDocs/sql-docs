@@ -88,7 +88,7 @@ ms.devlang: tsql
  
 ## Examples   
 
-  These examples use the latest **AdventureWorksLT** sample database when the `SAMPLE` option is chosen for a new single database of Azure SQL Database.
+  These examples use the latest `AdventureWorksLT` sample database when the `SAMPLE` option is chosen for a new single database of Azure SQL Database.
 
 ### PowerShell
 
@@ -140,11 +140,11 @@ $params = @{
 
 ### Transact-SQL
   
-  You can use the [Azure portal query editor](connect-query-portal.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to execute T-SQL queries against your Azure SQL Database.
+  You can use the [Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to execute T-SQL queries against your Azure SQL Database.
 
 1.  Open a new query window.
 
-2.  Connect to the database where you want to change MAXDOP. You cannot change database scoped configurations in the master database.
+2.  Connect to the database where you want to change MAXDOP. You cannot change database scoped configurations in the `master` database.
   
 3.  Copy and paste the following example into the query window and select **Execute**. 
 

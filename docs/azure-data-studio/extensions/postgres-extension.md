@@ -5,7 +5,7 @@ author: sunilagarwal
 ms.author: sunila
 ms.reviewer: erinstellato
 ms.date: 03/19/2019
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

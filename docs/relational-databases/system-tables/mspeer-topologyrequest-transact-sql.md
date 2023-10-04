@@ -4,9 +4,8 @@ description: MSpeer_topologyrequest (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_topologyrequest_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_topologyrequest"
 dev_langs:
   - "TSQL"
-ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 ---
 # MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

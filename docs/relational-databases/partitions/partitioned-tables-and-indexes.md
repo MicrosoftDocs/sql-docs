@@ -4,8 +4,8 @@ titleSuffix: SQL Server, Azure SQL Database, Azure SQL Managed Instance
 description: "With partitioned tabled and indexes, the data can be divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup."
 author: VanMSFT
 ms.author: vanto
-ms.date: "8/17/2022"
-ms.prod: sql
+ms.date: "04/18/2023"
+ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
   - "partitioned tables [SQL Server], about partitioned tables"
@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 SQL Server, Azure SQL Database, and Azure SQL Managed Instance support table and index partitioning. The data of partitioned tables and indexes is divided into units that may be spread across more than one filegroup in a database or stored in a single filegroup. When multiple files exist in a filegroup, data is spread across files using the [proportional fill algorithm](../databases/database-files-and-filegroups.md#file-and-filegroup-fill-strategy). The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. 
 
-Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes were not available in every edition of SQL Server. For a list of features supported by the editions of SQL Server, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Partitioned tables and indexes are available in all service tiers of Azure SQL Database and Azure SQL Managed Instance.
+Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, partitioned tables and indexes were not available in every edition of SQL Server. For a list of features supported by the editions of SQL Server, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md). Partitioned tables and indexes are available in all service tiers of Azure SQL Database and Azure SQL Managed Instance.
 
 Table partitioning is also available in dedicated SQL pools in Azure Synapse Analytics, with some syntax differences. Learn more in [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition).
   
@@ -54,7 +54,7 @@ A range type (either LEFT or RIGHT), specifies how the boundary values of the pa
 - A LEFT range specifies that the boundary value belongs to the left side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the highest bounding value will be included within a partition.
 - A RIGHT range specifies that the boundary value belongs to the right side of the boundary value interval when interval values are sorted by the database engine in ascending order from left to right. In other words, the lowest bounding value will be included in each partition.
 
-If LEFT or RIGHT not specified, LEFT range is the default.
+If LEFT or RIGHT is not specified, LEFT range is the default.
 
 For example, the following partition function partitions a table or index into 12 partitions, one for each month of a year's worth of values in a **datetime** column. A RIGHT range is used, indicating that boundary values will serve as lower bounding values in each partition. RIGHT ranges are often simpler to work with when partitioning a table based on a column of **datetime** or **datetime2** data types, as rows with a value of midnight will be stored in the same partition as rows with later values on the same day. Similarly, if using the data type of **date** and  using partitions of a month or more, a RIGHT range keeps the first day of the month in the same partition as later days in that month. This aids in precise [Partition elimination](#partition-elimination) when querying an entire day's worth of data.
 
@@ -212,7 +212,7 @@ Learn more about partitioned tables and index strategies in the following articl
 - [Scaling out with Azure SQL Database](/azure/azure-sql/database/elastic-scale-introduction)
 - [Partitioning tables in dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-partition)
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
-- [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+- [Partitioned Table and Index Strategies Using SQL Server 2008](https://download.microsoft.com/download/D/B/D/DBDE7972-1EB9-470A-BA18-58849DB3EB3B/PartTableAndIndexStrat.docx)    
 - [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
 - [Bulk Loading into a Partitioned Table](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
 - [Project REAL: Data Lifecycle--Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    

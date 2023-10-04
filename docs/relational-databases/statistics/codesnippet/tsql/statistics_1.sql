@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF EXISTS ( SELECT name FROM sys.stats
     WHERE name = 'BikeWeights'

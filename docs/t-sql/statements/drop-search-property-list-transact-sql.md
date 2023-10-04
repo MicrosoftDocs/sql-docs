@@ -4,9 +4,8 @@ description: DROP SEARCH PROPERTY LIST (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "DROP_SEARCH_PROPERTY_LIST_TSQL"
@@ -20,7 +19,7 @@ dev_langs:
   - "TSQL"
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a property list from the current database if the search property list is currently not associated with any full-text index in the database.  
   
@@ -65,7 +64,7 @@ SELECT name FROM sys.registered_search_property_lists;
 >  The property list owner can grant CONTROL permissions on the list. By default, the user who creates a search property list is its owner. The owner can be changed by using the [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
 ## Examples  
- The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
+ The following example drops the `JobCandidateProperties` property list from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  

@@ -3,11 +3,11 @@ metadata:
   title: Azure Synapse Pathway FAQ
   description: Frequently asked question for Azure Synapse Pathway
   author: charlesfeddersen
-  ms.prod: sql
+  ms.service: sql
   ms.topic: faq
   ms.date: 02/11/2022
   ms.author: charlesf
-  ms.technology: tools-other
+  ms.subservice: tools-other
   monikerRange: "=azure-sqldw-latest"
   ms.reviewer: wiassaf
     
@@ -62,7 +62,7 @@ sections:
       - question: |
          Where can I raise issues encountered in Azure Synapse Pathway? 
         answer: |
-              Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-prem support) portals.
+              Support for Synapse Pathway is available through the Microsoft support channel. You can raise the ticket either in the Azure portal or standard (typically on-premises support) portals.
       - question: |
          Is stored procedure creation supported as part of DML conversion? 
         answer: |

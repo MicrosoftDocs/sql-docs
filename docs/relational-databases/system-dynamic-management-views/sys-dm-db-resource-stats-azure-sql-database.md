@@ -4,7 +4,7 @@ description: sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed 
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: wiassaf
-ms.date: "08/19/2021"
+ms.date: "07/21/2023"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 # sys.dm_db_resource_stats (Azure SQL Database and Azure SQL Managed Instance)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database or an [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. One row exists for every 15 seconds, even if there is no activity. Historical data is maintained for approximately one hour.  
+  Returns CPU, I/O, and memory consumption for a database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or an [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. One row exists for every 15 seconds, even if there is no activity. Historical data is maintained for approximately one hour.  
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  
@@ -36,10 +36,10 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database's service tier.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. For databases using the vCore-based model, this column is `NULL`.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is `NULL`.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Average CPU utilization by the database engine instance hosting the pool, as a percentage of instance limit. Reported at one minute granularity and includes memory utilization by both user and internal workloads.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Average CPU utilization by the database engine instance hosting the pool, as a percentage of instance limit. Reported at one minute granularity and includes CPU utilization by both user and internal workloads.|
 |avg_instance_memory_percent|**decimal (5,2)**|Average memory usage for the SQL Server instance hosting the database. Includes memory utilization by both user and internal workloads.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
-|replica_role|**int**|Represents the current replica's role with 0 as primary, 1 as secondary, and 2 as forwarder (geo-secondary's primary). You will see "1" when connected with ReadOnly intent to all readable secondaries. If connecting to a geo-secondary without specifying ReadOnly intent, you should see "2" (connecting to the forwarder).|
+|replica_role|**int**|Represents the current replica role. </br></br> 0 - Primary</br>1 - High availability (HA) secondary</br>2 - Geo-replication forwarder</br>3 - Named replica</br></br>Reports 1 when connected with ReadOnly intent to any [readable secondary](/azure/azure-sql/database/read-scale-out). If connecting to a geo-secondary without specifying ReadOnly intent, reports 2 to reflect a connection to a geo-replication forwarder. If connecting to a named replica without specifying ReadOnly intent, reports 3.|
   
 > [!TIP]  
 > For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models), [Manually tune query performance in Azure SQL Database](/azure/azure-sql/database/performance-guidance), and [SQL Database resource limits and resource governance](/azure/sql-database/sql-database-resource-limits-database-server).
@@ -59,7 +59,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
   
 ## Example  
   
-The following example returns resource utilization data ordered by the most recent time for the currently connected [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
+The following example returns resource utilization data ordered by the most recent time for the currently connected database in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
   
 ```sql  
 SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;  

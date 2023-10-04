@@ -1,26 +1,22 @@
 ---
+title: "Get Information About DML Triggers"
 description: "Get Information About DML Triggers"
-title: "Get Information About DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "metadata [SQL Server], triggers"
   - "viewing DML triggers"
   - "DML triggers, metadata"
   - "displaying DML triggers"
   - "status information [SQL Server], triggers"
   - "DML triggers, viewing"
-ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DML Triggers
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   This topic describes how to get information about DML triggers in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. This information can include the types of triggers on a table, the name of a trigger, its owner and the date it was created or modified. If the trigger was not encrypted when it was created, you obtain the definition of the trigger. You can use the definition to help you understand how a trigger affects the table up on which it is defined. Also, you can find out the objects that a specific trigger uses. With this information, you can identify the objects that affect the trigger if they are changed or deleted in the database.  
   
  **In This Topic**  
@@ -86,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the definition of the `iuPerson` trigger.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT definition   
 FROM sys.sql_modules  
@@ -95,7 +91,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
 GO  
@@ -103,7 +99,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
 GO  
@@ -119,7 +115,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the dependencies of `iuPerson` trigger.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
     o.type_desc AS referencing_desciption,   
@@ -145,7 +141,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view information about DML triggers (`TR`) in the database.  
   
 ```  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT  name, parent_id, create_date, modify_date, is_instead_of_trigger  
 FROM sys.triggers  
@@ -155,7 +151,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
 FROM sys.objects  
@@ -165,7 +161,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
 GO  
@@ -181,7 +177,7 @@ GO
 3.  Copy and paste one of the following examples into the query window and click **Execute**. Each example shows how you can view the events that fire the `iuPerson` trigger.  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
 FROM sys.events  
@@ -190,7 +186,7 @@ GO
 ```  
   
 ```sql  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO   
 SELECT object_id, type,is_first, is_last  
 FROM sys.trigger_events  

@@ -1,18 +1,15 @@
 ---
-title: "Data regions and maps in a paginated report | Microsoft Docs"
-description: Explore the types and characteristics of data regions and maps to design the display from your paginated report datasets in Report Builder.  
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "data regions"
-ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
+title: "Data regions and maps in a paginated report"
+description: Explore the types and characteristics of data regions and maps to design the display from your paginated report datasets in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "data regions"
 ---
 # Data regions and maps in a paginated report (Report Builder)
 
@@ -25,7 +22,7 @@ ms.author: maggies
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 >
-> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
+> Report parts are deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019, and discontinued starting in SQL Server Reporting Services 2022 and Power BI Report Server.
   
 ## Table  
  A table is a data region that presents data row by row. Table columns are static: you determine the number of columns when you design your report. Table rows are dynamic: they expand downwards to accommodate the data. You can add groups to tables, which organize data by selected fields or expressions. For information about adding a table to a report, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  

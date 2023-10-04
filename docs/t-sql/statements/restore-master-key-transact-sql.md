@@ -4,11 +4,9 @@ description: RESTORE MASTER KEY (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "RESTORE_MASTER_KEY_TSQL"
   - "RESTORE MASTER KEY"
@@ -34,7 +32,7 @@ dev_langs:
 > [!IMPORTANT]
 > [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces backup and restore support for the database master key to and from an Azure Blob storage. The `URL` syntax is only available for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -93,23 +91,23 @@ RESTORE MASTER KEY FROM
   
 ## Examples
 
- The following example restores the database master key of the `AdventureWorks2012` database from a file.  
+ The following example restores the database master key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from a file.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 RESTORE MASTER KEY   
-    FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   
+    FROM FILE = 'c:\backups\keys\AdventureWorks2022_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
     ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
 GO  
 ```  
   
- The following example restores the database master key of the `AdventureWorks2012` database from an Azure Blob storage.  
+ The following example restores the database master key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from an Azure Blob storage.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 RESTORE MASTER KEY   
-    FROM URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2012_master_key.bak'   
+    FROM URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2022_master_key.bak'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
     ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
 GO  

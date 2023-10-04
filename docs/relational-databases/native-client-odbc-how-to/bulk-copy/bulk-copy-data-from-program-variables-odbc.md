@@ -1,19 +1,15 @@
 ---
+title: "Bulk Copy Data from Program Variables (ODBC)"
 description: "Bulk Copy Data from Program Variables (ODBC)"
-title: "Bulk Copy Data from Program Variables (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "bulk copy [ODBC], program variables"
-  - "bulk copy [ODBC]"
-ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "bulk copy [ODBC], program variables"
+  - "bulk copy [ODBC]"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data from Program Variables (ODBC)
@@ -68,7 +64,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  
@@ -290,7 +286,7 @@ SQLLEN lDataLengthB;
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  

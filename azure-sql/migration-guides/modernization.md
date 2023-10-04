@@ -10,7 +10,7 @@ ms.topic: faq
 ---
 # Migrate SQL Server workloads (FAQ)
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi-sqlvm](../includes/appliesto-sqlserver-sqldb-sqlmi-sqlvm.md)]
 
 Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 
@@ -90,7 +90,7 @@ Whenever a Platform-as-a-Service (PaaS) solution doesn't fit your workload, Azur
 
 #### Scenario 5: Meeting regulatory compliance: How does Azure SQL help meet regulatory compliance requirements?
 
-[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad-hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
+[Azure Policy](/azure/governance/policy/overview) has built-in policies that help organizations meet regulatory compliance. Ad hoc and customized policies can also be created. For more information, see [Azure Policy Regulatory Compliance controls for Azure SQL Database and SQL Managed Instance](../database/security-controls-policy.md). For an overview of compliance offerings, you can consult [Azure compliance documentation](/azure/compliance/).
 
 ### Getting started, the holistic approach
 
@@ -160,7 +160,7 @@ The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensin
 
 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits) is a licensing program that can be applied to on-premises SQL Server licenses, allowing license mobility, AHB, and other benefits. SA is required if AHB is to be invoked for using existing SQL Server licenses (with SA) when moving to Azure SQL. Without SA + AHB, customers are charged with PAYG pricing.
 
-Alternatively, the outsourcing software management terms applicable to SQL server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
+Alternatively, the outsourcing software management terms applicable to SQL Server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
 
 #### Do I have to pay for high availability (HA) in SQL Managed Instance and SQL Database?
 
@@ -256,7 +256,7 @@ Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implem
 
 #### How are backups handled in Azure SQL PaaS services?
 
-You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md) and [SQL Database](../database/automated-backups-overview.md) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
+You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true) and [SQL Database](../database/automated-backups-overview.md?view=azuresql-db&preserve-view=true) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
 
 #### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 
@@ -264,7 +264,7 @@ SQL Managed Instance and Database are built on top of inherent [high availabilit
 
 #### How does disaster recovery work in SQL Managed Instance and SQL Database?
 
-See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](/azure/azure-sql/managed-instance/frequently-asked-questions-faq#business-continuity) provide information on DR options.
+See the [SQL Database and SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md) documentation. [SQL Managed Instance Frequently Asked Questions](../managed-instance/frequently-asked-questions-faq.yml#business-continuity) provide information on DR options.
 
 ### Performance and scale
 

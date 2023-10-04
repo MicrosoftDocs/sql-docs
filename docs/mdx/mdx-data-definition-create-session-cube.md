@@ -1,14 +1,14 @@
 ---
+title: "CREATE SESSION CUBE Statement  (MDX)"
 description: "MDX Data Definition - CREATE SESSION CUBE"
-title: "CREATE SESSION CUBE Statement  (MDX) | Microsoft Docs"
-ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: mdx
-ms.topic: reference
+author: minewiskan
 ms.author: owend
 ms.reviewer: owend
-author: minewiskan
+ms.date: 02/17/2022
+ms.service: sql
+ms.subservice: analysis-services
+ms.topic: reference
+ms.custom: mdx
 ---
 # MDX Data Definition - CREATE SESSION CUBE
 
@@ -151,7 +151,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
 -   When performing grouping on a cube dimension in a server cube, the grouping affects all cube dimensions based on the same dimension.  
   
 ## Example  
- The following example demonstrates creating a session-scoped version of the Adventure Works cube that contains the Reseller Sales Amount measure, the Reseller dimension, the Product dimension, the Geography dimension, and the Date dimension. Within this session cube, two groups are created; one group contains countries in Europe and one group contains groups in North America. This sample is a simplified version of a CREATE SESSION CUBE statement issued by Microsoft Excel when a user creates a custom grouping of members.  
+ The following example demonstrates creating a session-scoped version of the Adventure Works cube that contains the Reseller Sales Amount measure, the Reseller dimension, the Product dimension, the Geography dimension, and the Date dimension. Within this session cube, two groups are created; one group contains countries/regions in Europe and one group contains groups in North America. This sample is a simplified version of a CREATE SESSION CUBE statement issued by Microsoft Excel when a user creates a custom grouping of members.  
   
 ```  
 CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]   

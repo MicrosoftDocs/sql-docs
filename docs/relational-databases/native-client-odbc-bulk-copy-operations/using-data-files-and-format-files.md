@@ -1,27 +1,23 @@
 ---
+title: "Using Data Files and Format Files"
 description: "Using Data Files and Format Files"
-title: "Using Data Files and Format Files | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC], file formats"
   - "ODBC, functions"
   - "SQL Server Native Client ODBC driver, bulk copy"
   - "bulk copy [SQL Server Native Client]"
   - "ODBC, bulk copy operations"
   - "bulk copy [ODBC], data files"
-ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Data Files and Format Files
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The simplest bulk copy program does the following:  
   

@@ -1,13 +1,13 @@
 ---
 title: "Display data & log space info for a database"
 description: Learn how to display the data and log space information for a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/16/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "logs [SQL Server], space"
   - "status information [SQL Server], space"
   - "displaying space information"
@@ -16,14 +16,10 @@ helpviewer_keywords:
   - "viewing space information"
   - "space allocation [SQL Server], displaying"
   - "data space [SQL Server]"
-ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Display data and log space information for a database
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This article describes how to display the data and log space information for a database in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   
@@ -52,7 +48,7 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
 3. Paste the following example into the query window and then select **Execute**. This example uses the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure to report disk space information for the entire database, including tables and indexes.  
   
    ```sql  
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    EXEC sp_spaceused;  
    GO  
@@ -99,7 +95,7 @@ Permission to run **sp_spaceused** is granted to the **public** role. Only membe
 3. Paste the following example into the query window then select **Execute**. This example queries the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view to return specific information about the data and log files in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
    ```sql  
-   USE AdventureWorks2012;  
+   USE AdventureWorks2022;  
    GO  
    SELECT file_id, name, type_desc, physical_name, size, max_size  
    FROM sys.database_files;  

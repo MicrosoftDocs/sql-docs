@@ -1,14 +1,14 @@
 ---
+title: "New Publication Wizard"
 description: "New Publication Wizard"
-title: "New Publication Wizard | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.swb.dbpublishin"
   - "sql13.swb.dbpublishingwizard.choosetables.f1"
   - "sql13.swb.dbpublishingwizard.databasename.f1"
@@ -36,11 +36,8 @@ f1_keywords:
   - "sql13.swb.dbpublishingwizard.choosedbroles.f1"
   - "sql13.swb.dbpublishingwizard.chooseudtype.f1"
   - "sql13.swb.dbpublishingwizard.chooseschemas.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "New Publication Wizard"
-ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # New Publication Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

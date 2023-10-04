@@ -4,8 +4,8 @@ description: "API reference for the PDOStatement::getColumnMeta function in the 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/29/2021"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # PDOStatement::getColumnMeta

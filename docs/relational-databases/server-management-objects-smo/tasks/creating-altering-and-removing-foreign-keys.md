@@ -1,23 +1,17 @@
 ---
-description: "Creating, Altering, and Removing Foreign Keys"
 title: "Creating, Altering, and Removing Foreign Keys"
-ms.custom: seo-dt-2019
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "foreign keys [SMO]"
-ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
+description: "Creating, Altering, and Removing Foreign Keys"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "foreign keys [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Foreign Keys
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), foreign keys are represented by the <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> object.  
   
@@ -35,9 +29,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Declare a Table object variable and reference the Employee table.
 Dim tbe As Table
 tbe = db.Tables("Employee", "HumanResources")
@@ -66,9 +60,9 @@ fk.Create()
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db;  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Declare another Table object variable and reference the EmployeeDepartmentHistory table.   
             Table tbea;  
             tbea = db.Tables["EmployeeDepartmentHistory", "HumanResources"];  
@@ -92,8 +86,8 @@ fk.Create()
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  
-#database tables in Adventureworks2012  
-CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
+#database tables in AdventureWorks2022  
+CD \sql\localhost\default\databases\AdventureWorks2022\Tables\  
   
 #Get reference to the FK table  
 $tbea = get-item HumanResources.EmployeeDepartmentHistory  

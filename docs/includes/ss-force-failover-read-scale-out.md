@@ -58,7 +58,7 @@ To manually fail over without data loss:
    >[!NOTE]
    >This setting is not specific to failover and should be set based on the requirements of the environment.
 
-1. Set the primary replica offline to prepare for the role change: 
+1. Set the primary replica and the secondary replica(s) not participating in the failover offline to prepare for the role change: 
 
    ```SQL
    ALTER AVAILABILITY GROUP [AGRScale] OFFLINE
@@ -70,7 +70,7 @@ To manually fail over without data loss:
    ALTER AVAILABILITY GROUP AGRScale FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ```
 
-1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
+1. Update the role of the old primary and other secondaries to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [AGRScale] 

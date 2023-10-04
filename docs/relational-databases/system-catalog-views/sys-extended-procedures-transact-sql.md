@@ -4,9 +4,8 @@ description: sys.extended_procedures (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "extended_procedures"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.extended_procedures catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

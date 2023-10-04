@@ -4,8 +4,8 @@ description: "Cryptographic Functions (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "07/24/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 helpviewer_keywords:
   - "functions [SQL Server], cryptographic"
@@ -102,7 +102,7 @@ These functions support digital signing, digital signature validation, encryptio
         [SIGNBYASYMKEY](../../t-sql/functions/signbyasymkey-transact-sql.md)
     :::column-end:::
     :::column:::
-        [VERIFYSIGNEDBYASMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)
+        [VERIFYSIGNEDBYASYMKEY](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -110,7 +110,7 @@ These functions support digital signing, digital signature validation, encryptio
         [SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)
     :::column-end:::
     :::column:::
-        [VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)
+        [VERIFYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)
     :::column-end:::
 :::row-end:::
 :::row:::

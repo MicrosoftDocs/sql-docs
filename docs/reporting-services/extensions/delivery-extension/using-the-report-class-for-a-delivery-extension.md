@@ -1,19 +1,16 @@
 ---
-title: "Using the Report Class for a Delivery Extension | Microsoft Docs"
+title: "Using the Report Class for a Delivery Extension"
 description: Find out how delivery extensions can use the Report class, which stores the report URL on the report server, the report name, and other properties.
-ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "delivery extensions [Reporting Services], report information"
-  - "Report class"
-ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/06/2017
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "delivery extensions [Reporting Services], report information"
+  - "Report class"
 ---
 # Using the Report Class for a Delivery Extension
   The <xref:Microsoft.ReportingServices.Interfaces.Report> class represents a report in the report server database. Any subscription is associated with a specific report. The report is contained in the notification. Your delivery extension can use the <xref:Microsoft.ReportingServices.Interfaces.Report> object that is part of the notification to render the report. The <xref:Microsoft.ReportingServices.Interfaces.Report> object also contains report-specific properties, such as the URL to the report on the report server and the name of the report. These properties can all be used as part of your delivery provider.  

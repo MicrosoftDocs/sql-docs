@@ -4,8 +4,8 @@ description: Microsoft SQL Server hosting CLR is called CLR integration. Authori
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "04/19/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "common language runtime [SQL Server], about CLR integration"
@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "managed code [SQL Server], vs. Transact-SQL"
   - "managed code [SQL Server], vs. extended stored procedures"
   - "execution at client vs. execution at server [CLR integration]"
-ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 ---
 # CLR Integration - Overview
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

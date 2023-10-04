@@ -7,10 +7,7 @@ ms.date: 06/24/2020
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom:
-  - "subject-armqs sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "mode-arm"
+ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-arm-template
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using an ARM template
@@ -50,7 +47,7 @@ Select **Try it** from the following PowerShell code block to open Azure Cloud S
 $projectName = Read-Host -Prompt "Enter a project name that is used for generating resource names"
 $location = Read-Host -Prompt "Enter an Azure location (i.e. centralus)"
 $adminUser = Read-Host -Prompt "Enter the SQL server administrator username"
-$adminPassword = Read-Host -Prompt "Enter the SQl server administrator password" -AsSecureString
+$adminPassword = Read-Host -Prompt "Enter the SQL Server administrator password" -AsSecureString
 
 $resourceGroupName = "${projectName}rg"
 

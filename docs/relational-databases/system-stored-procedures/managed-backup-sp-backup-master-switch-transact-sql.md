@@ -1,80 +1,81 @@
 ---
-description: "managed_backup.sp_backup_master_switch (Transact-SQL)"
-title: "managed_backup.sp_backup_master_switch (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+title: "managed_backup.sp_backup_master_switch (Transact-SQL)"
+description: "Pauses or resumes the SQL Server Managed Backup to Microsoft Azure."
+author: markingmyname
+ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 05/31/2023
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_ backup_master_switch"
   - "smart_admin.sp_backup_master_switch"
   - "sp_ backup_master_switch_TSQL"
   - "smart_admin.sp_backup_master_switch_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_ backup_master_switch"
   - "smart_admin.sp_backup_master_switch"
-ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # managed_backup.sp_backup_master_switch (Transact-SQL)
+
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Pauses or resumes the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
-  
- Use this stored procedure to temporarily pause and them resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This makes sure that all the configurations settings remain and is retained when the operations resume. When [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused the retention period is not enforced. This means that there is no check to determine whether files should be deleted from storage or if there are backup file corrupted, or break in log chain.  
-  
+Pauses or resumes the [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
 
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```sql  
-EXEC managed_backup.sp_backup_master_switch   
-                     [@new_state = ] { 0 | 1}  
-```  
-  
-##  <a name="Arguments"></a> Arguments  
- @state  
- Set the state of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. The @state parameter is **BIT**. When set to a value of 0 the operations are paused, and when set to a value of 1 the operation resume.  
-  
-## Return Code Value  
- 0 (success) or 1 (failure)  
-  
-## Security  
- Describes security issues related to the statement.Include Permissions as a subsection (H3 heading). Consider including other subsections for Ownership Chaining and Auditing if appropriate.  
-  
-### Permissions  
- Requires membership in **db_backupoperator** database role, with **ALTER ANY CREDENTIAL** permissions, and **EXECUTE** permissions on **sp_delete_backuphistory**stored procedure.  
-  
-## Examples  
- The following example can be used to pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the instance it is executed on:  
-  
-```  
-Use msdb;  
-GO  
-EXEC managed_backup.sp_backup_master_switch @new_state=0;  
-Go  
-  
-```  
-  
- The following example can be used to resume [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
-  
-```  
-Use msdb;  
-GO  
-EXEC managed_backup.sp_backup_master_switch @new_state=1;  
-Go  
-  
-```  
-  
-## See Also  
- [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  
+Use `managed_backup.sp_backup_master_switch` to temporarily pause and then resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. This procedure makes sure that all the configurations settings remain, and are retained when the operations resume. When [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] is paused the retention period isn't enforced.
+
+In other words, there's no check to determine:
+
+- whether files should be deleted from storage
+- if there are corrupted backup files
+- if there's a break in the log chain.
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## Syntax
+
+```syntaxsql
+EXEC managed_backup.sp_backup_master_switch [ @new_state = ] { 0 | 1 }
+[ ; ]
+```
+
+## Arguments
+
+#### [ @new_state = ] { 0 | 1 }
+
+Set the state of [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)]. *@new_state* is **bit**. When set to a value of `0`, the operations are paused, and when set to a value of `1`, the operation resume.
+
+## Return code values
+
+`0` (success) or `1` (failure).
+
+## Permissions
+
+Requires membership in **db_backupoperator** database role, with ALTER ANY CREDENTIAL permissions, and EXECUTE permissions on `sp_delete_backuphistory` stored procedure.
+
+## Examples
+
+The following example can be used to pause [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the instance it is executed on:
+
+```sql
+USE msdb;
+GO
+EXEC managed_backup.sp_backup_master_switch @new_state = 0;
+Go
+```
+
+The following example can be used to resume [!INCLUDE [ss_smartbackup](../../includes/ss-smartbackup-md.md)].
+
+```sql
+USE msdb;
+GO
+EXEC managed_backup.sp_backup_master_switch @new_state = 1;
+Go
+```
+
+## See also
+
+- [SQL Server Managed Backup to Microsoft Azure](../backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

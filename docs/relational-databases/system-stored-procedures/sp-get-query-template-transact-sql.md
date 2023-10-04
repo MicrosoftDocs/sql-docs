@@ -1,30 +1,26 @@
 ---
+title: "sp_get_query_template (Transact-SQL)"
 description: "sp_get_query_template (Transact-SQL)"
-title: "sp_get_query_template (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_get_query_template"
-  - "sp_get_query_template_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_get_query_template"
-ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_get_query_template"
+  - "sp_get_query_template_TSQL"
+helpviewer_keywords:
+  - "sp_get_query_template"
+dev_langs:
+  - "TSQL"
 ---
 # sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the parameterized form of a query. The results returned mimic the parameterized form of a query that results from using forced parameterization. sp_get_query_template is used primarily when you create TEMPLATE plan guides.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -62,7 +58,7 @@ sp_get_query_template
  The following example returns the parameterized form of a query that contains two constant literal values.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @my_templatetext nvarchar(max)  
 DECLARE @my_parameters nvarchar(max)  

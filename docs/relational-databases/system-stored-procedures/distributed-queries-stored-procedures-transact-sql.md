@@ -1,63 +1,60 @@
 ---
-description: "Distributed Queries Stored Procedures (Transact-SQL)"
-title: "Distributed Queries Stored Procedures (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "system stored procedures [SQL Server], distributed queries"
-  - "distributed queries [SQL Server], stored procedures"
-ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
+title: "Distributed Queries stored procedures (Transact-SQL)"
+description: "Distributed Queries stored procedures (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
+ms.reviewer: randolphwest
+ms.date: 05/24/2023
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+helpviewer_keywords:
+  - "system stored procedures [SQL Server], distributed queries"
+  - "distributed queries [SQL Server], stored procedures"
+dev_langs:
+  - "TSQL"
 ---
-# Distributed Queries Stored Procedures (Transact-SQL)
+# Distributed Queries stored procedures (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to implement and manage Distributed Queries.  
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to implement and manage Distributed Queries.
 
 :::row:::
     :::column:::
-        [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
+        [sp_addlinkedserver](sp-addlinkedserver-transact-sql.md)
 
-        [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
+        [sp_addlinkedsrvlogin](sp-addlinkedsrvlogin-transact-sql.md)
 
-        [sp_catalogs](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)
+        [sp_catalogs](sp-catalogs-transact-sql.md)
 
-        [sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)
+        [sp_column_privileges_ex](sp-column-privileges-ex-transact-sql.md)
 
-        [sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)
+        [sp_columns_ex](sp-columns-ex-transact-sql.md)
 
-        [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)
+        [sp_droplinkedsrvlogin](sp-droplinkedsrvlogin-transact-sql.md)
 
-        [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)
+        [sp_dropserver (Transact-SQL)](sp-dropserver-transact-sql.md)
 
-        [sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)
+        [sp_foreignkeys](sp-foreignkeys-transact-sql.md)
     :::column-end:::
     :::column:::
-        [sp_indexes](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)
+        [sp_indexes](sp-indexes-transact-sql.md)
 
-        [sp_linkedservers](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)
+        [sp_linkedservers](sp-linkedservers-transact-sql.md)
 
-        [sp_primarykeys](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)
+        [sp_primarykeys](sp-primarykeys-transact-sql.md)
 
-        [sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)
+        [sp_serveroption](sp-serveroption-transact-sql.md)
 
-        [sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)
+        [sp_table_privileges_ex](sp-table-privileges-ex-transact-sql.md)
 
-        [sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)
+        [sp_tables_ex](sp-tables-ex-transact-sql.md)
 
-        [sp_testlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)
+        [sp_testlinkedserver (Transact-SQL)](sp-testlinkedserver-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
-## See Also  
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+## See also
+
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

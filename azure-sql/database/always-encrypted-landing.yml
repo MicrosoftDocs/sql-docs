@@ -13,7 +13,7 @@ metadata:
   ms.topic: landing-page
   author: VanMSFT
   ms.author: vanto
-  ms.reviewer: kendralittle, mathoma
+  ms.reviewer: mathoma
   ms.date: 01/15/2021
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
@@ -48,10 +48,8 @@ landingContent:
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Configure Always Encrypted by using Azure Key Vault
-            url: always-encrypted-azure-key-vault-configure.md
-          - text: Configure Always Encrypted by using the Windows certificate store
-            url: always-encrypted-certificate-store-configure.md
+          - text: Getting started with Always Encrypted
+            url: /sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started
 
 
   # Card

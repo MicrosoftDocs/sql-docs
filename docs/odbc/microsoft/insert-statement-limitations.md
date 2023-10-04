@@ -1,20 +1,16 @@
 ---
+title: "INSERT Statement Limitations"
 description: "INSERT Statement Limitations"
-title: "INSERT Statement Limitations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC SQL grammar, INSERT statement limitations"
   - "INSERT statement limitations [ODBC]"
   - "truncation of data [ODBC]"
-ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-author: David-Engel
-ms.author: v-davidengel
 ---
 # INSERT Statement Limitations
 Inserted data is truncated on the right without warning if it is too long to fit into the column.  

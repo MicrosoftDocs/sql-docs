@@ -4,8 +4,7 @@ description: The Machine Learning extension for Azure Data Studio enables you to
 author: rothja
 ms.author: jroth
 ms.date: 05/19/2020
-ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

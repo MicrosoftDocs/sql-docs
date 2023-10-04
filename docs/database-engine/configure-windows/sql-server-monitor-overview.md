@@ -4,8 +4,8 @@ description: Learn about SQL Server Monitor. See how to use its Replication Moni
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.sqlservermonitor.main.f1"

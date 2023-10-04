@@ -5,8 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 09/22/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "nvarchar data type"
@@ -29,13 +29,13 @@ Fixed-size string data. *n* defines the string size in byte-pairs, and must be a
 
 #### nvarchar [ ( *n* | max ) ]
 
-Variable-size string data. *n* defines the string size in byte-pairs, and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^30-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. For [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) encoding, the storage size is two times *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For UTF-16 encoding, the storage size is still two times *n* bytes + 2 bytes, but the number of characters that can be stored may be smaller than *n* because Supplementary Characters use two byte-pairs (also called [surrogate-pair](https://www.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF)). The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
+Variable-size string data. *n* defines the string size in byte-pairs, and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^31-1 characters (2 GB). The storage size is two times *n* bytes + 2 bytes. For [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) encoding, the storage size is two times *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For UTF-16 encoding, the storage size is still two times *n* bytes + 2 bytes, but the number of characters that can be stored may be smaller than *n* because Supplementary Characters use two byte-pairs (also called [surrogate-pair](https://www.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF)). The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
 
 ## Remarks
 
 A common misconception is to think that with **nchar(*n*)** and **nvarchar(*n*)**, the *n* defines the number of characters. However, in **nchar(*n*)** and **nvarchar(*n*)**, the *n* defines the string length in **byte-pairs** (0-4,000). *n* never defines numbers of characters that can be stored. This is similar to the definition of [**char(*n*)** and **varchar(*n*)**](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 
-The misconception happens because when using characters defined in the Unicode range 0 to 65,535, one character can be stored per each byte-pair. However, in higher Unicode ranges (65,536 to 1,114,111) one character may use two byte-pairs. For example, in a column defined as **nchar(10)**, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can store 10 characters that use one byte-pair (Unicode range 0 to 65,535), but fewer than 10 characters when using two byte-pairs (Unicode range 65,536 to 1,114,111). For more information about Unicode storage and character ranges, see [Storage differences between UTF-8 and UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
+The misconception happens because when using characters defined in the Unicode range 0 to 65,535, one character can be stored per each byte-pair. However, in higher Unicode ranges (65,536 to 1,114,111) one character may use two byte-pairs. For example, in a column defined as **nchar(10)**, the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] can store 10 characters that use one byte-pair (Unicode range 0 to 65,535), but fewer than 10 characters when using two byte-pairs (Unicode range 65,536 to 1,114,111). For more information about Unicode storage and character ranges, see [Storage differences between UTF-8 and UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
 
 When *n* isn't specified in a data definition or variable declaration statement, the default length is 1. When *n* isn't specified with the CAST function, the default length is 30.
 

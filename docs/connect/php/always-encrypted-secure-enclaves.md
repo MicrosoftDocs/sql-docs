@@ -4,8 +4,8 @@ description: "Learn how to use Always Encrypted with secure enclaves with the Mi
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 01/31/2020
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using Always Encrypted with secure enclaves with the PHP Drivers for SQL Server

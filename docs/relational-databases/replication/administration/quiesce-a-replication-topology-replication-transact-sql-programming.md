@@ -1,22 +1,19 @@
 ---
 title: "Quiesce a Replication topology (Replication SP)"
-description: Learn how to use Replication stored procedures to quiesce a replication topology for SQL Server. 
-ms.custom: seo-lt-2019
+description: Learn how to use Replication stored procedures to quiesce a replication topology for SQL Server.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "administering replication, quiescing"
   - "quiesce [SQL Server replication]"
   - "transactional replication, backup and restore"
-ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Quiesce a Replication Topology (Replication Transact-SQL Programming)

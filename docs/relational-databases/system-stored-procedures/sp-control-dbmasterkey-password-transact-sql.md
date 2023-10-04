@@ -1,30 +1,26 @@
 ---
+title: "sp_control_dbmasterkey_password (Transact-SQL)"
 description: "sp_control_dbmasterkey_password (Transact-SQL)"
-title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/09/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_control_dbmasterkey_password"
-  - "sp_control_dbmasterkey_password_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_control_dbmasterkey_password"
-ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
+ms.date: "04/09/2020"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_control_dbmasterkey_password"
+  - "sp_control_dbmasterkey_password_TSQL"
+helpviewer_keywords:
+  - "sp_control_dbmasterkey_password"
+dev_langs:
+  - "TSQL"
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds or drops a credential containing the password needed to open a database master key.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -76,11 +72,11 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## Examples  
   
-### A. Creating a credential for the AdventureWorks2012 master key  
- The following example creates a credential for the `AdventureWorks2012` database master key, and saves the master key password as the secret in the credential. Because all parameters that are passed to `sp_control_dbmasterkey_password` must be of data type **nvarchar**, the text strings are converted with the casting operator `N`.  
+### A. Creating a credential for the AdventureWorks master key  
+ The following example creates a credential for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database master key, and saves the master key password as the secret in the credential. Because all parameters that are passed to `sp_control_dbmasterkey_password` must be of data type **nvarchar**, the text strings are converted with the casting operator `N`.  
   
 ```  
-EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
+EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2022',   
     @password = N'sdfjlkj#mM00sdfdsf98093258jJlfdk4', @action = N'add';  
 GO  
 ```  
@@ -89,7 +85,7 @@ GO
  The following example removes the credential created in example A. Note that all parameters are required, including the password.  
   
 ```  
-EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
+EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2022',   
     @password = N'sdfjlkj#mM00sdfdsf98093258jJlfdk4', @action = N'drop';  
 GO  
 ```  

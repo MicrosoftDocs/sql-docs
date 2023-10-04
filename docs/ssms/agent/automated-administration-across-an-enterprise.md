@@ -1,13 +1,13 @@
 ---
-description: "Automated Administration Across an Enterprise"
 title: "Automated Administration Across an Enterprise"
-ms.custom: seo-lt-2019
+description: "Automated Administration Across an Enterprise"
+author: markingmyname
+ms.author: maghan
 ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "enterprise automatic administration [SQL Server]"
   - "multiserver administration [SQL Server]"
   - "SQL Server Agent jobs, multiserver administration"
@@ -17,14 +17,10 @@ helpviewer_keywords:
   - "master servers [SQL Server]"
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
-ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 # Automated Administration Across an Enterprise
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.

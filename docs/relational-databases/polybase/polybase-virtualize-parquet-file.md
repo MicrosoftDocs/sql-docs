@@ -5,13 +5,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
 ms.date: 05/10/2022
+ms.service: sql
+ms.subservice: polybase
 ms.topic: conceptual
-ms.custom:
-- event-tier1-build-2022
-ms.prod: sql
-ms.technology: polybase
 monikerRange: ">= sql-server-ver16 || >= sql-server-linux-ver16"
-ms.metadata: 
 ---
 
 # Virtualize parquet file in a S3-compatible object storage with PolyBase
@@ -98,7 +95,7 @@ SELECT * FROM sys.external_data_sources;
 
 ### SELECT from a parquet file using OPENROWSET
 
-The following example demonstrates using T-SQL to query a parquet file stored in S3-compliant object storage via OPENROWSET query. For more information, see [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).
+The following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via OPENROWSET query. For more information, see [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md).
 
 As this is a parquet file, two important things are happening automatically:
 
@@ -114,9 +111,9 @@ FROM    OPENROWSET
         ) AS [cc];
 ```
 
-### Query S3-compliant object storage via external table
+### Query S3-compatible object storage via external table
 
-The following example demonstrates using T-SQL to query a parquet file stored in S3-compliant object storage via querying external table. The sample uses a relative path within the external data source.
+The following example demonstrates using T-SQL to query a parquet file stored in S3-compatible object storage via querying external table. The sample uses a relative path within the external data source.
 
 ```sql
 CREATE EXTERNAL FILE FORMAT ParquetFileFormat WITH(FORMAT_TYPE = PARQUET);
@@ -140,8 +137,8 @@ For more information, see:
 
 ### Limitations
 
-1. SQL Server queries on an external table backed by S3-compliant storage are limited to 1000 objects per prefix. This is because S3-compliant object listing is limited to 1000 object keys per prefix.
-2. For S3-compliant object storage, customers are not allowed to create their access key ID with a `:` character in it.
+1. SQL Server queries on an external table backed by S3-compatible storage are limited to 1000 objects per prefix. This is because S3-compatible object listing is limited to 1000 object keys per prefix.
+2. For S3-compatible object storage, customers are not allowed to create their access key ID with a `:` character in it.
 3. The total URL length is limited to 259 characters. This means `s3://<hostname>/<objectkey>` shouldn't exceed 259 characters. The `s3://` counts towards this limit, so the path length cannot exceed 259-5 = 254 characters.
 4. The SQL credential name is limited by 128 characters in UTF-16 format.
 5. The credential name created must contain the bucket name unless this credential is for a new external data source.

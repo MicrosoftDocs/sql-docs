@@ -1,19 +1,17 @@
 ---
 title: nodes() Method (xml Data Type)
 description: "nodes() Method (xml Data Type)"
-ms.prod: sql
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "nodes() method"
-  - "nodes method"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "07/26/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "nodes() method"
+  - "nodes method"
+dev_langs:
+  - "TSQL"
 ---
 
 # nodes() Method (xml Data Type)
@@ -218,7 +216,7 @@ Note the following:
   
 - The `nodes()` method is applied to the Instructions column and returns a rowset, `T (C)`. This rowset contains logical copies of the original manufacturing instructions document with `/root/Location` as the context item.  
   
-- CROSS APPLY applies `nodes()` to each row in the `Instructions` table and returns only the rows that produce a result set.  
+- CROSS APPLY applies `nodes()` to each row in the `ProductModel` table and returns only the rows that produce a result set.  
   
     ```sql  
     SELECT C.query('.') as result  

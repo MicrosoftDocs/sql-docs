@@ -1,23 +1,19 @@
 ---
+title: "Data in Data Flows"
 description: "Data in Data Flows"
-title: "Data in Data Flows | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "converting data types [Integration Services]"
   - "comparing data"
   - "data types [Integration Services], data flow"
   - "parsing [Integration Services]"
   - "string comparisons"
   - "data flow [Integration Services], data options"
-ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: chugugrace
-ms.author: chugu
 ---
 # Data in Data Flows
 

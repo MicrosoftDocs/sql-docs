@@ -5,6 +5,7 @@ ms.reviewer: vanto
 ms.date: 06/07/2022
 ms.service: sql-database
 ms.subservice: service-overview
+ms.custom: devx-track-azurecli
 ms.topic: include
 ---
 
@@ -56,15 +57,16 @@ To create a resource group, server, and single database in the Azure portal:
    :::image type="content" source="./media/sql-database-create-single-database/new-sql-database-basics.png" alt-text="Screenshot of the Create SQL Database page of the Azure portal, showing the basic tab.":::
 
 1. On the **Networking** tab, under **Connectivity method**, select **Public endpoint**.
-1. Under **Firewall rules**, set **Add current client IP address** to **Yes**.
-1. Select **Next: Additional settings** at the bottom of the page.
 
    :::image type="content" source="./media/sql-database-create-single-database/networking.png" alt-text="Screenshot of the Create SQL Database page of the Azure portal, showing the networking tab.":::
   
    For more information about firewall settings, see [Allow Azure services and resources to access this server](../database/network-access-controls-overview.md) and [Add a private endpoint](../database/private-endpoint-overview.md).
 
+1. Under **Firewall rules**, set **Add current client IP address** to **Yes**.
+1. Select **Next: Security** at the bottom of the page. 
+1. Optionally, enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md). Leave the other settings disabled by default. 
+1. Select **Next: Additional settings** at the bottom of the page.
 1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**.
-1. Optionally, enable [Microsoft Defender for SQL](../database/azure-defender-for-sql.md).
 1. Optionally, set the [maintenance window](../database/maintenance-window.md) so planned maintenance is performed at the best time for your database.
 1. Select **Review + create** at the bottom of the page.
 
@@ -135,7 +137,7 @@ The following PowerShell code creates an Azure resource group, server, single da
       -FirewallRuleName "AllowedIPs" -StartIpAddress $startIp -EndIpAddress $endIp
    $serverFirewallRule
 
-   # Create General Purpose Gen5 database with 2 vCores
+   # Create General Purpose standard-series (Gen5) database with 2 vCores
    Write-host "Creating a gen5 2 vCore database..."
    $database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName `
       -ServerName $serverName `
@@ -165,7 +167,7 @@ The following Azure CLI code blocks create a resource group, server, single data
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
-[!INCLUDE [azure-cli-prepare-your-environment-h3.md](../includes/azure-cli-prepare-your-environment-h3.md)]
+[!INCLUDE [azure-cli-prepare-your-environment-h3.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-h3.md)]
 
 [!INCLUDE [cli-launch-cloud-shell-sign-in.md](../includes/cli-launch-cloud-shell-sign-in.md)]
 

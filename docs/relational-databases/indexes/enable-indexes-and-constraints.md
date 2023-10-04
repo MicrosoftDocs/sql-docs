@@ -4,9 +4,8 @@ description: Enable Indexes and Constraints
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/17/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "indexes [SQL Server], enabling"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "disabled indexes [SQL Server], how to enable"
   - "constraints [SQL Server], enabling"
   - "clustered indexes, enabling disabled indexes"
-ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable Indexes and Constraints
@@ -112,7 +110,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Enables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table.  
@@ -131,7 +129,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- re-creates the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -152,7 +150,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- enables the IX_Employee_OrganizationLevel_OrganizationNode index  
     -- on the HumanResources.Employee table  
@@ -169,7 +167,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- enables all indexes  
     -- on the HumanResources.Employee table  
@@ -187,7 +185,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- enables all indexes  
     -- on the HumanResources.Employee table  

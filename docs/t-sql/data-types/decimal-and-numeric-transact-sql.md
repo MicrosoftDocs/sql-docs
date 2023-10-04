@@ -4,8 +4,8 @@ description: "Transact-SQL reference for the decimal and numeric data types. Dec
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "09/10/2019"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 f1_keywords:
   - "decimal"
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "numeric data type, about numeric data type"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # decimal and numeric (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Numeric data types that have fixed precision and scale. Decimal and numeric are synonyms and can be used interchangeably.
   
@@ -58,7 +58,7 @@ Converting from **decimal** or **numeric** to **float** or **real** can cause so
   
 By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses rounding when converting a number to a **decimal** or **numeric** value with a lower precision and scale. Conversely, if the SET ARITHABORT option is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] raises an error when overflow occurs. Loss of only precision and scale isn't sufficient to raise an error.
   
-Prior to [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], conversion of **float** values to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any **float** value less than 5E-18 (when set using either the scientific notation of 5E-18 or the decimal notation of 0.0000000000000000050000000000000005) rounds down to 0. This is no longer a restriction as of [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
+Prior to [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], conversion of **float** values to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any **float** value less than 5E-18 (when set using either the scientific notation of 5E-18 or the decimal notation of 0.000000000000000005) rounds down to 0. This is no longer a restriction as of [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)].
   
 ## Examples  
 The following example creates a table using the **decimal** and **numeric** data types.  Values are inserted into each column. The results are returned by using a SELECT statement.

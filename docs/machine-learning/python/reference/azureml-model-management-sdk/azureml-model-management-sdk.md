@@ -1,24 +1,12 @@
 ---
-
-# required metadata
 title: "Deploy & manage Machine Learning Server web services in Python"
 description: "This class is for SQL Machine Learning Services and Machine Learning Server for managing web services."
 author: WilliamDAssafMSFT
-ms.author: wiassaf 
+ms.author: wiassaf
 ms.date: 2/16/2018
+ms.service: sql
+ms.subservice: "machine-learning-services"
 ms.topic: "reference"
-ms.prod: "sql"
-ms.technology: "machine-learning-services"
-
-# optional metadata
-#ROBOTS: ""
-#audience: ""
-#ms.devlang: ""
-#ms.reviewer: ""
-#ms.suite: ""
-#ms.tgt_pltfrm: ""
-#ms.technology: ""
-#ms.custom: ""
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15"
 ---
 

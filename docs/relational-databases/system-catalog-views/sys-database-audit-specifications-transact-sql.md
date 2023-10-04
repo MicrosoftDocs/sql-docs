@@ -5,9 +5,8 @@ author: sravanisaluru
 ms.author: srsaluru
 ms.reviewer: rwestMSFT
 ms.date: 04/04/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "database_audit_specifications_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.database_audit_specifications catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 ---
 # sys.database_audit_specifications (Transact-SQL)
 

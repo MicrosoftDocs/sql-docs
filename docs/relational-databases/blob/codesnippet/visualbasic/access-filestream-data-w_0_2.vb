@@ -79,7 +79,7 @@ Module Module1
             Dim someData As String = "EKG data."
             Dim unicode As Encoding = Encoding.GetEncoding(0)
 
-            sqlFileStream.Write(unicode.GetBytes(someData.ToCharArray()), 0, someData.Length)
+            sqlFileStream.Write(unicode.GetBytes(someData.ToCharArray()), 0, Encoding.GetBytes())
 
             'Read the data from the FILESTREAM 
             'BLOB. 

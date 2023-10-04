@@ -4,8 +4,8 @@ description: Find out how to configure the named pipe that the SQL Server Databa
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "Named Pipes [SQL Server], configuring"

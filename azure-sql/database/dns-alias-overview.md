@@ -8,7 +8,6 @@ ms.date: 07/11/2022
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: seo-lt-2019 sqldbrb=1
 ---
 # DNS alias for Azure SQL Database
 [!INCLUDE[appliesto-sqldb-asa](../includes/appliesto-sqldb-asa.md)]

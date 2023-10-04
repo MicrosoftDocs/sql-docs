@@ -4,8 +4,8 @@ description: Learn about SQL Server log shipping, which sends transaction log ba
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: log-shipping
+ms.service: sql
+ms.subservice: log-shipping
 ms.topic: conceptual
 helpviewer_keywords:
   - "secondary servers [SQL Server]"

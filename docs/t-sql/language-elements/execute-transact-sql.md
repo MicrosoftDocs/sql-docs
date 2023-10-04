@@ -3,13 +3,10 @@ title: "EXECUTE (Transact-SQL)"
 description: "EXECUTE (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "08/07/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "EXEC"
   - "EXECUTE_TSQL"
@@ -30,26 +27,26 @@ helpviewer_keywords:
   - "EXECUTE statement"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 
 # EXECUTE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Executes a command string or character string within a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, or one of the following modules: system stored procedure, user-defined stored procedure, CLR stored procedure, scalar-valued user-defined function, or extended stored procedure. The EXECUTE statement can be used to send pass-through commands to linked servers. Additionally, the context in which a string or command is executed can be explicitly set. Metadata for the result set can be defined by using the WITH RESULT SETS options.
   
 > [!IMPORTANT]  
 >  Before you call EXECUTE with a character string, validate the character string. Never execute a command constructed from user input that has not been validated.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 
 ::: moniker range=">=sql-server-ver15"
-The following code block shows the syntax in SQL Server 2019. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
+The following code block shows the syntax in SQL Server 2019 and later versions. Alternatively, see [syntax in SQL Server 2017 and earlier](execute-transact-sql.md?view=sql-server-2017&preserve-view=true) instead. 
 
 ```syntaxsql
--- Syntax for SQL Server 2019
+-- Syntax for SQL Server 2019 and later versions
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -263,6 +260,29 @@ Execute a character string
 ```  
 
 
+```syntaxsql
+-- Syntax for Microsoft Fabric
+
+-- Execute a stored procedure  
+[ { EXEC | EXECUTE } ]  
+    procedure_name   
+        [ { value | @variable [ OUT | OUTPUT ] } ] [ ,...n ]  
+        [ WITH <execute_option> [ ,...n ] ]  }  
+[;]  
+  
+-- Execute a SQL string  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
+[;]  
+
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -278,7 +298,7 @@ Execute a character string
  A module that has been created in another database can be executed if the user running the module owns the module or has the appropriate permission to execute it in that database. A module can be executed on another server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the user running the module has the appropriate permission to use that server (remote access) and to execute the module in that database. If a server name is specified but no database name is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] looks for the module in the default database of the user.  
   
  ;*number*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Is an optional integer that is used to group procedures of the same name. This parameter is not used for extended stored procedures.  
   
@@ -337,7 +357,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Specifies the context in which the statement is executed.  
   
  LOGIN  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies the context to be impersonated is a login. The scope of impersonation is the server.  
   
@@ -361,7 +381,7 @@ If you pass a single word that does not begin with `@` and that's not enclosed i
  Indicates parameters for which values are supplied in the \<arg-list> of pass-through commands that are used in an EXEC('...', \<arg-list>) AT \<linkedsrv> statement.  
   
  AT *linked_server_name*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
  Specifies that *command_string* is executed against *linked_server_name* and results, if any, are returned to the client. *linked_server_name* must refer to an existing linked server definition in the local server. Linked servers are defined by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -379,12 +399,12 @@ AT DATA_SOURCE data_source_name
 |Term|Definition|  
 |----------|----------------|  
 |RECOMPILE|Forces a new plan to be compiled, used, and discarded after the module is executed. If there is an existing query plan for the module, this plan remains in the cache.<br /><br /> Use this option if the parameter you are supplying is atypical or if the data has significantly changed. This option is not used for extended stored procedures. We recommend that you use this option sparingly because it is expensive.<br /><br /> **Note:** You can not use WITH RECOMPILE when calling a stored procedure that uses OPENDATASOURCE syntax. The WITH RECOMPILE option is ignored when a four-part object name is specified.<br /><br /> **Note:** RECOMPILE is not supported with natively compiled, scalar user-defined functions. If you need to recompile, use [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> This option provides no guarantee of what results, if any, will be returned, and no definition is provided. The statement executes without error if any results are returned or no results are returned. RESULT SETS UNDEFINED is the default behavior if a result_sets_option is not provided.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
-|RESULT SETS NONE|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Guarantees that the execute statement will not return any results. If any results are returned the batch is aborted.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
-|*\<result_sets_definition>*|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Provides a guarantee that the result will come back as specified in the result_sets_definition. For statements that return multiple result sets, provide multiple *result_sets_definition* sections. Enclose each *result_sets_definition* in parentheses, separated by commas. For more information, see \<result_sets_definition> later in this topic.<br /><br /> This option always results in an error for natively compiled, scalar user-defined functions because the functions never return a result set.|
+|**RESULT SETS UNDEFINED**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> This option provides no guarantee of what results, if any, will be returned, and no definition is provided. The statement executes without error if any results are returned or no results are returned. RESULT SETS UNDEFINED is the default behavior if a result_sets_option is not provided.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
+|RESULT SETS NONE|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> Guarantees that the execute statement will not return any results. If any results are returned the batch is aborted.<br /><br /> For interpreted scalar user-defined functions, and natively compiled scalar user-defined functions, this option is not operational because the functions never return a result set.|  
+|*\<result_sets_definition>*|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br /> Provides a guarantee that the result will come back as specified in the result_sets_definition. For statements that return multiple result sets, provide multiple *result_sets_definition* sections. Enclose each *result_sets_definition* in parentheses, separated by commas. For more information, see \<result_sets_definition> later in this topic.<br /><br /> This option always results in an error for natively compiled, scalar user-defined functions because the functions never return a result set.|
   
 \<result_sets_definition>
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
   
  Describes the result sets returned by the executed statements. The clauses of the result_sets_definition have the following meaning  
   
@@ -434,7 +454,7 @@ AT DATA_SOURCE data_source_name
  Changes in database context last only until the end of the EXECUTE statement. For example, after the `EXEC` in this following statement is run, the database context is master.  
   
 ```sql  
-USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
+USE master; EXEC ('USE AdventureWorks2022; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
 ## Context Switching  
@@ -534,11 +554,11 @@ GO
 ### D. Using EXECUTE with a remote stored procedure  
  The following example executes the `uspGetEmployeeManagers` stored procedure on the remote server `SQLSERVER1` and stores the return status that indicates success or failure in `@retstat`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 DECLARE @retstat INT;  
-EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
+EXECUTE @retstat = SQLSERVER1.AdventureWorks2022.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
 ### E. Using EXECUTE with a stored procedure variable  
@@ -592,12 +612,12 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### G. Using EXECUTE with AT linked_server_name  
  The following example passes a command string to a remote server. It creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a DDL statement (`CREATE TABLE`) against that linked server.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
-EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
+EXECUTE ( 'CREATE TABLE AdventureWorks2022.dbo.SalesTbl   
 (SalesID int, SalesName varchar(10)) ; ' ) AT SeattleSales;  
 GO  
 ```  
@@ -624,7 +644,7 @@ GO
 ### J. Using EXECUTE to query an Oracle database on a linked server  
  The following example executes several `SELECT` statements at the remote Oracle server. The example begins by adding the Oracle server as a linked server and creating linked server login.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 -- Setup the linked server.  
@@ -667,7 +687,7 @@ GO
 ### L. Using a parameter with EXECUTE and AT linked_server_name  
  The following example passes a command string to a remote server by using a question mark (`?`) placeholder for a parameter. The example creates a linked server `SeattleSales` that points to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and executes a `SELECT` statement against that linked server. The `SELECT` statement uses the question mark as a place holder for the `ProductID` parameter (`952`), which is provided after the statement.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql    
 -- Setup the linked server.  
@@ -675,7 +695,7 @@ EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'
 GO  
 -- Execute the SELECT statement.  
 EXECUTE ('SELECT ProductID, Name   
-    FROM AdventureWorks2012.Production.Product  
+    FROM AdventureWorks2022.Production.Product  
     WHERE ProductID = ? ', 952) AT SeattleSales;  
 GO  
 ```  
@@ -683,7 +703,7 @@ GO
 ### M. Using EXECUTE to redefine a single result set  
  Some of the previous examples executed `EXEC dbo.uspGetEmployeeManagers 6;` which returned 7 columns. The following example demonstrates using the `WITH RESULT SET` syntax to change the names and data types of the returning result set.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
   
 ```sql    
 EXEC uspGetEmployeeManagers 16  
@@ -703,7 +723,7 @@ WITH RESULT SETS
 ### N. Using EXECUTE to redefine a two result sets  
  When executing a statement that returns more than one result set, define each expected result set. The following example in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] creates a procedure that returns two result sets. Then the procedure is executed using the **WITH RESULT SETS** clause, and specifying two result set definitions.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
   
 ```sql    
 --Create the procedure  
@@ -860,12 +880,10 @@ GO
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd/sqlcmd-utility.md)   
  [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
-  
-  

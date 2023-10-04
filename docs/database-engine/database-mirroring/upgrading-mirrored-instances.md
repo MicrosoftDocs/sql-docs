@@ -4,8 +4,8 @@ description: Learn how to reduce downtime when upgrading a SQL Server mirrored i
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "02/01/2016"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "upgrading SQL Server, rolling upgrade of mirrored databases"

@@ -4,9 +4,8 @@ description: sys.assembly_files (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.assembly_files"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.assembly_files catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 ---
 # sys.assembly_files (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

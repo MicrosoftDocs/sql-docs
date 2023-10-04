@@ -53,7 +53,7 @@ The following SQL Server components are used when backing up to Azure Blob stora
 | **Credential** |The information that is required to connect and authenticate to Azure Blob storage is stored as a credential. In order for SQL Server to write backups to an Azure Blob or restore from it, a SQL Server credential must be created. For more information, see [SQL Server Credential](/sql/t-sql/statements/create-credential-transact-sql). |
 
 > [!NOTE]
-> SQL Server 2016 has been updated to support block blobs. Please see [Tutorial: Using Microsoft Azure Blob storage with SQL Server 2016 databases](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016) for more details.
+> SQL Server 2016 has been updated to support block blobs. Please see [Tutorial: Use Microsoft Azure Blob Storage with SQL Server databases](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016) for more details.
 > 
 
 ## Next steps
@@ -62,7 +62,7 @@ The following SQL Server components are used when backing up to Azure Blob stora
 2. Then go through one of the following tutorials that walk you through creating a storage account and performing a restore.
    
    * **SQL Server 2014**: [Tutorial: SQL Server 2014 Backup and Restore to Microsoft Azure Blob storage](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url).
-   * **SQL Server 2016**: [Tutorial: Using the Microsoft Azure Blob storage with SQL Server 2016 databases](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)
+   * **SQL Server 2016**: [Tutorial: Using the Microsoft Azure Blob Storage with SQL Server databases](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)
 3. Review additional documentation starting with [SQL Server Backup and Restore with Microsoft Azure Blob storage](/sql/relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service).
 
 If you have any problems, review the topic [SQL Server Backup to URL Best Practices and Troubleshooting](/sql/relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting).

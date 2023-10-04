@@ -4,10 +4,10 @@ description: "Identify performance issues and assess that your SQL Server VM is 
 author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
-ms.date: 11/02/2021
+ms.date: 07/14/2023
 ms.service: virtual-machines
 ms.topic: how-to
-ms.custom: ignite-fall-2021
+ms.custom: ignite-fall-2021, devx-track-azurecli
 ---
 
 
@@ -18,7 +18,7 @@ The SQL best practices assessment feature of the Azure portal identifies possibl
 
 
 To learn more, watch this video on [SQL best practices assessment](/shows/Data-Exposed/optimally-configure-sql-server-on-azure-virtual-machines-with-sql-assessment?WT.mc_id=dataexposed-c9-niner):
-<iframe src="https://aka.ms/docs/player?id=13b2bf63-485c-4ec2-ab14-a1217734ad9f" width="640" height="370"></iframe>
+> [!VIDEO https://aka.ms/docs/player?id=13b2bf63-485c-4ec2-ab14-a1217734ad9f]
 
 
 
@@ -27,7 +27,7 @@ To learn more, watch this video on [SQL best practices assessment](/shows/Data-E
 Once the SQL best practices assessment feature is enabled, your SQL Server instance and databases are scanned to provide recommendations for things like indexes, deprecated features, enabled or missing trace flags, statistics, etc. Recommendations are surfaced to the [SQL VM management page](manage-sql-vm-portal.md) of the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.SqlVirtualMachine%2FSqlVirtualMachines). 
 
 
-Assessment results are uploaded to your [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) using [Microsoft Monitoring Agent (MMA)](/azure/azure-monitor/agents/log-analytics-agent). If your VM is already configured to use Log Analytics, the SQL best practices assessment feature uses the existing connection.  Otherwise, the MMA extension is installed to the SQL Server VM and connected to the specified Log Analytics workspace.
+Assessment results are uploaded to your [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) using [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/agents-overview). The AMA extension is installed to the SQL Server VM, if it is not installed already, and AMA resources such as [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview), [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) are created and connected to the specified Log Analytics workspace.
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
@@ -35,7 +35,7 @@ Assessment run time depends on your environment (number of databases, objects, a
 
 To use the SQL best practices assessment feature, you must have the following prerequisites: 
 
-- Your SQL Server VM must be registered with the [SQL Server IaaS extension in full mode](sql-agent-extension-manually-register-single-vm.md#full-mode). 
+- Your SQL Server VM must be registered with the [SQL Server IaaS extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 - A [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) in the same subscription as your SQL Server VM to upload assessment results to. 
 - SQL Server needs to be 2012 or higher version.
 
@@ -53,16 +53,17 @@ To enable SQL best practices assessments using the Azure portal, follow these st
 1. Select **SQL best practices assessments** under **Settings**. 
 1. Select **Enable SQL best practices assessments** or **Configuration** to navigate to the **Configuration** page. 
 1. Check the **Enable SQL best practices assessments** box and provide the following:
-    1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. If the SQL Server VM has not been associated with a workspace previously, then choose an existing workspace in the subscription from the drop-down. Otherwise, the previously-associated workspace is already populated.  
+    1. The [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) that assessments will be uploaded to. Choose an existing workspace in the subscription from the drop-down. 
+    1. Choose a resource group where the Azure Monitor Agent resources [DCE](/azure/azure-monitor/essentials/data-collection-endpoint-overview) and [DCR](/azure/azure-monitor/essentials/data-collection-rule-overview) will be created. If you specify the same resource group across multiple SQL Server VMs, these resources are reused. 
     1. The **Run schedule**. You can choose to run assessments on demand, or automatically on a schedule. If you choose a schedule, then provide the frequency (weekly or monthly), day of week, recurrence (every 1-6 weeks), and the time of day your assessments should start (local to VM time). 
-1. Select **Apply** to save your changes and deploy the Microsoft Monitoring Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
+1. Select **Apply** to save your changes and deploy the Azure Monitor Agent to your SQL Server VM if it's not deployed already. An Azure portal notification will tell you once the SQL best practices assessment feature is ready for your SQL Server VM. 
     
 # [Azure CLI](#tab/azure-cli)
 
 To enable the SQL best practices assessments feature using the Azure CLI, use the following command example:
 
 ```azure-cli
-az sql vm update --enable-assessment true --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+az sql vm update --enable-assessment true --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" --agent-rg myRg2 -n "myVM"
 ```
 
 To disable the feature, use the following command: 
@@ -96,13 +97,13 @@ To enable the feature and set a schedule for assessment runs using the Azure CLI
 
 ```azure-cli
 # Schedule is set to every 2 weeks starting on Sunday at 11 pm (VM OS time)
-az sql vm update --assessment-weekly-interval 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+az sql vm update --assessment-weekly-interval 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" --agent-rg myRg2 -n "myVM"
 
 # To schedule assessment for 2nd Sunday of each month at 11 pm (VM OS time)
-az sql vm update --monthly-occurrence 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+az sql vm update --monthly-occurrence 2 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" --agent-rg myRg2 -n "myVM"
  
 # To schedule assessment for the last Sunday of each month at 11 pm (VM OS time)
-az sql vm update --monthly-occurrence -1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" -n "myVM"
+az sql vm update --monthly-occurrence -1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name "myLAWorkspace" --workspace-rg "myLARg" -g "myRg" --agent-rg myRg2 -n "myVM"
 
 ```
 
@@ -128,7 +129,7 @@ To run an on-demand assessment by using the Azure portal, select **Run assessmen
 To run an on-demand assessment by using the Azure CLI, using the following command:
 
 ```azure-cli
-# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machine resource via Azure Portal
+# This will start an on-demand assessment run. You can track progress of the run or view results on the SQL virtual machines resource via Azure Portal
 az sql vm start-assessment -g "myRg" -n "myVM"
 ```
 
@@ -179,6 +180,8 @@ $subscriptionId = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 $myWsRg = 'myWsRg'
 # Log Analytics workspace where assessment results will be stored
 $myWsName = 'myWsName'
+# Resource Group where the Azure Monitor Agent resources will be created
+$myAgentRg = 'myAgentRg'
  
 # Ensure in correct subscription
 az account set --subscription $subscriptionId
@@ -188,10 +191,10 @@ $sqlvms = az sql vm list | ConvertFrom-Json
 foreach ($sqlvm in $sqlvms)
 {
   echo "Configuring feature on $($sqlvm.id)"
-  az sql vm update --assessment-weekly-interval 1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup -n $sqlvm.name
+  az sql vm update --assessment-weekly-interval 1 --assessment-day-of-week Sunday --assessment-start-time-local "23:00" --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup --agent-rg $myAgentRg -n $sqlvm.name
   
   # Alternatively you can use this command to only enable the feature without setting a schedule
-  # az sql vm update --enable-assessment true --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup -n $sqlvm.name  
+  # az sql vm update --enable-assessment true --workspace-name $myWsName --workspace-rg $myWsRg -g $sqlvm.resourceGroup --agent-rg $myAgentRg -n $sqlvm.name  
  
   # You can use this command to start an on-demand assessment on each VM
   # az sql vm start-assessment -g $sqlvm.resourceGroup -n $sqlvm.name
@@ -203,9 +206,9 @@ foreach ($sqlvm in $sqlvms)
 
 You may encounter some of the following known issues when using SQL best practices assessments. 
 
-### Configuration error for Enable SQL best practices assessment
+### Migrating from Microsoft Monitoring Agent (MMA) to Azure Monitor Agent (AMA)
 
-If your virtual machine is already associated with a Log Analytics workspace that you don't have access to or that is in another subscription, you will see an error in the configuration blade. For the former, you can either obtain permissions for that workspace or switch your VM to a different Log Analytics workspace by following [these instructions](/azure/azure-monitor/agents/agent-manage) to remove Microsoft Monitoring Agent. 
+Previously, SQL best practices assessment feature used MMA to upload assessments to Log Analytics workspace. MMA is being [retired](/azure/azure-monitor/agents/azure-monitor-agent-migration). This feature now uses AMA to upload assessments. If you have enabled SQL best practices assessment using MMA in the past, you can easily migrate to AMA by first disabling, then re-enabling the feature. Your existing results will still be available after the disable/enable operation as long as you specify the same Log Analytics workspace. If it isn't being used by other services, you can at this point remove the Microsoft Monitoring Agent by following [these instructions](/azure/azure-monitor/agents/agent-manage). Before you migrate, please make sure Azure Monitor Log Analytics is supported in the region where your SQL Server VM lives using the [table linked here](/azure/azure-monitor/agents/agents-overview#supported-regions). 
 
 ### Deployment failure for Enable or Run Assessment 
 

@@ -1,19 +1,15 @@
 ---
-description: "What&#39;s New in Integration Services in SQL Server 2017"
-title: "What&#39;s New in Integration Services in SQL Server 2017 | Microsoft Docs"
-ms.custom:
-  - intro-whats-new
-ms.date: "09/28/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
+title: "What's New in Integration Services in SQL Server 2017"
+description: "What's New in Integration Services in SQL Server 2017"
 author: chugugrace
 ms.author: chugu
+ms.date: "09/28/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
-# What&#39;s New in Integration Services in SQL Server 2017
+# What's New in Integration Services in SQL Server 2017
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 

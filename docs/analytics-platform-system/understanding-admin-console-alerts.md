@@ -4,12 +4,10 @@ description: Learn about the Admin Console alerts in Analytics Platform System, 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 06/23/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: troubleshooting
-ms.custom:
-  - seo-dt-2019
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Admin Console alerts in Analytics Platform System
@@ -18,7 +16,7 @@ Alerts for Analytics Platform System appear in the Admin Console appliance and i
   
 For information about connecting to the Admin Console by using Internet Explorer, see [Monitor the appliance by using the Admin Console (Analytics Platform System)](monitor-the-appliance-by-using-the-admin-console.md). For information about Operations Manager, see [Monitor the appliance by using System Center Operations Manager (Analytics Platform System)](monitor-the-appliance-by-using-system-center-operations-manager.md).
   
-For information about obtaining alert information by using Transact\-SQL, see [Monitor the appliance by using system views (Analytics Platform System)](monitor-the-appliance-by-using-system-views.md).
+For information about obtaining alert information by using Transact-SQL, see [Monitor the appliance by using system views (Analytics Platform System)](monitor-the-appliance-by-using-system-views.md).
   
 ## Types of alerts
 

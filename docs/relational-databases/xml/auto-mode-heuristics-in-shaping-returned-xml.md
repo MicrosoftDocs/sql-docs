@@ -1,18 +1,15 @@
 ---
 title: "AUTO Mode Heuristics in Shaping Returned XML"
 description: Learn how to use AUTO mode heuristics with the FOR XML clause to compare column values in adjacent rows. Also, learn how the AUTO mode determines the shape of XML returned by a query.
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
-author: MikeRayMSFT
-ms.author: mikeray
-# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 # AUTO mode heuristics in shaping returned XML
 

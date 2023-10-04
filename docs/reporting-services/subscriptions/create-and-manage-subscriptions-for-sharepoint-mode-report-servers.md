@@ -1,20 +1,17 @@
 ---
-title: "Create and Manage Subscriptions for SharePoint Mode Report Servers | Microsoft Docs"
+title: "Create and Manage Subscriptions for SharePoint Mode Report Servers"
 description: Learn to create a Reporting Services subscription to deliver reports from a SharePoint web app that's integrated with a SharePoint mode report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
+ms.service: reporting-services
+ms.subservice: subscriptions
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "subscriptions [Reporting Services], creating"
   - "subscriptions [Reporting Services], deleting"
   - "subscriptions [Reporting Services], managing"
-ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create and Manage Subscriptions for SharePoint Mode Report Servers
   You can create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions to deliver reports from a SharePoint Web application that is integrated with a SharePoint mode report server. Subscriptions can deliver reports to a document library, file folder, or as e-mail. This topic summarizes the requirements and steps for creating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription.  

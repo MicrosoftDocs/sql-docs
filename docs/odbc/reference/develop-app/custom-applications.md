@@ -1,20 +1,16 @@
 ---
+title: "Custom Applications"
 description: "Custom Applications"
-title: "Custom Applications | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "interoperability [ODBC], custom applications"
   - "custom applications [ODBC]"
   - "interoperability [ODBC], levels"
-ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Custom Applications
 Custom applications typically perform a specific task for a few DBMSs. For example, an application might retrieve data from a single DBMS and generate a report, or it might transfer data among several DBMSs. What these applications have in common is that these DBMSs are known before the application is written and are unlikely to change over the life of the application.  

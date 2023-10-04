@@ -4,9 +4,8 @@ description: MSpeer_originatorid_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSpeer_originatorid_history_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSpeer_originatorid_history"
 dev_langs:
   - "TSQL"
-ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 ---
 # MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

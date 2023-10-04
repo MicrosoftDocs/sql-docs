@@ -1,18 +1,15 @@
 ---
-title: "User Role Properties (Management Studio) | Microsoft Docs"
+title: "User Role Properties (Management Studio)"
 description: Learn about the User Role Properties page in SQL Server Management Studio where you view item-level role definition tasks, change the task list, or modify a role description.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.reportserver.userroleproperties.f1"
-ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.swb.reportserver.userroleproperties.f1"
 ---
 # User Role Properties (Management Studio)
   Use this page to view which tasks are included in an item-level role definition. You can also use this page to change the task list or modify a role description.  

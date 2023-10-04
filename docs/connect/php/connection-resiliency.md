@@ -4,8 +4,8 @@ description: Learn what idle connection resiliency is and how it behaves within 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 07/23/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Idle Connection Resiliency
@@ -64,7 +64,7 @@ function BreakConnection( $conn, $conn_break )
 // Connect to the local server using Windows authentication and specify
 // AdventureWorks as the database in use. Specify values for
 // ConnectRetryCount and ConnectRetryInterval as well.
-$databaseName = 'AdventureWorks2014';
+$databaseName = 'AdventureWorks2022';
 $serverName = '(local)';
 $connectionInfo = array( "Database"=>$databaseName, "ConnectRetryCount"=>10, "ConnectRetryInterval"=>10 );
 

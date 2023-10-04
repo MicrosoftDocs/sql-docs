@@ -1,24 +1,20 @@
 ---
-description: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 title: "Fetch, IRow::GetColumns and ISequentialStream"
-ms.custom: ""
+description: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   
@@ -42,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Example  
  This example shows how to fetch a single row using IRow. In this example one column at a time is retrieved from the row. This example illustrate the use of IRow::Open() as well as IRow::GetColumns(). To read the column data, the example uses ISequentialStream::Read.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
  The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by the sample.  
   
@@ -51,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by the sample.  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  
@@ -659,7 +655,7 @@ int InitializeAndEstablishConnection() {
 ```  
   
 ```sql
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')  

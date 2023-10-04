@@ -4,13 +4,12 @@ description: Learn about transaction lifetimes in SQL Server CLR integration. Tr
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "lifetimes [SQL Server]"
   - "Transact-SQL vs. managed code"
-ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 ---
 # Transaction Lifetimes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

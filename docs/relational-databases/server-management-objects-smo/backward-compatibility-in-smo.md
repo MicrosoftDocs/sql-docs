@@ -1,21 +1,15 @@
 ---
+title: "Backward Compatibility in SMO"
 description: "Backward Compatibility in SMO"
-title: "Backward Compatibility in SMO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.topic: "reference"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Backward Compatibility in SMO
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   SMO applications that were written using previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be recompiled by using SMO in newer versions.  
   
@@ -55,4 +49,4 @@ Imports Microsoft.SqlServer.Management.Common
   
  If your code uses the Transfer object directly, you will have to link to the Microsoft.SqlServer.Management.SmoExtended namespace.  
   
- When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] features have been deprecated in newer versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md).
+ When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] features have been deprecated in newer versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md).

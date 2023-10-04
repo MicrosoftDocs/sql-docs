@@ -4,9 +4,8 @@ description: The system_health Extended Events session is included with SQL Serv
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/21/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "extended events [SQL Server], system health session"
@@ -55,7 +54,7 @@ The session collects information that includes the following:
 -   Security errors using *security_error_ring_buffer_recorded*.  
 
 > [!NOTE]
-> For more information on deadlocks, see [deadlocking in the Transaction Locking and Row Versioning Guide](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks).   
+> For more information on deadlocks, see the [Deadlocks guide](../../relational-databases/sql-server-deadlocks-guide.md).   
 > For more information on SQL error messages, see [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md).
 
 ## View the session data  
@@ -83,7 +82,7 @@ Be aware that after you restore the session, you must start the session by using
 
 ## The system_health session in Azure SQL 
 
-There is no built-in system_health Extended Event session in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], but you can use `sys.fn_xe_file_target_read_file` to read from Extended Event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
+There is no built-in system_health Extended Event session in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], but you can use `sys.fn_xe_file_target_read_file` to read from Extended Event sessions you create yourself and store in Azure Blob Storage. For an example walkthrough, review [Event File target code for Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-code-event-file).
 
 In [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], the system_health Extended Events session XEL target is not accessible, but system_health can be accessed via the ring buffer target. For more information, see [Targets for Extended Events in SQL Server](../extended-events/targets-for-extended-events-in-sql-server.md#h2_target_ring_buffer).
   

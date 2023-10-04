@@ -1,14 +1,13 @@
 ---
+title: "Identifiers (SSIS)"
 description: "Identifiers (SSIS)"
-title: "Identifiers (SSIS) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "regular identifiers [Integration Services]"
   - "variables [Integration Services], expressions"
   - "identifiers [Integration Services]"
@@ -18,9 +17,6 @@ helpviewer_keywords:
   - "names [Integration Services]"
   - "expressions [Integration Services], identifiers"
   - "qualified identifiers [Integration Services]"
-ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: chugugrace
-ms.author: chugu
 ---
 # Identifiers (SSIS)
 
@@ -120,5 +116,5 @@ ms.author: chugu
 ```  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/resources/cheat-sheet/ssis), on pragmaticworks.com  
   

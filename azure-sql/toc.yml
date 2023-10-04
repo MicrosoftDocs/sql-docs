@@ -13,18 +13,10 @@
   items:
   - name: Billing options
     items:
-    - name: vCore purchasing model 
-      href: database/service-tiers-vcore.md
     - name: Azure Hybrid Benefit
       href: azure-hybrid-benefit.md
     - name: Reserved capacity
       href: database/reserved-capacity-overview.md
-  - name: Service tiers
-    items:
-    - name: General Purpose
-      href: database/service-tier-general-purpose.md
-    - name: Business Critical
-      href: database/service-tier-business-critical.md
 
   - name: Shared concepts 
     items: 
@@ -63,7 +55,7 @@
         displayName: regulatory, compliance, standards, domains
         href: ./database/security-controls-policy.md
       - name: Security baseline
-        href: /security/benchmark/azure/baselines/sql-database-security-baseline?toc=/azure/azure-sql/toc.json
+        href: /security/benchmark/azure/baselines/azure-sql-security-baseline?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
       - name: Always Encrypted
         href: database/always-encrypted-landing.yml
       - name: Microsoft Defender for SQL
@@ -75,26 +67,21 @@
       - name: Dynamic data masking
         href: database/dynamic-data-masking-overview.md
       - name: SQL Vulnerability Assessment
-        items:
-        - name: SQL Vulnerability Assessment
-          href: database/sql-vulnerability-assessment.md
-        - name: Vulnerability Assessment rules
-          href: database/sql-database-vulnerability-assessment-rules.md
-        - name: Vulnerability Assessment rules changelog
-          href: database/sql-database-vulnerability-assessment-rules-changelog.md
-        - name: Store vulnerability scans in storage
-          href: database/sql-database-vulnerability-assessment-storage.md
+        displayName: database
+        href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
-      - name: Azure AD Authentication
-        href: database/authentication-aad-overview.md
+      - name: Microsoft Entra authentication
         items:
-        - name: Configure Azure AD auth
+        - name: Microsoft Entra authentication documentation
+          href: database/authentication-azure-ad-landing.yml
+          displayName: Microsoft Entra authentication
+        - name: Microsoft Entra authentication overview
+          href: database/authentication-aad-overview.md
+        - name: Configure Microsoft Entra authentication
           href: database/authentication-aad-configure.md
-        - name: Multi-factor Azure AD auth
+        - name: Microsoft Entra multifactor authentication
           href: database/authentication-mfa-ssms-overview.md
-        - name: Configure multi-factor auth
-          href: database/authentication-mfa-ssms-configure.md
         - name: Conditional Access
           href: database/conditional-access-configure.md
         - name: Server principals (logins)
@@ -103,28 +90,27 @@
           href: database/authentication-aad-service-principal.md
         - name: Directory Readers role
           href: database/authentication-aad-directory-readers-role.md
-        - name: Azure AD-only authentication
+        - name: Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication.md
-        - name: Azure Policy for Azure AD-only authentication
+        - name: Azure Policy for Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication-policy.md
         - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
-      - name: Transparent Data Encryption (TDE)
+      - name: Transparent data encryption (TDE)
         items:
         - name: Overview
           href: database/transparent-data-encryption-tde-overview.md
         - name: Bring Your Own Key (BYOK)
           href: database/transparent-data-encryption-byok-overview.md
-        - name: Managed identities with BYOK
+        - name: Managed identities with CMK
           href: database/transparent-data-encryption-byok-identity.md
+        - name: Cross-tenant CMK
+          href: database/transparent-data-encryption-byok-cross-tenant.md
 
     - name: Business continuity
       displayName: Backup, back up, restore, recovery
       items:
-        - name: Overview
-          href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
-        - name: High availability
-          href: database/high-availability-sla.md
+
         - name: Backup and recovery 
           items:
           - name: Accelerated database recovery
@@ -169,6 +155,8 @@
     items:
     - name: Connect and query from apps
       items:
+      - name: Connect and query
+        href: database/connect-query-content-reference-guide.md
       - name: .NET with Visual Studio
         href: database/connect-query-dotnet-visual-studio.md
       - name: .NET with Windows, Linux, and macOS
@@ -194,29 +182,26 @@
 
     - name: Security  
       items:
-      - name: Azure AD Authentication
+      - name: Microsoft Entra authentication
         items:
-        - name: Create Azure AD guest users and set as an Azure AD admin
+        - name: Create Microsoft Entra guest users and set as a Microsoft Entra admin
           href: database/authentication-aad-guest-users.md
         - name: Assign Directory Readers role to groups
           href: database/authentication-aad-directory-readers-role-tutorial.md
-        - name: Enable Azure AD-only authentication
+        - name: Enable Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication-tutorial.md
-        - name: Enforce Azure AD-only authentication using Azure Policy
+        - name: Enforce Microsoft Entra-only authentication using Azure Policy
           href: database/authentication-azure-ad-only-authentication-policy-how-to.md
-        - name: Create server with Azure AD-only authentication enabled
+        - name: Create server with Microsoft Entra-only authentication enabled
           href: database/authentication-azure-ad-only-authentication-create-server.md
-        - name: Create and utilize Azure AD server logins
+        - name: Create and utilize Microsoft Entra server logins
           href: database/authentication-azure-ad-logins-tutorial.md  
       - name: Configure TDE with BYOK
         href: database/transparent-data-encryption-byok-configure.md
       - name: Always Encrypted
         items: 
-        - name: Use the Azure key vault
-          href: database/always-encrypted-azure-key-vault-configure.md
-        - name: Use the certificate store
-          href: database/always-encrypted-certificate-store-configure.md
-
+        - name: Getting started with Always Encrypted
+          href: /sql/relational-databases/security/encryption/always-encrypted-tutorial-getting-started
   
     - name: Monitor & tune
       items: 
@@ -269,8 +254,8 @@
         href: /azure/connectors/connectors-create-api-sqlazure?toc=/azure/azure-sql/toc.json
       - name: Index with Azure Cognitive Search
         href: /azure/search/search-howto-connecting-azure-sql-database-to-azure-search-using-indexers?toc=/azure/azure-sql/toc.json
-      - name: Server-side CLR/.NET integration
-        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview?toc=/azure/azure-sql/toc.json
+      - name: Server-side CLR/.NET integration 
+        href: /sql/relational-databases/clr-integration/common-language-runtime-integration-overview
       - name: Java
         items:
         - name: Use Java and JDBC
@@ -282,7 +267,7 @@
         - name: Use Spring Data R2DBC
           href: /azure/developer/java/spring-framework/configure-spring-data-r2dbc-with-azure-sql-server?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
 
-- name: SQL Database (SQL DB)
+- name: Azure SQL Database (SQL DB)
   items:
   - name: Documentation
     href: database/index.yml
@@ -292,9 +277,10 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Try for free
-      href: database/free-sql-db-free-account-how-to-deploy.md
-
+    - name: Try Azure SQL Database free
+      href: database/free-offer.md
+    - name: Try Azure SQL Database free FAQ
+      href: database/free-offer-faq.yml
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -311,6 +297,8 @@
       - name: ARM template
         displayName: Resource Manager
         href: database/single-database-create-arm-template-quickstart.md
+      - name: Terraform
+        href: database/single-database-create-terraform-quickstart.md
       - name: With ledger and digest storage
         displayName: Create Azure SQL Database with ledger
         href: database/ledger-create-a-single-database-with-ledger-enabled.md
@@ -323,6 +311,18 @@
         href: database/firewall-create-server-level-portal-quickstart.md
       - name: Database project in a local dev environment
         href: database/local-dev-experience-quickstart.md
+    - name: Connect and query
+      items:
+      - name: .NET with SqlClient
+        href: database/azure-sql-dotnet-quickstart.md
+      - name: .NET with EF Core
+        href: database/azure-sql-dotnet-entity-framework-core-quickstart.md
+      - name: Python with pyodbc
+        href: database/azure-sql-python-quickstart.md
+      - name: Node.js with mssql
+        href: database/azure-sql-javascript-mssql-quickstart.md
+      - name: Use the Azure portal query editor 
+        href: database/connect-query-portal.md
     - name: GitHub Actions
       href: database/connect-github-actions-sql-db.md
 
@@ -352,14 +352,15 @@
       items:
       - name: Always Encrypted with secure enclaves
         href: database/always-encrypted-enclaves-getting-started.md
+        items: 
+        - name: Always Encrypted with secure enclaves using SGX
+          href: database/always-encrypted-enclaves-getting-started-sgx.md
+        - name: Always Encrypted with secure enclaves using VBS
+          href: database/always-encrypted-enclaves-getting-started-vbs.md
       - name: Configure security
         href: database/secure-database-tutorial.md
       - name: Create users using service principals
         href: database/authentication-aad-service-principal-tutorial.md
-      - name: Rotate TDE BYOK keys
-        href: database/transparent-data-encryption-byok-key-rotation.md
-      - name: Remove TDE protector
-        href: database/transparent-data-encryption-byok-remove-tde-protector.md
     - name: Move data
       items: 
       - name: Migrate using DMS
@@ -391,6 +392,8 @@
         href: database/service-tier-hyperscale.md
       - name: Hyperscale architecture
         href: database/hyperscale-architecture.md
+      - name: Elastic pools
+        href: database/hyperscale-elastic-pool-overview.md
       - name: Hyperscale backups 
         href: database/hyperscale-automated-backups-overview.md
       - name: Replicas
@@ -435,16 +438,32 @@
           items:
           - name: Configure and use Always Encrypted with secure enclaves >
             href: /sql/relational-databases/security/encryption/configure-always-encrypted-enclaves
-          - name: Plan for Intel SGX enclaves and attestation
+          - name: Plan for secure enclaves and attestation
             href: database/always-encrypted-enclaves-plan.md
-          - name: Enable Intel SGX
-            href: database/always-encrypted-enclaves-enable-sgx.md
+          - name: Enable secure enclaves
+            href: database/always-encrypted-enclaves-enable.md
           - name: Configure Azure Attestation
             href: database/always-encrypted-enclaves-configure-attestation.md
         - name: Azure SQL Auditing
-          href: database/auditing-overview.md
-        - name: Audit log format
-          href: database/audit-log-format.md
+          items:
+            - name: Auditing overview
+              href: database/auditing-overview.md
+            - name: Auditing setup
+              href: database/auditing-setup.md
+            - name: Analyze audit logs and reports
+              href: database/auditing-analyze-audit-logs.md
+            - name: Auditing best practices
+              href: database/auditing-best-practices.md
+            - name: Auditing managed identity
+              href: database/auditing-managed-identity.md
+            - name: Auditing Microsoft support operations
+              href: database/auditing-microsoft-support-operations.md
+            - name: Auditing policy at the server and database level
+              href: database/auditing-server-level-database-level.md
+            - name: Audit log format
+              href: database/audit-log-format.md
+            - name: Manage Auditing using APIs
+              href: database/auditing-manage-using-api.md
         - name: DNS aliases
           href: database/dns-alias-overview.md
         - name: Ledger
@@ -473,6 +492,18 @@
           href: database/network-access-controls-overview.md
         - name: Outbound firewall rules
           href: database/outbound-firewall-rule-overview.md
+        - name: Transparent data encryption (TDE)
+          items:
+          - name: Overview
+            href: database/transparent-data-encryption-tde-overview.md
+          - name: Bring Your Own Key (BYOK)
+            href: database/transparent-data-encryption-byok-overview.md
+          - name: Managed identities with CMK
+            href: database/transparent-data-encryption-byok-identity.md
+          - name: Cross-tenant CMK
+            href: database/transparent-data-encryption-byok-cross-tenant.md
+          - name: Database level CMK
+            href: database/transparent-data-encryption-byok-database-level-overview.md
         - name: Private Link
           href: database/private-endpoint-overview.md
         - name: VNet endpoints
@@ -483,12 +514,18 @@
 
     - name: Business continuity
       items: 
+      - name: Overview
+        href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: database/high-availability-sla.md
       - name: Automated backups
         href: database/automated-backups-overview.md
       - name: Active geo-replication
         href: database/active-geo-replication-overview.md
       - name: Auto-failover groups
         href: database/auto-failover-group-sql-db.md
+      - name: HA/DR checklist
+        href: database/high-availability-disaster-recovery-checklist.md
       - name: Outage recovery guidance
         href: database/disaster-recovery-guidance.md
       - name: Recovery drills
@@ -549,6 +586,7 @@
 
   - name: Migration guides
     items: 
+
     - name: From Access
       href: migration-guides/database/access-to-sql-database-guide.md
     - name: From Db2
@@ -568,25 +606,24 @@
       - name: Assessment rules 
         href: migration-guides/database/sql-server-to-sql-database-assessment-rules.md
 
+
   - name: How to
     href: database/how-to-content-reference-guide.md
     items:
     - name: T-SQL differences
       href: database/transact-sql-tsql-differences-sql-server.md
-
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
-      href: database/connect-query-content-reference-guide.md
       items:
-      - name: Connect and run ad-hoc queries
+      - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+          href: /sql/azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
-        - name: Azure portal
-          href: database/connect-query-portal.md
+        - name: Azure portal query editor
+          href: database/query-editor.md
         - name: VS Code
           href: database/connect-query-vscode.md
       - name: Connect and query from apps
@@ -609,6 +646,25 @@
         href: database/local-dev-experience-create-database-project.md
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
+
+    - name: Migrate
+      items: 
+      - name: Migrate DTU to vCore
+        href: database/migrate-dtu-to-vcore.md
+      - name: Manage SQL Database after migration
+        href: database/manage-data-after-migrating-to-database.md
+      - name: Migrate to availability zone
+        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Migrate to passwordless
+        items: 
+        - name: Migrate a .NET application
+          href: database/azure-sql-passwordless-migration.md
+        - name: Migrate a Node.js application
+          href: database/azure-sql-passwordless-migration-nodejs.md
+        - name: Migrate a Python application
+          href: database/azure-sql-passwordless-migration-python.md
+
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks
@@ -618,7 +674,18 @@
         - name: Azure Monitor for SQL Database
           href: database/monitoring-sql-database-azure-monitor.md 
         - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md              
+          href: database/monitoring-sql-database-azure-monitor-reference.md
+    - name: Hyperscale databases
+      items: 
+      - name: Manage Hyperscale databases
+        href: database/manage-hyperscale-database.md
+      - name: Create zone-redundant database
+        href: database/hyperscale-create-zone-redundant-database.md
+      - name: Hyperscale performance diagnostics
+        href: database/hyperscale-performance-diagnostics.md
+      - name: Use command-line with Hyperscale elastic pool
+        href: database/hyperscale-elastic-pool-command-line.md
+        
     - name: Manage
       items:
       - name: Management API reference
@@ -629,8 +696,6 @@
         href: database/file-space-manage.md
       - name: Use Resource Health for connectivity issues
         href: database/resource-health-to-troubleshoot-connectivity.md
-      - name: Migrate DTU to vCore
-        href: database/migrate-dtu-to-vcore.md
       - name: Scale database resources
         href: database/single-database-scale.md
       - name: Scale pool resources
@@ -647,21 +712,19 @@
         href: database/block-crud-tsql.md
       - name: Azure Automation
         href: database/automation-manage.md
-      - name: Elastic jobs (preview)
-        items:
-        - name: Job automation with elastic jobs
-          href: database/job-automation-overview.md
-        - name: Configure jobs
-          href: database/elastic-jobs-overview.md
-        - name: Create and manage (PowerShell)
-          href: database/elastic-jobs-powershell-create.md
-        - name: Create and manage (T-SQL)
-          href: database/elastic-jobs-tsql-create-manage.md
-        - name: Migrate (from old Elastic jobs)
-          href: database/elastic-jobs-migrate.md
-
-
-    - name: Secure 
+      - name: Block geo-replication of Azure SQL Database backups
+        href: database/block-geo-redundant-backup-storage.md
+    - name: Elastic jobs (preview)
+      items:
+      - name: Job automation with elastic jobs
+        href: database/job-automation-overview.md
+      - name: Configure jobs
+        href: database/elastic-jobs-overview.md
+      - name: Create and manage (PowerShell)
+        href: database/elastic-jobs-powershell-create.md
+      - name: Create and manage (T-SQL)
+        href: database/elastic-jobs-tsql-create-manage.md
+    - name: Security
       items: 
       - name: Audit to storage account behind VNet or firewall
         href: database/audit-write-storage-account-behind-vnet-firewall.md
@@ -669,8 +732,6 @@
         href: database/threat-detection-configure.md
       - name: Configure dynamic data masking
         href: database/dynamic-data-masking-configure-portal.md
-      - name: Create server configured with UMI and customer-managed TDE
-        href: database/transparent-data-encryption-byok-create-server.md
       - name: IP-based firewall
         href: database/firewall-configure.md
       - name: Ledger
@@ -685,6 +746,36 @@
           href: /sql/relational-databases/security/ledger/ledger-how-to-configure-ledger-database
         - name: Verify ledger database for tampering
           href: /sql/relational-databases/security/ledger/ledger-verify-database
+      - name: Vulnerability assessment
+        items:
+        - name: Enable vulnerability assessment
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-enable?toc=/azure/azure-sql/toc.json
+        - name: Manage vulnerability assessments
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-manage?toc=/azure/azure-sql/toc.json
+        - name: Find and remediate threats
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-find?toc=/azure/azure-sql/toc.json
+        - name: Review sensitive data
+          href: /azure/defender-for-cloud/sql-information-protection-policy?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability assessment rules
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules?toc=/azure/azure-sql/toc.json
+        - name: Vulnerability assessment rules changelog
+          href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-rules-changelog?toc=/azure/azure-sql/toc.json
+        - name: Store vulnerability scans in storage
+          href: database/sql-database-vulnerability-assessment-storage.md
+      - name: Transparent data encryption (TDE)
+        items:
+        - name: Create server configured with UMI and customer-managed TDE
+          href: database/transparent-data-encryption-byok-create-server.md
+        - name: Create server configured with cross-tenant customer-managed TDE
+          href: database/transparent-data-encryption-byok-create-server-cross-tenant.md
+        - name: Rotate TDE BYOK keys
+          href: database/transparent-data-encryption-byok-key-rotation.md
+        - name: Remove TDE protector
+          href: database/transparent-data-encryption-byok-remove-tde-protector.md
+        - name: Identity and key management with database level CMK
+          href: database/transparent-data-encryption-byok-database-level-basic-actions.md
+        - name: Configure geo replication when using database level CMK
+          href: database/transparent-data-encryption-byok-database-level-geo-replication-restore.md
       - name: vNet endpoints - PowerShell
         href: database/scripts/vnet-service-endpoint-rule-powershell-create.md
 
@@ -727,13 +818,11 @@
         href: database/analyze-prevent-deadlocks.md
       - name: Configure the max degree of parallelism (MAXDOP)
         href: database/configure-max-degree-of-parallelism.md
+      - name: Optimized locking
+        href: /sql/relational-databases/performance/optimized-locking
 
     - name: Load and move data 
       items: 
-      - name: Migrate to SQL Database
-        href: database/migrate-to-database-from-sql-server.md
-      - name: Manage SQL Database after migration
-        href: database/manage-data-after-migrating-to-database.md
       - name: Import/export (allow Azure services disabled)
         href: database/database-import-export-azure-services-off.md
       - name: Import/export using Private endpoints
@@ -746,8 +835,6 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
-
-
     - name: Database sharding
       items:
       - name: Upgrade client library
@@ -782,7 +869,6 @@
         href: database/elastic-query-horizontal-partitioning.md
       - name: Query across tables with different schemas
         href: database/elastic-query-vertical-partitioning.md
-
 
     - name: Design data applications
       items:
@@ -856,7 +942,7 @@
             href: database/saas-multitenantdb-provision-and-catalog.md
           - name: Monitor database performance
             href: database/saas-multitenantdb-performance-monitoring.md
-          - name: Run ad-hoc queries
+          - name: Run ad hoc queries
             href: database/saas-multitenantdb-adhoc-reporting.md
           - name: Manage tenant schema
             href: database/saas-multitenantdb-schema-management.md
@@ -959,7 +1045,8 @@
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
-
+    - name: Try Azure SQL Database free with Azure free account (old offer)
+      href: database/free-sql-db-free-account-how-to-deploy.md
 - name: Azure SQL Managed Instance (SQL MI)
   items:
   - name: Documentation
@@ -990,6 +1077,8 @@
       - name: Bicep
         displayName: ARM, Resource Manager, Template
         href: managed-instance/create-bicep-quickstart.md
+      - name: Terraform
+        href: managed-instance/instance-create-terraform.md
       - name: ARM template
         displayName: Resource Manager
         href: managed-instance/create-template-quickstart.md
@@ -1002,8 +1091,6 @@
       items:
       - name: Service-aided subnet configuration
         href: managed-instance/subnet-service-aided-configuration-enable.md
-      - name: Public endpoint
-        href: managed-instance/public-endpoint-configure.md
       - name: Minimal TLS version
         href: managed-instance/minimal-tls-version-configure.md
       - name: Client VM connection
@@ -1056,20 +1143,28 @@
     items:
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
-    - name: Automated backups
-      href: managed-instance/automated-backups-overview.md 
-    - name: Auto-failover groups
-      href: managed-instance/auto-failover-group-sql-mi.md
     - name: T-SQL differences
       href: managed-instance/transact-sql-tsql-differences-sql-server.md
-    - name: Transactional replication
-      href: managed-instance/replication-transactional-overview.md
     - name: Managed Instance link
       href: managed-instance/managed-instance-link-feature-overview.md
+    - name: Log Replay Service (LRS)
+      href: managed-instance/log-replay-service-overview.md      
     - name: Instance pools
       href: managed-instance/instance-pools-overview.md
     - name: Data virtualization 
       href: managed-instance/data-virtualization-overview.md
+    - name: Business continuity
+      items: 
+      - name: Overview
+        href: managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md
+      - name: High availability
+        href: managed-instance/high-availability-sla.md
+      - name: Automated backups
+        href: managed-instance/automated-backups-overview.md 
+      - name: Backup transparency
+        href: managed-instance/backup-transparency.md
+      - name: Auto-failover groups
+        href: managed-instance/auto-failover-group-sql-mi.md
     - name: Management operations
       items:
       - name: Overview
@@ -1080,7 +1175,8 @@
         href: managed-instance/management-operations-cancel.md
       - name: API reference
         href: managed-instance/api-references-create-manage-instance.md
-
+      - name: Use Resource Health for connectivity issues
+        href: managed-instance/resource-health-to-troubleshoot-connectivity.md
     - name: Machine Learning Services
       items:
       - name: Overview
@@ -1249,12 +1345,14 @@
             href: /sql/machine-learning/security/user-permission?context=%2fazure%2fazure-sql%2fmanaged-instance%2fcontext%2fml-context&preserve-view=true&view=azuresqldb-mi-current   
     - name: Features
       items:
+      - name: Transactional replication
+        href: managed-instance/replication-transactional-overview.md
       - name: Linked servers
-        href: /sql/relational-databases/linked-servers/linked-servers-database-engine?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/linked-servers/linked-servers-database-engine
       - name: Service Broker
-        href: /sql/database-engine/configure-windows/sql-server-service-broker?toc=/azure/azure-sql/toc.json
+        href: /sql/database-engine/configure-windows/sql-server-service-broker
       - name: Database mail
-        href: /sql/relational-databases/database-mail/database-mail?toc=/azure/azure-sql/toc.json
+        href: /sql/relational-databases/database-mail/database-mail
     - name: Security
       items:
       - name: Always Encrypted
@@ -1265,31 +1363,31 @@
         href: managed-instance/public-endpoint-overview.md
       - name: Server trust groups
         href: managed-instance/server-trust-group-overview.md
-      - name: Windows Auth for Azure AD Principals
+      - name: Windows Auth for Microsoft Entra principals
         items:
         - name: Overview
-          displayName: Windows Authentication for Azure AD Principals with Kerberos Overview
+          displayName: Windows Authentication for Microsoft Entra Principals with Kerberos Overview
           href: managed-instance/winauth-azuread-overview.md
         - name: Implementation with Kerberos
-          displayName: Windows Authentication for Azure AD Principals Implementation with Kerberos
+          displayName: Windows Authentication for Microsoft Entra Principals Implementation with Kerberos
           href: managed-instance\winauth-implementation-aad-kerberos.md
         - name: Setup summary
-          displayName: Windows Authentication for Azure AD Principals with Kerberos Setup
+          displayName: Windows Authentication for Microsoft Entra Principals with Kerberos Setup
           href: managed-instance\winauth-azuread-setup.md
         - name: Set up the modern interactive flow
-          displayName: Windows authentication for Azure AD with the modern interactive flow
+          displayName: Windows authentication for Microsoft Entra with the modern interactive flow
           href: managed-instance\winauth-azuread-setup-modern-interactive-flow.md
         - name: Set up the incoming trust-based flow
-          displayName: Windows authentication for Azure AD with the incoming trust-based flow
+          displayName: Windows authentication for Microsoft Entra with the incoming trust-based flow
           href: managed-instance\winauth-azuread-setup-incoming-trust-based-flow.md
         - name: Set up managed instances
-          displayName: Set up managed instances for Windows authentication for Azure AD using Kerberos
+          displayName: Set up managed instances for Windows authentication for Microsoft Entra using Kerberos
           href: managed-instance\winauth-azuread-kerberos-managed-instance.md
         - name: Run a trace using Windows Auth
-          displayName: Run a trace using Windows authentication for Azure AD with Kerberos
+          displayName: Run a trace using Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-run-trace-managed-instance.md
         - name: Troubleshoot
-          displayName: Troubleshoot Windows authentication for Azure AD with Kerberos
+          displayName: Troubleshoot Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-troubleshoot.md
   - name: How to
     items:
@@ -1297,8 +1395,28 @@
       href: managed-instance/how-to-content-reference-guide.md      
     - name: Connect applications
       href: managed-instance/connect-application-instance.md
-    - name: Job automation with SQL Agent 
-      href: managed-instance/job-automation-managed-instance.md
+    - name: Distributed transactions with DTC
+      displayName: distributed transaction coordinator 
+      href: managed-instance/distributed-transaction-coordinator-dtc.md
+    - name: Enroll in November 2022 feature wave
+      href: managed-instance/november-2022-feature-wave-enroll.md
+
+    - name: Automation
+      items:
+      - name: Azure Automation
+        href: managed-instance/automation-manage.md
+      - name: Job automation with SQL Agent 
+        href: managed-instance/job-automation-managed-instance.md
+
+    - name: Manage
+      items:
+      - name: Start & stop instance
+        href: managed-instance/instance-stop-start-how-to.md
+      - name: Copy or move a database
+        href: managed-instance/database-copy-move-how-to.md
+      - name: Manage file space
+        href: managed-instance/file-space-manage.md
+
     - name: Monitor & Tune
       items:
         - name: Identify query performance bottlenecks
@@ -1308,9 +1426,12 @@
         - name: Azure Monitor for Azure SQL Managed Instance
           href: managed-instance/monitoring-sql-managed-instance-azure-monitor.md 
         - name: Azure Monitor for Azure SQL Managed Instance reference 
-          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md           
+          href: managed-instance/monitoring-sql-managed-instance-azure-monitor-reference.md
+          
     - name: Configure settings
       items: 
+      - name: tempdb
+        href: managed-instance/tempdb-configure.md
       - name: Customize time zone
         href: managed-instance/timezones-overview.md
       - name: Configure connection types
@@ -1330,6 +1451,10 @@
         href: managed-instance/vnet-existing-add-subnet.md
       - name: Configure service endpoint policies for SQL MI
         href: managed-instance/service-endpoint-policies-configure.md
+      - name: Configure public endpoint
+        href: managed-instance/public-endpoint-configure.md
+      - name: Configure private endpoint
+        href: managed-instance/private-endpoint-overview.md
       - name: Move SQL MI to another subnet
         href: managed-instance/vnet-subnet-move-instance.md
       - name: Delete subnet after deleting SQL MI
@@ -1347,7 +1472,8 @@
         href: managed-instance/log-replay-service-migrate.md
       - name: TDE certificate
         href: managed-instance/tde-certificate-migrate.md
-
+      - name: To availability zone support
+        href: /azure/reliability/migrate-sql-managed-instance?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
     - name: Managed Instance link 
       items:
       - name: Prepare environment for link 
@@ -1373,14 +1499,18 @@
         href: managed-instance/recovery-using-backups.md
       - name: Restore to a point in time
         href: managed-instance/point-in-time-restore.md
+      - name: Restore database to SQL Server
+        href: managed-instance/restore-database-to-sql-server.md
       - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
       - name: Auto-failover groups
         items: 
         - name: Create failover group
           href: managed-instance/auto-failover-group-configure-sql-mi.md
+        - name: Configure standby replica
+          href: managed-instance/auto-failover-group-standby-replica-how-to-configure.md
         - name: Manually initiate a failover
-          href: managed-instance/user-initiated-failover.md
+          href: managed-instance/user-initiated-failover.md          
   - name: Samples
     items:
     - name: Azure CLI
@@ -1391,8 +1521,6 @@
         href: managed-instance/scripts/create-configure-managed-instance-cli.md
       - name: Configure transparent data encryption (TDE)
         href: managed-instance/scripts/transparent-data-encryption-byok-sql-managed-instance-cli.md
-      - name: Restore geo-backup
-        href: managed-instance/scripts/restore-geo-backup-cli.md  
     - name: Azure PowerShell
       items:
       - name: Samples overview
@@ -1508,6 +1636,10 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage
           href: virtual-machines/windows/storage-configuration.md
+        - name: Microsoft Entra authentication
+          href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
+        - name: Azure Update Manager
+          href: virtual-machines/azure-update-manager-sql-vm.md
         - name: Automated Patching
           href: virtual-machines/windows/automated-patching.md
         - name: SQL best practices assessment
@@ -1525,6 +1657,8 @@
             href: virtual-machines/windows/sql-agent-extension-manually-register-single-vm.md
           - name: Bulk register multiple VMs
             href: virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk.md
+          - name: Known issues and troubleshooting
+            href: virtual-machines/windows/sql-agent-extension-troubleshoot-known-issues.md
       - name: Migrate
         items:
         - name: VM to a new region
@@ -1545,18 +1679,25 @@
           - name: Configure AG (multi-subnet)
             displayName: Always On, alwayson, availability group
             items: 
-            - name: Prerequisites
-              href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
+            - name: Azure portal
               displayName: Always On, alwayson, availability group
-            - name: Create availability group
-              href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
-              displayName: Always On, alwayson, availability group
+              href: virtual-machines/windows/availability-group-azure-portal-configure.md
+            - name: Migrate single subnet to multi-subnet
+              href: virtual-machines/windows/availability-group-manually-migrate-multi-subnet.md
+            - name: Manually
+              items: 
+              - name: Prerequisites
+                href: virtual-machines/windows/availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md
+                displayName: Always On, alwayson, availability group
+              - name: Create availability group
+                displayName: Always On, alwayson, availability group
+                href: virtual-machines/windows/availability-group-manually-configure-tutorial-multi-subnet.md
+              - name: Extend AG to multiple regions
+                href: virtual-machines/windows/availability-group-manually-configure-multi-subnet-multiple-regions.md
+              
           - name: Configure AG (single subnet)
             displayName: Always On, alwayson, availability group
-            items: 
-            - name: Azure portal
-              href: virtual-machines/windows/availability-group-azure-portal-configure.md
-              displayName: Always On, alwayson, availability group
+            items:               
             - name: PowerShell or Az CLI
               href: virtual-machines/windows/availability-group-az-commandline-configure.md
               displayName: Always On, alwayson, availability group
@@ -1625,9 +1766,6 @@
         href: /sql/connect/sql-connection-libraries
       - name: REST
         href: /rest/api/
-      - name: Azure Policy built-ins
-        displayName: samples, policies, definitions
-        href: ./database/policy-reference.md
     - name: Resources
       items:
       - name: FAQ
@@ -1662,7 +1800,7 @@
 
     - name: Concepts
       items: 
-      - name: SQL IaaS agent extension 
+      - name: SQL IaaS Agent extension 
         href: virtual-machines/linux/sql-server-iaas-agent-extension-linux.md
     - name: "How-to guides"
       items: 
@@ -1670,11 +1808,13 @@
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
-      - name: Setting up Azure RHEL VM availability group with STONITH
+      - name: Set up Azure RHEL VM availability group with STONITH
         href: virtual-machines/linux/rhel-high-availability-stonith-tutorial.md
+      - name: Set up Azure SLES VM availability group with STONITH
+        href: virtual-machines/linux/sles-high-availability-stonith-tutorial.md
       - name: Configure availability group listener for SQL Server on RHEL virtual machines in Azure
         href: virtual-machines/linux/rhel-high-availability-listener-tutorial.md
-      - name: Setup Always On availability group with DH2i DxEnterprise
+      - name: Set up Always On availability group with DH2i DxEnterprise
         href: virtual-machines/linux/dh2i-high-availability-tutorial.md
     - name: Resources
       items:
@@ -1749,7 +1889,7 @@
   - name: SQLCMD
     href: /sql/tools/sqlcmd-utility
   - name: SqlPackage
-    href: /sql/tools/sqlpackage/sqlpackage?toc=/azure/azure-sql/toc.json
+    href: /sql/tools/sqlpackage/sqlpackage
   - name: SQL Database Management Library package
     href: https://www.nuget.org/packages/Microsoft.Azure.Management.Sql
   - name: SQL connection  drivers
@@ -1795,6 +1935,14 @@
     href: https://social.msdn.microsoft.com/Forums/home
   - name: Stack Overflow
     href: https://stackoverflow.com/questions/tagged/azure-sql-database
+  - name: What's New Archives
+    items: 
+    - name: Azure SQL Database
+      href: database/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: Azure SQL Managed Instance
+      href: managed-instance/doc-changes-updates-release-notes-whats-new-archive.md
+    - name: SQL Server on Azure VMs
+      href: virtual-machines/windows/doc-changes-updates-release-notes-whats-new-archive.md
   - name: Troubleshoot
     items:
     - name: Known issues with Azure SQL Managed Instance 
@@ -1809,8 +1957,10 @@
       href: database/troubleshoot-memory-errors-issues.md
     - name: Import/Export service hangs
       href: database/database-import-export-hang.md
-    - name: Transaction log errors
+    - name: Transaction log errors in Azure SQL Database
       href: database/troubleshoot-transaction-log-errors-issues.md
+    - name: Transaction log errors in Azure SQL Managed Instance
+      href: managed-instance/troubleshoot-transaction-log-errors-issues.md
     - name: Request quota increases
       href: database/quota-increase-request.md
   - name: Service updates

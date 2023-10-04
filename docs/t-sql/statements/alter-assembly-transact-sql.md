@@ -4,9 +4,8 @@ description: ALTER ASSEMBLY (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "09/07/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ALTER_ASSEMBLY_TSQL"
@@ -30,7 +29,7 @@ dev_langs:
 > [!WARNING]
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -71,7 +70,7 @@ ALTER ASSEMBLY assembly_name
  \<client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
   
  \<assembly_bits> is the binary value for the assembly.  
   
@@ -200,7 +199,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
   ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
 
 ### B. Adding a file to associate with an assembly  
  The following example uploads the source code file `Class1.cs` to be associated with assembly `MyClass`. This example assumes assembly `MyClass` is already created in the database.  
@@ -211,7 +210,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database does not support refereencing a file.
+> Azure SQL Database does not support referencing a file.
 
 ### C. Changing the permissions of an assembly  
  The following example changes the permission set of assembly `ComplexNumber` from SAFE to `EXTERNAL ACCESS`.  

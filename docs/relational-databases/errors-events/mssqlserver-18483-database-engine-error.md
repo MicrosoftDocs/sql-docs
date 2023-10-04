@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_18483"
 title: MSSQLSERVER_18483
-ms.custom: ""
-ms.date: 12/25/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18483 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_18483"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
+ms.date: 12/25/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18483 (Database Engine error)"
 ---
 # MSSQLSERVER_18483
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

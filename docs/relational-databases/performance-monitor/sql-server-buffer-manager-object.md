@@ -1,18 +1,15 @@
 ---
 title: "SQL Server, Buffer Manager object"
 description: Learn about the Buffer Manager object, which provides counters to monitor memory for pages, counters to monitor physical I/O, and buffer pool extensions.
-ms.custom: ""
-ms.date: "07/12/2021"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Buffer Manager object"
-  - "SQLServer:Buffer Manager"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "07/12/2021"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Buffer Manager object"
+  - "SQLServer:Buffer Manager"
 ---
 # SQL Server, Buffer Manager object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,20 @@
 ---
-description: "Back Up and Restore Full-Text Catalogs and Indexes"
 title: "Back up & restore Full-Text catalogs & indexes"
+description: "Back Up and Restore Full-Text Catalogs and Indexes"
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: search
+ms.service: sql
+ms.subservice: search
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full-text indexes [SQL Server], backing up"
   - "full-text search [SQL Server], back up and restore"
   - "recovery [full-text search]"
   - "backups [SQL Server], full-text indexes"
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
-ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +30,10 @@ ms.custom: "seo-lt-2019"
  You can retrieve the properties of the full-text indexes by using the following [SELECT](../../t-sql/queries/select-transact-sql.md) statement, which selects columns from the [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) and [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) catalog views.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @TableID int;  
-SET @TableID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product'));  
+SET @TableID = (SELECT OBJECT_ID('AdventureWorks2022.Production.Product'));  
 SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,   
    i.has_crawl_completed, i.crawl_type, c.name as fulltext_catalog_name   
    FROM sys.fulltext_indexes i, sys.fulltext_catalogs c   

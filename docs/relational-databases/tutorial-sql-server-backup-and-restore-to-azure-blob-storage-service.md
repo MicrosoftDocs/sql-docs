@@ -1,24 +1,20 @@
 ---
 title: "Quickstart: Backup & restore to Azure Blob Storage"
-description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage. Create an Azure Blob Container, write a backup, and then restore."
-ms.custom:
-  - seo-dt-2019
-  - intro-quickstart
-ms.date: "12/21/2020"
-ms.prod: sql
-ms.technology: backup-restore
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.topic: quickstart
+description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage. Create an Azure Blob Storage container, write a backup, and then restore."
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: "12/21/2020"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: quickstart
+ms.custom: intro-quickstart
 ---
 
 # Quickstart: SQL backup and restore to Azure Blob Storage
 
 [!INCLUDE [sqlserver2016-asdbmi](../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage.  The article explains how to create an Azure Blob Container, write a backup to the blob service, and then perform a restore.
+This quickstart helps you understand how to write backups to and restore from the Azure Blob Storage.  The article explains how to create an Azure Blob Storage container, write a backup to Azure Blob Storage, and then perform a restore.
 
 > [!NOTE]
 > SQL Server 2012 SP1 CU2 introduced support for back up to Azure Blob storage. SQL Server 2014 and prior does not support the Shared Access Signature (SAS) that is described in this quickstart article.
@@ -36,7 +32,7 @@ To complete this quickstart, you must be familiar with [!INCLUDE[ssNoVersion](..
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) or deploy [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) with connectivity established through an [Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or [point-to-site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions. 
 
-## Create Azure Blob container
+## Create Azure Blob Storage container
 A container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. 
 
 To create a Container, follow these steps:

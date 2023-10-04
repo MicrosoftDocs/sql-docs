@@ -1,15 +1,13 @@
 ---
-title: "Tutorial: Creating a Matrix Report (Report Builder) | Microsoft Docs"
+title: "Tutorial: Creating a Matrix Report (Report Builder)"
 description: Learn how to create a Reporting Services paginated report with a matrix of sample sales data in nested row and column groups.
-ms.date: 06/23/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/23/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Tutorial: Creating a Matrix Report (Report Builder)
 This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a matrix of sample sales data in nested row and column groups. 

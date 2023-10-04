@@ -4,13 +4,12 @@ description: See a reference for the system catalog view sys.pdw_health_componen
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "05/12/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: reference
 ms.custom: kr2b-contr-experiment
 dev_langs:
   - "TSQL"
-ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)

@@ -1,17 +1,13 @@
 ---
 title: XML Input file sample with user-specified configuration
-description: This article contains an XML input file sample with user-specified configuration to use for tuning workloads to use with Database Engine Tuning Advisor.
 titleSuffix: DTA
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
+description: This article contains an XML input file sample with user-specified configuration to use for tuning workloads to use with Database Engine Tuning Advisor.
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/01/2017
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
 ---
 
 # XML Input File Sample with User-specified Configuration (DTA)
@@ -26,7 +22,7 @@ Copy and paste this sample of an XML input file that specifies a user-specified 
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
   <DTAInput>  
     <Server>  
       <Name>MyServerName</Name>  

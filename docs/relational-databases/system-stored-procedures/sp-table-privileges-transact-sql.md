@@ -1,23 +1,19 @@
 ---
+title: "sp_table_privileges (Transact-SQL)"
 description: "sp_table_privileges (Transact-SQL)"
-title: "sp_table_privileges (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_table_privileges"
-  - "sp_table_privileges_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_table_privileges"
-ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_table_privileges"
+  - "sp_table_privileges_TSQL"
+helpviewer_keywords:
+  - "sp_table_privileges"
+dev_langs:
+  - "TSQL"
 ---
 # sp_table_privileges (Transact-SQL)
 
@@ -25,7 +21,7 @@ ms.author: maghan
 
   Returns a list of table permissions (such as INSERT, DELETE, UPDATE, SELECT, REFERENCES) for the specified table or tables.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,7 +73,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  The following example returns privilege information about all tables with names beginning with the word `Contact`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_table_privileges   
    @table_name = 'Contact%';  

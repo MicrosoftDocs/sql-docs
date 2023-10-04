@@ -1,25 +1,19 @@
 ---
+title: "Setting Properties - SMO"
 description: "Setting Properties - SMO"
-title: "Setting Properties - SMO | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SMO [SQL Server], properties"
   - "SQL Server Management Objects, properties"
   - "properties [SMO]"
-ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Setting Properties - SMO
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Properties are values that store descriptive information about the object. For example, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configuration options are represented by the <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> object's properties. Properties can be accessed either directly or indirectly by using the property collection. Accessing properties directly uses the following syntax:  
   
@@ -92,9 +86,9 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Create a new table in the AdventureWorks2012 database. 
+'Create a new table in the AdventureWorks2022 database. 
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 Dim tb As Table
 'Specify the parent database, table schema and the table name in the constructor.
 tb = New Table(db, "Test_Table", "HumanResources")
@@ -124,9 +118,9 @@ tb.Create()
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Create a new table in the AdventureWorks2012 database.   
+//Create a new table in the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 Table tb;   
 //Specify the parent database, table schema, and the table name in the constructor.   
 tb = new Table(db, "Test_Table", "HumanResources");   
@@ -158,9 +152,9 @@ tb.Create();
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Set properties on the uspGetEmployeeManagers stored procedure on the AdventureWorks2012 database.
+'Set properties on the uspGetEmployeeManagers stored procedure on the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 Dim sp As StoredProcedure
 sp = db.StoredProcedures("uspGetEmployeeManagers")
 sp.AnsiNullsStatus = False
@@ -181,9 +175,9 @@ Next
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Set properties on the uspGetEmployeedManagers stored procedure on the AdventureWorks2012 database.   
+//Set properties on the uspGetEmployeedManagers stored procedure on the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 StoredProcedure sp;   
 sp = db.StoredProcedures("uspGetEmployeeManagers");   
 sp.AnsiNullsStatus = false;   
@@ -205,9 +199,9 @@ sp.QuotedIdentifierStatus = false;
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Assign the Table object type to a System.Type object variable.
 Dim tb As Table
 Dim typ As Type
@@ -219,7 +213,7 @@ Dim sc As StringCollection
 sc = srv.GetDefaultInitFields(typ)
 'Set the default initialization fields for the Table object type to the CreateDate property.
 srv.SetDefaultInitFields(typ, "CreateDate")
-'Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2012.
+'Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2022.
 'Note that the improvement in performance can be viewed in SQL Profiler.
 For Each tb In db.Tables
     Console.WriteLine(tb.Schema + "." + tb.Name + " " + tb.CreateDate)
@@ -238,9 +232,9 @@ srv.SetDefaultInitFields(typ, sc)
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Reference the AdventureWorks2012 database.   
+//Reference the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 //Assign the Table object type to a System.Type object variable.   
 Table tb;   
 Type typ;   
@@ -252,7 +246,7 @@ StringCollection sc;
 sc = srv.GetDefaultInitFields(typ);   
 //Set the default initialization fields for the Table object type to the CreateDate property.   
 srv.SetDefaultInitFields(typ, "CreateDate");   
-//Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2012.   
+//Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2022.   
    //Note that the improvement in performance can be viewed in SQL Server Profiler.   
 foreach ( tb in db.Tables) {   
    Console.WriteLine(tb.Schema + "." + tb.Name + " " + tb.CreateDate);   

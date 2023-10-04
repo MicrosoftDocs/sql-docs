@@ -4,8 +4,8 @@ description: "INDEX_COL (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "INDEX_COL_TSQL"
@@ -24,7 +24,7 @@ dev_langs:
 
   Returns the indexed column name. Returns NULL for XML indexes.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,12 +65,12 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  The following example returns the column names of the two key columns in the index `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,1) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,1) AS  
         [Index Column 1],   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,2) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,2) AS  
         [Index Column 2]  
 ;  
 GO  

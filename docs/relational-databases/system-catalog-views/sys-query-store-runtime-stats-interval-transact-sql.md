@@ -4,9 +4,8 @@ description: sys.query_store_runtime_stats_interval (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/23/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "QUERY_STORE_RUNTIME_STATS_INTERVAL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "query_store_runtime_stats_interval catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats_interval (Transact-SQL)

@@ -1,18 +1,14 @@
 ---
-title: "SQL Server Audit Records | Microsoft Docs"
+title: "SQL Server Audit Records"
 description: SQL Server audits consist of audit action items, which are recorded to an audit target. Check this summary for the records that can be sent to a target.
-ms.custom: ""
-ms.date: "03/23/2022"
-ms.prod: sql
-ms.prod_service: security
-ms.reviewer: ""
-ms.technology: security
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "audit records [SQL Server]"
-ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: sravanisaluru
 ms.author: srsaluru
+ms.date: "03/23/2022"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+helpviewer_keywords:
+  - "audit records [SQL Server]"
 ---
 # SQL Server Audit Records
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +41,7 @@ ms.author: srsaluru
 |**server_instance_name**|Name of the server instance where the audit occurred. Uses the standard machine\instance format.|**nvarchar(120)**|Yes|  
 |**database_name**|The database context in which the action occurred.|**sysname**|No|  
 |**schema_name**|The schema context in which the action occurred.|**sysname**|No|  
-|**object_name**|The name of the entity on which the audit occurred. This name can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects<br /><br /> TSQL statement (if any)|**sysname**|No|  
+|**object_name**|The name of the entity on which the audit occurred. This name can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects<br /><br /> Transact-SQL statement (if any)|**sysname**|No|  
 |**statement**|TSQL statement (if any)|**nvarchar(4000)**|No|  
 |**additional_information**|Any additional information about the event, stored as XML.|**nvarchar(4000)**|No|  
   

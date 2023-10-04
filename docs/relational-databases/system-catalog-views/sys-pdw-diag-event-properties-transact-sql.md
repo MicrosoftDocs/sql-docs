@@ -4,12 +4,11 @@ description: sys.pdw_diag_event_properties (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_diag_event_properties (Transact-SQL)

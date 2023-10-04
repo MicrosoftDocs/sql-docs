@@ -4,8 +4,8 @@ description: sys.dm_db_uncontained_entities (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_db_uncontained_entities"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_db_uncontained_entities dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

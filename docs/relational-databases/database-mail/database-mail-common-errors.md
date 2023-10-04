@@ -1,19 +1,15 @@
 ---
-description: "Common errors with database mail"
 title: "Common errors with database mail| Microsoft Docs"
-ms.custom: ""
+description: "Common errors with database mail"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "04/22/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "architecture [SQL Server], Database Mail"
   - "Database Mail [SQL Server], architecture"
   - "Database Mail [SQL Server], components"
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Common errors with database mail 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -89,8 +85,11 @@ Database Mail relies on a number of internal stored procedures. To reduce the su
 EXEC sp_configure 'show advanced options', 1;  
 RECONFIGURE;
 EXEC sp_configure 'Database Mail XPs', 1;  
-RECONFIGURE  
+RECONFIGURE;
+EXEC sp_configure 'show advanced options', 0;
+RECONFIGURE;
 GO  
+```
 
 Database Mail may be stopped in the **msdb** database. To check status of Database Mail, execute the following statement:
 

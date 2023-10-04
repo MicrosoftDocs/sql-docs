@@ -3,10 +3,12 @@ title: Configure peer-to-peer replication with two replicas in an availability g
 description: Describes how to configure peer-to-peer replication with databases in SQL Server Always On availability groups.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.prod: sql
-ms.topic: how-to
 ms.date: 10/05/2021
-ms.custom: template-how-to 
+ms.service: sql
+ms.topic: how-to
+ms.custom:
+  - template-how-to
+  - updatefrequency5
 ---
 
 # Configure both peers in availability groups
@@ -50,7 +52,7 @@ This section describes the roles and names of the various elements participating
 
    To see if replication is installed on any instance, run the following query:
 
-   ```tsql
+   ```sql
    USE master;   
    GO   
    DECLARE @installed int;   
@@ -69,7 +71,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
 
 1. Run `sp_adddistributor` to configure distribution on *Dist1*. Use `@password =` to specify a password that the remote publisher uses to connect to the distributor. Use this password at each remote publisher when you configure the remote distributor.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_adddistributor  
@@ -79,7 +81,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
 
 1. Create the distribution database at the distributor.
 
-   ```tsql
+   ```sql
    USE master;
    GO  
    EXEC sys.sp_adddistributiondb  
@@ -97,7 +99,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
    > [!NOTE]
    > If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary requires Kerberos authentication to  for the communication between the replica host computers. Use of a SQL Server login for the connection to the current primary doesn't require Kerberos authentication.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_adddistpublisher  
@@ -118,7 +120,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
 
 1. Configure remote distribution original publisher (*Node1*). Specify the same value for `@password` as that used when `sp_adddistributor` was run at the distributor to set up distribution.
 
-   ```tsql
+   ```sql
    EXEC sys.sp_adddistributor  
    @distributor = 'Dist1',  
    @password = '<Password used when running sp_adddistributor on distributor server>' 
@@ -126,7 +128,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
 
 1. Enable the database for replication.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_replicationdboption  
@@ -139,7 +141,7 @@ This section describes how to set up the first peer (*Peer1*) in an availability
 
 At each secondary replica host (Node2) for the first availability group, configure distribution. Specify the same value for `@password` as that used when `sp_adddistributor` was run at the distributor to set up distribution.
 
-```tsql
+```sql
 EXEC sys.sp_adddistributor  
    @distributor = 'Dist1',  
    @password = '<Password used when running sp_adddistributor on distributor server>' 
@@ -150,7 +152,7 @@ EXEC sys.sp_adddistributor
 1. On the intended primary replica, create the availability group with the database as a member database.
 1. Create a DNS listener for the availability group. The replication agent connects to the current primary replica by using the listener. The following example creates a listener named `MyAGListenerName`.
 
-   ```tsql
+   ```sql
    ALTER AVAILABILITY GROUP 'MyAG'
    ADD LISTENER 'MyAGListenerName' (WITH IP (('<ip address>', '<subnet mask>') [, PORT = <listener_port>]));   
    ```
@@ -162,7 +164,7 @@ EXEC sys.sp_adddistributor
 
 On the distributor for *Peer1*, redirect the original publisher to the AG listener name.
 
-```tsql
+```sql
 USE distribution;   
 GO   
 EXEC sys.sp_redirect_publisher    
@@ -178,7 +180,7 @@ EXEC sys.sp_redirect_publisher
 
 The following script creates the publication for Peer1.
 
-```tsql
+```sql
 EXEC master..sp_replicationdboption  @dbname=  'MyDBName'   
         ,@optname=  'publish'   
         ,@value=  'true'  
@@ -226,7 +228,7 @@ GO
 
 On original publisher (Node1), run the following script to make the publication compatible with availability group:
 
-```tsql
+```sql
 USE MyDBName
 GO
 DECLARE @publication sysname = N'P2P_MyDBName' 
@@ -247,7 +249,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
 
 1. Run `sp_adddistributor` to configure distribution on *Dist2*. Use `@password =` to specify a password that the remote publisher uses to connect to the distributor. Use this password at each remote publisher when you configure the remote distributor.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_adddistributor  
@@ -257,7 +259,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
 
 1. Create the distribution database at the distributor.
 
-   ```tsql
+   ```sql
    USE master;
    GO  
    EXEC sys.sp_adddistributiondb  
@@ -275,7 +277,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
    > [!NOTE]
    > If any modified replication agents run on a computer other than the distributor, use of Windows authentication for the connection to the primary requires Kerberos authentication to  for the communication between the replica host computers. Use of a SQL Server login for the connection to the current primary doesn't require Kerberos authentication.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_adddistpublisher  
@@ -296,7 +298,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
 
 1. Configure remote distribution on (*Node3*). Specify the same value for `@password` as that used when `sp_adddistributor` was run at the distributor to set up distribution.
 
-   ```tsql
+   ```sql
    EXEC sys.sp_adddistributor  
    @distributor = 'Dist2',  
    @password = '<Password used when running sp_adddistributor on distributor server>' 
@@ -304,7 +306,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
 
 1. Enable the database for replication.
 
-   ```tsql
+   ```sql
    USE master;  
    GO  
    EXEC sys.sp_replicationdboption  
@@ -317,7 +319,7 @@ This section describes how to set up the second peer (*Peer2*) in a different av
 
 At each secondary replica host (Node4) for the second availability group, configure distribution. Specify the same value for `@password` as that used when `sp_adddistributor` was run at the distributor to set up distribution.
 
-```tsql
+```sql
 EXEC sys.sp_adddistributor  
    @distributor = 'Dist2',  
    @password = '<Password used when running sp_adddistributor on distributor server>' 
@@ -328,7 +330,7 @@ EXEC sys.sp_adddistributor
 1. On the intended primary replica, create the availability group with the database as a member database.
 1. Create a DNS listener for the availability group. The replication agent connects to the current primary replica by using the listener. The following example creates a listener named `MyAG2ListenerName`.
 
-   ```tsql
+   ```sql
    ALTER AVAILABILITY GROUP 'MyAG2'
    ADD LISTENER 'MyAG2ListenerName' (WITH IP (('<ip address>', '<subnet mask>') [, PORT = <listener_port>]));   
    ```
@@ -340,7 +342,7 @@ EXEC sys.sp_adddistributor
 
 On the distributor for *Peer2*, redirect the original publisher to the AG listener name.
 
-```tsql
+```sql
 USE distribution;   
 GO   
 EXEC sys.sp_redirect_publisher    
@@ -358,7 +360,7 @@ The following script creates the publication for Peer2.
 
 On *Node3* run the following command to create the peer-to-peer publication.
 
-```tsql
+```sql
 EXEC master..sp_replicationdboption  @dbname=  'MyDBName'   
         ,@optname=  'publish'   
         ,@value=  'true'  
@@ -409,7 +411,7 @@ GO
 
 On the original publisher (Node3), run the following script to make the publication compatible with availability group:
 
-```tsql
+```sql
 USE MyDBName
 GO
 DECLARE @publication sysname = N'P2P_MyDBName' 
@@ -431,14 +433,14 @@ Execute the following script on *Node1*. This assumes *Node1* is running the pri
 > [!IMPORTANT]
 > The script below specifies the availability group listener name for the subscriber.
 >
-> ```tsql
+> ```sql
 > @subscriber = N'MyAGListenerName,<port>'
 > ```
 
 > [!NOTE]
 > In the script above `,<port>` is optional. It is only required if you are using non-default ports. Do not include then angle brackets `<>`.
 
-```tsql
+```sql
 EXEC [MyDBName].dbo.sp_addsubscription 
    @publication = N'P2P_MyDBName'
  , @subscriber = N'MyAG2Listener,<port>' 
@@ -475,14 +477,14 @@ To create a push subscription from *Peer2* to the availability group listener (*
 > [!IMPORTANT]
 > The script below specifies the availability group listener name for the subscriber.
 >
-> ```tsql
+> ```sql
 > @subscriber = N'MyAGListenerName,<port>'
 > ```
 
 > [!NOTE]
 > In the script above `,<port>` is optional. It is only required if you are using non-default ports. Do not include then angle brackets `<>`.
 
-```tsql
+```sql
 EXEC [MyDBName].dbo.sp_addsubscription 
    @publication = N'P2P_MyDBName'
  , @subscriber = N'MyAGListenerName,<port>'
@@ -516,7 +518,7 @@ GO
 
 At each secondary replica host, make sure the push subscribers of the database publications appear as linked servers.
 
-```tsql
+```sql
 EXEC sys.sp_addlinkedserver   
     @server = 'MySubscriber';
 ```

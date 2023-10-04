@@ -1,21 +1,16 @@
 ---
-description: "Work with Change Data"
 title: "Work with Change Data"
-ms.custom: seo-dt-2019
+description: "Work with Change Data"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "01/02/2019"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "change data"
   - "change data capture, query function scenarios"
   - "change data capture, LSN boundaries"
   - "change data capture, query functions"
-ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Work with Change Data 
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

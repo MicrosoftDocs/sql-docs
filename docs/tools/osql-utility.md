@@ -1,11 +1,14 @@
 ---
 title: osql Utility
 description: In SQL Server, the osql utility lets you enter Transact-SQL statements, system procedures, and script files. Osql uses ODBC to communicate with the server.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
+author: markingmyname
+ms.author: maghan
+ms.manager: jroth
+ms.date: "03/16/2017"
+ms.service: sql
+ms.subservice: tools-other
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "statements [SQL Server], command prompt"
   - "QUIT command"
   - "Transact-SQL statements, command prompt"
@@ -18,24 +21,17 @@ helpviewer_keywords:
   - "GO command"
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
-ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-author: markingmyname
-ms.author: maghan
-ms.manageR: jroth
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: "03/16/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017"
 ---
 
 # osql Utility
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The **osql** utility allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
   
 > [!IMPORTANT]  
->  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+>  This feature will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use the feature. Use **sqlcmd** instead. For more information, see [sqlcmd Utility](./sqlcmd/sqlcmd-utility.md).  
   
 ## Syntax  
   
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
  The **osql** utility uses the ODBC API. The utility uses the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ODBC driver default settings for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO connection options. For more information, see Effects of ANSI Options.  
   
 > [!NOTE]  
->  The **osql** utility does not support CLR user-defined data types. To process these data types, you must use the **sqlcmd** utility. For more information, see [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+>  The **osql** utility does not support CLR user-defined data types. To process these data types, you must use the **sqlcmd** utility. For more information, see [sqlcmd Utility](./sqlcmd/sqlcmd-utility.md).  
   
 ## OSQL Commands  
  In addition to [!INCLUDE[tsql](../includes/tsql-md.md)] statements within **osql**, these commands are also available.  
@@ -340,5 +336,3 @@ GO
  [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST and CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
-  
-  

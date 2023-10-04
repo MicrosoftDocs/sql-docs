@@ -4,8 +4,8 @@ description: "Data type synonyms (Transact-SQL)"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "07/23/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "data types [SQL Server], synonyms"
@@ -13,22 +13,24 @@ helpviewer_keywords:
   - "synonyms [SQL Server], data types"
 dev_langs:
   - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   
 |Synonym|SQL Server system data type|  
 |---|---|
-|**Binary varying**|**varbinary**|  
+|**binary varying**|**varbinary**|  
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
 |**character(**_n_**)**|**char(n)**|  
 |**character varying(**_n_**)**|**varchar(n)**|  
-|**Dec**|**decimal**|  
-|**Double precision**|**float**|  
+|**dec**|**decimal**|  
+|**double precision**|**float**|  
 |**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
 |**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  

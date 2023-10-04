@@ -1,16 +1,12 @@
 ---
+title: "Data Migration Settings (OracleToSQL)"
 description: "Data Migration Settings (OracleToSQL)"
-title: "Data Migration Settings (OracleToSQL) | Microsoft Docs"
-ms.prod: sql
-ms.custom: ""
+author: cpichuka
+ms.author: cpichuka
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.technology: ssma
+ms.service: sql
+ms.subservice: ssma
 ms.topic: conceptual
-ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-author: cpichuka 
-ms.author: cpichuka 
-manager: madhuriy
 ---
 # Data Migration Settings (OracleToSQL)
   

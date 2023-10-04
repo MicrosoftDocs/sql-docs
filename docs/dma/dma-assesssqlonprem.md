@@ -2,14 +2,13 @@
 title: "Perform a SQL Server migration assessment"
 titleSuffix: Data Migration Assistant
 description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server before migrating to another SQL Server or to Azure SQL Database
-author: rajeshsetlem
-ms.author: rajpo
+author: ajithkr-ms
+ms.author: ajithkr
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: dma
+ms.service: sql
+ms.subservice: dma
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---
@@ -18,7 +17,7 @@ helpviewer_keywords:
 
 The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database by using Data Migration Assistant.
 
-Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application’s data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+Data Migration Assistant v5.0 introduces support for analyzing database connectivity and embedded SQL queries in the application code. For more information, see the blog post [Using Data Migration Assistant to assess an application's data access layer](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
 [!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
@@ -58,7 +57,7 @@ Data Migration Assistant v5.0 introduces support for analyzing database connecti
 
 1. Select **Add Sources** to open the connection flyout menu.
 
-2. Enter the SQL server instance name, choose the Authentication type, set the correct connection properties, and then select **Connect**.
+2. Enter the SQL Server instance name, choose the Authentication type, set the correct connection properties, and then select **Connect**.
 
 3. Select the databases to assess, and then select **Add**.
 

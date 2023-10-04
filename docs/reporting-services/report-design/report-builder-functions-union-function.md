@@ -1,16 +1,13 @@
 ---
-title: "Union function in a paginated report | Microsoft Docs"
+title: "Union function in a paginated report"
 description: Find out about this function that returns the union of all the non-null numeric values in a paginated report that are specified by an expression.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - Union function in a paginated report (Report Builder)
 

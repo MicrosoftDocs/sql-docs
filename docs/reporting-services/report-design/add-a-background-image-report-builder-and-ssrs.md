@@ -1,16 +1,13 @@
 ---
-title: "Add a background image to a paginated report | Microsoft Docs"
+title: "Add a background image to a paginated report"
 description: Discover how to embed an image in the paginated report definition to add the image to a variety of report items including text boxes, lists, and page header.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add a background image to a paginated report (Report Builder)
 

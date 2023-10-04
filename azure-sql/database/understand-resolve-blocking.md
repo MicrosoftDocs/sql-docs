@@ -5,7 +5,7 @@ description: An overview of Azure SQL database-specific topics on blocking and t
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 4/8/2022
+ms.date: 02/07/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -66,6 +66,14 @@ When locking and blocking persists to the point where there is a detrimental eff
 * A SPID holds locks on a set of resources and never releases them. This type of blocking does not resolve itself and prevents access to the affected resources indefinitely.
 
 In the first scenario, the situation can be very fluid as different SPIDs cause blocking on different resources over time, creating a moving target. These situations are difficult to troubleshoot using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) to narrow down the issue to individual queries. In contrast, the second situation results in a consistent state that can be easier to diagnose.
+
+### Optimized locking
+
+Optimized locking is a new Database Engine feature drastically reduces lock memory and the number of locks concurrently required for writes. Optimized locking uses two primary components: **Transaction ID (TID)** locking (also used in other row versioning features) and **lock after qualification (LAQ)**. It does not require any additional configuration. 
+
+This article currently applies to the behavior of the Database Engine without optimized locking.
+
+For more information and to learn where optimized locking is available, see [Optimized locking](/sql/relational-databases/performance/optimized-locking).
 
 ## Applications and blocking
 
@@ -448,7 +456,7 @@ The Waittype, Open_Tran, and Status columns refer to information returned by [sy
 
 ## Next steps
 
-* [Azure SQL Database: Improving Performance Tuning with Automatic Tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
+* [Azure SQL Database: improving performance tuning with automatic tuning](/Shows/Data-Exposed/Azure-SQL-Database-Improving-Performance-Tuning-with-Automatic-Tuning)
 * [Deliver consistent performance with Azure SQL](/training/modules/azure-sql-performance/)
 * [Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-common-errors-issues.md)
 * [Transient Fault Handling](/aspnet/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling)

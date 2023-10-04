@@ -1,16 +1,15 @@
 ---
+title: "Migrate a Reporting Services Installation (SharePoint Mode)"
 description: "Migrate a Reporting Services Installation (SharePoint Mode)"
-title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
-ms.date: 08/17/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
-ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016"
+ms.date: 08/17/2017
+ms.service: reporting-services
+ms.topic: conceptual
 ms.custom:
   - intro-migration
+  - updatefrequency5
+monikerRange: "= sql-server-2016"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

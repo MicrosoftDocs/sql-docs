@@ -1,19 +1,33 @@
 ---
-title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
+title: "What's New in SSMA for Access (AccessToSQL)"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
 author: cpichuka
-ms.prod: sql
-ms.custom:
-  - intro-whats-new
-ms.date: "04/29/2021"
-ms.reviewer: ""
-ms.technology: ssma
-ms.topic: conceptual
 ms.author: cpichuka
+ms.date: "04/29/2021"
+ms.service: sql
+ms.subservice: ssma
+ms.topic: conceptual
+ms.custom: intro-whats-new
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v9.4
+
+The v9.4 release of SSMA for Access contains minor performance improvements, bug fixes, and an enhanced help experience.
+
+## SSMA v9.3
+
+The v9.2 release of SSMA for Access contains the following changes:
+
+* Added support for SQL Server 2022 target
+
+## SSMA v9.2
+
+The v9.2 release of SSMA for Access contains the following changes:
+
+* Added support for DECIMAL type for Office 365 version 2209 and above.
 
 ## SSMA v9.1
 
@@ -157,7 +171,7 @@ To leverage this setting, in SSMA for Access, navigate to **Tools** > **Project 
 
 ## SSMA v8.5
 
-The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL server, together with a targeted set of fixes designed to improve usability and performance.
+The v8.5 release of SSMA for Access is enhanced with support for Azure Active Directory authentication and basic support for JSON features in SQL Server, together with a targeted set of fixes designed to improve usability and performance.
 
 In addition, SSMA for Access now supports conversion of multiple standard functions (`ISNULL`, `IIF`, etc.).
 

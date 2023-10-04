@@ -1,14 +1,13 @@
 ---
 title: "Metadata Visibility Configuration"
 description: Learn how to configure metadata visibility for securables that a user owns or has been granted permission to in SQL Server.
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "subcomponents visibility [SQL Server]"
   - "metadata [SQL Server], visibility"
   - "permissions [SQL Server], metadata access"
@@ -17,13 +16,13 @@ helpviewer_keywords:
   - "displaying metadata"
   - "database metadata [SQL Server]"
   - "metadata [SQL Server], permissions"
-author: VanMSFT
-ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata Visibility Configuration
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission. For example, the following query returns a row if the user has been granted a permission such as SELECT or INSERT on the table `myTable`.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission.
+  
+  For example, the following query returns a row if the user has been granted a permission such as SELECT or INSERT on the table `myTable`.  
   
 ```sql  
 SELECT name, object_id  
@@ -73,16 +72,17 @@ GO
     :::column-end:::
 :::row-end:::
 
+
  Limited metadata accessibility means the following:  
-  
--   Applications that assume **public** metadata access will break.  
   
 -   Queries on system views might only return a subset of rows, or sometimes an empty result set.  
   
 -   Metadata-emitting, built-in functions such as OBJECTPROPERTYEX may return `NULL`.  
   
 -   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] `sp_help` stored procedures might return only a subset of rows, or `NULL`.  
-  
+-   
+-   As a result, applications that assume **public** metadata access will break.  
+
  SQL modules, such as stored procedures and triggers, run under the security context of the caller and, therefore, have limited metadata accessibility. For example, in the following code, when the stored procedure tries to access metadata for the table `myTable` on which the caller has no rights, an empty result set is returned. In earlier releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a row is returned.  
   
 ```sql  
@@ -95,7 +95,7 @@ END;
 GO  
 ```  
   
- To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission at an appropriate scope: object level, database level, or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) and [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ To allow callers to view metadata, you can grant the callers VIEW DEFINITION permission or starting with SQL Server 2022 either VIEW SECUIRITY DEFINITION or VIEW PERFORMANCE DEFINITION at an appropriate scope: object level, database level, or server level. Therefore, in the previous example, if the caller has VIEW DEFINITION  permission on `myTable`, the stored procedure returns a row. For more information, see [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md) and [GRANT Database Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
  You can also modify the stored procedure so that it executes under the credentials of the owner. When the procedure owner and the table owner are the same owner, ownership chaining applies, and the security context of the procedure owner enables access to the metadata for `myTable`. Under this scenario, the following code returns a row of metadata to the caller.  
   
@@ -157,7 +157,7 @@ GO
 
 -   OBJECT_DEFINITION() function  
   
--   The value stored in the password_hash column of `sys.sql_logins`.  A user that does not have **CONTROL SERVER** permission will see a `NULL` value in this column.  
+-   The value stored in the password_hash column of `sys.sql_logins`.  A user that does not have **CONTROL SERVER** or starting with SQL Server 2022 the **VIEW ANY CRYPTOGRAPHICALLY SECURED DEFINITION** permission will see a `NULL` value in this column.  
   
 > [!NOTE]  
 >  The SQL definitions of built-in system procedures and functions are publicly visible through the `sys.system_sql_modules` catalog view, the `sp_helptext` stored procedure, and the OBJECT_DEFINITION() function.  

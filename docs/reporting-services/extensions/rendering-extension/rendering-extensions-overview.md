@@ -1,19 +1,16 @@
 ---
-title: "Rendering Extensions Overview | Microsoft Docs"
+title: "Rendering Extensions Overview"
 description: See which data rendering extensions are included with Reporting Services. Learn how to add custom rendering extensions to generate reports in other formats.
-ms.date: 12/7/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
-ms.topic: reference
-helpviewer_keywords: 
-  - "formats [Reporting Services], rendering extensions"
-  - "rendering extensions [Reporting Services], about extensions"
-ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/7/2020
+ms.service: reporting-services
+ms.subservice: extensions
+ms.topic: reference
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "formats [Reporting Services], rendering extensions"
+  - "rendering extensions [Reporting Services], about extensions"
 ---
 # Rendering Extensions Overview
   A rendering extension is a component or module of a report server that transforms report data and layout information into a device-specific format. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes seven rendering extensions: HTML, Excel, Word, CSV or Text, XML, Image, and PDF. You can create additional rendering extensions to generate reports in other formats.  

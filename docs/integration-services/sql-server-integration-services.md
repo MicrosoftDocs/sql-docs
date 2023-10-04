@@ -1,13 +1,13 @@
 ---
 title: SQL Server Integration Services
 description: Learn about SQL Server Integration Services, Microsoft's platform for building enterprise-level data integration and data transformations solutions.
-ms.prod: sql
-ms.prod_service: integration-services
-ms.technology: integration-services
+author: chugugrace
+ms.author: chugu
+ms.date: 08/17/2023
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: overview
-keywords: 
-  - "SSIS"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SSIS"
   - "DTS [Integration Services]"
   - "SQL Server Integration Services"
@@ -15,18 +15,19 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: chugugrace
-ms.author: chugu
-ms.reviewer: ""
-ms.custom: FY22Q2Fresh
-ms.date: 12/10/2021
+keywords: SSIS
 ---
 
 # SQL Server Integration Services
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
-SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
+SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems. For example:
+
+- Copy or download files
+- Load data warehouses
+- Cleanse and mine data
+- Manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data
 
 ## Capabilities
 
@@ -46,7 +47,7 @@ You can start by installing SQL Server Integration Services, which is part of SQ
 
 For installation instructions and guidance, see [Install Integration Services](install-windows/install-integration-services.md).
 
-## ![info_tip](../sql-server/media/info-tip.png) Resources
+## :::image type="icon" source="../includes/media/info-tip.svg" border="false"::: Get help
 
 - [Get help in the SSIS forum](/answers/topics/sql-server-integration-services.html)
 - [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  

@@ -1,26 +1,22 @@
 ---
+title: "Bookmarking Rows in ODBC"
 description: "Scrolling and Fetching Rows - Bookmarking Rows in ODBC"
-title: "Bookmarking Rows in ODBC | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "cursors [ODBC], fetching rows"
   - "ODBC cursors, fetching rows"
   - "cursors [ODBC], scrolling rows"
   - "ODBC cursors, scrolling rows"
   - "bookmarks [ODBC]"
-ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scrolling and Fetching Rows - Bookmarking Rows in ODBC
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A bookmark is a value used to identify a row of data. The meaning of the bookmark value is known only to the driver or data source. For example, it might be as simple as a row number or as complex as a disk address. In ODBC, the application requests a bookmark for a particular row, stores it, and passes it back to the cursor to return to the row.  
   

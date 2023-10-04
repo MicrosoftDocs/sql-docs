@@ -1,22 +1,19 @@
 ---
 title: "Cardinality Estimation (SQL Server)"
 description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "cardinality estimator"
-  - "CE (cardinality estimator)"
-  - "estimating cardinality"
-dev_langs: 
-- "TSQL"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: "katsmith"
-ms.custom:
-- event-tier1-build-2022
 ms.date: "05/24/2022"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "cardinality estimator"
+  - "CE (cardinality estimator)"
+  - "estimating cardinality"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -181,11 +178,7 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
   
   - Further, setting a lower compatibility level also misses a number of improvements in the query optimizer for latest versions, and affects all queries against the database.
   
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
-
-  - Further, setting a lower compatibility level also misses many improvements in the query optimizer for latest versions, and affects all queries against the database.
-
-- You could use `LEGACY_CARDINALITY_ESTIMATION` database option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
+- You could use `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration option, to have the whole database use the older CE, while retaining other improvements in the query optimizer.
 
 - You could use `LEGACY_CARDINALITY_ESTIMATION` query hint, to have a single query use the older CE, while retaining other improvements in the query optimizer.
 
@@ -198,8 +191,8 @@ Suppose that with CE 120 or above, a less efficient query plan is generated for 
 You can ensure your database is at a particular level by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 > [!IMPORTANT]
-> The database engine version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is based on the same code base as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. Most importantly, the database engine in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL database engine bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-> As of **November 2019**, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update Database Compatibility Level for existing databases. It is up to customers to do at their own discretion.
+> The database engine version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is based on the same code base as the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. Most importantly, the database engine in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] always has the newest SQL database engine bits. Version 12 of [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> As of **November 2019**, in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the default compatibility level is 150 for newly created databases. [!INCLUDE[msCoName](../../includes/msconame-md.md)] does not update Database Compatibility Level for existing databases. It is up to customers to do at their own discretion.
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -288,7 +281,7 @@ For more information about the Query Store, see [Monitoring Performance By Using
 
 ## Constant folding and expression evaluation during Cardinality Estimation
 
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
+The [!INCLUDE[ssDE-md](../../includes/ssde-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`. For more information, see [Constant Folding](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
 
 In addition, some expressions that aren't constant folded but whose arguments are known at compile time, whether the arguments are parameters or constants, are evaluated by the result-set size (cardinality) estimator that is part of the Query Optimizer during optimization. For more information, see [Expression Evaluation](../../relational-databases/query-processing-architecture-guide.md#constant-folding-and-expression-evaluation).
 

@@ -4,11 +4,9 @@ description: Learn about memory-optimized tables, which are durable and support 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "12/02/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Memory-Optimized Tables
@@ -42,7 +40,7 @@ Starting with SQL Server 2016, and in Azure SQL Database, there are no limitatio
   
 -   Through natively compiled stored procedures.  
   
--   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad-hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+-   Through interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], outside of a natively-compiled stored procedure. These [!INCLUDE[tsql](../../includes/tsql-md.md)] statements may be either inside interpreted stored procedures or they may be ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 ## Accessing Data in Memory-Optimized Tables  
 

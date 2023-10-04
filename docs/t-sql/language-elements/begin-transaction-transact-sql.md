@@ -3,13 +3,10 @@ title: "BEGIN TRANSACTION (Transact-SQL)"
 description: "BEGIN TRANSACTION (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "synapse-analytics, database-engine, pdw, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "BEGIN_TRANSACTION_TSQL"
   - "TRANSACTION_TSQL"
@@ -29,14 +26,14 @@ helpviewer_keywords:
   - "starting transactions"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current || =fabric"
 ---
 # BEGIN TRANSACTION (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Marks the starting point of an explicit, local transaction. Explicit transactions start with the BEGIN TRANSACTION statement and end with the COMMIT or ROLLBACK statement.  
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +48,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure Synapse Analytics and Parallel Data Warehouse
+--Applies to Synpase Data Warehouse in Microsoft Fabric, Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -62,17 +59,17 @@ BEGIN { TRAN | TRANSACTION }
 
 ## Arguments
  *transaction_name*  
- **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
  Is the name assigned to the transaction. *transaction_name* must conform to the rules for identifiers, but identifiers longer than 32 characters are not allowed. Use transaction names only on the outermost pair of nested BEGIN...COMMIT or BEGIN...ROLLBACK statements. *transaction_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
   
  @*tran_name_variable*  
- **Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+ **Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
  
  Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a **char**, **varchar**, **nchar**, or **nvarchar** data type. If more than 32 characters are passed to the variable, only the first 32 characters will be used; the remaining characters will be truncated.  
   
  WITH MARK [ '*description*' ]  
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 Specifies that the transaction is marked in the log. *description* is a string that describes the mark. A *description* longer than 128 characters is truncated to 128 characters before being stored in the msdb.dbo.logmarkhistory table.  
   
@@ -141,7 +138,7 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
@@ -153,8 +150,8 @@ COMMIT;
 ```
 
 ### B. Rolling back a transaction
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
-, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+, [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 
@@ -168,7 +165,7 @@ ROLLBACK;
 ```
 
 ### C. Naming a transaction 
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 The following example shows how to name a transaction.  
   
@@ -177,8 +174,8 @@ DECLARE @TranName VARCHAR(20);
 SELECT @TranName = 'MyTransaction';  
   
 BEGIN TRANSACTION @TranName;  
-USE AdventureWorks2012;  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+USE AdventureWorks2022;  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
   
 COMMIT TRANSACTION @TranName;  
@@ -186,7 +183,7 @@ GO
 ```  
   
 ### D. Marking a transaction  
-**Applies to:** [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
+**Applies to:** [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, Azure SQL Database
 
 The following example shows how to mark a transaction. The transaction `CandidateDelete` is marked.  
   
@@ -194,9 +191,9 @@ The following example shows how to mark a transaction. The transaction `Candidat
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-DELETE FROM AdventureWorks2012.HumanResources.JobCandidate  
+DELETE FROM AdventureWorks2022.HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
 GO  
 COMMIT TRANSACTION CandidateDelete;  

@@ -2,18 +2,18 @@
 title: Change automated backup settings
 titleSuffix: Azure SQL Managed Instance
 description: Change point-in-time restore and backup redundancy options for automatic backups in Azure SQL Managed Instance by using the Azure portal, the Azure CLI, Azure PowerShell, and the REST API.
-author: MilanMSFT
-ms.author: mlazic
+author: Stralle
+ms.author: strrodic
 ms.reviewer: wiassaf, mathoma, danil
 ms.date: 07/20/2022
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: conceptual
 ms.custom:
-  - "references_regions"
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
-  - "azure-sql-split"
+  - references_regions
+  - devx-track-azurepowershell
+  - devx-track-azurecli
+  - azure-sql-split
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 # Change automated backup settings for Azure SQL Managed Instance
@@ -24,8 +24,8 @@ Some of the content in this article is duplicated in /azure-sql/database/automat
 --->
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/automated-backups-change-settings.md)
-> * [Azure SQL Managed Instance](automated-backups-change-settings.md)
+> * [Azure SQL Database](../database/automated-backups-change-settings.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](automated-backups-change-settings.md?view=azuresql-mi&preserve-view=true)
 
 This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Managed Instance, such as the short-term retention policy and the backup storage redundancy option that's used for backups. For Azure SQL Database, see [Change automated backup settings for Azure SQL Database](../database/automated-backups-change-settings.md).
 
@@ -33,7 +33,7 @@ This article provides examples to modify [automated backup](automated-backups-ov
 
 ## Change short-term retention policy
 
-You can change the default point-in-time recovery (PITR) backup retention period and the differential backup frequency by using the Azure portal, PowerShell, or the REST API. The following examples illustrate how to change the PITR retention to 28 days and the differential backups to a 24-hour interval.
+You can change the default point-in-time recovery (PITR) backup retention period by using the Azure portal, PowerShell, or the REST API. The following examples illustrate how to change the PITR retention to 28 days.
 
 > [!WARNING]
 > If you reduce the current retention period, you lose the ability to restore to points in time older than the new retention period. Backups that are no longer needed to provide PITR within the new retention period are deleted. 
@@ -45,7 +45,7 @@ You can change the default point-in-time recovery (PITR) backup retention period
 
 ### [Azure portal](#tab/azure-portal)
 
-To change the PITR backup retention period or the differential backup frequency for active databases by using the Azure portal:
+To change the PITR backup retention period for active databases by using the Azure portal:
 
 1. Go to the managed instance with the databases whose retention period you want to change. 
 1. Select **Backups** on the left pane, and then select the **Retention policies** tab. 
@@ -58,7 +58,7 @@ To change the PITR backup retention period or the differential backup frequency 
 
 Prepare your environment for the Azure CLI:
 
-[!INCLUDE[azure-cli-prepare-your-environment-no-header](../includes/azure-cli-prepare-your-environment-no-header.md)]
+[!INCLUDE[azure-cli-prepare-your-environment-no-header](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment-no-header.md)]
 
 Use the following example to change the PITR backup retention of a *single active* database in a managed instance:
 
@@ -153,7 +153,7 @@ Status code: 200
 }
 ```
 
-For more information, see [Backup retention REST API](/rest/api/sql/backupshorttermretentionpolicies).
+For more information, see [Backup retention REST API](/rest/api/sql/2020-08-01-preview/backup-short-term-retention-policies).
 
 ---
 

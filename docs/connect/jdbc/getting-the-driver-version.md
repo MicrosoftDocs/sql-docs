@@ -4,8 +4,8 @@ description: Learn how and where to find the version of the Microsoft JDBC Drive
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 05/03/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Getting the driver version

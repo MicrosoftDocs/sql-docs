@@ -4,16 +4,14 @@ description: XML Schemas (XML Type System) Catalog Views (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/15/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 helpviewer_keywords:
   - "catalog views [SQL Server], XML schemas"
   - "XML schemas [SQL Server], catalog views"
 dev_langs:
   - "TSQL"
-ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 ---
 # XML Schemas (XML Type System) Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,23 +1,19 @@
 ---
+title: "sp_attach_single_file_db (Transact-SQL)"
 description: "sp_attach_single_file_db (Transact-SQL)"
-title: "sp_attach_single_file_db (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_attach_single_file_db"
-  - "sp_attach_single_file_db_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_attach_single_file_db"
-ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_attach_single_file_db"
+  - "sp_attach_single_file_db_TSQL"
+helpviewer_keywords:
+  - "sp_attach_single_file_db"
+dev_langs:
+  - "TSQL"
 ---
 # sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +26,7 @@ ms.author: maghan
 > [!IMPORTANT]  
 >  We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,10 +73,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
 USE master;  
 GO  
-EXEC sp_detach_db @dbname = 'AdventureWorks2012';  
-EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2012',   
+EXEC sp_detach_db @dbname = 'AdventureWorks2022';  
+EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2022',   
     @physname =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf';  
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_Data.mdf';  
 ```  
   
 ## See Also  

@@ -1,16 +1,14 @@
 ---
+title: "MSSQLSERVER_3617"
 description: "MSSQLSERVER_3617"
-title: "MSSQLSERVER_3617 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/13/2021"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "3617 (Database Engine error)"
-author: PijoCoder
+author: pijocoder
 ms.author: jopilov
+ms.date: "07/13/2021"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "3617 (Database Engine error)"
 ---
 # MSSQLSERVER_3617
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

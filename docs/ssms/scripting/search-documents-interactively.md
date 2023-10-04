@@ -1,19 +1,16 @@
 ---
 title: "Search Documents Interactively"
 description: Learn how to use the Find and Replace dialog box to search one or more open files or windows, pausing after each match to review what was found, in its context. You can also perform a bulk find operation and review the search matches in report format.
-ms.custom: seo-lt-2019
+author: markingmyname
+ms.author: maghan
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.technology: ssms
-ms.reviewer: ""
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "interactive searches [SQL Server Management Studio]"
   - "searches [SQL Server Management Studio], interactive"
   - "Query Editor [SQL Server Management Studio], interactive search"
-ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Documents Interactively
@@ -61,6 +58,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
  [Search and Replace](./search-and-replace.md)   
  [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
- [Search Text with Wildcards](./search-text-with-wildcards.md)   
  [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

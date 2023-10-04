@@ -4,9 +4,8 @@ description: Learn how srv_willconvert determines whether a specific data type c
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: stored-procedures
+ms.service: sql
+ms.subservice: stored-procedures
 ms.topic: "reference"
 helpviewer_keywords:
   - "srv_willconvert"
@@ -15,7 +14,6 @@ dev_langs:
 apilocation: opends60.dll
 apiname: srv_willconvert
 apitype: "DLLExport"
-ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 ---
 # srv_willconvert (Extended Stored Procedure API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

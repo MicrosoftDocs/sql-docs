@@ -4,8 +4,8 @@ description: Learn how to run SQL Server on a network and without one. For local
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 helpviewer_keywords:
   - "verifying Server service has been started"

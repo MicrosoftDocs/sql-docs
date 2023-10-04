@@ -1,16 +1,13 @@
 ---
+title: Enable Always Encrypted with secure enclaves for existing encrypted columns"
 description: "Enable Always Encrypted with secure enclaves for existing encrypted columns"
-title: Enable Always Encrypted with secure enclaves for existing encrypted columns | Microsoft Docs"
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "vanto"
-ms.technology: security
-ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
+ms.reviewer: "vanto"
+ms.date: 05/24/2022
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: ">= sql-server-ver15"
 ---
 # Enable Always Encrypted with secure enclaves for existing encrypted columns 
@@ -56,18 +53,18 @@ This method involves executing Method 1 as the first step, and then re-encrypt t
 For information on how to rotate a column master key and re-encrypt a column in-place to rotate a column encryption key, see [Rotate enclave-enabled keys](always-encrypted-enclaves-rotate-keys.md).
 
 ## Method 3: Re-encrypt a selected column with an enclave-enabled column encryption key on the client side
-This method involves re-encrypting a column with an enclave-enabled column encryption key, enable rich queries with randomized encryption. Since the current column encryption key isn't enclave-enabled, you can't re-encrypt the column in-place. Use the Always Encrypted wizard or the Set-SqlColumnEncryption cmdlet to re-encrypt the column outside of the database.
+This method involves re-encrypting a column with an enclave-enabled column encryption key, enable rich queries with randomized encryption. Since the current column encryption key isn't enclave-enabled, you can't re-encrypt the column in-place. Use the Always Encrypted wizard or the Set-SqlColumnEncryption cmdlet to re-encrypt the column of the database.
 
 - Pros:
-  - Allows you selectively enable the enclave functionality (in-place encryption and rich queries, if you're re-encrypting the column with randomized encryption) for one column or a small subset of columns.
+  - Allows you to selectively enable the enclave functionality (in-place encryption and rich queries, if you're re-encrypting the column with randomized encryption) for one column or a small subset of columns.
   - It can enable rich computations for columns in one step.
-  - It doesn't require creating a new column master key, so it has a smaller impact on applications.
   
 - Cons:
   - To re-encrypt the data, the tool will move it out of the database, which can take a long time and is prone to network errors.
+  - It introduces key management overhead. You'll need to create a new column master key and make it available to applications that query the impacted columns.
 
 For more information on how to rotate a column encryption via a client-side tool, see [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) and [Rotate Always Encrypted keys using PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
-## Next Steps
+## Next steps
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

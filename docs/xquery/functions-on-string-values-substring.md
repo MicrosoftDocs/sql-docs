@@ -1,24 +1,20 @@
 ---
-title: "substring Function (XQuery) | Microsoft Docs"
+title: "substring Function (XQuery)"
 description: Learn about the XQuery function substring() that returns the specified portion of a source string.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "substring function [XQuery]"
-  - "fn:substring function"
-ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "substring function [XQuery]"
+  - "fn:substring function"
+dev_langs:
+  - "XML"
 ---
 # Functions on String Values - substring
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns part of the value of *$sourceString*, starting at the position indicated by the value of *$startingLoc,* and continues for the number of characters indicated by the value of *$length*.  
   

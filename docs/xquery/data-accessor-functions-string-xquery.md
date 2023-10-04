@@ -1,24 +1,20 @@
 ---
-title: "string Function (XQuery) | Microsoft Docs"
+title: "string Function (XQuery)"
 description: Learn about the XQuery function string() that returns the value of its argument represented as a string.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "string function"
-  - "fn:string function"
-ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "string function"
+  - "fn:string function"
+dev_langs:
+  - "XML"
 ---
 # Data Accessor Functions - string (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the value of *$arg* represented as a string.  
   

@@ -1,27 +1,21 @@
 ---
+title: "Using Filegroups and Files to Store Data"
 description: "Using Filegroups and Files to Store Data"
-title: "Using Filegroups and Files to Store Data | Microsoft Docs"
-ms.custom: ""
+author: "markingmyname"
+ms.author: "maghan"
 ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
+ms.service: sql
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "filegroups [SMO]"
   - "storing data [SMO]"
   - "files [SMO]"
   - "files [SMO], about files"
   - "storage [SMO]"
-ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-author: "markingmyname"
-ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Filegroups and Files to Store Data
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Data files are used to store database files. The data files are subdivided into file groups. The <xref:Microsoft.SqlServer.Management.Smo.Database> object has a <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> property that references a <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> object. Each <xref:Microsoft.SqlServer.Management.Smo.FileGroup> object in that collection has a <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> property. This property refers to a <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> collection that contains all the data files that belong to the database. A file group is principally used to group files together that are used to store a database object. One reason for spreading a database object over several files is that it can improve performance, especially if the files are stored on different disk drives.  
   
@@ -37,9 +31,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a FileGroup object called SECONDARY on the database.
 Dim fg1 As FileGroup
 fg1 = New FileGroup(db, "SECONDARY")
@@ -59,9 +53,9 @@ df1.Create()
 ```  
 {  
             Server srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db = default(Database);  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Define a FileGroup object called SECONDARY on the database.   
             FileGroup fg1 = default(FileGroup);  
             fg1 = new FileGroup(db, "SECONDARY");  
@@ -83,8 +77,8 @@ df1.Create()
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default\Databases\  
   
-#And the database object corresponding to AdventureWorks2012.  
-$db = get-item AdventureWorks2012  
+#And the database object corresponding to AdventureWorks2022.  
+$db = get-item AdventureWorks2022  
   
 #Create a new filegroup  
 $fg1 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Filegroup -argumentlist $db, "SECONDARY"  
@@ -107,9 +101,9 @@ $df1.Create()
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a LogFile object and set the database, name, and file name properties in the constructor.
 Dim lf1 As LogFile
 lf1 = New LogFile(db, "logfile1", "c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\logfile1.ldf")
@@ -131,9 +125,9 @@ lf1.Drop()
 ```  
 //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db = default(Database);  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Define a LogFile object and set the database, name, and file name properties in the constructor.   
             LogFile lf1 = default(LogFile);  
             lf1 = new LogFile(db, "logfile1", "c:\\Program Files\\Microsoft SQL Server\\MSSQL.10_50.MSSQLSERVER\\MSSQL\\Data\\logfile1.ldf");  
@@ -160,8 +154,8 @@ lf1.Drop()
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default\Databases\  
   
-#And the database object corresponding to AdventureWorks2012  
-$db = get-item AdventureWorks2012  
+#And the database object corresponding to AdventureWorks2022  
+$db = get-item AdventureWorks2022  
   
 #Create a filegroup  
 $fg1 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Filegroup -argumentlist $db, "Secondary"  

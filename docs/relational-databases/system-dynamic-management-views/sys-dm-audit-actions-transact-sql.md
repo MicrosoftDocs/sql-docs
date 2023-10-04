@@ -4,8 +4,8 @@ description: sys.dm_audit_actions (Transact-SQL)
 author: sravanisaluru
 ms.author: srsaluru
 ms.date: "03/23/2022"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_audit_actions_TSQL"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_audit_actions dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=azuresqldb-mi-current"
 ---
 # sys.dm_audit_actions (Transact-SQL)

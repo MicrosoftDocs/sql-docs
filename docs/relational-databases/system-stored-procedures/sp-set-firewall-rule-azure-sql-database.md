@@ -1,24 +1,21 @@
 ---
+title: "sp_set_firewall_rule (Azure SQL Database)"
 description: "sp_set_firewall_rule (Azure SQL Database)"
-title: "sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "07/28/2016"
 ms.service: sql-database
-ms.reviewer: ""
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_set_firewall_rule"
   - "sp_set_firewall_rule_TSQL"
   - "sys.sp_set_firewall_rule"
   - "sys.sp_set_firewall_rule_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_set_firewall_rule"
   - "firewall_rules, setting server rules"
-ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
-author: VanMSFT
-ms.author: vanto
+dev_langs:
+  - "TSQL"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest"
 ---
 # sp_set_firewall_rule (Azure SQL Database)
@@ -37,7 +34,7 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## Arguments  
- The following table demonstrates the supported arguments and options in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ The following table demonstrates the supported arguments and options in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
 |Name|Datatype|Description|  
 |----------|--------------|-----------------|  

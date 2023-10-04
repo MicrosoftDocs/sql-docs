@@ -1,16 +1,14 @@
 ---
+title: "URL Reservation Syntax  (Configuration Manager)"
 description: "URL Reservation Syntax  (Report Server Configuration Manager)"
-title: "URL Reservation Syntax  (Configuration Manager) | Microsoft Docs"
-ms.date: 10/05/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "URL reservations"
-ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 10/05/2022
+ms.service: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "URL reservations"
 ---
 # URL Reservation Syntax  (Report Server Configuration Manager)
   This topic describes the parts of the URL string for the Report Server Web service and Report Manager. The URL string that is stored internally has a different structure from a URL that you type in the Address bar of a browser window. The URL reservation string appears in the Results window of the Reporting Services Configuration tool when you configure a URL and in the RSReportServer.config file. Knowing how the URL string is defined can be useful if you are troubleshooting URL reservation problems or querying HTTP.SYS to view the internal URL reservations that are defined on your server.  
@@ -28,12 +26,12 @@ ms.author: maggies
 |--------------|------------------|-----------------|  
 |Scheme|http or https|Prefixes for non-TLS and TLS connections.|  
 |Hostname| | Identifies the server on the network.|
-| |(+) Strong wildcard, equates to **(All Assigned)** value for the IP address. | (+) Strong wildcard is the default. HTTP.SYS will accept all requests on all network adaptors for a given port and virtual directory combination. The report server will accept any request on the port.|
-| | (\*) Weak wildcard, equates to an IP address of **(All Unassigned)**. | (\*) Weak wildcard. HTTP.SYS accepts all requests not handled by other URL reservations on all network adaptors for a given port and virtual directory combination.|
+| |(+) Strong wildcard, equates to **(All Assigned)** value for the IP address. | (+) Strong wildcard is the default. HTTP.SYS will accept all requests on all network adapters for a given port and virtual directory combination. The report server will accept any request on the port.|
+| | (\*) Weak wildcard, equates to an IP address of **(All Unassigned)**. | (\*) Weak wildcard. HTTP.SYS accepts all requests not handled by other URL reservations on all network adapters for a given port and virtual directory combination.|
 | | Fully qualified domain name | Fully qualified domain name includes domain address and server name, as registered with a domain controller or public domain name server.|
 | | Machine name | Machine name is the NETBIOS name of the computer on the network.|
-| | IP address (IPV4)| IP address (IPV4) is the IP address of a network adaptor on the computer in IPV4 format: *nnn.nnn.nnn.nnn*.|
-| | IP address (IPV6) | IP address (IPV6) is the IP address of a network adaptor on the computer in IPV6 format: \<header>:\<header>:*nnn.nnn.nnn.nnn*.| 
+| | IP address (IPV4)| IP address (IPV4) is the IP address of a network adapter on the computer in IPV4 format: *nnn.nnn.nnn.nnn*.|
+| | IP address (IPV6) | IP address (IPV6) is the IP address of a network adapter on the computer in IPV6 format: \<header>:\<header>:*nnn.nnn.nnn.nnn*.| 
 |Port|80 | Port 80 is the standard port for HTTP requests to and from a server.|
 | |443 |Port 443 is the standard report for TLS connections.|
 | |\<custom>| You can use any port that is not already reserved by another application.|

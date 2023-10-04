@@ -1,14 +1,15 @@
 ---
 title: FOR XML (SQL Server)
 description: Learn about the FOR XML clause that is used in SQL queries to retrieve results as XML.
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: xml
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: randolphwest
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 f1_keywords:
   - "FOR_XML_TSQL"
-dev_langs:
-  - TSQL
 helpviewer_keywords:
   - "FOR XML clause, about FOR XML clause"
   - "PATH FOR XML mode, construction"
@@ -18,12 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], FOR XML clause"
   - "AUTO FOR XML mode"
   - "XML [SQL Server], construction"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: randolphwest
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-# monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017"
+dev_langs:
+  - TSQL
 ---
 # FOR XML (SQL Server)
 
@@ -54,10 +51,10 @@ FOR XML is not valid for any selection that is used with a FOR BROWSE clause.
 
 ## Example
 
-The following `SELECT` statement retrieves information from the `Sales.Customer` and `Sales.SalesOrderHeader` tables in the `AdventureWorks2012` database. This query specifies the `AUTO` mode in the `FOR XML` clause:
+The following `SELECT` statement retrieves information from the `Sales.Customer` and `Sales.SalesOrderHeader` tables in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This query specifies the `AUTO` mode in the `FOR XML` clause:
 
 ```sql
-USE AdventureWorks2012
+USE AdventureWorks2022;
 GO
 SELECT Cust.CustomerID,
        OrderHeader.CustomerID,
@@ -77,7 +74,7 @@ For example, consider this query:
 
 ```sql
 SELECT TOP 1 LastName
-  FROM ServerName.AdventureWorks2012.Person.Person
+  FROM ServerName.AdventureWorks2022.Person.Person
   FOR XML AUTO;
 ```
 
@@ -86,7 +83,7 @@ SELECT TOP 1 LastName
 **Local server**: &nbsp; When `ServerName` is a local server, the query returns the following text:
 
 ```xml
-<AdventureWorks2012.Person.Person LastName="Achong" />  
+<AdventureWorks2022.Person.Person LastName="Achong" />  
 ```
 
 &nbsp;
@@ -94,7 +91,7 @@ SELECT TOP 1 LastName
 **Network server**: &nbsp; When `ServerName` is a network server, the query returns the following text:
 
 ```xml
-<ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
+<ServerName.AdventureWorks2022.Person.Person LastName="Achong" />
 ```
 
 &nbsp;
@@ -103,7 +100,7 @@ SELECT TOP 1 LastName
 
 ```sql
 SELECT TOP 1 LastName
-  FROM ServerName.AdventureWorks2012.Person.Person x
+  FROM ServerName.AdventureWorks2022.Person.Person x
   FOR XML AUTO;
 ```
 

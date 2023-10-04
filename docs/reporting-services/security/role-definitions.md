@@ -1,21 +1,18 @@
 ---
+title: "Role Definitions"
 description: "Role Definitions"
-title: "Role Definitions | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "roles [Reporting Services], creating"
   - "roles [Reporting Services], security"
   - "security [Reporting Services], role definitions"
   - "role-based security [Reporting Services], role definitions"
-ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Role Definitions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], a *role definition* is a named collection of tasks that define the operations available on a report server. Role definitions provide the rules used by the report server to enforce security. When a user attempts to perform a task, such as publishing a report, the report server checks the user's role assignment to determine whether the task is included in their role definition. If the task is included in the role definition, the request is submitted.  

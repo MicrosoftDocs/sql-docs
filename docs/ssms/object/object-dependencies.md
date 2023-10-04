@@ -1,18 +1,14 @@
 ---
-description: "Object Dependencies"
 title: "Object Dependencies"
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
-ms.technology: ssms
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.common.objectdependencies.f1"
-ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
+description: "Object Dependencies"
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "01/19/2017"
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.common.objectdependencies.f1"
 ---
 # Object Dependencies
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,5 +56,5 @@ Displays the type of dependency between two objects. Can be one of the following
   
 -   Not available or Unresolved Entity  
   
-    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+    Indicates the dependency type cannot be determined. This occurs only when the selected object is on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is earlier than [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)].  
   

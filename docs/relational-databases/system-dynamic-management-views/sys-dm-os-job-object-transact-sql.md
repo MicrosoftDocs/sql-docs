@@ -7,16 +7,15 @@ ms.date: "06/03/2020"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
-  - "sys.dm_db_resource_stats"
-  - "sys.dm_db_resource_stats_TSQL"
-  - "dm_db_resource_stats"
-  - "dm_db_resource_stats_TSQL"
+  - "sys.dm_os_job_object"
+  - "sys.dm_os_job_object_TSQL"
+  - "dm_os_job_object"
+  - "dm_os_job_object_TSQL"
 helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
 dev_langs:
   - "TSQL"
-ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_os_job_object (Azure SQL Database)

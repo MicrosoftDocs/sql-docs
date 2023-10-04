@@ -1,24 +1,20 @@
 ---
-title: "sum Function (XQuery) | Microsoft Docs"
+title: "sum Function (XQuery)"
 description: Learn about the XQuery function sum() that returns the sum of a sequence of numbers.
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "sum function [XQuery]"
-  - "fn:sum function"
-ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/09/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "sum function [XQuery]"
+  - "fn:sum function"
+dev_langs:
+  - "XML"
 ---
 # Aggregate Functions - sum
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sum of a sequence of numbers.  
   

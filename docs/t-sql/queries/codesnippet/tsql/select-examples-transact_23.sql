@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT pp.FirstName, pp.LastName, e.NationalIDNumber
 FROM HumanResources.Employee AS e WITH (INDEX(AK_Employee_NationalIDNumber))
@@ -7,7 +7,7 @@ WHERE LastName = 'Johnson';
 GO
 
 -- Force a table scan by using INDEX = 0.
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT pp.LastName, pp.FirstName, e.JobTitle
 FROM HumanResources.Employee AS e WITH (INDEX = 0) JOIN Person.Person AS pp

@@ -1,12 +1,14 @@
 ---
 title: How to configure MSDTC on Linux
 description: In this article, learn how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
-author: VanMSFT 
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: 08/12/2020
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
@@ -102,7 +104,7 @@ Configure the Linux server routing table so that RPC communication on port 135 i
 
 ### Port routing in Ubuntu and SLES
 
-Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during reboots, so the following commands also provide instructions for restoring the rules after a reboot.
+Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during restarts, so the following commands also provide instructions for restoring the rules after a restart.
 
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 
@@ -127,7 +129,7 @@ Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are a
    sudo iptables-save > /etc/iptables.conf
    ```
 
-4. To reload the rules after a reboot, add the following command to `/etc/rc.local` (for Ubuntu) or to `/etc/init.d/after.local` (for SLES):
+4. To reload the rules after a restart, add the following command to `/etc/rc.local` (for Ubuntu) or to `/etc/init.d/after.local` (for SLES):
 
    ```bash
    iptables-restore < /etc/iptables.conf
@@ -202,6 +204,6 @@ If a client on a Windows operating system needs to enlist into distributed trans
 | [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
-## Next steps
+## Related content
 
-For more information about SQL Server on Linux, see [SQL Server on Linux](sql-server-linux-overview.md).
+- [SQL Server on Linux](sql-server-linux-overview.md)

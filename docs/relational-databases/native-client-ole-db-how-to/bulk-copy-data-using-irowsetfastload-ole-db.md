@@ -1,25 +1,21 @@
 ---
+title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider)"
 description: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client"
-title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
+ms.service: sql
+ms.subservice: native-client
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "bulk copy [ODBC], text data"
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
-ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: markingmyname
-ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB) in  SQL Server Native Client
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  
   
@@ -27,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  A complete sample is available that illustrates the use of **IRowsetFastLoad** for bulk copying of the records into a table. In this sample, 10 records are added to the table **IRFLTable**. You need to create the table **IRFLTable** in the database.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
@@ -58,7 +54,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')  
@@ -419,7 +415,7 @@ void SetupOption (DBPROPID PropID, WCHAR *wszVal, DBPROP * pDBProp ) {
 ```  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
   
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'IRFLTable')  

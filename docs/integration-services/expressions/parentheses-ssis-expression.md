@@ -1,20 +1,16 @@
 ---
+title: "() (Parentheses) (SSIS Expression)"
 description: "() (Parentheses) (SSIS Expression)"
-title: "() (Parentheses) (SSIS Expression) | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "() (parentheses operator)"
   - "evaluation order [Integration Services]"
   - "parentheses operator ()"
-ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: chugugrace
-ms.author: chugu
 ---
 # () (Parentheses) (SSIS Expression)
 

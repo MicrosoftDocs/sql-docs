@@ -4,8 +4,8 @@ description: "Filter and RecordCount Properties Example (VB)"
 author: rothja
 ms.author: jroth
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: reference
 helpviewer_keywords:
   - "RecordCount property [ADO], Visual Basic example"
@@ -99,7 +99,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  When you know the data you want to select, it's usually more efficient to open a **Recordset** with an SQL statement. This example shows how you can create just one **Recordset** and obtain records from a particular country.  
+>  When you know the data you want to select, it's usually more efficient to open a **Recordset** with an SQL statement. This example shows how you can create just one **Recordset** and obtain records from a particular country/region.  
   
 ```  
 Attribute VB_Name = "Filter"  

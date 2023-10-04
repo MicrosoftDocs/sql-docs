@@ -7,7 +7,6 @@ ms.author: randolphwest
 ms.date: "4/18/2022"
 ms.service: sql-database
 ms.topic: "reference"
-ms.custom: seo-dt-2019
 f1_keywords:
   - "sys.dm_continuous_copy_status_TSQL"
   - "dm_continuous_copy_status_TSQL"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "sys.dm_continuous_copy_status"
 dev_langs:
   - "TSQL"
-ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 monikerRange: "=azuresqldb-current"
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database and Azure SQL Managed Instance)

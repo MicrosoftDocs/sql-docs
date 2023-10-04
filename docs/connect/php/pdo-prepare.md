@@ -4,8 +4,8 @@ description: "API reference for the PDO::prepare function in the Microsoft PDO_S
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "01/31/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
 ---
 # PDO::prepare

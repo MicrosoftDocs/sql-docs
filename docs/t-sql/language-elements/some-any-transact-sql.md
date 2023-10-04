@@ -4,9 +4,8 @@ description: "SOME | ANY (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "SOME"
@@ -26,12 +25,12 @@ dev_langs:
 
 Compares a scalar value with a single-column set of values. SOME and ANY are equivalent.  
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax
   
 ```syntaxsql
-scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
+scalar_expression { = | <> | != | > | >= | !> | < | <= | !< }   
      { SOME | ANY } ( subquery )   
 ```
 
@@ -101,7 +100,7 @@ PRINT 'FALSE' ;
 
 ### B. Running a practical example
 
-The following example creates a stored procedure that determines whether all the components of a specified `SalesOrderID` in the `AdventureWorks2012` database can be manufactured in the specified number of days. The example uses a subquery to create a list of the number of `DaysToManufacture` value for all the components of the specific `SalesOrderID`, and then tests whether any of the values that are returned by the subquery are greater than the number of days specified. If every value of `DaysToManufacture` that is returned is less than the number provided, the condition is TRUE and the first message is printed.
+The following example creates a stored procedure that determines whether all the components of a specified `SalesOrderID` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database can be manufactured in the specified number of days. The example uses a subquery to create a list of the number of `DaysToManufacture` value for all the components of the specific `SalesOrderID`, and then tests whether any of the values that are returned by the subquery are greater than the number of days specified. If every value of `DaysToManufacture` that is returned is less than the number provided, the condition is TRUE and the first message is printed.
 
 ```sql  
 -- Uses AdventureWorks

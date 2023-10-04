@@ -1,25 +1,24 @@
 ---
-description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 title: "Bulk Copy, enhanced types, OLE DB"
-ms.custom: ""
-ms.date: 12/18/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: native-client
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "ODBC, bulk copy operations"
-ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
+description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 author: markingmyname
 ms.author: maghan
+ms.date: 12/18/2019
+ms.service: sql
+ms.subservice: native-client
+ms.topic: "reference"
+helpviewer_keywords:
+  - "ODBC, bulk copy operations"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
+> [!IMPORTANT] 
+> [!INCLUDE[snac-removed-oledb-and-odbc](../../includes/snac-removed-oledb-and-odbc.md)]
+
 ## Format Files  
  When building format files interactively, the following table describes the input used to specify date/time types and the corresponding host-file data type names.  
   

@@ -3,11 +3,10 @@ title: Release notes for mssql-tools on Linux and macOS
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 author: David-Engel
 ms.author: v-davidengel
-manager: kenvh
 ms.reviewer: v-davidengel
-ms.date: 08/08/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.date: 08/11/2023
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Release notes for the Microsoft SQL Server tools on Linux and macOS
@@ -15,6 +14,18 @@ ms.topic: conceptual
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 This article lists and describes what's new in the versioned releases of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server Tools on Linux and macOS.
+
+## 18.3.1.1, July 2023
+
+| New item | Details |
+| :------- | :------ |
+| Alpine ARM64 | Only released for Alpine Linux. This version now supports the ARM64 platform on Alpine Linux. |
+
+## 18.2.1.1, January 2023
+
+| New item | Details |
+| :------- | :------ |
+| Sqlcmd Bugfix | Fixed issue with command line parameters not being hidden |
 
 ## 18.1.1.1, August 2022
 
@@ -39,6 +50,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 | :------- | :------ |
 | Sqlcmd Bugfix | Fixed extraneous trailing bytes after encoding conversion. |
 | TDS 8.0 | Add support for TDS 8.0 strict encryption |
+| Secure by default | Following the change in Microsoft ODBC Driver 18 for SQL Server to default Encrypt to `yes`, sqlcmd and bcp both require encryption and validate certificates, by default. In sqlcmd, use `-No` to connect with optional encryption. In bcp, use `-Yo` to connect with optional encryption. For more information, see [Connecting with sqlcmd](connecting-with-sqlcmd.md) and [Connecting with bcp](connecting-with-bcp.md). |
 
 ## 17.9.1.1, February 2022
 

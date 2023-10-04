@@ -1,28 +1,26 @@
 ---
 title: "Specify XSINIL with the ELEMENTS Directive"
 description: View an example that specifies XSINIL with the ELEMENTS directive to generate element-centric XML from the query result.
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "RAW mode, specifying XSINIL example"
-author: MikeRayMSFT
-ms.author: mikeray
-ms.custom: "seo-lt-2019"
 ---
 # Example: Specify XSINIL with the ELEMENTS Directive
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.
 
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductID, Name, Color
 FROM Production.Product
@@ -48,7 +46,7 @@ This is the partial result.
 Because the `Color` column has null values for some products, the resulting XML won't generate the corresponding `<Color>` element. By adding the `XSINIL` directive with `ELEMENTS`, you can generate the `<Color>` element even for NULL color values in the result set.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductID, Name, Color
 FROM Production.Product

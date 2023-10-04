@@ -1,16 +1,13 @@
 ---
-title: "Expression scope for totals, aggregates, and built-in collections in a paginated report | Microsoft Docs"
+title: "Expression scope for totals, aggregates, and built-in collections in a paginated report"
 description: Discover the variety of meanings for scope in expressions for totals, aggregates, and built-in collections in paginated reports in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Expression scope for totals, aggregates, and built-in collections in a paginated report (Report Builder)
 

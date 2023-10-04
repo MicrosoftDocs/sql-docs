@@ -1,21 +1,17 @@
 ---
+title: "The ODBC Solution"
 description: "The ODBC Solution"
-title: "The ODBC Solution | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "ODBC [ODBC], database access"
   - "SQL [ODBC], database access"
   - "database access [ODBC]"
   - "standardizing database access [ODBC], using ODBC"
-ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-author: David-Engel
-ms.author: v-davidengel
 ---
 # The ODBC Solution
 The question, then, is how does ODBC standardize database access? There are two architectural requirements:  

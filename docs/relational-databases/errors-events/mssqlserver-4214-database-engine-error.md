@@ -1,17 +1,15 @@
 ---
-description: "MSSQLSERVER_"
 title: MSSQLSERVER_4214
-ms.custom: ""
-ms.date: 08/20/2020
-ms.prod: sql
-ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "4214 (Database Engine error)"
-ms.assetid: 
+description: "MSSQLSERVER_"
 author: suresh-kandoth
-ms.author: ramakoni
+ms.author: sureshka
+ms.reviewer: jopilov, mathoma
+ms.date: 08/20/2020
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "4214 (Database Engine error)"
 ---
 # MSSQLSERVER_4214
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

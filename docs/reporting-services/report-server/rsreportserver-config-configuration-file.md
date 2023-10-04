@@ -1,16 +1,13 @@
 ---
-title: "RsReportServer.config Configuration File | Microsoft Docs"
+title: "RsReportServer.config Configuration File"
 description: Learn about the configuration file that stores settings that are used by the Report Server Web service and background processing.
-ms.date: 05/01/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/01/2020
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes don't use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
@@ -190,7 +187,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Specifies the URL of the report server that the web portal connects to. Only modify this value if you are configuring the web portal to connect to a report server in another instance or on a remote computer.|N,S|  
-|**ReportBuilderTrustLevel**|Don't modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|Don't modify this value; it is not configurable. In [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|For the web portal only, this setting specifies whether the report server calculates a page count value before the report is rendered, or as the report is viewed. Valid values are **Estimate** (default) and **Actual**. Use **Estimate** to calculate page count information as the user views the report. Initially, the page count is set to 2 (for the current page plus one additional page), but adjusts upwards as the user pages through the report. Use **Actual** if you want to calculate page count in advance before the report is displayed. **Actual** is provided for backward compatibility. Note that if you set **PageCountMode** to **Actual**, the entire report must be processed to get a valid page count, increasing wait time before the report is displayed.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config file) Native Mode  
@@ -687,7 +684,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<Extension Name="SQLAZURE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.MSSQL.MsSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
 			<Extension Name="ORACLE" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Oracle.OraSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
 			<Extension Name="TERADATA" Type="Microsoft.ReportingServices.SemanticQueryEngine.Sql.Teradata.TdSqlModelGenerator,Microsoft.ReportingServices.SemanticQueryEngine"/>
-			<Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.Generation.ModelGeneratorExtention,Microsoft.AnalysisServices.Modeling"/>
+			<Extension Name="OLEDB-MD" Type="Microsoft.AnalysisServices.Modeling.Generation.ModelGeneratorExtension,Microsoft.AnalysisServices.Modeling"/>
 		</ModelGeneration>
 		<Security>
 			<Extension Name="Windows" Type="Microsoft.ReportingServices.Authorization.WindowsAuthorization, Microsoft.ReportingServices.Authorization"/>

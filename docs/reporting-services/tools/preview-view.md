@@ -1,20 +1,17 @@
 ---
-title: "Preview View | Microsoft Docs"
+title: "Preview View"
 description: Learn about the Preview view of the Reporting Services Report Designer where you view a display of your rendered report.
-ms.date: 05/30/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: tools
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.previewview.f1"
-helpviewer_keywords: 
-  - "Preview view [Reporting Services]"
-ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/30/2016
+ms.service: reporting-services
+ms.subservice: tools
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rtp.rptdesigner.previewview.f1"
+helpviewer_keywords:
+  - "Preview view [Reporting Services]"
 ---
 # Preview View
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. If the report has a complex query or has a large amount of data, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.

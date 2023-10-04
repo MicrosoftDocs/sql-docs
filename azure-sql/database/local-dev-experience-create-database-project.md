@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 05/24/2022
 ms.service: sql-database
 ms.topic: how-to
-ms.custom: template-how-to
+ms.custom: template-how-to, build-2023, build-2023-dataai
 ---
 
 # Create a project for a local Azure SQL Database development environment
@@ -21,9 +21,9 @@ Before creating or opening a SQL Database project, follow the steps in [Set up a
 
 ## Create a new project
 
-In the **Projects** view select the **New Project** button and enter a project name in the text input that appears.  In the **Select a Folder** dialog that appears, choose a directory for the project's folder, .sqlproj file, and other contents to reside in.
+In the **Database Projects** view select the **New Project** button and enter a project name in the text input that appears.  In the **Select a Folder** dialog that appears, choose a directory for the project's folder, .sqlproj file, and other contents to reside in.
 
-The empty project is opened and visible in the **Projects** view for editing.
+The empty project is opened and visible in the **Database Projects** view for editing.
 
 ## Create a project from Azure SQL Database
 
@@ -33,9 +33,9 @@ Finally, select a target structure of the extraction. The new project opens and 
 
 ## Open an existing project
 
-In the **Projects** view, select **Open Project** and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, Visual Studio Code or [Visual Studio SQL Server Data Tools](/sql/ssdt/sql-server-data-tools).
+In the **Database Projects** view, select **Open Project** and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio, Visual Studio Code or [Visual Studio SQL Server Data Tools](/sql/ssdt/sql-server-data-tools).
 
-The existing project opens and its contents are visible in the **Projects** view for editing.
+The existing project opens and its contents are visible in the **Database Projects** view for editing.
 
 ## Next steps
 

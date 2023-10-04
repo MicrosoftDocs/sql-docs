@@ -4,11 +4,9 @@ description: Learn how to use the Optimistic Concurrency Control mechanism in up
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "<before> block"
   - "low concurrency protection"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "optimistic concurrency control"
   - "concurrency [SQLXML]"
   - "intermediate concurrency protection [SQLXML]"
-ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)

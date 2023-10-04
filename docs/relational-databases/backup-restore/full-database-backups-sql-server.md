@@ -1,14 +1,13 @@
 ---
-title: "Full Database Backups (SQL Server) | Microsoft Docs"
+title: "Full Database Backups (SQL Server)"
 description: In SQL Server, a full database backup backs up the whole database. Full database backups represent the database at the time the backup finished.
-ms.custom: ""
+author: MashaMSFT
+ms.author: mathoma
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "full backups [SQL Server]"
   - "backups [SQL Server], database"
   - "backing up databases [SQL Server], full backups"
@@ -17,9 +16,6 @@ helpviewer_keywords:
   - "database backups [SQL Server], full backups"
   - "size [SQL Server], backups"
   - "database backups [SQL Server], about backing up databases"
-ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
-author: MashaMSFT
-ms.author: mathoma
 ---
 # Full Database Backups (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,8 +46,8 @@ ms.author: mathoma
  The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set.  
   
 ```  
--- Back up the AdventureWorks2012 database to new media set.  
-BACKUP DATABASE AdventureWorks2012  
+-- Back up the AdventureWorks2022 database to new media set.  
+BACKUP DATABASE AdventureWorks2022  
     TO DISK = 'Z:\SQLServerBackups\AdventureWorksSimpleRM.bak'   
     WITH FORMAT;  
 GO  
@@ -69,15 +65,15 @@ GO
   
 ```  
 USE master;  
-ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+ALTER DATABASE AdventureWorks2022 SET RECOVERY FULL;  
 GO  
--- Back up the AdventureWorks2012 database to new media set (backup set 1).  
-BACKUP DATABASE AdventureWorks2012  
-  TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012FullRM.bak'   
+-- Back up the AdventureWorks2022 database to new media set (backup set 1).  
+BACKUP DATABASE AdventureWorks2022  
+  TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022FullRM.bak'   
   WITH FORMAT;  
 GO  
 --Create a routine log backup (backup set 2).  
-BACKUP LOG AdventureWorks2012 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012FullRM.bak';  
+BACKUP LOG AdventureWorks2022 TO DISK = 'Z:\SQLServerBackups\AdventureWorks2022FullRM.bak';  
 GO  
 ```  
   

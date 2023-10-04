@@ -4,8 +4,8 @@ description: Table-valued parameters provide an efficient way to send multiple r
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 04/21/2022
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Using table-valued parameters

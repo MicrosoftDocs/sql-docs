@@ -1,21 +1,17 @@
 ---
+title: "Upgrading the Version of a Data Flow Component"
 description: "Upgrading the Version of a Data Flow Component"
-title: "Upgrading the Version of a Data Flow Component | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "PerformUpgrade method"
   - "custom data flow components [Integration Services], upgrading version"
   - "data flow components [Integration Services], upgrading version"
   - "upgrading data flow components [Integration Services]"
-ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: chugugrace
-ms.author: chugu
 ---
 # Upgrading the Version of a Data Flow Component
 

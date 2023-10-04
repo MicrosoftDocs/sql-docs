@@ -1,20 +1,17 @@
 ---
-description: "Find property set GUIDs and property integer IDs for Search properties"
 title: "Find property set GUIDs & property integer IDs for Search properties"
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "search, sql-database"
-ms.technology: search
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "full-text search [SQL Server], search property lists"
-  - "search property lists [SQL Server], configuring"
-ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
+description: "Find property set GUIDs and property integer IDs for Search properties"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: mikeray
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: search
+ms.topic: conceptual
+helpviewer_keywords:
+  - "full-text search [SQL Server], search property lists"
+  - "search property lists [SQL Server], configuring"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
-ms.custom: "seo-lt-2019"
 ---
 # Find property set GUIDs and property integer IDs for Search properties
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

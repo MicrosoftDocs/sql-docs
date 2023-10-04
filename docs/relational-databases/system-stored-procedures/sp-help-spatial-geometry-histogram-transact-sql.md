@@ -1,23 +1,19 @@
 ---
+title: "sp_help_spatial_geometry_histogram (Transact-SQL)"
 description: "sp_help_spatial_geometry_histogram (Transact-SQL)"
-title: "sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_help_spatial_geometry_histogram"
-  - "sp_help_spatial_geometry_histogram_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_help_spatial_geometry_histogram"
-ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_help_spatial_geometry_histogram"
+  - "sp_help_spatial_geometry_histogram_TSQL"
+helpviewer_keywords:
+  - "sp_help_spatial_geometry_histogram"
+dev_langs:
+  - "TSQL"
 ---
 # sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,13 +81,13 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## Examples  
  The following example creates a sample table and then calls **sp_help_spatial_geometry_histogram** on the table.  
   
- `USE AdventureWorksDW2012`  
+ `USE AdventureWorksDW2022`  
   
  `GO`  
   
  `-- Set database compatibility for circular arc segments`  
   
- `ALTER DATABASE AdventureWorksDW2012`  
+ `ALTER DATABASE AdventureWorksDW2022`  
   
  `SET COMPATIBILITY_LEVEL = 110;`  
   

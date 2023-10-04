@@ -1,13 +1,12 @@
 ---
+title: "Create DML Triggers"
 description: "Create DML Triggers"
-title: "Create DML Triggers | Microsoft Docs"
-ms.custom: ""
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: "09/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.service: sql
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "encryption [SQL Server], DML triggers"
   - "deferred name resolution, DML triggers"
   - "WITH ENCRYPTION clause"
@@ -16,9 +15,6 @@ helpviewer_keywords:
   - "DML triggers, programming"
   - "testing column changes"
   - "results [SQL Server], DML triggers"
-ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
-author: MikeRayMSFT
-ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create DML Triggers
@@ -107,7 +103,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
     ```sql  
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     CREATE TRIGGER NewPODetail3  
     ON Purchasing.PurchaseOrderDetail  

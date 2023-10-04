@@ -1,21 +1,19 @@
 ---
 title: "Example: Constructing Siblings with EXPLICIT Mode"
 description: View an example of an SQL query that uses EXPLICIT mode with the FOR XML clause to construct XML siblings.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "EXPLICIT FOR XML mode"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Construct siblings with EXPLICIT mode
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Assume that you want to construct XML that provides sales order information. In this example, `<SalesPerson>` and `<OrderDetail>` elements are siblings. Each Order has one `<OrderHeader>` element, one `<SalesPerson>` element, and one or more `<OrderDetail>` elements.
 
@@ -32,7 +30,7 @@ Assume that you want to construct XML that provides sales order information. In 
 The following EXPLICIT mode query constructs this XML. The query specifies `Tag` values of 1 for the `<OrderHeader>` element, 2 for the `<SalesPerson>` element, and 3 for the `<OrderDetail>` element. Because `<SalesPerson>` and `<OrderDetail>` are siblings, the query specifies the same `Parent` tag value of 1 identifying the `<OrderHeader>` element.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

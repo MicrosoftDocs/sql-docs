@@ -1,23 +1,20 @@
 ---
-title: "Configure a Native Mode Report Server for Local Administration | Microsoft Docs"
+title: "Configure a Native Mode Report Server for Local Administration"
 description: Learn how to configure the report server for local administration, if you install a Reporting Services report server in certain environments.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/28/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
+ms.service: reporting-services
+ms.subservice: report-server
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "UAC"
   - "installing Reporting Services"
   - "Windows Vista"
   - "Localhost"
   - "windows server 2008"
   - "Vista"
-ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
   Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  

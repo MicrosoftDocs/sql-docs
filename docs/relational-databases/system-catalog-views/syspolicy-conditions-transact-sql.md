@@ -4,9 +4,8 @@ description: syspolicy_conditions (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syspolicy_conditions"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_conditions view"
 dev_langs:
   - "TSQL"
-ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 ---
 # syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,33 +1,29 @@
 ---
+title: "sys.fn_cdc_map_lsn_to_time (Transact-SQL)"
 description: "sys.fn_cdc_map_lsn_to_time (Transact-SQL)"
-title: "sys.fn_cdc_map_lsn_to_time (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sys.fn_cdc_map_lsn_to_time_TSQL"
   - "sys.fn_cdc_map_lsn_to_time"
   - "fn_cdc_map_lsn_to_time_TSQL"
   - "fn_cdc_map_lsn_to_time"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sys.fn_cdc_map_lsn_to_time"
   - "fn_cdc_map_lsn_to_time"
-ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 ---
 # sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the date and time value from the **tran_end_time** column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table for the specified log sequence number (LSN). You can use this function to systematically map LSN ranges to date ranges in a change table.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -53,7 +49,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
  The following example uses the function `sys.fn_cdc_map_lsn_to_time` to determine the commit time associated with the last change processed in the specified LSN interval for the `HumanResources_Employee` capture instance.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @max_lsn binary(10);  
 SELECT @max_lsn = MAX(__$start_lsn)  

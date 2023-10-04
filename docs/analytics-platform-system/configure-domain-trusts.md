@@ -5,12 +5,10 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: murshedz
 ms.date: 05/06/2022
-ms.prod: sql
-ms.technology: data-warehouse
+ms.service: sql
+ms.subservice: data-warehouse
 ms.topic: how-to
-ms.custom:
-  - seo-dt-2019
-  - kr2b-contr-experiment
+ms.custom: kr2b-contr-experiment
 ---
 
 # Configure domain trusts in Analytics Platform System

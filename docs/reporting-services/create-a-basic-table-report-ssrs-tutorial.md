@@ -1,23 +1,21 @@
 ---
-title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
-description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report. 
+title: "Create a Basic Table Report (SSRS Tutorial)"
+description: Use the Report Designer tool in Visual Studio / SQL Server Data Tools (SSDT) and then create a SQL Server Reporting Services (SSRS) paginated report.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 04/16/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "walkthroughs [Reporting Services]"
   - "tutorials [Reporting Services]"
   - "reports [Reporting Services], creating"
-ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 
-In this tutorial, you use the *Report Designer* tool in Visual Studio / SQL Server Data Tools (SSDT). You create a SQL Server Reporting Services (SSRS) paginated report. The report contains a query table, created from data in the AdventureWorks2016 database.
+In this tutorial, you use the *Report Designer* tool in Visual Studio / SQL Server Data Tools (SSDT). You create a SQL Server Reporting Services (SSRS) paginated report. The report contains a query table, created from data in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 As you progress in this tutorial, you're going to learn how to:
   
@@ -36,10 +34,10 @@ Your system must have the following components installed to take this tutorial:
 
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
 - SQL Server 2016 Reporting Services or later (SSRS).
-- The AdventureWorks2016 database.  For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
+- The [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.  For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio along with the Reporting Services extension installed to enable access to the *Report Designer*.
   
-You must also have read-only permissions to retrieve data from the AdventureWorks2016 database.
+You must also have read-only permissions to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 **Estimated time to complete the tutorial:** 30 minutes.
 

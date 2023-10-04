@@ -1,20 +1,17 @@
 ---
-title: "Text-based Query Designer User Interface (Report Builder) | Microsoft Docs"
-description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. 
-ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-f1_keywords: 
-  - "10010"
-helpviewer_keywords: 
-  - "query designers, text-based"
-ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
+title: "Text-based Query Designer User Interface (Report Builder)"
+description: Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/14/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "10010"
+helpviewer_keywords:
+  - "query designers, text-based"
 ---
 # Text-based Query Designer User Interface (Report Builder)
   Use the text-based query designer to specify a query using the query language supported by the data source, run the query, and view the results at design time. You can specify multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, query or command syntax for custom data processing extensions, and queries that are specified as expressions. Because the text-based query designer does not preprocess the query and can accommodate any kind of query syntax, this is the default query designer tool for many data source types.  
@@ -51,7 +48,7 @@ ms.author: maggies
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query returns the list of names from the  AdventureWorks2014 database **ContactType** table for the **Person** schema.  
+ The following query returns the list of names from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database **ContactType** table for the **Person** schema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -74,7 +71,7 @@ SELECT Name FROM Person.ContactType
 |Result|Displays the results of the query. To run the query, right-click in any pane and click **Run**, or click the **Run** button on the toolbar.|  
   
 #### Example  
- The following query calls the AdventureWorks2014 stored procedure **uspGetWhereUsedProductID**. You must enter a value for the product identification number parameter when you run the query.  
+ The following query calls the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] stored procedure **uspGetWhereUsedProductID**. You must enter a value for the product identification number parameter when you run the query.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -93,7 +90,7 @@ uspGetWhereUsedProductID
  When you select **Command typeTableDirect**, the text-based query designer presents two panes: the Query pane and the Result pane. When you enter a table and click the **Run** button, all the columns for that table are returned.  
   
 #### Example  
- For a data source type OLE DB, the following dataset query returns a result set for all contact types in the AdventureWorks2014 database.  
+ For a data source type OLE DB, the following dataset query returns a result set for all contact types in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  `Person.ContactType`  
   

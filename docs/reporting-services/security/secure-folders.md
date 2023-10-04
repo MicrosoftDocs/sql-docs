@@ -1,21 +1,18 @@
 ---
+title: "Secure Folders"
 description: "Secure Folders"
-title: "Secure Folders | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "high-security folders [Reporting Services]"
   - "low-security folders"
   - "folders [Reporting Services], security"
   - "security [Reporting Services], folders"
-ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Secure Folders
   Folder security is the foundation for securing all content in a report server. Because security is inherited throughout the folder structure, you can designate large or small sections of the folder hierarchy to allow for certain kinds of access.  

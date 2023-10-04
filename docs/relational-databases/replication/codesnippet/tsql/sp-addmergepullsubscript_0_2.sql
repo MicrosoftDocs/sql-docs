@@ -15,7 +15,7 @@ DECLARE @login AS sysname;
 DECLARE @password AS nvarchar(512);
 SET @publication = N'AdvWorksSalesOrdersMergeWebSync';
 SET @publisher = $(PubServer);
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 SET @websyncurl = 'https://' + $(WebServer) + '/WebSync';
 SET @security_mode = 0; -- Basic Authentication for IIS
 SET @login = $(Login);
@@ -23,7 +23,7 @@ SET @password = $(Password);
 
 -- At the subscription database, create a pull subscription 
 -- to a merge publication.
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 EXEC sp_addmergepullsubscription 
 	@publisher = @publisher, 
 	@publication = @publication, 

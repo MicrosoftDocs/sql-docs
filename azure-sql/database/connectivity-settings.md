@@ -5,13 +5,11 @@ description: This article explains the Transport Layer Security (TLS) version ch
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 07/14/2022
+ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
-ms.custom:
-  - "devx-track-azurepowershell"
-  - "devx-track-azurecli"
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.devlang: azurecli
 ---
 
@@ -31,9 +29,9 @@ You can change these settings from the networking tab of your [logical server](l
 
 ## Deny public network access
 
-The default for the **Connectivity method** setting is **No access** so that customers can connect by using either public endpoints (with IP-based server- level firewall rules or with virtual-network firewall rules) or private endpoints (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
+The default for the **Public network access** setting is **Disable**. Customers can choose to connect to a database by using either public endpoints (with IP-based server-level firewall rules or with virtual-network firewall rules), or [private endpoints](private-endpoint-overview.md) (by using Azure Private Link), as outlined in the [network access overview](network-access-controls-overview.md).
 
-When **Connectivity method** is set to **No access**, only connections via private endpoints are allowed. All connections via public endpoints will be denied with an error message similar to:  
+When **Public network access** is set to **Disable**, only connections from private endpoints are allowed. All connections from public endpoints will be denied with an error message similar to:  
 
 ```output
 Error 47073
@@ -42,7 +40,7 @@ The public network interface on this server is not accessible.
 To connect to this server, use the Private Endpoint from inside your virtual network.
 ```
 
-When **Connectivity method** is set to **No access**, any attempts to add, remove or edit any firewall rules will be denied with an error message similar to:
+When **Public network access** is set to **Disable**, any attempts to add, remove, or edit any firewall rules will be denied with an error message similar to:
 
 ```output
 Error 42101
@@ -50,7 +48,7 @@ Unable to create or modify firewall rules when public network interface for the 
 To manage server or database level firewall rules, please enable the public network interface.
 ```
 
-Ensure that **Connectivity method** is set to **Public endpoint** or **Private endpoint** to be able to add, remove or edit any firewall rules for Azure SQL Database and Azure Synapse Analytics. 
+Ensure that **Public network access** is set to **Selected networks** to be able to add, remove, or edit any firewall rules for Azure SQL Database and Azure Synapse Analytics. 
 
 ## Change public network access 
 
@@ -58,7 +56,7 @@ It's possible to change the public network access via the Azure portal, Azure Po
 
 ### [Portal](#tab/azure-portal)
 
-To enable public network access for the logical server hosting your databases, go to the **Networking page** in the [Azure portal](https://portal.azure.com), choose the **Public access** tab, and then set the **Public network access** to **Select networks**. 
+To enable public network access for the logical server hosting your databases, go to the **Networking page** in the [Azure portal](https://portal.azure.com) for your [logical server in Azure](logical-servers.md), choose the **Public access** tab, and then set the **Public network access** to **Select networks**. 
 
 
 From this page, you can add a virtual network rule, as well as configure firewall rules for your public endpoint. 
@@ -118,7 +116,7 @@ Currently, we support TLS 1.0, 1.1, and 1.2. Setting a minimal TLS version ensur
 > [!IMPORTANT]
 > The default for the minimal TLS version is to allow all versions. After you enforce a version of TLS, it's not possible to revert to the default.
 
-For customers with applications that rely on older versions of TLS, we recommend setting the minimal TLS version according to the requirements of your applications. For customers that rely on applications to connect by using an unencrypted connection, we recommend not setting any minimal TLS version.
+For customers with applications that rely on older versions of TLS, we recommend setting the minimal TLS version according to the requirements of your applications. If application requirements are unknown or workloads rely on older drivers that are no longer maintained, we recommend not setting any minimal TLS version.
 
 For more information, see [TLS considerations for SQL Database connectivity](connect-query-content-reference-guide.md#tls-considerations-for-database-connectivity).
 
@@ -128,6 +126,9 @@ After you set the minimal TLS version, login attempts from customers who are usi
 Error 47072
 Login failed with invalid TLS version
 ```
+
+> [!NOTE]
+> When you configure a minimum TLS version, that minimum version is enforced at the application layer. Tools that attempt to determine TLS support at the protocol layer may return TLS versions in addition to the minimum required version when run directly against the SQL Database endpoint.
 
 ### [Portal](#tab/azure-portal)
 

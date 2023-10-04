@@ -1,30 +1,26 @@
 ---
+title: "sp_addmergepublication (Transact-SQL)"
 description: "sp_addmergepublication (Transact-SQL)"
-title: "sp_addmergepublication (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepublication"
-  - "sp_addmergepublication_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergepublication"
-ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepublication"
+  - "sp_addmergepublication_TSQL"
+helpviewer_keywords:
+  - "sp_addmergepublication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new merge publication. This stored procedure is executed at the Publisher on the database that is being published.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -202,7 +198,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Value|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
-|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|**100RTM**|[!INCLUDE[sql2008-md](../../includes/sql2008-md.md)]|  
   
 `[ @replicate_ddl = ] replicate_ddl`
  Indicates if schema replication is supported for the publication. *replicate_ddl* is **int**, with a default of 1. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  

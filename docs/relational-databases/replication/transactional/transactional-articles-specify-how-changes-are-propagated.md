@@ -1,18 +1,15 @@
 ---
 title: "Specify how changes are propagated (Transactional)"
-description: Learn how to specify how change are propagated for a Transactional Publication in SQL Server. 
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "transactional replication, propagation methods"
-ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
+description: Learn how to specify how change are propagated for a Transactional Publication in SQL Server.
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "transactional replication, propagation methods"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Transactional Articles - Specify How Changes Are Propagated

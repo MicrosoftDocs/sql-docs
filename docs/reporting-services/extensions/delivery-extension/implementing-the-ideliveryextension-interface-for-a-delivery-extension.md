@@ -1,20 +1,17 @@
 ---
-title: "Implementing the IDeliveryExtension Interface for a Delivery Extension | Microsoft Docs"
+title: "Implementing the IDeliveryExtension Interface for a Delivery Extension"
 description: Find out how to implement the IDeliveryExtension interface in a delivery extension so that clients can validate user data and retrieve delivery settings.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "delivery extensions [Reporting Services], attributes"
   - "delivery extensions [Reporting Services], class creation"
   - "IDeliveryExtension interface"
-ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Implementing the IDeliveryExtension Interface for a Delivery Extension
   Your delivery extension class is used to deliver report notifications to users based on the contents of the notifications. The delivery extension class also provides infrastructure for validating user settings that are passed to the delivery extension. In addition, your delivery extension class should contain specific properties that clients can use to gain information about the name of the extension, the settings that the extension supports, and the rendering formats that are available to the delivery extension.  

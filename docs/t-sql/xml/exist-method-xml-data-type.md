@@ -1,19 +1,17 @@
 ---
 title: exist() Method (xml Data Type)
 description: "exist() Method (xml Data Type)"
-ms.prod: sql
-ms.technology: t-sql
-ms.topic: reference
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "exist() method"
-  - "exist method"
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: ""
-ms.custom: ""
 ms.date: "07/26/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+helpviewer_keywords:
+  - "exist() method"
+  - "exist method"
+dev_langs:
+  - "TSQL"
 ---
 
 # exist() Method (xml Data Type)

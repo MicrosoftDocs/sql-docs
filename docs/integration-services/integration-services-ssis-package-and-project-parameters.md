@@ -1,19 +1,15 @@
 ---
+title: "Package and Project Parameters"
 description: "Integration Services (SSIS) Package and Project Parameters"
-title: "Package and Project Parameters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.ssis.designer.parameter.f1"
-  - "sql13.dts.designer.parameterwindow.f1"
-ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
+ms.date: "03/03/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.ssis.designer.parameter.f1"
+  - "sql13.dts.designer.parameterwindow.f1"
 ---
 # Integration Services (SSIS) Package and Project Parameters
 
@@ -215,7 +211,4 @@ The Deployment Wizard allows you to set server default parameter values when you
 
 ### Set server defaults with Transact-SQL  
  To set server defaults with Transact-SQL, use the [catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) stored procedure. To view current server defaults, query the [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) view. To clear a server default value, use the [catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) stored procedure.  
-  
-## Related Content  
- Blog entry, [SSIS Quick Tip: Required Parameters](https://go.microsoft.com/fwlink/?LinkId=239781), on mattmasson.com.  
   

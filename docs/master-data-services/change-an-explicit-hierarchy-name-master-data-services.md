@@ -1,22 +1,18 @@
 ---
-description: "Change an Explicit Hierarchy Name (Master Data Services)"
 title: Change an Explicit Hierarchy Name
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "explicit hierarchies, changing name"
-ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
+description: "Change an Explicit Hierarchy Name (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "explicit hierarchies, changing name"
 ---
 # Change an Explicit Hierarchy Name (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an explicit hierarchy.  
   

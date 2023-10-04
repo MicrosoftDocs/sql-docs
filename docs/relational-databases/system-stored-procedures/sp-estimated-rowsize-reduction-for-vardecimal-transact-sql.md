@@ -1,27 +1,23 @@
 ---
+title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
 description: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
-title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: markingmyname
+ms.author: maghan
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_estimated_rowsize_reduction_for_vardecimal"
   - "sp_estimated_rowsize_reduction_for_vardecimal_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_estimated_rowsize_reduction_for_vardecimal"
   - "decimal data type, compressing"
   - "numeric data type, compressing"
   - "estimate decimal compression"
   - "table compression [SQL Server]"
-ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: markingmyname
-ms.author: maghan
+dev_langs:
+  - "TSQL"
 ---
 # sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +27,7 @@ ms.author: maghan
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use ROW and PAGE compression instead. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md). For compression effects on the size of tables and indexes, see [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -67,10 +63,10 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
  Requires CONTROL permission on the table.  
   
 ## Examples  
- The following example estimates the rowsize reduction if the `Production.WorkOrderRouting` table in the `AdventureWorks2012` database is compressed.  
+ The following example estimates the rowsize reduction if the `Production.WorkOrderRouting` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is compressed.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_estimated_rowsize_reduction_for_vardecimal 'Production.WorkOrderRouting' ;  
 GO  

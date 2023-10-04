@@ -1,20 +1,17 @@
 ---
 title: "Tutorial: Configure Transactional Replication"
-description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers. 
-ms.custom: seo-lt-2019
+description: This tutorial teaches you how to configure Transactional Replication between two fully connected SQL Servers.
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "tutorials [SQL Server replication]"
   - "replication [SQL Server], tutorials"
   - "wizards [SQL Server replication]"
-ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
-author: "MashaMSFT"
-ms.author: "mathoma"
 ---
 # Tutorial: Configure replication between two fully connected servers (transactional)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +37,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
 - At the publisher server (source), install:  
   
    - Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Server Compact. These editions cannot be replication publishers.   
-   - The [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
+   - The [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 - At the subscriber server (destination), install any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] cannot be a subscriber in transactional replication.  
   

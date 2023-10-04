@@ -1,24 +1,21 @@
 ---
+title: "Define an Article"
 description: "Define an Article"
-title: "Define an Article | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: conceptual
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "articles [SQL Server replication], defining"
   - "sp_addmergearticle"
   - "adding articles"
   - "sp_addarticle"
   - "articles [SQL Server replication], adding"
-ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 ---
 # Define an Article
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

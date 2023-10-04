@@ -1,16 +1,13 @@
 ---
-title: "Add, Edit, Refresh Fields in the Report Data Pane (Report Builder) | Microsoft Docs"
+title: "Add, Edit, Refresh Fields in the Report Data Pane (Report Builder)"
 description: Learn details about datasets as well as how to add, edit, and refresh fields in the report data pane in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
-ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)
   Dataset fields are the built-in collection of field names that represent the data that is returned when a dataset query runs on an external data source.  

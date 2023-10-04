@@ -1,12 +1,9 @@
 ---
-title: include file
-description: include file
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/15/2018
-ms.service:
+ms.reviewer: randolphwest
+ms.date: 01/12/2023
+ms.service: reporting-services
 ms.topic: include
-ms.custom: include file
 ---
-
-❌ SharePoint Online
+:::image type="content" source="media/no-icon.svg" border="false" alt-text="Not supported"::: SharePoint Online

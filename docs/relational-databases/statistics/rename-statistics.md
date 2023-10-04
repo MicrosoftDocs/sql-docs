@@ -1,18 +1,15 @@
 ---
-title: "Rename Statistics | Microsoft Docs"
+title: "Rename Statistics"
 description: Learn how to rename a statistics object in SQL Server by using Transact-SQL. You must have ALTER permission on the table or view.
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: performance
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "renaming statistics"
-  - "statistics [SQL Server], renaming"
-ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: performance
+ms.topic: conceptual
+helpviewer_keywords:
+  - "renaming statistics"
+  - "statistics [SQL Server], renaming"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Statistics
@@ -54,7 +51,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     EXEC sp_rename N'AK_Employee_LoginID', N'AK_Emp_Login', N'STATISTICS';   
     GO  

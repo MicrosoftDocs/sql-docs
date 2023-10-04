@@ -1,23 +1,17 @@
 ---
+title: "Using User-Defined Tables"
 description: "Using User-Defined Tables"
-title: "Using User-Defined Tables | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "user-defined tables [SQL Server]"
-ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "08/06/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "user-defined tables [SQL Server]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using User-Defined Tables
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   User-defined tables represent tabular information. They are used as parameters when you pass tabular data into stored procedures or user-defined functions. User-defined tables cannot be used to represent columns in a database table.  
   
@@ -44,9 +38,9 @@ To use any code example that is provided, you will have to choose the programmin
 'Connect to the local, default instance of SQL Server  
         Dim srv As Server  
         srv = New Server  
-        'Reference the AdventureWorks2012 database.  
+        'Reference the AdventureWorks2022 database.  
         Dim db As Database  
-        db = srv.Databases("AdventureWorks2012")  
+        db = srv.Databases("AdventureWorks2022")  
         'Define a UserDefinedTableType object variable by supplying the 'database and name in the constructor.  
         Dim udtt As UserDefinedTableType  
         udtt = New UserDefinedTableType(db, "My_User_Defined_Table")  
@@ -109,8 +103,8 @@ To use any code example that is provided, you will have to choose the programmin
             //Connect to the local, default instance of SQL Server   
                Server srv = new Server();  
   
-            //Reference the AdventureWorks2012 database.   
-            Database db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+            Database db = srv.Databases["AdventureWorks2022"];  
             //Define a UserDefinedTableType object variable by supplying the  
             //database and name in the constructor.   
          UserDefinedTableType udtt = new UserDefinedTableType(db, "My_User_Defined_Table");  
@@ -175,9 +169,9 @@ To use any code example that is provided, you will have to choose the programmin
  The example shows how to create a user-defined table, and then how to use it as a parameter in a user-defined function.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 #Define a UserDefinedTableType object variable by supplying the  
 #database and name in the constructor.   

@@ -1,15 +1,13 @@
 ---
-title: "Paginated report parameters | Microsoft Docs"
+title: "Paginated report parameters"
 description: This topic describes the common uses for Reporting Services paginated report parameters, the properties you can set, and much more.
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-ms.custom: seodec18
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
 ms.date: 12/06/2018
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 
 # Paginated report parameters (Report Builder)

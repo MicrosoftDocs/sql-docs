@@ -1,16 +1,13 @@
 ---
-title: "SQL Server 2017 Release Notes | Microsoft Docs"
+title: "SQL Server 2017 Release Notes"
 description: This article describes limitations and issues with SQL Server 2017 and provides links to related information.
-ms.custom: ""
-ms.date: "11/01/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: release-landing
-ms.topic: conceptual
-ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-monikerRange: "= sql-server-2017"
+ms.date: "11/01/2017"
+ms.service: sql
+ms.subservice: release-landing
+ms.topic: conceptual
+monikerRange: ">= sql-server-2016"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -31,7 +28,7 @@ This article describes limitations and issues with SQL Server 2017. For related 
 
 - **Issue and customer impact:** After upgrade, the existing FILESTREAM network share may be no longer available.
 
-- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
+- **Workaround:** First, restart the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
 
     1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**. 
     2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
@@ -59,12 +56,9 @@ On the user permissions page, when granting permission to the root level in the 
 - **Issue and customer impact:** Running *DReplay* fails with the following message: "Error DReplay Unexpected error occurred!".
 - **Workaround:** None.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](../linux/sql-server-linux-release-notes-2017.md).
 
-
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC1 - July 2017)
 ### SQL Server Integration Services (SSIS) (RC1 - July 2017)
 - **Issue and customer impact:** The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
@@ -76,7 +70,6 @@ There are no release notes for SQL Server on Windows related to this release. Se
   2. Change the name of the *runincluster* parameter to *runinscaleout* in the script.
   3. Run the script.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.1 (May  2017)
 ### Documentation (CTP 2.1)
 - **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is noted with **Applies To**. 
@@ -122,7 +115,6 @@ There are no release notes for SQL Server on Windows related to this release. Se
 
    This workaround removes the v14 version of those assemblies, so any applications that depend on the v14 versions will no longer function. If those assemblies are needed, then a separate installation without any side-by-side 2016 installs is required.
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)
 ### Documentation (CTP 2.0)
 - **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql16-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] is noted with **Applies To**. 
@@ -147,10 +139,8 @@ There are no release notes for SQL Server on Windows related to this release. Se
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
 - [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
-- [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [SQL Server Update Center - links and information for all supported versions](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

@@ -4,8 +4,8 @@ description: "Visual C++ Extensions Header"
 author: rothja
 ms.author: jroth
 ms.date: 11/08/2018
-ms.prod: sql
-ms.technology: ado
+ms.service: sql
+ms.subservice: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, Visual C++"

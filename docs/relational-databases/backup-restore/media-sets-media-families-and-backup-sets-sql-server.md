@@ -5,11 +5,9 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
 ms.date: 08/17/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "media sets [SQL Server], about media sets"
   - "backup media [SQL Server], about backup media"
@@ -34,7 +32,7 @@ This article introduces the basic backup-media terminology of [!INCLUDE[ssNoVers
 This article describes the format that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses for backup media, the correspondence between backup media and backup devices, the organization of backups on backup media, and several considerations for media sets and media families. The article also describes the steps initializing or formatting backup media before you use it for the first time or replace an old media set with a new media set, how to overwrite old backup sets in a media set, and how to append new backup sets to a media set.  
   
 > [!NOTE]  
-> For more information on SQL Server backup to the Azure Blob storage service,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+> For more information on SQL Server backup to Azure Blob Storage,, see, [SQL Server Backup and Restore with Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Terms  
  **media set**  
@@ -57,7 +55,7 @@ This article describes the format that [!INCLUDE[ssNoVersion](../../includes/ssn
 > [!NOTE]  
 > Media sets can be mirrored to protect against a damaged media volume (a tape or disk file). For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
- Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+ Compressed and uncompressed backups can't occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
   
 ## Media Families  
@@ -109,7 +107,7 @@ In a mirrored media set, each media family is mirrored. For example, if six back
  This example shows a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that creates a media set called `MyAdvWorks_MediaSet_1` for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database using three tape drives as backup devices:  
   
 ```  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
 WITH   
    FORMAT,  
@@ -125,7 +123,7 @@ WITH
  Every backup operation to a media set must write to the same number and type of backup devices. With multiple devices, as with the first backup set, the content of every subsequent backup set is distributed among the backup media on all of the devices. To continue the above example, a second backup operation (a differential backup) appends information to the same media set:  
   
 ```  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
 WITH   
    NOINIT,  
@@ -143,12 +141,12 @@ WITH
  When you are restoring backups, you can use the FILE option to specify which backups you want to use. The following example shows the use of FILE **=**_backup_set_file_number_ clauses when restoring a full database backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database followed by a differential database backup on the same media set. The media set uses three backup tapes, which are on tape drives `\\.\tape0`, `tape1`, and `tape2`.  
   
 ```  
-RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
+RESTORE DATABASE AdventureWorks2022 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
    WITH   
    MEDIANAME = 'AdventureWorksMediaSet1',  
    FILE=1,   
    NORECOVERY;  
-RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'   
+RESTORE DATABASE AdventureWorks2022 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'   
    WITH   
    MEDIANAME = 'AdventureWorksMediaSet1',  
    FILE=2,   
@@ -204,7 +202,7 @@ Appending, which is the default behavior of the BACKUP, can be explicitly specif
  Microsoft Windows backups and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups can share the same media, but they aren't interoperable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can't back up Windows data.  
   
 > [!IMPORTANT]  
-> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+> Compressed and uncompressed backups cannot occur together in a media set. Any edition of [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] or later versions can read compressed backups. For more information, see [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
  
 ##  <a name="Overwriting"></a> Overwriting backup sets  

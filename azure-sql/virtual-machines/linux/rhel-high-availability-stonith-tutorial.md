@@ -3,8 +3,10 @@ title: Configure availability groups for SQL Server on RHEL virtual machines in 
 description: Learn about setting up high availability in an RHEL cluster environment and set up STONITH
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/25/2020
+ms.date: 09/25/2023
 ms.service: virtual-machines-sql
+ms.subservice: hadr
+ms.custom: devx-track-azurecli
 ms.topic: tutorial
 ---
 # Tutorial: Configure availability groups for SQL Server on RHEL virtual machines in Azure 
@@ -29,7 +31,7 @@ This tutorial will use the Azure CLI to deploy resources in Azure.
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
-[!INCLUDE [azure-cli-prepare-your-environment.md](../../includes/azure-cli-prepare-your-environment.md)]
+[!INCLUDE [azure-cli-prepare-your-environment.md](~/../azure-sql/reusable-content/azure-cli/azure-cli-prepare-your-environment.md)]
 
 - This article requires version 2.0.30 or later of the Azure CLI. If using Azure Cloud Shell, the latest version is already installed.
 
@@ -335,7 +337,7 @@ In this section, we will enable and start the pcsd service, and then configure t
 
 ### Enable and start pcsd service and Pacemaker
 
-1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after reboot.
+1. Run the commands on all nodes. These commands allow the nodes to rejoin the cluster after each node restarts.
 
     ```bash
     sudo systemctl enable pcsd
@@ -474,18 +476,22 @@ License     : GPLv2+ and LGPLv2+
 Description : The fence-agents-azure-arm package contains a fence agent for Azure instances.
 ```
 
-### Register a new application in Azure Active Directory
+<a name='register-a-new-application-in-azure-active-directory'></a>
+
+### Register a new application in Microsoft Entra ID
+
+To register a new application in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), follow these steps: 
  
  1. Go to https://portal.azure.com
- 2. Open the [Azure Active Directory blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties). Go to Properties and write down the Directory ID. This is the `tenant ID`
- 3. Click [**App registrations**](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
- 4. Click **New registration**
- 5. Enter a **Name** like `<resourceGroupName>-app`, select **Accounts in this organization directory only**
- 6. Select Application Type **Web**, enter a sign-on URL (for example http://localhost) and click Add. The sign-on URL is not used and can be any valid URL. Once done, Click **Register**
- 7. Select **Certificates and secrets** for your new App registration, then click **New client secret**
- 8. Enter a description for a new key (client secret), select **Never expires** and click **Add**
- 9. Write down the value of the secret. It is used as the password for the Service Principal
-10. Select **Overview**. Write down the Application ID. It is used as the username (login ID in the steps below) of the Service Principal
+ 2. Open the [Microsoft Entra ID Properties blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties) and write down the `Tenant ID`. 
+ 3. Select [**App registrations**](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
+ 4. Select **New registration**.
+ 5. Enter a **Name** like `<resourceGroupName>-app`. For **supported account types** select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+ 6. Select _Web_ for **Redirect URI**, and enter a URL (for example, http://localhost) and select **Add**. The sign-on URL can be any valid URL. Once done, select **Register**. 
+ 7. Choose **Certificates and secrets** for your new App registration, then select **New client secret**.
+ 8. Enter a description for a new key (client secret), and then select **Add**. 
+ 9. Write down the value of the secret. It is used as the password for the Service Principal.
+10. Select **Overview**. Write down the Application ID. It is used as the username (login ID in the steps below) of the Service Principal.
  
 ### Create a custom role for the fence agent
 
@@ -912,7 +918,7 @@ The following Transact-SQL commands are used in this step. Run these commands on
 CREATE DATABASE [db1]; -- creates a database named db1
 GO
 
-ALTER DATABASE [db1] SET RECOVERY FULL; -- set the database in full recovery mode
+ALTER DATABASE [db1] SET RECOVERY FULL; -- set the database in full recovery model
 GO
 
 BACKUP DATABASE [db1] -- backs up the database to disk
@@ -940,7 +946,7 @@ If the `synchronization_state_desc` lists SYNCHRONIZED for `db1`, this means the
 We will be following the guide to [create the availability group resources in the Pacemaker cluster](/sql/linux/sql-server-linux-create-availability-group#create-the-availability-group-resources-in-the-pacemaker-cluster-external-only).
 
 > [!NOTE]
-> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+> This article contains references to the term *slave*, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
 
 ### Create the AG cluster resource
 

@@ -4,10 +4,9 @@ description: Learn how to specify the endpoint URL when adding or modifying a re
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "05/17/2016"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "endpoints [SQL Server], AlwaysOn Availability Groups"
   - "endpoints [SQL Server], Always On Availability Groups"
@@ -61,7 +60,10 @@ helpviewer_keywords:
     ```  
   
      Find the row whose **type_desc** value is "DATABASE_MIRRORING," and use the corresponding port number.  
-  
+
+> [!NOTE]
+> To use Kerberos authentication for the communication between availability group endpoints, [register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) for the database mirroring endpoints used by the AG. 
+
 ### Examples  
   
 #### A. Using a system name  

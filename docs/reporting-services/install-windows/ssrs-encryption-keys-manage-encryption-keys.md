@@ -1,22 +1,19 @@
 ---
-title: "Configure and Manage Encryption Keys (Configuration Manager) | Microsoft Docs"
+title: "Configure and Manage Encryption Keys (Configuration Manager)"
 description: "Reporting Services uses encryption keys to secure credentials and connection information that is stored in a report server database."
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 12/04/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.custom: seo-lt-2019​, seo-mmd-2019
-
+ms.service: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "private keys [Reporting Services]"
   - "cryptography [Reporting Services]"
   - "symmetric keys [Reporting Services]"
   - "encryption [Reporting Services]"
   - "public keys [Reporting Services]"
-ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Configure and Manage Encryption Keys (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses encryption keys to secure credentials and connection information that is stored in a report server database. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], encryption is supported through a combination of public, private, and symmetric keys that are used to protect sensitive data. The symmetric key is created during report server initialization when you install or configure the report server, and it is used by the report server to encrypt sensitive data that is stored in the report server. Public and private keys are created by the operating system, and they are used to protect the symmetric key. A public and private key pair is created for each report server instance that stores sensitive data in a report server database.  

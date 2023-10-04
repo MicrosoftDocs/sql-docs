@@ -1,21 +1,17 @@
 ---
-description: "Disable Check Constraints with INSERT and UPDATE Statements"
 title: "Disable check constraints with INSERT and UPDATE statements"
-
-ms.custom: ""
+description: "Disable Check Constraints with INSERT and UPDATE Statements"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "11/24/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "CHECK constraints, disabling"
   - "constraints [SQL Server], disabling"
   - "disabling constraints"
   - "constraints [SQL Server], check"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Check Constraints with INSERT and UPDATE Statements
@@ -54,7 +50,7 @@ For more information, see [Check Constraints](unique-constraints-and-check-const
 3.  Copy and paste the following examples into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     ALTER TABLE Purchasing.PurchaseOrderHeader  
     NOCHECK CONSTRAINT CK_PurchaseOrderHeader_Freight;   

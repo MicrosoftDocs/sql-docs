@@ -4,9 +4,8 @@ description: sys.dm_fts_index_keywords_by_document (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, pdw"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.dm_fts_index_keywords_by_document_TSQL"
@@ -19,7 +18,6 @@ helpviewer_keywords:
   - "full-text search [SQL Server], viewing keywords"
 dev_langs:
   - "TSQL"
-ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_keywords_by_document (Transact-SQL)
@@ -109,13 +107,13 @@ GO
 ## Examples  
   
 ### A. Displaying full-text index content at the document level  
- The following example displays the content of the full-text index at the document level in the `HumanResources.JobCandidate` table of the `AdventureWorks2012` sample database.  
+ The following example displays the content of the full-text index at the document level in the `HumanResources.JobCandidate` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 > [!NOTE]  
 >  You can create this index by executing the example provided for the `HumanResources.JobCandidate` table in [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
-SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
+SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks2022'),   
 object_id('HumanResources.JobCandidate'));  
 GO  
 ```  

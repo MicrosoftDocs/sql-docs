@@ -1,16 +1,13 @@
 ---
+title: "Logging in the Script Task"
 description: "Logging in the Script Task"
-title: "Logging in the Script Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: "reference"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, logs"
   - "SSIS packages, logs"
   - "logs [Integration Services], scripts"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "SSIS Script task, logs"
   - "Script task [Integration Services], logs"
   - "packages [Integration Services], logs"
-ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: chugugrace
-ms.author: chugu
+dev_langs:
+  - "VB"
 ---
 # Logging in the Script Task
 

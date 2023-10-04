@@ -1,19 +1,16 @@
 ---
-title: "Configure a Report Server (Reporting Services Native Mode) | Microsoft Docs"
-description: Learn about additional configuration for SQL Server Report Server, which depends on options you chose during installation. 
-ms.date: 06/18/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "report server configuration"
-  - "report servers [Reporting Services], configuring"
-ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
+title: "Configure a Report Server (Reporting Services Native Mode)"
+description: Learn about additional configuration for SQL Server Report Server, which depends on options you chose during installation.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/18/2019
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "report server configuration"
+  - "report servers [Reporting Services], configuring"
 ---
 # Configure a Report Server (Reporting Services Native Mode)
   Depending on options you selected during installation, the Report Server might require additional configuration before you can use it. At a minimum, a report server configuration consists of the following:  

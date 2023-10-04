@@ -4,9 +4,8 @@ description: MSmerge_current_partition_mappings
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSmerge_current_partition_mappings"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_current_partition_mappings system table"
 dev_langs:
   - "TSQL"
-ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

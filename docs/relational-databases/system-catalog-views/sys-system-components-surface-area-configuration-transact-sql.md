@@ -4,9 +4,8 @@ description: sys.system_components_surface_area_configuration (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.system_components_surface_area_configuration_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.system_components_surface_area_configuration catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 ---
 # sys.system_components_surface_area_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

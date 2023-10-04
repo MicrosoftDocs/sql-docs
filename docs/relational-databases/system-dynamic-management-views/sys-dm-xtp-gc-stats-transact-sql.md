@@ -3,9 +3,9 @@ title: "sys.dm_xtp_gc_stats (Transact-SQL)"
 description: sys.dm_xtp_gc_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "06/10/2016"
-ms.prod: sql
-ms.technology: system-objects
+ms.date: "02/27/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dm_xtp_gc_stats"
@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_xtp_gc_stats dynamic management view"
 dev_langs:
   - "TSQL"
-ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 ---
 
 # sys.dm_xtp_gc_stats (Transact-SQL)
@@ -39,15 +38,19 @@ Provides information (the overall statistics) about the current behavior of the 
 |parallel_assist_count|**bigint**|The number of rows processed by user transactions.|  
 |idle_worker_count|**bigint**|The number of garbage rows processed by the idle worker.|  
 |sweep_scans_started|**bigint**|The number of dusty corner scans performed by garbage collection subsystem.|  
-|sweep_scans_retries|**bigint**|The number of dusty corner scans performed by the garbage collection subsystem.|  
+|sweep_scan_retries|**bigint**|The number of dusty corner scans performed by the garbage collection subsystem.|  
 |sweep_rows_touched|**bigint**|Rows read by dusty corner processing.|  
 |sweep_rows_expiring|**bigint**|Expiring rows read by dusty corner processing.|  
 |sweep_rows_expired|**bigint**|Expired rows read by dusty corner processing.|  
 |sweep_rows_expired_removed|**bigint**|Expired rows removed by dusty corner processing.|  
-  
+
 ## Permissions  
  Requires VIEW SERVER STATE permission on the instance.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Usage Scenario  
  The following is sample output:  
   
@@ -64,6 +67,7 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
                0                 673673  
 ```  
   
-## See Also  
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
+

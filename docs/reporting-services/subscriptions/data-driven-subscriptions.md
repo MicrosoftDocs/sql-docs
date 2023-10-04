@@ -1,19 +1,16 @@
 ---
-title: "Data-Driven Subscriptions | Microsoft Docs"
+title: "Data-Driven Subscriptions"
 description: Learn about data-driven subscriptions, which provide a way to use dynamic subscription data that's retrieved from an external data source at run time.
-ms.date: 05/20/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: subscriptions
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "subscriptions [Reporting Services], data-driven"
-  - "data-driven subscriptions"
-ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/20/2019
+ms.service: reporting-services
+ms.subservice: subscriptions
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "subscriptions [Reporting Services], data-driven"
+  - "data-driven subscriptions"
 ---
 # Data-Driven Subscriptions
   A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to do the following:  

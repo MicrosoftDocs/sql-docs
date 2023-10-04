@@ -1,23 +1,19 @@
 ---
 title: "sp_removedbreplication (T-SQL)"
 description: Describes the sp_removedbreplication stored procedure used to remove all replication objects on the publication database for SQL Server replication.
-ms.custom: seo-lt-2019
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_removedbreplication"
-  - "sp_removedbreplication_TSQL"
-helpviewer_keywords: 
-  - "sp_removedbreplication"
-ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: markingmyname
 ms.author: maghan
+ms.date: "03/04/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_removedbreplication"
+  - "sp_removedbreplication_TSQL"
+helpviewer_keywords:
+  - "sp_removedbreplication"
+dev_langs:
+  - "TSQL"
 ---
 # sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,7 +23,7 @@ ms.author: maghan
 > [!NOTE]  
 >  This procedure should be used only if other methods of removing replication objects have failed.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -65,10 +61,10 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 ## Examples
 
-### A. Remove replication objects, AdventureWorks2012Replica subscription database
+### A. Remove replication objects, AdventureWorks replica subscription database
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-### B. Remove replication objects, AdventureWorksReplica subscription database
+### B. Remove replication objects, AdventureWorks replica subscription database
   
 ```sql
 -- Remove replication objects from the subscription database on MYSUB.  

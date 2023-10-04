@@ -4,11 +4,9 @@ description: Learn how In-Memory OLTP provides full durability for memory-optimi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 ---
 # Durability for Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -21,7 +19,7 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
  All changes made to disk-based tables or durable memory-optimized tables are captured in one or more transaction log records. When a transaction commits, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] writes the log records associated with the transaction to disk before communicating to the application or user session that the transaction has committed. This guarantees that changes made by the transaction are durable. The transaction log for memory-optimized tables is fully integrated with the same log stream used by disk-based tables. This integration allows existing transaction log backup, recover, and restore operations to continue to work without requiring any additional steps. However, since [!INCLUDE[inmemory](../../includes/inmemory-md.md)] can increase transaction throughput of your workload significantly, log IO may become a performance bottleneck. To sustain this increased throughput, ensure the log IO subsystem can handle the increased load.  
   
 ## Data and Delta Files  
- The data in memory-optimized tables is stored as free-form data rows in an in-memory heap data structure, and are linked through one or more indexes in memory. There are no page structures for data rows, such as those used for disk-based tables. For long term persistence and to allow truncation of the transction log, operations on memory-optimized tables are persisted in a set of data and delta files. These files are generated based on the transaction log, using an asynchronous background process. The data and delta files are located in one or more containers (using the same mechanism used for FILESTREAM data). These containers are part of a memory-optimized filegroup.  
+ The data in memory-optimized tables is stored as free-form data rows in an in-memory heap data structure, and are linked through one or more indexes in memory. There are no page structures for data rows, such as those used for disk-based tables. For long term persistence and to allow truncation of the transaction log, operations on memory-optimized tables are persisted in a set of data and delta files. These files are generated based on the transaction log, using an asynchronous background process. The data and delta files are located in one or more containers (using the same mechanism used for FILESTREAM data). These containers are part of a memory-optimized filegroup.  
   
  Data is written to these files in a strictly sequential fashion, which minimizes disk latency for spinning media. You can use multiple containers on different disks to distribute the I/O activity. Data and delta files in multiple containers on different disks will increase database restore/recovery performance when data is read from the data and delta files on disk, into memory.  
   

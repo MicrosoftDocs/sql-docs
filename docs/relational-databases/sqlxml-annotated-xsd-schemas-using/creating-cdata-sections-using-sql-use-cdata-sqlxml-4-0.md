@@ -4,11 +4,9 @@ description: "Learn how to create CDATA sections in SQLXML 4.0 using the sql:use
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 01/11/2019
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "markup characters [SQLXML]"
   - "special characters [SQLXML]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "CDATA sections"
   - "escaping blocks of text [SQLXML]"
   - "annotated XSD schemas, CDATA sections"
-ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)

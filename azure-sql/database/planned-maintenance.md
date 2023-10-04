@@ -46,9 +46,8 @@ If your database is experiencing log-on failures, check the [Resource Health](/a
 
 The [maintenance window feature](maintenance-window.md) allows for the configuration of predictable maintenance window schedules for eligible Azure SQL databases and SQL managed instances. [Maintenance window advance notifications](../database/advance-notifications.md) are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Maintenance windows and advance notifications for maintenance windows are generally available for Azure SQL Database. For Azure SQL Managed Instance, maintenance windows are generally available but advance notifications are in public preview.
 
-
 ## Next steps
 
-- Learn more about [Resource Health](resource-health-to-troubleshoot-connectivity.md) for Azure SQL Database and Azure SQL Managed Instance.
+- Learn more about [Resource Health for Azure SQL Database](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true) and [Resource Health for Azure SQL Managed Instance](../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true).
 - For more information about retry logic, see [Retry logic for transient errors](troubleshoot-common-connectivity-issues.md#retry-logic-for-transient-errors).
 - Configure maintenance window schedules with the [Maintenance window](maintenance-window.md) feature.

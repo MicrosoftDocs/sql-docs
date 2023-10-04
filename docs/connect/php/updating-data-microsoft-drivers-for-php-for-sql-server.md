@@ -4,8 +4,8 @@ description: Here's a set of sample code snippets for common use cases where you
 author: David-Engel
 ms.author: v-davidengel
 ms.date: 03/26/2018
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Updating data (Microsoft Drivers for PHP for SQL Server)

@@ -1,21 +1,17 @@
 ---
+title: "Allocating a Statement Handle ODBC"
 description: "Allocating a Statement Handle ODBC"
-title: "Allocating a Statement Handle ODBC | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL statements [ODBC], statement handles"
   - "statement handles [ODBC]"
   - "allocating statement handles [ODBC]"
   - "handles [ODBC], statement"
-ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Allocating a Statement Handle ODBC
 Before the application can execute a statement, it must allocate a statement handle as follows:  

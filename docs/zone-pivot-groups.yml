@@ -27,5 +27,8 @@ groups:
   pivots:
   - id: as1-azure-sql-database
     title: Azure SQL Database
+  - id: as1-azure-sql-managed-instance
+    title: Azure SQL Managed Instance
   - id: as1-sql-server
     title: SQL Server
+  

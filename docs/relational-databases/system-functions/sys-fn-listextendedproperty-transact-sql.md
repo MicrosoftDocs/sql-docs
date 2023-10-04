@@ -1,19 +1,16 @@
 ---
+title: "sys.fn_listextendedproperty (Transact-SQL)"
 description: "sys.fn_listextendedproperty (Transact-SQL)"
-title: "sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "fn_listextendedproperty"
   - "fn_listextendedproperty_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "fn_listextendedproperty function"
   - "displaying extended properties"
   - "database extended properties [SQL Server]"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "database objects [SQL Server], extended properties"
   - "extended properties [SQL Server], columns"
   - "table extended properties [SQL Server]"
-ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-author: rwestMSFT
-ms.author: randolphwest
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_listextendedproperty (Transact-SQL)
@@ -34,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   Returns extended property values of database objects.  
  
  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -161,7 +157,7 @@ WHERE o.name = 'Employee';
  The following example displays all extended properties set on the database object itself.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty(default, default, default, default, default, default, default);  
@@ -182,7 +178,7 @@ GO
  The following example lists extended properties for columns in the `ScrapReason` table. This is contained in the schema `Production`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty (NULL, 'schema', 'Production', 'table', 'ScrapReason', 'column', default);  
@@ -207,7 +203,7 @@ GO
  The following example lists extended properties for all tables contained in the `Sales` schema.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT objtype, objname, name, value  
 FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, NULL);  

@@ -1,14 +1,14 @@
 ---
-title: "Understanding Security Policies | Microsoft Docs"
+title: "Understanding Security Policies"
 description: Learn about Reporting Services security policies, which specify permissions for assemblies, extensions, and report expressions based on code groups.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: extensions
-
-
+ms.service: reporting-services
+ms.subservice: extensions
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "code groups [Reporting Services]"
   - "code access security [Reporting Services], security policies"
   - "Execution permission set"
@@ -19,9 +19,6 @@ helpviewer_keywords:
   - "FullTrust permission set"
   - "security policies [Reporting Services]"
   - "named permission sets [Reporting Services]"
-ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Understanding Security Policies
   Any code that is executed by a report server must be part of a specific code access security policy. These security policies consist of code groups that map evidence to a set of named permission sets. Often, code groups are associated with a named permission set that specifies the allowable permissions for code in that group. The runtime uses evidence provided by a trusted host or by the loader to determine which code groups the code belongs to and, therefore, which permissions to grant the code. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adheres to this security policy architecture as defined by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR). The following sections describe the various types of code in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and the policy rules associated with them.  

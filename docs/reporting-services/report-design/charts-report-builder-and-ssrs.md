@@ -1,14 +1,14 @@
 ---
-title: "Charts in a paginated report | Microsoft Docs"
+title: "Charts in a paginated report"
 description: Use chart data regions to help readers of your paginated reports understand large volumes of aggregated data at a glance in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1"
   - "10256"
   - "10166"
@@ -18,9 +18,6 @@ f1_keywords:
   - "10251"
   - "10172"
   - "sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1"
-ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Charts in a paginated report (Report Builder)
 

@@ -4,8 +4,8 @@ description: Learn about date/time conversions performed between SQL Server and 
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "06/14/2018"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
   - "conversions [OLE DB], server to client"
@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  This article describes date/time conversions performed between [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) and a client application written with OLE DB Driver for SQL Server.  
+  This article describes date/time conversions performed between [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)] and later versions, and a client application written with OLE DB Driver for SQL Server.  
   
 ## Conversions  
  The following table describes conversions between the type returned to the client and the type in the binding. For output parameters, if ICommandWithParameters::SetParameterInfo has been called and the type specified in *pwszDataSourceType* does not match the actual type on the server, an implicit conversion will be performed by the server, and the type returned to the client will match the type specified through ICommandWithParameters::SetParameterInfo. This can lead to unexpected conversion results when the server's conversion rules are different from those described in this article. For example, when a default date must be provided, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 1900-1-1 rather than 1899-12-30.  

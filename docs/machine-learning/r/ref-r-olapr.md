@@ -1,12 +1,12 @@
 ---
 title: olapR R package
 description: olapR is an R package from Microsoft used for MDX queries against a SQL Server Analysis Services OLAP cube. Functions do not support all MDX operations, but you can build queries that slice, dice, drilldown, rollup, and pivot on dimensions. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
-ms.prod: sql
-ms.technology: machine-learning-services
-ms.date: 09/30/2021
-ms.topic: how-to
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 09/30/2021
+ms.service: sql
+ms.subservice: machine-learning-services
+ms.topic: how-to
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
 ---
 # olapR (R package in SQL Server Machine Learning Services)
@@ -105,7 +105,7 @@ FROM [Analysis Services Tutorial]
 WHERE [Sales Territory].[Sales Territory Country].[Australia]
 ```
 
-Using an AdventureWorks OLAP cube from the [multidimensional cube tutorial](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial), this MDX query selects the internet sales count and sales amount and places them on the Column axis. On the Row axis it places all possible values of the "Product Line" dimension. Then, using the WHERE clause (which is the slicer axis in MDX queries), it filters the query so that only the sales from Australia matter. Without the slicer axis, we would roll up and summarize the sales from all countries.
+Using an AdventureWorks OLAP cube from the [multidimensional cube tutorial](/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial), this MDX query selects the internet sales count and sales amount and places them on the Column axis. On the Row axis it places all possible values of the "Product Line" dimension. Then, using the WHERE clause (which is the slicer axis in MDX queries), it filters the query so that only the sales from Australia matter. Without the slicer axis, we would roll up and summarize the sales from all countries/regions.
 
  ## olapR examples
 

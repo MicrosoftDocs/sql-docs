@@ -3,7 +3,7 @@ title: "sys.dm_os_out_of_memory_events"
 description: sys.dm_os_out_of_memory_events returns a log of out of memory (OOM) events, including a predicted out of memory cause.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "03/10/2022"
+ms.date: "02/27/2023"
 ms.service: sql-database
 ms.topic: "reference"
 f1_keywords:
@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 
   Returns a log of out of memory (OOM) events.
 
-  For more information on out of memory conditions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Troubleshoot out of memory errors in Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
+  For more information on out of memory conditions in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Troubleshoot out of memory errors in Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
   
 |Column Name|Data Type|Description|  
 |-------------|---------------|-----------------|  
@@ -51,6 +51,10 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 On [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], requires `VIEW SERVER STATE` permission.
 
 On SQL Database **Basic**, **S0**, and **S1** service objectives, and for databases in **elastic pools**, the [server admin](/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) account, the [Azure Active Directory admin](/azure/azure-sql/database/authentication-aad-overview#administrator-structure) account, or membership in the `##MS_ServerStateReader##` [server role](/azure/azure-sql/database/security-server-roles) is required. On all other SQL Database service objectives, either the `VIEW DATABASE STATE` permission on the database, or membership in the `##MS_ServerStateReader##` server role is required.
+
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
 
 ## Remarks
 

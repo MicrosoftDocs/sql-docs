@@ -1,32 +1,24 @@
---- 
-
-# required metadata 
-title: "featurizeImage function (MicrosoftML) " 
-description: " Featurizes an image using a pre-trained deep neural network model. " 
-keywords: "(MicrosoftML), featurizeImage, alexnet, cnn, dnn, featurize, image, resnet, transform" 
+---
+title: "featurizeImage function (MicrosoftML)"
+description: "Featurizes an image using a pre-trained deep neural network model (MicrosoftML)."
 author: "rothja"
-ms.author: "jroth" 
-manager: "cgronlun" 
+ms.author: "jroth"
 ms.date: 07/15/2019
-ms.topic: "reference" 
-ms.prod: "mlserver" 
-ms.service: "" 
-ms.assetid: "" 
-
-# optional metadata 
-ROBOTS: "" 
-audience: "" 
-ms.devlang: "" 
-ms.reviewer: "" 
-ms.suite: "" 
-ms.tgt_pltfrm: "" 
-#ms.technology: "" 
-ms.custom: "" 
-
+ms.service: sql
+ms.subservice: machine-learning
+ms.topic: "reference"
+keywords:
+  - (MicrosoftML)
+  - featurizeImage
+  - alexnet
+  - cnn
+  - dnn
+  - featurize
+  - image
+  - resnet
+  - transform
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15"
---- 
-
-
+---
 
 
  # featurizeImage: Machine Learning Image Featurization Transform 

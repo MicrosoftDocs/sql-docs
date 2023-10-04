@@ -3,7 +3,7 @@ title: Monitor XTP In-memory storage
 description: Estimate and monitor XTP In-memory storage use, capacity; resolve capacity error 41823
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma, kendralittle
+ms.reviewer: mathoma
 ms.date: 01/25/2019
 ms.service: sql-database
 ms.subservice: performance

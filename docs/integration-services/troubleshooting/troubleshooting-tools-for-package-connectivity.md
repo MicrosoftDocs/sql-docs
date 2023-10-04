@@ -1,23 +1,19 @@
 ---
+title: "Troubleshooting Tools for Package Connectivity"
 description: "Troubleshooting Tools for Package Connectivity"
-title: "Troubleshooting Tools for Package Connectivity | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/02/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server Integration Services packages, troubleshooting"
   - "SSIS packages, troubleshooting"
   - "Integration Services, troubleshooting"
   - "connectivity [Integration Services], troubleshooting"
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
-ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: chugugrace
-ms.author: chugu
 ---
 # Troubleshooting Tools for Package Connectivity
 

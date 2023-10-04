@@ -1,20 +1,16 @@
 ---
+title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
 description: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent"
-title: "Load-Balancing Packages on Remote Servers by Using SQL Server Agent | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "load-balancing [Integration Services]"
   - "parent packages [Integration Services]"
   - "SQL Server Agent [Integration Services]"
-ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-author: chugugrace
-ms.author: chugu
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
 
@@ -64,7 +60,7 @@ ms.author: chugu
   
  When you design the child packages, the packages have no limitations in their design, and you can put in any functionality you desire. However, if the package accesses data, you must ensure that the server that runs the package has access to the data.  
   
- To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
+ To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right-click the package in Solution Explorer and then click **Entry-point Package**.  
   
  After the child packages have been designed, the next step is to deploy them on the remote servers.  
   
@@ -96,7 +92,7 @@ ms.author: chugu
 ## Implementation of the Parent Package
   When load balancing SSIS packages across various servers, the next step after the child packages have been created, deployed, and remote SQL Server Agent Jobs created to run them, is to create the parent package. The parent package will contain many Execute SQL Server Agent Job tasks, each task responsible for calling a different SQL Server Agent job that runs one of the child packages. The Execute SQL Server Agent Job tasks in the parent package in turn run the various SQL Server Agent jobs. Each task in the parent package contains information such as how to connect to the remote server and what job to run on that server. For more information, see [Execute SQL Server Agent Job Task](../../integration-services/control-flow/execute-sql-server-agent-job-task.md).  
   
- To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
+ To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right-click the package in Solution Explorer and then click **Entry-point Package**.  
   
 ### Listing Child Packages  
  If you deploy your project that contains a parent package and child package(s) to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can view a list of the child packages that are executed by the parent package. When you run the parent package, an **Overview** report for the parent package is automatically generated in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The report lists the child packages that were executed by the Execute Package task contained in the parent package, as shown in the following image.  

@@ -4,7 +4,7 @@ ms.author: mikeray
 ms.date: 11/25/2018
 ms.service: virtual-machines-sql
 ms.topic: include
-ms.custom: devx-track-azurepowershell
+ms.custom:
 ---
 
 ## Start your PowerShell session

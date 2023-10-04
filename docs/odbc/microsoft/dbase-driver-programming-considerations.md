@@ -1,21 +1,17 @@
 ---
+title: "dBASE Driver Programming Considerations"
 description: "dBASE Driver Programming Considerations"
-title: "dBASE Driver Programming Considerations | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], DBasedriver"
   - "desktop database drivers [ODBC], DBasedriver"
   - "DBase driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
-ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-author: David-Engel
-ms.author: v-davidengel
 ---
 # dBASE Driver Programming Considerations
 This section contains the following topics.  

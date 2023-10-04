@@ -4,11 +4,9 @@ description: Learn about table and row size for memory-optimized tables. You can
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "06/19/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table and Row Size in Memory-Optimized Tables

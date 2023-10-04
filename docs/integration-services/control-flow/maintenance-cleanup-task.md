@@ -1,22 +1,18 @@
 ---
+title: "Maintenance Cleanup Task"
 description: "Maintenance Cleanup Task"
-title: "Maintenance Cleanup Task | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.maintenancecleanuptask.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "deleting files"
   - "removing files"
   - "Maintenance Cleanup task"
-ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: chugugrace
-ms.author: chugu
 ---
 # Maintenance Cleanup Task
 

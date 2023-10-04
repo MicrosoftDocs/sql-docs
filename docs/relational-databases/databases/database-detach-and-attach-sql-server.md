@@ -1,14 +1,13 @@
 ---
 title: "Database Detach and Attach (SQL Server)"
 description: You can detach and reattach data and transaction log files of a SQL Server database to change the database to a different instance or to move the database.
-ms.custom: ""
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "06/30/2020"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: backup-restore
+ms.service: sql
+ms.subservice: backup-restore
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "upgrading databases"
   - "databases [SQL Server], detaching"
   - "detach database [SQL Server]"
@@ -25,9 +24,6 @@ helpviewer_keywords:
   - "differential base [SQL Server]"
   - "attaching databases [SQL Server]"
   - "databases [SQL Server], moving"
-ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
 # Database Detach and Attach (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +112,7 @@ Like any database that is fully or partially offline, a database with restoring 
 ###  <a name="OtherServerInstance"></a> Attaching a Database to Another Server Instance  
   
 > [!IMPORTANT]  
-> A database created by a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be attached in earlier versions. This precludes the database from being physically used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, this relates to metadata state and does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
+> A database created by a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be attached in earlier versions. This precludes the database from being physically used with an older version of the [!INCLUDE[ssDE-md](../../includes/ssde-md.md)]. However, this relates to metadata state and does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
 When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage metadata when making a database available on another server instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   

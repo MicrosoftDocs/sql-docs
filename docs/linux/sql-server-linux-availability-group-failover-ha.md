@@ -3,12 +3,13 @@ title: Manage availability group failover - SQL Server on Linux
 description: "This article describes types of failover: automatic, planned manual failover, and forced manual failover. Automatic and planned manual preserve all your data."
 author: tejasaks
 ms.author: tejasaks
-ms.reviewer: vanto
+ms.reviewer: vanto, randolphwest
 ms.date: 10/05/2021
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
-ms.assetid: 
+ms.custom:
+  - linux-related-content
 ---
 # Always On Availability Group failover on Linux
 
@@ -18,14 +19,14 @@ Within the context of an availability group (AG), the primary role and secondary
 
 For background information about failover, see [Failover and failover modes](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Manual failover
+## <a id="failover"></a> Manual failover
 
 Use the cluster management tools to fail over an AG managed by an external cluster manager. For example, if a solution uses Pacemaker to manage a Linux cluster, use `pcs` to perform manual failovers on RHEL or Ubuntu. On SLES use `crm`. 
 
 > [!IMPORTANT]
 > Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager. For instructions to force failover with potential data loss, see [Force failover](#forceFailover).
 
-### <a name="manualFailover">Manual failover steps
+### <a id="manualFailover"></a> Manual failover steps
 
 To fail over, the secondary replica that will become the primary replica must be synchronous. If a secondary replica is asynchronous, [change the availability mode](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
@@ -37,7 +38,7 @@ Manually fail over in two steps.
 
    Second, [remove the location constraint](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Step 1. Manually fail over by moving availability group resource
+#### <a id="manualMove"></a> Step 1. Manually fail over by moving availability group resource
 
 To manually fail over an AG resource named *ag_cluster* to cluster node named *nodeName2*, run the appropriate command for your distribution:
 
@@ -57,7 +58,7 @@ To manually fail over an AG resource named *ag_cluster* to cluster node named *n
 >When you use the --lifetime option, the location constraint created to move the resource is temporary in nature and is valid for 30 seconds in previous example.
 >Please note that the temporary constraint is not cleared automatically and may show up in the constraint list, but as an expired constraint. Expired constraints do not affect the failover behavior of pacemaker cluster. If you do not use the --lifetime option when moving the resource, you should remove a location constraint that is automatically added as noted below.
 
-#### <a name="removeLocConstraint"> </a> Step 2. Remove the location constraint
+#### <a id="removeLocConstraint"></a> Step 2. Remove the location constraint
 
 During a manual failover, the `pcs` command `move` or `crm` command `migrate` adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 
@@ -117,7 +118,7 @@ For more information:
 - [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Force failover 
+## <a id="forceFailover"></a> Force failover
 
 A forced failover is intended strictly for disaster recovery. In this case, you cannot fail over with cluster management tools because the primary datacenter is down. If you force failover to an unsynchronized secondary replica, some data loss is possible. Only force failover if you must restore service to the AG immediately and are willing to risk losing data.
 
@@ -176,10 +177,10 @@ For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compa
 
 Automatic failover requires at least one synchronous replica.
 
-## Next steps
+## Related content
 
-[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
+- [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=rhel)
+- [Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
+- [Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)
 
-[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=sles)
-
-[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-pacemaker.md?tabs=ubuntu)
+[!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

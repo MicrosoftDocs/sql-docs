@@ -40,7 +40,7 @@ The following table provides additional information and considerations about the
 
 | Witness type  | Description  | Requirements and recommendations  |
 | ---------    |---------        |---------                        |
-| Cloud witness     |  <ul><li> Uses Azure storage as the cloud witness, contains just the time stamp. </li><li> Ideal for deployments in multiple sites, multiple zones, and multiple regions.</li> <li> Creates well-known container `msft-cloud-witness` under the Microsoft Storage Account. </li> <li> Writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under the container </li>      |  <ul><li>Default size is 1 MB.</li><li> Use **General Purpose** for the account kind. Blob storage is not supported. </li><li> Use Standard storage. Azure Premium Storage is not supported. </li><li> Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally redundant storage** for **Replication** type.</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li> <li> Cloud Witness uses HTTPS (default port 443) to establish communication with Azure blob service. Ensure that HTTPS port is accessible via network Proxy. </li>|
+| Cloud witness     |  <ul><li> Uses Azure storage as the cloud witness, contains just the time stamp. </li><li> Ideal for deployments in multiple sites, multiple zones, and multiple regions.</li> <li> Creates well-known container `msft-cloud-witness` under the Microsoft Storage Account. </li> <li> Writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under the container </li>      |  <ul><li>Default size is 1 MB.</li><li> Use **General Purpose** for the account kind. Blob storage is not supported. </li><li> Use Standard storage. Azure Premium Storage is not supported. </li><li> Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally redundant storage** for **Replication** type.</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li> <li> Cloud Witness uses HTTPS (default port 443) to establish communication with Azure Blob Storage. Ensure that HTTPS port is accessible via network Proxy. </li>|
 
 When configuring a Cloud Witness quorum resource for your Failover Cluster, consider:
 - Instead of storing the Access Key, your Failover Cluster will generate and securely store a Shared Access Security (SAS) token.
@@ -54,7 +54,7 @@ A cloud witness requires an Azure Storage Account. To configure a storage accoun
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account. Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
-    2. For **Account kind**, select **General purpose**.
+    2. For **Account kind**, select **General Purpose**.
     3. For **Performance**, select **Standard**.
     2. For **Replication**, select **Local-redundant storage (LRS)**.
 
@@ -104,7 +104,7 @@ Use the Quorum Configuration Wizard built into Failover Cluster Manager to confi
    2. (Required parameter) Access Key corresponding to the Storage Account.
        1. When creating for the first time, use Primary Access Key 
        2. When rotating the Primary Access Key, use Secondary Access Key
-   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.
+   3. (Optional parameter) If you intend to use a different Azure service endpoint (for example, Azure operated by 21Vianet), update the endpoint server name.
 
     ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](./media/hadr-create-quorum-windows-failover-cluster-how-to/cloud-witness-10.png)
       

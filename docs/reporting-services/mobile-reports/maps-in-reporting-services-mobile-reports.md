@@ -1,21 +1,19 @@
 ---
-title: "Maps in Reporting Services mobile reports | Microsoft Docs"
-description: SQL Server Mobile Report Publisher provides three types of map visualization, and built-in maps for continents and a number of individual countries.
-ms.date: 07/21/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: mobile-reports
-
-ms.topic: conceptual
-ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
+title: "Maps in Reporting Services mobile reports"
+description: SQL Server Mobile Report Publisher provides three types of map visualization, and built-in maps for continents and a number of individual countries/regions.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/21/2022
+ms.service: reporting-services
+ms.subservice: mobile-reports
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Maps in Reporting Services mobile reports
 
 [!INCLUDE [ssrs-mobile-report-deprecated](../../includes/ssrs-mobile-report-deprecated.md)]
 
-Maps are a great way to visualize geographical data. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] provides three different types of map visualization, and built-in maps for continents and a number of individual countries. You can also [upload and use custom maps](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
+Maps are a great way to visualize geographical data. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] provides three different types of map visualization, and built-in maps for continents and a number of individual countries/regions. You can also [upload and use custom maps](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
 ## Types of maps  
   
@@ -47,7 +45,7 @@ When you first add a map to your report, [!INCLUDE[SS_MobileReptPub_Short](../..
 ![SSMRP_MapsData](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
   
 To display real data in your map, you need to set values for at least two of the map's data properties:   
-* The **Keys** property connects the data to specific map regions -- states in the USA, for instance, or countries in Africa.  
+* The **Keys** property connects the data to specific map regions -- states in the USA, for instance, or countries/regions in Africa.  
 * The **Values** property is a numeric field in the same table as the selected keys field. These values are represented differently in different maps. The **gradient map** uses these values to color each region with a varying shades based on the range of values. The **bubble map** base the size of a bubble visualization over each region on the value property.   
 * For range stop heat maps, you also need to set the **Targets** property.  
   

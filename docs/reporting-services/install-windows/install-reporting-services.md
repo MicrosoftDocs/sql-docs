@@ -1,15 +1,15 @@
 ---
+title: "Install SQL Server Reporting Services"
 description: "Install SQL Server Reporting Services"
-title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 09/16/2022
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: ">= sql-server-2016"
+ms.date: 09/16/2022
+ms.service: reporting-services
+ms.topic: conceptual
 ms.custom:
   - intro-installation
+  - updatefrequency5
+monikerRange: ">= sql-server-2016"
 ---
 # Install SQL Server Reporting Services
 

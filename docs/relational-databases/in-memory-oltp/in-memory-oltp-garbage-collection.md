@@ -4,11 +4,9 @@ description: Learn about garbage collection in In-Memory OLTP in SQL Server. If 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # In-Memory OLTP Garbage Collection

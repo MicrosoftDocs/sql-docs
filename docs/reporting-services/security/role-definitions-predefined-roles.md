@@ -1,20 +1,17 @@
 ---
+title: "Role definitions - predefined roles"
 description: "Role definitions - predefined roles"
-title: "Role definitions - predefined roles | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 02/04/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "security [Reporting Services], defaults"
   - "default security"
   - "role-based security [Reporting Services], defaults"
-ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Role definitions - predefined roles
 
@@ -170,7 +167,7 @@ ms.author: maggies
 |Manage individual subscriptions|Create, view, modify, and delete subscriptions for reports and linked reports.|  
 |Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view, and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
-|Manage resources|Create, modify, and delete resources, and view. and modify resource properties.|  
+|Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
 |View data sources|View shared data source items in the folder hierarchy.|  
 |View folders|View folder contents.|  
 |View reports|Run reports that are stored in the user's My Reports folder and view report properties.|  

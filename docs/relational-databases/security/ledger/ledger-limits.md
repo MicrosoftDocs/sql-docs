@@ -1,23 +1,24 @@
 ---
 title: "Ledger considerations and limitations"
 description: Limitations and considerations for the ledger feature
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
-ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/23/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Ledger considerations and limitations
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 There are some considerations and limitations to be aware of when working with ledger tables due to the nature of system-versioning and immutable data.
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview.
 
 ## General considerations and limitations
 
@@ -39,14 +40,18 @@ Consider the following when working with ledger.
 - In-memory tables aren't supported.
 - Sparse column sets aren't supported.
 - SWITCH IN/OUT partition isn't supported.
+- DBCC CLONEDATABASE isn't supported.
 - Ledger tables can't have full-text indexes.
 - Ledger tables can't be graph table.
 - Ledger tables can't be FileTables.
 - Ledger tables can't have a rowstore non-clustered index when they have a clustered columnstore index.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
-- Change data capture isn't supported for ledger tables.
+- Change data capture isn't allowed on the history table, but is allowed on ledger tables.
 - Transactional replication isn't supported for ledger tables.
+- Database mirroring isn't supported.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.
+- The Managed Instance link feature is not supported.
+- Change the digest path manually after a native restore of a database backup to an Azure SQL managed instance.
 
 ### Unsupported data types
 

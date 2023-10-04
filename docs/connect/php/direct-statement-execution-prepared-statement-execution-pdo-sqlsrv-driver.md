@@ -4,8 +4,8 @@ description: "Learn how to use the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute for d
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "08/10/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 # Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver

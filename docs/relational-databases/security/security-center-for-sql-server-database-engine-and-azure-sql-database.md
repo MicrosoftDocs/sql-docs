@@ -1,30 +1,25 @@
 ---
 title: "Security documentation for SQL Server & Azure SQL Database"
-description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: security
+description: A reference of security and protection-related content for SQL Server and Azure SQL Database.
+author: VanMSFT
+ms.author: vanto
+ms.date: "09/27/2017"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-f1_keywords: 
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SQL Server, security"
   - "security [SQL Server]"
   - "database security [SQL Server]"
   - "databases [SQL Server], security"
-ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-author: VanMSFT
-ms.author: vanto
-ms.custom: seo-lt-2019
-ms.date: "09/27/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Security for SQL Server Database Engine and Azure SQL Database
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  **Legend**  
   
@@ -59,7 +54,7 @@ This page provides links to help you locate the information that you need about 
 |Feature|Link|  
 |-|-|  
 |**Firewall Protection**<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Windows Firewall Settings<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Azure Service Firewall Settings<br /><br /> :::image type="icon" source="../../relational-databases/security/media/security-center-sqldb.png"::: Database Firewall Settings|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL Database Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
-|**Encrypting Data in Transit**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Forced SSL Connections<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Optional SSL Connections|[Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md), [Network security](/azure/sql-database/sql-database-security-best-practice#network-security) <br /><br /> [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
+|**Encrypting Data in Transit**<br /><br /> :::image type="icon" source="../performance/media/security-center-both.png"::: Forced SSL Connections<br /><br /> :::image type="icon" source="../performance/media/security-center-sqlserver.png"::: Optional SSL Connections|[Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/configure-sql-server-encryption.md)<br /><br /> [Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/configure-sql-server-encryption.md), [Network security](/azure/sql-database/sql-database-security-best-practice#network-security) <br /><br /> [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="Audit"></a> Auditing: Recording Access  
   

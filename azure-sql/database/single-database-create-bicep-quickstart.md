@@ -7,10 +7,7 @@ ms.date: 05/16/2022
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom:
-  - "subject-armqs sqldbrb=1"
-  - "devx-track-azurepowershell"
-  - "mode-arm"
+ms.custom: subject-armqs sqldbrb=1, mode-arm, devx-track-bicep
 ---
 
 # Quickstart: Create a single database in Azure SQL Database using Bicep

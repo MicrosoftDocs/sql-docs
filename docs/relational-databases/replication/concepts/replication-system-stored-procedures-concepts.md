@@ -1,24 +1,21 @@
 ---
+title: "Replication System Stored Procedures Concepts"
 description: "Replication System Stored Procedures Concepts"
-title: "Replication System Stored Procedures Concepts | Microsoft Docs"
-ms.custom: ""
+author: "MashaMSFT"
+ms.author: "mathoma"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "stored procedures [SQL Server replication], programming"
   - "programming [SQL Server replication], system stored procedures"
   - "programming interfaces [SQL Server replication]"
   - "system stored procedures [SQL Server replication]"
   - "replication [SQL Server], how-to topics"
-ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-author: "MashaMSFT"
-ms.author: "mathoma"
+dev_langs:
+  - "TSQL"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 # Replication System Stored Procedures Concepts
@@ -85,7 +82,7 @@ SET @publisher = $(DistPubServer);
 -- Specify the replication working directory.  
 SET @directory = N'\\' + $(DistPubServer) + '\repldata';  
 -- Specify the publication database.  
-SET @publicationDB = N'AdventureWorks2012';   
+SET @publicationDB = N'AdventureWorks2022';   
   
 -- Install the server MYDISTPUB as a Distributor using the defaults,  
 -- including autogenerating the distributor password.  
@@ -99,7 +96,7 @@ EXEC sp_adddistributiondb @database = @distributionDB,
     @security_mode = 1;  
 GO  
   
--- Create a Publisher and enable AdventureWorks2012 for replication.  
+-- Create a Publisher and enable AdventureWorks2022 for replication.  
 -- Add MYDISTPUB as a publisher with MYDISTPUB as a local distributor  
 -- and use Windows Authentication.  
 DECLARE @distributionDB AS sysname;  
@@ -127,7 +124,7 @@ GO
 ### Creating a SQL Query File in SQL Server Management Studio  
  A replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] script file can be created as a SQL Query file in a [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] project. After the script is written, a connection can be made to the database for this query file and the script can be executed. For more information about how to create [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md).  
   
- To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
+ To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -151,7 +148,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../tools/sqlcmd/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
@@ -223,5 +220,4 @@ REM -- The following must be supplied on one line.
 ## See Also  
  [Replication Programming Concepts](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)  
-  
+ [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)

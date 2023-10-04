@@ -8,9 +8,7 @@ ms.date: 03/25/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.custom:
-  - seo-lt-2019
-  - sqldbrb=1
+ms.custom: sqldbrb=1
 ---
 
 # Delete a subnet after deleting an Azure SQL Managed Instance

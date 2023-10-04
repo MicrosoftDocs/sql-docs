@@ -4,10 +4,9 @@ description: "A reference of various system objects that can be used when workin
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "04/03/2010"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016"
 ---
 # Always On availability group system object reference

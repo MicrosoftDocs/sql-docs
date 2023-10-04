@@ -1,21 +1,18 @@
 ---
-title: "Formatting series colors on a paginated report chart | Microsoft Docs"
+title: "Formatting series colors on a paginated report chart"
 description: Learn how to use the many built-in palettes in paginated reports for charts or define a custom palette of your own design in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/03/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10245"
   - "10252"
   - "sql13.rtp.rptdesigner.serieslabelproperties.borders.f1"
   - "sql13.rtp.rptdesigner.seriesproperties.borders.f1"
-ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Formatting series colors on a paginated report chart (Report Builder)
 

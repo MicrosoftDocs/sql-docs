@@ -4,11 +4,9 @@ description: Learn about monitoring and troubleshooting In-Memory OLTP memory us
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: troubleshooting
-ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Troubleshoot Memory Usage

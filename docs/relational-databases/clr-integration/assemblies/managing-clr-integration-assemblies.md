@@ -4,8 +4,8 @@ description: You can host managed DLL assemblies in SQL Server.  You can registe
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: clr
+ms.service: sql
+ms.subservice: clr
 ms.topic: "reference"
 helpviewer_keywords:
   - "database objects [CLR integration], assemblies"
@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "assemblies [CLR integration], managing"
 dev_langs:
   - "TSQL"
-ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 ---
 # Managing CLR Integration Assemblies
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

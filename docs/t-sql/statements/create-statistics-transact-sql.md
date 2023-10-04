@@ -4,11 +4,10 @@ description: CREATE STATISTICS (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.reviewer: katsmith, wiassaf
-ms.date: 10/12/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 07/26/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "STATISTICS"
   - "STATISTICS_TSQL"
@@ -24,18 +23,25 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 
 # CREATE STATISTICS (Transact-SQL)
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
 Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.
 
 To learn more, see [Statistics](../../relational-databases/statistics/statistics.md).
 
-:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif" border="false"::: [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+::: moniker range="=fabric"
+
+> [!NOTE]
+> For more information on statistics in [!INCLUDE [fabric](../../includes/fabric.md)], see [Statistics in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/statistics).
+
+::: moniker-end
+
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -85,7 +91,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 ```
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 CREATE STATISTICS statistics_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -112,6 +118,19 @@ CREATE STATISTICS statistics_name
   
 <comparison_op> ::=
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<
+```
+
+```syntaxsql
+-- Syntax for Microsoft Fabric
+CREATE STATISTICS statistics_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
+    ( column_name )
+    [ WITH {
+           FULLSCAN
+           | SAMPLE number PERCENT
+      }
+    ]
+[;]
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -152,9 +171,11 @@ For more information about filter predicates, see [Create Filtered Indexes](../.
 
 Compute statistics by scanning all rows. FULLSCAN and SAMPLE 100 PERCENT have the same results. FULLSCAN cannot be used with the SAMPLE option.
 
-When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan
+When omitted, SQL Server uses sampling to create the statistics, and determines the sample size that is required to create a high quality query plan.
 
-#### SAMPLE number { PERCENT | ROWS }  
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
+
+#### SAMPLE number { PERCENT | ROWS }
 Specifies the approximate percentage or number of rows in the table or indexed view for the query optimizer to use when it creates statistics. For PERCENT, *number* can be from 0 through 100 and for ROWS, *number* can be from 0 to the total number of rows. The actual percentage or number of rows the query optimizer samples might not match the percentage or number specified. For example, the query optimizer scans all rows on a data page.
 
 SAMPLE is useful for special cases in which the query plan, based on default sampling, is not optimal. In most situations, it is not necessary to specify SAMPLE because the query optimizer already uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans.
@@ -163,8 +184,10 @@ SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN
 
 We recommend against specifying `0 PERCENT` or `0 ROWS`. When `0 PERCENT` or `0 ROWS` is specified, the statistics object is created, but does not contain statistics data.
 
-#### PERSIST_SAMPLE_PERCENT = { ON | OFF }  
-When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**.
+In [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], only single-column FULLSCAN and single-column SAMPLE-based statistics are supported. When no option is included, FULLSCAN statistics are created.
+
+#### PERSIST_SAMPLE_PERCENT = { ON | OFF }
+When **ON**, the statistics retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage gets reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**.
 
 > [!NOTE]  
 > If the table is truncated, all statistics built on the truncated HoBT will revert to using the default sampling percentage.
@@ -190,7 +213,7 @@ For more information about the AUTO_STATISTICS_UPDATE option, see [ALTER DATABAS
 
 When **ON**, the statistics created are per partition statistics. When **OFF**, stats are combined for all partitions. The default is **OFF**.
 
-If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:
+If per partition statistics are not supported, an error is generated. Incremental stats are not supported for following statistics types:
 
 - Statistics created with indexes that are not partition-aligned with the base table.  
 - Statistics created on Always On readable secondary databases.  
@@ -217,17 +240,17 @@ Restricts the maximum number of processors used in a parallel statistic operatio
 0 (default)  
 Uses the actual number of processors or fewer based on the current system workload.
 
-\<update_stats_stream_option>
+#### update_stats_stream_option
 
 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]
 
 #### AUTO_DROP = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
+**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 Prior to [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
-Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the AUTO_DROP option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics will be dropped as necessary. In this way, manually created statistics with AUTO_DROP enabled behave like auto-created statistics.
+Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], the AUTO_DROP option is enabled by default on all new and migrated databases. The AUTO_DROP property allows the creation of statistics objects in a mode such that a subsequent schema change will *not* be blocked by the statistic object, but instead the statistics are dropped as necessary. In this way, manually created statistics with AUTO_DROP enabled behave like auto-created statistics.
 
 > [!NOTE]  
 > Trying to set or unset the *Auto_Drop* property on auto-created statistics may raise errors. Auto-created statistics always uses auto drop. Some backups, when restored, may have this property set incorrectly until the next time the statistics object is updated (manually or automatically). However, auto-created statistics always behave like auto drop statistics. When restoring a database to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] from a previous version, it is recommended to execute `sp_updatestats` on the database, setting the proper metadata for the statistics AUTO_DROP feature.
@@ -248,7 +271,9 @@ SQL Server can use `tempdb` to sort the sampled rows before building statistics.
 
 ### Statistics for external tables
 
-When creating external table statistics, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the external table into a temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and then creates the statistics. For samples statistics, only the sampled rows are imported. If you have a large external table, it will be much faster to use the default sampling instead of the full scan option.
+When creating external table statistics, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports the external table into a temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and then creates the statistics. For samples statistics, only the sampled rows are imported. If you have a large external table, it is faster to use the default sampling instead of the full scan option.
+
+When the external table is using `DELIMITEDTEXT`, `CSV`, `PARQUET`, or `DELTA` as data types, external tables only support statistics for one column per `CREATE STATISTICS` command.
 
 ### Statistics with a filtered condition
 
@@ -290,7 +315,7 @@ The following example creates the `NamePurchase` statistics for all rows in the 
 
 ```sql
 CREATE STATISTICS NamePurchase
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)
+    ON AdventureWorks2022.Person.Person (BusinessEntityID, EmailPromotion)
     WITH FULLSCAN, NORECOMPUTE;
 ```
 
@@ -310,7 +335,7 @@ GO
 
 The only decision you need to make when you create statistics on an external table, besides providing the list of columns, is whether to create the statistics by sampling the rows or by scanning all of the rows. CREATE and DROP STATISTICS on external tables are not supported in Azure SQL Database.
 
-Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.
+Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option takes much longer. For a large table, the default sampling method is usually sufficient.
 
 ```sql
 --Create statistics on an external table and use default sampling.
@@ -326,7 +351,7 @@ The following example creates the `NamePurchase` statistics for all rows in the 
 
 ```sql
 CREATE STATISTICS NamePurchase
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)
+    ON AdventureWorks2022.Person.Person (BusinessEntityID, EmailPromotion)
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;
 ```
 
@@ -376,6 +401,7 @@ FROM sys.stats;
 ## Next steps
 
 - [Statistics](../../relational-databases/statistics/statistics.md)
+- [Statistics in Microsoft Fabric](/fabric/data-warehouse/statistics)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)
 - [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

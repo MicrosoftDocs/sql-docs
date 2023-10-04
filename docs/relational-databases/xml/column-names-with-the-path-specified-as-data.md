@@ -1,17 +1,15 @@
 ---
 title: "Column Names with the Path Specified as data()"
 description: Learn about XML queries containing column names with the path specified as data().
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "names [SQL Server], columns with"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Column names with the path specified as data()
 
@@ -20,7 +18,7 @@ ms.author: mikeray
 If the path specified as column name is `data()`, the value is treated as an atomic value in the generated XML. A space character is added to the XML if the next item in the serialization is also an atomic value. This is useful when you're creating list typed element and attribute values. The following query retrieves the product model ID, name, and list of products in that product model.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID       AS "@ProductModelID",
        Name                 AS "@ProductModelName",

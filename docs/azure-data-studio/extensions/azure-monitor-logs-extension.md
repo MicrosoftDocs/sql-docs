@@ -5,7 +5,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.date: 11/03/2021
-ms.prod: azure-data-studio
+ms.service: azure-data-studio
 ms.topic: conceptual
 ---
 

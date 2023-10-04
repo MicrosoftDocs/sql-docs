@@ -1,15 +1,13 @@
 ---
-title: Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to SQL Server or to Azure SQL Database.
-documentationcenter: NA
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.technology: integration-services
+author: chugugrace
+ms.author: chugu
+ms.date: 08/20/2018
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
 ms.custom: loading
-ms.date: 08/20/2018
-ms.author: chugu
-author: chugugrace
 ---
 # Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 
@@ -54,7 +52,7 @@ To step through this tutorial, you need the following things:
       or
    - **A SQL Server instance**. SQL Server runs on premises or on an Azure virtual machine. To download a free evaluation or developer edition of SQL Server, see [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).
 
-5. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases].
+5. **Sample data**. This tutorial uses sample data stored in SQL Server in the AdventureWorks sample database as the source data. To get the AdventureWorks sample database, see [AdventureWorks Sample Databases][AdventureWorks Sample Databases].
 6. **A firewall rule** if you're loading data into SQL Database. You have to create a firewall rule on SQL Database with the IP address of your local computer before you can upload data to the SQL Database.
 
 ## Create a new Integration Services project
@@ -201,4 +199,4 @@ Congratulations! You've successfully used SQL Server Integration Services to loa
 [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
 [SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
-[AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
+[AdventureWorks Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

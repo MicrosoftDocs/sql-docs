@@ -4,9 +4,8 @@ description: sys.parameter_xml_schema_collection_usages (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.parameter_xml_schema_collection_usages"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.parameter_xml_schema_collection_usages catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameter_xml_schema_collection_usages (Transact-SQL)

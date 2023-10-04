@@ -4,10 +4,9 @@ description: Learn about the interoperability of replication, change tracking, a
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 10/05/2021
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
   - "change tracking [SQL Server], Always On Availability Groups"
@@ -157,7 +156,7 @@ helpviewer_keywords:
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
-    @provider=N'SQLNCLI11',   
+    @provider=N'MSOLEDBSQL',   
     @datasrc=N'AG_Listener_Name',   
     @provstr=N'ApplicationIntent=ReadOnly',   
     @catalog=N'MY_DB_NAME';  
@@ -168,9 +167,9 @@ helpviewer_keywords:
      In general, you should use domain logins for client access to change data residing in databases that are members of Always On availability groups. To ensure continued access to change data after failover, the domain user will need access privileges on all of the hosts supporting availability group replicas. If a database user is added to a database in a primary replica, and the user is associated with a domain login, the database user is propagated to secondary databases and continues to be associated with the specified domain login. If the new database user is associated with a SQL Server authentication login, the user at the secondary databases will be propagated without a login. While the associated [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login could be used to access change data at the primary where the database user was originally defined, that node is the only one where access would be possible. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login would not be able to access data from any secondary database, nor from any new primary databases other than the original database where the database user was defined.  
      
 -   **Disabling Change Data Capture**  
-If Change Data Capture needs to be disabled on a database that is part of an Always On Availability Group, then you will need to perform more steps to ensure that log truncation is not affected. You will need to implement one of the following steps to prevent Change Data Capture from blocking log truncation after disabling Change Data Capture:
-    - Restart the SQL Server service on every secondary replica instance
-    - OR remove the database from all the secondary replica instances of the Availability Group and add it to the Availability Group replica instances using automatic or manual seeding
+If you need to disable Change Data Capture (CDC) on a database that is part of an Always On availability group and you're on [SQL Server 2016 SP2](https://support.microsoft.com/topic/kb4092045-fix-lsn-truncation-occurs-in-alwayson-ag-when-disabling-the-change-data-capture-feature-in-sql-server-2016-cf5f641f-5550-caa0-8bb9-418294101bf3) or later, you don't need to perform any additional steps for automatic log truncation. If you're on an earlier version than SQL Server 2016 SP2 and you disable CDC on a database that is part of an availability group, then you will need to implement one of the following steps to prevent blocking log truncation after CDC is disabled:
+    - Restart the SQL Server service on _every_ secondary replica instance.
+    - Remove the database from all the secondary replica instances of the availability group and then add it back to each availability group replica instance using automatic or manual seeding. 
   
 ###  <a name="CT"></a> Change Tracking  
  A database enabled for change tracking (CT) can be part of an Always On availability group. No more configuration is needed. Change tracking client applications that use the CDC table-valued functions (TVFs) to access change data will need the ability to locate the primary replica after failover. If the client application connects through the availability group listener name, connection requests will always be appropriately directed to the current primary replica.  
@@ -181,7 +180,11 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 >  Msg 22117, Level 16, State 1, Line1  
 >   
 >  For databases that are members of a secondary replica (that is, for secondary databases), change tracking is not supported. As an alternative to running change tracking queries on the primary replica, you can create a database snapshot of an AG database from the secondary replica and then use that to query change data. A database snapshot is a read-only, static view of a SQL Server database (the source database), so change tracking data in the database snapshot will be of the time when the snapshot was taken on the AG database from the secondary replica.
-  
+
+> [!NOTE]  
+>  When a failover occurs on a database with Change Tracking enabled, recovery time on the new primary replica may take longer than usual as Change Tracking requires a full database restart. 
+
+
 ##  <a name="Prereqs"></a> Prerequisites, Restrictions, and Considerations for Using Replication  
  This section describes considerations for deploying replication with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations.  
   
@@ -203,13 +206,16 @@ If Change Data Capture needs to be disabled on a database that is part of an Alw
 |Replication|Publisher|Distributor<sup>1</sup>|Subscriber|  
 |-|-|-|-|  
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes|
-|**Peer-to-peer**<sup>2</sup>|Yes|No|Yes|  
+|**Peer-to-peer**<sup>2</sup>|Yes|Yes<sup>3</sup>|Yes|  
 |**Merge**|Yes|No|No|  
 |**Snapshot**|Yes|No|Yes|
+|**Updatable Subscriptions - For Transactional Replication**|No|No|No|
   
 <sup>1</sup> The Distributor database is not supported for use with database mirroring.
 
 <sup>2</sup> Requires SQL Server 2019 CU 13 or later.
+
+<sup>3</sup> Requires SQL Server 2019 CU 17 or later.
   
 ### Considerations  
   

@@ -1,23 +1,19 @@
 ---
+title: "sp_grantlogin (Transact-SQL)"
 description: "sp_grantlogin (Transact-SQL)"
-title: "sp_grantlogin (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+author: VanMSFT
+ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-f1_keywords: 
+f1_keywords:
   - "sp_grantlogin_TSQL"
   - "sp_grantlogin"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sp_grantlogin"
-ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-ms.author: vanto
-author: VanMSFT
+dev_langs:
+  - "TSQL"
 ---
 # sp_grantlogin (Transact-SQL)
 
@@ -28,7 +24,7 @@ author: VanMSFT
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) instead.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -49,7 +45,7 @@ sp_grantlogin [@loginame=] 'login'
  **sp_grantlogin** cannot be executed within a user-defined transaction.  
   
 ## Permissions  
- Requires ALTER ANY LOGIN permission on the server.  
+ Requires membership of server role **securityadmin**.  
   
 ## Examples  
  The following example uses `CREATE LOGIN` to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the Windows user `Corporate\BobJ.` This is the preferred method.  

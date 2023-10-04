@@ -1,15 +1,13 @@
 ---
-title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
+title: "Lesson 2: Modifying the Report Data Source Properties"
 description: Learn how to use the web portal to select a report that will be delivered to recipients and also how to modify the Report Data Source properties.
-ms.date: 05/23/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/23/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 2: Modifying the Report Data Source Properties
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
@@ -35,13 +33,13 @@ You will also modify the dataset and report to use a parameter to filter the rep
 5.  Verify the connection string is the following and it assumes that the sample database is on a local database server:  
   
     ```  
-    Data source=localhost; initial catalog=AdventureWorks2014  
+    Data source=localhost; initial catalog=AdventureWorks2022  
     ```  
   
 6.  Click **Use the following credentials**.  
   
 7. In the **Type of credentials**, select **Windows user name and password**
-8. Type your user name (use the format *domain\user*) and password. If you do not have permission to access the AdventureWorks2014 database, specify a login that does.  
+8. Type your user name (use the format *domain\user*) and password. If you do not have permission to access the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, specify a login that does.  
     
 9. Click **Test Connection** to verify you can connect to the data source.  
   

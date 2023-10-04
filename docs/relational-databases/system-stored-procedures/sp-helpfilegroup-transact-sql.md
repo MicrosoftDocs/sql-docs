@@ -1,30 +1,26 @@
 ---
+title: "sp_helpfilegroup (Transact-SQL)"
 description: "sp_helpfilegroup (Transact-SQL)"
-title: "sp_helpfilegroup (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_helpfilegroup_TSQL"
-  - "sp_helpfilegroup"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_helpfilegroup"
-ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: markingmyname
 ms.author: maghan
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_helpfilegroup_TSQL"
+  - "sp_helpfilegroup"
+helpviewer_keywords:
+  - "sp_helpfilegroup"
+dev_langs:
+  - "TSQL"
 ---
 # sp_helpfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the names and attributes of filegroups associated with the current database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -68,7 +64,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
  The following example returns information about the filegroups in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpfilegroup;  
 GO  
@@ -78,7 +74,7 @@ GO
  The following example returns information for all files in the `PRIMARY` filegroup in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  
 GO  

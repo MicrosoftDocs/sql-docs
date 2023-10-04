@@ -1,35 +1,28 @@
 ---
-description: "SQL Server backup and restore with S3-compatible object storage preview"
 title: "Backup & restore with S3-compatible object storage"
-storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/24/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
+description: "SQL Server backup and restore with S3-compatible object storage"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: 05/18/2023
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
+storage: Learn about SQL Server backup to and restore from S3-compatible object storage, including the benefits of using S3-compatible object storage to store SQL Server backups.
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
-# SQL Server backup and restore with S3-compatible object storage preview
+# SQL Server backup and restore with S3-compatible object storage
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
 This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
 
-> [!NOTE]
-> SQL Server backup and restore with S3-compatible object storage is in preview as a feature of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
-  
 ## Overview
 
-[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3 compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
+[!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces object storage integration to the data platform, enabling you to integrate SQL Server with S3-compatible object storage in addition to Azure Storage. To provide this integration SQL Server has been enhanced with a new S3 connector, which uses the S3 REST API to connect to any provider of S3-compatible object storage. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the existing BACKUP/RESTORE TO/FROM URL syntax by adding support for the new S3 connector using the REST API. For information on supported platforms, see [providers of S3-compatible object storage](#providers-of-s3-compatible-object-storage).
 
 This article contains information on using Backup to URL for S3-compatible object storage. To learn more about using Backup to URL for S3-compatible object storage, see [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
 
-### Backup and Restore to S3 compatible storage
+### Backup and Restore to S3-compatible storage
 
 The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support the S3 connector. For more information on Backup to URL functionality, see: 
 
@@ -42,30 +35,30 @@ The `BACKUP TO URL` and `RESTORE FROM URL` syntax has been extended to support t
 
 There are many providers of S3-compatible object storage in the market today. Object storage is either provided as software-defined, as hardware appliances, or as a combination for hybrid cloud scenarios.
 
-The following table provides a non-exhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+The following table provides a nonexhaustive summary of object storage providers offering an S3 endpoint as part of their solution. Not all solutions have been validated against the current version of [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
-| **Vendor (alphabetical)**       | **Offering**                  | 
-|---------------------------------|-------------------------------|
-| [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3) |
-| [Ceph][ceph_webs]               | Ceph                          |
-| [Cloudian][cloudian_webs]       | HyperStore                    |
-| [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage |
-| [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform      |
-| [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric       |
-| [MinIO][minio_webs]             | Multi-Cloud Object Storage    |
-| [NetApp][netapp_webs]           | StorageGRID<br>ONTAP          |
-| [Nutanix][nutanix_webs]         | Nutanix Object Storage        |
-| [Pure Storage][pure_webs]       | Pure FlashBlade               |
-| [Red Hat][redhat_webs]          | OpenShift Container Storage   |
-| [Scality][scality_webs]         | Scality Artesca               |
-| [Weka][weka_webs]               | Weka S3                       |
+| **Vendor (alphabetical)**       | **Offering**                             | 
+|---------------------------------|------------------------------------------|
+| [AWS][aws_webs]                 | AWS Simple Cloud Storage (S3)            |
+| [Ceph][ceph_webs]               | Ceph                                     |
+| [Cloudian][cloudian_webs]       | HyperStore                               |
+| [Dell Technologies][dell_webs]  | ECS Enterprise Object Storage            |
+| [Hitachi Vantara][hitachi_webs] | Hitachi Content Platform for Cloud Scale |
+| [HPE][hpe_webs]                 | HPE Ezmeral Data Fabric                  |
+| [MinIO][minio_webs]             | Multicloud Object Storage               |
+| [NetApp][netapp_webs]           | StorageGRID<br />ONTAP                     |
+| [Nutanix][nutanix_webs]         | Nutanix Object Storage                   |
+| [Pure Storage][pure_webs]       | Pure FlashBlade                          |
+| [Red Hat][redhat_webs]          | OpenShift Container Storage              |
+| [Scality][scality_webs]         | Scality Artesca                          |
+| [Weka][weka_webs]               | Weka S3                                  |
 
 ## Prerequisites for the S3 endpoint
 
 The S3 endpoint must have been configured as follows:
 
-- TLS has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server will require the certificate for this scenario.
-- A user (Access Key ID) has been configured and the secret (Secret Key ID) for that user is known to you. You will need both to authenticate against the S3 endpoint.
+- TLS has been configured. It is assumed that all connections will be securely transmitted over HTTPS not HTTP. SQL Server requires the certificate for this scenario.
+- A user (Access Key ID) has been configured and the secret (Secret Key ID) for that user is known to you. You need both to authenticate against the S3 endpoint.
 - At least one bucket has been configured. Buckets can't be created or configured inside [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
 ## Performance best practices
@@ -76,16 +69,16 @@ By using S3 parts in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you c
 
 ## Known issues and limitations
 
-Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They may be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks will continue to persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, these temporary files are removed automatically by the object store to form the final backup file. Some S3-providers will handle temporary file cleanup through their garbage collector system.
+Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They may be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
 
 ## Next steps
 
- - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md). 
- - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
- - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
- - [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
- - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- - [Tutorial: Use Azure Blob Storage with SQL Server 2016 - SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+- [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
+- [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
+- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+- [SQL Server Backup to URL for Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-to-url.md)
+- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 <!-- Table links -->
 [aws_docs]:  https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html

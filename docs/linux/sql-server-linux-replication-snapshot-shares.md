@@ -1,15 +1,16 @@
 ---
-title: Configure snapshot folder shares 
+title: Configure snapshot folder shares
 titleSuffix: SQL Server on Linux
 description: Learn to configure snapshot folder shares SQL Server replication on Linux.
-ms.custom: seo-lt-2019
-author: VanMSFT
-ms.author: vanto
+author: rwestMSFT
+ms.author: randolphwest
 ms.reviewer: vanto
 ms.date: 09/24/2018
+ms.service: sql
+ms.subservice: linux
 ms.topic: article
-ms.prod: sql
-ms.technology: linux
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication snapshot folder with shares
@@ -133,10 +134,9 @@ Add the following section to `mssql.conf` on both machines. Use wherever the sam
 * When setting up replication, use the shares path (example `//host1/mssql_data`
 * Map `//host1/mssql_data` to a local directory and the mapping added to `mssql.conf`.
 
-## Next steps
+## Related content
 
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

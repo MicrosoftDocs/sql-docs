@@ -4,12 +4,10 @@ description: Learn about memory-optimized tables and DDL triggers, which fire fo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: in-memory-oltp
+ms.service: sql
+ms.subservice: in-memory-oltp
 ms.topic: conceptual
 ms.custom: intro-migration
-ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrating Triggers

@@ -1,22 +1,19 @@
 ---
-title: "Introducing Exception Handling in Reporting Services | Microsoft Docs"
-description: Learn how to handle exceptions thrown by the Report Server Web service so you can return useful information to users when errors occur. 
+title: "Introducing Exception Handling in Reporting Services"
+description: Learn how to handle exceptions thrown by the Report Server Web service so you can return useful information to users when errors occur.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service-net-framework-exception-handling
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Web service [Reporting Services], exception handling"
   - "errors [Reporting Services]"
   - "exceptions [Reporting Services]"
   - "Report Server Web service, exception handling"
   - "XML Web service [Reporting Services], exception handling"
-ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Introducing Exception Handling in Reporting Services
   If your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application sends a request to the Report Server Web service that the service is unable to process, the service returns a SOAP exception to the client. Handling exceptions thrown by the Report Server Web service is an important part of the applications that you develop because you can return useful information to users when errors occur.  

@@ -6,12 +6,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: dakryze
 ms.date: 05/12/2021
+ms.service: sql
+ms.subservice: linux
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: linux
+ms.custom: intro-installation
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15"
-ms.custom:
-  - intro-installation
 ---
 # Install PolyBase on Linux
 
@@ -20,12 +19,13 @@ ms.custom:
 The following steps install [PolyBase](../../relational-databases/polybase/polybase-guide.md) (`mssql-server-polybase` and `mssql-server-polybase-hadoop`) on Linux. PolyBase enables you to run external queries against remote data sources.
 
 >[!NOTE]
-> Before installing PolyBase, first [install SQL Server 2019](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the `mssql-server-polybase` and `mssql-server-polybase-hadoop` package.
+> Before installing PolyBase, first [install SQL Server](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the `mssql-server-polybase` and `mssql-server-polybase-hadoop` package.
 
 >[!NOTE]
 >
 > - PolyBase is not supported on SQL Server 2017 for Linux.
 > - Scale-out for PolyBase on Linux is currently unavailable.
+> - Hadoop is no longer supported on SQL Server 2022.
 
 Install PolyBase for your operating system:
 
@@ -34,6 +34,8 @@ Install PolyBase for your operating system:
 - [SUSE Linux Enterprise Server](#SLES)
 
 ## <a name="RHEL"></a>Install on RHEL
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions
 
 1. Download the Microsoft Red Hat repository configuration file.
 
@@ -49,7 +51,7 @@ Install PolyBase for your operating system:
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
-1. Use the following command to install the `mssql-server-polybase` on Red Hat Enterprise Linux. 
+1. Use the following command to install the `mssql-server-polybase` on Red Hat Enterprise Linux.
 
    ```console
    sudo yum install -y mssql-server-polybase
@@ -64,7 +66,11 @@ Install PolyBase for your operating system:
    >[!NOTE]
    >After installation, you must [enable the PolyBase feature](#enable).
 
-   Use the following command to install the `mssql-server-polybase-hadoop`. 
+### Installing Hadoop on RHEL
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
+
+Use the following command to install the `mssql-server-polybase-hadoop`.
 
 1. ```console
    sudo yum install -y mssql-server-polybase-hadoop
@@ -89,6 +95,8 @@ If you need an offline installation, locate the PolyBase package download in the
 
 ## <a name="ubuntu"></a>Install on Ubuntu
 
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions
+
 1. Register the Microsoft Ubuntu repository.
    
    For Ubuntu 16.04:
@@ -109,7 +117,7 @@ If you need an offline installation, locate the PolyBase package download in the
    curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-2. Use the following command to install the `mssql-server-polybase` on Ubuntu. 
+2. Use the following command to install the `mssql-server-polybase` on Ubuntu.
 
    ```console
    sudo apt-get install mssql-server-polybase
@@ -126,7 +134,11 @@ If you need an offline installation, locate the PolyBase package download in the
 
    If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes-2017.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-4. Use the following command to install the `mssql-server-polybase-hadoop`. 
+### Installing Hadoop on Ubuntu
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
+
+1. Use the following command to install the `mssql-server-polybase-hadoop`. 
 
    ```console
    sudo apt-get install mssql-server-polybase-hadoop
@@ -139,16 +151,18 @@ If you need an offline installation, locate the PolyBase package download in the
    - `mssql-server-extensibility`
    - `mssql-zulu-jre-11`
 
-5. Installation prompts to restart `launchpadd`. Use the following command to do so.
+2. Installation prompts to restart `launchpadd`. Use the following command to do so.
 
    ```console
    sudo systemctl restart mssql-launchpadd
    ```
 
 >[!NOTE]
->After installation, you must [set the Hadoop connectivity level](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity).
+>After installation, you must [set the Hadoop connectivity level](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity). This step only applies to [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
 
 ## <a name="SLES"></a>Install on SLES
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] and later versions
 
 1. Add the Microsoft SQL Server repository to Zypper.
 
@@ -187,7 +201,9 @@ RECONFIGURE WITH OVERRIDE;
 
 If you already have `mssql-server-polybase` installed, you can update to the latest version with the following commands:
 
-### RHEL
+### RHEL with Hadoop
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)]
 
 ```console
 sudo yum remove -y mssql-server-polybase-hadoop
@@ -197,13 +213,23 @@ sudo yum install -y mssql-server-polybase
 sudo yum install -y mssql-server-polybase-hadoop
 ```
 
+### RHEL without Hadoop
+
+```console
+sudo yum remove -y mssql-server-polybase
+sudo yum check-update
+sudo yum install -y mssql-server-polybase
+```
+
 You will be prompted to restart the SQL Server instance. Use the following command to do so.
 
 ```console
 sudo systemctl restart mssql-server
 ```
 
-### Ubuntu
+### Ubuntu with Hadoop
+
+**Applies to:** [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].
 
 ```console
 sudo apt-get remove mssql-server-polybase-hadoop
@@ -211,6 +237,14 @@ sudo apt-get remove mssql-server-polybase
 sudo apt-get update 
 sudo apt-get install mssql-server-polybase
 sudo apt-get install mssql-server-polybase-hadoop
+```
+
+### Ubuntu without Hadoop
+
+```console
+sudo apt-get remove mssql-server-polybase
+sudo apt-get update 
+sudo apt-get install mssql-server-polybase
 ```
 
 You will be prompted to restart the SQL Server instance. Use the following command to do so.

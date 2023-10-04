@@ -4,8 +4,8 @@ description: "Learn about constants defined in the Microsoft SQLSRV and PDO_SQLS
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "02/11/2019"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "constants"

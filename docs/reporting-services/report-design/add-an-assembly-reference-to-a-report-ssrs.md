@@ -1,22 +1,19 @@
 ---
-title: "Add an assembly reference to a paginated report | Microsoft Docs"
+title: "Add an assembly reference to a paginated report"
 description: Learn how to provide an assembly reference to a report so that the report processor can resolve names in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/14/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "code [Reporting Services]"
   - "custom assemblies [Reporting Services], referencing"
   - "custom code [Reporting Services]"
   - "adding assembly references"
   - "assemblies [Reporting Services], references"
-ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Add an assembly reference to a paginated report (Report Builder)
 

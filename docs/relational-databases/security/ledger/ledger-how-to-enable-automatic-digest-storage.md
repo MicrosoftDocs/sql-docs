@@ -1,23 +1,21 @@
 ---
 title: Enable automatic digest storage
 description: This article discusses how to enable automatic digest storage in Azure SQL Database using the Azure portal, PowerShell, and the Azure CLI.
-ms.service: sql-database
-ms.subservice: security
-ms.devlang:
-ms.custom:
-- event-tier1-build-2022
-ms.topic: how-to
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: kendralittle, mathoma
-ms.date: 07/25/2022
-monikerRange: "= azuresqldb-current"
+ms.reviewer: mathoma
+ms.date: 06/06/2023
+ms.service: sql-database
+ms.subservice: security
+ms.custom: devx-track-azurecli
+ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
+monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # Enable automatic digest storage
 
-[!INCLUDE [SQL Server 2022 and Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 ::: zone pivot="as1-azure-sql-database"
 
@@ -33,12 +31,11 @@ In this article, we'll describe how you can configure automatic generation and s
 # [Portal](#tab/Portal)
 
 1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable automatic digest storage. Select that database in SQL Database.
-> [!NOTE]
-> Enable automatic digest storage can also be configured when creating a new database.
+
+   > [!NOTE]
+   > Enable automatic digest storage can also be configured when creating a new database.
 
 1. In **Security**, select the **Ledger** option. 
-
-   :::image type="content" source="media/ledger/ledger-portal-manage-ledger.png" alt-text="Screenshot that shows the Azure portal with the Security Ledger tab selected.":::
 
 1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. The storage container name is fixed and can't be modified.
 
@@ -70,14 +67,80 @@ $ledgerDigestUploadConfig
 
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql db ledger-digest-uploads enable](/cli/azure/sql/db) command.  
 
-> [!NOTE]
-> Modify the parameters `name`, `resource-group`, `server` and `endpoint` (ACL endpoint or Azure Storage endpoint)
+*Make sure you modify the parameters resource-group, server, name and endpoint (ACL endpoint or Azure Storage endpoint)*
 
 ```azurecli-interactive
 az sql db ledger-digest-uploads enable \
-    --name Database01 \
     --resource-group ResourceGroup01 \
     --server Server01 \
+    --name Database01 \
+    --endpoint https://ledgerstorage.blob.core.windows.net
+```
+
+---
+::: zone-end
+
+::: zone pivot="as1-azure-sql-managed-instance"
+
+In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
+
+> [!NOTE]
+> Ledger in Azure SQL Managed Instance is currently in public preview.
+
+## Prerequisites
+
+- Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
+- An Azure SQL Managed Instance
+
+## Enable automatic digest storage using the Azure portal
+
+# [Portal](#tab/Portal2)
+
+1. Open the [Azure portal](https://portal.azure.com/) and locate the managed database for which you want to enable automatic digest storage.
+   > [!NOTE]
+   > Ledger in Azure SQL Managed Instance is currently in public preview. Enable automatic digest storage can only be configured *after* the database has been created.
+
+1. In **Security**, select the **Ledger** option. 
+
+1. In the **Ledger** pane, select **Enable automatic digest storage**. Select the storage type. You can choose between Azure Storage or Azure Confidential Ledger (ACL). Depending on the storage type you picked, you have to select an existing storage account or ACL, or create a new one. The storage container name is fixed and can't be modified.
+
+   :::image type="content" source="media/ledger/automatic-digest-management-sql-managed-instance.png" alt-text="Screenshot that shows the selections for enabling digest storage.":::
+
+1. Select **Save** to save your automatic digest storage configuration.
+
+# [PowerShell](#tab/PowerShell2)
+
+## Enable database digest uploads using PowerShell
+
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
+  
+> [!NOTE]
+> Make sure you modify the parameters *ResourceGroupName, InstanceName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*.
+
+```azurepowershell-interactive
+Write-host "Enabling ledger digest upload..." 
+$ledgerDigestUploadConfig = Enable-AzSqlInstanceDatabaseLedgerDigestUpload `
+     -ResourceGroupName "ResourceGroup01" `
+     -InstanceName "ManagedInstance01" `
+     -DatabaseName "Database01" `
+     -Endpoint "https://ledgerstorage.blob.core.windows.net"
+$ledgerDigestUploadConfig
+```
+
+# [Azure CLI](#tab/AzureCLI2)
+
+## Enable database digest uploads using the Azure CLI
+
+Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [az sql midb ledger-digest-uploads enable](/cli/azure/sql/midb) command.  
+
+> [!NOTE]
+> Make sure you modify the parameters *resource-group, managed-instance, name and endpoint (ACL endpoint or Azure Storage endpoint)*
+
+```azurecli-interactive
+az sql midb ledger-digest-uploads enable \
+    --resource-group ResourceGroup01 \
+    --managed-instance ManagedInstance01 \
+    --name Database01 \
     --endpoint https://ledgerstorage.blob.core.windows.net
 ```
 

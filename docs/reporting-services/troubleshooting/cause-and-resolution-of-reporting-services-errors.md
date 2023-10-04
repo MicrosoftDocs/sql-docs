@@ -1,20 +1,17 @@
 ---
 title: "Cause and Resolution of Reporting Services Errors"
 description: View the list of error message articles related to Reporting Services. Each article explains the error message, possible causes, and how to correct the problem.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: troubleshooting
-
-
+ms.service: reporting-services
+ms.subservice: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "messages [Reporting Services]"
   - "errors [Reporting Services]"
   - "troubleshooting [Reporting Services], errors"
-ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Cause and Resolution of Reporting Services Errors
   This topic contains cause and resolution information for a number of errors related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  

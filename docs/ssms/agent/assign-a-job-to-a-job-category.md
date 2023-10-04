@@ -1,23 +1,19 @@
 ---
-description: "Assign a Job to a Job Category"
 title: "Assign a Job to a Job Category"
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
+description: "Assign a Job to a Job Category"
+author: markingmyname
+ms.author: maghan
+ms.date: 06/03/2020
+ms.service: sql
+ms.subservice: ssms
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "jobs [SQL Server Agent], assigning"
   - "SQL Server Agent jobs, categories"
   - "jobs [SQL Server Agent], categories"
   - "categories [SQL Server Agent jobs]"
   - "SQL Server Agent jobs, assigning"
   - "assigning job to category"
-ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
-ms.date: 06/03/2020
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
 ---
 
@@ -57,7 +53,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 #### To assign a job to a job category  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

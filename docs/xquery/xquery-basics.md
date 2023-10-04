@@ -1,23 +1,19 @@
 ---
-title: "XQuery Basics | Microsoft Docs"
+title: "XQuery Basics"
 description: Learn the fundamentals of the XQuery language including, sequence and QNames, expression context, atomization, type system, error handling, and comments.
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
-ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "XQuery, about XQuery"
-ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: "rothja"
 ms.author: "jroth"
+ms.date: "03/17/2017"
+ms.service: sql
+ms.subservice: xml
+ms.topic: "language-reference"
+helpviewer_keywords:
+  - "XQuery, about XQuery"
+dev_langs:
+  - "XML"
 ---
 # XQuery Basics
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   This section describes the fundamentals of XQuery.  
   

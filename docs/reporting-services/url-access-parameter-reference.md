@@ -1,20 +1,16 @@
 ---
-title: "URL access parameter reference | Microsoft Docs"
+title: "URL access parameter reference"
 description: Use the parameters in this article as part of a URL to configure the look and feel of your Reporting Services reports.
-ms.date: 05/22/2020
-
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "reports [Reporting Services], display options"
-  - "URL access [Reporting Services], report display parameters"
-ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/22/2020
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "reports [Reporting Services], display options"
+  - "URL access [Reporting Services], report display parameters"
 ---
 # URL access parameter reference
 
@@ -165,13 +161,13 @@ ms.author: maggies
          For example, in native mode:
   
         ```  
-        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
         ```  
   
          For example, in SharePoint mode:
   
         ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you're prompted to open or save the file or resource to disk.  

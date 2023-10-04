@@ -1,20 +1,16 @@
 ---
 title: "Index Element (DTA)"
 description: In the dta utility, the Index element contains information about an index that you want to create or drop for a user-specified configuration.
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: tools-other
-ms.topic: conceptual
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Index element (DTA)"
-ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ""
-ms.custom: seo-lt-2019
 ms.date: 03/14/2017
+ms.service: sql
+ms.subservice: tools-other
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Index element (DTA)"
+dev_langs:
+  - "XML"
 ---
 
 # Index Element (DTA)

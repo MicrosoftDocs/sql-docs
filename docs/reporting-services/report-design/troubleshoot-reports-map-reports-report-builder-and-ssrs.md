@@ -1,16 +1,13 @@
 ---
-title: "Troubleshoot reports: map reports in a paginated report | Microsoft Docs"
+title: "Troubleshoot reports: map reports in a paginated report"
 description: Explore troubleshooting ideas for situations that can result when you customize, add a layer, or publish a paginated report with a map in Report Builder.
-ms.date: 07/22/2020
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 07/22/2020
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Troubleshoot reports: map reports in a paginated report (Report Builder)
 
@@ -112,7 +109,7 @@ ms.author: maggies
  To reload the spatial data and use the map view center saved in the report, right-click the map viewport, and then click **Reload**. After you enter the credentials for the spatial data source, the layer loads the spatial data and the map view is restored.  
   
 ## The center and view for a map layer option does not work.  
- When the viewport is set to center on the spatial data for a specific layer, and the center of the view does not appear to be the center for the layer, there are probably small islands or areas that are included in the spatial data that are too small to be seen in the viewport. For example, spatial data for a country might include small islands or other small territories as part of the territory. The viewport uses all spatial data to calculate the center for the layer.  
+ When the viewport is set to center on the spatial data for a specific layer, and the center of the view does not appear to be the center for the layer, there are probably small islands or areas that are included in the spatial data that are too small to be seen in the viewport. For example, spatial data for a country/region might include small islands or other small territories as part of the territory. The viewport uses all spatial data to calculate the center for the layer.  
   
  To override calculations for the layer, you can do one of the following:  
   

@@ -1,19 +1,17 @@
 ---
-title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016"
 description: Learn about changes in Reporting Services that might break applications, scripts, or functionalities based on earlier versions of SQL Server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 07/02/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
+ms.service: reporting-services
+ms.subservice: reporting-services
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "Me.Value references"
   - "Reporting Services, backward compatibility"
   - "breaking changes [Reporting Services]"
-ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016
 

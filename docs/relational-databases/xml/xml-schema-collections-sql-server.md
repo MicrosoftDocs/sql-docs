@@ -1,12 +1,12 @@
 ---
 title: "XML schema collections (SQL Server)"
 description: Learn how the XML schema collection stores imported XML schemas to validate XML instances and type the XML data as it is stored in an SQL Server database.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "XSD schemas [SQL Server]"
@@ -19,12 +19,10 @@ helpviewer_keywords:
   - "XML [SQL Server], schema collections"
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # XML schema collections (SQL Server)
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 As described in the [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) article, SQL Server provides native storage of XML data through the **xml** data type. You can optionally associate XSD schemas with a variable or a column of **xml** type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:
 

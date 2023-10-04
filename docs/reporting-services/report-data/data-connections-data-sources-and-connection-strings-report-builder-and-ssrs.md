@@ -1,15 +1,13 @@
 ---
-title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
+title: "Create data connection strings - Report Builder & SSRS"
 description: Learn how to create data connection strings and learn important information related to data source credentials.
-ms.date: 12/02/2021
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
-ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 12/02/2021
+ms.service: reporting-services
+ms.subservice: report-data
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Create data connection strings - Report Builder & SSRS
 
@@ -55,7 +53,7 @@ ms.author: maggies
  If you configure your ODBC or SQL data source to prompt for a password or to include the password in the connection string, and a user enters the password with special characters like punctuation marks, some underlying data source drivers cannot validate the special characters. When you process the report, the message "Not a valid password" may indicate this problem. If changing the password is impractical, you can work with your database administrator to store the appropriate credentials on the server as part of a system ODBC data source name (DSN). For more information, see [OdbcConnection.ConnectionString](/dotnet/api/system.data.odbc.odbcconnection.connectionstring)" in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
   
 ##  <a name="bkmk_Expressions_in_connection_strings"></a> Expression-based connection strings  
- Expression-based connection strings are evaluated at run time. For example, you can specify the data source as a parameter, include the parameter reference in the connection string, and allow the user to choose a data source for the report. For example, suppose a multinational firm has data servers in several countries. With an expression-based connection string, a user who is running a sales report can select a data source for a particular country before running the report.  
+ Expression-based connection strings are evaluated at run time. For example, you can specify the data source as a parameter, include the parameter reference in the connection string, and allow the user to choose a data source for the report. For example, suppose a multinational firm has data servers in several countries/regions. With an expression-based connection string, a user who is running a sales report can select a data source for a particular country/region before running the report.  
   
  The following example illustrates the use of a data source expression in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection string. The example assumes you have created a report parameter named `ServerName`:  
   

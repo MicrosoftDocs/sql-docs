@@ -2,14 +2,14 @@
 title: Transparent data encryption
 titleSuffix: Azure SQL Database & SQL Managed Instance & Azure Synapse Analytics
 description: An overview of transparent data encryption for Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key.
-author: rwestMSFT
-ms.author: randolphwest
+author: GithubMirek
+ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 04/27/2022
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
-ms.custom: seo-lt-2019 sqldbrb=3
+ms.custom: sqldbrb=3
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 # Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics
@@ -31,7 +31,8 @@ For Azure SQL Database and Azure Synapse, the TDE protector is set at the [serve
 > All newly created databases in SQL Database are encrypted by default by using service-managed transparent data encryption. Existing SQL databases created before May 2017 and SQL databases created through restore, geo-replication, and database copy are not encrypted by default. Existing SQL Managed Instance databases created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance. 
 
 > [!NOTE]
-> TDE cannot be used to encrypt system databases, such as the **master** database, in Azure SQL Database and Azure SQL Managed Instance. The **master** database contains objects that are needed to perform the TDE operations on the user databases. It is recommended to not store any sensitive data in the system databases. [Infrastructure encryption](transparent-data-encryption-byok-overview.md#doubleencryption) is now being rolled out which encrypts the system databases including master. 
+> TDE cannot be used to encrypt system databases, such as the `master` database, in Azure SQL Database and Azure SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there. 
+
 
 
 ## Service-managed transparent data encryption
@@ -117,7 +118,7 @@ Use the following cmdlets for Azure SQL Database and Azure Synapse:
 
 Manage TDE by using Transact-SQL.
 
-Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the master database.
+Connect to the database by using a login that is an administrator or member of the **dbmanager** role in the `master` database.
 
 | Command | Description |
 | --- | --- |
@@ -137,7 +138,7 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an Azure Active Directory identity to a server. (used to grant access to Key Vault)|
+|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a server.|
 |[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a server. |
 |[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a server.|
@@ -148,6 +149,8 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 |[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables TDE for a database.|
 |[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
 |[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/listbyconfiguration)|Gets the encryption result for a database.|
+
+---
 
 ## Next steps
 

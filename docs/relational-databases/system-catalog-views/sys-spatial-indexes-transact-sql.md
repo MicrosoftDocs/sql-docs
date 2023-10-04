@@ -4,9 +4,8 @@ description: sys.spatial_indexes (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.spatial_indexes_TSQL"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.spatial_indexes catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 ---
 # sys.spatial_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

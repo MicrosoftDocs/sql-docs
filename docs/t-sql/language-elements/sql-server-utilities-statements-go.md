@@ -3,13 +3,10 @@ title: "SQL Server Utilities Statements - GO"
 description: "SQL Server Utilities Statements - GO"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "07/27/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 f1_keywords:
   - "GO"
   - "GO_TSQL"
@@ -21,13 +18,13 @@ dev_langs:
   - "TSQL"
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
   GO signals the end of a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -51,7 +48,7 @@ GO [count]
  Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a GO command.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
 SELECT @MyMsg = 'Hello, World.'  
@@ -79,15 +76,17 @@ GO
 SELECT @@VERSION;  
 GO;  
 ```
+
+ In the [!INCLUDE [fabric](../../includes/fabric.md)] portal SQL query editor, each SQL statement runs as an independent session. Session context does not persist across SQL statements. For more information, see [SQL query editor](/fabric/data-warehouse/sql-query-editor#limitations).
   
 ## Permissions  
  GO is a utility command that requires no permissions. It can be executed by any user.    
   
 ## Examples  
- The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
+ The following example creates two batches. The first batch contains only a `USE AdventureWorks2022` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  

@@ -4,9 +4,8 @@ description: CREATE ENDPOINT (Transact-SQL)
 author: markingmyname
 ms.author: maghan
 ms.date: "08/10/2017"
-ms.prod: sql
-ms.prod_service: "sql-database"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "ENDPOINT"
@@ -50,7 +49,7 @@ dev_langs:
 > [!NOTE]  
 > Native XML Web Services (SOAP/HTTP endpoints) was removed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -112,8 +111,9 @@ FOR DATABASE_MIRRORING (
  Specifies a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows login that is assigned ownership of the newly created endpoint object. If AUTHORIZATION is not specified, by default, the caller becomes owner of the newly created object.  
   
  To assign ownership by specifying AUTHORIZATION, the caller must have IMPERSONATE permission on the specified *login*.  
-  
- To reassign ownership, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+
+ The AUTHORIZATION option is not available in ALTER ENDPOINT. Ownership can only be assigned when the endpoint is created.
+ To reassign ownership, see [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md) and then return to this article to recreate the endpoint. 
   
  STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Is the state of the endpoint when it is created. If the state is not specified when the endpoint is created, STOPPED is the default.  
@@ -241,7 +241,7 @@ FOR DATABASE_MIRRORING (
  Enables the endpoint to perform in the role of a witness in the mirroring process.  
   
 > [!NOTE]  
->  For [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)], WITNESS is the only option available.  
+>  For [!INCLUDE[ssexpress-2005-md](../../includes/ssexpress-2005-md.md)], WITNESS is the only option available.  
   
  PARTNER  
  Enables the endpoint to perform in the role of a partner in the mirroring process.  

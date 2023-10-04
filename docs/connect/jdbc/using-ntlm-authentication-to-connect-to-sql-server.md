@@ -3,11 +3,10 @@ title: Using NTLM authentication to connect to SQL Server
 description: Learn how to establish a SQL database connection using NTLM authentication with the JDBC driver.
 author: lilgreenbird
 ms.author: "v-susanh"
-manager: kenvh
 ms.reviewer: v-davidengel
 ms.date: 03/31/2021
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 ---
 
@@ -30,7 +29,7 @@ For more information on connection properties, see [Setting the connection prope
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication.
+See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] settings, which control the behavior of NTLM authentication.
 
 ## Logging
 

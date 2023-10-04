@@ -1,20 +1,16 @@
 ---
-description: "Import Statuses (Master Data Services)"
 title: Import Statuses
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
+description: "Import Statuses (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
 ---
 # Import Statuses (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the **Integration Management** functional area, on the **Staging Batches** page, the following statuses are possible.  
   

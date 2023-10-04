@@ -1,19 +1,14 @@
 ---
+title: "Revert a Database to a Database Snapshot"
 description: "Revert a Database to a Database Snapshot"
-title: "Revert a Database to a Database Snapshot | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "database snapshots [SQL Server], reverting to"
-  - "reverting databases"
-ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
+ms.date: "03/09/2017"
+ms.service: sql
+ms.topic: conceptual
+helpviewer_keywords:
+  - "database snapshots [SQL Server], reverting to"
+  - "reverting databases"
 ---
 # Revert a Database to a Database Snapshot
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -143,7 +138,7 @@ GO
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
 -- does, delete it.  
-IF EXISTS (SELECT dbid FROM sys.databases  
+IF EXISTS (SELECT database_id FROM sys.databases  
     WHERE NAME='sales_snapshot0600')  
     DROP DATABASE SalesSnapshot0600;  
 GO  

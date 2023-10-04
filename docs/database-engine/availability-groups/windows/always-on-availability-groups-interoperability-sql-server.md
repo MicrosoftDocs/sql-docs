@@ -4,10 +4,9 @@ description: "Describes the different features that can and cannot function alon
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "09/15/2021"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: reference
-ms.custom: seodec18
 helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], interoperability"

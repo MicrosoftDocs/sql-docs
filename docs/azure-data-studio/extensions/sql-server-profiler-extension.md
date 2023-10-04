@@ -4,10 +4,9 @@ description: Learn how to install and use the SQL Server Profiler extension. An 
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 06/28/2021
-ms.prod: azure-data-studio
+ms.date: 08/07/2023
+ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 
 # SQL Server Profiler extension (Preview)
@@ -21,6 +20,7 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 - Capturing the series of Transact-SQL statements that lead to a problem.
 - Monitoring the performance of SQL Server to tune workloads.
 - Correlating performance counters to diagnose problems.
+- Opening an existing XEL file for review.
 
 ## Install the SQL Server Profiler extension
 
@@ -35,12 +35,20 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 ## Start Profiler
 
 1. To start Profiler, first make a connection to a server in the Servers tab.
-2. After you make a connection, type **Alt + P** to launch Profiler.
-3. To start Profiler, type **Alt + S.** You can now start seeing Extended Events.
+2. After you make a connection, type **Alt + P** to launch Profiler, or right-click on the server connection and select **Launch Profiler.**
+3. Select a session template from the dropdown.  For Azure SQL DB, Standard_Azure is the only template available.
+4. Edit the session name if appropriate, and select Start.
+5. The session will be started automatically and you will start to see events in the viewer.
+6. To stop Profiler, type **Alt + S** or use the Stop button in the toolbar.  
+7. The hotkey **Alt + S** is a toggle. To restart Profiler, type **Alt + S** or use the Start button in the toolbar.  
 
     ![View profiler](media/sql-server-profiler-extension/view-profiler.png)
 
-4. To stop Profiler, type **Alt + S.** This hotkey is a toggle.
+## Open a saved XEL file
+
+1. To view a XEL file that you have saved locally, open the Command Palette using **Ctrl/CMD + Shift + P** and then type **Profiler: Open XEL File** and select the command.
+2. Browse to the saved XEL file and select Open.
+3. The file will open in the viewer. 
 
 ## Next steps
 

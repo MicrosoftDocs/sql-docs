@@ -1,21 +1,19 @@
 ---
 title: "Database ledger"
 description: This article provides information on ledger database tables and associated views.
-ms.date: "05/24/2022"
-ms.service: sql-database
-ms.subservice: security
-ms.custom:
-- event-tier1-build-2022
-ms.reviewer: kendralittle, mathoma
-ms.topic: conceptual
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: mathoma
+ms.date: 05/23/2023
+ms.service: sql-database
+ms.subservice: security
+ms.topic: conceptual
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
 # What is the database ledger?
 
-[!INCLUDE [SQL Server 2022 Azure SQL Database](../../../includes/applies-to-version/sqlserver2022-asdb.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
 
 The database ledger is part of the ledger feature. The database ledger incrementally captures the state of a database as the database evolves over time, while updates occur on ledger tables. It logically uses a blockchain and [Merkle tree data structures](/archive/msdn-magazine/2018/march/blockchain-blockchain-fundamentals). 
 
@@ -46,14 +44,14 @@ Because this is a regular table update, the system automatically guarantees its 
 
 For more information on how ledger provides data integrity, see the articles, [Digest management](ledger-digest-management.md) and [Database verification](ledger-database-verification.md).
 
-## Where are database transaction and block data stored?
+## Where are database transactions and block data stored?
 
 The data for transactions and blocks is physically stored as rows in two system catalog views:
 
 - [sys.database_ledger_transactions](../../system-catalog-views/sys-database-ledger-transactions-transact-sql.md): Maintains a row with the information of each transaction in the database ledger. The information includes the ID of the block where this transaction belongs and the ordinal of the transaction within the block. 
 - [sys.database_ledger_blocks](../../system-catalog-views/sys-database-ledger-blocks-transact-sql.md): Maintains a row for every block in the ledger, including the root of the Merkle tree over the transactions within the block and the hash of the previous block to form a blockchain.
 
-To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md).
+To view the database ledger, run the following T-SQL statements in [SQL Server Management Studio](../../../ssms/download-sql-server-management-studio-ssms.md), [Azure Data Studio](../../../azure-data-studio/download-azure-data-studio.md) or [SQL Server Developer Tools](../../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ```sql
 SELECT * FROM sys.database_ledger_transactions;
@@ -75,3 +73,4 @@ Viewing the database ledger requires the `VIEW LEDGER CONTENT` permission. For d
 - [Ledger overview](ledger-overview.md)
 - [Data Manipulation Language (DML)](../../../t-sql/queries/queries.md)
 - [Ledger views](../../system-catalog-views/security-catalog-views-transact-sql.md#ledger-views)
+

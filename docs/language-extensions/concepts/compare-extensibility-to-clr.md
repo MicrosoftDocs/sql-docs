@@ -1,13 +1,12 @@
 ---
 title: Compare SQL Server Language Extensions to SQL CLR
-titleSuffix:
 description: "What's the difference between SQL Server Language Extensions and SQL Common Language Runtime (CLR)? This article compares the two."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 09/21/2021
+ms.service: sql
+ms.subservice: language-extensions
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 
@@ -30,7 +29,7 @@ The following are some of the key differences between SQL Language Extensions an
 | Platform support        | Windows & Linux - Linux supports only SAFE assemblies. | Windows & Linux - full parity in terms of functionality. |
 | Mode of execution       | In-proc            | Out-of-proc |
 | Isolation               | CLR code executes within engine process, instance administrator needs to trust all assemblies/code. | Runtime execution is outside of the engine process. Further isolation is provided using App Containers in Windows or Namespaces in Linux. External network communication is also disabled by default. |
-| Declarative syntax (T-SQL) | User-defined types, user-defined aggregates, functions, procedures, triggers. | Only ad-hoc execution using sp_execute_external_script. |
+| Declarative syntax (T-SQL) | User-defined types, user-defined aggregates, functions, procedures, triggers. | Only ad hoc execution using sp_execute_external_script. |
 | DDL support             | CREATE ASSEMBLY to upload user code and define other objects (functions, procs, triggers UDTs, UDAggs). | CREATE EXTERNAL LANGUAGE, EXTERNAL LIBRARY to manage extensions and libraries. |
 | Library support         | Achieved via assemblies. | Libraries for specific runtime can be used (Ex: R or Python packages, Java libraries). |
 | Runtimes supported      | .NET Framework     | R, Python, Java, C# or Bring your own runtime (BYOR). |

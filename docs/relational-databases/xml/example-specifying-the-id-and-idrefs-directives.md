@@ -1,22 +1,20 @@
 ---
 title: "Example: Specifying the ID and IDREFS Directives"
 description: Learn how specifying the ID and IDREFS directives in an SQL query can enable intra-document links.
-ms.custom: "fresh2019may"
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "IDREFS directive"
   - "ID directive"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Example: Specify the ID and IDREFS directives
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 An element attribute can be specified as an **ID** type attribute, and the **IDREFS** attribute can then be used to refer to it. This enables intra-document links and is similar to the primary key and foreign key relationships in relational databases.
 
@@ -40,7 +38,7 @@ Elements of **IDREFS** type also have more than one value. Therefore, you have t
 This is the query that produces the XML you want. The query uses the `ID` and `IDREFS` directives to overwrite the types in the column names (`SalesOrder!2!SalesOrderID!ID`, `Customer!1!SalesOrderIDList!IDREFS`).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

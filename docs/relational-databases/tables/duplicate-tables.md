@@ -1,21 +1,18 @@
 ---
-description: "Create a duplicate copy of a table, without the row data."
 title: "Duplicate tables without the row data."
-ms.custom: ""
+description: "Create a duplicate copy of a table, without the row data."
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "10/21/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "copying tables"
   - "tables [SQL Server], duplicating"
   - "duplicating tables"
   - "duplicating table structures"
   - "table copying [SQL Server]"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Duplicate tables

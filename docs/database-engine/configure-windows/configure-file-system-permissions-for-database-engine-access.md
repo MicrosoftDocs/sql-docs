@@ -4,8 +4,8 @@ description: Learn about per-service SIDs. See how to grant them access permissi
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "01/31/2022"
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 ---
 

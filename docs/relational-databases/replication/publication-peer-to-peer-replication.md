@@ -1,18 +1,15 @@
 ---
+title: "Publication (Peer-to-Peer Replication)"
 description: "Publication (Peer-to-Peer Replication)"
-title: "Publication (Peer-to-Peer Replication) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rep.p2pwizard.publication.f1"
-ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: "MashaMSFT"
 ms.author: "mathoma"
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: replication
+ms.topic: conceptual
+ms.custom: updatefrequency5
+f1_keywords:
+  - "sql13.rep.p2pwizard.publication.f1"
 ---
 # Publication (Peer-to-Peer Replication)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

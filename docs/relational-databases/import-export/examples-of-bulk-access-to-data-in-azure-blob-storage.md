@@ -4,10 +4,9 @@ description: "Transact-SQL examples that use BULK INSERT and OPENROWSET to acces
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/04/2022
-ms.prod: sql
-ms.technology: data-movement
+ms.service: sql
+ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "bulk importing [SQL Server], from Azure Blob Storage"
   - "Azure Blob Storage, bulk import to SQL Server"
@@ -37,6 +36,17 @@ CREATE DATABASE SCOPED CREDENTIAL UploadInvoices
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
+
+## Known issues
+
+Requests from Azure SQL Database and Azure SQL Managed Instance using SAS tokens may be blocked with the following error:
+
+```text
+Msg 4861, Level 16, State 1, Line 27
+Cannot bulk load because the file "FileName.extension" could not be opened. Operating system error code 5(Access is denied.).
+```
+
+Only a subset of Azure services are currently on the trusted services list. For a complete list of trusted services and updates on Azure storage firewall settings, see [Trusted access for resources registered in your subscription](/azure/storage/common/storage-network-security?tabs=azure-portal#trusted-access-for-resources-registered-in-your-subscription).
 
 ## Examples
 

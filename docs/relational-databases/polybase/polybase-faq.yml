@@ -1,10 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: "Frequently Asked Questions in PolyBase"
-  description: Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
-  ms.date: 08/13/2021
-  ms.prod: sql
-  ms.technology: polybase
+  description: Frequently asked questions about PolyBase. Compare PolyBase and linked servers and compare PolyBase in Big Data Clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase.
+  ms.date: 11/03/2022
+  ms.service: sql
+  ms.subservice: polybase
   ms.topic: conceptual
   author: WilliamDAssafMSFT
   ms.author: wiassaf
@@ -13,13 +13,13 @@ metadata:
 
 title: Frequently asked questions
 summary: |
-   [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+   [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
   
 
 sections:
   - name: Ignored
     questions:
-      - question: PolyBase VS. linked servers
+      - question: PolyBase vs. linked servers
         answer: |
           The following table highlights the differences between PolyBase and linked server features:
           
@@ -27,15 +27,26 @@ sections:
           |--------------------------|--------------------------|  
           |Database scoped object|Instance scoped object|
           |Uses ODBC drivers|Uses OLEDB providers|
-          |Supports read-only operations for all data sources and insert operation for HADOOP & data pool data source only|Supports both read and write operations|
+          |Supports read-only operations for all data sources and write to some external data sources|Supports both read and write operations|
           |Queries to remote data source from a single connection can be scaled-out |Queries to remote data source from a single connection cannot be scaled-out|
           |Predicates pushdown is supported|Predicates pushdown is supported|
           |No separate configuration needed for availability group|Separate configuration needed for each instance in availability group|
           |Basic authentication only|Basic & integrated authentication|
           |Suitable for analytic queries processing large number of rows|Suitable for OLTP queries returning single or few rows|
           |Queries using external table cannot participate in distributed transaction|Distributed queries can participate in distributed transaction|
+      - question: What's new in PolyBase in SQL Server 2022? 
+        answer: |
+          [!INCLUDE[sssql22](../../includes/sssql22-md.md)] now supports CSV, Parquet, and Delta files stored on Azure Storage Account v2, Azure Data Lake Storage Gen2, or any S3-compatible object storage using the S3 REST API, on-premises or in the cloud.
+
+          [!INCLUDE[sssql22](../../includes/sssql22-md.md)] can now use CREATE EXTERNAL TABLE as SELECT (CETAS), together with commands like OPENROWSET, CREATE EXTERNAL TABLE (CET), and all the new T-SQL enhancements. 
           
-      - question: What's new in PolyBase 2019? 
+          Currently, support for Hadoop external data sources has been removed in [!INCLUDE[sssql22](../../includes/sssql22-md.md)].
+
+          [!INCLUDE[sssql22](../../includes/sssql22-md.md)] Cumulative update 2 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples.
+
+          Read more on [Data Virtualization with PolyBase for SQL Server 2022](https://cloudblogs.microsoft.com/sqlserver/2022/10/05/data-virtualization-with-polybase-for-sql-server-2022/) and review [SQL Server 2022 PolyBase enhancements](polybase-guide.md#sql-server-2022-polybase-enhancements).
+
+      - question: What's new in PolyBase in SQL Server 2019? 
         answer: |
           PolyBase in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be stored as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
           
@@ -47,25 +58,14 @@ sections:
           - MongoDB
           - Compatible ODBC generic types
             
+          [!INCLUDE[sssql19](../../includes/sssql19-md.md)] Cumulative update 19 now introduces support for Oracle TNS files. Please refer to [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-connection-options.md) for more information and samples.
+
           > [!NOTE]
-          > PolyBase can allow connection to external data sources using third party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, visit our [guide](../../relational-databases/polybase/polybase-configure-odbc-generic.md) for PolyBase ODBC generic configuration.  
-          
-      - question: PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances
+          > PolyBase can allow connection to external data sources using third-party ODBC drivers. These drivers are not provided along with PolyBase and may not work as intended. For more information, see [Configure PolyBase to access external data with ODBC generic types](../../relational-databases/polybase/polybase-configure-odbc-generic.md).  
+
+      - question: What CONNECTION_OPTIONS can I specify for connection to third-party data sources?
         answer: |
-          The following table highlights the PolyBase features available in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] stand-alone install and [!INCLUDE[sssql19](../../includes/sssql19-md.md)] big data cluster:
-          
-          |Feature |Big Data Cluster|Stand alone instance|
-          |--------------------------|--------------------------|---------|   
-          |Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X|
-          |Create external data source using a compatible third-party ODBC Driver | | X|
-          |Create external data source for HADOOP data source | X| X|
-          |Create external data source for Azure Blob Storage | X| X|
-          |Create external table on a SQL Server data pool | X| |
-          |Create external table on a SQL Server storage pool | X| |
-          |Scale-out query execution | X| X (Windows only) |
-          
-          > [!NOTE]
-          > For more information on connections using the ODBC generic connector visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md).
+          Review [CREATE EXTERNAL DATA SOURCE (Transact-SQL) CONNECTION_OPTIONS](../../t-sql/statements/create-external-data-source-connection-options.md) for supported data provider connection options for SQL Server, Oracle, Teradata, the MongoDB API for Cosmos DB, and generic ODBC data providers.
 
       - question: How can I view the remote query execution plan of PolyBase pushdown computation?
         answer: |
@@ -74,6 +74,14 @@ sections:
       - question: How can I tell whether PolyBase pushdown computation is happening?
         answer: |
           See [How to tell if external pushdown occurred](polybase-how-to-tell-pushdown-computation.md).
+
+      - question: Is PolyBase supported on Azure SQL Database?
+        answer: |
+          No, but you can query data in the files placed on Azure Blob Storage using OPENROWSET function, or use CREATE EXTERNAL TABLE to read from a serverless SQL pool in Synapse Analytics. For more information, see [Azure SQL can read Azure Data Lake storage files using Synapse SQL external tables](https://devblogs.microsoft.com/azure-sql/read-azure-storage-files-using-synapse-sql-external-tables/).
+
+      - question: Is PolyBase supported on Azure SQL Managed Instance?
+        answer: |
+          Azure SQL Managed Instance has its own data virtualization capabilities for Azure Data Lake Storage (ADLS) and Azure Blob Storage as data sources. For more information, see [Data virtualization with Azure SQL Managed Instance](/azure/azure-sql/managed-instance/data-virtualization-overview).
 
       - question: Which ports should I allow through my firewall for PolyBase?
         answer: | 
@@ -90,12 +98,31 @@ sections:
           | Microsoft SQL Server | [Ports Used By SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md#ports-used-by-sql-server)| 
           | Hortonworks HDP | [Administering HDFS](https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.5/administration/content/hdfs-ports.html)|
           | Cloudera CDH | [Ports Used by CDH Components](https://docs.cloudera.com/documentation/enterprise/6/6.3/topics/cdh_ports.html)| 
-          | | | 
 
       - question: What ports are used for PolyBase scale-out group? 
         answer: | 
           By default, the PolyBase data movement service connects to the head node of a scale-out group over a range of ports from TCP 16450-16460, typically using 16450-16453, plus port 17001. These ports are only used when a PolyBase scale-out group is configured and should be allowed through server firewalls. SQL Server Setup should automatically create a local firewall rule allowing these ports upon feature installation. For more information, see [Configure PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md). 
+
+          > [!NOTE]
+          > The Microsoft SQL Server PolyBase scale-out groups will be retired. Scale-out group functionality will be removed from the product in [!INCLUDE[sssql22](../../includes/sssql22-md.md)]. 
           
+      - question: PolyBase in Big Data Clusters vs. PolyBase in stand-alone instances
+        answer: |
+          For more information on connections using the ODBC generic connector, visit our [How to guide for configuring ODBC generic types](polybase-configure-odbc-generic.md). 
           
+          The following table highlights the PolyBase features available in [!INCLUDE[sssql19](../../includes/sssql19-md.md)] stand-alone install and [!INCLUDE[sssql19](../../includes/sssql19-md.md)] big data cluster:
+          
+          |Feature |Big Data Cluster|Stand alone instance|
+          |--------------------------|--------------------------|---------|   
+          |Create external data source for SQL Server, Oracle, Teradata, and Mongo DB |X|X|
+          |Create external data source using a compatible third-party ODBC Driver | | X|
+          |Create external data source for HADOOP data source | X| X|
+          |Create external data source for Azure Blob Storage | X| X|
+          |Create external table on a SQL Server data pool | X| |
+          |Create external table on a SQL Server storage pool | X| |
+          |Scale-out query execution | X| X (Windows only) |
+          
+          [!INCLUDE[big-data-clusters-banner-retirement](../../includes/bdc-banner-retirement.md)]
+
       
           

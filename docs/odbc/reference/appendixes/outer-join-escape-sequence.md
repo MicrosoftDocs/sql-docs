@@ -1,20 +1,16 @@
 ---
+title: "Outer Join Escape Sequence"
 description: "Outer Join Escape Sequence"
-title: "Outer Join Escape Sequence | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: reference
-helpviewer_keywords: 
+helpviewer_keywords:
   - "outer join escape sequence [ODBC]"
   - "escape sequences [ODBC], outer join"
   - "ODBC escape sequences [ODBC], outer join"
-ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Outer Join Escape Sequence
 ODBC uses escape sequences for outer joins. The syntax of this escape sequence is as follows:  

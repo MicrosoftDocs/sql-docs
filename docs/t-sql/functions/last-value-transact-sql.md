@@ -4,11 +4,10 @@ description: "LAST_VALUE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
 ms.reviewer: kendalv, randolphwest
-ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: t-sql
+ms.date: 07/26/2023
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "LAST_VALUE"
   - "LAST_VALUE_TSQL"
@@ -17,15 +16,15 @@ helpviewer_keywords:
   - "LAST_VALUE function"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
-# LAST_VALUE () (Transact-SQL)
+# LAST_VALUE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-edge-fabricse-fabricdw.md)]
 
 Returns the last value in an ordered set of values.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -44,13 +43,13 @@ Is the value to be returned. *scalar_expression* can be a column, subquery, or o
 
 #### [ IGNORE NULLS | RESPECT NULLS ]
 
-**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
+**Applies to**: SQL Server (starting with [!INCLUDE[sssql22](../../includes/sssql22-md.md)]), Azure SQL Database, Azure SQL Managed Instance, [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)]
 
 IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.
 
 RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.
 
-For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+For more information on this argument in [!INCLUDE[ssazurede-md](../../includes/ssazurede-md.md)], see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
 #### OVER ( [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] )
 
@@ -77,7 +76,7 @@ The same type as *scalar_expression*.
 The following example returns the hire date of the last employee in each department for the given salary (`Rate`). The `PARTITION BY` clause partitions the employees by department and the `LAST_VALUE` function is applied to each partition independently. The `ORDER BY` clause specified in the `OVER` clause determines the logical order in which the `LAST_VALUE` function is applied to the rows in each partition.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Department
     , LastName
@@ -120,10 +119,10 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 
 The following example uses the `FIRST_VALUE` and `LAST_VALUE` functions in computed expressions to show the difference between the sales quota value for the current quarter and the first and last quarter of the year respectively for a given number of employees. The `FIRST_VALUE` function returns the sales quota value for the first quarter of the year, and subtracts it from the sales quota value for the current quarter. It's returned in the derived column entitled `DifferenceFromFirstQuarter`. For the first quarter of a year, the value of the `DifferenceFromFirstQuarter` column is 0. The `LAST_VALUE` function returns the sales quota value for the last quarter of the year, and subtracts it from the sales quota value for the current quarter. It's returned in the derived column entitled `DifferenceFromLastQuarter`. For the last quarter of a year, the value of the `DifferenceFromLastQuarter` column is 0.
 
-The clause `RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` is required in this example for the non-zero values to be returned in the `DifferenceFromLastQuarter` column, as shown below. The default range is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the `DifferenceFromLastQuarter` column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
+The clause `RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` is required in this example for the non-zero values to be returned in the `DifferenceFromLastQuarter` column. The default range is `RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`. In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the `DifferenceFromLastQuarter` column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT BusinessEntityID
     , DATEPART(QUARTER, QuotaDate) AS Quarter
@@ -168,7 +167,7 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
 275              2           2008        869000.00             20000.00                    0.00
 ```
 
-## See also
+## Next steps
 
-- [FIRST_VALUE &#40;Transact-SQL&#41;](first-value-transact-sql.md)
-- [SELECT - OVER Clause &#40;Transact-SQL&#41;](../queries/select-over-clause-transact-sql.md)
+- [FIRST_VALUE (Transact-SQL)](first-value-transact-sql.md)
+- [SELECT - OVER Clause (Transact-SQL)](../queries/select-over-clause-transact-sql.md)

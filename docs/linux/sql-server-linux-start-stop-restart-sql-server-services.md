@@ -1,11 +1,16 @@
 ---
 title: Start, stop, and restart SQL Server services on Linux
 description: Find out how to start, stop, or restart various SQL Server services on Linux. See how to use Transact-SQL and command-line tools for these actions.
+author: rwestMSFT
+ms.author: randolphwest
+ms.reviewer: randolphwest
 ms.date: 02/24/2022
-ms.prod: sql
-ms.technology: configuration
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom:
+  - linux-related-content
+helpviewer_keywords:
   - "SQL Server on Linux, startup options"
   - "Database Engine [SQL Server], starting and stopping services on Linux"
   - "command line [SQL Server], starting and stopping SQL Server services on Linux"
@@ -17,9 +22,6 @@ helpviewer_keywords:
   - "stopping SQL Server on Linux"
   - "SQL Server Database Engine on Linux setting startup options"
   - "administering SQL Server on Linux, starting and stopping services"
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: randolphwest
 ---
 
 # Start, stop, and restart SQL Server services on Linux
@@ -36,7 +38,7 @@ For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows, see [Star
 
 ### [!INCLUDE[ssDE](../includes/ssde-md.md)] service
 
-The [!INCLUDE[ssDE](../includes/ssde-md.md)] service is the default instance, with a limit of one per computer. Named instances aren't supported on Linux. To run multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a single computer using containers, see [Deploy and connect to SQL Server Docker containers](sql-server-linux-docker-container-deployment.md).
+The [!INCLUDE[ssDE](../includes/ssde-md.md)] service is the default instance, with a limit of one per computer. Named instances aren't supported on Linux. To run multiple instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a single computer using containers, see [Deploy and connect to SQL Server in a container](sql-server-linux-docker-container-deployment.md).
 
 ### SQL Server Agent service
 
@@ -56,7 +58,7 @@ Stopping the [!INCLUDE[ssDE](../includes/ssde-md.md)] by using the Transact-SQL 
 
 ## <a name="CommandLine"></a> Using command-line tools
 
-The following steps show how to start, stop, restart, and check the status of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service on Linux. To manage a SQL Server Docker container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
+The following steps show how to start, stop, restart, and check the status of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service on Linux. To manage a SQL Server container, see [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md).
 
 Check the status of the [!INCLUDE[ssDE](../includes/ssde-md.md)] service using this command:
 
@@ -93,8 +95,8 @@ The [!INCLUDE[ssDE](../includes/ssde-md.md)] can be stopped by using the **SHUTD
     ```
 
 For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transact-SQL&#41;](../t-sql/language-elements/shutdown-transact-sql.md).
-  
-## Next steps
+
+## Related content
 
 - [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)

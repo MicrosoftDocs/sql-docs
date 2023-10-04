@@ -1,23 +1,19 @@
 ---
+title: "EnvelopeAggregate (geography Data Type)"
 description: "EnvelopeAggregate (geography Data Type)"
-title: "EnvelopeAggregate (geography Data Type) | Microsoft Docs"
-ms.custom: ""
+author: MladjoA
+ms.author: mlandzic
 ms.date: "07/30/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "EnvelopeAggregate_TSQL"
   - "EnvelopeAggregate"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "EnvelopeAggregate method (geography)"
-ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-author: MladjoA
-ms.author: mlandzic 
+dev_langs:
+  - "TSQL"
 ---
 # EnvelopeAggregate (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -54,7 +50,7 @@ EnvelopeAggregate ( geography_operand )
  The following example performs a `EnvelopeAggregate` on a set of **geography** location points within a city.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT City,  
  geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation  

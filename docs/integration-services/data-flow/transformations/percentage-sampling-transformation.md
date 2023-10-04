@@ -1,17 +1,16 @@
 ---
+title: "Percentage Sampling Transformation"
 description: "Percentage Sampling Transformation"
-title: "Percentage Sampling Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.percentagesamplingtrans.f1"
   - "sql13.dts.designer.percentagesamplingtransformation.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "testing mining models"
   - "sampling seeds [Integration Services]"
   - "data mining [Analysis Services], sample data sets"
@@ -19,9 +18,6 @@ helpviewer_keywords:
   - "sample data sets [Integration Services]"
   - "datasets [Integration Services], sample"
   - "training mining models"
-ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: chugugrace
-ms.author: chugu
 ---
 # Percentage Sampling Transformation
 

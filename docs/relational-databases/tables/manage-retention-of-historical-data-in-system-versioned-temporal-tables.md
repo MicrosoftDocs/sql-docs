@@ -1,14 +1,12 @@
 ---
-description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
-ms.custom: "seo-lt-2019"
-ms.date: 07/25/2022
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: table-view-index
-ms.topic: conceptual
+description: "Manage retention of historical data in system-versioned temporal tables"
 author: rwestMSFT
 ms.author: randolphwest
+ms.date: 03/29/2023
+ms.service: sql
+ms.subservice: table-view-index
+ms.topic: conceptual
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables
@@ -45,7 +43,7 @@ Once you determine your data retention period, your next step is to develop a pl
 > [!NOTE]
 > The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).
 
-## Using stretch database approach
+## Using Stretch Database approach
 
 > [!NOTE]
 > Using the Stretch Database approach only applies to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
@@ -422,12 +420,11 @@ COMMIT;
 
 ## Using temporal history retention policy approach
 
-> [!NOTE]
-> Using the Temporal History Retention Policy approach applies to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and SQL Server 2017 starting from CTP 1.3.
+**Applies to:**  [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 
-After you define retention policy, Azure SQL Database starts checking regularly if there are historical rows that are eligible for automatic data cleanup. Identification of matching rows and their removal from the history table occur transparently, in the background task that is scheduled and run by the system. Age condition for the history table rows is checked based on the column representing end of SYSTEM_TIME period. If retention period, for example, is set to six months, table rows eligible for cleanup satisfy the following condition:
+After you define the retention policy, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] starts checking regularly if there are historical rows that are eligible for automatic data cleanup. Identification of matching rows and their removal from the history table occur transparently, in the background task that is scheduled and run by the system. Age condition for the history table rows is checked based on the column representing end of SYSTEM_TIME period. If retention period, for example, is set to six months, table rows eligible for cleanup satisfy the following condition:
 
 ```sql
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())

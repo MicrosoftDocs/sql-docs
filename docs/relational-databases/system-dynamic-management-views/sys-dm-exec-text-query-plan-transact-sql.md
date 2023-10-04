@@ -3,12 +3,10 @@ title: "sys.dm_exec_text_query_plan (Transact-SQL)"
 description: sys.dm_exec_text_query_plan (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "10/20/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: "02/24/2023"
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "dm_exec_text_query_plan"
   - "sys.dm_exec_text_query_plan_TSQL"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "sys.dm_exec_text_query_plan dynamic management function"
 dev_langs:
   - "TSQL"
-ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_text_query_plan (Transact-SQL)
@@ -30,9 +27,9 @@ Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md
 -   The output of the query plan is not limited in size.  
 -   Individual statements within the batch can be specified.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -101,6 +98,10 @@ When an ad hoc query uses [simple](../../relational-databases/query-processing-a
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
   
+### Permissions for SQL Server 2022 and later
+
+Requires VIEW SERVER PERFORMANCE STATE permission on the server.
+
 ## Examples  
   
 ### A. Retrieving the cached query plan for a slow-running Transact-SQL query or batch  

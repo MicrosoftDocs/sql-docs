@@ -5,8 +5,8 @@ author: minewiskan
 ms.author: owend
 ms.reviewer: owend
 ms.date: 02/17/2022
-ms.prod: sql
-ms.technology: analysis-services
+ms.service: sql
+ms.subservice: analysis-services
 ms.topic: reference
 ms.custom: dmx
 ---
@@ -88,12 +88,12 @@ INSERT INTO [MINING MODEL] <model>
  For more information about data source types, see [&#60;source data query&#62;](../dmx/source-data-query.md).  
   
 ## Basic Example  
- The following example uses **OPENQUERY** to train a Naive Bayes model based on the targeted mailing data in the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
+ The following example uses **OPENQUERY** to train a Naive Bayes model based on the targeted mailing data in the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] database.
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  
     [Bike Buyer])  
-OPENQUERY([AdventureWorksDW2012],'Select CustomerKey, Gender, [NumberCarsOwned], [BikeBuyer]   
+OPENQUERY([AdventureWorksDW2022],'Select CustomerKey, Gender, [NumberCarsOwned], [BikeBuyer]   
 FROM [vTargetMail]')  
 ```  
   
@@ -105,10 +105,10 @@ INSERT INTO MyAssociationModel
     ([OrderNumber],[Models] (SKIP, [Model])  
     )  
 SHAPE {  
-    OPENQUERY([AdventureWorksDW2012],'SELECT OrderNumber  
+    OPENQUERY([AdventureWorksDW2022],'SELECT OrderNumber  
     FROM vAssocSeqOrders ORDER BY OrderNumber')  
 } APPEND (  
-    {OPENQUERY([AdventureWorksDW2012],'SELECT OrderNumber, model FROM   
+    {OPENQUERY([AdventureWorksDW2022],'SELECT OrderNumber, model FROM   
     dbo.vAssocSeqLineItems ORDER BY OrderNumber, Model')}  
   RELATE OrderNumber to OrderNumber)   
 AS [Models]  

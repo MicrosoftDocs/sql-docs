@@ -1,23 +1,19 @@
 ---
 title: Leaf Member Staging Table
 description: Use the leaf members staging table in the Master Data Services database to create, update, deactivate, and delete leaf members.
-ms.custom: ""
-ms.date: "04/01/2016"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "members staging table [Master Data Services]"
-  - "database [Master Data Services], members staging table"
-ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "04/01/2016"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "members staging table [Master Data Services]"
+  - "database [Master Data Services], members staging table"
 ---
 # Leaf Member Staging Table (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the leaf members staging table (stg.name_Leaf) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete leaf members. You can also use it to update attribute values for leaf members.  
   

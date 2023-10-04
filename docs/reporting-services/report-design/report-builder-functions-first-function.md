@@ -1,16 +1,13 @@
 ---
-title: "First function in a paginated report | Microsoft Docs"
+title: "First function in a paginated report"
 description: Use the First function in a paginated report to return the first value in the given scope of the specified expression in Report Builder.
-ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/07/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report Builder functions - First function in a paginated report (Report Builder)
 

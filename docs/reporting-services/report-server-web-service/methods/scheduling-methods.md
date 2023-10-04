@@ -1,21 +1,18 @@
 ---
-title: "Scheduling Methods | Microsoft Docs"
+title: "Scheduling Methods"
 description: In Reporting Services, these methods create and manage shared schedules for report execution and delivery, and cache refresh plans used by the report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/06/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server-web-service
-
-
+ms.service: reporting-services
+ms.subservice: report-server-web-service
 ms.topic: reference
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "schedules [Reporting Services], methods"
   - "reports [Reporting Services], scheduling"
   - "shared schedules [Reporting Services], methods"
   - "methods [Reporting Services], scheduling"
-ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Scheduling Methods
   You can use these methods to create and manage shared schedules for report execution and delivery, and to cache refresh plans utilized by the report server.  

@@ -3,7 +3,6 @@ title: Server-level firewall rules
 description: Server-level firewall rules
 author: dalechen
 ms.author: ninarn
-manager: craigg
 ms.date: 07/13/2018
 ms.service: sql-database
 ms.topic: include

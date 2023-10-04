@@ -1,14 +1,14 @@
 ---
+title: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions"
 description: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions"
-title: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions | Microsoft Docs"
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: security
-
-
+ms.service: reporting-services
+ms.subservice: security
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "permissions [Reporting Services], SharePoint integrated mode"
   - "security [Reporting Services], tasks"
   - "roles [Reporting Services], predefined"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "permissions [Reporting Services], native mode"
   - "security [Reporting Services], predefined roles"
   - "security [Reporting Services], SharePoint integrated mode"
-ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions
   This topic compares role and task based authorization features in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode to the security features in SharePoint products. This topic compares terminology and characteristics of roles, tasks, SharePoint groups, permission levels, and permissions.  

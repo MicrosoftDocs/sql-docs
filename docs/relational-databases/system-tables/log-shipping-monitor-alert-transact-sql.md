@@ -4,9 +4,8 @@ description: log_shipping_monitor_alert (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "log_shipping_monitor_alert"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_monitor_alert system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 ---
 # log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

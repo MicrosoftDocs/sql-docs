@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "sys.resource_usage"
 dev_langs:
   - "TSQL"
-ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 monikerRange: "=azuresqldb-current"
 ---
 # sys.resource_usage (Azure SQL Database and Azure SQL Managed Instance)
@@ -27,7 +26,7 @@ monikerRange: "=azuresqldb-current"
 > [!IMPORTANT]
 >  This feature is in a preview state. Do not take a dependency on the specific implementation of this feature because the feature might be changed or removed in a future release.  
 > 
->  While in a preview state, the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] operations team might turn data collection off and on for this DMV:  
+>  While in a preview state, the [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] operations team might turn data collection off and on for this DMV:  
 > 
 >  -   When turned on, the DMV returns current data as it is aggregated.  
 > -   When turned off, the DMV returns historical data, which might be stale.  

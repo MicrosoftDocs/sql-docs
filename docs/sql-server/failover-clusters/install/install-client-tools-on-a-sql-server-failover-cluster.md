@@ -1,17 +1,13 @@
 ---
 title: "Install Client Tools: Failover Cluster"
 description: Learn how to install client tools, such as SQL Server Management Studio, on a SQL Server failover instance.
-ms.custom:
-  - seo-lt-2019
-  - intro-installation
-ms.date: "12/13/2019"
-ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
-ms.topic: how-to
-ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "12/13/2019"
+ms.service: sql
+ms.subservice: failover-cluster-instance
+ms.topic: how-to
+ms.custom: intro-installation
 ---
 # Install Client Tools on a SQL Server Failover Cluster
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +24,7 @@ ms.author: mathoma
   
 #### Installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client Tools Using the Setup User Interface  
   
-1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root installation folder, double click Setup.exe. To install from the network share, locate the root folder on the share, and then double-click Setup.exe.  
+1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root installation folder, double-click Setup.exe. To install from the network share, locate the root folder on the share, and then double-click Setup.exe.  
   
 2.  On the **Installation** page, click **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stand-alone installation or add Features to an existing installation**. Do not click **New [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation**.  
   
@@ -47,7 +43,7 @@ ms.author: mathoma
 3.  To install the complete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management tools, run the following command: Setup.exe/q/Action=Install /Features=ADV_SSMS. For more information about parameter values for the features, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### Uninstalling [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client Tools  
- They appear in Add or Remove programs in Control Panel as **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]**, and can be removed from there. When you use Remove Node to uninstall an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from the failover cluster, the client components are not uninstalled at the same time.  
+ They appear in Add or Remove programs in Control Panel as **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]**, and can be removed from there. When you use Remove Node to uninstall an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from the failover cluster, the client components are not uninstalled at the same time.  
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

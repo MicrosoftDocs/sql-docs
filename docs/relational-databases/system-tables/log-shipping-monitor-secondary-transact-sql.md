@@ -4,9 +4,8 @@ description: log_shipping_monitor_secondary (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "log_shipping_monitor_secondary_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "log_shipping_monitor_secondary system table"
 dev_langs:
   - "TSQL"
-ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 ---
 # log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

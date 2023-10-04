@@ -1,17 +1,16 @@
 ---
 title: Troubleshoot common connection issues to Azure SQL Database
 description: Provides steps to troubleshoot Azure SQL Database connection issues and resolve other Azure SQL Database or Azure SQL Managed Instance specific issues
-author: ramakoni1
-ms.author: ramakoni
+author: suresh-kandoth
+ms.author: sureshka
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 01/18/2022
+ms.date: 11/13/2022
 ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: troubleshooting
 ms.custom:
-  - "seo-lt-2019"
-  - "OKR 11/2019"
-  - "sqldbrb=1"
+  - OKR 11/2019
+  - sqldbrb=1
 ---
 
 # Troubleshooting connectivity issues and other errors with Azure SQL Database and Azure SQL Managed Instance
@@ -31,11 +30,11 @@ The Azure infrastructure has the ability to dynamically reconfigure servers when
 | Error code | Severity | Description |
 | ---:| ---:|:--- |
 | 926 |14 |Database 'replicatedmaster' cannot be opened. It has been marked SUSPECT by recovery. See the SQL Server errorlog for more information.<br/><br/>This error may be logged on SQL Managed Instance errorlog, for a short period of time, during the last stage of a reconfiguration, while the old primary is shutting down its log.<br/>Other, non-transient scenarios involving this error message are described in the [MSSQL Errors documentation](/sql/relational-databases/errors-events/mssqlserver-926-database-engine-error).|
-| 4060 |16 |Cannot open database "%.&#x2a;ls" requested by the login. The login failed. For more information, see [Errors 4000 to 4999](/sql/relational-databases/errors-events/database-engine-events-and-errors#errors-4000-to-4999)|
+| 4060 |16 |Cannot open database "%.&#x2a;ls" requested by the login. The login failed. For more information, see [Errors 4000 to 4999](/sql/relational-databases/errors-events/database-engine-events-and-errors-4000-to-4999)|
 | 40197 |17 |The service has encountered an error processing your request. Please try again. Error code %d.<br/><br/>You receive this error when the service is down due to software or hardware upgrades, hardware failures, or any other failover problems. The error code (%d) embedded within the message of error 40197 provides additional information about the kind of failure or failover that occurred. Some examples of the error codes are embedded within the message of error 40197 are 40020, 40143, 40166, and 40540.<br/><br/>Reconnecting automatically connects you to a healthy copy of your database. Your application must catch error 40197, log the embedded error code (%d) within the message for troubleshooting, and try reconnecting to SQL Database until the resources are available, and your connection is established again. For more information, see [Transient errors](troubleshoot-common-connectivity-issues.md#transient-errors-transient-faults).|
-| 40501 |20 |The service is currently busy. Retry the request after 10 seconds. Incident ID: %ls. Code: %d. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md).|
+| 40501 |20 |The service is currently busy. Retry the request after 10 seconds. Incident ID: %ls. Code: %d. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md).<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md).<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md).|
 | 40613 |17 |Database '%.&#x2a;ls' on server '%.&#x2a;ls' is not currently available. Please retry the connection later. If the problem persists, contact customer support, and provide them the session tracing ID of '%.&#x2a;ls'.<br/><br/> This error may occur if there is already an existing dedicated administrator connection (DAC) established to the database. For more information, see [Transient errors](troubleshoot-common-connectivity-issues.md#transient-errors-transient-faults).|
-| 49918 |16 |Cannot process request. Not enough resources to process request.<br/><br/>The service is currently busy. Please retry the request later. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
+| 49918 |16 |Cannot process request. Not enough resources to process request.<br/><br/>The service is currently busy. Please retry the request later. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md).<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md).<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
 | 49919 |16 |Cannot process create or update request. Too many create or update operations in progress for subscription "%ld".<br/><br/>The service is busy processing multiple create or update requests for your subscription or server. Requests are currently blocked for resource optimization. Query [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) for pending operations. Wait until pending create or update requests are complete or delete one of your pending requests and retry your request later. If your operations seem to be stuck, wait for other in-progress operations to complete, or cancel them when possible. For example, you may be able to cancel a database copy or geo-replica creation by deleting the database or replica being created. If unable to cancel an apparently stuck operation, [open a support ticket with Microsoft](/sql/sql-server/sql-server-get-help#contact-microsoft-support).  |
 | 49920 |16 |Cannot process request. Too many operations in progress for subscription "%ld".<br/><br/>The service is busy processing multiple requests for this subscription. Requests are currently blocked for resource optimization. Query [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) for operation status. Wait until pending requests are complete or delete one of your pending requests and retry your request later. If your operations seem to be stuck, wait for other in-progress operations to complete, or cancel them when possible. For example, you may be able to cancel a database copy or geo-replica creation by deleting the database or replica being created. If unable to cancel an apparently stuck operation, [open a support ticket with Microsoft](/sql/sql-server/sql-server-get-help#contact-microsoft-support). |
 | 4221 |16 |Login to read-secondary failed due to long wait on 'HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING'. The replica is not available for login because row versions are missing for transactions that were in-flight when the replica was recycled. The issue can be resolved by rolling back or committing the active transactions on the primary replica. Occurrences of this condition can be minimized by avoiding long write transactions on the primary. |
@@ -171,21 +170,39 @@ These exceptions can occur either because of connection or query issues. To conf
 
 Connection timeouts occur because the application can't connect to the server. To resolve this issue, try the steps (in the order presented) in the [Steps to fix common connection issues](#steps-to-fix-common-connection-issues) section.
 
+## Network connection termination errors
+
+SQL client libraries connect to Azure SQL Database and Azure SQL Managed Instance using the TCP network protocol. A client library uses a lower level component called TCP provider to manage TCP connections. When the TCP provider detects that a remote host has unexpectedly terminated an existing TCP connection, the client library raises an error. Because the error is a client error and not a SQL server error, there is no SQL error number included. Instead, the error number is 0, and the error message from the TCP provider is used.
+
+Examples of network connection termination errors include:
+
+`A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.) An existing connection was forcibly closed by the remote host`
+
+`A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`The client was unable to establish a connection because of an error during connection initialization process before login. Possible causes include the following: the client tried to connect to an unsupported version of SQL Server; the server was too busy to accept new connections; or there was a resource limitation (insufficient memory or maximum allowed connections) on the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+`A connection was successfully established with the server, but then an error occurred during the login process. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)`
+
+Connection termination errors may occur because the database or elastic pool is temporarily unavailable. They may also occur because of various problems in the network infrastructure between the database server and the client application, including firewalls, network appliances, etc. These problems may be transient or permanent. As a general guidance, applications should use a fixed number of retry attempts for these errors before considering them permanent failures.
+
 ## Resource governance errors
 
 Azure SQL Database uses a resource governance implementation based on [Resource Governor](/sql/relational-databases/resource-governor/resource-governor) to enforce resource limits. Learn more about [resource management in Azure SQL Database](resource-limits-logical-server.md).
 
 The most common resource governance errors are listed first with details, followed by a table of resource governance error messages.
 
-### Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.
+### Errors 10928 and 10936: Resource ID : 1. The request limit for the [database or elastic pool] is *%d* and has been reached
 
-The detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
+If the database level limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.`
 
-This error message indicates that the worker limit for Azure SQL Database has been reached. A value will be present instead of the placeholder *%d*. This value indicates the worker limit for your database at the time the limit was reached.
+If the elastic pool limit is reached, the detailed error message in this case reads: `Resource ID : 1. The request limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.` Elastic pool limits are higher than database limits, for more information, see [Resource limits](resource-limits-logical-server.md). They may be reached when multiple databases in the pool use a resource (such as workers) concurrently. 
+
+This error message indicates that the worker limit for the database or elastic pool has been reached. The maximum concurrent workers value for the service objective of the database or elastic pool will be present instead of the placeholder *%d*.
 
 > [!NOTE]
-> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error message 10928 in Azure SQL Database contains the wording "The request limit for the database is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
-> 
+> The initial offering of Azure SQL Database supported only single threaded queries. At that time, the number of requests was always equivalent to the number of workers. Error messages 10928 and 10936 in Azure SQL Database contain the wording "The request limit [...] is *N* and has been reached" for backwards compatibility purposes. The limit reached is actually the number of workers. If your max degree of parallelism (MAXDOP) setting is equal to zero or is greater than one, the number of workers may be much higher than the number of requests, and the limit may be reached much sooner than when MAXDOP is equal to one.
+>
 > Learn more about [Sessions, workers, and requests](resource-limits-logical-server.md#sessions-workers-and-requests).
 
 #### Connect with the Dedicated Admin Connection (DAC) if needed
@@ -209,7 +226,7 @@ You cannot use a DAC connection with Object Explorer.
 
 #### Review your max_worker_percent usage
 
-To find resource consumption statistics for your database for 14 days, query the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) system catalog view. The `max_worker_percent` column shows the percentage of workers used relative to the worker limit for your database. Connect to the master database on your [logical server](logical-servers.md) to query `sys.resource_stats`.
+To find resource consumption statistics for your database for 14 days, query the [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) system catalog view. The `max_worker_percent` column shows the percentage of workers used relative to the worker limit for your database. Connect to the `master` database on your [logical server](logical-servers.md) to query `sys.resource_stats`.
 
 ```sql
 SELECT start_time, end_time, database_name, sku, avg_cpu_percent, max_worker_percent, max_session_percent 
@@ -258,7 +275,7 @@ Triage an incident with insufficient workers by following these steps:
 
 #### Increase worker limits
 
-If the database consistently reaches its limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider adding more resources to the database to increase the worker limit.
+If the database or elastic pool consistently reaches its worker limit despite addressing blocking, optimizing queries, and validating your MAXDOP setting, consider scaling up the database or elastic pool to increase the worker limit.
 
 Find resource limits for Azure SQL Database by service tier and compute size:
 
@@ -323,7 +340,7 @@ If you repeatedly encounter this error, try to resolve the issue by following th
     ```sql
     SELECT
         r.start_time, DATEDIFF(ms,start_time, SYSDATETIME()) as duration_ms, 
-    	r.session_id, r.request_id, r.blocking_session_id,  
+        r.session_id, r.request_id, r.blocking_session_id,  
         r.status, r.command, DB_NAME(r.database_id) AS database_name,
         i.parameters, i.event_info AS input_buffer,
         r.last_wait_type, r.open_transaction_count, r.total_elapsed_time, r.cpu_time,
@@ -343,7 +360,7 @@ If you repeatedly encounter this error, try to resolve the issue by following th
 
 1. Consider batching your queries. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).
 
-### Error 40551: The session has been terminated because of excessive TEMPDB usage
+### Error 40551: The session has been terminated because of excessive tempdb usage
 
 `40551: The session has been terminated because of excessive TEMPDB usage. Try modifying your query to reduce the temporary table space usage.`
 
@@ -362,13 +379,8 @@ To resolve this issue, try the following methods:
 - The issue can occur because of insert, update, or delete operations.
 Try to reduce the number of rows that are operated on immediately by implementing batching or splitting into multiple smaller transactions.
 - The issue can occur because of index rebuild operations. To work around this issue, make sure the number of rows that are affected in the table * (average size of field that's updated in bytes + 80) < 2 gigabytes (GB).
-
-  > [!NOTE]
-  > For an index rebuild, the average size of the field that's updated should be substituted by the average index size.
-
-  > [!NOTE]
-  > For more information on troubleshooting a full transaction log in Azure SQL Database and Azure SQL Managed Instance, see [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md).
-
+- For an index rebuild, the average size of the field that's updated should be substituted by the average index size.
+- For more information, see [Troubleshooting a full transaction log in Azure SQL Database](troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true) and [Troubleshooting a full transaction log in Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true).
 
 ### Error 40553: The session has been terminated because of excessive memory usage
 
@@ -384,13 +396,14 @@ For more information on other out of memory errors and sample queries, see [Trou
 
 | Error code | Severity | Description |
 | ---:| ---:|:--- |
-| 10928 |20 |Resource ID: %d. The %s limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance..<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.](#error-10928-resource-id--1-the-request-limit-for-the-database-is-d-and-has-been-reached) When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
-| 10929 |20 |Resource ID: %d. The %s minimum guarantee is %d, maximum limit is %d, and the current usage for the database is %d. However, the server is currently too busy to support requests greater than %d for this database. The Resource ID indicates the resource that has reached the limit. For worker threads, the Resource ID = 1. For sessions, the Resource ID = 2. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md)<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md)<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). <br/>Otherwise, try again later. |
+| 10928 |20 |Resource ID: %d. The %s limit for the database is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10928: Resource ID : 1. The request limit for the database is *%d* and has been reached.](#errors-10928-and-10936-resource-id--1-the-request-limit-for-the-database-or-elastic-pool-is-d-and-has-been-reached) When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md).<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md).<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
+| 10936 |20 |Resource ID: %d. The %s limit for the elastic pool is %d and has been reached. See 'http://go.microsoft.com/fwlink/?LinkId=267637' for assistance.<br/><br/>The Resource ID indicates the resource that has reached the limit. When Resource ID = 1, this indicates a worker limit has been reached. Learn more in [Error 10936: Resource ID : 1. The request limit for the elastic pool is *%d* and has been reached.](#errors-10928-and-10936-resource-id--1-the-request-limit-for-the-database-or-elastic-pool-is-d-and-has-been-reached). When Resource ID = 2, this indicates the session limit has been reached.<br/><br/>Learn more about resource limits: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md).<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). |
+| 10929 |20 |Resource ID: %d. The %s minimum guarantee is %d, maximum limit is %d, and the current usage for the database is %d. However, the server is currently too busy to support requests greater than %d for this database. The Resource ID indicates the resource that has reached the limit. For worker threads, the Resource ID = 1. For sessions, the Resource ID = 2. For more information, see: <br/>&bull; &nbsp;[Logical SQL server resource limits](resource-limits-logical-server.md).<br/>&bull; &nbsp;[DTU-based limits for single databases](service-tiers-dtu.md).<br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md). <br/>Otherwise, try again later. |
 | 40544 |20 |The database has reached its size quota. Partition or delete data, drop indexes, or consult the documentation for possible resolutions. For database scaling, see [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md).|
 | 40549 |16 |Session is terminated because you have a long-running transaction. Try shortening your transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).|
 | 40550 |16 |The session has been terminated because it has acquired too many locks. Try reading or modifying fewer rows in a single transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).|
-| 40551 |16 |The session has been terminated because of excessive `TEMPDB` usage. Try modifying your query to reduce the temporary table space usage.<br/><br/>If you are using temporary objects, conserve space in the `TEMPDB` database by dropping temporary objects after they are no longer needed by the session. For more information on tempdb limits in SQL Database, see [Tempdb database in SQL Database](resource-limits-logical-server.md#tempdb-sizes).|
-| 40552 |16 |The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).<br/><br/>If you perform bulk inserts using the `bcp.exe` utility or the `System.Data.SqlClient.SqlBulkCopy` class, try using the `-b batchsize` or `BatchSize` options to limit the number of rows copied to the server in each transaction. If you are rebuilding an index with the `ALTER INDEX` statement, try using the `REBUILD WITH ONLINE = ON` option. For information on transaction log sizes for the vCore purchasing model, see: <br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md)<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md).|
+| 40551 |16 |The session has been terminated because of excessive `tempdb` usage. Try modifying your query to reduce the temporary table space usage.<br/><br/>If you are using temporary objects, conserve space in the `tempdb` database by dropping temporary objects after they are no longer needed by the session. For more information on `tempdb` limits in SQL Database, see [Tempdb database in SQL Database](resource-limits-logical-server.md#tempdb-sizes).|
+| 40552 |16 |The session has been terminated because of excessive transaction log space usage. Try modifying fewer rows in a single transaction. For information on batching, see [How to use batching to improve SQL Database application performance](../performance-improve-use-batching.md).<br/><br/>If you perform bulk inserts using the `bcp.exe` utility or the `System.Data.SqlClient.SqlBulkCopy` class, try using the `-b batchsize` or `BatchSize` options to limit the number of rows copied to the server in each transaction. If you are rebuilding an index with the `ALTER INDEX` statement, try using the `REBUILD WITH ONLINE = ON` option. For information on transaction log sizes for the vCore purchasing model, see: <br/>&bull; &nbsp;[vCore-based limits for single databases](resource-limits-vcore-single-databases.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/>&bull; &nbsp;[Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md).|
 | 40553 |16 |The session has been terminated because of excessive memory usage. Try modifying your query to process fewer rows.<br/><br/>Reducing the number of `ORDER BY` and `GROUP BY` operations in your Transact-SQL code reduces the memory requirements of your query. For database scaling, see [Scale single database resources](single-database-scale.md) and [Scale elastic pool resources](elastic-pool-scale.md). For more information on out of memory errors and sample queries, see [Troubleshoot out of memory errors with Azure SQL Database](troubleshoot-memory-errors-issues.md).|
 
 ## Elastic pool errors
@@ -399,8 +412,8 @@ The following errors are related to creating and using elastic pools:
 
 | Error code | Severity | Description | Corrective action |
 |:--- |:--- |:--- |:--- |
-| 1132 | 17 |The elastic pool has reached its storage limit. The storage usage for the elastic pool cannot exceed (%d) MBs. Attempting to write data to a database when the storage limit of the elastic pool has been reached. For information on resource limits, see: <br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md). <br/> |Consider increasing the DTUs of and/or adding storage to the elastic pool if possible in order to increase its storage limit, reduce the storage used by individual databases within the elastic pool, or remove databases from the elastic pool. For elastic pool scaling, see [Scale elastic pool resources](elastic-pool-scale.md). For more information on removing unused space from databases, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).|
-| 10929 | 16 |The %s minimum guarantee is %d, maximum limit is %d, and the current usage for the database is %d. However, the server is currently too busy to support requests greater than %d for this database. For information on resource limits, see: <br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md)<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md). <br/> Otherwise, try again later. DTU / vCore min per database; DTU / vCore max per database. The total number of [concurrent workers](resource-limits-logical-server.md#sessions-workers-and-requests) across all databases in the elastic pool attempted to exceed the pool limit. |Consider increasing the DTUs or vCores of the elastic pool if possible in order to increase its worker limit, or remove databases from the elastic pool. |
+| 1132 | 17 |The elastic pool has reached its storage limit. The storage usage for the elastic pool cannot exceed (%d) MBs. Attempting to write data to a database when the storage limit of the elastic pool has been reached. For information on resource limits, see: <br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md).<br/> |Consider increasing the DTUs of and/or adding storage to the elastic pool if possible in order to increase its storage limit, reduce the storage used by individual databases within the elastic pool, or remove databases from the elastic pool. For elastic pool scaling, see [Scale elastic pool resources](elastic-pool-scale.md). For more information on removing unused space from databases, see [Manage file space for databases in Azure SQL Database](file-space-manage.md).|
+| 10929 | 16 |The %s minimum guarantee is %d, maximum limit is %d, and the current usage for the database is %d. However, the server is currently too busy to support requests greater than %d for this database. For information on resource limits, see: <br/>&bull; &nbsp;[DTU-based limits for elastic pools](resource-limits-dtu-elastic-pools.md).<br/>&bull; &nbsp;[vCore-based limits for elastic pools](resource-limits-vcore-elastic-pools.md). <br/> Otherwise, try again later. DTU / vCore min per database; DTU / vCore max per database. The total number of [concurrent workers](resource-limits-logical-server.md#sessions-workers-and-requests) across all databases in the elastic pool attempted to exceed the pool limit. |Consider increasing the DTUs or vCores of the elastic pool if possible in order to increase its worker limit, or remove databases from the elastic pool. |
 | 40844 | 16 |Database '%ls' on Server '%ls' is a '%ls' edition database in an elastic pool and cannot have a continuous copy relationship.  |N/A |
 | 40857 | 16 |Elastic pool not found for server: '%ls', elastic pool name: '%ls'. Specified elastic pool does not exist in the specified server. | Provide a valid elastic pool name. |
 | 40858 | 16 |Elastic pool '%ls' already exists in server: '%ls'. Specified elastic pool already exists in the specified server. | Provide new elastic pool name. |
@@ -467,7 +480,7 @@ FROM sys.databases
 WHERE database_id = DB_ID();
 ```
 
-You can modify the read-only status for a database in Azure SQL Database using [ALTER DATABASE Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true). You can’t currently set a database in a managed instance to read-only.
+You can modify the read-only status for a database in Azure SQL Database using [ALTER DATABASE Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true). You can't currently set a database in a managed instance to read-only.
 
 ## Confirm whether an error is caused by a connectivity issue
 
@@ -518,6 +531,7 @@ Learn more about related topics in the following articles:
 
 - [Azure SQL Database connectivity architecture](./connectivity-architecture.md)
 - [Azure SQL Database and Azure Synapse Analytics network access controls](./network-access-controls-overview.md)
-- [Troubleshooting transaction log errors with Azure SQL Database and Azure SQL Managed Instance](troubleshoot-transaction-log-errors-issues.md)
+- [Troubleshooting a full transaction log in Azure SQL Database](troubleshoot-transaction-log-errors-issues.md?view=azuresql-db&preserve-view=true)
+- [Troubleshooting a full transaction log in Azure SQL Managed Instance](../managed-instance/troubleshoot-transaction-log-errors-issues.md?view=azuresql-mi&preserve-view=true)
 - [Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](troubleshoot-common-connectivity-issues.md)
 - [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md)

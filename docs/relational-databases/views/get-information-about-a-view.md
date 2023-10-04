@@ -1,16 +1,15 @@
 ---
-description: "Get Information About a View"
 title: "Get Information About a View"
-ms.custom: ""
+description: "Get Information About a View"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "08/19/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "views [SQL Server], status information"
   - "metadata [SQL Server], views"
   - "dependencies [SQL Server], views"
@@ -19,8 +18,6 @@ helpviewer_keywords:
   - "viewing view information"
   - "status information [SQL Server], views"
   - "view dependencies"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About a View
@@ -182,7 +179,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste one of the following examples into the query window and select **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT definition, uses_ansi_nulls, uses_quoted_identifier, is_schema_bound  
     FROM sys.sql_modules  
@@ -191,7 +188,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     ```  
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     SELECT OBJECT_DEFINITION (OBJECT_ID('HumanResources.vEmployee')) AS ObjectDefinition;   
     GO  
@@ -215,7 +212,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT OBJECT_NAME(referencing_id) AS referencing_entity_name,   
         o.type_desc AS referencing_desciption,   

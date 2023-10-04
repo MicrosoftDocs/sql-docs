@@ -1,25 +1,21 @@
 ---
+title: "Aggregate Transformation"
 description: "Aggregate Transformation"
-title: "Aggregate Transformation | Microsoft Docs"
-ms.custom: ""
+author: chugugrace
+ms.author: chugu
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
+ms.service: sql
+ms.subservice: integration-services
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.dts.designer.aggregatetrans.f1"
   - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
   - "sql13.dts.designer.aggregationtransformation.advanced.f1"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "IsBig property"
   - "aggregate functions [Integration Services]"
   - "Aggregate transformation [Integration Services]"
   - "large data, SSIS transformations"
-ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: chugugrace
-ms.author: chugu
 ---
 # Aggregate Transformation
 

@@ -8,9 +8,7 @@ ms.date: 09/24/2018
 ms.service: sql-database
 ms.subservice: scenario
 ms.topic: tutorial
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 ---
 # Learn how to provision new tenants and register them in the catalog
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -5,8 +5,8 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: jopilov
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: supportability
+ms.service: sql
+ms.subservice: supportability
 ms.topic: "reference"
 helpviewer_keywords:
   - "3183 (Database Engine error)"

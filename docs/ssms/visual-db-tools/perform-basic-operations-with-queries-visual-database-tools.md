@@ -1,20 +1,15 @@
 ---
-description: "Perform Basic Operations with Queries (Visual Database Tools)"
 title: Perform Basic Operations with Queries
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "queries [Visual Database Tools]"
-  - "Visual Database Tools [SQL Server], queries"
-ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
+description: "Perform Basic Operations with Queries (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-
+ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "queries [Visual Database Tools]"
+  - "Visual Database Tools [SQL Server], queries"
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]

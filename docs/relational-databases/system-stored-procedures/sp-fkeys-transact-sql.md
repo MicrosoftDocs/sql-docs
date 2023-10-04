@@ -1,31 +1,27 @@
 ---
+title: "sp_fkeys (Transact-SQL)"
 description: "sp_fkeys (Transact-SQL)"
-title: "sp_fkeys (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/08/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: system-objects
-ms.topic: "reference"
-f1_keywords: 
-  - "sp_fkeys"
-  - "sp_fkeys_TSQL"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "sp_fkeys"
-ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: markingmyname
 ms.author: maghan
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.date: "09/08/2017"
+ms.service: sql
+ms.subservice: system-objects
+ms.topic: "reference"
+f1_keywords:
+  - "sp_fkeys"
+  - "sp_fkeys_TSQL"
+helpviewer_keywords:
+  - "sp_fkeys"
+dev_langs:
+  - "TSQL"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # sp_fkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricdw.md)]
 
   Returns logical foreign key information for the current environment. This procedure shows foreign key relationships including disabled foreign keys.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -77,8 +73,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |FKTABLE_NAME|**sysname**|Name of the table (with a foreign key). This field always returns a value.|  
 |FKCOLUMN_NAME|**sysname**|Name of the foreign key column, for each column of the TABLE_NAME returned. This field always returns a value.|  
 |KEY_SEQ|**smallint**|Sequence number of the column in a multicolumn primary key. This field always returns a value.|  
-|UPDATE_RULE|**smallint**|Action applied to the foreign key when the SQL operation is an update.  Possible values:<br /> 0=CASCADE changes to foreign key.<br /> 1=NO ACTION changes if foreign key is present.<br />	2 = set null <br />	3 = set default |  
-|DELETE_RULE|**smallint**|Action applied to the foreign key when the SQL operation is a deletion. Possible values:<br /> 0=CASCADE changes to foreign key.<br /> 1=NO ACTION changes if foreign key is present.<br />	2 = set null <br />	3 = set default |  
+|UPDATE_RULE|**smallint**|Action applied to the foreign key when the SQL operation is an update.  Possible values:<br /> 0=CASCADE changes to foreign key.<br /> 1=NO ACTION changes if foreign key is present.<br />    2 = set null <br />    3 = set default |  
+|DELETE_RULE|**smallint**|Action applied to the foreign key when the SQL operation is a deletion. Possible values:<br /> 0=CASCADE changes to foreign key.<br /> 1=NO ACTION changes if foreign key is present.<br />    2 = set null <br />    3 = set default |  
 |FK_NAME|**sysname**|Foreign key identifier. It is NULL if not applicable to the data source. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns the FOREIGN KEY constraint name.|  
 |PK_NAME|**sysname**|Primary key identifier. It is NULL if not applicable to the data source. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns the PRIMARY KEY constraint name.|  
   
@@ -99,17 +95,17 @@ The sp_fkeys stored procedure is equivalent to SQLForeignKeys in ODBC.
  Requires `SELECT` permission on the schema.  
   
 ## Examples  
- The following example retrieves a list of foreign keys for the `HumanResources.Department` table in the `AdventureWorks2012` database.  
+ The following example retrieves a list of foreign keys for the `HumanResources.Department` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_fkeys @pktable_name = N'Department'  
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example retrieves a list of foreign keys for the `DimDate` table in the `AdventureWorksPDW2012` database. No rows are returned because [!INCLUDE[ssDW](../../includes/ssdw-md.md)] does not support foreign keys.  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ The following example retrieves a list of foreign keys for the `DimDate` table in the `AdventureWorksPDW2012` database. No rows are returned because [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] does not support foreign keys.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate';  

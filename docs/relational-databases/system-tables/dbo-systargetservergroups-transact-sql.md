@@ -4,9 +4,8 @@ description: dbo.systargetservergroups (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/09/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "dbo.systargetservergroups"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "systargetservergroups system table"
 dev_langs:
   - "TSQL"
-ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 ---
 # dbo.systargetservergroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

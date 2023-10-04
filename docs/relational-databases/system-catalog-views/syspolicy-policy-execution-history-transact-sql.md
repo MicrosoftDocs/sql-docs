@@ -4,9 +4,8 @@ description: syspolicy_policy_execution_history (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syspolicy_policy_execution_history_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "syspolicy_policy_execution_history view"
 dev_langs:
   - "TSQL"
-ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 ---
 # syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

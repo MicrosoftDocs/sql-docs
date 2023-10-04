@@ -4,15 +4,13 @@ description: Database Engine Extended Stored Procedures - Programming
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
+ms.service: sql
 ms.topic: "reference"
 helpviewer_keywords:
   - "gateway applications [SQL Server]"
   - "extended stored procedures [SQL Server], about extended stored procedures"
   - "Open Data Services [SQL Server]"
   - "ODS [SQL Server]"
-ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 ---
 # Database Engine Extended Stored Procedures - Programming
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

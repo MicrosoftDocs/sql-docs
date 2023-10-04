@@ -1,22 +1,18 @@
 ---
+title: "ToString (geography Data Type)"
 description: "ToString (geography Data Type)"
-title: "ToString (geography Data Type) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: t-sql
-ms.topic: reference
-f1_keywords: 
-  - "ToString (geography Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "ToString method"
-ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
-ms.author: mlandzic 
+ms.author: mlandzic
+ms.date: "03/14/2017"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: reference
+f1_keywords:
+  - "ToString (geography Data Type)"
+helpviewer_keywords:
+  - "ToString method"
+dev_langs:
+  - "TSQL"
 ---
 # ToString (geography Data Type)
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

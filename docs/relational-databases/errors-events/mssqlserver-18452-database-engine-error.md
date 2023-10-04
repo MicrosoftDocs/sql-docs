@@ -1,18 +1,15 @@
 ---
+title: "MSSQLSERVER_18452"
 description: "MSSQLSERVER_18452"
-title: "MSSQLSERVER_18452 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
-ms.prod: sql
-ms.reviewer: ""
-ms.technology: supportability
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "18456 (Database Engine error)"
-  - "18452 (Database Engine error)"
-ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "04/04/2017"
+ms.service: sql
+ms.subservice: supportability
+ms.topic: "reference"
+helpviewer_keywords:
+  - "18456 (Database Engine error)"
+  - "18452 (Database Engine error)"
 ---
 # MSSQLSERVER_18452
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +23,7 @@ ms.author: mathoma
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|LOGON_INVALID_CONNECT|  
-|Message Text|Login failed for user '%.*ls'. The login is a SQL Server login and cannot be used with Windows Authentication.%.\*ls|  
+|Message Text|Login failed. The login is from an untrusted domain and cannot be used with Integrated authentication.%.\*ls|  
   
 ## Explanation  
 The user attempted to login with credentials that cannot be validated. Possible causes are:  

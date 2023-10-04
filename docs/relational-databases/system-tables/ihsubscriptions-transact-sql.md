@@ -4,9 +4,8 @@ description: IHsubscriptions (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/03/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "IHsubscriptions_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "IHsubscriptions system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 ---
 # IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

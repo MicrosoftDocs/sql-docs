@@ -4,9 +4,8 @@ description: syscollector_execution_stats (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "syscollector_execution_stats"
@@ -16,7 +15,6 @@ helpviewer_keywords:
   - "data collector view"
 dev_langs:
   - "TSQL"
-ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 ---
 # syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

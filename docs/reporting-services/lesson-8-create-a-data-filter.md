@@ -1,15 +1,13 @@
 ---
-title: "Lesson 8: Create a Data Filter | Microsoft Docs"
+title: "Lesson 8: Create a Data Filter"
 description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
-ms.date: 05/18/2016
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: reporting-services
-
-ms.topic: conceptual
-ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 05/18/2016
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Lesson 8: Create a Data Filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  
@@ -45,7 +43,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 ### To create a function that selects unfiltered data from the PurchaseOrdeDetail table  
   
-1.  In Solution Explorer, expand Default.aspx, and then double click Default.aspx.cs.  
+1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
 2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object, and does the following.  
   
@@ -77,7 +75,7 @@ You need to complete the following tasks to implement a table-based filter.
                     DataSet2 ds = new DataSet2();  
   
                     //Create a SQL Connection to the AdventureWorks2008 database using Windows Authentication.  
-                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=Adventureworks2014;Integrated Security=SSPI"))  
+                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2022;Integrated Security=SSPI"))  
                     {  
                         //Building the dynamic query with the parameter ProductID.  
                         SqlDataAdapter adap = new SqlDataAdapter("SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail ", sqlconn);  
@@ -155,7 +153,7 @@ You need to complete the following tasks to implement a query filter.
   
 ### To create a function that selects filtered data from the PurchaseOrderDetail table  
   
-1.  In Solution Explorer, expand Default.aspx, and then double click Default.aspx.cs.  
+1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
 2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object and does the following.  
   
@@ -188,7 +186,7 @@ You need to complete the following tasks to implement a query filter.
                     DataSet2 ds = new DataSet2();  
   
                     //Create a SQL Connection to the AdventureWorks2008 database using Windows Authentication.  
-                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=Adventureworks2014;Integrated Security=SSPI"))  
+                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2022;Integrated Security=SSPI"))  
                     {  
                         //Building the dynamic query with the parameter ProductID.  
                         SqlCommand cmd = new SqlCommand("SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail where ProductID = @ProductID", sqlconn);  

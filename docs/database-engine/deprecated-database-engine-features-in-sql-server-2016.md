@@ -6,10 +6,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 07/25/2022
-ms.prod: sql
-ms.technology: release-landing
+ms.service: sql
+ms.subservice: release-landing
 ms.topic: conceptual
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
@@ -34,10 +33,7 @@ You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersio
 
 The value of these counters is also available by executing the following statement:
 
-```sql
-SELECT * FROM sys.dm_os_performance_counters
-WHERE object_name = 'SQLServer:Deprecated Features';
-```
+[!INCLUDE [deprecated-os-performance-counters](../includes/deprecated-os-performance-counters.md)]
 
 ## Features deprecated in the next version of SQL Server
 
@@ -46,7 +42,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|
 |--------------|------------------------|-----------------|------------------|----------------|
 |Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|
-|Compatibility levels|Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|
+|Compatibility levels|Upgrade from version 100 ([!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|
 |Hash algorithms|Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated.|Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.|Deprecated hash algorithm|None|
@@ -103,7 +99,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Instance options|sp_configure options:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Now automatically configured. Setting has no effect.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|
 |Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high ... program.exe option instead.|sp_configure 'priority boost'|199|
 |Instance options|sp_configure option 'remote proc trans'|System tables are no longer updatable. Setting has no effect.|sp_configure 'remote proc trans'|37|
-|Linked servers|Specifying the SQLOLEDB provider for linked servers.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB for linked servers|19|
+|Linked servers|Specifying the SQLOLEDB provider for linked servers.|[Microsoft OLE DB Driver (MSOLEDBSQL) for SQL Server](../connect/oledb/oledb-driver-for-sql-server.md)|SQLOLEDB for linked servers|19|
 |Locking|sp_lock|sys.dm_tran_locks|sp_lock|99|
 |Metadata|FILE_ID<br /><br /> INDEXKEY_PROPERTY|FILE_IDEX<br /><br /> sys.index_columns|FILE_ID<br /><br /> INDEXKEY_PROPERTY|15<br /><br /> 17|
 |Native XML Web Services|The CREATE ENDPOINT or ALTER ENDPOINT statement with the FOR SOAP option.<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|Use Windows Communications Foundation (WCF) or ASP.NET instead.|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|
@@ -121,7 +117,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|
 |Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|
 |Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[sql2008-md](../includes/sql2008-md.md)]. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|
 |Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY, and REVOKE specific permissions.|ALL Permission|35|
 |Security|PERMISSIONS intrinsic function|Query sys.fn_my_permissions instead.|PERMISSIONS|170|
 |Security|SETUSER|EXECUTE AS|SETUSER|165|

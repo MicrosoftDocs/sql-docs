@@ -4,14 +4,14 @@ description: "Columnstore index query performance recommendations for achieving 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Query performance
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Recommendations for achieving the very fast query performance that columnstore indexes are designed to provide.
 
@@ -62,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 - Columnstore indexes compress data by columns instead of by rows, achieving high compression rates and reducing the size of the data stored on disk. Each column is compressed and stored independently.  Data within a column always has the same data type and tends to have similar values. Data compression techniques are very good at achieving higher compression rates when values are similar.
 
-- For example, if a fact table stores customer addresses and has a column for country, the total number of possible values is fewer than 200. Some of those values will be repeated many times. If the fact table has 100 million rows, the country column will compress easily and require very little storage. Row-by-row compression is not able to capitalize on the similarity of column values in this way and will use more bytes to compress the values in the country column.
+- For example, if a fact table stores customer addresses and has a column for country/region, the total number of possible values is fewer than 200. Some of those values will be repeated many times. If the fact table has 100 million rows, the country/region column will compress easily and require very little storage. Row-by-row compression is not able to capitalize on the similarity of column values in this way and will use more bytes to compress the values in the country/region column.
 
 ### Column elimination
 
@@ -177,7 +177,7 @@ Segment elimination does not apply to LOB data types, such as the (max) data typ
 
 Currently, only [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later supports clustered columnstore rowgroup elimination for the prefix of `LIKE` predicates, for example `column LIKE 'string%'`. Segment elimination is not supported for non-prefix use of `LIKE`, such as `column LIKE '%string'`.
 
-In [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can create ordered clustered columnstore indexes, which allow for ordering by columns to aid segment elimination, especially for string columns. In ordered clustered columnstore indexes, segment elimination on the first column in the index key is most effective, because it is sorted. Performance gains due to segment elimination on other columns in the table will be less predictable. For more on ordered clustered columnstore indexes, see [Use an ordered clustered columnstore index for large data warehouse tables](columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
+In [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can create ordered clustered columnstore indexes, which allow for ordering by columns to aid segment elimination, especially for string columns. In ordered clustered columnstore indexes, segment elimination on the first column in the index key is most effective, because it is sorted. Performance gains due to segment elimination on other columns in the table will be less predictable. For more on ordered clustered columnstore indexes, see [Use an ordered clustered columnstore index for large data warehouse tables](columnstore-indexes-design-guidance.md#use-an-ordered-clustered-columnstore-index-for-large-data-warehouse-tables).
 
 Using the query connection option [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md), you can view segment elimination in action. Look for output such as the following to indicate that segment elimination has occurred. Row groups are made up of column segments, so this may indicate segment elimination. The below SET STATISTICS IO output example of a query, roughly 83% data was skipped by the query:
 

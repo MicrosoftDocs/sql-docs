@@ -1,18 +1,14 @@
 ---
+title: "Use a Recordset Destination"
 description: "Use a Recordset Destination"
-title: "Use a Recordset Destination | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
-ms.technology: integration-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Recordset destination"
-ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: integration-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "Recordset destination"
 ---
 # Use a Recordset Destination
 

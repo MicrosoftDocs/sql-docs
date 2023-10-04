@@ -4,18 +4,15 @@ description: Learn how to run SQL queries using the ExecuteXmlReader method of t
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "reference"
-ms.custom: "seo-lt-2019"
 helpviewer_keywords:
   - "queries [SQLXML], SQLXML Managed Classes"
   - "SQLXML Managed Classes, executing SQL queries"
   - "Managed Classes [SQLXML], executing SQL queries"
   - "ExecuteXmlReader method"
   - "SQL queries [SQLXML]"
-ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method
@@ -32,7 +29,7 @@ using System.IO;
 using System.Xml;  
    class Test  
    {  
-      static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks2012;Integrated Security=SSPI";  
+      static string ConnString = "Provider=SQLOLEDB;Server=(local);database=AdventureWorks2022;Integrated Security=SSPI";  
       public static int testParams()  
       {  
          SqlXmlParameter p;  

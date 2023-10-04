@@ -4,9 +4,8 @@ description: sys.assembly_references (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "06/10/2016"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "assembly_references"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.assembly_references catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 ---
 # sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

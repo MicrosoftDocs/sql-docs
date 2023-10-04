@@ -1,16 +1,13 @@
 ---
-title: "Report parameters concepts in paginated reports | Microsoft Docs"
-description: Find out how to add parameters to link related paginated reports, to control a report appearance, to filter report data, or to narrow the scope in Report Builder. 
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
+title: "Report parameters concepts in paginated reports"
+description: Find out how to add parameters to link related paginated reports, to control a report appearance, to filter report data, or to narrow the scope in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Report parameters concepts in paginated reports (Report Builder)
 

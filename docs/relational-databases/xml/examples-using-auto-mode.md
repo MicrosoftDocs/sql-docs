@@ -1,21 +1,19 @@
 ---
 title: "Examples: Using AUTO Mode"
 description: View examples of queries that use FOR XML AUTO mode.
-ms.custom: ""
-ms.date: 05/05/2022
-ms.prod: sql
-ms.prod_service: "database-engine"
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: randolphwest
-ms.technology: xml
+ms.date: 05/05/2022
+ms.service: sql
+ms.subservice: xml
 ms.topic: conceptual
 helpviewer_keywords:
   - "AUTO FOR XML mode, examples"
-author: MikeRayMSFT
-ms.author: mikeray
 ---
 # Examples: Using AUTO mode
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 The following examples illustrate the use of AUTO mode. Many of these queries are specified against bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.
 
@@ -24,7 +22,7 @@ The following examples illustrate the use of AUTO mode. Many of these queries ar
 This query retrieves customer, order, and order detail information for a specific customer.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Cust.CustomerID,
        OrderHeader.CustomerID,
@@ -78,7 +76,7 @@ This is the partial result.
 The following query returns individual customer IDs and the number of orders that the customer has requested.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT C.CustomerID, COUNT(*) AS NoOfOrders
 FROM Sales.Customer AS C
@@ -101,7 +99,7 @@ This is the partial result:
 This query returns concatenated individual customer names and the order information. Because the computed column is assigned to the innermost level encountered at that point, the `<SOH>` element in this example. The concatenated customer names are added as attributes of the `<SOH>` element in the result.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT P.FirstName + ' ' + P.LastName AS Name,
        SOH.SalesOrderID
@@ -131,7 +129,7 @@ FROM (SELECT FirstName+ ' '+LastName AS Name, C.PersonID, C.CustomerID
       WHERE C.PersonID = P.BusinessEntityID) AS IndividualCustomer
 LEFT OUTER JOIN  Sales.SalesOrderHeader AS SOH
    ON IndividualCustomer.CustomerID = SOH.CustomerID
-ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
+ORDER BY IndividualCustomer.CustomerID, SOH.CustomerID FOR XML AUTO;
 ```
 
 This is the partial result:

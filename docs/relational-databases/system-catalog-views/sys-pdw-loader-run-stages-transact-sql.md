@@ -4,12 +4,11 @@ description: sys.pdw_loader_run_stages (Transact-SQL)
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 monikerRange: ">=aps-pdw-2016"
 ---
 # sys.pdw_loader_run_stages (Transact-SQL)

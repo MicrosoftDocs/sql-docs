@@ -1,23 +1,19 @@
 ---
 title: "AsGml (geometry Data Type)"
 description: "AsGml (geometry Data Type)"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: t-sql
+author: MladjoA
+ms.author: mlandzic
+ms.date: "08/03/2017"
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-f1_keywords: 
+f1_keywords:
   - "AsGml_(geometry_Data_Type)_TSQL"
   - "AsGml_(geometry Data Type)"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "AsGml (geometry Data Type)"
-ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-author: MladjoA
-ms.author: mlandzic 
-ms.reviewer: ""
-ms.custom: ""
-ms.date: "08/03/2017"
+dev_langs:
+  - "TSQL"
 ---
 # AsGml (geometry Data Type)
 
@@ -56,7 +52,7 @@ SELECT @g.AsGml();
  This method returns the description as a `LineString` instance.  
   
 ```xml
-<LineString xmlns="https://www.opengis.net/gml">  
+<LineString xmlns="http://www.opengis.net/gml">  
 <posList>0 0 0 1 1 0</posList></LineString>  
 ```  
   

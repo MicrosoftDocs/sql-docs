@@ -1,14 +1,14 @@
 ---
-title: "Create, Modify, and Delete Shared Data Sources | Microsoft Docs"
+title: "Create, Modify, and Delete Shared Data Sources"
 description: Learn to manage data sources that can be referenced by multiple reports, models, and data-driven subscriptions that run on a Reporting Services report server.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-data
-
-
+ms.service: reporting-services
+ms.subservice: report-data
 ms.topic: conceptual
-helpviewer_keywords: 
+ms.custom: updatefrequency5
+helpviewer_keywords:
   - "modifying data source properties"
   - "shared data sources [Reporting Services]"
   - "removing shared data sources"
@@ -16,9 +16,6 @@ helpviewer_keywords:
   - "data sources [Reporting Services], shared"
   - "data sources [Reporting Services], modifying properties"
   - "deleting shared data sources"
-ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)
   A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.  Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
@@ -77,10 +74,10 @@ ms.author: maggies
   
 7.  For **Connection string**, specify the connection string that the report server uses to connect to the data source. We recommend not specifying credentials in the connection string.  
   
-     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AdventureWorks2016 database:  
+     The following example illustrates a connection string for connecting to the local [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2016 
+    data source=<localservername>; initial catalog=AdventureWorks2022 
     ```  
   
 8.  For **Connect using**, specify how credentials are obtained when the report runs:  

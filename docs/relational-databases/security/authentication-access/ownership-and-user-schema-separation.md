@@ -1,13 +1,13 @@
 ---
 title: "Ownership and user-schema separation in SQL Server"
-description: Learn how user-schema separation allows flexibility in managing SQL Server database object permissions. Schemas group objects into separate namespaces. 
-ms.date: "08/09/2021"
-ms.prod: sql
-ms.technology: security
-ms.topic: conceptual
-ms.reviewer: vanto
+description: Learn how user-schema separation allows flexibility in managing SQL Server database object permissions. Schemas group objects into separate namespaces.
 author: AndreasWolter
 ms.author: anwolter
+ms.reviewer: vanto
+ms.date: "08/09/2021"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
 ---
 # Ownership and user-schema separation in SQL Server
 

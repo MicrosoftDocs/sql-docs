@@ -4,9 +4,8 @@ description: MSdistpublishers (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSdistpublishers"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSdistpublishers system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 ---
 # MSdistpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

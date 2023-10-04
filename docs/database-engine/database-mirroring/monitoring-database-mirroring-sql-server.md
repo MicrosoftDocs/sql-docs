@@ -4,8 +4,8 @@ description: Learn about the Database Mirroring Monitor, system stored procedure
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.technology: database-mirroring
+ms.service: sql
+ms.subservice: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
   - "monitoring [SQL Server], database mirroring"

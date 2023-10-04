@@ -4,9 +4,8 @@ description: Create indexes with included columns
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: "03/09/2017"
-ms.prod: sql
-ms.prod_service: "table-view-index, sql-database"
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
   - "index size [SQL Server]"
@@ -18,7 +17,6 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], included columns"
   - "designing indexes [SQL Server], included columns"
   - "nonkey columns"
-ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create indexes with included columns
@@ -44,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 -   The order of nonkey columns in the index definition does not impact the performance of queries that use the index.
 
--   Avoid very wide nonclustered indexes where the included columns don’t represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
+-   Avoid very wide nonclustered indexes where the included columns don't represent a narrow enough subset of the underlying table columns. If adding wide indexes, always verify if the cost of updating one extra wide index offsets the cost of reading directly from the table.
   
 ###  <a name="Restrictions"></a> Limitations and restrictions  
   
@@ -85,7 +83,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
 6.  Under the **Index key columns** tab, click **Add...**.  
   
-7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
+7.  In the **Select Columns from** _table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the index.  
   
 8.  Click **OK**.  
   
@@ -108,7 +106,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
     -- index key column is PostalCode and the nonkey columns are  

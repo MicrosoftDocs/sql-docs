@@ -4,8 +4,8 @@ description: Install replication components by using the SQL Server Installation
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: "07/26/2017"
-ms.prod: sql
-ms.technology: install
+ms.service: sql
+ms.subservice: install
 ms.topic: conceptual
 ms.custom: intro-installation
 helpviewer_keywords:
@@ -37,8 +37,8 @@ After replication components are installed, you must configure the server before
   
 - See [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
-## See also  
- [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
- [Features Supported by the Editions of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) and
- [Features Supported by the Editions of SQL Server  2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
+## Related content
+
+- [SQL Server installation guide](install-sql-server.md)
+- [Install SQL Server on Windows from the command prompt](install-sql-server-from-the-command-prompt.md)
+- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)

@@ -1,23 +1,19 @@
 ---
-description: "Delete a Subscription View (Master Data Services)"
 title: Delete a Subscription View
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: sql
-ms.prod_service: "mds"
-ms.reviewer: ""
-ms.technology: master-data-services
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "deleting subscription views [Master Data Services]"
-  - "subscription views [Master Data Services], deleting"
-ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
+description: "Delete a Subscription View (Master Data Services)"
 author: CordeliaGrey
 ms.author: jiwang6
+ms.date: "03/01/2017"
+ms.service: sql
+ms.subservice: master-data-services
+ms.topic: conceptual
+helpviewer_keywords:
+  - "deleting subscription views [Master Data Services]"
+  - "subscription views [Master Data Services], deleting"
 ---
 # Delete a Subscription View (Master Data Services)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  
   

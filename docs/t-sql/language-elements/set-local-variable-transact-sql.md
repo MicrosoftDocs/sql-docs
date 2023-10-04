@@ -3,13 +3,10 @@ title: "SET @local_variable (Transact-SQL)"
 description: "SET @local_variable (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: ""
 ms.date: "04/13/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: ""
 helpviewer_keywords:
   - "SET @local_variable"
   - "variables [SQL Server], assigning"
@@ -17,14 +14,14 @@ helpviewer_keywords:
   - "local variables [SQL Server]"
 dev_langs:
   - "TSQL"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-mi-current||=fabric"
 ---
 # SET @local_variable (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
 Sets the specified local variable, previously created by using the DECLARE @*local_variable* statement, to the specified value.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
 Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance:
@@ -54,7 +51,9 @@ SET
     }  
 }   
 ```  
-Syntax for Azure Synapse Analytics and Parallel Data Warehouse:  
+
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse and [!INCLUDE [fabric](../../includes/fabric.md)]:  
+
 ```syntaxsql
 SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
@@ -200,7 +199,7 @@ GO
 The following example creates a local variable named `@state` and uses the local variable in a `SELECT` statement to find the first and last names of all employees who live in the state of `Oregon`.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
@@ -254,7 +253,7 @@ DECLARE @CursorVar CURSOR;
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
 FOR  
 SELECT LastName, FirstName  
-FROM AdventureWorks2019.HumanResources.vEmployee  
+FROM AdventureWorks2022.HumanResources.vEmployee  
 WHERE LastName like 'B%';  
   
 OPEN @CursorVar;  
@@ -274,7 +273,7 @@ GO
 The following example uses a query to assign a value to a variable.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
@@ -313,7 +312,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### J. Printing the value of a variable initialized by using SET  
 The following example creates the `@myvar` variable, puts a string value into the variable, and prints the value of the `@myvar` variable.  

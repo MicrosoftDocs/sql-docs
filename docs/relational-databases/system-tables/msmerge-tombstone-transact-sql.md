@@ -4,9 +4,8 @@ description: MSmerge_tombstone (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.technology: replication
+ms.service: sql
+ms.subservice: replication
 ms.topic: "reference"
 f1_keywords:
   - "MSmerge_tombstone_TSQL"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "MSmerge_tombstone system table"
 dev_langs:
   - "TSQL"
-ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 ---
 # MSmerge_tombstone (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,16 +1,13 @@
 ---
-title: "Highlight chart data by adding strip lines in a paginated report | Microsoft Docs"
+title: "Highlight chart data by adding strip lines in a paginated report"
 description: Use strip lines in horizontal or vertical ranges in a paginated report to improve readability, highlight dates, or highlight a specific key range in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Highlight chart data by adding strip lines in a paginated report (Report Builder)
 

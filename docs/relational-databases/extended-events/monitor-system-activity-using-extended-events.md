@@ -4,14 +4,12 @@ description: Use Extended Events with Event Tracing for Windows to monitor syste
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: "03/06/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: xevents
+ms.service: sql
+ms.subservice: xevents
 ms.topic: tutorial
 helpviewer_keywords:
   - "xe"
   - "extended events [SQL Server], monitoring system activity"
-ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor System Activity Using Extended Events

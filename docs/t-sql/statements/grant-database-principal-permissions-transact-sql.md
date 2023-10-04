@@ -5,11 +5,9 @@ description: Grant permissions on a database user, database role, or application
 author: VanMSFT
 ms.author: vanto
 ms.date: "03/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
-ms.custom: seo-lt-2019
 helpviewer_keywords:
   - "database roles [SQL Server], permissions"
   - "permissions [SQL Server], database roles"
@@ -24,15 +22,15 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 dev_langs:
   - "TSQL"
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
   Grants permissions on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -87,7 +85,7 @@ GRANT permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
@@ -164,7 +162,7 @@ GRANT permission [ ,...n ]
 ## Examples  
   
 ### A. Granting CONTROL permission on a user to another user  
- The following example grants `CONTROL` permission on `AdventureWorks2012` user `Wanida` to user `RolandX`.  
+ The following example grants `CONTROL` permission on [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] user `Wanida` to user `RolandX`.  
   
 ```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -172,7 +170,7 @@ GO
 ```  
   
 ### B. Granting VIEW DEFINITION permission on a role to a user with GRANT OPTION  
- The following example grants `VIEW DEFINITION` permission on `AdventureWorks2012` role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
+ The following example grants `VIEW DEFINITION` permission on [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
   
 ```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -181,9 +179,9 @@ GO
 ```  
   
 ### C. Granting IMPERSONATE permission on a user to an application role  
- The following example grants `IMPERSONATE` permission on user `HamithaL` to `AdventureWorks2012` application role `AccountsPayable17`.  
+ The following example grants `IMPERSONATE` permission on user `HamithaL` to [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

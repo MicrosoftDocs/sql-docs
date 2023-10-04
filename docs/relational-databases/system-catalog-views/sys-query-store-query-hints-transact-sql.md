@@ -3,12 +3,10 @@ title: "sys.query_store_query_hints (Transact-SQL)"
 description: The sys.query_store_query_hints system catalog view returns Query Store hints.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.date: 10/14/2022
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "language-reference"
-ms.custom: event-tier1-build-2022
 f1_keywords:
   - "SYS.QUERY_STORE_QUERY_HINTS"
   - "QUERY_STORE_QUERY_HINTS"
@@ -37,6 +35,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-ver16||
 |**source**|int|Source of Query Store hint: user source is zero and system-generated is non-zero. |
 |**source_desc**|nvarchar(128)|Description of source of Query Store hint.|
 |**comment**|nvarchar(max)|Internal use only.|
+|**query_hint_scope**| tinyint | Determines the scope at which the hint will be applied, as per the `replica_group_id` column in [sys.query_store_replicas](../system-catalog-views/sys-query-store-replicas.md). |
 
 ## Remarks
  Query Store hints are created by [sys.sp_query_store_set_hints (Transact-SQL)](../system-stored-procedures/sys-sp-query-store-set-hints-transact-sql.md) and removed by [sys.sp_query_store_clear_hints](../system-stored-procedures/sys-sp-query-store-clear-hints-transact-sql.md).

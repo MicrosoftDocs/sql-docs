@@ -1,16 +1,13 @@
 ---
+title: "Configure column encryption using Always Encrypted with PowerShell"
 description: "Configure column encryption using Always Encrypted with PowerShell"
-title: "Configure column encryption using Always Encrypted with PowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/31/2019"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.technology: security
+ms.date: "04/05/2023"
+ms.service: sql
+ms.subservice: security
 ms.topic: conceptual
-ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-author: jaszymas
-ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with PowerShell
@@ -30,7 +27,8 @@ For more information about Always Encrypted support in the SqlServer PowerShell 
 
 To set the target encryption configuration, you need to make sure:
 - a column encryption key is configured in the database (if you're encrypting or re-encrypting a column). For details, see [Configure Always Encrypted keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
-- you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets. 
+- you can access the column master key for each column you want to encrypt, re-encrypt, or decrypt, from the computer running the PowerShell cmdlets.
+- you use SqlServer PowerShell module version 22.0.50 or later.
 
 ## Performance and Availability Considerations
 
@@ -60,9 +58,10 @@ Task  |Article  |Accesses plaintext keys/key store  |Accesses database
 ---|---|---|---
 Step 1. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 Step 2. Connect to your server and database | [Connecting to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
-Step 3. Authenticate to Azure, if your column master key (protecting the column encryption key, to be rotated), is stored in Azure Key Vault | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Yes | No
-Step 4. Construct an array of SqlColumnEncryptionSettings objects - one for each database column, you want to encrypt, re-encrypt, or decrypt. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). It specifies the target encryption scheme for a column. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
-Step 5. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted, or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications won't be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
+Step 3. Authenticate to Azure, if your column master key (protecting the column encryption key, to be rotated), is stored in Azure Key Vault | [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) | Yes | No
+Step 4. Obtain an access token for Azure Key Vaults, if your column master key is stored in Azure Key Vault. | [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) | No | No
+Step 5. Construct an array of SqlColumnEncryptionSettings objects - one for each database column, you want to encrypt, re-encrypt, or decrypt. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). It specifies the target encryption scheme for a column. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
+Step 6. Set the desired encryption configuration, specified in the array of SqlColumnMasterKeySettings objects, you created in the previous step. A column will be encrypted, re-encrypted, or decrypted, depending on the specified target settings and the current encryption configuration of the column.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Note:** This step may take a long time. Your applications won't be able to access the tables through the entire operation or a portion of it, depending on the approach (online vs. offline), you select. | Yes | Yes
 
 ## Encrypt Columns using Offline Approach - Example
 
@@ -71,7 +70,14 @@ The below example demonstrates setting the target encryption configuration for a
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
+Import-Module Az.Accounts -MinimumVersion 2.2.0
+
+#Connect to Azure
+Connect-AzAccount
+
+# Obtain an access token for key vaults.
+$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token  
 
 # Connect to your database.
 $serverName = "<server name>"
@@ -84,7 +90,7 @@ $database = Get-SqlDatabase -ConnectionString $connStr
 $ces = @()
 $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Patients.SSN" -EncryptionType "Deterministic" -EncryptionKey "CEK1"
 $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Patients.BirthDate" -EncryptionType "Randomized" -EncryptionKey "CEK1"
-Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory .
+Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -LogFileDirectory . -KeyVaultAccessToken $keyVaultAccessToken
 ```
  
 ## Encrypt Columns using Online Approach - Example
@@ -93,7 +99,14 @@ The below example demonstrates setting the target encryption configuration for a
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
+Import-Module Az.Accounts -MinimumVersion 2.2.0
+
+#Connect to Azure
+Connect-AzAccount
+
+# Obtain an access token for key vaults.
+$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token  
 
 # Connect to your database.
 $serverName = "<server name>"
@@ -106,7 +119,7 @@ $database = Get-SqlDatabase -ConnectionString $connStr
 $ces = @()
 $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Patients.SSN" -EncryptionType "Deterministic" -EncryptionKey "CEK1"
 $ces += New-SqlColumnEncryptionSettings -ColumnName "dbo.Patients.BirthDate" -EncryptionType "Randomized" -EncryptionKey "CEK1"
-Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -UseOnlineApproach -MaxDowntimeInSeconds 180 -LogFileDirectory .
+Set-SqlColumnEncryption -InputObject $database -ColumnEncryptionSettings $ces -UseOnlineApproach -MaxDowntimeInSeconds 180 -LogFileDirectory . -KeyVaultAccessToken $keyVaultAccessToken
 ```
 ## Decrypt Columns - Example
 
@@ -115,7 +128,14 @@ The following example shows how to decrypt all columns that are currently encryp
 
 ```PowerShell
 # Import the SqlServer module.
-Import-Module "SqlServer"
+Import-Module "SqlServer" -MinimumVersion 22.0.50
+Import-Module Az.Accounts -MinimumVersion 2.2.0
+
+#Connect to Azure
+Connect-AzAccount
+
+# Obtain an access token for key vaults.
+$keyVaultAccessToken = (Get-AzAccessToken -ResourceUrl https://vault.azure.net).Token  
 
 # Connect to your database.
 $serverName = "<server name>"
@@ -138,7 +158,7 @@ for($i=0; $i -lt $tables.Count; $i++){
 }
 
 # Decrypt all columns.
-Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
+Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory . -KeyVaultAccessToken $keyVaultAccessToken
 ```
  
 ## Next Steps

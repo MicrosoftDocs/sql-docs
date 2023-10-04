@@ -4,9 +4,8 @@ description: sys.database_credentials (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "02/27/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.database_credentials"
@@ -17,7 +16,6 @@ helpviewer_keywords:
   - "sys.database_credentials catalog view"
 dev_langs:
   - "TSQL"
-ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_credentials (Transact-SQL)

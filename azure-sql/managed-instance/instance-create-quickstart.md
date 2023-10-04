@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Create an Azure SQL Managed Instance (portal)"
 description: Create a managed instance, network environment, and client VM for access using the Azure portal in this quickstart.
-author: urosmil
-ms.author: urmilano
+author: urosran
+ms.author: urandjelovic
 ms.reviewer: mathoma
 ms.date: 04/06/2022
 ms.service: sql-managed-instance
@@ -59,11 +59,11 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 | Setting| Suggested value | Description |
 | ------ | --------------- | ----------- |
 | **Service Tier** | Select one of the options. | Based on your scenario, select one of the following options: </br> <ul><li>**General Purpose**: for most production workloads, and the default option.</li><li>**Business Critical**: designed for low-latency workloads with high resiliency to failures and fast failovers.</li></ul><BR>For more information, review [service tiers](service-tiers-managed-instance-vcore.md) and [resource limits](./resource-limits.md).|
-| **Hardware Configuration** | Select one of the options. | Hardware configuration generally defines the compute and memory limits and other characteristics that impact the performance of the workload. **Gen5** is the default.|
+| **Hardware Configuration** | Select one of the options. | Hardware configuration generally defines the compute and memory limits and other characteristics that impact the performance of the workload. **Standard-series (Gen5)** is the default.|
 | **vCore compute model** | Select an option. | vCores represent exact amount of compute resources that are always provisioned for your workload. **Eight vCores** is the default.|
 | **Storage in GB** | Select an option. | Storage size in GB, select based on expected data size. If migrating existing data from on-premises or on various cloud platforms, see [Migration overview: SQL Server to SQL Managed Instance](../migration-guides/managed-instance/sql-server-to-managed-instance-overview.md).|
 | **Azure Hybrid Benefit** | Check option if applicable. | For leveraging an existing license for Azure. For more information, see [Azure Hybrid Benefit - Azure SQL Database & SQL Managed Instance](../azure-hybrid-benefit.md). |
-| **Backup storage redundancy** | Select **Geo-redundant backup storage**. | Storage redundancy inside Azure for backup storage. Note that this value cannot be changed later. Geo-redundant backup storage is default and recommended, though Zone and Local redundancy allow for more cost flexibility and single region data residency. For more information, see [Backup Storage redundancy](../database/automated-backups-overview.md?tabs=managed-instance#backup-storage-redundancy).|
+| **Backup storage redundancy** | Select **Geo-redundant backup storage**. | Storage redundancy inside Azure for backup storage. Note that this value cannot be changed later. Geo-redundant backup storage is default and recommended, though Zone and Local redundancy allow for more cost flexibility and single region data residency. For more information, see [Backup Storage redundancy](automated-backups-overview.md?tabs=managed-instance#backup-storage-redundancy).|
 
 
 - To review your choices before you create a SQL Managed Instance, you can select **Review + create**. Or, configure networking options by selecting **Next: Networking**.
@@ -168,7 +168,7 @@ To optionally fine-tune networking settings, inspect the following:
     To change or add rules, open the **Inbound Security Rules** and **Outbound security rules** in the Network security group settings.
 
 > [!IMPORTANT]
-> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-on-the-network-security-group).
+> If you have configured a public endpoint for SQL Managed Instance, you need to open ports to allow network traffic allowing connections to SQL Managed Instance from the public internet. For more information, see [Configure a public endpoint for SQL Managed Instance](public-endpoint-configure.md#allow-public-endpoint-traffic-in-the-network-security-group).
 >
 
 ## Retrieve connection details to SQL Managed Instance
@@ -191,7 +191,7 @@ To learn about how to connect to SQL Managed Instance:
 - For a quickstart that shows how to connect to SQL Managed Instance from an on-premises client computer by using a point-to-site connection, see [Configure a point-to-site connection](point-to-site-p2s-configure.md).
 
 To restore an existing SQL Server database from on-premises to SQL Managed Instance: 
-- Use the [Azure Database Migration Service for migration](/azure/dms/tutorial-sql-server-to-managed-instance) to restore from a database backup file. 
+- Use the [Azure Database Migration Service](/azure/dms/tutorial-sql-server-managed-instance-online-ads) to restore from a database backup file.
 - Use the [T-SQL RESTORE command](restore-sample-database-quickstart.md) to restore from a database backup file.
 
 For advanced monitoring of SQL Managed Instance database performance with built-in troubleshooting intelligence, see [Monitor Azure SQL Managed Instance by using Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql).

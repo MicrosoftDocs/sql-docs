@@ -1,23 +1,17 @@
 ---
+title: "SMO Object Model Diagram"
 description: "SMO Object Model Diagram"
-title: "SMO Object Model Diagram | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: 
-
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "object models [SMO]"
-ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: "markingmyname"
 ms.author: "maghan"
+ms.date: "03/04/2017"
+ms.service: sql
+ms.topic: "reference"
+helpviewer_keywords:
+  - "object models [SMO]"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Object Model Diagram
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This diagram shows the SMO object hierarchy and the relationships between the object types. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object.  
   

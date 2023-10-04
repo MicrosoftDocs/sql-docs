@@ -1,16 +1,12 @@
 ---
-title: "Deleting Backup Blob Files with Active Leases | Microsoft Docs"
+title: "Deleting Backup Blob Files with Active Leases"
 description: If a SQL Server backup or restore fails, a blob in Azure Storage can become orphaned. Learn how to delete an orphaned blob.
-ms.custom: ""
-ms.date: "08/17/2017"
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
-ms.topic: conceptual
-ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MashaMSFT
 ms.author: mathoma
+ms.date: "08/17/2017"
+ms.service: sql
+ms.subservice: backup-restore
+ms.topic: conceptual
 ---
 # Delete backup blob files with active leases
 
@@ -57,7 +53,7 @@ The follow steps describe how to clean up after failed backup or restore activit
 #### Tips on running this script
   
 > [!WARNING]  
-> If a backup to the Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to concurrently acquire. Run this script during a maintenance window or when no backups are running or expected to run.  
+> If a backup to Azure Blob Storage is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to concurrently acquire. Run this script during a maintenance window or when no backups are running or expected to run.  
   
 - Before you run this script, you should add values for the storage account, storage key, container, and the Azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll.
   

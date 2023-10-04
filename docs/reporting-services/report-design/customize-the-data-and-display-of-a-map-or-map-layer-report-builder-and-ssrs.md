@@ -1,14 +1,14 @@
 ---
-title: "Customize the display of a map or map layer in a paginated report | Microsoft Docs"
-description:  Improve the user experience of data and display in a paginated report with changes to legends, color, labels, and resolution in Report Builder. 
+title: "Customize the display of a map or map layer in a paginated report"
+description: Improve the user experience of data and display in a paginated report with changes to legends, color, labels, and resolution in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/07/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10521"
   - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
   - "10515"
@@ -20,9 +20,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
   - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
   - "10507"
-ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Customize the display of a map or map layer in a paginated report (Report Builder)
 

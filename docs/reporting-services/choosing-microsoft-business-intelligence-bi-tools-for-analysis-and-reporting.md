@@ -3,13 +3,11 @@ title: Analysis and reporting with Microsoft business intelligence (BI) tools
 description: Learn about the workloads mapped for data analysis and reporting, and about the Microsoft BI tools that are best suited for those workloads.
 author: maggiesMSFT
 ms.author: maggies
-ms.reviewer: ""
-ms.prod: reporting-services
-ms.technology: reporting-services
-ms.prod_service: reporting-services-native
-ms.topic: conceptual
-ms.custom: seodec18
 ms.date: 07/22/2020
+ms.service: reporting-services
+ms.subservice: reporting-services
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Analysis and reporting with Microsoft business intelligence (BI) tools
 
@@ -34,7 +32,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 |Collaborate and share|||[SharePoint Sites](/sharepoint/getting-started)|[SharePoint Team Sites](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI Sites](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Corporate BI**|IT Pro||||||  
 |Create multi-dimensional/tabular corporate models||||||[Analysis Services](/analysis-services/analysis-services-overview)|  
-|Create ad-hoc data visualizations|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
+|Create ad hoc data visualizations|||[Power View for SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Create dashboards|||[SharePoint Dashboards](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](/SharePoint/administration/performancepoint-services-overview)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Create operational reports||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Create custom and embedded reports|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  

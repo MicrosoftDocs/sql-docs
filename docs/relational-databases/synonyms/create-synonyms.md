@@ -1,18 +1,17 @@
 ---
-description: "Create Synonyms"
 title: "Create Synonyms"
-ms.custom: ""
-ms.date: "02/01/2022"
-ms.prod: sql
-ms.technology: t-sql
-ms.topic: conceptual
-f1_keywords: 
-  - "sql13.swb.synonym.general.f1"
-helpviewer_keywords: 
-  - "creating synonyms"
-  - "synonyms [SQL Server], creating"
+description: "Create Synonyms"
 author: markingmyname
 ms.author: maghan
+ms.date: "02/01/2022"
+ms.service: sql
+ms.subservice: t-sql
+ms.topic: conceptual
+f1_keywords:
+  - "sql13.swb.synonym.general.f1"
+helpviewer_keywords:
+  - "creating synonyms"
+  - "synonyms [SQL Server], creating"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Synonyms
@@ -70,7 +69,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 USE tempdb;  
 GO  
 CREATE SYNONYM MyAddressType  
-FOR AdventureWorks2012.Person.AddressType;  
+FOR AdventureWorks2022.Person.AddressType;  
 GO  
 ```  
   

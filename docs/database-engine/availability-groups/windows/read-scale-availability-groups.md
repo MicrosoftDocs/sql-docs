@@ -4,10 +4,9 @@ description: "Learn details about how to achieve read-scale when using Always On
 author: MashaMSFT
 ms.author: mathoma
 ms.date: "10/24/2017"
-ms.prod: sql
-ms.technology: availability-groups
+ms.service: sql
+ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: seodec18
 ---
 # Use read-scale with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

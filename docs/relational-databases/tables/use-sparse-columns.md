@@ -1,19 +1,16 @@
 ---
-description: "Use Sparse Columns"
 title: "Use Sparse Columns"
-ms.custom: ""
+description: "Use Sparse Columns"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.date: "07/09/2021"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, synapse-analytics, pdw"
-ms.reviewer: ""
-ms.technology: table-view-index
+ms.service: sql
+ms.subservice: table-view-index
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "sparse columns, described"
   - "null columns"
   - "sparse columns"
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use sparse columns
@@ -185,7 +182,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 >  This table has only five columns to make it easier to display and read. Declaring the sparse columns to be nullable is optional if the [ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) option is set. When SET ANSI_DEFAULTS is ON, SET ANSI_NULL_DFLT_ON is enabled. ANSI_DEFAULTS is ON by default for most connection providers. For more information, see [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md).
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TABLE DocumentStore  

@@ -4,8 +4,8 @@ description: "sys.index_columns contains one row per column that is part of an i
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 10/14/2022
-ms.prod: sql
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.index_columns"
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**partition_ordinal**|**tinyint**|Ordinal (1-based) within set of partitioning columns. A clustered columnstore index can have at most one partitioning column.<br /><br />0 = Not a partitioning column.|
 |**is_descending_key**|**bit**|`1` = Index key column has a descending sort direction.<br /><br />`0` = Index key column has an ascending sort direction, or the column is part of a columnstore or hash index.|
 |**is_included_column**|**bit**|`1` = Column is a non-key column added to the index by using the CREATE INDEX INCLUDE clause, or the column is part of a columnstore index.<br /><br />`0` = Column is not an included column.<br /><br />Columns implicitly added because they're part of the clustering key are not listed in `sys.index_columns`.<br /><br />Columns implicitly added because they're a partitioning column are returned as `0`.|
-|**column_store_order_ordinal**|**tinyint**|Applies to: [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Ordinal (1-based) within set of order columns in an ordered clustered columnstore index. For more on ordered clustered columnstore indexes, see [Columnstore index design guidance](../indexes/columnstore-indexes-design-guidance.md).|
+|**column_store_order_ordinal**|**tinyint**|Applies to: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]<br />Ordinal (1-based) within set of order columns in an ordered clustered columnstore index. For more on ordered clustered columnstore indexes, see [Columnstore index design guidance](../indexes/columnstore-indexes-design-guidance.md).|
 
 ## Permissions
 
@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example returns all indexes and index columns for the table `Production.BillOfMaterials`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT i.name AS index_name
     ,COL_NAME(ic.object_id,ic.column_id) AS column_name

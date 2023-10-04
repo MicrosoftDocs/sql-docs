@@ -1,20 +1,16 @@
 ---
+title: "Data Buffer Address"
 description: "Data Buffer Address"
-title: "Data Buffer Address | Microsoft Docs"
-ms.custom: ""
+author: David-Engel
+ms.author: v-davidengel
 ms.date: "01/19/2017"
-ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
-helpviewer_keywords: 
+helpviewer_keywords:
   - "address of data buffers [ODBC]"
   - "buffers [ODBC], data"
   - "data buffers [ODBC], address"
-ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
-author: David-Engel
-ms.author: v-davidengel
 ---
 # Data Buffer Address
 The application passes the address of the data buffer to the driver in an argument, often named *ValuePtr* or a similar name. For example, in the following call to **SQLBindCol**, the application specifies the address of the *Date* variable:  

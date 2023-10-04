@@ -1,16 +1,13 @@
 ---
-title: "FLWOR Statement and Iteration (XQuery) | Microsoft Docs"
+title: "FLWOR Statement and Iteration (XQuery)"
 description: Learn about the for, let, where, order by, and return clauses that make up the FLOWR iteration syntax in XQuery.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "return clause"
   - "FLWOR statement"
   - "effective Boolean value [XQuery]"
@@ -21,12 +18,11 @@ helpviewer_keywords:
   - "iterations [XQuery]"
   - "XQuery, FLWOR statement"
   - "EBV"
-ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # FLWOR Statement and Iteration (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   XQuery defines the FLWOR iteration syntax. FLWOR is the acronym for `for`, `let`, `where`, `order by`, and `return`.  
   
@@ -355,7 +351,7 @@ WHERE ProductModelID=7
  The following query retrieves all the telephone numbers for a specific customer from the AdditionalContactInfo column. The results are sorted by telephone number.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT AdditionalContactInfo.query('  
    declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  

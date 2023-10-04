@@ -1,14 +1,12 @@
 ---
-description: "Showplan Logical and Physical Operators Reference"
 title: "Showplan Logical & Physical Operators Reference"
-ms.custom: seo-dt-2019
+description: "Showplan Logical and Physical Operators Reference"
+author: rwestMSFT
+ms.author: randolphwest
 ms.date: "10/12/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.service: sql
 ms.topic: conceptual
-f1_keywords: 
+f1_keywords:
   - "sql13.swb.showplan.leftouterjoin.f1"
   - "sql13.swb.showplan.remotedelete.f1"
   - "sql13.swb.showplan.parallelism.f1"
@@ -120,7 +118,7 @@ f1_keywords:
   - "sql13.swb.showplan.concatenation.f1"
   - "sql13.swb.showplan.computescalar"
   - "sql13.swb.showplan.foreignkeyreferencescheck"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "execution plans [SQL Server], operators"
   - "ActualRows attribute"
   - "reading execution plan output"
@@ -134,9 +132,6 @@ helpviewer_keywords:
   - "physical operators [SQL Server]"
   - "ActualRebinds attribute"
   - "execution plans [SQL Server], reading output"
-ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-author: rwestMSFT
-ms.author: randolphwest
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan Logical and Physical Operators Reference
@@ -199,7 +194,7 @@ A related counter, **ActualEndOfScans**, is available only when Showplan output 
 |![Clustered index insert operator icon](../relational-databases/media/clustered-index-insert-32x.gif "Clustered index insert operator icon")|**Clustered Index Insert**|The **Clustered Index Insert** Showplan operator inserts rows from its input into the clustered index specified in the Argument column. The Argument column also contains a SET:() predicate, which indicates the value to which each column is set. If **Clustered Index Insert** has no children for insert values, the row inserted is taken from the **Insert** operator itself.**Clustered Index Insert** is a physical operator.| 
 |![Clustered index merge operator](../relational-databases/media/clustered-index-merge-32x.gif "Clustered index merge operator")|**Clustered Index Merge**|The **Clustered Index Merge** operator applies a merge data stream to a clustered index. The operator deletes, updates, or inserts rows from the clustered index specified in the **Argument** column of the operator. The actual operation performed depends on the runtime value of the **ACTION** column specified in the **Argument** column of the operator. **Clustered Index Merge** is a physical operator.| 
 |![Clustered index scan operator icon](../relational-databases/media/clustered-index-scan-32x.gif "Clustered index scan operator icon")|**Clustered Index Scan**|The **Clustered Index Scan** operator scans the clustered index specified in the Argument column of the query execution plan. When an optional WHERE:() predicate is present, only those rows that satisfy the predicate are returned. If the Argument column contains the ORDERED clause, the query processor has requested that the output of the rows be returned in the order in which the clustered index has sorted it. If the ORDERED clause is not present, the storage engine scans the index in the optimal way, without necessarily sorting the output. **Clustered Index Scan** is a logical and physical operator.| 
-|![Clustered index seek operator icon](../relational-databases/media/clustered-index-seek-32x.gif "Clustered index seek operator icon")|**Clustered Index Seek**|The **Clustered Index Seek** operator uses the seeking ability of indexes to retrieve rows from a clustered index. The **Argument** column contains the name of the clustered index being used and the SEEK:() predicate. The storage engine uses the index to process only those rows that satisfy this SEEK:() predicate. It can also include a WHERE:() predicate where the storage engine evaluates against all rows that satisfy the SEEK:() predicate, but this is optional and does not use indexes to complete this process.<br /><br /> If the **Argument** column contains the ORDERED clause, the query processor has determined that the rows must be returned in the order in which the clustered index has sorted them. If the ORDERED clause is not present, the storage engine searches the index in the optimal way, without necessarily sorting the output. Allowing the output to retain its ordering can be less efficient than producing nonsorted output. When the keyword LOOKUP appears, then a bookmark lookup is being performed. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and later versions, the **Key Lookup** operator provides bookmark lookup functionality. **Clustered Index Seek** is a logical and physical operator.| 
+|![Clustered index seek operator icon](../relational-databases/media/clustered-index-seek-32x.gif "Clustered index seek operator icon")|**Clustered Index Seek**|The **Clustered Index Seek** operator uses the seeking ability of indexes to retrieve rows from a clustered index. The **Argument** column contains the name of the clustered index being used and the SEEK:() predicate. The storage engine uses the index to process only those rows that satisfy this SEEK:() predicate. It can also include a WHERE:() predicate where the storage engine evaluates against all rows that satisfy the SEEK:() predicate, but this is optional and does not use indexes to complete this process.<br /><br /> If the **Argument** column contains the ORDERED clause, the query processor has determined that the rows must be returned in the order in which the clustered index has sorted them. If the ORDERED clause is not present, the storage engine searches the index in the optimal way, without necessarily sorting the output. Allowing the output to retain its ordering can be less efficient than producing nonsorted output. When the keyword LOOKUP appears, then a bookmark lookup is being performed. In [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] and later versions, the **Key Lookup** operator provides bookmark lookup functionality. **Clustered Index Seek** is a logical and physical operator.| 
 |![Clustered index update operator icon](../relational-databases/media/clustered-index-update-32x.gif "Clustered index update operator icon")|**Clustered Index Update**|The **Clustered Index Update** operator updates input rows in the clustered index specified in the **Argument** column.If a WHERE:() predicate is present, only those rows that satisfy this predicate are updated. If a SET:() predicate is present, each updated column is set to this value. If a DEFINE:() predicate is present, the values that this operator defines are listed. These values may be referenced in the SET clause or elsewhere within this operator and elsewhere within this query. **Clustered Index Update** is a logical and physical operator.| 
 |![Collapse operator icon](../relational-databases/media/collapse-32x.gif "Collapse operator icon")|**Collapse**|The **Collapse** operator optimizes update processing. When an update is performed, it can be split (using the **Split** operator) into a delete and an insert. The **Argument** column contains a GROUP BY:() clause that specifies a list of key columns. If the query processor encounters adjacent rows that delete and insert the same key values, it replaces these separate operations with a single more efficient update operation. **Collapse** is a logical and physical operator.| 
 |![Columnstore Index Scan](../relational-databases/media/columnstoreindexscan.gif "Columnstore Index Scan")|**Columnstore Index Scan**|The **Columnstore Index Scan** operator scans the columnstore index specified in the **Argument** column of the query execution plan.| 

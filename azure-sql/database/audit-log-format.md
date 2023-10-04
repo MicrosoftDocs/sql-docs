@@ -36,7 +36,7 @@ Audit events are written to the namespace and event hub that was defined during 
 
 ### Log Analytics
 
-Audit events are written to Log Analytics workspace defined during auditing configuration, to the `AzureDiagnostics` table with the category `SQLSecurityAuditEvents`. For additional useful information about Log Analytics search language and commands, see [Log Analytics search reference](/azure/azure-monitor/logs/log-query-overview).
+Audit events are written to Log Analytics workspace defined during auditing configuration, to the `AzureDiagnostics` table with the category `SQLSecurityAuditEvents`, and table with the category `DevOpsOperationsAudit` for Microsoft Support Operations. For additional useful information about Log Analytics search language and commands, see [Log Analytics search reference](/azure/azure-monitor/logs/log-query-overview).
 
 ## <a id="subheading-1"></a>Audit log fields
 
@@ -68,7 +68,7 @@ Audit events are written to Log Analytics workspace defined during auditing conf
 | schema_name | schema_name_s | The schema context in which the action occurred. NULL for audits occurring outside a schema | sysname | string |
 | N/A | securable_class_type_s | Securable object that maps to the class_type being audited | N/A | string |
 | sequence_group_id | sequence_group_id_g | Unique identifier | varbinary | GUID |
-| sequence_number | sequence_number_d | Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits | int | int |
+| sequence_number | sequence_number_d | Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits. Note that Azure SQL Database and Azure Synapse Audit stores 4000 characters of data for character fields in an audit record. When there are more than 4000 characters, any data beyond the first 4000 characters will be truncated | int | int |
 | server_instance_name | server_instance_name_s | Name of the server instance where the audit occurred | sysname | string |
 | server_principal_id | server_principal_id_d | ID of the login context in which the action is performed | int | int |
 | server_principal_name | server_principal_name_s | Current login | sysname | string |

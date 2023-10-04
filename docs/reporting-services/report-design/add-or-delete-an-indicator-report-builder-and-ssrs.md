@@ -1,16 +1,13 @@
 ---
-title: "Add or delete an indicator in a paginated report | Microsoft Docs"
+title: "Add or delete an indicator in a paginated report"
 description: Learn how to add or delete an indicator in your paginated reports to convey the state of a single data value in Report Builder.
-ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
-ms.topic: conceptual
-ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 03/01/2017
+ms.service: reporting-services
+ms.subservice: report-design
+ms.topic: conceptual
+ms.custom: updatefrequency5
 ---
 # Add or delete an indicator in a paginated report (Report Builder)
 

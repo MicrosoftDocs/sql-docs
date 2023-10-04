@@ -1,16 +1,14 @@
 ---
 title: "Register computer with Host Guardian Service"
 description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
-ms.custom:
-- event-tier1-build-2022
-ms.date: "05/24/2022"
-ms.prod: sql
-ms.reviewer: vanto
-ms.technology: security
-ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.reviewer: vanto
+ms.date: "02/15/2023"
+ms.service: sql
+ms.subservice: security
+ms.topic: conceptual
+monikerRange: ">= sql-server-ver15"
 ---
 
 # Register computer with Host Guardian Service
@@ -22,16 +20,14 @@ This article describes how to register [!INCLUDE [ssnoversion-md](../../../inclu
 > [!NOTE]
 > The process of registering a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] with HGS requires a joint effort of the HGS administrator and the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator. See [Roles and responsibilities when configuring attestation with HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-Before you start, make sure you've deployed at least one HGS computer and set up the HGS attestation service. For more information, see [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md) for more information.
+Before you start, make sure you've deployed at least one HGS computer and set up the HGS attestation service. For more information, see [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md).
 
 ## Step 1: Install the attestation client components
 
 > [!NOTE]
 > This step should be performed by the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator.
 
-To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service.
-The attestation process is managed by an optional Windows component called the HGS Client.
-The steps below will help you install this component and begin attesting.
+To allow a SQL client to verify it's talking to a trustworthy [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer, the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer must successfully attest with the Host Guardian Service. The attestation process is managed by an optional Windows component called the HGS Client. The steps below will help you install this component and begin attesting.
 
 1. Ensure the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer meets the [prerequisites outlined in the HGS planning doc](./always-encrypted-enclaves-host-guardian-service-plan.md#prerequisites).
 
@@ -75,7 +71,7 @@ Before lowering the VBS required security features, check with your OEM or cloud
 To change the required platform security features for VBS, run the following command in an elevated PowerShell console:
 
 ```powershell
-# Value 0 = No security features required (use this for Azure VMs)
+# Value 0 = No security features required
 # Value 1 = Only Secure Boot is required
 # Value 2 = Only DMA protection is required (default configuration)
 # Value 3 = Both Secure Boot and DMA protection are required
@@ -84,7 +80,7 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 After changing the registry, restart the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer and check if VBS is running again.
 
-If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after rebooting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
+If the computer is managed by your company, Group Policy or Microsoft Endpoint Manager may override any changes you make to these registry keys after restarting. Contact your IT help desk to see if they deploy policies that manage your VBS configuration.
 
 ## Step 3: Configure the attestation URL
 

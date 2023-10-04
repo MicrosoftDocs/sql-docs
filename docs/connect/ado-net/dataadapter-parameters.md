@@ -4,8 +4,8 @@ description: Learn about the properties of DbDataAdapter that return data from a
 author: David-Engel
 ms.author: v-davidengel
 ms.date: "11/30/2020"
-ms.prod: sql
-ms.technology: connectivity
+ms.service: sql
+ms.subservice: connectivity
 ms.topic: conceptual
 dev_langs:
   - "csharp"

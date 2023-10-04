@@ -4,8 +4,8 @@ description: "@@IDENTITY (Transact-SQL)"
 author: VanMSFT
 ms.author: vanto
 ms.date: "08/29/2017"
-ms.prod: sql
-ms.technology: t-sql
+ms.service: sql
+ms.subservice: t-sql
 ms.topic: reference
 f1_keywords:
   - "@@IDENTITY_TSQL"
@@ -22,7 +22,7 @@ dev_langs:
 
   Is a system function that returns the last-inserted identity value.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -57,7 +57,7 @@ dev_langs:
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Display the value of LocationID in the last row in the table.  
 SELECT MAX(LocationID) FROM Production.Location;  

@@ -10,8 +10,8 @@ ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:
-  - "sqldbrb=2"
-  - "mode-other"
+  - sqldbrb=2
+  - mode-other
 keywords:
   - "connect to sql database"
   - "sql server management studio"
@@ -37,14 +37,14 @@ Completing this quickstart requires the following items:
   || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
   |||[Connectivity from on-site](../managed-instance/point-to-site-p2s-configure.md) | [Connect to SQL Server](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |Load data|Adventure Works loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
+  |Load data|Wide World Importers loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
   |||Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
 
 
   > [!IMPORTANT]
   > The scripts in this article are written to use the Adventure Works database. With a managed instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
-If you simply want to run some ad-hoc queries without installing SSMS, see [Quickstart: Use the Azure portal's query editor to query a database in Azure SQL Database](connect-query-portal.md).
+If you simply want to run some ad hoc queries without installing SSMS, use [the Azure portal's query editor to query a database in Azure SQL Database](query-editor.md).
 
 ## Get server connection information
 
@@ -184,7 +184,7 @@ Run this [DELETE](/sql/t-sql/statements/delete-transact-sql/) Transact-SQL code 
 ## Next steps
 
 - For information about SSMS, see [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms/).
-- To connect and query using the Azure portal, see [Connect and query with the Azure portal SQL Query editor](connect-query-portal.md).
+- To connect and query using the Azure portal, see [Connect and query with the Azure portal SQL Query editor](query-editor.md).
 - To connect and query using Visual Studio Code, see [Connect and query with Visual Studio Code](connect-query-vscode.md).
 - To connect and query using .NET, see [Connect and query with .NET](connect-query-dotnet-visual-studio.md).
 - To connect and query using PHP, see [Connect and query with PHP](connect-query-php.md).

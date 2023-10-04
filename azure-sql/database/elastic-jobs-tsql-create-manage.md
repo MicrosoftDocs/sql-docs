@@ -8,9 +8,7 @@ ms.date: 05/03/2022
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
-ms.custom:
-  - "seo-lt-2019"
-  - "sqldbrb=1"
+ms.custom: sqldbrb=1
 dev_langs:
   - "TSQL"
 ---
@@ -377,6 +375,7 @@ Connect to the [*job database*](job-automation-overview.md#elastic-job-database)
 --Connect to the job database specified when creating the job agent
 
 EXEC jobs.sp_delete_job @job_name='ResultsPoolsJob';
+EXEC jobs.sp_purge_jobhistory @job_name='ResultsPoolsJob';
 
 --Note: job history is automatically deleted if it is >45 days old
 ```
@@ -676,7 +675,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. max_parallelism is int.
 
 #### Return Code Values
 
@@ -801,7 +800,7 @@ If not null, the name of the table that the command's first result set will be w
 Output parameter that will be assigned the new job version number. job_version is int.
 
 [ **\@max_parallelism =** ] max_parallelism OUTPUT  
-The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or is inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
+The maximum level of parallelism per elastic pool. If set, then the job step will be restricted to only run on a maximum of that many databases per elastic pool. This applies to each elastic pool that is either directly included in the target group or to elastic pools inside a server that is included in the target group. To reset the value of max_parallelism back to null, set this parameter's value to -1. max_parallelism is int.
 
 #### Return Code Values
 
@@ -1010,7 +1009,6 @@ Adds a database or group of databases to a target group.
         [ , [ @server_name = ] 'server_name' ]
         [ , [ @database_name = ] 'database_name' ]
         [ , [ @elastic_pool_name = ] 'elastic_pool_name' ]
-        [ , [ @shard_map_name = ] 'shard_map_name' ]
         [ , [ @target_id = ] 'target_id' OUTPUT ]
 ```
 
@@ -1023,7 +1021,7 @@ The name of the target group to which the member will be added. target_group_nam
 Specifies if the target group member will be included or excluded. target_group_name is nvarchar(128), with default of 'Include'. Valid values for membership_type are 'Include' or 'Exclude'.
 
 [ **\@target_type =** ] 'target_type'  
-The type of target database or collection of databases including all databases in a server, all databases in an Elastic pool, all databases in a shard map, or an individual database. target_type is nvarchar(128), with no default. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase', or 'SqlShardMap'.
+The type of target database or collection of databases including all databases in a server, all databases in an Elastic pool, or an individual database. target_type is nvarchar(128), with no default. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase'.
 
 [ **\@refresh_credential_name =** ] 'refresh_credential_name'  
 The name of the database scoped credential. refresh_credential_name is nvarchar(128), with no default.
@@ -1036,9 +1034,6 @@ The name of the database that should be added to the specified target group. dat
 
 [ **\@elastic_pool_name =** ] 'elastic_pool_name'  
 The name of the Elastic pool that should be added to the specified target group. elastic_pool_name should be specified when target_type is 'SqlElasticPool'. elastic_pool_name is nvarchar(128), with no default.
-
-[ **\@shard_map_name =** ] 'shard_map_name'  
-The name of the shard map pool that should be added to the specified target group. elastic_pool_name should be specified when target_type is 'SqlShardMap'. shard_map_name is nvarchar(128), with no default.
 
 [ **\@target_id =** ] target_group_id OUTPUT  
 The target identification number assigned to the target group member if created added to the target group. target_id is an output variable of type uniqueidentifier, with a default of NULL.
@@ -1232,6 +1227,7 @@ Shows job execution history.
 |**end_time** | datetime2(7) | Date and time the job finished execution. NULL if the job has not yet been executed or has not yet completed execution.
 |**current_attempts** | int | Number of times the step was retried. Parent job will be 0, child job executions will be 1 or greater based on the execution policy.
 |**current_attempt_start_time** | datetime2(7) | Date and time the job started execution. NULL indicates this is the parent job execution.
+|**next_attempt_start_time** | datetime2(7) | Date and time the job will start next execution. NULL indicates this is the parent job execution.
 |**last_message** | nvarchar(max) | Job or step history message.
 |**target_type** | nvarchar(128) | Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool' or 'SqlDatabase'. NULL indicates this is the parent job execution.
 |**target_id** | uniqueidentifier | Unique ID of the target group member.  NULL indicates this is the parent job execution.
@@ -1330,7 +1326,7 @@ Shows all members of all target groups.
 |**target_group_name**|nvarchar(128|The name of the target group, a collection of databases. |
 |**target_group_id**|uniqueidentifier|Unique ID of the target group.|
 |**membership_type**|int|Specifies if the target group member is included or excluded in the target group. Valid values for target_group_name are 'Include' or 'Exclude'.|
-|**target_type**|nvarchar(128)|Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase', or 'SqlShardMap'.|
+|**target_type**|nvarchar(128)|Type of target database or collection of databases including all databases in a server, all databases in an Elastic pool or a database. Valid values for target_type are 'SqlServer', 'SqlElasticPool', 'SqlDatabase'|
 |**target_id**|uniqueidentifier|Unique ID of the target group member.|
 |**refresh_credential_name**|nvarchar(128)|Name of the database scoped credential used to connect to the target group member.|
 |**subscription_id**|uniqueidentifier|Unique ID of the subscription.|
@@ -1338,13 +1334,9 @@ Shows all members of all target groups.
 |**server_name**|nvarchar(128)|Name of the server contained in the target group. Specified only if target_type is 'SqlServer'. |
 |**database_name**|nvarchar(128)|Name of the database contained in the target group. Specified only when target_type is 'SqlDatabase'.|
 |**elastic_pool_name**|nvarchar(128)|Name of the Elastic pool contained in the target group. Specified only when target_type is 'SqlElasticPool'.|
-|**shard_map_name**|nvarchar(128)|Name of the shard maps contained in the target group. Specified only when target_type is 'SqlShardMap'.|
-
-## Resources
-
-- ![Topic link icon](/sql/database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
 
 ## Next steps
 
+- [Transact-SQL syntax conventions](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)  
 - [Create and manage Elastic Jobs using PowerShell](elastic-jobs-powershell-create.md)
 - [Authorization and Permissions](/dotnet/framework/data/adonet/sql/authorization-and-permissions-in-sql-server)

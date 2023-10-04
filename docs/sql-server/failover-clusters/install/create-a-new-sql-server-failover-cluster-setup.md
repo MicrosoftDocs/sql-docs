@@ -1,21 +1,19 @@
 ---
 title: "Create new Failover Cluster Instance"
 description: This article describes how to use the Setup program to install or upgrade a SQL Server Always On failover cluster instance or add a node to an existing failover cluster instance.
-ms.custom: "seo-lt-2019"
+author: MashaMSFT
+ms.author: mathoma
 ms.date: 10/05/2021
-ms.reviewer: ""
-ms.prod: sql
-ms.technology: failover-cluster-instance
+ms.service: sql
+ms.subservice: failover-cluster-instance
 ms.topic: how-to
-helpviewer_keywords: 
+helpviewer_keywords:
   - "adding nodes"
   - "failover clustering [SQL Server], creating clusters"
   - "nodes [Faillover Clustering], removing"
   - "nodes [Faillover Clustering], adding"
   - "clusters [SQL Server], creating"
   - "removing nodes"
-author: MashaMSFT
-ms.author: mathoma
 ---
 
 # Create a New Always On Failover Cluster Instance (Setup)
@@ -93,7 +91,7 @@ ms.author: mathoma
   
 6.  The System Configuration Checker verifies the system state of your computer before Setup continues. After the check is complete, select **Next** to continue. You can view the details on the screen by selecting **Show Details**, or as an HTML report by selecting **View detailed report**.  
   
-7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+7.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md).  
   
 8.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Select **Next** to continue. To end Setup, select **Cancel**.  
   
@@ -104,7 +102,7 @@ ms.author: mathoma
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
-     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\.  
+     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also supports installing system databases (`Master`, `Model`, `MSDB`, and `TempDB`), and [!INCLUDE[ssDE](../../../includes/ssde-md.md)] user databases on a Server Message Block (SMB) file share. For more information on installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with SMB file share as a storage, see [Install SQL Server with SMB Fileshare as a Storage Option](../../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
@@ -133,7 +131,7 @@ ms.author: mathoma
     > [!NOTE]  
     >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], whether default or named instances, do not use a nondefault value for the **Instance ID** box.  
   
-     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
   
      **Detected [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances and features on this computer** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Select **Next** to continue.  
   
@@ -247,7 +245,7 @@ ms.author: mathoma
   
      To continue, select **Next**.  
   
-8.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+8.  On the Product key page, indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md).  
   
     > [!NOTE]  
     >  You must specify the same product key on all the nodes that you are preparing for the same failover cluster instance.  
@@ -258,7 +256,7 @@ ms.author: mathoma
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
-     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
+     You can specify a custom directory for shared components by using the field at the bottom of this page. To change the installation path for shared components, either update the path in the field provided at the bottom of the dialog box, or select the ellipsis button to browse to an installation directory. The default installation path is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
     >  When you select the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Services feature, both replication and full-text search are selected automatically. Unselecting any of these subfeatures also unselects the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Services feature.  
@@ -273,7 +271,7 @@ ms.author: mathoma
     > [!IMPORTANT]  
     >  Use the same InstanceID for all the nodes that are prepared for the failover cluster instance  
   
-     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
+     **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or select the ellipsis button to locate an installation folder.  
   
      **Installed instances** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Select **Next** to continue.  
   

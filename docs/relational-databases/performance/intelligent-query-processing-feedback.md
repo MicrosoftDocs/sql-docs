@@ -4,9 +4,9 @@ description: Learn about query processing feedback features, part of the Intelli
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: katsmith
-ms.date: 09/29/2022
-ms.prod: sql
-ms.technology: configuration
+ms.date: 06/08/2023
+ms.service: sql
+ms.subservice: configuration
 ms.topic: conceptual
 f1_keywords:
   - "parallel queries [SQL Server]"
@@ -35,13 +35,13 @@ The feedback features discussed in this article are:
 
 ## Memory grant feedback
 
-Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (starting in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], multiple executions) of a query and adjust the grant given to the query accordingly. This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the query store and an improved algorithm known as percentile grant.
+Sometimes a query executes with a memory grant that is too large or too small.  If the memory grant is too large, we inhibit parallelism on the server. If it's too small, we may spill to disk, which is a costly operation. Memory grant feedback attempts to remember the memory needs of a prior execution (with percentile feedback, multiple past executions). Based on this historical query information, memory grant feedback adjusts the grant given to the query accordingly for subsequent executions.
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, memory grant feedback is also replica-aware for secondary replicas in availability groups. Memory grant feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+This feature has been released in three waves. Batch mode memory grant feedback, followed by row mode memory grant feedback, and in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], we're introducing memory grant feedback on-disk persistence using the Query Store and an improved algorithm known as percentile grant.
 
 ### Batch mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 A query's execution plan includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
 
@@ -144,7 +144,7 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ### Row mode memory grant feedback
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Row mode memory grant feedback expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators.
 
@@ -175,6 +175,7 @@ Values surfaced in this attribute are as follows:
 | No: Accurate Grant | If there's no spill to disk and the statement uses at least 50% of the granted memory, then memory grant feedback isn't triggered. |
 | No: Feedback disabled | If memory grant feedback is continually triggered and fluctuates between memory-increase and memory-decrease operations, the database engine will disable memory grant feedback for the statement. |
 | Yes: Adjusting | Memory grant feedback has been applied and may be further adjusted for the next execution. |
+| Yes: Percentile Adjusting | Memory grant feedback is being applied using the percentile grant algorithm, which looks at more history than only the most recent execution. |
 | Yes: Stable | Memory grant feedback has been applied and granted memory is now stable, meaning that what was last granted for the previous execution is what was granted for the current execution. |
 
 #### Disable row mode memory grant feedback without changing the compatibility level
@@ -203,14 +204,16 @@ A USE HINT query hint takes precedence over a [database scoped configuration](..
 
 ### Percentile and persistence mode memory grant feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
-This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
+This feature was introduced in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], however this performance enhancement is available for queries that operate in the database compatibility level 140 (introduced in SQL Server 2017) or higher, or the `QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n` hint of 140 and higher, and when Query Store is enabled for the database and is in a "read write" state.
+
+ - Percentile memory grant feedback is enabled by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect if Query Store is not enabled or when Query Store is not in a "read write" state.
+ - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], but has no effect when Query Store is not enabled or when Query Store is not in a "read write" state.
+ - Percentile and persistence for memory grant feedback is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and enabled by default on all databases, both existing and new. 
+ - Percentile and persistence for memory grant feedback is not currently available in [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 It's recommended that you have a performance baseline for your workload before the feature is enabled for your database. The baseline numbers will help you determine if you're getting the intended benefit from the feature.
-
- - Percentile memory grant feedback is disabled by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. To take advantage of this in compatibility level 140 and higher, [Percentile memory grant feedback must be enabled](#enable-memory-grant-feedback-persistence-and-percentile).
- - Persistence for memory grant, CE, and DOP feedback is on by default in [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]. Persistence is not currently available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)].
 
 Memory grant feedback (MGF) is an existing feature that adjusts the size of the memory allocated for a query based on past performance. However, the initial phases of this project only stored the memory grant adjustment with the plan in the cache – if a plan is evicted from the cache, the feedback process must start again, resulting in poor performance the first few times a query is executed after eviction. The new solution is to persist the grant information with the other query information in the Query Store so that the benefits last across cache evictions. Memory grant feedback persistence and percentile address existing limitations of memory grant feedback in a non-intrusive way.
 
@@ -230,7 +233,9 @@ Persistence also applies to [DOP feedback](#degree-of-parallelism-dop-feedback) 
 
 #### Enable memory grant feedback: persistence and percentile
 
-To enable memory grant feedback persistence and percentile, use database compatibility level 140 or higher for the database you're connected to when executing the query.
+Persistence and percentile feedback are [enabled by default](#percentile-and-persistence-mode-memory-grant-feedback) in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)].
+
+Use database compatibility level 140 or higher for the database you're connected to when executing the query. You can change this via [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md):
 
 `ALTER DATABASE <DATABASE NAME> SET COMPATIBILITY LEVEL = 140; -- OR HIGHER`
 
@@ -240,9 +245,9 @@ The Query Store must be enabled for every database where the persistence portion
 
 To disable memory grant feedback percentile for all query executions originating from the database, execute the following within the context of the applicable database:
 
-`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE = OFF;`
+`ALTER DATABASE SCOPED CONFIGURATION SET MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = OFF;`
 
-The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE` is `OFF`.
+The default setting for `MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT` is `ON`.
 
 #### Disable persistence
 
@@ -256,9 +261,9 @@ Disabling memory grant feedback persistence will also remove existing collected 
 
 The default setting for `MEMORY_GRANT_FEEDBACK_PERSISTENCE` is `ON`.
 
-#### Considerations
+### Considerations for memory grant feedback
 
-You can view your current settings by querying `sys.database_scoped_configurations`.
+You can view your current settings by querying [sys.database_scoped_configurations](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 > [!NOTE]  
 > That this feature won't work if both `BATCH_MODE_MEMORY_GRANT_FEEDBACK` and `ROW_MODE_MEMORY_GRANT_FEEDBACK` are set to OFF.
@@ -267,11 +272,16 @@ Given feedback data is now persisted in the Query Store, there's some increase i
 
 Percentile-based memory grant errs on the side of reducing spills. Because it's no longer based on the last execution-only but on an observation of the several past executions, this could increase memory usage for oscillating workloads with wide variance in memory grant requirements between executions.
 
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, memory grant feedback is replica-aware for secondary replicas in availability groups. Memory grant feedback can apply feedback differently on a primary replica and on a secondary replica. However, memory grant feedback is not persisted on secondary replicas, and on failover, the memory grant feedback from the old primary replica is applied to the new primary replica. Any feedback applied to the secondary replica when it becomes the primary replica is lost. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
+
 ## Degree of parallelism (DOP) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] (Preview)
 
 [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduced a new feature called degree of parallelism (DOP) feedback to improve query performance by identifying parallelism inefficiencies for repeating queries, based on elapsed time and waits. DOP feedback is part of the [intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) family of features, and addresses suboptimal usage of parallelism for repeating queries. This scenario helps with optimizing resource usage and improving scalability of workloads, when excessive parallelism can cause performance issues. Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid the issues described above.
+
+> [!NOTE]
+> This feature is currently available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924).
 
 Instead of incurring in the pains of an all-encompassing default or manual adjustments to each query, DOP feedback self-adjusts DOP to avoid excess parallelism. If parallelism usage is deemed inefficient, DOP feedback lowers the DOP for the next execution of the query, from whatever is the configured DOP, and verify if it helps.
 
@@ -279,7 +289,7 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 
 - To enable DOP feedback, enable the `DOP_FEEDBACK` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-) in a database.
 
-- The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the `sys.query_store_plan_feedback` catalog view when we reach a stable degree of parallelism feedback value.
+- The Query Store must be enabled for every database where DOP feedback is used, and in the "Read write" state. Feedback will be persisted in the [sys.query_store_plan_feedback](../system-catalog-views/sys-query-store-plan-feedback.md) catalog view when we reach a stable degree of parallelism feedback value.
 
 - DOP feedback is available for queries that operate in the database compatibility level 160 (introduced with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]) or higher.
 
@@ -290,8 +300,8 @@ Parallelism is often beneficial for reporting and analytical queries, or queries
 - To disable DOP feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET DOP_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#dop_feedback---on--off-).
 
 - To disable DOP feedback at the query level, use the `DISABLE_DOP_FEEDBACK` query hint.
- 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, DOP feedback is also replica-aware for secondary replicas in availability groups. DOP feedback can apply feedback differently on a primary replica and on a secondary replica. However, DOP feedback is not persisted on secondary replicas, and on failover, the DOP feedback from the old primary replica is not applied to the new primary replica. On failover, feedback applied to primary or secondary replicas is lost. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
 ### DOP feedback implementation
 
@@ -308,7 +318,7 @@ Only verified feedback is persisted. If the adjusted DOP results in a performanc
 
 Minimum DOP for any query adjusted with DOP feedback is 2. Serial executions are out of scope for DOP feedback.
 
-Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
+Feedback information can be tracked using the [sys.query_store_plan_feedback](../system-catalog-views/sys-query-store-plan-feedback.md) catalog view.
 
 If a query has a query plan forced through Query Store, DOP feedback can still be used for that query.
 
@@ -327,13 +337,16 @@ The following XEs are available for the feature:
 
 ## Cardinality estimation (CE) feedback
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later. 
+<!---
+Currently in preview for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
+-->
 
 Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), the Cardinality Estimation (CE) feedback is part of the [intelligent query processing family of features](intelligent-query-processing.md) and addresses suboptimal query execution plans for repeating queries when these issues result from incorrect CE model assumptions. This scenario helps with reducing regression risks related to the default CE when upgrading from older versions of the Database Engine.
 
-Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Feedback is applied when significant model estimation errors resulting in performance drops are found.
+Because no single set of CE models and assumptions can accommodate the vast array of customer workloads and data distributions, CE feedback provides an adaptable solution based on query runtime characteristics. CE feedback will identify and use a model assumption that better fits a given query and data distribution to improve query execution plan quality. Currently, CE Feedback can identify plan operators where the estimated number of rows and the actual number of rows are very different. Feedback is applied when significant model estimation errors occur, and there is a viable alternate model to try.
 
-- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is also replica-aware for secondary replicas in availability groups. CE feedback can apply feedback differently on a primary replica and on a secondary replica. For more information, see [Query Store for secondary replicas](monitoring-performance-by-using-the-query-store.md#query-store-for-secondary-replicas).
+- Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], when Query Store for secondary replicas is enabled, CE feedback is not replica-aware for secondary replicas in availability groups. CE feedback currently only benefits primary replicas. For more information, see [Query Store for secondary replicas](query-store-for-secondary-replicas.md).
 
 ### Understand Cardinality Estimation
 
@@ -347,7 +360,7 @@ CE feedback learns which CE model assumptions are optimal over time and then app
 
 1. CE feedback **identifies** model-related assumptions and evaluates whether they're accurate for repeating queries.
 
-1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.
+1. If an assumption looks incorrect, a subsequent execution of the same query is tested with a query plan that adjusts the impactful CE model assumption and **verifies** if it helps.  We identify incorrectness by looking at actual vs. estimated rows from plan operators.  Not all errors can be corrected by model variants available in CE feedback.
 
 1. If it improves plan quality, the old query plan is **replaced** with a query plan that uses the appropriate [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#l-using-use-hint) that adjusts the estimation model, implemented through the [Query Store hint](query-store-hints.md) mechanism.
 
@@ -433,7 +446,7 @@ CE feedback activity is visible via the `query_feedback_analysis` and `query_fee
 
 Hints set by CE feedback can be tracked using the [sys.query_store_query_hints](../system-catalog-views/sys-query-store-query-hints-transact-sql.md) catalog view.
 
-Feedback information can be tracked using the `sys.query_store_plan_feedback` catalog view.
+Feedback information can be tracked using the [sys.query_store_plan_feedback](../system-catalog-views/sys-query-store-plan-feedback.md) catalog view.
 
 To disable CE feedback at the database level, use the `ALTER DATABASE SCOPED CONFIGURATION SET CE_FEEDBACK = OFF` [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#ce_feedback---on--off-).
 

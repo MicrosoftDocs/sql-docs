@@ -1,26 +1,22 @@
 ---
-title: "SequenceType Expressions (XQuery) | Microsoft Docs"
+title: "SequenceType Expressions (XQuery)"
 description: Learn about the XQuery SequenceType expressions instance of and cast as.
-ms.custom: ""
+author: "rothja"
+ms.author: "jroth"
 ms.date: "03/14/2017"
-ms.prod: sql
-ms.prod_service: sql
-ms.reviewer: ""
-ms.technology: xml
+ms.service: sql
+ms.subservice: xml
 ms.topic: "language-reference"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "SequenceType expressions"
   - "instance of operator [XQuery]"
   - "expressions [XQuery], SequenceType"
   - "cast as operator"
-ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-author: "rothja"
-ms.author: "jroth"
+dev_langs:
+  - "XML"
 ---
 # SequenceType Expressions (XQuery)
-[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sqlserver.md)]
 
   In XQuery, a value is always a sequence. The type of the value is referred to as a sequence type. The sequence type can be used in an **instance of** XQuery expression. The SequenceType syntax described in the XQuery specification is used when you need to refer to a type in an XQuery expression.  
   

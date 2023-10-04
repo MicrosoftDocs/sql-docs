@@ -1,19 +1,16 @@
 ---
-title: "Turn Reporting Services Features On or Off | Microsoft Docs"
+title: "Turn Reporting Services Features On or Off"
 description: Learn how to turn off individual features in native mode Reporting Services. There are different ways to configure features.
-ms.date: 06/10/2019
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-server
-
-
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "Reporting Services, configuration"
-  - "security [Reporting Services], strategies"
-ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
+ms.date: 06/10/2019
+ms.service: reporting-services
+ms.subservice: report-server
+ms.topic: conceptual
+ms.custom: updatefrequency5
+helpviewer_keywords:
+  - "Reporting Services, configuration"
+  - "security [Reporting Services], strategies"
 ---
 # Turn Reporting Services Features On or Off
   You can turn off report server features that you do not use as part of a lockdown strategy for reducing the attack surface of a production report server. In most cases, you will want to run [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features concurrently to use all of the functionality provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. However, depending on your deployment model, you can disable the features that you do not require. For example, you can enable only the background processing if all report processing is configured as scheduled operations. Similarly, you can run just the Report Server web service if you only want interactive, on-demand reporting.  

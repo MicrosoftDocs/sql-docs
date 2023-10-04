@@ -4,9 +4,8 @@ description: sys.check_constraints (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
 ms.date: "06/28/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.technology: system-objects
+ms.service: sql
+ms.subservice: system-objects
 ms.topic: "reference"
 f1_keywords:
   - "sys.check_constraints"

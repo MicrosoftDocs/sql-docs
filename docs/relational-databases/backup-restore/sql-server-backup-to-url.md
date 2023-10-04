@@ -1,37 +1,34 @@
 ---
 title: "SQL Server Backup to URL for Microsoft Azure Blob Storage"
 description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob Storage as a backup destination.
-ms.custom:
-- event-tier1-build-2022
-ms.date: 05/09/2022
-ms.prod: sql
-ms.prod_service: backup-restore
-ms.reviewer: ""
-ms.technology: backup-restore
+author: dplessMSFT
+ms.author: dpless
+ms.reviewer: mathoma, wiassaf
+ms.date: 03/01/2023
+ms.service: sql
+ms.subservice: backup-restore
+ms.custom: devx-track-azurepowershell
 ms.topic: conceptual
-author: WilliamDAssafMSFT
-ms.author: wiassaf
 ---
-
 # SQL Server backup to URL for Microsoft Azure Blob Storage
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This article introduces the concepts, requirements and components necessary to use Microsoft Azure Blob Storage as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this article.  
-  
+
 ## Overview
 
-It is important to understand the components and the interaction between them to do a backup to or restore from Microsoft Azure Blob Storage.  
-  
+It is important to understand the components and the interaction between them to perform a backup to or restore from Microsoft Azure Blob Storage.  
+
  Creating an Azure Storage account within your Azure subscription is the first step in this process. This storage account is an administrative account that has full administrative permissions on all containers and objects created with the storage account. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can either use the Azure storage account name and its access key value to authenticate and write and read blobs to Microsoft Azure Blob Storage or use a Shared Access Signature token generated on specific containers granting it read and write rights. For more information on Azure Storage Accounts, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create) and for more information about Shared Access Signatures, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview). The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations.  
-  
+
 ### Azure Storage and S3-compatible storage
 
-SQL Server 2012 Service Pack 1 CU2 and SQL Server 2014 introduced the ability to backup to a URL pointed at Azure Blob Storage, using familiar T-SQL syntax to write backups securely to Azure storage. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced [File-snapshot backups for database files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md) and security via shared-access signature (SAS) keys, a secure and simple way to authenticate certificates to Azure Storage security policy. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces the ability to write backups to S3-compatible object storage, with backup and restore functionality conceptually similar to working with Backup to URL using Azure Blob Storage as a backup device type. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the BACKUP/RESTORE TO/FROM URL syntax by adding support for a new S3 connector using the REST API. 
+SQL Server 2012 Service Pack 1 CU2 and SQL Server 2014 introduced the ability to back up to a URL pointed at Azure Blob Storage, using familiar T-SQL syntax to write backups securely to Azure storage. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] introduced [File-snapshot backups for database files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md) and security via shared-access signature (SAS) keys, a secure and simple way to authenticate certificates to Azure Storage security policy. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] introduces the ability to write backups to S3-compatible object storage, with backup and restore functionality conceptually similar to working with Backup to URL using Azure Blob Storage as a backup device type. [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] extends the BACKUP/RESTORE TO/FROM URL syntax by adding support for a new S3 connector using the REST API. 
 
 This article contains information on using Backup to URL for Azure Blob Storage. To learn more about using Backup to URL for S3-compatible storage, see [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 
-###  <a name="blockbloborpageblob"></a> Backup to Azure Storage block blob vs. page blob
+### <a id="blockbloborpageblob"></a> Backup to Azure Storage block blob vs. page blob
 
 There are two types of blobs that can be stored in Microsoft Azure Blob Storage: block and page blobs. For SQL Server 2016 and later, block blob is preferred.
 
@@ -42,17 +39,17 @@ Backup to block blob is only available in SQL Server 2016 or later version for b
 The main reasons are:
 
 - Shared Access Signature is a safer way to authorize blob access compared to storage key.
-- You can backup to multiple block blobs to get better backup and restore performance, and support larger database backup.
+- You can back up to multiple block blobs to get better backup and restore performance, and support larger database backup.
 - [Block blob](https://azure.microsoft.com/pricing/details/storage/blobs/) is cheaper than [page blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/).
-- Customers that need to backup to page blobs via a proxy server will need to use `backuptourl.exe`.
+- Customers that need to back up to page blobs via a proxy server will need to use `backuptourl.exe`.
 
-Backup of a large database to Azure Blob Storage is subject to the limitations listed in [Azure SQL Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Taking a backup of a large database to Azure Blob Storage is subject to the limitations listed in [Azure SQL Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
 If the database is too large, either:
 
 - Use backup compression
    or
-- Backup to multiple block blobs
+- Back up to multiple block blobs
 
 #### Support on Linux, containers, and Azure Arc-enabled SQL Managed Instance
 
@@ -65,67 +62,69 @@ If the SQL Server instance is hosted on Linux, including:
 
 The only supported backup to URL for Azure Blob Storage is to block blobs, using the Shared Access Signature.
 
-###  <a name="Blob"></a> Microsoft Azure Blob Storage  
+### <a id="Blob"></a> Microsoft Azure Blob Storage
 
 **Storage Account:** The storage account is the starting point for all storage services. To access Microsoft Azure Blob Storage, first create an Azure storage account. For more information, see [Create a Storage Account](/azure/storage/common/storage-account-create)  
-  
+
 **Container:** A container provides a grouping of a set of blobs, and can store an unlimited number of blobs. To write a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to Azure Blob Storage, you must have at least the root container created. You can generate a Shared Access Signature token on a container and grant access to objects on a specific container only.  
-  
+
 **Blob:** A file of any type and size. There are two types of blobs that can be stored in Azure Blob Storage: block and page blobs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can use either blob type depending upon the Transact-SQL syntax used. Blobs are addressable using the following URL format: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>. For more information about Azure Blob Storage, see [Introduction to Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction). For more information about page and block blobs, see [Understanding Block and Page Blobs](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs).  
-  
-![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
-  
+
+:::image type="content" source="media/sql-server-backup-to-url/backuptocloud-blobarchitecture.gif" alt-text="A diagram of Azure Blob Storage accounts, containers, and blobs.":::
+
 **Azure Snapshot:** A snapshot of an Azure blob taken at a point in time. For more information, see [Creating a Snapshot of a Blob](/rest/api/storageservices/Creating-a-Snapshot-of-a-Blob). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup now supports Azure snapshot backups of database files stored in Azure Blob Storage. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
-  
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+
+### <a id="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components
 
 **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup file. The URL must point to an actual blob, not just a container. If the blob does not exist, it is created. If an existing blob is specified, BACKUP fails, unless the "WITH FORMAT" option is specified to overwrite the existing backup file in the blob.  
-  
- Here is a sample URL value: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. HTTPS is not required, but is recommended.  
-  
+
+ Here is a sample URL value: `http[s]://ACCOUNTNAME.blob.core.windows.net/<CONTAINER>/FILENAME.bak`. HTTPS is not required, but is recommended.  
+
 **Credential:** A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to Azure Blob Storage and its container and blob objects. The Credential stores either the name of the storage account and the storage account **access key** values or container URL and its Shared Access Signature token. Once the credential is created, the syntax of the BACKUP/RESTORE statements determines the type of blob and the credential required.  
-  
+
 For an example about how to create a Shared Access Signature, see [Create a Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) examples later in this article and to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) examples later in this article.  
-  
+
 For general information about credentials, see [Credentials](../security/authentication-access/credentials-database-engine.md)  
-  
+
 For information on other examples where credentials are used, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
-  
-##  <a name="security"></a> Security for Azure Blob Storage
+
+## <a id="security"></a> Security for Azure Blob Storage
 
 The following are security considerations and requirements when backing up to or restoring from Azure Blob Storage.  
-  
+
 - When creating a container for Azure Blob Storage, we recommend that you set the access to **private**. Setting the access to private restricts the access to users or accounts able to provide the necessary information to authenticate to the Azure account.  
-  
+
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that either an Azure account name and access key authentication or a Shared Access Signature and access token be stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential. This information is used to authenticate to the Azure account when performing backup or restore operations.  
 
     > [!WARNING]
     > Azure Storage supports [disabling](/azure/storage/common/shared-key-authorization-prevent) Shared Key authorization for a storage account. If Shared Key authorization is disabled, SQL Server Backup To URL will not work.
-  
+
 - The user account that is used to issue BACKUP or RESTORE commands should be in the **db_backup operator** database role with **Alter any credential** permissions.   
 
-##  <a name="limitations"></a> Limitations of backup/restore to Azure Blob Storage
-  
-- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4 MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
-  
+## <a id="limitations"></a> Limitations of backup/restore to Azure Blob Storage
+
+- SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4 MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes - the limit is a maximum of 64 URLs, which results in  the following formula: `64 stripes * 50,000 blocks * 4MB maxtransfersize = 12.8 TB`.  
+
     > [!IMPORTANT]  
     >  Although the maximum backup size supported by a single block blob is 200 GB, it's possible for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to write in smaller block sizes, which can lead [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reach the 50,000 block limit before the entire backup is transferred. Stripe backups (even if they're smaller than 200 GB) to avoid the block limit, especially when if you use differential or uncompressed backups.
 
-- You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.   
+- You can issue backup or restore statements by using Transact-SQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
   
+- Backup to Azure Storage account using Azure Active Directory, User Managed or System Managed Identities is not supported by SQL Server.
+
 - Creating a logical device name is not supported. So adding URL as a backup device using sp_dumpdevice or through SQL Server Management Studio is not supported.  
-  
+
 - Appending to existing backup blobs is not supported. Backups to an existing blob can only be overwritten by using the **WITH FORMAT** option. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup.  
-  
+
 - Backup to multiple blobs in a single backup operation is only supported using block blobs and using a Shared Access Signature (SAS) token rather than the storage account key for the SQL Credential.  
-  
+
 - Specifying **BLOCKSIZE** is not supported for page blobs. 
-  
+
 - Specifying **MAXTRANSFERSIZE** is not supported page blobs. 
-  
+
 - Specifying backupset options - **RETAINDAYS** and **EXPIREDATE** are not supported.  
-  
+
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL - 'https://.blob.core.windows.net//.bak', leaving 223 characters for account, container, and blob names put together.  
 
 - SQL Server versions prior to 2022 have a limit of 256 characters for Shared Access signature (SAS) tokens, which will limit the type of tokens that can be used (for example, User Delegation Key tokens are not supported).
@@ -135,11 +134,11 @@ The following are security considerations and requirements when backing up to or
    - The [netsh.exe](/windows/win32/winsock/netsh-exe) utility on Windows Vista and Windows Server 2008 or later. 
 
 - [Immutable storage for Azure Blob Storage](/azure/storage/blobs/storage-blob-immutable-storage) is not supported. Set the **Immutable Storage** policy to false. 
-  
+
 ## Supported arguments & statements in Azure Blob Storage
 
-###  <a name="Support"></a> Support for backup/restore statements in Azure Blob Storage
-  
+### <a id="Support"></a> Support for backup/restore statements in Azure Blob Storage
+
 |Backup/Restore Statement|Supported|Exceptions|Comments|
 |-|-|-|-|
 |BACKUP|Y|BLOCKSIZE and MAXTRANSFERSIZE are supported for block blobs. They are not supported for page blobs. | BACKUP to a block blob requires a Shared Access Signature saved in a SQL Server credential. BACKUP to page blob requires the storage account key saved in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, and requires the WITH CREDENTIAL argument to be specified.|  
@@ -149,11 +148,11 @@ The following are security considerations and requirements when backing up to or
 |RESTORE LABELONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |RESTORE VERIFYONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |RESTORE REWINDONLY|-|||  
-  
- For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
-  
- For syntax and general information about restore statements, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
-  
+
+ For syntax and general information about backup statements, see [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
+
+ For syntax and general information about restore statements, see [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
+
 ### Support for backup arguments in Azure Blob Storage
 
 |Argument|Supported|Exception|Comments|  
@@ -180,7 +179,7 @@ The following are security considerations and requirements when backing up to or
 |MEDIANAME|Y|||  
 |BLOCKSIZE|Y|Not supported for page blob. Supported for block blob.| Recommend BLOCKSIZE=65536 to optimize use of the 50,000 blocks allowed in a block blob. |  
 |BUFFERCOUNT|Y|||  
-|MAXTRANSFERSIZE|Y|Not supported for page blob. Supported for block blob.| Default is 1048576. The value can range up to 4 MB in increments of 65536 bytes.</br> Recommend MAXTRANSFERSIZE=4194304 to optimize use of the 50,000 blocks allowed in a block blob. |  
+|MAXTRANSFERSIZE|Y|Not supported for page blob. Supported for block blob.| Default is 1048576. The value can range up to 4 MB in increments of 65536 bytes.<br />Recommend MAXTRANSFERSIZE=4194304 to optimize use of the 50,000 blocks allowed in a block blob. |  
 |NO_CHECKSUM &#124; CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |STATS|Y|||  
@@ -188,11 +187,11 @@ The following are security considerations and requirements when backing up to or
 |UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|Y|||  
 |NO_TRUNCATE|Y|||  
-  
- For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
-  
-### Support for restore arguments in Azure Blob Storage 
-  
+
+ For more information about backup arguments, see [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
+
+### Support for restore arguments in Azure Blob Storage
+
 |Argument|Supported|Exceptions|Comments|  
 |-|-|-|-|  
 |DATABASE|Y|||  
@@ -224,88 +223,91 @@ The following are security considerations and requirements when backing up to or
 |KEEP_CDC|Y|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
 |STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|Y|||  
-  
- For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
-  
-##  <a name="BackupTaskSSMS"></a> Back up with SSMS  
+
+ For more information about Restore arguments, see [RESTORE Arguments (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+
+## <a id="BackupTaskSSMS"></a> Back up with SSMS
+
 You can back up a database to URL through the Back Up task in SQL Server Management Studio using a SQL Server Credential.  
-  
+
 > [!NOTE]  
 >  To create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file-snapshot backup, or overwrite an existing media set, you must use Transact-SQL, Powershell or C# rather than the Back Up task in SQL Server Management Studio.  
-  
- The following steps describe the changes made to the Back Up Database task in SQL Server Management Studio to allow for backing up to Azure storage:  
-  
-1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 
-2.  Expand **Databases**, right-click the desired database, point to **Tasks**, and then select **Back Up...**.
-  
-3.  On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Select **Add** and the **Select Backup Destination** dialog box will open:
-    1.  **Azure storage container:** The name of the Microsoft Azure storage container to store the backup files.  Select an existing container from the drop-down list or manually enter the container. 
-  
-    2.  **Shared Access Policy:** Enter the shared access signature for a manually entered container.  This field is not available if an existing container was chosen. 
-  
-    3.  **Backup File:** Name of the backup file.
-    
-    4.  **New Container:** Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
+ The following steps describe the changes made to the Back Up Database task in SQL Server Management Studio to allow for backing up to Azure storage:  
+
+1. In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
+
+1. Expand **Databases**, right-click the desired database, point to **Tasks**, and then select **Back Up...**.
+
+1. On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Select **Add** and the **Select Backup Destination** dialog box will open:
+    1. **Azure storage container:** The name of the Microsoft Azure storage container to store the backup files.  Select an existing container from the drop-down list or manually enter the container. 
+
+    1. **Shared Access Policy:** Enter the shared access signature for a manually entered container.  This field is not available if an existing container was chosen. 
+
+    1. **Backup File:** Name of the backup file.
+
+    1. **New Container:** Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
 
 > [!NOTE] 
 >  **Add** supports multiple backup files and storage containers for a single media set.
 
 When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following articles have more information on the Back Up Database dialog:  
-  
- - [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
-  
- - [Back Up Database &#40;Media Options Page&#41;](../../relational-databases/backup-restore/back-up-database-media-options-page.md)  
-  
- - [Back Up Database &#40;Backup Options Page&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
-  
+
+ - [Back Up Database (General Page)](../../relational-databases/backup-restore/back-up-database-general-page.md)  
+
+ - [Back Up Database (Media Options Page)](../../relational-databases/backup-restore/back-up-database-media-options-page.md)  
+
+ - [Back Up Database (Backup Options Page)](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
+
  - [Create Credential - Authenticate to Azure Storage](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
-  
-##  <a name="MaintenanceWiz"></a> Back up with maintenance plan  
- Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio includes **URL** as one of the destination options, and other supporting objects required to backup to Azure storage like the SQL Credential. It has the same For more information, see the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
-  
+
+## <a id="MaintenanceWiz"></a> Back up with maintenance plan
+
+ Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio includes **URL** as one of the destination options, and other supporting objects required to back up to Azure storage like the SQL Credential. It has the same For more information, see the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+
 > [!NOTE]  
 >  To create a striped backup set, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file-snapshot backup, or a SQL credential using Shared Access token, you must use Transact-SQL, Powershell or C# rather than the Backup task in Maintenance Plan Wizard.  
-  
-##  <a name="RestoreSSMS"></a> Restore with SSMS 
+
+## <a id="RestoreSSMS"></a> Restore with SSMS
+
 The Restore Database task includes **URL** as a device to restore from.  The following steps describe using the Restore task to restore from Azure Blob Storage: 
-  
+
 1. Right-click **Databases** and select **Restore Database...**. 
-  
-2. On the **General** page, select **Device** under the **Source** section.
-  
-3. Select the browse (...) button to open the **Select backup devices** dialog box. 
 
-4. Select **URL** from the **Backup media type:** drop-down list.  Select **Add** to open the **Select a Backup File Location** dialog box.
+1. On the **General** page, select **Device** under the **Source** section.
 
-    1. **Azure storage container:** The fully qualified name of the Microsoft Azure storage container which contains the backup files.  Select an existing container from the drop-down list or manually enter the fully qualified container name.
-      
-    2. **Shared Access Signature:**  Used to enter the shared access signature for the designated container.
-      
-    3. **Add:**  Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-      
-    4. **OK:**    SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and select **OK**. This takes you back to the **Select Backup Devices** dialog, and clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
-  
-     [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
-  
-     [Restore Database &#40;Files Page&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)  
-  
-     [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
-  
-##  <a name="Examples"></a> Code Examples  
+1. Select the browse (...) button to open the **Select backup devices** dialog box. 
+
+1. Select **URL** from the **Backup media type:** drop-down list.  Select **Add** to open the **Select a Backup File Location** dialog box.
+
+    1. **Azure storage container:** The fully qualified name of the Microsoft Azure storage container that contains the backup files.  Select an existing container from the drop-down list or manually enter the fully qualified container name.
+
+    1. **Shared Access Signature:**  Used to enter the shared access signature for the designated container.
+
+    1. **Add:**  Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
+
+    1. **OK:**    SQL Server connects to Microsoft Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Microsoft Azure** dialog. The backup files residing in the storage container are displayed on this page. Select the file you want to use to restore and select **OK**. This takes you back to the **Select Backup Devices** dialog, and selecting **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore. 
+
+     [Restore Database (General Page)](../../relational-databases/backup-restore/restore-database-general-page.md)  
+
+     [Restore Database (Files Page)](../../relational-databases/backup-restore/restore-database-files-page.md)  
+
+     [Restore Database (Options Page)](../../relational-databases/backup-restore/restore-database-options-page.md)  
+
+## <a id="Examples"></a> Code Examples
 
 This section contains the following examples.  
-  
+
 - [Create a credential](#credential)  
-  
+
 - [Backing up a complete database](#complete)  
 
 - [Restoring to a point-in-time using STOPAT](#PITR)  
-  
+
 > [!NOTE]  
-> For a tutorial on using SQL Server 2016 with Azure Blob Storage, see [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
-### <a name="SAS"></a> Create a Shared Access Signature
+> For a tutorial on using SQL Server 2016 with Azure Blob Storage, see [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+
+### <a id="SAS"></a> Create a Shared Access Signature
 
 The following example creates Shared Access Signatures that can be used to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential on a newly created container. The script  creates a Shared Access Signature that is associated with a Stored Access Policy. For more information, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview). The script also writes the T-SQL command required to create the credential on SQL Server. 
 
@@ -314,7 +316,7 @@ The following example creates Shared Access Signatures that can be used to creat
 > These scripts were verified using Azure PowerShell 5.1.15063. 
 
 **Shared Access Signature that is associated with a Stored Access Policy**
-  
+
 ```Powershell  
 # Define global variables for the script  
 $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
@@ -352,24 +354,24 @@ $cbc = $container.CloudBlobContainer
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
 $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
 $sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
-Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
+Write-Host 'Shared Access Signature= '$($sas.TrimStart('?'))''  
 
 # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
 Write-Host 'Credential T-SQL'  
-$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.Substring(1)   
+$tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET='{1}'" -f $cbc.Uri,$sas.TrimStart('?')   
 $tSql | clip  
 Write-Host $tSql  
 ```  
 
-After successfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instancance of SQL Server and run the command to create the credential with the Shared Access Signature. 
+After successfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instance of SQL Server and run the command to create the credential with the Shared Access Signature. 
 
-###  <a name="credential"></a> Create a credential
+### <a id="credential"></a> Create a credential
 
 The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials for authentication to Azure Blob Storage. Do one of the following.
-  
+
 1. **Using Shared Access Signature**  
 
-   If you ran the script to create the Shared Access Signature above, copy the `CREATE CREDENTIAL` to a query editor connected to your instance of SQL Server and run the command. 
+   If you ran the previous script to create the Shared Access Signature, copy the `CREATE CREDENTIAL` to a query editor connected to your instance of SQL Server and run the command. 
 
    The following T-SQL is an example that creates the credential to use a Shared Access Signature. 
 
@@ -381,9 +383,9 @@ The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
       WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
       SECRET = '<SAS_TOKEN>';  
    ```  
-  
-2. **Using storage account identity and access key**  
-  
+
+1. **Using storage account identity and access key**  
+
    ```sql 
    IF NOT EXISTS  
    (SELECT * FROM sys.credentials   
@@ -391,54 +393,54 @@ The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
    ,SECRET = '<mystorageaccountaccesskey>';  
    ```  
-  
-### <a name="complete"></a> Perform a full database backup  
 
-The following examples perform a full database backup of the AdventureWorks2016 database to Azure Blob Storage. Do one of the following:
-  
+### <a id="complete"></a> Perform a full database backup
+
+The following examples perform a full database backup of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to Azure Blob Storage. Use one of the following samples:
+
 1. **To URL using Shared Access Signature**  
-  
+
    ```sql  
-   BACKUP DATABASE AdventureWorks2016   
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   BACKUP DATABASE AdventureWorks2022   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak';  
    GO   
    ```  
 
 1. **To URL using storage account identity and access key**  
-  
+
    ```sql
-   BACKUP DATABASE AdventureWorks2016  
-   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+   BACKUP DATABASE AdventureWorks2022  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak'   
          WITH CREDENTIAL = '<mycredentialname>'   
         ,COMPRESSION  
         ,STATS = 5;  
    GO
    ```  
 
-###  <a name="PITR"></a> Restoring to a point-in-time using STOPAT  
+### <a id="PITR"></a> Restore to a point-in-time using STOPAT
 
-The following example restores the AdventureWorks2016 sample database to its state at a point in time, and shows a restore operation.  
-  
+The following example restores the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to its state at a point in time, and shows a restore operation.  
+
 **From URL using Shared Access Signature**  
-  
+
    ```sql
-   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   RESTORE DATABASE AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2022_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.mdf'  
+   ,MOVE 'AdventureWorks2022_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2022.ldf'  
    ,NORECOVERY  
    ,REPLACE  
    ,STATS = 5;  
    GO   
   
-   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   RESTORE LOG AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_18_00_00.trn'   
    WITH   
    RECOVERY   
    ,STOPAT = 'May 18, 2015 5:35 PM'   
    GO  
    ```  
-  
+
 ## Next steps
 
 - [SQL Server Backup to URL for Azure Blob Storage best practices and troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
-- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [Tutorial: Using Azure Blob Storage with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+- [Back Up and Restore of System Databases (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
+- [Tutorial: Use Azure Blob Storage with SQL Server databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)

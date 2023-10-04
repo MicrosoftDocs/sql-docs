@@ -1,19 +1,15 @@
 ---
-description: "Add Tables to Diagrams (Visual Database Tools)"
 title: Add Tables to Diagrams
-ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology: ssms
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "inserting tables"
-  - "adding tables"
-ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
+description: "Add Tables to Diagrams (Visual Database Tools)"
 author: markingmyname
 ms.author: maghan
-ms.reviewer: 
-ms.custom: seo-lt-2019
 ms.date: 01/19/2017
+ms.service: sql
+ms.subservice: ssms
+ms.topic: conceptual
+helpviewer_keywords:
+  - "inserting tables"
+  - "adding tables"
 ---
 
 # Add Tables to Diagrams (Visual Database Tools)

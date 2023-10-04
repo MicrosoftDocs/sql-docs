@@ -1,14 +1,14 @@
 ---
-title: "Page headers and footers in a paginated report | Microsoft Docs"
-description: Discover the many paginated report items you can add to headers and footers, including text, images, rectangles, borders, background color, and expressions in Report Builder. 
+title: "Page headers and footers in a paginated report"
+description: Discover the many paginated report items you can add to headers and footers, including text, images, rectangles, borders, background color, and expressions in Report Builder.
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 03/01/2017
-ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
-ms.technology: report-design
-
-
+ms.service: reporting-services
+ms.subservice: report-design
 ms.topic: conceptual
-f1_keywords: 
+ms.custom: updatefrequency5
+f1_keywords:
   - "10125"
   - "sql13.rtp.rptdesigner.pagefooter.border.f1"
   - "10120"
@@ -19,9 +19,6 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.pagefooter.fill.f1"
   - "sql13.rtp.rptdesigner.pagefooter.general.f1"
   - "10124"
-ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
 ---
 # Page headers and footers in a paginated report (Report Builder)
 

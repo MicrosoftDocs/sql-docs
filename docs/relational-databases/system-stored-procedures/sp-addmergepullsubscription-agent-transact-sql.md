@@ -1,23 +1,19 @@
 ---
+title: "sp_addmergepullsubscription_agent (Transact-SQL)"
 description: "sp_addmergepullsubscription_agent (Transact-SQL)"
-title: "sp_addmergepullsubscription_agent (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: replication
-ms.topic: "reference"
-dev_langs: 
-  - "TSQL"
-f1_keywords: 
-  - "sp_addmergepullsubscription_agent"
-  - "sp_addmergepullsubscription_agent_TSQL"
-helpviewer_keywords: 
-  - "sp_addmergepullsubscription_agent"
-ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: markingmyname
 ms.author: maghan
+ms.date: 07/15/2023
+ms.service: sql
+ms.subservice: replication
+ms.topic: "reference"
+f1_keywords:
+  - "sp_addmergepullsubscription_agent"
+  - "sp_addmergepullsubscription_agent_TSQL"
+helpviewer_keywords:
+  - "sp_addmergepullsubscription_agent"
+dev_langs:
+  - "TSQL"
 ---
 # sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -25,7 +21,7 @@ ms.author: maghan
 
   Adds a new agent job used to schedule synchronization of a pull subscription to a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -100,7 +96,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @publisher_security_mode = ] publisher_security_mode`
- Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. If **0**, specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. If **1**, specifies Windows Authentication.  
+ Is the security mode to use when connecting to a Publisher when synchronizing. *publisher_security_mode* is **int**, with a default of 1. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. 
+- **1** specifies Windows authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -145,8 +145,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Is the name of the Distributor. *distributor* is **sysname**, with a default of *publisher*; that is, the Publisher is also the Distributor.  
   
 `[ @distributor_security_mode = ] distributor_security_mode`
- Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of 0. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. **1** specifies Windows Authentication.  
-  
+ Is the security mode to use when connecting to a Distributor when synchronizing. *distributor_security_mode* is **int**, with a default of 0. The following values define the security mode: 
+- **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
+- **1** specifies Windows Authentication.  
+- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -355,5 +359,3 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
-  
-  

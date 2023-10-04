@@ -27,6 +27,7 @@ Alters a security policy.
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
   
 ## Syntax
+
   
 ```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
@@ -50,11 +51,11 @@ ALTER SECURITY POLICY schema_name.security_policy_name
 
 ## Arguments
 
-#### security_policy_name  
+#### *security_policy_name*
 
 The name of the security policy. Security policy names must fulfill the rules for identifiers and must be unique within the database and to its schema.  
   
-#### schema_name  
+#### *schema_name*
 
 Is the name of the schema to which the security policy belongs. *schema_name* is required because of schema binding.  
   
@@ -62,11 +63,11 @@ Is the name of the schema to which the security policy belongs. *schema_name* is
 
 The type of security predicate for the function bound to the target table. `FILTER` predicates silently filter the rows that are available to read operations. `BLOCK` predicates explicitly block write operations that violate the predicate function.  
   
-#### tvf_schema_name.security_predicate_function_name  
+#### *tvf_schema_name*.*security_predicate_function_name*
 
 Is the inline table value function you use as a predicate and that you enforce upon queries against a target table. At most, you can define one security predicate for a particular DML operation against a particular table. Create the inline table value function using the `SCHEMABINDING` option.  
   
-#### { column_name | arguments }
+#### { *column_name* | *arguments* }
 
 The column name or expression used as parameters for the security predicate function. Any columns on the target table can be used as arguments for the predicate function. Expressions that include literals, built-ins, and expressions that use arithmetic operators can be used.  
   
@@ -88,7 +89,7 @@ Enables or disables the security policy from enforcing its security predicates a
 
 Indicates the security policy shouldn't be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization (Replication Transact-SQL Programming)](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
   
-#### table_schema_name.table_name  
+#### *table_schema_name.table_name*
 
 Is the target table for the applied security predicate. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
@@ -103,6 +104,7 @@ Block predicates are evaluated after the corresponding DML operation is executed
 ## Permissions
 
 Requires the `ALTER ANY SECURITY POLICY` permission.  
+
   
 Additionally the following permissions are required for each predicate that is added:  
   
@@ -168,7 +170,7 @@ ALTER SECURITY POLICY rls.SecPol
   
 ## Related content
 
-- [Row-Level Security](../../relational-databases/security/row-level-security.md)   
+- [Row-level security](../../relational-databases/security/row-level-security.md)
 - [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
 - [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)   
 - [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   

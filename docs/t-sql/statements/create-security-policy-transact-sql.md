@@ -90,7 +90,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 
  Indicates that the security policy should not be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization (Replication Transact-SQL Programming)](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
   
-#### [*table_schema_name*.] *table_name*
+#### [ *table_schema_name*. ] *table_name*
 
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
@@ -115,7 +115,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
 ## Examples
 
- The following examples demonstrate the use of the `CREATE SECURITY POLICY` syntax. For an example of a complete security policy scenario, see [Row-Level Security](../../relational-databases/security/row-level-security.md).  
+The following examples demonstrate the use of the `CREATE SECURITY POLICY` syntax. For an example of a complete security policy scenario, see [Row-level security](../../relational-databases/security/row-level-security.md).
   
 ### A. Create a security policy
 
@@ -128,6 +128,7 @@ ON [dbo].[Customer];
 ```  
   
 ### B. Create a policy that affects multiple tables
+
 
  The following syntax creates a security policy with three filter predicates on three different tables, and enables the security policy.  
   
@@ -154,7 +155,7 @@ CREATE SECURITY POLICY rls.SecPol
 
 ## Related content
 
-- [Row-Level Security](../../relational-databases/security/row-level-security.md)   
+- [Row-level security](../../relational-databases/security/row-level-security.md)
 - [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)   
 - [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)   
 - [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   

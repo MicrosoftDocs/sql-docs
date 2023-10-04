@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Types of views
 
- Besides the standard role of basic user-defined views, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of views that serve special purposes in a database.  
+Besides the standard role of basic user-defined views, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of views that serve special purposes in a database.  
   
 ### Indexed views  
 
@@ -31,11 +31,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ### Partitioned views  
 
- A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
+A partitioned view joins horizontally partitioned data from a set of member tables across one or more servers. This makes the data appear as if from one table. A view that joins member tables on the same instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is a local partitioned view.  
   
 ### System views  
 
- System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the `sys.databases` catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views (Transact-SQL)](../../t-sql/language-reference.md)  
+System views expose catalog metadata. You can use system views to return information about the instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or the objects defined in the instance. For example, you can query the `sys.databases` catalog view to return information about the user-defined databases available in the instance. For more information, see [System Views (Transact-SQL)](../../t-sql/language-reference.md).
   
 ## Common view tasks
 

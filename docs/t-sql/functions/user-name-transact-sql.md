@@ -25,9 +25,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns a database user name from a specified identification number, or the current user name. 
+Returns a database user name from a specified identification number, or the current user name. 
   
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 
   
 ## Syntax
   
@@ -41,23 +41,24 @@ USER_NAME ( [ id ] )
 
 #### *id*
 
- Is the identification number associated with a database user, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). *id* is **int**. The parentheses are required.  
+The identification number associated with a database user, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). *id* is **int**. The parentheses are required.
   
-## Return Type
+## Return types
 
  **nvarchar(128)**  
   
 ## Remarks
 
- When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word `NULL` will return `NULL`. When `USER_NAME` is called without specifying an *id* after an `EXECUTE AS` statement, `USER_NAME` returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, `USER_NAME` returns the name of the Windows principal instead of the group.  
+When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word `NULL` will return `NULL`. When `USER_NAME` is called without specifying an *id* after an `EXECUTE AS` statement, `USER_NAME` returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, `USER_NAME` returns the name of the Windows principal instead of the group.  
 
  Although the `USER_NAME()` function is supported on Azure SQL Database, using `EXECUTE AS USER = USER_NAME(n)` is not supported on Azure SQL Database.
 
 ## Examples
+
   
 ### A. Use USER_NAME() to identify a user ID
 
- The following example returns the user name for user ID `13`, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+The following example returns the user name for user ID `13`, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ```sql  
 SELECT USER_NAME(13);  
@@ -65,6 +66,7 @@ GO
 ```  
 
 ### B. Use USER_NAME without an ID
+
  The following example finds the name of the current user without specifying an ID.  
   
 ```sql  
@@ -74,8 +76,7 @@ GO
   
  Here is the result set for a user that is a member of the sysadmin fixed server role.  
   
-```
-------------------------------  
+```output
 dbo  
 ```  
   
@@ -90,7 +91,7 @@ GO
   
  [!INCLUDE [ssResult](../../includes/ssresult-md.md)]  
   
-```
+```output
 name  
 ------------------------------  
 dbo  
@@ -100,9 +101,9 @@ dbo
   
 ### D. Call USER_NAME during impersonation with EXECUTE AS
 
- The following example shows how `USER_NAME` behaves during impersonation. 
+The following example shows how `USER_NAME` behaves during impersonation.
 
- `EXECUTE AS` is not supported on Microsoft Fabric.
+ `EXECUTE AS` is not supported on [!INCLUDE [fabric](../../includes/fabric.md)].
 
  > [!CAUTION]
  > When testing with `EXECUTE AS`, always script a `REVERT` to follow.
@@ -122,7 +123,7 @@ GO
   
  [!INCLUDE [ssResult](../../includes/ssresult-md.md)]  
   
-```
+```output
 -------------
 dbo  
 
@@ -134,6 +135,7 @@ dbo
 ```  
   
 ## Examples: [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] and [!INCLUDE [ssPDW](../../includes/sspdw-md.md)]
+
   
 ### E. Use USER_NAME without an ID
 
@@ -145,11 +147,9 @@ SELECT USER_NAME();
   
  Here is the result set for a currently logged-in user.  
   
-```
-------------------------------   
+```output
 User7                              
 ```  
-
 
 ### F. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  

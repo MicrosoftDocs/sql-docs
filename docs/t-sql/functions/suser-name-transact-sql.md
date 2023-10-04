@@ -70,24 +70,22 @@ SELECT SUSER_NAME(1);
 
 ### B. Use SUSER_NAME without an ID
 
- The following example finds the name of the current user without specifying an ID.  
+The following example finds the name of the current user without specifying an ID.
   
 ```sql  
 SELECT SUSER_NAME();  
 GO  
 ```  
   
- In SQL Server, here is the result set for a Microsoft Entra ID authenticated login:
+In SQL Server, here is the result set for a Microsoft Entra ID authenticated login:
   
 ```
-------------------------------  
 contoso\username  
 ```
 
- In Azure SQL Database and Microsoft Fabric, here is the result set for a Microsoft Entra ID authenticated login:
+In Azure SQL Database and Microsoft Fabric, here is the result set for a Microsoft Entra ID authenticated login:
 
-```
-------------------------------  
+```output
 username@contoso.com
 ```
 

@@ -35,20 +35,23 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 
 ## Arguments
 
-#### *IF EXISTS*
+#### IF EXISTS
  **Applies to**: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] through [current version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Conditionally drops the security policy only if it already exists.  
   
 #### *schema_name*
+
  Is the name of the schema to which the security policy belongs.  
   
 #### *security_policy_name*
+
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   
 ## Remarks
   
 ## Permissions
+
  Requires the ALTER ANY SECURITY POLICY permission and ALTER permission on the schema.  
   
 ## Examples
@@ -59,7 +62,7 @@ DROP SECURITY POLICY secPolicy;
   
 ## Related content
 
-- [Row-Level Security](../../relational-databases/security/row-level-security.md)   
+- [Row-level security](../../relational-databases/security/row-level-security.md)
 - [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
 - [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)   
 - [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   

@@ -35,7 +35,6 @@ Row-level security was first introduced to [!INCLUDE [sssql16-md](../../includes
 > [!NOTE]
 > This article is focused on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL platforms. For [!INCLUDE [fabric](../../includes/fabric.md)], see [Row-level security in Microsoft Fabric](/fabric/data-warehouse/row-level-security).
 
-
 ## <a id="Description"></a> Description
 
 Row-level security (RLS) supports two types of security predicates:
@@ -689,7 +688,7 @@ DROP SCHEMA Sample;
 
 We can demonstrate row-level security [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] and [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
 
-The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you cannot `CREATE TABLE`, but you can `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
+The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you cannot use `CREATE TABLE`, but you can use `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
 
 In this example, first create a schema `sales`, a table `sales.Orders`. 
 

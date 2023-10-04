@@ -104,7 +104,7 @@ Requires **CONTROL** permission on the database.
 
 ## SQL Server 2022
 
-Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blob Storage and Azure Data Lake Gen 2 the only supported authentication method supported is `SHARED ACCESS SIGNATURE`.
+Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] a new type of connector was introduced, using REST-API calls replacing HADOOP.  For Azure Blob Storage and Azure Data Lake Gen 2 the only supported authentication method is `SHARED ACCESS SIGNATURE`.
 
 Please refer to [create external data source](../../t-sql/statements/create-external-data-source-transact-sql.md) for more information.
 

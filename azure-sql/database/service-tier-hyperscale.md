@@ -20,22 +20,22 @@ Azure SQL Database is based on SQL Server Database Engine architecture that is a
 - Business Critical
 - Hyperscale
 
-The Hyperscale service tier is suitable for all workload types. Its cloud native architecture provides independently scalable compute and storage to support the widest variety of traditional and modern applications. Compute and storage resources in Hyperscale substantially exceed the resources available in the General Purpose and Business Critical tiers. 
+The Hyperscale service tier is suitable for all workload types. Its cloud-native architecture provides independently scalable compute and storage to support the widest variety of traditional and modern applications. Compute and storage resources in Hyperscale substantially exceed the resources available in the General Purpose and Business Critical tiers. 
 
 > [!NOTE]
 >
 > - For details on the General Purpose and Business Critical service tiers in the vCore-based purchasing model, see [General Purpose](service-tier-general-purpose.md) and [Business Critical](service-tier-business-critical.md) service tiers. For a comparison of the vCore-based purchasing model with the DTU-based purchasing model, see [Azure SQL Database purchasing models and resources](purchasing-models.md).
-> - The Hyperscale service tier is currently only available for Azure SQL Database, and not Azure SQL Managed Instance.
+> - The Hyperscale service tier is currently only available for Azure SQL Database and not Azure SQL Managed Instance.
 
 ## What are the Hyperscale capabilities
 
 The Hyperscale service tier in Azure SQL Database provides the following additional capabilities:
 
-- Rapid Scale up - you can, in constant time, scale up your compute resources to accommodate heavy workloads when needed, and then scale the compute resources back down when not needed.
+- Rapid Scale up - you can constantly scale up your compute resources to accommodate heavy workloads when needed and then scale the compute resources back down when not needed.
 - Rapid scale out - you can provision one or more [read-only replicas](service-tier-hyperscale-replicas.md) for offloading your read workload and for use as hot-standbys.
 - Automatic scale-up, scale-down, and billing for compute based on usage with [serverless compute](serverless-tier-overview.md) (in preview).
 - Optimized price/performance for a group of Hyperscale databases with varying resource demands with [elastic pools](./hyperscale-elastic-pool-overview.md) (in preview).
-- Auto scaling storage with support upto 100 TB of database or elastic pool size.
+- Auto-scaling storage with support for up to 100 TB of database or elastic pool size.
 - Higher overall performance due to higher transaction log throughput and faster transaction commit times regardless of data volumes.
 - Fast database backups (based on file snapshots) regardless of size with no IO impact on compute resources.
 - Fast database restores or copies (based on file snapshots) in minutes rather than hours or days.
@@ -49,7 +49,7 @@ For more information about the compute sizes for the Hyperscale service tier, se
 
 ## Who should consider the Hyperscale service tier
 
-The Hyperscale service tier is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It's optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
+The Hyperscale service tier is intended for all customers who require higher performance and availability, fast backup and restore, and/or fast storage and compute scalability. This includes customers who are moving to the cloud to modernize their applications as well as customers who are already using other service tiers in the Azure SQL Database. The Hyperscale service tier supports a broad range of database workloads, from pure OLTP to pure analytics. It's optimized for OLTP and hybrid transaction and analytical processing (HTAP) workloads.
 
 > [!NOTE]
 > [Elastic pools for Hyperscale](./hyperscale-elastic-pool-overview.md) are currently in preview.
@@ -89,7 +89,7 @@ The vCore-based service tiers are differentiated based on database availability,
 
 |ㅤ| **General Purpose** | **Business Critical** | **Hyperscale** |
 |:---:|:---:|:---:|:---:|
-|**Best for** | Offers budget oriented balanced compute and storage options.|OLTP applications with high transaction rate and low IO latency. Offers high resilience to failures and fast failovers using multiple hot standby replicas. |The widest variety of workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore. |
+|**Best for** | Offers budget-oriented balanced compute and storage options.|OLTP applications with high transaction rate and low IO latency. Offers high resilience to failures and fast failovers using multiple hot standby replicas. |The widest variety of workloads. Autoscaling storage size up to 100 TB, fast vertical and horizontal compute scaling, fast database restore. |
 | **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | Decoupled storage with local SSD cache (per compute replica)|
 | **Storage size**<sup>1</sup> | 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
@@ -106,7 +106,7 @@ The vCore-based service tiers are differentiated based on database availability,
 
 |Hardware configuration  |CPU  |Memory  |
 |:---------|:---------|:---------|
-|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel Xeon&reg; Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Autoscale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time a workload may use and be billed for 240 GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Autoscale up to 24 GB per vCore<br>- Autoscale up to 240 GB max|
+|Standard-series (Gen5) |**Provisioned compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel&reg; Xeon Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Provision up to 128 vCores (hyper-threaded)<br><br>**Serverless compute**<br>- Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake)\*, Intel&reg; 8272CL (Cascade Lake) 2.5 GHz\*, Intel Xeon&reg; Platinum 8307C (Ice Lake)\*, AMD EPYC 7763v (Milan) processors<br>- Autoscale up to 80 vCores (hyper-threaded)<br>- The memory-to-vCore ratio dynamically adapts to memory and CPU usage based on workload demand and can be as high as 24 GB per vCore.  For example, at a given point in time, a workload may use and be billed for 240 GB memory and only 10 vCores.|**Provisioned compute**<br>- 5.1 GB per vCore<br>- Provision up to 625 GB<br><br>**Serverless compute**<br>- Autoscale up to 24 GB per vCore<br>- Autoscale up to 240 GB max|
 |Premium-series | - Intel&reg; Xeon Platinum 8307C (Ice Lake), AMD EPYC 7763v (Milan) processors | - 5.1 GB per vCore<Br>- Provision up to 128 vCores (hyper-threaded) |
 |Premium-series memory optimized | - Intel&reg; Xeon Platinum 8307C (Ice Lake), AMD EPYC 7763v (Milan) processors | - 10.2 GB per vCore<Br>- Provision up to 80 vCores (hyper-threaded) |
 
@@ -116,7 +116,7 @@ Serverless is only supported on Standard-series (Gen5) hardware.
   
 ## Distributed functions architecture
 
-Hyperscale separates the query processing engine from the components that provide long-term storage and durability for the data. This architecture provides the ability to smoothly scale storage capacity as far as needed (initial target is 100 TB), and the ability to scale compute resources rapidly.
+Hyperscale separates the query processing engine from the components that provide long-term storage and durability for the data. This architecture provides the ability to smoothly scale storage capacity as far as needed (initial target is 100 TB) and the ability to scale compute resources rapidly.
 
 The following diagram illustrates the functional Hyperscale architecture:
 
@@ -130,7 +130,7 @@ With the ability to rapidly spin up/down additional read-only compute nodes, the
 
 ## Create and manage Hyperscale databases
 
-You can create and manage Hyperscale databases using the Azure portal, Transact-SQL, PowerShell and the Azure CLI. Refer [Quickstart: Create a Hyperscale database](hyperscale-database-create-quickstart.md#create-a-hyperscale-database).
+You can create and manage Hyperscale databases using the Azure portal, Transact-SQL, PowerShell and the Azure CLI. Refer to [Quickstart: Create a Hyperscale database](hyperscale-database-create-quickstart.md#create-a-hyperscale-database).
 
 |  **Operation** |  **Details** | **Learn more** |
 |:---|:---|:---|
@@ -140,15 +140,15 @@ You can create and manage Hyperscale databases using the Azure portal, Transact-
 
 ## Database high availability in Hyperscale
 
-As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), and on the presence of at least one high-availability replica. In a planned failover (i.e. a maintenance event), the system either creates the new primary replica before initiating a failover, or uses an existing high-availability replica as the failover target. In an unplanned failover (i.e. a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists, or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
+As in all other service tiers, Hyperscale guarantees data durability for committed transactions regardless of compute replica availability. The extent of downtime due to the primary replica becoming unavailable depends on the type of failover (planned vs. unplanned), [whether zone redundancy is configured](high-availability-sla.md#hyperscale-service-tier-zone-redundant-availability), and on the presence of at least one high-availability replica. In a planned failover (i.e. a maintenance event), the system either creates the new primary replica before initiating a failover or uses an existing high-availability replica as the failover target. In an unplanned failover (i.e. a hardware failure on the primary replica), the system uses a high-availability replica as a failover target if one exists or creates a new primary replica from the pool of available compute capacity. In the latter case, downtime duration is longer due to extra steps required to create the new primary replica.
 
-You can [choose a maintenance window](maintenance-window.md?view=azuresql-db&preserve-view=true) that allows you to making impactful maintenance events predictable and less disruptive for your workload.
+You can [choose a maintenance window](maintenance-window.md?view=azuresql-db&preserve-view=true) that allows you to make impactful maintenance events predictable and less disruptive for your workload.
 
 For Hyperscale SLA, see [SLA for Azure SQL Database](https://azure.microsoft.com/support/legal/sla/azure-sql-database).
 
 ## Back up and restore
 
-Back up and restore operations for Hyperscale databases are file-snapshot based. This enables these operations to be nearly instantaneous. Since Hyperscale architecture utilizes the storage layer for backup and restore, processing burden and performance impact to compute replicas are significantly reduced. Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
+Back up and restore operations for Hyperscale databases are file-snapshot based. This enables these operations to be nearly instantaneous. Since Hyperscale architecture utilizes the storage layer for backup and restore, the processing burden and performance impact to compute replicas are significantly reduced. Learn more in [Hyperscale backups and storage redundancy](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy).
 
 ## Disaster recovery for Hyperscale databases
 
@@ -164,13 +164,13 @@ These are the current limitations of the Hyperscale service tier.  We're activel
 | :---- | :--------- |
 | Restore database from other service tiers |  A non-Hyperscale database can't be restored as a Hyperscale database, and a Hyperscale database can't be restored as a non-Hyperscale database.<BR/><BR/>For databases migrated to Hyperscale from other Azure SQL Database service tiers, pre-migration backups are kept for the duration of [backup retention](automated-backups-overview.md#backup-retention) period of the source database, including long-term retention policies. Restoring a pre-migration backup within the backup retention period of the database is supported [via the command line](recovery-using-backups.md#point-in-time-restore). You can restore these backups to any non-Hyperscale service tier.|
 | Elastic Pools |  [Elastic Pools](hyperscale-elastic-pool-overview.md) are now in preview.|
-| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory optimized tables aren't currently supported in Hyperscale, and must be changed to disk tables.|
-| Shrink Database | DBCC SHRINKDATABASE, DBCC SHRINKFILE or setting AUTO_SHRINK to ON at the database level, aren't currently supported for Hyperscale databases. |
+| Migration of databases with In-Memory OLTP objects | Hyperscale supports a subset of In-Memory OLTP objects, including memory-optimized table types, table variables, and natively compiled modules. However, when any In-Memory OLTP objects are present in the database being migrated, migration from Premium and Business Critical service tiers to Hyperscale isn't supported. To migrate such a database to Hyperscale, all In-Memory OLTP objects and their dependencies must be dropped. After the database is migrated, these objects can be recreated. Durable and non-durable memory-optimized tables aren't currently supported in Hyperscale and must be changed to disk tables.|
+| Shrink Database | DBCC SHRINKDATABASE, DBCC SHRINKFILE or setting AUTO_SHRINK to ON at the database level aren't currently supported for Hyperscale databases. |
 | Database integrity check | DBCC CHECKDB isn't currently supported for Hyperscale databases. DBCC CHECKTABLE ('TableName') WITH TABLOCK  and DBCC CHECKFILEGROUP WITH TABLOCK may be used as a workaround. See [Data Integrity in Azure SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/) for details on data integrity management in Azure SQL Database. |
 | Elastic Jobs | Using a Hyperscale database as the Job database isn't supported. However, elastic jobs can target Hyperscale databases in the same way as any other database in Azure SQL Database. |
 |Data Sync| Using a Hyperscale database as a Hub or Sync Metadata database isn't supported. However, a Hyperscale database can be a member database in a Data Sync topology. |
-| Hyperscale service tier premium-series hardware | Premium-series and memory optimized premium-series hardware doesn't currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
-| Regional availability | Hyperscale service tier premium-series and premium-series memory optimized hardware is available in limited Azure regions. For a list, see [Hyperscale premium-series availability](service-tiers-sql-database-vcore.md#hyperscale-premium-series-availability).|
+| Hyperscale service tier premium-series hardware | Premium-series and memory-optimized premium-series hardware doesn't currently support:<br/><br/>- Zone redundancy<BR/><BR/>- Serverless compute tier.| 
+| Regional availability | Hyperscale service tier premium-series and premium-series memory-optimized hardware is available in limited Azure regions. For a list, see [Hyperscale premium-series availability](service-tiers-sql-database-vcore.md#hyperscale-premium-series-availability).|
 
 ## Next steps
 

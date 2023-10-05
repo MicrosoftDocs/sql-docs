@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## October 20203
+## October 2023
 
 This release is published October 10, 2023
 
@@ -24,7 +24,7 @@ This release is published October 10, 2023
 
 - Enable extended support updates (ESU) for failover clusters (general availability)
 
-- Azure Arc-enabled SQL Server failover cluster (preview). Includes:
+- Azure Arc-enabled SQL Server failover cluster (preview). Preview features include:
   - Render failover cluster instances in Azure portal.
   - Inventory databases
   - Defender
@@ -218,7 +218,6 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 
 - Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
-- SQL Server on Azure Arc-enabled servers doesn't support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
   - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. Delete your Arc-enabled SQL Server resource and enable automatic registration with SQL IaaS Agent extension. (This step is no longer required, beginning with April, 2023 release.)
   - SQL Server in Linux containers

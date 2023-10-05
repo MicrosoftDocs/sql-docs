@@ -8,6 +8,8 @@ ms.date: 03/19/2021
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 
 # Migration guide: MySQL to Azure SQL Database

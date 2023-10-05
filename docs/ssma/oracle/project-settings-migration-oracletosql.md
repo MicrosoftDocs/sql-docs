@@ -7,7 +7,9 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 f1_keywords:
   - "ssma.oracle.projectsettingmigration.f1"
 ---

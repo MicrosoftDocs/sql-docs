@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Generating Reports (DB2ToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

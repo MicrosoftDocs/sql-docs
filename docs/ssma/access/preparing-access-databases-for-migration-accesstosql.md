@@ -7,6 +7,8 @@ ms.date: "08/15/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Access databases, versions"
   - "Access databases, when to migrate"

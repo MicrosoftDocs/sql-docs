@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  

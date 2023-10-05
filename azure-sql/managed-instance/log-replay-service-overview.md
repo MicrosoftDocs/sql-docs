@@ -9,6 +9,7 @@ ms.service: sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
 ms.custom:
+  - sql-migration-content
 ---
 
 # Overview of Log Replay Service with Azure SQL Managed Instance

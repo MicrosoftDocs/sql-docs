@@ -8,6 +8,8 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # SQL Server Migration Assistant for DB2 (DB2ToSQL)
 

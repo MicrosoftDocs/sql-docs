@@ -32,7 +32,7 @@ To connect your SQL Server to Azure, see [Azure Connected Machine agent deployme
 
 Azure Arc automatically installs the Azure extension for SQL Server when a server connected to Azure Arc has SQL Server installed. All the SQL Server instance resources are automatically created in Azure. These provide a centralized management platform for all your SQL Servers.
 
-To learn more, see [Auto deployment of Azure extension for SQL Server](connect-at-scale-autodeploy.md).
+To learn more, see [Auto deployment of Azure extension for SQL Server](manage-autodeploy.md).
 
 ## Verify your Azure Arc-enabled SQL Server resources
 

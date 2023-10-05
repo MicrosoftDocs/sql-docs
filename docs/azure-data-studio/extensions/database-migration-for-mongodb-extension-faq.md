@@ -6,6 +6,7 @@ ms.author: sandnair
 ms.reviewer: randolphwest
 ms.date: 08/21/2023
 ms.service: azure-data-studio
+ms.subservice: migration-extension
 ms.topic: conceptual
 ---
 # Azure Cosmos DB Migration for MongoDB extension FAQ

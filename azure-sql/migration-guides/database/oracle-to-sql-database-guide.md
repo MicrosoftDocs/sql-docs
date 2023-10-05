@@ -8,6 +8,8 @@ ms.date: 08/25/2020
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 
 # Migration guide: Oracle to Azure SQL Database

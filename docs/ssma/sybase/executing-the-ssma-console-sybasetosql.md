@@ -7,6 +7,8 @@ ms.date: "09/27/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Sybase Console,Database Connection Commands"
   - "Sybase Console,Manageability Commands"

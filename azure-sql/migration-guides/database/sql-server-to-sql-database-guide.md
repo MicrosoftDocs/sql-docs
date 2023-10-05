@@ -8,6 +8,8 @@ ms.date: 01/06/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: SQL Server to Azure SQL Database
 

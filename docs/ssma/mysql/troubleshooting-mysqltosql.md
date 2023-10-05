@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Troubleshooting (MySQLToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

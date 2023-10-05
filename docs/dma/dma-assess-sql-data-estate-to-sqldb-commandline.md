@@ -8,6 +8,8 @@ ms.date: "10/02/2020"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ---

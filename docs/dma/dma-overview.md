@@ -8,8 +8,10 @@ ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: dma
 ms.topic: overview
-ms.custom: UpdateFrequency5
-helpviewer_keywords: 
+ms.custom:
+  - UpdateFrequency5
+  - sql-migration-content
+helpviewer_keywords:
   - "Data Migration Assistant, overview"
 ---
 

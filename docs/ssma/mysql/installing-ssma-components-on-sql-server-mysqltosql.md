@@ -7,7 +7,9 @@ ms.date: "07/14/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - sql-migration-content
 helpviewer_keywords:
   - "SSMA extension pack, Installation"
 ---

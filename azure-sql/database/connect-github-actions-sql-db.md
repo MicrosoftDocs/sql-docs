@@ -8,9 +8,7 @@ ms.date: 02/15/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
-ms.custom:
-  - github-actions-azure
-  - mode-other
+ms.custom: github-actions-azure, mode-other, devx-track-azurecli
 ---
 
 # Use GitHub Actions to connect to Azure SQL Database

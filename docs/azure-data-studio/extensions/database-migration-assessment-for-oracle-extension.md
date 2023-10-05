@@ -6,7 +6,9 @@ ms.author: niball
 ms.reviewer: maghan, randolphwest
 ms.date: 10/24/2022
 ms.service: azure-data-studio
+ms.subservice: migration-extension
 ms.topic: conceptual
+ms.custom: sql-migration-content
 ---
 
 # Database Migration Assessment for Oracle extension (Preview)

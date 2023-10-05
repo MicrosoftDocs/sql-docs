@@ -1,6 +1,6 @@
 ---
-title: Automatically connect Azure Arc-enabled SQL Servers
-description: In this article, you learn how Microsoft helps you automatically connect SQL Server instance resources to Azure Arc at scale.
+title: Manage automatic connection for Azure Arc-enabled SQL Servers
+description: In this article, you learn how you can manage the automatic connection of SQL Server instance resources to Azure Arc on Azure Arc-enabled servers.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,7 @@ ms.date: 07/28/2023
 ms.topic: conceptual
 ---
 
-# Automatically connect Azure Arc-enabled SQL Servers
+# Manage automatic connection for Azure Arc-enabled SQL Servers
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

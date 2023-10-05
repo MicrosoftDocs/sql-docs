@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/12/2023
+ms.date: 10/10/2023
 ms.topic: conceptual
 ---
 
@@ -12,11 +12,22 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## October 10, 20203
+## October 20203
+
+This release is published October 10, 2023
 
 ### Extension version
 
 `1.1.2459.60`
+
+### Azure extension for SQL Server
+
+- Enable extended support updates (ESU) for failover clusters (general availability)
+
+- Azure Arc-enabled SQL Server failover cluster (preview). Includes:
+  - Render failover cluster instances in Azure portal.
+  - Inventory databases
+  - Defender
 
 ## September 2023
 
@@ -226,26 +237,3 @@ This release is published on October 12, 2022
 ### Azure extension for SQL Server
 
 SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
-
-## September 2022
-
-This release is published September 13, 2022
-
-### Extension version
-
-`1.1.2082.9`
-
-### Azure extension for SQL Server
-
-- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have been released with the same image tag.
-- SQL Server 2022 RC0 includes the option of installing Azure extension for SQL Server during setup. 
-- The extension now supports HTTP proxy servers on the Linux platforms.
-
-### Microsoft Entra ID authentication
-
-- Azure extension for SQL Server has been enhanced to support configuring Microsoft Entra ID authentication using `mssql-conf`. For more details, see [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
-
-[!INCLUDE [entra-id](../../includes/entra-id.md)]
-
-
-

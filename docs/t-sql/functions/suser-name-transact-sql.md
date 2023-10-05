@@ -43,7 +43,7 @@ SUSER_NAME ( [ server_user_id ] )
 
 #### *server_user_id*
 
-The login identification number of the user. *server_user_id*, which is optional, is **int**. *server_user_id* can be the login identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When *server_user_id* isn't specified, the login identification name for the current user is returned. If the parameter contains the word NULL, it will return NULL.
+The login identification number of the user. *server_user_id*, which is optional, is **int**. *server_user_id* can be the login identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When *server_user_id* isn't specified, the login identification name for the current user is returned. If the parameter contains the word `NULL`, it returns `NULL`.
 
 ## Return type
 
@@ -91,6 +91,8 @@ username@contoso.com
 
 ## Related content
 
+- [USER_NAME (Transact-SQL)](user-name-transact-sql.md)
+- [SUSER_SNAME (Transact-SQL)](suser-sname-transact-sql.md)
 - [SUSER_ID (Transact-SQL)](../../t-sql/functions/suser-id-transact-sql.md)
 - [Principals (Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)
 - [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)

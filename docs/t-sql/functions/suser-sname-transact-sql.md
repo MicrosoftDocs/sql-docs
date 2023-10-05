@@ -45,7 +45,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 
 #### *server_user_sid*
 
-The optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group. Refer to the `sid` column in `sys.server_principals` or `sys.sql_logins` catalog views. If *server_user_sid* isn't specified, information about the current user is returned. If the parameter contains the word `NULL` will return `NULL`.
+The optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group. Refer to the `sid` column in `sys.server_principals` or `sys.sql_logins` catalog views. If *server_user_sid* isn't specified, information about the current user is returned. If the parameter contains the word `NULL`, `SUSER_SNAME` returns `NULL`.
 
 *server_user_sid* is not supported on [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 

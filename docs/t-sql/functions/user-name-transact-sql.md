@@ -32,16 +32,16 @@ Returns a database user name from a specified identification number, or the curr
 ## Syntax
   
 ```syntaxsql
-USER_NAME ( [ id ] )  
+USER_NAME ( [ ID ] )  
 ```  
   
 [!INCLUDE [sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
-#### *id*
+#### *ID*
 
-The identification number associated with a database user, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). *id* is **int**. The parentheses are required.
+The identification number associated with a database user, as listed in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). *ID* is **int**. The parentheses are required.
   
 ## Return types
 
@@ -49,7 +49,7 @@ The identification number associated with a database user, as listed in [sys.dat
   
 ## Remarks
 
-When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word `NULL` will return `NULL`. When `USER_NAME` is called without specifying an *id* after an `EXECUTE AS` statement, `USER_NAME` returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, `USER_NAME` returns the name of the Windows principal instead of the group.  
+When *ID* is omitted, the current user in the current context is assumed. If the parameter contains the word `NULL`, `USER_NAME` will return `NULL`. When `USER_NAME` is called without specifying an *ID* after an `EXECUTE AS` statement, `USER_NAME` returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, `USER_NAME` returns the name of the Windows principal instead of the group.  
 
  Although the `USER_NAME()` function is supported on Azure SQL Database, using `EXECUTE AS USER = USER_NAME(n)` is not supported on Azure SQL Database.
 
@@ -160,7 +160,7 @@ SELECT name FROM sysusers WHERE name = USER_NAME(1);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```output
 name                             
 ------------------------------   
 User7                              
@@ -168,6 +168,8 @@ User7
 
 ## Related content
 
+- [SUSER_NAME (Transact-SQL)](suser-name-transact-sql.md)
+- [SUSER_SNAME (Transact-SQL)](suser-sname-transact-sql.md)
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
 - [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
 - [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   

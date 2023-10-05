@@ -6,7 +6,9 @@ ms.author: roblescarlos
 ms.reviewer: randolphwest
 ms.date: 12/16/2022
 ms.service: azure-data-studio
+ms.subservice: migration-extension
 ms.topic: conceptual
+ms.custom: sql-migration-content
 ---
 
 # Azure SQL migration extension for Azure Data Studio

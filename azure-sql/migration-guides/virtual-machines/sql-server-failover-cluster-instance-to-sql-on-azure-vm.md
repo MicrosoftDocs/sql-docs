@@ -9,6 +9,8 @@ ms.date: 03/22/2023
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migrate failover cluster instance to SQL Server on Azure VMs
 

@@ -7,7 +7,9 @@ ms.date: "09/30/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - sql-migration-content
 helpviewer_keywords:
   - "Sybase Console,Launching SSMA Console"
   - "Sybase Console,Output Conventions"

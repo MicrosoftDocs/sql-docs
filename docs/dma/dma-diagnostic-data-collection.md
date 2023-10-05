@@ -7,6 +7,8 @@ ms.date: "04/23/2021"
 ms.service: sql
 ms.subservice: dma
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 
 # Enable and disable DMA usage and diagnostic data collection

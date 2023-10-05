@@ -10,6 +10,7 @@ ms.subservice: migration-guide
 ms.topic: how-to
 ms.custom:
   - ignite-fall-2021
+  - sql-migration-content
 ---
 # Assessment rules for SQL Server to Azure SQL Database migration
 

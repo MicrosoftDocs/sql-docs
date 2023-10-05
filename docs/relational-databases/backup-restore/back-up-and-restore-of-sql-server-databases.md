@@ -103,12 +103,6 @@ To ensure security, backup files should have extensions that follow proper conve
 -	Database backup files should have the `.BAK` extension
 -	Log backup files should have the `.TRN` extension. 
 
-The accounts that perform backup or restore operations should not be granted more privileges than necessary. Review [backup](../../t-sql/statements/backup-transact-sql.md#permissions) and [restore](../../t-sql/statements/restore-statements-transact-sql.md#permissions) for specific permission details. It's recommended that backups are [encrypted](../security/encryption/transparent-data-encryption.md) and, if possible, [compressed](backup-compression-sql-server.md). 
-
-To ensure security, backup files should have extensions that follow proper conventions: 
--	Database backup files should have the `.BAK` extension
--	Log backup files should have the `.TRN` extension. 
-
 
 ### Use Separate Storage 
 

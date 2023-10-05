@@ -59881,6 +59881,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/azure-data-studio/extensions/github-copilot-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/github-copilot-extension-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/ssdt/release-notes-ssdt.md",
       "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
       "redirect_document_id": false

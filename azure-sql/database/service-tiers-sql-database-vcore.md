@@ -286,11 +286,11 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
 
 - Australia East
-- Canada Central (including [zone redundancy](high-availability-sla.md#zone-redundant-availability)
+- Canada Central (including [zone redundancy](high-availability-sla.md#zone-redundant-availability))
 - Central India
 - Central US
 - East Asia
-- East US (including [zone redundancy](high-availability-sla.md#zone-redundant-availability)
+- East US (including [zone redundancy](high-availability-sla.md#zone-redundant-availability))
 - East US 2
 - Japan East
 - Japan West*

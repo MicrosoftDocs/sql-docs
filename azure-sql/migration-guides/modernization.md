@@ -7,6 +7,8 @@ ms.reviewer: dmarinkovic, randolphwest
 ms.date: 09/13/2022
 ms.service: sql-database
 ms.topic: faq
+ms.custom:
+  - sql-migration-content
 ---
 # Migrate SQL Server workloads (FAQ)
 

@@ -9,6 +9,8 @@ ms.date: 05/24/2022
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: Oracle to SQL Server on Azure Virtual Machines
 

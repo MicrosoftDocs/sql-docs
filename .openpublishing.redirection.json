@@ -41326,6 +41326,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale-autodeploy.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-autodeploy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/quick-enabled-sql-server.md",
       "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
       "redirect_document_id": false

@@ -8,7 +8,9 @@ ms.date: 06/17/2021
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: reference
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # T-SQL differences between SQL Server and Azure SQL Database
 

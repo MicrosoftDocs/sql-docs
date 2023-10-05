@@ -7,6 +7,8 @@ ms.date: "03/12/2019"
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, Best Practices"
 ---

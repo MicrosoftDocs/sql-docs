@@ -8,6 +8,8 @@ ms.date: 07/10/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Access databases"
   - "Access databases, exporting metadata"

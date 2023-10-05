@@ -7,7 +7,9 @@ ms.date: "04/29/2021"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - sql-migration-content
 ---
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 

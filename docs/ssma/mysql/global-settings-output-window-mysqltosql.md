@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Global Settings (Output Window) (MySQLToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

@@ -4,7 +4,7 @@ description: Provides a quick checklist to review your best practices and guidel
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 03/29/2023
+ms.date: 10/06/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual

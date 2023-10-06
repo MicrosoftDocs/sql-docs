@@ -10419,6 +10419,8 @@ items:
         items:
         - name: Connect SQL Server to Azure using Arc
           href: sql-server/azure-arc/automatically-connect.md
+        - name: Manage auto deploy
+          href: sql-server/azure-arc/manage-autodeploy.md
         - name: Alternate methods to connect
           items:
           - name: Deployment options
@@ -10433,8 +10435,6 @@ items:
             href: sql-server/azure-arc/connect-at-scale-policy.md
           - name: Script
             href: sql-server/azure-arc/connect-at-scale-script.md
-          - name: Automatically connect
-            href: sql-server/azure-arc/connect-at-scale-autodeploy.md
           - name: Connect machines using Configuration Manager custom task sequence
             href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
       - name: Manage

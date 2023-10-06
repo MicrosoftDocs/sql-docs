@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Finishing Test Case Preparation (OracleToSQL)
 The wizard's final page displays the Test Case description and information about objects involved in the test. In addition, on this page you can set the test execution options.  

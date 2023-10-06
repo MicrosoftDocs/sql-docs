@@ -1,12 +1,13 @@
 ---
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 03/29/2023
+ms.date: 10/06/2023
 ms.service: virtual-machines
 ms.topic: include
 ---
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type.
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
+- Consider using [Azure Elastic SAN](../virtual-machines/windows/performance-guidelines-best-practices-storage.md#azure-elastic-san) for SQL Server workloads for better cost-efficiency due to storage consolidation, shared dynamic performance and the ability to drive higher storage throughput without needing to to upgrade a VM. Azure Elasic SAN is currently in preview. 
 - Place data, log, and `tempdb` files on separate drives.
   - For the data drive, use [premium P30 and P40 or smaller disks](/azure/virtual-machines/disks-types#premium-ssds) to ensure the availability of cache support. When using the [Ebdsv5 VM series](/azure/virtual-machines/ebdsv5-ebsv5-series), use [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) which provides better price-performance for workloads that require high IOPS and I/O throughput.
   - For the log drive plan for capacity and test performance versus cost while evaluating either [Premium SSD v2](/azure/virtual-machines/disks-types#premium-ssd-v2) or Premium SSD [P30 - P80 disks](/azure/virtual-machines/disks-types#premium-ssds)

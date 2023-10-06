@@ -194,7 +194,8 @@ The SQL IaaS Agent extension only supports:
 - SQL Server VMs deployed through the Azure Resource Manager. SQL Server VMs deployed through the classic model aren't supported. 
 - SQL Server VMs deployed to the public or Azure Government cloud. Deployments to other private or government clouds aren't supported. 
 - SQL Server FCIs with limited functionality. SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
-- VMs with a single named instance, or VMs with multiple named instances, if a default instance exists. 
+- VMs with a default instance, or a single named instance. 
+- If the VM has multiple named instances, then one of the instances must be the default instance to work with the SQL IaaS Agent extension. 
 - SQL Server instance images only. The SQL IaaS Agent extension does not support Reporting Services or Analysis services, such as the following images: SQL Server Reporting Services, Power BI Report Server, SQL Server Analysis Services. 
 
 ## <a id="in-region-data-residency"></a> Privacy statements

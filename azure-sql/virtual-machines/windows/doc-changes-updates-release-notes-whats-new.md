@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 09/21/2023
+ms.date: 10/06/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -19,6 +19,13 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+## October 2023
+
+| Changes | Details |
+| --- | --- |
+| **Azure Elastic SAN preview** | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is currently in preview. Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more. |  
 
 ## September 2023
 

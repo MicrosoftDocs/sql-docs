@@ -304,7 +304,7 @@ For a full list of bug fixes addressed for the May 2023 Hotfix release, visit th
 | Connection | Added support for advanced connection options for other providers |
 | General | Added support for customizing table keyboard shortcuts |
 | General | Added warning notification on startup if Azure PII logging is enabled |
-| GitHub Copilot | GitHub Copilot extension for autocomplete-style suggestions added to extension gallery. Learn more at [GitHub Copilot extension](./extensions/github-copilot-extension.md) |
+| GitHub Copilot | GitHub Copilot extension for autocomplete-style suggestions added to extension gallery. Learn more at [GitHub Copilot extension](./extensions/github-copilot-extension-overview.md) |
 | Notebooks | Fixed issue where deleted text listed using the Find feature |
 | Object Explorer | Introduced filtering capability for Object Explorer (preview) |
 | Query Editor | Shorted text for Change Connection and Export as Notebook button |

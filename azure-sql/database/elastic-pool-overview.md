@@ -27,7 +27,7 @@ SaaS developers build applications on top of large-scale data tiers with multipl
 - Overprovision resources based on peak usage and overpay.
 - Underprovision to save cost at the expense of performance and customer satisfaction during peaks.
 
-Elastic pools solve this problem by ensuring that databases get the performance resources they need when they need it. They provide a simple resource allocation mechanism within a predictable budget. To learn more about design patterns for SaaS applications using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
+Elastic pools solve this problem by ensuring that databases get the performance resources they need when they need them. They provide a simple resource allocation mechanism within a predictable budget. To learn more about design patterns for SaaS applications using elastic pools, see [Design patterns for multitenant SaaS applications with SQL Database](saas-tenancy-app-design-patterns.md).
 >  
 > [!IMPORTANT]  
 > There's no per-database charge for elastic pools. You're billed for each hour a pool exists at the highest eDTU or vCores, regardless of usage or whether the pool was active for less than an hour.

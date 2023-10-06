@@ -7,7 +7,9 @@ ms.date: "04/29/2021"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - sql-migration-content
 ---
 
 # Installing SSMA components on SQL Server (SybaseToSQL)

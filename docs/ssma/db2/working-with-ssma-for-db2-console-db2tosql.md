@@ -8,6 +8,8 @@ ms.date: 12/16/2022
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Work with SSMA for DB2 Console (DB2ToSQL)
 

@@ -7,6 +7,8 @@ ms.date: 07/06/2020
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"

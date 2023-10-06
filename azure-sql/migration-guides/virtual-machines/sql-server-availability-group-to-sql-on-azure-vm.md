@@ -9,6 +9,8 @@ ms.date: 10/27/2022
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migrate an availability group to SQL Server on Azure VM
 

@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

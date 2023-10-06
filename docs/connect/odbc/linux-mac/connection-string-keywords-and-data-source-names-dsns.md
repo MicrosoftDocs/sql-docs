@@ -121,7 +121,7 @@ TLS on Linux and macOS uses the OpenSSL library. The following table shows the m
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
-|Debian 10, 11|1.1.1|/etc/ssl/certs|
+|Debian 10, 11, 12|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
 |OS X 10.11, macOS|1.0.2|/usr/local/etc/openssl/certs|

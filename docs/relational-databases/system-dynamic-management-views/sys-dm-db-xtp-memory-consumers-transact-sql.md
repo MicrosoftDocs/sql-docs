@@ -79,8 +79,6 @@ The following table describes the memory consumers specified in the `memory_cons
 
 ## Remarks
 
-In the output, the allocators at database levels refer to user tables, indexes, and system tables. `VARHEAP` with `object_id = NULL` refers to memory allocated to tables with variable length columns.
-
 When a memory-optimized table has a columnstore index, the system uses some internal tables, which consume some memory, to track data for the columnstore index. For details about these internal tables and sample queries showing their memory consumption, see [sys.memory_optimized_tables_internal_attributes (Transact-SQL)](../system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
 
 ## Permissions
@@ -102,6 +100,7 @@ Run the following query against the sample `WideWorldImporters` database, which 
 ```sql
 SELECT CONVERT(CHAR(10), OBJECT_NAME(object_id)) AS Name,
     memory_consumer_type_desc,
+    memory_consumer_desc,
     object_id,
     index_id,
     allocated_bytes,
@@ -109,58 +108,65 @@ SELECT CONVERT(CHAR(10), OBJECT_NAME(object_id)) AS Name,
 FROM sys.dm_db_xtp_memory_consumers;
 ```
 
-[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)] The allocators at the database level refer to user tables, indexes, and system tables. The `VARHEAP` rows with `object_id` = `NULL` refer to memory allocated to data rows of the tables. The sum of the allocated bytes, when converted to MB, is 50 MB.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
-|Name|memory_consumer_type_desc|object_id|index_id|allocated_bytes|used_bytes|
-|---|---|---|---|---|---|
-|ColdRoomTe|VARHEAP|1179151246|3|196608|800|
-|ColdRoomTe|VARHEAP|1179151246|2|196608|800|
-|VehicleTem|VARHEAP|1243151474|2|10551296|1187936|
-|ColdRoomTe|VARHEAP|1179151246|NULL|65536|384|
-|memory_opt|VARHEAP|1211151360|2|131072|208|
-|VehicleTem|VARHEAP|1243151474|NULL|33423360|32802112|
-|memory_opt|VARHEAP|1211151360|NULL|0|0|
-|VehicleTem|VARHEAP|1243151474|2|131072|160|
-|VehicleTem|VARHEAP|1243151474|NULL|0|0|
-|VehicleTem|VARHEAP|1243151474|NULL|0|0|
-|NULL|VARHEAP|-15|1|131072|176|
-|NULL|VARHEAP|-15|NULL|0|0|
-|NULL|VARHEAP|-14|2|131072|192|
-|NULL|VARHEAP|-14|1|131072|208|
-|NULL|VARHEAP|-14|NULL|0|0|
-|NULL|HASH|-13|1|2048|2048|
-|NULL|VARHEAP|-13|NULL|0|0|
-|NULL|HASH|-10|2|32768|32768|
-|NULL|HASH|-10|1|32768|32768|
-|NULL|VARHEAP|-10|NULL|131072|544|
-|NULL|HASH|-11|1|32768|32768|
-|NULL|VARHEAP|-11|NULL|196608|240|
-|NULL|HASH|-12|1|8192|8192|
-|NULL|VARHEAP|-12|NULL|196608|2160|
-|NULL|HASH|-9|1|2048|2048|
-|NULL|VARHEAP|-9|NULL|131072|1440|
-|NULL|VARHEAP|-7|1|327680|976|
-|NULL|VARHEAP|-7|NULL|131072|720|
-|NULL|HASH|-3|1|2048|2048|
-|NULL|VARHEAP|-3|NULL|0|0|
-|NULL|HASH|0|2|8192|8192|
-|NULL|HASH|0|1|32768|32768|
-|NULL|VARHEAP|NULL|NULL|393216|13416|
-|NULL|VARHEAP|NULL|NULL|1114112|4800|
-|NULL|VARHEAP|NULL|NULL|196608|25184|
-|NULL|VARHEAP|-15|1|262144|176|
-|NULL|VARHEAP|-15|NULL|0|0|
-|NULL|HASH|-7|1|32768|32768|
-|NULL|VARHEAP|-7|NULL|65536|600|
-|NULL|HASH|-3|1|2048|2048|
-|NULL|VARHEAP|-3|NULL|0|0|
-|NULL|HASH|0|1|32768|32768|
-|NULL|VARHEAP|NULL|NULL|393216|11120|
-|NULL|PGPOOL|0|NULL|262144|262144|
-|NULL|PGPOOL|0|NULL|2883584|2621440|
-|NULL|PGPOOL|0|NULL|49152|40960|
-|NULL|VARHEAP|NULL|NULL|1179648|28624|
-|NULL|VARHEAP|NULL|NULL|131072|512|
+```output
+Name       memory_consumer_type_desc memory_consumer_desc                   object_id   index_id    allocated_bytes      used_bytes
+---------- ------------------------- -------------------------------------- ----------- ----------- ----------------- ------------
+NULL       VARHEAP                   Range index heap                       -15         1           131072               176
+NULL       VARHEAP                   Physical range index partition table   -15         NULL        0                    0
+NULL       VARHEAP                   Range index heap                       -14         2           131072               192
+NULL       VARHEAP                   Range index heap                       -14         1           131072               208
+NULL       VARHEAP                   Large Rows File table                  -14         NULL        0                    0
+NULL       HASH                      Hash index                             -13         1           2048                 2048
+NULL       VARHEAP                   Encryption table                       -13         NULL        0                    0
+NULL       HASH                      Hash index                             -10         2           32768                32768
+NULL       HASH                      Hash index                             -10         1           32768                32768
+NULL       VARHEAP                   Tx Segment table                       -10         NULL        65536                544
+NULL       HASH                      Hash index                             -11         1           32768                32768
+NULL       VARHEAP                   Checkpoint table                       -11         NULL        131072               320
+NULL       HASH                      Hash index                             -12         1           8192                 8192
+NULL       VARHEAP                   Ckpt file table                        -12         NULL        131072               3120
+NULL       HASH                      Hash index                             -9          1           2048                 2048
+NULL       VARHEAP                   Ckpt file watermark table              -9          NULL        131072               1280
+NULL       VARHEAP                   Range index heap                       -7          1           262144               976
+NULL       VARHEAP                   Physical Sequence Object table         -7          NULL        65536                864
+NULL       HASH                      Hash index                             -3          1           2048                 2048
+NULL       VARHEAP                   Physical root fragment table           -3          NULL        0                    0
+NULL       HASH                      Hash index                             0           2           8192                 8192
+NULL       HASH                      Hash index                             0           1           32768                32768
+NULL       VARHEAP                   Physical Root table                    NULL        NULL        327680               12160
+NULL       PGPOOL                    Tail cache 256K page pool              0           NULL        262144               262144
+NULL       PGPOOL                    256K page pool                         0           NULL        35389440             18874368
+NULL       PGPOOL                    64K page pool                          0           NULL        131072               65536
+NULL       PGPOOL                    4K page pool                           0           NULL        49152                40960
+NULL       VARHEAP                   Storage internal heap                  NULL        NULL        786432               4816
+NULL       VARHEAP                   Storage user heap                      NULL        NULL        262144               22496
+ColdRoomTe VARHEAP                   Range index heap                       1179151246  3           196608               800
+ColdRoomTe VARHEAP                   Range index heap                       1179151246  2           196608               800
+memory_opt VARHEAP                   Range index heap                       1211151360  2           131072               208
+VehicleTem VARHEAP                   Range index heap                       1243151474  2           11796480             1181824
+ColdRoomTe VARHEAP                   Table heap                             1179151246  NULL        65536                384
+memory_opt VARHEAP                   Table heap                             1211151360  NULL        0                    0
+VehicleTem VARHEAP                   Table heap                             1243151474  NULL        33423360             32802112
+VehicleTem VARHEAP                   Range index heap                       1243151474  2           131072               160
+VehicleTem VARHEAP                   LOB Page Allocator                     1243151474  NULL        0                    0
+VehicleTem VARHEAP                   Table heap                             1243151474  NULL        0                    0
+NULL       VARHEAP                   Range index heap                       -15         1           327680               176
+NULL       VARHEAP                   Logical range index partition table    -15         NULL        0                    0
+NULL       HASH                      Hash index                             -7          1           32768                32768
+NULL       VARHEAP                   Logical Sequence Object table          -7          NULL        65536                600
+NULL       HASH                      Hash index                             -3          1           2048                 2048
+NULL       VARHEAP                   Logical root fragment table            -3          NULL        0                    0
+NULL       HASH                      Hash index                             0           1           32768                32768
+NULL       VARHEAP                   Logical Root table                     NULL        NULL        327680               11120
+NULL       PGPOOL                    Tail cache 256K page pool              0           NULL        262144               0
+NULL       PGPOOL                    256K page pool                         0           NULL        10485760             0
+NULL       PGPOOL                    64K page pool                          0           NULL        131072               0
+NULL       PGPOOL                    4K page pool                           0           NULL        32768                0
+NULL       VARHEAP                   Database internal heap                 NULL        NULL        1048576              8016
+NULL       VARHEAP                   Database user heap                     NULL        NULL        65536                1024
+```
 
 The total memory allocated and used from this DMV is same as the object level in [sys.dm_db_xtp_table_memory_stats](sys-dm-db-xtp-table-memory-stats-transact-sql.md).
 
@@ -175,7 +181,7 @@ FROM sys.dm_db_xtp_memory_consumers;
 ```output
 total_allocated_MB total_used_MB
 ------------------ --------------------
-50                 35
+92                 51
 ```
 
 ## Related content

@@ -87,7 +87,7 @@ Premium SSD v2 disks aren't currently supported by SQL Server gallery images, bu
 [Azure Elastic SAN](/azure/storage/elastic-san/elastic-san-introduction) delivers a massively scalable, cost-effective, highly performant, and reliable block storage solution that connects to a variety of Azure compute services over iSCSI protocol. Elastic SAN enables a seamless transition from an existing SAN storage estate to the cloud without having to refactor customer application architecture. This solution can achieve massive scale - up to millions of IOPS, double-digit GB/s of throughput, and low single-digit millisecond latencies with built-in resiliency to minimize downtime. This makes it a great fit for customers looking to consolidate storage, customers working with multiple compute services, or those who have workloads that require high throughput levels achieved by driving storage over network bandwidth.  
 
 > [!NOTE]
-> - Azure Elasic SAN is currently in preview. 
+> - Azure Elastic SAN is currently in preview. 
 > - VM sizing with Elastic SAN should accommodate production (VM to VM) network throughput requirements along with storage throughput. 
 
 Consider placing SQL Server workloads on Elastic SAN for better cost effiency because: 

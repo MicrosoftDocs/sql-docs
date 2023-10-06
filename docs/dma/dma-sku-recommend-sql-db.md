@@ -8,6 +8,8 @@ ms.date: 09/11/2023
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ---

@@ -9,7 +9,9 @@ ms.date: 02/13/2019
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # New DBA in the cloud – Managing Azure SQL Database after migration
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

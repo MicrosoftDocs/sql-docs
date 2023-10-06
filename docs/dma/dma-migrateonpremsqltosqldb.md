@@ -7,7 +7,9 @@ ms.date: 06/29/2020
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ---

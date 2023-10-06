@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Edit Type Mapping (AccessToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

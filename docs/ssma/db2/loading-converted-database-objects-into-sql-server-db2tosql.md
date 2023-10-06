@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Loading Converted Database Objects into SQL Server (DB2ToSQL)
 After you have converted DB2 schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  

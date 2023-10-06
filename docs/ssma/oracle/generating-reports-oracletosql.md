@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Report Generation in Oracle Console, synchronize-target"
   - "Report Generation in Oracle Console,refresh-from-database"

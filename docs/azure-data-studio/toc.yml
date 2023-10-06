@@ -91,7 +91,11 @@
     - name: Extension for Oracle
       href: extensions/extension-for-oracle.md
     - name: GitHub Copilot extension
-      href: extensions/github-copilot-extension.md
+      items:
+      - name: Overview
+        href: extensions/github-copilot-extension-overview.md
+      - name: Use GitHub Copilot with Azure Data Studio
+        href: extensions/github-copilot-extension-using-github-copilot.md
     - name: Kusto extension
       href: extensions/kusto-extension.md
     - name: Machine Learning extension

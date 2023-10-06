@@ -23,6 +23,8 @@ ms.custom:
 
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md).
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Preview
 
 The following table lists the features of Azure SQL Database that are currently in preview.
@@ -84,11 +86,12 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 | Changes | Details |
 | --- | --- |
-| **Optimized locking additional diagnostic information** | Additional wait types, wait and lock resources, and deadlock graph elements are available for [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
-| **Database level CMK with TDE** | [Database level CMK](transparent-data-encryption-byok-database-level-overview.md) allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is now generally available. |
-| **Try Azure SQL Database for free** preview | [Try Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. This offer is currently in preview. |
-| **Hyperscale short-term and long-term retention GA** | [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases. For more information, read about [the GA of long-term retention (LTR) for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616) and [the GA of short-term retention for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |
 | **BASE64_ENCODE and BASE64_DECODE support** | The [BASE64_ENCODE](/sql/t-sql/functions/base64-encode-transact-sql) and [BASE64_DECODE](/sql/t-sql/functions/base64-decode-transact-sql) are now available in Azure SQL Database. |
+| **Database level CMK with TDE** | [Database level CMK](transparent-data-encryption-byok-database-level-overview.md) allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is now generally available. |
+| **Hyperscale short-term and long-term retention GA** | [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases. For more information, read about [the GA of long-term retention (LTR) for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616) and [the GA of short-term retention for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |
+| **Microsoft Entra ID rebrand**| Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
+| **Optimized locking additional diagnostic information** | Additional wait types, wait and lock resources, and deadlock graph elements are available for [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
+| **Try Azure SQL Database for free** preview | [Try Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. This offer is currently in preview. |
 
 ### August 2023
 

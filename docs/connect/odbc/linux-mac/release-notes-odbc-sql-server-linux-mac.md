@@ -39,6 +39,7 @@ GeneMi.  2019/04/03.
 
 | New item | Details |
 | :------- | :------ |
+| New distribution supported. | Debian 12  |
 | Improved Performance | More efficient packet buffer memory allocation |
 | New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |

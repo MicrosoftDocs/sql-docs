@@ -230,6 +230,9 @@ curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/a
 #Debian 11
 curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
+#Debian 12
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd

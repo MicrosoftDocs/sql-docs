@@ -29,7 +29,6 @@ For the ARM64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?li
 
 | Feature added | Details |
 | :------- | :------ |
-| New distribution supported. | Debian 12  |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 17.10.5

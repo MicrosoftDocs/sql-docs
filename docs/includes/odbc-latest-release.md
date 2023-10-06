@@ -9,5 +9,5 @@ ms.subservice: connectivity
 ms.topic: include
 ---
 
-Version: 18.3.1.1  
-Date: July 31, 2023  
+Version: 18.3.2.1  
+Date: October 10, 2023  

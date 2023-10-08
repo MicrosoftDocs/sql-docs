@@ -103,11 +103,11 @@ To set or update the license type using the REST API:
 
 ### Are there dual-use rights with Azure Hybrid Benefit for SQL Server?
 
-You have 180 days of dual use rights of the license to ensure migrations are running seamlessly. After that 180-day period, you can only use the SQL Server license on Azure. You no longer have dual use rights on-premises and on Azure.
+You have 180 days of dual-use rights of the license to ensure migrations are running seamlessly. After that 180-day period, you can only use the SQL Server license on Azure. You no longer have dual-use rights on-premises and on Azure.
 
 ### How does Azure Hybrid Benefit for SQL Server differ from license mobility?
 
-We offer license mobility benefits to SQL Server customers with Software Assurance. License mobility allows reassignment of their licenses to a partner's shared servers. You can use this benefit on Azure IaaS and AWS EC2.
+We offer license mobility benefits to SQL Server customers with Software Assurance. License mobility allows the reassignment of their licenses to a partner's shared servers. You can use this benefit on Azure IaaS and AWS EC2.
 
 Azure Hybrid Benefit for SQL Server differs from license mobility in two key areas:
 

@@ -31,7 +31,7 @@ Some of the content in this article is duplicated in /azure-sql/managed-instance
 
 This article provides examples to modify [automated backup](automated-backups-overview.md) settings for Azure SQL Database, such as the short-term retention policy and the backup storage redundancy option that's used for backups. For Azure SQL Managed Instance, see [Change automated backup settings for Azure SQL Managed Instance](../managed-instance/automated-backups-change-settings.md).
 
-[!INCLUDE [GDPR-related guidance](~/../azure/includes/gdpr-intro-sentence.md)]
+[!INCLUDE [GDPR-related guidance](~/includes/gdpr-intro-sentence.md)]
 
 ## Change short-term retention policy
 

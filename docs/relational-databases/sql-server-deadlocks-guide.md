@@ -4,7 +4,7 @@ description: "Learn about deadlocks in the SQL Server database engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 03/21/2023
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -509,7 +509,57 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 
 :::image type="content" source="media/sql-server-deadlocks-guide/graphical-deadlock-xdl.png" alt-text="A screenshot of a visual deadlock graph in an .xdl file in SSMS." lightbox="media/sql-server-deadlocks-guide/graphical-deadlock-xdl.png":::
 
-## <a id="Additional_Reading"></a> See also
+## Optimized locking and deadlocks
+
+**Applies to:** [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+
+[Optimized locking](performance/optimized-locking.md) introduced a different method for locking mechanics that changes how deadlocks involving exclusive TID locks may be reported. Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. 
+
+Consider the following example where optimized locking is enabled:
+
+```sql
+CREATE TABLE t2 
+(a int PRIMARY KEY not null 
+,b int null); 
+
+INSERT INTO t2 VALUES (1,10),(2,20),(3,30) 
+GO 
+```
+
+The following TSQL commands in two sessions will create a deadlock on table `t2`:
+
+In session 1:
+
+```sql
+--session 1
+begin tran foo;
+update t2 set b = b+ 10 where a = 1; 
+```
+
+In session 2:
+```sql
+--session 2:
+begin tran bar 
+update t2 set b = b+ 10 where a = 2; 
+```
+ 
+In session 1:
+```sql
+--session 1:
+update t2 set b = b + 100 where a = 2; 
+```
+ 
+In session 2:
+```sql
+--session 2:
+update t2 set b = b + 20 where a = 1; 
+```
+
+This results in a deadlock. In this case, a keylock resource, where each session holds an X lock on its own TID and is waiting on the S lock on the other TID, resulting in a deadlock. The following XML, captured as the deadlock report, contains elements and attributes specific to optimized locking:
+
+:::image type="content" source="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png" alt-text="A screenshot of the XML of a deadlock report showing the UnderlyingResource nodes and keylock nodes specific to optimized locking." lightbox="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png":::
+
+## <a id="Additional_Reading"></a> Related content
 
 - [Extended Events](../relational-databases/extended-events/extended-events.md)   
 - [sys.dm_tran_locks (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
@@ -518,8 +568,5 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 - [Lock:Deadlock Chain Event Class](event-classes/lock-deadlock-chain-event-class.md)
 - [Lock:Deadlock Event Class](event-classes/lock-deadlock-event-class.md)
 - [SET DEADLOCK_PRIORITY (Transact-SQL)](../t-sql/statements/set-deadlock-priority-transact-sql.md)
-
-## Next steps
-
 - [Analyze and prevent deadlocks in Azure SQL Database](/azure/azure-sql/database/analyze-prevent-deadlocks)
 - [Open, view, and print a deadlock file in SQL Server Management Studio (SSMS)](performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)

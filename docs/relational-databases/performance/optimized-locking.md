@@ -4,7 +4,7 @@ description: "Learn about the optimized locking enhancement to the Database Engi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, peskount
-ms.date: 10/04/2023
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -229,7 +229,7 @@ To support monitoring and troubleshooting of blocking and deadlocking with optim
 - Wait resource visibility
     - `XACT` wait resources. For more information, see `wait_resource` in [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 - Deadlock graph
-    - Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock.
+    - Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. For more information and an example, see [Optimized locking and deadlocks](../sql-server-deadlocks-guide.md#optimized-locking-and-deadlocks).
 
 ## Best practices with optimized locking
 

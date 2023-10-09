@@ -123,7 +123,7 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 [redhat_docs]:  https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.8
 [redhat_sheet]: https://www.redhat.com/rhdc/managed-files/cl-ocs3-datasheet-f19840wg-201911-en.pdf
-[redhat_webs]:  https://access.redhat.com/products/red-hat-openshift-container-storage
+[redhat_webs]:  https://www.redhat.com/technologies/cloud-computing/openshift
 
 [scality_docs]: https://docs.scality.com
 [scality_sheet]: https://go.scality.com/l/893901/2021-08-17/23c52m/893901/1629719058hjLdj34t/Artesca_Datasheet_Letter_Web_210818.pdf

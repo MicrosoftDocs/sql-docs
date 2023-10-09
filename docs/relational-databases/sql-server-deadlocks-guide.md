@@ -475,12 +475,12 @@ The second update statement in **Session A** will be blocked by **Session B** on
 
 After a few seconds, the deadlock monitor will identify that the transactions in **Session A** and **Session B** are mutually blocking one another, and that neither can make progress. You should see a deadlock occur, with **Session A** chosen as the deadlock victim. **Session B** will complete successfully. An error message will appear in **Session A** with text similar to the following:
 
-```
+```output
 Msg 1205, Level 13, State 51, Line 7
 Transaction (Process ID 51) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction.
 ```
 
-If a deadlock is not raised, verify that READ_COMMITTED_SNAPSHOT has been enabled in your sample database. Deadlocks may occur in any database configuration, but this example requires READ_COMMITTED_SNAPSHOT to be enabled.
+If a deadlock is not raised, verify that READ_COMMITTED_SNAPSHOT has been enabled in your sample database. Deadlocks can occur in any database configuration, but this example requires READ_COMMITTED_SNAPSHOT to be enabled.
 
 You could then view details of the deadlock in the ring_buffer target of the `system_health` Extended Events session, which is enabled and active by default in SQL Server. Consider the following query:
 
@@ -511,7 +511,7 @@ You can view the XML in the `Deadlock_XML` column inside SSMS, by selecting the 
 
 ## Optimized locking and deadlocks
 
-**Applies to:** [!INCLUDE[ssazure-sqldb](../../includes/ssazure-sqldb.md)]
+**Applies to:** [!INCLUDE[ssazure-sqldb](../includes/ssazure-sqldb.md)]
 
 [Optimized locking](performance/optimized-locking.md) introduced a different method for locking mechanics that changes how deadlocks involving exclusive TID locks may be reported. Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. 
 
@@ -532,30 +532,33 @@ In session 1:
 
 ```sql
 --session 1
-begin tran foo;
-update t2 set b = b+ 10 where a = 1; 
+BEGIN TRAN foo;
+UPDATE t2 SET b = b+ 10 WHERE a = 1; 
 ```
 
 In session 2:
+
 ```sql
 --session 2:
-begin tran bar 
-update t2 set b = b+ 10 where a = 2; 
+BEGIN TRAN bar 
+UPDATE t2 SET b = b+ 10 WHERE a = 2; 
 ```
- 
+
 In session 1:
+
 ```sql
 --session 1:
-update t2 set b = b + 100 where a = 2; 
-```
- 
-In session 2:
-```sql
---session 2:
-update t2 set b = b + 20 where a = 1; 
+UPDATE t2 SET b = b + 100 WHERE a = 2; 
 ```
 
-This results in a deadlock. In this case, a keylock resource, where each session holds an X lock on its own TID and is waiting on the S lock on the other TID, resulting in a deadlock. The following XML, captured as the deadlock report, contains elements and attributes specific to optimized locking:
+In session 2:
+
+```sql
+--session 2:
+UPDATE t2 SET b = b + 20 WHERE a = 1; 
+```
+
+This scenario of competing `UPDATE` statements results in a deadlock. In this case, a keylock resource, where each session holds an X lock on its own TID and is waiting on the S lock on the other TID, resulting in a deadlock. The following XML, captured as the deadlock report, contains elements and attributes specific to optimized locking:
 
 :::image type="content" source="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png" alt-text="A screenshot of the XML of a deadlock report showing the UnderlyingResource nodes and keylock nodes specific to optimized locking." lightbox="media/sql-server-deadlocks-guide/optimized-locking-tid-lock-deadlock-xml.png":::
 

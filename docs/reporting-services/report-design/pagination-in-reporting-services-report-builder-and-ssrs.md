@@ -1,35 +1,36 @@
 ---
 title: "Pagination in paginated reports"
-description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Report Builder.
+description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Microsoft Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/16/2019
+ms.date: 10/09/2023
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Pagination in paginated reports (Report Builder)
+
+# Pagination in paginated reports (Microsoft Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
 
-  Pagination refers to the number of pages within a paginated report and how report items are arranged on these pages. Pagination in Report Builder varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in Report Builder.  
+  Pagination refers to the number of pages within a paginated report and how report items are arranged on these pages. Pagination in Microsoft Report Builder varies depending on the rendering extension you use to view and deliver the report. When you run a report on the report server, the report uses the HTML renderer. HTML follows a specific set of pagination rules. If you export the same report to PDF, for example, the PDF renderer is used and a different set of rules are applied; therefore, the report paginates differently. To successfully design an easy-to-read report for your users that is optimized for the renderer that you plan to use to deliver your report, you need to understand the rules used to control pagination in Report Builder.  
   
  This topic discusses the impact of the physical page size and the report layout on how hard page break renderers render the report. You can set properties to modify the physical page size and margins, and divide the report into columns, by using the **Report Properties** pane, the **Properties** pane, or the **Page Setup** dialog box. You access the **Report Properties** pane by clicking the blue area outside the report body. You access the **Page Setup** dialog box by clicking **Run** on the Home tab, and then clicking **Page Setup** on the Run tab.  
   
 > [!NOTE]  
 >  If you have designed a report to be one page wide, but it renders across multiple pages, check that the width of the report body, including margins, is not larger than the physical page size width. To prevent empty pages from being added to your report, you can reduce the container size by dragging the container corner to the left.  
-  
+
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+
 ## The Report Body  
  The report body is a rectangular container displayed as white space on the design surface. It can grow or shrink to accommodate the report items contained within it. The report body does not reflect the physical page size and, in fact, the report body can grow beyond the boundaries of the physical page size to span multiple report pages. Some renderers, such as [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], Word, HTML and MHTML, render reports that grow or shrink depending on the contents of the page. Reports rendered in these formats are optimized for screen-based viewing, such as in a Web browser. These renderers add vertical page breaks when required.  
   
  You can format the report body so that there is a border color, border style and border width. You can also add a background color and background image.  
   
 ## The Physical Page  
- The physical page size is the paper size. The paper size that you specify for the report controls how the report is rendered. Reports rendered in hard page break formats insert page breaks horizontally and vertically based on the physical page size to provide an optimized reading experience when printed or viewed in a hard page break file format. Reports rendered in soft page break formats insert page breaks horizontally based on the physical size to provide an optimized reading experience when viewed in a Web browser.  
+ The physical page size is the paper size. The paper size that you specify for the report controls how the report is rendered. Reports that are rendered in hard page break formats insert page breaks horizontally and vertically based on the physical page size, to provide an optimized reading experience when printed or viewed in a hard page break file format. Reports that are rendered in soft page break formats insert page breaks horizontally based on the physical size, to provide an optimized reading experience when viewed in a Web browser.  
   
  By default, the page size is 8.5 x 11 inches but you can change this size by using the **Report Properties** pane, **Page Setup** dialog box or by changing the PageHeight and PageWidth properties in the **Properties** pane. The page size does not grow or shrink to accommodate the contents of the report body. If you want the report to appear on a single page, all the content within the report body must fit on the physical page. If it does not fit and you use the hard page break format, then the report will require additional pages. If the report body grows past the right edge of the physical page, then a page break is inserted horizontally. If the report body grows past the bottom edge of the physical page, then a page break is inserted vertically.  
   
@@ -43,12 +44,15 @@ ms.custom: updatefrequency5
  ![Physical page with margins and usable area.](../../reporting-services/report-design/media/rspagemargins.gif "Physical page with margins and usable area.")  
   
 ### Newsletter-Style Columns  
- Your report can be divided into columns, such as columns in a newspaper, that are treated as logical pages rendered on the same physical page. They are arranged from left to right, top to bottom, and are separated by white space between each column. If the report is divided into more than one column, each physical page is divided vertically into columns, each of which is considered a logical page. For example, suppose you have two columns on a physical page. The content of your report fills the first column and then the second column. If the report does not fit entirely within the first two columns, the report fills the first column and then the second column on the next page. Columns continue to be filled, from left to right, top to bottom until all report items are rendered. If you specify column sizes that cause the horizontal width or vertical width to equal zero, the column spacing defaults to zero.  
+ You can divide your report into columns, such as the columns in a newspaper. All the columns are treated as logical pages rendered on the same physical page. They are arranged from left to right, top to bottom, and are separated by white space between each column. If the report is divided into more than one column, each physical page is divided vertically into columns, each of which is considered a logical page. For example, suppose you have two columns on a physical page. The content of your report fills the first column and then the second column. If the report does not fit entirely within the first two columns, the report fills the first column and then the second column on the next page. Columns continue to be filled, from left to right, top to bottom until all report items are rendered. If you specify column sizes that cause the horizontal width or vertical width to equal zero, the column spacing defaults to zero.  
   
  Columns are specified using the **Report Properties** pane, **Page Setup** dialog box or by changing the TopMargin, BottomMargin, LeftMargin and RightMargin properties in the **Properties** pane. If you want to use a margin size that is not defined, you can specify the margin size using the Device Information settings for the specific renderer that you are using to export the report. Columns are only applied when you render and print reports in PDF or Image formats. The following image indicates the usable page area of a page containing columns.  
   
  ![Physical page with columns depicted.](../../reporting-services/report-design/media/rspagecolumns.gif "Physical page with columns depicted.")  
-  
+
+> [!NOTE]  
+> Newsletter-style column reports aren't supported in subreports. For more information, see [Subreports in paginated reports](subreports-report-builder-and-ssrs.md). 
+
 ## Page Breaks and Page Names  
  A report might be more readable and its data easier to audit and export when the report has page names. Reporting Services provides properties for reports and tablix data regions (table, matrix, and list), groups, and rectangles in the report to control pagination, reset page numbers, and provide new report page names on page breaks. These features can enhance reports regardless of the format in which reports are rendered, but are especially useful when exporting reports to Excel workbooks.  
   
@@ -81,3 +85,4 @@ ms.custom: updatefrequency5
  [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
+

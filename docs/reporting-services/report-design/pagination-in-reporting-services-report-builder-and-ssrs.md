@@ -3,12 +3,13 @@ title: "Pagination in paginated reports"
 description: Learn about the number of pages within a paginated report and how report items are arranged on these pages in Report Builder.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 12/16/2019
+ms.date: 10/09/2023
 ms.service: reporting-services
 ms.subservice: report-design
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
+
 # Pagination in paginated reports (Report Builder)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-ssrs-rb](../../includes/ssrs-appliesto-ssrs-rb.md)] [!INCLUDE [ssrs-appliesto-pbi-rb](../../includes/ssrs-appliesto-pbi-rb.md)] [!INCLUDE [ssrb-applies-to-ssdt-yes](../../includes/ssrb-applies-to-ssdt-yes.md)]
@@ -19,10 +20,10 @@ ms.custom: updatefrequency5
   
 > [!NOTE]  
 >  If you have designed a report to be one page wide, but it renders across multiple pages, check that the width of the report body, including margins, is not larger than the physical page size width. To prevent empty pages from being added to your report, you can reduce the container size by dragging the container corner to the left.  
-  
+
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+
 ## The Report Body  
  The report body is a rectangular container displayed as white space on the design surface. It can grow or shrink to accommodate the report items contained within it. The report body does not reflect the physical page size and, in fact, the report body can grow beyond the boundaries of the physical page size to span multiple report pages. Some renderers, such as [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], Word, HTML and MHTML, render reports that grow or shrink depending on the contents of the page. Reports rendered in these formats are optimized for screen-based viewing, such as in a Web browser. These renderers add vertical page breaks when required.  
   
@@ -48,7 +49,10 @@ ms.custom: updatefrequency5
  Columns are specified using the **Report Properties** pane, **Page Setup** dialog box or by changing the TopMargin, BottomMargin, LeftMargin and RightMargin properties in the **Properties** pane. If you want to use a margin size that is not defined, you can specify the margin size using the Device Information settings for the specific renderer that you are using to export the report. Columns are only applied when you render and print reports in PDF or Image formats. The following image indicates the usable page area of a page containing columns.  
   
  ![Physical page with columns depicted.](../../reporting-services/report-design/media/rspagecolumns.gif "Physical page with columns depicted.")  
-  
+
+> [!NOTE]  
+> Newsletter-style column reports aren't supported in subreports. For more information, see [Subreports in paginated reports](subreports-report-builder-and-ssrs.md). 
+
 ## Page Breaks and Page Names  
  A report might be more readable and its data easier to audit and export when the report has page names. Reporting Services provides properties for reports and tablix data regions (table, matrix, and list), groups, and rectangles in the report to control pagination, reset page numbers, and provide new report page names on page breaks. These features can enhance reports regardless of the format in which reports are rendered, but are especially useful when exporting reports to Excel workbooks.  
   
@@ -81,3 +85,4 @@ ms.custom: updatefrequency5
  [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
+

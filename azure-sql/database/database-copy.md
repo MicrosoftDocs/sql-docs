@@ -134,6 +134,7 @@ CREATE DATABASE Database2 AS COPY OF server1.Database1;
 
 > [!NOTE]  
 > Database copy using T-SQL isn't supported when connecting to the destination server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, database copy is supported when connected to the destination server from a public IP address using SQL authentication. Once the copy operation completes, public access can be [denied](connectivity-settings.md#deny-public-network-access).
+
 Similarly, the below command copies `Database1` on server1 to a new database named `Database2` within an elastic pool called pool2, on server2.
 
 ```sql

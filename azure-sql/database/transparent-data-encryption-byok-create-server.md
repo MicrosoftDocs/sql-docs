@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and customer-
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 09/19/2023
+ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -154,8 +154,22 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ```powershell
 # create a server with user-assigned managed identity and customer-managed TDE
-New-AzSqlServer -ResourceGroupName <ResourceGroupName> -Location <Location> -ServerName <ServerName> -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential) -SqlAdministratorLogin <ServerAdminName> -SqlAdministratorPassword <ServerAdminPassword> -AssignIdentity -IdentityType <IdentityType> -UserAssignedIdentityId <UserAssignedIdentityId> -PrimaryUserAssignedIdentityId <PrimaryUserAssignedIdentityId> -KeyId <CustomerManagedKeyId>
+$params = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    Location = "<Location>"
+    ServerName = "<ServerName>"
+    ServerVersion = "12.0"
+    SqlAdministratorCredentials = (Get-Credential)
+    SqlAdministratorLogin = "<ServerAdminName>"
+    SqlAdministratorPassword = "<ServerAdminPassword>"
+    AssignIdentity = $true
+    IdentityType = "<IdentityType>"
+    UserAssignedIdentityId = "<UserAssignedIdentityId>"
+    PrimaryUserAssignedIdentityId = "<PrimaryUserAssignedIdentityId>"
+    KeyId = "<CustomerManagedKeyId>"
+}
 
+New-AzSqlServer @params
 ```
 
 # [ARM Template](#tab/arm-template)

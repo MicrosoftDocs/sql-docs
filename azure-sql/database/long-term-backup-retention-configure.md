@@ -323,7 +323,7 @@ Delete backups that are retained for a specific database with an LTR policy.
 
 This example shows how to delete an LTR backup from the list of backups.
 
-1. Identify backups with [View LTR backups](long-term-backup-retention-configure.md#view-ltr-backups-1).
+1. Identify backups with [View LTR backups](#view-ltr-backups-1).
 1. Use `Remove-AzSqlDatabaseLongTermRetentionBackup` to delete a backup.
     ```powershell
     # remove the earliest backup

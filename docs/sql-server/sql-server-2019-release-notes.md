@@ -49,7 +49,7 @@ This section identifies known issues you may experience with this product.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
-### UTF-8 collation cannot be used with certain features
+### UTF-8 collations can't be used with certain features
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with the following features:
   - [In-Memory OLTP tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)

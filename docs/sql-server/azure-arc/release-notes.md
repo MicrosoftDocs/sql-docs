@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 ## October 2023
 
-This release is published October 10, 2023
+This release is published October 10, 2023.
 
 ### Extension version
 
@@ -28,6 +28,8 @@ This release is published October 10, 2023
   - Render failover cluster instances in Azure portal.
   - Inventory databases
   - Defender
+
+  For details, see [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
 
 ## September 2023
 
@@ -212,7 +214,7 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 |LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
 |PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])|
 |Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
-|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
+|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it might not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
 
 ### Known issues and limitations
 

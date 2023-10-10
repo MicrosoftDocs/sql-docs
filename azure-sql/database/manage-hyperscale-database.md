@@ -7,7 +7,7 @@ ms.reviewer: wiassaf, mathoma
 ms.date: 09/26/2022
 ms.service: sql-database
 ms.subservice: service-overview
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.topic: conceptual
 ---
 
@@ -357,7 +357,7 @@ After migrating a database to Hyperscale or reconfiguring a database within the 
 
 The Azure portal shows a list of all databases on a [logical server](logical-servers.md). The **Pricing tier** column includes the service tier for each database.
 
-:::image type="content" source="media/manage-hyperscale-database/database-list-azure-portal.png" alt-text="Screenshot of the overview panel of a logical server in Azure SQL Database. A list of databases appears at the bottom of the panel." lightbox="media/manage-hyperscale-database/database-list-azure-portal.png":::
+:::image type="content" source="media/manage-hyperscale-database/database-list-azure-portal.png" alt-text="Screenshot of the overview panel of a logical server in Azure SQL Database, databases at the bottom of the panel." lightbox="media/manage-hyperscale-database/database-list-azure-portal.png":::
 
 1. Navigate to your [logical server](logical-servers.md) in the Azure portal.
 1. In the left navigation bar, select **Overview**.

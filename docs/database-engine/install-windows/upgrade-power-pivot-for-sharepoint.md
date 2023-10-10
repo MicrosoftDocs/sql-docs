@@ -363,7 +363,7 @@ Get-PowerPivotSystemService
 
  For step-by-step instructions that guide you through all of the post-installation configuration tasks, see [Initial Configuration (Power Pivot for SharePoint)](/sharepoint/administration/configure-power-pivot-for-sharepoint-2013).
 
-## See also
+## Related content
 
 - [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
 - [Power Pivot for SharePoint 2010 Installation](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)

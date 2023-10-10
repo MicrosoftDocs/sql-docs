@@ -80,7 +80,7 @@ If the cluster operates in non-Active Directory mode, update the Apache Knox Gat
 
 1. Connect to the master SQL endpoint with any administrator user.
 
-1. To change the password for the login credentials that you defined during deployment in the parameter `AZDATA_USERNAME`, run the following TSQL command:
+1. To change the password for the login credentials that you defined during deployment in the parameter `AZDATA_USERNAME`, run the following Transact-SQL command:
 
    ```sql
    ALTER LOGIN <AZDATA_USERNAME> WITH PASSWORD = 'newPassword'

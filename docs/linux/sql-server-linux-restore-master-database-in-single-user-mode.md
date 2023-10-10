@@ -119,7 +119,7 @@ When you start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 When you restore a `master` database backup, any existing user databases that were added to the instance after the backup was taken, won't be visible after restoring `master`. The files should still exist on the storage layer, so you'll need to manually reattach those user database files to bring those databases online. See [Attach a Database](../relational-databases/databases/attach-a-database.md) for more information.
 
-## Next steps
+## Related content
 
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
 - [sqlcmd Utility](../tools/sqlcmd/sqlcmd-utility.md)

@@ -4,7 +4,7 @@ description: "Rename Columns (Database Engine)"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/27/2022
+ms.date: 09/26/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -24,7 +24,7 @@ You can rename a table column in [!INCLUDE[ssnoversion](../../includes/ssnoversi
 
 Renaming a column won't automatically rename references to that column. You must modify any objects that reference the renamed column manually. For example, if you rename a table column and that column is referenced in a trigger, you must modify the trigger to reflect the new column name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before renaming it.
 
-Renaming a column doesn't automatically update the metadata for any objects which SELECT all columns (using the `*`) from that table. For example, if you rename a table column and that column is referenced by a non-schema-bound view or function that SELECTs all columns (using the `*`), the metadata for the view or function continues to reflect the original column name. Refresh the metadata using [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) or [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md).
+Renaming a column doesn't automatically update the metadata for any objects which SELECT all columns (using `*`) from that table. For example, if you rename a table column and that column is referenced by a non-schema-bound view or function that SELECTs all columns (using `*` ), the metadata for the view or function continues to reflect the original column name. Refresh the metadata using [sp_refreshsqlmodule](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md) or [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md).
 
 ## Permissions
 

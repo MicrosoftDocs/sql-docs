@@ -21,7 +21,7 @@ To complete this quickstart, you need Azure Data Studio and an Azure Cosmos DB A
 - [Install the Azure Cosmos DB API for MongoDB extension for Azure Data Studio](./extensions/azure-cosmos-db-mongodb-extension.md).
 - [Create an Azure Cosmos DB API for MongoDB account](/azure/cosmos-db/mongodb/mongodb-introduction).
 
-## Connect to an Azure Cosmos DB API for MongoDB RU account
+## Connect to an Azure Cosmos DB for MongoDB account
 
 ### [API for MongoDB (RU-based)](#tab/mongodb-ru)
 

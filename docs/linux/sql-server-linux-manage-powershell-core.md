@@ -269,5 +269,6 @@ SELECT Name
 - Read-SqlXEvent
 - Convert-UrnToPath
 
-## See also
+## Related content
+
 - [SQL Server PowerShell](../powershell/sql-server-powershell.md)

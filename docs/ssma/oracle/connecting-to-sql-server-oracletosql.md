@@ -7,6 +7,8 @@ ms.date: "11/16/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 helpviewer_keywords:
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ---

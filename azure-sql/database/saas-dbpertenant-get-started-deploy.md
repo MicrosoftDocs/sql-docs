@@ -217,7 +217,7 @@ Now that you've started running a load against the collection of tenants, let's 
 1. In the [Azure portal](https://portal.azure.com), browse to your list of SQL servers. Then open the **catalog-dpt-&lt;USER&gt;** server.
     - The catalog server contains two databases, **tenantcatalog** and **basetenantdb** (a template database that's copied to create new tenants).
 
-   ![Screenshot shows a catalog server Overview page with the two databases.](./media/saas-dbpertenant-get-started-deploy/databases.png)
+    :::image type="content" source="./media/saas-dbpertenant-get-started-deploy/databases.png" alt-text="Screenshot that shows a catalog server Overview page with the two databases." lightbox="./media/saas-dbpertenant-get-started-deploy/databases.png":::
 
 2. Go back to your list of SQL servers.
 
@@ -228,7 +228,7 @@ Now that you've started running a load against the collection of tenants, let's 
     - Each tenant database is an **Elastic Standard** database in a 50-eDTU standard pool.
     - The Red Maple Racing database is the tenant database you provisioned previously.
 
-   ![Server with databases](./media/saas-dbpertenant-get-started-deploy/server.png)
+    :::image type="content" source="./media/saas-dbpertenant-get-started-deploy/server.png" alt-text="Screenshot that shows the four databases in the server with red maple racing database highlighted." lightbox="./media/saas-dbpertenant-get-started-deploy/server.png":::
 
 ## Monitor the pool
 

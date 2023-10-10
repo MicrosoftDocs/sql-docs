@@ -121,7 +121,7 @@ landingContent:
             url: ../database/security-best-practice.md
           - text: Logins, user accounts, roles, and permissions
             url: ../database/logins-create-manage.md
-          - text: Azure Active Directory
+          - text: Microsoft Entra ID (formerly Azure Active Directory)
             url: ../database/authentication-aad-overview.md
           - text: Auditing
             url: auditing-configure.md 

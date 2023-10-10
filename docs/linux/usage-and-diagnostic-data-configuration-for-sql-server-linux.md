@@ -267,6 +267,6 @@ To enable Local Audit on Docker, you must have Docker [persist your data](./sql-
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
-For more information about SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).
+- [Overview of SQL Server on Linux](sql-server-linux-overview.md)

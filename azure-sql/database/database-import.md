@@ -4,7 +4,7 @@ description: Create a new database in Azure SQL Database or Azure SQL Managed In
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: jeschult, mathoma
-ms.date: 08/25/2023
+ms.date: 10/05/2023
 ms.service: sql-db-mi
 ms.subservice: backup-restore
 ms.topic: quickstart
@@ -71,7 +71,7 @@ SqlPackage /a:import /tcs:"Data Source=<serverName>.database.windows.net;Initial
 > [!IMPORTANT]  
 > To connect to Azure SQL Database from behind a corporate firewall, the firewall must have port 1433 open. To connect to SQL Managed Instance, you must have a [point-to-site connection](../managed-instance/point-to-site-p2s-configure.md) or an express route connection.
 
-As an alternative to username and password, you can use Microsoft Entra ID (formerly Azure Active Directory) with multi-factor authentication. Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`. This example shows how to import a database using SqlPackage with Microsoft Entra multi-factor authentication:
+As an alternative to username and password, you can use Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) with multifactor authentication. Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`. This example shows how to import a database using SqlPackage with Microsoft Entra multifactor authentication:
 
 ```cmd
 SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.database.windows.net /ua:True /tid:"apptest.onmicrosoft.com"
@@ -124,6 +124,9 @@ while ($importStatus.Status -eq "InProgress") {
 $importStatus
 ```
 
+> [!TIP]  
+> For another script example, see [Import a database from a BACPAC file](scripts/import-from-bacpac-powershell.md).
+
 # [Azure CLI](#tab/azure-cli)
 
 Use the [az-sql-db-import](/cli/azure/sql/db#az-sql-db-import) command to submit an import database request to Azure. Depending on database size, the import may take some time to complete. The DTU based provisioning model supports select database max size values for each tier. When importing a database [use one of these supported values](/sql/t-sql/statements/create-database-transact-sql).
@@ -138,8 +141,7 @@ az sql db import --resource-group "<resourceGroup>" --server "<server>" --name "
     -u "<userId>" -p "<password>"
 ```
 
-> [!TIP]  
-> For another script example, see [Import a database from a BACPAC file](scripts/import-from-bacpac-powershell.md).
+---
 
 ## Cancel the import request
 
@@ -177,7 +179,7 @@ You can also use these wizards.
 - [Import Data-tier Application Wizard in SQL Server Management Studio](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database#using-the-import-data-tier-application-wizard).
 - [SQL Server Import and Export Wizard](/sql/integration-services/import-export-data/start-the-sql-server-import-and-export-wizard).
 
-## Next steps
+## Related content
 
 - To learn how to connect to and query Azure SQL Database from Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database).
 - To learn how to connect to and query a database in Azure SQL Database, see [Quickstart: Azure SQL Database: Use SQL Server Management Studio to connect to and query data](connect-query-ssms.md).

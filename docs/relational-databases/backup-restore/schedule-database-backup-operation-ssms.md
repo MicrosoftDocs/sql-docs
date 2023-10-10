@@ -12,7 +12,7 @@ ms.topic: how-to
 
 # How to schedule a database backup operation by using SQL Server Management Studio
 
-This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](../../sql-server/editions-and-components-of-sql-server-2019.md#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
+This article describes how to schedule a database backup operation by using SQL Server Management Studio (SSMS) for [SQL Editions that support SQL Server Agent](../../sql-server/editions-and-components-of-sql-server-2022.md#SSMS). To schedule backups for SQL Express editions, see [Schedule and automate backups of SQL Server databases in SQL Server Express](/troubleshoot/sql/database-engine/backup-restore/schedule-automate-backup-database).
 
 ## Use maintenance plans to back up databases
 

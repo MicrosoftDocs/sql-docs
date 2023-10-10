@@ -38,7 +38,7 @@ Fixed-size string data. *n* defines the string size in bytes and must be a value
 
 #### varchar [ ( *n* | max ) ]
 
-Variable-size string data. Use *n* to define the string size in bytes and can be a value from 1 through 8,000, or use **max** to indicate a column constraint size up to a maximum storage of 2^31-1 bytes (2 GB). For single-byte encoding character sets such as `Latin`, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+Variable-size string data. Use *n* to define the string size in bytes and can be a value from 1 through 8,000, or use **max** to indicate a column constraint size up to a maximum storage of 2^31-1 bytes (2 GB). For single-byte encoding character sets such as `Latin`, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **char varying** or **character varying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## Remarks
 

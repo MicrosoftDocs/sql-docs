@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: wiassaf
-ms.date: 09/19/2023
+ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -20,6 +20,8 @@ ms.custom: references_regions
 
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
 
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Preview
 
@@ -41,7 +43,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 |[SDK-style SQL project](/sql/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects) | Use [Microsoft.Build.Sql](https://www.nuget.org/packages/Microsoft.Build.Sql) for SDK-style SQL projects in the SQL Database Projects extension in Azure Data Studio or Visual Studio Code. SDK-style SQL projects are especially advantageous for applications shipped through pipelines or built in cross-platform environments.| 
 |[Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker) | Support for cross-instance message exchange using Service Broker between instances of Azure SQL Managed Instance, and between SQL Server and Azure SQL Managed Instance. |
 |[Threat detection](threat-detection-configure.md) | Threat detection notifies you of security threats detected to your database. |
-|[Zone-redundancy](../database/high-availability-sla.md) | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
+|[Zone-redundancy](../managed-instance/high-availability-sla.md#zone-redundant-availability) | Deploy your Business Critical SQL Managed Instance to multiple availability zones to improve the availability of your instance in the event of a disaster. | 
 
 
 ## General availability (GA)
@@ -69,13 +71,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 |[Restore database from SQL MI to SQL Server](restore-database-to-sql-server.md) | November 2022 |  Restore your database from Azure SQL Managed Instance to SQL Server 2022. | 
 |[Time series](/sql/t-sql/functions/generate-series-transact-sql) | November 2022 | Generates a series of numbers within a given interval.  Review [GENERATE_SERIES](/sql/t-sql/functions/generate-series-transact-sql) and [DATE_BUCKET](/sql/t-sql/functions/date-bucket-transact-sql) to learn more. | 
 |[Transactional Replication](replication-transactional-overview.md) | November 2022 | Replicate data from SQL Managed Instance to database hosted on SQL Server, SQL Managed Instance or SQL Database, or from SQL Server to SQL Managed Instance. To get started, review [Configure replication in Azure SQL Managed Instance](replication-between-two-instances-configure-tutorial.md). |
-|[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | 10/2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Managed Instance. | 
-|[Tempdb configurations - file settings](tempdb-configure.md)| September 2022 | Configure the number of `tempdb` files and their growth increments to tune the performance of your instance even more. |
-|[Memory optimized premium-series hardware](resource-limits.md#service-tier-characteristics) | September 2022 |Deploy your SQL Managed Instance to the new memory optimized premium-series hardware to take advantage of the latest Intel Ice Lake CPUs. Memory optimized hardware offers higher memory to vCore ratio. | 
-|[16-TB support in Business Critical](resource-limits.md#service-tier-characteristics) | September 2022 |Support for allocation up to 16 TB of space on SQL Managed Instance in the Business Critical service tier using the new memory optimized premium-series hardware. | 
-|[Data virtualization](data-virtualization-overview.md) | September 2022 |  Join locally stored relational data with data queried from external data sources, such as Azure Data Lake Storage Gen2 or Azure Blob Storage. |
-|[GZRS backup storage redundancy](automated-backups-overview.md) | September 2022 | Backup storage redundancy option that combines geo-redundancy and zone-redundancy, improving both availability and resiliency, while also enabling Point-In-Time Restore (PITR) across availability zones.  | 
-
+|[Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Managed Instance. | 
 
 
 
@@ -93,6 +89,12 @@ Eligible existing instances created prior to November 2022 can enroll into the f
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
+
+### September 2023
+
+| Changes | Details |
+| --- | --- |
+| **Microsoft Entra ID rebrand**| Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
 
 ### August 2023
 

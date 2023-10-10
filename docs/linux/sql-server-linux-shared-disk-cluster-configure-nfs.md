@@ -243,6 +243,6 @@ Ensure that your security standards are enforced for accessing. When configuring
 
 1. Repeat the steps on the other node(s).
 
-## Next steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)

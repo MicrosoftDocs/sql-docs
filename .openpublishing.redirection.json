@@ -51,6 +51,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md",
+      "redirect_url": "/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/2014/analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md",
       "redirect_url": "/previous-versions/sql/2014/analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy",
       "redirect_document_id": false
@@ -41321,6 +41326,21 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql-server/azure-arc/connect-at-scale-autodeploy.md",
+      "redirect_url": "/sql/sql-server/azure-arc/manage-autodeploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/quick-enabled-sql-server.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md",
+      "redirect_url": "/sql/sql-server/azure-arc/automatically-connect#evaluate-azure-arc-enabled-sql-server-on-an-azure-vm",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/sql-server/azure-arc/billing.md",
       "redirect_url": "/sql/sql-server/azure-arc/manage-configuration",
       "redirect_document_id": false
@@ -59858,6 +59878,11 @@
     {
       "source_path": "docs/ssdt/release-notes-ssdt-2019.md",
       "redirect_url": "/sql/ssdt/ssis-vs2019-troubleshooting-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/github-copilot-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/github-copilot-extension-overview",
       "redirect_document_id": false
     },
     {

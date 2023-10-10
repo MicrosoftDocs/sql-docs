@@ -296,7 +296,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | `ACCEPT_EULA` | Accepts the SQL Server license terms when set to any value like `Y`. |
 | `SSIS_PID` | Sets the SQL Server edition or product key. Here are the possible values:<br /><br />- Evaluation<br />- Developer<br />- Express<br />- Web<br />- Standard<br />- Enterprise<br />- A product key<br /><br />If you specify a product key, it must be in the form `#####-#####-#####-#####-#####`, where `#` is a letter or a digit. |
 
-## Next steps
+## Related content
 
 - [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 - [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)

@@ -220,7 +220,18 @@ You can also **Download** or **Remove** the package. Removing the package resets
         "excelIconBackground":"#217346",
         "folderIconBackground":"#4668c5",
         "datasetIconBackground":"#c94f0f",
-        "otherIconBackground":"#000000"        
+        "otherIconBackground":"#000000", 
+        
+        "primaryButton": "#bb2124",
+        "primaryButtonHover": "#d31115",
+        "primaryButtonPressed": "#3d0000", 
+        
+        "link": "#d31115",
+        "linkHover": "#671215",
+        "linkVisited": "#3d0000", 
+        
+        "radioButtonCheckBox": "#bb2124",
+        "radioButtonCheckBoxHover": "#d31115"        
         },  
         "theme":{  
         "dataPoints":[  
@@ -268,3 +279,4 @@ You can also **Download** or **Remove** the package. Removing the package resets
 ## Next steps
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+

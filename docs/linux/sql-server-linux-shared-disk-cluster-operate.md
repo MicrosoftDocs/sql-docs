@@ -72,8 +72,6 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## Next Steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
-
-<!--Image references-->

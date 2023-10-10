@@ -201,7 +201,7 @@ FROM sys.dm_os_wait_stats;
 - [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
 
-## Next steps
+## Related content
 
 - [Performance Monitoring and Tuning Tools](../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
 - [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md)

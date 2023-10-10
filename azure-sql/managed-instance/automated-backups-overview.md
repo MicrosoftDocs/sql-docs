@@ -154,7 +154,10 @@ In other words, for any point in time during the retention period, there must be
 
 Backups that are no longer needed to provide PITR functionality are automatically deleted. Because differential backups and log backups require an earlier full backup to be restorable, all three backup types are purged together in weekly sets.
 
-For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, backups are compressed to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+For all databases, including [TDE-encrypted](../database/transparent-data-encryption-tde-overview.md) databases, all full and differential backups are compressed, to reduce backup storage compression and costs. Average backup compression ratio is 3 to 4 times. However, it can be significantly lower or higher depending on the nature of the data and whether data compression is used in the database.
+
+> [!IMPORTANT]
+> For TDE-encrypted databases, log backups files are not compressed for performance reasons. Log backups for non-TDE-encrypted databases are compressed.
 
 Azure SQL Managed Instance computes your total used backup storage as a cumulative value. Every hour, this value is reported to the Azure billing pipeline. The pipeline is responsible for aggregating this hourly usage to calculate your consumption at the end of each month. After the database is deleted, consumption decreases as backups age out and are deleted. After all backups are deleted and PITR is no longer possible, billing stops.
 

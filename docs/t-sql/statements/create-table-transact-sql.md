@@ -321,10 +321,8 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
     [ NULL | NOT NULL ]
-[
-    [ CONSTRAINT constraint_name ] DEFAULT memory_optimized_constant_expression ]
-    | [ IDENTITY [ ( 1, 1 ) ]
-]
+    [ [ CONSTRAINT constraint_name ] DEFAULT memory_optimized_constant_expression ]
+    | [ IDENTITY [ ( 1, 1 ) ] ]
     [ <column_constraint> ]
     [ <column_index> ]
 

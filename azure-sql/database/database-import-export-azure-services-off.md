@@ -8,7 +8,9 @@ ms.date: 01/08/2020
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # Import or export an Azure SQL Database without allowing Azure services to access the server
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

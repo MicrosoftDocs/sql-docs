@@ -9,6 +9,8 @@ ms.date: 07/31/2023
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration overview: SQL Server to SQL Server on Azure VMs
 

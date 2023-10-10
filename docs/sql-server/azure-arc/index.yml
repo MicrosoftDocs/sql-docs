@@ -41,10 +41,6 @@ landingContent:
         links:
           - text: Prerequisites
             url: prerequisites.md
-      - linkListType: quickstart
-        links:
-          - text: Connect a hybrid machine
-            url: quick-enabled-sql-server.md
       - linkListType: deploy
         links:
           - text: Automatically connect

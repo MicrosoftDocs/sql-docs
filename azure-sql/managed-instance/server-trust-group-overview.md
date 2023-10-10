@@ -30,15 +30,15 @@ To create a server trust group by using the Azure portal, follow these steps:
 
 3. On the **Security** settings, select the **SQL trust groups** tab.
 
-   :::image type="content" source="./media/server-trust-group-overview/sql-trust-groups.png" alt-text="SQL trust groups":::
+   :::image type="content" source="./media/server-trust-group-overview/sql-trust-groups.png" alt-text="Screenshot shows SQL trust groups page for a SQL managed instance.":::
 
 4. On the **SQL trust groups** configuration page, select the **New Group** icon.
 
-   :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group-button.png" alt-text="New Group":::
+   :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group-button.png" alt-text="Screenshot shows SQL trust groups page with New Group selected.":::
 
 5. On the **SQL trust group** create blade set the **Group name**. It needs to be unique in the group's subscription, resource group and region. **Trust scope** defines the type of cross-instance scenario that is enabled with the server trust group. Trust scope is fixed - all available functionalities are preselected and this cannot be changed. Select **Subscription** and **Resource group** to choose the managed instances that will be members of the group.
 
-   :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group.png" alt-text="SQL trust group create blade":::
+   :::image type="content" source="./media/server-trust-group-overview/new-sql-trust-group.png" alt-text="Screenshot shows the Create SQL trust group create page with values.":::
 
 6. After all required fields are populated, select **Save**.
 
@@ -52,7 +52,7 @@ To edit a server trust group, follow these steps:
 1. Select the trust group you want to edit.
 1. Click **Configure group**.
 
-   :::image type="content" source="./media/server-trust-group-overview/configure-sql-trust-group.png" alt-text="Configure SQL trust group":::
+   :::image type="content" source="./media/server-trust-group-overview/configure-sql-trust-group.png" alt-text="Screenshot shows a SQL trust group with Configure group highlighted.":::
 
 1. Add or remove managed instances from the group.
 1. Click **Save** to confirm choice or **Cancel** to abandon changes.
@@ -66,11 +66,11 @@ To delete a server trust group, follow these steps:
 1. On the **Security** settings select the **SQL trust groups** tab.
 1. Select the trust group you want to delete.
 
-   :::image type="content" source="./media/server-trust-group-overview/select-delete-sql-trust-group.png" alt-text="Select SQL trust group":::
+   :::image type="content" source="./media/server-trust-group-overview/select-delete-sql-trust-group.png" alt-text="Screenshot shows SQL trust groups page with a group highlighted.":::
 
 1. Select **Delete group**.
 
-   :::image type="content" source="./media/server-trust-group-overview/delete-sql-trust-group.png" alt-text="Delete SQL trust group"::: 
+   :::image type="content" source="./media/server-trust-group-overview/delete-sql-trust-group.png" alt-text="Screenshot shows a SQL trust group with Delete Group highlighted."::: 
 
 1. Type in the SQL trust group name to confirm deletion and select **Delete**.
 

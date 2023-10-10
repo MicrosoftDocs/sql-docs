@@ -271,6 +271,6 @@ In this tutorial, you completed the following tasks.
 > - Install and configure Pacemaker on each cluster node
 > - Configure the failover cluster instance
 
-## Next steps
+## Related content
 
 - [Operate failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)

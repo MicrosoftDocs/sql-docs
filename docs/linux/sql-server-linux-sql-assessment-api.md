@@ -271,7 +271,7 @@ finally {
 
 1. Once the command completes, the output will be generated in JSON format. This output can be integrated with any third party tool that supports parsing JSON files. One such example tool is [Red Hat Insights](https://www.redhat.com/en/blog/sql-server-database-best-practices-now-available-through-red-hat-insights).
 
-## Next steps
+## Related content
 
 - [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md)
 - [SQL best practices assessment for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-assessment-for-sql-vm)

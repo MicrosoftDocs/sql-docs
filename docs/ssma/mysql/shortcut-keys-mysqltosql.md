@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Shortcut Keys (MySQLToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

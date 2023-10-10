@@ -40,29 +40,29 @@ Prepare your environment for PowerShell.
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
-For **Get-AzSqlDatabaseLongTermRetentionBackup** and **Restore-AzSqlDatabase**, you need to have one of the following roles:
+For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you need to have one of the following roles:
 
 - Subscription Owner role or
 - SQL Server Contributor role or
 - Custom role with the following permissions:
 
-   Microsoft.Sql/locations/longTermRetentionBackups/read
-   Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionBackups/read
-   Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/read
+   `Microsoft.Sql/locations/longTermRetentionBackups/read`
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionBackups/read`
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/read`
 
-For **Remove-AzSqlDatabaseLongTermRetentionBackup**, you need to have one of the following roles:
+For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to have one of the following roles:
 
 - Subscription Owner role or
 - Custom role with the following permission:
 
-   Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`
 
 > [!NOTE]
 > The SQL Server Contributor role does not have permission to delete LTR backups.
 
-Azure Role-baed access control (RBAC) permissions could be granted in either *subscription* or *resource group* scope. However, to access LTR backups that belong to a dropped server, the permission must be granted in the *subscription* scope of that server.
+Azure role-based access control (RBAC) permissions could be granted in either *subscription* or *resource group* scope. However, to access LTR backups that belong to a dropped server, the permission must be granted in the *subscription* scope of that server.
 
-- Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`
 
 ---
 
@@ -304,33 +304,32 @@ Delete backups that are retained for a specific database with an LTR policy.
 # [Portal](#tab/portal)
 
 1. In the Azure portal, navigate to your server and then select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the **Available LTR backups** column. A pane appears with a list of the available LTR backups for the selected database.
-
-1. In the **Available LTR backups** pane that appears, review the available backups. Select a backup to delete.
+1. In the **Available LTR backups** pane that appears, review the available backups. Select a backup to delete. Select **Delete**. 
 
 # [Azure CLI](#tab/azure-cli)
 
-Run the [az sql db ltr-backup delete](/cli/azure/sql/db/ltr-backup#az-sql-db-ltr-backup-delete) command to remove an LTR backup. You can use [az sql db ltr-backup list](/cli/azure/sql/db/ltr-backup#az-sql-db-ltr-backup-list) to find the backup `name`.
-
-```azurecli
-az sql db ltr-backup delete \
-   --location eastus2 \
-   --server myserver \
-   --database mydb \
-   --name "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
-```
-
+1. Use [az sql db ltr-backup list](/cli/azure/sql/db/ltr-backup#az-sql-db-ltr-backup-list) to find the backup `name`.
+1. Run the [az sql db ltr-backup delete](/cli/azure/sql/db/ltr-backup#az-sql-db-ltr-backup-delete) command to remove an LTR backup.
+    ```azurecli
+    az sql db ltr-backup delete \
+       --location eastus2 \
+       --server myserver \
+       --database mydb \
+       --name "3214b3fb-fba9-43e7-96a3-09e35ffcb336;132292152080000000"
+    ```
+    
 
 # [PowerShell](#tab/powershell)
 
-### Delete LTR backups
-
 This example shows how to delete an LTR backup from the list of backups.
 
-```powershell
-# remove the earliest backup
-$ltrBackup = $ltrBackups[0]
-Remove-AzSqlDatabaseLongTermRetentionBackup -ResourceId $ltrBackup.ResourceId
-```
+1. Identify backups with [View LTR backups](long-term-backup-retention-configure.md#view-ltr-backups-1).
+1. Use `Remove-AzSqlDatabaseLongTermRetentionBackup` to delete a backup.
+    ```powershell
+    # remove the earliest backup
+    $ltrBackup = $ltrBackups[0]
+    Remove-AzSqlDatabaseLongTermRetentionBackup -ResourceId $ltrBackup.ResourceId
+    ```
 
 ---
 

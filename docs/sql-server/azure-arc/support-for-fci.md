@@ -48,6 +48,7 @@ The portal displays the databases on the SQL Server instance.
 
 - All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.
 - Always On availability groups on a failover cluster instance aren't supported for Azure Arc-enabled SQL Server at this time.
+- Automated backups and point-in-time restore is not supported for failover cluster instances at this time.
 
 ## Related tasks
 

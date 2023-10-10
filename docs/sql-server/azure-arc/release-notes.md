@@ -29,9 +29,11 @@ This release is published October 10, 2023
   - Inventory databases
   - Defender
 
+  For details, see [Support for Always On failover cluster instances in Azure Arc](support-for-fci.md).
+
 ## September 2023
 
-This release is published September 13, 2023.
+This release is published September 13, 2023.a
 
 ### Extension version
 

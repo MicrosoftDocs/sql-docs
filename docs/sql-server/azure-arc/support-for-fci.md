@@ -1,0 +1,54 @@
+---
+title: Support for Always On failover cluster instances
+description: In this article, you learn how you can view and manage Azure Arc-enabled SQL Servers that are configured as a failover cluster.
+author: dnethi
+ms.author: dinethi
+ms.reviewer: mikeray, randolphwest
+ms.date: 10/06/2023
+ms.topic: conceptual
+---
+
+# Support for Always On failover cluster instances in Azure Arc (preview)
+
+Always On failover clustering is a high availability technology that leverages Windows Server failover clustering to provide local redundancy at an instance level.
+
+[!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
+
+If the Azure Arc-enabled SQL Server is configured as a failover cluster instance, additional information about the host Windows failover cluster is also shown in the Azure portal. The Azure SQL extension agent on each of the nodes participating in the Windows cluster recognizes the installed SQL binaries as an installation of SQL Server. The agent projects the installation into Azure as an Azure Arc-enabled SQL Server resource. In addition to each of these Azure Arc-enabled SQL Server resources, the clustered resource also gets projected into Azure, also as an Azure Arc-enabled SQL Server resource type. This means that means that a cluster with `n` nodes projects `n+1` Azure Arc-enabled SQL Server resources.
+
+## View cluster configuration, SQL Server, and database properties
+
+All the information about the SQL Server configuration is available on the clustered, database inventory, backups, cluster configuration, and other capabilities like Defender, Best Practices Assessment and etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
+
+ - The name of the Azure Arc-enabled SQL resource following the pattern `<NetworkName>_<InstanceName>`.
+ - The `Always On role` property in the Essentials pane in Azure portal would show `Failover cluster instance`.
+
+In addition, the database resources are nested under the clustered resource. For example, `<DatabaseName> (<NetworkName>_<InstanceName>/<DatabaseName>)`.
+
+### Cluster configuration
+
+To view the cluster configuration:
+
+1. Browse to the Azure Arc-enabled SQL Server resource named `<NetworkName>_<InstanceName>`
+1. Select **Overview**
+1. Select **Properties**
+
+The portal displays the host cluster configuration under `Properties`.
+
+### View databases
+
+To view the cluster configuration:
+
+1. Browse to the Azure Arc-enabled SQL Server resource named `<NetworkName>_<InstanceName>`
+1. Select on `Databases` tab
+
+The portal displays the databases on the SQL Server instance.
+
+## Limitations
+
+- All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.
+- Always On availability groups on a failover cluster instance aren't supported for Azure Arc-enabled SQL Server at this time.
+
+## Related tasks
+
+- [View SQL Server databases - Azure Arc](view-databases.md)

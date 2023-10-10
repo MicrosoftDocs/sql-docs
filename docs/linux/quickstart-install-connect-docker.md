@@ -4,7 +4,7 @@ description: This quickstart shows how to use Docker to run the SQL Server Linux
 author: amitkh-msft
 ms.author: amitkh
 ms.reviewer: vanto, randolphwest
-ms.date: 07/11/2023
+ms.date: 10/24/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
@@ -13,7 +13,7 @@ ms.custom:
   - kr2b-contr-experiment
   - linux-related-content
 zone_pivot_groups: cs1-command-shell
-monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
+monikerRange: ">=sql-server-linux-2017 || >=sql-server-2017"
 ---
 # Quickstart: Run SQL Server Linux container images with Docker
 
@@ -133,7 +133,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-powershell"
 
    > [!NOTE]  
-   > If you are using PowerShell Core, replace the double quotes with single quotes.
+   > If you're using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
@@ -164,7 +164,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    | --- | --- |
    | **-e "ACCEPT_EULA=Y"** | Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [Password Policy](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
@@ -205,7 +205,7 @@ Before starting the following steps, make sure that you've selected your preferr
    d4a1999ef83e   mcr.microsoft.com/mssql/server:2017-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
    ```
 
-1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
+1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
    ```bash
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
@@ -286,7 +286,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-powershell"
 
    > [!NOTE]  
-   > If you are using PowerShell Core, replace the double quotes with single quotes.
+   > If you're using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
@@ -317,7 +317,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    | --- | --- |
    | **-e "ACCEPT_EULA=Y"** | Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [Password Policy](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
@@ -358,7 +358,7 @@ Before starting the following steps, make sure that you've selected your preferr
    d4a1999ef83e   mcr.microsoft.com/mssql/server:2019-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
    ```
 
-1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
+1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
    ```bash
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
@@ -439,7 +439,7 @@ Before starting the following steps, make sure that you've selected your preferr
    ::: zone pivot="cs1-powershell"
 
    > [!NOTE]  
-   > If you are using PowerShell Core, replace the double quotes with single quotes.
+   > If you're using PowerShell Core, replace the double quotes with single quotes.
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong@Passw0rd>" `
@@ -470,7 +470,7 @@ Before starting the following steps, make sure that you've selected your preferr
    | Parameter | Description |
    | --- | --- |
    | **-e "ACCEPT_EULA=Y"** | Set the `ACCEPT_EULA` variable to any value to confirm your acceptance of the End-User Licensing Agreement. Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
-   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
+   | **-e "MSSQL_SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least eight characters and meets the [Password Policy](../relational-databases/security/password-policy.md). Required setting for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] image. |
    | **-e "MSSQL_COLLATION=\<*SQL_Server_collation*\>"** | Specify a custom SQL Server collation, instead of the default `SQL_Latin1_General_CP1_CI_AS`. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is listening on TCP 1433 in the container and this container port is then exposed to TCP port 1433 on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
@@ -511,7 +511,7 @@ Before starting the following steps, make sure that you've selected your preferr
    d4a1999ef83e   mcr.microsoft.com/mssql/server:2022-latest   "/opt/mssql/bin/perm..."   2 minutes ago   Up 2 minutes   0.0.0.0:1433->1433/tcp, :::1433->1433/tcp   sql1
    ```
 
-1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
+1. If the `STATUS` column shows a status of `Up`, then [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running in the container and listening on the port specified in the `PORTS` column. If the `STATUS` column for your [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] container shows `Exited`, see [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md). The server is ready for connections once the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error logs display the message: `SQL Server is now ready for client connections. This is an informational message; no user action is required`. You can review the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log inside the container using the command:
 
    ```bash
    docker exec -t sql1 cat /var/opt/mssql/log/errorlog | grep connection
@@ -587,7 +587,7 @@ The **SA** account is a system administrator on the [!INCLUDE [ssnoversion-md](.
 
 ## Connect to SQL Server
 
-The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [**sqlcmd**](../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
+The following steps use the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tool, [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md), inside the container to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)].
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `sql1` is name specified by the `--name` parameter when you created the container.
 
@@ -720,7 +720,7 @@ The following steps use **sqlcmd** outside of your container to connect to [!INC
 
 1. Find the IP address for your container's host machine, using `ifconfig` or `ip addr`.
 
-1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [Install **sqlcmd** on Windows](../tools/sqlcmd/sqlcmd-utility.md) or [Install **sqlcmd** on Linux](sql-server-linux-setup-tools.md).
+1. For this example, install the **sqlcmd** tool on your client machine. For more information, see [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md) or [Install the SQL Server command-line tools sqlcmd and bcp on Linux](sql-server-linux-setup-tools.md).
 
 1. Run **sqlcmd** specifying the IP address and the port mapped to port 1433 in your container. In this example, the port is the same as port 1433 on the host machine. If you specified a different mapped port on the host machine, you would use it here. You'll also need to open the appropriate inbound port on your firewall to allow the connection.
 
@@ -755,11 +755,15 @@ The following steps use **sqlcmd** outside of your container to connect to [!INC
 
 Other common tools to connect to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] include:
 
-- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
+- [SQL Server extension for Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
+- [Use SQL Server Management Studio on Windows to manage SQL Server on Linux](sql-server-linux-manage-ssms.md)
+- [What is Azure Data Studio?](../azure-data-studio/what-is-azure-data-studio.md)
 - [mssql-cli (Preview)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
-- [PowerShell Core](sql-server-linux-manage-powershell-core.md)
+- [Manage SQL Server on Linux with PowerShell Core](sql-server-linux-manage-powershell-core.md)
+
+## Disable the `sa` account as a best practice
+
+[!INCLUDE [connect-with-sa](includes/connect-with-sa.md)]
 
 ## Remove your container
 
@@ -801,12 +805,14 @@ After you have tried using the [!INCLUDE [ssnoversion-md](../includes/ssnoversio
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
+## Related tasks
+
+Learn about [running multiple containers](sql-server-linux-docker-container-deployment.md#multiple) and [data persistence](sql-server-linux-docker-container-configure.md#persist).
+
 ## Related content
 
-- [Restore a SQL Server database in a Linux container](tutorial-restore-backup-in-sql-server-container.md).
-- Learn about [running multiple containers](sql-server-linux-docker-container-deployment.md#multiple) and [data persistence](sql-server-linux-docker-container-configure.md#persist).
-- [Troubleshoot SQL Server Linux containers](sql-server-linux-docker-container-troubleshooting.md).
-
-Also, check out the [mssql-docker GitHub repository](https://github.com/microsoft/mssql-docker) for resources, feedback, and known issues.
+- [Restore a SQL Server database in a Linux container](tutorial-restore-backup-in-sql-server-container.md)
+- [Troubleshoot SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
+- [mssql-docker GitHub repository](https://github.com/microsoft/mssql-docker)
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

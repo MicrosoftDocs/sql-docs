@@ -154,7 +154,18 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ```powershell
 # create a server with user-assigned managed identity and cross-tenant customer-managed TDE with automatic key rotation enabled
-New-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId> -EncryptionProtectorAutoRotation:$true
+$params = @{
+    ResourceGroupName = '<ResourceGroupName>'
+    ServerName = '<ServerName>'
+    DatabaseName = '<DatabaseName>'
+    AssignIdentity = $true
+    UserAssignedIdentityId = '<UserAssignedIdentityId>'
+    EncryptionProtector = '<CustomerManagedKeyId>'
+    FederatedClientId = '<FederatedClientId>'
+    EncryptionProtectorAutoRotation = $true
+}
+
+New-AzSqlDatabase @params
 ```
 
 # [ARM Template](#tab/arm-template)
@@ -296,7 +307,20 @@ Replace the following values in the example:
 To get your user-assigned managed identity **Resource ID**, search for **Managed Identities** in the [Azure portal](https://portal.azure.com). Find your managed identity, and go to **Properties**. An example of your UMI **Resource ID** looks like `/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>`.
 
 ```powershell
-Set-AzSqlDatabase -ResourceGroupName <ResourceGroupName> -ServerName <ServerName> -DatabaseName <DatabaseName> -AssignIdentity -UserAssignedIdentityId <UserAssignedIdentityId> -EncryptionProtector <CustomerManagedKeyId> -FederatedClientId <FederatedClientId> -KeyList <ListOfKeys> -KeysToRemove <ListOfKeysToRemove> -EncryptionProtectorAutoRotation:$true
+$params = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    ServerName = "<ServerName>"
+    DatabaseName = "<DatabaseName>"
+    AssignIdentity = $true
+    UserAssignedIdentityId = "<UserAssignedIdentityId>"
+    EncryptionProtector = "<CustomerManagedKeyId>"
+    FederatedClientId = "<FederatedClientId>"
+    KeyList = "<ListOfKeys>"
+    KeysToRemove = "<ListOfKeysToRemove>"
+    EncryptionProtectorAutoRotation = $true
+}
+
+Set-AzSqlDatabase @params
 ```
 
 An example of -KeyList and -KeysToRemove is:

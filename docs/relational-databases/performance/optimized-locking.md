@@ -4,7 +4,7 @@ description: "Learn about the optimized locking enhancement to the Database Engi
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest, peskount
-ms.date: 10/04/2023
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -34,8 +34,8 @@ Optimized locking is composed of two primary components: **Transaction ID (TID) 
 
 For example:
 
-- Without optimized locking, updating 1 million rows in a table may require 1 million exclusive (X) row locks held until the end of the transaction.
-- With optimized locking, updating 1 million rows in a table may require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
+- Without optimized locking, updating 1 million rows in a table might require 1 million exclusive (X) row locks held until the end of the transaction.
+- With optimized locking, updating 1 million rows in a table might require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
 
 This article covers these two core concepts of optimized locking in detail.
 
@@ -229,7 +229,7 @@ To support monitoring and troubleshooting of blocking and deadlocking with optim
 - Wait resource visibility
     - `XACT` wait resources. For more information, see `wait_resource` in [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 - Deadlock graph
-    - Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock.
+    - Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. For more information and an example, see [Optimized locking and deadlocks](../sql-server-deadlocks-guide.md#optimized-locking-and-deadlocks).
 
 ## Best practices with optimized locking
 

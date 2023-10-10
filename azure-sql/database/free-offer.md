@@ -4,7 +4,7 @@ description: Guidance on how to deploy the Azure SQL Database free offer for new
 author: NilsPohlmann
 ms.author: nilsp
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/25/2023
+ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to
@@ -129,6 +129,7 @@ Compared to a normal General Purpose database, this free offer has the following
 - Elastic Jobs and DNS Alias aren't available for this free offer.
 - The free offer Azure SQL Database can't be a part of an elastic pool or autofailover group.
 - Currently, you can only use the Azure portal to create the free offer database.
+- Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free offer. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/) or the [Azure Free offer](https://azure.microsoft.com/pricing/offers/ms-azr-0044p/). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
 - For more information, review the [Azure SQL Database free offer FAQ](free-offer-faq.yml).
 
 ## Clean up resources

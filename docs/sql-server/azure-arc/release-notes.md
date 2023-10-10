@@ -18,16 +18,18 @@ This release is published October 10, 2023.
 
 ### Extension version
 
-`1.1.2467.68`
+`1.1.2467.69`
 
 ### Azure extension for SQL Server
 
-- Enable extended support updates (ESU) for failover clusters (general availability)
+- Enable extended support updates (ESU) for failover clusters (general availability) 
 
-- Azure Arc-enabled SQL Server failover cluster (preview). Preview features include:
-  - Render failover cluster instances in Azure portal.
-  - Inventory databases
-  - Defender
+- Azure Arc-enabled SQL Server failover cluster (preview). Support for this feature will be available on October 14, 2023.
+
+  - Features include:
+    - Render failover cluster instances in Azure portal.
+    - Inventory databases
+    - Defender
 
   For details, see [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
 

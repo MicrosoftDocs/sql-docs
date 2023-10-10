@@ -34,8 +34,8 @@ Optimized locking is composed of two primary components: **Transaction ID (TID) 
 
 For example:
 
-- Without optimized locking, updating 1 million rows in a table may require 1 million exclusive (X) row locks held until the end of the transaction.
-- With optimized locking, updating 1 million rows in a table may require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
+- Without optimized locking, updating 1 million rows in a table might require 1 million exclusive (X) row locks held until the end of the transaction.
+- With optimized locking, updating 1 million rows in a table might require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
 
 This article covers these two core concepts of optimized locking in detail.
 

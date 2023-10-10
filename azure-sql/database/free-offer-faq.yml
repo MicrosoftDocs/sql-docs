@@ -50,6 +50,10 @@ sections:
         answer: |
          Yes, if you change the **Free limit reached behavior** setting to **Continue using for additional charges**.
 
+      - question: Can I use my Student subscription with the Azure SQL Database free offer database?
+        answer: |
+         There are multiple student offers. Currently, the Microsoft Azure for Students Starter offer is incompatible with this Azure SQL Database free offer. Instead, consider the [Azure for College Students offer](https://azure.microsoft.com/pricing/offers/ms-azr-0170p/) or the [Azure Free offer](https://azure.microsoft.com/pricing/offers/ms-azr-0044p/). If desired, the **Continue using database for additional charges** option can deduct from the starting credits.
+
 additionalContent: |
  ## Next step
  - [Azure SQL Database free offer](free-offer.md)

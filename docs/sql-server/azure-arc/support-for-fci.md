@@ -1,5 +1,5 @@
 ---
-title: Support for Always On failover cluster instances
+title: View Always On failover cluster instances
 description: In this article, you learn how you can view and manage Azure Arc-enabled SQL Servers that are configured as a failover cluster.
 author: dnethi
 ms.author: dinethi
@@ -8,7 +8,7 @@ ms.date: 10/06/2023
 ms.topic: conceptual
 ---
 
-# Support for Always On failover cluster instances in Azure Arc (preview)
+# View Always On failover cluster instances in Azure Arc (preview)
 
 Always On failover clustering is a high availability technology that leverages Windows Server failover clustering to provide local redundancy at an instance level.
 

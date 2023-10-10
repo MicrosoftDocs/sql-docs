@@ -4,13 +4,34 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 09/12/2023
+ms.date: 10/10/2023
 ms.topic: conceptual
 ---
 
 # Release notes - Azure Arc-enabled SQL Server
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## October 2023
+
+This release is published October 10, 2023.
+
+### Extension version
+
+`1.1.2467.69`
+
+### Azure extension for SQL Server
+
+- Enable extended support updates (ESU) for failover clusters (general availability).
+
+- Azure Arc-enabled SQL Server failover cluster (preview). Support for this feature will be available on October 16, 2023.
+
+  - Features include:
+    - Render failover cluster instances in Azure portal.
+    - Inventory databases
+    - Defender
+
+  For details, see [View Always On failover cluster instances in Azure Arc](support-for-fci.md).
 
 ## September 2023
 
@@ -195,13 +216,12 @@ The *LicenseType* property of `SQL Server - Azure Arc` has been extended to prov
 |LicenseOnly|SQL Server instance is installed using a product key without Software Assurance or SQL subscription|
 |PAYG|SQL Server instance is installed using a pay-as-you-go activation option (new in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)])|
 |Free|Indicates that the instance uses Evaluation or Developer edition of SQL Server|
-|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it may not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
+|HADR|Indicates that the instance is a replica in an availability group. If it's covered by Software Assurance, it might not require a license. For more information, review [SQL Server Commercial Licensing Terms](https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS).|
 
 ### Known issues and limitations
 
 - Feature use requires Azure extension for SQL Server version `v1.1.2132.21` or higher.
 - The pay-as-you-go billing is limited to SQL Server 2022[!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
-- SQL Server on Azure Arc-enabled servers doesn't support SQL Server Failover Cluster Instances.
 - Azure extension for SQL Server is not supported in the following environments:
   - SQL Server in Azure VMs. If a custom VM image is migrated to Azure VM, Azure extension for SQL Server will stop working. Delete your Arc-enabled SQL Server resource and enable automatic registration with SQL IaaS Agent extension. (This step is no longer required, beginning with April, 2023 release.)
   - SQL Server in Linux containers
@@ -220,26 +240,3 @@ This release is published on October 12, 2022
 ### Azure extension for SQL Server
 
 SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
-
-## September 2022
-
-This release is published September 13, 2022
-
-### Extension version
-
-`1.1.2082.9`
-
-### Azure extension for SQL Server
-
-- Both Linux (`LinuxAgent.SqlServer`) and Windows (`WindowsAgent.SqlServer`) versions of Azure extension for SQL Server have been released with the same image tag.
-- SQL Server 2022 RC0 includes the option of installing Azure extension for SQL Server during setup. 
-- The extension now supports HTTP proxy servers on the Linux platforms.
-
-### Microsoft Entra ID authentication
-
-- Azure extension for SQL Server has been enhanced to support configuring Microsoft Entra ID authentication using `mssql-conf`. For more details, see [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md).
-
-[!INCLUDE [entra-id](../../includes/entra-id.md)]
-
-
-

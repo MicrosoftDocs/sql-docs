@@ -10445,6 +10445,8 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
+        - name: View Always On failover cluster instances
+          href: sql-server/azure-arc/support-for-fci.md  
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
         - name: Automate backups

@@ -8,7 +8,6 @@ ms.topic: include
 Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't currently support the following configurations:
 
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] running in containers.
-- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Failover Cluster Instances (FCI).
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] editions: Business Intelligence.
 - Private Link connections to the Azure Arc data processing service at the `san-af-<region>-prod.azurewebsites.net` endpoint used for inventory and usage upload.

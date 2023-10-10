@@ -84,7 +84,7 @@ The following table specifies the compute capacity limits for a single instance 
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) licensing is limited to 20 cores per [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance. (This licensing isn't available for new agreements.) There are no limits under the Core-based Server Licensing model.
 
 > [!NOTE]  
-> SQL Server limit of 64 logical processors per NUMA node.
+> SQL Server limits the number of logical processors per NUMA node to 64.
 
 In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture isn't visible to the guest applications.
 

@@ -128,7 +128,7 @@ The four key components of ADR are:
 
 - **Cleaner**
 
-  The cleaner is the asynchronous process that wakes up periodically and cleans page versions that aren't needed.
+  The cleaner is the asynchronous process that wakes up periodically and cleans obsolete row versions from PVS.
 
 ## ADR improvements in [!INCLUDE[sssql22-md](../includes/sssql22-md.md)]
 

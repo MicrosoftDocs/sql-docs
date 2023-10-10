@@ -9,7 +9,9 @@ ms.date: 02/13/2019
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # New DBA in the cloud – Managing Azure SQL Database after migration
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -27,6 +29,8 @@ This article discusses some of the core characteristics of Azure SQL Database as
 - Security and compliance
 - Intelligent database monitoring and maintenance
 - Data movement
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Monitor databases using the Azure portal
 
@@ -80,9 +84,9 @@ To learn more about Disaster recovery, see: [Azure SQL Database Disaster Recover
 
 ## Security and compliance
 
-SQL Database takes Security and privacy very seriously. Security within SQL Database is available at the database level and at the platform level and is best understood when categorized into several layers. At each layer you get to control and provide optimal security for your application. The layers are:
+SQL Database takes security and privacy very seriously. Security within SQL Database is available at the database level and at the platform level and is best understood when categorized into several layers. At each layer you get to control and provide optimal security for your application. The layers are:
 
-- Identity & authentication ([SQL authentication and Azure Active Directory [Azure AD] authentication](logins-create-manage.md)).
+- Identity & [authentication](logins-create-manage.md) (SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 - Monitoring activity ([Auditing](./auditing-overview.md) and [threat detection](threat-detection-configure.md)).
 - Protecting actual data ([Transparent Data Encryption [TDE]](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql) and [Always Encrypted [AE]](/sql/relational-databases/security/encryption/always-encrypted-database-engine)).
 - Controlling Access to sensitive and privileged data ([Row Level security](/sql/relational-databases/security/row-level-security) and [Dynamic Data Masking](/sql/relational-databases/security/dynamic-data-masking)).
@@ -93,22 +97,24 @@ SQL Database takes Security and privacy very seriously. Security within SQL Data
 
 There are two authentication methods offered in SQL Database:
 
-- [Azure Active Directory Authentication](authentication-aad-overview.md)
+- [Microsoft Entra authentication](authentication-aad-overview.md)
 - [SQL authentication](/sql/relational-databases/security/choose-an-authentication-mode#connecting-through-sql-server-authentication)
 
-Traditional Windows authentication is not supported. Azure Active Directory (Azure AD) is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
+Windows authentication is not supported. Microsoft Entra ID is a centralized identity and access management service. With this you can very conveniently provide single sign-on (SSO) access to the personnel in your organization. What this means is that the credentials are shared across Azure services for simpler authentication.
 
-Azure AD supports [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md) and [Azure AD can easily be integrated with Windows Server Active Directory](/azure/active-directory/hybrid/how-to-connect-install-express). SQL Authentication works exactly like you've been using it in the past. You provide a username/password and you can authenticate users to any database on a given server. This also allows SQL Database and Azure Synapse Analytics to offer Multi-Factor Authentication and guest user accounts within an Azure AD domain. If you already have an Active Directory on-premises, you can federate the directory with Azure Active Directory to extend your directory to Azure.
+Microsoft Entra ID supports [multifactor authentication](authentication-mfa-ssms-overview.md), and can easily be [integrated with Windows Server Active Directory](/azure/active-directory/hybrid/how-to-connect-install-express). This also allows SQL Database and Azure Synapse Analytics to offer multifactor authentication and guest user accounts within a Microsoft Entra domain. If you already have an Active Directory on-premises, you can federate the directory with Microsoft Entra ID to extend your directory to Azure.
+
+SQL authentication supports only username and password to authenticate users to any database on a given server. 
 
 |**If you...**|**SQL Database / Azure Synapse Analytics**|
 |---|---|
-|Prefer not to use Azure Active Directory (Azure AD) in Azure|Use [SQL authentication](security-overview.md)|
-|Used AD on SQL Server on-premises|[Federate AD with Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Azure AD authentication. With this, you can use single sign-on.|
-|Need to enforce Multi-Factor Authentication|Require Multi-Factor Authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Azure AD Universal authentication with Multi-Factor Authentication support](authentication-mfa-ssms-overview.md).|
-|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Azure AD Universal authentication](authentication-mfa-ssms-overview.md) in SQL Database or dedicated SQL pool, which leverages [Azure AD B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
-|Are logged in to Windows using your Azure AD credentials from a federated domain|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
-|Are logged in to Windows using credentials from a domain not federated with Azure|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
-|Have middle-tier services which need to connect to SQL Database or Azure Synapse Analytics|Use [Azure AD integrated authentication](authentication-aad-configure.md).|
+|Prefer not to use Microsoft Entra ID in Azure|Use [SQL authentication](security-overview.md)|
+|Used AD on SQL Server on-premises|[Federate AD with Microsoft Entra ID](/azure/active-directory/hybrid/whatis-hybrid-identity), and use Microsoft Entra authentication. With this, you can use single sign-on.|
+|Need to enforce multifactor authentication|Require multifactor authentication as a policy through [Microsoft Conditional Access](conditional-access-configure.md), and use [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md).|
+|Have guest accounts from Microsoft accounts (live.com, outlook.com) or other domains (gmail.com)|Use [Microsoft Entra universal authentication](authentication-mfa-ssms-overview.md) in SQL Database or dedicated SQL pool, which leverages [Microsoft Entra B2B Collaboration](/azure/active-directory/external-identities/what-is-b2b).|
+|Are logged in to Windows using your Microsoft Entra credentials from a federated domain|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
+|Are logged in to Windows using credentials from a domain not federated with Azure|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
+|Have middle-tier services which need to connect to SQL Database or Azure Synapse Analytics|Use [Microsoft Entra integrated authentication](authentication-aad-configure.md).|
 
 
 ### How do I limit or control connectivity access to my database

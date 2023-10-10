@@ -335,9 +335,9 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. We recommend you use a year-specific tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. For example:
 
-   - First year: `Year1OrderID`
-   - Second year: `Year2OrderID`
-   - Third year: `Year3OrderID`
+   - First year: `Year1InvoiceID`
+   - Second year: `Year2InvoiceID`
+   - Third year: `Year3InvoiceID`
 
    > [!NOTE]  
    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.

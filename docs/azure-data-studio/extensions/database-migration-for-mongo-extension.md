@@ -6,6 +6,7 @@ ms.author: sandnair
 ms.reviewer: 
 ms.date: 04/14/2023
 ms.service: azure-data-studio
+ms.subservice: migration-extension
 ms.topic: conceptual
 ---
 

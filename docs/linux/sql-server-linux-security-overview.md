@@ -28,7 +28,7 @@ ms.custom:
 
 For more information about security features available in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
-## Next steps
+## Related content
 
 - [Get started with security features of SQL Server on Linux](sql-server-linux-security-get-started.md)
 - [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md)

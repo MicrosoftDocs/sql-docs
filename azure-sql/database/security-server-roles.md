@@ -12,13 +12,18 @@ ms.topic: conceptual
 ---
 
 # Azure SQL Database server roles for permission management
+[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+This article describes fixed server-level roles in Azure SQL Database. 
 
 > [!NOTE]
 > The fixed server-level roles in this article are in public preview for Azure SQL Database. These server-level roles are also part of the release for [SQL Server 2022](/sql/relational-databases/security/authentication-access/server-level-roles#fixed-server-level-roles-introduced-in-sql-server-2022).
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
-In Azure SQL Database, the server is a logical concept and permissions can't be granted on a server level. To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a [logical server](logical-servers.md). Roles are security principals that group logins.
+## Overview 
+
+In Azure SQL Database, the server is a logical concept and permissions can't be granted at the server level. To simplify permission management, Azure SQL Database provides a set of fixed server-level roles to help you manage the permissions on a [logical server](logical-servers.md). Roles are security principals that group logins.
 
 > [!NOTE]
 > The *roles* concept in this article are like *groups* in the Windows operating system.
@@ -69,7 +74,7 @@ Each fixed server-level role has certain permissions assigned to it. The followi
 
   ## Permissions  
   
- Only the server admin account or the Azure Active Directory admin Account (which can be an Azure Active Directory Group) can add or remove other Logins to or from server roles. This is specific to Azure SQL Database.  
+ Only the server admin account or the Microsoft Entra admin account (which can be a Microsoft Entra group) can add or remove other logins to or from server roles. This is specific to Azure SQL Database.  
  
 ## Working with server-level roles
 
@@ -188,9 +193,11 @@ SELECT * FROM sys.dm_exec_query_stats
 
 ``` 
 
-### D. Check server-level roles for Azure AD logins
+<a name='d-check-server-level-roles-for-azure-ad-logins'></a>
 
-Run this command in the virtual `master` database to see all Azure AD logins that are part of server-level roles in SQL Database. For more information on Azure AD server logins, see [Azure Active Directory server principals](authentication-azure-ad-logins.md).
+### D. Check server-level roles for Microsoft Entra logins
+
+Run this command in the virtual `master` database to see all Microsoft Entra logins that are part of server-level roles in SQL Database. For more information on Microsoft Entra server logins, see [Microsoft Entra server principals](authentication-azure-ad-logins.md).
 
 ```sql
 SELECT
@@ -226,7 +233,7 @@ SELECT DR1.name AS DbRoleName, isnull (DR2.name, 'No members')  AS DbUserName
 ## Limitations of server-level roles
 
 - Role assignments may take up to 5 minutes to become effective. Also for existing sessions, changes to server role assignments don't take effect until the connection is closed and reopened. This is due to the distributed architecture between the `master` database and other databases on the same logical server.
-  - Partial workaround: to reduce the waiting period and ensure that server role assignments are current in a database, a server administrator, or an Azure AD administrator can run `DBCC FLUSHAUTHCACHE` in the user database(s) on which the login has access. Current logged on users still have to reconnect after running `DBCC FLUSHAUTHCACHE` for the membership changes to take effect on them.
+  - Partial workaround: to reduce the waiting period and ensure that server role assignments are current in a database, a server administrator, or a Microsoft Entra administrator can run `DBCC FLUSHAUTHCACHE` in the user database(s) on which the login has access. Current logged on users still have to reconnect after running `DBCC FLUSHAUTHCACHE` for the membership changes to take effect on them.
 
 - `IS_SRVROLEMEMBER()` isn't supported in the `master` database.
 

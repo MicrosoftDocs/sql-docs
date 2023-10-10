@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 09/15/2023
+ms.date: 09/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -162,9 +162,9 @@ A more detailed breakdown of recent resource consumption by user workloads and i
 > [!TIP]
 > When monitoring or troubleshooting workload performance, it's important to consider both **user CPU consumption** (`avg_cpu_percent`, `cpu_percent`), and **total CPU consumption** by user workloads and internal processes (`avg_instance_cpu_percent`,`sql_instance_cpu_percent`). Performance may be noticeably impacted if *either* of these metrics is in the 70-100% range.
 
-**User CPU consumption** is defined as a percentage toward the user workload CPU limit in each service objective. Likewise, **total CPU consumption** is defined as a percentage toward the CPU limit for all workloads. Because the two limits are different, the user and total CPU consumption are measured on different scales, and are not directly comparable with each other.
+**User CPU consumption** is defined as a percentage toward the user workload CPU limit in each service objective. Likewise, **total CPU consumption** is defined as the percentage toward the CPU limit for all workloads. Because the two limits are different, the user and total CPU consumption are measured on different scales, and are not directly comparable with each other.
 
-When either **user CPU utilization** or **total CPU consumption** is the 70-100% range, a service objective limit is being reached.
+If **user CPU consumption** reaches 100%, it means that the user workload is fully using the CPU capacity available to it in the selected service objective, even if **total CPU consumption** remains below 100%.
 
 When **total CPU consumption** reaches the 70-100% range, it's possible to see user workload throughput flattening and query latency increasing, even if **user CPU consumption** remains significantly below 100%. This is more likely to occur when using smaller service objectives with a moderate allocation of compute resources, but relatively intense user workloads, such as in [dense elastic pools](elastic-pool-resource-management.md). This can also occur with smaller service objectives when internal processes temporarily require additional resources, for example when creating a new replica of the database, or backing up the database.
 

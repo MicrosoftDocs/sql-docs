@@ -96,16 +96,12 @@ The following table lists the release history for [!INCLUDE [ssSQL22](../include
 
 [!INCLUDE [linux-known-issues-2022](includes/linux-known-issues-2022.md)]
 
-## See also
+## Related content
 
 - [SQL Server on Linux FAQ](sql-server-linux-faq.yml)
-
-## Next steps
-
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
 - [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
-

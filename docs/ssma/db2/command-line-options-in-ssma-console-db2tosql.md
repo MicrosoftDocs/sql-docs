@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Command Line Options in SSMA Console (DB2ToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

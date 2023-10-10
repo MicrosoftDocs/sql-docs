@@ -78,7 +78,7 @@ One major difference with [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.
 
 The default paths for non-system databases can be changed using the `mssql-conf` utility. For information on how to change the defaults, [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir). You can also store [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] data and transaction in other locations as long as they have the proper security even if it isn't a default location; the location would need to be stated.
 
-## Next steps
+## Related content
 
 - [Configure failover cluster instance - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [Configure failover cluster instance - NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)

@@ -169,11 +169,8 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 -   [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Evaluation to [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] Standard.  
   
-## See Also  
+## Related content
 
- [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
- 
- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- 
- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
+- [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+- [SQL Server 2016 and 2017: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [Upgrade SQL Server](upgrade-sql-server.md)

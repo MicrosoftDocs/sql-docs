@@ -59,4 +59,4 @@ WHERE object_name LIKE '%Database Replica%';
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

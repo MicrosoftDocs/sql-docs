@@ -57,7 +57,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 SQL Managed Instance is a single-tenant, platform as a service offering that operates in two planes: a data plane and a control plane.
 
-The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. Data plane depends on Azure services like Azure Storage, Azure Active Directory (Azure AD) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
+The *data plane* is deployed inside the customer's subnet for compatibility, connectivity, and network isolation. Data plane depends on Azure services like Azure Storage, Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for authentication, and telemetry collection services. You'll see traffic that originates in subnets that contain SQL Managed Instance going to those services.
 
 The *control plane* carries the deployment, management, and core service maintenance functions via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All control plane communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
@@ -75,7 +75,7 @@ The following diagram shows entities that connect to SQL Managed Instance. It al
 
 :::image type="content" source="media/connectivity-architecture-overview/01-connectivity-architecture-entities.png" border="false" alt-text="Diagram that shows entities in the connectivity architecture for SQL Managed Instance before November 2022.":::
 
-SQL Managed Instance is a single-tenant, platform as a service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet. SQL Managed Instance typically is accessed via its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Azure Active Directory (Azure AD), Azure Key Vault, Azure Event Hubs, and telemetry collection services. Traffic that originates in subnets that contain SQL Managed Instance might go to those services.
+SQL Managed Instance is a single-tenant, platform as a service (PaaS) offering. Its compute and networking elements are deployed inside the customer's subnet. SQL Managed Instance typically is accessed via its [VNet-local endpoint](connectivity-architecture-overview.md#vnet-local-endpoint). SQL Managed Instance depends on Azure services like Azure Storage, Microsoft Entra ID, Azure Key Vault, Azure Event Hubs, and telemetry collection services. Traffic that originates in subnets that contain SQL Managed Instance might go to those services.
 
 Deployment, management, and core service maintenance operations are carried out via automated agents. These agents have exclusive access to the compute resources that operate the service. You can't use `ssh` or Remote Desktop Protocol to access those hosts. All internal communications are encrypted and signed by using certificates. To check the trustworthiness of communicating parties, SQL Managed Instance constantly verifies these certificates by using certificate revocation lists.
 
@@ -178,7 +178,7 @@ The subnet in which SQL Managed Instance is deployed must have the following cha
   - All resources of type `Microsoft.Network/virtualNetworks/subnets/contextualServiceEndpointPolicies`
 - **Locks on virtual network**: [Locks](/azure/azure-resource-manager/management/lock-resources) on the dedicated subnet's virtual network, its parent resource group, or subscription, might occasionally interfere with SQL Managed Instance management and maintenance operations. Take special care when you use resource locks.
 - **Replication traffic**: Replication traffic for auto-failover groups between two managed instances should be direct and not routed through a hub network.
-- **Custom DNS server:** If the virtual network is configured to use a custom DNS server, the DNS server must be able to resolve public DNS records. Using features like Azure AD authentication might require resolving more fully qualified domain names (FQDNs). For more information, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
+- **Custom DNS server:** If the virtual network is configured to use a custom DNS server, the DNS server must be able to resolve public DNS records. Using features like Microsoft Entra authentication might require resolving more fully qualified domain names (FQDNs). For more information, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
 
 
 ### Mandatory security rules with service-aided subnet configuration
@@ -196,7 +196,7 @@ To ensure outbound management traffic flow, the rules described in the following
 
 |Name               |Port          |Protocol|Source           |Destination               |Action|
 |-------------------|--------------|--------|-----------------|--------------------------|------|
-|AAD-out            |443           |TCP     |_subnet_         |AzureActiveDirectory      |Allow |
+|AAD-out            |443           |TCP     |_subnet_         |AzureActiveDirectory    |Allow |
 |OneDsCollector-out |443           |TCP     |_subnet_         |OneDsCollector            |Allow |
 |internal-out       |Any           |Any     |_subnet_         |_subnet_                  |Allow |
 |StorageP-out       |443           |Any     |_subnet_         |Storage._primaryRegion_   |Allow |
@@ -231,7 +231,7 @@ The routes that are described in the following table are necessary to ensure tha
 
 |Name                     |Address prefix           |Next hop            |
 |-------------------------|-------------------------|--------------------|
-|AzureActiveDirectory     |AzureActiveDirectory     |Internet<sup>*</sup>|
+|AzureActiveDirectory    |AzureActiveDirectory     |Internet<sup>*</sup>|
 |OneDsCollector           |OneDsCollector           |Internet<sup>*</sup>|
 |Storage._primaryRegion_  |Storage._primaryRegion_  |Internet<sup>*</sup>|
 |Storage._secondaryRegion_|Storage._secondaryRegion_|Internet<sup>*</sup>|
@@ -273,7 +273,7 @@ The following virtual network features are currently *not supported* with SQL Ma
 - **Database mail to external SMTP relays on port 25**: Sending [database mail](/sql/relational-databases/database-mail/configure-database-mail) via port 25 to external email services is only available to certain subscription types in Microsoft Azure. Instances on other subscription types should use a different port (for example, 587) to contact external SMTP relays. Otherwise, instances may fail to deliver database mail. For more information, see [Troubleshoot outbound SMTP connectivity problems in Azure](/azure/virtual-network/troubleshoot-outbound-smtp-connectivity).
 - **Microsoft peering**: Enabling [Microsoft peering](/azure/expressroute/expressroute-faqs#microsoft-peering) on ExpressRoute circuits that are peered directly or transitively with a virtual network in which SQL Managed Instance resides affects traffic flow between SQL Managed Instance components inside the virtual network and services it depends on. Availability issues result. SQL Managed Instance deployments to a virtual network that already has Microsoft peering enabled are expected to fail.
 - **Virtual network peering – global**: [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) connectivity across Azure regions doesn't work for instances of SQL Managed Instance that are placed in subnets that were created before September 9, 2020.
-- **Virtual network peering – configuration**: When establishing virtual network peering between virtual networks that contain subnets with SQL Managed Instances, such subnets must  use different route tables and network security groups (NSG). Reusing the route table and NSG in two or more subnets participating in virtual network peering will cause connectivity issues in all subnets using those route table or NSG, and cause SQL Managed Instance's management operations to fail.
+- **Virtual network peering – configuration**: When establishing virtual network peering between virtual networks that contain subnets with SQL Managed Instances, such subnets must use different route tables and network security groups (NSG). Reusing the route table and NSG in two or more subnets participating in virtual network peering will cause connectivity issues in all subnets using those route tables or NSG, and cause SQL Managed Instance's management operations to fail.
 - **AzurePlatformDNS**: Using the AzurePlatformDNS [service tag](/azure/virtual-network/service-tags-overview) to block platform DNS resolution would render SQL Managed Instance unavailable. Although SQL Managed Instance supports customer-defined DNS for DNS resolution inside the engine, there's a dependency on platform DNS for platform operations.
 - **NAT gateway**: Using [Azure Virtual Network NAT](/azure/virtual-network/nat-gateway/nat-overview) to control outbound connectivity with a specific public IP address renders SQL Managed Instance unavailable. The SQL Managed Instance service is currently limited to use the basic load balancer, which doesn't provide coexistence of inbound and outbound flows with Azure Virtual Network NAT.
 - **IPv6 for Azure Virtual Network**: Deploying SQL Managed Instance to [dual stack IPv4/IPv6 virtual networks](/azure/virtual-network/ip-services/ipv6-overview) is expected to fail. Associating a network security group or a route table with user-defined routes (UDRs) that contains IPv6 address prefixes to a SQL Managed Instance subnet renders SQL Managed Instance unavailable. Also, adding IPv6 address prefixes to a network security group or UDR that's already associated with a managed instance subnet renders SQL Managed Instance unavailable. SQL Managed Instance deployments to a subnet with a network security group and UDR that already have IPv6 prefixes are expected to fail.

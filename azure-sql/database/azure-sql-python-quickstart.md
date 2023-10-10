@@ -20,7 +20,7 @@ This quickstart describes how to connect an application to a database in Azure S
 ## Prerequisites
 
 * An [Azure subscription](https://azure.microsoft.com/free/python/).
-* An Azure SQL database configured with Azure Active Directory (Azure AD) authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
+* An Azure SQL database configured with Microsoft Entra authentication. You can create one using the [Create database quickstart](./single-database-create-quickstart.md).
 * The latest version of the [Azure CLI](/cli/azure/get-started-with-azure-cli).
 * Visual Studio Code with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 * Python 3.7 or later.
@@ -90,13 +90,13 @@ Interactive authentication provides a passwordless option when you're running lo
 
 ## [Interactive Authentication](#tab/sql-inter)
 
-In Windows, Azure AD Interactive Authentication can use Azure Active Directory Multi-Factor Authentication technology to set up connection. In this mode, by providing the sign in ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
+In Windows, Microsoft Entra Interactive Authentication can use Microsoft Entra multifactor authentication technology to set up connection. In this mode, by providing the sign in ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection.
 
 ```Bash
 export AZURE_SQL_CONNECTIONSTRING='Driver={ODBC Driver 18 for SQL Server};Server=tcp:<database-server-name>.database.windows.net,1433;Database=<database-name>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30'
 ```
 
-For more information, see [Using Azure Active Directory with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory). If you use this option, look for the window that prompts you for credentials.
+For more information, see [Using Microsoft Entra ID with the ODBC Driver](/sql/connect/odbc/using-azure-active-directory). If you use this option, look for the window that prompts you for credentials.
 
 ## [SQL Authentication](#tab/sql-auth)
 
@@ -268,7 +268,7 @@ The app is ready to be deployed to Azure.
 
 ## Connect the App Service to Azure SQL Database
 
-In the [Configure the database](#configure-the-database) section, you configured networking and Azure AD authentication for the Azure SQL database server. In this section, you complete the database configuration and configure the App Service with a connection string to access the database server.
+In the [Configure the database](#configure-the-database) section, you configured networking and Microsoft Entra authentication for the Azure SQL database server. In this section, you complete the database configuration and configure the App Service with a connection string to access the database server.
 
 To run these commands you can use any tool or IDE that can connect to Azure SQL Database, including [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio), and Visual Studio Code with the [SQL server mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. As well, you can use the Azure portal as described in [Quickstart: Use the Azure portal query editor to query Azure SQL Database](/azure/azure-sql/database/connect-query-portal).
 

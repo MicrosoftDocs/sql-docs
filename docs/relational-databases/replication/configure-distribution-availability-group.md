@@ -57,7 +57,7 @@ After a distribution database in the AG is configured based on the steps describ
 - All SQL Server 2017 instances hosting distribution database replicas must be SQL Server 2017 CU 6 or later. 
 - All SQL Server 2016 instances hosting distribution database replicas must be SQL Server 2016 SP2-CU3 or later.
 - All SQL Server instances hosting distribution database replicas must be the same version, except during the narrow timeframe when upgrade takes place.
-- The distribution database must be in full recovery mode.
+- The distribution database must be in the full recovery model.
 - For recovery and to allow transaction log truncation, configure full and transaction log backups.
 - The distribution database AG must have a listener configured.
 - Secondary replicas in a distribution database AG can be synchronous or asynchronous. Synchronous mode is recommended and preferred.
@@ -93,7 +93,7 @@ This example configures a new distributor and publisher and puts the distributio
 ### Distributors workflow
 
 1. Configure DIST1, DIST2, DIST3 as distributor with `sp_adddistributor @@servername`. Specify the password for `distributor_admin` through the `@password`. The `@password` should be identical across DIST1, DIST2, DIST3.
-2. Create the distribution database on DIST1 with `sp_adddistributiondb`. The name of the distribution database is `distribution`. Change the recovery mode of `distribution` database from simple to full.
+2. Create the distribution database on DIST1 with `sp_adddistributiondb`. The name of the distribution database is `distribution`. Change the recovery model of `distribution` database from simple to full.
 3. Create an AG for `distribution` database with replicas on DIST1, DIST2, and DIST3. Preferably all the replicas are synchronous. Configure secondary replicas to be readable or allow read. At this time, the distribution databases are the AG, DIST1 is the primary replica, and DIST2 and DIST3 are secondary replicas.
 4. Configure a listener named `DISTLISTENER` for the AG.
 5. For recovery and to allow transaction log truncation, configure full and transaction log backups.

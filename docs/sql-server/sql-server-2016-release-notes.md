@@ -11,7 +11,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "build notes"
   - "release issues"
-monikerRange: "= sql-server-2016"
+monikerRange: ">= sql-server-2016"
 ---
 
 # SQL Server 2016 Release Notes

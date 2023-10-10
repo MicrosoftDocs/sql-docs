@@ -221,7 +221,7 @@ Test failover using the Azure portal.
 
 1. Select **Failover groups** under the **Settings** pane and then choose the failover group you created in section 2.
   
-   ![Select the failover group from the portal](./media/failover-group-add-single-database-tutorial/select-failover-group.png)
+   :::image type="content" source="./media/failover-group-add-single-database-tutorial/select-failover-group.png" alt-text="Screenshot shows the Azure portal page for Failover groups.":::
 
 1. <a id="test-forced-failover-portal"></a>Review which server is primary and which server is secondary.
 1. Initiate either planned or forced failover: 

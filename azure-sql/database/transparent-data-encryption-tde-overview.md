@@ -5,7 +5,7 @@ description: An overview of transparent data encryption for Azure SQL Database, 
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/27/2022
+ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -15,7 +15,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 # Transparent data encryption for SQL Database, SQL Managed Instance, and Azure Synapse Analytics
 [!INCLUDE[appliesto-sqldb-sqlmi-asa](../includes/appliesto-sqldb-sqlmi-asa.md)]
 
-[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) helps protect Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics against the threat of malicious offline activity by encrypting data at rest. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases and must be manually enabled for older databases of Azure SQL Database. For Azure SQL Managed Instance, TDE is enabled at the instance level and newly created databases. TDE must be manually enabled for Azure Synapse Analytics. 
+[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) helps protect Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics against the threat of malicious offline activity by encrypting data at rest. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application. By default, TDE is enabled for all newly deployed Azure SQL Databases and must be manually enabled for older databases of Azure SQL Database. For Azure SQL Managed Instance, TDE is enabled at the instance level and newly created databases. TDE must be manually enabled for Azure Synapse Analytics.
 
 > [!NOTE]
 > This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on Transparent Data Encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
@@ -25,15 +25,13 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 TDE performs real-time I/O encryption and decryption of the data at the page level. Each page is decrypted when it's read into memory and then encrypted before being written to disk. TDE encrypts the storage of an entire database by using a symmetric key called the Database Encryption Key (DEK). On database startup, the encrypted DEK is decrypted and then used for decryption and re-encryption of the database files in the SQL Server database engine process. DEK is protected by the TDE protector. TDE protector is either a service-managed certificate (service-managed transparent data encryption) or an asymmetric key stored in [Azure Key Vault](/azure/key-vault/general/security-features) (customer-managed transparent data encryption).
 
-For Azure SQL Database and Azure Synapse, the TDE protector is set at the [server](logical-servers.md) level and is inherited by all databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and it is inherited by all encrypted databases on that instance. The term *server* refers both to server and instance throughout this document, unless stated differently.
+For Azure SQL Database and Azure Synapse, the TDE protector is set at the [server](logical-servers.md) level and is inherited by all databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and inherited by all encrypted databases on that instance. The term *server* refers both to server and instance throughout this document, unless stated differently.
 
 > [!IMPORTANT]
-> All newly created databases in SQL Database are encrypted by default by using service-managed transparent data encryption. Existing SQL databases created before May 2017 and SQL databases created through restore, geo-replication, and database copy are not encrypted by default. Existing SQL Managed Instance databases created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance. 
+> All newly created databases in SQL Database are encrypted by default by using service-managed transparent data encryption. Existing SQL databases created before May 2017 and SQL databases created through restore, geo-replication, and database copy are not encrypted by default. Existing SQL Managed Instance databases created before February 2019 are not encrypted by default. SQL Managed Instance databases created through restore inherit encryption status from the source. To restore an existing TDE-encrypted database, the required TDE certificate must first be [imported](../managed-instance/tde-certificate-migrate.md) into the SQL Managed Instance.
 
 > [!NOTE]
-> TDE cannot be used to encrypt system databases, such as the `master` database, in Azure SQL Database and Azure SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there. 
-
-
+> TDE cannot be used to encrypt system databases, such as the `master` database, in Azure SQL Database and Azure SQL Managed Instance. The `master` database contains objects that are needed to perform TDE operations on user databases. It is recommended not to store any sensitive data in system databases.  The exception is `tempdb`, which is always encrypted with TDE to protect the data stored there.
 
 ## Service-managed transparent data encryption
 
@@ -78,13 +76,15 @@ Manage TDE in the Azure portal.
 
 To configure TDE through the Azure portal, you must be connected as the Azure Owner, Contributor, or SQL Security Manager.
 
-Enable and disable TDE on the database level. For Azure SQL Managed Instance use Transact-SQL (T-SQL) to turn TDE on and off on a database. For Azure SQL Database and Azure Synapse, you can manage TDE for the database in the [Azure portal](https://portal.azure.com) after you've signed in with the Azure Administrator or Contributor account. Find the TDE settings under your user database. By default, service-managed transparent data encryption is used. A TDE certificate is automatically generated for the server that contains the database.
+Enable and disable TDE on the database level. For Azure SQL Managed Instance use Transact-SQL (T-SQL) to turn TDE on and off on a database. For Azure SQL Database and Azure Synapse, you can manage TDE for the database in the [Azure portal](https://portal.azure.com) after you've signed in with the Azure Administrator or Contributor account. Find the TDE settings under your user database. By default, server level encryption key is used. A TDE certificate is automatically generated for the server that contains the database.
 
 ![Service-managed transparent data encryption](./media/transparent-data-encryption-tde-overview/service-managed-transparent-data-encryption.png)  
 
-You set the TDE master key, known as the TDE protector, at the server or instance level. To use TDE with BYOK support and protect your databases with a key from Key Vault, open the TDE settings under your server.
+You set the TDE master key, known as the TDE protector, at the server or instance level. To use TDE with BYOK support and protect your databases with a key from Azure Key Vault, open the TDE settings under your server or managed instance.
 
 ![Transparent data encryption with Bring Your Own Key support](./media/transparent-data-encryption-tde-overview/tde-byok-support.png)
+
+You can also use a customer-managed key for TDE on a database level for Azure SQL Database. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
 
 # [PowerShell](#tab/azure-powershell)
 
@@ -110,7 +110,6 @@ Use the following cmdlets for Azure SQL Database and Azure Synapse:
 | [Get-AzSqlServerTransparentDataEncryptionProtector](/powershell/module/az.sql/get-azsqlservertransparentdataencryptionprotector) |Gets the transparent data encryption protector |
 | [Remove-AzSqlServerKeyVaultKey](/powershell/module/az.sql/remove-azsqlserverkeyvaultkey) |Removes a Key Vault key from a server. |
 
-
 > [!IMPORTANT]
 > For Azure SQL Managed Instance, use the T-SQL [ALTER DATABASE](/sql/t-sql/statements/alter-database-azure-sql-database) command to turn TDE on and off on a database level, and check [sample PowerShell script](transparent-data-encryption-byok-configure.md) to manage TDE on an instance level.
 
@@ -126,7 +125,6 @@ Connect to the database by using a login that is an administrator or member of t
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Returns information about the encryption state of a database and its associated database encryption keys |
 | [sys.dm_pdw_nodes_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Returns information about the encryption state of each Azure Synapse node and its associated database encryption keys |
 
-
 You can't switch the TDE protector to a key from Key Vault by using Transact-SQL. Use PowerShell or the Azure portal.
 
 # [REST API](#tab/azure-RESTAPI)
@@ -138,7 +136,7 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an Azure Active Directory identity to a server. (used to grant access to Key Vault)|
+|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an identity from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to a server. (used to grant access to Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a server.|
 |[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a server. |
 |[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a server.|
@@ -149,6 +147,8 @@ Use the following set of commands for Azure SQL Database and Azure Synapse:
 |[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables TDE for a database.|
 |[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
 |[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/listbyconfiguration)|Gets the encryption result for a database.|
+
+---
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: "Enable applications to determine the DML changes (insert, update, 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 09/20/2022
+ms.date: 09/26/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2019.md).
+[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] provides two features that track changes to data in a database: [change data capture](#Capture) and [change tracking](#Tracking). These features enable applications to determine the DML changes (insert, update, and delete operations) that were made to user tables in a database. Change data capture and change tracking can be enabled on the same database; no special considerations are required. For the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that support change data capture and change tracking, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ## Benefits of using change data capture or change tracking
 
@@ -30,15 +30,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
  Using change data capture or change tracking in applications to track changes in a database, instead of developing a custom solution, has the following benefits:
 
-- There is reduced development time. Because functionality is available in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you don't have to develop a custom solution.
+- There's reduced development time. Because functionality is available in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you don't have to develop a custom solution.
 
 - Schema changes aren't required. You don't have to add columns, add triggers, or create side table in which to track deleted rows or to store change tracking information if columns can't be added to the user tables.
 
-- There is a built-in cleanup mechanism. Cleanup for change tracking is performed automatically in the background. Custom cleanup for data that is stored in a side table isn't required.
+- There's a built-in cleanup mechanism. Cleanup for change tracking is performed automatically in the background. Custom cleanup for data that is stored in a side table isn't required.
 
 - Functions are provided to obtain change information.
 
-- There is low overhead to DML operations. Synchronous change tracking will always have some overhead. However, using change tracking can help minimize the overhead. The overhead will frequently be less than that of using alternative solutions, especially solutions that require the use of triggers.
+- There's low overhead to DML operations. Synchronous change tracking will always have some overhead. However, using change tracking can help minimize the overhead. The overhead will frequently be less than that of using alternative solutions, especially solutions that require the use of triggers.
 
 - Change tracking is based on committed transactions. The order of the changes is based on transaction commit time. This allows for reliable results to be obtained when there are long-running and overlapping transactions. Custom solutions that use **timestamp** values must be designed to handle these scenarios.
 
@@ -93,7 +93,7 @@ All base column types are supported by change data capture. The following table 
 |Type of Column|Changes Captured in Change Tables|Limitations|
 |--------------------|---------------------------------------|-----------------|
 |Sparse columns|Yes|Doesn't support capturing changes when using a columnset.|
-|Computed columns|No|Changes to computed columns aren't tracked. The column will appear in the change table with the appropriate type, but will have a value of NULL.|
+|Computed columns|No|Changes to computed columns aren't tracked. The column appears in the change table with the appropriate type, but will have a value of NULL.|
 |XML|Yes|Changes to individual XML elements aren't tracked.|
 |Timestamp|Yes|The data type in the change table is converted to binary.|
 |BLOB data types|Yes|The previous image of the BLOB column is stored only if the column itself is changed.|
@@ -147,7 +147,7 @@ You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-pro
 
 ## <a id="Tracking"></a> Change tracking
 
- Change tracking captures the fact that rows in a table were changed, but doesn't capture the data that was changed. This enables applications to determine the rows that have changed with the latest row data being obtained directly from the user tables. Therefore, change tracking is more limited in the historical questions it can answer compared to change data capture. However, for those applications that don't require the historical information, there is far less storage overhead because of the changed data not being captured. A synchronous tracking mechanism is used to track the changes. This has been designed to have minimal overhead to the DML operations.
+ Change tracking captures the fact that rows in a table were changed, but doesn't capture the data that was changed. This enables applications to determine the rows that have changed with the latest row data being obtained directly from the user tables. Therefore, change tracking is more limited in the historical questions it can answer compared to change data capture. However, for those applications that don't require the historical information, there's far less storage overhead because of the changed data not being captured. A synchronous tracking mechanism is used to track the changes. This has been designed to have minimal overhead to the DML operations.
 
  The following illustration shows a synchronization scenario that would benefit by using change tracking. In the scenario, an application requires the following information: all the rows in the table that were changed since the last time that the table was synchronized, and only the current row data. Because a synchronous mechanism is used to track the changes, an application can perform two-way synchronization and reliably detect any conflicts that might have occurred.
 
@@ -155,7 +155,7 @@ You can use [sys.sp_cdc_disable_db](../../relational-databases/system-stored-pro
 
 ### Change tracking and Sync Services for ADO.NET
 
-[!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] enables synchronization between databases, providing an intuitive and flexible API that enables you to build applications that target offline and collaboration scenarios. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] provides an API to synchronize changes, but it doesn't actually track changes in the server or peer database. You can create a custom change tracking system, but this typically introduces significant complexity and performance overhead. To track changes in a server or peer database, we recommend that you use change tracking in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] because it is easy to configure and provides high performance tracking.
+[!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] enables synchronization between databases, providing an intuitive and flexible API that enables you to build applications that target offline and collaboration scenarios. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] provides an API to synchronize changes, but it doesn't actually track changes in the server or peer database. You can create a custom change tracking system, but this typically introduces significant complexity and performance overhead. To track changes in a server or peer database, we recommend that you use change tracking in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] because it's easy to configure and provides high performance tracking.
 
 For more information about change tracking and [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)], use the following links:
 
@@ -165,7 +165,7 @@ For more information about change tracking and [!INCLUDE[sql_sync_long](../../in
 
 - [Microsoft Sync Framework Developer Center](/previous-versions/sql/synchronization/mt490616(v=msdn.10))
 
-  Provides complete documentation for [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] and [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. In the documentation for [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], the topic "How to: Use SQL Server Change Tracking" contains detailed information and code examples.
+  Provides complete documentation for [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] and [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)].
 
 ## Next steps
 
@@ -174,11 +174,11 @@ For more information about change tracking and [!INCLUDE[sql_sync_long](../../in
 |Provides an overview of change data capture.|[About Change Data Capture (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|
 |Describes how to enable and disable change data capture on a database or table.|[Enable and Disable Change Data Capture (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|
 |Describes how to administer and monitor change data capture.|[Administer and Monitor Change Data Capture (SQL Server)](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|
-|Describes how to work with the change data that is available to change data capture consumers. This topic covers validating LSN boundaries, the query functions, and query function scenarios.|[Work with Change Data (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)|
+|Describes how to work with the change data that is available to change data capture consumers. This article covers validating LSN boundaries, the query functions, and query function scenarios.|[Work with Change Data (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)|
 |Provides an overview of change tracking.|[About Change Tracking (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md)|
 |Describes how to enable and disable change tracking on a database or table.|[Enable and Disable Change Tracking (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)|
 |Describes how to manage change tracking, configure security, and determine the effects on storage and performance when change tracking is used.|[Manage Change Tracking (SQL Server)](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|
-|Describes how applications that use change tracking can obtain tracked changes, apply these changes to another data store, and update the source database. This topic also describes the role change tracking plays when a failover occurs and a database must be restored from a backup.|[Work with Change Tracking (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|
+|Describes how applications that use change tracking can obtain tracked changes, apply these changes to another data store, and update the source database. This article also describes the role change tracking plays when a failover occurs and a database must be restored from a backup.|[Work with Change Tracking (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|
 
 ## See also
 

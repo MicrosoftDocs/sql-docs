@@ -212,7 +212,7 @@ Put the `tempdb` database on disks that differ from the disks that user database
 #### Introduced in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)]
 
 - Starting in [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], SQL Server does not use the `FILE_FLAG_WRITE_THROUGH` option when opening files for `tempdb` to allow for maximum disk throughput. Since `tempdb` is recreated on startup of SQL Server, these options are not needed as they are for other system databases and user databases for data consistency. For more information on `FILE_FLAG_WRITE_THROUGH`, see [Logging and data storage algorithms that extend data reliability in SQL Server](/troubleshoot/sql/database-engine/database-file-operations/logging-data-storage-algorithms#performance-impacts).
-- Memory-optimized `tempdb` metadata removes a bottleneck on PAGELATCH waits in `tempdb`, and unlocks a new level of scalability. For more information, watch this [video demo on How (and When) To: Memory Optimized TempDB Metadata](/shows/data-exposed/how-and-when-to-memory-optimized-tempdb-metadata). For more information, read [monitoring and troubleshooting memory-optimized tempdb metadata](/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory).
+- Memory-optimized TempDB metadata removes a bottleneck on PAGELATCH waits in `tempdb`, and unlocks a new level of scalability. For more information, watch this [video demo on How (and When) To: Memory Optimized TempDB Metadata](/shows/data-exposed/how-and-when-to-memory-optimized-tempdb-metadata). For more information, read [monitoring and troubleshooting memory-optimized tempdb metadata](/troubleshoot/sql/database-engine/performance/memory-optimized-tempdb-out-of-memory).
 - Concurrent Page Free Space (PFS) page updates reduce patch latch contention in all databases, an issue most commonly seen in `tempdb`. This improvement changes the way that concurrency is managed with PFS updates so that they can be updated under a shared latch, rather than an exclusive latch. This behavior is on by default in all databases (including TempDB) starting with SQL Server 2019 (15.x). For more information on PFS pages, read [Under the covers: GAM, SGAM, and PFS pages](https://techcommunity.microsoft.com/t5/sql-server-blog/under-the-covers-gam-sgam-and-pfs-pages/ba-p/383125).
 - By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files, based on the number of logical cores (with up to eight data files). This doesn't apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB, with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows.
 
@@ -222,14 +222,14 @@ Put the `tempdb` database on disks that differ from the disks that user database
 
 ## Memory-optimized tempdb metadata
 
-Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized `tempdb` metadata.
+Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: Memory-optimized TempDB metadata.
 
 This feature effectively removes this bottleneck and unlocks a new level of scalability for `tempdb`-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free, non-durable, memory-optimized tables.
 
 > [!NOTE]  
-> Currently the memory-optimized `tempdb` metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
+> Currently the Memory-optimized TempDB metadata feature is not available in Azure SQL Database or Azure SQL Managed Instance.
 
-Watch this seven-minute video for an overview of how and when to use memory-optimized `tempdb` metadata:
+Watch this seven-minute video for an overview of how and when to use Memory-optimized TempDB metadata:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
@@ -249,7 +249,7 @@ You can verify whether or not `tempdb` is memory-optimized by using the followin
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
 ```
 
-If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
+If the server fails to start for any reason after you enable Memory-optimized TempDB metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
 
 To protect the server from potential out-of-memory conditions, you can bind `tempdb` to a [resource pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md). This is done through the [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) command rather than the steps you would normally follow to bind a resource pool to a database.
 
@@ -257,7 +257,7 @@ To protect the server from potential out-of-memory conditions, you can bind `tem
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
 ```
 
-This change also requires a restart to take effect, even if memory-optimized `tempdb` metadata is already enabled.
+This change also requires a restart to take effect, even if Memory-optimized TempDB metadata is already enabled.
 
 ### Memory-optimized tempdb limitations
 
@@ -285,9 +285,9 @@ This change also requires a restart to take effect, even if memory-optimized `te
 
 - Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views are in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
 
-- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when memory-optimized `tempdb` metadata is enabled.
+- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when Memory-optimized TempDB metadata is enabled.
 
-- Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when memory-optimized `tempdb` metadata is enabled.
+- Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when Memory-optimized TempDB metadata is enabled.
 
 - A system stored procedure is available to manually cause the in-memory engine to release memory related to deleted rows of in-memory data that are eligible for garbage collection. This can help with troubleshooting specific [memory-optimized tempdb metadata (HkTempDB) out of memory errors](/troubleshoot/sql/admin/memory-optimized-tempdb-out-of-memory). For more information, see [sys.sp_xtp_force_gc (Transact-SQL)](../system-stored-procedures/sys-sp-xtp-force-gc-transact-sql.md).
 
@@ -361,11 +361,10 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
   R1.internal_objects_dealloc_page_count;
 ```
 
-## Next steps
+## Related content
 
-- [SORT_IN_TEMPDB option for indexes](../../relational-databases/indexes/sort-in-TempDB-option-for-indexes.md)
-- [System databases](../../relational-databases/databases/system-databases.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)
-- [Move database files](../../relational-databases/databases/move-database-files.md)
-- 
+- [SORT_IN_TEMPDB Option For Indexes](../indexes/sort-in-tempdb-option-for-indexes.md)
+- [System databases](system-databases.md)
+- [sys.databases](../system-catalog-views/sys-databases-transact-sql.md)
+- [sys.master_files](../system-catalog-views/sys-master-files-transact-sql.md)
+- [Move database files](move-database-files.md)

@@ -3,19 +3,22 @@ title: What is a single database?
 description: Learn about the single database resource type in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
-ms.date: 04/08/2019
+ms.reviewer: mathoma, randolphwest
+ms.date: 09/25/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
 ms.custom: sqldbrb=1
 ---
 # What is a single database in Azure SQL Database?
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 The single database resource type creates a database in Azure SQL Database with its own set of resources and is managed via a [server](logical-servers.md). With a single database, each database is isolated, using a dedicated database engine. Each has its own service tier within the [DTU-based purchasing model](service-tiers-dtu.md) or [vCore-based purchasing model](service-tiers-vcore.md) and a compute size defining the resources allocated to the database engine.
 
 Single database is a deployment model for Azure SQL Database. The other is [elastic pools](elastic-pool-overview.md).
+
+[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
 
 ## Dynamic scalability
 
@@ -37,7 +40,7 @@ Single databases and elastic pools provide many availability characteristics. Fo
 
 Most Transact-SQL features that applications use are fully supported in both Microsoft SQL Server and Azure SQL Database. For example, the core SQL components such as data types, operators, string, arithmetic, logical, and cursor functions, work identically in SQL Server and SQL Database. There are, however, a few T-SQL differences in DDL (data-definition language) and DML (data manipulation language) elements resulting in T-SQL statements and queries that are only partially supported (which we discuss later in this article).
 
-In addition, there are some features and syntax that are not supported because Azure SQL Database is designed to isolate features from dependencies on the `master` database and the operating system. As such, most server-level activities are inappropriate for SQL Database. T-SQL statements and options are not available if they configure server-level options, configure operating system components, or specify file system configuration. When such capabilities are required, an appropriate alternative is often available in some other way from SQL Database or from another Azure feature or service.
+In addition, there are some features and syntax that aren't supported because Azure SQL Database is designed to isolate features from dependencies on the `master` database and the operating system. As such, most server-level activities are inappropriate for SQL Database. T-SQL statements and options aren't available if they configure server-level options, configure operating system components, or specify file system configuration. When such capabilities are required, an appropriate alternative is often available in some other way from SQL Database or from another Azure feature or service.
 
 For more information, see [Resolving Transact-SQL differences during migration to SQL Database](transact-sql-tsql-differences-sql-server.md).
 
@@ -45,11 +48,15 @@ For more information, see [Resolving Transact-SQL differences during migration t
 
 SQL Database provides a range of [built-in security and compliance](security-overview.md) features to help your application meet various security and compliance requirements.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Azure SQL Database has been certified against a number of compliance standards. For more information, see the [Microsoft Azure Trust Center](https://gallery.technet.microsoft.com/Overview-of-Azure-c1be3942), where you can find the most current list of SQL Database compliance certifications.
 
-## Next steps
+## Related content
 
-- To quickly get started with a single database, start with the [Single database quickstart guide](quickstart-content-reference-guide.md).
-- To learn about migrating a SQL Server database to Azure, see [Migrate to Azure SQL Database](migrate-to-database-from-sql-server.md).
-- For information about supported features, see [Features](features-comparison.md).
+- [Migrate to Azure SQL Database](migrate-to-database-from-sql-server.md)
+- [Features](features-comparison.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get started in Azure SQL Database](quickstart-content-reference-guide.md)

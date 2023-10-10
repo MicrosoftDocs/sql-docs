@@ -192,7 +192,7 @@ EXECUTE @result = my_proc;
 GO
 ```  
   
-Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the `@@ERROR` function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement. Before the introduction of `TRY`/`CATCH`/`THROW` error handling in TSQL return codes were sometimes required to determine the success or failure of stored procedures. Stored procedures should always indicate failure with an error (generated with `THROW`/`RAISERROR` if necessary), and not rely on a return code to indicate the failure. Also you should avoid using the return code to return application data.
+Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the `@@ERROR` function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement. Before the introduction of `TRY`/`CATCH`/`THROW` error handling in Transact-SQL return codes were sometimes required to determine the success or failure of stored procedures. Stored procedures should always indicate failure with an error (generated with `THROW`/`RAISERROR` if necessary), and not rely on a return code to indicate the failure. Also you should avoid using the return code to return application data.
   
 ### Examples of return codes
 

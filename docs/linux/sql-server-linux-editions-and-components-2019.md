@@ -32,7 +32,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides details of features supported by the various editions of SQL Server 2019 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-2019.md).
+This article provides details of features supported by the various editions of SQL Server 2019 on Linux. For editions and supported features of SQL Server on Windows, see [Editions and supported features of SQL Server 2019](../sql-server/editions-and-components-of-sql-server-2019.md).
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -212,7 +212,7 @@ The following features and services aren't available for SQL Server 2019 on Linu
 | | Distributed query with 3rd-party connections |
 | | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |
 | | System extended stored procedures (XP_CMDSHELL, etc.) |
-| | Filetable, FILESTREAM |
+| | FileTable, FILESTREAM |
 | | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | | Buffer Pool Extension |
 | | Backup to URL - page blob<sup>2</sup> |
@@ -235,11 +235,9 @@ The following features and services aren't available for SQL Server 2019 on Linu
 
 <sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
 
-## Next steps
+[!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
-- [Editions and supported features of SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)
-- [Editions and supported features of SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)
+## Related content
+
 - [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)
 - [Product Specifications for SQL Server](../sql-server/index.yml)

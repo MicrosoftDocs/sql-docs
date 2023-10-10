@@ -7,6 +7,8 @@ ms.date: "1/22/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: "article"
+ms.custom:
+  - sql-migration-content
 ms.devlang: sql
 ---
 

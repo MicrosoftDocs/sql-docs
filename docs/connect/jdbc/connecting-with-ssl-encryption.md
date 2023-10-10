@@ -4,7 +4,7 @@ description: Find examples of how to connect using TLS encryption in your Java a
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: vanto
-ms.date: 03/31/2021
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The examples in this article describe how to use connection string properties that allow applications to use Transport Layer Security (TLS) encryption in a Java application. For more information about these new connection string properties such as **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, and **hostNameInCertificate**, see [Setting the Connection Properties](setting-the-connection-properties.md).
+The examples in this article describe how to use connection string properties that allow applications to use Transport Layer Security (TLS) encryption in a Java application. For more information about these new connection string properties such as **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword**, and **hostNameInCertificate**, see [Setting the connection properties](setting-the-connection-properties.md).
 
 ## Configuring the connection
 

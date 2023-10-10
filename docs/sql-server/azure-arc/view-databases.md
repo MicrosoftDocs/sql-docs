@@ -7,6 +7,7 @@ ms.reviewer: mikeray, randolphwest
 ms.date: 06/19/2023
 ms.topic: conceptual
 ---
+
 # View SQL Server databases - Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -21,6 +22,8 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 - Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
 - Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
 - Is connected to the internet directly or through a proxy server.
+- To view the database size and space available, please provide the following permission:
+   - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine.
 
 ## Inventory databases
 
@@ -111,18 +114,7 @@ resources
 | summarize count() by tostring(SQLversion)
 ```
 
-### Scenario 7: SQL Server by version, edition, and license type
-
-```kusto
-resources
-| where type == 'microsoft.azurearcdata/sqlserverinstances'
-| extend SQLversion = properties.version
-| extend SQLedition = properties.edition
-| extend licenseType = properties.licenseType
-| project name, SQLversion, SQLedition, licenseType
-```
-
-### Scenario 8: Show a count of databases by compatibility
+### Scenario 7: Show a count of databases by compatibility
 
 This example returns the number of databases, ordered by the compatibility level:
 
@@ -141,3 +133,5 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 - [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 - [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
+
+

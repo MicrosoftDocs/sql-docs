@@ -20,18 +20,26 @@ You can receive notifications about the detected threats via [email notification
 
 [Advanced Threat Protection](../database/threat-detection-overview.md) is part of the [Microsoft Defender for SQL](../database/azure-defender-for-sql.md)  offering, which is a unified package for advanced SQL security capabilities. Advanced Threat Protection can be accessed and managed via the central Microsoft Defender for SQL portal.
 
-##  Azure portal
+## Azure portal
 
-1. Sign in to the [Azure portal](https://portal.azure.com). 
-2. Navigate to the configuration page of the instance of SQL Managed Instance you want to protect. Under **Security**, select **Defender for SQL**.
-3. In the Microsoft Defender for SQL configuration page:
-   - Turn **ON** Microsoft Defender for SQL.
-   - Configure the **Send alerts to** email address to receive security alerts upon detection of anomalous database activities.
-   - Select the **Azure storage account** where anomalous threat audit records are saved.
-   - Select the **Advanced Threat Protection types** that you would like configured. Learn more about [Advanced Threat Protection alerts](../database/threat-detection-overview.md).
-4. Click **Save** to save the new or updated Microsoft Defender for SQL policy.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Navigate to the configuration page of the instance of SQL Managed Instance you want to protect. Under **Security**, select **Microsoft Defender for Cloud**.
+1. For **Enablement Status**, select **Configure** to open the **Server settings** page.
 
-   :::image type="content" source="../database/media/azure-defender-for-sql/set-up-advanced-threat-protection-mi.png" alt-text="set up advanced threat protection":::
+   :::image type="content" source="media/threat-detection-configure/defender-cloud-configure.png" alt-text="Screenshot shows the Microsoft Defender for Cloud page for a SQL managed instance with the option to configure." lightbox="media/threat-detection-configure/defender-cloud-configure.png":::
+
+1. In the **Server settings** configuration page, for **Microsoft Defender for SQL**, select **ON**.
+
+   :::image type="content" source="../database/media/azure-defender-for-sql/set-up-advanced-threat-protection-mi.png" alt-text="Screenshot shows the Server settings page where you can set up advanced threat protection.":::
+
+1. Choose **Select Storage account** and then select a storage account where Microsoft Defender for Cloud saves anomalous threat audit records.
+1. Under **Advanced Threat Protection Settings**, select **Add your contact details to the subscriptions email settings in Defender for Cloud**.
+1. For **Email recipients**, select users by role or add individual email addresses.
+
+   :::image type="content" source="media/threat-detection-configure/defender-cloud-email-notification.png" alt-text="Screenshot shows the Email notifications page where you can specify email recipients and notification types.":::
+
+1. Select the **Notification types** sent by Microsoft Defender for Cloud. Learn more about [Advanced Threat Protection alerts](../database/threat-detection-overview.md).
+1. Select **Save**.
 
 ## Next steps
 

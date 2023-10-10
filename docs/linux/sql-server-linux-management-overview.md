@@ -45,7 +45,7 @@ Microsoft has released a new cross-platform scripting tool for [!INCLUDE [ssnove
 
 PowerShell provides a rich command-line environment to manage [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. For more information, see [Use PowerShell to Manage SQL Server on Linux](sql-server-linux-manage-powershell.md).
 
-## Next steps
+## Related content
 
 - [SQL Server on Linux](sql-server-linux-overview.md)
-- [Start, stop, and restart SQL Server services on Linux](./sql-server-linux-start-stop-restart-sql-server-services.md)
+- [Start, stop, and restart SQL Server services on Linux](sql-server-linux-start-stop-restart-sql-server-services.md)

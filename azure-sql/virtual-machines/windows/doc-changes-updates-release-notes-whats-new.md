@@ -4,7 +4,7 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 09/06/2023
+ms.date: 10/06/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -19,11 +19,20 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+## October 2023
+
+| Changes | Details |
+| --- | --- |
+| **Azure Elastic SAN preview** | You can now place your SQL Server workloads on an Azure Elastic SAN for improved performance, throughput, and cost. The Azure Elastic SAN is currently in preview. Review [Azure Elastic SAN](performance-guidelines-best-practices-storage.md#azure-elastic-san) to learn more. |  
+
 ## September 2023
 
 | Changes | Details |
 | --- | --- |
 | **SQL VM health notifications** | The **Overview** page of the [SQL virtual machines](manage-sql-vm-portal.md#overview-page) resource in the Azure portal now displays information about the health of the [SQL IaaS Agent extension](sql-server-iaas-agent-extension-automate-management.md), as well as error conditions when the state is _unhealthy_ or _failed_. Review [Troubleshoot the extension](sql-agent-extension-troubleshoot-known-issues.md) to learn more. | 
+| **Microsoft Entra ID rebrand**| Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
 
 ## August 2023
 

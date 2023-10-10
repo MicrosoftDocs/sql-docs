@@ -263,7 +263,7 @@ Check the following items when a node is offline.
 
 - **Node name mappings**
 
-## Next steps
+## Related content
 
-- [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
+- [Cluster from Scratch (from Pacemaker)](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 - [Configure Red Hat Enterprise Linux shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

@@ -1,47 +1,51 @@
 ---
-title: Create and utilize Azure Active Directory server logins
-description: This article guides you through creating and utilizing Azure Active Directory logins in the virtual master database of Azure SQL
+title: Create and utilize Microsoft Entra server logins
+description: This article guides you through creating and utilizing Microsoft Entra logins in the virtual master database of Azure SQL
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
-ms.date: 03/21/2023
+ms.date: 09/27/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: tutorial
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 
-# Tutorial: Create and utilize Azure Active Directory server logins
+# Tutorial: Create and utilize Microsoft Entra server logins
 
 [!INCLUDE[appliesto-sqldb-sqlmi-asa-dedicated-only](../includes/appliesto-sqldb-sqlmi-asa-dedicated-only.md)]
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) server principals (logins) are currently in public preview for Azure SQL Database. Azure SQL Managed Instance can already utilize Azure AD logins.
 
-This article guides you through creating and utilizing [Azure Active Directory (Azure AD) principals (logins)](authentication-azure-ad-logins.md) in the virtual `master` database of Azure SQL.
+This article guides you through creating and utilizing [logins](authentication-azure-ad-logins.md) backed by Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) within the virtual `master` database of Azure SQL.
 
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> - Create an Azure AD login in the virtual `master` database with the new syntax extension for Azure SQL Database
-> - Create a user mapped to an Azure AD login in the virtual `master` database
-> - Grant server roles to an Azure AD user
-> - Disable an Azure AD login
+> - Create a Microsoft Entra login in the virtual `master` database with the new syntax extension for Azure SQL Database
+> - Create a user mapped to a Microsoft Entra login in the virtual `master` database
+> - Grant server roles to a Microsoft Entra user
+> - Disable a Microsoft Entra login
+
+> [!NOTE]
+> Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database. Azure SQL Managed Instance can already utilize Microsoft Entra logins.
+
 
 ## Prerequisites
 
 - A SQL Database or SQL Managed Instance with a database. See [Quickstart: Create an Azure SQL Database single database](single-database-create-quickstart.md) if you haven't already created an Azure SQL Database, or [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
-- Azure AD authentication set up for SQL Database or Managed Instance. For more information, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md).
-- This article instructs you on creating an Azure AD login and user within the virtual `master` database. Only an Azure AD admin can create a user within the virtual `master` database, so we recommend you use the Azure AD admin account when going through this tutorial. An Azure AD principal with the `loginmanager` role can create a login, but not a user within the virtual `master` database.
+- Microsoft Entra authentication set up for SQL Database or Managed Instance. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md).
+- This article instructs you on creating a Microsoft Entra login and user within the virtual `master` database. Only a Microsoft Entra admin can create a user within the virtual `master` database, so we recommend you use the Microsoft Entra admin account when going through this tutorial. A Microsoft Entra principal with the `loginmanager` role can create a login, but not a user within the virtual `master` database.
 
-## Create Azure AD login
+<a name='create-azure-ad-login'></a>
 
-1. Create an Azure SQL Database login for an Azure AD account. In our example, we'll use `bob@contoso.com` that exists in our Azure AD domain called `contoso`. A login can also be created from an Azure AD group or [service principal (applications)](authentication-aad-service-principal.md). For example, `mygroup` that is an Azure AD group consisting of Azure AD accounts that are a member of that group. For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
+## Create Microsoft Entra login
+
+1. Create an Azure SQL Database login for a Microsoft Entra account. In our example, we'll use `bob@contoso.com` that exists in our Microsoft Entra domain called `contoso`. A login can also be created from a Microsoft Entra group or [service principal (applications)](authentication-aad-service-principal.md). For example, `mygroup` that is a Microsoft Entra group consisting of Microsoft Entra accounts that are a member of that group. For more information, see [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true).
 
    > [!NOTE]
-   > The first Azure AD login must be created by the Azure Active Directory admin. The Azure AD admin can be an Azure AD user or group. A SQL login cannot create Azure AD logins.
+   > The first Microsoft Entra login must be created by the Microsoft Entra admin. The Microsoft Entra admin can be a Microsoft Entra user or group. A SQL login cannot create Microsoft Entra logins.
 
-1. Using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), log into your SQL Database with the Azure AD admin account set up for the server.
+1. Using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), log into your SQL Database with the Microsoft Entra admin account set up for the server.
 1. Run the following query:
 
    ```sql
@@ -67,9 +71,11 @@ In this tutorial, you learn how to:
 
 1. The login `bob@contoso.com` has been created in the virtual `master` database.
 
-## Create user from an Azure AD login
+<a name='create-user-from-an-azure-ad-login'></a>
 
-1. Now that we've created an Azure AD login, we can create a database-level Azure AD user that is mapped to the Azure AD login in the virtual `master` database. We'll continue to use our example, `bob@contoso.com` to create a user in the virtual `master` database, as we want to demonstrate adding the user to special roles. Only an Azure AD admin or SQL server admin can create users in the virtual `master` database.
+## Create user from a Microsoft Entra login
+
+1. Now that we've created a Microsoft Entra login, we can create a database-level Microsoft Entra user that is mapped to the Microsoft Entra login in the virtual `master` database. We'll continue to use our example, `bob@contoso.com` to create a user in the virtual `master` database, as we want to demonstrate adding the user to special roles. Only a Microsoft Entra admin or SQL server admin can create users in the virtual `master` database.
 
 1. We're using the virtual `master` database, but you can switch to a database of your choice if you want to create users in other databases. Run the following query.
 
@@ -79,7 +85,7 @@ In this tutorial, you learn how to:
    ```
 
    > [!TIP]
-   > Although it is not required to use Azure AD user aliases (for example, `bob@contoso.com`), it is a recommended best practice to use the same alias for Azure AD users and Azure AD logins. 
+   > Although it is not required to use Microsoft Entra user aliases (for example, `bob@contoso.com`), it is a recommended best practice to use the same alias for Microsoft Entra users and Microsoft Entra logins. 
 
 1. Check the created user in `sys.database_principals`. Execute the following query:
 
@@ -97,16 +103,18 @@ In this tutorial, you learn how to:
    ```
 
 > [!NOTE]
-> The existing syntax to create an Azure AD user without an Azure AD login is still supported, and requires the creation of a contained user inside SQL Database (without login).
+> The existing syntax to create a Microsoft Entra user without a Microsoft Entra login is still supported. Executing the following syntax creates a database contained user inside the specific database you are connected to. Importantly, this user is not associated to any login, even if a login of the same name exists in the virtual `master` database.
 >
 > For example, `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`.
 
-## Grant server-level roles to Azure AD logins
+<a name='grant-server-level-roles-to-azure-ad-logins'></a>
+
+## Grant server-level roles to Microsoft Entra logins
 
 You can add logins to the [fixed server-level roles](security-server-roles.md#fixed-server-level-roles), such as the **##MS_DefinitionReader##**, **##MS_ServerStateReader##**, or **##MS_ServerStateManager##** role.
 
 > [!NOTE]
-> The server-level roles mentioned here are not supported for Azure AD groups.
+> The server-level roles mentioned here are not supported for Microsoft Entra groups.
 
 ```sql
 ALTER SERVER ROLE ##MS_DefinitionReader## ADD MEMBER [AzureAD_object];
@@ -127,7 +135,7 @@ DBCC FLUSHAUTHCACHE
 DBCC FREESYSTEMCACHE('TokenAndPermUserStore') WITH NO_INFOMSGS 
 ```
 
-To check which Azure AD logins are part of server-level roles, run the following query:
+To check which Microsoft Entra logins are part of server-level roles, run the following query:
 
 ```sql
 SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
@@ -139,7 +147,9 @@ SELECT roles.principal_id AS RolePID,roles.name AS RolePName,
        ON server_role_members.member_principal_id = members.principal_id;
 ```
 
-## Grant special roles for Azure AD users
+<a name='grant-special-roles-for-azure-ad-users'></a>
+
+## Grant special roles for Microsoft Entra users
 
 [Special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse) can be assigned to users in the virtual `master` database.
 
@@ -157,7 +167,7 @@ To remove a user from a role, run the following query:
 ALTER ROLE [dbmanager] DROP MEMBER [AzureAD_object] 
 ```
 
-`AzureAD_object` can be an Azure AD user, group, or service principal in Azure AD.
+`AzureAD_object` can be a Microsoft Entra user, group, or service principal in Microsoft Entra ID.
 
 In our example, we created the user `bob@contoso.com`. Let's give the user the **dbmanager** and **loginmanager** roles.
 
@@ -191,7 +201,7 @@ In our example, we created the user `bob@contoso.com`. Let's give the user the *
 
 ## Optional - Disable a login
 
-The [ALTER LOGIN (Transact-SQL)](/sql/t-sql/statements/alter-login-transact-sql?view=azuresqldb-current&preserve-view=true) DDL syntax can be used to enable or disable an Azure AD login in Azure SQL Database.
+The [ALTER LOGIN (Transact-SQL)](/sql/t-sql/statements/alter-login-transact-sql?view=azuresqldb-current&preserve-view=true) DDL syntax can be used to enable or disable a Microsoft Entra login in Azure SQL Database.
 
 ```sql
 ALTER LOGIN [bob@contoso.com] DISABLE
@@ -218,6 +228,6 @@ A use case for this would be to allow read-only on [geo-replicas](active-geo-rep
 
 For more information and examples, see:
 
-- [Azure Active Directory server principals](authentication-azure-ad-logins.md)
+- [Microsoft Entra server principals](authentication-azure-ad-logins.md)
 - [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-current&preserve-view=true)
 - [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)

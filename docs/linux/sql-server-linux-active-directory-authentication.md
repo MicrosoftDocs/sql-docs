@@ -267,7 +267,7 @@ While it is not recommended, it is possible to use utilities, such as **realmd**
 >  
 > SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
 
-## Next steps
+## Related content
 
 - [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)

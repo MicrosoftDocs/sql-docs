@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 08/07/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -39,21 +39,21 @@ fi
 
 
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.1.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.apk
 curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.1.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.sig
 curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.3.1.1-1_amd64.sig msodbcsql18_18.3.1.1-1_$architecture.apk
-gpg --verify mssql-tools18_18.3.1.1-1_amd64.sig mssql-tools18_18.3.1.1-1_$architecture.apk
+gpg --verify msodbcsql18_18.3.2.1-1_$architecture.sig msodbcsql18_18.3.2.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.3.1.1-1_$architecture.apk
+sudo apk add --allow-untrusted msodbcsql18_18.3.2.1-1_$architecture.apk
 sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 ```
 
@@ -76,6 +76,9 @@ curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/a
 
 #Debian 11
 curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
+#Debian 12
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
@@ -191,19 +194,19 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.5.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.5.1-1_amd64.sig
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.10.4.1-1_amd64.sig msodbcsql17_17.10.4.1-1_amd64.apk
+gpg --verify msodbcsql17_17.10.5.1-1_amd64.sig msodbcsql17_17.10.5.1-1_amd64.apk
 gpg --verify mssql-tools_17.10.1.1-1_amd64.sig mssql-tools_17.10.1.1-1_amd64.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.10.4.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.10.5.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ```
 
@@ -226,6 +229,9 @@ curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/a
 
 #Debian 11
 curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
+#Debian 12
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17

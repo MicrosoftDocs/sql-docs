@@ -135,8 +135,9 @@ The SSIS log providers for Text files, for XML files, and for SQL Server Profile
 -   If you don't provide a path, the log provider writes to the current directory of the host. If the current user doesn't have permission to write to the current directory of the host, the log provider raises an error.
 -   You can't use an environment variable in a file path. If you specify an environment variable, the literal text that you specify appears in the file path. For example, if you specify `%TMP%/log.txt`, the log  provider appends the literal text `/%TMP%/log.txt` to the current host directory.
 
-## Related content about SSIS on Linux
--   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
--   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
--   [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)
--   [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)
+## Related content
+
+- [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+- [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+- [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)
+- [Schedule SQL Server Integration Services package execution on Linux with cron](sql-server-linux-schedule-ssis-packages.md)

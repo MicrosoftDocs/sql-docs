@@ -202,21 +202,14 @@ Preserve backup logs, maintenance plans, and other automated tasks, including jo
 
 View [linked servers](../../../relational-databases/linked-servers/linked-servers-database-engine.md) by using SQL Server Management Studio. In the Object Explorer, right-click server objects to expand list.
 
-Additional considerations may be needed 
-based on the complexity of your data and 
-environment.
+Additional considerations may be needed based on the complexity of your data and environment.
 
-[Troubleshoot orphaned users.](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
-
-[Migrating-triggers.](../../../relational-databases/linked-servers/linked-servers-database-engine.md)
-
-[Migrate system objects using scripts wizard.](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
-
-[Mirrored backup media sets.](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
-
-[Backup overview of SQL Server.](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
-
-[Editions and supported features of SQL Server.](../../editions-and-components-of-sql-server-2019.md)
+- [Troubleshoot orphaned users](../../failover-clusters/troubleshoot-orphaned-users-sql-server.md)
+- [Migrating Triggers](../../../relational-databases/in-memory-oltp/migrating-triggers.md)
+- [Generate and Publish Scripts Wizard](../../../ssms/scripting/generate-and-publish-scripts-wizard.md)
+- [Mirrored Backup Media Sets](../../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)
+- [Backup Overview (SQL Server)](../../../relational-databases/backup-restore/backup-overview-sql-server.md)
+- [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md)
 
 ### Migrate schema and data
 

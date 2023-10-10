@@ -393,9 +393,9 @@ You are now ready to configure the FCI.
 | Red Hat Enterprise Linux with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
 | SUSE Linux Enterprise Server with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
-## Next steps
+## Related content
 
-[Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

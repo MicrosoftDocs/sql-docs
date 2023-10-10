@@ -81,13 +81,13 @@ The following table describes the audit file content that can be returned by thi
 | Column name | Type | Description |
 | --- | --- | --- |
 | action_id | **varchar(4)** | ID of the action. Not nullable. |
-| additional_information | **nvarchar(4000)** | Unique information that only applies to a single event is returned as XML. A few auditable actions contain this kind of information.<br /><br />One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br />`<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br />Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name). The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br />Is nullable. Returns NULL when there is no additional information reported by the event. |
+| additional_information | **nvarchar(4000)** | Unique information that only applies to a single event is returned as XML. A few auditable actions contain this kind of information.<br /><br />One level of T-SQL stack will be displayed in XML format for actions that have T-SQL stack associated with them. The XML format will be:<br /><br />`<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br />Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name). The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br />Is nullable. Returns NULL when there is no additional information reported by the event. |
 | affected_rows | **bigint** | **Applies to**: Azure SQL Database only<br /><br />Number of rows affected by the executed statement. |
 | application_name | **nvarchar(128)** | **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and Azure SQL Database<br /><br />Name of client application that executed the statement that caused the audit event |
 | audit_file_offset | **bigint** | **Applies to**: SQL Server only<br /><br />The buffer offset in the file that contains the audit record. Not nullable. |
 | audit_schema_version | **int** | Always 1 |
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Not nullable. |
-| client_ip | **nvarchar(128)** | **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and Azure SQL Database<br /><br />	Source IP of the client application |
+| client_ip | **nvarchar(128)** | **Applies to**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] and later versions, and Azure SQL Database<br /><br />Source IP of the client application |
 | connection_id | GUID | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br />ID of the connection in the server |
 | data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br />Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level. |
@@ -99,10 +99,11 @@ The following table describes the audit file content that can be returned by thi
 | is_column_permission | **bit** | Flag indicating if this is a column level permission. Not nullable. Returns 0 when the permission_bitmask = 0.<br />1 = true<br />0 = false |
 | object_id | **int** | The ID of the entity on which the audit occurred. This includes the following:<br />Server objects<br />Databases<br />Database objects<br />Schema objects<br />Not nullable. Returns 0 if the entity is the Server itself or if the audit isn't performed at an object level. For example, Authentication. |
 | object_name | **sysname** | The name of the entity on which the audit occurred. This includes the following:<br />Server objects<br />Databases<br />Database objects<br />Schema objects<br />Is nullable. Returns NULL if the entity is the Server itself or if the audit isn't performed at an object level. For example, Authentication. |
+| obo_middle_tier_app_id | **varchar(120)** | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br />The application ID of the middle tier application which connects to SQL Database using OBO access.<br />Is nullable. Returns NULL if the request is not made using OBO access. |
 | permission_bitmask | **varbinary(16)** | In some actions, this is the permissions that were grant, denied, or revoked. |
 | response_rows | **bigint** | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br />Number of rows returned in the result set. |
 | schema_name | **sysname** | The schema context in which the action occurred. Is nullable. Returns NULL for audits occurring outside a schema. |
-| sequence_group_id | **varbinary** | **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions<br /><br />	Unique identifier |
+| sequence_group_id | **varbinary** | **Applies to**: [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)] and later versions<br /><br />Unique identifier |
 | sequence_number | **int** | Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits. Not nullable. |
 | server_instance_name | **sysname** | Name of the server instance where the audit occurred. The standard server\instance format is used. |
 | server_principal_id | **int** | ID of the login context that the action is performed in. Not nullable. |
@@ -110,7 +111,7 @@ The following table describes the audit file content that can be returned by thi
 | server_principal_sid | **varbinary** | Current login SID. Is nullable. |
 | session_id | **smallint** | ID of the session on which the event occurred. Not nullable. |
 | session_server_principal_name | **sysname** | Server principal for session. Is nullable. Returns the identity of the original login that was connected to the instance of SQL Server in case there were explicit or implicit context switches. |
-| statement | **nvarchar(4000)** | TSQL statement if it exists. Is nullable. Returns NULL if not applicable. |
+| statement | **nvarchar(4000)** | Transact-SQL statement if it exists. Is nullable. Returns NULL if not applicable. |
 | succeeded | **bit** | Indicates whether the action that triggered the event succeeded. Not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br />1 = success<br />0 = fail |
 | target_database_principal_id | **int** | The database principal the GRANT/DENY/REVOKE operation is performed on. Not nullable. Returns 0 if not applicable. |
 | target_database_principal_name | **sysname** | Target user of action. Is nullable. Returns NULL if not applicable. |

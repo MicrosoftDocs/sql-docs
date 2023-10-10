@@ -21,7 +21,7 @@ Use the following steps to create a new support request from the Azure portal fo
 
 1. On  the [Azure portal](https://portal.azure.com) menu, select **Help + support**.
 
-   ![The Help + support link](./media/quota-increase-request/help-plus-support.png)
+   :::image type="content" source="./media/quota-increase-request/help-plus-support.png" alt-text="Screenshot of the Azure portal left side navigation menu that highlights the Help + support menu option." lightbox="./media/quota-increase-request/help-plus-support.png":::
 
 1. In **Help + support**, select **New support request**.
 

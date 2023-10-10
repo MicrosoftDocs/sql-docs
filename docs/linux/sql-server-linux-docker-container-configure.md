@@ -664,7 +664,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

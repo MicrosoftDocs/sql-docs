@@ -975,7 +975,7 @@ traceflag = 3456
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
 - [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md)
 - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)

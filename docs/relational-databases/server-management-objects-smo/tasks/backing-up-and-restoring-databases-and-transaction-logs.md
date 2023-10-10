@@ -155,7 +155,7 @@ Module SMO_VBBackup3
         'Remove the device.  
         rs.Devices.Remove(bdid)  
   
-        'Set the database recovery mode back to its original value.  
+        'Set the database recovery model back to its original value.  
         srv.Databases("AdventureWorks2022").DatabaseOptions.RecoveryModel = recoverymod  
   
         'Drop the table that was added.  
@@ -292,7 +292,7 @@ class A {
       // Remove the device.   
       rs.Devices.Remove(bdid);  
   
-      // Set the database recovery mode back to its original value.  
+      // Set the database recovery model back to its original value.  
       db.RecoveryModel = (RecoveryModel)recoverymod;  
   
       // Drop the table that was added.   
@@ -426,7 +426,7 @@ $rs.SqlRestore($srv)
 #Remove the device.  
 $rs.Devices.Remove($bdid)  
   
-#Set the database recovery mode back to its original value.  
+#Set the database recovery model back to its original value.  
 $db = $srv.Databases["AdventureWorks"]  
 $db.DatabaseOptions.RecoveryModel = $recoverymod  
   

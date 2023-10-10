@@ -211,7 +211,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 
-## Next steps
+## Unattended install
 
 Simplify multiple unattended installs and create a stand-alone bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own bash script.
 
@@ -230,4 +230,6 @@ Then run the bash script as follows:
 . ./my_script_name.sh
 ```
 
-For more information about SQL Server on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).
+## Related content
+
+- [SQL Server on Linux overview](sql-server-linux-overview.md)

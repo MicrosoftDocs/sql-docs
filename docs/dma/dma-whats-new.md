@@ -8,7 +8,9 @@ ms.date: 07/25/2022
 ms.service: sql
 ms.subservice: dma
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - sql-migration-content
 helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ---

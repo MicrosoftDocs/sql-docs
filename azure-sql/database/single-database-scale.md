@@ -25,7 +25,10 @@ After initially picking the number of vCores or DTUs, you can scale a single dat
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Impact
+
 
 Changing the service tier or compute size of mainly involves the service performing the following steps:
 
@@ -103,7 +106,7 @@ else {
 
 ## Permissions
 
-To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
 
 To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
@@ -155,7 +158,7 @@ More than 1 TB of storage in the Premium tier is currently available in all regi
 
 - If the max size for a P11 or P15 database was ever set to a value greater than 1 TB, then can it only be restored or copied to a P11 or P15 database.  Subsequently, the database can be rescaled to a different compute size provided the amount of space allocated at the time of the rescaling operation doesn't exceed max size limits of the new compute size.
 - For active geo-replication scenarios:
-  - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute size are rejected as secondaries since they aren't capable of supporting more than 1 TB.
+  - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute sizes are rejected as secondaries since they aren't capable of supporting more than 1 TB.
   - Upgrading the primary database in a geo-replication relationship: Changing the maximum size to more than 1 TB on a primary database triggers the same change on the secondary database. Both upgrades must be successful for the change on the primary to take effect. Region limitations for the more than 1-TB option apply. If the secondary is in a region that doesn't support more than 1 TB, the primary isn't upgraded.
 - Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage to [import](database-import.md) and [export](database-export.md) data.
 

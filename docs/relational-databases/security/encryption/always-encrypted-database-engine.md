@@ -181,7 +181,7 @@ The following limitations apply to queries on encrypted columns:
 
 - The following features don't work on encrypted columns:
 
-  - [SQL Server replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md), are supported.
+  - [SQL Server replication](../../replication/sql-server-replication.md) (transactional, merge, or snapshot replication). Physical replication features, including [Always](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md), are supported.
   - Distributed queries ([linked servers](../../linked-servers/linked-servers-database-engine.md), [OPENROWSET (Transact-SQL)](../../../t-sql/functions/openrowset-transact-sql.md), [OPENDATASOURCE (Transact-SQL)](../../../t-sql/functions/opendatasource-transact-sql.md)).
   - [Cross-database queries](../../in-memory-oltp/cross-database-queries.md) that perform joins on columns (using deterministic encryption) from different databases.
 

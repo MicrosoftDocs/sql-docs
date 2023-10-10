@@ -64,6 +64,7 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**dayofyear**|**dy**|  
 |**day**|**dd, d**|  
 |**week**|**wk, ww**|  
+|**weekday**|**dw, w**| 
 |**hour**|**hh**|  
 |**minute**|**mi, n**|  
 |**second**|**ss, s**|  
@@ -121,6 +122,7 @@ SELECT DATEDIFF(month,       '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(dayofyear,   '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(day,         '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(week,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(weekday,     '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

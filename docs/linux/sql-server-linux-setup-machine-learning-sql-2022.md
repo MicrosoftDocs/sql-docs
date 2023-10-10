@@ -242,7 +242,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
 
-## Next steps
+## Related content
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

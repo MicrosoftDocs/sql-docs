@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Executing the SSMA Console (DB2ToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The ensuing sections detail the same. The console application uses certain standard script file commands as enumerated in this section.  

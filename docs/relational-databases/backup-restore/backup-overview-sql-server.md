@@ -55,7 +55,7 @@ This article introduces the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-m
 
 - **[file backup](full-file-backups-sql-server.md)**: A backup of one or more database files or filegroups.
 
-**[partial backup](partial-backups-sql-server.md)**: Contains data from only some of the filegroups in a database, including the data in the primary filegroup, every read/write filegroup, and any optionally-specified read-only files.
+**[partial backup](partial-backups-sql-server.md)**: Contains data from only some of the filegroups in a database, including the data in the primary filegroup, every read/write filegroup, and any optionally specified read-only files.
 
 ## Backup media terms and definitions
 

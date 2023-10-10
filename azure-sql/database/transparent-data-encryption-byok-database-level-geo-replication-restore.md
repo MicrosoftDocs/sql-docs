@@ -118,7 +118,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
     ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
-- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector ` (and if necessary, `-FederatedClientId`) parameters.
+- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
     ```powershell
     # Create a secondary replica with Active Geo Replication with the same name as the primary database

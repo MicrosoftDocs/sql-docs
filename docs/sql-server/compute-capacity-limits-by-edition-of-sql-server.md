@@ -83,6 +83,9 @@ The following table specifies the compute capacity limits for a single instance 
 
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) licensing is limited to 20 cores per [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance. (This licensing isn't available for new agreements.) There are no limits under the Core-based Server Licensing model.
 
+> [!NOTE]  
+> [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] limits the number of logical processors per NUMA node to 64.
+
 In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture isn't visible to the guest applications.
 
 For example, a server that has four sockets populated with quad-core processors and the ability to enable two SMT threads per core contains 32 logical processors with SMT enabled. But it contains only 16 logical processors with SMT disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines' compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.

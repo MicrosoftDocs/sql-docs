@@ -4,7 +4,7 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 07/31/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,6 +27,22 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.3.2, October 2023
+
+| New item | Details |
+| :------- | :------ |
+| New distribution supported. | Debian 12  |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 17.10.5, October 2023
+
+| New item | Details |
+| :------- | :------ |
+| New distribution supported. | Debian 12  |
+| Improved Performance | More efficient packet buffer memory allocation |
+| New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.1, July 2023
 

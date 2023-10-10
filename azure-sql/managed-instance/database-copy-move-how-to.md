@@ -195,6 +195,24 @@ az sql midb move list --name $dbName --resource-group $rgName --managed-instance
 
 ---
 
+## Performance of copy and move operations
+
+Both database copy and move operations have two phases. The first one is initial seeding and the second one is the replication of changes from the source database to the destination database. Typically, initial seeding is a more demanding phase of the operation. The time it takes for the initial seeding to complete depends on the size of data, number of active copy or move operations, intensity of the workload that is happening on the source and destination Azure SQL Managed Instance, and the speed of the network between source and destination. Under optimal circumstances, and when the connectivity between source and destination is established using recommended global VNet peering, seeding speed is up to 360 GB per hour. The seeding process and its speed can be monitored via DMV sys.dm_hadr_physical_seeding_stats.
+
+```SQL
+SELECT 
+	role_desc,
+	transfer_rate_bytes_per_second,
+	transferred_size_bytes,
+	database_size_bytes,
+	start_time_utc,
+	estimate_time_complete_utc,
+	end_time_utc,
+	local_physical_seeding_id
+FROM
+	sys.dm_hadr_physical_seeding_stats;
+```
+
 ## Limitations
 
 Consider the following limitations of the copy and move feature:

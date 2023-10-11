@@ -107,7 +107,7 @@ You can copy or move a database to another managed instance by using the Azure p
 
 ### [PowerShell](#tab/azure-powershell)
 
-Use Azure PowerShell commandlets to start, get, complete or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
+Use Azure PowerShell commandlets to start, get, complete, or cancel [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) or [database move](/powershell/module/az.sql/move-azsqlinstancedatabase) operation.
 
 Here's an example of how you can copy a database.
 
@@ -155,7 +155,7 @@ Get-AzSqlInstanceDatabaseMoveOperation -DatabaseName $dbName -InstanceName $miNa
 
 ### [CLI](#tab/azure-cli)
 
-Use Azure CLI commandlets to start, get, complete or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
+Use Azure CLI commandlets to start, get, complete, or cancel [database copy](/cli/azure/sql/midb/copy) or [database move](/cli/azure/sql/midb/move) operation.
 
 Here's an example of how you can copy a database.
 
@@ -197,7 +197,7 @@ az sql midb move list --name $dbName --resource-group $rgName --managed-instance
 
 ## Performance of copy and move operations
 
-Both database copy and move operations have two phases. The first one is initial seeding and the second one is the replication of changes from the source database to the destination database. Typically, initial seeding is a more demanding phase of the operation. The time it takes for the initial seeding to complete depends on the size of data, number of active copy or move operations, intensity of the workload that is happening on the source and destination Azure SQL Managed Instance, and the speed of the network between source and destination. Under optimal circumstances, and when the connectivity between source and destination is established using recommended global VNet peering, seeding speed is up to 360 GB per hour. The seeding process and its speed can be monitored via DMV sys.dm_hadr_physical_seeding_stats.
+Both database copy and move operations have two phases. The first one is initial seeding and the second one is the replication of changes from the source database to the destination database. Typically, initial seeding is a more demanding phase of the operation. The time it takes for the initial seeding to complete depends on the size of data and the number of active copy or move operations. Intensity of the workload that is happening on the source and destination Azure SQL Managed Instance and the speed of the network between source and destination will also influence seeding speed. Under optimal circumstances, and when the connectivity between source and destination is established using recommended global VNet peering, seeding speed is up to 360 GB per hour. The seeding process and its speed can be monitored via DMV sys.dm_hadr_physical_seeding_stats.
 
 ```SQL
 SELECT 
@@ -232,7 +232,7 @@ Consider the following limitations of the copy and move feature:
 ## Next steps
 
 More documentation related to database copy and move.
-- Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase)
+- Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).
 - Azure CLI documentation for [database copy](/cli/azure/sql/midb/copy) and [database move](/cli/azure/sql/midb/move).
 
 For other data movement options, review:

@@ -4,7 +4,7 @@ description: "This article describes how to create indexes on a view."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 01/12/2023
+ms.date: 08/18/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -40,7 +40,7 @@ The following steps are required to create an indexed view and are critical to t
 
 ## <a id="Restrictions"></a> Required SET options for indexed views
 
-Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
+Evaluating the same expression can produce different results in the [!INCLUDE [ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.
 
 To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required value** column whenever the following conditions occur:
 
@@ -160,7 +160,7 @@ When you refer to **datetime** and **smalldatetime** string literals in indexed 
 
 When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referenced by a large number of indexed views, or fewer but complex indexed views, those indexed views will have to be updated as well during DML execution. As a result, DML query performance may degrade significantly, or in some cases, a query plan can't even be produced. In such scenarios, test your DML queries before production use, analyze the query plan and tune/simplify the DML statement.
 
-To prevent the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from using indexed views, include the [`OPTION (EXPAND VIEWS)`](../../t-sql/queries/hints-transact-sql-query.md#expand-views) hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).
+To prevent the [!INCLUDE [ssDE](../../includes/ssde-md.md)] from using indexed views, include the [`OPTION (EXPAND VIEWS)`](../../t-sql/queries/hints-transact-sql-query.md#expand-views) hint on the query.  Also, if any of the listed options are incorrectly set, this will prevent the optimizer from using the indexes on the views. For more information about the `OPTION (EXPAND VIEWS)` hint, see [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).
 
 ## Various additional considerations
 
@@ -235,7 +235,7 @@ JOIN Sales.SalesOrderHeader AS o
     ORDER BY OrderDate ASC;
 ```
 
-Finally, this example shows querying directly from the indexed view. On [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Standard edition, you must use the `NOEXPAND` query hint to query the indexed view directly.
+Finally, this example shows querying directly from the indexed view. Prior to [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. On [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Standard edition, you must use the `NOEXPAND` query hint to query the indexed view directly. Since [!INCLUDE [ssSQL15_md](../../includes/sssql16-md.md)] Service Pack 1, all editions support automatic use of an indexed view. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)] also support automatic use of indexed views without specifying the `NOEXPAND` hint. For more information, see [Table Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).
 
 ```sql
 --This query uses the indexed view directly, on Enterprise edition.

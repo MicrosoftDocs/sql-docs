@@ -9,7 +9,7 @@ ms.service: sql
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azure-sqldw-latest||=fabric"
+monikerRange: "=azure-sqldw-latest || =fabric"
 ---
 # Azure Synapse Analytics Stored Procedures
 
@@ -30,9 +30,9 @@ monikerRange: "= azure-sqldw-latest||=fabric"
 - [sp_special_columns_100 (Azure Synapse Analytics)](sp-special-columns-100-sql-data-warehouse.md)
 
 > [!NOTE]  
-> Some additional system stored procedures are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and are not intended for general customer use. These procedures are listed at [System Stored Procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility is not guaranteed. All procedures on the list are not available in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
+> Some additional system stored procedures are used only within an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and aren't intended for general customer use. These procedures are listed at [System stored procedures (Transact-SQL)](./system-stored-procedures-transact-sql.md). These procedures are subject to change and compatibility isn't guaranteed. All procedures on the list aren't available in [!INCLUDE [ssazuresynapse-md](../../includes/ssazuresynapse-md.md)].
 
 ## See also
 
-- [System stored functions (Transact-SQL)](~/relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System functions by category for Transact-SQL](../system-functions/system-functions-category-transact-sql.md)
 - [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

@@ -55,15 +55,15 @@ The e-mail address to send the message from. This address must be an internet e-
 
 #### [ @display_name = ] '*display_name*'
 
-The display name to use on e-mail messages from this account. *@display_name* is **nvarchar(128)**, with a default of NULL. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name `SQL Server Agent Automated Mailer` on e-mail messages.
+The display name to use on e-mail messages from this account. *@display_name* is **nvarchar(128)**, with a default of `NULL`. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name `SQL Server Agent Automated Mailer` on e-mail messages.
 
 #### [ @replyto_address = ] '*replyto_address*'
 
-The address that responses to messages from this account are sent to. *@replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, `danw@adventure-works.com`.
+The address that responses to messages from this account are sent to. *@replyto_address* is **nvarchar(128)**, with a default of `NULL`. For example, replies to an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, `danw@adventure-works.com`.
 
 #### [ @description = ] '*description*'
 
-A description for the account. *@description* is **nvarchar(256)**, with a default of NULL.
+A description for the account. *@description* is **nvarchar(256)**, with a default of `NULL`.
 
 #### [ @mailserver_name = ] '*server_name*'
 
@@ -79,11 +79,11 @@ The port number for the e-mail server. *@port* is **int**, with a default of `25
 
 #### [ @username = ] '*username*'
 
-The user name to use to log on to the e-mail server. *@username* is **nvarchar(128)**, with a default of NULL. When this parameter is NULL, Database Mail doesn't use authentication for this account. If the mail server doesn't require authentication, use NULL for the username.
+The user name to use to log on to the e-mail server. *@username* is **nvarchar(128)**, with a default of `NULL`. When this parameter is NULL, Database Mail doesn't use authentication for this account. If the mail server doesn't require authentication, use NULL for the username.
 
 #### [ @password = ] '*password*'
 
-The password to use to log on to the e-mail server. *@password* is **nvarchar(128)**, with a default of NULL. There is no need to provide a password unless a username is specified.
+The password to use to log on to the e-mail server. *@password* is **nvarchar(128)**, with a default of `NULL`. There is no need to provide a password unless a username is specified.
 
 #### [ @use_default_credentials = ] *use_default_credentials*
 
@@ -95,7 +95,7 @@ Specifies whether Database Mail encrypts communication using Secure Sockets Laye
 
 #### [ @account_id = ] *account_id* OUTPUT
 
-Returns the account ID for the new account. *@account_id* is **int**, with a default of NULL.
+Returns the account ID for the new account. *@account_id* is **int**, with a default of `NULL`.
 
 ## Return code values
 
@@ -130,6 +130,6 @@ EXEC msdb.dbo.sysmail_add_account_sp
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
-- [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)
+- [Database Mail](../database-mail/database-mail.md)
+- [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)
 - [Database Mail stored procedures (Transact-SQL)](database-mail-stored-procedures-transact-sql.md)

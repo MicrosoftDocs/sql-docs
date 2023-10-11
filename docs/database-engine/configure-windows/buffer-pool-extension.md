@@ -43,7 +43,7 @@ ms.topic: conceptual
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], A buffer is an 8-KB page in memory, the same size as a data or index page. Thus, the buffer cache is divided into 8-KB pages. A page remains in the buffer cache until the buffer manager needs the buffer area to read in more data. Data is written back to disk only if it is modified. These in-memory modified pages are known as dirty pages. A page is clean when it is equivalent to its database image on disk. Data in the buffer cache can be modified multiple times before being written back to disk.  
   
  Buffer pool  
- Also called buffer cache. The buffer pool is a global resource shared by all databases for their cached data pages. The maximum and minimum size of the buffer pool cache is determined during startup or when the instance of SQL server is dynamically reconfigured by using sp_configure. This size determines the maximum number of pages that can be cached in the buffer pool at any time in the running instance.  
+ Also called buffer cache. The buffer pool is a global resource shared by all databases for their cached data pages. The maximum and minimum size of the buffer pool cache is determined during startup or when the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is dynamically reconfigured by using sp_configure. This size determines the maximum number of pages that can be cached in the buffer pool at any time in the running instance.  
   
  The maximum memory that can be committed by buffer pool extension can be limited by the other applications running on the machine in case those create significant memory pressure.  
   

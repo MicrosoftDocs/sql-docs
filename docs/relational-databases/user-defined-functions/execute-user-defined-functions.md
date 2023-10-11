@@ -30,7 +30,7 @@ Permissions aren't required to run the [EXECUTE](../../t-sql/language-elements/e
 This example uses the `ufnGetSalesOrderStatusText` scalar-valued function that is available in most editions of `AdventureWorks`.  The purpose of the function is to return a text value for sales status from a given integer.  Vary the example by passing integers 1 through 7 to the `@Status` parameter.
 
 ```sql
-USE [AdventureWorks2016CTP3]
+USE [AdventureWorks2022]
 GO
 
 -- Declare a variable to return the results of the function.

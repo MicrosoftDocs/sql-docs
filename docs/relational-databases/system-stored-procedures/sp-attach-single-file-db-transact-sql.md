@@ -73,10 +73,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
 USE master;  
 GO  
-EXEC sp_detach_db @dbname = 'AdventureWorks2012';  
-EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2012',   
+EXEC sp_detach_db @dbname = 'AdventureWorks2022';  
+EXEC sp_attach_single_file_db @dbname = 'AdventureWorks2022',   
     @physname =   
-N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2012_Data.mdf';  
+N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks2022_Data.mdf';  
 ```  
   
 ## See Also  

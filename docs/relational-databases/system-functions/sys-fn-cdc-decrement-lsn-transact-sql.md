@@ -50,7 +50,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  The following example uses `sys.fn_cdc_decrement_lsn` to set the upper LSN boundary in a query that returns change data rows that have LSN values less than the maximum LSN value.  
   
 ```sql  
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 DECLARE @from_lsn binary(10), @to_lsn binary(10);  
 SET @from_lsn = sys.fn_cdc_get_min_lsn('HumanResources_Employee');  

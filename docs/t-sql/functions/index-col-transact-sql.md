@@ -65,12 +65,12 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  The following example returns the column names of the two key columns in the index `PK_SalesOrderDetail_SalesOrderID_LineNumber`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,1) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,1) AS  
         [Index Column 1],   
-    INDEX_COL (N'AdventureWorks2012.Sales.SalesOrderDetail', 1,2) AS  
+    INDEX_COL (N'AdventureWorks2022.Sales.SalesOrderDetail', 1,2) AS  
         [Index Column 2]  
 ;  
 GO  

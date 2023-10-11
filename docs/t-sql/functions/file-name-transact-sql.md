@@ -61,7 +61,7 @@ GO
 ```
 File Name 1                File Name 2  
 -------------------------  ------------------------  
-AdventureWorks2012_Data    AdventureWorks2012_Log  
+AdventureWorks2022_Data    AdventureWorks2022_Log  
 
 (1 row(s) affected)
 ``` 

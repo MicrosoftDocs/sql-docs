@@ -80,10 +80,10 @@ GO
   
  **Example: Start a full population of full-text and semantic indexes**  
   
- The following example starts full population of both full-text and semantic indexes by altering an existing full-text index on the **Production.Document** table in the AdventureWorks2012 sample database.  
+ The following example starts full population of both full-text and semantic indexes by altering an existing full-text index on the **Production.Document** table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database.  
   
 ```vb  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 ALTER FULLTEXT INDEX ON Production.Document  

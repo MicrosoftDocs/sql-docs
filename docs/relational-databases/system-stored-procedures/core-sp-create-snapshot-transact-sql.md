@@ -105,4 +105,4 @@ EXEC core.sp_create_snapshot
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
-- [Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)
+- [Management Data Warehouse](../data-collection/management-data-warehouse.md)

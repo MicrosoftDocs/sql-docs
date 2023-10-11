@@ -8,7 +8,9 @@ ms.date: 03/01/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 ---
 # Install SQL Server Integration Services (SSIS) on Linux
 
@@ -149,7 +151,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.
@@ -185,7 +187,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.
@@ -221,7 +223,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Import the public repository GPG keys.
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Register the SQL Server Ubuntu repository.
@@ -294,7 +296,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | `ACCEPT_EULA` | Accepts the SQL Server license terms when set to any value like `Y`. |
 | `SSIS_PID` | Sets the SQL Server edition or product key. Here are the possible values:<br /><br />- Evaluation<br />- Developer<br />- Express<br />- Web<br />- Standard<br />- Enterprise<br />- A product key<br /><br />If you specify a product key, it must be in the form `#####-#####-#####-#####-#####`, where `#` is a letter or a digit. |
 
-## Next steps
+## Related content
 
 - [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
 - [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md)

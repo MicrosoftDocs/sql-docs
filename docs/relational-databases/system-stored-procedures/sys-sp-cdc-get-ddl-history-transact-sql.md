@@ -45,7 +45,7 @@ The name of the capture instance associated with a source table. *@capture_insta
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

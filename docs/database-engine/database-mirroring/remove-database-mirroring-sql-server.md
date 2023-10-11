@@ -72,7 +72,7 @@ helpviewer_keywords:
      The following example removes database mirroring from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
+    ALTER DATABASE AdventureWorks2022 SET PARTNER OFF;  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: Removing Database Mirroring  
@@ -110,6 +110,6 @@ helpviewer_keywords:
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

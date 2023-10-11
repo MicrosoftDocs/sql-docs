@@ -18,8 +18,8 @@ monikerRange: "= azuresql || = azuresql-mi"
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/monitoring-with-dmvs.md)
-> * [Azure SQL Managed Instance](monitoring-with-dmvs.md)
+> * [Azure SQL Database](../database/monitoring-with-dmvs.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](monitoring-with-dmvs.md?view=azuresql-mi&preserve-view=true)
 
 Microsoft Azure SQL Managed Instance enables a subset of dynamic management views (DMVs) to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and so on. This article provides information on how to detect common performance problems by using dynamic management views.
 

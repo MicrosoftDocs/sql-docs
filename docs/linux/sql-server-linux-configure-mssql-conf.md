@@ -3,11 +3,12 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 11/24/2022
+ms.date: 09/06/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
@@ -48,7 +49,7 @@ ms.topic: conceptual
 <!--SQL Server 2019 on Linux-->
 ::: moniker range="= sql-server-linux-ver15 || = sql-server-ver15"
 
-**mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with [!INCLUDE [SQL Server 2019](../includes/sssql19-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 | Parameter | Description |
 | --- | --- |
@@ -71,9 +72,9 @@ ms.topic: conceptual
 | [Locale](#lcid) | Set the locale for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
-| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only. |
+| [Machine Learning Services EULAs](#mlservices-eula) | Accept R and Python EULAs for `mlservices` packages. Applies to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only. |
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
-| [outboundnetworkaccess](#mlservices-outbound-access) | Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions. |
+| [outboundnetworkaccess](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
@@ -106,9 +107,9 @@ ms.topic: conceptual
 | [Locale](#lcid) | Set the locale for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
-| [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only. |
+| [Machine Learning Services EULAs](#mlservices-eula) | Accept R and Python EULAs for `mlservices` packages. Applies to [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] only. |
 | [Network settings](#network) | Additional network settings for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. |
-| [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [MLServices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions. |
+| [Outbound network access](#mlservices-outbound-access) | Enable outbound network access for [Machine Learning Services](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions. |
 | [TCP port](#tcpport) | Change the port where [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Trace flags](#traceflags) | Set the trace flags that the service is going to use. |
@@ -175,14 +176,14 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 The `sqlagent.errorlogfile` and `sqlagent.errorlogginglevel` settings allows you to set the SQL Agent log file path and logging level respectively.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogfile <path>
 ```
 
 SQL Agent logging levels are bitmask values that equal:
 
-- 1 = Errors
-- 2 = Warnings
-- 4 = Info
+- `1` = Errors
+- `2` = Warnings
+- `4` = Info
 
 If you want to capture all levels, use `7` as the value.
 
@@ -204,7 +205,7 @@ sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/l
 
 In the previous example, `/path/to/new/location.pfx` is your preferred path *including* the certificate name.
 
-The certificate for Azure AD authentication, downloaded by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], is stored at this location. You won't be able to change it to `/var/opt/mssql/secrets`.
+The certificate for Azure AD authentication, downloaded by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], is stored at this location. You can't change it to `/var/opt/mssql/secrets`.
 
 > [!NOTE]  
 > The default Azure AD certificate path can be changed at any time after [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is installed, but must be changed *before* enabling Azure AD.
@@ -214,7 +215,7 @@ The certificate for Azure AD authentication, downloaded by the Azure extension f
 The following options are used by Azure AD authentication for an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on Linux.
 
 > [!WARNING]  
-> Azure AD parameters are configured by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and should not be reconfigured manually. They are listed here for information purposes.
+> Azure AD parameters are configured by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and shouldn't be reconfigured manually. They are listed here for information purposes.
 
 | Option | Description |
 | --- | --- |
@@ -247,7 +248,7 @@ For options on using `setup-ad-keytab`, run the following command:
 sudo /opt/mssql/bin/mssql-conf setup-ad-keytab --help
 ```
 
-The `validate-ad-config` option will validate the configuration for Active Directory authentication.
+The `validate-ad-config` option validates the configuration for Active Directory authentication.
 
 ## <a id="collation"></a> Change the SQL Server collation
 
@@ -263,7 +264,7 @@ The `set-collation` option changes the collation value to any of the supported c
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. The **mssql-conf** utility will attempt to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
+1. The **mssql-conf** utility attempts to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
 
 1. Restore your user database backups.
 
@@ -319,13 +320,13 @@ The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings chan
    sudo systemctl restart mssql-server
    ```
 
-1. Now all the database files for the new databases created will be stored in this new location. If you would like to change the location of the log (.ldf) files of the new databases, you can use the following `set` command:
+1. Now all the database files for the new databases created are stored in this new location. If you would like to change the location of the log (.ldf) files of the new databases, you can use the following `set` command:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
    ```
 
-1. This command also assumes that a /tmp/log directory exists, and that it is under the user and group `mssql`.
+1. This command also assumes that a /tmp/log directory exists, and that it's under the user and group `mssql`.
 
 ## <a id="masterdatabasedir"></a> Change the default `master` database file directory location
 
@@ -376,7 +377,7 @@ To change these settings, use the following steps:
    ```
 
    > [!NOTE]  
-   > If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] cannot find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new `master` database. You will have to stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to continue using the existing metadata.
+   > If [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can't find `master.mdf` and `mastlog.ldf` files in the specified directory, a templated copy of the system databases will be automatically created in the specified directory, and [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] will successfully start up. However, metadata such as user databases, server logins, server certificates, encryption keys, SQL agent jobs, or old SA login password will not be updated in the new `master` database. You'll have to stop [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] and move your old `master.mdf` and `mastlog.ldf` to the new specified location and start [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to continue using the existing metadata.
 
 ## <a id="masterdatabasename"></a> Change the name of `master` database files
 
@@ -446,7 +447,7 @@ To set up this new location, use the following commands:
 
 ## <a id="errorlogdir"></a> Change the default error log file directory location
 
-The `filelocation.errorlogfile` setting changes the location where the new error log, default profiler trace, system health session XE and Hekaton session XE files are created. By default, this location is `/var/opt/mssql/log`. The directory in which the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log file is set, becomes the default log directory for other logs.
+The `filelocation.errorlogfile` setting changes the location where the new error log, default profiler trace, system health session XE, and Hekaton session XE files are created. By default, this location is `/var/opt/mssql/log`. The directory in which the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] error log file is set, becomes the default log directory for other logs.
 
 To change these settings:
 
@@ -475,7 +476,7 @@ To change these settings:
    sudo systemctl restart mssql-server
    ```
 
-The `errorlog.numerrorlogs` setting will allow you to specify the number of error logs maintained before cycling the log.
+The `errorlog.numerrorlogs` setting allows you to specify the number of error logs maintained before cycling the log.
 
 ## <a id="backupdir"></a> Change the default backup directory location
 
@@ -544,12 +545,12 @@ The first phase capture is controlled by the `coredump.coredumptype` setting, wh
     | --- | --- |
     | `mini` | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the host environment thread stacks and modules. It doesn't contain indirect memory references or globals. |
     | `miniplus` | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:<br /><br />- Various globals<br />- All memory above 64 TB<br />- All named regions found in `/proc/$pid/maps`<br />- Indirect memory from threads and stacks<br />- Thread information, including associated thread environment blocks (TEBs) and process environment blocks (PEBs)<br />- Module information<br />- VMM and VAD tree |
-    | `filtered` | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
+    | `filtered` | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump. |
     | `full` | Full is a complete process dump that includes all regions located in `/proc/$pid/maps`. This isn't controlled by the `coredump.captureminiandfull` setting. |
 
 ## <a id="edition"></a> Edition
 
-The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#-editions)
+The edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] can be changed using the `set-edition` option. To change the edition of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service first needs to be stopped. For more information on available [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux editions, see [SQL Server editions](sql-server-linux-editions-and-components-2019.md#-editions).
 
 ## <a id="hadr"></a> High availability
 
@@ -616,10 +617,10 @@ The `language.lcid` setting changes the [!INCLUDE [ssnoversion-md](../includes/s
 
 The `memory.memorylimitmb` setting controls the amount of physical memory (in MB) available to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The default is 80% of the physical memory, to prevent out-of-memory (OOM) conditions.
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > The `memory.memorylimitmb` setting limits the amount of *physical memory* available to the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] process. The **max server memory (MB)** setting can be used to adjust the amount of memory available to the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] *buffer pool*, but it can never exceed the amount of physical memory available to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For more information about the **max server memory (MB)** server configuration option, see [Server memory configuration options](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-1. Run the **mssql-conf** script as root with the `set` command for `memory.memorylimitmb`. The following example changes the memory available to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to 3.25 GB (3328 MB).
+1. Run the **mssql-conf** script as root with the `set` command for `memory.memorylimitmb`. The following example changes the memory available to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to 3.25 GB (3,328 MB).
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
@@ -683,9 +684,9 @@ There are several other settings for **mssql-conf** that you can use to monitor 
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-## <a id="mlservices-eula"></a> Accept MLServices EULAs
+## <a id="mlservices-eula"></a> Accept Machine Learning Services EULAs
 
-Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the [!INCLUDE [ssde-md](../includes/ssde-md.md)] requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to mlservices EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
+Adding [machine learning R or Python packages](sql-server-linux-setup-machine-learning.md) to the [!INCLUDE [ssde-md](../includes/ssde-md.md)] requires that you accept the licensing terms for open-source distributions of R and Python. The following table enumerates all available commands or options related to `mlservices` EULAs. The same EULA parameter is used for R and Python, depending on what you installed.
 
 ```bash
 # For all packages: database engine and mlservices
@@ -711,7 +712,7 @@ accepteula = Y
 accepteulaml = Y
 ```
 
-:::moniker-end
+::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
 ## <a id="mlservices-outbound-access"></a> Enable outbound network access
@@ -740,7 +741,7 @@ You can also add `outboundnetworkaccess` directly to the [mssql.conf file](#mssq
 outboundnetworkaccess = 1
 ```
 
-:::moniker-end
+::: moniker-end
 
 ## <a id="tcpport"></a> Change the TCP port
 
@@ -770,11 +771,11 @@ The following options configure TLS for an instance of [!INCLUDE [ssnoversion-md
 
 | Option | Description |
 | --- | --- |
-| `network.forceencryption` | If 1, then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |
-| `network.tlscert` | The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/certs/mssql.pem` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
-| `network.tlskey` | The absolute path to the private key file that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/private/mssql.key` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
-| `network.tlsprotocols` | A comma-separated list of which TLS protocols are allowed by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-| `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| `network.forceencryption` | If 1, then [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |
+| `network.tlscert` | The absolute path to the certificate file that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/certs/mssql.pem` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
+| `network.tlskey` | The absolute path to the private key file that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses for TLS. Example: `/etc/ssl/private/mssql.key` The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
+| `network.tlsprotocols` | A comma-separated list of which TLS protocols are allowed by [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client doesn't support any allowed protocol, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] rejects the connection attempt. For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0). If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
+| `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | `network.kerberoskeytabfile` | Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
@@ -858,14 +859,14 @@ To view the various options that can be configured using the **mssql-conf** util
 sudo /opt/mssql/bin/mssql-conf --help
 ```
 
-The results will give you various configuration options and a short description for each of the settings.
+The results provide various configuration options and a short description for each of the settings.
 
 ## <a id="mssql-conf-format"></a> mssql.conf format
 
-The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There is an example of this in  [Customer Feedback](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
+The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in  [Customer Feedback](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
 
 ```ini
 [EULA]
@@ -974,7 +975,7 @@ traceflag = 3456
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
 - [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md)
 - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)

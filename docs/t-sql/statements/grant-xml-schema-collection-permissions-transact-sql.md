@@ -118,10 +118,10 @@ GRANT permission  [ ,...n ] ON
 |Application role|ALTER permission on the role, membership in the db_securityadmin fixed database role, membership in the db_owner fixed database role, or membership in the sysadmin fixed server role.|  
   
 ## Examples  
- The following example grants `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
+ The following example grants `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
  ```sql
- USE AdventureWorks2012;  
+ USE AdventureWorks2022;  
  GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
  GO
  ```  

@@ -59,7 +59,7 @@ Reissue the statement after a transaction has been started.
  When sp_getbindtoken is used to enlist a distributed transaction connection inside an open transaction, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns the same token. For example:  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @bind_token varchar(255);  
   

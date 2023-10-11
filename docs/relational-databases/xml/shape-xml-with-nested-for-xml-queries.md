@@ -37,7 +37,7 @@ This is the expected shape of the XML:
 This is the nested FOR XML query:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT Product.ProductID,
           (SELECT 'ListPrice' as PriceType,

@@ -16,9 +16,9 @@ ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
 
 > [!div class="op_single_selector"]
 >
-> - [Azure SQL Database (single database)](failover-group-add-single-database-tutorial.md)
-> - [Azure SQL Database (elastic pool)](failover-group-add-elastic-pool-tutorial.md)
-> - [Azure SQL Managed Instance](../managed-instance/failover-group-add-instance-tutorial.md)
+> - [Azure SQL Database (single database)](failover-group-add-single-database-tutorial.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Database (elastic pool)](failover-group-add-elastic-pool-tutorial.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Managed Instance](../managed-instance/failover-group-add-instance-tutorial.md?view=azuresql-mi&preserve-view=true)
 
 Configure an [auto-failover group](auto-failover-group-sql-db.md) for an Azure SQL Database elastic pool and test failover using the Azure portal.
 

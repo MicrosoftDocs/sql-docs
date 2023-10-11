@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 07/17/2023
+ms.date: 09/29/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
@@ -18,11 +18,11 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
-> Database Level TDE CMK is in public preview.
->
-> This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> Database Level TDE CMK is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
 
-In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and [customer-managed keys (CMK) at the database level](transparent-data-encryption-byok-database-level-overview.md), utilizing a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#creating-a-user-assigned-managed-identity) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant for this guide, but they can be in different tenants.
+In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and [customer-managed keys (CMK) at the database level](transparent-data-encryption-byok-database-level-overview.md), utilizing a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#creating-a-user-assigned-managed-identity) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). Both the Azure Key Vault and logical server for Azure SQL are in the same Microsoft Entra tenant for this guide, but they can be in different tenants.
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Use the following instructions or commands to create a secondary replica or copy
 
 To create a database in Azure SQL Database as a copy with database level customer-managed keys, follow these steps:
 
-1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** menu and check the list of current keys in use by the database.
+1. Go to the [Azure portal](https://portal.azure.com) and navigate to the Azure SQL Database configured with database level customer-managed keys. Access the **Transparent Data Encryption** tab of the **Data Encryption** menu and check the list of current keys in use by the database.
 
    :::image type="content" source="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png" alt-text="Screenshot of the Azure portal transparent data encryption menu for a database." lightbox="media/transparent-data-encryption-byok-database-level-geo-replication-restore/database-transparent-data-encryption-menu.png":::
 
@@ -118,7 +118,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
     ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
-- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector ` (and if necessary, `-FederatedClientId`) parameters.
+- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
     ```powershell
     # Create a secondary replica with Active Geo Replication with the same name as the primary database
@@ -149,7 +149,7 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 - Prepopulate the list of current keys in use by the primary database using the following REST API request:
 
     ```rest
-    GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime(‘current’))
+    GET https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-08-01-preview&$expand=keys($filter=pointInTime('current'))
     ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
@@ -508,6 +508,10 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
 
 > [!NOTE]
 > The ARM template highlighted in the [Create an Azure SQL Database with database level customer-managed keys as a secondary or copy](#create-an-azure-sql-database-with-database-level-customer-managed-keys-as-a-secondary-or-copy) section can be referenced to restore the database with an ARM template by changing the `createMode` parameter.
+
+## Automatic key rotation option for copied or restored databases
+
+Newly copied or restored databases can be configured to automatically rotate the customer-managed key used for transparent data encryption. For information on how to enable automatic key rotation in the Azure portal or using APIs, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
 
 ## Next steps
 

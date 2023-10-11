@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page
   author: MashaMSFT
   ms.author: mathoma
-  ms.date: 12/14/2022
+  ms.date: 09/05/2023
   ms.custom:
   - event-tier1-build-2022
   - event-tier1-build-2022
@@ -71,10 +71,14 @@ landingContent:
         url: azure-arc/overview.md
     - linkListType: quickstart
       links:
-      - text: Connect & query (SSMS)
-        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
-      - text: Connect & query (Azure Data Studio)
+      - text: What is SQL Server?
+        url: what-is-sql-server.md
+      - text: Connect to the Database Engine
+        url: connect-to-database-engine.md
+      - text: Connect & query with Azure Data Studio
         url: ../azure-data-studio/quickstart-sql-server.md
+      - text: Connect & query with SSMS
+        url: ../ssms/quickstarts/ssms-connect-query-sql-server.md
     - linkListType: download
       links:
       - text: SQL Server

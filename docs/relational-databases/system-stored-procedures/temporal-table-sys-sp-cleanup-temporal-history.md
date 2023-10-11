@@ -54,7 +54,7 @@ It is always recommended to rely on an internal background task for cleanup that
 
 Requires **db_owner** permissions.
 
-## Example
+## Examples
 
 ```sql
 DECLARE @rowcnt INT;

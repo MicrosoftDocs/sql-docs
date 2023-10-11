@@ -48,11 +48,11 @@ helpviewer_keywords:
 ## Access a Data Source  
  To access a data source, use the *rs:Command*=*GetDataSourceContents* parameter. If your browser supports XML, the data source definition is displayed if you are an authenticated user with **Read Contents** permission on the data source. For example:  
   
- **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Native** `https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016"
   
- **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents`  
   
  The XML structure might look similar to the following example:  
 
@@ -61,7 +61,7 @@ helpviewer_keywords:
 ```  
 <DataSourceDefinition>  
    <Extension>SQL</Extension>  
-   <ConnectString>Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AdventureWorks2012;Data Source=MYSERVER1;</ConnectString>  
+   <ConnectString>Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AdventureWorks2022;Data Source=MYSERVER1;</ConnectString>  
    <CredentialRetrieval>Integrated</CredentialRetrieval>  
    <WindowsCredentials>False</WindowsCredentials>  
    <ImpersonateUser>False</ImpersonateUser>  

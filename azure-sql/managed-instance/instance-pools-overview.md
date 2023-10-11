@@ -73,7 +73,7 @@ There are several resource limitations regarding instance pools and instances in
     - 8 vCores pool supports up to 200 databases,
     - 16 vCores pool supports up to 400 databases,
     - 24 and larger vCores pool supports up to 500 databases.
-- Azure AD authentication can be used after creating or setting a managed instance with the `-AssignIdentity` flag. For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) and [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance). Users can then set an Azure AD admin for the instance by following [Provision Azure AD admin (SQL Managed Instance)](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
+- Authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) can be used after creating or setting a managed instance with the `-AssignIdentity` flag. For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) and [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance). Users can then set a Microsoft Entra admin for the instance by following [Provision Microsoft Entra admin (SQL Managed Instance)](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance).
 
 Total storage allocation and number of databases across all instances must be lower than or equal to the limits exposed by instance pools.
 
@@ -99,7 +99,7 @@ The public preview has the following limitations:
 
 ## SQL features supported
 
-Managed instances created in pools support the same [compatibility levels and features supported in single managed instances](sql-managed-instance-paas-overview.md#sql-features-supported).
+Managed instances created in pools support the same [compatibility levels and features supported in single managed instances](sql-managed-instance-paas-overview.md#supported-sql-features).
 
 Every managed instance deployed in a pool has a separate instance of SQL Agent.
 

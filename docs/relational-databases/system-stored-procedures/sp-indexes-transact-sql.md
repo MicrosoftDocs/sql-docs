@@ -81,13 +81,13 @@ sp_indexes [ @table_server = ] 'table_server'
  Requires SELECT permission on the schema.  
   
 ## Examples  
- The following example returns all index information from the `Employees` table of the `AdventureWorks2012` database on the `Seattle1` linked server.  
+ The following example returns all index information from the `Employees` table of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database on the `Seattle1` linked server.  
   
 ```  
 EXEC sp_indexes @table_server = 'Seattle1',   
    @table_name = 'Employee',   
    @table_schema = 'HumanResources',  
-   @table_catalog = 'AdventureWorks2012';  
+   @table_catalog = 'AdventureWorks2022';  
 ```  
   
 ## See Also  

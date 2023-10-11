@@ -8,8 +8,10 @@ ms.date: 01/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-migration
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+ms.custom:
+  - intro-migration
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Restore a SQL Server database in a Linux container
 

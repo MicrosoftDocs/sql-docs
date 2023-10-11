@@ -139,7 +139,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  The following example creates schema `Sprockets` owned by `Annik` that contains table `NineProngs`. The statement grants `SELECT` to `Mandar` and denies `SELECT` to `Prasanna`. Note that `Sprockets` and `NineProngs` are created in a single statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  

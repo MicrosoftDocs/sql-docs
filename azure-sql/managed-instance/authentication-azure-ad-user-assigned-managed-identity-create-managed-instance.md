@@ -5,7 +5,7 @@ description: This article guides you through creating an Azure SQL Managed Insta
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
-ms.date: 06/30/2022
+ms.date: 09/27/2023
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
@@ -16,10 +16,12 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/authentication-azure-ad-user-assigned-managed-identity-create-server.md)
-> * [Azure SQL Managed Instance](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)
+> * [Azure SQL Database](../database/authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
 
-This how-to guide outlines the steps to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Azure AD for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md).
+This how-to guide outlines the steps to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Microsoft Entra for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md).
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -28,7 +30,7 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 - Create a user-assigned managed identity and assign it the necessary permission to be a server or managed instance identity. For more information, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) and [user-assigned managed identity permissions for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md#permissions).
 - [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or higher is required when using PowerShell for user-assigned managed identities.
 - [The Azure CLI 2.26.0](/cli/azure/install-azure-cli) or higher is required to use the Azure CLI with user-assigned managed identities.
-- For a list of limitations and known issues with using user-assigned managed identity, see [User-assigned managed identity in Azure AD for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md#limitations-and-known-issues)
+- For a list of limitations and known issues with using user-assigned managed identity, see [User-assigned managed identity in Microsoft Entra for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md#limitations-and-known-issues)
 
 # [Portal](#tab/azure-portal)
 
@@ -44,7 +46,7 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
    For more information on the configuration options, see [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 
-1. Under **Authentication**, select a preferred authentication model. If you're looking to only configure [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md), see our guide [here](../database/authentication-azure-ad-only-authentication-create-server.md?tabs=azure-portal).
+1. Under **Authentication**, select a preferred authentication model. If you're looking to configure [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md), see the [guide](../database/authentication-azure-ad-only-authentication-create-server.md?tabs=azure-portal).
 
 1. Next, go through the **Networking** tab configuration, or leave the default settings.
 
@@ -73,14 +75,14 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 # [The Azure CLI](#tab/azure-cli)
 
-The Azure CLI command `az sql mi create` is used to provision a new Azure SQL Managed Instance. The below command will provision a managed instance with a user-assigned managed identity, and also enable [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md).
+The Azure CLI command `az sql mi create` is used to provision a new Azure SQL Managed Instance. The below command will provision a managed instance with a user-assigned managed identity, and also enable [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md).
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
 The managed instance SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provision, the SQL Administrator login won't be used.
 
-The Azure AD admin will be the account you set for `<AzureADAccount>`, and can be used to manage the instance when the provisioning is complete.
+The Microsoft Entra admin will be the account you set for `<AzureADAccount>`, and can be used to manage the instance when the provisioning is complete.
 
 Replace the following values in the example:
 
@@ -88,8 +90,8 @@ Replace the following values in the example:
 - `<ResourceGroupName>`: Name of the resource group for your managed instance. The resource group should also include the virtual network and subnet created
 - `<managedIdentity>`: The user-assigned managed identity. Can also be used as the primary identity.
 - `<primaryIdentity>`: The primary identity you want to use as the instance identity
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
-- `<AzureADAccountSID>`: The Azure AD Object ID for the user
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
+- `<AzureADAccountSID>`: The Microsoft Entra Object ID for the user
 - `<managedinstancename>`: Name the managed instance you want to create
 - The `subnet` parameter needs to be updated with the `<subscriptionId>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`.
 
@@ -104,14 +106,14 @@ For more information, see [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create)
 
 # [PowerShell](#tab/azure-powershell)
 
-The PowerShell command `New-AzSqlInstance` is used to provision a new Azure SQL Managed Instance. The below command will provision a managed instance with a user-assigned managed identity, and also enable [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md).
+The PowerShell command `New-AzSqlInstance` is used to provision a new Azure SQL Managed Instance. The below command will provision a managed instance with a user-assigned managed identity, and also enable [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md).
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
 The managed instance SQL Administrator login will be automatically created and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provision, the SQL Administrator login won't be used.
 
-The Azure AD admin will be the account you set for `<AzureADAccount>`, and can be used to manage the instance when the provisioning is complete.
+The Microsoft Entra admin will be the account you set for `<AzureADAccount>`, and can be used to manage the instance when the provisioning is complete.
 
 Replace the following values in the example:
 
@@ -121,7 +123,7 @@ Replace the following values in the example:
 - `<managedIdentity>`: The user-assigned managed identity. Can also be used as the primary identity.
 - `<primaryIdentity>`: The primary identity you want to use as the instance identity
 - `<Location>`: Location of the managed instance, such as `West US`, or `Central US`
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 - The `SubnetId` parameter needs to be updated with the `<subscriptionId>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`.
 
 
@@ -141,19 +143,19 @@ The [Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/mana
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
-The script below will provision a managed instance with a user-assigned managed identity, set the Azure AD admin as `<AzureADAccount>`, and enable [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md). The instance SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
+The script below will provision a managed instance with a user-assigned managed identity, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md). The instance SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 
-The Azure AD admin, `<AzureADAccount>` can be used to manage the instance when the provisioning is complete.
+The Microsoft Entra admin, `<AzureADAccount>` can be used to manage the instance when the provisioning is complete.
 
 Replace the following values in the example:
 
-- `<tenantId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**
+- `<tenantId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**
 - `<subscriptionId>`: Your subscription ID can be found in the Azure portal
 - `<instanceName>`: Use a unique managed instance name
 - `<ResourceGroupName>`: Name of the resource group for your logical server
-- `<AzureADAccount>`: Can be an Azure AD user or group. For example, `DummyLogin`
+- `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 - `<Location>`: Location of the server, such as `westus2`, or `centralus`
-- `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **User** pane, search for the Azure AD user and find their **Object ID**
+- `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **User** pane, search for the Microsoft Entra user and find their **Object ID**
 - The `subnetId` parameter needs to be updated with the `<ResourceGroupName>`, the `Subscription ID`, `<VNetName>`, and `<SubnetName>`
 
 
@@ -202,7 +204,7 @@ Invoke-RestMethod -Uri https://management.azure.com/subscriptions/$subscriptionI
 
 # [ARM Template](#tab/arm-template)
 
-To provision a new managed instance with a user-assigned managed identity, virtual network and subnet, with an Azure AD admin set for the instance and Azure AD-only authentication enabled, use the following template.
+To provision a new virtual network, subnet, and new managed instance configured with a Microsoft Entra admin, a user-assigned managed identity, and Microsoft Entra-only authentication, use the following template. 
 
 Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/Microsoft.Template), and **Build your own template in the editor**. Next, **Save** the configuration once you pasted in the example.
 
@@ -500,5 +502,4 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ## See also
 
-- [User-assigned managed identity in Azure AD for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md)
-- [Create an Azure SQL logical server using a user-assigned managed identity](../database/authentication-azure-ad-user-assigned-managed-identity-create-server.md)
+- [User-assigned managed identity in Microsoft Entra ID for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md)

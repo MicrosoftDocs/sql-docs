@@ -3,7 +3,7 @@ title: SqlClient driver support lifecycle
 description: Product support lifecycle information for the Microsoft.Data.SqlClient .NET library.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 05/23/2023
+ms.date: 08/29/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -21,14 +21,13 @@ Microsoft.Data.SqlClient library follows the latest .NET Core support policy for
 
 ## Microsoft.Data.SqlClient release cadence
 
-New stable (GA) releases are published every six months on a regular cadence beginning with version 1.2, along with 2 to 3 preview releases in between. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
+New stable (GA) releases are published every six months on a regular cadence beginning with version 1.2, along with 2 to 3 preview releases in between. Stakeholders and maintainers choose Long Term Support (LTS) releases based on a few qualifications and customer response.
 
 ### Actively supported releases
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
 |--|--|--|--|--|--|
 | 5.1 | January 19, 2023 | 5.1.1 | March 28, 2023 | LTS | January 20, 2026 |
-| 5.0 | July 29, 2022 | 5.0.2 | March 31, 2023 | Current | July 19, 2023 |
 | 4.0 | November 18, 2021 | 4.0.3 | April 20, 2023 | LTS | November 19, 2024 |
 | 3.1 | March 30, 2022 | 3.1.3 | March 10, 2023 | LTS | March 30, 2025 |
 | 2.1 | November 19, 2020 | 2.1.6 | April 27, 2023 | LTS | November 20, 2023 |
@@ -37,6 +36,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 | Version | Release Date | Last Patch Version | Last Patch Release Date | Support Level | Support Ended |
 |--|--|--|--|--|--|
+| 5.0 | July 29, 2022 | 5.0.2 | March 31, 2023 | Current | July 19, 2023 |
 | 4.1 | January 31, 2022 | 4.1.1 | September 13, 2022 | Current | January 29, 2023 |
 | 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | May 18, 2022 |
 | 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | Current | May 19, 2021 |
@@ -45,7 +45,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 
 ## Azure Key Vault Provider release cadence
 
-New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Long Term Support (LTS) releases will be chosen by stakeholders and maintainers based on a few qualifications and customer response.
+New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider` are published on demand when new features are added. Stakeholders and maintainers choose Long Term Support (LTS) releases based on a few qualifications and customer response.
 
 ### Actively supported Azure Key Vault Provider releases
 
@@ -53,6 +53,11 @@ New stable (GA) releases for `Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyV
 |--|--|--|--|--|--|
 | 3.x | June 14, 2021 | 3.0.0 | June 14, 2021 | LTS | June 15, 2024 |
 | 2.x | March 3, 2021 | 2.0.0 | March 3, 2021 | LTS | March 4, 2024 |
+
+### Out of support Azure Key Vault Provider releases
+
+| Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level | End of Support |
+|--|--|--|--|--|--|
 | 1.x | November 19, 2019 | 1.2.0 | December 01, 2020 | LTS | November 21, 2022 |
 
 ## Long Term Support (LTS) releases

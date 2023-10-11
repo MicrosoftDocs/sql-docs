@@ -69,7 +69,7 @@ If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](
 3. Copy and paste the following example into the query window and click **Execute**. 
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- The following example updates the statistics for the AK_SalesOrderDetail_rowguid index of the SalesOrderDetail table.  
     UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;   
@@ -85,7 +85,7 @@ If using UPDATE STATISTICS or making changes through [!INCLUDE[ssManStudioFull](
 3. Copy and paste the following example into the query window and click **Execute**.
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- The following example updates the statistics for all indexes on the SalesOrderDetail table.
     UPDATE STATISTICS Sales.SalesOrderDetail;   
@@ -103,7 +103,7 @@ For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql
 3. Copy and paste the following example into the query window and click **Execute**.
   
     ```sql  
-    USE AdventureWorks2012;   
+    USE AdventureWorks2022;   
     GO  
     -- The following example updates the statistics for all tables in the database.  
     EXEC sp_updatestats;  

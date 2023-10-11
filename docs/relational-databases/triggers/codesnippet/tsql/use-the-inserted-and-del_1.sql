@@ -1,4 +1,4 @@
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ('Purchasing.LowCredit','TR') IS NOT NULL
    DROP TRIGGER Purchasing.LowCredit;

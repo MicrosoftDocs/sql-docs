@@ -67,9 +67,11 @@ FROM sys.dm_db_persisted_sku_features;
 GO
 ```
 
-## See also
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
+
+[!INCLUDE [editions-supported-features-linux](../../includes/editions-supported-features-linux.md)]
+
+## Related contet
 
 - [System Dynamic Management Views](system-dynamic-management-views.md)
 - [Database Related Dynamic Management Views (Transact-SQL)](database-related-dynamic-management-views-transact-sql.md)
-- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)

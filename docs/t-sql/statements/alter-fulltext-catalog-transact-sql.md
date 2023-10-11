@@ -74,7 +74,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
 ```sql  
 --Change to accent insensitive  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 ALTER FULLTEXT CATALOG ftCatalog   
 REBUILD WITH ACCENT_SENSITIVITY=OFF;  

@@ -7,7 +7,6 @@ ms.reviewer: maghan, randolphwest
 ms.date: 03/22/2023
 ms.service: azure-data-studio
 ms.topic: how-to
-ms.custom: updatefrequency5
 ---
 # Explore and manage Azure SQL resources from the Azure View
 

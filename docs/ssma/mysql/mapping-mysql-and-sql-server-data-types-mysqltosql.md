@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 f1_keywords:
   - "ssma.mysql.typemappingeditform.f1"
 helpviewer_keywords:
@@ -76,5 +78,5 @@ When you view the **Type Mapping** tab in SSMA, the background is color-coded to
 The next step in the migration process is to either [Create an assessment report](assessing-mysql-databases-for-conversion-mysqltosql.md) or [Convert MySQL database objects into SQL Server or SQL Azure syntax](converting-mysql-databases-mysqltosql.md). If you create a report, MySQL objects are automatically converted during the assessment.  
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

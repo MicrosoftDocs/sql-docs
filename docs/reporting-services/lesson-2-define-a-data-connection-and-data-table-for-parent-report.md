@@ -10,7 +10,9 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report
-After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report. In this tutorial the data connection is to the AdventureWorks2014 database.  
+After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report.
+
+[!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   
 ## To define a data connection and Data Table by adding a DataSet (for parent report)  
   
@@ -28,29 +30,29 @@ After you create a new website project using the ASP.NET website template for Vi
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   
-    1.  In the **Server name** box, enter the server where the **AdventureWorks2014** database is located.  
+    1.  In the **Server name** box, enter the server where the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database is located.  
   
         The default SQL Server Express instance is **(local)\sqlexpress**.  
   
     2.  In the **Log on to the server** section, select the option that provides you access to the data. **Use Windows Authentication** is the default.  
   
-    3.  From the **Select or enter a database name** drop-down list, select **AdventureWorks2014**.  
+    3.  From the **Select or enter a database name** drop-down list, select [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].  
   
     4.  Select **OK**, and then select **Next**.  
   
 7.  If you selected **Use SQL Server Authentication** in the Step 6 (b), select the option whether to include the sensitive data in the string or set the information in your application code.  
   
-8.  On the **Save the Connection String to the Application Configuration File** page, type in the name for the connection string or accept the default **AdventureWorks2014ConnectionString**. Select **Next**.  
+8.  On the **Save the Connection String to the Application Configuration File** page, type in the name for the connection string or accept the default **AdventureWorks2022ConnectionString**. Select **Next**.  
   
 9. On the **Choose a Command Type** page, select **Use SQL Statements**, and then select **Next**.  
   
-10. On the **Enter a SQL Statement** page, enter the following Transact-SQL query to retrieve data from the **AdventureWorks2014** database, and then select **Next**.  
+10. On the **Enter a SQL Statement** page, enter the following Transact-SQL query to retrieve data from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, and then select **Next**.  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
+    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**.
   
 11. On the **Choose Methods to Generate** page, be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then select **Finish**.  
   

@@ -9,7 +9,9 @@ ms.date: 04/03/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 ---
 # Install SQL Server 2022 Machine Learning Services (Python and R) on Linux
@@ -52,11 +54,11 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 ## Install mssql-server-extensibility package
 
-1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility`.
+1. [Configure Linux Repositories](sql-server-linux-change-repo.md) corresponding to the Linux distribution. Install the SQL Server extensibility feature with the package `mssql-server-extensibility` and associated dependency `libssl-dev`.
 
     **Ubuntu**
     ```bash
-    apt-get install mssql-server-extensibility
+    sudo apt-get install mssql-server-extensibility libssl-dev
     ```
 
     **RHEL**
@@ -84,7 +86,13 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 
 1. Download and install the version of R that is desired. Choose a version of R 4.2 or higher, [available for download directly from cran.r-project.org](https://cran.r-project.org/). Follow the instructions for the desired runtime.
 
-1. Install dependencies for `CompatibilityAPI` and `RevoScaleR`. From an admin R terminal of the version you have installed, run the following:
+1. Open an admin R terminal:
+
+    ```bash
+    sudo R
+    ```
+
+1. Install dependencies for `CompatibilityAPI` and `RevoScaleR` by running the following:
 
     ```r
     # R Terminal
@@ -112,8 +120,8 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Configure the installed R runtime with SQL Server for Linux, where `path/to/` is the file path to the R binary, and `RFolderVersion` is the version-specific folder name for your installation of R runtime, for example, `R4.2`.
 
     ```bash  
-    /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility rbinpath /usr/lib/R/bin/R
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib/R
     ```
 
 1. Restart the `Launchpadd` service.
@@ -162,8 +170,8 @@ Available installation packages for [!INCLUDE [sssql22-md](../includes/sssql22-m
 1. Configure the installed Python runtime with SQL Server, where `pythonbinbath` is set to the path of the installed python binary, and `datadirectories` includes the path where the packages are installed for the desired version of python, for example, `/usr/lib/python3.10/dist-packages`. Use the following script with your actual installation path:
 
     ```bash
-    /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
-    /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
+    sudo /opt/mssql/bin/mssql-conf set extensibility pythonbinpath /usr/bin/python3.10
+    sudo /opt/mssql/bin/mssql-conf set extensibility datadirectories /usr/lib:/usr/lib/python3.10/dist-packages
     ```
 
 1. Restart the `Launchpadd` service.
@@ -234,7 +242,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 RevoScale packages are also supported as a standalone package with Python and R runtimes. In order to setup Python or R runtime for the standalone scenario, follow the instructions in the [Install Python runtime](#install-python-runtime) and [Install R runtime](#install-r-runtime) sections respectively.
 
-## Next steps
+## Related content
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

@@ -58,13 +58,13 @@ A returned row contains the following information:
 
 You can manually trigger garbage collection with another system stored procedure, `sys.sp_xtp_force_gc`. You can observe the reduction in memory cleanup in [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md).
 
-In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the [sys.dm_xtp_system_memory_consumers](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md) dynamic management view has improved insights specific to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
+In [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], the [sys.dm_xtp_system_memory_consumers](../system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql.md) dynamic management view has improved insights specific to [memory-optimized tempdb metadata](../databases/tempdb-database.md#memory-optimized-tempdb-metadata).
 
 ## Permissions
 
 Requires membership in the **db_owner** fixed database role.
 
-## Example
+## Examples
 
 To mark unneeded source files for garbage collection in the `tempdb` database, use the following sample script:
 

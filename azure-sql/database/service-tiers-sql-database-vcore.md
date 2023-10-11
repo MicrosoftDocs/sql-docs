@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 07/05/2023
+ms.date: 10/02/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -16,8 +16,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](service-tiers-sql-database-vcore.md)
-> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md)
+> * [Azure SQL Database](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/service-tiers-managed-instance-vcore.md?view=azuresql-mi&preserve-view=true)
 
 This article reviews the [vCore purchasing model](service-tiers-vcore.md) for [Azure SQL Database](sql-database-paas-overview.md). 
 
@@ -103,21 +103,15 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 |**Use case**|**General Purpose**|**Business Critical**|**Hyperscale**|
 |---|---|---|---|
 |**Best for**|Most business workloads. Offers budget-oriented, balanced, and scalable compute and storage options. |Offers business applications the highest resilience to failures by using several high availability secondary replicas, and provides the highest I/O performance. | The widest variety of workloads, including those workloads with highly scalable storage and read-scale requirements.  Offers higher resilience to failures by allowing configuration of more than one high availability secondary replica. |
-| **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores<sup>1</sup> |
+| **Compute size** | 2 to 128 vCores | 2 to 128 vCores  |2 to 128 vCores  |
 | **Storage type** | Premium remote storage (per instance) |Super-fast local SSD storage (per instance)  | Decoupled storage with local SSD cache (per compute replica) |
 | **Storage size**| 1 GB – 4 TB | 1 GB – 4 TB  | 10 GB – 100 TB |
 | **IOPS** | 16,000 maximum IOPS | 8,000 IOPS per vCore with 200,000 maximum IOPS   | 327,680 IOPS with max local SSD <br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS depend on the workload. |
-| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB<sup>3</sup>| 
-| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention <sup>1</sup>, with up to 10 years of long-term retention available <sup>2</sup> |
-|**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA) (preview)|
+| **Memory/vCore** | 5.1 GB | 5.1 GB | 5.1 GB or 10.2 GB | 
+| **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
+|**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA)|
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |
 |**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
-
-<sup>1</sup> Short-term backup retention for 1-35 days for Hyperscale databases is now in preview.   
-
-<sup>2</sup> Long-term retention for Hyperscale databases is now in preview. 
-
-<sup>3</sup> 10.2 GB/vCore is available with premium-series memory optimized hardware (preview).
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 
@@ -243,7 +237,7 @@ Fsv2-series in only supported in the General Purpose tier. For regions where Fsv
 ### DC-series
 
 - DC-series hardware uses Intel processors with Software Guard Extensions (Intel SGX) technology.
-- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves), which isn't supported with other hardware configurations.
+- DC-series is required for [Always Encrypted with secure enclaves](/sql/relational-databases/security/encryption/always-encrypted-enclaves) workloads which require stronger security protection of hardware enclaves, compared to Virtualization-based Security (VBS) enclaves.
 - DC-series is designed for workloads that process sensitive data and demand confidential query processing capabilities, provided by Always Encrypted with secure enclaves.
 - DC-series hardware provides balanced compute and memory resources.
 
@@ -292,19 +286,25 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
 
 - Australia East
-- Canada Central
+- Canada Central (including [zone redundancy](high-availability-sla.md#zone-redundant-availability))
 - Central India
 - Central US
-- East US
+- East Asia
+- East US (including [zone redundancy](high-availability-sla.md#zone-redundant-availability))
 - East US 2
 - Japan East
-- North Europe
+- Japan West*
 - North Central US
+- North Europe
+- Southeast Asia
 - South Central US
 - UK South
 - West Europe
 - West US 1
 - West US 2
+- West US 3
+
+\* Premium-series memory optimized hardware is not currently available.
 
 #### Fsv2-series
 
@@ -334,12 +334,12 @@ Fsv2-series is available in the following regions:
 DC-series is available in the following regions:
 
 - Canada Central
-- Canada East
 - East US
 - North Europe
 - UK South
 - West Europe
 - West US
+- Southeast Asia
 
 If you need DC-series in a currently unsupported region, [submit a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). On the **Basics** page, provide the following:
 

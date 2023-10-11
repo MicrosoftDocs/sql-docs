@@ -45,7 +45,7 @@ The identifier for the policy category. *@policy_category_id* is **int**, and mu
 
 #### [ @mandate_database_subscriptions = ] *mandate_database_subscriptions*
 
-Determines whether database subscription is mandated for the policy category. *@mandate_database_subscriptions* is **bit** value, with a default of NULL. You can use either of the following values:
+Determines whether database subscription is mandated for the policy category. *@mandate_database_subscriptions* is **bit** value, with a default of `NULL`. You can use either of the following values:
 
 - `0` - Not mandated
 - `1` - Mandated

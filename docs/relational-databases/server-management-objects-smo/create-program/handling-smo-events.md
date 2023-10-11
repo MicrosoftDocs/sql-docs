@@ -42,19 +42,19 @@ To use any code example that is provided, you will have to choose the programmin
 ```VBNET
 'Create an event handler subroutine that runs when a table is created.
 Private Sub MyCreateEventHandler(ByVal sender As Object, ByVal e As ServerEventArgs)
-    Console.WriteLine("A table has just been added to the AdventureWorks2012 2008 database.")
+    Console.WriteLine("A table has just been added to the AdventureWorks2022 database.")
 End Sub
 'Create an event handler subroutine that runs when a table is deleted.
 Private Sub MyDropEventHandler(ByVal sender As Object, ByVal e As ServerEventArgs)
-    Console.WriteLine("A table has just been dropped from the AdventureWorks2012 2008 database.")
+    Console.WriteLine("A table has just been dropped from the AdventureWorks2022 database.")
 End Sub
 Sub Main()
     'Connect to the local, default instance of SQL Server.
     Dim srv As Server
     srv = New Server
-    'Reference the AdventureWorks2012 database.
+    'Reference the AdventureWorks2022 database.
     Dim db As Database
-    db = srv.Databases("AdventureWorks2012")
+    db = srv.Databases("AdventureWorks2022")
     'Create a database event set that contains the CreateTable event only.
     Dim databaseCreateEventSet As New DatabaseEventSet
     databaseCreateEventSet.CreateTable = True
@@ -103,21 +103,21 @@ End Sub
 //Create an event handler subroutine that runs when a table is created.   
 private void MyCreateEventHandler(object sender, ServerEventArgs e)   
 {   
-Console.WriteLine("A table has just been added to the AdventureWorks2012 database.");   
+Console.WriteLine("A table has just been added to the AdventureWorks2022 database.");   
 }   
 //Create an event handler subroutine that runs when a table is deleted.   
 private void MyDropEventHandler(object sender, ServerEventArgs e)   
 {   
-Console.WriteLine("A table has just been dropped from the AdventureWorks2012 database.");   
+Console.WriteLine("A table has just been dropped from the AdventureWorks2022 database.");   
 }   
 public void Main()   
 {   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Reference the AdventureWorks2012 database.   
+//Reference the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases("AdventureWorks2012");   
+db = srv.Databases("AdventureWorks2022");   
 //Create a database event set that contains the CreateTable event only.   
 DatabaseEventSet databaseCreateEventSet = new DatabaseEventSet();   
 databaseCreateEventSet.CreateTable = true;   

@@ -50,7 +50,7 @@ IDENT_SEED ( 'table_or_view' )
  The following example returns the seed value for the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
 GO  
@@ -60,7 +60,7 @@ GO
  The following example returns the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database with an identity column with a seed value.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   
    IDENT_SEED(TABLE_SCHEMA + '.' + TABLE_NAME) AS IDENT_SEED  

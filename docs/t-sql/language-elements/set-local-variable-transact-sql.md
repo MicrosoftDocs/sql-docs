@@ -199,7 +199,7 @@ GO
 The following example creates a local variable named `@state` and uses the local variable in a `SELECT` statement to find the first and last names of all employees who live in the state of `Oregon`.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
@@ -253,7 +253,7 @@ DECLARE @CursorVar CURSOR;
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
 FOR  
 SELECT LastName, FirstName  
-FROM AdventureWorks2019.HumanResources.vEmployee  
+FROM AdventureWorks2022.HumanResources.vEmployee  
 WHERE LastName like 'B%';  
   
 OPEN @CursorVar;  
@@ -273,7 +273,7 @@ GO
 The following example uses a query to assign a value to a variable.  
   
 ```sql  
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  

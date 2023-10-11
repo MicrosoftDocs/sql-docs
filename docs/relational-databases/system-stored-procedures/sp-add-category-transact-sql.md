@@ -67,7 +67,7 @@ The name of the category to be added. The name must be unique within the specifi
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

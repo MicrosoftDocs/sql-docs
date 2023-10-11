@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Execute a query. Example:  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SET SHOWPLAN_XML ON;  
     GO  

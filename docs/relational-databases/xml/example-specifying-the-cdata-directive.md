@@ -20,7 +20,7 @@ If the directive is set to **CDATA**, the contained data isn't entity encoded, b
 The following query wraps the product model summary description in a CDATA section.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

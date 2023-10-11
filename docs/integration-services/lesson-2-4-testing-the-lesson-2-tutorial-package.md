@@ -17,7 +17,7 @@ ms.topic: tutorial
 With the Foreach Loop container and the Flat File connection manager now configured, the Lesson 2 package can iterate through the 14 flat files in the Sample Data folder. Each time a file name matches the specified criterion, the Foreach Loop container populates the user-defined variable with the file name. This variable, in turn, updates the ConnectionString property of the Flat File connection manager, which connects to that flat file. The Foreach Loop container then runs the unmodified data flow task against the data in that flat file.  
   
 > [!NOTE]  
-> If you ran the package from Lesson 1, you need to delete the records from the dbo.NewFactCurrencyRate table in the AdventureWorksDW2012 database before you run the package from this lesson. Lesson 2 attempts to insert records already inserted in Lesson 1, which causes an error.  
+> If you ran the package from Lesson 1, you need to delete the records from the dbo.NewFactCurrencyRate table in the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] database before you run the package from this lesson. Lesson 2 attempts to insert records already inserted in Lesson 1, which causes an error.  
   
 ## Check the package layout  
 Before you test the package, verify that the control and data flows in the Lesson 2 package contains the objects shown in the following diagrams. Lesson 2's data flow is the same as Lesson 1.  

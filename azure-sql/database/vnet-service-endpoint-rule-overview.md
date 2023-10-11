@@ -4,7 +4,7 @@ description: Mark a subnet as a virtual network service endpoint. Then add the e
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, genemi, mathoma
-ms.date: 08/24/2022
+ms.date: 09/27/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -19,9 +19,11 @@ ms.custom:
 *Virtual network rules* are a firewall security feature that controls whether the server for your databases and elastic pools in [Azure SQL Database](sql-database-paas-overview.md) or for your dedicated SQL pool (formerly SQL DW) databases in [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) accepts communications that are sent from particular subnets in virtual networks. This article explains why virtual network rules are sometimes your best option for securely allowing communication to your database in SQL Database and Azure Synapse Analytics.
 
 > [!NOTE]
-> This article applies to both SQL Database and Azure Synapse Analytics. For simplicity, the term *database* refers to both databases in SQL Database and Azure Synapse Analytics. Likewise, any references to *server* refer to the [logical SQL server](logical-servers.md) that hosts SQL Database and Azure Synapse Analytics.
+> This article applies to both SQL Database and Azure Synapse Analytics. For simplicity, the term *database* refers to both databases in SQL Database and Azure Synapse Analytics. Likewise, any references to *server* refer to the [logical server](logical-servers.md) that hosts SQL Database and Azure Synapse Analytics.
 
 To create a virtual network rule, there must first be a [virtual network service endpoint][vm-virtual-network-service-endpoints-overview-649d] for the rule to reference.
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Create a virtual network rule
 
@@ -59,7 +61,7 @@ You have the option of using [role-based access control (RBAC)][rbac-what-is-813
 > [!NOTE]
 > In some cases, the database in SQL Database and the virtual network subnet are in different subscriptions. In these cases, you must ensure the following configurations:
 >
-> - Both subscriptions must be in the same Azure Active Directory (Azure AD) tenant.
+> - Both subscriptions must be in the same Microsoft Entra tenant.
 > - The user has the required permissions to initiate operations, such as enabling service endpoints and adding a virtual network subnet to the given server.
 > - Both subscriptions must have the Microsoft.Sql provider registered.
 
@@ -113,7 +115,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
 
 #### Steps
 
-1. If you have a standalone dedicated SQL pool (formerly SQL DW), register your SQL server with Azure AD by using PowerShell:
+1. If you have a standalone dedicated SQL pool (formerly SQL DW), register your SQL server with Microsoft Entra ID by using PowerShell:
 
    ```powershell
    Connect-AzAccount
@@ -138,7 +140,7 @@ PolyBase and the COPY statement are commonly used to load data into Azure Synaps
     | --- | --- |
     | Role | Storage Blob Data Contributor |
     | Assign access to | User, group, or service principal |
-    | Members | Server or workspace hosting your dedicated SQL pool that you've registered with Azure AD |
+    | Members | Server or workspace hosting your dedicated SQL pool that you've registered with Microsoft Entra ID |
 
     :::image type="content" source="../includes/role-based-access-control/media/add-role-assignment-page.png" alt-text="Screenshot that shows Add role assignment page in Azure portal.":::
 

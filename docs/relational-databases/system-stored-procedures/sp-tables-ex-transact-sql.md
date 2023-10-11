@@ -90,7 +90,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 ```  
 EXEC sp_tables_ex @table_server = 'LONDON2',   
-@table_catalog = 'AdventureWorks2012',   
+@table_catalog = 'AdventureWorks2022',   
 @table_schema = 'HumanResources',   
 @table_type = 'TABLE';  
 ```  

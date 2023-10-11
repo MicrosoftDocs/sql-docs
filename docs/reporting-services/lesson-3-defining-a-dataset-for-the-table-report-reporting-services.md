@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 After you define the data source for the paginated report, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, calculated fields, and variables.
 
-Use the Query Designer in Report Designer to define the dataset. For this tutorial, you're going to create a query that retrieves sales order information from the AdventureWorks2016 database.
+Use the Query Designer in Report Designer to define the dataset. For this tutorial, you're going to create a query that retrieves sales order information from the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
 ## Define a Transact-SQL query for report data  
 
@@ -25,7 +25,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
 3. Below that, select the **Use a dataset embedded in my report** radio button.
 
-4. From the **Data source** dropdown box, select AdventureWorks2016.
+4. From the **Data source** dropdown box, select AdventureWorks2022.
 
 5. For the **Query type**, select the **Text** radio button.
 
@@ -54,7 +54,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the AdventureWorks2016 database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
 
 8. Select **OK** to exit the **Query Designer**.
 

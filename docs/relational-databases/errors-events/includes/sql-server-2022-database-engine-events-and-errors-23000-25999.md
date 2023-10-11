@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 08/01/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -237,3 +237,4 @@ ms.topic: include
 | 25753 | 10 | No | XE session '%s' started. |
 | 25754 | 10 | No | XE session '%s' stopping. |
 | 25755 | 16 | No | Could not create live session target because live session targets are disabled. |
+| 25756 | 16 | No | Could not create stream XEL file because that functionality is disabled. |

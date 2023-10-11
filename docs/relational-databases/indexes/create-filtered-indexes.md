@@ -108,7 +108,7 @@ Requires ALTER permission on the table or view. The user must be a member of the
 
 ## <a id="TsqlProcedure"></a> Create a filtered index with Transact-SQL
 
-This example uses the `AdventureWorks2019` database, available for download at [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md).
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
@@ -117,7 +117,7 @@ This example uses the `AdventureWorks2019` database, available for download at [
 1. Copy and paste the following example into the query window and select **Execute**.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 DROP INDEX IF EXISTS FIBillOfMaterialsWithEndDate
@@ -133,7 +133,7 @@ GO
 The filtered index `FIBillOfMaterialsWithEndDate` is valid for the following query. [You can display the query execution plan](../performance/display-an-actual-execution-plan.md) to determine if the query optimizer used the filtered index.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT ProductAssemblyID, ComponentID, StartDate

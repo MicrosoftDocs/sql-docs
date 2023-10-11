@@ -3,7 +3,7 @@ title: "sys.fn_my_permissions (Transact-SQL)"
 description: "sys.fn_my_permissions (Transact-SQL)"
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: "03/14/2017"
+ms.date: "08/14/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -34,19 +34,20 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## Arguments  
- *securable*  
+
+#### *securable*  
  Is the name of the securable. If the securable is the server or a database, this value should be set to NULL. *securable* is a scalar expression of type **sysname**. *securable* can be a multipart name.  
   
- '*securable_class*'  
+#### '*securable_class*'  
  Is the name of the class of securable for which permissions are listed. *securable_class* is a **sysname**. *securable_class* must be one of the following: APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, ENDPOINT, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVER, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION.  
   
 ## Columns Returned  
- The following table lists the columns that **fn_my_permissions** returns. Each row that is returned describes a permission held by the current security context on the securable. Returns NULL if the query fails.  
+ The following table lists the columns that `fn_my_permissions` returns. Each row that is returned describes a permission held by the current security context on the securable. Returns `NULL` if the query fails.  
   
 |Column name|Type|Description|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Name of the securable on which the listed permissions are effectively granted.|  
-|subentity_name|**sysname**|Column name if the securable has columns, otherwise NULL.|  
+|subentity_name|**sysname**|Column name if the securable has columns, otherwise `NULL`.|  
 |permission_name|**nvarchar**|Name of the permission.|  
   
 ## Remarks  
@@ -62,7 +63,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  The permission evaluation is always performed in the security context of the caller. To determine whether some other principal has an effective permission, the caller must have IMPERSONATE permission on that principal.  
   
- For schema-level entities, one-, two-, or three-part nonnull names are accepted. For database-level entities, a one-part name is accepted, with a null value meaning "*current database*". For the server itself, a null value (meaning "current server") is required. **fn_my_permissions** cannot check permissions on a linked server.  
+ For schema-level entities, one-, two-, or three-part nonnull names are accepted. For database-level entities, a one-part name is accepted, with a null value meaning "*current database*". For the server itself, a null value (meaning "current server") is required. `fn_my_permissions` cannot check permissions on a linked server.  
   
  The following query will return a list of built-in securable classes:  
   
@@ -72,8 +73,9 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- If DEFAULT is supplied as the value of *securable* or *securable_class*, the value will be interpreted as NULL.  
+ If `DEFAULT` is supplied as the value of *securable* or *securable_class*, the value will be interpreted as `NULL`.  
  
+The `fn_my_permissions` function is not supported in Azure Synapse Analytics dedicated SQL pools.
    
 ## Permissions  
  Requires membership in the public role.  
@@ -81,6 +83,7 @@ GO
 ## Examples  
   
 ### A. Listing effective permissions on the server  
+
  The following example returns a list of the effective permissions of the caller on the server.  
   
 ```sql
@@ -88,26 +91,29 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### B. Listing effective permissions on the database  
+### B. Listing effective permissions on the database 
+
  The following example returns a list of the effective permissions of the caller on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions (NULL, 'DATABASE');  
 GO  
 ```  
   
 ### C. Listing effective permissions on a view  
+
  The following example returns a list of the effective permissions of the caller on the `vIndividualCustomer` view in the `Sales` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;   
 GO   
 ```  
   
 ### D. Listing effective permissions of another user  
+
  The following example returns a list of the effective permissions of database user `Wanida` on the `Employee` table in the `HumanResources` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The caller requires IMPERSONATE permission on user `Wanida`.  
   
 ```sql
@@ -119,6 +125,7 @@ GO
 ```  
   
 ### E. Listing effective permissions on a certificate  
+
  The following example returns a list of the effective permissions of the caller on a certificate named `Shipping47` in the current database.  
   
 ```sql
@@ -127,16 +134,18 @@ GO
 ```  
   
 ### F. Listing effective permissions on an XML Schema Collection  
+
  The following example returns a list of the effective permissions of the caller on an XML Schema Collection named `ProductDescriptionSchemaCollection` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT * FROM fn_my_permissions('ProductDescriptionSchemaCollection',  
     'XML SCHEMA COLLECTION');  
 GO  
 ```  
   
 ### G. Listing effective permissions on a database user  
+
  The following example returns a list of the effective permissions of the caller on a user named `MalikAr` in the current database.  
   
 ```sql
@@ -145,23 +154,23 @@ GO
 ```  
   
 ### H. Listing effective permissions of another login  
+
  The following example returns a list of the effective permissions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof` on the `Employee` table in the `HumanResources` schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The caller requires IMPERSONATE permission on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof`.  
   
 ```sql
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
-SELECT * FROM fn_my_permissions('AdventureWorks2012.HumanResources.Employee', 'OBJECT')   
+SELECT * FROM fn_my_permissions('AdventureWorks2022.HumanResources.Employee', 'OBJECT')   
     ORDER BY subentity_name, permission_name ;    
 REVERT;  
 GO  
 ```  
   
-## See Also  
- [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
+## Next steps
+
+- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+- [Securables](../../relational-databases/security/securables.md)   
+- [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+- [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

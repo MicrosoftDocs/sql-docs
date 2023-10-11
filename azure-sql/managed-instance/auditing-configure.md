@@ -190,7 +190,7 @@ Audit logs from a managed instance can be  sent to Azure Event Hubs or Azure Mon
 
 1. Select **Save**.
 
-   :::image type="content" source="media/auditing-configure/9_mi_configure_diagnostics.png" alt-text="Screenshot showing how to configure diagnostic settings.":::
+   :::image type="content" source="media/auditing-configure/9-mi-configure-diagnostics.png" alt-text="Screenshot showing how to configure diagnostic settings.":::
 
 1. Connect to the managed instance using **SQL Server Management Studio (SSMS)** or any other supported client.
 

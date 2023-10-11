@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-curr
 
 [!INCLUDE [SQL Server 2019, ASDB, ASDBMI](../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
-This article helps administrators diagnose issues with accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and later, [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
+This article helps administrators diagnose issues with accelerated database recovery (ADR) in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and later, [!INCLUDE[ssazuremi_md](../includes/ssazuremi_md.md)], and [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
 ## Examine the persistent version store (PVS)
 

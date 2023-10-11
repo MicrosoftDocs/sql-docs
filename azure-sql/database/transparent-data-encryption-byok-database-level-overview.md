@@ -5,7 +5,7 @@ description: Overview of customer managed keys (CMK) support for transparent dat
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 04/25/2023
+ms.date: 09/29/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -16,10 +16,14 @@ monikerRange: "= azuresql || = azuresql-db"
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+This article describes transparent data encryption (TDE) with customer-managed keys at the database level for Azure SQL Database. 
+
 > [!NOTE]
-> Database Level TDE CMK is in public preview.
->
-> This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> Database Level TDE CMK is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
+## Overview
 
 Azure SQL offers encryption at rest capability to customers through [transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption). Extending TDE with [customer-managed key (CMK)](transparent-data-encryption-byok-overview.md) enables data protection at rest where the TDE protector (the encryption key) is stored in an Azure Key Vault that encrypts the database encryption keys. Currently, TDE with CMK is set at the server level, and is inherited by all encrypted databases associated with that server. This new feature allows setting the TDE protector as a customer-managed key individually for each database within the server. Any `Microsoft.Sql/servers/databases` resource with a valid, nonempty `encryptionProtector` property is configured with database level customer-managed keys.
 
@@ -29,10 +33,11 @@ The following functionality is available:
 
 - User-assigned managed identity: You can assign a single user-assigned managed identity to the database. This identity can be used to access the Azure Key Vault and manage encryption keys.
 - Encryption key management: You can enable one or more encryption keys to be added at the database level, and set one of the added keys as the TDE protector. The encryption keys being added use the user-assigned managed identity already assigned to the database to access Azure Key Vault.
-- [Federated client identity](/graph/api/resources/federatedidentitycredentials-overview): You can also enable a customer-managed key (CMK) from Azure Key Vault in a different Azure Active Directory (Azure AD) tenant to be set as TDE protector at the database-level, by utilizing federated client identity set on the Azure SQL Database. This allows you to manage TDE with keys stored in a different tenant's Azure Key Vault.
+- [Federated client identity](/graph/api/resources/federatedidentitycredentials-overview): You can also enable a customer-managed key (CMK) from Azure Key Vault in a different Microsoft Entra tenant to be set as TDE protector at the database-level, by utilizing federated client identity set on the Azure SQL Database. This allows you to manage TDE with keys stored in a different tenant's Azure Key Vault.
 
 > [!NOTE]
 > System-assigned managed identity is not supported at the database level.
+
 
 ## Benefits of customer-managed TDE at the database level
 
@@ -40,9 +45,9 @@ As more service providers, also known as independent software vendors (ISVs), us
 
 However, there's one significant limitation to this approach. When multiple databases are hosted on the same Azure SQL logical server, they share the server-level TDE protector. ISVs are unable to offer true customer-managed keys (CMK) capabilities to their customers. Without the ability to manage their own encryption keys, customers may be hesitant to entrust sensitive data to the ISV's service, particularly if compliance regulations require them to maintain full control over their encryption keys.
 
-With database level TDE CMK, ISVs can offer CMK capability to their customers and achieve security isolation, as each database’s TDE protector can potentially be owned by the respective ISV customer in a key vault that they own. The security isolation achieved for ISV’s customers is both in terms of the *key* and the *identity* used to access the key.
+With database level TDE CMK, ISVs can offer CMK capability to their customers and achieve security isolation, as each database's TDE protector can potentially be owned by the respective ISV customer in a key vault that they own. The security isolation achieved for ISV's customers is both in terms of the *key* and the *identity* used to access the key.
 
-The diagram below summarizes the new functionality indicated above. It presents two separate Azure AD tenants. The `Best Services` tenant that contains the Azure SQL logical server with two databases, `DB 1` and `DB 2`, and the `Azure Key Vault 1` with a `Key 1` accessing the database `DB 1` using `UMI 1`. Both `UMI 1` and `Key 1` represent the server level setting. By default, all databases created initially on this server inherit this setting for TDE with CMK. The `Contoso` tenant represents a client tenant that contains `Azure Key Vault 2` with a `Key 2` assessing the database `DB 2` across the tenant as part of the database level CMK cross-tenant support using `Key 2` and `UMI 2` setup for this database.  
+The diagram below summarizes the new functionality indicated above. It presents two separate Microsoft Entra tenants. The `Best Services` tenant that contains the Azure SQL logical server with two databases, `DB 1` and `DB 2`, and the `Azure Key Vault 1` with a `Key 1` accessing the database `DB 1` using `UMI 1`. Both `UMI 1` and `Key 1` represent the server level setting. By default, all databases created initially on this server inherit this setting for TDE with CMK. The `Contoso` tenant represents a client tenant that contains `Azure Key Vault 2` with a `Key 2` assessing the database `DB 2` across the tenant as part of the database level CMK cross-tenant support using `Key 2` and `UMI 2` setup for this database.  
 
 ![Setup and functioning of the customer-managed TDE at the database level](./media/transparent-data-encryption-byok-database-level-overview/customer-managed-tde-at-the-database-level.PNG)
 
@@ -101,13 +106,29 @@ Rotating the TDE protector for a database means to switch to a new asymmetric ke
 
 New keys can be added and existing keys can be removed from the database using similar requests and modifying the keys property for the database resource. [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) with the parameter `-KeyList` and `-KeysToRemove` can be used for these operations. To retrieve the encryption protector, identity, and keys setting, [Get-AzSqlDatabase](/powershell/module/az.sql/get-azsqldatabase) can be used. The Azure Resource Manager resource *Microsoft.Sql/servers/databases* by default only shows the TDE protector and managed identity configured on the database. To expand the full list of keys, other parameters like `-ExpandKeyList` are needed. Additionally, `-KeysFilter "current"` and a point in time value (for example, `2023-01-01`) can be used to retrieve the current keys used and keys used in the past at a specific point in time.
 
-In order for the database to use TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the database user-assigned managed identity using its unique Azure Active Directory (Azure AD) identity:
+### Automatic key rotation
+
+Automatic key rotation is available at the database level and can be used with Azure Key Vault keys. The rotation is triggered when a new version of the key is detected, and will automatically be rotated within **24 hours**. For information on how to configure automatic key rotation using the Azure portal, PowerShell, or the Azure CLI, see [Automatic key rotation at the database level](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation-at-the-database-level).
+
+### Permission for key management
+
+Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment.
+
+#### Access policy permission model
+
+In order for the database to use TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the database user-assigned managed identity using its unique Microsoft Entra identity:
 
 - **get** - for retrieving the public part and properties of the key in the Azure Key Vault.
 - **wrapKey** - to be able to protect (encrypt) DEK.
 - **unwrapKey** - to be able to unprotect (decrypt) DEK.
 
-[Cross-tenant customer managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to setup a federated client ID for server level CMK. Similar setup needs to be done for database level CMK and the federated client ID must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
+#### Azure RBAC permissions model
+
+In order for the database to use the TDE protector stored in AKV for encryption of the DEK, a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations) must be added for the database user-assigned managed identity using its unique Microsoft Entra identity.
+
+### Cross-tenant customer-managed keys
+
+[Cross-tenant customer-managed keys with transparent data encryption](transparent-data-encryption-byok-cross-tenant.md) describes how to set up a federated client ID for server level CMK. Similar setup needs to be done for database level CMK and the federated client ID must be added as part of the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) or [New-AzSqlDatabase](/powershell/module/az.sql/new-azsqldatabase) API requests.
 
 > [!NOTE]
 > If the multi-tenant application hasn't been added to the key vault access policy with the required permissions (*Get, Wrap Key, Unwrap Key*), using an application for identity federation in the Azure portal will show an error. Make sure that the permissions are configured correctly before configuring the federated client identity.
@@ -119,12 +140,10 @@ In case of an inaccessible TDE protector as described in [Transparent data encry
 
 > [!NOTE]
 > [Identity and key management for TDE with database level customer-managed keys](transparent-data-encryption-byok-database-level-basic-actions.md) describes the identity and key management operations for database level CMK in detail, along with Powershell, the Azure CLI, and REST API examples.
->
-> Automated rotation of the TDE protector offered at the server level is not available at the database level in public preview.
 
 ### Additional considerations
 
-- If TDE with CMK is already enabled at the server level, setting CMK for a particular database overrides the server level CMK setting (database’s DEK gets re-encrypted with the database-level TDE protector).
+- If TDE with CMK is already enabled at the server level, setting CMK for a particular database overrides the server level CMK setting (database's DEK gets re-encrypted with the database-level TDE protector).
 - Any logical server level key changes or rotations don't affect database level CMK settings and the database continues to use its own CMK setting.
 - Database level CMK isn't supported through Transact-SQL (T-SQL).
 - The logical server user-assigned managed identity (UMI) can be used at the database level. However, it's recommended to use a designated UMI for the database level CMK.

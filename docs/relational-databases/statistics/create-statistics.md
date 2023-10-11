@@ -96,7 +96,7 @@ Requires that the user be the table or indexed view owner, or a member of one of
 1. Copy and paste the following example into the query window and select **Execute**.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    -- Create new statistic object called ContactMail1
    -- on the BusinessEntityID and EmailPromotion columns in the Person.Person table.
@@ -109,7 +109,7 @@ Requires that the user be the table or indexed view owner, or a member of one of
 1. The statistic created above potentially improves the results for the following query.
 
    ```sql
-   USE AdventureWorks2012;
+   USE AdventureWorks2022;
    GO
    SELECT LastName, FirstName
    FROM Person.Person

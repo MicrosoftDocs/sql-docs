@@ -64,8 +64,6 @@ If the collection set is set to non-cached mode, the frequency is ignored, becau
 
 The input parameters for the collector type. *@parameters* is **xml**, with a default of `NULL`. The *@parameters* schema must match the parameters schema of the collector type.
 
-
-
 #### [ @collection_item_id = ] *collection_item_id* OUTPUT
 
 The unique identifier that identifies the collection set item. *@collection_item_id* is an OUTPUT parameter of type **int**.
@@ -115,7 +113,7 @@ DECLARE @params XML = CONVERT(XML, N'\<ns:TSQLQueryCollector xmlns:ns="DataColle
 
 EXEC sp_syscollector_create_collection_item @collection_set_id = @collection_set_id,
     @collector_type_uid = @collector_type_uid,
-    @name = 'My custom TSQL query collector item',
+    @name = 'My custom T-SQL query collector item',
     @frequency = 6000,
     @parameters = @params,
     @collection_item_id = @collection_item_id OUTPUT;

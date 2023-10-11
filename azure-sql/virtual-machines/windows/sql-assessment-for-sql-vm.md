@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 07/14/2023
 ms.service: virtual-machines
 ms.topic: how-to
-ms.custom: ignite-fall-2021
+ms.custom: ignite-fall-2021, devx-track-azurecli
 ---
 
 
@@ -18,7 +18,7 @@ The SQL best practices assessment feature of the Azure portal identifies possibl
 
 
 To learn more, watch this video on [SQL best practices assessment](/shows/Data-Exposed/optimally-configure-sql-server-on-azure-virtual-machines-with-sql-assessment?WT.mc_id=dataexposed-c9-niner):
-<iframe src="https://aka.ms/docs/player?id=13b2bf63-485c-4ec2-ab14-a1217734ad9f" width="640" height="370"></iframe>
+> [!VIDEO https://aka.ms/docs/player?id=13b2bf63-485c-4ec2-ab14-a1217734ad9f]
 
 
 

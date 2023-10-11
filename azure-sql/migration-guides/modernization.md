@@ -7,10 +7,12 @@ ms.reviewer: dmarinkovic, randolphwest
 ms.date: 09/13/2022
 ms.service: sql-database
 ms.topic: faq
+ms.custom:
+  - sql-migration-content
 ---
 # Migrate SQL Server workloads (FAQ)
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqlserver-sqldb-sqlmi-asvm.md)]
+[!INCLUDE[appliesto-sqlserver-sqldb-sqlmi-sqlvm](../includes/appliesto-sqlserver-sqldb-sqlmi-sqlvm.md)]
 
 Migrating on-premises SQL Server workloads and associated applications to the cloud usually brings a wide range of questions which go beyond mere product feature information.
 
@@ -160,19 +162,19 @@ The [Azure Hybrid Benefit August 2020 update](https://www.microsoft.com/licensin
 
 [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits) is a licensing program that can be applied to on-premises SQL Server licenses, allowing license mobility, AHB, and other benefits. SA is required if AHB is to be invoked for using existing SQL Server licenses (with SA) when moving to Azure SQL. Without SA + AHB, customers are charged with PAYG pricing.
 
-Alternatively, the outsourcing software management terms applicable to SQL server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
+Alternatively, the outsourcing software management terms applicable to SQL Server licenses acquired prior to October 1, 2019 permit you to allocate your existing licenses to Azure Dedicated Host just as you would license a server in your own data center: see [Pricing - Dedicated Host Virtual Machines](https://azure.microsoft.com/pricing/details/virtual-machines/dedicated-host/).
 
 #### Do I have to pay for high availability (HA) in SQL Managed Instance and SQL Database?
 
 Both General Purpose and Business Critical tiers of SQL Managed Instance and SQL Database are built on top of inherent [high availability architecture](../database/high-availability-sla.md). This way, there's no extra charge for HA. For SQL Database Hyperscale tier HA replica is charged.
 
-#### Do I have to pay for HA and DR replicas for Azure SQL?
+#### Do I have to pay for HA and DR replicas for Azure SQL VM?
 
 If you have Software Assurance, on Azure SQL VM you can implement high availability (HA) and disaster recovery (DR) plans with SQL Server without incurring additional licensing costs for the passive disaster recovery instance. See the [SQL VM documentation](../virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure) for more details.
 
 #### Do I have to pay for disaster recovery (DR) in SQL Managed Instance and SQL Database?
 
-Yes. These are separate costs.
+SQL Managed Instance provides the possibility to [configure a license-free standby replica](../managed-instance/auto-failover-group-standby-replica-how-to-configure.md), which means that SQL Server licensing costs for the vCores that the secondary standby replica uses are not charged.
 
 #### Can I centrally manage Azure Hybrid Benefit for SQL Server across the entire Azure subscription?
 
@@ -256,7 +258,7 @@ Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implem
 
 #### How are backups handled in Azure SQL PaaS services?
 
-You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md) and [SQL Database](../database/automated-backups-overview.md) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
+You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true) and [SQL Database](../database/automated-backups-overview.md?view=azuresql-db&preserve-view=true) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
 
 #### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 

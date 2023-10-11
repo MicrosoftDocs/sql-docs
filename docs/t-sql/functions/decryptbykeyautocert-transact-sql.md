@@ -72,7 +72,7 @@ This example shows how `DECRYPTBYKEYAUTOCERT` can simplify decryption code. This
   
 ```sql  
 --Create the keys and certificate.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  
 CREATE CERTIFICATE HumanResources037   

@@ -73,7 +73,7 @@ In Linux, SQL uses a **launchpadd** service to communicate with a separate launc
 
 ### Python scripts executed from a remote client
 
-You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
+You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQL Server computer, if these conditions are met:
 
 + You design the scripts appropriately
 + The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](../python/ref-py-revoscalepy.md) package is required to use remote compute contexts.

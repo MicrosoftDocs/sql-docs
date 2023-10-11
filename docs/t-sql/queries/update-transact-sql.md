@@ -264,7 +264,7 @@ OPTION **(** \<query_hint> [ **,**... *n* ] **)**
  Use caution when specifying the FROM clause to provide the criteria for the update operation. The results of an UPDATE statement are undefined if the statement includes a FROM clause that is not specified in such a way that only one value is available for each column occurrence that is updated, that is if the UPDATE statement is not deterministic. For example, in the UPDATE statement in the following script, both rows in `Table1` meet the qualifications of the FROM clause in the UPDATE statement; but it is undefined which row from `Table1` is used to update the row in `Table2.`  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.Table1', 'U') IS NOT NULL  
     DROP TABLE dbo.Table1;  
@@ -294,7 +294,7 @@ FROM dbo.Table2;
  The same problem can occur when the `FROM` and `WHERE CURRENT OF` clauses are combined. In the following example, both rows in `Table2` meet the qualifications of the `FROM` clause in the `UPDATE` statement. It is undefined which row from `Table2` is to be used to update the row in `Table1`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID ('dbo.Table1', 'U') IS NOT NULL  
     DROP TABLE dbo.Table1;  
@@ -509,7 +509,7 @@ ID     Value
  The following example updates a single column for all rows in the `Person.Address` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Person.Address  
 SET ModifiedDate = GETDATE();  
@@ -519,7 +519,7 @@ SET ModifiedDate = GETDATE();
  The following example updates the values in the `Bonus`, `CommissionPct`, and `SalesQuota` columns for all rows in the `SalesPerson` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;  
@@ -533,7 +533,7 @@ GO
  The following example uses the WHERE clause to specify which rows to update. The statement updates the value in the `Color` column of the `Production.Product` table for all rows that have an existing value of 'Red' in the `Color` column and have a value in the `Name` column that starts with 'Road-250'.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 SET Color = N'Metallic Red'  
@@ -545,7 +545,7 @@ GO
  The following examples use the TOP clause to limit the number of rows that are modified in an UPDATE statement. When a TOP (*n*) clause is used with UPDATE, the update operation is performed on a random selection of '*n*' number of rows. The following example updates the `VacationHours` column by 25 percent for 10 random rows in the `Employee` table.  
   
 ```sql  
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 UPDATE TOP (10) HumanResources.Employee
 SET VacationHours = VacationHours * 1.25 ;
@@ -567,7 +567,7 @@ GO
  The following example updates the `PerAssemblyQty` value for all parts and components that are used directly or indirectly to create the `ProductAssemblyID 800`. The common table expression returns a hierarchical list of parts that are used directly to build `ProductAssemblyID 800` and parts that are used to build those components, and so on. Only the rows returned by the common table expression are modified.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
 (  
@@ -595,7 +595,7 @@ WHERE d.ComponentLevel = 0;
  The following example uses the WHERE CURRENT OF clause to update only the row on which the cursor is positioned. When a cursor is based on a join, only the `table_name` specified in the UPDATE statement is modified. Other tables participating in the cursor are not affected.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
@@ -621,7 +621,7 @@ GO
  The following examples uses computed values in an UPDATE statement. The example doubles the value in the `ListPrice` column for all rows in the `Product` table.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 SET ListPrice = ListPrice * 2;  
@@ -632,7 +632,7 @@ GO
  The following example uses the variable `@NewPrice` to increment the price of all red bicycles by taking the current price and adding 10 to it.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @NewPrice INT = 10;  
 UPDATE Production.Product  
@@ -644,7 +644,7 @@ GO
  The following example uses the compound operator += to append the data `' - tool malfunction'` to the existing value in the column `Name` for rows that have a `ScrapReasonID` between 10 and 12.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.ScrapReason   
 SET Name += ' - tool malfunction'  
@@ -655,7 +655,7 @@ WHERE ScrapReasonID BETWEEN 10 and 12;
  The following example uses a subquery in the SET clause to determine the value that is used to update the column. The subquery must return only a scalar value (that is, a single value per row). The example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table. The subquery aggregates the sales for each salesperson in the `UPDATE` statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD +   
@@ -673,7 +673,7 @@ GO
  The following example sets the `CostRate` column to its default value (0.00) for all rows that have a `CostRate` value greater than `20.00`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Location  
 SET CostRate = DEFAULT  
@@ -687,7 +687,7 @@ WHERE CostRate > 20.00;
  The following example updates rows in a table by specifying a view as the target object. The view definition references multiple tables, however, the UPDATE statement succeeds because it references columns from only one of the underlying tables. The UPDATE statement would fail if columns from both tables were specified. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Person.vStateProvinceCountryRegion  
 SET CountryRegionName = 'United States of America'  
@@ -698,7 +698,7 @@ WHERE CountryRegionName = 'United States';
  The follow example updates rows in the table `Production.ScrapReason`. The table alias assigned to `ScrapReason` in the FROM clause is specified as the target object in the UPDATE clause.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE sr  
 SET sr.Name += ' - tool malfunction'  
@@ -712,7 +712,7 @@ JOIN Production.WorkOrder AS wo
  The following example updates rows in a table variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create the table variable.  
 DECLARE @MyTableVar TABLE (  
@@ -744,7 +744,7 @@ GO
  The following example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD + SubTotal  
@@ -762,7 +762,7 @@ GO
  In the situation in which more than one sale for a specified salesperson can occur on the same day, all the sales for each sales person must be aggregated together within the `UPDATE` statement, as shown in the following example:  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Sales.SalesPerson  
 SET SalesYTD = SalesYTD +   
@@ -792,14 +792,14 @@ EXEC sp_addlinkedserver @server = N'MyLinkedServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2022.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -816,7 +816,7 @@ SET GroupName = 'Sales and Marketing';
  The following example updates a row in a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*. You may need to configure the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Ad Hoc Distributed Queries. For more information, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
 
 ```sql
-UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2022.HumanResources.Department
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
@@ -827,7 +827,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  The following example uses the .WRITE clause to update a partial value in `DocumentSummary`, an **nvarchar(max)** column in the `Production.Document` table. The word `components` is replaced with the word `features` by specifying the replacement word, the starting location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example also uses the OUTPUT clause to return the before and after images of the `DocumentSummary` column to the `@MyTableVar` table variable.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @MyTableVar TABLE (  
     SummaryBefore NVARCHAR(max),  
@@ -847,7 +847,7 @@ GO
  The following examples add and remove data from an **nvarchar(max)** column that has a value currently set to NULL. Because the .WRITE clause cannot be used to modify a NULL column, the column is first populated with temporary data. This data is then replaced with the correct data by using the .WRITE clause. The additional examples append data to the end of the column value, remove (truncate) data from the column and, finally, remove partial data from the column. The SELECT statements display the data modification generated by each UPDATE statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Replacing NULL value with temporary data.  
 UPDATE Production.Document  
@@ -904,7 +904,7 @@ GO
  The following example replaces an existing image stored in a **varbinary(max)** column with a new image. The [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function is used with the BULK option to load the image into the column. This example assumes that a file named `Tires.jpg` exists in the specified file path.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.ProductPhoto  
 SET ThumbNailPhoto = (  
@@ -963,7 +963,7 @@ WHERE Name = 'Anchorage';
  The following example specifies the [table hint](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. This hint specifies that a shared lock is taken on the table `Production.Product` and held until the end of the UPDATE statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 UPDATE Production.Product  
 WITH (TABLOCK)  
@@ -976,7 +976,7 @@ GO
  The following example specifies the [query hint](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` in the UPDATE statement. This hint instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE PROCEDURE Production.uspProductUpdate  
 @Product NVARCHAR(25)  
@@ -1000,7 +1000,7 @@ EXEC Production.uspProductUpdate 'BK-%';
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. For more examples using the OUTPUT clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 
 --Display the initial data of the table to be updated.  
@@ -1043,7 +1043,7 @@ GO
  The following example uses an UPDATE statement in a stored procedure. The procedure takes one input parameter, `@NewHours` and one output parameter `@RowCount`. The `@NewHours` parameter value is used in the UPDATE statement to update the column `VacationHours` in the table `HumanResources.Employee`. The `@RowCount` output parameter is used to return the number of rows affected to a local variable. The CASE expression is used in the SET clause to conditionally determine the value that is set for `VacationHours`. When the employee is paid hourly (`SalariedFlag` = 0), `VacationHours` is set to the current number of hours plus the value specified in `@NewHours`; otherwise, `VacationHours` is set to the value specified in `@NewHours`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
 @NewHours SMALLINT  
@@ -1066,7 +1066,7 @@ EXEC HumanResources.Update_VacationHours 40;
  The following example uses an UPDATE statement in a TRY...CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRANSACTION;  
   

@@ -55,4 +55,4 @@ Requires **db_owner** permissions.
 
 ## See also
 
-- [Performance Considerations with Memory-Optimized System-Versioned Temporal Tables](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)
+- [Performance Considerations with Memory-Optimized System-Versioned Temporal Tables](../tables/memory-optimized-system-versioned-temporal-tables-performance.md)

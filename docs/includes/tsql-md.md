@@ -1,1 +1,1 @@
- Transact\-SQL 
+ Transact-SQL 

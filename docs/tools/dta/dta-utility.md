@@ -26,7 +26,7 @@ helpviewer_keywords:
 The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
   
 > [!NOTE]
-> The Database Engine Tuning Advisor is not supported for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
+> The Database Engine Tuning Advisor is not supported for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] or [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]. Instead, consider the strategies recommended in [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/database/monitor-tune-overview). For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see also the [Database Advisor performance recommendations for Azure SQL Database](/azure/azure-sql/database/database-advisor-implement-performance-recommendations).
 
 Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
@@ -129,7 +129,7 @@ dta -D db_name1, db_name2 -d db_name1
  Specifies the first database to which **dta** connects when tuning a workload. Only one database can be specified for this argument. For example:  
   
 ```console  
-dta -d AdventureWorks2012 ...  
+dta -d AdventureWorks2022 ...  
 ```  
   
  If multiple database names are specified, then **dta** returns an error. The **-d** argument is optional.  
@@ -334,7 +334,7 @@ In this case, DTA will use Query Store as the source of workload and only consid
  Specifies the name of the tuning session. This is required if **-ID** is not specified.  
   
  **-Tf** _table_list_file_  
- Specifies the name of a file containing a list of tables to be tuned. Each table listed within the file should begin on a new line. Table names should be qualified with three-part naming, for example, **AdventureWorks2012.HumanResources.Department**. Optionally, to invoke the table-scaling feature, the name of an existing table can be followed by a number indicating the projected number of rows in the table. Database Engine Tuning Advisor takes into consideration the projected number of rows while tuning or evaluating statements in the workload that reference these tables. Note that there can be one or more spaces between the *number_of_rows* count and the *table_name*.  
+ Specifies the name of a file containing a list of tables to be tuned. Each table listed within the file should begin on a new line. Table names should be qualified with three-part naming, for example, **AdventureWorks2022.HumanResources.Department**. Optionally, to invoke the table-scaling feature, the name of an existing table can be followed by a number indicating the projected number of rows in the table. Database Engine Tuning Advisor takes into consideration the projected number of rows while tuning or evaluating statements in the workload that reference these tables. Note that there can be one or more spaces between the *number_of_rows* count and the *table_name*.  
   
  This is the file format for *table_list_file*:  
   
@@ -395,9 +395,9 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
  This example demonstrates the use of *table_list_file* (the **-Tf** argument). The contents of the file table_list.txt are as follows:  
 
 ```console
-AdventureWorks2012.Sales.Customer  100000  
-AdventureWorks2012.Sales.Store  
-AdventureWorks2012.Production.Product  2000000  
+AdventureWorks2022.Sales.Customer  100000  
+AdventureWorks2022.Sales.Store  
+AdventureWorks2022.Production.Product  2000000  
 ```
 
 The contents of table_list.txt specifies that:  

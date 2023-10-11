@@ -68,4 +68,4 @@ Check the extension log for the following record:
 [YY/MM/DDDD HH:MM:SS PM UTC] [INFO] [UploadServiceProvider] [ExtensionHandlerArcUploadServicesNotifications] [AzureUpload] Arc for Sql Server upload response status: InternalServerError.`
 ```
 
-Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcData` following [these steps](.\release-notes.md#breaking-change-1).
+Make sure to migrate the Arc-enabled SQL Server resource to `Microsoft.AzureArcData`.

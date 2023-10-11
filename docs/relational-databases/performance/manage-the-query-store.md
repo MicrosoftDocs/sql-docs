@@ -23,7 +23,7 @@ This article outlines the management of the [!INCLUDE[ssNoVersion](../../include
 > [!NOTE]  
 > In [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], Query Store is now enabled by default for all newly created SQL Server databases to help better track performance history, troubleshoot query plan–related issues, and enable new query processor capabilities.
 
-### <a id="QueryStoreOptions"></a> Query Store defaults in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+### <a id="QueryStoreOptions"></a> Query Store defaults in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 This section describes optimal configuration defaults in Azure SQL Database that are designed to ensure reliable operation of the Query Store and dependent features. Default configuration is optimized for continuous data collection, that is minimal time spent in OFF/READ_ONLY states. For more information about all available Query Store options, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query_store_option-).
 
@@ -37,10 +37,10 @@ This section describes optimal configuration defaults in Azure SQL Database that
 | DATA_FLUSH_INTERVAL_SECONDS |Specifies maximum period during which captured runtime statistics are kept in memory, before flushing to disk |900 |Enforced for new databases |
 
 > [!IMPORTANT]  
-> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. After it's enabled, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
+> These defaults are automatically applied in the final stage of Query Store activation in an [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]. After it's enabled, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] won't change configuration values that are set by customers, unless they negatively impact primary workload or reliable operations of the Query Store.
 
 > [!NOTE]  
-> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`
+> Query Store cannot be disabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`
 
 If you want to stay with your custom settings, use [ALTER DATABASE with Query Store options](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) to revert configuration to the previous state. Check out [Best Practices with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md) in order to learn how to choose optimal configuration parameters.
 

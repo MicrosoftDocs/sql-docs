@@ -1,19 +1,19 @@
 ---
 title: Download and install Azure Data Studio
 description: Download and install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
-author: erinstellato-ms
-ms.author: erinstellato
+author: dlevy-msft
+ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 06/05/2023
+ms.date: 10/03/2023
 ms.service: azure-data-studio
 ms.topic: overview
 ms.custom: intro-overview
 ---
 # Download and install Azure Data Studio
 
-Azure Data Studio is a cross-platform database tool for data professionals who use on-premises and cloud data platforms on Windows, macOS, and Linux.
+Azure Data Studio is a lightweight, cross-platform data management and development tool with connectivity to popular cloud and on-premises databases. Azure Data Studio supports Windows, macOS, and Linux, with immediate capability to connect to Azure SQL and SQL Server.  Browse the extension library for more database support options including MySQL, PostgreSQL, and CosmosDB.
 
-Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with the built-in charting of query result sets and customizable dashboards.
+Azure Data Studio's familiar interface offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal.  Engineered with the data platform user in mind, its extensibility allows users to customize their experience by installing the extensions relevant to their workflow, including database migrations, charting, GitHub Copilot, and more!
 
 Use Azure Data Studio to query, design, and manage your databases and data warehouses wherever they are, on your local computer or in the cloud.
 
@@ -21,20 +21,22 @@ For more information about Azure Data Studio, visit [What is Azure Data Studio?]
 
 ## Download Azure Data Studio
 
-Azure Data Studio 1.44.1 is the latest general availability (GA) version.
+Azure Data Studio 1.46.1 is the latest general availability (GA) version.
 
-- Release number: 1.44.1
-- Release date: June 5, 2023
+- Release number: 1.46.1
+- Release date: October 3, 2023
 
 | Platform | Type | Download |
 | --- | --- | --- |
-| Windows | User Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2237020)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2237126) |
-| | System Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2237021)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2237207) |
-| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2237022)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2237023) |
-| Linux | .tar.gz | [64-bit](https://go.microsoft.com/fwlink/?linkid=2237211) |
-| | .deb | [64-bit](https://go.microsoft.com/fwlink/?linkid=2237414) |
-| | .rpm | [64-bit](https://go.microsoft.com/fwlink/?linkid=2237415) |
-| macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2237210)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2237208)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2237209) |
+| Windows | User Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2247827)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2247733) |
+| | System Installer | [64-bit](https://go.microsoft.com/fwlink/?linkid=2247375)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2247462) |
+| | .zip | [64 bit](https://go.microsoft.com/fwlink/?linkid=2247732)&emsp;[ARM64](https://go.microsoft.com/fwlink/?linkid=2247463) |
+| Linux | .tar.gz | [64-bit](https://go.microsoft.com/fwlink/?linkid=2247828) |
+| | .deb | [64-bit](https://go.microsoft.com/fwlink/?linkid=2247464) |
+| | .rpm<sup>1</sup> | [64-bit](https://go.microsoft.com/fwlink/?linkid=2247734) |
+| macOS | .zip | [Universal](https://go.microsoft.com/fwlink/?linkid=2247376)&emsp;[Intel Chip](https://go.microsoft.com/fwlink/?linkid=2247377)&emsp;[Apple Silicon](https://go.microsoft.com/fwlink/?linkid=2247465) |
+
+<sup>1</sup> There is a known issue with install on RHEL. For more information see the [release notes](release-notes-azure-data-studio.md#known-issues-in-1460).
 
 If you have comments or suggestions or want to report a problem with downloading Azure Data Studio, submit an issue to our team on the [Azure Data Studio feedback page](https://github.com/microsoft/azuredatastudio/issues/).
 

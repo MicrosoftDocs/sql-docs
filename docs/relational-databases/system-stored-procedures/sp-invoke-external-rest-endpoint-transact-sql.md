@@ -1,10 +1,10 @@
 ---
 title: "sp_invoke_external_rest_endpoint (Transact-SQL)"
 description: The sp_invoke_external_rest_endpoint stored procedure invokes an HTTPS REST endpoint.
-author: yorek
-ms.author: damauri
+author: jettermctedder
+ms.author: bspendolini
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.topic: "reference"
 f1_keywords:
@@ -18,14 +18,11 @@ dev_langs:
   - "TSQL"
 monikerRange: "azuresqldb-current"
 ---
-# sp_invoke_external_rest_endpoint (Transact-SQL) (Preview)
+# sp_invoke_external_rest_endpoint (Transact-SQL)
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
 The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST endpoint provided as an input argument to the procedure.
-
-> [!WARNING]  
-> This feature is in public preview. Your use of the feature is governed by the [Supplemental Terms of Use For Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 ## Syntax
 
@@ -34,9 +31,9 @@ The `sp_invoke_external_rest_endpoint` stored procedure invokes an HTTPS REST en
 ```syntaxsql
 EXEC @returnValue = sp_invoke_external_rest_endpoint
   [ @url = ] N'url'
-  [ , [ @payload = ] N'json_payload' ]
+  [ , [ @payload = ] N'request_payload' ]
   [ , [ @headers = ] N'http_headers_as_json_array' ]
-  [ , [ @method = ] 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' ]
+  [ , [ @method = ] 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' | 'HEAD' ]
   [ , [ @timeout = ] seconds ]
   [ , [ @credential = ] credential ]
   [ , @response OUTPUT ]
@@ -48,9 +45,9 @@ EXEC @returnValue = sp_invoke_external_rest_endpoint
 
 URL of the HTTPS REST endpoint to be called. *@url* is **nvarchar(4000)** with no default.
 
-#### [ @payload = ] N'*json_payload*'
+#### [ @payload = ] N'*request_payload*'
 
-Unicode string in a JSON format that contains the payload to send to the HTTPS REST endpoint. Payload must be a valid JSON document. *@payload* is **nvarchar(max)** with no default.
+Unicode string in a JSON, XML, or TEXT format that contains the payload to send to the HTTPS REST endpoint. Payloads must be a valid JSON document, a well formed XML document, or text. *@payload* is **nvarchar(max)** with no default.
 
 #### [ @headers = ] N'*headers*'
 
@@ -60,7 +57,7 @@ The *@headers* parameter is **nvarchar(4000)** with no default.
 
 #### [ @method = ] N'*method*'
 
-HTTP method for calling the URL. Must be one of the following values: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`. *@method* is **nvarchar(6)** with `POST` as default value.
+HTTP method for calling the URL. Must be one of the following values: `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, `HEAD`. *@method* is **nvarchar(6)** with `POST` as default value.
 
 #### [ @timeout = ] *seconds*
 
@@ -90,7 +87,7 @@ GRANT EXECUTE ANY EXTERNAL ENDPOINT TO [<PRINCIPAL>];
 
 ## Response format
 
-Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the *@response* output parameter. *@response* contains a JSON document with the following schema:
+Response of the HTTP call and the resulting data sent back by the invoked endpoint is available through the *@response* output parameter. *@response* may contain a JSON document with the following schema:
 
 ```json
 {
@@ -112,7 +109,30 @@ Specifically:
 - *response*: a JSON object that contains the HTTP result and other response metadata.
 - *result*: the JSON payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (`No Content`).
 
-In the `response` section, aside from the HTTP status code and description, the entire set of received response headers will be provided in the `headers` object. The following example shows a `response` section:
+Or the *@response* may contain an XML document with the following schema:
+
+```xml
+<output>
+    <response>
+        <status>
+            <http code="" description=" " />
+        </status>
+        <headers>
+            <header key="" value="" />
+            <header key="" value="" />
+        </headers>
+    </response>
+    <result>
+    </result>
+</output>
+```
+
+Specifically:
+
+- *response*: an XML object that contains the HTTP result and other response metadata.
+- *result*: the XML payload returned by the HTTP call. Omitted if the received HTTP result is a 204 (`No Content`).
+
+In the `response` section, aside from the HTTP status code and description, the entire set of received response headers will be provided in the `headers` object. The following example shows a `response` section in JSON (also the structure for text responses):
 
 ```json
 "response": {
@@ -130,6 +150,26 @@ In the `response` section, aside from the HTTP status code and description, the 
     "Strict-Transport-Security": "max-age=31536000; includeSubDomains"
     }
   }
+```
+
+And the following example shows a `response` section in XML:
+
+```XML
+<response>
+    <status>
+        <http code="200" description="OK" />
+    </status>
+    <headers>
+        <header key="Date" value="Tue, 01 Apr 1976 21:12:04 GMT" />
+        <header key="Content-Length" value="2112" />
+        <header key="Content-Type" value="application/xml" />
+        <header key="Server" value="Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0" />
+        <header key="x-ms-request-id" value="31536000-64bi-64bi-64bi-31536000" />
+        <header key="x-ms-version" value="2021-10-04" />
+        <header key="x-ms-creation-time" value="Wed, 19 Apr 2023 22:17:33 GMT" />
+        <header key="x-ms-server-encrypted" value="true" />
+    </headers>
+</response>
 ```
 
 ## Allowed endpoints
@@ -156,6 +196,10 @@ Only calls to endpoints in the following services are allowed:
 | Analysis Services | *.asazure.windows.net |
 | IoT Central | *.azureiotcentral.com |
 | API Management | *.azure-api.net |
+| Azure Blob Storage | *.blob.core.windows.net |
+| Azure Files | *.file.core.windows.net |
+| Azure Queue Storage | *.queue.core.windows.net |
+| Azure Table Storage | *.table.core.windows.net |
 
 [Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 
@@ -241,7 +285,7 @@ WITH IDENTITY = 'HTTPEndpointQueryString', SECRET = '{"code":"<your-function-key
 
 ### [Managed Identity](#tab/managed-identity)
 
-With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](/azure/app-service/configure-authentication-provider-aad))
+With this IDENTITY value, the DATABASE SCOPED CREDENTIAL the authentication information will be taken from the System-Assigned Managed Identity of the logical Azure SQL server in which the Azure SQL database is in and it will be passed in the request headers. The SECRET must be set to the APP_ID (or CLIENT_ID) used to configure Azure AD Authentication of the called endpoint. (For example: [Configure your App Service or Azure Functions app to use Azure AD login](/azure/app-service/configure-authentication-provider-aad))
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [https://<APP_NAME>.azurewebsites.net/api/<FUNCTION_NAME>]
@@ -314,7 +358,27 @@ Only endpoints that are configured to use HTTPS with at least TLS 1.2 encryption
 - *accept*: set to `application/json`
 - *user-agent*: set `<EDITION>/<PRODUCT VERSION>` for example: `SQL Azure/12.0.2000.8`
 
-If the same headers are also specified via the *@headers* parameter, the system-supplied values will take precedence and overwrite any user-specified values.
+While *user-agent* will always be overwritten by the stored procedure, the *content-type* and *accept* header values can be user defined via the *@headers* parameter. Only the media type directive is allowed to be specified in the content-type and specifying the charset or boundary directives is not possible.
+
+#### Request and response payload supported [media types](https://developer.mozilla.org/en-US/docs/Glossary/MIME_type)
+
+The following are accepted values for the header *content-type*.
+
+- application/json
+- application/vnd.microsoft.*.json
+- application/xml
+- application/vnd.microsoft.*.xml
+- application/vnd.microsoft.*+xml
+- application/x-www-form-urlencoded
+- text/*
+
+For the *accept* header, the following are the accepted values.
+
+- application/json
+- application/xml
+- text/*
+
+For more information on text header types, please refer to the [text type registry at IANA](https://www.iana.org/assignments/media-types/media-types.xhtml#text).
 
 > [!NOTE]  
 > If you are testing invocation of the REST endpoint with other tools, like [cURL](https://curl.se/) or any modern REST client like [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/), make sure to include the same headers that are automatically injected by `sp_invoke_external_rest_endpoint` to have the same behavior and results.
@@ -387,7 +451,23 @@ EXEC @ret = sp_invoke_external_rest_endpoint
 SELECT @ret AS ReturnCode, @response AS Response;
 ```
 
-### C. Send a message to an event hub using the Azure SQL Database Managed Identity
+### C. Read the contents of a file from Azure Blob Storage with a SAS token
+
+This example reads a file from Azure Blob Storage using a SAS token for authentication. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
+
+```sql
+DECLARE @ret INT, @response NVARCHAR(MAX);
+
+EXEC @ret = sp_invoke_external_rest_endpoint
+  @url = N'https://blobby.blob.core.windows.net/datafiles/my_favorite_blobs.txt?sp=r&st=2023-07-28T19:56:07Z&se=2023-07-29T03:56:07Z&spr=https&sv=2022-11-02&sr=b&sig=XXXXXX1234XXXXXX6789XXXXX',
+  @headers = N'{"Accept":"application/xml"}',
+  @method = 'GET',
+  @response = @response OUTPUT;
+
+SELECT @ret AS ReturnCode, @response AS Response;
+```
+
+### D. Send a message to an event hub using the Azure SQL Database Managed Identity
 
 This sample shows how you can send messages to Event Hubs using the Azure SQL Managed Identity. Make sure you have configured the [System Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview) for the Azure SQL Database logical server hosting your database, for example:
 
@@ -425,6 +505,80 @@ EXEC @ret = sp_invoke_external_rest_endpoint @url = @url,
     @response = @response OUTPUT;
 
 SELECT @ret AS ReturnCode, @response AS Response;
+```
+
+### E. Read and write a file to Azure File Storage with an Azure SQL Database scoped credentials
+
+This example writes a file to an Azure File Storage using an Azure SQL Database scoped credentials for authentication and then returns the contents. The results will be returned in XML, so using the header `"Accept":"application/xml"` will be needed.
+
+Start by creating a master key for the Azure SQL Database
+
+```sql
+create master key encryption by password = '2112templesmlm2BTS21.qwqw!@0dvd'
+go
+```
+
+Then, create the database scoped credentials using the SAS token provided by the Azure Blob Storage Account.
+
+```sql
+create database scoped credential [filestore]
+with identity='SHARED ACCESS SIGNATURE',
+secret='sv=2022-11-02&ss=bfqt&srt=sco&sp=seespotrun&se=2023-08-03T02:21:25Z&st=2023-08-02T18:21:25Z&spr=https&sig=WWwwWWwwWWYaKCheeseNXCCCCCCDDDDDSSSSSU%3D'
+go
+```
+
+Next, create the file and add text to it with the following two statements:
+
+```sql
+declare @payload nvarchar(max) = (select * from (values('Hello from Azure SQL!', sysdatetime())) payload([message], [timestamp])for json auto, without_array_wrapper)
+declare @response nvarchar(max), @url nvarchar(max), @headers nvarchar(1000);
+declare @len int = len(@payload)
+
+-- Create the File
+set @url = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+set @headers = json_object(
+        'x-ms-type': 'file',
+        'x-ms-content-length': cast(@len as varchar(9)),
+        'Accept': 'application/xml')
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @method = 'PUT',
+    @headers = @headers,
+    @credential = [filestore],
+    @response = @response output
+select cast(@response as xml);
+
+-- Add text to the File
+set @headers = json_object(
+        'x-ms-range': 'bytes=0-' + cast(@len-1 as varchar(9)),
+        'x-ms-write': 'update',
+        'Accept': 'application/xml');
+set @url = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+set @url += '?comp=range'
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @method = 'PUT',
+    @headers = @headers,
+    @payload = @payload,
+    @credential = [filestore],
+    @response = @response output
+select cast(@response as xml)
+go
+```
+
+Finally, use the following statement to read the file
+
+```sql
+declare @response nvarchar(max);
+declare @url nvarchar(max) = 'https://myfiles.file.core.windows.net/myfiles/test-me-from-azure-sql.json'
+exec sp_invoke_external_rest_endpoint
+    @url = @url,
+    @headers = '{"Accept":"application/xml"}',
+    @credential = [filestore],
+    @method = 'GET',
+    @response = @response output
+select cast(@response as xml)
+go
 ```
 
 ## See also

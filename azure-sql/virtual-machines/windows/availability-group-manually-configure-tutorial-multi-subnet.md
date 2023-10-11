@@ -186,6 +186,31 @@ To enable the availability group feature, follow these steps:
 1. Restart the SQL Server service.
 1. Repeat these steps for the other SQL Server instance.
 
+## Enable FILESTREAM feature
+
+If you're not using FILESTREAM for your database in the availability group, skip this step and move to the next step - **Create Database**.
+
+If you plan on adding a database to your availability group that uses [FILESTREAM](/sql/database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server), then FILESTREAM needs to be enabled as the feature is disabled by default. Use the **SQL Server Configuration Manager** to enable the feature on both SQL Server instances. 
+
+To [enable the FILESTREAM feature](/sql/relational-databases/blob/enable-and-configure-filestream), follow these steps:
+
+1. Launch the RDP file to the first SQL Server VM (such as **SQL-VM-1**) with a domain account that is a member of sysadmin fixed server role, such as the **CORP\Install** domain account created in the [prerequisites document](availability-group-manually-configure-prerequisites-tutorial-multi-subnet.md)
+1. From the **Start** screen of one your SQL Server VMs, launch **SQL Server Configuration Manager**.
+1. In the browser tree, highlight **SQL Server Services**, right-click the **SQL Server (MSSQLSERVER)** service and select **Properties**.
+1. Select the **FILESTREAM** tab, then check the box to **Enable FILESTREAM for Transact-SQL access**:
+1. Select **Apply**. Select **OK** in the pop-up dialog.
+1. In SQL Server Management Studio, click **New Query** to display the Query Editor.
+1. In Query Editor, enter the following Transact-SQL code:
+
+   ```sql
+   EXEC sp_configure filestream_access_level, 2  
+   RECONFIGURE
+   ```
+
+1. Click **Execute**.
+1. Restart the SQL Server service.
+1. Repeat these steps for the other SQL Server instance.
+
 ## Create database
 
 For your database, you can either follow the steps in this section to create a new database, or restore an [AdventureWorks database](/sql/samples/sql-samples-where-are). You also need to back up the database to initialize the log chain. Databases that have not been backed up do not meet the prerequisites for an availability group.
@@ -196,7 +221,7 @@ To create a database, follow these steps:
 1. Open **SQL Server Management Studio** and connect to the SQL Server instance.
 1. In **Object Explorer**, right-click **Databases** and select **New Database**.
 1. In **Database name**, type **MyDB1**.
-1. Select the **Options** page, and choose **Full** from the **Recovery model** drop-down, if it's not full by default. The database must be in full recovery mode to meet the prerequisites of participating in an availability group.
+1. Select the **Options** page, and choose **Full** from the **Recovery model** drop-down, if it's not full by default. The database must be in the full recovery model to meet the prerequisites of participating in an availability group.
 1. Select **OK** to close the **New Database** page and create your new database.
 
 To back up the database, follow these steps:
@@ -223,9 +248,9 @@ To create the backup file share, follow these steps:
 
 5. In **Name, Description, and Settings** verify the share name and path. Select **Next**.
 
-6. On **Shared Folder Permissions** set **Customize permissions**. Select **Custom...**.
+6. On **Shared Folder Permissions** set **Customize permissions**. Select **Custom**.
 
-7. On **Customize Permissions**, select **Add...**.
+7. On **Customize Permissions**, select **Add**.
 
 8. Check **Full Control** to grant full access to the share the SQL Server service account (`Corp\SQLSvc`):  
 
@@ -249,7 +274,7 @@ To create your availability group, follow these steps.
 
     :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/12-new-ag-name.png" alt-text="New availability group Wizard, Specify availability group Name":::
 
-1. On the **Select Databases** page, select your database, and then select **Next**. If your database does not meet the prerequisites, make sure it's in full recovery mode, and [take a backup](#create-database):
+1. On the **Select Databases** page, select your database, and then select **Next**. If your database does not meet the prerequisites, make sure it's in the full recovery model, and [take a backup](#create-database):
 
    :::image type="content" source="./media/availability-group-manually-configure-tutorial-multi-subnet/13-new-ag-select-database.png" alt-text="New availability group Wizard, Select Databases":::
 

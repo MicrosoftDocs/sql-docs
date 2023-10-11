@@ -77,7 +77,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   
    @table_name = 'Product%',   
    @table_schema = 'Production',  
-   @table_catalog ='AdventureWorks2012';  
+   @table_catalog ='AdventureWorks2022';  
 ```  
   
 ## See Also  

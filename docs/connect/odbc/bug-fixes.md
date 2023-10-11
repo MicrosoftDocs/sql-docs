@@ -4,7 +4,7 @@ description: This page contains a listing of bugs fixed in each release, startin
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 06/15/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -15,6 +15,19 @@ helpviewer_keywords:
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix crashes when receiving invalid data from server
+- Fix infinite loop when receiving invalid data from server
+- Fix a crash when attempting to connect under low-memory conditions
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.10.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix crashes when receiving invalid data from server
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.3.1 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix a bug in setting of data classification version attribute
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 18.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

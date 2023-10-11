@@ -22,7 +22,7 @@ The following examples illustrate the use of PATH mode in generating XML from a 
 This query specifies a FOR XML PATH mode.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT
        ProductModelID,
@@ -49,7 +49,7 @@ The following result is element-centric XML where each column value in the resul
 The following result is the same as the `RAW` mode query with the `ELEMENTS` option specified. It returns element-centric XML with a default `<row>` element for each row in the result set.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID,
        Name
@@ -61,7 +61,7 @@ FOR XML RAW, ELEMENTS;
 You can optionally specify the row element name to overwrite the default `<row>`. For example, the following query returns the `<ProductModel>` element for each row in the rowset.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID,
        Name
@@ -87,7 +87,7 @@ The resulting XML will have a specified row element name.
 If you specify a zero-length string, the wrapping element isn't produced.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID,
        Name
@@ -111,7 +111,7 @@ This is the result:
 In the following query, the `ProductModelID` column name specified starts with '\@' and doesn't contain a slash mark ('/'). Therefore, an attribute of the `<row>` element that has the corresponding column value is created in the resulting XML.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID AS "@id",
        Name
@@ -193,7 +193,7 @@ This is the partial result. Because the query specifies ManuInstr as the column 
 In the previous FOR XML query, you may want to include namespaces for the `<Root>` and `<ProductModelData>` elements. You can do this by first defining the prefix to namespace binding by using WITH XMLNAMESPACES and using prefixes in the FOR XML query. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 WITH XMLNAMESPACES (
    'uri1' AS ns1,
@@ -243,7 +243,7 @@ For each product model, this query constructs a value list of product IDs. For e
 This is the query that produces the XML you want:
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID     AS "@ProductModelID",
        Name               AS "@ProductModelName",
@@ -291,7 +291,7 @@ This is the partial result:
 The subquery constructing the product names returns the result as a string that is entitized and then added to the XML. If you add the type directive, `FOR XML PATH (''), type`, the subquery returns the result as **xml** type and no entitization occurs.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID AS "@ProductModelID",
       Name AS "@ProductModelName",
@@ -341,7 +341,7 @@ This is the result:
 The following query is similar to example C, except that it uses `WITH XMLNAMESPACES` to include namespaces in the XML result. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 WITH XMLNAMESPACES ('uri1' AS ns1,  DEFAULT 'uri2')
 SELECT ProductModelID AS "@ns1:ProductModelID",

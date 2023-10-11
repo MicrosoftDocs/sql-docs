@@ -10,7 +10,7 @@ DECLARE @publication AS sysname;
 DECLARE @article AS sysname;
 DECLARE @owner AS sysname;
 DECLARE @snapshot_share AS sysname;
-SET @publicationDB = N'AdventureWorks2012'; 
+SET @publicationDB = N'AdventureWorks2022'; 
 SET @publication = N'AdvWorksSalesOrdersMergeAltSnapshot'; 
 SET @article = N'SpecialOffer';
 SET @owner = N'Sales';

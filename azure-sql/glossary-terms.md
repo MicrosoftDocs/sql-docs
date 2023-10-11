@@ -12,7 +12,7 @@ ms.topic: reference
 ms.custom: sqldbrb=4
 ---
 # Azure SQL glossary of terms
-[!INCLUDE[appliesto-asf](./includes/appliesto-asf.md)] 
+[!INCLUDE[appliesto-sqldb-sqlmi-sqlvm](./includes/appliesto-sqldb-sqlmi-sqlvm.md)] 
 
 ## Azure SQL Database
 

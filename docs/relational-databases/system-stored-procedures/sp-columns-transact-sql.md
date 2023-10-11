@@ -91,7 +91,7 @@ sp_columns [ @table_name = ] object
  The following example returns column information for a specified table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
    @table_owner = N'HumanResources';  

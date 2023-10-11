@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)
 ```
 
-## Modifying data with table-valued parameters (transact-SQL)
+## Modifying data with table-valued parameters (Transact-SQL)
 
 Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement. For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.
 

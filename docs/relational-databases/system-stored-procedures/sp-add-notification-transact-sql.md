@@ -55,7 +55,7 @@ The method by which the operator is notified. *@notification_method* is **tinyin
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

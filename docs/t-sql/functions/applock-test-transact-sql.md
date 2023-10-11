@@ -66,7 +66,7 @@ Two users (**User A** and **User B**), with separate sessions, run the following
 **User A** runs:
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 BEGIN TRAN;  
 DECLARE @result INT;  
@@ -82,7 +82,7 @@ GO
 **User B** then runs:
   
 ```sql
-Use AdventureWorks2012;  
+Use AdventureWorks2022;  
 GO  
 BEGIN TRAN;  
 SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');  

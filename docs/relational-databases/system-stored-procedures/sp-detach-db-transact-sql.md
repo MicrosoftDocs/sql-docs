@@ -100,7 +100,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 ```  
 USE master;  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET SINGLE_USER;  
 GO  
 ```  
@@ -118,13 +118,13 @@ GO
  The following example detaches the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database with *skipchecks* set to true.  
   
 ```  
-EXEC sp_detach_db 'AdventureWorks2012', 'true';  
+EXEC sp_detach_db 'AdventureWorks2022', 'true';  
 ```  
   
  The following example detaches the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and keeps the full-text index files and the metadata of the full-text index. This command runs UPDATE STATISTICS, which is the default behavior.  
   
 ```  
-exec sp_detach_db @dbname='AdventureWorks2012'  
+exec sp_detach_db @dbname='AdventureWorks2022'  
     , @keepfulltextindexfile='true';  
 ```  
   

@@ -18,7 +18,7 @@ dev_langs:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that allow OLE Automation objects to be used within a [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] blocks access to OLE Automation stored procedures because this component is turned off as part of the security configuration for this server. A system administrator can enable access to OLE Automation procedures by using `sp_configure`. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that allow OLE Automation objects to be used within a [!INCLUDE [tsql](../../includes/tsql-md.md)] batch. By default, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] blocks access to OLE Automation stored procedures because this component is turned off as part of the security configuration for this server. A system administrator can enable access to OLE Automation procedures by using `sp_configure`. For more information, see [Surface Area Configuration](../security/surface-area-configuration.md).
 
 - [sp_OACreate](sp-oacreate-transact-sql.md)
 - [sp_OADestroy](sp-oadestroy-transact-sql.md)

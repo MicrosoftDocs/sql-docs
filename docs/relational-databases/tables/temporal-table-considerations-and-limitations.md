@@ -3,11 +3,11 @@ title: "Temporal table considerations and limitations"
 description: "Considerations and limitations to be aware of when working with temporal tables."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 11/22/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # Temporal table considerations and limitations
 
@@ -15,9 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning:
 
-- A temporal table must have a primary key defined in order to correlate records between the current table and the history table, and the history table can't have a primary key defined.
+- A temporal table must have a primary key defined, in order to correlate records between the current table and the history table, and the history table can't have a primary key defined.
 
-- The `SYSTEM_TIME` period columns used to record the `ValidFrom` and `ValidTo` values must be defined with a datatype of **datetime2**.
+- The `SYSTEM_TIME` period columns used to record the `ValidFrom` and `ValidTo` values must be defined with a data type of **datetime2**.
 
 - Temporal syntax works on tables or views that are *stored locally* in the database. With remote objects such as tables on a linked server, or external tables, you can't use the `FOR` clause or period predicates directly in the query.
 
@@ -27,11 +27,11 @@ There are some considerations and limitations to be aware of when working with t
 
 - If current table is partitioned, the history table is created on default file group because partitioning configuration isn't replicated automatically from the current table to the history table.
 
-- Temporal and history tables can't be FileTable and can contain columns of any supported data type other than FILESTREAM, since FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and thus system versioning can't be guaranteed.
+- Temporal and history tables can't be FileTable and can contain columns of any supported data type other than FILESTREAM, since FileTable and FILESTREAM allow data manipulation outside of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] and thus system versioning can't be guaranteed.
 
 - A node or edge table can't be created as or altered to a temporal table.
 
-- While temporal tables support blob data types, such as **(n)varchar(max)**, **varbinary(max)**, **(n)text**, and **image**, they'll incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
+- While temporal tables support blob data types, such as **(n)varchar(max)**, **varbinary(max)**, **(n)text**, and **image**, they incur significant storage costs and have performance implications due to their size. As such, when designing your system, care should be taken when using these data types.
 
 - History table must be created in the same database as the current table. Temporal querying over linked servers isn't supported.
 
@@ -41,7 +41,7 @@ There are some considerations and limitations to be aware of when working with t
 
 - Online option (`WITH (ONLINE = ON`) has no effect on `ALTER TABLE ALTER COLUMN` in a system-versioned temporal table. `ALTER` column isn't performed as an online operation, regardless of which value was specified for the ONLINE option.
 
-- `INSERT` and `UPDATE` statements can't reference the `SYSTEM_TIME` period columns. Attempts to insert values directly into these columns will be blocked.
+- `INSERT` and `UPDATE` statements can't reference the `SYSTEM_TIME` period columns. Attempts to insert values directly into these columns are blocked.
 
 - `TRUNCATE TABLE` isn't supported while `SYSTEM_VERSIONING` is `ON`.
 
@@ -66,7 +66,7 @@ There are some considerations and limitations to be aware of when working with t
 
 - Regular queries only affect data in the current table. To query data in the history table, you must use temporal queries. For more information, see [Querying data in a system-versioned temporal table](querying-data-in-a-system-versioned-temporal-table.md).
 
-- An optimal indexing strategy will include a clustered columns store index and / or a B-tree rowstore index on the current table and a clustered columnstore index on the history table for optimal storage size and performance. If you create / use your own history table, we strongly recommend that you create this type of index consisting of period columns starting with the end of period column, to speed up temporal querying and speed up the queries that are part of the data consistency check. The default history table has a clustered rowstore index created for you based on the period columns (end, start). At a minimum, a nonclustered rowstore index is recommended.
+- An optimal indexing strategy includes a clustered columns store index and/or a B-tree rowstore index on the current table and a clustered columnstore index on the history table for optimal storage size and performance. If you create/use your own history table, we strongly recommend that you create this type of index consisting of period columns starting with the end of period column, to speed up temporal querying and speed up the queries that are part of the data consistency check. The default history table has a clustered rowstore index created for you based on the period columns (end, start). At a minimum, a nonclustered rowstore index is recommended.
 
 - The following objects/properties aren't replicated from the current to the history table when the history table is created:
   - Period definition
@@ -83,13 +83,13 @@ There are some considerations and limitations to be aware of when working with t
 
 [!INCLUDE [sql-b-tree](../../includes/sql-b-tree.md)]
 
-## See also
+## Next steps
 
-- [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
-- [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)
-- [Temporal Table System Consistency Checks](../../relational-databases/tables/temporal-table-system-consistency-checks.md)
-- [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md)
-- [Temporal Table Security](../../relational-databases/tables/temporal-table-security.md)
-- [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-- [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
-- [Temporal Table Metadata Views and Functions](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)
+- [Temporal Tables](temporal-tables.md)
+- [Getting Started with System-Versioned Temporal Tables](getting-started-with-system-versioned-temporal-tables.md)
+- [Temporal Table System Consistency Checks](temporal-table-system-consistency-checks.md)
+- [Partitioning with Temporal Tables](partitioning-with-temporal-tables.md)
+- [Temporal Table Security](temporal-table-security.md)
+- [Manage Retention of Historical Data in System-Versioned Temporal Tables](manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
+- [System-Versioned Temporal Tables with Memory-Optimized Tables](system-versioned-temporal-tables-with-memory-optimized-tables.md)
+- [Temporal Table Metadata Views and Functions](temporal-table-metadata-views-and-functions.md)

@@ -41,13 +41,13 @@ The following examples show the layout of a non-XML format file and of an XML fo
 The following non-XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Fmt -n -T
 ```
 
 The `bcp` command defaults to a local, default instance of SQL Server with Windows Authentication. You can specify other instance and login information as desired, for more information see [bcp Utility](../../tools/bcp-utility.md). For example, to specify a remote server named instance with Windows Authentication, use:
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T -S servername/instancename
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Fmt -n -T -S servername/instancename
 ```
 
 The contents of this format file are as follows, starting with the major version number of SQL Server, and the table metadata information.
@@ -68,7 +68,7 @@ For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../../rela
 The following XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.
 
 ```cmd
-bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
+bcp AdventureWorks2022.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 ```
 
 The format file contains:

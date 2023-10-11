@@ -117,7 +117,7 @@ This statement returns 1 if the index is used to enforce uniqueness of the full-
 The following example inquires whether the `PK_Document_DocumentNode` index is used to enforce the uniqueness of the full-text key column, as follows:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 SELECT INDEXPROPERTY(OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey');
 ```
@@ -139,7 +139,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFulltextKeyColumn' ) AS '
 The following example returns the identifier of the full-text key column or NULL. NULL implies that you're using an invalid index name, the index name doesn't correspond to the table, the table doesn't exist, or so forth.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');
 GO
@@ -148,7 +148,7 @@ GO
 The following example shows how to use the identifier of the unique key column to obtain the name of the column.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 DECLARE @key_column SYSNAME

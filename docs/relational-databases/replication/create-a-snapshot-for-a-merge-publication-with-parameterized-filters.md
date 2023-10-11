@@ -211,7 +211,7 @@ REM In a batch file, commands must be made in a single line.
 REM Run the Snapshot agent from the command line to generate the standard snapshot   
 REM schema and other files.   
 SET DistPub=%computername%  
-SET PubDB=AdventureWorks2012   
+SET PubDB=AdventureWorks2022   
 SET PubName=AdvWorksSalesPersonMerge  
   
 "C:\Program Files\Microsoft SQL Server\120\COM\SNAPSHOT.EXE" -Publication %PubName%    
@@ -227,7 +227,7 @@ PAUSE
 REM Run the Snapshot agent from the command line, this time to generate   
 REM the bulk copy (.bcp) data for each Subscriber partition.    
 SET DistPub=%computername%  
-SET PubDB=AdventureWorks2012   
+SET PubDB=AdventureWorks2022   
 SET PubName=AdvWorksSalesPersonMerge  
 SET SnapshotDir=\\%DistPub%\repldata\unc\fernando  
   
@@ -248,8 +248,8 @@ REM Run the Merge Agent for each subscription to apply the partitioned
 REM snapshot for each Subscriber.    
 SET Publisher = %computername%  
 SET Subscriber = %computername%  
-SET PubDB = AdventureWorks2012   
-SET SubDB = AdventureWorks2012Replica   
+SET PubDB = AdventureWorks2022   
+SET SubDB = AdventureWorks2022Replica   
 SET PubName = AdvWorksSalesPersonMerge   
 SET SnapshotDir=\\%DistPub%\repldata\unc\fernando  
   

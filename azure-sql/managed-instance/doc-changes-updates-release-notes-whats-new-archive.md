@@ -16,8 +16,8 @@ ms.custom: references_regions
 [!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> - [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new-archive.md)
-> - [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md)
+> - [Azure SQL Database](../database/doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new-archive.md?view=azuresql-mi&preserve-view=true)
 
 This article summarizes older documentation changes associated with new features and improvements in the releases of [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance). To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md).
 
@@ -42,7 +42,7 @@ The following changes were added to SQL Managed Instance and the documentation i
 | **16 TB support for General Purpose preview** | Support has been added for allocation of up to 16 TB of space for SQL Managed Instance in the General Purpose service tier. See [resource limits](resource-limits.md) to learn more. This instance offer is currently in preview. |
 | **Parallel backup** | It's now possible to take backups in parallel for SQL Managed Instance in the General Purpose tier, enabling faster backups. See the [Parallel backup for better performance](https://techcommunity.microsoft.com/t5/azure-sql/parallel-backup-for-better-performance-in-sql-managed-instance/ba-p/2421762) blog entry to learn more. |
 | **Azure AD-only authentication preview** | It's now possible to restrict authentication to your Azure SQL Managed Instance only to Azure Active Directory users. This feature is currently in preview. To learn more, see [Azure AD-only authentication](../database/authentication-azure-ad-only-authentication.md). |
-| **Resource Health monitor** | Use Resource Health to monitor the health status of your Azure SQL Managed Instance. See [Resource health](../database/resource-health-to-troubleshoot-connectivity.md) to learn more. |
+| **Resource Health monitor** | Use Resource Health to monitor the health status of your Azure SQL Managed Instance. For more information, see [Resource health](../managed-instance/resource-health-to-troubleshoot-connectivity.md?view=azuresql-mi&preserve-view=true). |
 | **Granular permissions for data masking GA** | Granular permissions for dynamic data masking for Azure SQL Managed Instance is now generally available (GA). To learn more, see [Dynamic data masking](../database/dynamic-data-masking-overview.md#permissions). |
 | **User-defined routes (UDR) tables** | Service-aided subnet configuration for Azure SQL Managed Instance now makes use of service tags for user-defined routes (UDR) tables. See the [connectivity architecture](connectivity-architecture-overview.md) to learn more. |
 | **Audit management operations** | The ability to audit SQL Managed Instance operations is now generally available (GA). |

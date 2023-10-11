@@ -4,7 +4,7 @@ description: "Describes SqlClient support for LocalDB databases."
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: v-kaywon
-ms.date: "08/15/2019"
+ms.date: "08/28/2023"
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Beginning in SQL Server code name Denali, a lightweight version of SQL Server, called LocalDB, will be available. This topic discusses how to connect to a LocalDB database.  
+Beginning in SQL Server 2012, a lightweight version of SQL Server, called LocalDB, is available. This article discusses how to connect to a LocalDB database.  
   
 ## Remarks  
 For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see SQL Server Books Online.  
@@ -24,7 +24,7 @@ To summarize what you can do with LocalDB:
   
 - Use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, `sqlcmd -S (localdb)\myinst`.  
   
-- Use the `AttachDBFilename` connection string keyword to add a database to your LocalDB instance. When using `AttachDBFilename`, if you do not specify the name of the database with the `Database` connection string keyword, the database will be removed from the LocalDB instance when the application closes.  
+- Use the `AttachDBFilename` connection string keyword to add a database to your LocalDB instance. When using `AttachDBFilename`, if you don't specify the name of the database with the `Database` connection string keyword, the database is removed from the LocalDB instance when the application closes.  
   
 - Specify a LocalDB instance in your connection string. For example, your instance name is `myInstance`, the connection string would include:  
   
@@ -32,11 +32,14 @@ To summarize what you can do with LocalDB:
 server=(localdb)\\myInstance  
 ```  
   
-`User Instance=True` is not allowed when connecting to a LocalDB database.  
+`User Instance=True` isn't allowed when connecting to a LocalDB database.  
   
-You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041). If you will use sqlcmd.exe to modify data in your LocalDB instance, you will need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.  
+You can download LocalDB from [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041). If you use sqlcmd.exe to modify data in your LocalDB instance, you need sqlcmd from SQL Server 2012, which you can also get from the SQL Server 2012 Feature Pack.  
   
-## Programmatically create a named instance  
+## Programmatically create a named instance
+
+[!INCLUDE [appliesto-netfx-xxxx-xxxx-md](../../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
+
 An application can create a named instance and specify a database as follows:  
   
 - Specify the LocalDB instances to create in the app.config file, as follows.  The version number of the instance should be the same as the version number of your LocalDB installation.  
@@ -47,7 +50,7 @@ An application can create a named instance and specify a database as follows:
       <configSections>  
         <section  
         name="system.data.localdb"  
-        type="System.Data.LocalDBConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>  
+        type="Microsoft.Data.LocalDBConfigurationSection,Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5"/>  
       </configSections>  
       <system.data.localdb>  
         <localdbinstances>  

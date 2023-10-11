@@ -3,7 +3,7 @@ title: "SQL Server 2016 & 2017: Hardware & software requirements"
 description: A list of hardware, software, and operating system requirements for installing and running SQL Server 2016 and SQL Server 2017.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: "09/16/2021"
+ms.date: "08/04/2023"
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -61,8 +61,8 @@ For hardware and software requirements for other versions of SQL Server, see:
   
 |Component|Requirement|  
 |---------------|-----------------|  
-|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br /><br />Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).<br /><br />Installing SQL Server on computers with the NTFS or ReFS file formats is recommended. The FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems.<br /><br />Read-only, mapped, or compressed drives are blocked during installation. |  
-|Drive|A DVD drive, as appropriate, is required for installation from disc.  |  
+|Hard Disk|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires a minimum of 6 GB of available hard-disk space.<br /><br />Disk space requirements vary with the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] components you install. For more information, see [Hard Disk Space Requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this article. For information on supported storage types for data files, see [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).<br /><br />Installing SQL Server on computers with the NTFS or ReFS file formats is recommended. The FAT32 file system is supported but not recommended as it is less secure than the NTFS or ReFS file systems.<br /><br />Read-only, mapped, or compressed drives are blocked during installation. |  
+|Drive|A DVD drive, as appropriate, is required for installation from disk.  |  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
 |Internet|Internet functionality requires Internet access (fees may apply).|  
 |Memory \*|**Minimum:**<br /><br />Express Editions: 512 MB<br /><br />All other editions: 1 GB<br /><br />**Recommended:**<br /><br />Express Editions: 1 GB<br /><br />All other editions: At least 4 GB and should be increased as database size increases to ensure optimal performance.|  
@@ -84,7 +84,7 @@ The following software requirements apply to all installations:
 |Component|Requirement|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] and later require [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 for the Database Engine, Master Data Services, or  Replication. SQL Server setup automatically installs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. You can also manually install [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] from [Microsoft .NET Framework 4.6 (Web Installer) for Windows](https://support.microsoft.com/kb/3045560).<br /><br />For more information, recommendations, and guidance about [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 see [.NET Framework Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br /><br />[!INCLUDE[win81](../../includes/win81-md.md)], and [!INCLUDE[winserver2012r2](../../includes/winserver2012r2-md.md)] require [KB2919355](https://support.microsoft.com/kb/2919355) before installing [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.<br /><br />**Note:** Support for .NET Framework 4.5.2, 4.6, and 4.6.1 ended on April 26, 2022.<ul><li>SQL Server 2016 (13.x) and later require .NET Framework 4.6 for Database Engine, Master Data Services, or Replication (SQL Server setup automatically installs .NET Framework). You can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do an in-place upgrade, and they are backward compatible. For more information, check [Download .NET Framework 4.8 \| Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48).</li><li>SQL Server 2014 and SQL Server 2012 use .NET Framework 3.5 SP1, which is supported till 2029, so this retirement doesn't impact them.</li></ul>|  
-|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br /><br />**Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios.<br /><br />**Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br />For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP, and VIA.<br /><br />**Note:** VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and fails after an instance failover. It is therefore not recommended and should only be used in specific scenarios.<br /><br />**Important:** The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br />For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   
@@ -138,7 +138,7 @@ The following table shows which editions of SQL Server 2017 are compatible with 
 
 ### Server Core support for SQL Server 2017
 
-Installing SQL Server 2017 on Server Core mode is supported by the following editions of Windows Server:
+The following editions of Windows server support installing SQL Server 2017 on Server Core mode:
 
 :::row:::
     :::column:::
@@ -244,7 +244,7 @@ For minimum version requirements to install [!INCLUDE[ssNoVersion](../../include
 
 ### Server Core support for SQL Server 2016
 
-Installing SQL Server 2016 on Server Core mode is supported by the following editions of Windows Server:
+The following editions of Windows server support installing SQL Server 2016 on Server Core mode:
 
 :::row:::
     :::column:::
@@ -345,7 +345,7 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
   
 -   Local Disk 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently supports disk drives that have standard native sector sizes of 512 bytes and 4 KB.  Hard disks with sector sizes larger than 4 KB may cause errors when attempting to store [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data files on them.  See [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/kb/926930) for more information on hard disk sector-size support in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Troubleshoot errors related to system disk sector size greater than 4 KB](/troubleshoot/sql/admin/troubleshoot-os-4kb-disk-sector-size).
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online.
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource fails to come online.
 -   Shared Storage  
 -   [Storage Spaces Direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 -   SMB File Share  
@@ -355,13 +355,13 @@ For more information on installing SQL Server on Server Core, see [Install SQL S
   
   
 ##  <a name="DC_support"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Domain Controller  
- For security reasons, we recommend that you do not install [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will not block installation on a computer that is a domain controller, but the following limitations apply:  
+ For security reasons, we recommend that you do not install [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] on a domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup doesn't block installation on a computer that is a domain controller, but the following limitations apply:  
   
 -   You cannot run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services on a domain controller under a local service account.    
 -   After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you cannot change the computer from a domain member to a domain controller. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain controller.    
 -   After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed on a computer, you cannot change the computer from a domain controller to a domain member. You must uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before you change the host computer to a domain member.   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instances are not supported where cluster nodes are domain controllers.   
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not supported on a read-only domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup cannot create security groups or provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup will fail. 
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not supported on a read-only domain controller. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup cannot create security groups or provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on a read-only domain controller. In this scenario, Setup fails. 
 
   > [!NOTE]
   > This restriction also applies to installations on domain member nodes.
@@ -378,7 +378,7 @@ You can get relevant installation media from the following locations:
 - [SQL Server evaluation center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
 - [Most recent cumulative updates](/troubleshoot/sql/releases/download-and-install-latest-updates?bc=%2fsql%2fbreadcrumb%2ftoc.json&toc=%2fsql%2ftoc.json)
 
-Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart) though SQL Server on a virtual machine will be slower than running natively because of the overhead of virtualization.
+Alternatively, you can create an [Azure virtual machine already running SQL Server](/azure/azure-sql/virtual-machines/windows/sql-vm-create-portal-quickstart).
   
   
 ## Next steps

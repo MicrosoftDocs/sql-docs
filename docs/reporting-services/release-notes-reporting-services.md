@@ -4,13 +4,14 @@ description: Learn details about the changes in SQL Server Reporting Services (S
 author: casualoak
 ms.author: petebro
 ms.reviewer: maggies
-ms.date: 06/20/2023
+ms.date: 07/25/2023
 ms.service: reporting-services
 ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2017"
 ---
+
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
@@ -94,6 +95,10 @@ Release Candidate 0 (RC0)
 ::: moniker-end
 
 ## SQL Server 2019 Reporting Services
+
+## 15.0.8599.29221, 2023/07/20
+*(Product Version: 15.0.1102.1084)*
+- Added support for GB18030-2022 Chinese government standard
 
 ## 15.0.8563.17333, 2023/06/20
 *(Product Version: 15.0.1102.1075)*
@@ -338,3 +343,4 @@ Initial release.
 [What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+

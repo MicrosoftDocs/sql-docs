@@ -53,10 +53,10 @@ USER_ID ( [ 'user' ] )
  USER_ID can be used in a select list, in a WHERE clause, and anywhere an expression is allowed. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## Examples  
- The following example returns the identification number for the `AdventureWorks2012` user `Harold`.  
+ The following example returns the identification number for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] user `Harold`.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 SELECT USER_ID('Harold');  
 GO  
 ```  

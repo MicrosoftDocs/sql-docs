@@ -61,7 +61,7 @@ To create or manage maintenance plans, you must be a member of the **sysadmin** 
 
 1. Copy and paste the following example into the query window and select **Execute**.
 
-   In this example, the code creates a daily SQL Agent job that runs at 23:30 (11:30 p.m.), which reorganizes all the indexes on the `HumanResources.Employee` table in the `AdventureWorks2019` database.
+   In this example, the code creates a daily SQL Agent job that runs at 23:30 (11:30 p.m.), which reorganizes all the indexes on the `HumanResources.Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
    ```sql
    USE [msdb];
@@ -75,42 +75,42 @@ To create or manage maintenance plans, you must be a member of the **sysadmin** 
    EXEC [dbo].[sp_add_jobstep] @job_name = N'HistoryCleanupTask_1',
                                @step_name = N'Reorganize all indexes on HumanResources.Employee table',
                                @subsystem = N'TSQL',
-                               @command = N'USE [AdventureWorks2019];
+                               @command = N'USE [AdventureWorks2022];
    GO
    ALTER INDEX [AK_Employee_LoginID]
    ON [HumanResources].[Employee]
    REORGANIZE
    WITH (LOB_COMPACTION = ON);
    GO
-   USE [AdventureWorks2019];
+   USE [AdventureWorks2022];
    GO
    ALTER INDEX [AK_Employee_NationalIDNumber]
    ON [HumanResources].[Employee]
    REORGANIZE
    WITH (LOB_COMPACTION = ON);
    GO
-   USE [AdventureWorks2019];
+   USE [AdventureWorks2022];
    GO
    ALTER INDEX [AK_Employee_rowguid]
    ON [HumanResources].[Employee]
    REORGANIZE
    WITH (LOB_COMPACTION = ON);
    GO
-   USE [AdventureWorks2019];
+   USE [AdventureWorks2022];
    GO
    ALTER INDEX [IX_Employee_OrganizationLevel_OrganizationNode]
    ON [HumanResources].[Employee]
    REORGANIZE
    WITH (LOB_COMPACTION = ON);
    GO
-   USE [AdventureWorks2019];
+   USE [AdventureWorks2022];
    GO
    ALTER INDEX [IX_Employee_OrganizationNode]
    ON [HumanResources].[Employee]
    REORGANIZE
    WITH (LOB_COMPACTION = ON);
    GO
-   USE [AdventureWorks2019];
+   USE [AdventureWorks2022];
    GO
    ALTER INDEX [PK_Employee_BusinessEntityID]
    ON [HumanResources].[Employee]

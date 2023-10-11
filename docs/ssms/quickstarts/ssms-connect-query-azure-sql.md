@@ -49,8 +49,8 @@ The article demonstrates the following steps:
    | | Azure Active Directory <sup>1</sup> | |
    | | - Universal with MFA | See [Using multi-factor Azure Active Directory authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview). |
    | | - Password<br />- Integrated<br />- Service Principal | See [Azure Active Directory service principal with Azure SQL](/azure/azure-sql/database/authentication-aad-service-principal). |
-   | | - Managed Identity | See [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity). |
-   | | - Default | |
+   | | - Managed Identity | See [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).<br />Connecting to a SQL instance with SSMS using a managed identity requires an Azure VM. See [Use a Windows VM system-assigned managed identity to access Azure SQL](/azure/active-directory/managed-identities-azure-resources/tutorial-windows-vm-access-sql)  |
+   | | - Default | The default option can be used when connecting using any Azure AD authentication mode that's passwordless and noninteractive. |
    | | SQL Server Authentication | Use **SQL Server Authentication** for Azure SQL to connect. |
    | **Login** | Server account user ID | The user ID from the server account used to create the server. |
    | **Password** | Server account password | The password from the server account used to create the server. |
@@ -89,19 +89,19 @@ Now let's create a database named TutorialDB by following the below steps:
 
 1. Paste the following T-SQL code snippet into the query window:
 
-```sql
-IF NOT EXISTS (
-   SELECT name
-   FROM sys.databases
-   WHERE name = N'TutorialDB'
-)
-CREATE DATABASE [TutorialDB];
-GO
+   ```sql
+   IF NOT EXISTS (
+      SELECT name
+      FROM sys.databases
+      WHERE name = N'TutorialDB'
+   )
+   CREATE DATABASE [TutorialDB];
+   GO
 
-ALTER DATABASE [TutorialDB]
-SET QUERY_STORE = ON;
-GO
-```
+   ALTER DATABASE [TutorialDB]
+   SET QUERY_STORE = ON;
+   GO
+   ```
 
 1. Execute the query by selecting **Execute** or selecting F5 on your keyboard.
 

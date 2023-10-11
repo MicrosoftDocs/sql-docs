@@ -266,7 +266,7 @@ Beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can se
  For information about the recommended follow up after removing an availability database from an availability group, see [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  
   
  ADD REPLICA ON  
- Specifies from one to eight SQL server instances to host secondary replicas in an availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause.  
+ Specifies from one to eight SQL Server instances to host secondary replicas in an availability group.  Each replica is specified by its server instance address followed by a WITH (...) clause.  
   
  Supported only on the primary replica.  
   

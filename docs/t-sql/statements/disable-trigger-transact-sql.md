@@ -75,7 +75,8 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  To disable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a user must have CONTROL SERVER permission on the server. To disable a DDL trigger with database scope (ON DATABASE), at a minimum, a user must have ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
-The following examples are described in the AdventureWorks2012 database.
+
+[!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
   
 ### A. Disabling a DML trigger on a table  
  The following example disables trigger `uAddress` that was created on table `Person`.  

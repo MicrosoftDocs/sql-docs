@@ -113,7 +113,7 @@ If a *\<FilterExpression>* is not specified for an object, all the objects at th
 URNs are a subset of query expressions. Each URN forms a fully-qualified reference to a single object. A typical URN uses the Name property to identify a single object at each node. For example, this URN refers to a specific column:  
   
 ```powershell
-Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
+Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2022']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
 ```
   
 ## Examples  
@@ -136,28 +136,28 @@ Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, '
  This query expression enumerates all of [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tables that are not in the **Production** schema and contain the word History in the table name:  
   
 ```  
-Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
+Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2022']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
 ### D. Not supplying a filter expression for the final node  
- This query expression enumerates all the columns in the **AdventureWorks2012.Sales.SalesPerson** table:  
+ This query expression enumerates all the columns in the **AdventureWorks2022.Sales.SalesPerson** table:  
   
 ```  
-Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='Sales' and @Name='SalesPerson']/Columns  
+Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2022"]/Table[@Schema='Sales' and @Name='SalesPerson']/Columns  
 ```  
   
 ### E. Enumerating objects using datetime  
  This query expression enumerates all the tables that are created in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database at a specific time:  
   
 ```  
-Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
+Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2022"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
 ### F. Enumerating objects using is_null  
  This query expression enumerates all the tables in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database that do not have NULL for their date last modified property:  
   
 ```  
-Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
+Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2022"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
 ## See Also

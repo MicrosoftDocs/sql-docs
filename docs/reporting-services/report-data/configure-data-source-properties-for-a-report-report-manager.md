@@ -33,7 +33,7 @@ helpviewer_keywords:
      The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2022  
     ```  
   
 8.  For **Connect using**, specify how credentials are obtained when the report runs:  

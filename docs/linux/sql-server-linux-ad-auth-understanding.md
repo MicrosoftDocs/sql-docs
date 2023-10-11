@@ -8,7 +8,9 @@ ms.date: 03/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Understand Active Directory authentication for SQL Server on Linux and containers
 
@@ -151,7 +153,7 @@ Group refresh requires the following two conditions:
 - Network connectivity between the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance and the on-premises Active Directory domain.
 - Two-way trust between the domain that [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is connected to, and the on-premises Active Directory domain. For more information, see [Understanding Active Directory](/windows-server/identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview#understanding-active-directory).
 
-## Next steps
+## Related content
 
 - [Troubleshooting Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-troubleshooting.md)
 - [Rotating Keytabs for SQL Server on Linux](sql-server-linux-ad-auth-rotate-keytabs.md)

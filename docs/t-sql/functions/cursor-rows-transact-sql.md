@@ -52,7 +52,7 @@ This returns the number of qualifying rows currently in the last cursor opened o
 This example first declares a cursor, and then uses `SELECT` to display the value of `@@CURSOR_ROWS`. The setting has a value of `0` before the cursor opens and then has a value of `-1`, to indicate that the cursor keyset populates asynchronously.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT @@CURSOR_ROWS;  
 DECLARE Name_Cursor CURSOR FOR  

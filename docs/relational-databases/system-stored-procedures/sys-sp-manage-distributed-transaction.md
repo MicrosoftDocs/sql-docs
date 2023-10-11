@@ -8,7 +8,7 @@ ms.date: 07/06/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current"
 ---
 # sys.sp_manage_distributed_transaction (Transact-SQL)
 
@@ -41,7 +41,7 @@ Specifies operation to perform. Valid values are `commit`, `abort`, or `forget`.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

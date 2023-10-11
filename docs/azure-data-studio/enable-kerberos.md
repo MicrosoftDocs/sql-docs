@@ -96,7 +96,7 @@ Here's the expected output:
 * Success
 ```
 
-### [RedHat Enterprise Linux](#tab/rhel)
+### [Red Hat Enterprise Linux](#tab/rhel)
 
 ```bash
 sudo yum install realmd krb5-workstation

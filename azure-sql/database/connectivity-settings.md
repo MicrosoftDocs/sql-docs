@@ -9,7 +9,7 @@ ms.date: 10/21/2022
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ms.devlang: azurecli
 ---
 
@@ -56,7 +56,7 @@ It's possible to change the public network access via the Azure portal, Azure Po
 
 ### [Portal](#tab/azure-portal)
 
-To enable public network access for the logical server hosting your databases, go to the **Networking page** in the [Azure portal](https://portal.azure.com), choose the **Public access** tab, and then set the **Public network access** to **Select networks**. 
+To enable public network access for the logical server hosting your databases, go to the **Networking page** in the [Azure portal](https://portal.azure.com) for your [logical server in Azure](logical-servers.md), choose the **Public access** tab, and then set the **Public network access** to **Select networks**. 
 
 
 From this page, you can add a virtual network rule, as well as configure firewall rules for your public endpoint. 

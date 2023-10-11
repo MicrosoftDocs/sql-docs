@@ -7,7 +7,9 @@ ms.date: "04/29/2021"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - sql-migration-content
 helpviewer_keywords:
   - "Installing the extension pack"
   - "SQL Server Database Objects"
@@ -58,7 +60,7 @@ To install the extension pack:
 8. Select the desired installation type and, click **Next**.
 
    > [!IMPORTANT]
-   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure Synapse Analytics do not support extension pack.
+   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and Azure Synapse Analytics do not support extension pack.
 
    If you are installing the extension pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
 

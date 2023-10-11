@@ -57,9 +57,9 @@ If *TraversedObject* isn't specified, *PropertyOrMethod* is required.
 
 If *PropertyOrMethod* isn't specified, the *TraversedObject* is returned as an object token output parameter from the OLE Automation stored procedure.
 
-If *PropertyOrMethod* is specified, the property or method of the *TraversedObject* is called, and the property value or method return value is returned as an output parameter from the OLE Automation stored procedure.
+If *PropertyOrMethod* is specified, the property or method of the *TraversedObject* is called. The property value or method return value is returned as an output parameter from the OLE Automation stored procedure.
 
-If any item in the *TraversedObject* list does not return an OLE object, an error is raised.
+If any item in the *TraversedObject* list doesn't return an OLE object, an error is raised.
 
 For more information about [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] OLE object syntax, see the [!INCLUDE [vbprvb](../../includes/vbprvb-md.md)] documentation.
 
@@ -74,12 +74,12 @@ The following are examples of object hierarchy syntax that use a SQL-DMO SQLServ
 EXEC @hr = sp_OAGetProperty @object,
    'Databases("AdventureWorks2022").Tables("Person.Address")',
    @table OUT
-  
+
 -- Get the Rows property of the AdventureWorks2022 Person.Address table.
 EXEC @hr = sp_OAGetProperty @object,
    'Databases("AdventureWorks2022").Tables("Person.Address").Rows',
    @rows OUT
-  
+
 -- Call the CheckTable method to validate the
 -- AdventureWorks2022 Person.Address table.
 EXEC @hr = sp_OAMethod @object,
@@ -89,5 +89,5 @@ EXEC @hr = sp_OAMethod @object,
 
 ## See also
 
-- [OLE Automation Sample Script](../../relational-databases/stored-procedures/ole-automation-sample-script.md)
+- [OLE Automation Sample Script](../stored-procedures/ole-automation-sample-script.md)
 - [OLE Automation stored procedures (Transact-SQL)](ole-automation-stored-procedures-transact-sql.md)

@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This script uses system tables and replication stored procedures to answer questions commonly asked about objects at the Distributor and Publisher. The script can be used "as-is" and can also provide the basis for customized scripts. The script might require two modifications to run in your environment:  
   
--   Change the line `use AdventureWorks2012` to use the name of your publication database.  
+-   Change the line `use AdventureWorks2022` to use the name of your publication database.  
   
 -   Remove the comments (`--`) from the line `exec sp_helparticle @publication='<PublicationName>'` and replace \<PublicationName> with the name of a publication.  
   
@@ -58,7 +58,7 @@ EXEC sp_helpsubscriberinfo;
   
 --********** Execute at the Publisher in the publication database **********--  
   
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 go  
   
 --What are the snapshot and transactional publications in this database?   

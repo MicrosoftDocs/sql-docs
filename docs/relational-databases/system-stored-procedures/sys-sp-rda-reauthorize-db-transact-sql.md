@@ -68,7 +68,7 @@ Requires **db_owner** permissions.
 
 When you run [sys.sp_rda_reauthorize_db (Transact-SQL)](sys-sp-rda-reauthorize-db-transact-sql.md) to reconnect to the remote Azure database, this operation automatically resets the query mode to `LOCAL_AND_REMOTE`, which is the default behavior for Stretch Database. That is, queries return results from both local and remote data.
 
-## Example
+## Examples
 
 The following example restores the authenticated connection between a local database enabled for Stretch and the remote database. It makes a copy of the remote data (recommended) and connects to the new copy.
 

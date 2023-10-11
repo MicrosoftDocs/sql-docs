@@ -48,7 +48,7 @@ CollectionAggregate ( geography_operand )
  The following example returns a `GeometryCollection` instance that contains a set of **geography** objects.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation  
  FROM Person.Address  

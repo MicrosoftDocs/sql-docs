@@ -62,19 +62,19 @@ helpviewer_keywords:
     ```  
     USE master;  
     GO  
-    ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
+    ALTER DATABASE AdventureWorks2022 SET RECOVERY FULL;  
     ```  
   
 2.  Create a full database back of the database by using the following BACKUP statement:  
   
     ```  
-    BACKUP DATABASE AdventureWorks2012 TO DISK = 'C:\AdventureWorks2012_Data.bck';  
+    BACKUP DATABASE AdventureWorks2022 TO DISK = 'C:\AdventureWorks2022_Data.bck';  
     ```  
   
 3.  Create a routine log backup:  
   
     ```  
-    BACKUP LOG AdventureWorks2012 TO DISK = 'C:\AdventureWorks2012_Log.bck';  
+    BACKUP LOG AdventureWorks2022 TO DISK = 'C:\AdventureWorks2022_Log.bck';  
     ```  
   
  The following example restores the backups that are created previously, after creating a tail-log backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. (This step assumes that the log disk can be accessed.)  
@@ -87,27 +87,27 @@ helpviewer_keywords:
 ```  
 /* Example of restoring a to the point of failure */  
 -- Step 1: Create a tail-log backup by using WITH NORECOVERY.  
-BACKUP LOG AdventureWorks2012  
-   TO DISK = 'C:\AdventureWorks2012_Log.bck'  
+BACKUP LOG AdventureWorks2022  
+   TO DISK = 'C:\AdventureWorks2022_Log.bck'  
    WITH NORECOVERY;  
 GO  
 -- Step 2: Restore the full database backup.  
-RESTORE DATABASE AdventureWorks2012  
-   FROM DISK = 'C:\AdventureWorks2012_Data.bck'  
+RESTORE DATABASE AdventureWorks2022  
+   FROM DISK = 'C:\AdventureWorks2022_Data.bck'  
    WITH NORECOVERY;  
 GO  
 -- Step 3: Restore the first transaction log backup.  
-RESTORE LOG AdventureWorks2012  
-   FROM DISK = 'C:\AdventureWorks2012_Log.bck'  
+RESTORE LOG AdventureWorks2022  
+   FROM DISK = 'C:\AdventureWorks2022_Log.bck'  
    WITH NORECOVERY;  
 GO  
 -- Step 4: Restore the tail-log backup.  
-RESTORE LOG AdventureWorks2012  
-   FROM  DISK = 'C:\AdventureWorks2012_Log.bck'  
+RESTORE LOG AdventureWorks2022  
+   FROM  DISK = 'C:\AdventureWorks2022_Log.bck'  
    WITH NORECOVERY;  
 GO  
 -- Step 5: Recover the database.  
-RESTORE DATABASE AdventureWorks2012  
+RESTORE DATABASE AdventureWorks2022  
    WITH RECOVERY;  
 GO  
 ```  

@@ -66,7 +66,7 @@ Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
  The following example returns information for the most current session.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT session_id, start_time, end_time, duration, scan_phase,  
     error_count, start_lsn, current_lsn, end_lsn, tran_count,  

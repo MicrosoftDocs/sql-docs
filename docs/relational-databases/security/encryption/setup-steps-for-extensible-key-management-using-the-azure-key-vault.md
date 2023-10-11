@@ -1,8 +1,8 @@
 ---
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault.
-author: Rupp29
-ms.author: arupp
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto, randolphwest
 ms.date: 03/20/2023
 ms.service: sql
@@ -353,7 +353,7 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 >  
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
-> - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
+> - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure operated by 21Vianet, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
 > - Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.
 > - **Starting with updated version 1.0.5.0 (TimeStamp: November 2020), the SQL Server Connector supports RSA 2048, RSA 3072, RSA-HSM 2048 and RSA-HSM 3072 keys.**
@@ -425,7 +425,7 @@ For a note about the minimum permission levels needed for each action in this se
 
    - Edit the `IDENTITY` argument (`ContosoEKMKeyVault`) to point to your Azure key vault.
      - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
-     - If you're using a *private Azure cloud* (for example, Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
+     - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
    - Replace the first part of the `SECRET` argument with the Azure Active Directory Client ID from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
 
      > [!IMPORTANT]  
@@ -438,7 +438,7 @@ For a note about the minimum permission levels needed for each action in this se
      CREATE CREDENTIAL sysadmin_ekm_cred
          WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
          -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Azure China 21Vianet
+         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Microsoft Azure operated by 21Vianet
          -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
                 --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
          SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'

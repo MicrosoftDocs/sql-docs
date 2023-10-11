@@ -8,6 +8,8 @@ ms.date: 12/09/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux
@@ -52,8 +54,7 @@ The following features are not supported:
 * Peer-to-Peer replication
 * Oracle publishing
 
-## Next steps
+## Related content
 
-[Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
-
-[Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)
+- [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
+- [Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)

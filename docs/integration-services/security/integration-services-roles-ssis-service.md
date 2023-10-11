@@ -35,7 +35,7 @@ helpviewer_keywords:
   
      The list of views includes: [catalog].[projects], [catalog].[packages], [catalog].[operations], [catalog].[extended_operation_info], [catalog].[operation_messages], [catalog].[event_messages], [catalog].[execution_data_statistics], [catalog].[execution_component_phases], [catalog].[execution_data_taps], [catalog].[event_message_context], [catalog].[executions], [catalog].[executables], [catalog].[executable_statistics], [catalog].[validations], [catalog].[execution_parameter_values], and [catalog].[execution_property_override_values].  
 
-By design, there are permissions granted on views and stored procedures that are assigned to the SQL server fixed role **public** role. The permissions don't give users access to execute or edit packages, only permissions to interact with the internal mechanism of the SSISDB which in turn determine actual permissions.
+By design, there are permissions granted on views and stored procedures that are assigned to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fixed **public** role. The permissions don't give users access to execute or edit packages, only permissions to interact with the internal mechanism of the SSISDB which in turn determine actual permissions.
   
 ## Roles in the msdb database  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the three fixed database-level roles, **db_ssisadmin**, **db_ssisltduser**, and **db_ssisoperator**, for controlling access to packages that are saved to the **msdb** database. You assign roles to a package using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The role assignments are saved to the **msdb** database.  

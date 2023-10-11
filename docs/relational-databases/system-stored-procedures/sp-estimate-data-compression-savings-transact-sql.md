@@ -4,7 +4,7 @@ description: "The sp_estimate_data_compression_savings system stored procedure r
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dimitri-furman, wiassaf, randolphwest
-ms.date: 08/18/2022
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -19,20 +19,20 @@ dev_langs:
 ---
 # sp_estimate_data_compression_savings (Transact-SQL)
 
-[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Returns the current size of the requested object and estimates the object size for the requested compression state. Compression can be evaluated for whole tables or parts of tables. This includes heaps, clustered indexes, nonclustered indexes, columnstore indexes, indexed views, and table and index partitions. The objects can be compressed by using row, page, columnstore or columnstore archive compression. If the table, index, or partition is already compressed, you can use this procedure to estimate the size of the table, index, or partition if it is recompressed or stored without compression.
+Returns the current size of the requested object and estimates the object size for the requested compression state. Compression can be evaluated for whole tables or parts of tables. This includes heaps, clustered indexes, nonclustered indexes, columnstore indexes, indexed views, and table and index partitions. The objects can be compressed by using row, page, columnstore or columnstore archive compression. If the table, index, or partition is already compressed, you can use this procedure to estimate the size of the table, index, or partition if it's recompressed or stored without compression.
 
 Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can compress off-row XML data in columns using the `xml` data type, reducing storage and memory requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md). `sp_estimate_data_compression_savings` supports XML compression estimates.
 
 > [!NOTE]  
-> Compression and `sp_estimate_data_compression_savings` are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2019](~/sql-server/editions-and-components-of-sql-server-2019.md).
->
+> Compression and `sp_estimate_data_compression_savings` aren't available in every edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
+>  
 > The `sys.sp_estimate_data_compression_savings` system stored procedure is available in Azure SQL Database and Azure SQL Managed Instance.
 
 To estimate the size of the object if it were to use the requested compression setting, this stored procedure samples the source object and loads this data into an equivalent table and index created in `tempdb`. The table or index created in `tempdb` is then compressed to the requested setting and the estimated compression savings is computed.
 
-To change the compression state of a table, index, or partition, use the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) statements. For general information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).
+To change the compression state of a table, index, or partition, use the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) statements. For general information about compression, see [Data Compression](../data-compression/data-compression.md).
 
 > [!NOTE]  
 > If the existing data is fragmented, you might be able to reduce its size without using compression by rebuilding the index. For indexes, the fill factor will be applied during an index rebuild. This could increase the size of the index.
@@ -80,7 +80,7 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later, NULL is als
 
 #### [ @xml_compression = ] *xml_compression*
 
-**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
+**Applies to**: [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Specifies whether to calculate savings for XML compression. *xml_compression* is **bit**, and can be NULL, 0, or 1. The default is NULL.
 
@@ -88,22 +88,22 @@ Specifies whether to calculate savings for XML compression. *xml_compression* is
 
 ## Return code values
 
-**0** (success) or **1** (failure)
+`0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 The following result set is returned to provide current and estimated size for the table, index, or partition.
 
-|Column name|Data type|Description|
-|-----------------|---------------|-----------------|
-|object_name|**sysname**|Name of the table or the indexed view.|
-|schema_name|**sysname**|Schema of the table or indexed view.|
-|index_id|**int**|Index ID of an index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index<br /><br /> > 1 = Nonclustered index|
-|partition_number|**int**|Partition number. Returns 1 for a nonpartitioned table or index.|
-|size_with_current_compression_setting (KB)|**bigint**|Size of the requested table, index, or partition as it currently exists.|
-|size_with_requested_compression_setting (KB)|**bigint**|Estimated size of the table, index, or partition that uses the requested compression setting; and, if applicable, the existing fill factor, and assuming there is no fragmentation.|
-|sample_size_with_current_compression_setting (KB)|**bigint**|Size of the sample with the current compression setting. This includes any fragmentation.|
-|sample_size_with_requested_compression_setting (KB)|**bigint**|Size of the sample that is created by using the requested compression setting; and, if applicable, the existing fill factor and no fragmentation.|
+| Column name | Data type | Description |
+| --- | --- | --- |
+| object_name | **sysname** | Name of the table or the indexed view. |
+| schema_name | **sysname** | Schema of the table or indexed view. |
+| index_id | **int** | Index ID of an index:<br /><br />0 = Heap<br /><br />1 = Clustered index<br /><br />> 1 = Nonclustered index |
+| partition_number | **int** | Partition number. Returns 1 for a nonpartitioned table or index. |
+| size_with_current_compression_setting (KB) | **bigint** | Size of the requested table, index, or partition as it currently exists. |
+| size_with_requested_compression_setting (KB) | **bigint** | Estimated size of the table, index, or partition that uses the requested compression setting; and, if applicable, the existing fill factor, and assuming there's no fragmentation. |
+| sample_size_with_current_compression_setting (KB) | **bigint** | Size of the sample with the current compression setting. This includes any fragmentation. |
+| sample_size_with_requested_compression_setting (KB) | **bigint** | Size of the sample that is created by using the requested compression setting; and, if applicable, the existing fill factor and no fragmentation. |
 
 ## Remarks
 
@@ -123,7 +123,7 @@ If the index or partition ID doesn't exist, no results are returned.
 
 Requires `SELECT` permission on the table, `VIEW DATABASE STATE` and `VIEW DEFINITION` on the database containing the table and on `tempdb`.
 
-## Limitations and restrictions
+## Limitations
 
 Prior to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], this procedure didn't apply to columnstore indexes, and therefore didn't accept the data compression parameters COLUMNSTORE and COLUMNSTORE_ARCHIVE. Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, columnstore indexes can be used both as a source object for estimation, and as a requested compression type.
 
@@ -133,37 +133,37 @@ When [Memory-Optimized TempDB Metadata](../databases/tempdb-database.md#memory-o
 
 ## Considerations for columnstore indexes
 
-Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the `@data_compression` parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
+Starting with [!INCLUDE [sql-server-2019](../../includes/sssql19-md.md)], and in Azure SQL Database and Azure SQL Managed Instance, `sp_estimate_compression_savings` supports estimating both columnstore and columnstore archive compression. Unlike page and row compression, applying columnstore compression to an object requires creating a new columnstore index. For this reason, when using the COLUMNSTORE and COLUMNSTORE_ARCHIVE options of this procedure, the type of the source object provided to the procedure determines the type of columnstore index used for the compressed size estimate. The following table illustrates the reference objects used to estimate compression savings for each source object type when the `@data_compression` parameter is set to either COLUMNSTORE or COLUMNSTORE_ARCHIVE.
 
-|Source Object|Reference Object|
-|-----------------|---------------|
-|Heap|Clustered columnstore index|
-|Clustered index|Clustered columnstore index|
-|Nonclustered index|Nonclustered columnstore index (including the key columns and any included columns of the provided nonclustered index, and the partition column of the table, if any)|
-|Nonclustered columnstore index|Nonclustered columnstore index (including the same columns as the provided nonclustered columnstore index)|
-|Clustered columnstore index|Clustered columnstore index|
+| Source Object | Reference object |
+| --- | --- |
+| Heap | Clustered columnstore index |
+| Clustered index | Clustered columnstore index |
+| Nonclustered index | Nonclustered columnstore index (including the key columns and any included columns of the provided nonclustered index, and the partition column of the table, if any) |
+| Nonclustered columnstore index | Nonclustered columnstore index (including the same columns as the provided nonclustered columnstore index) |
+| Clustered columnstore index | Clustered columnstore index |
 
 > [!NOTE]  
-> When estimating columnstore compression from a rowstore source object (clustered index, nonclustered index or heap), if there are any columns in the source object that have a data type that is not supported in a columnstore index, `sp_estimate_compression_savings` will fail with an error.
+> When estimating columnstore compression from a rowstore source object (clustered index, nonclustered index or heap), if there are any columns in the source object that have a data type that isn't supported in a columnstore index, `sp_estimate_compression_savings` will fail with an error.
 
 Similarly, when the `@data_compression` parameter is set to `NONE`, `ROW`, or `PAGE` and the source object is a columnstore index, the following table outlines the reference objects used.
 
-|Source Object|Reference Object|
-|-----------------|---------------|
-|Clustered columnstore index|Heap|
-|Nonclustered columnstore index|Nonclustered index (including the columns contained in the nonclustered columnstore index as key columns, and the partition column of the table, if any, as an included column)|
+| Source Object | Reference object |
+| --- | --- |
+| Clustered columnstore index | Heap |
+| Nonclustered columnstore index | Nonclustered index (including the columns contained in the nonclustered columnstore index as key columns, and the partition column of the table, if any, as an included column) |
 
 > [!NOTE]  
-> When estimating rowstore compression (NONE, ROW or PAGE) from a columnstore source object, be sure that the source index does not contain more than 32 key columns as this is the limit supported in a rowstore (nonclustered) index.
+> When estimating rowstore compression (NONE, ROW or PAGE) from a columnstore source object, be sure that the source index doesn't contain more than 32 key columns as this is the limit supported in a rowstore (nonclustered) index.
 
 ## Examples
 
 ### A. Estimate savings with ROW compression
 
-The following example estimates the size of the `Production.WorkOrderRouting` table if it is compressed by using `ROW` compression.
+The following example estimates the size of the `Production.WorkOrderRouting` table if it's compressed by using `ROW` compression.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 EXEC sys.sp_estimate_data_compression_savings
      'Production', 'WorkOrderRouting', NULL, NULL, 'ROW';
@@ -174,10 +174,10 @@ GO
 
 **Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]
 
-The following example estimates the size of the `Production.ProductModel` table if it is compressed by using `PAGE` compression, and the *xml_compression* value is enabled.
+The following example estimates the size of the `Production.ProductModel` table if it's compressed by using `PAGE` compression, and the *xml_compression* value is enabled.
 
 ```sql
-USE AdventureWorks2016;
+USE AdventureWorks2022;
 GO
 EXEC sys.sp_estimate_data_compression_savings
      'Production', 'ProductModel', NULL, NULL, 'PAGE', 1;
@@ -186,8 +186,8 @@ GO
 
 ## Next steps
 
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
-- [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)
-- [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
-- [Unicode Compression Implementation](../../relational-databases/data-compression/unicode-compression-implementation.md)
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+- [sys.partitions (Transact-SQL)](../system-catalog-views/sys-partitions-transact-sql.md)
+- [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
+- [Unicode Compression Implementation](../data-compression/unicode-compression-implementation.md)

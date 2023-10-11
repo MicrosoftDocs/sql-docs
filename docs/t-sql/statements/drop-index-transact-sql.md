@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The DROP INDEX statement does not apply to indexes created by defining PRIMARY KEY or UNIQUE constraints. To remove the constraint and corresponding index, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause.  
   
 > [!IMPORTANT]
->  The syntax defined in `<drop_backward_compatible_index>` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax in new development work, and plan to modify applications that currently use the feature. Use the syntax specified under `<drop_relational_or_xml_index>` instead. XML indexes cannot be dropped using backward compatible syntax.  
+>  The syntax defined in `<drop_backward_compatible_index>` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax in new development work, and plan to modify applications that currently use the feature. Use the syntax specified under `<drop_relational_or_xml_or_spatial_index>` instead. XML indexes cannot be dropped using backward compatible syntax.  
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -148,10 +148,10 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).  
   
  ONLINE = ON | **OFF**  
- **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.  
   
@@ -164,7 +164,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  The ONLINE option can only be specified when you drop clustered indexes. For more information, see the Remarks section.  
   
 > [!NOTE]  
->  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).  
   
  MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"**default**"**  
  **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supports "default" as the filegroup name.  
@@ -318,9 +318,9 @@ GO
 IF NOT EXISTS (SELECT name FROM sys.filegroups  
                 WHERE name = N'NewGroup')  
     BEGIN  
-    ALTER DATABASE AdventureWorks2012  
+    ALTER DATABASE AdventureWorks2022  
         ADD FILEGROUP NewGroup;  
-    ALTER DATABASE AdventureWorks2012  
+    ALTER DATABASE AdventureWorks2022  
         ADD FILE (NAME = File1,  
             FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\File1.ndf')  
         TO FILEGROUP NewGroup;  

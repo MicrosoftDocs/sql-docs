@@ -11,14 +11,14 @@ ms.topic: conceptual
 
 # How to: Create New Database Objects Using Queries
 
-If you prefer to use scripts to create or edit views, stored procedures, functions, triggers, or user-defined-types, you can use the Transact\-SQL Editor. The Transact\-SQL Editor provides IntelliSense and other language support. For more information, see [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
+If you prefer to use scripts to create or edit views, stored procedures, functions, triggers, or user-defined-types, you can use the Transact-SQL Editor. The Transact-SQL Editor provides IntelliSense and other language support. For more information, see [Use Transact-SQL Editor to Edit and Execute Scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
-The Transact\-SQL Editor is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project. If you are not connected to a database but want to execute a query against it, you can also use the **New Query Connection** dialog box by selecting **Transact-SQL Editor** menu from the **SQL** menu to connect to a database and launch the Transact\-SQL Editor.  
+The Transact-SQL Editor is invoked when you use the **View Code** contextual menu to open a database entity in a connected database or a project. It is also automatically opened when you use the **New Query** contextual menu from the SQL Server Object Explorer, or add a new script object to a database project. If you are not connected to a database but want to execute a query against it, you can also use the **New Query Connection** dialog box by selecting **Transact-SQL Editor** menu from the **SQL** menu to connect to a database and launch the Transact-SQL Editor.  
   
 > [!WARNING]  
 > The following procedures use entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) section.  
   
-### To create a new table using a Transact\-SQL query  
+### To create a new table using a Transact-SQL query  
   
 1.  Right-click the **Trade** database node and select **New Query**.  
   
@@ -34,13 +34,13 @@ The Transact\-SQL Editor is invoked when you use the **View Code** contextual me
     );  
     ```  
   
-3.  Click the **Execute Query** button in the Transact\-SQL Editor toolbar to run this query.  
+3.  Click the **Execute Query** button in the Transact-SQL Editor toolbar to run this query.  
   
 4.  Right-click the **Trade** database in **SQL Server Object Explorer** and select **Refresh**. Notice that new **Fruits** table has been added to the database.  
   
 ### To create a new function  
   
-1.  Replace the code in the current Transact\-SQL Editor with the following:  
+1.  Replace the code in the current Transact-SQL Editor with the following:  
   
     ```  
   
@@ -65,13 +65,13 @@ The Transact\-SQL Editor is invoked when you use the **View Code** contextual me
     END  
     ```  
   
-    This function will return all rows in the `Products` table whose `SupplierId` equals to the specified parameter. Click the **Execute Query** button in the Transact\-SQL Editor toolbar to run this query.  
+    This function will return all rows in the `Products` table whose `SupplierId` equals to the specified parameter. Click the **Execute Query** button in the Transact-SQL Editor toolbar to run this query.  
   
 2.  In SQL Server Object Explorer, under the **Trade** node, expand the **Programmability** and **Functions** nodes. You can find the new function you just created under **Table-valued Functions**.  
   
 ### To create a new view  
   
-1.  Replace the code in the current Transact\-SQL Editor with the following. Then click the **Execute Query** button above the editor to run this query.  
+1.  Replace the code in the current Transact-SQL Editor with the following. Then click the **Execute Query** button above the editor to run this query.  
   
     ```  
     CREATE VIEW [dbo].PerishableFruits   

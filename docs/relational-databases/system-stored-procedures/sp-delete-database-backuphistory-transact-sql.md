@@ -69,7 +69,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
 USE msdb;  
 GO  
-EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';  
+EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2022';  
   
 ```  
   

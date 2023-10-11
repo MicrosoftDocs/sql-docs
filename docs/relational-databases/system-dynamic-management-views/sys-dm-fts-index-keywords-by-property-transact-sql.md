@@ -106,7 +106,7 @@ GO
 ```  
 -- Once the full-text index is configured to support property searching  
 -- on the Author property, return any keywords indexed for this property.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO   
 SELECT KWBPOP.* FROM   
    sys.dm_fts_index_keywords_by_property( DB_ID(),   

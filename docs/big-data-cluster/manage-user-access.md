@@ -36,7 +36,7 @@ To grant additional Active Directory groups *bdcUser* permissions without alteri
 
 1. Connect to the master SQL endpoint by using your favorite SQL client. Use any administrator login (for example, `AZDATA_USERNAME`, which was provided during deployment). Alternatively, it could be any Active Directory account that belongs to the Active Directory group that's provided as `clusterAdmins` in the security configuration.
 
-1. To create a login for the Active Directory user or group, run the following TSQL command:
+1. To create a login for the Active Directory user or group, run the following Transact-SQL command:
 
    ```sql
    CREATE LOGIN [<domain>\<principal>] FROM WINDOWS;

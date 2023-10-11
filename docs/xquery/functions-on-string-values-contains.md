@@ -60,7 +60,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 --determine whether the <Summary> text contains the word  
 --Aerodynamic.   
   
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  

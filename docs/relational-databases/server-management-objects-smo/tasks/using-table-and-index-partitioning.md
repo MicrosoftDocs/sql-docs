@@ -36,9 +36,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Reference the AdventureWorks2012 database.   
+//Reference the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases("AdventureWorks2012");   
+db = srv.Databases("AdventureWorks2022");   
 //Define and create three new file groups on the database.   
 FileGroup fg2;   
 fg2 = new FileGroup(db, "Second");   

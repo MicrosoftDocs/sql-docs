@@ -81,5 +81,5 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 
 - [Database Engine stored procedures (Transact-SQL)](database-engine-stored-procedures-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
+- [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
 - [sp_refreshsqlmodule (Transact-SQL)](sp-refreshsqlmodule-transact-sql.md)

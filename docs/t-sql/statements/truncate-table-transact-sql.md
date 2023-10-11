@@ -139,7 +139,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  The following example removes all data from the `JobCandidate` table. `SELECT` statements are included before and after the `TRUNCATE TABLE` statement to compare results.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
 FROM HumanResources.JobCandidate;  

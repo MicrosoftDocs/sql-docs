@@ -72,7 +72,7 @@ DROP ROLE role_name
  Requires **ALTER ANY ROLE** permission on the database, or **CONTROL** permission on the role, or membership in the **db_securityadmin**.  
   
 ## Examples  
- The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  
+ The following example drops the database role `purchasing` from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 DROP ROLE purchasing;  

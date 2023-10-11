@@ -30,7 +30,7 @@ Private Sub listReportsButton_Click(sender As Object, e As System.EventArgs)
    rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
   
    ' Return the list of items in My Reports  
-   Dim items As CatalogItem() = rs.ListChildren("/Adventureworks 2008 Sample Reports", False)  
+   Dim items As CatalogItem() = rs.ListChildren("/Adventureworks Sample Reports", False)  
   
    Dim ci As CatalogItem  
    For Each ci In  items  
@@ -54,7 +54,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
    rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
    // Return the list of items in My Reports  
-   CatalogItem[] items = rs.ListChildren("/Adventureworks 2008 Sample Reports", false);  
+   CatalogItem[] items = rs.ListChildren("/Adventureworks Sample Reports", false);  
   
    foreach (CatalogItem ci in items)  
    {  

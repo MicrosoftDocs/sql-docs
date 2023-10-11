@@ -28,7 +28,7 @@ This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that
 
 ## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio and access to a SQL server.
+To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server.
 
 * Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 

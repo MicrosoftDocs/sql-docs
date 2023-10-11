@@ -69,13 +69,13 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
  The following example shows the effects of `SET ANSI_NULL_DFLT_OFF` with both settings for the ANSI null default database option.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 -- Set the 'ANSI null default' database option to true by executing   
 -- ALTER DATABASE.  
 GO  
-ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT ON;  
+ALTER DATABASE AdventureWorks2022 SET ANSI_NULL_DEFAULT ON;  
 GO  
 -- Create table t1.  
 CREATE TABLE t1 (a TINYINT);  
@@ -105,7 +105,7 @@ GO
 -- This illustrates the effect of having both the database  
 -- option and SET option disabled.  
 -- Set the 'ANSI null default' database option to false.  
-ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
+ALTER DATABASE AdventureWorks2022 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
 CREATE TABLE t4 (a TINYINT) ;  

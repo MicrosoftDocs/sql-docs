@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
  The following example displays information about the high-level content of the full-text index in the `HumanResources.JobCandidate` table.  
   
 ```  
-SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2012'), object_id('HumanResources.JobCandidate'))  
+SELECT * FROM sys.dm_fts_index_keywords(db_id('AdventureWorks2022'), object_id('HumanResources.JobCandidate'))  
 GO  
 ```  
   

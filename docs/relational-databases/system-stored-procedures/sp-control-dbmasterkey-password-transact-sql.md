@@ -72,11 +72,11 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## Examples  
   
-### A. Creating a credential for the AdventureWorks2012 master key  
- The following example creates a credential for the `AdventureWorks2012` database master key, and saves the master key password as the secret in the credential. Because all parameters that are passed to `sp_control_dbmasterkey_password` must be of data type **nvarchar**, the text strings are converted with the casting operator `N`.  
+### A. Creating a credential for the AdventureWorks master key  
+ The following example creates a credential for the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database master key, and saves the master key password as the secret in the credential. Because all parameters that are passed to `sp_control_dbmasterkey_password` must be of data type **nvarchar**, the text strings are converted with the casting operator `N`.  
   
 ```  
-EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
+EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2022',   
     @password = N'sdfjlkj#mM00sdfdsf98093258jJlfdk4', @action = N'add';  
 GO  
 ```  
@@ -85,7 +85,7 @@ GO
  The following example removes the credential created in example A. Note that all parameters are required, including the password.  
   
 ```  
-EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
+EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2022',   
     @password = N'sdfjlkj#mM00sdfdsf98093258jJlfdk4', @action = N'drop';  
 GO  
 ```  

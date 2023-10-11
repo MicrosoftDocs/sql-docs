@@ -14,9 +14,9 @@ ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database (single database)](failover-group-add-single-database-tutorial.md)
-> * [Azure SQL Database (elastic pool)](failover-group-add-elastic-pool-tutorial.md)
-> * [Azure SQL Managed Instance](../managed-instance/failover-group-add-instance-tutorial.md)
+> * [Azure SQL Database (single database)](failover-group-add-single-database-tutorial.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Database (elastic pool)](failover-group-add-elastic-pool-tutorial.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/failover-group-add-instance-tutorial.md?view=azuresql-mi&preserve-view=true)
 
 
 A [failover group](auto-failover-group-sql-db.md) is a declarative abstraction layer that allows you to group multiple geo-replicated databases. Learn to configure a failover group for an Azure SQL Database and test failover using either the Azure portal, PowerShell, or the Azure CLI.  In this tutorial, you'll learn how to:
@@ -221,7 +221,7 @@ Test failover using the Azure portal.
 
 1. Select **Failover groups** under the **Settings** pane and then choose the failover group you created in section 2.
   
-   ![Select the failover group from the portal](./media/failover-group-add-single-database-tutorial/select-failover-group.png)
+   :::image type="content" source="./media/failover-group-add-single-database-tutorial/select-failover-group.png" alt-text="Screenshot shows the Azure portal page for Failover groups.":::
 
 1. <a id="test-forced-failover-portal"></a>Review which server is primary and which server is secondary.
 1. Initiate either planned or forced failover: 

@@ -109,9 +109,6 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
     ![New database upgrade tuning window](../../relational-databases/performance/media/qta-new-session-tuning.png "New database upgrade tuning window")
 
-> [!NOTE]
-> A possible alternative scenario starts by restoring a database backup from the production server where a database has already gone through the recommended database compatibility upgrade workflow, to a test server.
-
 ### Execute the database upgrade workflow
 
 1. For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and select **Monitor Sessions**.

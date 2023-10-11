@@ -36,7 +36,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash, and merge joins
+  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] supports only nested loop joins. [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] supports nested loop, hash, and merge joins
   - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
   - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] and Azure SQL Database. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - Queries that insert, update, or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
@@ -46,7 +46,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 >
 > The [compatibility level](../../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) of the database should be set to SQL Server 2022 (160) or higher.
 >
-> In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required.
+> In [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] and in [!INCLUDE[sql-server-2022](../../../includes/sssql22-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a [binary-code point (_BIN2) collation or a UTF-8 collation](../../../relational-databases/collations/collation-and-unicode-support.md). In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], a_BIN2 collation is required.
 
 ### DBCC commands using secure enclaves
 
@@ -56,7 +56,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 
 Your environment needs to meet the following requirements to support executing statements that use a secure enclave.
 
-- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
+- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database server in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] must be correctly configured to support enclaves and attestation, if applicable/required. For more information, see [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - When you're connecting to your database from an application or a tool (such as SQL Server Management Studio), make sure to:
 
   - Use a client driver version or a tool version that supports Always Encrypted with secure enclaves.
@@ -76,13 +76,13 @@ Your environment needs to meet the following requirements to support executing s
     | Product | Enclave technology | Supported attestation protocols |
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] | VBS enclaves (preview)  | None |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves (preview)  | None |
 
 - Specify an attestation URL that is valid for your environment if you're using attestation.
 
   - If you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service (HGS), see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
+  - If you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves and Microsoft Azure Attestation, see [Determine the attestation URL for your attestation policy](./always-encrypted-enclaves.md#secure-enclave-attestation).
 
 ### Prerequisites for running T-SQL statements using enclaves in SSMS
 
@@ -98,8 +98,8 @@ Make sure you run your statements from a query window that uses a connection tha
 6. Set **Protocol** to:
 
     1. **Host Guardian Service** if you're using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
-    1. **Microsoft Azure Attestation** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with Intel SGX enclaves.
-    1. **None** if you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] with VBS enclaves.
+    1. **Microsoft Azure Attestation** if you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with Intel SGX enclaves.
+    1. **None** if you're using [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] with VBS enclaves.
 
 7. Specify your enclave attestation URL. Not applicable when the Protocol is set to *None*. For example, `https://hgs.bastion.local/Attestation` or `https://contososqlattestation.uks.attest.azure.net/attest/SgxEnclave`.
 
@@ -122,7 +122,7 @@ Make sure you run your statements from a query window that uses a connection tha
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**.
 3. Specify the attestation protocol and the attestation URL.
     - If you're using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
-    - If you're using if you're using a DC-series database with Intel SGX in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
+    - If you're using if you're using a DC-series database with Intel SGX in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
 
     ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
 

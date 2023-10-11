@@ -111,8 +111,9 @@ FOR DATABASE_MIRRORING (
  Specifies a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows login that is assigned ownership of the newly created endpoint object. If AUTHORIZATION is not specified, by default, the caller becomes owner of the newly created object.  
   
  To assign ownership by specifying AUTHORIZATION, the caller must have IMPERSONATE permission on the specified *login*.  
-  
- To reassign ownership, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+
+ The AUTHORIZATION option is not available in ALTER ENDPOINT. Ownership can only be assigned when the endpoint is created.
+ To reassign ownership, see [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md) and then return to this article to recreate the endpoint. 
   
  STATE **=** { STARTED | **STOPPED** | DISABLED }  
  Is the state of the endpoint when it is created. If the state is not specified when the endpoint is created, STOPPED is the default.  

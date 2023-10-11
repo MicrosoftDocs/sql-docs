@@ -60,7 +60,7 @@ Specifies the number of rows you want to delete from syscommittab. *@numrows* is
 
 `0` (success) or `1` (failure).
 
-## Example
+## Examples
 
 ```sql
 DECLARE @deleted_rows BIGINT;

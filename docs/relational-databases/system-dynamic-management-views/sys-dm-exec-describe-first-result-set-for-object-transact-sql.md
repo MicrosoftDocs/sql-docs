@@ -132,7 +132,7 @@ GO
  The following example uses both the sys.procedures system catalog view and the **sys.dm_exec_describe_first_result_set_for_object** function to display metadata for the result sets of all stored procedures in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 SELECT p.name, r.*   

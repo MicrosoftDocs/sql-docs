@@ -3025,6 +3025,8 @@
     items:
     - name: Connection resiliency
       href: ../connect/odbc/connection-resiliency.md
+    - name: Connection encryption troubleshooting
+      href: ../connect/odbc/connection-troubleshooting.md
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
     - name: DSN and Connection String Keywords and Attributes
@@ -5597,7 +5599,7 @@
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: Fetch Rows from a Result Set
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: Filestream
+        - name: FILESTREAM
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: Read a FILESTREAM Column to File Using IBCPSession

@@ -167,8 +167,8 @@ The following table lists the parameters required to configure Azure Key Vault (
 | PARAMETER | DESCRIPTION | EXAMPLE |
 | --- | --- | --- |
 | **Key Vault URL** |The location of the key vault. |`https://contosokeyvault.vault.azure.net/` |
-| **Principal name** |Azure Active Directory service principal name. This name is also referred to as the Client ID. |`fde2b411-33d5-4e11-af04eb07b669ccf2` |
-| **Principal secret** |Azure Active Directory service principal secret. This secret is also referred to as the Client Secret. |`9VTJSQwzlFepD8XODnzy8n2V01Jd8dAjwm/azF1XDKM=` |
+| **Principal name** |Microsoft Entra service principal name. This name is also referred to as the Client ID. |`fde2b411-33d5-4e11-af04eb07b669ccf2` |
+| **Principal secret** |Microsoft Entra service principal secret. This secret is also referred to as the Client Secret. |`9VTJSQwzlFepD8XODnzy8n2V01Jd8dAjwm/azF1XDKM=` |
 | **Credential name** |**Credential name**: AKV Integration creates a credential within SQL Server and allows the VM to access the key vault. Choose a name for this credential. |`mycred1` |
 
 For more information, see [Configure Azure Key Vault Integration for SQL Server on Azure VMs](azure-key-vault-integration-configure.md).
@@ -210,11 +210,11 @@ If you chose a free license image, such as the developer edition, the **SQL Serv
 
 ### Automated patching
 
-**Automated patching** is enabled by default. Automated patching allows Azure to automatically apply SQL Server and operating system security updates. Specify a day of the week, time, and duration for a maintenance window. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale. If you do not want Azure to automatically patch SQL Server and the operating system, select **Disable**.  
+**Automated patching** is enabled by default. [Automated Patching](automated-patching.md) allows Azure to automatically apply SQL Server and operating system security updates. Specify a day of the week, time, and duration for a maintenance window. Azure performs patching in this maintenance window. The maintenance window schedule uses the VM locale. If you do not want Azure to automatically patch SQL Server and the operating system, select **Disable**.  
 
 ![SQL VM automated patching](./media/create-sql-vm-portal/azure-sqlvm-automated-patching.png)
 
-For more information, see [Automated Patching for SQL Server in Azure Virtual Machines](automated-patching.md).
+For improved patching management, which also includes Cumulative Updates, try the integrated [Azure Update Manager](../azure-update-manager-sql-vm.md) experience after your SQL Server VM finishes deployment. 
 
 ### Automated backup
 

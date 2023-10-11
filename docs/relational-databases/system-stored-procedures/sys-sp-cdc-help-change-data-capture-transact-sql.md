@@ -41,7 +41,7 @@ sys.sp_cdc_help_change_data_capture
 
 #### [ @source_schema = ] '*source_schema*'
 
-The name of the schema in which the source table belongs. *@source_schema* is **sysname**, with a default of NULL. When *@source_schema* is specified, *@source_name* must also be specified.
+The name of the schema in which the source table belongs. *@source_schema* is **sysname**, with a default of `NULL`. When *@source_schema* is specified, *@source_name* must also be specified.
 
 If non-null, *@source_schema* must exist in the current database.
 
@@ -49,7 +49,7 @@ If *@source_schema* is non-null, *@source_name* must also be non-null.
 
 #### [ @source_name = ] '*source_name*'
 
-The name of the source table. *@source_name* is **sysname**, with a default of NULL. When *@source_name* is specified, *@source_schema* must also be specified.
+The name of the source table. *@source_name* is **sysname**, with a default of `NULL`. When *@source_name* is specified, *@source_schema* must also be specified.
 
 If non-null, *@source_name* must exist in the current database.
 
@@ -59,7 +59,7 @@ If *@source_name* is non-null, *@source_schema* must also be non-null.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

@@ -95,7 +95,7 @@ Cumulative wait information is tracked by SQL Server and can be accessed using t
    > [!NOTE]
    > If you see significant PAGEIOLATCH waits, it means that SQL Server is waiting on the I/O subsystem. While a certain amount of PAGEIOLATCH waits is expected and normal behavior, if the average PAGEIOLATCH wait times are consistently above 10 milliseconds (ms) you should investigate why the I/O subsystem is under pressure.
 
-If when examining the `sys.dm_os_wait_stats` DMV you encounter non-buffer latches, `sys.dm_os_latch_waits` must be examined to obtain a detailed breakdown of cumulative wait information for non-buffer latches. All buffer latch waits are classified under the BUFFER latch class, the remaining are used to classify non-buffer latches.
+If when examining the `sys.dm_os_wait_stats` DMV you encounter non-buffer latches, `sys.dm_os_latch_stats` must be examined to obtain a detailed breakdown of cumulative wait information for non-buffer latches. All buffer latch waits are classified under the BUFFER latch class, the remaining are used to classify non-buffer latches.
 
 ## Symptoms and causes of SQL Server latch contention
 

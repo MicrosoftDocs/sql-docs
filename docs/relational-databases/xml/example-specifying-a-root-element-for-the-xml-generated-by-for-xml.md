@@ -21,7 +21,7 @@ By specifying the `ROOT` option in the `FOR XML` query, you can request a single
 ## Example
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT ProductModelID, Name
 FROM Production.ProductModel

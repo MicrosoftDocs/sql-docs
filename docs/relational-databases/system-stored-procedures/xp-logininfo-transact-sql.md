@@ -36,11 +36,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 
 #### [ @acctname = ] '*@acctname*'
 
-The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of NULL. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `'CONTOSO\macraes'`, or `'BUILTIN\Administrators'`.
+The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of `NULL`. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `'CONTOSO\macraes'`, or `'BUILTIN\Administrators'`.
 
 #### [ @option = ] 'all' | 'members' ]
 
-Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. *@option* is **varchar(10)**, with a default of NULL. Unless `all` is specified, only the first permission path is displayed.
+Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. *@option* is **varchar(10)**, with a default of `NULL`. Unless `all` is specified, only the first permission path is displayed.
 
 #### [ @privilege = ] '*variable_name*' OUTPUT ]
 
@@ -52,7 +52,7 @@ When `OUTPUT` is specified, this option puts *@privilege* in the output paramete
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ When `OUTPUT` is specified, this option puts *@privilege* in the output paramete
 
 ## Remarks
 
-If *@acctname* is specified, `xp_logininfo` reports the highest privilege level of the specified Windows user or group. If a Windows user has access as both a system administrator and as a domain user, it is reported as a system administrator. If the user is a member of multiple Windows groups of equal privilege level, only the group that was first granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is reported.
+If *@acctname* is specified, `xp_logininfo` reports the highest privilege level of the specified Windows user or group. If a Windows user has access as both a system administrator and as a domain user, it's reported as a system administrator. If the user is a member of multiple Windows groups of equal privilege level, only the group that was first granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is reported.
 
 If *@acctname* is a valid Windows user or group that isn't associated with a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login, an empty result set is returned. If *@acctname* can't be identified as a valid Windows user or group, an error message is returned.
 

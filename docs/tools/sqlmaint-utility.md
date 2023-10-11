@@ -101,13 +101,13 @@ number[minutes | hours | days | weeks | months]
  If you run the utility at 10:23 A.M. on December 1, 1996, and this is the *text_file* value:  
   
 ```  
-c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.rpt  
+c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2022_maint.rpt  
 ```  
   
  The generated file name is:  
   
 ```  
-c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_199612011023.rpt  
+c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2022_maint_199612011023.rpt  
 ```  
   
  The full Universal Naming Convention (UNC) file name is required for *text_file* when **sqlmaint** accesses a remote server.  
@@ -121,7 +121,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  The full UNC file name is required for *html_file* when **sqlmaint** accesses a remote server.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Specifies that any HTML report in the report directory be deleted if the time interval after the creation of the report file exceeds \<*time_period*>. **-DelHtmlRpt** looks for files whose name fits the pattern generated from the *html_file* parameter. If *html_file* is c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, then **-DelHtmlRpt** causes **sqlmaint** to delete any files whose names match the pattern C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm and that are older than the specified \<*time_period*>.  
+ Specifies that any HTML report in the report directory be deleted if the time interval after the creation of the report file exceeds \<*time_period*>. **-DelHtmlRpt** looks for files whose name fits the pattern generated from the *html_file* parameter. If *html_file* is c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2022_maint.htm, then **-DelHtmlRpt** causes **sqlmaint** to delete any files whose names match the pattern C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2022_maint\*.htm and that are older than the specified \<*time_period*>.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Specifies that unused space be removed from the database specified in **-D**. This option is only useful for databases that are defined to grow automatically. *Threshold_percent* specifies in megabytes the size that the database must reach before **sqlmaint** attempts to remove unused data space. If the database is smaller than the *threshold_percent*, no action is taken. *Free_percent* specifies how much unused space must remain in the database, specified as a percentage of the final size of the database. For example, if a 200-MB database contains 100 MB of data, specifying 10 for *free_percent* results in the final database size being 110 MB. Note that a database is not expanded if it is smaller than *free_percent* plus the amount of data in the database. For example, if a 108-MB database has 100 MB of data, specifying 10 for *free_percent* does not expand the database to 110 MB; it remains at 108 MB.  
@@ -240,7 +240,7 @@ dbname_log_yyyymmddhhmm.BAK
 ### A. Performing DBCC checks on a database  
   
 ```  
-sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
+sqlmaint -S MyServer -D AdventureWorks2022 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
 ### B. Updating statistics using a 15% sample in all databases in a plan. Also, shrink any of the database that have reached 110 MB to having only 10% free space  

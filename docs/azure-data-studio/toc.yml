@@ -91,7 +91,11 @@
     - name: Extension for Oracle
       href: extensions/extension-for-oracle.md
     - name: GitHub Copilot extension
-      href: extensions/github-copilot-extension.md
+      items:
+      - name: Overview
+        href: extensions/github-copilot-extension-overview.md
+      - name: Use GitHub Copilot with Azure Data Studio
+        href: extensions/github-copilot-extension-using-github-copilot.md
     - name: Kusto extension
       href: extensions/kusto-extension.md
     - name: Machine Learning extension
@@ -156,6 +160,8 @@
       href: extensions/jupyter-book-extension.md
     - name: Wizard extension
       href: extensions/wizard-extension.md
+  - name: Command line interface
+    href: command-line.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Preview features
@@ -218,8 +224,12 @@
     href: usage-data-collection.md
   - name: Windows authentication (Kerberos)
     href: enable-kerberos.md
-  - name: Workspace & user settings
-    href: settings.md
+  - name: User and Workspace settings
+    items:
+    - name: Modify User and Workspace settings
+      href: settings.md
+    - name: User and Workspace settings
+      href: settings-list.md
 - name: References
   items:
   - name: SQL tools

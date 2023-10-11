@@ -39,7 +39,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## Examples  
- The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
+ The following example uses the MyDS data source already defined in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to create a connection to the [!INCLUDE [sssampledbdwobject-md](../includes/sssampledbdwobject-md.md)] database and query the **vTargetMail** view.  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

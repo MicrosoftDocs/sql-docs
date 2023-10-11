@@ -64,7 +64,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  Is the password that was used to protect the symmetric key.  
   
 ## Remarks  
- Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. If you open a symmetric key and then switch context, the key will remain open and be available in the impersonated context. Information about open symmetric keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) catalog view.  
+ Open symmetric keys are bound to the session not to the security context. An open key will continue to be available until it is either explicitly closed or the session is terminated. If you open a symmetric key and then switch context, the key will remain open and be available in the impersonated context. Multiple keys can be open at once. Information about open symmetric keys is visible in the [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) catalog view.  
   
  If the symmetric key was encrypted with another key, that key must be opened first.  
   
@@ -89,7 +89,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  The following example opens the symmetric key `SymKeyMarketing3` and decrypts it by using the private key of certificate `MarketingCert9`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
 GO  
@@ -99,7 +99,7 @@ GO
  The following example opens the symmetric key `MarketingKey11` and decrypts it by using symmetric key `HarnpadoungsatayaSE3`.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   
     DECRYPTION BY CERTIFICATE sariyaCert01;  

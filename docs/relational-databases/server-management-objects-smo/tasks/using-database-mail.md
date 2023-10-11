@@ -60,7 +60,7 @@ a.Create()
            //service, name, description, display name, and email address  
            //arguments in the constructor.   
            MailAccount a = default(MailAccount);   
-           a = new MailAccount(sm, "AdventureWorks2012 Administrator", "AdventureWorks2012 Automated Mailer", "Mail account for administrative e-mail.", "dba@Adventure-Works.com");   
+           a = new MailAccount(sm, "AdventureWorks2022 Administrator", "AdventureWorks2022 Automated Mailer", "Mail account for administrative e-mail.", "dba@Adventure-Works.com");   
            a.Create();    
 }  
 ```  

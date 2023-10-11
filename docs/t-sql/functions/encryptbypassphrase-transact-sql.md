@@ -75,7 +75,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  The following example updates a record in the `SalesCreditCard` table and encrypts the value of the credit card number stored in column `CardNumber_EncryptedbyPassphrase`, using the primary key as an authenticator.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   

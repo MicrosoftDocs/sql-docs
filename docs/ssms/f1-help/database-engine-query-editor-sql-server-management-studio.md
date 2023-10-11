@@ -301,7 +301,7 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 | View and use the basic features in the XML/A Editor. | [XML Editor](../scripting/xml-editor-sql-server-management-studio.md) |
 | How to use the sqlcmd features in the Database Engine Query Editor.| [Edit SQLCMD Scripts](../../tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md) |
 | How to use code snippets in the Database Engine Query Editor. Snippets are templates for commonly used statements or blocks, and can be customized or extended to include site-specific snippets.| [T-SQL Code Snippets](../scripting/add-transact-sql-snippets.md) |
-| How to use the Transact\-SQL debugger to step through code and view debugging information such as the values in variables and parameters.| [T-SQL Debugger](../scripting/transact-sql-debugger.md) |
+| How to use the Transact-SQL debugger to step through code and view debugging information such as the values in variables and parameters.| [T-SQL Debugger](../scripting/transact-sql-debugger.md) |
 
 ## See also
 

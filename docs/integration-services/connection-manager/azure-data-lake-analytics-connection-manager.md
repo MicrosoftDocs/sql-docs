@@ -16,13 +16,14 @@ f1_keywords:
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Analytics connection manager to connect to a Data Lake Analytics account with one of the two following authentication types:
 -   Azure Active Directory (Azure AD) User Identity
 -   Azure AD Service Identity 
 
 The Data Lake Analytics connection manager is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+
+> [!IMPORTANT]
+> Azure Data Lake Analytics will be retired on **29 February 2024**. Learn more [with this announcement](https://azure.microsoft.com/updates/migrate-to-azure-synapse-analytics/).
  
 ## Configure the connection manager
 

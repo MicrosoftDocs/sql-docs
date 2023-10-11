@@ -54,7 +54,7 @@ A placeholder that indicates that a maximum of 50 arguments can be specified.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 `xp_sscanf` returns the following message:
 

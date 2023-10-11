@@ -17,9 +17,9 @@ ms.custom:
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database (single database)](../database/failover-group-add-single-database-tutorial.md)
-> * [Azure SQL Database (elastic pool)](../database/failover-group-add-elastic-pool-tutorial.md)
-> * [Azure SQL Managed Instance](failover-group-add-instance-tutorial.md)
+> * [Azure SQL Database (single database)](../database/failover-group-add-single-database-tutorial.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Database (elastic pool)](../database/failover-group-add-elastic-pool-tutorial.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](failover-group-add-instance-tutorial.md?view=azuresql-mi&preserve-view=true)
 
 Add managed instances of Azure SQL Managed Instance to an [auto-failover group](auto-failover-group-sql-mi.md). 
 

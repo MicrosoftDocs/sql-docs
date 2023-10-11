@@ -64,7 +64,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  
@@ -286,7 +286,7 @@ SQLLEN lDataLengthB;
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPSource')  
      DROP TABLE BCPSource  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')  

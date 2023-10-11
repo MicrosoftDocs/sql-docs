@@ -1,17 +1,18 @@
 ### YamlMime:Landing
 
 title: Azure Data Studio
-summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+summary: Obtain the skills to connect and query various databases, including SQL Server, Azure SQL Database, PostgreSQL, MySQL and more.
 
 metadata:
   title: Azure Data Studio
-  summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+  description: Learn how to use Azure Data Studio to connect to and query SQL Server, Azure SQL Database, PostgreSQL, MySQL and more.
   ms.service: azure-data-studio
   ms.topic: landing-page
   ms.custom: ignite-2022
-  author: markingmyname
-  ms.author: maghan
-  ms.date: 05/09/2020
+  author: erinstellato-ms
+  ms.author: erinstellato
+  ms.reviewer: maghan
+  ms.date: 08/18/2023
 landingContent:
   - title: About Azure Data Studio
     linkLists:
@@ -32,9 +33,9 @@ landingContent:
     linkLists:
       - linkListType: quickstart
         links:
-          - text: Connect and query SQL Server
+          - text: Connect and query data in SQL Server
             url: quickstart-sql-server.md
-          - text: Connect and query Azure SQL database
+          - text: Connect and query data in Azure SQL database
             url: quickstart-sql-database.md
           - text: Connect and query data in Azure Synapse Analytics
             url: quickstart-sql-dw.md
@@ -47,10 +48,20 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Enable Kerberos
-            url: enable-kerberos.md
+          - text: Connect
+            url: connect.md
           - text: Manage servers and databases with Insight widgets in Azure Data Studio
             url: insight-widgets.md
+          - text: Create and use code snippets
+            url: code-snippets.md
+          - text: Explore and manage Azure SQL resources
+            url: azure-view.md
+          - text: Create and edit keyboard shortcuts
+            url: keyboard-shortcuts.md
+          - text: Enable or disable usage data collection
+            url: usage-data-collection.md
+          - text: Enable Kerberos
+            url: enable-kerberos.md
           - text: Modify User and Workspace Settings
             url: settings.md
 
@@ -75,21 +86,36 @@ landingContent:
         links:
           - text: Extend the functionality of Azure Data Studio
             url:  extensions/add-extensions.md
-          - text: Extend the functionality by creating Azure Data Studio extensions
-            url:  extensions/extension-authoring.md
-          - text: Jupyter Book extension
-            url:  extensions/jupyter-book-extension.md
+          - text: GitHub Copilot extension overview
+            url:  extensions/github-copilot-extension-overview.md
           - text: Kusto (KQL)
             url:  extensions/kusto-extension.md
-          - text: Notebook extension
-            url:  extensions/notebook-extension.md
-          - text: Azure SQL migration extension
-            url:  extensions/azure-sql-migration-extension.md
           - text: MySQL extension
             url:  extensions/mysql-extension.md
           - text: PostgreSQL extension
             url:  extensions/postgres-extension.md
-          - text: PowerShell Editor Support
-            url:  extensions/powershell-extension.md
-          - text: Wizard extension
-            url:  extensions/wizard-extension.md
+          - text: SandDance extension
+            url:  extensions/sanddance-extension.md
+          - text: Schema Compare extension
+            url:  extensions/schema-compare-extension.md
+          - text: SQL Database projects extension
+            url:  extensions/sql-database-project-extension.md
+          - text: SQL Server Import extension
+            url:  extensions/sql-server-import-extension.md
+          - text: SQL Server Profiler extension
+            url:  extensions/sql-server-profiler-extension.md
+
+  - title: Migration extensions
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure SQL migration extension
+            url:  extensions/azure-sql-migration-extension.md
+          - text: Azure PostgreSQL migration extension
+            url:  extensions/azure-postgresql-migration-extension.md
+          - text: Database Migration Assessment for Oracle
+            url:  extensions/database-migration-assessment-for-oracle-extension.md
+          - text: Azure Cosmos DB migration for MongoDB
+            url:  extensions/database-migration-for-mongo-extension.md
+          - text: Database Schema Conversion Toolkit
+            url:  extensions/dsct/database-schema-conversion-toolkit.md           

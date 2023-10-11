@@ -375,6 +375,7 @@ Connect to the [*job database*](job-automation-overview.md#elastic-job-database)
 --Connect to the job database specified when creating the job agent
 
 EXEC jobs.sp_delete_job @job_name='ResultsPoolsJob';
+EXEC jobs.sp_purge_jobhistory @job_name='ResultsPoolsJob';
 
 --Note: job history is automatically deleted if it is >45 days old
 ```

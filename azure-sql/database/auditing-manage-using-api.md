@@ -42,7 +42,7 @@ Extended policy with WHERE clause support for additional filtering:
 - [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/create-or-update)
 - [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/createorupdate)
 - [Get Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/get)
-- [Get Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/get)
+- [Get Server *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/server-extended-auditing-settings/get)
 
 ### Use Azure CLI
 

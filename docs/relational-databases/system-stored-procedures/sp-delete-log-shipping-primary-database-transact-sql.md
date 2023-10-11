@@ -61,10 +61,10 @@ sp_delete_log_shipping_primary_database
  Only members of the **sysadmin** fixed server role can run this procedure.  
   
 ## Examples  
- This example illustrates using **sp_delete_log_shipping_primary_database** to delete the primary database **AdventureWorks2012**.  
+ This example illustrates using **sp_delete_log_shipping_primary_database** to delete the primary database [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)].  
   
 ```  
-EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  
+EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2022';  
 GO  
 ```  
   

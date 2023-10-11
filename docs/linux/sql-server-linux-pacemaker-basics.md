@@ -8,6 +8,8 @@ ms.date: 12/29/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Pacemaker for availability groups and failover cluster instances on Linux
 
@@ -145,7 +147,7 @@ Currently, there's no direct way for a WSFC and a Pacemaker cluster to work toge
 
 On Linux, all nodes of a Pacemaker cluster must be on the same distribution. For example, this means that a RHEL node can't be part of a Pacemaker cluster that has a SLES node. The main reason for this was previously stated: the distributions may have different versions and functionality, so things couldn't work properly. Mixing distributions has the same story as mixing WSFCs and Linux: use None or distributed AGs.
 
-## Next steps
+## Related content
 
 - [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)
 - [Configure a Pacemaker cluster for SQL Server availability groups](sql-server-linux-availability-group-cluster-pacemaker.md)

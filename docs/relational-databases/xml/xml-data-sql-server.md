@@ -4,7 +4,7 @@ description: Use XML data for developing rich applications for semi-structured d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 05/09/2022
+ms.date: 08/04/2023
 ms.service: sql
 ms.subservice: xml
 ms.topic: conceptual
@@ -28,18 +28,18 @@ helpviewer_keywords:
 
 - The OPENXML function, to retrieve XML data in relational format.
 
-- Starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).
+- XML compression provides a method to compress off-row XML data for both XML columns and indexes, improving capacity requirements. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) and [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md). XML compression is available in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 ## Next steps
 
-- [XML Data Type and Columns &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)
-- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)
-- [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)
-- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)
-- [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)
+- [XML Data Type and Columns (SQL Server)](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)
+- [XML Indexes (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)
+- [XML Schema Collections (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)
+- [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
+- [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
 
 ## See also
 
-- [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
-- [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)
+- [Examples of Bulk Import and Export of XML Documents (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)
+- [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)
 - [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)

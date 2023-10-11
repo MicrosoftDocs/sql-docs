@@ -161,13 +161,13 @@ helpviewer_keywords:
          For example, in native mode:
   
         ```  
-        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
         ```  
   
          For example, in SharePoint mode:
   
         ```  
-        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2022&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents**: Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you're prompted to open or save the file or resource to disk.  

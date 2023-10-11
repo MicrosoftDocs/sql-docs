@@ -77,12 +77,12 @@ GO
  The following example uses comments to explain what the section of the code is supposed to do.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 /*  
 This section of the code joins the Person table with the Address table,   
 by using the Employee and BusinessEntityAddress tables in the middle to   
-get a list of all the employees in the AdventureWorks2012 database   
+get a list of all the employees in the AdventureWorks2022 database   
 and their contact information.  
 */  
 SELECT p.FirstName, p.LastName, a.AddressLine1, a.AddressLine2, a.City, a.PostalCode  

@@ -8,7 +8,9 @@ ms.date: 05/03/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
-ms.custom: intro-deployment
+ms.custom:
+  - intro-deployment
+  - linux-related-content
 ---
 # Tutorial: Set up a three node Always On availability group with HPE Serviceguard for Linux
 
@@ -41,7 +43,7 @@ This tutorial consists of the following tasks:
 
   The instructions in this tutorial are validated against HPE Serviceguard for Linux. A trial edition is available for download from [HPE](https://www.hpe.com/us/en/resources/servers/serviceguard-linux-trial.html).
 
-- SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us)
+- SQL Server database files on logical volume mount (LVM) for all three virtual machines. See [Quick start guide for Serviceguard Linux (HPE)](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html)
 
 - Ensure that you have a OpenJDK Java runtime installed on the VMs. The IBM Java SDK isn't supported.
 
@@ -73,8 +75,8 @@ In this step, install HPE Serviceguard for Linux on all three VMs. The following
 
 To install Serviceguard, use the `cminstaller` method. Specific instructions are available in the following links:
 
-- [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_serviceguard_using_cminstaller). Refer to the section **Install_serviceguard_using_cminstaller**.
-- [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Install_QS_from_the_ISO). Refer to the section **Install_QS_from_the_ISO**.
+- [Install Serviceguard for Linux on two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1E75E8C6-C674-48D1-B30D-DED738431FDD.html). Refer to the section **Install_serviceguard_using_cminstaller**.
+- [Install Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-5C321932-E5F7-4D05-8A55-33E56BE7AFB0.html). Refer to the section **Install_QS_from_the_ISO**.
 
 After you complete the installation of the HPE Serviceguard cluster, you can enable cluster management portal on TCP port 5522 on the primary replica node. The following steps add a rule to the firewall to allow 5522. The following command is for a Red Hat Enterprise Linux (RHEL). you need to run similar commands for other distributions:
 
@@ -87,8 +89,8 @@ sudo firewall-cmd --reload
 
 Follow theses instructions to configure and create the HPE Serviceguard cluster. In this step, you will also configure the quorum server.
 
-1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_QS). Refer to the **Configure_QS** section.
-1. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Configure_and_create_cluster). Refer to the **Configure_and_create_Cluster** section.
+1. [Configure the Serviceguard quorum server on the third node](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-C371758D-AF60-4FA9-B541-E1198650162A.html). Refer to the **Configure_QS** section.
+1. [Configure and create Serviceguard cluster on the other two nodes](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-43419A91-E430-42F3-BFE4-29CC7FAA64D0.html). Refer to the **Configure_and_create_Cluster** section.
 
 > [!NOTE]  
 > You can bypass manual installation of your HPE Serviceguard cluster and quorum, by adding the [HPE Serviceguard for Linux (SGLX) extension](https://techcommunity.microsoft.com/t5/sql-server-blog/hpe-sglx-the-new-azure-vm-extension-for-sql-server-on-linux/ba-p/3723764) from the Azure VM marketplace, when you create your VM.
@@ -271,7 +273,7 @@ Connect to the primary replica and run the following T-SQL commands to:
 CREATE DATABASE [db1];
 GO
 
--- set the database in full recovery mode
+-- set the database in full recovery model
 ALTER DATABASE [db1] SET RECOVERY FULL; 
 GO
 
@@ -291,7 +293,7 @@ After successfully completing the previous steps, you can see an `ag1` availabil
 
 In HPE Serviceguard, deploy the SQL Server workload on availability group through Serviceguard cluster manager UI.
 
-Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Protect_your_alwayson_availability_group). Refer to the section **Protecting Microsoft SQL Server on Linux for Always On Availability Groups**.
+Deploy the availability group workload and enable high availability (HA), disaster recovery (DR) via Serviceguard cluster using the [Serviceguard manager graphical user interface](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-BD13B685-12ED-4BA0-83CD-181B312F6138.html). Refer to the section **Protecting Microsoft SQL Server on Linux for Always On Availability Groups**.
 
 ### Create the load balancer in the Azure portal
 
@@ -390,8 +392,8 @@ For the automatic failover test, you can bring down the primary replica (power o
 1. The cluster manager promotes one of the secondary replicas in the availability group to primary.
 1. The failed primary replica automatically joins the cluster after it is back up. The cluster manager promotes it to secondary replica.
 
-For HPE Serviceguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00107699en_us#Test_the_setup_preparedness)
+For HPE Serviceguard, refer to the section [**Testing the setup for failover readiness**](https://support.hpe.com/hpesc/public/docDisplay?docId=a00112895en_us&page=GUID-1119C5B1-3DEE-473D-8684-A7816BE12B7D.html)
 
-## Next steps
+## Related content
 
-- Learn more about Always On [Availability Groups on Linux](sql-server-linux-availability-group-overview.md).
+- [Availability Groups on Linux](sql-server-linux-availability-group-overview.md)

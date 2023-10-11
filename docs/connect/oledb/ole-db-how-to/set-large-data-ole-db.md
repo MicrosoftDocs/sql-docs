@@ -18,8 +18,8 @@ helpviewer_keywords:
   This sample shows how to set BLOB data, create a table, add a sample record, fetches that record in the rowset, and then set the value of the BLOB field. This sample is not supported on IA64.  
   
  To pass a pointer to its own storage object, the consumer creates an accessor that binds the value of the BLOB column and then calls the **IRowsetChange::SetData** or **IRowsetChange::InsertRow** methods.  
-  
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+
+ [!INCLUDE [article-uses-adventureworks](../../../includes/article-uses-adventureworks.md)]  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  

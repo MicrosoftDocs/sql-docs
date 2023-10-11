@@ -124,7 +124,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Within a [!INCLUDE[tsql](../../includes/tsql-md.md)] script or batch, IntelliSense in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor supports only the statements and syntax that are listed in this topic. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code examples show what statements and syntax elements IntelliSense supports. For example, in the following batch, IntelliSense is available for the `SELECT` statement when it is coded by itself, but not when the `SELECT` is contained in a `CREATE FUNCTION` statement.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT Name  
 FROM Production.Product  
@@ -136,7 +136,7 @@ AS
 RETURN   
 (  
     SELECT Name  
-    FROM AdventureWorks2012.Production.Product  
+    FROM AdventureWorks2022.Production.Product  
     WHERE Name LIKE N'Road-250%'  
       AND Color = N'Red'  
 );GO  

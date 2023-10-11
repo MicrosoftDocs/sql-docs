@@ -182,7 +182,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 >  This table has only five columns to make it easier to display and read. Declaring the sparse columns to be nullable is optional if the [ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) option is set. When SET ANSI_DEFAULTS is ON, SET ANSI_NULL_DFLT_ON is enabled. ANSI_DEFAULTS is ON by default for most connection providers. For more information, see [SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md).
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TABLE DocumentStore  

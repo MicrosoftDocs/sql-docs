@@ -111,7 +111,7 @@ $firstName = "Catherine";
 $lastName = "Abel;
 $birthDate = "1996-10-19";
 $params = array($ssn, $firstName, $lastName, $birthDate);
-// during sqlsrv_prepare, the driver determines the SQL types for each parameter and pass them to SQL server
+// during sqlsrv_prepare, the driver determines the SQL types for each parameter and pass them to SQL Server
 $stmt = sqlsrv_prepare($conn, $query, $params);
 sqlsrv_execute($stmt);
 ```
@@ -143,7 +143,7 @@ $ssn = "795-73-9838";
 $firstName = "Catherine";
 $lastName = "Able";
 $birthDate = "1996-10-19";
-// during PDO::prepare, the driver determines the SQL types for each parameter and pass them to SQL server
+// during PDO::prepare, the driver determines the SQL types for each parameter and pass them to SQL Server
 $stmt = $conn->prepare($query);
 $stmt->bindParam(1, $ssn);
 $stmt->bindParam(2, $firstName);

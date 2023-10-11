@@ -50,7 +50,7 @@ SET NOEXEC { ON | OFF }
  The following example uses `NOEXEC` with a valid query, a query with an object name that is not valid, and a query with incorrect syntax.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 PRINT 'Valid query';  
 GO  
@@ -75,7 +75,7 @@ GO
 SET NOEXEC ON;  
 GO  
 -- Function name used is a reserved keyword.  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE FUNCTION dbo.Values(@BusinessEntityID int)  
 RETURNS TABLE  

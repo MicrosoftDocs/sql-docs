@@ -75,7 +75,7 @@ GO
  The following example returns the number of characters in the column `FirstName` and the first and last names of employees located in `Australia`.  
   
 ```sql  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 GO  
 SELECT DISTINCT LEN(FirstName) AS FNameLength, FirstName, LastName   
 FROM dbo.DimEmployee AS e  

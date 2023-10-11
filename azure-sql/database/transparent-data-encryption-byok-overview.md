@@ -5,7 +5,7 @@ description: Bring Your Own Key (BYOK) support for transparent data encryption (
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 04/04/2023
+ms.date: 09/28/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -22,16 +22,14 @@ In this scenario, the key used for encryption of the Database Encryption Key (DE
 
 For Azure SQL Database and Azure Synapse Analytics, the TDE protector is set at the server level and is inherited by all encrypted databases associated with that server. For Azure SQL Managed Instance, the TDE protector is set at the instance level and is inherited by all encrypted databases on that instance. The term *server* refers both to a server in SQL Database and Azure Synapse and to a managed instance in SQL Managed Instance throughout this document, unless stated differently.
 
-Managing the TDE protector at the database level in Azure SQL Database is available in public preview. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
+Managing the TDE protector at the database level in Azure SQL Database is available. For more information, see [Transparent data encryption (TDE) with customer-managed keys at the database level](transparent-data-encryption-byok-database-level-overview.md).
 
 > [!NOTE]
-> This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
+> - This article applies to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)). For documentation on transparent data encryption for dedicated SQL pools inside Synapse workspaces, see [Azure Synapse Analytics encryption](/azure/synapse-analytics/security/workspaces-encryption).
+> - <a id="doubleencryption"></a> To provide Azure SQL customers with two layers of encryption of data at rest, infrastructure encryption (using AES-256 encryption algorithm) with platform managed keys is being rolled out. This provides an addition layer of encryption at rest along with TDE with customer-managed keys, which is already available. For Azure SQL Database and Azure SQL Managed Instance, all databases, including the `master` database and other system databases, will be encrypted when infrastructure encryption is turned on. At this time, customers must request access to this capability. If you are interested in this capability, contact AzureSQLDoubleEncryptionAtRest@service.microsoft.com.
 
-> [!IMPORTANT]
-> For those using service-managed TDE who would like to start using customer-managed TDE, data remains encrypted during the process of switching over, and there is no downtime nor re-encryption of the database files. Switching from a service-managed key to a customer-managed key only requires re-encryption of the DEK, which is a fast and online operation.
 
-> [!NOTE]
-> <a id="doubleencryption"></a> To provide Azure SQL customers with two layers of encryption of data at rest, infrastructure encryption (using AES-256 encryption algorithm) with platform managed keys is being rolled out. This provides an addition layer of encryption at rest along with TDE with customer-managed keys, which is already available. For Azure SQL Database and Azure SQL Managed Instance, all databases, including the `master` database and other system databases, will be encrypted when infrastructure encryption is turned on. At this time, customers must request access to this capability. If you are interested in this capability, contact AzureSQLDoubleEncryptionAtRest@service.microsoft.com.
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Benefits of the customer-managed TDE
 
@@ -49,11 +47,14 @@ Customer-managed TDE provides the following benefits to the customer:
 
 - Greater trust from your end customers, since AKV is designed such that Microsoft can't see nor extract encryption keys;
 
+> [!IMPORTANT]
+> For those using service-managed TDE who would like to start using customer-managed TDE, data remains encrypted during the process of switching over, and there is no downtime nor re-encryption of the database files. Switching from a service-managed key to a customer-managed key only requires re-encryption of the DEK, which is a fast and online operation.
+
 ## How customer-managed TDE works
 
 ![Setup and functioning of the customer-managed TDE](./media/transparent-data-encryption-byok-overview/customer-managed-tde-with-roles.PNG)
 
-In order for the Azure SQL server to use TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the server using its unique Azure Active Directory (Azure AD) identity:
+In order for the [logical server in Azure](logical-servers.md) to use the TDE protector stored in AKV for encryption of the DEK, the key vault administrator needs to give the following access rights to the server using its unique Microsoft Entra identity:
 
 - **get** - for retrieving the public part and properties of the key in the Key Vault
 
@@ -75,9 +76,8 @@ Auditors can use Azure Monitor to review key vault AuditEvent logs, if logging i
 
 ### Requirements for configuring AKV
 
-- Key vault and SQL Database/managed instance must belong to the same Azure Active Directory tenant. Cross-tenant key vault and server interactions aren't supported. To move resources afterwards, TDE with AKV has to be reconfigured. Learn more about [moving resources](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 - [Soft-delete](/azure/key-vault/general/soft-delete-overview) and [purge protection](/azure/key-vault/general/soft-delete-overview#purge-protection) features must be enabled on the key vault to protect from data loss due to accidental key (or key vault) deletion. 
-- Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Azure Active Directory identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Azure AD identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Azure AD identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
+- Grant the server or managed instance access to the key vault (*get*, *wrapKey*, *unwrapKey*) using its Microsoft Entra identity. The server identity can be a system-assigned managed identity or a user-assigned managed identity assigned to the server. When using the Azure portal, the Microsoft Entra identity gets automatically created when the server is created. When using PowerShell or Azure CLI, the Microsoft Entra identity must be explicitly created and should be verified. See [Configure TDE with BYOK](transparent-data-encryption-byok-configure.md) and [Configure TDE with BYOK for SQL Managed Instance](../managed-instance/scripts/transparent-data-encryption-byok-powershell.md) for detailed step-by-step instructions when using PowerShell.
     - Depending on the permission model of the key vault (access policy or Azure RBAC), key vault access can be granted either by creating an access policy on the key vault, or by creating a new Azure RBAC role assignment with the role [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide#azure-built-in-roles-for-key-vault-data-plane-operations).
 
 - When using a firewall with AKV, you must enable the option **Allow trusted Microsoft services to bypass the firewall**. For more information, see [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
@@ -153,6 +153,9 @@ Rotating the TDE protector for a server means to switch to a new asymmetric key 
 
 When used with [automated key rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation), this feature enables end-to-end zero-touch rotation for the TDE protector on Azure SQL Database and Azure SQL Managed Instance.
 
+> [!NOTE]
+> Setting TDE with CMK using manual or automated rotation of keys will always use the latest version of the key that is supported. The setup does not allow using a previous or lower version of keys. Always using the latest key version complies with the Azure SQL security policy that disallows previous key versions that may be compromised. The previous versions of the key may be needed for [database backup or restore purposes](transparent-data-encryption-byok-overview.md#database-backup-and-restore-with-customer-managed-tde), especially in case of [long-term retention backups](long-term-retention-overview.md), where the older key versions must be preserved. For geo-replication setups, all keys required by the source server need to be present on the target server.
+
 ### Geo-replication considerations when configuring automated rotation of the TDE protector
 
 To avoid issues while establishing or during geo-replication, when automatic rotation of the TDE protector is enabled on the primary or secondary server, it's important to follow these rules when configuring geo-replication:
@@ -195,7 +198,7 @@ It may happen that someone with sufficient access rights to the key vault accide
 
 - changing the key vault's firewall rules
 
-- deleting the managed identity of the server in Azure Active Directory
+- deleting the managed identity of the server in Microsoft Entra ID
 
 Learn more about [the common causes for database to become inaccessible](/sql/relational-databases/security/encryption/troubleshoot-tde?view=azuresqldb-current&preserve-view=true#common-errors-causing-databases-to-become-inaccessible).
 

@@ -7,7 +7,9 @@ ms.date: 10/02/2017
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 ---
 # Migrate an Oracle schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant
 

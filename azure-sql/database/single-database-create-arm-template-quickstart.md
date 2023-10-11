@@ -47,7 +47,7 @@ Select **Try it** from the following PowerShell code block to open Azure Cloud S
 $projectName = Read-Host -Prompt "Enter a project name that is used for generating resource names"
 $location = Read-Host -Prompt "Enter an Azure location (i.e. centralus)"
 $adminUser = Read-Host -Prompt "Enter the SQL server administrator username"
-$adminPassword = Read-Host -Prompt "Enter the SQl server administrator password" -AsSecureString
+$adminPassword = Read-Host -Prompt "Enter the SQL Server administrator password" -AsSecureString
 
 $resourceGroupName = "${projectName}rg"
 

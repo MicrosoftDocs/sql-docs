@@ -79,7 +79,7 @@ dev_langs:
 |**sys.sysguidrefs**|Exists in every database. Contains a row for each GUID classified ID reference.|  
   
 ## Updating System Base Tables    
-You can view the data in the system tables through the system catalog views. To update the metadata in a system base table, use the appropriate TSQL interface (for example, DDL statements). You can't manually update system tables. SQL Server reports the following messages when you perform direct updates to system tables.
+You can view the data in the system tables through the system catalog views. To update the metadata in a system base table, use the appropriate Transact-SQL interface (for example, DDL statements). You can't manually update system tables. SQL Server reports the following messages when you perform direct updates to system tables.
 
 ### A system table is manually updated
 Msg 17659: Warning: System table ID \<id\> has been updated directly in database ID \<id\> and cache coherence may not have been maintained. SQL Server should be restarted.

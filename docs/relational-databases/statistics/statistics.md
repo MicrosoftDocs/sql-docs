@@ -180,14 +180,14 @@ Consider using asynchronous statistics to achieve more predictable query respons
 
 Asynchronous statistics update is performed by a background request. When the request is ready to write updated statistics to the database, it attempts to acquire a schema modification lock on the statistics metadata object. If a different session is already holding a lock on the same object, asynchronous statistics update is blocked until the schema modification lock can be acquired. Similarly, sessions that need to acquire a schema stability (Sch-S) lock on the statistics metadata object to compile a query may be blocked by the asynchronous statistics update background session, which is already holding or waiting to acquire the schema modification lock. Therefore, for workloads with very frequent query compilations and frequent statistics updates, using asynchronous statistics may increase the likelihood of concurrency issues due to lock blocking.
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and beginning in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). With this configuration enabled, the background request will wait to acquire the schema modification (Sch-M) lock and persist the updated statistics on a separate low-priority queue, allowing other requests to continue compiling queries with existing statistics. Once no other session is holding a lock on the statistics metadata object, the background request will acquire its schema modification lock and update statistics. In the unlikely event that the background request cannot acquire the lock within a timeout period of several minutes, the asynchronous statistics update will be aborted, and the statistics will not be updated until another automatic statistics update is triggered, or until statistics are [updated manually](update-statistics.md).
+In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and beginning in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can avoid potential concurrency issues using asynchronous statistics update if you enable the ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). With this configuration enabled, the background request will wait to acquire the schema modification (Sch-M) lock and persist the updated statistics on a separate low-priority queue, allowing other requests to continue compiling queries with existing statistics. Once no other session is holding a lock on the statistics metadata object, the background request will acquire its schema modification lock and update statistics. In the unlikely event that the background request cannot acquire the lock within a timeout period of several minutes, the asynchronous statistics update will be aborted, and the statistics will not be updated until another automatic statistics update is triggered, or until statistics are [updated manually](update-statistics.md).
 
 > [!NOTE]  
-> The ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY database scoped configuration option is available in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and in SQL Server beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
+> The ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY database scoped configuration option is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and in SQL Server beginning with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)].
 
 ### AUTO_DROP option
 
-*Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
+*Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE[ssSQL22](../../includes/sssql22-md.md)]
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], if statistics are manually created by a user or third party tool on a user database, those statistics objects can block or interfere with schema changes the customer may desire.
 
@@ -271,7 +271,7 @@ When creating multicolumn statistics, the order of the columns in the statistics
 To create densities that are useful for cardinality estimates, the columns in the query predicate must match one of the prefixes of columns in the statistics object definition. For example, the following example creates a multicolumn statistics object on the columns `LastName`, `MiddleName`, and `FirstName`.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF EXISTS (SELECT name FROM sys.stats
     WHERE name = 'LastFirst'
@@ -406,7 +406,7 @@ To improve the cardinality estimates for variables and functions, follow these g
     For example, the following stored procedure `Sales.GetRecentSales` changes the value of the parameter `@date` when `@date` is NULL.
 
     ```sql
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL
         DROP PROCEDURE Sales.GetRecentSales;
@@ -425,7 +425,7 @@ To improve the cardinality estimates for variables and functions, follow these g
     If the first call to the stored procedure `Sales.GetRecentSales` passes a NULL for the `@date` parameter, the Query Optimizer will compile the stored procedure with the cardinality estimate for `@date = NULL` even though the query predicate is not called with `@date = NULL`. This cardinality estimate might be significantly different than the number of rows in the actual query result. As a result, the Query Optimizer might choose a suboptimal query plan. To help avoid this, you can rewrite the stored procedure into two procedures as follows:
 
     ```sql
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL
         DROP PROCEDURE Sales.GetNullRecentSales;
@@ -456,7 +456,7 @@ To improve cardinality estimates for local variables, you can use the `OPTIMIZE 
 For some applications, recompiling the query each time it executes might take too much time. The `OPTIMIZE FOR` query hint can help even if you don't use the `RECOMPILE` option. For example, you could add an `OPTIMIZE FOR` option to the stored procedure `Sales.GetRecentSales` to specify a specific date. The following example adds the `OPTIMIZE FOR` option to the `Sales.GetRecentSales` procedure.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL
     DROP PROCEDURE Sales.GetRecentSales;
@@ -477,7 +477,7 @@ GO
 
 For some applications, query design guidelines might not apply because you cannot change the query or the RECOMPILE query hint might cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).
 
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints](../performance/query-store-hints.md).
+ In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], consider Query Store hints to force plans, instead of plan guides. For more information, see [Query Store hints](../performance/query-store-hints.md).
 
 ## See also
 

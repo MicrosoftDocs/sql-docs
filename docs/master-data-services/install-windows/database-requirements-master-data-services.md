@@ -46,7 +46,7 @@ ms.topic: conceptual
   
 -   Microsoft SQL Server 2008 R2 Developer (64-bit) x64  
   
- For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). 
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
   
 ### Operating System  
  For information about the supported Windows operating systems and other requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  

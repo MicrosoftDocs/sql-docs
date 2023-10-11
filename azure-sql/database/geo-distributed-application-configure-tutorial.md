@@ -44,8 +44,6 @@ To complete the tutorial, make sure you've installed the following items:
   > [!NOTE]
   > The tutorial uses the *AdventureWorksLT* sample database.
 
-- Java and Maven, see [Build an app using SQL Server](https://www.microsoft.com/sql-server/developer-get-started/), highlight **Java** and select your environment, then follow the steps.
-
 > [!IMPORTANT]
 > Be sure to set up firewall rules to use the public IP address of the computer on which you're performing the steps in this tutorial. Database-level firewall rules will replicate automatically to the secondary server.
 >

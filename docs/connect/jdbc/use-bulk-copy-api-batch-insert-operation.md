@@ -55,10 +55,11 @@ There are currently these limitations that apply to this feature.
 * Insert queries that contain INSERT-SELECT expressions (for example, `INSERT INTO TABLE SELECT * FROM TABLE2`), isn't supported.
 * Insert queries that contain multiple VALUE expressions (for example, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), isn't supported.
 * Insert queries that are followed by the OPTION clause, joined with multiple tables, or followed by another query, isn't supported.
-* `IDENTIY_INSERT` isn't managed in the driver. Either don't include identity columns in insert statements, or manually set the `IDENTITY_INSERT` state of your tables between batch insert statements. For more information, see [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md).
+* `IDENTIY_INSERT` isn't managed in the driver. Either don't include identity columns in insert statements, manually set the `IDENTITY_INSERT` state of your tables between batch insert statements, or manually pass the explicit value for an identity column with the insert statement. For more information, see [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md).
 * Because of the limitations of Bulk Copy API, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, and `GEOGRAPHY` data types, are currently not supported for this feature.
 
-If the query fails because of non "SQL server" related errors, the driver logs the error message and falls back to the original logic for batch insert.
+If the query fails because of errors unrelated to the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance, the driver logs the error message and falls back to the original logic for batch insert.
+
 
 ## Example
 

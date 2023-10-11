@@ -8,7 +8,10 @@ ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom:
+  - devx-track-azurepowershell
+  - devx-track-azurecli
+  - sql-migration-content
 ---
 
 # Migrate databases from SQL Server by using Log Replay Service - Azure SQL Managed Instance 
@@ -609,6 +612,7 @@ If LRS fails to start after some time and you get an error, check for the most c
 - Is the SAS token validity time appropriate for the time window of starting and completing the migration? There might be mismatches because of the different time zones used for your SQL Managed Instance deployment and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
 - Are the database name, resource group name, and managed instance name spelled correctly?
 - If you started LRS in autocomplete mode, was a valid file name for the last backup file specified?
+- Does the backup URI path contain keywords `backup` or `backups`? Rename the container or folders that are using `backup` or `backups` as these are reserved keywords.
 
 
 ## Next steps

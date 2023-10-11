@@ -9,11 +9,12 @@ ms.service: sql
 ms.subservice: samples
 ms.topic: conceptual
 ---
+
 # AdventureWorks sample databases
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server and Azure SQL Database.
+This article provides direct links to download `AdventureWorks` sample databases, and instructions for restoring them to SQL Server, Azure SQL Database, and Azure SQL Managed Instance.
 
 For more information about samples, see the [Samples GitHub repository](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).
 
@@ -81,9 +82,9 @@ For more information on restoring a [!INCLUDE [ssnoversion-md](../includes/ssnov
 
 # [Transact-SQL (T-SQL)](#tab/tsql)
 
-You can restore your sample database using Transact-SQL (T-SQL). An example to restore `AdventureWorks2022` is provided below, but the database name and installation file path may vary depending on your environment.
+You can restore your sample database using Transact-SQL (T-SQL). An example to restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] is provided below, but the database name and installation file path may vary depending on your environment.
 
-To restore `AdventureWorks2022` on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
+To restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] on **Windows**, modify values as appropriate to your environment and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];
@@ -97,7 +98,7 @@ WITH
 GO
 ```
 
-To restore `AdventureWorks2022` on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
+To restore [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] on **Linux**, change the Windows filesystem path to Linux, and then run the following Transact-SQL (T-SQL) command:
 
 ```sql
 USE [master];

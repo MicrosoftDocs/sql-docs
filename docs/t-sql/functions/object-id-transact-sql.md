@@ -75,7 +75,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ```sql  
 USE master;  
 GO  
-SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
+SELECT OBJECT_ID(N'AdventureWorks2022.Production.WorkOrder') AS 'Object ID';  
 GO  
 ```  
   
@@ -83,7 +83,7 @@ GO
  The following example checks for the existence of a specified table by verifying that the table has an object ID. If the table exists, it is deleted. If the table does not exist, the `DROP TABLE` statement is not executed.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
 DROP TABLE dbo.AWBuildVersion;  
@@ -102,8 +102,8 @@ GO
 ```sql  
 DECLARE @db_id INT;  
 DECLARE @object_id INT;  
-SET @db_id = DB_ID(N'AdventureWorks2012');  
-SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
+SET @db_id = DB_ID(N'AdventureWorks2022');  
+SET @object_id = OBJECT_ID(N'AdventureWorks2022.Person.Address');  
 IF @db_id IS NULL   
   BEGIN;  
     PRINT N'Invalid database';  

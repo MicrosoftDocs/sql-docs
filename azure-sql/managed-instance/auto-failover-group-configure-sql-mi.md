@@ -14,8 +14,8 @@ ms.custom: azure-sql-split, devx-track-azurepowershell
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/auto-failover-group-configure-sql-db.md)
-> * [Azure SQL Managed Instance](auto-failover-group-configure-sql-mi.md)
+> * [Azure SQL Database](../database/auto-failover-group-configure-sql-db.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](auto-failover-group-configure-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
 This article teaches you how to configure an [auto-failover group](auto-failover-group-sql-mi.md) for Azure SQL Managed Instance using the Azure portal and Azure PowerShell. For an end-to-end experience, review the [Auto-failover group tutorial](failover-group-add-instance-tutorial.md). 
 
@@ -237,7 +237,7 @@ The listener endpoint is in the form of `fog-name.database.windows.net`, and is 
 
 ## <a name="creating-a-failover-group-between-managed-instances-in-different-subscriptions"></a> Create group between instances in different subscriptions
 
-You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Azure Active Directory Tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). 
+You can create a failover group between SQL Managed Instances in two different subscriptions, as long as subscriptions are associated to the same [Microsoft Entra tenant](/azure/active-directory/fundamentals/active-directory-whatis#terminology). 
 
 - When using PowerShell API, you can do it by specifying the `PartnerSubscriptionId` parameter for the secondary SQL Managed Instance. 
 - When using REST API, each instance ID included in the `properties.managedInstancePairs` parameter can have its own Subscription ID.

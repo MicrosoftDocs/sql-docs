@@ -44,7 +44,7 @@ An optional parameter, specifying that no output should be returned to the clien
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 Executing the following `xp_cmdshell` statement returns a directory listing of the current directory.
 
@@ -64,13 +64,13 @@ The command(s) completed successfully.
 The Windows process spawned by `xp_cmdshell` has the same security rights as the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account.
 
 > [!CAUTION]  
-> `xp_cmdshell` is a powerful feature and disabled by default. `xp_cmdshell` can be enabled and disabled by using Policy-Based Management or by executing `sp_configure`. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md). Using `xp_cmdshell` can trigger security audit tools.
+> `xp_cmdshell` is a powerful feature and disabled by default. `xp_cmdshell` can be enabled and disabled by using Policy-Based Management or by executing `sp_configure`. For more information, see [Surface area configuration](../security/surface-area-configuration.md) and [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md). Using `xp_cmdshell` can trigger security audit tools.
 
 `xp_cmdshell` operates synchronously. Control isn't returned to the caller until the command-shell command is completed. If `xp_cmdshell` is executed within a batch and returns an error, the batch will fail.
 
 ## xp_cmdshell proxy account
 
-When it is called by a user that isn't a member of the **sysadmin** fixed server role, `xp_cmdshell` connects to Windows by using the account name and password stored in the credential named **##xp_cmdshell_proxy_account##**. If this proxy credential doesn't exist, `xp_cmdshell` fails.
+When it's called by a user that isn't a member of the **sysadmin** fixed server role, `xp_cmdshell` connects to Windows by using the account name and password stored in the credential named **##xp_cmdshell_proxy_account##**. If this proxy credential doesn't exist, `xp_cmdshell` fails.
 
 The proxy account credential can be created by executing `sp_xp_cmdshell_proxy_account`. As arguments, this stored procedure takes a Windows user name and password. For example, the following command creates a proxy credential for Windows domain user `SHIPPING\KobeR` that has the Windows password `sdfh%dkc93vcMt0`.
 
@@ -101,7 +101,7 @@ To allow non-administrators to use `xp_cmdshell`, and allow [!INCLUDE [ssNoVersi
     GRANT exec ON xp_cmdshell TO N'<some_user>';
    ```
 
-Now non-administrators can launch operating system processes with `xp_cmdshell` and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) continue to receive the permissions of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by `xp_cmdshell`.
+Now non-administrators can launch operating system processes with `xp_cmdshell` and those processes run with the permissions of the proxy account that you configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) continue to receive the permissions of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by `xp_cmdshell`.
 
 To determine the Windows account being used by `xp_cmdshell` when launching operating system processes, execute the following statement:
 
@@ -134,7 +134,7 @@ The following example uses `xp_cmdshell` to execute a command string without ret
 
 ```sql
 USE master;
-  
+
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
     \\server2\backups\SQLbcks', NO_OUTPUT;
 GO
@@ -187,5 +187,5 @@ EXEC master..xp_cmdshell @cmd;
 
 - [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
 - [xp_cmdshell (server configuration option)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)
-- [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)
+- [Surface area configuration](../security/surface-area-configuration.md)
 - [sp_xp_cmdshell_proxy_account (Transact-SQL)](sp-xp-cmdshell-proxy-account-transact-sql.md)

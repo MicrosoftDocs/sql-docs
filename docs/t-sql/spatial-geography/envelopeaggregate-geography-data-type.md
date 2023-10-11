@@ -50,7 +50,7 @@ EnvelopeAggregate ( geography_operand )
  The following example performs a `EnvelopeAggregate` on a set of **geography** location points within a city.  
   
  ```sql
- USE AdventureWorks2012  
+ USE AdventureWorks2022  
  GO  
  SELECT City,  
  geography::EnvelopeAggregate(SpatialLocation) AS SpatialLocation  

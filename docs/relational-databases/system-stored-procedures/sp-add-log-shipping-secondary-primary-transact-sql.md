@@ -73,7 +73,7 @@ The name of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent
 
 #### [ @file_retention_period = ] '*file_retention_period*'
 
-The length of time, in minutes, that a backup file is retained on the secondary server in the path specified by the @backup_destination_directory parameter before being deleted. *@history_retention_period* is **int**, with a default of NULL. A value of 14420 is used if none is specified.
+The length of time, in minutes, that a backup file is retained on the secondary server in the path specified by the @backup_destination_directory parameter before being deleted. *@history_retention_period* is **int**, with a default of `NULL`. A value of 14420 is used if none is specified.
 
 #### [ @monitor_server = ] '*monitor_server*'
 
@@ -112,7 +112,7 @@ The ID for the secondary server in the log shipping configuration. *@secondary_i
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

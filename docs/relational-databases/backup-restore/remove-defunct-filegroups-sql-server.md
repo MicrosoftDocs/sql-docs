@@ -83,9 +83,9 @@ helpviewer_keywords:
 ```sql  
 USE master;  
 GO  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 REMOVE FILE test1dat3 ;  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 REMOVE FILE test1dat4 ;  
 GO  
   
@@ -94,7 +94,7 @@ GO
 ```sql  
 USE master;  
 GO  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 REMOVE FILEGROUP Test1FG1 ;  
 GO  
   

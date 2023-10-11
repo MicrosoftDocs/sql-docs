@@ -47,19 +47,19 @@ Type of job to modify. *@job_type* is **nvarchar(20)** with a default of `captur
 
 #### [ @maxtrans ] = *max_trans*
 
-Maximum number of transactions to process in each scan cycle. *@maxtrans* is **int** with a default of NULL, which indicates no change for this parameter. If specified, the value must be a positive integer.
+Maximum number of transactions to process in each scan cycle. *@maxtrans* is **int** with a default of `NULL`, which indicates no change for this parameter. If specified, the value must be a positive integer.
 
 *max_trans* is valid only for capture jobs.
 
 #### [ @maxscans ] = *max_scans*
 
-Maximum number of scan cycles to execute in order to extract all rows from the log. *@maxscans* is **int** with a default of NULL, which indicates no change for this parameter.
+Maximum number of scan cycles to execute in order to extract all rows from the log. *@maxscans* is **int** with a default of `NULL`, which indicates no change for this parameter.
 
 *max_scan* is valid only for capture jobs.
 
 #### [ @continuous ] = *continuous*
 
-Indicates whether the capture job is to run continuously (`1`), or run only once (`0`). *@continuous* is **bit** with a default of NULL, which indicates no change for this parameter.
+Indicates whether the capture job is to run continuously (`1`), or run only once (`0`). *@continuous* is **bit** with a default of `NULL`, which indicates no change for this parameter.
 
 - When *@continuous* is `1`, the [sp_cdc_scan](sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (`@maxtrans * @maxscans`) transactions. It then waits the number of seconds specified in *polling_interval* before beginning the next log scan.
 
@@ -73,25 +73,25 @@ Indicates whether the capture job is to run continuously (`1`), or run only once
 
 #### [ @pollinginterval ] = *polling_interval*
 
-Number of seconds between log scan cycles. *@pollinginterval* is **bigint** with a default of NULL, which indicates no change for this parameter.
+Number of seconds between log scan cycles. *@pollinginterval* is **bigint** with a default of `NULL`, which indicates no change for this parameter.
 
 *polling_interval* is valid only for capture jobs when *@continuous* is set to `1`.
 
 #### [ @retention ] = *retention*
 
-Number of minutes that change rows are to be retained in change tables. *@retention* is **bigint** with a default of NULL, which indicates no change for this parameter. The maximum value is `52494800` (100 years). If specified, the value must be a positive integer.
+Number of minutes that change rows are to be retained in change tables. *@retention* is **bigint** with a default of `NULL`, which indicates no change for this parameter. The maximum value is `52494800` (100 years). If specified, the value must be a positive integer.
 
 *@retention* is valid only for cleanup jobs.
 
 #### [ @threshold = ] '*delete threshold*'
 
-Maximum number of delete entries that can be deleted using a single statement on cleanup. *@threshold* is **bigint** with a default of NULL, which indicates no change for this parameter. *@threshold* is valid only for cleanup jobs.
+Maximum number of delete entries that can be deleted using a single statement on cleanup. *@threshold* is **bigint** with a default of `NULL`, which indicates no change for this parameter. *@threshold* is valid only for cleanup jobs.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -111,7 +111,7 @@ Requires membership in the **db_owner** fixed database role.
 
 ### A. Change a capture job
 
-The following example updates the *@job_type*, *@maxscans*, and *@maxtrans* parameters of a capture job in the `AdventureWorks2022` database. The other valid parameters for a capture job, *@continuous* and *@pollinginterval*, are omitted; their values aren't modified.
+The following example updates the *@job_type*, *@maxscans*, and *@maxtrans* parameters of a capture job in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The other valid parameters for a capture job, *@continuous* and *@pollinginterval*, are omitted; their values aren't modified.
 
 ```sql
 USE AdventureWorks2022;
@@ -126,7 +126,7 @@ GO
 
 ### B. Change a cleanup job
 
-The following example updates a cleanup job in the `AdventureWorks2022` database. All valid parameters for this job type, except *@threshold*, are specified. The value of *@threshold* isn't modified.
+The following example updates a cleanup job in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. All valid parameters for this job type, except *@threshold*, are specified. The value of *@threshold* isn't modified.
 
 ```sql
 USE AdventureWorks2022;

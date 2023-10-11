@@ -63,7 +63,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
  The following example uses the minimum LSN value returned by `sys.fn_cdc_get_min_lsn` to verify that the proposed low endpoint for a change data query is valid for the current timeline for the capture instance `HumanResources_Employee`. This example assumes that the previous high endpoint LSN for the capture instance was saved and is available to set the `@save_to_lsn` variable. For the purposes of this example, `@save_to_lsn` is set to 0x000000000000000000 to force the error-handling section to run.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @min_lsn binary(10), @from_lsn binary(10),@save_to_lsn binary(10), @to_lsn binary(10);  
 -- Sets @save_to_lsn to the previous high endpoint saved from the last change data request.  

@@ -162,7 +162,7 @@ GRANT permission [ ,...n ]
 ## Examples  
   
 ### A. Granting CONTROL permission on a user to another user  
- The following example grants `CONTROL` permission on `AdventureWorks2012` user `Wanida` to user `RolandX`.  
+ The following example grants `CONTROL` permission on [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] user `Wanida` to user `RolandX`.  
   
 ```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
@@ -170,7 +170,7 @@ GO
 ```  
   
 ### B. Granting VIEW DEFINITION permission on a role to a user with GRANT OPTION  
- The following example grants `VIEW DEFINITION` permission on `AdventureWorks2012` role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
+ The following example grants `VIEW DEFINITION` permission on [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
   
 ```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### C. Granting IMPERSONATE permission on a user to an application role  
- The following example grants `IMPERSONATE` permission on user `HamithaL` to `AdventureWorks2012` application role `AccountsPayable17`.  
+ The following example grants `IMPERSONATE` permission on user `HamithaL` to [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] application role `AccountsPayable17`.  
   
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

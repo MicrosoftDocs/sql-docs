@@ -85,7 +85,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  The following example opens a global cursor and uses `sp_cursor_list` to report on the attributes of the cursor.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Declare and open a keyset-driven cursor.  
 DECLARE abc CURSOR KEYSET FOR  

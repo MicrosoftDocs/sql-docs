@@ -54,7 +54,7 @@ SYSTEM_USER
  You cannot EXECUTE AS a SYSTEM_USER.
  
  Azure SQL Database: 
- The SSYSTEM_USER statement doesn't support execution using an impersonated security context through EXECUTE AS.
+ The SYSTEM_USER statement doesn't support execution using an impersonated security context through EXECUTE AS.
 
 ## Examples  
   
@@ -81,7 +81,7 @@ The current system user is: WillisJo
  The following example creates a table with `SYSTEM_USER` as a `DEFAULT` constraint for the `SRep_tracking_user` column.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  

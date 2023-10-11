@@ -29,7 +29,7 @@ Compiles a plan for the submitted cursor statement or batch, then creates and po
 ```syntaxsql
 sp_cursorprepexec prepared handle OUTPUT , cursor OUTPUT , params , statement , options
     [ , scrollopt [ , ccopt [ , rowcount ] ] ]
-    [ , '@parameter_name [ , ...n ] ' ]
+    [ , '@parameter_name [ , ...n ]' ]
 ```
 
 ## Arguments
@@ -125,7 +125,7 @@ If *params* returns a NULL value, then the statement isn't parameterized.
 
 ## Examples
 
-This example demonstrates the use of `sp_cursorprepexec`. It runs a query against the `Person` table in the `AdventureWorks2022` database returning all records where first name is "Katherine".
+This example demonstrates the use of `sp_cursorprepexec`. It runs a query against the `Person` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database returning all records where first name is "Katherine".
 
 ```sql
 USE AdventureWorks2022;

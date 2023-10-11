@@ -5,6 +5,6 @@ DROP TABLE #Bicycles;
 GO
 SELECT * 
 INTO #Bicycles
-FROM AdventureWorks2012.Production.Product
+FROM AdventureWorks2022.Production.Product
 WHERE ProductNumber LIKE 'BK%';
 GO

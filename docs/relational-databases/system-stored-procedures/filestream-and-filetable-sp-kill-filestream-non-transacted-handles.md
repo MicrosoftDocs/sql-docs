@@ -45,7 +45,7 @@ You can pass NULL for the value of *table_name* to close all open nontransaction
 
 #### [ @handle_id = ] *handle_id*
 
-The optional ID of the individual handle to be closed. You can get the *handle_id* from the [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) dynamic management view. Each ID is unique in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If you specify *handle_id*, then you also have to provide a value for *table_name*.
+The optional ID of the individual handle to be closed. You can get the *handle_id* from the [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) dynamic management view. Each ID is unique in a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. If you specify *handle_id*, then you also have to provide a value for *table_name*.
 
 You can pass NULL for the value of *handle_id* to close all open nontransactional handles for the FileTable specified by *table_name*. NULL is the default value.
 
@@ -61,11 +61,11 @@ None.
 
 The *handle_id* required by `sp_kill_filestream_non_transacted_handles` isn't related to the `session_id` or unit of work that is used in other `kill` commands.
 
-For more information, see [Manage FileTables](../../relational-databases/blob/manage-filetables.md).
+For more information, see [Manage FileTables](../blob/manage-filetables.md).
 
 ## Metadata
 
-For information about open nontransactional file handles, query the dynamic management view [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).
+For information about open nontransactional file handles, query the dynamic management view [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).
 
 ## Permissions
 
@@ -78,10 +78,10 @@ The following examples show how to call `sp_kill_filestream_non_transacted_handl
 ```sql
 -- Close all open handles in the current database.
 sp_kill_filestream_non_transacted_handles;
-  
+
 -- Close all open handles in myFileTable.
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable';
-  
+
 -- Close a specific handle in myFileTable.
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD;
 ```
@@ -104,7 +104,7 @@ GO
 
 ## See also
 
-- [Manage FileTables](../../relational-databases/blob/manage-filetables.md)
+- [Manage FileTables](../blob/manage-filetables.md)
 - [FILESTREAM and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 - [FILESTREAM and FileTable catalog views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 - [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)

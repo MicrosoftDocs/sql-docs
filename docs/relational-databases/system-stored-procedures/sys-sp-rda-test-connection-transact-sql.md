@@ -69,7 +69,7 @@ In case of success, `sp_rda_test_connection` returns error 14855 (`STRETCH_MAJOR
 
 In case of failure, `sp_rda_test_connection` returns error 14856 (`STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED`) with severity `EX_USER` and an error return code.
 
-## Result sets
+## Result set
 
 | Column name | Data type | Description |
 | --- | --- | --- |

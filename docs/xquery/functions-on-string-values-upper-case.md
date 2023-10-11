@@ -48,7 +48,7 @@ SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');
  This example shows how to use the upper-case function to perform a case-insensitive search.  
   
 ```  
-USE AdventureWorks  
+USE AdventureWorks2022;
 GO  
 --WITH XMLNAMESPACES clause specifies the namespace prefix  
 --to use.   

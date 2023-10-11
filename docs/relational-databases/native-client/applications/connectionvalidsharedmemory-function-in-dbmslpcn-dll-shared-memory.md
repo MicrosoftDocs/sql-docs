@@ -28,7 +28,7 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
   
 -   Type: **char\***  
   
--   The name of the SQL server.  
+-   The name of the SQL Server.  
   
 ## Return value  
  Type: **BOOL**  

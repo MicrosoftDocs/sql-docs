@@ -45,9 +45,9 @@ Returns information about the connections established to this instance of the da
 |last_write|**datetime**|Timestamp when last write occurred over this connection. Is nullable.|  
 |net_packet_size|**int**|Network packet size used for information and data transfer. Is nullable.|  
 |client_net_address|**varchar(48)**|Host address of the client connecting to this server. Is nullable.|  
-|client_tcp_port|**int**|Port number on the client computer that is associated with this connection. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
-|local_net_address|**varchar(48)**|Represents the IP address on the server that this connection targeted. Available only for connections using the TCP transport provider. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
-|local_tcp_port|**int**|Represents the server TCP port that this connection targeted if it were a connection using the TCP transport. Is nullable.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this column always returns NULL.|  
+|client_tcp_port|**int**|Port number on the client computer that is associated with this connection. Is nullable.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this column always returns NULL.|  
+|local_net_address|**varchar(48)**|Represents the IP address on the server that this connection targeted. Available only for connections using the TCP transport provider. Is nullable.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this column always returns NULL.|  
+|local_tcp_port|**int**|Represents the server TCP port that this connection targeted if it were a connection using the TCP transport. Is nullable.<br /><br /> In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], this column always returns NULL.|  
 |connection_id|**uniqueidentifier**|Identifies each connection uniquely. Is not nullable.|  
 |parent_connection_id|**uniqueidentifier**|Identifies the primary connection that the MARS session is using. Is nullable.|  
 |most_recent_sql_handle|**varbinary(64)**|The SQL handle of the last request executed on this connection. The `most_recent_sql_handle` column is always in sync with the `most_recent_session_id` column. Is nullable.|  

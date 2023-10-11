@@ -15,7 +15,7 @@ In lesson 1, you added a [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-m
   
 In this lesson, you're going to define a *data source*, connection information the report uses to access data from a relational database or other sources.
 
-For this report, you're going to add the AdventureWorks2016 sample database as your data source. This tutorial assumes that the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
+For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database as your data source. This tutorial assumes that the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
 
 ## To set up a connection  
 
@@ -27,7 +27,7 @@ For this report, you're going to add the AdventureWorks2016 sample database as y
 
     ![The Data Source Properties Dialog Box](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. In the **Name** text box, type "AdventureWorks2016".
+2. In the **Name** text box, type "AdventureWorks2022".
 
 3. Select the **Embedded connection** radio button.
 
@@ -35,14 +35,14 @@ For this report, you're going to add the AdventureWorks2016 sample database as y
   
 5. In the **Connection string** text box, type the following string:
 
-    `Data source=localhost; initial catalog=AdventureWorks2016`
+    `Data source=localhost; initial catalog=AdventureWorks2022`
 
     > [!NOTE]
-    > This connection string assumes that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the report server, and the AdventureWorks2016 database are all installed on the local computer.
+    > This connection string assumes that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the report server, and the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database are all installed on the local computer.
     >
     >Change the connection string and replace "localhost" with the name of your database server/instance if the assumption isn't true. If you're using [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] or a SQL Server named instance, you need to modify your connection string to include instance information. For example:
     >
-    > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
+    > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2022`
     >
     > For more information about connection strings, you can refer to the `See also` section below.
 
@@ -50,13 +50,13 @@ For this report, you're going to add the AdventureWorks2016 sample database as y
 
 7. Select **OK** to complete the process.
 
-Report Designer adds the data source AdventureWorks2016 to the **Report Data** pane.
+Report Designer adds the data source AdventureWorks2022 to the **Report Data** pane.
 
 ![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
 
 ## Next steps
 
-In this lesson, you've successfully defined a connection to the AdventureWorks2016 sample database. Continue with [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
+In this lesson, you've successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
 
 ## See also
 

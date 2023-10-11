@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/13/2023
+ms.date: 08/17/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -12,11 +12,21 @@ monikerRange: ">=sql-server-2016"
 ---
 # What are Extended Security Updates for SQL Server?
 
-[!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
-
-This article provides information for using [Azure Arc](/azure/azure-arc/overview) to receive Extended Security Updates (ESUs) for versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that are out of extended support.
-
 [!INCLUDE [esu-table](includes/esu-table.md)]
+
+Extended Security Updates (ESUs) are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
+
+This article provides information how to receive Extended Security Updates (ESUs) for versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] that are out of extended support.
+
+ESUs are made available **if needed**, once a security vulnerability is discovered and is rated as **Critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there's no regular release cadence for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESUs.
+
+ESUs don't include:
+
+- New features
+- Functional improvements
+- Customer-requested fixes
+
+[!INCLUDE [SQL Server end of support](../../includes/applies-to-version/sql-migration-end-of-support.md)]
 
 For information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
 
@@ -40,34 +50,14 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 - **SQL Server on-premises or a hosted environment, and connected to Azure Arc.** You can use Extended Security Updates enabled by Azure Arc to enable ESU as a monthly subscription. The updates are automatically installed when they're available. You also benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides. If you migrate your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure or upgrade the subscription, charges then automatically stop. You can cancel the ESU subscription manually at any time.
 
-- **SQL Server on-premises or in a hosted environment, and not connected to Azure Arc.** You can purchase the ESU SKU through the Volume Licensing Service Center (VLSC), and manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on the Azure portal to receive the patches. For more information, see [Register disconnected SQL Server instances for ESUs](#register-instances-for-esus) later in this article.
+- **SQL Server on-premises or in a hosted environment, and not connected to Azure Arc.** You can purchase the ESU SKU through the Volume Licensing Service Center (VLSC), and manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on the Azure portal to receive the patches. For more information, see  [Register disconnected SQL Server instances for ESUs](#register-instances-for-esus) later in this article.
 
   > [!NOTE]  
   > Connecting or registering instances is free of charge. Both *connected* and *registered* instances do not incur additional charges when downloading ESUs, which are delivered through the Azure portal.
 
 [!INCLUDE [msCoName](../../includes/msconame-md.md)] recommends applying ESU patches as soon as they're available to keep your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
-## Extended support dates
-
-For the versions in the following table, consider using [Extended Security Updates](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support) described in this article, or other migration options. For more information, see [End of support options](sql-server-end-of-support-overview.md).
-
-| SQL Server version | Extended Support end date |
-| --- | --- |
-| SQL Server 2012 | July 12, 2022 |
-
-## What are Extended Security Updates
-
-Extended Security Updates (ESUs) include security updates for customers who have purchased an Extended Support Update subscription, and are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
-
-ESUs are made available **if needed**, once a security vulnerability is discovered and is rated as **Critical** by the [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com). Therefore, there's no regular release cadence for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] ESUs.
-
-ESUs don't include:
-
-- New features
-- Functional improvements
-- Customer-requested fixes
-
-### Support
+## Support
 
 ESUs don't include technical support, but you can use an active support contract, such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3), or Premier/Unified Support, to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
 
@@ -118,9 +108,9 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 ## Subscribe to Extended Security Updates enabled by Azure Arc
 
-If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription, which provides you with the flexibility to cancel at any time without having to separately purchase an ESU SKU. For more information, see [Deployment options for Azure Arc-enabled SQL Server](../azure-arc/deployment-options.md).
+If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription, which provides you with the flexibility to cancel at any time without having to separately purchase an ESU SKU. The ESU subscription enables automated deployment of the patches as they are released.
 
-You can subscribe to Extended Security Updates enabled by Azure Arc at any time using the Azure portal, Azure PowerShell, or Azure CLI.
+You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Manage SQL Server Configuration](../azure-arc/manage-configuration.md)[Manage SQL Server Configuration].
 
 ### [Azure portal](#tab/portal)
 
@@ -137,6 +127,9 @@ The following steps subscribe to ESUs using the Azure portal:
 1. Select **Subscribe to Extended Security Updates**, and select **Save**.
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-subscribe-save.png" alt-text="Screenshot showing the Subscribe to ESU option highlighted." lightbox="media/sql-server-extended-security-updates/extended-security-updates-subscribe-save.png":::
+
+> [!NOTE]  
+> To subscribe to Extended Security Updates, you must have License type set to Pay-as-you-go or License with Software assurance. Otherwise, the **Extended Security Updates** option will be disabled.
 
 ### [Azure PowerShell](#tab/powershell)
 
@@ -240,9 +233,13 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!IMPORTANT]
 > Don't cancel Extended Security Updates enabled by Azure Arc before or after migrating to Azure. When you migrate your on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure Virtual Machines or Azure VMware Solutions, the ESU charges will stop automatically, but you will continue to have full access to the Extended Security Updates. For more information, see [Extended Security Updates: frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
-## <a id="register-instances-for-esus"></a> Register disconnected SQL Server instances for ESUs
+## <a id="register-instances-for-esus"></a> Register Extended Security Updates purchased through volume licensing
 
-If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances can't be connected to Azure Arc, you can manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances in the Azure portal to enable access to the ESUs. If you prefer to take advantage of the flexibility of Extended Security Updates enabled by Azure Arc, follow the [deployment options for Azure Arc-enabled SQL Server](../azure-arc/deployment-options.md), and then subscribe to ESU as described in the previous section.
+If you purchased an ESU product through volume licensing (VL), you must register it to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that are not connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice.
+
+## <a id="register-instances-on-azure-portal"></a> Register disconnected SQL Server instances on Azure portal
+
+If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances can't be connected to Azure Arc, you can manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances in the Azure portal to enable access to the ESUs. If you prefer to take advantage of the flexibility of Extended Security Updates enabled by Azure Arc, connect your server to Azure Arc. To connect, follow the steps in [Automatically connect your SQL Server to Azure Arc](../azure-arc/automatically-connect.md).
 
 The following example shows how to manually register your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in a disconnected state, in the Azure portal.
 
@@ -336,10 +333,16 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 ### Confirmation
 
-1. We recommend using the `Year2OrderID` tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. The `Year2EntitlementConfirmed` tag is automatically filled in.
+1. We recommend you use a year-specific tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. For example:
+
+   - First year: `Year1InvoiceID`
+   - Second year: `Year2InvoiceID`
+   - Third year: `Year3InvoiceID`
 
    > [!NOTE]  
    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
+
+   The `Year2EntitlementConfirmed` tag is automatically filled in.
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-tags.png" alt-text="Screenshot of confirmation tags.":::
 
@@ -350,30 +353,6 @@ Now you can continue to the [Confirmation](#confirmation) section.
 1. Once you've added your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you'll see them in the portal after a few minutes. Because they were added manually, they always show in a disconnected state, with the description **Registered**.
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png" alt-text="Screenshot of two registered SQL Server instances on the Azure Arc portal." lightbox="media/sql-server-extended-security-updates/extended-security-updates-connected-servers.png":::
-
-### Link ESU invoice to registered servers
-
-Customers can use the **Purchase Order Number** under Invoice Summary in their Microsoft invoice (as shown in the following screenshot) to link the ESU purchase with the registration of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
-
-:::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-sample.png" alt-text="Sample invoice with Purchase Order Number highlighted.":::
-
-Follow these steps to link an ESU invoice to your Azure Arc [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to get access to extended updates. This example includes both **Connected** and **Registered** servers.
-
-1. Sign into the [Azure portal](https://portal.azure.com).
-
-1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
-
-1. Use the checkboxes next to each server to select which machines you would like to link, and then select **Link ESU invoice**.
-
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot of all SQL Server instances on the Azure Arc section." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png":::
-
-1. Fill in the ESU invoice number in the **Invoice ID** section, and then select **Link invoice**.
-
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png" alt-text="Screenshot of the invoice ID on the Link ESU invoice page." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png":::
-
-1. The servers you linked to the ESU invoice now show a valid ESU expiration date.
-
-   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot of SQL Server instances with a valid ESU expiration value." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png":::
 
 ### Formatting requirements for CSV file
 
@@ -400,6 +379,33 @@ Server3-SQL2012,SQL Server 2012,Enterprise,12,Azure Virtual Machine
 Server4-SQL2012,SQL Server 2012,Standard,8,Azure VMware Solution
 ```
 
+## Link ESU invoice
+
+You can use the **Purchase Order Number** under Invoice Summary in their Microsoft invoice (as shown in the following screenshot) to link the ESU purchase with the registration of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
+
+:::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-sample.png" alt-text="Sample invoice with Purchase Order Number highlighted.":::
+
+Follow these steps to link an ESU invoice to your Azure Arc [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to get access to extended updates. This example includes both **Connected** and **Registered** servers.
+
+1. Sign into the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Azure Arc** and select **SQL Server instances**.
+
+1. Use the checkboxes next to each [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance you would like to link, and then select **Link ESU invoice**.
+
+   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png" alt-text="Screenshot of all SQL Server instances on the Azure Arc section." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-select.png":::
+
+1. Fill in the ESU invoice number in the **Invoice ID** section, and then select **Link invoice**.
+
+   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png" alt-text="Screenshot of the invoice ID on the Link ESU invoice page." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-save.png":::
+
+1. The servers you linked to the ESU invoice now show a valid ESU expiration date.
+
+   :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot of SQL Server instances with a valid ESU expiration value." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png":::
+
+> [!IMPORTANT]
+> If you purchased an ESU VL product for disconnected SQL Servers, you should only select the instances with the **Status** = `Registered`. If you purchased an ESU VL product for Arc-enabled SQL Servers, you should only select the instances with the **Status** = `Connected`.
+
 ## Download ESUs
 
 Once your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances have been registered with Azure Arc, you can download the Extended Security Update packages using the link found in the Azure portal, if and when they're made available.
@@ -408,7 +414,7 @@ To download ESUs, follow these steps:
 
 1. Sign into the [Azure portal](https://portal.azure.com).
 
-1. Navigate to **Azure Arc** and select **Infrastructure** > **SQL Servers**.
+1. Navigate to **Azure Arc** and select **SQL Server instances**.
 
 1. Select a server from the list.
 
@@ -420,26 +426,7 @@ To download ESUs, follow these steps:
 
 ## Supported regions
 
-The following list shows the supported regions for this service:
-
-- Australia East
-- Canada Central
-- Central US
-- East Asia
-- East US
-- East US 2
-- France Central
-- Japan East
-- Korea Central
-- North Central US
-- North Europe
-- South Central US
-- Southeast Asia
-- UK South
-- West Europe
-- West US
-- West US 2
-- West US 3
+[!INCLUDE [azure-arc-data-regions](../azure-arc/includes/azure-arc-data-regions.md)]
 
 Government regions aren't supported. For more information, see [Can customers get free Extended Security Updates on Azure Government regions?](extended-security-updates-frequently-asked-questions.md#can-i-get-free-extended-security-updates-on-azure-government-regions)
 

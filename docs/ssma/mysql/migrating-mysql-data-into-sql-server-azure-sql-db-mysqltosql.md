@@ -7,7 +7,9 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-migration
+ms.custom:
+  - intro-migration
+  - sql-migration-content
 f1_keywords:
   - "ssma.mysql.migratedata.f1"
 helpviewer_keywords:
@@ -127,4 +129,4 @@ When large data size needs to be migrated within a short duration, at scale offl
 1. For monitoring the data migration, click on the monitoring URL or go to the data factory monitoring page in Azure portal.
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

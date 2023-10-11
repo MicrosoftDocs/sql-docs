@@ -4,7 +4,7 @@ description: "How SQL Server processes queries and optimizes query reuse through
 author: "akatesmith"
 ms.author: "katsmith"
 ms.reviewer: maghan, randolphwest, wiassaf
-ms.date: 09/01/2022
+ms.date: 08/18/2023
 ms.service: sql
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,18 +18,18 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following sections cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following sections cover how [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## Execution modes
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INCLUDE[tsql](../includes/tsql-md.md)] statements using two distinct processing modes:
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INCLUDE [tsql](../includes/tsql-md.md)] statements using two distinct processing modes:
 
 - Row mode execution
 - Batch mode execution
 
 ### Row mode execution
 
-*Row mode execution* is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
+*Row mode execution* is a query processing method used with traditional RDBMS tables, where data is stored in row format. When a query is executed and accesses data in row store tables, the execution tree operators and child operators read each required row, across all the columns specified in the table schema. From each row that is read, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] then retrieves the columns that are required for the result set, as referenced by a SELECT statement, JOIN predicate, or filter predicate.
 
 > [!NOTE]  
 > Row mode execution is very efficient for OLTP scenarios, but can be less efficient when scanning large amounts of data, for example in Data Warehousing scenarios.
@@ -38,18 +38,18 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can process [!INC
 
 *Batch mode execution* is a query processing method used to process multiple rows together (hence the term batch). Each column within a batch is stored as a vector in a separate area of memory, so batch mode processing is vector-based. Batch mode processing also uses algorithms that are optimized for the multi-core CPUs and increased memory throughput that are found on modern hardware.
 
-When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore).
+When it was first introduced, batch mode execution was closely integrated with, and optimized around, the columnstore storage format. However, starting with [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], batch mode execution no longer requires columnstore indexes. For more information, see [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing-details.md#batch-mode-on-rowstore).
 
 Batch mode processing operates on compressed data when possible, and eliminates the [exchange operator](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) used by row mode execution. The result is better parallelism and faster performance.
 
-When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate. For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).
+When a query is executed in batch mode, and accesses data in columnstore indexes, the execution tree operators and child operators read multiple rows together in column segments. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] reads only the columns required for the result, as referenced by a SELECT statement, JOIN predicate, or filter predicate. For more information on columnstore indexes, see [Columnstore Index Architecture](../relational-databases/sql-server-index-design-guide.md#columnstore_index).
 
 > [!NOTE]  
 > Batch mode execution is very efficient Data Warehousing scenarios, where large amounts of data are read and aggregated.
 
 ## SQL statement processing
 
-Processing a single [!INCLUDE[tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
+Processing a single [!INCLUDE [tsql](../includes/tsql-md.md)] statement is the most basic way that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] executes [!INCLUDE [tsql](../includes/tsql-md.md)] statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
 ### Logical operator precedence
 
@@ -115,28 +115,28 @@ Typically, there are many sequences in which the database server can access the 
 - **The methods used to compute calculations, and how to filter, aggregate, and sort data from each table.**  
   As data is accessed from tables, there are different methods to perform calculations over data such as computing scalar values, and to aggregate and sort data as defined in the query text, for example when using a `GROUP BY` or `ORDER BY` clause, and how to filter data, for example when using a `WHERE` or `HAVING` clause.
 
-The process of selecting one execution plan from potentially many possible plans is referred to as optimization. The Query Optimizer is one of the most important components of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)]. While some overhead is used by the Query Optimizer to analyze the query and select a plan, this overhead is typically saved several-fold when the Query Optimizer picks an efficient execution plan. For example, two construction companies can be given identical blueprints for a house. If one company spends a few days at the beginning to plan how they will build the house, and the other company begins building without planning, the company that takes the time to plan their project will probably finish first.
+The process of selecting one execution plan from potentially many possible plans is referred to as optimization. The Query Optimizer is one of the most important components of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)]. While some overhead is used by the Query Optimizer to analyze the query and select a plan, this overhead is typically saved several-fold when the Query Optimizer picks an efficient execution plan. For example, two construction companies can be given identical blueprints for a house. If one company spends a few days at the beginning to plan how they will build the house, and the other company begins building without planning, the company that takes the time to plan their project will probably finish first.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a cost-based optimizer. Each possible execution plan has an associated cost in terms of the amount of computing resources used. The Query Optimizer must analyze the possible plans and choose the one with the lowest estimated cost. Some complex `SELECT` statements have thousands of possible execution plans. In these cases, the Query Optimizer doesn't analyze all possible combinations. Instead, it uses complex algorithms to find an execution plan that has a cost reasonably close to the minimum possible cost.
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a cost-based optimizer. Each possible execution plan has an associated cost in terms of the amount of computing resources used. The Query Optimizer must analyze the possible plans and choose the one with the lowest estimated cost. Some complex `SELECT` statements have thousands of possible execution plans. In these cases, the Query Optimizer doesn't analyze all possible combinations. Instead, it uses complex algorithms to find an execution plan that has a cost reasonably close to the minimum possible cost.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't choose only the execution plan with the lowest resource cost; it chooses the plan that returns results to the user with a reasonable cost in resources and that returns the results the fastest. For example, processing a query in parallel typically uses more resources than processing it serially, but completes the query faster. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will use a parallel execution plan to return results if the load on the server won't be adversely affected.
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't choose only the execution plan with the lowest resource cost; it chooses the plan that returns results to the user with a reasonable cost in resources and that returns the results the fastest. For example, processing a query in parallel typically uses more resources than processing it serially, but completes the query faster. The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will use a parallel execution plan to return results if the load on the server won't be adversely affected.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes, and hold information on the density<sup>1</sup> of the underlying data. This is used to indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. If the index statistics aren't current, the Query Optimizer may not make the best choice for the current state of the table. For more information about densities, see [Statistics](../relational-databases/statistics/statistics.md#density).
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes, and hold information on the density<sup>1</sup> of the underlying data. This is used to indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer, because VIN has lower density than manufacturer. If the index statistics aren't current, the Query Optimizer may not make the best choice for the current state of the table. For more information about densities, see [Statistics](../relational-databases/statistics/statistics.md#density).
 
 <sup>1</sup> Density defines the distribution of unique values that exist in the data, or the average number of duplicate values for a given column. As density decreases, selectivity of a value increases.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
 
 > [!NOTE]  
-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:
+> [!INCLUDE [ssManStudioFull](../includes/ssmanstudiofull-md.md)] has three options to display execution plans:
 >
 > - The ***[Estimated Execution Plan](../relational-databases/performance/display-the-estimated-execution-plan.md)***, which is the compiled plan, as produced by the Query Optimizer.
-> - The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)], the elapsed and CPU time used during execution.
+> - The ***[Actual Execution Plan](../relational-databases/performance/display-an-actual-execution-plan.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information available after the execution completes, such as execution warnings, or in newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], the elapsed and CPU time used during execution.
 > - The ***[Live Query Statistics](../relational-databases/performance/live-query-statistics.md)***, which is the same as the compiled plan plus its execution context. This includes runtime information during execution progress, and is updated every second. Runtime information includes for example the actual number of rows flowing through the operators.
 
 ### Process a SELECT statement
 
-The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following:
+The basic steps that [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses to process a single SELECT statement include the following:
 
 1. The parser scans the `SELECT` statement and breaks it into logical units such as keywords, expressions, operators, and identifiers.
 1. A query tree, sometimes referred to as a sequence tree, is built describing the logical steps needed to transform the source data into the format required by the result set.
@@ -146,19 +146,19 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 
 ### Constant folding and expression evaluation
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE[tsql](../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] evaluates some constant expressions early to improve query performance. This is referred to as constant folding. A constant is a [!INCLUDE [tsql](../includes/tsql-md.md)] literal, such as `3`, `'ABC'`, `'2005-12-31'`, `1.0e3`, or `0x12345678`.
 
 #### Foldable expressions
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses constant folding with the following types of expressions:
 
 - Arithmetic expressions, such as `1 + 1` and `5 / 3 * 2`, that contain only constants.
 - Logical expressions, such as `1 = 1` and `1 > 2 AND 3 > 4`, that contain only constants.
-- Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions aren't foldable. Deterministic built-in functions are foldable, with some exceptions.
-- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Built-in functions that are considered foldable by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions aren't foldable. Deterministic built-in functions are foldable, with some exceptions.
+- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE]  
-> An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
+> An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
 
 #### Nonfoldable expressions
 
@@ -167,12 +167,12 @@ All other expression types aren't foldable. In particular, the following types o
 - Nonconstant expressions such as an expression whose result depends on the value of a column.
 - Expressions whose results depend on a local variable or parameter, such as @x.
 - Nondeterministic functions.
-- User-defined [!INCLUDE[tsql](../includes/tsql-md.md)] functions<sup>1</sup>.
+- User-defined [!INCLUDE [tsql](../includes/tsql-md.md)] functions<sup>1</sup>.
 - Expressions whose results depend on language settings.
 - Expressions whose results depend on SET options.
 - Expressions whose results depend on server configuration options.
 
-<sup>1</sup> Before [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], deterministic scalar-valued CLR user-defined functions and methods of CLR user-defined types were not foldable.
+<sup>1</sup> Before [!INCLUDE [ssSQL11](../includes/sssql11-md.md)], deterministic scalar-valued CLR user-defined functions and methods of CLR user-defined types were not foldable.
 
 #### Examples of foldable and nonfoldable constant expressions
 
@@ -191,7 +191,7 @@ If the `PARAMETERIZATION` database option isn't set to `FORCED` for this query, 
 - The expression doesn't have to be evaluated repeatedly at run time.
 - The value of the expression after it is evaluated is used by the Query Optimizer to estimate the size of the result set of the portion of the query `TotalDue > 117.00 + 1000.00`.
 
-On the other hand, if `dbo.f` is a scalar user-defined function, the expression `dbo.f(100)` isn't folded, because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doesn't fold expressions that involve user-defined functions, even if they are deterministic. For more information on parameterization, see [Forced Parameterization](#forced-parameterization) later in this article.
+On the other hand, if `dbo.f` is a scalar user-defined function, the expression `dbo.f(100)` isn't folded, because [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] doesn't fold expressions that involve user-defined functions, even if they are deterministic. For more information on parameterization, see [Forced Parameterization](#forced-parameterization) later in this article.
 
 #### Expression evaluation
 
@@ -210,7 +210,7 @@ No other functions or operators are evaluated by the Query Optimizer during card
 Consider this stored procedure:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE PROCEDURE MyProc( @d datetime )
 AS
@@ -224,7 +224,7 @@ During optimization of the `SELECT` statement in the procedure, the Query Optimi
 Now consider an example similar to the previous one, except that a local variable `@d2` replaces `@d+1` in the query and the expression is evaluated in a SET statement instead of in the query.
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
@@ -237,33 +237,33 @@ BEGIN
 END;
 ```
 
-When the `SELECT` statement in `MyProc2` is optimized in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` isn't known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
+When the `SELECT` statement in `MyProc2` is optimized in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the value of `@d2` isn't known. Therefore, the Query Optimizer uses a default estimate for the selectivity of `OrderDate > @d2`, (in this case 30 percent).
 
 ### Process other statements
 
-The basic steps described for processing a `SELECT` statement apply to other [!INCLUDE[tsql](../includes/tsql-md.md)] statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT` statements that provide the data values to be updated or inserted.
+The basic steps described for processing a `SELECT` statement apply to other [!INCLUDE [tsql](../includes/tsql-md.md)] statements such as `INSERT`, `UPDATE`, and `DELETE`. `UPDATE` and `DELETE` statements both have to target the set of rows to be modified or deleted. The process of identifying these rows is the same process used to identify the source rows that contribute to the result set of a `SELECT` statement. The `UPDATE` and `INSERT` statements may both contain embedded `SELECT` statements that provide the data values to be updated or inserted.
 
 Even Data Definition Language (DDL) statements, such as `CREATE PROCEDURE` or `ALTER TABLE`, are ultimately resolved to a series of relational operations on the system catalog tables and sometimes (such as `ALTER TABLE ADD COLUMN`) against the data tables.
 
 ### Worktables
 
-The Relational Engine may need to build a worktable to perform a logical operation specified in an [!INCLUDE[tsql](../includes/tsql-md.md)] statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that aren't covered by any indexes, the Relational Engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in `tempdb` and are dropped automatically when they are no longer needed.
+The Relational Engine may need to build a worktable to perform a logical operation specified in an [!INCLUDE [tsql](../includes/tsql-md.md)] statement. Worktables are internal tables that are used to hold intermediate results. Worktables are generated for certain `GROUP BY`, `ORDER BY`, or `UNION` queries. For example, if an `ORDER BY` clause references columns that aren't covered by any indexes, the Relational Engine may need to generate a worktable to sort the result set into the order requested. Worktables are also sometimes used as spools that temporarily hold the result of executing a part of a query plan. Worktables are built in `tempdb` and are dropped automatically when they are no longer needed.
 
 ### View resolution
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor treats indexed and nonindexed views differently:
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] query processor treats indexed and nonindexed views differently:
 
 - The rows of an indexed view are stored in the database in the same format as a table. If the Query Optimizer decides to use an indexed view in a query plan, the indexed view is treated the same way as a base table.
-- Only the definition of a nonindexed view is stored, not the rows of the view. The Query Optimizer incorporates the logic from the view definition into the execution plan it builds for the [!INCLUDE[tsql](../includes/tsql-md.md)] statement that references the nonindexed view.
+- Only the definition of a nonindexed view is stored, not the rows of the view. The Query Optimizer incorporates the logic from the view definition into the execution plan it builds for the [!INCLUDE [tsql](../includes/tsql-md.md)] statement that references the nonindexed view.
 
-The logic used by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer to decide when to use an indexed view is similar to the logic used to decide when to use an index on a table. If the data in the indexed view covers all or part of the [!INCLUDE[tsql](../includes/tsql-md.md)] statement, and the Query Optimizer determines that an index on the view is the low-cost access path, the Query Optimizer will choose the index regardless of whether the view is referenced by name in the query.
+The logic used by the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer to decide when to use an indexed view is similar to the logic used to decide when to use an index on a table. If the data in the indexed view covers all or part of the [!INCLUDE [tsql](../includes/tsql-md.md)] statement, and the Query Optimizer determines that an index on the view is the low-cost access path, the Query Optimizer will choose the index regardless of whether the view is referenced by name in the query.
 
-When an [!INCLUDE[tsql](../includes/tsql-md.md)] statement references a nonindexed view, the parser and Query Optimizer analyze the source of both the [!INCLUDE[tsql](../includes/tsql-md.md)] statement and the view and then resolve them into a single execution plan. There isn't one plan for the [!INCLUDE[tsql](../includes/tsql-md.md)] statement and a separate plan for the view.
+When an [!INCLUDE [tsql](../includes/tsql-md.md)] statement references a nonindexed view, the parser and Query Optimizer analyze the source of both the [!INCLUDE [tsql](../includes/tsql-md.md)] statement and the view and then resolve them into a single execution plan. There isn't one plan for the [!INCLUDE [tsql](../includes/tsql-md.md)] statement and a separate plan for the view.
 
 For example, consider the following view:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
@@ -273,34 +273,34 @@ JOIN Person.Person AS p
 GO
 ```
 
-Based on this view, both of these [!INCLUDE[tsql](../includes/tsql-md.md)] statements perform the same operations on the base tables and produce the same results:
+Based on this view, both of these [!INCLUDE [tsql](../includes/tsql-md.md)] statements perform the same operations on the base tables and produce the same results:
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
-FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
-JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
+FROM AdventureWorks2022.Sales.SalesOrderHeader AS soh
+JOIN AdventureWorks2022.dbo.EmployeeName AS EmpN
   ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
-FROM AdventureWorks2014.HumanResources.Employee AS e
-JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
+FROM AdventureWorks2022.HumanResources.Employee AS e
+JOIN AdventureWorks2022.Sales.SalesOrderHeader AS soh
   ON soh.SalesPersonID = e.BusinessEntityID
-JOIN AdventureWorks2014.Person.Person AS p
+JOIN AdventureWorks2022.Person.Person AS p
   ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Management Studio Showplan feature shows that the relational engine builds the same execution plan for both of these `SELECT` statements.
 
 ### Use hints with views
 
 Hints that are placed on views in a query may conflict with other hints that are discovered when the view is expanded to access its base tables. When this occurs, the query returns an error. For example, consider the following view that contains a table hint in its definition:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
 SELECT a.AddressID, a.AddressLine1,
@@ -345,11 +345,11 @@ The join order in the query plan is `Table1`, `Table2`, `TableA`, `TableB`, `Tab
 
 ### Resolve indexes on views
 
-As with any index, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] chooses to use an indexed view in its query plan only if the Query Optimizer determines it is beneficial to do so.
+As with any index, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] chooses to use an indexed view in its query plan only if the Query Optimizer determines it is beneficial to do so.
 
-Indexed views can be created in any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In some editions of some versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the Query Optimizer automatically considers the indexed view. In some editions of some versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to use an indexed view, the `NOEXPAND` table hint must be used. For clarification, see the documentation for each version.
+Indexed views can be created in any edition of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. In some editions of some older versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the Query Optimizer automatically considers the indexed view. In some editions of some older versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], to use an indexed view, the `NOEXPAND` table hint must be used. Prior to [!INCLUDE [ssSQL15_md](../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Since, all editions support automatic use of an indexed view. [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] also support automatic use of indexed views without specifying the `NOEXPAND` hint.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer uses an indexed view when the following conditions are met:
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer uses an indexed view when the following conditions are met:
 
 - These session options are set to `ON`:
   - `ANSI_NULLS`
@@ -381,9 +381,9 @@ The Query Optimizer treats an indexed view referenced in the `FROM` clause as a 
 
 You can prevent view indexes from being used for a query by using the `EXPAND VIEWS` query hint, or you can use the `NOEXPAND` table hint to force the use of an index for an indexed view specified in the `FROM` clause of a query. However, you should let the Query Optimizer dynamically determine the best access methods to use for each query. Limit your use of `EXPAND` and `NOEXPAND` to specific cases where testing has shown that they improve performance significantly.
 
-The `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query.
+- The `EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-When `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` specified with the optional `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` can be specified only for an indexed view and can't be specified for a view not indexed.
+- When `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. `NOEXPAND` specified with the optional `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` can be specified only for an indexed view and can't be specified for a view not indexed. Prior to [!INCLUDE [ssSQL15_md](../includes/sssql16-md.md)] Service Pack 1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Since, all editions support automatic use of an indexed view. [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)] and [!INCLUDE [ssazuremi_md](../includes/ssazuremi_md.md)] also support automatic use of indexed views without specifying the `NOEXPAND` hint.
 
 When neither `NOEXPAND` nor `EXPAND VIEWS` is specified in a query that contains a view, the view is expanded to access underlying tables. If the query that makes up the view contains any table hints, these hints are propagated to the underlying tables. (This process is explained in more detail in View Resolution.) As long as the set of hints that exists on the underlying tables of the view are identical to each other, the query is eligible to be matched with an indexed view. Most of the time, these hints will match each other, because they are being inherited directly from the view. However, if the query references tables instead of views, and the hints applied directly on these tables aren't identical, then such a query isn't eligible for matching with an indexed view. If the `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`, or `XLOCK` hints apply to the tables referenced in the query after view expansion, the query isn't eligible for indexed view matching.
 
@@ -391,16 +391,18 @@ If a table hint in the form of `INDEX (index_val[ ,...n] )` references a view in
 
 Generally, when the Query Optimizer matches an indexed view to a query, any hints specified on the tables or views in the query are applied directly to the indexed view. If the Query Optimizer chooses not to use an indexed view, any hints are propagated directly to the tables referenced in the view. For more information, see View Resolution. This propagation doesn't apply to join hints. They are applied only in their original position in the query. Join hints aren't considered by the Query Optimizer when matching queries to indexed views. If a query plan uses an indexed view that matches part of a query that contains a join hint, the join hint isn't used in the plan.
 
-Hints aren't allowed in the definitions of indexed views. In compatibility mode 80 and higher, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ignores hints inside indexed view definitions when maintaining them, or when executing queries that use indexed views. Although using hints in indexed view definitions won't produce a syntax error in 80 compatibility mode, they are ignored.
+Hints aren't allowed in the definitions of indexed views. In compatibility mode 80 and higher, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] ignores hints inside indexed view definitions when maintaining them, or when executing queries that use indexed views. Although using hints in indexed view definitions won't produce a syntax error in 80 compatibility mode, they are ignored.
+
+For more information, see [Table Hints (Transact-SQL)](../t-sql/queries/hints-transact-sql-table.md#using-noexpand).
 
 ### Resolve distributed partitioned views
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor optimizes the performance of distributed partitioned views. The most important aspect of distributed partitioned view performance is minimizing the amount of data transferred between member servers.
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] query processor optimizes the performance of distributed partitioned views. The most important aspect of distributed partitioned view performance is minimizing the amount of data transferred between member servers.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] builds intelligent, dynamic plans that make efficient use of distributed queries to access data from remote member tables:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] builds intelligent, dynamic plans that make efficient use of distributed queries to access data from remote member tables:
 
 - The Query Processor first uses OLE DB to retrieve the check constraint definitions from each member table. This allows the query processor to map the distribution of key values across the member tables.
-- The Query Processor compares the key ranges specified in an [!INCLUDE[tsql](../includes/tsql-md.md)] statement `WHERE` clause to the map that shows how the rows are distributed in the member tables. The query processor then builds a query execution plan that uses distributed queries to retrieve only those remote rows that are required to complete the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. The execution plan is also built in such a way that any access to remote member tables, for either data or metadata, are delayed until the information is required.
+- The Query Processor compares the key ranges specified in an [!INCLUDE [tsql](../includes/tsql-md.md)] statement `WHERE` clause to the map that shows how the rows are distributed in the member tables. The query processor then builds a query execution plan that uses distributed queries to retrieve only those remote rows that are required to complete the [!INCLUDE [tsql](../includes/tsql-md.md)] statement. The execution plan is also built in such a way that any access to remote member tables, for either data or metadata, are delayed until the information is required.
 
 For example, consider a system where a `Customers` table is partitioned across Server1 (`CustomerID` from 1 through 3299999), Server2 (`CustomerID` from 3300000 through 6599999), and Server3 (`CustomerID` from 6600000 through 9999999).
 
@@ -414,7 +416,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 The execution plan for this query extracts the rows with `CustomerID` key values from 3200000 through 3299999 from the local member table, and issues a distributed query to retrieve the rows with key values from 3300000 through 3400000 from Server2.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Processor can also build dynamic logic into query execution plans for [!INCLUDE[tsql](../includes/tsql-md.md)] statements in which the key values aren't known when the plan must be built. For example, consider this stored procedure:
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Processor can also build dynamic logic into query execution plans for [!INCLUDE [tsql](../includes/tsql-md.md)] statements in which the key values aren't known when the plan must be built. For example, consider this stored procedure:
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -424,7 +426,7 @@ FROM CompanyData.dbo.Customers
 WHERE CustomerID = @CustomerIDParameter;
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can't predict what key value will be supplied by the `@CustomerIDParameter` parameter every time the procedure is executed. Because the key value can't be predicted, the query processor also can't predict which member table will have to be accessed. To handle this case, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] builds an execution plan that has conditional logic, referred to as dynamic filters, to control which member table is accessed, based on the input parameter value. Assuming the `GetCustomer` stored procedure was executed on Server1, the execution plan logic can be represented as shown in the following:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can't predict what key value will be supplied by the `@CustomerIDParameter` parameter every time the procedure is executed. Because the key value can't be predicted, the query processor also can't predict which member table will have to be accessed. To handle this case, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] builds an execution plan that has conditional logic, referred to as dynamic filters, to control which member table is accessed, based on the input parameter value. Assuming the `GetCustomer` stored procedure was executed on Server1, the execution plan logic can be represented as shown in the following:
 
 ```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
@@ -435,17 +437,17 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sometimes builds these types of dynamic execution plans even for queries that aren't parameterized. The Query Optimizer may parameterize a query so that the execution plan can be reused. If the Query Optimizer parameterizes a query referencing a partitioned view, the Query Optimizer can no longer assume the required rows will come from a specified base table. It will then have to use dynamic filters in the execution plan.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] sometimes builds these types of dynamic execution plans even for queries that aren't parameterized. The Query Optimizer may parameterize a query so that the execution plan can be reused. If the Query Optimizer parameterizes a query referencing a partitioned view, the Query Optimizer can no longer assume the required rows will come from a specified base table. It will then have to use dynamic filters in the execution plan.
 
 ## Stored procedure and trigger execution
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stores only the source for stored procedures and triggers. When a stored procedure or trigger is first executed, the source is compiled into an execution plan. If the stored procedure or trigger is again executed before the execution plan is aged from memory, the relational engine detects the existing plan and reuses it. If the plan has aged out of memory, a new plan is built. This process is similar to the process [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] follows for all [!INCLUDE[tsql](../includes/tsql-md.md)] statements. The main performance advantage that stored procedures and triggers have in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compared with batches of dynamic [!INCLUDE[tsql](../includes/tsql-md.md)] is that their [!INCLUDE[tsql](../includes/tsql-md.md)] statements are always the same. Therefore, the relational engine easily matches them with any existing execution plans. Stored procedure and trigger plans are easily reused.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] stores only the source for stored procedures and triggers. When a stored procedure or trigger is first executed, the source is compiled into an execution plan. If the stored procedure or trigger is again executed before the execution plan is aged from memory, the relational engine detects the existing plan and reuses it. If the plan has aged out of memory, a new plan is built. This process is similar to the process [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] follows for all [!INCLUDE [tsql](../includes/tsql-md.md)] statements. The main performance advantage that stored procedures and triggers have in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] compared with batches of dynamic [!INCLUDE [tsql](../includes/tsql-md.md)] is that their [!INCLUDE [tsql](../includes/tsql-md.md)] statements are always the same. Therefore, the relational engine easily matches them with any existing execution plans. Stored procedure and trigger plans are easily reused.
 
 The execution plan for stored procedures and triggers is executed separately from the execution plan for the batch calling the stored procedure or firing the trigger. This allows for greater reuse of the stored procedure and trigger execution plans.
 
 ## Execution plan caching and reuse
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
 
 The plan cache has two stores for all compiled plans:
 
@@ -465,7 +467,7 @@ WHERE name LIKE '%plans%';
 > - The **Bound Trees** cache store (PHDR) used for data structures used during plan compilation for views, constraints, and defaults. These structures are known as Bound Trees or Algebrizer Trees.
 > - The **Extended Stored Procedures** cache store (XPROC) used for predefined system procedures, like `sp_executeSql` or `xp_cmdshell`, that are defined using a DLL, not using Transact-SQL statements. The cached structure contains only the function name and the DLL name in which the procedure is implemented.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components:
 
 - **Compiled Plan** (or Query Plan)  
   The query plan produced by the compilation process is mostly a re-entrant, read-only data structure used by any number of users. It stores information about:
@@ -474,7 +476,7 @@ WHERE name LIKE '%plans%';
   - The number of estimated rows flowing through the operators.
 
      > [!NOTE]  
-     > In newer versions of the [!INCLUDE[ssDE-md](../includes/ssde-md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
+     > In newer versions of the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], information about the statistics objects that were used for [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md) is also stored.
 
   - What support objects must be created, such as [worktables](#worktables) or workfiles in `tempdb`.
  No user context or runtime information is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism.
@@ -484,17 +486,17 @@ Each user that is currently executing the query has a data structure that holds 
 
   :::image type="content" source="media/query-processing-architecture-guide/execution-context.gif" alt-text="Diagram of the Execution context.":::
 
-When any [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE[tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE[tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If no execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
+When any [!INCLUDE [tsql](../includes/tsql-md.md)] statement is executed in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] first looks through the plan cache to verify that an existing execution plan for the same [!INCLUDE [tsql](../includes/tsql-md.md)] statement exists. The [!INCLUDE [tsql](../includes/tsql-md.md)] statement qualifies as existing if it literally matches a previously executed [!INCLUDE [tsql](../includes/tsql-md.md)] statement with a cached plan, character per character. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the [!INCLUDE [tsql](../includes/tsql-md.md)] statement. If no execution plan exists, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
 
 > [!NOTE]  
-> The execution plans for some [!INCLUDE[tsql](../includes/tsql-md.md)] statements aren't persisted in the plan cache, such as bulk operation statements running on rowstore or statements containing string literals larger than 8 KB in size. These plans only exist while the query is being executed.
+> The execution plans for some [!INCLUDE [tsql](../includes/tsql-md.md)] statements aren't persisted in the plan cache, such as bulk operation statements running on rowstore or statements containing string literals larger than 8 KB in size. These plans only exist while the query is being executed.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has an efficient algorithm to find any existing execution plans for any specific [!INCLUDE[tsql](../includes/tsql-md.md)] statement. In most systems, the minimal resources that are used by this scan are less than the resources that are saved by being able to reuse existing plans instead of compiling every [!INCLUDE[tsql](../includes/tsql-md.md)] statement.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has an efficient algorithm to find any existing execution plans for any specific [!INCLUDE [tsql](../includes/tsql-md.md)] statement. In most systems, the minimal resources that are used by this scan are less than the resources that are saved by being able to reuse existing plans instead of compiling every [!INCLUDE [tsql](../includes/tsql-md.md)] statement.
 
-The algorithms to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements to existing, unused execution plans in the plan cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the below `SELECT` statements. While in this example it isn't required that the `Person` table is fully qualified to execute, it means that the second statement isn't matched with an existing plan, but the third is matched:
+The algorithms to match new [!INCLUDE [tsql](../includes/tsql-md.md)] statements to existing, unused execution plans in the plan cache require that all object references be fully qualified. For example, assume that `Person` is the default schema for the user executing the below `SELECT` statements. While in this example it isn't required that the `Person` table is fully qualified to execute, it means that the second statement isn't matched with an existing plan, but the third is matched:
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 SELECT * FROM Person;
 GO
@@ -504,7 +506,7 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE[ssDE-md](../includes/ssde-md.md)] performs [constant folding](#constant-folding-and-expression-evaluation) and these options affect the results of such expressions:
+Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE [ssDE-md](../includes/ssde-md.md)] performs [constant folding](#constant-folding-and-expression-evaluation) and these options affect the results of such expressions:
 
 :::row:::
     :::column:::
@@ -564,10 +566,10 @@ Changing any of the following SET options for a given execution will affect the 
 
 ### Cache multiple plans for the same query
 
-Queries and execution plans are uniquely identifiable in the [!INCLUDE[ssDE-md](../includes/ssde-md.md)], much like a fingerprint:
+Queries and execution plans are uniquely identifiable in the [!INCLUDE [ssDE-md](../includes/ssde-md.md)], much like a fingerprint:
 
 - The **query plan hash** is a binary hash value calculated on the execution plan for a given query, and used to uniquely identify similar execution plans.
-- The **query hash** is a binary hash value calculated on the [!INCLUDE[tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries.
+- The **query hash** is a binary hash value calculated on the [!INCLUDE [tsql](../includes/tsql-md.md)] text of a query, and is used to uniquely identify queries.
 
 A compiled plan can be retrieved from the plan cache using a **Plan Handle**, which is a transient identifier that remains constant only while the plan remains in the cache. The plan handle is a hash value derived from the compiled plan of the entire batch. The plan handle for a compiled plan remains the same even if one or more statements in the batch get recompiled.
 
@@ -576,10 +578,10 @@ A compiled plan can be retrieved from the plan cache using a **Plan Handle**, wh
 > The `sys.dm_exec_requests` DMV contains the `statement_start_offset` and `statement_end_offset` columns for each record, which refer to the currently executing statement of a currently executing batch or persisted object. For more information, see [sys.dm_exec_requests  (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 > The `sys.dm_exec_query_stats` DMV also contains these columns for each record, which refer to the position of a statement within a batch or persisted object. For more information, see [sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md).
 
-The actual [!INCLUDE[tsql](../includes/tsql-md.md)] text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The [!INCLUDE[tsql](../includes/tsql-md.md)] text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
+The actual [!INCLUDE [tsql](../includes/tsql-md.md)] text of a batch is stored in a separate memory space from the plan cache, called the **SQL Manager** cache (SQLMGR). The [!INCLUDE [tsql](../includes/tsql-md.md)] text for a compiled plan can be retrieved from the sql manager cache using a **SQL Handle**, which is a transient identifier that remains constant only while at least one plan that references it remains in the plan cache. The sql handle is a hash value derived from the entire batch text and is guaranteed to be unique for every batch.
 
 > [!NOTE]  
-> Like a compiled plan, the [!INCLUDE[tsql](../includes/tsql-md.md)] text is stored per batch, including the comments. The sql handle contains the MD5 hash of the entire batch text and is guaranteed to be unique for every batch.
+> Like a compiled plan, the [!INCLUDE [tsql](../includes/tsql-md.md)] text is stored per batch, including the comments. The sql handle contains the MD5 hash of the entire batch text and is guaranteed to be unique for every batch.
 
 The query below provides information about memory usage for the sql manager cache:
 
@@ -622,7 +624,7 @@ WHERE text LIKE '%usp_SalesByCustomer%'
 GO
 ```
 
-[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+[!INCLUDE [ssResult](../includes/ssresult-md.md)]
 
 ```output
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
@@ -645,7 +647,7 @@ EXEC usp_SalesByCustomer 8
 GO
 ```
 
-Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+Verify again what can be found in the plan cache. [!INCLUDE [ssResult](../includes/ssresult-md.md)]
 
 ```output
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
@@ -671,7 +673,7 @@ EXEC usp_SalesByCustomer 8
 GO
 ```
 
-Verify again what can be found in the plan cache. [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+Verify again what can be found in the plan cache. [!INCLUDE [ssResult](../includes/ssresult-md.md)]
 
 ```output
 memory_object_address    objtype   refcounts   usecounts   query_plan_hash    query_hash
@@ -700,19 +702,19 @@ Notice there are now two entries in the `sys.dm_exec_cached_plans` DMV output:
 What this effectively means is that we have two plan entries in the cache corresponding to the same batch, and it underscores the importance of making sure that the plan cache affecting SET options are the same, when the same queries are executed repeatedly, to optimize for plan reuse and keep plan cache size to its required minimum.
 
 > [!TIP]  
-> A common pitfall is that different clients may have different default values for the SET options. For example, a connection made through [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically sets `QUOTED_IDENTIFIER` to ON, while SQLCMD sets `QUOTED_IDENTIFIER` to OFF. Executing the same queries from these two clients will result in multiple plans (as described in the example above).
+> A common pitfall is that different clients may have different default values for the SET options. For example, a connection made through [!INCLUDE [ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatically sets `QUOTED_IDENTIFIER` to ON, while SQLCMD sets `QUOTED_IDENTIFIER` to OFF. Executing the same queries from these two clients will result in multiple plans (as described in the example above).
 
 ### Remove execution plans from the plan cache
 
-Execution plans remain in the plan cache as long as there is enough memory to store them. When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a cost-based approach to determine which execution plans to remove from the plan cache. To make a cost-based decision, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] increases and decreases a current cost variable for each execution plan according to the following factors.
+Execution plans remain in the plan cache as long as there is enough memory to store them. When memory pressure exists, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses a cost-based approach to determine which execution plans to remove from the plan cache. To make a cost-based decision, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] increases and decreases a current cost variable for each execution plan according to the following factors.
 
 When a user process inserts an execution plan into the cache, the user process sets the current cost equal to the original query compile cost; for ad hoc execution plans, the user process sets the current cost to zero. Thereafter, each time a user process references an execution plan, it resets the current cost to the original compile cost; for ad hoc execution plans the user process increases the current cost. For all plans, the maximum value for the current cost is the original compile cost.
 
-When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] responds by removing execution plans from the plan cache. To determine which plans to remove, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the state of each execution plan and removes plans when their current cost is zero. An execution plan with zero current cost isn't removed automatically when memory pressure exists; it is removed only when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the plan and the current cost is zero. When examining an execution plan, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pushes the current cost towards zero by decreasing the current cost if a query isn't currently using the plan.
+When memory pressure exists, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] responds by removing execution plans from the plan cache. To determine which plans to remove, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the state of each execution plan and removes plans when their current cost is zero. An execution plan with zero current cost isn't removed automatically when memory pressure exists; it is removed only when the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] examines the plan and the current cost is zero. When examining an execution plan, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] pushes the current cost toward zero by decreasing the current cost if a query isn't currently using the plan.
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the execution plans until enough have been removed to satisfy memory requirements. While memory pressure exists, an execution plan may have its cost increased and decreased more than once. When memory pressure no longer exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] stops decreasing the current cost of unused execution plans and all execution plans remain in the plan cache, even if their cost is zero.
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the execution plans until enough have been removed to satisfy memory requirements. While memory pressure exists, an execution plan may have its cost increased and decreased more than once. When memory pressure no longer exists, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] stops decreasing the current cost of unused execution plans and all execution plans remain in the plan cache, even if their cost is zero.
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the resource monitor and user worker threads to free memory from the plan cache in response to memory pressure. The resource monitor and user worker threads can examine plans run concurrently to decrease the current cost for each unused execution plan. The resource monitor removes execution plans from the plan cache when global memory pressure exists. It frees memory to enforce policies for system memory, process memory, resource pool memory, and maximum size for all caches.
+The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] uses the resource monitor and user worker threads to free memory from the plan cache in response to memory pressure. The resource monitor and user worker threads can examine plans run concurrently to decrease the current cost for each unused execution plan. The resource monitor removes execution plans from the plan cache when global memory pressure exists. It frees memory to enforce policies for system memory, process memory, resource pool memory, and maximum size for all caches.
 
 The maximum size for all caches is a function of the buffer pool size and can't exceed the maximum server memory. For more information on configuring the maximum server memory, see the `max server memory` setting in `sp_configure`.
 
@@ -721,9 +723,9 @@ The user worker threads remove execution plans from the plan cache when single c
 The following examples illustrate which execution plans get removed from the plan cache:
 
 - An execution plan is frequently referenced so that its cost never goes to zero. The plan remains in the plan cache and isn't removed unless there is memory pressure and the current cost is zero.
-- An ad hoc execution plan is inserted and isn't referenced again before memory pressure exists. Since ad hoc plans are initialized with a current cost of zero, when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the execution plan, it will see the zero current cost and remove the plan from the plan cache. The ad hoc execution plan remains in the plan cache with a zero current cost when memory pressure doesn't exist.
+- An ad hoc execution plan is inserted and isn't referenced again before memory pressure exists. Since ad hoc plans are initialized with a current cost of zero, when the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] examines the execution plan, it will see the zero current cost and remove the plan from the plan cache. The ad hoc execution plan remains in the plan cache with a zero current cost when memory pressure doesn't exist.
 
-To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) can also be used to clear any cache, including plan cache. Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
+To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) can also be used to clear any cache, including plan cache. Starting with [!INCLUDE [sssql15-md](../includes/sssql16-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
 
 A change in some configuration settings via [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) and [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) will also cause plans to be removed from plan cache. You can find the list of these configuration settings in the Remarks section of the [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks) article. A configuration change like this will log the following informational message in the error log:
 
@@ -731,7 +733,7 @@ A change in some configuration settings via [sp_configure](system-stored-procedu
 
 ### <a id="recompiling-execution-plans"></a> Recompile execution plans
 
-Certain changes in a database can cause an execution plan to be either inefficient or invalid, based on the new state of the database. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detects the changes that invalidate an execution plan and marks the plan as not valid. A new plan must then be recompiled for the next connection that executes the query. The conditions that invalidate a plan include the following:
+Certain changes in a database can cause an execution plan to be either inefficient or invalid, based on the new state of the database. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] detects the changes that invalidate an execution plan and marks the plan as not valid. A new plan must then be recompiled for the next connection that executes the query. The conditions that invalidate a plan include the following:
 
 - Changes made to a table or view referenced by the query (`ALTER TABLE` and `ALTER VIEW`).
 - Changes made to a single procedure, which would drop all plans for that procedure from the cache (`ALTER PROCEDURE`).
@@ -745,11 +747,11 @@ Certain changes in a database can cause an execution plan to be either inefficie
 
 Most recompilations are required either for statement correctness or to obtain potentially faster query execution plans.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, whenever a statement within a batch causes recompilation, the entire batch, whether submitted through a stored procedure, trigger, ad hoc batch, or prepared statement, was recompiled. Starting with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], only the statement inside the batch that triggers recompilation is recompiled. Also, there are additional types of recompilations in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later because of its expanded feature set.
+In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, whenever a statement within a batch causes recompilation, the entire batch, whether submitted through a stored procedure, trigger, ad hoc batch, or prepared statement, was recompiled. Starting with [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)], only the statement inside the batch that triggers recompilation is recompiled. Also, there are additional types of recompilations in [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)] and later because of its expanded feature set.
 
 Statement-level recompilation benefits performance because, in most cases, a small number of statements causes recompilations and their associated penalties, in terms of CPU time and locks. These penalties are therefore avoided for the other statements in the batch that don't have to be recompiled.
 
-The `sql_statement_recompile` extended event (xEvent) reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
+The `sql_statement_recompile` extended event (xEvent) reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including `sp_executesql`, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
 :::row:::
@@ -818,7 +820,7 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 :::row-end:::
 
 > [!NOTE]  
-> In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents aren't available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
+> In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents aren't available, then the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
 >
 > The trace event `SQL:StmtRecompile` also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations.
 >
@@ -830,7 +832,7 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 >
 > This behavior applies to standard user-defined tables, temporary tables, and the inserted and deleted tables created by DML triggers. If query performance is affected by excessive recompilations, consider changing this setting to `OFF`. When the `AUTO_UPDATE_STATISTICS` database option is set to `OFF`, no recompilations occur based on statistics or cardinality changes, with the exception of the inserted and deleted tables that are created by DML `INSTEAD OF` triggers. Because these tables are created in `tempdb`, the recompilation of queries that access them depends on the setting of `AUTO_UPDATE_STATISTICS` in `tempdb`.
 >
-> Note that in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prior to 2005, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
+> In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] prior to 2005, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
 
 ### Parameters and execution plan reuse
 
@@ -843,34 +845,34 @@ The only difference between the following two `SELECT` statements is the values 
 
 ```sql
 SELECT *
-FROM AdventureWorks2014.Production.Product
+FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
 SELECT *
-FROM AdventureWorks2014.Production.Product
+FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-The only difference between the execution plans for these queries is the value stored for the comparison against the `ProductSubcategoryID` column. While the goal is for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to always recognize that the statements generate essentially the same plan and reuse the plans, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sometimes doesn't detect this in complex [!INCLUDE[tsql](../includes/tsql-md.md)] statements.
+The only difference between the execution plans for these queries is the value stored for the comparison against the `ProductSubcategoryID` column. While the goal is for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] to always recognize that the statements generate essentially the same plan and reuse the plans, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] sometimes doesn't detect this in complex [!INCLUDE [tsql](../includes/tsql-md.md)] statements.
 
-Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement by using parameters helps the relational engine recognize duplicate plans. You can use parameters in the following ways:
+Separating constants from the [!INCLUDE [tsql](../includes/tsql-md.md)] statement by using parameters helps the relational engine recognize duplicate plans. You can use parameters in the following ways:
 
-- In [!INCLUDE[tsql](../includes/tsql-md.md)] , use `sp_executesql`:
+- In [!INCLUDE [tsql](../includes/tsql-md.md)] , use `sp_executesql`:
 
   ```sql
   DECLARE @MyIntParm INT
   SET @MyIntParm = 1
   EXEC sp_executesql
      N'SELECT *
-     FROM AdventureWorks2014.Production.Product
+     FROM AdventureWorks2022.Production.Product
      WHERE ProductSubcategoryID = @Parm',
      N'@Parm INT',
      @MyIntParm
   ```
 
-  This method is recommended for [!INCLUDE[tsql](../includes/tsql-md.md)]  scripts, stored procedures, or triggers that generate SQL statements dynamically.
+  This method is recommended for [!INCLUDE [tsql](../includes/tsql-md.md)]  scripts, stored procedures, or triggers that generate SQL statements dynamically.
 
 - ADO, OLE DB, and ODBC use parameter markers. Parameter markers are question marks (?) that replace a constant in an SQL statement and are bound to a program variable. For example, you would do the following in an ODBC application:
 
@@ -881,16 +883,16 @@ Separating constants from the [!INCLUDE[tsql](../includes/tsql-md.md)] statement
     ```vb
     SQLExecDirect(hstmt,
       "SELECT *
-      FROM AdventureWorks2014.Production.Product
+      FROM AdventureWorks2022.Production.Product
       WHERE ProductSubcategoryID = ?",
       SQL_NTS);
      ```
 
-  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver included with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] use `sp_executesql` to send statements to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when parameter markers are used in applications.
+  The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver included with [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] use `sp_executesql` to send statements to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] when parameter markers are used in applications.
 
 - To design stored procedures, which use parameters by design.
 
-If you don't explicitly build parameters into the design of your applications, you can also rely on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer to automatically parameterize certain queries by using the default behavior of simple parameterization. Alternatively, you can force the Query Optimizer to consider parameterizing all queries in the database by setting the `PARAMETERIZATION` option of the `ALTER DATABASE` statement to `FORCED`.
+If you don't explicitly build parameters into the design of your applications, you can also rely on the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer to automatically parameterize certain queries by using the default behavior of simple parameterization. Alternatively, you can force the Query Optimizer to consider parameterizing all queries in the database by setting the `PARAMETERIZATION` option of the `ALTER DATABASE` statement to `FORCED`.
 
 When forced parameterization is enabled, simple parameterization can still occur. For example, the following query can't be parameterized according to the rules of forced parameterization:
 
@@ -903,38 +905,38 @@ However, it can be parameterized according to simple parameterization rules. Whe
 
 ### Simple parameterization
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new [!INCLUDE[tsql](../includes/tsql-md.md)] statements with existing, previously compiled execution plans.
+In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new [!INCLUDE [tsql](../includes/tsql-md.md)] statements with existing, previously compiled execution plans.
 
 > [!WARNING]  
 > Using parameters or parameter markers to hold values typed by end users is more secure than concatenating the values into a string that is then executed using either a data access API method, the `EXECUTE` statement, or the `sp_executesql` stored procedure.
 
-If a [!INCLUDE[tsql](../includes/tsql-md.md)] statement is executed without parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes the statement internally to increase the possibility of matching it against an existing execution plan. This process is called simple parameterization. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, the process was referred to as auto-parameterization.
+If a [!INCLUDE [tsql](../includes/tsql-md.md)] statement is executed without parameters, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] parameterizes the statement internally to increase the possibility of matching it against an existing execution plan. This process is called simple parameterization. In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] versions prior to 2005, the process was referred to as auto-parameterization.
 
 Consider this statement:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
-The value 1 at the end of the statement can be specified as a parameter. The relational engine builds the execution plan for this batch as if a parameter had been specified in place of the value 1. Because of this simple parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recognizes that the following two statements generate essentially the same execution plan and reuses the first plan for the second statement:
+The value 1 at the end of the statement can be specified as a parameter. The relational engine builds the execution plan for this batch as if a parameter had been specified in place of the value 1. Because of this simple parameterization, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] recognizes that the following two statements generate essentially the same execution plan and reuses the first plan for the second statement:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 1;
 ```
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-When processing complex [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the relational engine may have difficulty determining which expressions can be parameterized. To increase the ability of the relational engine to match complex [!INCLUDE[tsql](../includes/tsql-md.md)] statements to existing, unused execution plans, explicitly specify the parameters using either sp_executesql or parameter markers.
+When processing complex [!INCLUDE [tsql](../includes/tsql-md.md)] statements, the relational engine may have difficulty determining which expressions can be parameterized. To increase the ability of the relational engine to match complex [!INCLUDE [tsql](../includes/tsql-md.md)] statements to existing, unused execution plans, explicitly specify the parameters using either `sp_executesql` or parameter markers.
 
 > [!NOTE]  
-> When the `+`, `-`, `*`, `/`, or `%` arithmetic operators are used to perform implicit or explicit conversion of int, smallint, tinyint, or bigint constant values to the float, real, decimal or numeric data types, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applies specific rules to calculate the type and precision of the expression results. However, these rules differ, depending on whether the query is parameterized or not. Therefore, similar expressions in queries can, in some cases, produce differing results.
+> When the `+`, `-`, `*`, `/`, or `%` arithmetic operators are used to perform implicit or explicit conversion of int, smallint, tinyint, or bigint constant values to the float, real, decimal or numeric data types, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] applies specific rules to calculate the type and precision of the expression results. However, these rules differ, depending on whether the query is parameterized or not. Therefore, similar expressions in queries can, in some cases, produce differing results.
 
-Under the default behavior of simple parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes a relatively small class of queries. However, you can specify that all queries in a database be parameterized, subject to certain limitations, by setting the `PARAMETERIZATION` option of the `ALTER DATABASE` command to `FORCED`. Doing so may improve the performance of databases that experience high volumes of concurrent queries by reducing the frequency of query compilations.
+Under the default behavior of simple parameterization, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] parameterizes a relatively small class of queries. However, you can specify that all queries in a database be parameterized, subject to certain limitations, by setting the `PARAMETERIZATION` option of the `ALTER DATABASE` command to `FORCED`. Doing so may improve the performance of databases that experience high volumes of concurrent queries by reducing the frequency of query compilations.
 
 Alternatively, you can specify that a single query, and any others that are syntactically equivalent but differ only in their parameter values, be parameterized.
 
@@ -943,15 +945,15 @@ Alternatively, you can specify that a single query, and any others that are synt
 
 ### Forced parameterization
 
-You can override the default simple parameterization behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized, subject to certain limitations. Forced parameterization is enabled by setting the `PARAMETERIZATION` option to `FORCED` in the `ALTER DATABASE` statement. Forced parameterization may improve the performance of certain databases by reducing the frequency of query compilations and recompilations. Databases that may benefit from forced parameterization are generally those that experience high volumes of concurrent queries from sources such as point-of-sale applications.
+You can override the default simple parameterization behavior of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized, subject to certain limitations. Forced parameterization is enabled by setting the `PARAMETERIZATION` option to `FORCED` in the `ALTER DATABASE` statement. Forced parameterization may improve the performance of certain databases by reducing the frequency of query compilations and recompilations. Databases that may benefit from forced parameterization are generally those that experience high volumes of concurrent queries from sources such as point-of-sale applications.
 
 When the `PARAMETERIZATION` option is set to `FORCED`, any literal value that appears in a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, submitted in any form, is converted to a parameter during query compilation. The exceptions are literals that appear in the following query constructs:
 
 - `INSERT...EXECUTE` statements.
-- Statements inside the bodies of stored procedures, triggers, or user-defined functions. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] already reuses query plans for these routines.
+- Statements inside the bodies of stored procedures, triggers, or user-defined functions. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] already reuses query plans for these routines.
 - Prepared statements that have already been parameterized on the client-side application.
 - Statements that contain XQuery method calls, where the method appears in a context where its arguments would typically be parameterized, such as a `WHERE` clause. If the method appears in a context where its arguments wouldn't be parameterized, the rest of the statement is parameterized.
-- Statements inside a [!INCLUDE[tsql](../includes/tsql-md.md)] cursor. (`SELECT` statements inside API cursors are parameterized.)
+- Statements inside a [!INCLUDE [tsql](../includes/tsql-md.md)] cursor. (`SELECT` statements inside API cursors are parameterized.)
 - Deprecated query constructs.
 - Any statement that is run in the context of `ANSI_PADDING` or `ANSI_NULLS` set to `OFF`.
 - Statements that contain more than 2,097 literals that are eligible for parameterization.
@@ -970,19 +972,19 @@ Additionally, the following query clauses aren't parameterized. In these cases, 
 - The style argument of a `CONVERT` clause.
 - Integer constants inside an `IDENTITY` clause.
 - Constants specified by using ODBC extension syntax.
-- Constant-foldable expressions that are arguments of the `+`, `-`, `*`, `/`, and `%` operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:
+- Constant-foldable expressions that are arguments of the `+`, `-`, `*`, `/`, and `%` operators. When considering eligibility for forced parameterization, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:
   - No columns, variables, or subqueries appear in the expression.
   - The expression contains a `CASE` clause.
 - Arguments to query hint clauses. These include the *number_of_rows* argument of the `FAST` query hint, the *number_of_processors* argument of the `MAXDOP` query hint, and the *number* argument of the `MAXRECURSION` query hint.
 
-Parameterization occurs at the level of individual [!INCLUDE[tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
+Parameterization occurs at the level of individual [!INCLUDE [tsql](../includes/tsql-md.md)] statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the `sys.syscacheobjects` dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (\@1 tinyint).
 
 > [!NOTE]  
-> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Service Pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
+> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and Service Pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
 
 #### Data types of parameters
 
-When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes literals, the parameters are converted to the following data types:
+When [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] parameterizes literals, the parameters are converted to the following data types:
 
 - Integer literals whose size would otherwise fit within the int data type parameterize to int. Larger integer literals that are parts of predicates that involve any comparison operator (includes `<`, `<=`, `=`, `!=`, `>`, `>=`, `!<`, `!>`, `<>`, `ALL`, `ANY`, `SOME`, `BETWEEN`, and `IN`) parameterize to numeric(38,0). Larger literals that aren't parts of predicates that involve comparison operators parameterize to numeric whose precision is just large enough to support its size and whose scale is 0.
 - Fixed-point numeric literals that are parts of predicates that involve comparison operators parameterize to numeric whose precision is 38 and whose scale is just large enough to support its size. Fixed-point numeric literals that aren't parts of predicates that involve comparison operators parameterize to numeric whose precision and scale are just large enough to support its size.
@@ -1009,22 +1011,22 @@ You can override the behavior of forced parameterization by specifying that simp
 
 ### Prepare SQL statements
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational engine introduces full support for preparing [!INCLUDE[tsql](../includes/tsql-md.md)] statements before they are executed. If an application has to execute an [!INCLUDE[tsql](../includes/tsql-md.md)] statement several times, it can use the database API to do the following:
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] relational engine introduces full support for preparing [!INCLUDE [tsql](../includes/tsql-md.md)] statements before they are executed. If an application has to execute an [!INCLUDE [tsql](../includes/tsql-md.md)] statement several times, it can use the database API to do the following:
 
-- Prepare the statement once. This compiles the [!INCLUDE[tsql](../includes/tsql-md.md)] statement into an execution plan.
-- Execute the precompiled execution plan every time it has to execute the statement. This prevents having to recompile the [!INCLUDE[tsql](../includes/tsql-md.md)] statement on each execution after the first time.
-  Preparing and executing statements is controlled by API functions and methods. It isn't part of the [!INCLUDE[tsql](../includes/tsql-md.md)] language. The prepare/execute model of executing [!INCLUDE[tsql](../includes/tsql-md.md)] statements is supported by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver. On a prepare request, either the provider or the driver sends the statement to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a request to prepare the statement. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles an execution plan and returns a handle for that plan to the provider or driver. On an execute request, either the provider or the driver sends the server a request to execute the plan that is associated with the handle.
+- Prepare the statement once. This compiles the [!INCLUDE [tsql](../includes/tsql-md.md)] statement into an execution plan.
+- Execute the precompiled execution plan every time it has to execute the statement. This prevents having to recompile the [!INCLUDE [tsql](../includes/tsql-md.md)] statement on each execution after the first time.
+  Preparing and executing statements is controlled by API functions and methods. It isn't part of the [!INCLUDE [tsql](../includes/tsql-md.md)] language. The prepare/execute model of executing [!INCLUDE [tsql](../includes/tsql-md.md)] statements is supported by the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver. On a prepare request, either the provider or the driver sends the statement to [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] with a request to prepare the statement. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] compiles an execution plan and returns a handle for that plan to the provider or driver. On an execute request, either the provider or the driver sends the server a request to execute the plan that is associated with the handle.
 
-Prepared statements can't be used to create temporary objects on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Prepared statements can't reference system stored procedures that create temporary objects, such as temporary tables. These procedures must be executed directly.
+Prepared statements can't be used to create temporary objects on [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. Prepared statements can't reference system stored procedures that create temporary objects, such as temporary tables. These procedures must be executed directly.
 
-Excess use of the prepare/execute model can degrade performance. If a statement is executed only once, a direct execution requires only one network round-trip to the server. Preparing and executing an [!INCLUDE[tsql](../includes/tsql-md.md)] statement executed only one time requires an extra network round-trip; one trip to prepare the statement and one trip to execute it.
+Excess use of the prepare/execute model can degrade performance. If a statement is executed only once, a direct execution requires only one network round-trip to the server. Preparing and executing an [!INCLUDE [tsql](../includes/tsql-md.md)] statement executed only one time requires an extra network round-trip; one trip to prepare the statement and one trip to execute it.
 
 Preparing a statement is more effective if parameter markers are used. For example, assume that an application is occasionally asked to retrieve product information from the `AdventureWorks` sample database. There are two ways the application can do this.
 
 Using the first way, the application can execute a separate query for each product requested:
 
 ```sql
-SELECT * FROM AdventureWorks2014.Production.Product
+SELECT * FROM AdventureWorks2022.Production.Product
 WHERE ProductID = 63;
 ```
 
@@ -1033,7 +1035,7 @@ Using the second way, the application does the following:
 1. Prepares a statement that contains a parameter marker (?):
 
    ```sql
-   SELECT * FROM AdventureWorks2014.Production.Product
+   SELECT * FROM AdventureWorks2022.Production.Product
    WHERE ProductID = ?;
    ```
 
@@ -1042,15 +1044,15 @@ Using the second way, the application does the following:
 
 The second way is more efficient when the statement is executed more than three times.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute model has no significant performance advantage over direct execution, because of the way [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses execution plans. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has efficient algorithms for matching current [!INCLUDE[tsql](../includes/tsql-md.md)] statements with execution plans that are generated for prior executions of the same [!INCLUDE[tsql](../includes/tsql-md.md)] statement. If an application executes a [!INCLUDE[tsql](../includes/tsql-md.md)] statement with parameter markers multiple times, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will reuse the execution plan from the first execution for the second and subsequent executions (unless the plan ages from the plan cache). The prepare/execute model still has these benefits:
+In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute model has no significant performance advantage over direct execution, because of the way [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] reuses execution plans. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] has efficient algorithms for matching current [!INCLUDE [tsql](../includes/tsql-md.md)] statements with execution plans that are generated for prior executions of the same [!INCLUDE [tsql](../includes/tsql-md.md)] statement. If an application executes a [!INCLUDE [tsql](../includes/tsql-md.md)] statement with parameter markers multiple times, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] will reuse the execution plan from the first execution for the second and subsequent executions (unless the plan ages from the plan cache). The prepare/execute model still has these benefits:
 
-- Finding an execution plan by an identifying handle is more efficient than the algorithms used to match an [!INCLUDE[tsql](../includes/tsql-md.md)] statement to existing execution plans.
+- Finding an execution plan by an identifying handle is more efficient than the algorithms used to match an [!INCLUDE [tsql](../includes/tsql-md.md)] statement to existing execution plans.
 - The application can control when the execution plan is created and when it is reused.
-- The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+- The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)].
 
 ### Parameter sensitivity
 
-Parameter sensitivity, also known as "parameter sniffing", refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
+Parameter sensitivity, also known as "parameter sniffing", refers to a process whereby [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
 
@@ -1070,16 +1072,17 @@ For more information on troubleshooting bad parameter sniffing issues, see:
 
 ## Parallel query processing
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides parallel queries to optimize query execution and index operations for computers that have more than one microprocessor (CPU). Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform a query or index operation in parallel by using several operating system worker threads, the operation can be completed quickly and efficiently.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] provides parallel queries to optimize query execution and index operations for computers that have more than one microprocessor (CPU). Because [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] can perform a query or index operation in parallel by using several operating system worker threads, the operation can be completed quickly and efficiently.
 
-During query optimization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] looks for queries or index operations that might benefit from parallel execution. For these queries, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inserts exchange operators into the query execution plan to prepare the query for parallel execution. An exchange operator is an operator in a query execution plan that provides process management, data redistribution, and flow control. The exchange operator includes the `Distribute Streams`, `Repartition Streams`, and `Gather Streams` logical operators as subtypes, one or more of which can appear in the Showplan output of a query plan for a parallel query.
+During query optimization, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] looks for queries or index operations that might benefit from parallel execution. For these queries, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] inserts exchange operators into the query execution plan to prepare the query for parallel execution. An exchange operator is an operator in a query execution plan that provides process management, data redistribution, and flow control. The exchange operator includes the `Distribute Streams`, `Repartition Streams`, and `Gather Streams` logical operators as subtypes, one or more of which can appear in the Showplan output of a query plan for a parallel query.
 
 > [!IMPORTANT]  
-> Certain constructs inhibit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]'s ability to leverage parallelism on the entire execution plan, or parts or the execution plan.
+> Certain constructs inhibit [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]'s ability to use parallelism on the entire execution plan, or parts or the execution plan.
 
 Constructs that inhibit parallelism include:
+
 - **Scalar UDFs**  
-  For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining).
+  For more information on scalar user-defined functions, see [Create User-defined Functions](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Starting with [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)], the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] has the ability to inline these functions, and unlock use of parallelism during query processing. For more information on scalar UDF inlining, see [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing-details.md#scalar-udf-inlining).
 
 - **Remote Query**  
   For more information on Remote Query, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -1088,8 +1091,7 @@ Constructs that inhibit parallelism include:
   For more information on cursors, see [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
 
 - **Recursive queries**  
-  For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions
-](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
+  For more information on recursion, see [Guidelines for Defining and Using Recursive Common Table Expressions](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) and [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
 - **Multi-statement table-valued functions (MSTVFs)**  
   For more information on MSTVFs, see [Create User-defined Functions (Database Engine)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1125,7 +1127,7 @@ After exchange operators are inserted, the result is a parallel-query execution 
 
 Degree of parallelism (DOP) determines the maximum number of CPUs that are being used; it doesn't mean the number of worker threads that are being used. The DOP limit is set per [task](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It isn't a per [request](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks that are assigned to a [scheduler](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). More processors than specified by the MAXDOP may be used concurrently at any given point of query execution, when different tasks are executed concurrently. For more information, see the [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md).
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't use a parallel execution plan for a query if any one of the following conditions is true:
+The [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn't use a parallel execution plan for a query if any one of the following conditions is true:
 
 - The serial execution plan is trivial, or does not exceed the cost threshold for parallelism setting.
 - The serial execution plan has a lower total estimated subtree cost than any parallel execution plan explored by the optimizer.
@@ -1135,32 +1137,33 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer doesn
 > The total estimated subtree cost of a parallel plan may be lower than the cost threshold for parallelism setting. This indicates that the total estimated subtree cost of the serial plan exceeded it, and the query plan with the lower total estimated subtree cost was chosen.
 
 ### Degree of parallelism (DOP)
+
 <a id="DOP"></a>
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria:
 
-1. Whether [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is **running on a computer that has more than one microprocessor or CPU**, such as a symmetric multiprocessing computer (SMP). Only computers that have more than one CPU can use parallel queries.
+1. Whether [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] is **running on a computer that has more than one microprocessor or CPU**, such as a symmetric multiprocessing computer (SMP). Only computers that have more than one CPU can use parallel queries.
 
-1. Whether **sufficient worker threads are available**. Each query or index operation requires a certain number of worker threads to execute. Executing a parallel plan requires more worker threads than a serial plan, and the number of required worker threads increases with the degree of parallelism. When the worker thread requirement of the parallel plan for a specific degree of parallelism can't be satisfied, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one worker thread).
+1. Whether **sufficient worker threads are available**. Each query or index operation requires a certain number of worker threads to execute. Executing a parallel plan requires more worker threads than a serial plan, and the number of required worker threads increases with the degree of parallelism. When the worker thread requirement of the parallel plan for a specific degree of parallelism can't be satisfied, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one worker thread).
 
-1. The **type of query or index operation executed**. Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that don't benefit, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) if proper testing found that a different value is better suited for the running workload.
+1. The **type of query or index operation executed**. Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that don't benefit, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) if proper testing found that a different value is better suited for the running workload.
 
 1. Whether there are a **sufficient number of rows to process**. If the Query Optimizer determines that the number of rows is too low, it doesn't introduce exchange operators to distribute the rows. Thus, the operators are executed serially. Executing the operators in a serial plan avoids scenarios when the startup, distribution, and coordination costs exceed the gains achieved by parallel operator execution.
 
-1. Whether **current distribution statistics are available**. If the highest degree of parallelism isn't possible, lower degrees are considered before the parallel plan is abandoned. For example, when you create a clustered index on a view, distribution statistics can't be evaluated, because the clustered index doesn't yet exist. In this case, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] can't provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
+1. Whether **current distribution statistics are available**. If the highest degree of parallelism isn't possible, lower degrees are considered before the parallel plan is abandoned. For example, when you create a clustered index on a view, distribution statistics can't be evaluated, because the clustered index doesn't yet exist. In this case, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] can't provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
 
 > [!NOTE]  
-> Parallel index operations are only available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
+> Parallel index operations are only available in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
 
-At execution time, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines the optimal number of worker threads and spreads the execution of the parallel plan across those worker threads. When a query or index operation starts executing on multiple worker threads for parallel execution, the same number of worker threads is used until the operation is completed. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] re-examines the optimal number of worker thread decisions every time an execution plan is retrieved from the plan cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three worker threads, and a third execution can result in a parallel plan using four worker threads.
+At execution time, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] determines the optimal number of worker threads and spreads the execution of the parallel plan across those worker threads. When a query or index operation starts executing on multiple worker threads for parallel execution, the same number of worker threads is used until the operation is completed. The [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] re-examines the optimal number of worker thread decisions every time an execution plan is retrieved from the plan cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three worker threads, and a third execution can result in a parallel plan using four worker threads.
 
 The update and delete operators in a parallel query execution plan are executed serially, but the WHERE clause of an UPDATE or a DELETE statement may be executed in parallel. The actual data changes are then serially applied to the database.
 
-Up to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
+Up to [!INCLUDE [ssSQL11](../includes/sssql11-md.md)], the insert operator is also executed serially. However, the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
 
-Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+Starting with [!INCLUDE [ssSQL14](../includes/sssql14-md.md)] and database compatibility level 110, the `SELECT … INTO` statement can be executed in parallel. Other forms of insert operators work the same way as described for [!INCLUDE [ssSQL11](../includes/sssql11-md.md)].
 
-Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
+Starting with [!INCLUDE [sssql15-md](../includes/sssql16-md.md)] and database compatibility level 130, the `INSERT … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI), and using the TABLOCK hint. Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint. For more information, see [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Static and keyset-driven cursors can be populated by parallel execution plans. However, the behavior of dynamic cursors can be provided only by serial execution. The Query Optimizer always generates a serial execution plan for a query that is part of a dynamic cursor.
 
@@ -1168,18 +1171,18 @@ Static and keyset-driven cursors can be populated by parallel execution plans. H
 
 The degree of parallelism sets the number of processors to use in parallel plan execution. This configuration can be set at various levels:
 
-1. Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1. Server level, using the **max degree of parallelism (MAXDOP)** [server configuration option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).</br> **Applies to:** [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]
 
    > [!NOTE]  
    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] introduces automatic recommendations for setting the MAXDOP server configuration option during the installation process. The setup user interface allows you to either accept the recommended settings or enter your own value. For more information, see [Database Engine Configuration - MaxDOP page](../sql-server/install/instance-configuration.md#maxdop).
 
-1. Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1. Workload level, using the **MAX_DOP** [Resource Governor workload group configuration option](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Applies to:** [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]
 
-1. Database level, using the **MAXDOP** [database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]
+1. Database level, using the **MAXDOP** [database scoped configuration](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).</br> **Applies to:** [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
 
-1. Query or index statement level, using the **MAXDOP** [query hint](../t-sql/queries/hints-transact-sql-query.md) or **MAXDOP** index option. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users.</br> **Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]
+1. Query or index statement level, using the **MAXDOP** [query hint](../t-sql/queries/hints-transact-sql-query.md) or **MAXDOP** index option. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users.</br> **Applies to:** [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)]
 
-Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP isn't an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
+Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP isn't an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
 
 > [!TIP]  
 > For more information, see [MAXDOP recommendations](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#recommendations) for guidelines on configuring MAXDOP at the server, database, query, or hint level.
@@ -1274,17 +1277,17 @@ For more information on the operators used in this example, see the [Showplan Lo
 The query plans built for the index operations that create or rebuild an index, or drop a clustered index, allow for parallel, multi-worker threaded operations on computers that have multiple microprocessors.
 
 > [!NOTE]  
-> Parallel index operations are only available in Enterprise Edition, starting with [!INCLUDE[sql2008-md](../includes/sql2008-md.md)].
+> Parallel index operations are only available in Enterprise Edition, starting with [!INCLUDE [sql2008-md](../includes/sql2008-md.md)].
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the same algorithms to determine the degree of parallelism (the total number of separate worker threads to run) for index operations as it does for other queries. The maximum degree of parallelism for an index operation is subject to the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option. You can override the max degree of parallelism value for individual index operations by setting the MAXDOP index option in the CREATE INDEX, ALTER INDEX, DROP INDEX, and ALTER TABLE statements.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses the same algorithms to determine the degree of parallelism (the total number of separate worker threads to run) for index operations as it does for other queries. The maximum degree of parallelism for an index operation is subject to the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option. You can override the max degree of parallelism value for individual index operations by setting the MAXDOP index option in the CREATE INDEX, ALTER INDEX, DROP INDEX, and ALTER TABLE statements.
 
-When the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] builds an index execution plan, the number of parallel operations is set to the lowest value from among the following:
+When the [!INCLUDE [ssDEnoversion](../includes/ssdenoversion-md.md)] builds an index execution plan, the number of parallel operations is set to the lowest value from among the following:
 
 - The number of microprocessors, or CPUs in the computer.
 - The number specified in the max degree of parallelism server configuration option.
-- The number of CPUs not already over a threshold of work performed for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] worker threads.
+- The number of CPUs not already over a threshold of work performed for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] worker threads.
 
-For example, on a computer that has eight CPUs, but where max degree of parallelism is set to 6, no more than six parallel worker threads are generated for an index operation. If five of the CPUs in the computer exceed the threshold of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] work when an index execution plan is built, the execution plan specifies only three parallel worker threads.
+For example, on a computer that has eight CPUs, but where max degree of parallelism is set to 6, no more than six parallel worker threads are generated for an index operation. If five of the CPUs in the computer exceed the threshold of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] work when an index execution plan is built, the execution plan specifies only three parallel worker threads.
 
 The main phases of a parallel index operation include the following:
 
@@ -1296,20 +1299,20 @@ Individual `CREATE TABLE` or `ALTER TABLE` statements can have multiple constrai
 
 ## Distributed query architecture
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two methods for referencing heterogeneous OLE DB data sources in [!INCLUDE[tsql](../includes/tsql-md.md)] statements:
+Microsoft [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] supports two methods for referencing heterogeneous OLE DB data sources in [!INCLUDE [tsql](../includes/tsql-md.md)] statements:
 
 - Linked server names  
-  The system stored procedures `sp_addlinkedserver` and `sp_addlinkedsrvlogin` are used to give a server name to an OLE DB data source. Objects in these linked servers can be referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements using four-part names. For example, if a linked server name of `DeptSQLSrvr` is defined against another instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the following statement references a table on that server:
+  The system stored procedures `sp_addlinkedserver` and `sp_addlinkedsrvlogin` are used to give a server name to an OLE DB data source. Objects in these linked servers can be referenced in [!INCLUDE [tsql](../includes/tsql-md.md)] statements using four-part names. For example, if a linked server name of `DeptSQLSrvr` is defined against another instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the following statement references a table on that server:
 
   ```sql
   SELECT JobTitle, HireDate
-  FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
+  FROM DeptSQLSrvr.AdventureWorks2022.HumanResources.Employee;
   ```
 
-  The linked server name can also be specified in an `OPENQUERY` statement to open a rowset from the OLE DB data source. This rowset can then be referenced like a table in [!INCLUDE[tsql](../includes/tsql-md.md)] statements.
+  The linked server name can also be specified in an `OPENQUERY` statement to open a rowset from the OLE DB data source. This rowset can then be referenced like a table in [!INCLUDE [tsql](../includes/tsql-md.md)] statements.
 
 - Ad hoc connector names  
-  For infrequent references to a data source, the `OPENROWSET` or `OPENDATASOURCE` functions are specified with the information needed to connect to the linked server. The rowset can then be referenced the same way a table is referenced in [!INCLUDE[tsql](../includes/tsql-md.md)] statements:
+  For infrequent references to a data source, the `OPENROWSET` or `OPENDATASOURCE` functions are specified with the information needed to connect to the linked server. The rowset can then be referenced the same way a table is referenced in [!INCLUDE [tsql](../includes/tsql-md.md)] statements:
 
   ```sql
   SELECT *
@@ -1318,33 +1321,33 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two me
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses OLE DB to communicate between the relational engine and the storage engine. The relational engine breaks down each [!INCLUDE[tsql](../includes/tsql-md.md)] statement into a series of operations on simple OLE DB rowsets opened by the storage engine from the base tables. This means the relational engine can also open simple OLE DB rowsets on any OLE DB data source.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] uses OLE DB to communicate between the relational engine and the storage engine. The relational engine breaks down each [!INCLUDE [tsql](../includes/tsql-md.md)] statement into a series of operations on simple OLE DB rowsets opened by the storage engine from the base tables. This means the relational engine can also open simple OLE DB rowsets on any OLE DB data source.
 
 :::image type="content" source="media/query-processing-architecture-guide/oledb-storage.gif" alt-text="Diagram of OLE DB storage.":::
 
 The relational engine uses the OLE DB application programming interface (API) to open the rowsets on linked servers, fetch the rows, and manage transactions.
 
-For each OLE DB data source accessed as a linked server, an OLE DB provider must be present on the server running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The set of [!INCLUDE[tsql](../includes/tsql-md.md)] operations that can be used against a specific OLE DB data source depends on the capabilities of the OLE DB provider.
+For each OLE DB data source accessed as a linked server, an OLE DB provider must be present on the server running [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. The set of [!INCLUDE [tsql](../includes/tsql-md.md)] operations that can be used against a specific OLE DB data source depends on the capabilities of the OLE DB provider.
 
-For each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], members of the `sysadmin` fixed server role can enable or disable the use of ad hoc connector names for an OLE DB provider using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` property. When ad hoc access is enabled, any user logged on to that instance can execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements containing ad hoc connector names, referencing any data source on the network that can be accessed using that OLE DB provider. To control access to data sources, members of the `sysadmin` role can disable ad hoc access for that OLE DB provider, thereby limiting users to only those data sources referenced by linked server names defined by the administrators. By default, ad hoc access is enabled for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB provider, and disabled for all other OLE DB providers.
+For each instance of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], members of the `sysadmin` fixed server role can enable or disable the use of ad hoc connector names for an OLE DB provider using the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` property. When ad hoc access is enabled, any user logged on to that instance can execute [!INCLUDE [tsql](../includes/tsql-md.md)] statements containing ad hoc connector names, referencing any data source on the network that can be accessed using that OLE DB provider. To control access to data sources, members of the `sysadmin` role can disable ad hoc access for that OLE DB provider, thereby limiting users to only those data sources referenced by linked server names defined by the administrators. By default, ad hoc access is enabled for the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] OLE DB provider, and disabled for all other OLE DB providers.
 
-Distributed queries can allow users to access another data source (for example, files, non-relational data sources such as Active Directory, and so on) using the security context of the Microsoft Windows account under which the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service is running. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impersonates the login appropriately for Windows logins; however, that isn't possible for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins. This can potentially allow a distributed query user to access another data source for which they don't have permissions, but the account under which the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service is running does have permissions. Use `sp_addlinkedsrvlogin` to define the specific logins that are authorized to access the corresponding linked server. This control isn't available for ad hoc names, so use caution in enabling an OLE DB provider for ad hoc access.
+Distributed queries can allow users to access another data source (for example, files, non-relational data sources such as Active Directory, and so on) using the security context of the Microsoft Windows account under which the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] service is running. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] impersonates the login appropriately for Windows logins; however, that isn't possible for [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] logins. This can potentially allow a distributed query user to access another data source for which they don't have permissions, but the account under which the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] service is running does have permissions. Use `sp_addlinkedsrvlogin` to define the specific logins that are authorized to access the corresponding linked server. This control isn't available for ad hoc names, so use caution in enabling an OLE DB provider for ad hoc access.
 
-When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes relational operations such as joins, restrictions, projections, sorts, and group by operations to the OLE DB data source. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doesn't default to scanning the base table into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and performing the relational operations itself. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries the OLE DB provider to determine the level of SQL grammar it supports, and, based on that information, pushes as many relational operations as possible to the provider.
+When possible, [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] pushes relational operations such as joins, restrictions, projections, sorts, and group by operations to the OLE DB data source. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] doesn't default to scanning the base table into [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] and performing the relational operations itself. [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] queries the OLE DB provider to determine the level of SQL grammar it supports, and, based on that information, pushes as many relational operations as possible to the provider.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specifies a mechanism for an OLE DB provider to return statistics indicating how key values are distributed within the OLE DB data source. This lets the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer better analyze the pattern of data in the data source against the requirements of each [!INCLUDE[tsql](../includes/tsql-md.md)] statement, increasing the ability of the Query Optimizer to generate optimal execution plans.
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] specifies a mechanism for an OLE DB provider to return statistics indicating how key values are distributed within the OLE DB data source. This lets the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer better analyze the pattern of data in the data source against the requirements of each [!INCLUDE [tsql](../includes/tsql-md.md)] statement, increasing the ability of the Query Optimizer to generate optimal execution plans.
 
 ## Query processing enhancements on partitioned tables and indexes
 
-[!INCLUDE[sql2008-md](../includes/sql2008-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This article describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects.
+[!INCLUDE [sql2008-md](../includes/sql2008-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This article describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects.
 
 > [!NOTE]  
-> Until [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
-> Starting with [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition.
+> Until [!INCLUDE [ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
+> Starting with [!INCLUDE [sssql15-md](../includes/sssql16-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Standard edition.
 
 ### New partition-aware seek operation
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the internal representation of a partitioned table is changed so that the table appears to the query processor to be a multicolumn index with `PartitionID` as the leading column. `PartitionID` is a hidden computed column used internally to represent the `ID` of the partition containing a specific row. For example, assume the table T, defined as `T(a, b, c)`, is partitioned on column a, and has a clustered index on column b. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], this partitioned table is treated internally as a nonpartitioned table with the schema `T(PartitionID, a, b, c)` and a clustered index on the composite key `(PartitionID, b)`. This allows the Query Optimizer to perform seek operations based on `PartitionID` on any partitioned table or index.
+In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], the internal representation of a partitioned table is changed so that the table appears to the query processor to be a multicolumn index with `PartitionID` as the leading column. `PartitionID` is a hidden computed column used internally to represent the `ID` of the partition containing a specific row. For example, assume the table T, defined as `T(a, b, c)`, is partitioned on column a, and has a clustered index on column b. In [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], this partitioned table is treated internally as a nonpartitioned table with the schema `T(PartitionID, a, b, c)` and a clustered index on the composite key `(PartitionID, b)`. This allows the Query Optimizer to perform seek operations based on `PartitionID` on any partitioned table or index.
 
 Partition elimination is now done in this seek operation.
 
@@ -1368,7 +1371,7 @@ The following illustration is a logical representation of the skip scan operatio
 
 ### Display partitioning information in query execution plans
 
-The execution plans of queries on partitioned tables and indexes can be examined by using the [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` statements `SET SHOWPLAN_XML` or `SET STATISTICS XML`, or by using the graphical execution plan output in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. For example, you can display the compile-time execution plan by selecting *Display Estimated Execution Plan* on the Query Editor toolbar and the run-time plan by selecting *Include Actual Execution Plan*.
+The execution plans of queries on partitioned tables and indexes can be examined by using the [!INCLUDE [tsql](../includes/tsql-md.md)] `SET` statements `SET SHOWPLAN_XML` or `SET STATISTICS XML`, or by using the graphical execution plan output in [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. For example, you can display the compile-time execution plan by selecting *Display Estimated Execution Plan* on the Query Editor toolbar and the run-time plan by selecting *Include Actual Execution Plan*.
 
 Using these tools, you can ascertain the following information:
 
@@ -1378,7 +1381,7 @@ Using these tools, you can ascertain the following information:
 
 #### Partition information enhancements
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides enhanced partitioning information for both compile-time and run-time execution plans. Execution plans now provide the following information:
+[!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] provides enhanced partitioning information for both compile-time and run-time execution plans. Execution plans now provide the following information:
 
 - An optional `Partitioned` attribute that indicates that an operator, such as a `seek`, `scan`, `insert`, `update`, `merge`, or `delete`, is performed on a partitioned table.
 - A new `SeekPredicateNew` element with a `SeekKeys` subelement that includes `PartitionID` as the leading index key column and filter conditions that specify range seeks on `PartitionID`. The presence of two `SeekKeys` subelements indicates that a skip scan operation on `PartitionID` is used.

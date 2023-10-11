@@ -30,7 +30,7 @@ In this task, you add and configure an OLE DB destination to use the OLE DB conn
   
 5.  Double-click **Sample OLE DB Destination**.  
   
-6.  In the **OLE DB Destination Editor** dialog, ensure that **localhost.AdventureWorksDW2012** is selected in the **OLE DB Connection manager** box.  
+6.  In the **OLE DB Destination Editor** dialog, ensure that **localhost.AdventureWorksDW2022** is selected in the **OLE DB Connection manager** box.  
   
 7.  In the **Name of the table or the view** box, enter or select **[dbo].[FactCurrencyRate]**.  
  

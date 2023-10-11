@@ -45,7 +45,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 6.  On the **Connection** page, make the following selections:  
   
-    1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2012** is displayed.  
+    1.  In the **OLE DB connection manager** dialog box, ensure that **localhost.AdventureWorksDW2022** is displayed.  
   
     2.  Select **Use results of an SQL query**, and then enter or paste the following SQL statement:  
   
@@ -86,7 +86,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 7.  On the **Connection** page, make the following selections:  
   
-    1.  In the **OLEDB connection manager** dialog, ensure that **localhost.AdventureWorksDW2012** is displayed.  
+    1.  In the **OLEDB connection manager** dialog, ensure that **localhost.AdventureWorksDW2022** is displayed.  
   
     2.  In the **Use a table or view** box, enter or select **[dbo].[DimDate]**.  
   

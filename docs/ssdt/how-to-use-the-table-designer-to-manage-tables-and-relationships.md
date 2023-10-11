@@ -16,7 +16,7 @@ dev_langs:
 
 # How to: Use the Table Designer to Manage Tables and Relationships
 
-The Table Designer provides a visual experience alongside the Transact\-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.  It is launched when you create a new table for a connected database or a project, or when you double-click to edit a table in either SQL Server Object Explorer or Solution Explorer.  
+The Table Designer provides a visual experience alongside the Transact-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.  It is launched when you create a new table for a connected database or a project, or when you double-click to edit a table in either SQL Server Object Explorer or Solution Explorer.  
   
 The designer consists of the Columns Grid, Script Pane and Context Pane. The Columns Grid lists all the columns in the table. You can add, edit and delete columns in this grid.  The Context Pane gives you a logical view of the table definition (Keys, Indices, Constraints, Triggers, etc.), and enables you to select an object to highlight its relationships to individual columns. You can also add new objects to the table in this pane, and edit the properties of a selected object in the Properties Grid. Script Pane shows you the definition of the table structure, and highlights the script of the selected object in the Context Pane or Columns Grid. You can edit the script side-by-side with the Columns Grid and Context Pane in view. Any changes from any of the three panes will propagate to the other two immediately.  
   

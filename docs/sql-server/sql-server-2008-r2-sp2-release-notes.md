@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"
-monikerRange: "= sql-server-2016"
+monikerRange: "<= sql-server-2016"
 ---
 # SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

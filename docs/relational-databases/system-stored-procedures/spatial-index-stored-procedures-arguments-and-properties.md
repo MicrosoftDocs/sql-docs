@@ -374,6 +374,6 @@ For examples, see the following articles:
 ## See also
 
 - [sp_help_spatial_geometry_index (Transact-SQL)](sp-help-spatial-geometry-index-transact-sql.md)
-- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)
+- [Spatial Indexes Overview](../spatial/spatial-indexes-overview.md)
 - [XQuery Basics](../../xquery/xquery-basics.md)
 - [XQuery Language Reference (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)

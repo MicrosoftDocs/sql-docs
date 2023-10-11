@@ -27,14 +27,13 @@ The Table Designer consists of a window split into three separate panes. The fir
 
 ### Create and update database tables using the Table Designer
 
-The SQL server connection in which your database resides needs to be active in order to create tables. This is indicated by the green dot at the bottom right corner of the server connection icon in the object explorer (below). If red (this means the connection is inactive), select the server connection name in the object explorer to activate the connection. For a tutorial on connecting to SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article.
+The SQL Server connection in which your database resides needs to be active in order to create tables. This is indicated by the green dot at the bottom right corner of the server connection icon in the object explorer (below). If red (this means the connection is inactive), select the server connection name in the object explorer to activate the connection. For a tutorial on connecting to SQL Server, check out the [Use Azure Data Studio to connect and query SQL Server tutorial](quickstart-sql-server.md) article.
 
-> [!NOTE]
-> We will be using the "AdventureWorks2019" sample database in this tutorial. If you haven't already, please refer to [AdventureWorks sample databases](../samples/adventureworks-install-configure.md) to download this sample database.
+[!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
 
 #### Create a table
 
-1. Right-click the **Tables** folder in the **AdventureWorks2019** database drop-down and select **New Table**:
+1. Right-click the **Tables** folder in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database drop-down and select **New Table**:
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-traversing-through-object-explorer-to-create-new-table.png" alt-text="Screenshot of Table Designer showing how to traverse object explorer to create a new table.":::
 
@@ -49,11 +48,11 @@ The SQL server connection in which your database resides needs to be active in o
     > [!NOTE]
     > Pay attention to the changes in the read-only Transact-SQL code generated as changes are made to the default table.
 
-5. Now that we have finished the design for our new table, we need to publish this change to the **AdventureWorks2019** database. To do this, select the "Publish" icon as seen below. Publishing can also be done by using the save command shortcut on your local device.
+5. Now that we have finished the design for our new table, we need to publish this change to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. To do this, select the "Publish" icon as seen below. Publishing can also be done by using the save command shortcut on your local device.
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-publish-icon.png" alt-text="Screenshot of Table Designer highlighting publish icon.":::
 
-    Once this icon is selected, a preview dialog window appears showing you all the actions performed in creating a table. It also provides the option to publish the changes directly to the **AdventureWorks2019** database or generate the editable SQL script in a query editor that can be saved as a file locally or executed to publish this script to the database.
+    Once this icon is selected, a preview dialog window appears showing you all the actions performed in creating a table. It also provides the option to publish the changes directly to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database or generate the editable SQL script in a query editor that can be saved as a file locally or executed to publish this script to the database.
 
     :::image type="content" source="media/table-designer-azure-data-studio/save-dialog-for-table-designer.png" alt-text="Screenshot of Table Designer showing save dialog box.":::
 

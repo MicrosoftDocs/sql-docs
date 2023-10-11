@@ -256,7 +256,7 @@ Overrides the [Configure the max degree of parallelism Server Configuration Opti
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations aren't available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Parallel index operations aren't available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ##### ONLINE = [ON | OFF]
 
@@ -672,7 +672,7 @@ GO
 
 ### C. Create a nonclustered columnstore index with a filtered predicate
 
-The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the `AdventureWorks2019` sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
+The following example creates a filtered, nonclustered columnstore index on the `Production.BillOfMaterials` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database. The filter predicate can include columns that aren't key columns in the filtered index. The predicate in this example selects only the rows where `EndDate` is non-NULL.
 
 ```sql
 IF EXISTS (SELECT name FROM sys.indexes

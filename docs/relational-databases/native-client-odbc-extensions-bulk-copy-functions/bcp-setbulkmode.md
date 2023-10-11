@@ -247,7 +247,7 @@ BOOL BCPSetBulkMode(TCHAR * pszServer, TCHAR * pszQureryOut, char BCPType, TCHAR
                ODBCCleanUp();  
                return false;  
             }  
-            // set queryout TSQL statement  
+            // set queryout T-SQL statement  
             rc = bcp_control(g_hDbc, BCPHINTS , pszQureryOut);  
             if (SUCCEED != rc) {  
                printf("bcp_control(..BCP_OPTION_HINTS..) failed\n");  

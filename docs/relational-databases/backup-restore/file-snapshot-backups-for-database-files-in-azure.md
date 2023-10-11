@@ -67,7 +67,7 @@ ms.topic: conceptual
 
  **Single storage account:** The file-snapshot and destination blobs must use the same storage account.  
 
- **Bulk recovery model:** When using bulk-logged recovery mode and working with a transaction log backup containing minimally-logged transactions, you cannot do a log restore (including point in time recovery) using the transaction log backup. Rather, you perform a database restore to time of the file-snapshot backup set. This limitation is identical to the limitation with streaming backup.  
+ **Bulk recovery model:** When using the bulk-logged recovery model and working with a transaction log backup containing minimally-logged transactions, you cannot do a log restore (including point in time recovery) using the transaction log backup. Rather, you perform a database restore to time of the file-snapshot backup set. This limitation is identical to the limitation with streaming backup.  
 
  **Online restore:** When using file-snapshot backups, you cannot perform an online restore. For more information about online restore, see [Online Restore (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md).  
 
@@ -80,50 +80,50 @@ ms.topic: conceptual
 
 ## Back up the database and log using a file-snapshot backup
 
- This example uses file-snapshot backup to back up the `AdventureWorks2016` sample database to URL.  
+ This example uses file-snapshot backup to back up the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] sample database to URL.  
 
 ```sql
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
 GO  
-ALTER DATABASE AdventureWorks2016  
+ALTER DATABASE AdventureWorks2022  
    SET RECOVERY FULL;  
 GO  
--- Back up the full AdventureWorks2016 database.  
-BACKUP DATABASE AdventureWorks2016   
-TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+-- Back up the full AdventureWorks2022 database.  
+BACKUP DATABASE AdventureWorks2022   
+TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak'   
 WITH FILE_SNAPSHOT;  
 GO  
--- Back up the AdventureWorks2016 log using a time stamp in the backup file name.  
+-- Back up the AdventureWorks2022 log using a time stamp in the backup file name.  
 DECLARE @Log_Filename AS VARCHAR (300);  
-SET @Log_Filename = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_Log_'+   
+SET @Log_Filename = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_Log_'+   
 REPLACE (REPLACE (REPLACE (CONVERT (VARCHAR (40), GETDATE (), 120), '-','_'),':', '_'),' ', '_') + '.trn';  
-BACKUP LOG AdventureWorks2016  
+BACKUP LOG AdventureWorks2022  
  TO URL = @Log_Filename WITH FILE_SNAPSHOT;  
 GO  
 ```  
 
 ## Restore from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file-snapshot backup
 
- The following example restores the `AdventureWorks2016` database using a transaction log file-snapshot backup set, and shows a recovery operation. Notice that you can restore a database from a single transactional log file-snapshot backup set.  
+ The following example restores the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database using a transaction log file-snapshot backup set, and shows a recovery operation. Notice that you can restore a database from a single transactional log file-snapshot backup set.  
 
 ```sql  
-RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.trn'   
+RESTORE DATABASE AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_16_00_00.trn'   
 WITH RECOVERY, REPLACE;  
 GO  
 ```  
 
 ## Restore from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file-snapshot backup to a point in time
 
- The following example restores the `AdventureWorks2016` to its state at a specified point in time using two transaction log file-snapshot backup sets, and shows a recovery operation.  
+ The following example restores the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] to its state at a specified point in time using two transaction log file-snapshot backup sets, and shows a recovery operation.  
 
 ```sql  
-RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.trn'   
+RESTORE DATABASE AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_16_00_00.trn'   
 WITH NORECOVERY,REPLACE;  
 GO   
   
-RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+RESTORE LOG AdventureWorks2022 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022_2015_05_18_18_00_00.trn'   
 WITH RECOVERY,STOPAT = 'May 18, 2015 5:35 PM';  
 GO  
 ```  
@@ -138,7 +138,7 @@ GO
  The following example deletes the specified file-snapshot backup set, including the backup file and the file-snapshots comprising the specified backup set.  
 
 ```sql
-EXEC sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak', 'adventureworks2016' ;  
+EXEC sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022.bak', 'AdventureWorks2022' ;  
 GO  
 ```  
 
@@ -150,10 +150,10 @@ GO
 
 ```sql  
 --Either specify the database name or set the database context  
-USE AdventureWorks2016  
+USE AdventureWorks2022  
 select * from sys.fn_db_backup_file_snapshots (null) ;  
 GO  
-select * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016') ;  
+select * from sys.fn_db_backup_file_snapshots ('AdventureWorks2022') ;  
 GO  
 ```  
 
@@ -167,7 +167,7 @@ GO
  The following example deletes the specified backup file-snapshot. The URL for the specified backup was obtained using the `sys.fn_db_backup_file_snapshots` system function.  
 
 ```sql
-EXEC sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016Data.mdf?snapshot=2015-05-29T21:31:31.6502195Z';  
+EXEC sys.sp_delete_backup_file_snapshot N'AdventureWorks2022', N'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2022Data.mdf?snapshot=2015-05-29T21:31:31.6502195Z';  
 GO  
 ```  
 

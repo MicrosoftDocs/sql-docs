@@ -66,7 +66,7 @@ Requires membership in the **public** role.
 The following example prevents the message about the number of rows affected from being displayed. In the following example, "(5 rows affected)" will only be returned to clients from the first SELECT statement.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SET NOCOUNT OFF;
 GO

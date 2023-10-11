@@ -91,23 +91,23 @@ RESTORE MASTER KEY FROM
   
 ## Examples
 
- The following example restores the database master key of the `AdventureWorks2012` database from a file.  
+ The following example restores the database master key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from a file.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 RESTORE MASTER KEY   
-    FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   
+    FROM FILE = 'c:\backups\keys\AdventureWorks2022_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
     ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
 GO  
 ```  
   
- The following example restores the database master key of the `AdventureWorks2012` database from an Azure Blob storage.  
+ The following example restores the database master key of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from an Azure Blob storage.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 RESTORE MASTER KEY   
-    FROM URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2012_master_key.bak'   
+    FROM URL = 'https://mydocsteststorage.blob.core.windows.net/mytestcontainer/AdventureWorks2022_master_key.bak'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003#GHkf02597gheij04'   
     ENCRYPTION BY PASSWORD = '259087M#MyjkFkjhywiyedfgGDFD';  
 GO  

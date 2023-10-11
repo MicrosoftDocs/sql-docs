@@ -4,6 +4,8 @@ ms.author: randolphwest
 ms.date: 07/11/2023
 ms.service: sql
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 <a id="RHEL"></a>
 
@@ -44,7 +46,7 @@ Use the following steps to install the **mssql-tools18** on Red Hat Enterprise L
 1. Run the following commands to install **mssql-tools18** with the unixODBC developer package.
 
    ```bash
-   sudo yum install -y mssql-tools18 unixodbc-dev
+   sudo yum install -y mssql-tools18 unixODBC-devel
    ```
 
    > [!NOTE]  

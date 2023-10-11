@@ -69,7 +69,7 @@ helpviewer_keywords:
      The following example removes the witness from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
     ```  
-    ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
+    ALTER DATABASE AdventureWorks2022 SET WITNESS OFF ;  
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Removing the Witness  

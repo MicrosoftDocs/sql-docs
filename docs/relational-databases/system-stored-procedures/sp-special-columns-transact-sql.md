@@ -86,7 +86,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  The following example returns information about the column that uniquely identifies rows in the `HumanResources.Department` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   
     ,@table_owner = 'HumanResources';  

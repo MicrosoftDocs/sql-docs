@@ -16,7 +16,7 @@ f1_keywords:
 
 # How to: Create a New Database Project
 
-You can create a new database project and import database schema from an existing database, a .sql script file or a Data-tier application (.dacpac). You can then invoke the same visual designer tools (Transact\-SQL Editor, Table Designer) available for connected database development to make changes to the offline database project, and publish the changes back to the production database. The changes can also be saved as a script to be published later. Using the **Project Properties** pane, you can change the target platform to different versions of SQL Server (including SQL Azure).  
+You can create a new database project and import database schema from an existing database, a .sql script file or a Data-tier application (.dacpac). You can then invoke the same visual designer tools (Transact-SQL Editor, Table Designer) available for connected database development to make changes to the offline database project, and publish the changes back to the production database. The changes can also be saved as a script to be published later. Using the **Project Properties** pane, you can change the target platform to different versions of SQL Server (including SQL Azure).  
   
 The following two procedures essentially achieve the same goal by creating a new database project and importing schema from an existing database. Each database object will be represented as a SQL script file (.sql) in **Solution Explorer**. For more information on importing database schema from a snapshot, see [How to: Create a Snapshot of a Project](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
   

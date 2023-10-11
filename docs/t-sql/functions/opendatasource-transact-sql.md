@@ -87,12 +87,12 @@ Any call to `OPENDATASOURCE`, `OPENQUERY`, or `OPENROWSET` in the `FROM` clause 
   
 ```sql  
 SELECT GroupName, Name, DepartmentID  
-FROM OPENDATASOURCE('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;TrustServerCertificate=Yes;Trusted_Connection=Yes;').HumanResources.Department  
+FROM OPENDATASOURCE('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2022;TrustServerCertificate=Yes;Trusted_Connection=Yes;').HumanResources.Department  
 ORDER BY GroupName, Name;  
 ``` 
 
 ### B. Using OPENDATASOURCE with SELECT and the SQL Server OLE DB Provider  
-The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2012.HumanResources.Employee` table. 
+The following example creates an ad hoc connection to the `Payroll` instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on server `London`, and queries the `AdventureWorks2022.HumanResources.Employee` table. 
 
 > [!NOTE] 
 > Using SQLNCLI will redirect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the latest version of SQL Server Native Client OLE DB Provider. The OLE DB provider is expected to be registered with the specified PROGID in the registry. 
@@ -104,7 +104,7 @@ The following example creates an ad hoc connection to the `Payroll` instance of 
 SELECT *  
 FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source=London\Payroll;Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Employee;  
+    .AdventureWorks2022.HumanResources.Employee;  
 ```  
 
 ### C. Using the Microsoft OLE DB Provider for Jet   

@@ -24,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current"
 
   Returns a log of out of memory (OOM) events.
 
-  For more information on out of memory conditions in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], see [Troubleshoot out of memory errors in Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
+  For more information on out of memory conditions in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], see [Troubleshoot out of memory errors in Azure SQL Database](/azure/azure-sql/database/troubleshoot-memory-errors-issues).
   
 |Column Name|Data Type|Description|  
 |-------------|---------------|-----------------|  

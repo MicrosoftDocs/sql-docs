@@ -34,7 +34,7 @@ The instructions below cover the process per type of SQL that you can monitor. T
 > [!NOTE]
 > SQL Insights (preview) does not support the following Azure SQL Database scenarios:
 > - **Elastic pools**: Metrics cannot be gathered for elastic pools. Metrics cannot be gathered for databases within elastic pools.
-> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, S1, and S2 [service tiers](./resource-limits-dtu-single-databases.md)
+> - **Low service tiers**: Metrics cannot be gathered for databases on Basic, S0, and S1 [service objectives](./resource-limits-dtu-single-databases.md)
 > 
 > SQL Insights (preview) has limited support for the following Azure SQL Database scenarios:
 > - **Serverless tier**: Metrics can be gathered for databases using the [serverless compute tier](./serverless-tier-overview.md). However, the process of gathering metrics will reset the auto-pause delay timer, preventing the database from entering an auto-paused state.
@@ -119,7 +119,7 @@ You will need to create one or more Azure virtual machines that will be used to 
 ### Azure virtual machine requirements
 The Azure virtual machine has the following requirements:
 
-- Operating system: Ubuntu 18.04 using Azure Marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). Custom images are not supported.
+- Operating system: Ubuntu 18.04 using the Azure Marketplace image. Custom images are not supported. To obtain Extended Security Maintenance (ESM) for this version of Ubuntu, we recommend using the Ubuntu Pro 18.04 LTS marketplace [image](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.0001-com-ubuntu-pro-bionic). For more information, see [Support for Linux and open-source technology in Azure](/troubleshoot/azure/cloud-services/support-linux-open-source-technology).
 - Recommended minimum Azure virtual machine sizes: Standard_B2s (2 CPUs, 4-GiB memory) 
 - Deployed in any Azure region [supported](/azure/azure-monitor/agents/azure-monitor-agent-overview#supported-regions) by the Azure Monitor agent, and meeting all Azure Monitor agent [prerequisites](/azure/azure-monitor/agents/azure-monitor-agent-manage#prerequisites).
 

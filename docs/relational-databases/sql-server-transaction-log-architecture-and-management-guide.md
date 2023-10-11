@@ -79,7 +79,7 @@ Virtual log file (VLF) creation follows this method:
 - In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and later versions, if the next growth is less than 1/8 of the current log physical size, then create 1 VLF that covers the growth size.
 - If the next growth is more than 1/8 of the current log size, use the pre-2014 method, namely:
   - If growth is less than 64 MB, create 4 VLFs that cover the growth size (for example, for 1-MB growth, create 4 VLFs of size 256 KB).
-    - In [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], and starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions), the logic is slightly different. If the growth is less than or equal to 64 MB, the Database Engine creates only one VLF to cover the growth size.
+    - In [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)], and starting with [!INCLUDE[sssql22-md](../includes/sssql22-md.md)] (all editions), the logic is slightly different. If the growth is less than or equal to 64 MB, the Database Engine creates only one VLF to cover the growth size.
   - If growth is from 64 MB up to 1 GB, create 8 VLFs that cover the growth size (for example, for 512-MB growth, create 8 VLFs of size 64 MB).
   - If growth is larger than 1 GB, create 16 VLFs that cover the growth size for example, for 8-GB growth, create 16 VLFs of size 512 MB).
 
@@ -306,7 +306,7 @@ The active log must include every part of all uncommitted transactions. An appli
 - If the system is shut down after the transaction has performed many uncommitted modifications, the recovery phase of the subsequent restart can take much longer than the time specified in the **recovery interval** option.
 - The log might grow very large, because the log can't be truncated past the MinLSN. This occurs even if the database is using the simple recovery model, in which the transaction log is truncated on each automatic checkpoint.
 
-Recovery of long-running transactions, and the problems described in this article, can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].
+Recovery of long-running transactions, and the problems described in this article, can be avoided by using [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr), a feature available starting with [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] and in [!INCLUDE [ssazure-sqldb](../includes/ssazure-sqldb.md)].
 
 ### Replication transactions
 

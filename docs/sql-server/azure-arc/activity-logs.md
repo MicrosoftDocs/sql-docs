@@ -1,6 +1,6 @@
 ---
-title: Azure activity log
-description: View Azure Arc-enabled SQL Server and databases activity log
+title: Use Azure Arc-enabled SQL Server activity logs
+description: View or download Azure Arc-enabled SQL Server and databases activity log
 author: guptasnigdha12
 ms.author: guptasnigdha
 ms.reviewer: mikeray, rajpo
@@ -8,7 +8,7 @@ ms.date: 05/26/2023
 ms.topic: conceptual
 ---
 
-# Azure Arc-enabled SQL Server and Databases activity logs
+# Use Azure Arc-enabled SQL Server and databases activity logs
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

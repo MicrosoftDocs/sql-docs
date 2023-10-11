@@ -6,6 +6,7 @@ ms.author: adityaduvuri
 ms.reviewer: maghan, randolphwest
 ms.date: 02/20/2023
 ms.service: azure-data-studio
+ms.subservice: migration-extension
 ms.topic: troubleshooting
 ---
 

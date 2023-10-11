@@ -11,7 +11,7 @@ DECLARE @publisher AS sysname;
 DECLARE @login AS sysname;
 DECLARE @password AS nvarchar(512);
 SET @publication = N'AdvWorksProductTran';
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 SET @publisher = $(PubServer);
 SET @login = $(Login);
 SET @password = $(Password);
@@ -45,7 +45,7 @@ EXEC sp_link_publication
     @password = @password;
 GO
 
-USE AdventureWorks2012
+USE AdventureWorks2022;
 GO
 
 -- Execute this batch at the Publisher.
@@ -53,11 +53,11 @@ DECLARE @publication AS sysname;
 DECLARE @subscriptionDB AS sysname;
 DECLARE @subscriber AS sysname;
 SET @publication = N'AdvWorksProductTran'; 
-SET @subscriptionDB = N'AdventureWorks2012Replica'; 
+SET @subscriptionDB = N'AdventureWorks2022Replica'; 
 SET @subscriber = $(SubServer);
 
 -- At the Publisher, register the subscription, using the defaults.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_addsubscription 
 	@publication = @publication, 
 	@subscriber = @subscriber, 

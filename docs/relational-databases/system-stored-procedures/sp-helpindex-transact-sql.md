@@ -59,7 +59,7 @@ sp_helpindex [ @objname = ] 'name'
  The following example reports on the types of indexes on the `Customer` table.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helpindex N'Sales.Customer';  
 GO  

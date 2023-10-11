@@ -8,7 +8,9 @@ ms.date: 01/27/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server 2019 Machine Learning Services (Python and R) on Linux
@@ -34,9 +36,7 @@ You can install Machine Learning Services on Red Hat Enterprise Linux (RHEL), SU
 
 * (R only) Microsoft R Open (MRO) provides the base R distribution for the R feature in SQL Server and is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
     * The required version is MRO 3.5.2.
-    * Choose from the following two approaches to install MRO:
-        * Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
-        * Register the **packages.microsoft.com** repo as described below to install the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
+    * Register the `packages.microsoft.com` repo as described below to install the MRO distribution: `microsoft-r-open-mro` and `microsoft-r-open-mkl`. 
     * See the installation sections below for how to install MRO.
 
 * You should have a tool for running T-SQL commands. 
@@ -426,14 +426,14 @@ mssql-mlservices-packages-py-9.4.7.64
 mssql-mlservices-mlm-py-9.4.7.64
 ```
 
-## Next steps
+## Related content
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
-+ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
+- [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
+- [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)
+- [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
+- [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)

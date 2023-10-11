@@ -30,9 +30,9 @@ To use any code example that is provided, you will have to choose the programmin
 Dim srv As Server
 srv = New Server
 'Modify a property using the Databases, Tables, and Columns collections to reference a column.
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Nullable = True
+srv.Databases("AdventureWorks2022").Tables("Person", "Person").Columns("ModifiedDate").Nullable = True
 'Call the Alter method to make the change on the instance of SQL Server.
-srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("ModifiedDate").Alter()
+srv.Databases("AdventureWorks2022").Tables("Person", "Person").Columns("ModifiedDate").Alter()
 ```
   
 ## Referencing an Object by Using a Collection in Visual C#  
@@ -44,9 +44,9 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 Server srv;   
 srv = new Server();   
 //Modify a property using the Databases, Tables, and Columns collections to reference a column.   
-srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Nullable = true;   
+srv.Databases["AdventureWorks2022"].Tables["Person", "Person"].Columns["LastName"].Nullable = true;   
 //Call the Alter method to make the change on the instance of SQL Server.   
-srv.Databases["AdventureWorks2012"].Tables["Person", "Person"].Columns["LastName"].Alter();   
+srv.Databases["AdventureWorks2022"].Tables["Person", "Person"].Columns["LastName"].Alter();   
 }  
 ```  
   

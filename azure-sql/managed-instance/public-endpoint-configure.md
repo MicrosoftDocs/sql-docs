@@ -8,9 +8,7 @@ ms.date: 07/14/2023
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
-ms.custom:
-  - sqldbrb=1
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1, devx-track-azurepowershell, devx-track-azurecli
 ---
 # Configure public endpoints in Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

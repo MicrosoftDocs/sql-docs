@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 f1_keywords:
   - "ssma.db2.convert.f1"
 ---
@@ -28,18 +30,18 @@ The following table shows which DB2 objects are converted, and the resulting [!I
 |-----------|----------------------------|  
 |Data Types|**SSMA maps every type except the following listed below:**<br /><br />CLOB: Some native functions for work with this type is not supported (for example,  CLOB_EMPTY())<br /><br />BLOB: Some native functions for work with this type aren't supported  (for example,  BLOB_EMPTY())<br /><br />DBLOB: Some native functions for work with this type aren't supported  (for example,  DBLOB_EMPTY())|  
 |User-Defined Types|**SSMA maps the following User-Defined:**<br /><br />Distinct Type<br /><br />Structured Type<br /><br />SQL PL data types - Note: Weak cursor type aren't supported.|  
-|Special Registers|**SSMA only maps registers listed below:**<br /><br />CURRENT TIMESTAMP<br /><br />CURRENT DATE<br /><br />CURRENT TIME<br /><br />CURRENT TIMEZONE<br /><br />CURRENT USER<br /><br />SESSION_USER and USER<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />CURRENT LOCK TIMEOUT<br /><br />CURRENT SCHEMA<br /><br />CURRENT SERVER<br /><br />CURRENT ISOLATION<br /><br />Other Special Registers aren't mapped to SQL server semantic.|  
+|Special Registers|**SSMA only maps registers listed below:**<br /><br />CURRENT TIMESTAMP<br /><br />CURRENT DATE<br /><br />CURRENT TIME<br /><br />CURRENT TIMEZONE<br /><br />CURRENT USER<br /><br />SESSION_USER and USER<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />CURRENT LOCK TIMEOUT<br /><br />CURRENT SCHEMA<br /><br />CURRENT SERVER<br /><br />CURRENT ISOLATION<br /><br />Other Special Registers aren't mapped to SQL Server semantics.|  
 |CREATE TABLE|**SSMA maps CREATE TABLE with the following exceptions:**<br /><br />Multidimensional clustering (MDC) tables<br /><br />Range-clustered tables (RCT)<br /><br />Partitioned tables<br /><br />Detached table<br /><br />DATA CAPTURE clause<br /><br />IMPLICITLY HIDDEN option<br /><br />VOLATILE option|  
-|CREATE VIEW|SSMA maps CREATE VIEW with 'WITH LOCAL CHECK OPTION' but other options aren't mapped to SQL server semantics|  
+|CREATE VIEW|SSMA maps CREATE VIEW with 'WITH LOCAL CHECK OPTION' but other options aren't mapped to SQL Server semantics|  
 |CREATE INDEX|**SSMA maps CREATE INDEX with the following exceptions:**<br /><br />XML index<br /><br />BUSINESS_TIME WITHOUT OVERLAPS option<br /><br />PARTITIONED clause<br /><br />SPECIFICATION ONLY option<br /><br />EXTEND USING option<br /><br />MINPCTUSED option<br /><br />PAGE SPLIT option|  
 |Triggers|**SSMA maps the following trigger semantics:**<br /><br />AFTER / FOR EACH ROW Triggers<br /><br />AFTER /FOR EACH STATEMENT Triggers<br /><br />BEFORE / FOR EACH ROW and INSTEAD OF / FOR EACH ROW Triggers|  
 |Sequences|Are mapped.|  
-|SELECT Statement|**SSMA maps SELECT with the following exceptions:**<br /><br />Data-change-table-reference clause - Partially mapped, but FINAL tables don't supported<br /><br />Table-reference clause - Partially mapped, but only-table-reference, outer-table-reference, analyze_table-expression, collection-derived-table, xmltable-expression aren't mapped to SQL server semantics<br /><br />Period-specification clause - Not mapped.<br /><br />Continue-handler clause - Not mapped.<br /><br />Typed-correlation clause - Not mapped.<br /><br />Concurrent-access-resolution clause - Not mapped.|  
+|SELECT Statement|**SSMA maps SELECT with the following exceptions:**<br /><br />Data-change-table-reference clause - Partially mapped, but FINAL tables don't supported<br /><br />Table-reference clause - Partially mapped, but only-table-reference, outer-table-reference, analyze_table-expression, collection-derived-table, xmltable-expression aren't mapped to SQL Server semantics<br /><br />Period-specification clause - Not mapped.<br /><br />Continue-handler clause - Not mapped.<br /><br />Typed-correlation clause - Not mapped.<br /><br />Concurrent-access-resolution clause - Not mapped.|  
 |VALUES Statement|Is mapped.|  
 |INSERT Statement|Is mapped.|  
-|UPDATE Statement|S**SMA maps UPDATE with the following exceptions:**<br /><br />Table-reference clause - Only-table-reference is not mapped to SQL server semantics<br /><br />Period clause - Is not mapped.|  
-|MERGE Statement|**SSMA maps MERGE with the following exceptions:**<br /><br />Single vs Multiple Occurrences of Each Clause - Is mapped to SQL server semantics for limited occurrences of each clause<br /><br />SIGNAL Clause - doesn't map to SQL Server semantics<br /><br />Mixed UPDATE and DELETE Clauses - doesn't map to SQL Server semantics<br /><br />Period-clause - doesn't map to SQL Server semantics|  
-|DELETE Statement|**SSMA maps DELETE with the following exceptions:**<br /><br />Table-reference clause - Only-table-reference is not mapped to SQL server semantics<br /><br />Period clause - doesn't map to SQL Server semantics|  
+|UPDATE Statement|S**SMA maps UPDATE with the following exceptions:**<br /><br />Table-reference clause - Only-table-reference is not mapped to SQL Server semantics<br /><br />Period clause - Is not mapped.|  
+|MERGE Statement|**SSMA maps MERGE with the following exceptions:**<br /><br />Single vs Multiple Occurrences of Each Clause - Is mapped to SQL Server semantics for limited occurrences of each clause<br /><br />SIGNAL Clause - doesn't map to SQL Server semantics<br /><br />Mixed UPDATE and DELETE Clauses - doesn't map to SQL Server semantics<br /><br />Period-clause - doesn't map to SQL Server semantics|  
+|DELETE Statement|**SSMA maps DELETE with the following exceptions:**<br /><br />Table-reference clause - Only-table-reference is not mapped to SQL Server semantics<br /><br />Period clause - doesn't map to SQL Server semantics|  
 |Isolation Level and Lock Type|Is mapped.|  
 |Procedures (SQL)|Are mapped.|  
 |Procedures (external)|Require manual update.|  
@@ -59,9 +61,9 @@ The following table shows which DB2 objects are converted, and the resulting [!I
 |SIGNAL Statement|Conditions aren't supported. Messages can be optional.|  
 |WHILE Statement|Is mapped.|  
 |GET DIAGNOSTICS Statement|**SSMA maps GET DIAGNOSTICS with the following exceptions:**<br /><br />ROW_COUNT - Is mapped.<br /><br />DB2_RETURN_STATUS - Is mapped.<br /><br />MESSAGE_TEXT - Is mapped.<br /><br />DB2_SQL_NESTING_LEVEL - doesn't map to SQL Server semantics<br /><br />DB2_TOKEN_STRING - doesn't map to SQL Server semantics|  
-|Cursors|**SSMA maps CURSORS with the following exceptions:**<br /><br />ALLOCATE CURSOR statement - doesn't map to SQL Server semantics<br /><br />ASSOCIATE LOCATORS statement - doesn't map to SQL Server semantics<br /><br />DECLARE CURSOR statement - Returnability clause is not mapped to SQL server semantics<br /><br />FETCH statement - Partial mapping. Variables as target are supported only. SQLDA DESCRIPTOR is not  mapped to SQL server semantics|  
+|Cursors|**SSMA maps CURSORS with the following exceptions:**<br /><br />ALLOCATE CURSOR statement - doesn't map to SQL Server semantics<br /><br />ASSOCIATE LOCATORS statement - doesn't map to SQL Server semantics<br /><br />DECLARE CURSOR statement - Returnability clause is not mapped to SQL Server semantics<br /><br />FETCH statement - Partial mapping. Variables as target are supported only. SQLDA DESCRIPTOR is not  mapped to SQL Server semantics|  
 |Variables|Are mapped.|  
-|Exceptions, Handlers, and Conditions|**SSMA maps "exception handling" with the following exceptions:**<br /><br />EXIT Handlers - Are mapped.<br /><br />UNDO Handlers - Are mapped.<br /><br />CONTINUE Handlers - Aren't mapped.<br /><br />Conditions - It doesn't map to SQL server semantics.|  
+|Exceptions, Handlers, and Conditions|**SSMA maps "exception handling" with the following exceptions:**<br /><br />EXIT Handlers - Are mapped.<br /><br />UNDO Handlers - Are mapped.<br /><br />CONTINUE Handlers - Aren't mapped.<br /><br />Conditions - It doesn't map to SQL Server semantics.|  
 |Dynamic SQL|Not mapped.|  
 |Aliases|Are mapped.|  
 |Nicknames|Partial mapping. Manual processing is required for underlying object|  

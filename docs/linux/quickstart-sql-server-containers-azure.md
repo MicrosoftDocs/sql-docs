@@ -3,13 +3,14 @@ title: "Quickstart: Deploy a SQL Server container cluster on Azure"
 description: This tutorial shows how to deploy a SQL Server high availability solution with Azure Kubernetes Service or Azure Red Hat OpenShift.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/18/2022
+ms.date: 07/31/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: quickstart
 ms.custom:
   - template-quickstart
   - intro-deployment
+  - linux-related-content
 ---
 # Quickstart: Deploy a SQL Server container cluster on Azure
 
@@ -19,10 +20,10 @@ This quickstart demonstrates how to configure a highly available SQL Server inst
 
 This quickstart uses the following command line tools to manage the cluster.
 
-|Cluster service|Command line tool|
-|---|---|
-|Azure Kubernetes Service (AKS)|[kubectl](https://kubernetes.io/docs/reference/kubectl/) (Kubernetes CLI)|
-|Azure Red Hat OpenShift|[oc](https://docs.openshift.com/container-platform/4.12/cli_reference/openshift_cli/getting-started-cli.html) (OpenShift CLI)|
+| Cluster service | Command line tool |
+| --- | --- |
+| Azure Kubernetes Service (AKS) | [kubectl](https://kubernetes.io/docs/reference/kubectl/) (Kubernetes CLI) |
+| Azure Red Hat OpenShift | [oc](https://docs.openshift.com/container-platform/4.12/cli_reference/openshift_cli/getting-started-cli.html) (OpenShift CLI) |
 
 ## Prerequisites
 
@@ -174,28 +175,17 @@ For a database in a Kubernetes cluster, you must use persisted storage. You can 
 
 ### [OpenShift](#tab/oc)
 
-For a database in an OpenShift cluster, you must use persisted storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/4.12/storage/persistent_storage/persistent_storage_local/persistent-storage-local.html) and [persistent volume claim](https://docs.openshift.com/container-platform/4.12/storage/persistent_storage/persistent_storage_local/persistent-storage-local.html#create-local-pvc_persistent-storage-local) in the OpenShift cluster using the following steps:
+For a database in an OpenShift cluster, you must use persisted storage. You can configure a [persistent volume](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html) and [persistent volume claim](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-azure.html#creating-the-persistent-volume-claim) in the OpenShift cluster using the following steps:
 
 1. Create a manifest to define the storage class and the persistent volume claim. The manifest specifies the storage provisioner, parameters, and reclaim policy. The OpenShift cluster uses this manifest to create the persistent storage.
 
-1. The following YAML example defines a storage class and persistent volume claim. The storage class provisioner is `azure-disk`, because this OpenShift cluster is in Azure. The storage account type is `Standard_LRS`. The persistent volume claim is named `mssql-data`. The persistent volume claim metadata includes an annotation connecting it back to the storage class.
+1. The following YAML example defines a persistent volume claim using the default storage class. The persistent volume claim is named `mssql-data`.
 
    ```yaml
-   kind: StorageClass
-   apiVersion: storage.k8s.io/v1
-   metadata:
-        name: azure-disk
-   provisioner: kubernetes.io/azure-disk
-   parameters:
-     storageaccounttype: Standard_LRS
-     kind: Managed
-   ---
    kind: PersistentVolumeClaim
    apiVersion: v1
    metadata:
      name: mssql-data
-     annotations:
-       volume.beta.kubernetes.io/storage-class: azure-disk
    spec:
      accessModes:
      - ReadWriteOnce
@@ -215,7 +205,6 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
    The persistent volume is automatically created as an Azure storage account, and bound to the persistent volume claim.
 
    ```output
-   storageclass "azure-disk" created
    persistentvolumeclaim "mssql-data" created
    ```
 
@@ -270,7 +259,7 @@ For a database in an OpenShift cluster, you must use persisted storage. You can 
 
 The container hosting the SQL Server instance is described as a Kubernetes *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
 
 - The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster.
 - The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
@@ -358,7 +347,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
      When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password.
 
-   - `securityContext`: Defines privilege and access control settings for a pod or container. In this case it's specified at the pod level, so all containers adhere to that security context. In the security context, we define the `fsGroup` with the value `10001`, which is the Group ID (GID) for the `mssql` group. This value means that all processes of the container are also part of the supplementary GID `10001` (`mssql`). The owner for volume `/var/opt/mssql` and any files created in that volume will be GID `10001` (the `mssql` group).
+   - `securityContext`: Defines privilege and access control settings for a pod or container. In this case, it's specified at the pod level, so all containers adhere to that security context. In the security context, we define the `fsGroup` with the value `10001`, which is the Group ID (GID) for the `mssql` group. This value means that all processes of the container are also part of the supplementary GID `10001` (`mssql`). The owner for volume `/var/opt/mssql` and any files created in that volume will be GID `10001` (the `mssql` group).
 
    > [!WARNING]  
    > By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the Internet) at port 1433.
@@ -415,7 +404,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
    kubectl.exe exec <nameOfSqlPod> -it -- /bin/bash
    ```
 
-   You are able to see the username as `mssql` if you run `whoami`. `mssql` is a non-root user.
+   You can see the username as `mssql` if you run `whoami`. `mssql` is a non-root user.
 
     ```console
     whoami
@@ -425,7 +414,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
 The container hosting the SQL Server instance is described as an OpenShift *deployment object*. The deployment creates a *replica set*. The replica set creates the *pod*.
 
-You will create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
+You create a manifest to describe the container, based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image.
 
 - The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the OpenShift cluster.
 - The manifest also describes a [service](https://docs.openshift.com/container-platform/4.12/networking/understanding-networking.html). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered.
@@ -451,7 +440,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
          terminationGracePeriodSeconds: 30
          hostname: mssqlinst
          securityContext:
-           fsGroup: 10001
+           fsGroupChangePolicy: OnRootMismatch
          containers:
          - name: mssql
            image: mcr.microsoft.com/mssql/server:2022-latest
@@ -464,6 +453,10 @@ You will create a manifest to describe the container, based on the SQL Server [m
                cpu: "2000m"
            ports:
            - containerPort: 1433
+           securityContext:
+             capabilities:
+               add:
+               - NET_BIND_SERVICE
            env:
            - name: MSSQL_PID
              value: "Developer"
@@ -513,7 +506,7 @@ You will create a manifest to describe the container, based on the SQL Server [m
 
      When OpenShift deploys the container, it refers to the secret named `mssql` to get the value for the password.
 
-   - `securityContext`: Defines privilege and access control settings for a pod or container. In this case it's specified at the pod level, so all containers adhere to that security context. In the security context, we define the `fsGroup` with the value `10001`, which is the Group ID (GID) for the `mssql` group. This value means that all processes of the container are also part of the supplementary GID `10001` (`mssql`). The owner for volume `/var/opt/mssql` and any files created in that volume will be GID `10001` (the `mssql` group).
+   - `securityContext`: Defines privilege and access control settings for a pod or container. There are settings applied at both the pod and container level. At the pod level, this option defines the `fsGroupChangePolicy` with the value `OnRootMismatch`. This ensures that the `fsGroup` selected by OpenShift is used for all the files in the `/var/opt/mssql` volume. At the container level, this option permits the `NET_BIND_SERVICE` capability, which allows the container to bind to ports lower than 1024.
 
    > [!WARNING]  
    > By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the Internet) at port 1433.
@@ -652,7 +645,7 @@ If you don't plan on going through the tutorials that follow, clean up your unne
 az group delete --name <MyResourceGroup> --yes --no-wait
 ```
 
-## Next steps
+## Related content
 
 - [Introduction to Kubernetes](/azure/aks/intro-kubernetes)
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)

@@ -128,7 +128,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'AdvWorksData',   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\BACKUP\AdvWorksData.bak';  
 GO  
-BACKUP DATABASE AdventureWorks2012   
+BACKUP DATABASE AdventureWorks2022   
  TO AdvWorksData  
    WITH FORMAT;  
 GO  

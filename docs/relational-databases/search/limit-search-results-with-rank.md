@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  The following example uses CONTAINSTABLE to return only the top three matches.  
   
 ```  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 SELECT K.RANK, AddressLine1, City  
@@ -66,7 +66,7 @@ RANK        Address                          City
  The following example uses CONTAINSTABLE to return the description of the top 5 products where the `Description` column contains the word "aluminum" near either the word "light" or the word "lightweight".  
   
 ```  
-USE AdventureWorks2012  
+USE AdventureWorks2022  
 GO  
   
 SELECT FT_TBL.ProductDescriptionID,  

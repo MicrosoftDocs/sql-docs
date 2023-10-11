@@ -62,7 +62,7 @@ The name of the source table on which to enable change data capture. *@source_na
 
 The name of the database role used to gate access to change data. *@role_name* is **sysname** and must be specified. If explicitly set to NULL, no gating role is used to limit access to the change data.
 
-If the role currently exists, it is used. If the role doesn't exist, an attempt is made to create a database role with the specified name. The role name is trimmed of white space at the right of the string before attempting to create the role. If the caller isn't authorized to create a role within the database, the stored procedure operation fails.
+If the role currently exists, it's used. If the role doesn't exist, an attempt is made to create a database role with the specified name. The role name is trimmed of white space at the right of the string before attempting to create the role. If the caller isn't authorized to create a role within the database, the stored procedure operation fails.
 
 #### [ @capture_instance = ] '*capture_instance*'
 
@@ -117,20 +117,20 @@ If you enable partition switching on [!INCLUDE [ssnoversion-md](../../includes/s
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
 ## Remarks
 
-Before you can enable a table for change data capture, the database must be enabled. To determine whether the database is enabled for change data capture, query the `is_cdc_enabled` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. To enable the database, use the [sys.sp_cdc_enable_db](sys-sp-cdc-enable-db-transact-sql.md) stored procedure.
+Before you can enable a table for change data capture, the database must be enabled. To determine whether the database is enabled for change data capture, query the `is_cdc_enabled` column in the [sys.databases](../system-catalog-views/sys-databases-transact-sql.md) catalog view. To enable the database, use the [sys.sp_cdc_enable_db](sys-sp-cdc-enable-db-transact-sql.md) stored procedure.
 
 When change data capture is enabled for a table, a change table and one or two query functions are generated. The change table serves as a repository for the source table changes extracted from the transaction log by the capture process. The query functions are used to extract data from the change table. The names of these functions are derived from the *@capture_instance* parameter in the following ways:
 
 - All changes function: `cdc.fn_cdc_get_all_changes_<capture_instance>`
 - Net changes function: `cdc.fn_cdc_get_net_changes_<capture_instance>`
 
-`sys.sp_cdc_enable_table` also creates the capture and cleanup jobs for the database if the source table is the first table in the database to be enabled for change data capture and no transactional publications exist for the database. It sets the `is_tracked_by_cdc` column in the [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) catalog view to `1`.
+`sys.sp_cdc_enable_table` also creates the capture and cleanup jobs for the database if the source table is the first table in the database to be enabled for change data capture and no transactional publications exist for the database. It sets the `is_tracked_by_cdc` column in the [sys.tables](../system-catalog-views/sys-tables-transact-sql.md) catalog view to `1`.
 
 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent doesn't have to be running when CDC is enabled for a table. However, the capture process doesn't process the transaction log and write entries to the change table unless [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent is running.
 

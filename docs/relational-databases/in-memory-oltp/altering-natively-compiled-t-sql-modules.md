@@ -12,7 +12,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 # Altering Natively Compiled T-SQL Modules
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can perform `ALTER` operations on natively compiled stored procedures and other natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] modules such as scalar UDFs and triggers using the `ALTER` statement.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you can perform `ALTER` operations on natively compiled stored procedures and other natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] modules such as scalar UDFs and triggers using the `ALTER` statement.  
   
 When executing `ALTER` on a natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] module, the module is recompiled using a new definition. While recompilation is in progress, the old version of the module continues to be available for execution. Once compilation completes, module executions are drained, and the new version of the module is installed. When you alter a natively compiled [!INCLUDE[tsql](../../includes/tsql-md.md)] module, you can modify the following options.  
   

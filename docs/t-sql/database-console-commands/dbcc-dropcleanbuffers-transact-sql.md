@@ -34,7 +34,7 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
 
 ## Syntax
 
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
@@ -87,7 +87,7 @@ Applies to: SQL Server 2022 and later
 
 - Requires **ALTER SERVER STATE** permission on the server
 
-Applies to: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+Applies to: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 - Requires membership in server role **##MS_ServerStateManager##**
 

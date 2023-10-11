@@ -36,8 +36,8 @@ To complete this quickstart, you need:
   || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
   | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
   |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |Load data|Adventure Works loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
-  |||Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
+  |Load data|Wide World Importers loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
+  |||Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import AdventureWorks from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
 
 
 
@@ -169,7 +169,7 @@ Open a command prompt and create a folder named *sqltest*. Open the folder you c
     ```
 
 > [!NOTE]
-> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Azure Active Directory are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
+> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
 
 
 ## Run the code

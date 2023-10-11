@@ -86,7 +86,7 @@ GO
  To show the similarity between `NULLIF` and `CASE`, the following queries evaluate whether the values in the `MakeFlag` and `FinishedGoodsFlag` columns are the same. The first query uses `NULLIF`. The second query uses the `CASE` expression.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
    NULLIF(MakeFlag,FinishedGoodsFlag) AS [Null if Equal]  

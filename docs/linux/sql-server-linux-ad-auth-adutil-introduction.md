@@ -8,7 +8,9 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Introduction to adutil - Active Directory utility
@@ -74,15 +76,15 @@ If you don't accept the EULA during the time of install, when you run the **adut
    ### Ubuntu 18.04
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-   sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
    ### Ubuntu 20.04
 
    ```bash
-   sudo wget -qO /etc/apt/trusted.gpg.d/microsoft.asc https://packages.microsoft.com/keys/microsoft.asc
-   sudo curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+   curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. If you had a previous preview version of **adutil** installed, remove any older **adutil** packages using the below command.
@@ -219,7 +221,7 @@ Each command is documented so you can get started right away. Here are some of t
 
 You can refer to the reference manual page of **adutil** using the command `man adutil`.
 
-## Next steps
+## Related content
 
 - [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

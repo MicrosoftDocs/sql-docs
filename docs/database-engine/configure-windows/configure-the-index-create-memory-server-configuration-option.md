@@ -79,7 +79,7 @@ helpviewer_keywords:
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `index create memory` option to `4096`.  
   
 ```sql  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

@@ -4,7 +4,7 @@ description: Learn how to enable secure enclaves in Azure SQL Database and elast
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 07/19/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell

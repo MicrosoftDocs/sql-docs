@@ -9,6 +9,8 @@ ms.date: 09/27/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "Linux, AD authentication"
   - "Linux, Active Directory authentication"
@@ -215,7 +217,7 @@ The following table describes recommendations for other client drivers:
 
 ## <a id="additionalconfig"></a> Additional configuration options
 
-If you are using third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to Active Directory domain and you would like to force SQL server in using the openldap library directly, you can configure the **disablesssd** option with **mssql-conf** as follows:
+If you are using third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to Active Directory domain and you would like to force [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] to use the `openldap` library directly, you can configure the `disablesssd` option with **mssql-conf** as follows:
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -265,7 +267,7 @@ While it is not recommended, it is possible to use utilities, such as **realmd**
 >  
 > SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
 
-## Next steps
+## Related content
 
 - [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)

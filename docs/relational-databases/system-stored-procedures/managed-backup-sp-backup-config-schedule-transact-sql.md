@@ -67,7 +67,7 @@ The start time of the backup window. Backups aren't started outside of the time 
 
 #### [ @backup_duration = ] '*backup window length*'
 
-The duration of the backup time window. There is no guarantee that backups will be completed during the time window defined by *@backup_begin_time* and *@backup_duration*. Backup operations that are started in this time window but exceed the duration of the window won't be canceled. Format: `'hh:mm'`.
+The duration of the backup time window. There's no guarantee that backups will be completed during the time window defined by *@backup_begin_time* and *@backup_duration*. Backup operations that are started in this time window but exceed the duration of the window won't be canceled. Format: `'hh:mm'`.
 
 #### [ @log_backup_freq = ] '*frequency of log backup*'
 
@@ -84,7 +84,7 @@ This determines the frequency of transaction log backups. These backups happen a
 
 Requires membership in the **db_backupoperator** database role, with ALTER ANY CREDENTIAL permissions, and EXECUTE permissions on the `sp_delete_backuphistory` stored procedure.
 
-### Example
+### Examples
 
 The following example configures managed backups for database `Test`, performing daily full backups beginning at 4am, with a maximum backup duration of 2 hours, and log frequency of 15 minutes.
 

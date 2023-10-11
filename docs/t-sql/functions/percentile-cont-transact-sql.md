@@ -61,7 +61,7 @@ PERCENTILE_CONT ( numeric_literal )
  The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 SELECT DISTINCT Name AS DepartmentName  
       ,PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY ph.Rate)   

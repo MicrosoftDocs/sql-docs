@@ -89,7 +89,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  The text in row option supports the TEXTPTR, WRITETEXT, UPDATETEXT, and READTEXT functions. Users can read parts of a BLOB with the SUBSTRING() function, but must remember that in-row text pointers have different duration and number limits from other text pointers.  
   
- To change a table from vardecimal storage format back to the normal decimal storage format, the database must be in SIMPLE recovery mode. Changing the recovery mode will break the log chain for backup purposes, therefore you should create a full database backup after removing the vardecimal storage format from a table.  
+ To change a table from vardecimal storage format back to the normal decimal storage format, the database must be in SIMPLE recovery model. Changing the recovery model will break the log chain for backup purposes, therefore you should create a full database backup after removing the vardecimal storage format from a table.  
   
  If you are converting an existing LOB data type column (text, ntext, or image) to small-to-medium large value types (varchar(max), nvarchar(max), or varbinary(max)), and most statements do not reference the large value type columns in your environment, consider changing **large_value_types_out_of_row** to **1** to gain optimal performance. When the **large_value_types_out_of_row** option value is changed, existing varchar(max), nvarchar(max), varbinary(max), and xml values are not immediately converted. The storage of the strings is changed as they are subsequently updated. Any new values inserted into a table are stored according to the table option in effect. For immediate results, either make a copy of the data and then repopulate the table after changing the **large_value_types_out_of_row** setting or update each small-to-medium large value types column to itself so that the storage of the strings is changed with the table option in effect. Consider rebuilding the indexes on the table after the update or repopulation to condense the table. 
     
@@ -103,7 +103,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  The following example specifies that the **xml** data in the `HumanResources.JobCandidate` table be stored out of row.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
@@ -116,9 +116,9 @@ USE master;
 GO  
 -- The database must be enabled for vardecimal storage format  
 -- before a table can be enabled for vardecimal storage format  
-EXEC sp_db_vardecimal_storage_format 'AdventureWorks2012', 'ON';  
+EXEC sp_db_vardecimal_storage_format 'AdventureWorks2022', 'ON';  
 GO  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_tableoption 'Production.WorkOrderRouting',   
    'vardecimal storage format', 'ON';  

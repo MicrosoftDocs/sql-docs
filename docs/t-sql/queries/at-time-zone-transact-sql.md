@@ -128,7 +128,7 @@ While **datetimeoffset** is not supported in data warehousing in [!INCLUDE [fabr
 Use `AT TIME ZONE` to add offset based on time zone rules when you know that the original **datetime** values are provided in the same time zone:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
   
 SELECT SalesOrderID, OrderDate,
@@ -141,7 +141,7 @@ FROM Sales.SalesOrderHeader;
 The following example converts values between different time zones. The **inputdate** values are **datetime** and are not stored with an offset, but are known to be Pacific Standard Time. The first step is to assign the known offset and then convert to the new time zone:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT SalesOrderID, OrderDate,
@@ -155,7 +155,7 @@ FROM Sales.SalesOrderHeader;
 You can also substitute in a local variable containing the time zone:
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 DECLARE @CustomerTimeZone nvarchar(128) = 'Central European Standard Time';
@@ -173,7 +173,7 @@ FROM Sales.SalesOrderHeader;
 The following example selects data from a temporal table using Pacific Standard Time.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 DECLARE @ASOF DATETIMEOFFSET;

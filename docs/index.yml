@@ -62,13 +62,16 @@ conceptualContent:
   items:
     - title: Getting started 
       links:
-        - text: Connect & query (Azure Data Studio)
-          url: azure-data-studio/quickstart-sql-server.md
+        - text: What is SQL Server?
+          url: sql-server/what-is-sql-server.md
           itemType: quickstart
-        - text: Connect & query (SSMS)
+        - text: Connect to the Database Engine
+          url: sql-server/connect-to-database-engine.md
+          itemType: quickstart
+        - text: Connect & query with SSMS
           url: ssms/quickstarts/ssms-connect-query-sql-server.md
           itemType: quickstart
-        - text: Writing Transact-SQL
+        - text: Write Transact-SQL
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: quickstart
         - text: SQL Server in a Linux container
@@ -154,12 +157,8 @@ additionalContent:
     - items:
       - title: Development
         links:
-          - text: Build an app using SQL Server
-            url: https://www.microsoft.com/sql-server/developer-get-started/
           - text: SQL Server client connectivity
             url: connect/homepage-sql-connection-programming.md
-          - text: DevOps using SQL Server 
-            url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
           - text: Azure SQL Database applications
             url: /azure/sql-database/sql-database-develop-overview
           - text: Azure SQL Database connectivity libraries

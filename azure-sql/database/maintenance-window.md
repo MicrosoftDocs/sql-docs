@@ -5,7 +5,7 @@ description: Understand how the Azure SQL Database and Azure SQL Managed Instanc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, urosmil, scottkim
-ms.date: 05/31/2023
+ms.date: 08/03/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -40,8 +40,8 @@ By default, Azure SQL maintenance policy blocks most impactful updates during th
 
 You can further adjust the maintenance updates to a time suitable to your Azure SQL resources by choosing from two additional maintenance window slots:
  
-* **Weekday** window: 10:00 PM to 6:00 AM local time, Monday - Thursday
-* **Weekend** window: 10:00 PM to 6:00 AM local time, Friday - Sunday
+- **Weekday** window: 10:00 PM to 6:00 AM local time, Monday - Thursday
+- **Weekend** window: 10:00 PM to 6:00 AM local time, Friday - Sunday
 
 Maintenance window days listed indicate the starting day of each eight-hour maintenance window. For example, "10:00 PM to 6:00 AM local time, Monday – Thursday" means that the maintenance windows start at 10:00 PM local time on each day (Monday through Thursday) and complete at 6:00 AM local time the following day (Tuesday through Friday).
 
@@ -74,75 +74,136 @@ Offers restricted to dev/test usage only are not eligible (like Pay-As-You-Go De
 ### Supported service level objectives
 
 Choosing a maintenance window other than the default is available on all SLOs **except for**:
-* Instance pools
-* Basic, S0 and S1 
-* DC, Fsv2, M-series
-* Hyperscale service tier with zone redundancy
+
+- Instance pools
+- Basic, S0 and S1
+- DC, Fsv2, M-series
+- Hyperscale service tier with zone redundancy
+- Hyperscale Serverless databases
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 
-### Azure region support
+### Azure SQL Managed Instance region support for maintenance windows
 
-Choosing a maintenance window other than the default is currently available in the following regions:
+Choosing a maintenance window for Azure SQL Managed Instance other than the default is currently available in the following regions:
 
-| Azure Region | SQL Managed Instance | SQL Database | SQL Database in an [Azure Availability Zone](high-availability-sla.md) | 
+- Australia Central 1
+- Australia Central 2
+- Australia East
+- Australia Southeast
+- Brazil South
+- Brazil Southeast
+- Canada Central
+- Canada East
+- Central India
+- Central US
+- China East 2
+- China North 2
+- East US
+- East US 2
+- East Asia
+- France Central
+- France South
+- Germany West Central
+- Germany North  
+- Japan East
+- Japan West
+- Korea Central
+- Korea South
+- North Central US
+- North Europe
+- Norway East
+- Norway West
+- South Africa North
+- South Africa West
+- South Central US
+- South India
+- Southeast Asia
+- Switzerland North
+- Switzerland West
+- UAE Central
+- UAE North
+- UK South
+- UK West
+- US Gov Arizona
+- US Gov Texas
+- US Gov Virginia
+- West Central US
+- West Europe
+- West India
+- West US
+- West US 2
+- West US 3
+
+### Azure SQL Database region support for maintenance windows
+
+Choosing a maintenance window for Azure SQL Database other than the default is currently available in the following regions, organized by purchasing model.
+
+The following table is for databases that are not [zone-redundant](high-availability-sla.md#zone-redundant-availability). For databases in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability), see [the table for zone-redundant databases.](#ZR-maintenance-window-availability)
+
+| Azure Region | SQL Database: Hyperscale Premium-series and Premium-series memory optimized | All other Azure SQL Database purchasing models and tiers |
 |:---|:---|:---|:---|
-| Australia Central 1 | Yes | | |
-| Australia Central 2 | Yes | | |
-| Australia East | Yes | Yes | Yes |
-| Australia Southeast | Yes | Yes | |
-| Brazil South | Yes | Yes |  |
-| Brazil Southeast | Yes | Yes |  |
-| Canada Central | Yes | Yes | Yes |
-| Canada East | Yes | Yes | |
-| Central India | Yes | Yes | |
-| Central US | Yes | Yes | Yes |
-| China East 2 |Yes | Yes ||
-| China North 2 |Yes|Yes ||
-| East US | Yes | Yes | Yes |
-| East US 2 | Yes | Yes | Yes |
-| East Asia | Yes | Yes | |
-| France Central | Yes | Yes | |
-| France South | Yes | Yes | |
-| Germany West Central | Yes | Yes |  |
-| Germany North | Yes |  |  |
-| Japan East | Yes | Yes | Yes |
-| Japan West | Yes | Yes | |
-| Korea Central | Yes | | |
-| Korea South | Yes | | |
-| North Central US | Yes | Yes | |
-| North Europe | Yes | Yes | Yes |
-| Norway East | Yes | | |
-| Norway West | Yes | | |
-| South Africa North | Yes | | | 
-| South Africa West | Yes | | | 
-| South Central US | Yes | Yes | Yes |
-| South India | Yes | Yes | |
-| Southeast Asia | Yes | Yes | Yes |
-| Switzerland North | Yes | Yes | |
-| Switzerland West | Yes | | |
-| UAE Central | Yes | | |
-| UAE North | Yes | Yes | |
-| UK South | Yes | Yes | Yes |
-| UK West | Yes | Yes | |
-| US Gov Arizona | Yes | | |
-| US Gov Texas| Yes | Yes | | 
-| US Gov Virginia | Yes | Yes | | 
-| West Central US | Yes | Yes | |
-| West Europe | Yes | Yes | Yes |
-| West India | Yes | | |
-| West US | Yes | Yes |  |
-| West US 2 | Yes | Yes | Yes |
-| West US 3 | Yes | | |
+| Australia East | Yes | Yes |
+| Australia Southeast | | Yes |
+| Brazil South | | Yes |  
+| Brazil Southeast | | Yes |
+| Canada Central  | Yes | Yes |
+| Canada East  | | Yes |
+| Central India | | Yes |
+| Central US | Yes | Yes |
+| China East 2 | | Yes |
+| China North 2 | | Yes |
+| East US | Yes | Yes |
+| East US 2  | Yes | Yes |
+| East Asia  | | Yes |
+| France Central  | | Yes |
+| France South  | | Yes |
+| Germany West Central | | Yes |
+| Japan East | Yes | Yes |
+| Japan West | | Yes |
+| North Central US | | Yes |
+| North Europe | Yes | Yes |
+| South Central US | Yes | Yes |
+| South India | | Yes |
+| Southeast Asia | | Yes |
+| Switzerland North | | Yes |
+| UAE North | | Yes |
+| UK South | | Yes |
+| UK West | | Yes |
+| US Gov Texas | | Yes |
+| US Gov Virginia | | Yes |
+| West Central US | | Yes |
+| West Europe | Yes | Yes |
+| West US | Yes | Yes |
+| West US 2 | Yes | Yes |
+| West US 3 | Yes | |
 
+<a id="ZR-maintenance-window-availability"></a>
+
+The following table is for [zone-redundant](high-availability-sla.md#zone-redundant-availability) databases.
+
+| Azure Region  | All other Azure SQL Database purchasing models and tiers in an [Azure Availability Zone](high-availability-sla.md#zone-redundant-availability) |
+|:---|:---|
+| Australia East |  Yes |
+| Canada Central  |  Yes |
+| Central US |  Yes |
+| East US 1  |  Yes |
+| East US 2  |  Yes |
+| Japan East |  Yes |
+| North Europe |  Yes |
+| South Central US  | Yes |
+| Southeast Asia |  Yes |
+| UK South |  Yes |
+| West Europe |  Yes |
+| West US 2 |  Yes |
 
 ## Gateway maintenance
 
 To get the maximum benefit from maintenance windows, make sure your client applications are using the redirect connection policy. Redirect is the recommended connection policy, where clients establish connections directly to the node hosting the database, leading to reduced latency and improved throughput.  
 
-* In Azure SQL Database, any connections using the proxy connection policy could be affected by both the chosen maintenance window and a gateway node maintenance window. However, client connections using the recommended redirect connection policy are unaffected by a gateway node maintenance reconfiguration. 
+- In Azure SQL Database, any connections using the proxy connection policy could be affected by both the chosen maintenance window and a gateway node maintenance window. However, client connections using the recommended redirect connection policy are unaffected by a gateway node maintenance reconfiguration.
 
-* In Azure SQL Managed Instance, the gateway nodes are hosted [within the virtual cluster](../managed-instance/connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture) and have the same maintenance window as the managed instance, but using the redirect connection policy is still recommended to minimize number of disruptions during the maintenance event.
+- In Azure SQL Managed Instance, the gateway nodes are hosted [within the virtual cluster](../managed-instance/connectivity-architecture-overview.md#virtual-cluster-connectivity-architecture) and have the same maintenance window as the managed instance, but using the redirect connection policy is still recommended to minimize number of disruptions during the maintenance event.
 
 For more on the client connection policy in Azure SQL Database, see [Azure SQL Database Connection policy](../database/connectivity-architecture.md#connection-policy). 
 
@@ -152,7 +213,7 @@ For more on the client connection policy in Azure SQL Managed Instance, see [Azu
 
 Azure SQL Managed Instance consists of service components hosted on a dedicated set of isolated virtual machines that run inside the customer's virtual network subnet. These virtual machines form [virtual cluster(s)](../managed-instance/connectivity-architecture-overview.md#high-level-connectivity-architecture) that can host multiple managed instances. Maintenance window configured on instances of one subnet can influence the number of virtual clusters within the subnet, distribution of instances among virtual clusters, and virtual cluster management operations. This may require a consideration of few effects.
 
-### Maintenance window configuration is a long running operation 
+### Maintenance window configuration is a long running operation
 All instances hosted in a virtual cluster share the maintenance window. By default, all managed instances are hosted in the virtual cluster with the default maintenance window. Specifying another maintenance window for managed instance during its creation or afterwards means that it must be placed in virtual cluster with corresponding maintenance window. If there is no such virtual cluster in the subnet, a new one must be created first to accommodate the instance. Accommodating additional instance in the existing virtual cluster may require cluster resize. Both operations contribute to the duration of configuring maintenance window for a managed instance.
 Expected duration of configuring maintenance window on managed instance can be calculated using [estimated duration of instance management operations](../managed-instance/management-operations-overview.md#duration).
 
@@ -174,7 +235,7 @@ Operations affecting the virtual cluster, like service upgrades and virtual clus
 
 The serialization of virtual cluster management operations is general behavior that applies to the default maintenance policy as well. With a maintenance window schedule configured, the period between two adjacent windows can be few days long. Submitted operations can also be on hold for few days if the maintenance operation spans two windows. That is very rare case, but creation of new instances or resize of the existing instances (if additional compute nodes are needed) may be blocked during this period.
 
-## Retrieving list of maintenance events
+## Retrieve list of maintenance events
 
 [Azure Resource Graph](/azure/governance/resource-graph/overview) is an Azure service designed to extend Azure Resource Management. The Azure Resource Graph Explorer provides efficient and performant resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment. 
 
@@ -210,12 +271,12 @@ For the full reference of the sample queries and how to use them across tools li
 
 ## Next steps
 
-* [Configure maintenance window](maintenance-window-configure.md)
-* [Advance notifications](advance-notifications.md)
+- [Configure maintenance window](maintenance-window-configure.md)
+- [Advance notifications](advance-notifications.md)
 
 ## Learn more
 
-* [Maintenance window FAQ](maintenance-window-faq.yml)
-* [Azure SQL Database](sql-database-paas-overview.md) 
-* [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md)
-* [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](planned-maintenance.md)
+- [Maintenance window FAQ](maintenance-window-faq.yml)
+- [Azure SQL Database](sql-database-paas-overview.md)
+- [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md)
+- [Plan for Azure maintenance events in Azure SQL Database and Azure SQL Managed Instance](planned-maintenance.md)

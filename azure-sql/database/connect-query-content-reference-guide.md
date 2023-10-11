@@ -4,17 +4,17 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: Links to Azure SQL Database quickstarts showing how to connect to and query Azure SQL Database, and Azure SQL Managed Instance.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma
-ms.date: 07/19/2023
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 09/15/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
 ms.custom: sqldbrb=1
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Azure SQL Database and Azure SQL Managed Instance connect and query articles
 
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 The following document includes links to Azure examples showing how to connect and query Azure SQL Database and Azure SQL Managed Instance. For some related recommendations for Transport Level Security, see [TLS considerations for database connectivity](#tls-considerations-for-database-connectivity).
 
@@ -54,7 +54,7 @@ Get the connection information you need to connect to the database in Azure SQL 
 
 1. Review the complete **ADO.NET** connection string.
 
-   :::image type="content" source="./media/connect-query-dotnet-core/adonet-connection-string2.png" alt-text="Screenshot showing the ADO.NET connection string.":::
+   :::image type="content" source="media/connect-query-dotnet-core/adonet-connection-string2.png" alt-text="Screenshot showing the ADO.NET connection string.":::
 
 1. Copy the **ADO.NET** connection string if you intend to use it.
 
@@ -76,20 +76,20 @@ Non-Microsoft drivers might not use TLS by default. This can be a factor when co
 
 ## Libraries
 
-You can use various libraries and frameworks to connect to Azure SQL Database or Azure SQL Managed Instance. Check out our [Get started tutorials](https://aka.ms/sqldev) to quickly get started with programming languages such as C#, Java, Node.js, PHP, and Python. Then build an app by using SQL Server on Linux or Windows, or a SQL Server container on Linux.
+You can use various libraries and frameworks to connect to Azure SQL Database or Azure SQL Managed Instance. You can then build an app by using SQL Server on Linux or Windows, or a SQL Server container on Linux.
 
 The following table lists connectivity libraries or *drivers* that client applications can use from a variety of languages to connect to and use SQL Server running on-premises or in the cloud. You can use them on Linux, Windows, or in containers, and use them to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 | Language | Platform | Additional resources | Download | Get started |
 | :-- | :-- | :-- | :-- | :-- |
-| C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
+| C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [Download](https://dotnet.microsoft.com/download) |
 | C++ | Windows, Linux, macOS | [Microsoft ODBC driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) | [Download](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server/) |
 | Go | Windows, Linux, macOS | [Microsoft Go driver for SQL Server](https://github.com/microsoft/go-mssqldb#readme) | [Install](https://github.com/microsoft/go-mssqldb#install) |  [Get started](connect-query-go.md)
-| Java | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
-| Node.js | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu)
-| PHP | Windows, Linux, macOS| [PHP SQL driver for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-| Python | Windows, Linux, macOS | [Python SQL driver](/sql/connect/python/python-driver-for-sql-server/) | Install choices: <br/> \* [pymssql](/sql/connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development/) <br/> \* [pyodbc](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development/) |  [Get started](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
-| Ruby | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) | [Get started](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu)
+| Java | Windows, Linux, macOS | [Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server/) | [Download](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server) |
+| Node.js | Windows, Linux, macOS | [Node.js driver for SQL Server](/sql/connect/node-js/node-js-driver-for-sql-server/) | [Install](/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development/) |
+| PHP | Windows, Linux, macOS | [PHP SQL driver for SQL Server](/sql/connect/php/microsoft-php-driver-for-sql-server) | [Download](/sql/connect/php/download-drivers-php-sql-server) |
+| Python | Windows, Linux, macOS | [Python SQL driver](/sql/connect/python/python-driver-for-sql-server/) | Install choices:<br />\* [pymssql](/sql/connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development/)<br />\* [pyodbc](/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development/) |
+| Ruby | Windows, Linux, macOS | [Ruby driver for SQL Server](/sql/connect/ruby/ruby-driver-for-sql-server/) | [Install](/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development/) |
 
 ### Data-access frameworks
 

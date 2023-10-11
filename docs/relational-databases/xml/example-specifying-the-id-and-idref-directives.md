@@ -19,7 +19,7 @@ helpviewer_keywords:
 This example is almost the same as the [Specifying the ELEMENTXSINIL Directive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) example. The only difference is that the query specifies the **ID** and **IDREF** directives. These directives overwrite the types of the **SalesPersonID** attribute in the `<OrderHeader>` and `<OrderDetail>` elements, and form intra-document links. You need the schema to see the overwritten types. Therefore, the query specifies the **XMLDATA** option in the FOR XML clause to retrieve the schema.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

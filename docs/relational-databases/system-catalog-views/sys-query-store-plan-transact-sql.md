@@ -47,8 +47,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|
 |**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|
-|**avg_compile_duration**|**float**|Plan compilation statistics.|
-|**last_compile_duration**|**bigint**|Plan compilation statistics.|
+|**avg_compile_duration**|**float**|Plan compilation statistics, in microseconds. Divide by 1000000 to get seconds.|
+|**last_compile_duration**|**bigint**|Plan compilation statistics, in microseconds. Divide by 1000000 to get seconds.|
 |**plan_forcing_type**|**int**|Plan forcing type.<br /><br />0: NONE<br /><br />1: MANUAL<br /><br />2: AUTO|
 |**plan_forcing_type_desc**|**nvarchar(60)**|Text description of `plan_forcing_type`.<br /><br />NONE: No plan forcing<br /><br />MANUAL: Plan forced by user<br /><br />AUTO: Plan forced by automatic tuning.|
 |**has_compile_replay_script**|bit|**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])<BR/><BR/>Indicates whether the plan has an optimization replay script associated with it:<BR/><BR/>0 = No optimization replay script (none or even invalid).<BR/><BR/>1 = optimization replay script recorded. <BR/><BR/>Not applicable to [!INCLUDE [ssazuresynapse_md](../../includes/ssazuresynapse-md.md)].|

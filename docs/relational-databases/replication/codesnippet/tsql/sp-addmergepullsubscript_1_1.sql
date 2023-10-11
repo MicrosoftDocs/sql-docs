@@ -12,12 +12,12 @@ DECLARE @publicationDB AS sysname;
 DECLARE @hostname AS sysname;
 SET @publication = N'AdvWorksSalesOrdersMerge';
 SET @publisher = $(PubServer);
-SET @publicationDB = N'AdventureWorks2012';
+SET @publicationDB = N'AdventureWorks2022';
 SET @hostname = N'adventure-works\david8';
 
 -- At the subscription database, create a pull subscription 
 -- to a merge publication.
-USE [AdventureWorks2012Replica]
+USE [AdventureWorks2022Replica]
 EXEC sp_addmergepullsubscription 
   @publisher = @publisher, 
   @publication = @publication, 

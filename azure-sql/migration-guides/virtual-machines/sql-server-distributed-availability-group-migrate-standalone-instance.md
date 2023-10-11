@@ -8,6 +8,8 @@ ms.date: 12/15/2021
 ms.service: virtual-machines-sql
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Use distributed AG to migrate databases from a standalone instance 
 

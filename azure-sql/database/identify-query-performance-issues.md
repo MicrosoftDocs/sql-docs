@@ -17,8 +17,8 @@ monikerRange: "=azuresql||=azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](identify-query-performance-issues.md)
-> * [Azure SQL Managed Instance](../managed-instance/identify-query-performance-issues.md)
+> * [Azure SQL Database](identify-query-performance-issues.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/identify-query-performance-issues.md?view=azuresql-mi&preserve-view=true)
 
 When trying to resolve a performance bottleneck, start by determining whether the bottleneck is occurring while the query is in a running state or a waiting state. Different resolutions apply depending upon this determination. Use the following diagram to help understand the factors that can cause either a running-related problem or a waiting-related problem. Problems and resolutions relating to each type of problem are discussed in this article.
 

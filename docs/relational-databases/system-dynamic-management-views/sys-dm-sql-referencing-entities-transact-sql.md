@@ -137,7 +137,7 @@ sys.dm_sql_referencing_entities (
  The following example returns the entities in the current database that refer to the specified table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
 FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');  
@@ -148,7 +148,7 @@ GO
  The following example returns the entities that reference the alias type `dbo.Flag`. The result set shows that two stored procedures use this type. The `dbo.Flag` type is also used in the definition of several columns in the `HumanResources.Employee` table; however, because the type is not in the definition of a computed column, CHECK constraint, or DEFAULT constraint in the table, no rows are returned for the `HumanResources.Employee` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
 FROM sys.dm_sql_referencing_entities ('dbo.Flag', 'TYPE');  

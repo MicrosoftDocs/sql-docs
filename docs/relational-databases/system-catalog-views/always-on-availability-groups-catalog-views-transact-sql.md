@@ -38,6 +38,6 @@ This section contains catalog views and functions that are related to [!INCLUDE[
 
 - [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)
 - [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)
-- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)
 - [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  

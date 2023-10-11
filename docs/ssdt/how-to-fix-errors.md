@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # How to: Fix Errors
 
-The Error List pane displays any deployment or build errors. Syntax and semantic errors caused by editing in either the Transact\-SQL Editor or Table Designer also shows up in the list when you are editing database entities and its definitions. The Error List is dynamically updated as you edit scripts across different tabs. You can then follow the errors identified for further troubleshooting.  
+The Error List pane displays any deployment or build errors. Syntax and semantic errors caused by editing in either the Transact-SQL Editor or Table Designer also shows up in the list when you are editing database entities and its definitions. The Error List is dynamically updated as you edit scripts across different tabs. You can then follow the errors identified for further troubleshooting.  
   
 > [!WARNING]  
 > The following procedures use entities created in procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  
@@ -30,7 +30,7 @@ The Error List pane displays any deployment or build errors. Syntax and semantic
   
     Double-click the first warning identified and follow it to the script file that generated the warning. The problematic code section is highlighted. In the example, it is because the `ShelfLife` column is being used by both a `RETURN` and `SELECT` statement in a table-value function created previously.  
   
-5.  In the Transact\-SQL Editor, remove `ShelfLife` from the function.  
+5.  In the Transact-SQL Editor, remove `ShelfLife` from the function.  
   
 6.  Fix the second error in a similar manner by removing the check constraint.  
   

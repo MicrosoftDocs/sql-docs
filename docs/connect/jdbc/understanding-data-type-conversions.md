@@ -15,6 +15,9 @@ ms.topic: conceptual
 
 To facilitate the conversion of Java programming language data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides data type conversions as required by the JDBC specification. For added flexibility, all types are convertible to and from **Object**, **String**, and **byte[]** data types.
 
+> [!NOTE]
+> When using Always Encrypted, special considerations need to be made around data type conversions. For more information, see [Unsupported data type conversion errors](using-always-encrypted-with-the-jdbc-driver.md#unsupported-data-type-conversion-errors).
+
 ## Getter method conversions
 
 Based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, the following chart contains the JDBC driver's conversion map for the get\<Type>() methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class, and the supported conversions for the get\<Type> methods of the [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) class.

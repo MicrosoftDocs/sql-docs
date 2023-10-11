@@ -249,7 +249,7 @@ For descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statement
 
 - Complete database restore
 
-  Restores the entire database, beginning with a full database backup, which may be followed by restoring a differential database backup (and log backups). For more information, see [Complete Database Restores - Simple Recovery Mode](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores - Full Recovery Model](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).
+  Restores the entire database, beginning with a full database backup, which may be followed by restoring a differential database backup (and log backups). For more information, see [Complete Database Restores - Simple Recovery Model](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores - Full Recovery Model](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).
 
 - File restore
 
@@ -488,8 +488,8 @@ The RESTORE examples include the following:
 The following example restores a full database backup from the `AdventureWorksBackups` logical backup device. For an example of creating this device, see [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md).
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
-  FROM AdventureWorks2012Backups;
+RESTORE DATABASE AdventureWorks2022
+  FROM AdventureWorks2022Backups;
 ```
 
 > [!NOTE]  
@@ -499,15 +499,15 @@ RESTORE DATABASE AdventureWorks2012
 
 ### <a id="restoring_full_n_differential_db_backups"></a> B. Restore full and differential database backups
 
-The following example restores a full database backup followed by a differential backup from the `Z:\SQLServerBackups\AdventureWorks2012.bak` backup device, which contains both backups. The full database backup to be restored is the sixth backup set on the device (`FILE = 6`), and the differential database backup is the ninth backup set on the device (`FILE = 9`). As soon as the differential backup is recovered, the database is recovered.
+The following example restores a full database backup followed by a differential backup from the `Z:\SQLServerBackups\AdventureWorks2022.bak` backup device, which contains both backups. The full database backup to be restored is the sixth backup set on the device (`FILE = 6`), and the differential database backup is the ninth backup set on the device (`FILE = 9`). As soon as the differential backup is recovered, the database is recovered.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
-    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
+RESTORE DATABASE AdventureWorks2022
+    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'
     WITH FILE = 6,
       NORECOVERY;
-RESTORE DATABASE AdventureWorks2012
-    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak'
+RESTORE DATABASE AdventureWorks2022
+    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2022.bak'
     WITH FILE = 9,
       RECOVERY;
 ```
@@ -520,10 +520,10 @@ The following example uses the `RESTART` option to restart a `RESTORE` operation
 
 ```sql
 -- This database RESTORE halted prematurely due to power failure.
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups;
 -- Here is the RESTORE RESTART operation.
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups WITH RESTART;
 ```
 
@@ -534,14 +534,14 @@ RESTORE DATABASE AdventureWorks2012
 The following example restores a full database and transaction log and moves the restored database into the `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` directory.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups
     WITH NORECOVERY,
-      MOVE 'AdventureWorks2012_Data' TO
+      MOVE 'AdventureWorks2022_Data' TO
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\NewAdvWorks.mdf',
-      MOVE 'AdventureWorks2012_Log'
+      MOVE 'AdventureWorks2022_Log'
 TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\NewAdvWorks.ldf';
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
     WITH RECOVERY;
 ```
@@ -553,7 +553,7 @@ RESTORE LOG AdventureWorks2012
 The following example uses both the `BACKUP` and `RESTORE` statements to make a copy of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The `MOVE` statement causes the data and log file to be restored to the specified locations. The `RESTORE FILELISTONLY` statement is used to determine the number and names of the files in the database being restored. The new copy of the database is named `TestDB`. For more information, see [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).
 
 ```sql
-BACKUP DATABASE AdventureWorks2012
+BACKUP DATABASE AdventureWorks2022
     TO AdventureWorksBackups ;
 
 RESTORE FILELISTONLY
@@ -561,8 +561,8 @@ RESTORE FILELISTONLY
 
 RESTORE DATABASE TestDB
     FROM AdventureWorksBackups
-    WITH MOVE 'AdventureWorks2012_Data' TO 'C:\MySQLServer\testdb.mdf',
-    MOVE 'AdventureWorks2012_Log' TO 'C:\MySQLServer\testdb.ldf';
+    WITH MOVE 'AdventureWorks2022_Data' TO 'C:\MySQLServer\testdb.mdf',
+    MOVE 'AdventureWorks2022_Log' TO 'C:\MySQLServer\testdb.ldf';
 GO
 ```
 
@@ -573,18 +573,18 @@ GO
 The following example restores a database to its state as of `12:00 AM` on `April 15, 2020` and shows a restore operation that involves multiple log backups. On the backup device, `AdventureWorksBackups`, the full database backup to be restored is the third backup set on the device (`FILE = 3`), the first log backup is the fourth backup set (`FILE = 4`), and the second log backup is the fifth backup set (`FILE = 5`).
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM AdventureWorksBackups
     WITH FILE = 3, NORECOVERY;
   
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
     WITH FILE = 4, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
   
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
     FROM AdventureWorksBackups
     WITH FILE = 5, NORECOVERY, STOPAT = 'Apr 15, 2020 12:00 AM';
-RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
+RESTORE DATABASE AdventureWorks2022 WITH RECOVERY;
 ```
 
 [&#91;Top of examples&#93;](#examples)
@@ -594,7 +594,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 The following example restores the transaction log to the mark in the marked transaction named `ListPriceUpdate`.
 
 ```sql
-USE AdventureWorks2012
+USE AdventureWorks2022;
 GO
 BEGIN TRANSACTION ListPriceUpdate
     WITH MARK 'UPDATE Product list prices';
@@ -614,12 +614,12 @@ GO
 USE master;
 GO
 
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
 FROM AdventureWorksBackups
 WITH FILE = 3, NORECOVERY;
 GO
 
-RESTORE LOG AdventureWorks2012
+RESTORE LOG AdventureWorks2022
   FROM AdventureWorksBackups
     WITH FILE = 4,
     RECOVERY,
@@ -633,7 +633,7 @@ RESTORE LOG AdventureWorks2012
 The following example restores a full database backup from a `TAPE` backup device.
 
 ```sql
-RESTORE DATABASE AdventureWorks2012
+RESTORE DATABASE AdventureWorks2022
     FROM TAPE = '\\.\tape0';
 ```
 
@@ -692,7 +692,7 @@ The following example reverts a database to a database snapshot. The example ass
 
 ```sql
 USE master;
-RESTORE DATABASE AdventureWorks2012 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
+RESTORE DATABASE AdventureWorks2022 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';
 GO
 ```
 
@@ -856,7 +856,7 @@ The following database options are set/overridden and cannot be changed later:
 - NEW_BROKER (if broker is not enabled in .bak file)
 - ENABLE_BROKER (if broker is not enabled in .bak file)
 - AUTO_CLOSE=OFF (if a database in .bak file has AUTO_CLOSE=ON)
-- RECOVERY FULL (if a database in .bak file has SIMPLE or BULK_LOGGED recovery mode)
+- RECOVERY FULL (if a database in .bak file has SIMPLE or BULK_LOGGED recovery model)
 - Memory optimized filegroup is added and called XTP if it was not in the source .bak file. Any existing memory optimized filegroup is renamed to XTP
 - SINGLE_USER and RESTRICTED_USER options are converted to MULTI_USER
 

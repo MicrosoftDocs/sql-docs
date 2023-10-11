@@ -8,6 +8,8 @@ ms.date: 03/31/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Backup and restore SQL Server databases on Linux
 
@@ -103,11 +105,11 @@ The following steps walk you through restoring a database with SSMS.
 
 1. SQL Server restores the database. 
 
-## See also
+## Related content
 
-* [Create a Full Database Backup (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
-* [Back up a Transaction Log (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
-* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
+- [Create a Full Database Backup (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+- [Back up a Transaction Log (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+- [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+- [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

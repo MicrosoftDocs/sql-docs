@@ -9,8 +9,10 @@ ms.date: 06/14/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
+ms.custom:
+  - intro-installation
+  - linux-related-content
+monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Docker
 
@@ -115,7 +117,7 @@ EXEC sp_configure  'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE
 ```
 
-## Next steps
+## Related content
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

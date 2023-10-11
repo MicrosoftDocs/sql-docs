@@ -14,7 +14,7 @@ SET @subscriptionDB = N'AdventureWorksReplica';
 SET @hostname = N'adventure-works\david8'
 
 -- Add a push subscription to a merge publication.
-USE [AdventureWorks2012];
+USE [AdventureWorks2022];
 EXEC sp_addmergesubscription 
   @publication = @publication, 
   @subscriber = @subscriber, 

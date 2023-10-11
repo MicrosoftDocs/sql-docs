@@ -4,8 +4,8 @@ titleSuffix: Azure SQL Database & SQL Managed Instance
 description: How to use PHP to create a program that connects to a database in Azure SQL Database or Azure SQL Managed Instance, and query it using T-SQL statements.
 author: dzsquared
 ms.author: drskwier
-ms.reviewer: wiassaf, mathoma, v-masebo
-ms.date: 05/29/2020
+ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest
+ms.date: 09/15/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart
@@ -13,10 +13,11 @@ ms.custom:
   - sqldbrb=2
   - mode-other
 ms.devlang: php
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Quickstart: Use PHP to query a database in Azure SQL Database
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This article demonstrates how to use [PHP](https://php.net/manual/en/intro-whatis.php) to connect to a database in Azure SQL Database or Azure SQL Managed Instance. You can then use T-SQL statements to query data.
 
@@ -28,21 +29,17 @@ To complete this quickstart, you need:
 - A database in Azure SQL Database or Azure SQL Managed Instance. You can use one of these quickstarts to create and then configure a database:
 
   | Action | SQL Database | SQL Managed Instance | SQL Server on Azure VM |
-  |:--- |:--- |:---|:---|
+  | :--- | :--- | :--- | :--- |
   | Create| [Portal](single-database-create-quickstart.md) | [Portal](../managed-instance/instance-create-quickstart.md) | [Portal](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  || [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
+  | | [CLI](scripts/create-and-configure-database-cli.md) | [CLI](https://medium.com/azure-sqldb-managed-instance/working-with-sql-managed-instance-using-azure-cli-611795fe0b44) |
   || [PowerShell](scripts/create-and-configure-database-powershell.md) | [PowerShell](../managed-instance/scripts/create-configure-managed-instance-powershell.md) | [PowerShell](../virtual-machines/windows/sql-vm-create-powershell-quickstart.md)
-  | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md)| [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md)|
+  | Configure | [Server-level IP firewall rule](firewall-create-server-level-portal-quickstart.md) | [Connectivity from a VM](../managed-instance/connect-vm-instance-configure.md) |
   |||[Connectivity from on-premises](../managed-instance/point-to-site-p2s-configure.md) | [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md)
-  |Load data|Adventure Works loaded per quickstart|[Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
-  |||Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)| Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)|
+  | Load data | Wide World Importers loaded per quickstart | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) | [Restore Wide World Importers](../managed-instance/restore-sample-database-quickstart.md) |
+  | | | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) | Restore or import Adventure Works from a [BACPAC](database-import.md) file from [GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) |
 
-
-
-
-
-  > [!IMPORTANT]
-  > The scripts in this article are written to use the Adventure Works database. With a SQL Managed Instance, you must either import the Adventure Works database into an instance database or modify the scripts in this article to use the Wide World Importers database.
+  > [!IMPORTANT]  
+  > The scripts in this article are written to use the `AdventureWorks2022` database. With a SQL Managed Instance, you must either import the `AdventureWorks2022` database into an instance database or modify the scripts in this article to use the Wide World Importers database.
 
 - PHP-related software installed for your operating system:
 
@@ -50,24 +47,22 @@ To complete this quickstart, you need:
 
   - **Linux**, install PHP, the ODBC driver, then install the PHP Driver for SQL Server. See [Step 1, 2, and 3](/sql/connect/php/installation-tutorial-linux-mac).
 
-  - **Windows**, install PHP and PHP Drivers, then install the ODBC driver and SQLCMD. See [Step 1.2 and 1.3](https://www.microsoft.com/sql-server/developer-get-started/php/windows/).
-
 ## Get server connection information
 
 Get the connection information you need to connect to the database in Azure SQL Database. You'll need the fully qualified server name or host name, database name, and login information for the upcoming procedures.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-2. Navigate to the **SQL Databases**  or **SQL Managed Instances** page.
+1. Navigate to the **SQL Databases**  or **SQL Managed Instances** page.
 
-3. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server in an Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
+1. On the **Overview** page, review the fully qualified server name next to **Server name** for a database in Azure SQL Database or the fully qualified server name (or IP address) next to **Host** for an Azure SQL Managed Instance or SQL Server in an Azure VM. To copy the server name or host name, hover over it and select the **Copy** icon.
 
-> [!NOTE]
+> [!NOTE]  
 > For connection information for SQL Server on Azure VM, see [Connect to a SQL Server instance](../virtual-machines/windows/sql-vm-create-portal-quickstart.md#connect-to-sql-server).
 
 ## Add code to query the database
 
-1. In your favorite text editor, create a new file, *sqltest.php*.  
+1. In your favorite text editor, create a new file, *sqltest.php*.
 
 1. Replace its contents with the following code. Then add the appropriate values for your server, database, user, and password.
 

@@ -15,16 +15,17 @@ ms.topic: tutorial
 
 With the help of the SQL Database Projects extension, SQL projects (including tables, views, stored procedures) can be edited without the need to be connected to a server instance in Azure Data Studio. The tutorial below will show how to:
 
-1. Create a SQL Database Project of the ***AdventureWorks2019*** database.
+1. Create a SQL Database Project of the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database.
 
-2. Make and deploy changes to a table in the ***AdventureWorks2019*** database using SQL Database Projects and confirming this change in the locally connected server instance where this database resides.
+2. Make and deploy changes to a table in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database using SQL Database Projects and confirming this change in the locally connected server instance where this database resides.
 
-> [!NOTE]
-> Please note that you will need to have the [AdventureWorks sample database](../samples/adventureworks-install-configure.md) downloaded and available in Azure Data Studio to follow along this tutorial. You will also need to have the SQL Database Projects extension installed. Refer to the [SQL Database Projects documentation](extensions/sql-database-project-extension.md) to learn more about this extension.
+[!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
+
+You will also need to have the SQL Database Projects extension installed. Refer to the [SQL Database Projects documentation](extensions/sql-database-project-extension.md) to learn more about this extension.
 
 ## Create a SQL Database Project
 
-1. Navigate to the AdventureWorks database object located in the object explorer, right-click on it and select **Create Project from Database**:
+1. Navigate to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database object located in the object explorer, right-click on it and select **Create Project from Database**:
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-create-project-from-database.png" alt-text="Screenshot of the object explorer in Azure Data Studio showing how to create a project from a database object.":::
 
@@ -43,14 +44,14 @@ With the help of the SQL Database Projects extension, SQL projects (including ta
     Add another column named ***Citizenship*** of type nvarchar(50) and publish this change:
         :::image type="content" source="media/table-designer-azure-data-studio/table-designer-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to publish changes SQL Database Projects.":::
 
-2. From the file menu in the Database Projects, right-click on the project root node in which your project resides, and select **Build** to build this project. You should see a success or error message in the output terminal for a successful or failed build. When finished, right-click this same folder and select **Publish** to publish this project to the ***AdventureWorks2019*** database in your local host server connection.
+2. From the file menu in the Database Projects, right-click on the project root node in which your project resides, and select **Build** to build this project. You should see a success or error message in the output terminal for a successful or failed build. When finished, right-click this same folder and select **Publish** to publish this project to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database in your local host server connection.
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-show-how-to-build-and-publish-changes-to-sql-project.png" alt-text="Screenshot of Azure Data Studio showing how to build and publish changes SQL Database Projects.":::
 
     > [!NOTE]
     > Please note that you will need to be connected to your local host for this step. This can be done by clicking the plug icon in **Publish Project** dialog box.
 
-3. Exit the SQL Database Projects view. Then, go to the object explorer in your server connection and navigate to the **Tables** folder of ***AdventureWorks2019*** database. Open the table design of the table you made changes to and confirm the change made. In this case, we added a new column, ***Citizenship*** to the ***Person.Person*** table:
+3. Exit the SQL Database Projects view. Then, go to the object explorer in your server connection and navigate to the **Tables** folder of [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. Open the table design of the table you made changes to and confirm the change made. In this case, we added a new column, ***Citizenship*** to the ***Person.Person*** table:
 
     :::image type="content" source="media/table-designer-azure-data-studio/table-designer-confirm-changes-made-to-project-in-local-host.png" alt-text="Screenshot of Azure Data Studio showing the changes made to the table in the local host connection.":::
 

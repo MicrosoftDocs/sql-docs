@@ -83,7 +83,7 @@ EXECUTE dbo.usp_myproc;
  The following example creates a context execution stack by using multiple principals. The REVERT statement is then used to reset the execution context to the previous caller. The REVERT statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 -- Create two temporary principals.  
 CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';  

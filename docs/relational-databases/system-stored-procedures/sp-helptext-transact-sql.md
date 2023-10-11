@@ -60,7 +60,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  The following example displays the definition of the trigger `dEmployee` in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_helptext 'HumanResources.dEmployee';  
 GO  
@@ -70,9 +70,9 @@ GO
  The following example displays the definition of the computed column `TotalDue` on the `SalesOrderHeader` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-sp_helptext @objname = N'AdventureWorks2012.Sales.SalesOrderHeader', @columnname = TotalDue ;  
+sp_helptext @objname = N'AdventureWorks2022.Sales.SalesOrderHeader', @columnname = TotalDue ;  
 GO  
 ```  
   

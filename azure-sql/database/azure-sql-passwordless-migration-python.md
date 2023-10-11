@@ -3,12 +3,12 @@ title: Migrate a Python application to use passwordless connections with Azure S
 description: Learn how to migrate a Python application to use passwordless connections with Azure SQL Database.
 author: bobtabor-msft
 ms.author: rotabor
-ms.date: 05/15/2023
+ms.date: 10/11/2023
 ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: devx-track-csharp, passwordless-python, devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-csharp, passwordless-python, devx-track-azurecli
 ms.devlang: python
 ---
 
@@ -39,6 +39,10 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections when running locally and when deployed to Azure App Service.
 
 ```python
+import os
+import pyodbc, struct
+from azure.identity import DefaultAzureCredential
+
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
 
 def get_all():
@@ -49,7 +53,7 @@ def get_all():
     return
 
 def get_conn():
-    credential = identity.DefaultAzureCredential(exclude_interactive_browser_credential=False)
+    credential = DefaultAzureCredential(exclude_interactive_browser_credential=False)
     token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
     token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
     SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h
@@ -72,7 +76,7 @@ Run your app locally and verify that the connections to Azure SQL Database are w
 
 ## Configure the Azure hosting environment
 
-Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities:
+Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for applications to use when connecting to resources that support Microsoft Entra authentication. Learn more about managed identities:
 
 - [Passwordless overview](/azure/developer/intro/passwordless-overview)
 - [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)

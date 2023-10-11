@@ -67,7 +67,7 @@ This example shows how to connect to a server, specifying the database later.
 <?php  
    $c = new PDO( "sqlsrv:server=(local)");  
   
-   $c->exec( "USE AdventureWorks");  
+   $c->exec( "USE AdventureWorks2022" );  
    $query = 'SELECT * FROM Person.ContactType';  
    $stmt = $c->query( $query );  
    while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  

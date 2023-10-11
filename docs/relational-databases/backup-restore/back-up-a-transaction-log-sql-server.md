@@ -136,7 +136,7 @@ Execute the BACKUP LOG statement to back up the transaction log, specifying the 
  This example creates a transaction log backup for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to the previously created named backup device, `MyAdvWorks_FullRM_log1`.  
   
 ```sql  
-BACKUP LOG AdventureWorks2012  
+BACKUP LOG AdventureWorks2022  
    TO MyAdvWorks_FullRM_log1;  
 GO  
 ```  

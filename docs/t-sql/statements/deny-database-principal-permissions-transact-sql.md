@@ -148,7 +148,7 @@ DENY permission [ ,...n ]
  The following example denies `CONTROL` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] user `Wanida` to user `RolandX`.  
   
 ```sql 
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -157,7 +157,7 @@ GO
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] role `SammamishParking` to database user `JinghaoLiu`. The `CASCADE` option is specified because user `JinghaoLiu` was granted VIEW DEFINITION permission WITH GRANT OPTION.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
 GO  
@@ -169,7 +169,7 @@ GO
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

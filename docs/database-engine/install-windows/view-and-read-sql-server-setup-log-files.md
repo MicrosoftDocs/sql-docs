@@ -38,9 +38,9 @@ SQL Server Setup creates log files in a dated and time-stamped folder within **\
  ![Screenshot showing where to find the ConfigurationFiles.ini file in the Setup Bootstrap folder.](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
- > The numbers in the path *nnn* correspond to the version of SQL being installed. In the above picture, SQL 2017 was installed, so the folder is 140. For SQL 2016, the folder would be 130, and for SQL 2014 the folder would be 120.
+ > The numbers in the path *nnn* correspond to the version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] being installed. In the above picture, [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] was installed, so the folder is `140`. For [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], the folder would be `130`, and so on.
   
- SQL server setup completes three basic phases: 
+ [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Setup completes three basic phases: 
   
 1.  Global Rules verification: validates basic system requirements
 2.  Component update: checks to see if there are any updates available for the media being installed

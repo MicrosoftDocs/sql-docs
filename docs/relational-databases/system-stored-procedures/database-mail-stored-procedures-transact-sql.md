@@ -81,4 +81,4 @@ dev_langs:
 
 ## See also
 
-- [Database Mail](../../relational-databases/database-mail/database-mail.md)
+- [Database Mail](../database-mail/database-mail.md)

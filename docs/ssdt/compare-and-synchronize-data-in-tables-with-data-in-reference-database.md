@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 # Compare and Synchronize Data in One or More Tables with Data in a Reference Database
 
-You can compare the data in a *source* database and a *target* database and specify which tables should be compared. The data can be reviewed to guide a decision about which changes to synchronize. Then you would either update the target to synchronize the databases or export the update script to the Transact\-SQL editor or to a file.  
+You can compare the data in a *source* database and a *target* database and specify which tables should be compared. The data can be reviewed to guide a decision about which changes to synchronize. Then you would either update the target to synchronize the databases or export the update script to the Transact-SQL editor or to a file.  
   
 Perhaps you might synchronize databases to update a staging server with a copy of the production data. You might also synchronize one or more tables to populate them with reference data from another database. Also, you could compare data before and after you run tests as an additional form of verification.  
   
@@ -43,7 +43,7 @@ In this section, you can find descriptions of common tasks that support this sce
   
 **Set options to control how the data is compared:** When you compare data, you can safely ignore identity columns, disable triggers, and disable foreign keys. You can also drop primary keys, indexes, and unique constraints from the update script.  
   
-**Compare data in tables and optionally update the target to match the source:** After you specify a source and a target database to compare and run the comparison, view the results in the **Data Compare** window. View not only details of the differences but also the update script that is used to synchronize the data. After you identify differences between the two databases, specify an action for each difference. Then update the target or export the update script to the Transact\-SQL editor or to a file. You might want to export the script so that you or someone else can review it before you apply the changes.  
+**Compare data in tables and optionally update the target to match the source:** After you specify a source and a target database to compare and run the comparison, view the results in the **Data Compare** window. View not only details of the differences but also the update script that is used to synchronize the data. After you identify differences between the two databases, specify an action for each difference. Then update the target or export the update script to the Transact-SQL editor or to a file. You might want to export the script so that you or someone else can review it before you apply the changes.  
   
 ## <a name="UnderstandingDataCompareResults"></a>Understanding Comparison Results  
 The following table describes the five columns in the **Data Compare** window.  

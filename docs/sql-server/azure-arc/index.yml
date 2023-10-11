@@ -31,6 +31,8 @@ landingContent:
             url: point-in-time-restore.md
           - text: Video - Data Exposed
             url: /shows/data-exposed/new-benefits-of-azure-arc-enabled-sql-server-data-exposed
+          - text: Extended Security Updates
+            url: ../end-of-support/sql-server-extended-security-updates.md
  
  # Card
   - title: Arc-enable SQL Server
@@ -39,10 +41,6 @@ landingContent:
         links:
           - text: Prerequisites
             url: prerequisites.md
-      - linkListType: quickstart
-        links:
-          - text: Connect a hybrid machine
-            url: quick-enabled-sql-server.md
       - linkListType: deploy
         links:
           - text: Automatically connect

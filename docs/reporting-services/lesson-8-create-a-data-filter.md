@@ -75,7 +75,7 @@ You need to complete the following tasks to implement a table-based filter.
                     DataSet2 ds = new DataSet2();  
   
                     //Create a SQL Connection to the AdventureWorks2008 database using Windows Authentication.  
-                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=Adventureworks2014;Integrated Security=SSPI"))  
+                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2022;Integrated Security=SSPI"))  
                     {  
                         //Building the dynamic query with the parameter ProductID.  
                         SqlDataAdapter adap = new SqlDataAdapter("SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail ", sqlconn);  
@@ -186,7 +186,7 @@ You need to complete the following tasks to implement a query filter.
                     DataSet2 ds = new DataSet2();  
   
                     //Create a SQL Connection to the AdventureWorks2008 database using Windows Authentication.  
-                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=Adventureworks2014;Integrated Security=SSPI"))  
+                    using (SqlConnection sqlconn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2022;Integrated Security=SSPI"))  
                     {  
                         //Building the dynamic query with the parameter ProductID.  
                         SqlCommand cmd = new SqlCommand("SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail where ProductID = @ProductID", sqlconn);  

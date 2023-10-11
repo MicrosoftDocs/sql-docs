@@ -57,7 +57,7 @@ Requires **db_owner** permissions.
 
 If there are columns in the remote Azure table that no longer exist in the Stretch-enabled SQL Server table, these extra columns don't prevent Stretch Database from operating normally. You can optionally remove the extra columns manually.
 
-## Example
+## Examples
 
 To reconcile the columns in the remote Azure table, run the following statement.
 

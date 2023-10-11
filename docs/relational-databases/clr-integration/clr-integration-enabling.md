@@ -24,7 +24,7 @@ GO
  You can disable CLR integration by setting the `clr enabled` option to 0. When you disable CLR integration, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stops executing all user-defined CLR routines and unloads all application domains. Features that rely upon the CLR, such as the **hierarchyid** data type, the `FORMAT` function, replication, and Policy-Based Management, are not affected by this setting and will continue to function.
 
 > [!NOTE]
-> Though the `clr enabled` configuration option is enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], developing CLR user functions are not supported in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Though the `clr enabled` configuration option is enabled in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], developing CLR user functions are not supported in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
   
 ## Permissions
 

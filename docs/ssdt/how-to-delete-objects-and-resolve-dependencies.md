@@ -28,7 +28,7 @@ When you rename or delete an object in **SQL Server Object Explorer**, SQL Serve
   
 ### To rename a table  
   
-1.  Make sure that the `Customer` table is not opened in either the Table Designer or the Transact\-SQL Editor.  
+1.  Make sure that the `Customer` table is not opened in either the Table Designer or the Transact-SQL Editor.  
   
 2.  Expand the **Tables** node in **SQL Server Object Explorer**. Right-click the **Customer** table and select **Rename**.  
   
@@ -56,5 +56,5 @@ When you rename or delete an object in **SQL Server Object Explorer**, SQL Serve
 4.  Right-click the **Products** table in **SQL Server Object Explorer**, and select **View Code**. Notice that the foreign key reference to the `Customers` table is gone.  
   
     > [!WARNING]  
-    > If you already have the **Products** table opened in Table Designer or Transact\-SQL Editor when the delete operation occurs, it will not automatically refresh to show the deletion of the foreign key reference. In addition, errors about unresolved references may show up in the **Error List**. To resolve this issue, close the Table Designer or Transact\-SQL Editor, and reopen the Products table.  
+    > If you already have the **Products** table opened in Table Designer or Transact-SQL Editor when the delete operation occurs, it will not automatically refresh to show the deletion of the foreign key reference. In addition, errors about unresolved references may show up in the **Error List**. To resolve this issue, close the Table Designer or Transact-SQL Editor, and reopen the Products table.  
   

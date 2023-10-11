@@ -82,7 +82,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  The following example disallows page locks on the `IX_Customer_TerritoryID` index on the `Customer` table.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
     N'disallowpagelocks', TRUE;  
@@ -92,7 +92,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
  The following example disallows row locks on all indexes associated with the `Product` table. The `sys.indexes` catalog view is queried before and after executing the `sp_indexoption` procedure to show the results of the statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
 SELECT name, type_desc, allow_row_locks, allow_page_locks   
@@ -114,7 +114,7 @@ GO
  The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp_indexoption` procedure is executed to show the results of the statement.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 --Display the current row and page lock options of the table.   
 SELECT OBJECT_NAME (object_id) AS [Table], type_desc, allow_row_locks, allow_page_locks   

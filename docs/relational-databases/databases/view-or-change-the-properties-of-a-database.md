@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
   
     ```sql  
-    SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
+    SELECT DATABASEPROPERTYEX('AdventureWorks2022', 'IsAutoShrink');  
     ```  
   
 #### To view the properties of a database by querying sys.databases  
@@ -79,7 +79,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
   
     ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
-    FROM sys.databases WHERE name = 'AdventureWorks2012';  
+    FROM sys.databases WHERE name = 'AdventureWorks2022';  
     ```  
   
 #### To view the properties of a database-scoped configuration by querying sys.databases_scoped_configuration  

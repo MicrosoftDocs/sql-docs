@@ -154,7 +154,7 @@ These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or late
  For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
- The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016, SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
@@ -278,7 +278,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The Excel Connection Manager, the Excel Source, and the Excel Destination now provide explicit support for Excel 2016 data sources.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 released  
- The MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).
+ The Microsoft &reg; Connector for SAP BW for Microsoft SQL Server &reg; 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [Microsoft &reg; SQL Server &reg; 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).
  
 #### <a name="oracleteradata"></a> Connectors v4.0 for Oracle and Teradata released
 The Microsoft Connectors v4.0 for Oracle and Teradata have been released. To download the connectors, see [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -339,7 +339,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The SQL Server Import and Export Wizard can now import data from, and save data to, Azure Blob Storage. For more info, see [Choose a Data Source &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) and [Choose a Destination &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 released  
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
+ The Microsoft &reg; Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server &reg; 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [Microsoft &reg; SQL Server &reg; 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833).  
   
 ####  <a name="cdc2016"></a> CDC components updated for SQL Server 2016  
  The CDC (Change Data Capture) Control Task, Source, and Splitter Transformation components have been updated to provide full compatibility with SQL Server 2016. There is no new functionality and there are no changes in behavior.  
@@ -362,6 +362,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-## See Also  
- [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
+## Related content
+
+- [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

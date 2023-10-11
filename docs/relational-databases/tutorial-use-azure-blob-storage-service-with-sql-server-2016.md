@@ -21,14 +21,14 @@ This tutorial shows you how to work with  SQL Server Data Files in Azure Blob St
 ## Prerequisites
 
 To complete this tutorial, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  
-To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), access to an instance of SQL Server on-premises, access to an Azure virtual machine (VM) running an instance of SQL Server 2016 or later version, and an `AdventureWorks2016` database. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions.
+To use this tutorial, you need an Azure storage account, SQL Server Management Studio (SSMS), access to an instance of SQL Server on-premises, access to an Azure virtual machine (VM) running an instance of SQL Server 2016 or later version, and an [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions.
 
 - Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Create an [Azure storage account](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Provision an [Azure VM running SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 - Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
-- Download [AdventureWorks2016 sample databases](../samples/adventureworks-install-configure.md).
+- Download [AdventureWorks sample databases](../samples/adventureworks-install-configure.md).
 - Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions.
 
 > [!IMPORTANT]  
@@ -167,10 +167,10 @@ To create a SQL Server credential, follow these steps:
 
 ## 3 - Database BACKUP to URL
 
-In this section, you will back up the `AdventureWorks2016` database in your SQL Server instance to the container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
+In this section, you will back up the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database in your SQL Server instance to the container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
 
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2+ database or a SQL Server 2014 database to this container, you can use the deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the `WITH CREDENTIAL` syntax.
+> If you wish to backup a [!INCLUDE [sssql11-md](../includes/sssql11-md.md)] SP1 CU2+ database or a [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] database to this container, you can use the deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014&preserve-view=true) to backup to URL using the `WITH CREDENTIAL` syntax.
 
 To back up a database to blob storage, follow these steps:
 
@@ -181,12 +181,12 @@ To back up a database to blob storage, follow these steps:
     ```sql
     -- To permit log backups, before the full database backup, modify the database to use the full recovery model.
     USE master;
-    ALTER DATABASE AdventureWorks2016
+    ALTER DATABASE AdventureWorks2022
        SET RECOVERY FULL;
   
-    -- Back up the full AdventureWorks2016 database to the container that you created in section 1
-    BACKUP DATABASE AdventureWorks2016
-       TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_onprem.bak'
+    -- Back up the full AdventureWorks2022 database to the container that you created in section 1
+    BACKUP DATABASE AdventureWorks2022
+       TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_onprem.bak'
     ```
 
 1. Open Object Explorer and connect to Azure storage using your storage account and account key.
@@ -196,44 +196,44 @@ To back up a database to blob storage, follow these steps:
 
 ## 4 - Restore database to virtual machine from URL
 
-In this section, you will restore the `AdventureWorks2016` database to your SQL Server instance in your Azure virtual machine.
+In this section, you will restore the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database to your SQL Server instance in your Azure virtual machine.
 
 > [!NOTE]  
 > For the purposes of simplicity in this tutorial, we are using the same container for the data and log files that we used for the database backup. In a production environment, you would likely use multiple containers, and frequently multiple data files as well. You could also consider striping your backup across multiple blobs to increase backup performance when backing up a large database.
 
-To restore the `AdventureWorks2016` database from Azure Blob Storage to your SQL Server instance in your Azure virtual machine, follow these steps:
+To restore the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database from Azure Blob Storage to your SQL Server instance in your Azure virtual machine, follow these steps:
 
 1. Launch SSMS.
 1. Open a new query window and connect to the SQL Server instance of the database engine in your Azure virtual machine.
 1. Copy and paste the following Transact-SQL script into the query window. Modify the URL appropriately for your storage account name and the container that you specified in section 1 and then execute this script.
 
     ```sql
-    -- Restore AdventureWorks2016 from URL to SQL Server instance using Azure Blob Storage for database files
-    RESTORE DATABASE AdventureWorks2016
-       FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_onprem.bak'
+    -- Restore AdventureWorks2022 from URL to SQL Server instance using Azure Blob Storage for database files
+    RESTORE DATABASE AdventureWorks2022
+       FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_onprem.bak'
        WITH
-          MOVE 'AdventureWorks2016_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_Data.mdf'
-         ,MOVE 'AdventureWorks2016_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_Log.ldf'
+          MOVE 'AdventureWorks2022_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_Data.mdf'
+         ,MOVE 'AdventureWorks2022_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_Log.ldf'
     --, REPLACE
     ```
 
 1. Open Object Explorer and connect to your Azure SQL Server instance.
-1. In Object Explorer, expand the **Databases** node and verify that the `AdventureWorks2016` database has been restored (refresh the node as necessary)
-    1. Right-click `AdventureWorks2016`, and select **Properties**.
+1. In Object Explorer, expand the **Databases** node and verify that the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database has been restored (refresh the node as necessary)
+    1. Right-click **[!INCLUDE [sssampledbnormal-md](../includes/sssampledbnormal-md.md)]**, and select **Properties**.
     1. Select **Files** and verify that the paths for the two database files are URLs pointing to blobs in your Azure Blob Storage container (select **Cancel** when done).
 
-     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/adventureworks-on-azure-vm.png" alt-text="Screenshots from SSMS of the AdventureWorks2016 database on the Azure VM.":::
+     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/adventureworks-on-azure-vm.png" alt-text="Screenshots from SSMS of the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database on the Azure VM.":::
 
 1. In Object Explorer, connect to Azure storage.
-    1. Expand **Containers**, expand the container that you created in section 1 and verify that the `AdventureWorks2016_Data.mdf` and `AdventureWorks2016_Log.ldf` from step 3 above appears in this container, along with the backup file from section 3 (refresh the node as necessary).
+    1. Expand **Containers**, expand the container that you created in section 1 and verify that the `AdventureWorks2022_Data.mdf` and `AdventureWorks2022_Log.ldf` from step 3 above appears in this container, along with the backup file from section 3 (refresh the node as necessary).
 
    :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png" alt-text="Screenshot from Object Explorer in SSMS showing the data files within container on Azure beneath a SQL Server instance entry.":::
 
 ## 5 - Backup database using file-snapshot backup
 
-In this section, you will back up the `AdventureWorks2016` database in your Azure virtual machine using file-snapshot backup to perform a nearly instantaneous backup  using Azure snapshots. For more information on file-snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
+In this section, you will back up the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database in your Azure virtual machine using file-snapshot backup to perform a nearly instantaneous backup  using Azure snapshots. For more information on file-snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)
 
-To back up the `AdventureWorks2016` database using file-snapshot backup, follow these steps:
+To back up the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database using file-snapshot backup, follow these steps:
 
 1. Launch SSMS.
 1. Open a new query window and connect to the SQL Server instance of the database engine in your Azure virtual machine.
@@ -241,15 +241,15 @@ To back up the `AdventureWorks2016` database using file-snapshot backup, follow 
 
     ```sql
     -- Verify that no file snapshot backups exist
-    SELECT * FROM sys.fn_db_backup_file_snapshots ('AdventureWorks2016');
+    SELECT * FROM sys.fn_db_backup_file_snapshots ('AdventureWorks2022');
     ```
 
 1. Copy and paste the following Transact-SQL script into the query window. Modify the URL appropriately for your storage account name and the container that you specified in section 1 and then execute this script. Notice how quickly this backup occurs.
 
     ```sql
-    -- Backup the AdventureWorks2016 database with FILE_SNAPSHOT
-    BACKUP DATABASE AdventureWorks2016
-       TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2016_Azure.bak'
+    -- Backup the AdventureWorks2022 database with FILE_SNAPSHOT
+    BACKUP DATABASE AdventureWorks2022
+       TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_Azure.bak'
        WITH FILE_SNAPSHOT;
     ```
 
@@ -257,22 +257,22 @@ To back up the `AdventureWorks2016` database using file-snapshot backup, follow 
 
     ```sql
     -- Verify that two file-snapshot backups exist
-    SELECT * FROM sys.fn_db_backup_file_snapshots ('AdventureWorks2016');
+    SELECT * FROM sys.fn_db_backup_file_snapshots ('AdventureWorks2022');
     ```
 
     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-showing-snapshot.png" alt-text="A screenshot from SSMS of the results of fn_db_backup_file_snapshots, showing snapshots.":::
 
-1. In Object Explorer, in your SQL Server instance in your Azure virtual machine, expand the **Databases** node and verify that the `AdventureWorks2016` database has been restored to this instance (refresh the node as necessary).
+1. In Object Explorer, in your SQL Server instance in your Azure virtual machine, expand the **Databases** node and verify that the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database has been restored to this instance (refresh the node as necessary).
 1. In Object Explorer, connect to Azure storage.
-1. Expand **Containers**, expand the container that you created in section 1 and verify that the `AdventureWorks2016_Azure.bak` from step 4 above appears in this container, along with the backup file from section 3 and the database files from section 4 (refresh the node as necessary).
+1. Expand **Containers**, expand the container that you created in section 1 and verify that the `AdventureWorks2022_Azure.bak` from step 4 above appears in this container, along with the backup file from section 3 and the database files from section 4 (refresh the node as necessary).
 
     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG" alt-text="A screenshot from Object Explorer in SSMS showing the snapshot backup on Azure.":::
 
 ## 6 - Generate activity and backup log using file-snapshot backup
 
-In this section, you will generate activity in the `AdventureWorks2016` database and periodically create transaction log backups using file-snapshot backups. For more information on using file snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
+In this section, you will generate activity in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and periodically create transaction log backups using file-snapshot backups. For more information on using file snapshot backups, see [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).
 
-To generate activity in the `AdventureWorks2016` database and periodically create transaction log backups using file-snapshot backups, follow these steps:
+To generate activity in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database and periodically create transaction log backups using file-snapshot backups, follow these steps:
 
 1. Launch SSMS.
 1. Open two new query windows and connect each to the SQL Server instance of the database engine in your Azure virtual machine.
@@ -280,13 +280,13 @@ To generate activity in the `AdventureWorks2016` database and periodically creat
 
     ```sql
     -- Verify row count at start
-    SELECT COUNT (*) from AdventureWorks2016.Production.Location;
+    SELECT COUNT (*) from AdventureWorks2022.Production.Location;
     ```
 
 1. Copy and paste the following two Transact-SQL scripts into the two separate query windows. Modify the URL appropriately for your storage account name and the container that you specified in section 1 and then execute these scripts simultaneously in separate query windows. These scripts will take about seven minutes to complete.
 
     ```sql
-    -- Insert 30,000 new rows into the Production.Location table in the AdventureWorks2014 database in batches of 75
+    -- Insert 30,000 new rows into the Production.Location table in the AdventureWorks2022 database in batches of 75
     DECLARE @count INT=1, @inner INT;
     WHILE @count < 400
        BEGIN
@@ -294,7 +294,7 @@ To generate activity in the `AdventureWorks2016` database and periodically creat
              SET @inner =1;
                 WHILE @inner <= 75
                    BEGIN;
-                      INSERT INTO AdventureWorks2016.Production.Location
+                      INSERT INTO AdventureWorks2022.Production.Location
                          (Name, CostRate, Availability, ModifiedDate)
                             VALUES (NEWID(), .5, 5.2, GETDATE());
                       SET @inner = @inner + 1;
@@ -303,7 +303,7 @@ To generate activity in the `AdventureWorks2016` database and periodically creat
        WAITFOR DELAY '00:00:01';
        SET @count = @count + 1;
        END;
-    SELECT COUNT (*) from AdventureWorks2014.Production.Location;
+    SELECT COUNT (*) from AdventureWorks2022.Production.Location;
     ```
 
     ```sql
@@ -311,10 +311,10 @@ To generate activity in the `AdventureWorks2016` database and periodically creat
     DECLARE @count INT=1, @device NVARCHAR(120), @numrows INT;
     WHILE @count <= 7
        BEGIN
-             SET @numrows = (SELECT COUNT (*) FROM AdventureWorks2016.Production.Location);
+             SET @numrows = (SELECT COUNT (*) FROM AdventureWorks2022.Production.Location);
              SET @device = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/tutorial-' + CONVERT (varchar(10),@numrows) + '-' + FORMAT(GETDATE(), 'yyyyMMddHHmmss') + '.bak';
-             BACKUP LOG AdventureWorks2016 TO URL = @device WITH FILE_SNAPSHOT;
-             SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');
+             BACKUP LOG AdventureWorks2022 TO URL = @device WITH FILE_SNAPSHOT;
+             SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2022');
           WAITFOR DELAY '00:1:00';
              SET @count = @count + 1;
        END;
@@ -336,7 +336,7 @@ To generate activity in the `AdventureWorks2016` database and periodically creat
 
 ## 7 - Restore a database to a point in time
 
-In this section, you will restore the `AdventureWorks2016` database to a point in time between two of the transaction log backups.
+In this section, you will restore the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database to a point in time between two of the transaction log backups.
 
 With traditional backups, to accomplish point in time restore, you would need to use the full database backup, perhaps a differential backup, and all of the transaction log files up to and just past the point in time to which you wish to restore. With file-snapshot backups, you only need the two adjacent log backup files that provide the goal posts framing the time to which you wish to restore. You only need two log file snapshot backup sets because each log backup creates a file snapshot of each database file (each data file and the log file).
 
@@ -348,7 +348,7 @@ To restore a database to a specified point in time from file snapshot backup set
 
     ```sql
     -- Verify row count at start
-    SELECT COUNT (*) from AdventureWorks2016.Production.Location
+    SELECT COUNT (*) from AdventureWorks2022.Production.Location
     ```
 
     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/29-thousand-rows.png" alt-text="A screenshot of the SSMS results showing a row count of 29,939.":::
@@ -357,16 +357,16 @@ To restore a database to a specified point in time from file snapshot backup set
 
     ```sql
     -- restore and recover to a point in time between the times of two transaction log backups, and then verify the row count
-    ALTER DATABASE AdventureWorks2016 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    RESTORE DATABASE AdventureWorks2016
+    ALTER DATABASE AdventureWorks2022 SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    RESTORE DATABASE AdventureWorks2022
        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<firstbackupfile>.bak'
        WITH NORECOVERY,REPLACE;
-    RESTORE LOG AdventureWorks2016
+    RESTORE LOG AdventureWorks2022
        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<secondbackupfile>.bak'
        WITH RECOVERY, STOPAT = 'June 26, 2018 01:48 PM';
-    ALTER DATABASE AdventureWorks2016 set multi_user;
+    ALTER DATABASE AdventureWorks2022 set multi_user;
     -- get new count
-    SELECT COUNT (*) FROM AdventureWorks2016.Production.Location ;
+    SELECT COUNT (*) FROM AdventureWorks2022.Production.Location ;
     ```
 
 1. Review the output. Notice that after the restore the row count is 18,389, which is a row count number between log backup 5 and 6 (your row count will vary).
@@ -375,7 +375,7 @@ To restore a database to a specified point in time from file snapshot backup set
 
 ## 8 - Restore as new database from log backup
 
-In this section, you will restore the `AdventureWorks2016` database as a new database from a file-snapshot transaction log backup.
+In this section, you will restore the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database as a new database from a file-snapshot transaction log backup.
 
 In this scenario, you are performing a restore to a SQL Server instance on a different virtual machine for the purposes of business analysis and reporting. Restoring to a different instance on a different virtual machine offloads the workload to a virtual machine dedicated and sized for this purpose, removing its resource requirements from the transactional system.
 
@@ -393,10 +393,10 @@ To restore a database to a new database from a transaction log backup using file
 
     ```sql
     -- restore as a new database from a transaction log backup file
-    RESTORE DATABASE AdventureWorks2016_EOM
+    RESTORE DATABASE AdventureWorks2022_EOM
         FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<logbackupfile.bak>'
-        WITH MOVE 'AdventureWorks2016_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Data.mdf'
-       , MOVE 'AdventureWorks2016_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Log.ldf'
+        WITH MOVE 'AdventureWorks2022_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_EOM_Data.mdf'
+       , MOVE 'AdventureWorks2022_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2022_EOM_Log.ldf'
        , RECOVERY
     --, REPLACE
     ```
@@ -433,7 +433,7 @@ To delete a file-snapshot backup set, follow these steps:
 
     ```sql
     -- verify that two file snapshots have been removed
-    SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');
+    SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2022');
     ```
 
     :::image type="content" source="media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png" alt-text="Screenshot of the SSMS results pane showing two file snapshots deleted.":::

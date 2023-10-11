@@ -4,7 +4,7 @@ SET @publication = N'AdvWorksProductTran';
 SET @article = N'Product'; 
 
 -- Drop the transactional article.
-USE [AdventureWorks2012]
+USE [AdventureWorks2022]
 EXEC sp_droparticle 
   @publication = @publication, 
   @article = @article,

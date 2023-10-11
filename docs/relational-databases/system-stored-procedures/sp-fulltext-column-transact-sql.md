@@ -70,13 +70,13 @@ The language of the data stored in the column. *@language* is **int**, with a de
 
 #### [ @type_colname = ] N'*type_colname*'
 
-The name of a column in *@tabname* that holds the document type of *@colname*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It is only used when the data type of *@colname* is of type **varbinary(max)** or **image**. *@type_colname* is **sysname**, with a default of `NULL`.
+The name of a column in *@tabname* that holds the document type of *@colname*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It's only used when the data type of *@colname* is of type **varbinary(max)** or **image**. *@type_colname* is **sysname**, with a default of `NULL`.
 
 ## Return code values
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

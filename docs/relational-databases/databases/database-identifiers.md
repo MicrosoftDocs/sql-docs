@@ -46,7 +46,7 @@ There are two classes of identifiers:
    Comply with the rules for the format of identifiers. Regular identifiers are not delimited when they are used in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT *
    FROM HumanResources.Employee
@@ -57,7 +57,7 @@ There are two classes of identifiers:
    Are enclosed in double quotation marks (") or brackets ([ ]). Identifiers that comply with the rules for the format of identifiers might not be delimited. For example:
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT *
    FROM [HumanResources].[Employee] --Delimiter is optional.
@@ -67,7 +67,7 @@ There are two classes of identifiers:
 Identifiers that do not comply with all the rules for identifiers must be delimited in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For example:
 
 ```sql
-USE AdventureWorks
+USE AdventureWorks2022;
 GO
 CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
 (

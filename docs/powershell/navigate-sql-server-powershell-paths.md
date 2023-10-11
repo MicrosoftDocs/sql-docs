@@ -43,8 +43,8 @@ The information returned by **Get-ChildItem** (or its **dir** and **ls** aliases
 |SQLSERVER:\SQL|Returns the name of the local computer. If you have used SMO or WMI to connect to instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on other computers, those computers are also listed.|  
 |SQLSERVER:\SQL\\*ComputerName*|The list of instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] on the computer.|  
 |SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|The list of top-level object types in the instance, such as Endpoints, Certificates, and Databases.|  
-|Object class node, such as Databases|The list of objects of that type, such as the list of databases: master, model, AdventureWorks20008R2.|  
-|Object name node, such as AdventureWorks2012|The list of object types contained within the object. For example, a database would list object types such as tables and views.|  
+|Object class node, such as Databases|The list of objects of that type, such as the list of databases: `master`, `model`, [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)].|  
+|Object name node, such as [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)]|The list of object types contained within the object. For example, a database would list object types such as tables and views.|  
 
 By default, **Get-ChildItem** does not list any system objects. Use the *Force* parameter to see system objects, such as the objects in the **sys** schema.  
 
@@ -120,11 +120,11 @@ Get-ChildItem -force
 2.  Reference the custom drive name in path navigation cmdlets such as **Set-Location**.  
   
 ### Custom Drive Example (PowerShell)  
- This example creates a virtual drive named AWDB that maps to the node for a deployed copy of the AdventureWorks2012 sample database. The virtual drive is then used to navigate to a table in the database.  
+ This example creates a virtual drive named AWDB that maps to the node for a deployed copy of the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. The virtual drive is then used to navigate to a table in the database.  
   
 ```powershell  
 ## Create a new virtual drive.  
-New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
+New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2022  
   
 ## Use AWDB: to navigate to a specific table.  
 Set-Location AWDB:\Tables\Purchasing.Vendor  

@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Execute the fifth ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table that the sample used.  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 CREATE TABLE BCPDate (cola int, colb datetime)  
 ```  
   
@@ -172,7 +172,7 @@ int main() {
 ```  
   
 ```  
-use AdventureWorks  
+USE AdventureWorks2022;
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
      DROP TABLE BCPDate  
 GO  

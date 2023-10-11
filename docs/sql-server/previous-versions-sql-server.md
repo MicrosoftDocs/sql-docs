@@ -3,7 +3,7 @@ title: Previous versions of SQL Server documentation
 description: How to get online and offline documentation for previous versions of SQL Server, including 2005, 2008, 2012, and 2014.
 author: markingmyname
 ms.author: maghan
-ms.date: 08/12/2020
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual

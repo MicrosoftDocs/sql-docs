@@ -157,7 +157,7 @@ SELECT <select_criteria>
   
  SELECT statements are permitted in user-defined functions only if the select lists of these statements contain expressions that assign values to variables that are local to the functions.  
   
- A four-part name constructed with the OPENDATASOURCE function as the server-name part can be used as a table source wherever a table name can appear in a SELECT statement. A four-part name cannot be specified for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ A four-part name constructed with the OPENDATASOURCE function as the server-name part can be used as a table source wherever a table name can appear in a SELECT statement. A four-part name cannot be specified for [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].  
   
  Some syntax restrictions apply to SELECT statements that involve remote tables.  
   

@@ -38,9 +38,9 @@ To use any code example that is provided, you will have to choose the programmin
 'Connect to the local, default instance of SQL Server  
         Dim srv As Server  
         srv = New Server  
-        'Reference the AdventureWorks2012 database.  
+        'Reference the AdventureWorks2022 database.  
         Dim db As Database  
-        db = srv.Databases("AdventureWorks2012")  
+        db = srv.Databases("AdventureWorks2022")  
         'Define a UserDefinedTableType object variable by supplying the 'database and name in the constructor.  
         Dim udtt As UserDefinedTableType  
         udtt = New UserDefinedTableType(db, "My_User_Defined_Table")  
@@ -103,8 +103,8 @@ To use any code example that is provided, you will have to choose the programmin
             //Connect to the local, default instance of SQL Server   
                Server srv = new Server();  
   
-            //Reference the AdventureWorks2012 database.   
-            Database db = srv.Databases["AdventureWorks2012"];  
+            //Reference the AdventureWorks2022 database.   
+            Database db = srv.Databases["AdventureWorks2022"];  
             //Define a UserDefinedTableType object variable by supplying the  
             //database and name in the constructor.   
          UserDefinedTableType udtt = new UserDefinedTableType(db, "My_User_Defined_Table");  
@@ -169,9 +169,9 @@ To use any code example that is provided, you will have to choose the programmin
  The example shows how to create a user-defined table, and then how to use it as a parameter in a user-defined function.  
   
 ```powershell   
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 #Define a UserDefinedTableType object variable by supplying the  
 #database and name in the constructor.   

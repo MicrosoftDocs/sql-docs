@@ -117,7 +117,7 @@ To build the hash index, the first example adds a computed checksum column to th
 -- Create a checksum index.  
 
 SET ARITHABORT ON;  
-USE AdventureWorks2012;   
+USE AdventureWorks2022;   
 GO  
 ALTER TABLE Production.Product  
 ADD cs_Pname AS CHECKSUM(Name);  

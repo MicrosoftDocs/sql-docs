@@ -8,8 +8,10 @@ ms.date: 03/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: cs1-command-shell
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017"
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017"
 ---
 # Configure and customize SQL Server Docker containers
 
@@ -662,7 +664,7 @@ For examples of custom Docker containers, see <https://github.com/microsoft/mssq
 
 For information on how to build and run Docker containers using Dockerfiles, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices>.
 
-## Next steps
+## Related content
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

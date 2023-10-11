@@ -71,7 +71,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
  The following example creates a plan guide for a single SELECT statement by specifying a query plan from the plan cache. The example begins by executing a simple `SELECT` statement for which the plan guide will be created. The plan for this query is examined by using the `sys.dm_exec_sql_text` and `sys.dm_exec_text_query_plan` dynamic management views. The plan guide is then created for the query by specifying the query plan in the plan cache that is associated with the query. The final statement in the example verifies that the plan guide exists.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  
 FROM Production.WorkOrder AS w   

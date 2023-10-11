@@ -3,7 +3,7 @@ title: "JSON_ARRAY (Transact-SQL)"
 description: "JSON_ARRAY (Transact-SQL)"
 author: "uc-msft"
 ms.author: "umajay"
-ms.date: 05/24/2022
+ms.date: 09/05/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-ver
 # JSON_ARRAY (Transact-SQL)
 
 
-[!INCLUDE [sqlserver2022-asdb-asmi](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb](../../includes/applies-to-version/sqlserver2022-asdb.md)]
 
 Constructs JSON array text from zero or more expressions.
 

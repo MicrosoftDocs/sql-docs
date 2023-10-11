@@ -49,7 +49,7 @@ You can use multiple underscores to represent multiple characters. Changing the 
  The following example uses the _ operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
   
 ```sql  
--- USE AdventureWorks2012
+-- USE AdventureWorks2022;
   
 SELECT FirstName, LastName  
 FROM Person.Person  

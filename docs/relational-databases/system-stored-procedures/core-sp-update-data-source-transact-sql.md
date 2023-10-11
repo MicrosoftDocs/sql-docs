@@ -98,4 +98,4 @@ EXEC core.sp_update_data_source @collection_set_uid = '7B191952-8ECF-4E12-AEB2-E
 
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
 - [Data Collector stored procedures (Transact-SQL)](data-collector-stored-procedures-transact-sql.md)
-- [Management Data Warehouse](../../relational-databases/data-collection/management-data-warehouse.md)
+- [Management Data Warehouse](../data-collection/management-data-warehouse.md)

@@ -57,8 +57,8 @@ EXEC sp_xml_removedocument @hdoc;
 
 ## Next steps
 
-- [System Stored Procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [XML Stored Procedures (Transact-SQL)](xml-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [XML stored procedures (Transact-SQL)](xml-stored-procedures-transact-sql.md)
 - [sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
 - [sp_xml_preparedocument(Transact-SQL)](sp-xml-preparedocument-transact-sql.md)
 - [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)

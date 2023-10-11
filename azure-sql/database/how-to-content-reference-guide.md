@@ -26,9 +26,9 @@ In this article you can find a content reference of various guides, scripts, and
 
 ## Configure features
 
-- [Configure Azure Active Directory (Azure AD) auth](authentication-aad-configure.md)
+- [Configure Microsoft Entra auth](authentication-aad-configure.md)
 - [Configure Conditional Access](conditional-access-configure.md)
-- [Azure AD Multi-Factor Authentication](authentication-mfa-ssms-overview.md)
+- [Microsoft Entra multifactor authentication](authentication-mfa-ssms-overview.md)
 - [Configure backup retention](long-term-backup-retention-configure.md) for a database to keep your backups on Azure Blob Storage. 
 - [Configure geo-replication](active-geo-replication-overview.md) to keep a replica of your database in another region.
 - [Configure auto-failover group](auto-failover-group-configure-sql-db.md) to automatically fail over a group of single or pooled databases to a secondary server in another region in the event of a disaster. 
@@ -52,7 +52,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Enable e-mail notifications for automatic tuning](automatic-tuning-email-notifications-configure.md) to get information about tuning recommendations.
 - [Apply performance recommendations](database-advisor-find-recommendations-portal.md) and optimize your database.
 - [Create alerts](alerts-insights-configure-portal.md) to get notifications from Azure SQL Database.
-- [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md).
+- [Troubleshoot connectivity](troubleshoot-common-errors-issues.md) if you notice some connectivity issues between the applications and the database. You can also use [Resource Health for connectivity issues](resource-health-to-troubleshoot-connectivity.md?view=azuresql-db&preserve-view=true).
 - [Troubleshoot performance with Intelligent Insights](intelligent-insights-troubleshoot-performance.md)
 - [Manage file space](file-space-manage.md) to monitor storage usage in your database.
 - [Use Intelligent Insights diagnostics log](intelligent-insights-use-diagnostics-log.md)

@@ -5,7 +5,7 @@ description: Learn how to configure user-assigned managed identity and customer-
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
-ms.date: 10/17/2022
+ms.date: 10/10/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -15,7 +15,9 @@ ms.topic: how-to
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This how-to guide outlines the steps to create an Azure SQL logical [server](logical-servers.md) configured with transparent data encryption (TDE) with customer-managed keys (CMK) using a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
+This how-to guide outlines the steps to create a logical [server in Azure](logical-servers.md) configured with transparent data encryption (TDE) with customer-managed keys (CMK) using a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal).
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -60,27 +62,32 @@ This how-to guide outlines the steps to create an Azure SQL logical [server](log
 
 11. Select **Next: Security** at the bottom of the page.
 
-12. On the Security tab, under **Identity**, select **Configure Identities**.
+12. On the Security tab, under **Server Identity**, select **Configure Identities**.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="screenshot of security settings and configuring identities in the Azure portal":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-identity.png" alt-text="Screenshot of security settings and configuring identities in the Azure portal.":::
 
 13. On the **Identity** blade, select **Off** for **System assigned managed identity** and then select **Add** under **User assigned managed identity**. Select the desired **Subscription** and then under **User assigned managed identities**, select the desired user-assigned managed identity from the selected subscription. Then select the  **Add** button.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/identity-configuration-managed-identity.png" alt-text="screenshot of adding user assigned managed identity when configuring server identity":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/identity-configuration-managed-identity.png" alt-text="Screenshot of adding user assigned managed identity when configuring server identity.":::
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-user-assigned-managed-identity.png" alt-text="screenshot of user assigned managed identity when configuring server identity":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-user-assigned-managed-identity.png" alt-text="Screenshot of user assigned managed identity when configuring server identity.":::
 
 14. Under **Primary identity**, select the same user-assigned managed identity selected in the previous step.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-primary-identity-for-server.png" alt-text="screenshot of selecting primary identity for server":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/selecting-primary-identity-for-server.png" alt-text="Screenshot of selecting primary identity for server.":::
 
 15. Select **Apply**
 
-16. On the Security tab, under **Transparent data encryption**, select **Configure Transparent data encryption**. Select **Customer-managed key**, and an option to select **Select a key** will appear. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
+16. On the Security tab, under **Transparent Data Encryption Key Management**, you have the option to configure transparent data encryption for the server or database.
+    - For **Server level key**: Select **Configure transparent data encryption**. Select **Customer-Managed Key**, and an option to select **Select a key** will appear. Select **Change key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. Select the **Select** button.
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-server.png" alt-text="screenshot configuring TDE for server":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-server.png" alt-text="Screenshot of configuring TDE for the server in Azure SQL.":::
 
-    :::image type="content" source="media/transparent-data-encryption-byok-create-server/select-key-for-tde.png" alt-text="screenshot selecting key for use with TDE":::
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/select-key-for-tde.png" alt-text="Screenshot selecting key for use with TDE.":::
+
+    - For **Database level key**: Select **Configure transparent data encryption**. Select **Database level Customer-Managed Key**, and an option to configure the **Database Identity** and **Customer-Managed Key** will appear. Select **Configure** to configure a **User-Assigned Managed Identity** for the database, similar to step 13. Select **Change key** to configure a **Customer-Managed Key**. Select the desired **Subscription**, **Key vault**, **Key**, and **Version** for the customer-managed key to be used for TDE. You also have the option to enable **[Auto-rotate key](transparent-data-encryption-byok-key-rotation.md#automatic-key-rotation)** in the **Transparent Data Encryption** menu. Select the **Select** button.
+
+    :::image type="content" source="media/transparent-data-encryption-byok-create-server/configure-tde-for-database.png" alt-text="Screenshot configuring TDE for a database in Azure SQL.":::
 
 17. Select **Apply**
 
@@ -147,13 +154,27 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ```powershell
 # create a server with user-assigned managed identity and customer-managed TDE
-New-AzSqlServer -ResourceGroupName <ResourceGroupName> -Location <Location> -ServerName <ServerName> -ServerVersion "12.0" -SqlAdministratorCredentials (Get-Credential) -SqlAdministratorLogin <ServerAdminName> -SqlAdministratorPassword <ServerAdminPassword> -AssignIdentity -IdentityType <IdentityType> -UserAssignedIdentityId <UserAssignedIdentityId> -PrimaryUserAssignedIdentityId <PrimaryUserAssignedIdentityId> -KeyId <CustomerManagedKeyId>
+$params = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    Location = "<Location>"
+    ServerName = "<ServerName>"
+    ServerVersion = "12.0"
+    SqlAdministratorCredentials = (Get-Credential)
+    SqlAdministratorLogin = "<ServerAdminName>"
+    SqlAdministratorPassword = "<ServerAdminPassword>"
+    AssignIdentity = $true
+    IdentityType = "<IdentityType>"
+    UserAssignedIdentityId = "<UserAssignedIdentityId>"
+    PrimaryUserAssignedIdentityId = "<PrimaryUserAssignedIdentityId>"
+    KeyId = "<CustomerManagedKeyId>"
+}
 
+New-AzSqlServer @params
 ```
 
 # [ARM Template](#tab/arm-template)
 
-Here's an example of an ARM template that creates an Azure SQL logical server with a user-assigned managed identity and customer-managed TDE. The template also adds an Azure AD admin set for the server and enables [Azure AD-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
+Here's an example of an ARM template that creates a logical server in Azure with a user-assigned managed identity and customer-managed TDE. The template also adds a Microsoft Entra admin set for the server and enables [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md), but this can be removed from the template example.
 
 For more information and ARM templates, see [Azure Resource Manager templates for Azure SQL Database & SQL Managed Instance](arm-templates-content-guide.md).
 

@@ -438,8 +438,8 @@ The following example executes `DBCC CHECKDB` for the current database and for t
 -- Check the current database.
 DBCC CHECKDB;
 GO
--- Check the AdventureWorks2019 database without nonclustered indexes.
-DBCC CHECKDB (AdventureWorks2019, NOINDEX);
+-- Check the AdventureWorks2022 database without nonclustered indexes.
+DBCC CHECKDB (AdventureWorks2022, NOINDEX);
 GO
 ```
 

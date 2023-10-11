@@ -8,7 +8,7 @@ ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
 ms.topic: how-to
-ms.custom: passwordless-js, devx-track-azurecli, devx-track-azurepowershell, devx-track-javascript
+ms.custom: passwordless-js, devx-track-azurecli, devx-track-javascript
 ms.devlang: nodejs
 ---
 
@@ -127,11 +127,11 @@ Run your app locally and verify that the connections to Azure SQL Database are w
 
 ## Configure the Azure hosting environment
 
-Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Azure Active Directory (Azure AD) for applications to use when connecting to resources that support Azure AD authentication. Learn more about managed identities:
+Once your app is configured to use passwordless connections locally, the same code can authenticate to Azure SQL Database after it's deployed to Azure. The sections that follow explain how to configure a deployed application to connect to Azure SQL Database using a [managed identity](/azure/active-directory/managed-identities-azure-resources/overview). Managed identities provide an automatically managed identity in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for applications to use when connecting to resources that support Microsoft Entra authentication. Learn more about managed identities:
 
 - [Passwordless overview](/azure/developer/intro/passwordless-overview)
 - [Managed identity best practices](/azure/active-directory/managed-identities-azure-resources/managed-identity-best-practice-recommendations)
-- [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
+- [Managed identities in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
 
 ### Create the managed identity
 

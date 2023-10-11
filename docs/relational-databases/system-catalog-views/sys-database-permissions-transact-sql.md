@@ -168,7 +168,7 @@ INNER JOIN sys.schemas AS s ON o.schema_id = s.schema_id;
 
 You can use the previous example to query permissions specific to a single database object.
 
-For example, consider the following granular permissions granted to a database user `test` in the [sample database](../../samples/adventureworks-install-configure.md) `AdventureWorksDW2022`:
+For example, consider the following granular permissions granted to a database user `test` in the [sample database](../../samples/adventureworks-install-configure.md) [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)]:
 
 ```sql
 GRANT SELECT ON dbo.vAssocSeqOrders TO [test];

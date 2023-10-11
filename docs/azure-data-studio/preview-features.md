@@ -3,13 +3,11 @@ title: Preview features in Azure Data Studio
 description: Learn more about Azure Data Studio preview features and how to enable and use them.
 author: erinstellato-ms
 ms.author: erinstellato
-ms.reviewer: maghan
-ms.date: 10/14/2020
+ms.reviewer: maghan, randolphwest
+ms.date: 09/20/2023
 ms.service: azure-data-studio
 ms.topic: conceptual
-ms.custom: updatefrequency5
 ---
-
 # Preview features in Azure Data Studio
 
 In Azure Data Studio, new features and improvements are often first released as preview features before they're made generally available (GA). The amount of time a feature remains in preview can vary based on user feedback, quality checks, and long-term road maps. By enabling preview features, you get full access to Azure Data Studio features and the chance to provide early feedback.
@@ -18,59 +16,60 @@ In Azure Data Studio, new features and improvements are often first released as 
 
 ### On first launch
 
-If you're a new user, you can opt into preview features when you launch Azure Data Studio for the first time. On startup, a toast notification will appear in the bottom-right corner of the screen that gives you the option to enable or disable preview features. Select **Yes (recommended)** to enable preview features.
+If you're a new user, you can opt into preview features when you launch Azure Data Studio for the first time. On startup, a toast notification appears in the bottom-right corner of the screen that gives you the option to enable or disable preview features. Select **Yes (recommended)** to enable preview features.
 
-![Preview toast notification on first launch](./media/getting-started/preview-toast-notification.png)
+:::image type="content" source="media/getting-started/preview-toast-notification.png" alt-text="Screenshot of preview toast notification on first launch.":::
 
 ### In Settings
 
-You can enable or disable preview features anytime in your Settings.
+You can enable or disable preview features at any time in Settings.
 
-1. Select the **Gear** icon in the bottom-left corner and then select **Settings** from the context menu. The Settings tab will open.
+1. Select the **Gear** icon in the bottom-left corner and then select **Settings** from the context menu.
 
-   ![Gear icon to access Settings in ADS](./media/settings/open-settings-menu.png)
+   :::image type="content" source="media/settings/open-settings-menu.png" alt-text="Screenshot of gear icon to access Settings in ADS.":::
 
-2. Type "enable preview features" in the search bar.
+1. Once the Settings tab is open, type "enable preview features" in the search bar.
 
-3. To enable preview features, check the checkbox for **Enable unreleased preview features** under **Workbench: Enable Preview Features**. To disable preview features, clear the checkbox.
+1. To enable preview features, check the checkbox for **Enable unreleased preview features** under **Workbench: Enable Preview Features**. To disable preview features, clear the checkbox.
 
-   ![Enable preview features setting in ADS](./media/settings/preview-features-settings.png)
+   :::image type="content" source="media/settings/preview-features-settings.png" alt-text="Screenshot of enabling preview features setting in ADS.":::
 
 ## List of preview features in Azure Data Studio
 
 ### General features in preview
 
-* Azure portal integration
-* Backup / Restore
-* Deployments
-    * SQL Edge
-* Feature tour
-
-### Notebook features in preview
-
-* Dotnet interactive support
+- Attach Database
+- Backup / Restore
+- Create Database
+- Database Properties
+- Delete Database
+- Detach Database
+- User Management
+- Server Properties
+- SQLCMD mode in Query Editor
 
 ### First-party extensions in preview
 
-* Azure Monitor Logs
-* Azure SQL Edge Deployment
-* Central Management Servers
-* Cosmos
-* Database Administration Tool Extensions for Windows
-* Database Migration Assessment for Oracle
-* Kusto
-* Managed Instance Dashboard
-* Oracle
-* MySQL
-* PostgreSQL
-* SandDance for Azure Data Studio
-* Server Reports
-* SQL Assessment
-* SQL Database Projects
-* SQL Server Agent
-* SQL Server Profiler
-* whoisactive
+- Azure Cosmos DB API for MongoDB
+- Azure Cosmos DB Migration for MongoDB
+- Azure Monitor Logs
+- Azure PostgreSQL migration
+- Central Management Servers
+- Data Migration for Oracle
+- Database Administration Tool Extensions for Windows
+- Database Migration Assessment for Oracle
+- Database Schema Conversion Toolkit
+- Kusto
+- SQL Managed Instance Dashboard
+- Oracle
+- PostgreSQL
+- SandDance for Azure Data Studio
+- Server Reports
+- SQL Assessment
+- SQL Server Agent
+- SQL Server Profiler
+- whoisactive
 
 ## Next steps
 
-* [Azure Data Studio](what-is-azure-data-studio.md)
+- [User Settings](settings-list.md)

@@ -102,8 +102,10 @@ logread [-?]
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
- Specifies the path and file name for the extended events XML configuration file. The extended events configuration file allows you to configure sessions and enable events for tracking.  
-  
+ Specifies the path and file name for the extended events XML configuration file. The extended events configuration file allows you to configure sessions and enable events for tracking.   
+ Internal use only.  
+
+ 
  **-HistoryVerboseLevel** [ **0**\| **1**\| **2**]  
  Specifies the amount of history logged during a log reader operation. You can minimize the performance effect of history logging by selecting **1**.  
   

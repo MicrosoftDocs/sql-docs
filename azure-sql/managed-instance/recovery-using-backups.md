@@ -22,8 +22,8 @@ Some of the content in this article is duplicated in /azure-sql/database/recover
 
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/recovery-using-backups.md)
-> * [Azure SQL Managed Instance](recovery-using-backups.md)
+> * [Azure SQL Database](../database/recovery-using-backups.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](recovery-using-backups.md?view=azuresql-mi&preserve-view=true)
 
 This article provides steps to recover a database from a backup in Azure SQL Managed Instance. For Azure SQL Database, see [Restore a database from a backup in Azure SQL Database](../database/recovery-using-backups.md).
 
@@ -131,7 +131,7 @@ To restore a database in SQL Managed Instance, see [Restore-AzSqlInstanceDatabas
 You can restore a deleted database to the deletion time, or an earlier point in time, to the same instance, or a different instance than the source instance. The target instance can be in the same subscription or in a different subscription than the source instance. You restore a deleted database by creating a new database from the backup.
 
 > [!IMPORTANT]
-> If you delete a managed instance, all its databases are also deleted and can't be recovered. You can't restore a deleted managed instance.
+> You can't restore a deleted managed instance. If you delete a managed instance, all its databases are also deleted and can't be restored to the deletion time, or an earlier point in time. If you configured [long-term retention (LTR)](../database/long-term-retention-overview.md), you can still restore a database from deleted instance to another instance and to point in time when LTR backup was taken.
 
 ### [Azure portal](#tab/azure-portal)
 

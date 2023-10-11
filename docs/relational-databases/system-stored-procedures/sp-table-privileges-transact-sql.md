@@ -73,7 +73,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  The following example returns privilege information about all tables with names beginning with the word `Contact`.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_table_privileges   
    @table_name = 'Contact%';  

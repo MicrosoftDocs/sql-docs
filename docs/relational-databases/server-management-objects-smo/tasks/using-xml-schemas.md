@@ -28,9 +28,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server()
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define an XmlSchemaCollection object by supplying the parent database and name arguments in the constructor.
 Dim xsc As XmlSchemaCollection
 xsc = New XmlSchemaCollection(db, "MySampleCollection")
@@ -47,9 +47,9 @@ xsc.Create()
             //Connect to the local, default instance of SQL Server.   
             Server srv = default(Server);  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db = default(Database);  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Define an XmlSchemaCollection object by supplying the parent  
             // database and name arguments in the constructor.   
             XmlSchemaCollection xsc = default(XmlSchemaCollection);  
@@ -69,7 +69,7 @@ cd \sql\LocalHost
 $srv = get-item default  
   
 #Reference the AdventureWorks database.  
-$db = $srv.Databases["AdventureWorks2012"]  
+$db = $srv.Databases["AdventureWorks2022"]  
   
 #Create a new schema collection  
 $xsc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.XmlSchemaCollection `  

@@ -8,7 +8,7 @@ ms.date: 06/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
-monikerRange: ">= sql-server-ver16||>= sql-server-linux-ver16||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresqldb-mi-current"
 ---
 # sp_reset_dtc_log (Transact-SQL)
 
@@ -33,7 +33,7 @@ There are no arguments for this stored procedure.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -109,26 +109,26 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
     ```  
     -- Creates a job step that uses XMLA to create a relational data source that
-    -- references the AdventureWorks2012 Microsoft SQL Server database.  
+    -- references the AdventureWorks2022 Microsoft SQL Server database.  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
         @job_name = N'Weekly Sales Data Backup',  
         @step_name =
-            N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
+            N'Create a relational data source that references the AdventureWorks2022 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
             N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
-            <DatabaseID>AdventureWorks2012</DatabaseID>  
+            <DatabaseID>AdventureWorks2022</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
             <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
-                <ID>AdventureWorks2012</ID>  
-                <Name>Adventure Works 2012</Name>  
-                <ConnectionString>Data Source=localhost;Initial Catalog=AdventureWorks2012;Integrated Security=True</ConnectionString>  
+                <ID>AdventureWorks2022</ID>  
+                <Name>Adventure Works 2022</Name>  
+                <ConnectionString>Data Source=localhost;Initial Catalog=AdventureWorks2022;Integrated Security=True</ConnectionString>  
                 <ImpersonationInfo>  
                     <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>  
                 </ImpersonationInfo>  
@@ -161,7 +161,7 @@ For more information, see [sp_add_jobstep (Transact-SQL)](../../relational-datab
         @command = N' SELECT  
        [Measures].[Internet Sales Amount] ON COLUMNS,  
        [Customer].[State-Province].Members ON ROWS  
-    FROM [AdventureWorks2012]',   
+    FROM [AdventureWorks2022]',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  

@@ -4,7 +4,7 @@ description: "Sets up the primary database for a log shipping configuration, inc
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/02/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -51,27 +51,27 @@ sp_add_log_shipping_primary_database
 
 #### [ @database = ] '*database*'
 
-The name of the log shipping primary database. *@database* is **sysname**, with no default, and can't be NULL.
+The name of the log shipping primary database. *@database* is **sysname**, with no default, and can't be `NULL`.
 
 #### [ @backup_directory = ] N'*backup_directory*'
 
-The path to the backup folder on the primary server. *@backup_directory* is **nvarchar(500)**, with no default, and can't be NULL.
+The path to the backup folder on the primary server. *@backup_directory* is **nvarchar(500)**, with no default, and can't be `NULL`.
 
 #### [ @backup_share = ] N'*backup_share*'
 
-The network path to the backup directory on the primary server. *@backup_share* is **nvarchar(500)**, with no default, and can't be NULL.
+The network path to the backup directory on the primary server. *@backup_share* is **nvarchar(500)**, with no default, and can't be `NULL`.
 
 #### [ @backup_job_name = ] '*backup_job_name*'
 
-The name of the SQL Server Agent job on the primary server that copies the backup into the backup folder. *@backup_job_name* is **sysname** and can't be NULL.
+The name of the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job on the primary server that copies the backup into the backup folder. *@backup_job_name* is **sysname** and can't be `NULL`.
 
 #### [ @backup_retention_period = ] *backup_retention_period*
 
-The length of time, in minutes, to retain the log backup file in the backup directory on the primary server. *@backup_retention_period* is **int**, with no default, and can't be NULL.
+The length of time, in minutes, to retain the log backup file in the backup directory on the primary server. *@backup_retention_period* is **int**, with no default, and can't be `NULL`.
 
 #### [ @monitor_server = ] '*monitor_server*'
 
-The name of the monitor server. *@monitor_server* is **sysname**, with no default, and can't be NULL.
+The name of the monitor server. *@monitor_server* is **sysname**, with no default, and can't be `NULL`.
 
 #### [ @monitor_server_security_mode = ] *monitor_server_security_mode*
 
@@ -80,7 +80,7 @@ The security mode used to connect to the monitor server.
 - `1`: Windows Authentication
 - `0`: [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication
 
-*@monitor_server_security_mode* is **bit**, with a default of `1`, and can't be NULL.
+*@monitor_server_security_mode* is **bit**, with a default of `1`, and can't be `NULL`.
 
 #### [ @monitor_server_login = ] '*monitor_server_login*'
 
@@ -104,19 +104,19 @@ Specifies whether an alert is raised when *@backup_threshold* is exceeded. The v
 
 #### [ @history_retention_period = ] *history_retention_period*
 
-The length of time in minutes in which the history is retained. *@history_retention_period* is **int**, with a default of NULL. A value of 14420 is used if none is specified.
+The length of time in minutes in which the history is retained. *@history_retention_period* is **int**, with a default of `NULL`. A value of 14420 is used if none is specified.
 
 #### [ @backup_job_id = ] *backup_job_id* OUTPUT
 
-The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job ID associated with the backup job on the primary server. *@backup_job_id* is **uniqueidentifier** and can't be NULL.
+The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent job ID associated with the backup job on the primary server. *@backup_job_id* is an OUTPUT parameter of type **uniqueidentifier** and can't be `NULL`.
 
 #### [ @primary_id = ] *primary_id* OUTPUT
 
-The ID of the primary database for the log shipping configuration. *@primary_id* is **uniqueidentifier** and can't be NULL.
+The ID of the primary database for the log shipping configuration. *@primary_id* is an OUTPUT parameter of type **uniqueidentifier** and can't be `NULL`.
 
 #### [ @backup_compression = ] *backup_compression_option*
 
-Specifies whether a log shipping configuration uses [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md).
+Specifies whether a log shipping configuration uses [backup compression](../backup-restore/backup-compression-sql-server.md).
 
 - `0`: Disabled. Never compress log backups.
 - `1`: Enabled. Always compress log backups.
@@ -126,7 +126,7 @@ Specifies whether a log shipping configuration uses [backup compression](../../r
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

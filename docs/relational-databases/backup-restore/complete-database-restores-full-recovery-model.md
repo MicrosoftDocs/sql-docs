@@ -82,30 +82,30 @@ For information about support for backups from earlier versions of [!INCLUDE[ssN
 ```  
 USE master;  
 --Create tail-log backup.  
-BACKUP LOG AdventureWorks2012   
+BACKUP LOG AdventureWorks2022   
 TO DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'    
    WITH NORECOVERY;   
 GO  
 --Restore the full database backup (from backup set 1).  
-RESTORE DATABASE AdventureWorks2012   
+RESTORE DATABASE AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'   
   WITH FILE=1,   
     NORECOVERY;  
   
 --Restore the regular log backup (from backup set 2).  
-RESTORE LOG AdventureWorks2012   
+RESTORE LOG AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'   
   WITH FILE=2,   
     NORECOVERY;  
   
 --Restore the tail-log backup (from backup set 3).  
-RESTORE LOG AdventureWorks2012   
+RESTORE LOG AdventureWorks2022   
   FROM DISK = 'Z:\SQLServerBackups\AdventureWorksFullRM.bak'  
   WITH FILE=3,   
     NORECOVERY;  
 GO  
 --recover the database:  
-RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;  
+RESTORE DATABASE AdventureWorks2022 WITH RECOVERY;  
 GO  
 ```  
   

@@ -7,6 +7,8 @@ ms.date: 08/22/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 zone_pivot_groups: ld2-linux-distribution
 ---
 # Configure repositories for installing and upgrading SQL Server on Linux
@@ -198,7 +200,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 1. Import the public repository GPG keys.
 
    ```bash
-   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
    ```
 
 1. Use one of the following commands to configure the repository of your choice.
@@ -217,7 +219,7 @@ Configure the new repository to use for SQL Server installations and upgrades.
 
 ::: zone-end
 
-## Next steps
+## Related content
 
 After you have configured the correct repository, you can proceed to [install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server and any related packages from the new repository.
 

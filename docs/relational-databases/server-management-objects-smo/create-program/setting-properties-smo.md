@@ -86,9 +86,9 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Create a new table in the AdventureWorks2012 database. 
+'Create a new table in the AdventureWorks2022 database. 
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 Dim tb As Table
 'Specify the parent database, table schema and the table name in the constructor.
 tb = New Table(db, "Test_Table", "HumanResources")
@@ -118,9 +118,9 @@ tb.Create()
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Create a new table in the AdventureWorks2012 database.   
+//Create a new table in the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 Table tb;   
 //Specify the parent database, table schema, and the table name in the constructor.   
 tb = new Table(db, "Test_Table", "HumanResources");   
@@ -152,9 +152,9 @@ tb.Create();
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Set properties on the uspGetEmployeeManagers stored procedure on the AdventureWorks2012 database.
+'Set properties on the uspGetEmployeeManagers stored procedure on the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 Dim sp As StoredProcedure
 sp = db.StoredProcedures("uspGetEmployeeManagers")
 sp.AnsiNullsStatus = False
@@ -175,9 +175,9 @@ Next
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Set properties on the uspGetEmployeedManagers stored procedure on the AdventureWorks2012 database.   
+//Set properties on the uspGetEmployeedManagers stored procedure on the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 StoredProcedure sp;   
 sp = db.StoredProcedures("uspGetEmployeeManagers");   
 sp.AnsiNullsStatus = false;   
@@ -199,9 +199,9 @@ sp.QuotedIdentifierStatus = false;
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Assign the Table object type to a System.Type object variable.
 Dim tb As Table
 Dim typ As Type
@@ -213,7 +213,7 @@ Dim sc As StringCollection
 sc = srv.GetDefaultInitFields(typ)
 'Set the default initialization fields for the Table object type to the CreateDate property.
 srv.SetDefaultInitFields(typ, "CreateDate")
-'Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2012.
+'Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2022.
 'Note that the improvement in performance can be viewed in SQL Profiler.
 For Each tb In db.Tables
     Console.WriteLine(tb.Schema + "." + tb.Name + " " + tb.CreateDate)
@@ -232,9 +232,9 @@ srv.SetDefaultInitFields(typ, sc)
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
 srv = new Server();   
-//Reference the AdventureWorks2012 database.   
+//Reference the AdventureWorks2022 database.   
 Database db;   
-db = srv.Databases["AdventureWorks2012"];   
+db = srv.Databases["AdventureWorks2022"];   
 //Assign the Table object type to a System.Type object variable.   
 Table tb;   
 Type typ;   
@@ -246,7 +246,7 @@ StringCollection sc;
 sc = srv.GetDefaultInitFields(typ);   
 //Set the default initialization fields for the Table object type to the CreateDate property.   
 srv.SetDefaultInitFields(typ, "CreateDate");   
-//Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2012.   
+//Retrieve the Schema, Name, and CreateDate properties for every table in AdventureWorks2022.   
    //Note that the improvement in performance can be viewed in SQL Server Profiler.   
 foreach ( tb in db.Tables) {   
    Console.WriteLine(tb.Schema + "." + tb.Name + " " + tb.CreateDate);   

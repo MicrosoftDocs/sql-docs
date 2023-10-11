@@ -64,13 +64,13 @@ sp_dbmmonitordropalert database_name
  The following example drops the retention period setting of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;  
+EXEC sp_dbmmonitordropalert AdventureWorks2022, 5;  
 ```  
   
  The following example drops all of the warning thresholds and the retention period of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
-EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
+EXEC sp_dbmmonitordropalert AdventureWorks2022 ;  
 ```  
   
 ## See Also  

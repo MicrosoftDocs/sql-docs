@@ -62,13 +62,13 @@ When `'all'` is specified, all capture instances defined for *@source_name* are 
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
 ## Remarks
 
-`sys.sp_cdc_disable_table` drops the change data capture change table and system functions associated with the specified source table and capture instance. It deletes any rows associated with the specified capture instance from the change data capture system tables and sets the `is_tracked_by_cdc` column for the table entry in the [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) catalog view to `0`.
+`sys.sp_cdc_disable_table` drops the change data capture change table and system functions associated with the specified source table and capture instance. It deletes any rows associated with the specified capture instance from the change data capture system tables and sets the `is_tracked_by_cdc` column for the table entry in the [sys.tables](../system-catalog-views/sys-tables-transact-sql.md) catalog view to `0`.
 
 ## Permissions
 

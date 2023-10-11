@@ -72,13 +72,13 @@ https://myspsite/subsite/_vti_bin/reportserver
  The path of the catalog item. For native mode, it is the relative path of the item in the report server database, beginning with a slash (**/**). For example:  
   
 ```  
-/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
+/AdventureWorks2022/Employee_Sales_Summary_2022  
 ```  
   
  For SharePoint integrated mode, it is the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
   
 ```  
-https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl  
 ```  
   
  **&**  

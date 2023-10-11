@@ -3,8 +3,8 @@ title: "ALTER INDEX (Transact-SQL)"
 description: ALTER INDEX (Transact-SQL)
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: wiassaf, randolphwest
-ms.date: 06/06/2023
+ms.reviewer: wiassaf
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -79,7 +79,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 }
 
-<rebuild_index_option > ::=
+<rebuild_index_option> ::=
 {
       PAD_INDEX = { ON | OFF }
     | FILLFACTOR = fillfactor
@@ -155,7 +155,7 @@ ALTER INDEX { index_name | ALL }
 }
 [;]
 
-<rebuild_index_option > ::=
+<rebuild_index_option> ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
@@ -163,7 +163,7 @@ ALTER INDEX { index_name | ALL }
         [ ON PARTITIONS ( {<partition_number> [ TO <partition_number>] } [ , ...n ] ) ]
 }
 
-<single_partition_rebuild_index_option > ::=
+<single_partition_rebuild_index_option> ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
     | XML_COMPRESSION = { ON | OFF }
@@ -185,13 +185,13 @@ Specifies all indexes associated with the table or view regardless of the index 
 
 |Using the keyword ALL with this operation|Fails if the table has one or more|
 |----------------------------------------|----------------------------------------|
-|REBUILD WITH ONLINE = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|REBUILD WITH ONLINE = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]|
 |REBUILD PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|
 |REORGANIZE|Indexes with ALLOW_PAGE_LOCKS set to OFF|
 |REORGANIZE PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|
-|IGNORE_DUP_KEY = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|ONLINE = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|RESUMABLE = ON| Resumable indexes not supported with **All** keyword. <br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |
+|IGNORE_DUP_KEY = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]|
+|ONLINE = ON|XML index<br /><br />Spatial index<br /><br />Columnstore index: **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]|
+|RESUMABLE = ON| Resumable indexes not supported with **All** keyword. <br /><br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] |
 
 > [!WARNING]  
 > For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -214,7 +214,7 @@ The name of the table or view associated with the index. To display a report of 
 
 #### REBUILD [ WITH (\<rebuild_index_option> [ ,... *n*]) ]
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Specifies the index will be rebuilt using the same columns, index type, uniqueness attribute, and sort order. This clause is equivalent to [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). `REBUILD` enables a disabled index. Rebuilding a clustered index doesn't rebuild associated nonclustered indexes unless the keyword ALL is specified. If index options aren't specified, the existing index option values stored in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) are applied. For any index option whose value isn't stored in `sys.indexes`, the default indicated in the argument definition of the option applies.
 
@@ -291,7 +291,7 @@ For columnstore indexes, `REORGANIZE` compresses each CLOSED delta rowgroup into
 - REORGANIZE isn't required in order to move CLOSED delta rowgroups into compressed rowgroups. The background tuple-mover (TM) process wakes up periodically  to compress CLOSED delta rowgroups. We recommend using REORGANIZE when tuple-mover is falling behind. REORGANIZE can compress rowgroups more aggressively.
 - To compress all OPEN and CLOSED rowgroups, see the `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)` option in this section.
 
-For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], REORGANIZE performs the following additional defragmentation optimizations online:
+For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], REORGANIZE performs the following additional defragmentation optimizations online:
 
 - Physically removes rows from a rowgroup when 10% or more of the rows have been logically deleted. The deleted bytes are reclaimed on the physical media. For example, if a compressed row group of 1 million rows has 100,000 rows deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will remove the deleted rows and recompress the rowgroup with 900k rows. It saves on the storage by removing deleted rows.
 
@@ -303,7 +303,7 @@ For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 Applies to columnstore indexes.
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 COMPRESS_ALL_ROW_GROUPS provides a way to force OPEN or CLOSED delta rowgroups into the columnstore. With this option, it isn't necessary to rebuild the columnstore index to empty the delta rowgroups.  This, combined with the other remove and merge defragmentation features makes it no longer necessary to rebuild the index in most situations.
 
@@ -386,7 +386,7 @@ To restore automatic statistics updating, set the `STATISTICS_NORECOMPUTE` to OF
 
 #### STATISTICS_INCREMENTAL = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recomputes the statistics. The default is **OFF**.
 
@@ -407,11 +407,7 @@ Specifies whether underlying tables and associated indexes are available for que
 For an XML index or spatial index, only `ONLINE = OFF` is supported, and if ONLINE is set to ON an error is raised.
 
 > [!IMPORTANT]  
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:
->  
->- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
->- [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
->- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 ON  
 Long-term table locks aren't held during the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created. A Schema Modification (Sch-M) lock is acquired when a clustered index is created or dropped online and when a clustered or nonclustered index is being rebuilt. ONLINE can't be set to ON when an index is being created on a local temporary table.
@@ -428,13 +424,22 @@ Indexes, including indexes on global temp tables, can be rebuilt online except f
 - Initial unique clustered index on a view
 - Columnstore indexes
 - Clustered index, if the underlying table contains LOB data types (**image**, **ntext**, **text**) and spatial data types
-- **varchar(max)** and **varbinary(max)** columns can't be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the `ONLINE` option. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] doesn't permit the `ONLINE` option when the base table contains **varchar(max)** or **varbinary(max)** columns
+- **varchar(max)** and **varbinary(max)** columns can't be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the `ONLINE` option. [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] doesn't permit the `ONLINE` option when the base table contains **varchar(max)** or **varbinary(max)** columns
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
+ The following XEvents are related to `ALTER TABLE ... SWITCH PARTITION` and online index rebuild. 
+  
+-   lock_request_priority_state
+-   process_killed_by_abort_blockers  
+-   ddl_with_wait_at_low_priority  
+  
+ The existing XEvent `progress_report_online_index_operation` for online index operations includes `partition_number` and `partition_id`.  
+
+
 #### RESUMABLE = { ON | OFF}
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Specifies whether an online index operation is resumable.
 
@@ -446,7 +451,7 @@ Index operation isn't resumable.
 
 #### MAX_DURATION = *time* [**MINUTES**] used with `RESUMABLE = ON` (requires `ONLINE = ON`)
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused.
 
@@ -481,7 +486,7 @@ Page locks aren't used.
 
 #### OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. For more information, see [Sequential Keys](./create-index-transact-sql.md#sequential-keys).
 
@@ -506,7 +511,7 @@ Uses the actual number of processors or fewer based on the current system worklo
 For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]  
-> Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
+> Parallel index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 #### COMPRESSION_DELAY = { 0 | *duration [Minutes]* }
 
@@ -533,13 +538,13 @@ Index or specified partitions are compressed by using page compression. This doe
 
 COLUMNSTORE
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE specifies to decompress the index or specified partitions that are compressed with the COLUMNSTORE_ARCHIVE option. When the data is restored, it will continue to be compressed with the columnstore compression that is used for all columnstore indexes.
 
 COLUMNSTORE_ARCHIVE
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the specified partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.
 
@@ -547,7 +552,7 @@ For more information about compression, see [Data Compression](../../relational-
 
 #### XML_COMPRESSION
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 Specifies the XML compression option for the specified index that contains one or more **xml** data type columns. The options are as follows:
 
@@ -560,9 +565,6 @@ Index or specified partitions are not compressed.
 #### ON PARTITIONS ( { \<partition_number_expression> | \<range\> } [,...n] )
 
 Specifies the partitions to which the DATA_COMPRESSION or XML_COMPRESSION settings apply. If the index isn't partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause isn't provided, the DATA_COMPRESSION or XML_COMPRESSION option applies to all partitions of a partitioned index.
-
-> [!NOTE]  
-> XML_COMPRESSION is only available starting with [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Preview.
 
 `<partition_number_expression>` can be specified in the following ways:
 
@@ -609,7 +611,7 @@ Table locks are applied during the index operation. This prevents all user acces
 
 #### RESUME
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Resume an index operation that is paused manually or due to a failure.
 
@@ -623,13 +625,13 @@ Resuming an online index rebuild after a pause has to wait for blocking operatio
 
 #### PAUSE
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Pause a resumable online index rebuild operation.
 
 #### ABORT
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Abort a running or paused index operation that was declared as resumable. You must explicitly execute an `ABORT` command to terminate a resumable index rebuild operation. Failure or pausing a resumable index operation doesn't terminate its execution; rather, it leaves the operation in an indefinite pause state.
 
@@ -709,7 +711,7 @@ For more information, see [Perform Index Operations Online](../../relational-dat
 
 ### <a id="resumable-indexes"></a> Resumable index operations
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 Online index rebuild is specified as resumable using the `RESUMABLE = ON` option.
 
@@ -742,7 +744,7 @@ The following functionality is disabled for resumable index rebuild operations
 
 ### <a id="wait-at-low-priority"></a> WAIT_AT_LOW_PRIORITY with online index operations
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 The `low_priority_lock_wait` syntax allows for specifying `WAIT_AT_LOW_PRIORITY` behavior. `WAIT_AT_LOW_PRIORITY` can be used with `ONLINE = ON` only.
 
@@ -801,7 +803,7 @@ To execute `ALTER INDEX`, at a minimum, `ALTER` permission on the table or view 
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doesn't use filegroup and filestream options.
 - Columnstore indexes aren't available prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
-- Resumable index operations are available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+- Resumable index operations are available starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 ## Basic syntax example
 
@@ -900,7 +902,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 
 This example uses the `REORGANIZE` option to compress each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This isn't necessary, but is useful when the tuple-mover isn't compressing CLOSED rowgroups fast enough.
 
-You can run both example in the `AdventureWorksDW` sample database.
+You can run both example in the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] sample database.
 
 This sample will run REORGANIZE on all partitions.
 
@@ -917,13 +919,13 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 
 ### C. Compress all OPEN AND CLOSED delta rowgroups into the columnstore
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 The command `REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON )` compresses each OPEN and CLOSED delta rowgroup into the columnstore as a compressed  rowgroup. This empties the deltastore and forces all rows to get compressed into the columnstore. This is useful especially after performing many insert operations since these operations store the rows in one or more delta rowgroups.
 
 REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows <= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.
 
-The following examples use the `AdventureWorksDW2016` database.
+The following examples use the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database.
 
 This example moves all OPEN and CLOSED delta rowgroups into the columnstore index.
 
@@ -957,12 +959,12 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 > [!TIP]
-> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], we recommend using `ALTER INDEX REORGANIZE` instead of `ALTER INDEX REBUILD` for columnstore indexes.
+> Starting with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], we recommend using `ALTER INDEX REORGANIZE` instead of `ALTER INDEX REBUILD` for columnstore indexes.
 
 > [!NOTE]  
 > In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], `REORGANIZE` is only used to compress CLOSED rowgroups into the columnstore. The only way to perform defragmentation operations and to force all delta rowgroups into the columnstore is to rebuild the index.
 
-This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table `FactInternetSales2` in the `AdventureWorksDW` database with a clustered columnstore index, and inserts data from the first four columns.
+This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table `FactInternetSales2` in the [!INCLUDE [sssampledbdwobject-md](../../includes/sssampledbdwobject-md.md)] database with a clustered columnstore index, and inserts data from the first four columns.
 
 ```sql
 CREATE TABLE dbo.FactInternetSales2 (
@@ -1047,7 +1049,7 @@ GO
 
 ### A. Rebuild an index
 
-The following example rebuilds a single index on the `Employee` table in the `AdventureWorks2012` database.
+The following example rebuilds a single index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
@@ -1055,7 +1057,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 
 ### B. Rebuild all indexes on a table and specify options
 
-The following example specifies the keyword ALL. This rebuilds all indexes associated with the table `Production.Product` in the `AdventureWorks2012` database. Three options are specified.
+The following example specifies the keyword ALL. This rebuilds all indexes associated with the table `Production.Product` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Three options are specified.
 
 ```sql
 ALTER INDEX ALL ON Production.Product
@@ -1064,7 +1066,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
 
 The following example adds the ONLINE option including the low priority lock option, and adds the row compression option.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 ```sql
 ALTER INDEX ALL ON Production.Product
@@ -1080,7 +1082,7 @@ REBUILD WITH
 
 ### C. Reorganize an index with LOB compaction
 
-The following example reorganizes a single clustered index in the `AdventureWorks2012` database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Specifying the `WITH (LOB_COMPACTION = ON)` option isn't required because the default value is ON.
+The following example reorganizes a single clustered index in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Specifying the `WITH (LOB_COMPACTION = ON)` option isn't required because the default value is ON.
 
 ```sql
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION = ON);
@@ -1088,7 +1090,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
 
 ### D. Set options on an index
 
-The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the `AdventureWorks2012` database.
+The following example sets several options on the index `AK_SalesOrderHeader_SalesOrderNumber` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON
@@ -1103,7 +1105,7 @@ GO
 
 ### E. Disable an index
 
-The following example disables a nonclustered index on the `Employee` table in the `AdventureWorks2012` database.
+The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
@@ -1111,7 +1113,7 @@ ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 
 ### F. Disable constraints
 
-The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the `AdventureWorks2012` database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
+The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.
 
 ```sql
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
@@ -1145,9 +1147,9 @@ GO
 
 ### H. Rebuild a partitioned index
 
-The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the `AdventureWorks2012` database. Partition 5 is rebuilt with `ONLINE=ON` and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock can't be obtained to complete index rebuild, the rebuild operation statement itself is aborted, due to `ABORT_AFTER_WAIT = SELF`.
+The following example rebuilds a single partition, partition number `5`, of the partitioned index `IX_TransactionHistory_TransactionDate` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. Partition 5 is rebuilt with `ONLINE=ON` and the 10 minutes wait time for the low priority lock applies separately to every lock acquired by index rebuild operation. If during this time the lock can't be obtained to complete index rebuild, the rebuild operation statement itself is aborted, due to `ABORT_AFTER_WAIT = SELF`.
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 ```sql
 -- Verify the partitioned indexes.
@@ -1176,7 +1178,7 @@ GO
 
 ### J. Change the setting of an index with XML compression
 
-**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later, and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and [!INCLUDE [ssazuremi](../../includes/ssazuremi_md.md)].
 
 The following example rebuilds an index on a nonpartitioned rowstore table.
 
@@ -1192,7 +1194,7 @@ For more data compression examples, see [Data Compression](../../relational-data
 
 ### K. Online resumable index rebuild
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 
 The following examples show how to use online resumable index rebuild.
 

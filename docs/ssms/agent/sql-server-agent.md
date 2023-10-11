@@ -50,9 +50,9 @@ You can run jobs in several ways:
 
 - By executing the sp_start_job stored procedure.
 
-Each action in a job is a *job step*. For example, a job step might consist of running a Transact\-SQL statement, executing an SSIS package, or issuing a command to an Analysis Services server. Job steps are managed as part of a job.
+Each action in a job is a *job step*. For example, a job step might consist of running a Transact-SQL statement, executing an SSIS package, or issuing a command to an Analysis Services server. Job steps are managed as part of a job.
 
-Each job step runs in a specific security context. For job steps that use Transact\-SQL, use the EXECUTE AS statement to set the security context for the job step. For other types of job steps, use a proxy account to set the security context for the job step.
+Each job step runs in a specific security context. For job steps that use Transact-SQL, use the EXECUTE AS statement to set the security context for the job step. For other types of job steps, use a proxy account to set the security context for the job step.
 
 ### Schedules
 
@@ -120,7 +120,7 @@ Members of the **SQLAgentUserRole**, **SQLAgentReaderRole**, and **SQLAgentOpera
 
 ### Subsystems
 
-A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for Transact\-SQL job steps. Transact\-SQL job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
+A subsystem is a predefined object that represents functionality that is available to a job step. Each proxy has access to one or more subsystems. Subsystems provide security because they delimit access to the functionality that is available to a proxy. Each job step runs in the context of a proxy, except for Transact-SQL job steps. Transact-SQL job steps use the EXECUTE AS command to set the security context to the owner of the Job.  
 
 SQL Server defines the subsystems listed in the following table:  
 
@@ -139,7 +139,7 @@ SQL Server defines the subsystems listed in the following table:
 |SSIS package execution|Run an SSIS package.|
 
 > [!NOTE]
-> Because Transact\-SQL job steps do not use proxies, there is no SQL Server Agent subsystem for Transact\-SQL job steps.  
+> Because Transact-SQL job steps do not use proxies, there is no SQL Server Agent subsystem for Transact-SQL job steps.  
 
 SQL Server Agent enforces subsystem restrictions even when the security principal for the proxy would normally have permission to run the task in the job step. For example, a proxy for a user that is a member of the sysadmin fixed server role can't run an SSIS job step unless the proxy has access to the SSIS subsystem, even though the user can run SSIS packages.  
 
@@ -155,7 +155,7 @@ Use the following steps to configure SQL Server Agent to automate SQL Server adm
 
 1. Establish which administrative tasks or server events occur regularly and whether these tasks or events can be administered programmatically. A task is a good candidate for automation if it involves a predictable sequence of steps and occurs at a specific time or in response to a specific event.
 
-2. Define a set of jobs, schedules, alerts, and operators by using SQL Server Management Studio, Transact\-SQL scripts, or SQL Server Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
+2. Define a set of jobs, schedules, alerts, and operators by using SQL Server Management Studio, Transact-SQL scripts, or SQL Server Management Objects (SMO). For more information, see [Create Jobs](../../ssms/agent/create-jobs.md).  
 
 3. Run the SQL Server Agent jobs you've defined.
 

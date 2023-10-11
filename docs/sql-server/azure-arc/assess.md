@@ -26,11 +26,11 @@ This article provides instructions for using best practices assessment on an ins
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
->For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
 ## Prerequisites
 
-- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions at [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
+- Your Windows-based SQL Server instance is connected to Azure. Follow the instructions at [Automatically connect SQL Server machines to Azure Arc](automatically-connect.md).
 
   > [!NOTE]
   > Best practices assessment is currently limited to SQL Server running on Windows machines. The assessment doesn't apply to SQL on Linux machines currently.
@@ -94,7 +94,7 @@ You can automatically enable best practices assessment on multiple Arc-enabled S
 >[!IMPORTANT]
 >The policy enables best practices assessment only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.
 >
->For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-license-type.md).
+>For instructions to configure the appropriate license type, review [Manage SQL Server license and billing options](manage-configuration.md).
 
 1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
 1. Search for *Configure Arc-enabled Servers with SQL Server extension installed to enable or disable SQL best practices assessment.* and select the policy.
@@ -117,7 +117,7 @@ See [Azure Policy documentation](/azure/governance/policy) for general instructi
 
 ### Modify license type
 
-If an instance of SQL Server is configured with a license only type of license, you need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-license-type.md).
+If an instance of SQL Server is configured with a license only type of license, you need to change the license type to configure best practices assessment. For more information, see [Manage SQL Server license and billing options](manage-configuration.md).
 
 :::image type="content" source="media/assess/change-license-type.png" alt-text="Screenshot of Azure portal change license type.":::
 
@@ -184,10 +184,7 @@ If there are multiple runs in a single day, only the latest run is included in t
 
 For more information, see the [troubleshooting guide](troubleshoot-assessment.md).
 
-## Next steps
-
-- [Automatically connect your SQL Server to Azure Arc](automatically-connect.md)
-
+## Related content
 
 - Review the [rich set of nearly 500 rules](https://github.com/microsoft/sql-server-samples/blob/master/samples/manage/sql-assessment-api/DefaultRuleset.csv) best practices assessment applies.
 

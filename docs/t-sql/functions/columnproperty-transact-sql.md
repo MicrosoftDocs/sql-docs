@@ -85,7 +85,7 @@ When checking the deterministic property of a column, first test whether the col
 This example returns the length of the `LastName` column.
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 SELECT COLUMNPROPERTY( OBJECT_ID('Person.Person'),'LastName','PRECISION')AS 'Column Length';  
 GO  

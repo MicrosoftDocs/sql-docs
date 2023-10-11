@@ -58,10 +58,10 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  Requires CONTROL permission on the asymmetric key.  
   
 ## Examples  
- The following example removes the asymmetric key `MirandaXAsymKey6` from the `AdventureWorks2012` database.  
+ The following example removes the asymmetric key `MirandaXAsymKey6` from the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  
   

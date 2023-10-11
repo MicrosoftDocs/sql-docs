@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Copy and paste the following example into the query window and select **Execute**. The example returns all foreign keys and their properties for the table `HumanResources.Employee` in the sample database.  
   
     ```sql  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     SELECT   
         f.name AS foreign_key_name  

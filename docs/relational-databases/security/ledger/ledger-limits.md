@@ -46,7 +46,7 @@ Consider the following when working with ledger.
 - Ledger tables can't be FileTables.
 - Ledger tables can't have a rowstore non-clustered index when they have a clustered columnstore index.
 - Change tracking isn't allowed on the history table but is allowed on ledger tables.
-- Change data capture isn't supported for ledger tables.
+- Change data capture isn't allowed on the history table, but is allowed on ledger tables.
 - Transactional replication isn't supported for ledger tables.
 - Database mirroring isn't supported.
 - Azure Synapse Link is supported but only for the ledger table, not the history table.

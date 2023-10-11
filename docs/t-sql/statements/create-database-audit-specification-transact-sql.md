@@ -86,7 +86,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples
 
 ### A. Audit SELECT and INSERT on a table for any database principal 
- The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any member of the `public` database role, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database. This has the effect that every user is audited as every user is always member of the `public` role.
+ The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any member of the `public` database role, for the `HumanResources.EmployeePayHistory` table in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. This has the effect that every user is audited as every user is always member of the `public` role.
   
 ```sql  
 USE master ;  
@@ -101,7 +101,7 @@ ALTER SERVER AUDIT Payrole_Security_Audit
 WITH (STATE = ON) ;  
 GO  
 -- Move to the target database.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 -- Create the database audit specification.  
 CREATE DATABASE AUDIT SPECIFICATION Audit_Pay_Tables  
@@ -113,7 +113,7 @@ GO
 ``` 
 
 ### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
- The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
+ The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
 USE master ;  
@@ -129,7 +129,7 @@ ALTER SERVER AUDIT DataModification_Security_Audit
 WITH (STATE = ON) ;  
 GO  
 -- Move to the target database.  
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 CREATE ROLE SalesUK
 GO

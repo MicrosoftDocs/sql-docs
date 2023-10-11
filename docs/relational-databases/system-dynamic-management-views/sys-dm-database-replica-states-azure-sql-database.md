@@ -29,7 +29,7 @@ Returns state information for each database that participates in primary and sec
 
 | Column name | Data type | Description (on primary replica) |
 | --- | --- | --- |
-| **database_id** | **int** | Identifier of the database. <br /><br />In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
+| **database_id** | **int** | Identifier of the database. <br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server.|
 | **group_id** | **uniqueidentifier** | Identifier of the availability group to which the database belongs. |
 | **replica_id** | **uniqueidentifier** | Identifier of the availability replica within the availability group. |
 | **group_database_id** | **uniqueidentifier** | Identifier of the database within the availability group. This identifier is identical on every replica to which this database is joined. |
@@ -74,5 +74,5 @@ Requires VIEW DATABASE STATE permission on the database.
 
 ## See also
 
-- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+- [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 - [Monitor Availability Groups (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)

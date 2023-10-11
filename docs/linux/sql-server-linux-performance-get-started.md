@@ -3,12 +3,13 @@ title: Get started with performance features of SQL Server on Linux
 description: This article provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 11/24/2022
+ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - linux-related-content
 ---
 # Walkthrough for the performance features of SQL Server on Linux
 
@@ -17,7 +18,7 @@ ms.custom: intro-get-started
 If you're a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These aren't unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
 
 > [!NOTE]  
-> The following examples use the `AdventureWorks` sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
+> The following examples use the `AdventureWorks2022` sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
 
 ## Create a columnstore index
 
@@ -50,24 +51,24 @@ A columnstore index is a technology for storing and querying large stores of dat
 
    SELECT *
    FROM sys.dm_db_index_usage_stats
-      WHERE database_id = DB_ID('AdventureWorks')
-      AND object_id = OBJECT_ID('AdventureWorks.Sales.SalesOrderDetail');
+      WHERE database_id = DB_ID('AdventureWorks2022')
+      AND object_id = OBJECT_ID('AdventureWorks2022.Sales.SalesOrderDetail');
    ```
 
 ## Use In-Memory OLTP
 
-SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems. This section of the Evaluation Guide will walk you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
+SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems. This section walks you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
 ### Configure Database for In-Memory OLTP
 
-1. It's recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP. Use the following query to check the current compatibility level of AdventureWorks:
+1. It's recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP. Use the following query to check the current compatibility level of `AdventureWorks2022`:
 
    ```sql
-   USE AdventureWorks
+   USE AdventureWorks2022;
    GO
    SELECT d.compatibility_level
    FROM sys.databases as d
-       WHERE d.name = Db_Name();
+       WHERE d.name = DB_NAME();
    GO
    ```
 
@@ -89,11 +90,11 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
 1. Before you can create a memory-optimized table, you must first create a memory optimized filegroup, and a container for data files:
 
    ```sql
-   ALTER DATABASE AdventureWorks
+   ALTER DATABASE AdventureWorks2022
       ADD FILEGROUP AdventureWorks_mod
          CONTAINS memory_optimized_data;
    GO
-   ALTER DATABASE AdventureWorks
+   ALTER DATABASE AdventureWorks2022
       ADD FILE (NAME='AdventureWorks_mod',
       FILENAME='/var/opt/mssql/data/AdventureWorks_mod')
          TO FILEGROUP AdventureWorks_mod;
@@ -104,7 +105,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
 
 The primary store for memory-optimized tables is main memory and so unlike disk-based tables, data doesn't need to be read in from disk into memory buffers. To create a memory-optimized table, use the MEMORY_OPTIMIZED = ON clause.
 
-1. Execute the following query to create the memory-optimized table dbo.ShoppingCart. As a default, the data will be persisted on disk for durability purposes (DURABILITY can also be set to persist the schema only).
+1. Execute the following query to create the memory-optimized table dbo.ShoppingCart. As a default, the data is persisted on disk for durability purposes (DURABILITY can also be set to persist the schema only).
 
    ```sql
    CREATE TABLE dbo.ShoppingCart (
@@ -160,16 +161,6 @@ SQL Server supports natively compiled stored procedures that access memory-optim
    SELECT COUNT(*) FROM dbo.ShoppingCart;
    ```
 
-### Learn More About In-Memory OLTP
-
-For more information about In-Memory OLTP, see the following articles:
-
-- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
-- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
-- [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
-- [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
-- [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
-
 ## Use Query Store
 
 Query Store collects detailed performance information about queries, execution plans, and runtime statistics.
@@ -177,7 +168,7 @@ Query Store collects detailed performance information about queries, execution p
 Before [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], Query Store isn't enabled by default, and can be enabled with ALTER DATABASE:
 
 ```sql
-ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
+ALTER DATABASE AdventureWorks2022 SET QUERY_STORE = ON;
 ```
 
 Run the following query to return information about queries and plans in the query store:
@@ -202,7 +193,15 @@ SELECT wait_type, wait_time_ms
 FROM sys.dm_os_wait_stats;
 ```
 
-## Next steps
+### See also
+
+- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)
+- [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
+- [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
+- [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
+
+## Related content
 
 - [Performance Monitoring and Tuning Tools](../relational-databases/performance/performance-monitoring-and-tuning-tools.md)
 - [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md)

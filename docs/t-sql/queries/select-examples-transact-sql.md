@@ -125,7 +125,7 @@ The first example shows queries that are semantically equivalent to illustrate t
  This query uses the `LIKE` clause in the `HAVING` clause.  
   
 ```sql
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
 SELECT SalesOrderID, CarrierTrackingNumber   
 FROM Sales.SalesOrderDetail  

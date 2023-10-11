@@ -18,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   This topic discusses how various data-access components can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SNAC).  
   
 ## Server Support  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 supports connections to, [!INCLUDE[sql2008-md](../../../includes/sql2008-md.md)], [!INCLUDE[sql2008r2](../../../includes/sql2008r2-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], and [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)].  
   
 ## Supported Operating System Versions  
  The following table lists which operating systems support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  

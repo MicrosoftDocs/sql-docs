@@ -150,7 +150,7 @@ A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZE
 
 Materialized view is an automatic query optimization mechanism.  Users don't need to query a materialized view directly.  When a user query is submitted, the engine checks the user's permissions to the query objects and fails the query without execution if the user doesn't have access to the tables or regular views in the query.  If the user's permission has been verified, the optimizer automatically uses a matching materialized view to execute the query for faster performance.  Users get the same data back regardless if the query is served by querying the base tables or the materialized view.  
 
-EXPLAIN plan and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution. and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution.
+EXPLAIN plan and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution, and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution.
 
 To find out if a SQL statement can benefit from a new materialized view, run the `EXPLAIN` command with `WITH_RECOMMENDATIONS`.  For details, see [EXPLAIN (Transact-SQL)](../queries/explain-transact-sql.md?view=azure-sqldw-latest&preserve-view=true).
 

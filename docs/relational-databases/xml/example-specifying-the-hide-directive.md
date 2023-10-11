@@ -34,7 +34,7 @@ This query generates the XML you want. The query identifies two column groups ha
 This query uses the [query() Method (xml Data Type)](../../t-sql/xml/query-method-xml-data-type.md) of the **xml** data type to query the CatalogDescription column of **xml** type in order to retrieve the summary description. The query also uses the [value() Method (xml Data Type)](../../t-sql/xml/value-method-xml-data-type.md) of the **xml** data type to retrieve the ProductModelID value from the CatalogDescription column. This value isn't required in the resulting XML, but is required to sort the resulting rowset. Therefore, the column name, `[Summary!2!ProductModelID!HIDE]`, includes the **HIDE** directive. If this column isn't included in the SELECT statement, you'll have to sort the rowset by `[ProductModel!1!ProdModelID]` and `[Summary!2!SummaryDescription]` that is **xml** type and you can't use the **xml** type column in ORDER BY. Therefore, the extra `[Summary!2!ProductModelID!HIDE]` column is added and is then specified in the ORDER BY clause.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT  1 as Tag,
         0 as Parent,

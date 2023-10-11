@@ -45,17 +45,15 @@ Changing the service tier or compute size of an elastic pool follows a similar p
 
 The estimated latency to change the service tier, scale the compute size of a single database or elastic pool, move a database in/out of an elastic pool, or move a database between elastic pools is parameterized as follows:
 
-|Service tier|Basic single database,</br>Standard (S0-S1)|Basic elastic pool,</br>Standard (S2-S12), </br>General Purpose single database or elastic pool|Premium or Business Critical single database or elastic pool|Hyperscale
-|:---|:---|:---|:---|:---|
-|**Basic single database,</br> Standard (S0-S1)**|&bull; &nbsp;Constant time latency independent of space used</br>&bull; &nbsp;Typically, less than 5 minutes|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|
-|**Basic elastic pool, </br>Standard (S2-S12), </br>General Purpose single database or elastic pool**|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;For single databases, constant time latency independent of space used</br>&bull; &nbsp;Typically, less than 5 minutes for single databases</br>&bull; &nbsp;For elastic pools, proportional to the number of databases|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|
-|**Premium or Business Critical single database or elastic pool**|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|&bull; &nbsp;Latency proportional to database space used due to data copying</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used|
-|**Hyperscale**|N/A|N/A|N/A|&bull; &nbsp;Constant time latency independent of space used</br>&bull; &nbsp;Typically, less than 2 minutes|
+| Elastic pool scaling latency | To Basic, Standard, General Purpose elastic pool | To Premium, Business Critical elastic pool | To Hyperscale elastic pool |
+|:-|:-|:-|:-|
+| **From Basic, Standard, General Purpose elastic pool** | Proportional to the number of databases | &bull; &nbsp;Latency proportional to database space used due to data copying.</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used. | N/A – databases need to be added individually to [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations). Scaling latency per database documented in [Scale single database resources](single-database-scale.md). |
+| **From Premium, Business Critical elastic pool** | &bull; &nbsp;Latency proportional to database space used due to data copying.</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used. | &bull; &nbsp;Latency proportional to database space used due to data copying.</br>&bull; &nbsp;Typically, less than 1 minute per GB of space used. | N/A – databases need to be added individually to [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations). Scaling latency per database documented in [Scale single database resources](single-database-scale.md). |
+| **From Hyperscale elastic pool** | N/A | N/A | &bull; &nbsp;Constant time latency independent of space used.</br>&bull; &nbsp;Typically, less than 2 minutes. |
 
 > [!NOTE]
 >
-> - In the case of changing the service tier or scaling compute for an elastic pool, the summation of space used across all databases in the pool should be used to calculate the estimate.
-> - In the case of moving a database to/from an elastic pool, only the space used by the database impacts the latency, not the space used by the elastic pool.
+> - When changing the service tier or scaling compute for any non-Hyperscale elastic pool, the summation of space used across all databases in the pool should be used to calculate the estimate. Scaling latency for Hyperscale elastic pools is independent of space used.
 > - For Standard and General Purpose elastic pools, latency of moving a database in/out of an elastic pool or between elastic pools will be proportional to database size if the elastic pool is using Premium File Share ([PFS](/azure/storage/files/storage-files-introduction)) storage. To determine if a pool is using PFS storage, execute the following query in the context of any database in the pool. If the value in the AccountType column is `PremiumFileStorage` or `PremiumFileStorage-ZRS`, the pool is using PFS storage.
 
 ```sql
@@ -66,6 +64,12 @@ SELECT s.file_id,
 FROM sys.database_files AS s
 WHERE s.type_desc IN ('ROWS', 'LOG');
 ```
+
+> [!NOTE]
+> - The zone redundant property will remain the same by default when scaling an elastic pool from the Business Critical to the General Purpose tier. 
+> - Latency for the scaling operation when zone redundancy is changed for a General Purpose elastic pool is proportional to database size.
+> - Changing an existing non-Hyperscale elastic pool to the Hyperscale edition isn't supported. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations) for more details. Instead, databases need to be added individually to Hyperscale elastic pools.
+> - Changing the edition of a Hyperscale elastic pool to a non-Hyperscale edition isn't supported. See [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md#limitations) for more details.
 
 > [!TIP]
 > To monitor in-progress operations, see: [Manage operations using the SQL REST API](/rest/api/sql/operations/list), [Manage operations using CLI](/cli/azure/sql/db/op), [Monitor operations using T-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) and these two PowerShell commands: [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) and [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/stop-azsqldatabaseactivity).

@@ -116,7 +116,7 @@ Suppresses all informational messages.
 
 ### WAIT_AT_LOW_PRIORITY with shrink operations
 
-**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
+**Applies to:** [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later versions, [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE[ssazuremi_md](../../includes/ssazuremi_md.md)]
 
 The wait at low priority feature reduces lock contention. For more information, see [Understanding concurrency issues with DBCC SHRINKDATABASE](#understand-concurrency-issues-with-dbcc-shrinkfile).
 
@@ -125,14 +125,14 @@ This feature is similar to the [WAIT_AT_LOW_PRIORITY with online index operation
 - You cannot specify ABORT_AFTER_WAIT option NONE.
 
 #### WAIT_AT_LOW_PRIORITY
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 When a shrink command is executed in WAIT_AT_LOW_PRIORITY mode, new queries requiring schema stability (Sch-S) locks are not blocked by the waiting shrink operation until the shrink operation stops waiting and starts executing. The shrink operation will execute when it is able to obtain a schema modify lock (Sch-M) lock.  If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will silently exit.
 
 If a new shrink operation in WAIT_AT_LOW_PRIORITY mode cannot obtain a lock due to a long-running query, the shrink operation will eventually timeout after 1 minute by default and will silently exit. This will occur if the shrink operation cannot obtain the Sch-M lock due to concurrent query or queries holding Sch-S locks. When a timeout occurs, an error 49516 message will be sent to the SQL Server error log, for example: `Msg 49516, Level 16, State 1, Line 134 Shrink timeout waiting to acquire schema modify lock in WLP mode to process IAM pageID 1:2865 on database ID 5`. At this point, you can simply retry the shrink operation in WAIT_AT_LOW_PRIORITY mode knowing that there would be no impact to the application.
 
 #### ABORT_AFTER_WAIT = [ **SELF** | BLOCKERS ]
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] and later) and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].
 
 - SELF
 
@@ -250,7 +250,7 @@ GO
 
 ### B. Shrink a log file to a specified target size
 
-The following example shrinks the log file in the `AdventureWorks2022` database to 1 MB. To allow the `DBCC SHRINKFILE` command to shrink the file, the file is first truncated by setting the database recovery model to SIMPLE.
+The following example shrinks the log file in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database to 1 MB. To allow the `DBCC SHRINKFILE` command to shrink the file, the file is first truncated by setting the database recovery model to SIMPLE.
 
 ```sql
 USE AdventureWorks2022;
@@ -270,7 +270,7 @@ GO
 
 ### C. Truncate a data file
 
-The following example truncates the primary data file in the `AdventureWorks2022` database. The `sys.database_files` catalog view is queried to obtain the `file_id` of the data file.
+The following example truncates the primary data file in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database. The `sys.database_files` catalog view is queried to obtain the `file_id` of the data file.
 
 ```sql
 USE AdventureWorks2022;

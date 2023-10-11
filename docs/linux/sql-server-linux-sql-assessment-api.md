@@ -4,10 +4,12 @@ description: This article describes how to run the SQL Assessment API for SQL Se
 author: aravindmahadevan-ms
 ms.author: armaha
 ms.reviewer: amitkh-msft, randolphwest
-ms.date: 01/17/2023
+ms.date: 08/31/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use SQL Assessment API for SQL Server on Linux
 
@@ -100,13 +102,18 @@ You can save this file as `/opt/mssql/bin/runassessment.ps1`.
 
 ```powershell
 [CmdletBinding()] param ()
+
 $Error.Clear()
+
 # Create output directory if not exists
+
 $outDir = '/var/opt/mssql/log/assessments'
 if (-not ( Test-Path $outDir )) { mkdir $outDir }
 $outPath = Join-Path $outDir 'assessment-latest'
+
 $errorPath = Join-Path $outDir 'assessment-latest-errors'
 if ( Test-Path $errorPath ) { remove-item $errorPath }
+
 function ConvertTo-LogOutput {
     [CmdletBinding()]
     param (
@@ -186,13 +193,13 @@ function Get-ConfSetting {
 }
 
 try {
-
     Write-Verbose "Acquiring credentials"
 
     $login, $pwd = Get-Content '/var/opt/mssql/secrets/assessment' -Encoding UTF8NoBOM -TotalCount 2
     $securePassword = ConvertTo-SecureString $pwd -AsPlainText -Force
     $credential = New-Object System.Management.Automation.PSCredential ($login, $securePassword)
-
+    $securePassword.MakeReadOnly()
+    
     Write-Verbose "Acquired credentials"
 
     $serverInstance = '.'
@@ -200,12 +207,15 @@ try {
     if (Test-Path /var/opt/mssql/mssql.conf) {
         $port = Get-ConfSetting /var/opt/mssql/mssql.conf network tcpport
 
+
         if (-not [string]::IsNullOrWhiteSpace($port)) {
             Write-Verbose "Using port $($port)"
             $serverInstance = "$($serverInstance),$($port)"
         }
     }
 
+    # IMPORTANT: If the script is run in trusted environments and there is a prelogin handshake error,
+    # add -TrustServerCertificate flag in the commands for $serverName, $hostName and Get-SqlInstance lines below.
     $serverName = (Invoke-SqlCmd -ServerInstance $serverInstance -Credential $credential -Query "SELECT @@SERVERNAME")[0]
     $hostName = (Invoke-SqlCmd -ServerInstance $serverInstance -Credential $credential -Query "SELECT HOST_NAME()")[0]
 
@@ -216,14 +226,13 @@ try {
 
     Get-SqlInstance -ServerInstance $serverInstance -Credential $credential -ErrorAction Stop
     | Get-TargetsRecursive
-    | % { Write-Verbose "Invoke assessment on $($_.Urn)"; $_ }
+    | ForEach-Object { Write-Verbose "Invoke assessment on $($_.Urn)"; $_ }
     | Invoke-SqlAssessment 3>&1
     | ConvertTo-LogOutput
     | ConvertTo-Json -AsArray
     | Set-Content $outPath -Encoding UTF8NoBOM
 }
 finally {
-
     Write-Verbose "Error count: $($Error.Count)"
 
     if ($Error) {
@@ -234,6 +243,8 @@ finally {
     }
 }
 ```
+> [!NOTE]  
+> When you run the previous script in trusted environments, and you get a prelogin handshake error, add the `-TrustServerCertificate` flag in the commands for `$serverName`, `$hostName` and `Get-SqlInstance` lines in the code.
 
 ### Run the assessment
 
@@ -258,9 +269,9 @@ finally {
    su mssql -c "pwsh -File /opt/mssql/bin/runassessment.ps1"
    ```
 
-1. Once the command completes, the output will be generated in JSON format. This output can be integrated with any third party tool that supports parsing JSON files. One such example tool is [RedHat Insights](https://www.redhat.com/en/blog/sql-server-database-best-practices-now-available-through-red-hat-insights).
+1. Once the command completes, the output will be generated in JSON format. This output can be integrated with any third party tool that supports parsing JSON files. One such example tool is [Red Hat Insights](https://www.redhat.com/en/blog/sql-server-database-best-practices-now-available-through-red-hat-insights).
 
-## Next steps
+## Related content
 
 - [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md)
 - [SQL best practices assessment for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/sql-assessment-for-sql-vm)

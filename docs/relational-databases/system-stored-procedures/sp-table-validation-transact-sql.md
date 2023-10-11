@@ -50,11 +50,11 @@ The name of the table. *table* is **sysname**, with no default.
 
 #### [ @expected_rowcount = ] *expected_rowcount* OUTPUT
 
-Specifies whether to return the expected number of rows in the table. *@expected_rowcount* is **int**, with a default of NULL. If NULL, the actual rowcount is returned as an output parameter. If a value is provided, that value is checked against the actual rowcount to identify any differences.
+Specifies whether to return the expected number of rows in the table. *@expected_rowcount* is **int**, with a default of `NULL`. If NULL, the actual rowcount is returned as an output parameter. If a value is provided, that value is checked against the actual rowcount to identify any differences.
 
 #### [ @expected_checksum = ] *expected_checksum* OUTPUT
 
-Specifies whether to return the expected checksum for the table. *@expected_checksum* is **numeric**, with a default of NULL. If NULL, the actual checksum is returned as an output parameter. If a value is provided, that value is checked against the actual checksum to identify any differences.
+Specifies whether to return the expected checksum for the table. *@expected_checksum* is **numeric**, with a default of `NULL`. If NULL, the actual checksum is returned as an output parameter. If a value is provided, that value is checked against the actual checksum to identify any differences.
 
 #### [ @rowcount_only = ] *type_of_check_requested*
 
@@ -68,7 +68,7 @@ If `2`, perform a rowcount and binary checksum.
 
 #### [ @owner = ] '*owner*'
 
-The name of the owner of the table. *@owner* is **sysname**, with a default of NULL.
+The name of the owner of the table. *@owner* is **sysname**, with a default of `NULL`.
 
 #### [ @full_or_fast = ] *full_or_fast*
 
@@ -90,7 +90,7 @@ The table name of the view used for output messages. *table_name* is **sysname**
 
 #### [ @column_list = ] '*column_list*'
 
-The list of columns that should be used in the checksum function. *column_list* is **nvarchar(4000)**, with a default of NULL. Enables validation of merge articles to specify a column list that excludes computed and timestamp columns.
+The list of columns that should be used in the checksum function. *column_list* is **nvarchar(4000)**, with a default of `NULL`. Enables validation of merge articles to specify a column list that excludes computed and timestamp columns.
 
 ## Return code values
 
@@ -104,9 +104,9 @@ If performing a rowcount validation and the expected number of rows equals the n
 
 Checksum computes a 32-bit cyclic redundancy check (CRC) on the entire row image on the page. It does not selectively check columns and cannot operate on a view or vertical partition of the table. Also, the checksum skips the contents of **text** and **image** columns (by design).
 
-When doing a checksum, the structure of the table must be identical between the two servers; that is, the tables must have the same columns existing in the same order, same data types and lengths, and same NULL/NOT NULL conditions. For example, if the Publisher did a CREATE TABLE, then an ALTER TABLE to add columns, but the script applied at the Subscriber is a simple CREATE table, the structure is NOT the same. If you are not certain that the structure of the two tables is identical, look at [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) and confirm that the offset in each table is the same.
+When doing a checksum, the structure of the table must be identical between the two servers; that is, the tables must have the same columns existing in the same order, same data types and lengths, and same NULL/NOT NULL conditions. For example, if the Publisher did a CREATE TABLE, then an ALTER TABLE to add columns, but the script applied at the Subscriber is a simple CREATE table, the structure is NOT the same. If you are not certain that the structure of the two tables is identical, look at [syscolumns](../system-compatibility-views/sys-syscolumns-transact-sql.md) and confirm that the offset in each table is the same.
 
-Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non- [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.
+Floating point values are likely to generate checksum differences if character-mode **bcp** was used, which is the case if the publication has non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] subscribers. These are due to minor and unavoidable differences in precision when doing conversion to and from character mode.
 
 ## Permissions
 

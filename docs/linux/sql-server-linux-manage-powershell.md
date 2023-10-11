@@ -7,6 +7,8 @@ ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use PowerShell on Windows to manage SQL Server on Linux
 
@@ -112,11 +114,11 @@ Here's what the output might look like. You might notice the output is similar t
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
-AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
-AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
-AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
-AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
+AdventureWorks2022   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2022 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2022 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2022 Normal      172.00 MB   74.76 MB Simple       130 sa
+AdventureWorksDW2022 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
 If you need to see all databases on your instance, one option is to use the [Get-SqlDatabase](/powershell/module/sqlserver/Get-SqlDatabase) cmdlet.
@@ -143,6 +145,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## See also
+## Related content
+
 - [SQL Server PowerShell](../powershell/sql-server-powershell.md)
 - [SqlServer cmdlets](/powershell/module/sqlserver)

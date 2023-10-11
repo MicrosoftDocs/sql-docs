@@ -33,7 +33,6 @@ sp_fulltext_semantic_register_language_statistics_db [ @dbname = ] N'dbname'
 [ ; ]
 ```
 
-
 ## Arguments
 
 #### [ @dbname = ] N'*dbname*'

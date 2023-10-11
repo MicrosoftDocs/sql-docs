@@ -4,7 +4,7 @@ description: Learn how to install the Microsoft ODBC Driver for SQL Server on Li
 author: David-Engel
 ms.author: v-davidengel
 ms.reviewer: randolphwest
-ms.date: 06/15/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -26,23 +26,35 @@ The following sections explain how to install the Microsoft ODBC driver 18 from 
 ### [Alpine](#tab/alpine18-install)
 
 ```bash
+case $(uname -m) in
+    x86_64)   architecture="amd64" ;;
+    arm64)   architecture="arm64" ;;
+    *) architecture="unsupported" ;;
+esac
+if [[ "unsupported" == "$architecture" ]];
+then
+    echo "Alpine architecture $(uname -m) is not currently supported.";
+    exit;
+fi
+
+
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.apk
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/msodbcsql18_18.2.2.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/1/f/f/1fffb537-26ab-4947-a46a-7a45c27f6f77/mssql-tools18_18.2.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/msodbcsql18_18.3.2.1-1_$architecture.sig
+curl -O https://download.microsoft.com/download/3/5/5/355d7943-a338-41a7-858d-53b259ea33f5/mssql-tools18_18.3.1.1-1_$architecture.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql18_18.2.2.1-1_amd64.sig msodbcsql18_18.2.1.1-1_amd64.apk
-gpg --verify mssql-tools18_18.2.1.1-1_amd64.sig mssql-tools18_18.2.1.1-1_amd64.apk
+gpg --verify msodbcsql18_18.3.2.1-1_$architecture.sig msodbcsql18_18.3.2.1-1_$architecture.apk
+gpg --verify mssql-tools18_18.3.1.1-1_$architecture.sig mssql-tools18_18.3.1.1-1_$architecture.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql18_18.2.2.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools18_18.2.1.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql18_18.3.2.1-1_$architecture.apk
+sudo apk add --allow-untrusted mssql-tools18_18.3.1.1-1_$architecture.apk
 ```
 
 > [!NOTE]  
@@ -51,22 +63,23 @@ sudo apk add --allow-untrusted mssql-tools18_18.2.1.1-1_amd64.apk
 ### [Debian](#tab/debian18-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Debian 9
-curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/9/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 10
-curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 11
-curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
-exit
+#Debian 12
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -85,21 +98,18 @@ sudo apt-get install -y libgssapi-krb5-2
 ### [RHEL and Oracle Linux](#tab/redhat18-install)
 
 ```bash
-sudo su
-
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #RHEL 7 and Oracle Linux 7
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 8 and Oracle Linux 8
-curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 9
-curl https://packages.microsoft.com/config/rhel/9.0/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
-exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -113,22 +123,20 @@ sudo yum install -y unixODBC-devel
 ### [SLES](#tab/suse18-install)
 
 ```bash
-sudo su
 curl -O https://packages.microsoft.com/keys/microsoft.asc
-rpm --import microsoft.asc
+sudo rpm --import microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #SLES 12
-zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SLES 15
-zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+sudo zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 #(Only for driver 17.3 and below)
-SUSEConnect -p sle-module-legacy/15/x86_64
+sudo SUSEConnect -p sle-module-legacy/15/x86_64
 
-exit
 sudo ACCEPT_EULA=Y zypper install -y msodbcsql18
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install -y mssql-tools18
@@ -141,18 +149,16 @@ sudo zypper install -y unixODBC-devel
 ### [Ubuntu](#tab/ubuntu18-install)
 
 ```bash
-if ! [[ "18.04 20.04 22.04 22.10" == *"$(lsb_release -rs)"* ]];
+if ! [[ "18.04 20.04 22.04 23.04" == *"$(lsb_release -rs)"* ]];
 then
     echo "Ubuntu $(lsb_release -rs) is not currently supported.";
     exit;
 fi
 
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
-exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
@@ -188,19 +194,19 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.5.1-1_amd64.apk
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.apk
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.4.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.10.5.1-1_amd64.sig
 curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.10.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.10.4.1-1_amd64.sig msodbcsql17_17.10.4.1-1_amd64.apk
+gpg --verify msodbcsql17_17.10.5.1-1_amd64.sig msodbcsql17_17.10.5.1-1_amd64.apk
 gpg --verify mssql-tools_17.10.1.1-1_amd64.sig mssql-tools_17.10.1.1-1_amd64.apk
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.10.4.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.10.5.1-1_amd64.apk
 sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ```
 
@@ -210,22 +216,23 @@ sudo apk add --allow-untrusted mssql-tools_17.10.1.1-1_amd64.apk
 ### [Debian](#tab/debian17-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #Debian 9
-curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/9/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 10
-curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/10/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
 #Debian 11
-curl https://packages.microsoft.com/config/debian/11/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/debian/11/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
-exit
+#Debian 12
+curl https://packages.microsoft.com/config/debian/12/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
@@ -244,21 +251,18 @@ sudo apt-get install -y libgssapi-krb5-2
 ### [RHEL and Oracle Linux](#tab/redhat17-install)
 
 ```bash
-sudo su
-
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #RHEL 7 and Oracle Linux 7
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 8 and Oracle Linux 8
-curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
 #RHEL 9
-curl https://packages.microsoft.com/config/rhel/9.0/prod.repo > /etc/yum.repos.d/mssql-release.repo
+curl https://packages.microsoft.com/config/rhel/9/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 
-exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install -y msodbcsql17
 # optional: for bcp and sqlcmd
@@ -272,22 +276,20 @@ sudo yum install -y unixODBC-devel
 ### [SLES](#tab/suse17-install)
 
 ```bash
-sudo su
 curl -O https://packages.microsoft.com/keys/microsoft.asc
-rpm --import microsoft.asc
+sudo rpm --import microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
 #SLES 12
-zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SLES 15
-zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+sudo zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
 #(Only for driver 17.3 and below)
-SUSEConnect -p sle-module-legacy/15/x86_64
+sudo SUSEConnect -p sle-module-legacy/15/x86_64
 
-exit
 sudo ACCEPT_EULA=Y zypper install -y msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install -y mssql-tools
@@ -306,12 +308,10 @@ then
     exit;
 fi
 
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list > /etc/apt/sources.list.d/mssql-release.list
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 
-exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
 # optional: for bcp and sqlcmd
@@ -334,10 +334,8 @@ The following sections explain how to install the Microsoft ODBC driver 13.1 fro
 ### [Debian 8](#tab/debian8-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/debian/8/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql
 # optional: for bcp and sqlcmd
@@ -351,9 +349,7 @@ sudo apt-get install unixodbc-dev
 ### [RHEL 7](#tab/redhat7-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
-exit
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql
 # optional: for bcp and sqlcmd
@@ -367,9 +363,7 @@ sudo yum install unixODBC-devel
 ### [SLES 12](#tab/suse12-install)
 
 ```bash
-sudo su
-zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
-exit
+sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 sudo ACCEPT_EULA=Y zypper install msodbcsql
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y zypper install mssql-tools
@@ -382,10 +376,8 @@ sudo zypper install unixODBC-devel
 ### [Ubuntu 16.04](#tab/ubuntu16-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql
 # optional: for bcp and sqlcmd
@@ -405,44 +397,39 @@ The following sections explain how to install the Microsoft ODBC driver 13 from 
 ### [RHEL 7 (ODBC 13)](#tab/redhat7-13-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
-exit
+curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/mssql-release.repo
 sudo yum update
 sudo yum remove unixODBC #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
 sudo yum install unixODBC-utf16-devel #this step is optional but recommended*
 #Create symlinks for tools
-ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
-ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
+sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### [Ubuntu 16.04 (ODBC 13)](#tab/ubuntu16-13-install)
 
 ```bash
-sudo su
-curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-exit
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.0.1.0-1 mssql-tools=14.0.2.0-1
 sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
 #Create symlinks for tools
-ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
-ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
+sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### [SLES 12 (ODBC 13)](#tab/suse12-13-install)
 
 ```bash
-sudo su
-zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
-zypper update
+sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+sudo zypper update
 sudo ACCEPT_EULA=Y zypper install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
-zypper install unixODBC-utf16-devel
+sudo zypper install unixODBC-utf16-devel
 #Create symlinks for tools
-ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
-ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
+sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ---
@@ -465,7 +452,7 @@ It's also common to manually download all the dependent packages and place them 
 - Install dependencies and the driver.
 
 ```bash
-yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
+sudo yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
@@ -475,7 +462,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 - Install the dependencies and the driver.
 
 ```bash
-zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
+sudo zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
 sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
@@ -554,7 +541,7 @@ The ODBC driver on Linux consists of the following components:
 
 ## Resource file loading
 
-The driver needs to load the resource file to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the table above. As of version 17.1 the driver also attempts to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on Linux is `/opt/microsoft/msodbcsql17/share/resources/en_US/`.
+The driver needs to load the resource file to function. This file is called `msodbcsqlr17.rll` or `msodbcsqlr13.rll` depending on the driver version. The location of the `.rll` file is relative to the location of the driver itself (`so` or `dylib`), as noted in the previous table. As of version 17.1 the driver also attempts to load the `.rll` from the default directory if loading from the relative path fails. The default resource file path on Linux is `/opt/microsoft/msodbcsql17/share/resources/en_US/`.
 
 ## Troubleshoot
 

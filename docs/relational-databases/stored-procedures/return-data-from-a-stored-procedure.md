@@ -24,10 +24,10 @@ If you include a SELECT statement in the body of a stored procedure (but not a S
 
 ### Examples of returning data using a result set
 
-The following examples use the [AdventureWorks2019 sample database](../../samples/adventureworks-install-configure.md). This example shows a stored procedure that returns the `LastName` and `SalesYTD` values for all `SalesPerson` rows that also appear in the `vEmployee` view.
+The following examples use the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] [sample database](../../samples/adventureworks-install-configure.md). This example shows a stored procedure that returns the `LastName` and `SalesYTD` values for all `SalesPerson` rows that also appear in the `vEmployee` view.
   
  ```sql
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO
 
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -55,7 +55,7 @@ If you specify the output keyword for a parameter in the procedure definition, t
 The following example shows a procedure with an input and an output parameter. The `@SalesPerson` parameter would receive an input value specified by the calling program. The SELECT statement uses the value passed into the input parameter to obtain the correct `SalesYTD` value. The SELECT statement also assigns the value to the `@SalesYTD` output parameter, which returns the value to the calling program when the procedure exits.
   
 ```sql
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
     DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
@@ -141,7 +141,7 @@ In the following example, a procedure is created that specified an output parame
 First, create the procedure that declares and then opens a cursor on the `Currency` table.
   
 ```sql
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO
 
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -164,7 +164,7 @@ GO
 Next, execute a batch that declares a local cursor variable, executes the procedure to assign the cursor to the local variable, and then fetches the rows from the cursor.
   
 ```sql
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO
 
 DECLARE @MyCursor CURSOR;  
@@ -192,7 +192,7 @@ EXECUTE @result = my_proc;
 GO
 ```  
   
-Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the `@@ERROR` function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement. Before the introduction of `TRY`/`CATCH`/`THROW` error handling in TSQL return codes were sometimes required to determine the success or failure of stored procedures. Stored procedures should always indicate failure with an error (generated with `THROW`/`RAISERROR` if necessary), and not rely on a return code to indicate the failure. Also you should avoid using the return code to return application data.
+Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the `@@ERROR` function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement. Before the introduction of `TRY`/`CATCH`/`THROW` error handling in Transact-SQL return codes were sometimes required to determine the success or failure of stored procedures. Stored procedures should always indicate failure with an error (generated with `THROW`/`RAISERROR` if necessary), and not rely on a return code to indicate the failure. Also you should avoid using the return code to return application data.
   
 ### Examples of return codes
 
@@ -222,7 +222,7 @@ The example creates a procedure named `Sales.usp_GetSalesYTD`, which:
 At the end of the example, code is provided to execute the `Sales.usp_GetSalesYTD` procedure while specifying a last name for the input parameter and saving the output value in the variable `@SalesYTD`.
 
 ```sql
-USE AdventureWorks2019;  
+USE AdventureWorks2022;  
 GO
   
 CREATE PROCEDURE Sales.usp_GetSalesYTD 

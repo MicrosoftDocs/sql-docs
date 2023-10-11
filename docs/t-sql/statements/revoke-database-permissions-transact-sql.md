@@ -124,7 +124,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE AUDIT|ALTER|ALTER ANY SERVER AUDIT|  
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
-|ALTER ANY DATABASE EVENT SESSION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
+|ALTER ANY DATABASE EVENT SESSION<br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|ALTER|ALTER ANY EVENT SESSION|  
 |ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Applies to**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
@@ -137,7 +137,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|  
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|  
-|ALTER ANY SECURITY POLICY<br />**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY SECURITY POLICY<br />**Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|  
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|  
 |ALTER ANY USER|ALTER|CONTROL SERVER|  
@@ -177,7 +177,7 @@ permission | ALL [ PRIVILEGES ]
 |EXECUTE|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
-|KILL DATABASE CONNECTION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|  
+|KILL DATABASE CONNECTION<br /> **Applies to**: [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].|CONTROL|ALTER ANY CONNECTION|  
 |REFERENCES|CONTROL|CONTROL SERVER|  
 |SELECT|CONTROL|CONTROL SERVER|  
 |SHOWPLAN|CONTROL|ALTER TRACE|  
@@ -198,32 +198,32 @@ permission | ALL [ PRIVILEGES ]
 ## Examples  
   
 ### A. Revoking permission to create certificates  
- The following example revokes `CREATE CERTIFICATE` permission on the `AdventureWorks2012` database from user `MelanieK`.  
+ The following example revokes `CREATE CERTIFICATE` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from user `MelanieK`.  
   
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
 ```  
   
 ### B. Revoking REFERENCES permission from an application role  
- The following example revokes `REFERENCES` permission on the `AdventureWorks2012` database from application role `AuditMonitor`.  
+ The following example revokes `REFERENCES` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from application role `AuditMonitor`.  
   
 **Applies to**: [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
 ```  
   
 ### C. Revoking VIEW DEFINITION with CASCADE  
- The following example revokes `VIEW DEFINITION` permission on the `AdventureWorks2012` database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
+ The following example revokes `VIEW DEFINITION` permission on the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  
 ```  

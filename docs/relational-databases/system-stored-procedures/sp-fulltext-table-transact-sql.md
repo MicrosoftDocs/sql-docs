@@ -52,8 +52,8 @@ The action to be performed. *@action* is **nvarchar(50)**, with no default, and 
 | Value | Description |
 | --- | --- |
 | **Create** | Creates the metadata for a full-text index for the table referenced by *@tabname* and specifies that the full-text index data for this table should reside in *@ftcat*. This action also designates the use of *@keyname* as the full-text key column. This unique index must already be present and must be defined on one column of the table.<br /><br />A full-text search can't be performed against this table until the full-text catalog is populated. |
-| **Drop** | Drops the metadata on the full-text index for *@tabname*. If the full-text index is active, it is automatically deactivated before being dropped. It isn't necessary to remove columns before dropping the full-text index. |
-| **Activate** | Activates the ability for full-text index data to be gathered for *@tabname*, after it has been deactivated. There must be at least one column participating in the full-text index before it can be activated.<br /><br />A full-text index is automatically made active (for population) as soon as the first column is added for indexing. If the last column is dropped from the index, the index becomes inactive. If change tracking is on, activating an inactive index starts a new population.<br /><br />This doesn't actually populate the full-text index, but simply registers the table in the full-text catalog in the file system so that rows from *@tabname* can be retrieved during the next full-text index population. |
+| **Drop** | Drops the metadata on the full-text index for *@tabname*. If the full-text index is active, it's automatically deactivated before being dropped. It isn't necessary to remove columns before dropping the full-text index. |
+| **Activate** | Activates the ability for full-text index data to be gathered for *@tabname*, after it's been deactivated. There must be at least one column participating in the full-text index before it can be activated.<br /><br />A full-text index is automatically made active (for population) as soon as the first column is added for indexing. If the last column is dropped from the index, the index becomes inactive. If change tracking is on, activating an inactive index starts a new population.<br /><br />This doesn't actually populate the full-text index, but simply registers the table in the full-text catalog in the file system so that rows from *@tabname* can be retrieved during the next full-text index population. |
 | **Deactivate** | Deactivates the full-text index for *@tabname* so that full-text index data can no longer be gathered for the *@tabname*. The full-text index metadata remains and the table can be reactivated.<br /><br />If change tracking is on, deactivating an active index freezes the state of the index: any ongoing population is stopped, and no more changes are propagated to the index. |
 | **start_change_tracking** | Start an incremental population of the full-text index. If the table doesn't have a timestamp, start a full population of the full-text index. Start tracking changes to the table.<br /><br />Full-text change tracking doesn't track any WRITETEXT or UPDATETEXT operations performed on full-text indexed columns that are of type **image**, **text**, or **ntext**. |
 | **stop_change_tracking** | Stop tracking changes to the table. |
@@ -76,7 +76,7 @@ A valid single-key-column, unique non-nullable index on *@tabname* for a **creat
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 
@@ -92,7 +92,7 @@ After a table has been defined for full-text indexing, switching the full-text u
 
 To prevent this error, drop the full-text definition for this table using the **drop** action of `sp_fulltext_table` and redefine it using `sp_fulltext_table` and `sp_fulltext_column`.
 
-The full-text key column must be defined to be 900 bytes or less. It is recommended that the size of the key column is as small as possible for performance reasons.
+The full-text key column must be defined to be 900 bytes or less. It's recommended that the size of the key column is as small as possible for performance reasons.
 
 ## Permissions
 

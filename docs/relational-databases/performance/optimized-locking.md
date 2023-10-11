@@ -3,11 +3,13 @@ title: "Optimized locking"
 description: "Learn about the optimized locking enhancement to the Database Engine."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/03/2023
+ms.reviewer: randolphwest, peskount
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: references_regions
+ms.custom:
+  - references_regions
 helpviewer_keywords:
   - "optimized locking"
 dev_langs:
@@ -19,7 +21,7 @@ monikerRange: "=azuresqldb-current"
 
 [!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-This article introduces the optimized locking feature, a new [!INCLUDE[SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions.
+This article introduces the optimized locking feature, a new [!INCLUDE [SQL Server Database Engine](../../includes/ssdenoversion-md.md)] capability that offers an improved transaction locking mechanism that reduces lock memory consumption and blocking for concurrent transactions.
 
 ## What is optimized locking?
 
@@ -32,14 +34,14 @@ Optimized locking is composed of two primary components: **Transaction ID (TID) 
 
 For example:
 
-- Without optimized locking, updating 1 million rows in a table may require 1 million exclusive (X) row locks held until the end of the transaction.
-- With optimized locking, updating 1 million rows in a table may require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
+- Without optimized locking, updating 1 million rows in a table might require 1 million exclusive (X) row locks held until the end of the transaction.
+- With optimized locking, updating 1 million rows in a table might require 1 million X row locks but each lock is released as soon as each row is updated, and only one TID lock will be held until the end of the transaction.
 
 This article covers these two core concepts of optimized locking in detail.
 
 ### Availability
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)] only. For more information, see [Where is optimized locking currently available?](#where-is-optimized-locking-currently-available)
+Currently, optimized locking is available in [!INCLUDE [Azure SQL Database](../../includes/ssazure-sqldb.md)] only. For more information, see [Where is optimized locking currently available?](#where-is-optimized-locking-currently-available)
 
 #### Is optimized locking enabled?
 
@@ -56,7 +58,7 @@ Optimized locking builds on other database features:
 - Optimized locking requires [accelerated database recovery (ADR)](/azure/azure-sql/accelerated-database-recovery) to be enabled on the database.
 - For the most benefit from optimized locking, [read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true#read_committed_snapshot--on--off--1) should be enabled for the database.
 
-Both ADR and RCSI are enabled by default in [!INCLUDE[asdb](../../includes/ssazure_md.md)]. To verify that these options are enabled for your current database, use the following T-SQL query:
+Both ADR and RCSI are enabled by default in [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)]. To verify that these options are enabled for your current database, use the following T-SQL query:
 
 ```sql
 SELECT name
@@ -142,7 +144,7 @@ GO
 | `COMMIT TRAN` | |
 | | `COMMIT TRAN` |
 
-Note that the behavior of blocking changes with optimized locking in the previous example. Without optimized locking, Session 2 will be blocked.
+The behavior of blocking changes with optimized locking in the previous example. Without optimized locking, Session 2 will be blocked.
 
 However, with optimized locking, Session 2 will not be blocked as the latest committed version of row 1 contains a=1, which does not satisfy the predicate of Session 2.
 
@@ -168,7 +170,7 @@ GO
 
 ### <a id="behavior"></a> Query behavior changes with optimized locking and RCSI
 
-Concurrent systems under read committed snapshot isolation level (RCSI) with workloads that rely on strict execution order of transactions, might experience different query behavior when optimized locking is enabled. 
+Concurrent systems under read committed snapshot isolation level (RCSI) with workloads that rely on strict execution order of transactions, might experience different query behavior when optimized locking is enabled.
 
 Consider the following example where transaction T2 is updating table `t1` based on column `b` that was updated during transaction T1.
 
@@ -179,39 +181,55 @@ INSERT INTO t1 VALUES (1,1);
 GO
 ```
 
-| **Session 1**  |  **Session 2** |
+| **Session 1** | **Session 2** |
 | :-- | :-- |
 | BEGIN TRAN T1<br />UPDATE t1<br />SET b=2<br />WHERE a=1; | |
-| | BEGIN TRAN T2<br />UPDATE t1<br />SET b=3<br />WHERE b=2;|
-|COMMIT TRAN    ||
+| | BEGIN TRAN T2<br />UPDATE t1<br />SET b=3<br />WHERE b=2; |
+| COMMIT TRAN | |
 | | COMMIT TRAN |
 
 Let's evaluate the outcome of the above scenario with and without lock after qualification (LAQ), an integral part of optimized locking.
 
 **Without LAQ**
 
-Without LAQ, transaction T2 will be blocked and wait for the transaction T1 to complete. 
+Without LAQ, transaction T2 will be blocked and wait for the transaction T1 to complete.
 
 After both transactions commit, table `t1` will contain the following rows:
 
 ```
- a | b 
- 1 | 3 
+ a | b
+ 1 | 3
 ```
 
 **With LAQ**
 
-With LAQ, transaction T2 will use the latest committed version of the row b (`b`=1 in the version store) to evaluate its predicate (`b`=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results. 
+With LAQ, transaction T2 will use the latest committed version of the row b (`b`=1 in the version store) to evaluate its predicate (`b`=2). This row does not qualify; hence it is skipped and T2 moves to the next row without having been blocked by transaction T1. In this example, LAQ removes blocking but leads to different results.
 
 After both transactions commit, table `t1` will contain the following rows:
 
 ```
- a | b 
- 1 | 2 
+ a | b
+ 1 | 2
 ```
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Even without LAQ, applications should not assume that SQL Server (under versioning isolation levels) will guarantee strict ordering, without using locking hints. Our general recommendation for customers on concurrent systems under RCSI with workloads that rely on strict execution order of transactions (as shown in the previous exercise), is to [use stricter isolation levels](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).
+
+## Diagnostic additions for optimized locking
+
+To support monitoring and troubleshooting of blocking and deadlocking with optimized locking, look for the following additions:
+
+- Wait types for optimized locking
+    - `XACT` wait types and resource descriptions in [sys.dm_os_wait_stats (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#lck_m_s_xact):
+        - `LCK_M_S_XACT_READ` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to read.
+        - `LCK_M_S_XACT_MODIFY` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, with an intent to modify.
+        - `LCK_M_S_XACT` - Occurs when a task is waiting for a shared lock on an XACT `wait_resource` type, where the intent cannot be inferred. Rare.
+- Locking resources visibility
+    - `XACT` locking resources. For more information, see `resource_description` in [sys.dm_tran_locks (Transact-SQL)](../system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).
+- Wait resource visibility
+    - `XACT` wait resources. For more information, see `wait_resource` in [sys.dm_exec_requests (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
+- Deadlock graph
+    - Under each resource in the deadlock report's `<resource-list>`, each `<xactlock>` element reports the underlying resources and specific information for locks of each member of a deadlock. For more information and an example, see [Optimized locking and deadlocks](../sql-server-deadlocks-guide.md#optimized-locking-and-deadlocks).
 
 ## Best practices with optimized locking
 
@@ -223,7 +241,7 @@ To maximize the benefits of optimized locking, it is recommended to enable [read
 ALTER DATABASE databasename SET READ_COMMITTED_SNAPSHOT ON;
 ```
 
-In [!INCLUDE[asdb](../../includes/ssazure_md.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
+In [!INCLUDE [asdb](../../includes/ssazure-sqldb.md)], RCSI is enabled by default and read committed is the default isolation level. With RCSI enabled and when using read committed isolation level, readers don't block writers and writers don't block readers. Readers read a version of the row from the snapshot taken at the start of the query. With LAQ, writers will qualify rows per the predicate based on the latest committed version of the row without acquiring U locks. With LAQ, a query will wait only if the row qualifies and there is an active write transaction on that row. Qualifying based on the latest committed version and locking only the qualified rows reduces blocking and increases concurrency.
 
 In addition to reduced blocking, the lock memory required will be reduced. This is because readers don't take any locks, and writers take only short duration locks, instead of locks that expire at the end of the transaction. When using stricter isolation levels like repeatable read or serializable, the Database Engine is forced to hold row and page locks until the end of the transaction, for both readers and writers, resulting in increased blocking and lock memory.
 
@@ -267,7 +285,7 @@ In the previous query example, only table `t3` will use the repeatable read isol
 
 ### Where is optimized locking currently available?
 
-Currently, optimized locking is available in [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)].
+Currently, optimized locking is available in [!INCLUDE [Azure SQL Database](../../includes/ssazure-sqldb.md)].
 
 Optimized locking is available in the following service tiers:
 
@@ -281,7 +299,7 @@ Optimized locking is not currently available in:
 
 ### Is optimized locking on by default in both new and existing databases?
 
-In [!INCLUDE[Azure SQL Database](../../includes/ssazure_md.md)], yes.
+In [!INCLUDE [Azure SQL Database](../../includes/ssazure-sqldb.md)], yes.
 
 ### How can I detect if optimized locking is enabled?
 
@@ -317,7 +335,7 @@ Use the following steps to create a new support request from the Azure portal fo
 1. For **Problem Subtype**, choose **Blocking and deadlocks**.
 1. In **Additional details**, provide as much information as possible for why you would like to disable optimized locking. We are interested to review the reasons and use cases for disabling optimized locking with you.
 
-## Next steps
+## Related content
 
 - [Transaction locking and row versioning guide](../sql-server-transaction-locking-and-row-versioning-guide.md)
 - [Read committed snapshot isolation (RCSI)](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-current&preserve-view=true#read_committed_snapshot--on--off--1)

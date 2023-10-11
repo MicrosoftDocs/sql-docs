@@ -61,7 +61,7 @@ Execute permissions on `sp_configure` with no parameters or with only the first 
 1. Copy and paste the following example into the query window and select **Execute**. This example shows how to use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) to set the value of the `recovery interval (min)` option to `3` minutes.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 EXEC sp_configure 'show advanced options', 1;
 GO

@@ -86,7 +86,7 @@ IDENTITY [ (seed , increment) ]
  The following example creates a new table using the `IDENTITY` property for an automatically incrementing identification number.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
   
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
    DROP TABLE new_employees;  

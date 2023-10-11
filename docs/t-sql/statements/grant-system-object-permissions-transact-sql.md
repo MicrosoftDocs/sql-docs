@@ -72,7 +72,7 @@ GO
  The following example grants the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Sylvester1` permission to select a view that lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The example then grants the additional permission that is required to view metadata on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins that are not owned by the user.  
   
 ```sql  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
 GO  

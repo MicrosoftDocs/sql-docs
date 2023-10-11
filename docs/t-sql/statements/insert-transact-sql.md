@@ -325,7 +325,7 @@ For scenarios where requirements for minimal logging and parallel insert are met
 
 ::: moniker range="=fabric"
 
-For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql).
 
 ::: moniker-end
 
@@ -742,7 +742,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
-    @catalog = N'AdventureWorks2012';  
+    @catalog = N'AdventureWorks2022';  
 GO  
 ```  
   
@@ -750,7 +750,7 @@ GO
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-INSERT INTO MyLinkServer.AdventureWorks2012.HumanResources.Department (Name, GroupName)  
+INSERT INTO MyLinkServer.AdventureWorks2022.HumanResources.Department (Name, GroupName)  
 VALUES (N'Public Relations', N'Executive General and Administration');  
 GO  
 ```  
@@ -763,7 +763,7 @@ GO
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
-     FROM AdventureWorks2012.HumanResources.Department')  
+     FROM AdventureWorks2022.HumanResources.Department')  
 VALUES ('Environmental Impact', 'Engineering');  
 GO  
 ```  
@@ -780,7 +780,7 @@ GO
   
 INSERT INTO OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
-    .AdventureWorks2012.HumanResources.Department (Name, GroupName)  
+    .AdventureWorks2022.HumanResources.Department (Name, GroupName)  
     VALUES (N'Standards and Methods', 'Quality Assurance');  
 GO  
 ```  
@@ -819,7 +819,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Examples in this section demonstrate two methods to bulk load data into a table by using the INSERT statement.  
   
 #### Q. Inserting data into a heap with minimal logging  
- The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
+ The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
   
 ```sql
 -- Create the target heap.  
@@ -837,7 +837,7 @@ CREATE TABLE Sales.SalesHistory(
     ModifiedDate datetime NOT NULL );  
 GO  
 -- Temporarily set the recovery model to BULK_LOGGED.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET RECOVERY BULK_LOGGED;  
 GO  
 -- Transfer data from Sales.SalesOrderDetail to Sales.SalesHistory  
@@ -856,7 +856,7 @@ INSERT INTO Sales.SalesHistory WITH (TABLOCK)
 SELECT * FROM Sales.SalesOrderDetail;  
 GO  
 -- Reset the recovery model.  
-ALTER DATABASE AdventureWorks2012  
+ALTER DATABASE AdventureWorks2022  
 SET RECOVERY FULL;  
 GO  
 ```  

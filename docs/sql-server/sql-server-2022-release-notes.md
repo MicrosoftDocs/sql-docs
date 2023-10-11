@@ -8,7 +8,7 @@ ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-monikerRange: "= sql-server-ver16"
+monikerRange: ">= sql-server-2016"
 ---
 
 # SQL Server 2022 release notes
@@ -21,7 +21,7 @@ This article describes requirements, limitations and known issues for [!INCLUDE[
 
 For hardware and software requirements, see [SQL Server 2022: Hardware and software requirements](install/hardware-and-software-requirements-for-installing-sql-server-2022.md).
 
-## Feature notes
+## Known issues
 
 This section identifies known issues you may experience with this product. You may also review the Known Issues section of the [Cumulative Update](/troubleshoot/sql/releases/sqlserver-2022/build-versions) articles.
 

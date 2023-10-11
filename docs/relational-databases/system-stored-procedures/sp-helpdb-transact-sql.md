@@ -75,7 +75,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
  The following example displays information about the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-EXEC sp_helpdb N'AdventureWorks2012';  
+EXEC sp_helpdb N'AdventureWorks2022';  
 ```  
   
 ### B. Returning information about all databases  

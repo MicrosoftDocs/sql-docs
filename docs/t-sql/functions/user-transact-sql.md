@@ -73,7 +73,7 @@ The current user's database username is: dbo
  The following example creates a table by using `USER` as a `DEFAULT` constraint for the salesperson of a sales row.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 CREATE TABLE inventory22  
 (  

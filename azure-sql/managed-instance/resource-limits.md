@@ -5,7 +5,7 @@ description: This article provides an overview of the resource limits for Azure 
 author: vladai78
 ms.author: vladiv
 ms.reviewer: mathoma, vladiv, sachinp, wiassaf
-ms.date: 06/20/2023
+ms.date: 07/24/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: reference
@@ -16,8 +16,8 @@ ms.custom:
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/resource-limits-logical-server.md)
-> * [Azure SQL Managed Instance](resource-limits.md)
+> * [Azure SQL Database](../database/resource-limits-logical-server.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](resource-limits.md?view=azuresql-mi&preserve-view=true)
 
 This article provides an overview of the technical characteristics and resource limits for Azure SQL Managed Instance, and provides information about how to request an increase to these limits.
 
@@ -38,14 +38,14 @@ Hardware configurations have different characteristics, as described in the foll
 |    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 
 |:-- |:-- |:-- |:-- |
 | **CPU** |  Intel&reg; E5-2673 v4 (Broadwell) 2.3 GHz, Intel&reg; SP-8160 (Skylake), and  Intel&reg; 8272CL (Cascade Lake) 2.5 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors | Intel&reg; 8370C (Ice Lake) 2.8 GHz processors |
-| **Number of vCores** <BR>vCore=1 LP (hyper-thread) | 4-80 vCores | 4-80 vCores | 4-64 vCores |
-| **Max memory (memory/vCore ratio)** | 5.1 GB per vCore<br/>Add more vCores to get more memory. | 7 GB per vCore | 13.6 GB per vCore |
+| **Number of vCores** <br />vCore=1 LP (hyper-thread) | 4-80 vCores | 4-128 vCores | 4-128 vCores |
+| **Max memory (memory/vCore ratio)**   | 5.1 GB per vCore - 408 GB maximum<br />Add more vCores to get more memory. | 7 GB per vCore up to 80 vCores - 560 GB maximum  | 13.6 GB per vCore up to 64 vCores - 870.4 GB maximum |
 | **Max In-Memory OLTP memory** |  Instance limit: 0.8 - 1.65 GB per vCore | Instance limit: 1.1 - 2.3 GB per vCore | Instance limit: 2.2 - 4.5 GB per vCore |
-| **Max instance reserved storage**\* | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br/> **Business Critical:** up to 5.5 TB | **General Purpose:** up to 16 TB <br/> **Business Critical:** up to 16 TB |
+| **Max instance reserved storage**<sup>1</sup> | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 4 TB | **General Purpose:** up to 16 TB<br /> **Business Critical:** up to 5.5 TB | **General Purpose:** up to 16 TB <br /> **Business Critical:** up to 16 TB |
 
-\* Dependent on [the number of vCores](#service-tier-characteristics).
+<sup>1</sup> Dependent on [the number of vCores](#service-tier-characteristics).
 
->[!NOTE]
+> [!NOTE]
 > If your workload requires storage sizes greater than the available resource limits for Azure SQL Managed Instance, consider the Azure SQL Database [Hyperscale service tier](../database/service-tier-hyperscale.md).
 
 ### Regional support for memory optimized premium-series hardware
@@ -71,7 +71,9 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | 32    vCores | 37.94 GB | 53.09 GB | 128.61 GB |
 | 40    vCores | 52.23 GB | 73.09 GB | 164.13 GB |
 | 64    vCores | 99.9 GB | 139.82 GB | 288.61 GB |
-| 80    vCores | 131.68 GB| 184.30 GB | N/A |
+| 80    vCores | 131.68 GB| 184.30 GB | 288.61 GB |
+| 96 vCores    | N/A | 184.30 GB | 288.61 GB | 
+| 128 vCores | N/A | 184.30 GB | 288.61 GB | 
 
 ## Service tier characteristics
 
@@ -82,25 +84,27 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
-| Number of vCores\* | 4, 8, 16, 24, 32, 40, 64, 80 |  **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <BR> **Premium-series**: 4, 8, 16, 24, 32, 40, 64, 80 <BR> **Memory optimized premium-series**: 4, 8, 16, 24, 32, 40, 64<br/>\*Same number of vCores is dedicated for read-only queries. |
-| Max memory | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore) on each replica<BR> **Premium-series**: 28 GB - 560 GB (7 GB/vCore) on each replica<BR> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) on each replica |
-| Max instance storage size (reserved) | - 2 TB for 4 vCores<br/>- 8 TB for 8 vCores<br/>- 16 TB for other sizes <BR> | **Standard-series (Gen5)**: <br/>- 1 TB for 4, 8, 16 vCores<br/>- 2 TB for 24 vCores<br/>- 4 TB for 32, 40, 64, 80 vCores <BR> **Premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40, 64, 80 vCores<br/> **Memory optimized premium-series**: <BR>- 1 TB for 4, 8 vCores<br/>- 2 TB for 16, 24 vCores<br/>- 4 TB for 32 vCores<br/>- 5.5 TB for 40 vCores<br/>- 16 TB for 64 vCores<br/> |
+| Number of vCores\* | 4, 8, 16, 24, 32, 40, 64, 80 |  **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 4, 8, 16, 24, 32, 40, 64, 80, 96 <sup>1</sup>, 128<sup>1</sup> <br /> **Memory optimized premium-series**: 4, 8, 16, 24, 32, 40, 64, 80<sup>1</sup>, 96<sup>1</sup>, 128<sup>1</sup> <br />\*Same number of vCores is dedicated for read-only queries. |
+| Max memory | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore) on each replica <br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore up to 80 vCores<sup>1</sup>) on each replica<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore up to 64 vCores<sup>1</sup>) on each replica |
+| Max instance storage size (reserved) | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br /> | **Standard-series (Gen5)**: <br />- 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores <br />- 4 TB for 32, 40, 64, 80 vCores <br /> **Premium-series**: <br /> - 1 TB for 4, 8 vCores <br />- 2 TB for 16, 24 vCores <br />- 4 TB for 32 vCores<br />- 5.5 TB for 40, 64, 80 vCores<br /> **Memory optimized premium-series**: <br />- 1 TB for 4, 8 vCores<br />- 2 TB for 16, 24 vCores<br />- 4 TB for 32 vCores<br />- 5.5 TB for 40 vCores <br />- 16 TB for 64 vCores<br /> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
-| Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more `tempdb` space.<br/> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
+| Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
 | Max number of `tempdb` files | 128 | 128 |
 | Max number of databases per instance | 100 user databases, unless the instance storage size limit has been reached. | 100 user databases, unless the instance storage size limit has been reached. |
-| Max number of database files per instance | Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. | 32,767 files per database, unless the instance storage size limit has been reached. |
+| Max number of database files | 280 per instance, unless the instance storage size or [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) limit has been reached. | 32,767 files per database, unless the instance storage size limit has been reached. |
 | Max data file size | Maximum size of each data file is 8 TB. Use at least two data files for databases larger than 8 TB. | Up to currently available instance size (depending on the number of vCores). |
 | Max log file size | Limited to 2 TB and currently available instance storage size. | Limited to 2 TB and currently available instance storage size. |
-| Data/Log IOPS (approximate) | 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| 16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. |
-| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB (depending on log file size)<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4.5 MiB/s per vCore<br/>Max 96 MiB/s |
-| Data throughput (approximate) | 100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
+| Data/Log IOPS (approximate) | 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)| 16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. |
+| Log write throughput limit (per instance) | 4.5 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB (depending on log file size)<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | 4.5 MiB/s per vCore<br />Max 192 MiB/s |
+| Data throughput (approximate) | 100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) | Not limited. |
 | Storage IO latency (approximate) | 5-10 ms | 1-2 ms |
 | In-memory OLTP | Not supported | Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions | 30000 | 30000 |
 | Max concurrent workers | 105 * number of vCores + 800 | 105 * number of vCores + 800 |
 | [Read-only replicas](../database/read-scale-out.md) | 0 | 1 (included in price) |
-| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances| **Standard-series (Gen5)**:<br/> Supported for 40, 64, 80 vCores<BR> **Premium-series**: Supported for 64, 80 vCores <BR> **Memory optimized premium-series**: Supported for 64 vCores |
+| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances| **Standard-series (Gen5)**: <br /> Supported for 40, 64, 80 vCores <br /> **Premium-series**: Supported for 64, 80 vCores <br /> **Memory optimized premium-series**: Supported for 64 vCores |
+
+<sup>1</sup> The memory-to-vCore ratio is only available up to 80 vCores for premium-series hardware, and 64 vCores for memory optimized premium-series. Maximum memory is capped at 560 GB for premium-series vCores above 80, and 870.4 GB for memory optimized premium-series vCores above 64.  
 
 
 A few additional considerations: 
@@ -113,6 +117,7 @@ A few additional considerations:
 - Names of `tempdb`files cannot have more than 16 characters.
 
 Find more information about the [resource limits in SQL Managed Instance pools in this article](instance-pools-overview.md#resource-limitations).
+
 
 ### Data and log storage
 
@@ -256,9 +261,9 @@ To check the hardware used by resources for a specific SQL managed instance in A
 | --- | --- | 
 | **Hardware** | Intel&reg; E5-2673 v3 (Haswell) 2.4 GHz processors, attached SSD vCore = 1 PP (physical core) |   
 | **Number of vCores** | 8, 16, 24 vCores | 
-| **Max memory (memory/core ratio)** | 7 GB per vCore<br/>Add more vCores to get more memory. |  
+| **Max memory (memory/core ratio)** | 7 GB per vCore<br />Add more vCores to get more memory. |  
 | **Max In-Memory OLTP memory** |  Instance limit: 1-1.5 GB per vCore |
-| **Max instance reserved storage** |  General Purpose: 8 TB <br/>Business Critical: 1 TB | 
+| **Max instance reserved storage** |  General Purpose: 8 TB <br />Business Critical: 1 TB | 
 
 ### In-memory OLTP available space
 
@@ -276,18 +281,18 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
-| Number of vCores\* |  8, 16, 24 |  8, 16, 24 <BR>\*Same number of vCores is dedicated for read-only queries. |
-| Max memory |  56 GB - 168 GB (7GB/vCore)<br/>Add more vCores to get more memory. |  56 GB - 168 GB (7GB/vCore)<br/>+ additional 20.4 GB - 408 GB (5.1GB/vCore) for read-only queries.<br/>Add more vCores to get more memory. |
+| Number of vCores\* |  8, 16, 24 |  8, 16, 24 <br />\*Same number of vCores is dedicated for read-only queries. |
+| Max memory |  56 GB - 168 GB (7GB/vCore)<br />Add more vCores to get more memory. |  56 GB - 168 GB (7GB/vCore)<br />+ additional 20.4 GB - 408 GB (5.1GB/vCore) for read-only queries.<br />Add more vCores to get more memory. |
 | Max instance storage size (reserved) |  8 TB |  1 TB  |
 | Max database size |  Up to currently available instance size (max 2 TB - 8 TB depending on the number of vCores). |  Up to currently available instance size (max 1 TB - 4 TB depending on the number of vCores). |
-| Max `tempdb` database size |  Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br/>Add more vCores to get more `tempdb` space.<br/> Log file size is limited to 120 GB.|  Up to currently available instance storage size. |
+| Max `tempdb` database size |  Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.|  Up to currently available instance storage size. |
 | Max number of databases per instance |  100 user databases, unless the instance storage size limit has been reached. |  100 user databases, unless the instance storage size limit has been reached. |
 | Max number of database files per instance |  Up to 280, unless the instance storage size or [Azure Premium Disk storage allocation space limit](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files) has been reached. |  32,767 files per database, unless the instance storage size limit has been reached. |
 | Max data file size |  Limited to currently available instance storage size (max 2 TB - 8 TB) and [Azure Premium Disk storage allocation space](doc-changes-updates-known-issues.md#exceeding-storage-space-with-small-database-files). Use at least two data files for databases larger than 8 TB. |   Limited to currently available instance storage size (up to 1 TB - 4 TB). |
 | Max log file size |  Limited to 2 TB and currently available instance storage size. |  Limited to 2 TB and currently available instance storage size. |
-| Data/Log IOPS (approximate) |  Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br/>\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)|  16 K - 320 K (4000 IOPS/vCore)<br/>Add more vCores to get better IO performance. | 
-| Log write throughput limit (per instance) |  3 MiB/s per vCore<br/>Max 120 MiB/s per instance<br/>22 - 65 MiB/s per DB<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MiB/s per vCore<br/>Max 96 MB/s |
-| Data throughput (approximate) |  100 - 250 MiB/s per file<br/>\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
+| Data/Log IOPS (approximate) |  Up to 30-40 K IOPS per instance*, 500 - 7500 per file<br />\*[Increase file size to get more IOPS](#file-io-characteristics-in-general-purpose-tier)|  16 K - 320 K (4000 IOPS/vCore)<br />Add more vCores to get better IO performance. | 
+| Log write throughput limit (per instance) |  3 MiB/s per vCore<br />Max 120 MiB/s per instance<br />22 - 65 MiB/s per DB<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |   4 MiB/s per vCore<br />Max 96 MB/s |
+| Data throughput (approximate) |  100 - 250 MiB/s per file<br />\*[Increase the file size to get better IO performance](#file-io-characteristics-in-general-purpose-tier) |  Not limited. |
 | Storage IO latency (approximate) |  5-10 ms |  1-2 ms |
 | In-memory OLTP |  Not supported |  Available, [size depends on number of vCore](#in-memory-oltp-available-space) |
 | Max sessions |  30000 |  30000 |

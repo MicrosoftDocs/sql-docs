@@ -59,7 +59,7 @@ Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssm
 1. The following example renames the `SalesTerritory` table to `SalesTerr` in the `Sales` schema. Copy and paste the following example into the query window and select **Execute**.
 
     ```sql
-    USE AdventureWorks2012;
+    USE AdventureWorks2022;
     GO
     EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
     ```

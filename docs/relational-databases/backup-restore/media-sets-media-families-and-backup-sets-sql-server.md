@@ -107,7 +107,7 @@ In a mirrored media set, each media family is mirrored. For example, if six back
  This example shows a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that creates a media set called `MyAdvWorks_MediaSet_1` for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database using three tape drives as backup devices:  
   
 ```  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
 WITH   
    FORMAT,  
@@ -123,7 +123,7 @@ WITH
  Every backup operation to a media set must write to the same number and type of backup devices. With multiple devices, as with the first backup set, the content of every subsequent backup set is distributed among the backup media on all of the devices. To continue the above example, a second backup operation (a differential backup) appends information to the same media set:  
   
 ```  
-BACKUP DATABASE AdventureWorks2012  
+BACKUP DATABASE AdventureWorks2022  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
 WITH   
    NOINIT,  
@@ -141,12 +141,12 @@ WITH
  When you are restoring backups, you can use the FILE option to specify which backups you want to use. The following example shows the use of FILE **=**_backup_set_file_number_ clauses when restoring a full database backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database followed by a differential database backup on the same media set. The media set uses three backup tapes, which are on tape drives `\\.\tape0`, `tape1`, and `tape2`.  
   
 ```  
-RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
+RESTORE DATABASE AdventureWorks2022 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
    WITH   
    MEDIANAME = 'AdventureWorksMediaSet1',  
    FILE=1,   
    NORECOVERY;  
-RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'   
+RESTORE DATABASE AdventureWorks2022 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'   
    WITH   
    MEDIANAME = 'AdventureWorksMediaSet1',  
    FILE=2,   

@@ -7,6 +7,8 @@ ms.date: "08/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # Command-line options in the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of command-line options to execute and control SSMA activities. The ensuing sections provide additional detail.  

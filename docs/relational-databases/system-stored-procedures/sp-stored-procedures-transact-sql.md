@@ -90,7 +90,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  The following example returns all stored procedures in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 EXEC sp_stored_procedures;  
 ```  
@@ -99,9 +99,9 @@ EXEC sp_stored_procedures;
  The following example returns a result set for the `uspLogError` stored procedure.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
-sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
+sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2022', 1;  
 ```  
   
 ## See Also  

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "sp_updatestats"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
 # sp_updatestats (Transact-SQL)
 
@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 
 Runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database.
 
-For more information about `UPDATE STATISTICS`, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
+For more information about `UPDATE STATISTICS`, see [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md). For more information about statistics, see [Statistics](../statistics/statistics.md).
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -53,15 +53,15 @@ For disk-based tables, `sp_updatestats` updates statistics based on the `modific
 
 `sp_updatestats` can trigger a recompile of stored procedures or other compiled code. However, `sp_updatestats` might not cause a recompile, if only one query plan is possible for the tables referenced and the indexes on them. A recompilation would be unnecessary in these cases even if statistics are updated.
 
-For databases with a compatibility level below 90, executing `sp_updatestats` doesn't preserve the latest NORECOMPUTE setting for specific statistics. For databases with a compatibility level of 90 or higher, `sp_updatestats` does preserve the latest NORECOMPUTE option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).
+For databases with a compatibility level below 90, executing `sp_updatestats` doesn't preserve the latest NORECOMPUTE setting for specific statistics. For databases with a compatibility level of 90 or higher, `sp_updatestats` does preserve the latest NORECOMPUTE option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../statistics/statistics.md).
 
-When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. The auto drop feature is available in [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)].
+When restoring a database to [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] from a previous version, you should execute `sp_updatestats` on the database. This is related to setting proper metadata for the [statistics auto drop feature](../statistics/statistics.md#auto_drop-option) introduced in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. The auto drop feature is available in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], [!INCLUDE [ssazuremi_md](../../includes/ssazuremi_md.md)], and starting with [!INCLUDE [ssSQL22](../../includes/sssql22-md.md)].
 
 ## Permissions
 
 For [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], you must be the owner of the database (**dbo**), or a member of the **sysadmin** fixed server role.
 
-For [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], you must be a member of the **db_owner** fixed database role.
+For [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], you must be a member of the **db_owner** fixed database role.
 
 ## Examples
 
@@ -87,7 +87,7 @@ Use solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tiger
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 - [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 - [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)
-- [sp_autostats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)
-- [sp_createstats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)
+- [sp_autostats (Transact-SQL)](sp-autostats-transact-sql.md)
+- [sp_createstats (Transact-SQL)](sp-createstats-transact-sql.md)
 - [sys.dm_db_stats_properties](../system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
 - [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)

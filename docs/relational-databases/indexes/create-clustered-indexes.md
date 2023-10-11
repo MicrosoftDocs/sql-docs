@@ -119,7 +119,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     -- Create a new table with three columns.  
     CREATE TABLE dbo.TestTable  

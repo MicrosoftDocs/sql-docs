@@ -93,14 +93,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  
-                    "AdventureWorks2012 Sample Reports/" & _  
+                    "AdventureWorks Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
 string url = "https://localhost/reportserver?/" +  
-             "AdventureWorks2012 Sample Reports/" +  
+             "AdventureWorks Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  
 ```  

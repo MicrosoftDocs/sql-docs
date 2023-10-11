@@ -9,6 +9,8 @@ ms.date: 09/24/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication with non-default ports (SQL Server Linux)
@@ -51,9 +53,7 @@ exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
 ```
 
-## Next steps
+## Related content
 
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
-
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

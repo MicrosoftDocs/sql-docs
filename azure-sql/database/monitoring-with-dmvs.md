@@ -18,8 +18,8 @@ monikerRange: "= azuresql || = azuresql-db "
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](monitoring-with-dmvs.md)
-> * [Azure SQL Managed Instance](../managed-instance/monitoring-with-dmvs.md)
+> * [Azure SQL Database](monitoring-with-dmvs.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/monitoring-with-dmvs.md?view=azuresql-mi&preserve-view=true)
 
 Microsoft Azure SQL Database enables a subset of dynamic management views to diagnose performance problems, which might be caused by blocked or long-running queries, resource bottlenecks, poor query plans, and more.
 

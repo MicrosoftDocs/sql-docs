@@ -27,9 +27,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
-'Reference the AdventureWorks2012 2008R2 database.
+'Reference the AdventureWorks2022 database.
 Dim db As Database
-db = srv.Databases("AdventureWorks2012")
+db = srv.Databases("AdventureWorks2022")
 'Define a StoredProcedure object variable by supplying the parent database and name arguments in the constructor.
 Dim sp As StoredProcedure
 sp = New StoredProcedure(db, "GetLastNameByEmployeeID")
@@ -66,9 +66,9 @@ sp.Drop()
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
             srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
+            //Reference the AdventureWorks2022 database.   
             Database db;  
-            db = srv.Databases["AdventureWorks2012"];  
+            db = srv.Databases["AdventureWorks2022"];  
             //Define a StoredProcedure object variable by supplying the parent database and name arguments in the constructor.   
             StoredProcedure sp;  
             sp = new StoredProcedure(db, "GetLastNameByBusinessEntityID");  
@@ -102,9 +102,9 @@ sp.Drop()
  This code example shows how to create a stored procedure for the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database. The example returns the last name of an employee when it is given the employee ID number (`BusinessEntityID`). The stored procedure requires one input parameter to specify the employee ID number and one output parameter to return the last name of the employee.  
   
 ```powershell  
-# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
+# Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2022  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = get-item AdventureWorks2022  
   
 # Define a StoredProcedure object variable by supplying the parent database and name arguments in the constructor.   
 $sp  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.StoredProcedure `  

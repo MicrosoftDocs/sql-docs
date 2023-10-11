@@ -74,7 +74,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
  When you use the Parent/Child approach, each row contains a reference to the parent. The following table defines a typical table used to contain the parent and the child rows in a Parent/Child relationship:  
   
 ```sql
-USE AdventureWorks2012 ;  
+USE AdventureWorks2022;  
 GO  
   
 CREATE TABLE ParentChildOrg  
@@ -160,7 +160,7 @@ GO
  The GetLevel() method can be used to create a breadth first ordering. In the following example, both breadth-first and depth-first indexes are created:  
   
 ```sql
-USE AdventureWorks2012 ;   -- wmimof
+USE AdventureWorks2022;   -- wmimof
 GO  
   
 CREATE TABLE Organization  

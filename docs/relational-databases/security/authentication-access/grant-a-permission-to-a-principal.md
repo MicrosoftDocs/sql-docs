@@ -74,7 +74,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   
-    USE AdventureWorks2012;  
+    USE AdventureWorks2022;  
     GO  
     GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
         TO Recruiting11;  

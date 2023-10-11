@@ -41,7 +41,7 @@ The name of the server group to create. *@name* is **sysname**, with no default.
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

@@ -66,7 +66,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
  The following example returns the names of the full-text indexed tables associated with the `Cat_Desc` full-text catalog.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks2022;  
 GO  
 DECLARE @mycursor CURSOR;  
 EXEC sp_help_fulltext_tables_cursor @mycursor OUTPUT, 'Cat_Desc';  

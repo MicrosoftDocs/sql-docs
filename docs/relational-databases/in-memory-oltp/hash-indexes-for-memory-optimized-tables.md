@@ -213,8 +213,8 @@ OLTP workloads focus on individual rows. Full table scans are not usually in the
   
 **If memory utilization is the bigger concern:**  
   
-- Choose a bucket count close to the number of index key records.  
-- The bucket count should not be significantly lower than the number of index key values, as this impacts most DML operations as well the time it takes to recover the database after server restart.  
+- Choose a bucket count close to the number of unique index key values.  
+- The bucket count should not be significantly lower than the number of unique index key values, as this impacts most DML operations as well the time it takes to recover the database after server restart.  
   
 **If performance of equality tests is the bigger concern:**  
   

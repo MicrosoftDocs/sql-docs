@@ -3,7 +3,7 @@ title: "Columnstore indexes: Overview"
 description: "An overview on columnstore indexes. Columnstore indexes are the standard for storing and querying large data warehousing fact tables."
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 07/25/2022
+ms.date: 08/21/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -54,14 +54,14 @@ A rowgroup from where all data has been deleted transitions from COMPRESSED into
 > After merging smaller rowgroups, the index quality should be improved. 
 
 > [!NOTE]
-> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)],  [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and dedicated SQL pools in Azure Synapse Analytics, the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.         
+> <a name="bckmergetsk"></a> Starting with [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)],  [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], and dedicated SQL pools in Azure Synapse Analytics, the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. This improves the columnstore index quality over time.         
 
 #### Column segment
 A column segment is a column of data from within the rowgroup.  
   
 - Each rowgroup contains one column segment for every column in the table.  
 - Each column segment is compressed together and stored on physical media.
-- There is metadata with each segment to allow for fast elimination of segments without reading them.
+- There's metadata with each segment to allow for fast elimination of segments without reading them.
 
 ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.png "Column segment")  
   
@@ -80,7 +80,7 @@ A delta rowgroup is a clustered B-tree index that's used only with columnstore i
 
 When a delta rowgroup reaches the maximum number of rows, it transitions from an OPEN to CLOSED state. A background process named the tuple-mover checks for closed row groups. If the process finds a closed rowgroup, it compresses the delta rowgroup and stores it into the columnstore as a COMPRESSED rowgroup. 
 
-When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there is no reference to it. 
+When a delta rowgroup has been compressed, the existing delta rowgroup transitions into TOMBSTONE state to be removed later by the tuple-mover when there's no reference to it. 
 
 For more information about rowgroup statuses, see [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
 
@@ -134,7 +134,7 @@ Beginning with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)], ordere
 ### Can I combine rowstore and columnstore on the same table?  
 Yes. Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create an updatable nonclustered columnstore index on a rowstore table. The columnstore index stores a copy of the selected columns, so you need extra space for this data, but the selected data is compressed on average 10 times. You can run analytics on the columnstore index and transactions on the rowstore index at the same time. The columnstore is updated when data changes in the rowstore table, so both indexes work against the same data.  
   
-Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Because a non-unique value fails to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't insert the value into the columnstore.  
+Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can have one or more nonclustered rowstore indexes on a columnstore index and perform efficient table seeks on the underlying columnstore. Other options become available too. For example, you can enforce a primary key constraint by using a UNIQUE constraint on the rowstore table. Because a nonunique value fails to insert into the rowstore table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can't insert the value into the columnstore.  
   
 ## Metadata  
 All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index doesn't have key columns.  
@@ -201,7 +201,7 @@ All relational tables, unless you specify them as a clustered columnstore index,
   
 When you create a table with the `CREATE TABLE` statement, you can create the table as a columnstore by specifying the `WITH CLUSTERED COLUMNSTORE INDEX` option. If you already have a rowstore table and want to convert it to a columnstore, you can use the `CREATE COLUMNSTORE INDEX` statement.  
   
-|Task|Reference topics|Notes|  
+|Task|Reference articles|Notes|  
 |----------|----------------------|-----------|  
 |Create a table as a columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create the table as a clustered columnstore index. You don't have to first create a rowstore table and then convert it to columnstore.|  
 |Create a memory table with a columnstore index.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Beginning with [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], you can create a memory-optimized table with a columnstore index. The columnstore index can also be added after the table is created by using the `ALTER TABLE ADD INDEX` syntax.|  
@@ -221,7 +221,7 @@ When you create a table with the `CREATE TABLE` statement, you can create the ta
   
 ## Next steps
 
- [What's new in columnstore indexes](columnstore-indexes-what-s-new.md)
+ [What's new in columnstore indexes](columnstore-indexes-what-s-new.md)   
  [Columnstore indexes data loading](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore indexes versioned feature summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [Columnstore indexes query performance](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

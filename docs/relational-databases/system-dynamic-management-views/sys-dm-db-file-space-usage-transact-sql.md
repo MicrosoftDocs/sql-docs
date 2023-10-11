@@ -29,7 +29,7 @@ Returns space usage information for each data file in the database.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
-| `database_id` | **smallint** | Database ID.<br /><br />In [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)], the values are unique within a single database or an elastic pool, but not within a logical server. |
+| `database_id` | **smallint** | Database ID.<br /><br />In [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], the values are unique within a single database or an elastic pool, but not within a logical server. |
 | `file_id` | **smallint** | File ID.<br /><br />`file_id` maps to `file_id` in [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md) and to fileid in [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md). |
 | `filegroup_id` | **smallint** | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions.<br /><br />Filegroup ID. |
 | `total_page_count` | **bigint** | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later versions.<br /><br />Total number of pages in the data file. |

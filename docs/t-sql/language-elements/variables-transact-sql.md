@@ -91,7 +91,7 @@ DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2)
 
 The scope of a variable is the range of Transact-SQL statements that can reference the variable. The scope of a variable lasts from the point it is declared until the end of the batch or stored procedure in which it is declared. For example, the following script generates a syntax error because the variable is declared in one batch and referenced in another:  
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 DECLARE @MyVariable INT;
 SET @MyVariable = 1;
@@ -121,7 +121,7 @@ When a variable is first declared, its value is set to NULL. To assign a value t
 To assign a variable a value by using the SET statement, include the variable name and the value to assign to the variable. This is the preferred method of assigning a value to a variable. The following batch, for example, declares two variables, assigns values to them, and then uses them in the `WHERE` clause of a `SELECT` statement:  
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 -- Declare two variables.
 DECLARE @FirstNameVariable NVARCHAR(50),
@@ -142,7 +142,7 @@ GO
 A variable can also have a value assigned by being referenced in a select list. If a variable is referenced in a select list, it should be assigned a scalar value or the SELECT statement should only return one row. For example:  
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 DECLARE @EmpIDVariable INT;
 
@@ -157,7 +157,7 @@ GO
 If a SELECT statement returns more than one row and the variable references a non-scalar expression, the variable is set to the value returned for the expression in the last row of the result set. For example, in the following batch **\@EmpIDVariable** is set to the **BusinessEntityID** value of the last row returned, which is 1:  
 
 ```sql
-USE AdventureWorks2014;
+USE AdventureWorks2022;
 GO
 DECLARE @EmpIDVariable INT;
 

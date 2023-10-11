@@ -13,7 +13,8 @@ ms.custom: updatefrequency5
 A [drillthrough](./report-design/drillthrough-reports-report-builder-and-ssrs.md) report is a report that a user opens by clicking a link within another report. Drillthrough reports commonly contain details about an item that is contained in an original summary report. This tutorial will walk you through the following lessons of creating a drillthrough report with parameters and a query, in [local mode reporting](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
 ## Requirements  
-To use this walkthrough, you must have access to the **AdventureWorks2014** sample database. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
+
+[!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   
 This walkthrough assumes that you are familiar with Transaction-SQL queries and ADO.NET [DataSet](/dotnet/api/system.data.dataset) and [DataTable](/dotnet/api/system.data.datatable) objects.  
   

@@ -38,7 +38,7 @@ Fixed-size string data. *n* defines the string size in bytes and must be a value
 
 #### varchar [ ( *n* | max ) ]
 
-Variable-size string data. Use *n* to define the string size in bytes and can be a value from 1 through 8,000, or use **max** to indicate a column constraint size up to a maximum storage of 2^31-1 bytes (2 GB). For single-byte encoding character sets such as `Latin`, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **charvarying** or **charactervarying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+Variable-size string data. Use *n* to define the string size in bytes and can be a value from 1 through 8,000, or use **max** to indicate a column constraint size up to a maximum storage of 2^31-1 bytes (2 GB). For single-byte encoding character sets such as `Latin`, the storage size is *n* bytes + 2 bytes and the number of characters that can be stored is also *n*. For multibyte encoding character sets, the storage size is still *n* bytes + 2 bytes but the number of characters that can be stored may be smaller than *n*. The ISO synonyms for **varchar** are **char varying** or **character varying**. For more information on character sets, see [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## Remarks
 
@@ -125,7 +125,7 @@ SELECT DATALENGTH(CONVERT(CHAR, @myVariable)) AS 'VarcharDefaultLength';
 The following example converts two columns to character types and applies a style that applies a specific format to the displayed data. A **money** type is converted to character data and style `1` is applied, which displays the values with commas every three digits to the left of the decimal point, and two digits to the right of the decimal point. A **datetime** type is converted to character data and style `3` is applied, which displays the data in the format `dd/mm/yy`. In the `WHERE` clause, a **money** type is cast to a character type to perform a string comparison operation.
 
 ```sql
-USE AdventureWorks2012;
+USE AdventureWorks2022;
 GO
 SELECT BusinessEntityID,
    SalesYTD,

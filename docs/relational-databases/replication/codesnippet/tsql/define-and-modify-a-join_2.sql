@@ -13,7 +13,7 @@ DECLARE @filter AS sysname;
 DECLARE @schema_hr AS sysname;
 DECLARE @schema_sales AS sysname;
 
-SET @publicationdb = N'AdventureWorks2012';
+SET @publicationdb = N'AdventureWorks2022';
 SET @publication = N'AdvWorksSalesPersonMerge';
 SET @table1 = N'Employee';
 SET @table2 = N'SalesPerson';
@@ -21,9 +21,9 @@ SET @filter = N'SalesPerson_Employee';
 SET @schema_hr = N'HumanResources';
 SET @schema_sales = N'Sales';
 
-USE [AdventureWorks2012];
+USE [AdventureWorks2022];
 
--- Enable AdventureWorks2012 for merge replication.
+-- Enable AdventureWorks2022 for merge replication.
 EXEC sp_replicationdboption
   @dbname = @publicationdb,
   @optname = N'merge publish',
@@ -33,7 +33,7 @@ EXEC sp_replicationdboption
 -- and using the default agent schedule. 
 EXEC sp_addmergepublication 
   @publication = @publication, 
-  @description = N'Merge publication of AdventureWorks2012.', 
+  @description = N'Merge publication of AdventureWorks2022.', 
   @allow_subscriber_initiated_snapshot = N'true',
   @publication_compatibility_level = N'90RTM';
 

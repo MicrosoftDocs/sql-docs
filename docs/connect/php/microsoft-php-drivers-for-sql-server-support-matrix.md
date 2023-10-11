@@ -29,12 +29,12 @@ The following Microsoft PHP Drivers are supported, until the indicated End of Su
 |Microsoft PHP Drivers 5.9 for SQL Server|5.9|January 29, 2026|
 |Microsoft PHP Drivers 5.8 for SQL Server|5.8|January 31, 2025|
 |Microsoft PHP Drivers 5.6 for SQL Server|5.6|February 21, 2024|
-|Microsoft PHP Drivers 5.3 for SQL Server|5.3|July 20, 2023|
 
 The following Microsoft PHP Drivers are no longer supported.
 
 |Driver Name|Driver Package Version|End of Mainstream Support|
 |-|:-:|-|
+|Microsoft PHP Drivers 5.3 for SQL Server|5.3|July 20, 2023|
 |Microsoft PHP Drivers 5.2 for SQL Server|5.2|February 9, 2023|
 |Microsoft PHP Drivers 4.3 for SQL Server|4.3|July 6, 2022|
 |Microsoft PHP Drivers 4.0 for SQL Server|4.0|July 11, 2021|

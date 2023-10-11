@@ -50,7 +50,7 @@ GO
 SELECT a.*  
 FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
-      FROM AdventureWorks2012.HumanResources.Department  
+      FROM AdventureWorks2022.HumanResources.Department  
       ORDER BY GroupName, Name') AS a;  
 GO  
 ```

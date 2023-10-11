@@ -8,7 +8,9 @@ ms.date: 02/21/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Troubleshoot Active Directory authentication for SQL Server on Linux and containers
@@ -412,7 +414,7 @@ This table shows the common ports used by [!INCLUDE[ssNoVersion](../includes/ssn
 |LDAPS|636|
 |Kerberos|88|
 
-## Next steps
+## Related content
 
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)
 - [Tutorial: Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md)

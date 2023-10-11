@@ -65,7 +65,7 @@ This procedure starts the collection and upload jobs for the specified collectio
 
 Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.
 
-## Example
+## Examples
 
 Start a collection set using its identifier.
 

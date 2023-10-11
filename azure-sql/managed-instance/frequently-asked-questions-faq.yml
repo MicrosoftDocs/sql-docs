@@ -18,6 +18,8 @@ summary: |
   [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
   
   This article contains the most common questions about [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md).
+
+  [!INCLUDE [entra-id](../includes/entra-id.md)]
   
 
 sections:
@@ -149,8 +151,8 @@ sections:
           
           To use another DNS zone instead of the default, for example, *.contoso.com*: 
           - Use SQL Server Client Network Utility (CliConfg) to define an alias. You can use either just the managed instance hostname, or the managed instance hostname followed by a custom domain name. The CliConfg tool just adds alias in the registry under "HKLM\SOFTWARE\Microsoft\MSSQLServer\Client\ConnectTo" or "HKLM\SOFTWARE\WOW6432Node\Microsoft\MSSQLServer\Client\ConnectTo" depending if you use the 64-bit version (C:\Windows\System32\cliconfg.exe) or the 32-bit version (C:\Windows\SysWOW64\cliconfg.exe), so it can be done using group policy or a script as well. Use both to ensure 32-bit and 64-bit programs can resolve the alias.
-          - Use *CNAME* record in DNS with managed instance hostname pointing to managed instance FQDN. In this case, `TrustServerCertificate=TRUE` is needed when using Azure AD authentication.
-          - Use *A* record in DNS with managed instance hostname pointing to the managed instance IP address. **Using IP address is not recommended**, as it may change without notice. In this case, `TrustServerCertificate=TRUE` is needed when using Azure AD authentication.
+          - Use *CNAME* record in DNS with managed instance hostname pointing to managed instance FQDN. In this case, `TrustServerCertificate=TRUE` is needed when using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
+          - Use *A* record in DNS with managed instance hostname pointing to the managed instance IP address. **Using IP address is not recommended**, as it may change without notice. In this case, `TrustServerCertificate=TRUE` is needed when using Microsoft Entra authentication.
           
           
       - question: |
@@ -275,7 +277,7 @@ sections:
         answer: |
           ### Is the backup storage deducted from my managed instance storage?
           
-          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](../database/automated-backups-overview.md).
+          No, backup storage is not deducted from your managed instance storage space. The backup storage is independent from the instance storage space and it is not limited in size. Backup storage is limited by the time period to retain the backup of your instance databases, configurable up to 35 days. For details, see [Automated backups](automated-backups-overview.md).
           
           ### How can I see when automated backups are made on my managed instance?
           
@@ -324,9 +326,9 @@ sections:
           ### Can I set the NVA or on-premises firewall to filter the outbound management traffic based on FQDNs?
           
           No. This is not supported for several reasons:
-          -    Routing traffic that represent response to inbound management request would be asymmetric and could not work.
-          -    Routing traffic that goes to storage would be affected by throughput constraints and latency so this way we won't be able to provide expected service quality and availability.
-          -    Based on experience, these configurations are error prone and not supportable.
+          -    Routing traffic that represents a response to an inbound management request would be asymmetric and could not work.
+          -    Routing traffic to Azure Storage would be affected by throughput constraints and latency so this way we won't be able to provide expected service quality and availability.
+          -    These configurations are error prone and are not supportable.
           
           ### Can I set the NVA or firewall for the outbound non-management traffic?
           
@@ -370,11 +372,13 @@ sections:
           
           ### Can my managed instance have a static IP address?
           
-          This is currently only supported for [private endpoints](connectivity-architecture-overview.md#private-endpoint-preview).
+          Currently, only [private endpoints](connectivity-architecture-overview.md#private-endpoints) to managed instances guarantee static IP addresses.
           
           In rare but necessary situations, we might need to do an online migration of a managed instance to a new virtual cluster. If needed, this migration is because of changes in our technology stack aimed to improve security and reliability of the service. Migrating to a new virtual cluster results in changing the IP address that is mapped to the managed instance host name. The managed instance service doesn't claim static IP address support and reserves the right to change it without notice as a part of regular maintenance cycles.
           
           For the above reason, VNet-local and public endpoints should only be accessed via their associated domain names. We strongly discourage relying on immutability of their IP address as doing so may lead to prolonged unavailability while the service is healthy.
+          
+          If you require a static IP address that is reachable from outside the virtual network, you can deploy Azure Firewall with a frontend public IP address and configure a NAT rule to translate inbound traffic to a managed instance's private endpoint. Then, set up DNS resolution or configure client aliases so that that SQL clients connect to the firewall's public IP address via managed instance's fully qualified domain name.
           
           ### Does SQL Managed Instance have a public endpoint?
           
@@ -405,7 +409,7 @@ sections:
           
           - Turn on [Transparent Data Encryption (TDE)](../database/transparent-data-encryption-tde-overview.md) on all databases.
           - Turn off Common Language Runtime (CLR). This is recommended on-premises as well.
-          - Use Azure Active Directory (Azure AD) authentication only.
+          - Use Microsoft Entra authentication only.
           - Access the instance with a low-privileged DBA account.
           - Configure JIT jumpbox access for the sysadmin account.
           - Turn on [SQL auditing](/sql/relational-databases/security/auditing/sql-server-audit-database-engine), and integrate it with alerting mechanisms.
@@ -439,7 +443,7 @@ sections:
         answer: |
           ### Is the sysadmin server role available for SQL Managed Instance?
           
-          Yes, customers can create logins that are members of the sysadmin role.  Customers who assume the sysadmin privilege are also assuming responsibility for operating the instance, which can negatively impact the SLA commitment. To add a login to the sysadmin server role, see [Azure AD authentication](./aad-security-configure-tutorial.md#azure-ad-authentication).
+          Yes, customers can create logins that are members of the sysadmin role.  Customers who assume the sysadmin privilege are also assuming responsibility for operating the instance, which can negatively impact the SLA commitment. To add a login to the sysadmin server role, see [Microsoft Entra authentication](./aad-security-configure-tutorial.md#azure-ad-authentication).
           
           ### Is Transparent Data Encryption supported for SQL Managed Instance?
           
@@ -499,7 +503,7 @@ sections:
           
           ### How can I track billing cost for my managed instance?
           
-          You can do so using the [Azure Cost Management solution](/azure/cost-management-billing/index). Navigate to **Subscriptions** in the [Azure portal](https://portal.azure.com) and select **Cost Analysis**. 
+          You can do so using the [Microsoft Cost Management solution](/azure/cost-management-billing/index). Navigate to **Subscriptions** in the [Azure portal](https://portal.azure.com) and select **Cost Analysis**. 
           
           Use the **Accumulated costs** option and then filter by the **Resource type** as `microsoft.sql/managedinstances`.
           
@@ -513,7 +517,7 @@ sections:
           
           ### How can I monitor billing cost for my backup storage consumption?
           
-          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](../database/automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
+          You can monitor cost for backup storage via Azure portal. For instructions, see [Monitor costs for automated backups](automated-backups-overview.md?tabs=managed-instance#monitor-costs). 
           
           ### How can I optimize my backup storage costs on the managed instance?
           

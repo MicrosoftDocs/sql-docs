@@ -5,7 +5,7 @@ description: Learn about the currently known issues with Azure SQL Managed Insta
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 06/14/2023
+ms.date: 08/09/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -16,6 +16,8 @@ ms.custom: references_regions
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article lists the currently known issues with [Azure SQL Managed Instance](https://azure.microsoft.com/updates/?product=sql-database&query=sql%20managed%20instance), and their resolution date or possible workaround. To learn more about Azure SQL Managed Instance, see the [overview](sql-managed-instance-paas-overview.md), and [what's new](doc-changes-updates-release-notes-whats-new.md).
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Known issues
 
@@ -32,23 +34,23 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | [Distributed transactions can be executed after removing managed instance from Server Trust Group](#distributed-transactions-can-be-executed-after-removing-managed-instance-from-server-trust-group) | Oct 2020 | Has Workaround | |
 | [Distributed transactions can't be executed after managed instance scaling operation](#distributed-transactions-cant-be-executed-after-managed-instance-scaling-operation) | Oct 2020 | Resolved | May 2021 |
 | [Can't create SQL Managed Instance with the same name as logical server previously deleted](#cant-create-sql-managed-instance-with-the-same-name-as-logical-server-previously-deleted) | Aug 2020 | Has Workaround | |
-| [Service Principal can't access Azure AD and AKV](#service-principal-cant-access-azure-ad-and-akv) | Aug 2020 | Has Workaround | |
+| [Service Principal can't access Microsoft Entra ID [formerly Azure Active Directory]
+ and AKV](#service-principal-cant-access-azure-ad-and-akv) | Aug 2020 | Has Workaround | |
 | [Restoring manual backup without CHECKSUM might fail](#restoring-manual-backup-without-checksum-might-fail) | May 2020 | Resolved | June 2020 |
 | [Agent becomes unresponsive upon modifying, disabling, or enabling existing jobs](#agent-becomes-unresponsive-upon-modifying-disabling-or-enabling-existing-jobs) | May 2020 | Resolved | June 2020 |
 | [Permissions on resource group not applied to SQL Managed Instance](#permissions-on-resource-group-not-applied-to-sql-managed-instance) | Feb 2020 | Resolved | Nov 2020 |
 | [Limitation of manual failover via portal for failover groups](#limitation-of-manual-failover-via-portal-for-failover-groups) | Jan 2020 | Has Workaround | |
 | [SQL Agent roles need explicit EXECUTE permissions for nonsysadmin logins](#sql-agent-roles-need-explicit-execute-permissions-for-non-sysadmin-logins) | Dec 2019 | Resolved | Sep 2022 |
 | [SQL Agent jobs can be interrupted by Agent process restart](#sql-agent-jobs-can-be-interrupted-by-agent-process-restart) | Dec 2019 | Resolved | Mar 2020 |
-| [Azure AD logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | Nov 2019 | No Workaround | |
+| [Microsoft Entra logins and users aren't supported in SSDT](#azure-ad-logins-and-users-arent-supported-in-ssdt) | Nov 2019 | No Workaround | |
 | [In-memory OLTP memory limits aren't applied](#in-memory-oltp-memory-limits-arent-applied) | Oct 2019 | Has Workaround | |
-| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Has Workaround | |
+| [Wrong error returned while trying to remove a file that isn't empty](#wrong-error-returned-while-trying-to-remove-a-file-that-isnt-empty) | Oct 2019 | Resolved | August 2020 |
 | [Change service tier and create instance operations are blocked by ongoing database restore](#change-service-tier-and-create-instance-operations-are-blocked-by-ongoing-database-restore) | Sep 2019 | Has Workaround | |
 | [Resource Governor on Business Critical service tier might need to be reconfigured after failover](#resource-governor-on-business-critical-service-tier-might-need-to-be-reconfigured-after-failover) | Sep 2019 | Has Workaround | |
 | [Cross-database Service Broker dialogs must be reinitialized after service tier upgrade](#cross-database-service-broker-dialogs-must-be-reinitialized-after-service-tier-upgrade) | Aug 2019 | Has Workaround | |
-| [Impersonation of Azure AD login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | Jul 2019 | No Workaround | |
+| [Impersonation of Microsoft Entra login types isn't supported](#impersonation-of-azure-ad-login-types-isnt-supported) | Jul 2019 | No Workaround | |
 | [@query parameter not supported in sp_send_db_mail](#query-parameter-not-supported-in-sp_send_db_mail) | Apr 2019 | Resolved | Jan 2021 |
 | [Transactional replication must be reconfigured after geo-failover](#transactional-replication-must-be-reconfigured-after-geo-failover) | Mar 2019 | No Workaround | |
-| [Temporary database is used during RESTORE operation](#temporary-database-is-used-during-restore-operation) | | Has Workaround | |
 | [tempdb structure and content is re-created](#tempdb-structure-and-content-is-re-created) | | No Workaround | |
 | [Exceeding storage space with small database files](#exceeding-storage-space-with-small-database-files) | | Has Workaround | |
 | [GUID values shown instead of database names](#guid-values-shown-instead-of-database-names) | | Has Workaround | |
@@ -112,11 +114,13 @@ SQL Managed Instance scaling operations that include changing service tier or nu
 
 A DNS record of `<name>.database.windows.com` is created when you create a [logical server in Azure](../database/logical-servers.md) for Azure SQL Database, and when you create a SQL Managed Instance. The DNS record must be unique. As such, if you create a logical server for SQL Database and then delete it, there's a threshold period of seven days before the name is released from the records. In that period, a SQL Managed Instance can't be created with the same name as the deleted logical server. As a workaround, use a different name for the SQL Managed Instance, or create a support ticket to release the logical server name.
 
-### Service Principal can't access Azure AD and AKV
+<a name='service-principal-cant-access-azure-ad-and-akv'></a>
 
-In some circumstances, there might exist an issue with Service Principal used to access Azure AD and Azure Key Vault (AKV) services. As a result, this issue impacts usage of Azure AD authentication and Transparent Database Encryption (TDE) with SQL Managed Instance. This might be experienced as an intermittent connectivity issue, or not being able to run statements such are `CREATE LOGIN/USER FROM EXTERNAL PROVIDER` or `EXECUTE AS LOGIN/USER`. Setting up TDE with customer-managed key on a new Azure SQL Managed Instance might also not work in some circumstances.
+### Service Principal can't access Microsoft Entra ID and AKV
 
-**Workaround**: To prevent this issue from occurring on your SQL Managed Instance before executing any update commands, or in case you have already experienced this issue after update commands, go to Azure portal, access SQL Managed Instance [Active Directory admin page](../database/authentication-aad-configure.md?tabs=azure-powershell#azure-portal). Verify if you can see the error message "Managed Instance needs a Service Principal to access Azure Active Directory. Click here to create a Service Principal". In case you've encountered this error message, select it, and follow the step-by-step instructions provided until this error have been resolved.
+In some circumstances, there might exist an issue with Service Principal used to access Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and Azure Key Vault (AKV) services. As a result, this issue impacts usage of Microsoft Entra authentication and Transparent Database Encryption (TDE) with SQL Managed Instance. This might be experienced as an intermittent connectivity issue, or not being able to run statements such are `CREATE LOGIN/USER FROM EXTERNAL PROVIDER` or `EXECUTE AS LOGIN/USER`. Setting up TDE with customer-managed key on a new Azure SQL Managed Instance might also not work in some circumstances.
+
+**Workaround**: To prevent this issue from occurring on your SQL Managed Instance before executing any update commands, or in case you have already experienced this issue after update commands, go to Azure portal, access SQL Managed Instance [Active Directory admin page](../database/authentication-aad-configure.md?tabs=azure-powershell#azure-portal). Verify if you can see the error message "Managed Instance needs a Service Principal to access Microsoft Entra ID. Click here to create a Service Principal". In case you've encountered this error message, select it, and follow the step-by-step instructions provided until this error have been resolved.
 
 ### Limitation of manual failover via portal for failover groups
 
@@ -152,8 +156,6 @@ The Business Critical service tier doesn't correctly apply [max memory limits fo
 
 SQL Server and SQL Managed Instance [don't allow a user to drop a file that isn't empty](/sql/relational-databases/databases/delete-data-or-log-files-from-a-database#Prerequisites). If you try to remove a nonempty data file using an `ALTER DATABASE REMOVE FILE` statement, the error `Msg 5042 – The file '<file_name>' cannot be removed because it is not empty` isn't immediately returned. SQL Managed Instance will keep trying to drop the file, and the operation will fail after 30 minutes with `Internal server error`.
 
-**Workaround**: Remove the contents of the file using the `DBCC SHRINKFILE (N'<file_name>', EMPTYFILE)` command. If this is the only file in the file group you would need to delete data from the table or partition associated to this file group before you shrink the file, and optionally load this data into another table/partition.
-
 ### Change service tier and create instance operations are blocked by ongoing database restore
 
 An ongoing `RESTORE` statement, a Data Migration Service migration process, and built-in point-in-time restore, will block updating a service tier or resize of the existing instance and creating new instances until the restore process finishes.
@@ -173,16 +175,6 @@ The [Resource Governor](/sql/relational-databases/resource-governor/resource-gov
 Cross-database Service Broker dialogs will stop delivering the messages to the services in other databases after change service tier operation. The messages *aren't lost*, and they can be found in the sender queue. Any change of vCores or instance storage size in SQL Managed Instance causes a `service_broke_guid` value in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) view to be changed for all databases. Any `DIALOG` created using a [BEGIN DIALOG](/sql/t-sql/statements/begin-dialog-conversation-transact-sql) statement that references Service Brokers in other database stops delivering messages to the target service.
 
 **Workaround**: Stop any activity that uses cross-database Service Broker dialog conversations before updating a service tier, and reinitialize them afterward. If there are remaining messages that are undelivered after a service tier change, read the messages from the source queue and resend them to the target queue.
-
-### Temporary database is used during RESTORE operation
-
-When a database is restoring in SQL Managed Instance, the restore service first creates an empty database with the desired name to allocate the name on the instance. After some time, this database will be dropped, and restoring of the actual database will be started.
-
-The database that is in *Restoring* state temporarily has a random GUID value instead of name. The temporary name is changed to the desired name specified in the `RESTORE` statement once the restore process finishes.
-
-In the initial phase, a user can access the empty database and even create tables or load data in this database. This temporary database is dropped when the restore service starts the second phase.
-
-**Workaround**: Don't access the database that you're restoring until you see that restore is completed.
 
 ### Exceeding storage space with small database files
 
@@ -256,16 +248,20 @@ Azure SQL Managed Instance service is creating system login for purposes of tran
 
 We recently introduced support for auto backups in `msdb`, but the table doesn't currently contain username information.
 
-### Azure AD logins and users aren't supported in SSDT
+<a name='azure-ad-logins-and-users-arent-supported-in-ssdt'></a>
 
-SQL Server Data Tools don't fully support Azure AD logins and users.
+### Microsoft Entra logins and users aren't supported in SSDT
 
-### Impersonation of Azure AD login types isn't supported
+SQL Server Data Tools don't fully support Microsoft Entra logins and users.
 
-Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Azure Active Directory (Azure AD) principals isn't supported:
+<a name='impersonation-of-azure-ad-login-types-isnt-supported'></a>
 
-- Aliased Azure AD users. The following error is returned in this case: `15517`.
-- Azure AD logins and users based on Azure AD applications or service principals. The following errors are returned in this case: `15517` and `15406`.
+### Impersonation of Microsoft Entra login types isn't supported
+
+Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Microsoft Entra principals isn't supported:
+
+- Aliased Microsoft Entra users. The following error is returned in this case: `15517`.
+- Microsoft Entra logins and users based on Microsoft Entra applications or service principals. The following errors are returned in this case: `15517` and `15406`.
 
 ### Transactional replication must be reconfigured after geo-failover
 
@@ -331,13 +327,13 @@ The `@query` parameter in the [sp_send_db_mail](/sql/relational-databases/system
 
 The **Active Directory admin** page of Azure portal for Azure SQL Managed Instance may show the following error message, even though Service Principal already exists:
 
-"Managed Instance needs a Service Principal to access Azure Active Directory. Click here to create a Service Principal"
+"Managed Instance needs a Service Principal to access Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Click here to create a Service Principal"
 
-You can neglect this error message if Service Principal for the managed instance already exists, and/or Azure Active Directory authentication on the managed instance works.
+You can neglect this error message if Service Principal for the managed instance already exists, and/or Microsoft Entra authentication on the managed instance works.
 
 To check whether Service Principal exists, navigate to the **Enterprise applications** page on the Azure portal, choose **Managed Identities** from the **Application type** dropdown list, select **Apply**, and type the name of the managed instance in the search box. If the instance name shows up in the result list, Service Principal already exists and no further actions are needed.
 
-If you already followed the instructions from the error message and selected the link from the error message, Service Principal of the managed instance has been recreated. In that case, assign Azure AD read permissions to the newly created Service Principal in order for Azure AD authentication to work properly. This can be done via Azure PowerShell by following [instructions](../database/authentication-aad-configure.md?tabs=azure-powershell#powershell).
+If you already followed the instructions from the error message and selected the link from the error message, Service Principal of the managed instance has been recreated. In that case, assign Microsoft Entra ID read permissions to the newly created Service Principal in order for Microsoft Entra authentication to work properly. This can be done via Azure PowerShell by following [instructions](../database/authentication-aad-configure.md?tabs=azure-powershell#powershell).
 
 ## Contribute to content
 

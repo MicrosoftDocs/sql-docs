@@ -36,9 +36,9 @@ After registering the Microsoft repository, mssql-cli can be installed and upgra
 
 The following example applies to Ubuntu 18.04 (Bionic), more information and examples for other distributions can be found in the [Installation Guide](https://github.com/dbcli/mssql-cli/tree/master/doc/installation).
 
-```
+```bash
 # Import the public repository GPG keys
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 # Register the Microsoft Ubuntu repository
 sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod

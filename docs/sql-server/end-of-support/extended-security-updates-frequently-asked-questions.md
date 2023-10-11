@@ -3,7 +3,7 @@ title: "Extended Security Updates FAQ"
 description: Frequently asked questions about using Azure Arc to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/10/2023
+ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -87,7 +87,7 @@ You can move legacy [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] e
 
 ESUs are available for [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] in Azure Virtual Machines after the End of Support date of July 12, 2022, for the next three years.
 
-If you are looking to upgrade from [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], all subsequent versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] are supported. For [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you are required to be on the latest supported Service Pack. Starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], you are advised to be on the latest Cumulative Update. Service Packs aren't available starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
+If you're looking to upgrade from [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)], all subsequent versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] are supported. For [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)], you're required to be on the latest supported Service Pack. Starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], you're advised to be on the latest Cumulative Update. Service Packs aren't available starting with [!INCLUDE [ssSQL17](../../includes/sssql17-md.md)], only Cumulative Updates and General Distribution Releases (GDRs).
 
 Azure SQL Managed Instance is an instance-scoped deployment option in Azure SQL that provides the broadest [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] engine compatibility and native virtual network (VNET) support, so you can migrate [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] databases to SQL Managed Instance without changing apps. It combines the rich [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] surface area with the operational and financial benefits of an intelligent, fully managed service. You can use the new Azure Database Migration Service to move [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] to Azure SQL Managed Instance with few or no application code changes.
 
@@ -105,17 +105,9 @@ Government customers that are unable to connect or register their [!INCLUDE [ssn
 
 Yes, you can migrate [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure Stack and receive ESUs for no extra cost after the End of Support dates.
 
-#### For customers with a SQL Server cluster using shared storage, what is the guidance to migrating to Azure?
-
-Azure doesn't currently support shared storage clustering. For advice on how to configure a highly available [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance on Azure, refer to the [SQL Server High Availability guide](/azure/azure-sql/virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview).
-
 #### Can I get Extended Security Updates for SQL Server with a third-party hosting provider?
 
 You can't get ESUs if you move your [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] environment to a PaaS implementation on other cloud providers. If your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is running on a virtual machine (IaaS) with License Mobility for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance, you can subscribe to Extended Security Updates enabled by Azure Arc.
-
-#### What are the best practices for enhancing performance of SQL Server in Azure virtual machines?
-
-For advice on how to optimize performance for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure virtual machines, see the [SQL Server optimization guide](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices).
 
 #### How do US Federal Government customers register and obtain SQL Server 2012 ESUs if they are running in Azure Government/O365 GCCH/O365 DOD?
 
@@ -123,7 +115,7 @@ Azure Government regions aren't currently supported in the Azure portal. Until t
 
 Registering provides access to offers via the Azure portal, including ESUs, for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that can't be directly connected to Azure. You can register your instance in a [disconnected](sql-server-extended-security-updates.md#overview) state using the following metadata for each instance: `name,version,edition,cores,hostType`. For more information, see the [formatting requirements](sql-server-extended-security-updates.md#formatting-requirements-for-csv-file).
 
-If there is a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], you need to download the patch from the Azure portal following these [step-by-step instructions](sql-server-extended-security-updates.md#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
+If there's a critical security patch for [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)], you need to download the patch from the Azure portal following these [step-by-step instructions](sql-server-extended-security-updates.md#download-esus), and then apply the patch to their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances.
 
 Government customers that are unable to connect or register their [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances in one of the supported Azure regions, can [open a ticket with Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness) for further instructions. For more information, review the [support options for businesses](https://support.microsoft.com/topic/support-for-business-1f4c4d09-9047-28ac-bb3b-618757e3bffd).
 
@@ -132,7 +124,7 @@ Government customers that are unable to connect or register their [!INCLUDE [ssn
 Extended Security Updates enabled by Azure Arc (ESU subscription) includes several additional benefits compared to the Volume Licensing Service Center (VLSC) purchased ESU products:
 
 - An ESU subscription provides visibility of your entire [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] estate, automating repeatable updates and patches, and can enhance security and data governance with Azure services.
-- It is offered as a monthly subscription that automatically cancels when you migrate or upgrade. You pay only for what you need.
+- It's offered as a monthly subscription that automatically cancels when you migrate or upgrade. You pay only for what you need.
 - You don't need to resubscribe for Year 3.
 
 #### How do I activate an ESU subscription on multiple SQL Servers?
@@ -141,11 +133,11 @@ If you want to activate Extended Security Updates enabled by Azure Arc subscript
 
 #### How do I move from my current ESU to the ESU subscription enabled by Azure Arc?
 
-If you already purchased ESU for Year 1 from VLSC, but haven't yet paid for Year 2, you can activate the ESU subscription via Azure Arc using the previous guidance. If you already purchased ESU for Year 2 from VLSC, you can enable the ESU subscription and request a refund of the Year 2 purchase.
+If you already purchased ESU for Year 1 from VLSC, but haven't yet paid for Year 2, you can activate the ESU subscription via Azure Arc. If you already purchased Year 2, you must wait until Year 3 before switching to Arc-enabled ESUs.
 
 #### Do I need to have purchased the first year of ESU to enable the ESU subscription?
 
-Yes, you must have purchased the Year 1 ESU from VLSC to qualify for the monthly subscription. If you are new to the ESU plans, you must pay for Year 1 ESU before activating the monthly ESU subscription.
+Yes, you must have purchased the Year 1 ESU from VLSC to qualify for the monthly subscription. If you're new to the ESU plans, you must pay for Year 1 ESU before activating the monthly ESU subscription.
 
 #### Can I continue to use the Year 2 ESU purchased from VLSC for Arc-enabled SQL Server 2012 instances?
 
@@ -163,7 +155,7 @@ Your ESU charges stop immediately in the following cases:
 
 #### What happens if I accidentally cancel my subscription and need to reinstate?
 
-If you cancel your ESU subscription accidentally, you can reactivate it within 30 days. You are billed back to the time of the previous charge. After 30 days the subscription is terminated, and you will lose access to the future patches. To gain access to the future patches, you need to re-enable ESUs, which is treated as a brand new subscription.
+If you cancel your ESU subscription accidentally, you can reactivate it within 30 days. You're billed back to the time of the previous charge. After 30 days the subscription is terminated, and you'll lose access to the future patches. To gain access to the future patches, you need to re-enable ESUs, which is treated as a brand new subscription.
 
 #### What happens if I lose Internet connectivity to Azure due to an outage?
 
@@ -178,7 +170,7 @@ If you migrated an instance to [!INCLUDE [ssNoVersion](../../includes/ssnoversio
 
 #### If I paid for the annual commitment using the registered (disconnected) option, can I change to the ESU subscription in the following year?
 
-You need to onboard your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to Azure Arc and select the ESU subscription. You are prompted to confirm your previous annual purchase during this stage.
+You need to onboard your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to Azure Arc and select the ESU subscription. You're prompted to confirm your previous annual purchase during this stage.
 
 #### Am I automatically subscribed for Year 3, or do I need to remember to resubscribe?
 
@@ -192,9 +184,9 @@ Yes. You can select your [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] i
 
 You don't have access to the patches until you reinstall the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The following rules apply:
 
-- If the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance resource is still present as `Offline`, there is an extra charge for the period while the instance was disconnected, because the ESU plan remains active.
+- If the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance resource is still present as `Offline`, there's an extra charge for the period while the instance was disconnected, because the ESU plan remains active.
 
-- If the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is reinstalled in the same subscription or resource group, there is an extra charge for the period while the instance was disconnected, because the ESU plan remains active.
+- If the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is reinstalled in the same subscription or resource group, there's an extra charge for the period while the instance was disconnected, because the ESU plan remains active.
 
 - If the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance is reinstalled to a different subscription, resource group, or region, the instance is considered to be a new resource. You must enable the ESU subscription and pay for it.
 
@@ -202,8 +194,12 @@ You don't have access to the patches until you reinstall the Azure extension for
 
 You don't have access to the patches until the VM is online. When the VM is back online and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance shows a status of `Connected`, the following rules apply:
 
-- You are charged for the period of downtime (back to the previous ESU charge).
+- You're charged for the period of downtime (back to the previous ESU charge).
 - The ESU plan is reactivated.
+
+#### Will the billing start automatically when I sign up?
+
+While you can sign up at any time, you will be charged for ESUs from the beginning of Year 2. When you sign up, your bill includes a one time bill-back charge for each [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instance with an active ESU subscription, from July 12, 2023, to the current date. Going forward, each server will be billed on an hourly basis. Both charges will use the hourly rate (core count) x (100% of Year 2 ESU license price) / 730. For more information about ESU pricing, see [Plan your Windows Server 2012/2012 R2 and SQL Server 2012 end-of-support](https://www.microsoft.com/windows-server/extended-security-updates).
 
 #### Is Microsoft extending SQL Server 2008 / 2008 R2 and Windows Server 2008 Extended Security Updates?
 

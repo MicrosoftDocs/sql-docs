@@ -70,6 +70,9 @@ To configure writing audit logs to an event hub, select **Event Hub**. Select th
 
 :::image type="content" source="./media/auditing-overview/auditing_select_event_hub.png" alt-text="Screenshot showing the Event hub.":::
 
+> [!NOTE]
+> If you are using multiple targets like storage account , log analytics or event hub , make sure you have permissions for all the targets else saving audit configuration would fail as it will try to save the settings for all targets. 
+
 ## Next steps
 
 > [!div class="nextstepaction"]

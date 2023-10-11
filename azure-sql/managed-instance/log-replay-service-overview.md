@@ -9,6 +9,7 @@ ms.service: sql-managed-instance
 ms.subservice: migration
 ms.topic: conceptual
 ms.custom:
+  - sql-migration-content
 ---
 
 # Overview of Log Replay Service with Azure SQL Managed Instance
@@ -150,10 +151,10 @@ Consider the following limitations of LRS:
 - Database backups that are taken without `CHECKSUM` take longer to restore than do database backups with `CHECKSUM` enabled. 
 - The shared access signature (SAS) token that LRS uses must be generated for the entire Azure Blob Storage container, and it must have Read and List permissions only. For example, if you grant Read, List, and Write permissions, LRS won't be able to start because of the extra Write permission.
 - Using SAS tokens created with permissions that are set through defining a [stored access policy](/rest/api/storageservices/define-stored-access-policy) isn't supported. Follow the instructions in this article to manually specify Read and List permissions for the SAS token.
-- Backup files that contain percent sign (%) or dollar sign ($) characters in the file name can't be consumed by LRS. Consider renaming such file names.
 - You must place backup files for different databases in separate folders on the Blob Storage account in a flat-file structure. Nesting folders inside database folders isn't supported.
 - If you're using autocomplete mode, the entire backup chain needs to be available in advance on the Blob Storage account. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - You must start LRS separately for each database that points to the full URI path that contains an individual database folder. 
+- The backup URI path, container name or folder names should not contain `backup` or `backups` as these are reserved keywords.
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
 - While it's possible to use an Azure Storage account behind a firewall, extra configuration is necessary, and the storage account and managed instance must either be in the same region, or two paired regions. Review [Configure firewall](log-replay-service-migrate.md#configure-azure-storage-behind-a-firewall) to learn more. 

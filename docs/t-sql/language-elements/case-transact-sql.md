@@ -150,7 +150,7 @@ You must also ensure that at least one of the expressions in the THEN or ELSE cl
 Within a `SELECT` statement, a simple `CASE` expression allows for only an equality check; no other comparisons are made. The following example uses the `CASE` expression to change the display of product line categories to make them more understandable.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT ProductNumber,
@@ -172,7 +172,7 @@ GO
 Within a `SELECT` statement, the searched `CASE` expression allows for values to be replaced in the result set based on comparison values. The following example displays the list price as a text comment based on the price range for a product.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT ProductNumber,
@@ -225,7 +225,7 @@ GO
 The following example uses the `CASE` expression in an UPDATE statement to determine the value that is set for the column `VacationHours` for employees with `SalariedFlag` set to 0. When subtracting 10 hours from `VacationHours` results in a negative value, `VacationHours` is increased by 40 hours; otherwise, `VacationHours` is increased by 20 hours. The OUTPUT clause is used to display the before and after vacation values.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 UPDATE HumanResources.Employee
@@ -247,7 +247,7 @@ GO
 The following example uses the `CASE` expression in a SET statement in the table-valued function `dbo.GetContactInfo`. In the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, all data related to people is stored in the `Person.Person` table. For example, the person may be an employee, vendor representative, or a customer. The function returns the first and last name of a given `BusinessEntityID` and the contact type for that person. The `CASE` expression in the SET statement determines the value to display for the column `ContactType` based on the existence of the `BusinessEntityID` column in the `Employee`, `Vendor`, or `Customer` tables.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 CREATE FUNCTION dbo.GetContactInformation (@BusinessEntityID INT)
@@ -337,7 +337,7 @@ GO
 The following example uses the `CASE` expression in a HAVING clause to restrict the rows returned by the SELECT statement. The statement returns the hourly rate for each job title in the `HumanResources.Employee` table. The HAVING clause restricts the titles to those that are held by salaried employees with a maximum pay rate greater than 40 dollars, or non-salaried employees with a maximum pay rate greater than 15 dollars.
 
 ```sql
-USE AdventureWorks2019;
+USE AdventureWorks2022;
 GO
 
 SELECT JobTitle,

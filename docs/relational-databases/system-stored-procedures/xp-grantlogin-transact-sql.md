@@ -41,7 +41,7 @@ The name of the Windows user or group to be added. The Windows user or group mus
 
 #### [ @logintype = ] '*logintype*'
 
-The security level of the login being granted access. *@logintype* is **varchar(5)**, with a default of NULL. Only `admin` can be specified. If `admin` is specified, *@loginame* is granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.
+The security level of the login being granted access. *@logintype* is **varchar(5)**, with a default of `NULL`. Only `admin` can be specified. If `admin` is specified, *@loginame* is granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.
 
 ## Return code values
 

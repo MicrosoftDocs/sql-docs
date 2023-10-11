@@ -40,7 +40,7 @@ The <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> class exposes a set
 
 This casts the managed connection manager object to its underlying connection object. If you use C++, the **QueryInterface** method of the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> object is called and the interface of the underlying connection object is requested.
 
-The following table lists the connection managers included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. and the string that is used in the `package.Connections.Add("xxx")` statement. For a list of all connection managers, see [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md).
+The following table lists the connection managers included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and the string that is used in the `package.Connections.Add("xxx")` statement. For a list of all connection managers, see [Integration Services (SSIS) Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md).
 
 | String | Connection manager |
 | --- | --- |

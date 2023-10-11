@@ -10,7 +10,7 @@ ms.subservice: system-objects
 ms.topic: "reference"
 dev_langs:
   - "TSQL"
-monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
+monikerRange: "=azuresqldb-current || >=sql-server-ver16 || >=sql-server-linux-ver16"
 ---
 # sys.sp_copy_data_in_batches (Transact-SQL)
 
@@ -44,7 +44,7 @@ The name of the table to be used as the target of the data copy.
 
 0 (success)
 
-## Result sets
+## Result set
 
 None.
 

@@ -50,7 +50,7 @@ The action to be performed. *@action* is **varchar(20)**, and can be one of thes
 
 `0` (success) or `1` (failure).
 
-## Result sets
+## Result set
 
 None.
 

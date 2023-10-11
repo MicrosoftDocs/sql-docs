@@ -53,7 +53,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ```  
 REM -- Declare variables  
 SET Publisher=%InstanceName%;  
-SET PublicationDB=AdventureWorks2012;   
+SET PublicationDB=AdventureWorks2022;   
 SET Publication=AdvWorksSalesOrdersMerge;   
   
 REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersMerge.  
@@ -70,8 +70,8 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
 REM -- Declare the variables.  
 SET Publisher=%instancename%;  
 SET Subscriber=%instancename%;  
-SET PublicationDB=AdventureWorks2012;  
-SET SubscriptionDB=AdventureWorks2012Replica;   
+SET PublicationDB=AdventureWorks2022;  
+SET SubscriptionDB=AdventureWorks2022Replica;   
 SET Publication=AdvWorksProductsTran;  
   
 REM -- Start the Distribution Agent with four subscription streams.  
@@ -90,8 +90,8 @@ REM -- The following command must be supplied without line breaks.
 REM -- Declare the variables.  
 SET Publisher=%instancename%;  
 SET Subscriber=%instancename%;  
-SET PublicationDB=AdventureWorks2012;  
-SET SubscriptionDB=AdventureWorks2012Replica;   
+SET PublicationDB=AdventureWorks2022;  
+SET SubscriptionDB=AdventureWorks2022Replica;   
 SET Publication=AdvWorksSalesOrdersMerge;  
   
 REM --Start the Merge Agent with concurrent upload and download processes.  

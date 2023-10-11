@@ -4,7 +4,7 @@ DECLARE @newtable AS sysname;
 SET @publication = N'AdvWorksProductTran';
 SET @newtable = N'ProductTest';
 
-USE AdventureWorks2012
+USE AdventureWorks2022;
 
 EXEC sp_addarticle 
   @publication = @publication,

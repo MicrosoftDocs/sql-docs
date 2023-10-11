@@ -87,7 +87,7 @@ The name of the schema of the base object. If *schema_name* isn't specified, the
 The name of the base object that the synonym references.
 
 > [!NOTE]  
-> [!INCLUDE [ssSDSfull](../../includes/sssdsfull-md.md)] supports the three-part name format `database_name.[schema_name].object_name` when the *database_name* is the current database, or the *database_name* is `tempdb` and the *object_name* starts with `#`.
+> [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] supports the three-part name format `database_name.[schema_name].object_name` when the *database_name* is the current database, or the *database_name* is `tempdb` and the *object_name* starts with `#`.
 
 ## Remarks
 
@@ -127,7 +127,7 @@ The `CREATE SYNONYM` permission is a grantable permission.
 
 ### A. Create a synonym for a local object
 
-The following example first creates a synonym for the base object, `Product` in the `AdventureWorks2022` database, and then queries the synonym.
+The following example first creates a synonym for the base object, `Product` in the [!INCLUDE [sssampledbobject-md](../../includes/sssampledbobject-md.md)] database, and then queries the synonym.
 
 ```sql
 -- Create a synonym for the Product table in AdventureWorks2022.

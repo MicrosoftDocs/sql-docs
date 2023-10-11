@@ -3,7 +3,7 @@ title: "MSSQLSERVER_15517"
 description: "MSSQLSERVER_15517"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "04/04/2017"
+ms.date: "11/10/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -16,27 +16,25 @@ helpviewer_keywords:
 
 ## Details  
   
-| Attribute | Value |  
-| :-------- | :---- |  
-|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Event ID|15517|  
-|Event Source|MSSQLSERVER|  
-|Component|SQLEngine|  
-|Symbolic Name|SEC_CANNOTEXECUTEASUSER|  
+| Attribute | Value |
+| :-------- | :---- |
+|Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|Event ID|15517|
+|Event Source|MSSQLSERVER|
+|Component|SQLEngine|
+|Symbolic Name|SEC_CANNOTEXECUTEASUSER|
 |Message Text|Cannot execute as the database principal because the principal "*principal*" does not exist, this type of principal can't be impersonated, or you do not have permission.|  
   
 ## Explanation
 
-This error generally occurs because SQL Server can't obtain the information about the execution context of the principal that's specified in a user statement or module using the EXECUTE AS statement.
+This error generally occurs because SQL Server can't obtain the information about the execution context of the principal that's specified in a user statement or module using the `EXECUTE AS` statement.
 
-Your login information (Security identifier -sid) is automatically saved when you create a database on a SQL Server instance as the database owner in the corresponding database row in the sys.databases table and for the dbo user item in the sys.database_principals table within the database.  
+Your login information sid (Security identifier) is automatically saved when you create a database on a SQL Server instance as the database owner in the corresponding database row in the `sys.databases` table and for the `dbo` user item in the `sys.database_principals` table within the database.  
 
-The statements or modules that use EXECUTE AS OWNER clause will work fine as long as the sid entry stored for dbo user is valid.
-
-When you restore a database from its backup, the sid entry in the sys.databases is updated to the new principal that restored the database on the server but the sid entry within the restored database table sys.database_principals remains unchanged and if this sid entry can't be validated by the SQL Server instance where the database is restored, you can get the 15517 error. See the [example scenario](#example-scenario).
+The statements or modules that use `EXECUTE AS OWNER` clause will work fine as long as the sid entry stored for dbo user is valid.
 
 > [!NOTE]
-> The issue can happen with any principal that's used in the EXECUTE AS clause and that doesn't exist on the server where the database is restored.
+> The issue can happen with any principal that's used in the `EXECUTE AS` statement and that doesn't exist on the server where the database is restored.
 
 Here are a few common scenarios that can lead to this situation:
 
@@ -50,9 +48,7 @@ Here are a few common scenarios that can lead to this situation:
    - If the user is a SQL Server, the principal might exist on the target or destination server but the sid is different.
    - If the user is a Windows login, the Windows login doesn't exist on the target server or it's no longer valid.
 
-The user or application executing the stored procedure, function, or trigger doesn't have the necessary permissions to impersonate the principal specified in the EXECUTE AS clause.
-
-The principal specified in the EXECUTE AS clause is a certificate or asymmetric key, but the user or application executing the statement or module doesn't have permission to impersonate certificates or asymmetric keys.
+The user or application executing the stored procedure, function, or trigger doesn't have the necessary permissions to impersonate the principal specified in the `EXECUTE AS` statement.
 
 ## User Action
 
@@ -73,12 +69,12 @@ To resolve the error caused due to issues with an invalid dbo user error, change
     CREATE LOGIN login2 WITH PASSWORD = 'Uor80$23b';
     ```
 
-1. Add these two logins to sysadmin role (for demo purposes only).
+1. Add these two logins to the sysadmin role (for demo purposes only).
 1. Log in to your SQL Server instance using login1.
-1. Create a demo database and a stored procedure called testexec using the following script:
+1. Create a demo database and a stored procedure called `testexec` using the following script:
 
     ```sql
-    CREATE database Demodb_15517
+    CREATE DATABASE Demodb_15517
     GO
     USE Demodb_15517
     GO
@@ -90,35 +86,37 @@ To resolve the error caused due to issues with an invalid dbo user error, change
     GO
     ```
 
-1. Run the following two queries and note that the security identifier values (sid) are resolving to a valid login.
+1. Run the following two queries and note that the `sid` values are resolving to a valid login.
 
     - Query 1: Check the value of owner name in sys.databases.
 
     ```sql
-    SELECT name AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
+    SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
     FROM sys.databases
-    WHERE name = N'Demodb_15517';
+    WHERE NAME = N'Demodb_15517';
     /* 
-     Database_Name                                                                                                                    owner_sid                                                                                       OwnerName 
+     Database_Name                                                                                                                    owner_sid                                                                                       OwnerName
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                             login1
     (1 row affected)
     */ 
     ```
 
-    - Query 2: Check the value of owner name in sys.database_principals table within the demo database.
+    - Query 2: Check the value of owner name in the `sys.database_principals` table within the demo database.
 
     ```sql
     SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
     FROM Demodb_15517.sys.database_principals 
-    WHERE name = N'dbo'; 
+    WHERE NAME = N'dbo'; 
     /* 
     Owner_Name                                                                                     sid
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
     (1 row affected)
     */
     ```
 
-1. Back up your demo database using a query that resembles the following code:
+1. Back up your demo database using a query that resembles the following script:
 
 ```sql
 BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10 
@@ -128,7 +126,7 @@ GO
 1. Drop the demo database and login1.
 
 ```sql
-DROP database demodb_15517
+DROP DATABASE demodb_15517
 GO
 DROP login login1
 GO
@@ -136,47 +134,50 @@ GO
 
 1. Log in to SQL Server as login2.
 
-1. Use a statement that resembles the following code to restore the demo database from backup:
+1. Restore the demo database from backup using a statement that resembles the following script:
 
 ```sql
 USE [master] 
 RESTORE DATABASE [Demodb_15517] FROM   
-DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH  FILE = 1,   
+DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH FILE = 1,   
 MOVE N'Demodb_15517' TO N'C:\SQLBackups\Demodb_15517.mdf',   
 MOVE N'Demodb_15517_log' TO N'C:\SQLBackups\\Demodb_155172_log.ldf',   
-NOUNLOAD,  STATS = 5 
+NOUNLOAD, STATS = 5 
 GO 
 ```
 
-1. Now rerun Query 1 and Query 2.
+1. Now re-run Query 1 and Query 2.
 
-1. In Query 1, check the value of owner name in sys.databases. The new owner name now reflects login2.
+1. In Query 1, check the value of owner name in `sys.databases`. The new owner name now reflects login2.
 
 ```sql
-SELECT name AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
+SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
 FROM sys.databases 
-WHERE name = N'Demodb_15517'; 
+WHERE NAME = N'Demodb_15517'; 
 /* 
 Database_Name  owner_sid                                                                                      OwnerName
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
 (1 row affected)
 */ 
 ```
 
-1. In Query 2, check the value of owner name in sys.database_principals table within the demo database. The owner_name now reflects NULL.
+1. In Query 2, check the value of owner name in the `sys.database_principals` table within the demo database. The `owner_name` now reflects `NULL`.
 
 ```sql
 SELECT SUSER_SNAME(sid) AS Owner_Name, sid
 FROM Demodb_15517.sys.database_principals
-WHERE name = N'dbo';
+WHERE NAME = N'dbo';
 /* 
-Owner_Name                                                                                     sid 
+Owner_Name
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+sid 
 NULL                                                                                           0xDB79ED7B6731CF4E8DC7DF02871E3E36 
 (1 row affected) 
 */ 
 ```
 
-1. Now, if you run the testexec stored procedure, you get the 15517 error.
+1. Now, if you run the `testexec` stored procedure, you see the 15517 error message.
 
 ```sql
 USE Demodb_15517 
@@ -195,13 +196,12 @@ Cannot execute as the database principal because the principal "dbo" does not ex
 ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
 ```
 
-1. Rerun query 2 and verify that dbo users now resolve to login2 user.
+1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
 
 ```sql
 /* 
 Owner_Name                                                                                     sid
 -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-
 login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
 (1 row affected) 
 */ 
@@ -215,7 +215,6 @@ GO
 EXEC dbo.testexec 
 GO 
 /* -- You get an output similar to the following 
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
 May 29 2022 15:55:47  
@@ -226,8 +225,6 @@ Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hy
 ```
 
 ## See Also
-
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 [Copy Databases to Other Servers](../databases/copy-databases-to-other-servers.md)
 

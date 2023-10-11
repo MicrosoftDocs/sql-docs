@@ -45,7 +45,7 @@ Here are a few common scenarios that can lead to this situation:
 
 - You restore a database on a server that's different from the instance where the backup was originally taken but the SQL Server principal that created the database isn't a valid principal on the new server.
 
-   - If the user is a SQL Server, the principal might exist on the target or destination server but the sid is different.
+   - If the user is a SQL Server, the principal might exist on the target or destination server but the `sid` is different.
    - If the user is a Windows login, the Windows login doesn't exist on the target server or it's no longer valid.
 
 The user or application executing the stored procedure, function, or trigger doesn't have the necessary permissions to impersonate the principal specified in the `EXECUTE AS` statement.
@@ -90,139 +90,139 @@ To resolve the error caused due to issues with an invalid dbo user error, change
 
     - Query 1: Check the value of owner name in sys.databases.
 
-    ```sql
-    SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
-    FROM sys.databases
-    WHERE NAME = N'Demodb_15517';
-    /* 
-     Database_Name                                                                                                                    owner_sid                                                                                       OwnerName
-    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-    Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                             login1
-    (1 row affected)
-    */ 
-    ```
+        ```sql
+        SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
+        FROM sys.databases
+        WHERE NAME = N'Demodb_15517';
+        /* 
+         Database_Name                                                                                                                    owner_sid                                                                                       OwnerName
+        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+        Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                             login1
+        (1 row affected)
+        */ 
+        ```
 
     - Query 2: Check the value of owner name in the `sys.database_principals` table within the demo database.
 
-    ```sql
-    SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
-    FROM Demodb_15517.sys.database_principals 
-    WHERE NAME = N'dbo'; 
-    /* 
-    Owner_Name                                                                                     sid
-    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-    login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
-    (1 row affected)
-    */
-    ```
+        ```sql
+        SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
+        FROM Demodb_15517.sys.database_principals 
+        WHERE NAME = N'dbo'; 
+        /* 
+        Owner_Name                                                                                     sid
+        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+        login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
+        (1 row affected)
+        */
+        ```
 
 1. Back up your demo database using a query that resembles the following script:
 
-```sql
-BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10 
-GO 
-```
+    ```sql
+    BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10 
+    GO 
+    ```
 
 1. Drop the demo database and login1.
 
-```sql
-DROP DATABASE demodb_15517
-GO
-DROP login login1
-GO
-```
+    ```sql
+    DROP DATABASE demodb_15517
+    GO
+    DROP login login1
+    GO
+    ```
 
 1. Log in to SQL Server as login2.
 
 1. Restore the demo database from backup using a statement that resembles the following script:
 
-```sql
-USE [master] 
-RESTORE DATABASE [Demodb_15517] FROM   
-DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH FILE = 1,   
-MOVE N'Demodb_15517' TO N'C:\SQLBackups\Demodb_15517.mdf',   
-MOVE N'Demodb_15517_log' TO N'C:\SQLBackups\\Demodb_155172_log.ldf',   
-NOUNLOAD, STATS = 5 
-GO 
-```
+    ```sql
+    USE [master] 
+    RESTORE DATABASE [Demodb_15517] FROM   
+    DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH FILE = 1,   
+    MOVE N'Demodb_15517' TO N'C:\SQLBackups\Demodb_15517.mdf',   
+    MOVE N'Demodb_15517_log' TO N'C:\SQLBackups\\Demodb_155172_log.ldf',   
+    NOUNLOAD, STATS = 5 
+    GO 
+    ```
 
 1. Now re-run Query 1 and Query 2.
 
 1. In Query 1, check the value of owner name in `sys.databases`. The new owner name now reflects login2.
 
-```sql
-SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
-FROM sys.databases 
-WHERE NAME = N'Demodb_15517'; 
-/* 
-Database_Name  owner_sid                                                                                      OwnerName
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
-(1 row affected)
-*/ 
-```
+    ```sql
+    SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
+    FROM sys.databases 
+    WHERE NAME = N'Demodb_15517'; 
+    /* 
+    Database_Name  owner_sid                                                                                      OwnerName
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
+    (1 row affected)
+    */ 
+    ```
 
 1. In Query 2, check the value of owner name in the `sys.database_principals` table within the demo database. The `owner_name` now reflects `NULL`.
 
-```sql
-SELECT SUSER_SNAME(sid) AS Owner_Name, sid
-FROM Demodb_15517.sys.database_principals
-WHERE NAME = N'dbo';
-/* 
-Owner_Name
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-sid 
-NULL                                                                                           0xDB79ED7B6731CF4E8DC7DF02871E3E36 
-(1 row affected) 
-*/ 
-```
+    ```sql
+    SELECT SUSER_SNAME(sid) AS Owner_Name, sid
+    FROM Demodb_15517.sys.database_principals
+    WHERE NAME = N'dbo';
+    /* 
+    Owner_Name
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    sid 
+    NULL                                                                                           0xDB79ED7B6731CF4E8DC7DF02871E3E36 
+    (1 row affected) 
+    */ 
+    ```
 
 1. Now, if you run the `testexec` stored procedure, you see the 15517 error message.
 
-```sql
-USE Demodb_15517 
-GO 
-EXEC dbo.testexec 
-GO 
-/* 
-Msg 15517, Level 16, State 1, Procedure dbo.testexec, Line 0 [Batch Start Line 19] 
-Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission. 
-*/ 
-```
+    ```sql
+    USE Demodb_15517 
+    GO 
+    EXEC dbo.testexec 
+    GO 
+    /* 
+    Msg 15517, Level 16, State 1, Procedure dbo.testexec, Line 0 [Batch Start Line 19] 
+    Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission. 
+    */ 
+    ```
 
-1. To resolve the error, change the dbo to a valid user (login2) using the following statement:
+1. To resolve the error, change the dbo to a valid user (login2) using the following command:
 
-```sql
-ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
-```
+    ```sql
+    ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
+    ```
 
 1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
 
-```sql
-/* 
-Owner_Name                                                                                     sid
--------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
-(1 row affected) 
-*/ 
-```
+    ```sql
+    /* 
+    Owner_Name                                                                                     sid
+    -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
+    (1 row affected) 
+    */
+    ```
 
 1. Now, retry running the test stored procedure and notice that this time it executes successfully.
 
-```sql
-USE Demodb_15517 
-GO 
-EXEC dbo.testexec 
-GO 
-/* -- You get an output similar to the following 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
-May 29 2022 15:55:47  
-Copyright (C) 2019 Microsoft Corporation 
-Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hypervisor) 
-(1 row affected) 
-*/ 
-```
+    ```sql
+    USE Demodb_15517 
+    GO 
+    EXEC dbo.testexec 
+    GO 
+    /* -- You get an output similar to the following 
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+    Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
+    May 29 2022 15:55:47  
+    Copyright (C) 2019 Microsoft Corporation 
+    Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hypervisor) 
+    (1 row affected) 
+    */ 
+    ```
 
 ## See Also
 

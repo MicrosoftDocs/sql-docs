@@ -100,7 +100,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
 
 ### Check connectivity using Telnet
 
-[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you may need to enable this feature explicitly.
+[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you might need to enable this feature explicitly.
 
 Open a Command Prompt window after you have installed Telnet. Run the **Telnet** command and specify the IP address and private endpoint of the database in SQL Database.
 

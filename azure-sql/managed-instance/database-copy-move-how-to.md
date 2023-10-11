@@ -223,7 +223,7 @@ Consider the following limitations of the copy and move feature:
 - A database can participate in only a single move or copy operation at a time.
 - The source instance can run up to eight copy or move operations at a time. You can start more than eight operations, but some are queued and processed later, as managed by the service.
 - You can't rename a database during a copy or move operation.
-- Database tags are not copied with copy or move operation.
+- Database tags aren't copied with copy or move operation.
 - Database copy and move operations don't copy or move PITR backups.
 - You can't copy or move a database that's part of an [auto-failover group](auto-failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.

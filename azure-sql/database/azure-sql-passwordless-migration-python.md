@@ -3,7 +3,7 @@ title: Migrate a Python application to use passwordless connections with Azure S
 description: Learn how to migrate a Python application to use passwordless connections with Azure SQL Database.
 author: bobtabor-msft
 ms.author: rotabor
-ms.date: 05/15/2023
+ms.date: 10/11/2023
 ms.service: sql-database
 ms.subservice: security
 monikerRange: "= azuresql || = azuresql-db"
@@ -39,6 +39,10 @@ Create a user in Azure SQL Database. The user should correspond to the Azure acc
 Existing application code that connects to Azure SQL Database using the [Python SQL Driver - pyodbc](/sql/connect/python/pyodbc/python-sql-driver-pyodbc) continues to work with passwordless connections with minor changes. For example, the following code works with both SQL authentication and passwordless connections when running locally and when deployed to Azure App Service.
 
 ```python
+import os
+import pyodbc, struct
+from azure.identity import DefaultAzureCredential
+
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
 
 def get_all():
@@ -49,7 +53,7 @@ def get_all():
     return
 
 def get_conn():
-    credential = identity.DefaultAzureCredential(exclude_interactive_browser_credential=False)
+    credential = DefaultAzureCredential(exclude_interactive_browser_credential=False)
     token_bytes = credential.get_token("https://database.windows.net/.default").token.encode("UTF-16-LE")
     token_struct = struct.pack(f'<I{len(token_bytes)}s', len(token_bytes), token_bytes)
     SQL_COPT_SS_ACCESS_TOKEN = 1256  # This connection option is defined by microsoft in msodbcsql.h

@@ -31,7 +31,7 @@ This function returns a string resulting from the concatenation, or joining, of 
 ## Syntax
 
 ```syntaxsql
-CONCAT_WS ( argument1 , argument2 [ , argumentN ] ... )
+CONCAT ( argument1 , argument2 [ , argumentN ] ... )
 [ ; ]
 ```
 

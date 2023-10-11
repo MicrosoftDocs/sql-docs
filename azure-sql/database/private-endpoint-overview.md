@@ -5,7 +5,7 @@ description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 10/02/2023
+ms.date: 10/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
@@ -37,15 +37,17 @@ Private Endpoints can be created using the Azure portal, PowerShell, or the Azur
 
 Once the network admin creates the Private Endpoint (PE), the SQL admin can manage the Private Endpoint Connection (PEC) to SQL Database.
 
-1. Navigate to the server resource in the Azure portal as per steps shown in the following screenshot.
+1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-   - (1) Select the Private endpoint connections in the left pane
-   - (2) Shows a list of all Private Endpoint Connections (PECs)
-   - (3) Corresponding Private Endpoint (PE) created
+1. Select **Networking** in the left pane.
+1. Select the **Private access** tab. The page shows the following:
+
+   - A list of all Private Endpoint Connections (PECs)
+   - Private endpoints (PE) created
 
    :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot that shows how to locate the list of private endpoint connections for the server resource." lightbox="media/private-endpoint/pec-list-before.png" border="false":::
 
-1. Choose an individual PEC from the list by selecting it.
+1. If there are no private endpoints, create one using the **Create a private endpoint** button. Otherwise, choose an individual PEC from the list by selecting it.
 
    :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot that shows how to select a private endpoint connection in the Azure portal." lightbox="media/private-endpoint/pec-select.png":::
 
@@ -57,15 +59,15 @@ Once the network admin creates the Private Endpoint (PE), the SQL admin can mana
 
    :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot that shows the PEC in the Approved state after approval by the admin." lightbox="media/private-endpoint/pec-list-after.png":::
 
-1. Finally selecting the private endpoint name
+1. Finally, select the private endpoint name
 
    :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot showing PEC details with the endpoint name." lightbox="media/private-endpoint/pec-select.png":::
 
-   leads to the Network Interface details
+   This takes you to the **Private endpoint** overview page. Select the **Network interfaces** link to get the network interface details for the private endpoint connection.
 
    :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot that shows the NIC details for the private endpoint connection." lightbox="media/private-endpoint/pec-nic-click.png":::
 
-   which finally leads to the IP address for the private endpoint
+   The **Network interface** page shows the private IP address for the private endpoint connection.
 
    :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot that shows the Private IP address for the private endpoint connection." lightbox="media/private-endpoint/pec-ip-display.png":::
 
@@ -98,7 +100,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
 
 ### Check connectivity using Telnet
 
-[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you may need to enable this feature explicitly.
+[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you might need to enable this feature explicitly.
 
 Open a Command Prompt window after you have installed Telnet. Run the **Telnet** command and specify the IP address and private endpoint of the database in SQL Database.
 

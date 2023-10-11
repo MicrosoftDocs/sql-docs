@@ -1004,83 +1004,8 @@ The following table covers these SLOs: `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_40`,
 
 <sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
 
-## Business Critical - provisioned compute - M-series
-
-For important information about M-series hardware availability, see [Azure offer types supported by M-series](service-tiers-sql-database-vcore.md#azure-offer-types-supported-by-m-series).
-
-### Business Critical M-series hardware (part 1 of 2)
-
-Compute sizes (service level objectives, or SLOs) in the Business Critical M-series databases follow the naming convention `BC_M_` followed by the number of vCores. 
-
-The following table covers these SLOs: `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, and `BC_M_18`:
-
-| vCores | 8 | 10 | 12 | 14 | 16 | 18 |
-|:-|-:|-:|-:|-:|-:|-:|
-| Hardware | M-series | M-series | M-series | M-series | M-series | M-series |
-| Memory (GB) | 235.4 | 294.3 | 353.2 | 412.0 | 470.9 | 529.7 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | 64 | 80 | 96 | 112 | 128 | 150 |
-| Max data size (GB) | 512 | 640 | 768 | 896 | 1024 | 1152 |
-| Max log size (GB) <sup>1</sup> | 171 | 213 | 256 | 299 | 341 | 384 |
-| Tempdb max data size (GB) | 256 | 320 | 384 | 448 | 512 | 576 |
-| [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 13,836 | 13,836 | 13,836 | 13,836 | 13,836 | 13,836 |
-| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
-| Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Max data IOPS <sup>2</sup> | 12,499 | 15,624 | 18,748 | 21,873 | 24,998 | 28,123 |
-| Max log rate (MBps) | 48 | 60 | 72 | 84 | 96 | 108 |
-| Max concurrent workers | 800 | 1,000 | 1,200 | 1,400 | 1,600 | 1,800 |
-| Max concurrent logins | 800 | 1,000 | 1,200 | 1,400 | 1,600 | 1,800 |
-| Max concurrent external connections <sup>3</sup> | 80 | 100 | 120 | 140 | 150 | 150 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Number of replicas | 4 | 4 | 4 | 4 | 4 | 4 |
-| Multi-AZ | No | No | No | No | No | No |
-| Read Scale-out | Yes | Yes | Yes | Yes | Yes | Yes |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
-
-### Business Critical M-series hardware (part 2 of 2)
-
-Compute sizes (service level objectives, or SLOs) in the Business Critical M-series databases follow the naming convention `BC_M_` followed by the number of vCores. 
-
-The following table covers these SLOs: `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, and `BC_M_128`:
-
-| vCores | 20 | 24 | 32 | 64 | 128 |
-|:-|-:|-:|-:|-:|-:|
-| Hardware | M-series | M-series | M-series | M-series | M-series |
-| Memory (GB) | 588.6 | 706.3 | 941.8 | 1883.5 | 3767.0 |
-| Columnstore support | Yes | Yes | Yes | Yes | Yes |
-| In-memory OLTP storage (GB) | 172 | 216 | 304 | 704 | 1768 |
-| Max data size (GB) | 1280 | 1536 | 2048 | 4096 | 4096 |
-| Max log size (GB) <sup>1</sup> | 427 | 512 | 683 | 1024 | 1024 |
-| Tempdb max data size (GB) | 640 | 768 | 1024 | 2048 | 4096 |
-| [Max local storage size](resource-limits-logical-server.md#storage-space-governance) (GB) | 13,836 | 13,836 | 13,836 | 13,836 | 13,836 |
-| Storage type | Local SSD | Local SSD | Local SSD | Local SSD | Local SSD |
-| Read IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Write IO latency (approximate) | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms | 1-2 ms |
-| Max data IOPS <sup>2</sup> | 31,248 | 37,497 | 49,996 | 99,993 | 160,000 |
-| Max log rate (MBps) | 120 | 144 | 192 | 264 | 264 |
-| Max concurrent workers | 2,000 | 2,400 | 3,200 | 6,400 | 12,800 |
-| Max concurrent logins | 2,000 | 2,400 | 3,200 | 6,400 | 12,800 |
-| Max concurrent external connections <sup>3</sup> | 150 | 150 | 150 | 150 | 150 |
-| Max concurrent sessions | 30,000 | 30,000 | 30,000 | 30,000 | 30,000 |
-| Number of replicas | 4 | 4 | 4 | 4 | 4 |
-| Multi-AZ | No | No | No | No | No |
-| Read Scale-out | Yes | Yes | Yes | Yes | Yes |
-| Included backup storage | 1X DB size | 1X DB size | 1X DB size | 1X DB size | 1X DB size |
-
-<sup>1</sup> For documented max data size values. Reducing max data size reduces max log size proportionally.
-
-<sup>2</sup> The maximum value for IO sizes ranging between 8 KB and 64 KB. Actual IOPS are workload-dependent. For details, see [Data IO Governance](resource-limits-logical-server.md#resource-governance).
-
-<sup>3</sup> For more information on what counts as an external connection, see [External Connections](resource-limits-logical-server.md#external-connections).
-
 ## Business Critical - provisioned compute - DC-series
+
 ### Business Critical DC-series hardware (part 1 of 2)
 
 Compute sizes (service level objectives, or SLOs) in the Business Critical DC-series databases follow the naming convention `BC_DC_` followed by the number of vCores. 

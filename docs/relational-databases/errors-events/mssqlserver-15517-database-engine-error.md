@@ -40,8 +40,8 @@ Here are a few common scenarios that can lead to this situation:
 
 - You restore a database on the same server instance where the backup was originally taken but the SQL Server principal that created the database is no longer valid.
 
-   - SQL Server authentication login may have been removed.
-   - Windows authentication login may have left the company and is no longer a valid user in the Active Directory.
+   - SQL Server authentication login might have been removed.
+   - Windows authentication login might have left the company and is no longer a valid user in the Active Directory.
 
 - You restore a database on a server that's different from the instance where the backup was originally taken but the SQL Server principal that created the database isn't a valid principal on the new server.
 

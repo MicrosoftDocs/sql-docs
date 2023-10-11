@@ -4,7 +4,7 @@ description: Learn about the upcoming changes of root certificate changes that w
 author: tameikal-msft
 ms.author: talawren
 ms.reviewer: mathoma, vanto
-ms.date: 09/13/2020
+ms.date: 10/11/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: conceptual
@@ -24,11 +24,11 @@ The new certificate will be used starting October 26, 2020. If you use full vali
 
 ## How do I know if my application might be affected?
 
-All applications that use SSL/TLS and verify the root certificate needs to update the root certificate in order to connect to Azure SQL Database & SQL Managed Instance. 
+All applications that use SSL/TLS and verify the root certificate needs to update the root certificate in order to connect to Azure SQL Database & Azure SQL Managed Instance. 
 
 If you are not using SSL/TLS currently, there is no impact to your application availability. You can verify if your client application is trying to verify root certificate by looking at the connection string. If TrustServerCertificate is explicitly set to true then you are not affected.
 
-If your client driver utilizes OS certificate store, as majority of drivers do, and your OS is regularly maintained this change will likely not affect you, as the root certificate we are switching to should be already available in your Trusted Root Certificate Store. Check for Baltimore CyberDigiCert GlobalRoot G2 and validate it is present.
+If your client driver utilizes OS certificate store, as majority of drivers do, and your OS is regularly maintained this change will likely not affect you, as the root certificate we are switching to should be already available in your Trusted Root Certificate Store. Check for Baltimore CyberTrust Root and DigiCert GlobalRoot G2 Root, and validate it is present.
 
 If your client driver utilizes local file certificate store, to avoid your application's availability being interrupted due to certificates being unexpectedly revoked, or to update a certificate, which has been revoked, refer to the [**What do I need to do to maintain connectivity**](./ssl-root-certificate-expiring.md#what-do-i-need-to-do-to-maintain-connectivity) section.
 

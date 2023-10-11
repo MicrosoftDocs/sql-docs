@@ -3,7 +3,7 @@ title: Enable SQL Insights (preview)
 description: Enable SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/03/2022
+ms.date: 10/11/2023
 ms.service: sql-db-mi
 ms.topic: conceptual
 ms.custom: subject-monitoring
@@ -189,11 +189,24 @@ The profile is stored as a [data collection rule](/azure/azure-monitor/essential
 Select **Create monitoring profile** once you've entered the details for your monitoring profile. It can take up to a minute for the profile to be deployed.  If you don't see the new profile listed in **Monitoring profile** combo box, select the refresh button and it should appear once the deployment is completed.  Once you've selected the new profile, select the **Manage profile** tab to add a monitoring machine that will be associated with the profile.
 
 ### Add monitoring machine
-Select **Add monitoring machine** to open a context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
+Select **Add monitoring machine** to open an `Add monitoring virtual machine` context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
 
-Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store your password for the monitoring user, select the Key Vault resources with these secrets and enter the URI and secret name for the password to be used in the connection strings. See the next section for details on identifying the connection string for different SQL deployments.
+Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store your password for the monitoring user (strongly recommended), select the subscription of that Key Vault under `Key vault subscriptions`, and then the Key Vault that stores this secret under `KeyVault`. Then, in the `Connection strings` field, enter the URI and the secret name for the password to be used in the connection strings.
+
+For example, if the Key Vault URI is `https://mykeyvault.vault.azure.net/`, and the secret name is `sqlPassword`, then the JSON in the `Connection strings` field will contain the following:
+
+```json
+    "secrets": {
+        "telegrafPassword": {
+            "keyvault": "https://mykeyvault.vault.azure.net/",
+            "name": "sqlPassword"
+        }
+    }
+```
 
 :::image type="content" source="media/sql-insights-enable/add-monitoring-machine.png" alt-text="A screenshot of the Azure portal Add monitoring virtual machine page. Choose the VM, specify the KV url (if used) and the secret name. Enter connection strings for each system to monitor. Choose the KV where you created the secret used in the connection strings." lightbox="media/sql-insights-enable/add-monitoring-machine.png":::
+
+See the next section for details on identifying the connection string for different SQL deployments.
 
 ### Add connection strings 
 The connection string specifies the login name that SQL Insights (preview) should use when logging into SQL to collect monitoring data. If you're using a Key Vault to store the password for your monitoring user, provide the Key Vault URI and name of the secret that contains the password.

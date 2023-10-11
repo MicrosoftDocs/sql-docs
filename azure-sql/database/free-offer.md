@@ -147,4 +147,4 @@ To delete `myFreeDBResourceGroup` and all its resources using the Azure portal:
 - [Azure SQL Database free offer FAQ](free-offer-faq.yml)
 - [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages
 - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-- [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json?view=azuresqldb-current&preserve-view=true)
+- [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database)

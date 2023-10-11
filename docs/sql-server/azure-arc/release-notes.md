@@ -16,9 +16,9 @@ ms.topic: conceptual
 
 This release is published October 10, 2023. The extension is updated on October 16, 2023.
 
-### Extension version
+### Extension versions
 
-`1.1.2474.69`
+`1.1.2467.69`,`1.1.2474.69`
 
 ### Azure extension for SQL Server
 

@@ -18,7 +18,8 @@ This release is published October 10, 2023. The extension is updated on October 
 
 ### Extension versions
 
-`1.1.2467.69`,`1.1.2474.69`
+- `1.1.2467.69`
+- `1.1.2474.69` - Enables failover cluster instance discovery.
 
 ### Azure extension for SQL Server
 

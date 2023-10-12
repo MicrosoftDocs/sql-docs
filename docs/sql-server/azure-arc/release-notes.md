@@ -37,9 +37,10 @@ This release is published October 10, 2023.
 
 This release is published September 13, 2023.
 
-### Extension version
+### Extension versions
 
-`1.1.2451.59`
+- `1.1.2451.59`
+- `1.1.2440.53`
 
 ### Azure extension for SQL Server
 
@@ -240,3 +241,4 @@ This release is published on October 12, 2022
 ### Azure extension for SQL Server
 
 SQL Server Onboarding Role is no longer needed for onboarding SQL servers onto Azure Arc.
+

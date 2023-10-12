@@ -515,7 +515,7 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-If an exception or crash occurs in one of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] creates a memory dump. Capturing a memory dump may take a long time and take up significant space. To save resources and avoid repeated memory dumps, you can disable automatic dump capture using the `coredump.disablecoredump` option.
+If an exception or crash occurs in one of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] creates a memory dump. Capturing a memory dump might take a long time and take up significant space. To save resources and avoid repeated memory dumps, you can disable automatic dump capture using the `coredump.disablecoredump` option.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set coredump.disablecoredump <true or false>

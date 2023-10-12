@@ -23,7 +23,7 @@ This article provides general guidance on how to join a SQL Server Linux host ma
 Before you configure Active Directory authentication, you need to set up an Active Directory domain controller, Windows, on your network. Then join your SQL Server on Linux host to an Active Directory domain.
 
 > [!IMPORTANT]  
-> The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
+> The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps might slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
 >
 > For information on configuring Active Directory with newer versions of Ubuntu, RHEL, or SLES, see [Configure Active Directory authentication with SQL Server on Linux using adutil](sql-server-linux-ad-auth-adutil-tutorial.md).
 
@@ -232,7 +232,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    |---|---|
    | `Necessary packages are not installed` | Install those packages using your Linux distribution's package manager before running the realm join command again. |
    | `Insufficient permissions to join the domain` | Check with a domain administrator that you have sufficient permissions to join Linux machines to your domain. |
-   | `KDC reply did not match expectations` | You may not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command realm discover contoso.com. |
+   | `KDC reply did not match expectations` | You might not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command realm discover contoso.com. |
 
    SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SIDs). SSSD must be configured and running for SQL Server to create Active Directory logins successfully. **realmd** usually does this automatically as part of joining the domain, but in some cases, you must do this separately.
 

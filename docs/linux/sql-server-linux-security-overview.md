@@ -16,7 +16,7 @@ ms.custom:
 
 [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux currently has the following limitations:
 
-- A standard password policy is provided. `MUST_CHANGE` is the only option you may configure. The `CHECK_POLICY` option isn't supported.
+- A standard password policy is provided. `MUST_CHANGE` is the only option you might configure. The `CHECK_POLICY` option isn't supported.
 - Extensible Key Management isn't supported.
 - [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] authentication mode can't be disabled.
 - Password expiration is hard-coded to 90 days if you use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] authentication.

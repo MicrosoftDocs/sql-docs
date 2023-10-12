@@ -73,7 +73,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    ip addr show
    ```
 
-1. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`.
+1. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name might not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`.
 
    ```bash
    sudo vi /etc/hosts
@@ -247,7 +247,7 @@ In the example, `partition with quorum` means that a majority quorum of nodes is
 
 `PCSD Status` shows the cluster status for each node.
 
-### Reasons why a node may be offline
+### Reasons why a node might be offline
 
 Check the following items when a node is offline.
 

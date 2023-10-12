@@ -354,7 +354,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
 17.	When Linux starts, it will mount the file system. To ensure that only Pacemaker can mount the iSCSI disk, rebuild the root filesystem image. 
 
-    Run the following command which may take a few moments to complete. You will get no message back if successful.
+    Run the following command which might take a few moments to complete. You will get no message back if successful.
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)

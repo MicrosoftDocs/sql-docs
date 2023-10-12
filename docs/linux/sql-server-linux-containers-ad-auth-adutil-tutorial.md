@@ -86,7 +86,7 @@ Enabling Active Directory authentication on SQL Server on Linux containers requi
    ```
 
     > [!NOTE]
-    > Passwords may be specified in any of the three ways:
+    > Passwords might be specified in any of the three ways:
     >
     > - Password flag: --password \<password\>
     > - Environment variables - `ADUTIL_ACCOUNT_PWD`

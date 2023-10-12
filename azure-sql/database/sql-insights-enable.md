@@ -191,17 +191,36 @@ Select **Create monitoring profile** once you've entered the details for your mo
 ### Add monitoring machine
 Select **Add monitoring machine** to open an `Add monitoring virtual machine` context panel to choose the virtual machine from which to monitor your SQL instances and provide the connection strings.
 
-Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store your password for the monitoring user (strongly recommended), select the subscription of that Key Vault under `Key vault subscriptions`, and then the Key Vault that stores this secret under `KeyVault`. Then, in the `Connection strings` field, enter the URI and the secret name for the password to be used in the connection strings.
+Select the subscription and name of your monitoring virtual machine. If you're using Key Vault to store passwords for the monitoring logins (strongly recommended), select the subscription of that Key Vault under `Key vault subscriptions`, and then select the Key Vault that stores secrets under `KeyVault`. In the `Connection strings` field, enter the vault URI and the secret name for each password to be used in the connection strings.
 
-For example, if the Key Vault URI is `https://mykeyvault.vault.azure.net/`, and the secret name is `sqlPassword`, then the JSON in the `Connection strings` field will contain the following:
+For example, if the Key Vault URI is `https://mykeyvault.vault.azure.net/`, and the secret names are `sqlPassword1` and `sqlPassword2`, then the JSON in the `Connection strings` field will contain the following:
 
 ```json
-    "secrets": {
-        "telegrafPassword": {
-            "keyvault": "https://mykeyvault.vault.azure.net/",
-            "name": "sqlPassword"
-        }
-    }
+{
+   "secrets": {
+      "telegrafPassword1": {
+         "keyvault": "https://mykeyvault.vault.azure.net/",
+         "name": "sqlPassword1"
+      },
+      "telegrafPassword2": {
+         "keyvault": "https://mykeyvault.vault.azure.net/",
+         "name": "sqlPassword2"
+      }
+   }
+}
+```
+
+You can now reference these secrets further in the `Connection strings` field. In the following example, the two connection strings reference the `telegrafPassword1` and `telegrafPassword2` secrets defined earlier:
+
+```json
+{
+   "sqlAzureConnections": [
+      "Server=mysqlserver.database.windows.net;Port=1433;Database=mydatabase;User Id=telegraf;Password=$telegrafPassword1;"
+   ],
+   "sqlVmConnections": [
+      "Server=mysqlserver1;Port=1433;Database=master;User Id=telegraf;Password=$telegrafPassword2;"
+   ]
+}
 ```
 
 :::image type="content" source="media/sql-insights-enable/add-monitoring-machine.png" alt-text="A screenshot of the Azure portal Add monitoring virtual machine page. Choose the VM, specify the KV url (if used) and the secret name. Enter connection strings for each system to monitor. Choose the KV where you created the secret used in the connection strings." lightbox="media/sql-insights-enable/add-monitoring-machine.png":::

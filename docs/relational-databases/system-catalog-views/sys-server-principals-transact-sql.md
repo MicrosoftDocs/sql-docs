@@ -23,6 +23,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 
   Contains a row for every server-level principal.  
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 # [SQL Server, Azure SQL Managed Instance, PDW](#tab/sql)
 
 |Column name|Data type|Description|  
@@ -30,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 |**name**|**sysname**|Name of the principal. Is unique within a server.|  
 |**principal_id**|**int**|ID number of the Principal. Is unique within a server.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal. If Windows principal, then it matches Windows SID.|  
-|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> E = External Login from Azure Active Directory<br /><br /> X = External group from Azure Active Directory group or applications<br /><br /> K = Login mapped to an asymmetric key|  
+|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> E = External Login from Microsoft Entra ID<br /><br /> X = External group from Microsoft Entra group or applications<br /><br /> K = Login mapped to an asymmetric key|  
 |**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Login is disabled.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  
@@ -44,7 +46,10 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azur
 ## Permissions  
  Any login can see their own login name, the system logins, and the fixed server roles. To see other logins, requires ALTER ANY LOGIN, or a permission on the login. To see user-defined server roles, requires ALTER ANY SERVER ROLE, or membership in the role. 
  
-Azure SQL Database: Only members of the server role **##MS_LoginManager##**, or the special database role loginmanager in `master`, or the Azure AD admin and server admin can see all logins.
+In Azure SQL Database, only the following principals can see all logins:
+
+- members of the server role **##MS_LoginManager##** or special database role **loginmanager** in `master`
+- the Microsoft Entra admin and SQL server admin
  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -70,7 +75,7 @@ JOIN sys.server_permissions AS pe
 |**name**|**sysname**|Name of the principal. Is unique within a server.|  
 |**principal_id**|**int**|ID number of the Principal. Is unique within a server.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal.|  
-|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /> R = Server role<br /><br /> E = External Login from Azure Active Directory<br /><br /> X = External group from Azure Active Directory group or applications<br />|  
+|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /> R = Server role<br /><br /> E = External Login from Microsoft Entra ID<br /><br /> X = External group or application from Microsoft Entra ID<br />|  
 |**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br /><br /> SERVER_ROLE<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br />|  
 |**is_disabled**|**int**|1 = Login is disabled.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  
@@ -82,7 +87,7 @@ JOIN sys.server_permissions AS pe
 |**is_fixed_role**|**bit**|Returns 1 if the principal is one of the built-in server roles with fixed permissions. For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## Permissions  
-Any login can see their own login name, the system logins, and the fixed server roles. Only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Azure AD admin and server Admin can see all logins.
+Any login can see their own login name, the system logins, and the fixed server roles. Only members of the server role **##MS_LoginManager##** or the special database role loginmanager in `master` or the Microsoft Entra admin and server Admin can see all logins.
 
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 

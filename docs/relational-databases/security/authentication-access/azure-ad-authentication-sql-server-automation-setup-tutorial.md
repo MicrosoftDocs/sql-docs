@@ -1,6 +1,6 @@
 ---
-title: "Using automation to set up the Azure Active Directory admin for SQL Server"
-description: Tutorial on how to set up Azure Active Directory authentication that automatically creates a certificate and Azure AD application used to authenticate with SQL Server
+title: "Using automation to set up the Microsoft Entra admin for SQL Server"
+description: Tutorial on how to set up Microsoft Entra authentication that automatically creates a certificate and Microsoft Entra application used to authenticate with SQL Server
 author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto, randolphwest
@@ -12,49 +12,53 @@ ms.topic: tutorial
 monikerRange: ">=sql-server-ver16||>= sql-server-linux-ver16"
 ---
 
-# Tutorial: Using automation to set up the Azure Active Directory admin for SQL Server
+# Tutorial: Using automation to set up the Microsoft Entra admin for SQL Server
 
 [!INCLUDE [SQL Server 2022](../../../includes/applies-to-version/sqlserver2022.md)]
 
-In this article, we'll go over how to set up the Azure Active Directory (Azure AD) admin to allow Azure AD authentication for SQL Server using the Azure portal, and APIs such as:
+> [!NOTE]
+> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm).
+
+In this article, we'll go over how to set up the Microsoft Entra admin to allow authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for SQL Server using the Azure portal, and APIs such as:
 
 - PowerShell
 - The Azure CLI
 - ARM Template
 
-We'll also go over the updated functionality to set up an Azure AD admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Azure AD authentication for SQL Server required manual setup of Azure AD admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
+We'll also go over the updated functionality to set up a Microsoft Entra admin for SQL Server in the Azure portal that would allow for automated certificate creation and application registration. Previously, setting up [Microsoft Entra authentication for SQL Server required manual setup of Microsoft Entra admin with an Azure certificate and application registration](azure-ad-authentication-sql-server-setup-tutorial.md).
 
-> [!NOTE]
-> This feature is available in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later versions, and is only supported for SQL Server on-premises, for Windows and Linux hosts and [SQL Server 2022 on Windows Azure VMs](/azure/azure-sql/virtual-machines/windows/security-considerations-best-practices#azure-ad-authentication-preview).
+[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
 
 ## Prerequisites
 
 - [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or later is installed.
 - SQL Server is connected to Azure cloud. For more information, see [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md).
-- Access to Azure Active Directory is available for authentication purpose. For more information, see [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
+- Microsoft Entra ID is configured for authentication in the same tenant as the Azure Arc instance.
 - An [Azure Key Vault](/azure/key-vault/general/quick-create-portal) is required.
 
-## Preparation before setting the Azure AD admin
+<a name='preparation-before-setting-the-azure-ad-admin'></a>
 
-The following permissions are necessary to set up Azure AD admin in the **SQL Server – Azure Arc** and **Key vault** resources.
+## Preparation before setting the Microsoft Entra admin
+
+The following permissions are necessary to set up Microsoft Entra admin in the **SQL Server – Azure Arc** and **Key vault** resources.
 
 ### Configure permissions for Azure Arc
 
-Follow the guide to make sure your [SQL Server is connected to Azure Arc](../../../sql-server/azure-arc/connect.md). The user setting up Azure AD admin for the **SQL Server – Azure Arc** resource should have the **Contributor** role for the server.
+Follow the guide to make sure your [SQL Server is connected to Azure Arc](../../../sql-server/azure-arc/connect.md). The user setting up Microsoft Entra admin for the **SQL Server – Azure Arc** resource should have the **Contributor** role for the server.
 
 1. Go to the [Azure portal](https://portal.azure.com)
 1. Select **SQL Server – Azure Arc**, and select the instance for your SQL Server host.
 1. Select **Access control (IAM)**.
-1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Azure AD admin.
+1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Microsoft Entra admin.
 
 ### Configure permissions for Azure Key Vault
 
-Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't already have one. The user setting up Azure AD admin should have the **Contributor** role for your Azure Key Vault. To add a role to a user in Azure Key Vault:
+Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you don't already have one. The user setting up Microsoft Entra admin should have the **Contributor** role for your Azure Key Vault. To add a role to a user in Azure Key Vault:
 
 1. Go to the [Azure portal](https://portal.azure.com)
 1. Go to your **Key vault** resource.
 1. Select the **Access control (IAM)**.
-1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Azure AD admin.
+1. Select **Add** > **Add role assignment** to add the **Contributor** role to the user setting up the Microsoft Entra admin.
 
 #### Set access policies for the SQL Server host
 
@@ -68,39 +72,45 @@ Create an [Azure Key Vault](/azure/key-vault/general/quick-create-portal) if you
 
    You must **Save** to ensure the permissions are applied. They aren't applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
 
-#### Set access policies for Azure AD users
+<a name='set-access-policies-for-azure-ad-users'></a>
+
+#### Set access policies for Microsoft Entra users
 
 1. In the Azure portal, navigate to your Azure Key Vault instance, and select **Access policies**.
 1. Select **Add Access Policy**.
 1. For **Key permissions**, select **Get**, **List**, and **Create**.
 1. For **Secret permissions**, select **Get**, **List**, and **Set**.
 1. For **Certificate permissions**, select **Get**, **List**, and **Create**.
-1. For **Select principal**, add the Azure AD user you want to use to connect to SQL Server.
+1. For **Select principal**, add the Microsoft Entra user you want to use to connect to SQL Server.
 1. Select **Add** and then select **Save**.
 
-## Setting up the Azure AD admin for the SQL Server
+<a name='setting-up-the-azure-ad-admin-for-the-sql-server'></a>
 
-New APIs and portal functionality allows users to set up an Azure AD admin for SQL Server without having to separately create an Azure certificate and Azure AD application. Select a tab to learn how to set up an Azure AD admin for your SQL Server connected to Azure Arc with automatic certificate and application creation.
+## Setting up the Microsoft Entra admin for SQL Server
+
+New APIs and portal functionality allows users to set up a Microsoft Entra admin for SQL Server without having to separately create an Azure certificate and Microsoft Entra application. Select a tab to learn how to set up a Microsoft Entra admin for your SQL Server connected to Azure Arc with automatic certificate and application creation.
 
 > [!NOTE]
-> The ARM template still requires the creation of an Azure Key Vault certificate and Azure AD application before setting up an Azure AD admin. For more information on this process, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
+> The ARM template still requires the creation of an Azure Key Vault certificate and Microsoft Entra application before setting up a Microsoft Entra admin. For more information on this process, see [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 # [Portal](#tab/azure-portal)
 
-A new Azure portal functionality is enabled to set up an Azure AD admin, and creates an Azure Key Vault certificate and Azure AD application in the same process. This is necessary to use Azure AD authentication with SQL Server.
+Use the Azure portal to set up a Microsoft Entra admin, create an Azure Key Vault certificate and Microsoft Entra application in the same process. This is necessary to use Microsoft Entra authentication with SQL Server.
 
 > [!NOTE]
-> Previously, before setting up an Azure AD admin, [an Azure Key Vault certificate and Azure AD application registration was needed](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application). This is no longer the case with this new functionality. Users can still choose to provide their own certificate and application to set up the Azure AD admin.
+> Previously, before setting up a Microsoft Entra admin, [an Azure Key Vault certificate and Microsoft Entra application registration was needed](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application). This is no longer necessary but users can still choose to provide their own certificate and application to set up the Microsoft Entra admin.
 
-## Setting up Azure AD admin using the Azure portal
+<a name='setting-up-azure-ad-admin-using-the-azure-portal'></a>
+
+## Setting up Microsoft Entra admin using the Azure portal
 
 1. Go to the [Azure portal](https://portal.azure.com), and select **SQL Server – Azure Arc**. Select the instance for your SQL Server host.
 
 1. Check the status of your **SQL Server - Azure Arc** resource and see if it's connected by going to the **Properties** menu. For more information, see [Validate your Arc-enabled SQL Server resources](../../../sql-server/azure-arc/connect.md#validate-your-arc-enabled-sql-server-resources).
 
-1. Select **Azure Active Directory** on the left-hand column.
+1. Select **Microsoft Entra ID and Purview** under **Settings** from the resource menu. 
 
-1. Select **Set Admin**, and choose an account that will be added as an admin login to SQL Server.
+1. Select **Set Admin** to open the **Microsoft Entra ID** pane, and choose an account that will be added as an admin login to SQL Server.
 
 1. Select **Service-managed cert**.
 
@@ -108,27 +118,27 @@ A new Azure portal functionality is enabled to set up an Azure AD admin, and cre
 
 1. Select **Service-managed app registration**.
 
-1. Select **Save**. This will send a request to the Arc server agent, which will configure Azure AD authentication for that SQL Server instance. After saving, the operation can take several minutes to complete. Wait until the save process is confirmed with `Saved successfully`, before attempting an Azure AD login.
+1. Select **Save**. This sends a request to the Arc server agent, which configures Microsoft Entra authentication for that SQL Server instance. The operation can take several minutes to complete; wait until the save process is confirmed with `Saved successfully` before attempting a Microsoft Entra login.
 
 
-   The following actions are applied after you save:
+   The service-managed app registration does the following for you:
 
-   - Create a certificate in your key vault with a name like `<hostname>-<instanceName><uniqueNumber>`.
-   - Create an Azure AD application with a name like `<hostname>-<instanceName><uniqueNumber>`, and assign the necessary permissions for that application. For more information, see [Grant application permissions](azure-ad-authentication-sql-server-setup-tutorial.md#grant-application-permissions)
-   - Assign the certificate from the Azure Key Vault to the application.
+   - Creates a certificate in your key vault with a name in the form `<hostname>-<instanceName><uniqueNumber>`.
+   - Creates a Microsoft Entra application with a name like `<hostname>-<instanceName><uniqueNumber>`, and assigns the necessary permissions to that application. For more information, see [Grant application permissions](azure-ad-authentication-sql-server-setup-tutorial.md#grant-application-permissions)
+   - Assigns the new certificate in the Azure Key Vault to the application.
    - Saves these settings to Azure Arc.
 
-   :::image type="content" source="media/configure-azure-ad-certificate-application-for-sql-server-instance.png" alt-text="Screenshot of setting Azure Active Directory authentication with automatic certificate and application generation in the Azure portal." lightbox="media/configure-azure-ad-certificate-application-for-sql-server-instance.png":::
+   :::image type="content" source="media/configure-azure-ad-certificate-application-for-sql-server-instance.png" alt-text="Screenshot of setting Microsoft Entra authentication with automatic certificate and application generation in the Azure portal." lightbox="media/configure-azure-ad-certificate-application-for-sql-server-instance.png":::
 
 > [!NOTE]
-> The certificates created for the Azure AD setup are not rotated automatically. Customers can choose to provide their own certificate and application for the Azure AD admin setup. For more information, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
+> The certificates created for Microsoft Entra are not rotated automatically. Customers can choose to provide their own certificate and application for the Microsoft Entra admin setup. For more information, see [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md).
 
 # [The Azure CLI](#tab/azure-cli)
 
-The Azure CLI script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-the-azure-cli).
+The Azure CLI script below sets up a Microsoft Entra admin, creates an Azure Key Vault certificate, and creates a Microsoft Entra application. There is an additional section that provides a [sample script for setting up a Microsoft Entra admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-the-azure-cli).
 
 > [!NOTE]
-> The certificates created for the Azure AD setup are not rotated automatically.
+> The certificates created for the Microsoft Entra setup are not rotated automatically.
 
 - [The Azure CLI](/cli/azure/install-azure-cli) version 2.37.0 or higher is required
 - Az.ConnectedMachine 0.5.1 or higher is required
@@ -142,9 +152,9 @@ The following input parameters are used for the Azure CLI script:
 - `<keyVaultName>` - Your key vault name. This key vault must be created before running the script
 - `<machineName>` - Machine name of your SQL Server host
 - `<resourceGroupName>` - Resource group name that contains your **SQL Server – Azure Arc** instance
-- `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
+- `<adminAccountName>` - Microsoft Entra admin account that you want to set for your SQL Server
 - `<instanceName>` - Optional parameter for SQL Server named instances. Use this parameter when you have a named instance. If omitted, the default name of `MSSQLSERVER` is used
-- `<tenantId>` - Optional parameter for tenant ID. The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**. If omitted, the default tenant ID is used as a parameter
+- `<tenantId>` - Optional parameter for tenant ID. The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**. If omitted, the default tenant ID is used as a parameter
 - `<subscriptionId>` - Optional parameter for subscription ID. Your subscription ID can be found in the Azure portal. If omitted, the default subscription ID is used
 
 To use the Azure CLI script below, save the script as a `.ps1` file, and run the following command:
@@ -558,12 +568,14 @@ WindowsAgent.SqlServer westus2 Succeeded
 Success  
 ```
 
-### Setting up an Azure AD admin with existing certificate and application using the Azure CLI
+<a name='setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-the-azure-cli'></a>
 
-If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up an Azure AD admin, you can use the following CLI script:
+### Setting up a Microsoft Entra admin with existing certificate and application using the Azure CLI
+
+If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up a Microsoft Entra admin, you can use the following CLI script:
 
 ```azurecli
-# Set up Azure AD admin for user's existing key vault, certificate, and application  
+# Set up Microsoft Entra admin for user's existing key vault, certificate, and application  
 # Requires input parameters indicated below
 
 # Connect statement
@@ -703,10 +715,10 @@ Write-Output "Success"
 
 # [PowerShell](#tab/azure-powershell)
 
-The PowerShell script below sets up an Azure AD admin, creates an Azure Key Vault certificate, and creates an Azure AD application. There is an additional section that provides a [sample script for setting up an Azure AD admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-powershell).
+The PowerShell script below sets up a Microsoft Entra admin, creates an Azure Key Vault certificate, and creates a Microsoft Entra application. There is an additional section that provides a [sample script for setting up a Microsoft Entra admin when a certificate and application already exist](#setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-powershell).
 
 > [!NOTE]
-> The certificates created for the Azure AD setup are not rotated automatically.
+> The certificates created for Microsoft Entra setup are not rotated automatically.
 
 The following modules are required for this tutorial. Install the latest versions of the modules or higher than the noted version below:
 
@@ -722,9 +734,9 @@ The following input parameters are used for the PowerShell script:
 - `<keyVaultName>` - Your key vault name. This key vault must be created before running the script
 - `<machineName>` - Machine name of your SQL Server host
 - `<resourceGroupName>` - Resource group name that contains your **SQL Server – Azure Arc** instance
-- `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
+- `<adminAccountName>` - Microsoft Entra admin account that you want to set for your SQL Server
 - `<instanceName>` - Optional parameter for SQL Server named instances. Use this parameter when you have a named instance. If omitted, the default name of `MSSQLSERVER` is used
-- `<tenantId>` - Optional parameter for tenant ID. The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**. If omitted, the default tenant ID is used as a parameter
+- `<tenantId>` - Optional parameter for tenant ID. The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**. If omitted, the default tenant ID is used as a parameter
 - `<subscriptionId>` - Optional parameter for subscription ID. Your subscription ID can be found in the Azure portal. If omitted, the default subscription ID is used
 
 To use the PowerShell script below, save the script as a `.ps1` file, and run the following command:
@@ -735,8 +747,7 @@ To use the PowerShell script below, save the script as a `.ps1` file, and run th
 
 ## The PowerShell script
 
-> [!NOTE]
-> For SQL Server on Linux host machines, replace `WindowsAgent.SqlServer` with `LinuxAgent.SqlServer` in the script.
+For SQL Server on Linux host machines, replace `WindowsAgent.SqlServer` with `LinuxAgent.SqlServer` in the script.
 
 ```powershell
 param (
@@ -1059,7 +1070,7 @@ else
 }
 
 
-Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+Write-Host "Writing Microsoft Entra setting to SQL Server Arc Extension. This may take several minutes..."
 
 # Push settings to Arc
 #
@@ -1077,9 +1088,11 @@ catch
 Write-Output "Success"
 ```
 
-### Setting up an Azure AD admin with existing certificate and application using PowerShell
+<a name='setting-up-an-azure-ad-admin-with-existing-certificate-and-application-using-powershell'></a>
 
-If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up an Azure AD admin, you can use the following PowerShell script:
+### Setting up a Microsoft Entra admin with existing certificate and application using PowerShell
+
+If you already have an existing Azure Key Vault certificate, and an Azure application that you wish to use to set up a Microsoft Entra admin, you can use the following PowerShell script:
 
 ```powershell
 # Connect statement 
@@ -1097,8 +1110,8 @@ $keyVaultName="<keyVaultName>"
 $certSubjectName="<certSubjectName>" # Your existing certificate name
 $applicationName="<applicationName>" # Your existing application name 
 $adminAccountName="<adminAccountName>"
-$adminAccountSid="<adminID>"  # Use object ID for the Azure AD user and group, or client ID for the Azure AD application 
-$adminAccountType= 0  # 0 – for Azure AD user and application, 1 for Azure AD group 
+$adminAccountSid="<adminID>"  # Use object ID for the Microsoft Entra user and group, or client ID for the Microsoft Entra application 
+$adminAccountType= 0  # 0 – for Microsoft Entra user and application, 1 for Microsoft Entra group 
 
 $keyVault = Get-AzKeyVault -VaultName $keyVaultName
 if (!$keyVault)
@@ -1184,7 +1197,7 @@ else
 }
 
 
-Write-Host "Writing Azure AD setting to SQL Server Arc Extension. This may take several minutes..."
+Write-Host "Writing Microsoft Entra setting to SQL Server Arc Extension. This may take several minutes..."
 
 # Push settings to Arc
 #
@@ -1205,13 +1218,13 @@ Write-Output "Success"
 
 # [ARM template](#tab/arm-template)
 
-The following ARM template sets up an Azure AD admin using an existing Azure Key Vault certificate and Azure AD application.
+The following ARM template sets up a Microsoft Entra admin using an existing Azure Key Vault certificate and Microsoft Entra application.
 
 The following input parameters are used for the ARM template:
 
 - `<machineName>` - Machine name of your SQL Server host
 - `<Location>` - Location of your **SQL Server – Azure Arc** resource group, such as `West US`, or `Central US`
-- `<tenantId>` - The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Azure Active Directory** resource. In the **Overview** pane, you should see your **Tenant ID**
+- `<tenantId>` - The tenant ID can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **Overview** pane, you should see your **Tenant ID**
 - `<instanceName>` - SQL Server instance name. The default instance name of SQL Server is `MSSQLSERVER`
 - `<certSubjectName>` - Certificate name that you created
 - `<subscriptionId>` - Subscription ID. Your subscription ID can be found in the Azure portal
@@ -1219,11 +1232,11 @@ The following input parameters are used for the ARM template:
 - `<keyVaultName>` - Your key vault name
 - `<certIdentifier>` - The **Certificate Identifier** for your Azure Key Vault certificate. To obtain the **Certificate Identifier**, go to your **Key vault** resource, and select **Certificates** under **Settings**. Select the current version of the [certificate that you created](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-assign-a-certificate), and copy the **Certificate Identifier** value. For more information, see [Add a certificate to Key Vault](/azure/key-vault/certificates/quick-create-portal#add-a-certificate-to-key-vault)
 - `<certSecret>` - The **Secret Identifier** of your certificate, and can be found in the same menu as the **Certificate Identifier**
-- `<applicationName>` - The name of [your created Azure AD application](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application)
-- `<appID>` - The **Application (client) ID** of your Azure AD application can be found on the **Overview** menu of the application
-- `<adminAccountName>` - Azure AD admin account that you want to set for your SQL Server
-- `<adminID>` - The **Object ID** of the Azure AD user or group, or the **Application (client) ID** of the application if you're using another application as the Azure AD admin account. For more information, see [Tutorial: Create Azure AD users using Azure AD applications](/azure/azure-sql/database/authentication-aad-service-principal-tutorial)
-- `<adminType>` - Use `0` for Azure AD users and applications, and `1` for Azure AD groups
+- `<applicationName>` - The name of [your created Microsoft Entra application](azure-ad-authentication-sql-server-setup-tutorial.md#create-and-register-an-azure-ad-application)
+- `<appID>` - The **Application (client) ID** of your Microsoft Entra application can be found on the **Overview** menu of the application
+- `<adminAccountName>` - Microsoft Entra admin account that you want to set for your SQL Server
+- `<adminID>` - The **Object ID** of the Microsoft Entra user or group, or the **Application (client) ID** of the application if you're using another application as the Microsoft Entra admin account. For more information, see [Tutorial: Create Microsoft Entra users using Microsoft Entra applications](/azure/azure-sql/database/authentication-aad-service-principal-tutorial)
+- `<adminType>` - Use `0` for Microsoft Entra users and applications, and `1` for Microsoft Entra groups
 
 Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/Microsoft.Template), and **Build your own template in the editor**. Next, **Save** the configuration once you pasted in the example.
 
@@ -1273,32 +1286,34 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 
 ## Grant admin consent for the application
 
-Once the Azure AD admin has been set up, using the Azure AD admin credentials allows you to connect to SQL Server. However, any further database activities involving creating new Azure AD logins and users will fail until admin consent is granted to the Azure AD application.
+Once the Microsoft Entra admin has been set up, using the Microsoft Entra admin credentials allows you to connect to SQL Server. However, any further database activities involving creating new Microsoft Entra logins and users will fail until admin consent is granted to the Microsoft Entra application.
 
 > [!NOTE]
-> To grant **Admin consent** for the application, the account granting consent requires a role of Azure AD Global Administrator or Privileged Role Administrator. These roles are necessary to grant admin consent for the application, but is not necessary to set up Azure AD admin.
+> To grant **Admin consent** for the application, the account granting consent requires a role of Microsoft Entra ID Global Administrator or Privileged Role Administrator. These roles are necessary to grant admin consent for the application, but is not necessary to set up Microsoft Entra admin.
 
-1. In the [Azure portal](https://portal.azure.com), select **Azure Active Directory** > **App registrations**, select the newly created application. The application should have a name like `<hostname>-<instanceName><uniqueNumber>`.
+1. In the [Azure portal](https://portal.azure.com), select **Microsoft Entra ID** > **App registrations**, select the newly created application. The application should have a name like `<hostname>-<instanceName><uniqueNumber>`.
 1. Select the **API permissions** menu.
 
 1. Select **Grant admin consent**.
 
    :::image type="content" source="media/configured-app-permissions.png" alt-text="Screenshot of application permissions in the Azure portal.":::
 
-Without granting admin consent to the application, creating an Azure AD login or user in SQL Server will result in the following error:
+Without granting admin consent to the application, creating a Microsoft Entra login or user in SQL Server will result in the following error:
 
 ```output
 Msg 37455, Level 16, State 1, Line 2
 Server identity does not have permissions to access MS Graph.
 ```
 
-## Using Azure AD authentication to connect to SQL Server
+<a name='using-azure-ad-authentication-to-connect-to-sql-server'></a>
 
-Azure AD authentication is now set up for your SQL Server that is connected to Azure Arc. Follow the sections after setting up Azure AD admin in the article, [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md#create-logins-and-users) to connect to SQL Server using Azure AD authentication.
+## Using Microsoft Entra authentication to connect to SQL Server
+
+Microsoft Entra authentication is now set up for your SQL Server that is connected to Azure Arc. Follow the sections after setting up Microsoft Entra admin in the article, [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md#create-logins-and-users) to connect to SQL Server using Microsoft Entra authentication.
 
 ## See also
 
 - [Connect your SQL Server to Azure Arc](../../../sql-server/azure-arc/connect.md)
-- [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
-- [Tutorial: Set up Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
-- [Linked server for SQL Server with Azure Active Directory authentication](azure-ad-authentication-sql-server-linked-server.md)
+- [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md)
+- [Tutorial: Set up Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-setup-tutorial.md)
+- [Linked server for SQL Server with Microsoft Entra authentication](azure-ad-authentication-sql-server-linked-server.md)

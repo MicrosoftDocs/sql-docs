@@ -273,7 +273,7 @@ The following steps set the maintenance window on an existing database, elastic 
 1. Navigate to the managed instance you want to set the maintenance window for.
 1. In the **Settings** menu select **Maintenance**, then select the desired maintenance window.
 
-   :::image type="content" source="media/maintenance-window-configure/maintenance-mi.png" alt-text="SQL managed instance Maintenance page":::
+    :::image type="content" source="media/maintenance-window-configure/maintenance-mi.png" alt-text="Screenshot of the SQL managed instance Maintenance page":::
 
 # [PowerShell](#tab/azure-powershell)
 

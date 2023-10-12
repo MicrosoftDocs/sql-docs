@@ -21,13 +21,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw-fabricse-fabricdw.md)]
 
-  Returns a row for each security principal in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+Returns a row for each security principal in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+## Column descriptions 
+
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name of principal, unique within the database.|  
 |**principal_id**|**int**|ID of principal, unique within the database.|  
-|**type**|**char(1)**|Principal type:<br /><br /> A = Application role<br /><br /> C = User mapped to a certificate<br /><br /> E = External user from Azure Active Directory<br /><br /> G = Windows group<br /><br /> K = User mapped to an asymmetric key<br /><br /> R = Database role<br /><br /> S = SQL user<br /><br /> U = Windows user<br /><br /> X = External group from Azure Active Directory group or applications|  
+|**type**|**char(1)**|Principal type:<br /><br /> A = Application role<br /><br /> C = User mapped to a certificate<br /><br /> E = External user from Microsoft Entra ID<br /><br /> G = Windows group<br /><br /> K = User mapped to an asymmetric key<br /><br /> R = Database role<br /><br /> S = SQL user<br /><br /> U = Windows user<br /><br /> X = External group from Microsoft Entra group or applications|  
 |**type_desc**|**nvarchar(60)**|Description of principal type.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Name to be used when SQL name does not specify a schema. Null for principals not of type S, U, or A.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  
@@ -35,8 +39,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**owning_principal_id**|**int**|ID of the principal that owns this principal. All fixed Database Roles are owned by **dbo** by default.|  
 |**sid**|**varbinary(85)**|SID (Security Identifier) of the principal.  NULL for SYS and INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|If 1, this row represents an entry for one of the fixed database roles: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies authentication type. The following are the possible values and their descriptions.<br /><br /> 0 : No authentication<br />1 : Instance authentication<br />2 : Database authentication<br />3 : Windows authentication<br />4 : Azure Active Directory authentication|  
-|**authentication_type_desc**|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Description of the authentication type. The following are the possible values and their descriptions.<br /><br /> `NONE` : No authentication<br />`INSTANCE` : Instance authentication<br />`DATABASE` : Database authentication<br />`WINDOWS` : Windows authentication<br />`EXTERNAL`: Azure Active Directory authentication|  
+|**authentication_type**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies authentication type. The following are the possible values and their descriptions.<br /><br /> 0 : No authentication<br />1 : Instance authentication<br />2 : Database authentication<br />3 : Windows authentication<br />4 : Microsoft Entra authentication|  
+|**authentication_type_desc**|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Description of the authentication type. The following are the possible values and their descriptions.<br /><br /> `NONE` : No authentication<br />`INSTANCE` : Instance authentication<br />`DATABASE` : Database authentication<br />`WINDOWS` : Windows authentication<br />`EXTERNAL`: Microsoft Entra authentication|  
 |**default_language_name**|**sysname**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies the default language for this principal.|  
 |**default_language_lcid**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Signifies the default LCID for this principal.|  
 |**allow_encrypted_value_modifications**|**bit**|**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] and later, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suppresses cryptographic metadata checks on the server in bulk copy operations. This enables the user to bulk copy data encrypted using Always Encrypted, between tables or databases, without decrypting the data. The default is OFF. |      
@@ -117,5 +121,5 @@ JOIN sys.schemas AS s
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)  
+ [Connecting to Azure SQL with Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview) 
   

@@ -158,19 +158,6 @@ SQL Managed Instance enables system administrators to spend less time on adminis
 
 For more information, see [a list of supported and unsupported SQL Managed Instance features](../database/features-comparison.md), and [T-SQL differences between SQL Managed Instance and SQL Server](transact-sql-tsql-differences-sql-server.md).
 
-## Managed Instance link 
-
-The [Managed Instance link](managed-instance-link-feature-overview.md) uses distributed availability group technology to synchronize databases between SQL Server and Azure SQL Managed Instance, unlocking a number of scenarios, such as: 
-
-- Using Azure services without migrating to the cloud 
-- Offloading read-only workloads to Azure 
-- Disaster recovery 
-- Migrating to Azure
-
-## License-free DR benefit 
-
-With Azure SQL Managed Instance, you can save on vCore licensing costs by designating a secondary replica for disaster recovery (DR) only. To learn more, review [License-free DR benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
-
 ## vCore-based purchasing model
 
 The [vCore-based purchasing model](../database/service-tiers-vcore.md) for SQL Managed Instance gives you flexibility, control, transparency, and a straightforward way to translate on-premises workload requirements to the cloud. This model allows you to change compute, memory, and storage based upon your workload needs. The vCore model is also eligible for up to 55 percent savings with the [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/) for SQL Server.
@@ -221,6 +208,19 @@ Find more information about the differences between service tiers in [SQL Manage
 ## Management operations
 
 Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found in [Azure SQL Managed Instance management operations overview](management-operations-overview.md).
+
+## Managed Instance link 
+
+The [Managed Instance link](managed-instance-link-feature-overview.md) uses distributed availability group technology to synchronize databases between SQL Server and Azure SQL Managed Instance, unlocking a number of scenarios, such as: 
+
+- Using Azure services without migrating to the cloud 
+- Offloading read-only workloads to Azure 
+- Disaster recovery 
+- Migrating to Azure
+
+## License-free DR benefit 
+
+With Azure SQL Managed Instance, you can save on vCore licensing costs by designating a secondary replica for disaster recovery (DR) only. To learn more, review [License-free DR benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
 
 ## Advanced security and compliance
 

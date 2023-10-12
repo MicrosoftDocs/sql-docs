@@ -27,34 +27,34 @@ helpviewer_keywords:
   
 ## Explanation
 
-This error generally occurs because SQL Server can't obtain the information about the execution context of the principal that's specified in a user statement or module using the `EXECUTE AS` statement.
+This error typically occurs because Microsoft SQL Server can't get the information about the execution context of the principal that's specified in a user statement or module by using the `EXECUTE AS` statement.
 
-Your login information sid (Security identifier) is automatically saved when you create a database on a SQL Server instance as the database owner in the corresponding database row in the `sys.databases` table and for the `dbo` user item in the `sys.database_principals` table within the database.  
+Your login information Security Identifier (SID) is automatically saved when you create a database on a SQL Server instance as the database owner in the corresponding database row in the `sys.databases` table and for the `dbo` user item in the `sys.database_principals` table within the database.  
 
-The statements or modules that use `EXECUTE AS OWNER` clause will work fine as long as the sid entry stored for dbo user is valid.
+The statements or modules that use the `EXECUTE AS OWNER` clause will work as expected if the SID entry that's stored for the dbo user is valid.
 
 > [!NOTE]
-> The issue can happen with any principal that's used in the `EXECUTE AS` statement and that doesn't exist on the server where the database is restored.
+> The issue can occur for any principal that's used in the `EXECUTE AS` statement and that doesn't exist on the server to which the database is restored.
 
-Here are a few common scenarios that can lead to this situation:
+Here are a few common scenarios that might cause this issue to occur:
 
-- You restore a database on the same server instance where the backup was originally taken but the SQL Server principal that created the database is no longer valid.
+- You restore a database on the same server instance where the backup was originally taken, but the SQL Server principal that created the database is no longer valid for some reason. For example:
 
-   - SQL Server authentication login might have been removed.
-   - Windows authentication login might have left the company and is no longer a valid user in the Active Directory.
+   - The SQL Server authentication login was removed.
+   - The Windows authentication login is no longer for a valid user in Active Directory because the employee left the company.
 
-- You restore a database on a server that's different from the instance where the backup was originally taken but the SQL Server principal that created the database isn't a valid principal on the new server.
+- You restore a database on a server that's different from the instance where the backup was originally taken, but the SQL Server principal that created the database isn't a valid principal on the new server.
 
-   - If the user is a SQL Server, the principal might exist on the target or destination server but the `sid` is different.
+   - If the user is a SQL Server login, the principal might exist on the target or destination server but the `sid` value will be different.
    - If the user is a Windows login, the Windows login doesn't exist on the target server or it's no longer valid.
 
-The user or application executing the stored procedure, function, or trigger doesn't have the necessary permissions to impersonate the principal specified in the `EXECUTE AS` statement.
+The user or application that's running the stored procedure, function, or trigger doesn't have the necessary permissions to impersonate the principal that's specified in the `EXECUTE AS` statement.
 
-## User Action
+## User action
 
 Use the name of an existing principal or grant the IMPERSONATE permission on that principal to the required users.  
   
-To resolve the error caused due to issues with an invalid dbo user error, change the dbo_User to a valid login on your server, by running the following command:  
+To resolve the issue that occurs because of an invalid dbo user error, change the `dbo_User` value to a valid login on your server by running the following command:  
   
   ```sql
   ALTER AUTHORIZATION ON DATABASE:: DBName TO [NewLogin]  
@@ -62,16 +62,16 @@ To resolve the error caused due to issues with an invalid dbo user error, change
 
 ## Example scenario
 
-1. Create two temporary principals.
+1. Create two temporary principals:
 
     ```sql
     CREATE LOGIN login1 WITH PASSWORD = 'J345#$)thb';
     CREATE LOGIN login2 WITH PASSWORD = 'Uor80$23b';
     ```
 
-1. Add these two logins to the sysadmin role (for demo purposes only).
-1. Log in to your SQL Server instance using login1.
-1. Create a demo database and a stored procedure called `testexec` using the following script:
+1. Add these logins to the sysadmin role (for demonstration only).
+1. Log in to your SQL Server instance by using `login1`.
+1. Create a demonstration database and a stored procedure that's named `testexec` by running the following script:
 
     ```sql
     CREATE DATABASE Demodb_15517
@@ -86,9 +86,9 @@ To resolve the error caused due to issues with an invalid dbo user error, change
     GO
     ```
 
-1. Run the following two queries and note that the `sid` values are resolving to a valid login.
+1. Run the following queries, and check whether the `sid` values are resolving to a valid login:
 
-   - Query 1: Check the value of owner name in sys.databases.
+   - Query 1: Check the value of the `Owner_Name` value in sys.databases.
 
       ```sql
         SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
@@ -102,28 +102,28 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         */
       ```
 
-   - Query 2: Check the value of owner name in the `sys.database_principals` table within the demo database.
+   - Query 2: Check the `Owner_Name` value in the `sys.database_principals` table within the demonstration database:
 
       ```sql
         SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
         FROM Demodb_15517.sys.database_principals 
         WHERE NAME = N'dbo'; 
         /* 
-        Owner_Name                                                                                     sid
+        Owner_Name                                                                                     SID
         ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
         login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
         (1 row affected)
         */
       ```
 
-1. Back up your demo database using a query that resembles the following script:
+1. Back up the demonstration database by using a query that resembles the following script:
 
       ```sql
         BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10 
         GO 
       ```
 
-1. Drop the demo database and login1.
+1. Drop the demonstration database and `login1`:
 
       ```sql
         DROP DATABASE demodb_15517
@@ -132,9 +132,9 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         GO
       ```
 
-1. Log in to SQL Server as login2.
+1. Log in to SQL Server as `login2`.
 
-1. Restore the demo database from backup using a statement that resembles the following script:
+1. Restore the demonstration database from the backup by using a statement that resembles the following script:
 
       ```sql
         USE [master] 
@@ -146,9 +146,9 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         GO 
       ```
 
-1. Now re-run Query 1 and Query 2.
+1. Rerun Query 1 and Query 2.
 
-1. In Query 1, check the value of owner name in `sys.databases`. The new owner name now reflects login2.
+1. In Query 1, check the value of the `Owner_Name` value in `sys.databases`. The value now reflects `login2`.
 
       ```sql
         SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
@@ -162,7 +162,7 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         */ 
       ```
 
-1. In Query 2, check the value of owner name in the `sys.database_principals` table within the demo database. The `owner_name` now reflects `NULL`.
+1. In Query 2, check the value of the `Owner_Name` value in the `sys.database_principals` table within the demonstration database. The value now reflects `NULL`.
 
       ```sql
         SELECT SUSER_SNAME(sid) AS Owner_Name, sid
@@ -177,7 +177,7 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         */ 
       ```
 
-1. Now, if you run the `testexec` stored procedure, you see the 15517 error message.
+1. Run the `testexec` stored procedure. You should now see the "15517" error message.
 
       ```sql
         USE Demodb_15517 
@@ -190,31 +190,31 @@ To resolve the error caused due to issues with an invalid dbo user error, change
         */ 
       ```
 
-1. To resolve the error, change the dbo to a valid user (login2) using the following command:
+1. To resolve the error, change the dbo to a valid user (`login2`) by using the following command:
 
       ```sql
         ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
       ```
 
-1. Re-run Query 2 and verify that dbo users now resolve to the login2 user.
+1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
 
     ```sql
     /* 
-    Owner_Name                                                                                     sid
+    Owner_Name                                                                                     SID
     -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
     (1 row affected) 
     */
     ```
 
-1. Now, retry running the test stored procedure and notice that this time it executes successfully.
+1. Try again to run the test stored procedure. Notice that it now runs successfully.
 
     ```sql
     USE Demodb_15517 
     GO 
     EXEC dbo.testexec 
     GO 
-    /* -- You get an output similar to the following 
+    /* -- You get an output that resembles the following 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
     May 29 2022 15:55:47  
@@ -226,6 +226,6 @@ To resolve the error caused due to issues with an invalid dbo user error, change
 
 ## See Also
 
-[Copy Databases to Other Servers](../databases/copy-databases-to-other-servers.md)
+[Copy databases to other servers](../databases/copy-databases-to-other-servers.md)
 
 [Transfer logins and passwords between instances](/troubleshoot/sql/database-engine/security/transfer-logins-passwords-between-instances)

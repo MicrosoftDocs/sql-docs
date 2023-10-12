@@ -54,7 +54,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-When SQL Server returns an error message in a result set, the result set needs to be processed to retrieve the exception.
+When SQL Server returns an error message in a result set, the result set needs to be processed to retrieve the exception. Furthermore, this processing must be done before any additional operations involving the result set (e.g. retrieval of output parameters).
 
 ```java
 String SQL = "SELECT 1/0;";

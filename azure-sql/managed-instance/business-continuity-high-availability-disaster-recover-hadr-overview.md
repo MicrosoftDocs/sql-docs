@@ -52,7 +52,23 @@ SQL Managed Instance also provides several business continuity features that you
 - You can [restore a deleted database](recovery-using-backups.md#deleted-database-restore) to the point at which it was deleted.
 - [Long-term backup retention](../database/long-term-retention-overview.md) enables you to keep backups up to 10 years.  
 - [Auto-failover group](auto-failover-group-sql-mi.md#terminology-and-capabilities) allows the application to automatically recover in the event of a regional outage.
+- [Managed Instance link](managed-instance-link-feature-overview.md) allows for one-way disaster recovery for SQL Server 2016 and 2019, and two-way disaster recovery for SQL Server 2022 (failback currently in preview). 
 - [Temporal tables](../temporal-tables.md) enable you to restore row versions from any point in time.
+
+## License-free DR replicas 
+
+You can save on licensing costs by configuring a secondary Azure SQL Managed Instance for only disaster recovery (DR). This benefit is available if you're using an auto-failover group between two SQL managed instances, or you've configured a hybrid link between SQL Server and Azure SQL Managed Instance. As long as the secondary instance isn't used for any workloads, and is only a passive DR standby, you aren't charged for the vCore licensing costs used by the secondary instance. 
+
+When you designate a secondary instance for only disaster recovery, and no workloads are running on the instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/en-us/Licensing/product-licensing/sql-server?rtc=1). You're still billed for the compute and storage that the secondary instance uses.
+
+The name for the benefit depends on  your scenario: 
+
+- [Hybrid failover rights for a passive replica](managed-instance-link-feature-overview.md#license-free-passive-replica): When you configure a [link](managed-instance-link-feature-overview.md) between SQL Server and Azure SQL Managed Instance, you can use the **Hybrid failover rights** benefit to save on vCore licensing costs for the passive secondary replica. 
+- [Failover rights for a standby replica](auto-failover-group-standby-replica-how-to-configure.md): When you configure an auto-failover group between two managed instances, you can use the **Failover rights** benefit to save on vCore licensing costs for the standby secondary replica. 
+
+The following diagram demonstrates the benefit for each scenario: 
+
+:::image type="content" source="media/business-continuity-high-availability-disaster-recover-hadr-overview/failover-rights-diagram.png" alt-text="Diagram comparing the failover rights for Azure SQL Managed Instance. ":::
 
 
 ## Recover a database within the same Azure region

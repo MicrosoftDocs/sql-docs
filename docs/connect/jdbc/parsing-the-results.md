@@ -4,7 +4,7 @@ description: Learn about fully processing results, including multiple result set
 author: DavidEngel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 08/12/2019
+ms.date: 10/12/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual

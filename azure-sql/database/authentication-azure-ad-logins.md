@@ -98,7 +98,7 @@ The Microsoft Entra principal `login_name` won't be able to log into any user da
 
 ## Microsoft Entra logins and users with nonunique display names
 
-Using the display name of a service principal that isn't unique in Azure AD leads to errors when creating the login or user in Azure SQL. For example, if `myapp` isn't unique, you may run into the following error when executing the following query:
+Using the display name of a service principal that isn't unique in Microsoft Entra ID leads to errors when creating the login or user in Azure SQL. For example, if `myapp` isn't unique, you may run into the following error when executing the following query:
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER 
@@ -149,7 +149,7 @@ This naming convention is recommended to explicitly associate the database user 
 
 For nonunique service principals, it's important to verify the Microsoft Entra alias is tied to the correct application. To check that the user was created for the correct service principal (application):
 
-1. Get the **Application ID** of the application, or **Object ID** of the Azure AD group from the user created in SQL Database. See the following queries:
+1. Get the **Application ID** of the application, or **Object ID** of the Microsoft Entra group from the user created in SQL Database. See the following queries:
 
    - To get the **Application ID** of the service principal from the user created, execute the following query:
 
@@ -240,7 +240,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - Impersonation of Microsoft Entra database-level principals (users) at a user database-level is still supported.
 - Microsoft Entra logins overlapping with Microsoft Entra administrator aren't supported. Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, either directly or as a member of the admin group, the login created for this user won't have any effect. The login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
-  - `GRANT <PERMISSION> ON LOGIN :: <Azure AD account> TO <Any other login> `
+  - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
 - When permissions are altered for a Microsoft Entra login with existing open connections to an Azure SQL Database, permissions aren't effective until the user reconnects. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This applies to server role membership change using the [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) statement. 
 - Setting a Microsoft Entra login mapped to a Microsoft Entra group as the database owner isn't supported.
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.

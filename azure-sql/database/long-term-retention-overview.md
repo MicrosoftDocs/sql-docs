@@ -28,33 +28,32 @@ To enable LTR, you can define a policy using a combination of four parameters: w
 
 > [!NOTE]  
 > Any change to the LTR policy applies only to future backups. For example, if weekly backup retention (W), monthly backup retention (M), or yearly backup retention (Y) is modified, the new retention setting will only apply to new backups. The retention of existing backups will not be modified. If your intention is to delete old LTR backups before their retention period expires, you will need to [manually delete the backups](./long-term-backup-retention-configure.md#delete-ltr-backups).
->
 
 Examples of the LTR policy:
 
-- W=0, M=0, Y=5, WeekOfYear=3
+- `W=0, M=0, Y=5, WeekOfYear=3`
 
   The third full backup of each year is kept for five years.
 
-- W=0, M=3, Y=0
+- `W=0, M=3, Y=0`
 
   The first full backup of each month is kept for three months.
 
-- W=12, M=0, Y=0
+- `W=12, M=0, Y=0`
 
   Each weekly full backup is kept for 12 weeks.
 
-- W=6, M=12, Y=10, WeekOfYear=20
+- `W=6, M=12, Y=10, WeekOfYear=20`
 
   Each weekly full backup is kept for six weeks. Except the first full backup of each month, which is kept for 12 months. Except the full backup taken on the 20th week of the year, which is kept for 10 years.
 
 The following table illustrates the cadence and expiration of the long-term backups for the following policy:
 
-W=12 weeks (84 days), M=12 months (365 days), Y=10 years (3650 days), WeekOfYear=20 (the week after May 13)
+`W=12 weeks` (84 days), `M=12 months` (365 days), `Y=10 years` (3650 days), `WeekOfYear=20` (the week after May 13)
 
    :::image type="content" source="media/long-term-retention-overview/ltr-example.png" alt-text="Diagram showing an example of Long-term retention.":::
 
-If you modify the above policy and set W=0 (no weekly backups), the service only retains the monthly and yearly backups. No weekly backups are stored under the LTR policy. The storage amount needed to keep these backups reduces accordingly.
+If you modify the above policy and set `W=0` (no weekly backups), the service only retains the monthly and yearly backups. No weekly backups are stored under the LTR policy. The storage amount needed to keep these backups reduces accordingly.
 
 > [!IMPORTANT]  
 > The timing of individual LTR backups is controlled by Azure SQL Database. You cannot manually create an LTR backup or control the timing of the backup creation. After configuring an LTR policy, it  may take up to 7 days before the first LTR backup will show up on the list of available backups.  
@@ -78,6 +77,8 @@ To learn how to configure long-term retention or restore a database from backup 
 
 To learn how to configure long-term retention or restore a database from backup for SQL Managed Instance using the Azure portal or PowerShell, see [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md).
 
+When a restore request is initiated in the final 7 days of the LTR retention period, Azure will automatically extend the expiration date of all backups +7 days, to prevent an LTR backup from expiring during the restore.
+
 > [!NOTE]  
 > If you are using LTR backups to meet compliance or other mission-critical requirements, consider conducting periodic recovery drills to verify that LTR backups can be restored, and that the restore results in the expected database state.
 
@@ -89,3 +90,8 @@ Because database backups protect data from accidental corruption or deletion, th
 - [Business continuity overview for Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 - [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true)
 - [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true)
+
+For a tutorial on configuring and managing LTR backups, visit:
+
+- [Manage Azure SQL Database long-term backup retention](long-term-backup-retention-configure.md)
+- [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md)

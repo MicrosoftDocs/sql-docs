@@ -25,7 +25,7 @@ To prepare, you need to create and configure an Azure SQL Managed Instance and c
 
 1. Configure a Point-to-Site connection. See [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
-1. Configure Azure Active Directory authentication with SQL Managed Instance. See [Configure and manage Azure Active Directory authentication with SQL](/azure/sql-database/sql-database-aad-authentication-configure) for details.
+1. Configure Microsoft Entra authentication with SQL Managed Instance. See [Configure and manage Microsoft Entra authentication with SQL](/azure/sql-database/sql-database-aad-authentication-configure) for details.
 
 ### Configure web application machine
 
@@ -196,6 +196,7 @@ Install the **SQL Server 2019 Cumulative Update**. [!INCLUDE[ssMDSshort_md](../i
 ### Upgrade SQL Server
 
 You might get the error: `The client version is incompatible with the database version` after installing **SQL Server 2019 Cumulative Update**.
+
 ![Screenshot of the Master Data Services error.](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "mds-SQLServer2019-Config-MI_UpgradeDBPage")
 
 To fix this issue, you need upgrade the database version:

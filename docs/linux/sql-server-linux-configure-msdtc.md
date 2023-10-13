@@ -100,11 +100,11 @@ It is important to configure the firewall before configuring port routing in the
 
 ## Configure port routing
 
-Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. Configuration mechanism for port forwarding on different distribution may differ. The following sections provide guidance for Ubuntu, SUS Enterprise Linux (SLES), and Red Hat Enterprise Linux (RHEL).
+Configure the Linux server routing table so that RPC communication on port 135 is redirected to SQL Server's **network.rpcport**. Configuration mechanism for port forwarding on different distribution might differ. The following sections provide guidance for Ubuntu, SUS Enterprise Linux (SLES), and Red Hat Enterprise Linux (RHEL).
 
 ### Port routing in Ubuntu and SLES
 
-Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules may not persist during restarts, so the following commands also provide instructions for restoring the rules after a restart.
+Ubuntu and SLES do not use the **firewalld** service, so **iptable** rules are an efficient mechanism to achieve port routing. The **iptable** rules might not persist during restarts, so the following commands also provide instructions for restoring the rules after a restart.
 
 1. Create routing rules for port 135. In the following example, port 135 is directed to the RPC port, 13500, defined in the previous section. Replace `<ipaddress>` with the IP address of your server.
 

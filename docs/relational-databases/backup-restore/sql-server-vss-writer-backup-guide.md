@@ -579,7 +579,7 @@ The procedure is as follows:
 
 1. Ensure that the SQL Server instance is stopped.
 1. Perform the restore in two phases.
-    1. Restore the system databases and user databases that should be recovered at the same time (that is, Simple Recovery mode user databases) via file copy /volume-mount through VSS.
+    1. Restore the system databases and user databases that should be recovered at the same time (that is, user databases in the simple recovery model) via file copy /volume-mount through VSS.
         1. If the user databases to be rolled forward are not on the same volume as the system databases, then that volume should not be brought back at this time. This scenario requires planning prior to back up.
         1. If the user databases are on the same volume as the system databases, then the user databases need to be hidden from SQL Server.
     1. Start the SQL Server instance using the -f parameter.  (When using the -f startup option, only the master database can be restored.)

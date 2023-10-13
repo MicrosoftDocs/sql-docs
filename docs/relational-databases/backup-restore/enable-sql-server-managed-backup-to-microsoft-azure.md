@@ -131,7 +131,7 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is now enabled on the database you specified. It may take up to 15 minutes for the backup operations on the database to start to run.  
   
-5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following transact-SQL statement.  
+5.  **Review Extended Event Default Configuration:** Review the Extended Event settings by running the following Transact-SQL statement.  
   
     ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  

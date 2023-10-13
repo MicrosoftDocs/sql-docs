@@ -9,6 +9,8 @@ ms.date: 09/27/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: tutorial
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "Linux, AD authentication"
   - "Linux, Active Directory authentication"
@@ -238,7 +240,7 @@ This will use LDAPS over SSSD if Active Directory domain join on host was done v
 
 Starting with SQL Server 2017 CU14, if SQL Server was joined to an Active Directory domain controller using third-party providers and is configured to use openldap calls for general Active Directory lookup by setting **disablesssd** to true, you can also use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
 
-This may be useful for the scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with. And you use the openldap library mechanism by using the KDC list in **krb5.conf**.
+This might be useful for the scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with. And you use the openldap library mechanism by using the KDC list in **krb5.conf**.
 
 First, set **disablesssd** and **enablekdcfromkrb5conf** to true and then restart SQL Server:
 
@@ -265,7 +267,7 @@ While it is not recommended, it is possible to use utilities, such as **realmd**
 >  
 > SQL Server logins from Domain Local groups are not supported. Use Global Security Domain groups instead.
 
-## Next steps
+## Related content
 
 - [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
 - [Understanding Active Directory authentication for SQL Server on Linux and containers](sql-server-linux-ad-auth-understanding.md)

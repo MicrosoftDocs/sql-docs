@@ -8,6 +8,8 @@ ms.date: 12/06/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Operate failover cluster instance - SQL Server on Linux
 
@@ -19,7 +21,7 @@ This article explains how to operate a SQL Server failover cluster instance (FCI
 
 Failover for FCIs is similar to a Windows Server failover cluster (WSFC). If the cluster node hosting the FCI experiences some sort of failure, the FCI should automatically fail over to another node. Unlike a WSFC, there is no way to set preferred owners, so Pacemaker picks the node that will be the new host for the FCI.
 
-There are times you may want to manually fail the FCI to another node. The process is not the same as with FCIs on a WSFC. On a WSFC, you fail over resources at the role level. In Pacemaker, you choose a resource to move, and assuming all the constraints are correct, everything else will move as well. 
+There are times you might want to manually fail the FCI to another node. The process is not the same as with FCIs on a WSFC. On a WSFC, you fail over resources at the role level. In Pacemaker, you choose a resource to move, and assuming all the constraints are correct, everything else will move as well. 
 
 The way to failover depends on the Linux distribution. Follow the instructions for your linux distribution.
 
@@ -70,8 +72,6 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## Next Steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
-
-<!--Image references-->

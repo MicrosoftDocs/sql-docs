@@ -75,8 +75,8 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 | Change description | Details |
 | :----------------- | :------ |
 | Fix for a bug preventing reports without parameters to be loaded through **Server.LoadReportDefinition**. | &nbsp; |
-| The WebForms Report Viewer Control. | Supports embedding in RTL pages (pages that change the text flow using the *direction: rtl;* css property).<br/><br/>Supports customizing print dialog text via the *IReportViewerMessages5* localization interface.<br/><br/>Improved accessibility support.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
-| The WinForms Report Viewer Control. | Fix for printing when an app is running in a High DPI mode.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
+| The WebForms Report Viewer Control. | Supports embedding in RTL pages (pages that change the text flow using the *direction: rtl;* css property).<br/><br/>Supports customizing print dialog text via the *IReportViewerMessages5* localization interface.<br/><br/>Improved accessibility support.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148). |
+| The WinForms Report Viewer Control. | Fix for printing when an app is running in a High DPI mode.<br/><br/>&bull; &nbsp; &nbsp; [NuGet package for the Report Viewer control of WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148). |
 
 ## Next steps
 

@@ -55,8 +55,10 @@ If you install successfully, but the solution shows **"incompatible"**, and "The
 1. Open Visual Studio -> Extension -> Manage Extensions -> Installed
 1. Enable SSIS extension
 1. Relaunch Visual Studio
-
-If you get an error during installation, and find **"Bundle action failed: Invalid pointer (0x80004003)"** in the log. You can check the logs under %temp%\SsdtisSetup, the  more detail log is under Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
+   
+If you get an error during installation, and find **"Process returned error: 0x80131500"** in the log. You can open %temp%\SsdtisSetup folder, search in Microsoft.DataTools.IntegrationServices_{timestamp}_ISVsix.log:
+- When the error is "Pre-check verification failed with warning(s) :  AnotherInstallationRunning.",
+  - kill MSIExec.exe in task manager, and retry. 
 - When the error is "The file {filefullpath} already exists.":
    1. ```
       cd C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE

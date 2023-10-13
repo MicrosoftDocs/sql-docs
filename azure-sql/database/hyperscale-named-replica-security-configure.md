@@ -14,6 +14,9 @@ ms.topic: how-to
 
 This article describes the procedure to grant access to an Azure SQL Hyperscale [named replica](service-tier-hyperscale-replicas.md) without granting access to the primary replica or other named replicas. This scenario allows resource and security isolation of a named replica - as the named replica will be running using its own compute node - and it is useful whenever isolated read-only access to an Azure SQL Hyperscale database is needed. Isolated, in this context, means that CPU and memory are not shared between the primary and the named replica, queries running on the named replica do not use compute resources of the primary or of any other replicas, and principals accessing the named replica cannot access other replicas, including the primary.
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
+
 ## Create a login in the master database on the primary server
 
 In the `master` database on the logical server hosting the *primary* database, execute the following to create a new login.
@@ -26,7 +29,7 @@ Use your own strong and unique password.
 create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!';
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 ```sql
 create login [bob@contoso.com] from external provider;
@@ -42,9 +45,9 @@ Retrieve the SID hexadecimal value for the created login from the `sys.sql_login
 select sid from sys.sql_logins where name = 'third-party-login';
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
-Not required for Azure AD authentication.
+Not required for Microsoft Entra authentication.
 
 ---
 
@@ -56,7 +59,7 @@ Disable the login. This will prevent this login from accessing any database on t
 alter login [third-party-login] disable;
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 ```sql
 alter login [bob@contoso.com] disable;
@@ -75,7 +78,7 @@ Once the login has been created, connect to the primary read-write replica of yo
 create user [third-party-user] from login [third-party-login];
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 ```sql
 create user [bob@contoso.com] from login [bob@contoso.com];
@@ -91,7 +94,7 @@ As an optional step, once the database user has been created, you can drop the s
 drop login [third-party-login];
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 ```sql
 drop login [bob@contoso.com];
@@ -125,7 +128,7 @@ Connect to the `master` database on the logical server hosting the named replica
 create login [third-party-login] with password = 'Just4STRONG_PAZzW0rd!', sid = 0x0...1234;
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 Connect to the `master` database on the logical server hosting the named replica, created in the previous step and add the login.
 
@@ -149,7 +152,7 @@ Remember that by default a newly created user has a minimal set of permissions g
 GRANT SELECT ON [Application].[Cities] to [third-party-user];
 ```
 
-# [Azure AD authentication](#tab/AAD-Authentication)
+# [Microsoft Entra authentication](#tab/AAD-Authentication)
 
 ```sql
 GRANT SELECT ON [Application].[Cities] to [bob@contoso.com];
@@ -187,6 +190,3 @@ For more information:
 * Managing database access and logins, see [SQL Database security: Manage database access and login security](logins-create-manage.md)
 * Database engine permissions, see [Permissions](/sql/relational-databases/security/permissions-database-engine) 
 * Granting object permissions, see [GRANT Object Permissions](/sql/t-sql/statements/grant-object-permissions-transact-sql)
-
-
-

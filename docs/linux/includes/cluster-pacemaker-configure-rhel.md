@@ -5,6 +5,8 @@ ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 1. On all cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 

@@ -7,6 +7,8 @@ ms.date: 12/16/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Use PowerShell on Windows to manage SQL Server on Linux
 
@@ -143,6 +145,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## See also
+## Related content
+
 - [SQL Server PowerShell](../powershell/sql-server-powershell.md)
 - [SqlServer cmdlets](/powershell/module/sqlserver)

@@ -8,6 +8,8 @@ ms.date: 11/06/2020
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration performance: SQL Server to  Azure SQL Managed Instance performance baseline
 [!INCLUDE[appliesto-sqldb-sqlmi](../../includes/appliesto-sqlmi.md)]

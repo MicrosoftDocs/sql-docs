@@ -5,6 +5,8 @@ ms.date: 06/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 Certain versions of supported Linux distributions provide support for FUA I/O subsystem capability, which provides data durability. [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses the FUA capability to provide highly efficient and reliable I/O for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] workloads. For more information on FUA support by Linux distribution and its effect on [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see [SQL Server On Linux: Forced Unit Access (FUA) Internals](https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-forced-unit-access-fua-internals/ba-p/3199102).
 

@@ -251,7 +251,10 @@ In addition to the above considerations and strategy, in [!INCLUDE [ssazure-sqld
 There are specific but uncommon scenarios when one-time or periodic index maintenance may be needed in [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)]:
 
 - Index maintenance may be required to increase page density and reduce used space in the database, and thus stay within the size limit of the pricing tier. This avoids having to scale up to a higher pricing tier with a higher size limit.
-- If it becomes necessary to [shrink data files](/azure/azure-sql/database/file-space-manage), rebuilding or reorganizing indexes before shrinking files will increase page density. This makes the shrink operation faster, because it will need to move fewer pages.
+- If it becomes necessary to shrink files, rebuilding or reorganizing indexes before shrinking files will increase page density. This makes the shrink operation faster, because it will need to move fewer pages. For more information, visit:
+    - [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)
+    - [Manage file space for databases in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/file-space-manage)
+
 
 > [!TIP]
 > If you have determined that index maintenance is necessary for your [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] and [!INCLUDE[ssSDSmifull](../../includes/ssSDSmifull-md.md)] workloads, you should either reorganize indexes, or use online index rebuild. This lets query workloads access tables while indexes are being rebuilt.

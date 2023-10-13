@@ -19,6 +19,8 @@ This article outlines the basics of securing the data tier of an application usi
 
 ![Diagram of layered defense-in-depth. Customer data is encased in layers of network security, access management and threat and information protections.](./media/security-overview/sql-security-layer.png)
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Network security
 
 Microsoft Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics provide a relational database service for cloud and enterprise applications. To help protect customer data, firewalls prevent network access to the server until access is explicitly granted based on IP address or Azure Virtual network traffic origin.
@@ -43,25 +45,25 @@ IP firewall rules grant access to databases based on the originating IP address 
 
 ### Authentication
 
-Authentication is the process of proving the user is who they claim to be. Azure SQL Database and SQL Managed Instance support SQL authentication and Azure AD authentication. SQL Managed instance additionally supports Windows Authentication for Azure AD principals.
+Authentication is the process of proving the user is who they claim to be. SQL Database and SQL Managed Instance support SQL authentication and authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). SQL Managed instance additionally supports [Windows authentication](/azure/azure-sql/managed-instance/winauth-azuread-setup) for Microsoft Entra principals.
 
 - **SQL authentication**:
 
     SQL authentication refers to the authentication of a user when connecting to Azure SQL Database or Azure SQL Managed Instance using username and password. A **server admin** login with a username and password must be specified when the server is being created. Using these credentials, a **server admin** can authenticate to any database on that server or instance as the database owner. After that, additional SQL logins and users can be created by the server admin, which enable users to connect using username and password.
 
-- **Azure Active Directory authentication**:
+- **Microsoft Entra authentication**:
 
-    Azure Active Directory authentication is a mechanism of connecting to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Azure Active Directory (Azure AD). Azure AD authentication allows administrators to centrally manage the identities and permissions of database users along with other Azure services in one central location. This includes the minimization of password storage and enables centralized password rotation policies.
+    Microsoft Entra authentication is a mechanism to connect to [Azure SQL Database](sql-database-paas-overview.md), [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md) and [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) by using identities in Microsoft Entra ID. Microsoft Entra authentication allows administrators to centrally manage the identities and permissions of database users along with other Azure services in one central location. This minimizes password storage and enables centralized password rotation policies.
 
-     A server admin called the **Active Directory administrator** must be created to use Azure AD authentication with SQL Database. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](authentication-aad-overview.md). Azure AD authentication supports both managed and federated accounts. The federated accounts support Windows users and groups for a customer domain federated with Azure AD.
+     A server admin called the **Microsoft Entra administrator** must be created to use Microsoft Entra authentication with SQL Database. For more information, see [Connecting to SQL Database with Microsoft Entra authentication](authentication-aad-overview.md). Microsoft Entra authentication supports both managed and federated accounts. The federated accounts support Windows users and groups for a customer domain federated with Microsoft Entra ID.
 
-    Additional Azure AD authentication options available are [Active Directory Universal Authentication for SQL Server Management Studio](authentication-mfa-ssms-overview.md) connections including [multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks) and [Conditional Access](conditional-access-configure.md).
+    Microsoft Entra supports several different authentication options, including [multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks), [Integrated Windows authentication](/azure/active-directory/develop/msal-authentication-flows#integrated-windows-authentication-iwa), and [Conditional Access](conditional-access-configure.md).
 
-- **Windows Authentication for Azure AD Principals**:
+- **Windows authentication for Microsoft Entra principals**:
 
-    [Kerberos authentication for Azure AD Principals](../managed-instance/winauth-azuread-overview.md) enables Windows Authentication for Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
+    [Kerberos authentication for Microsoft Entra principals](../managed-instance/winauth-azuread-overview.md) enables Windows authentication for Azure SQL Managed Instance. Windows authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
 
-    To enable Windows Authentication for Azure Active Directory (Azure AD) principals, you will turn your Azure AD tenant into an independent Kerberos realm and create an incoming trust in the customer domain. Learn [how Windows Authentication for Azure SQL Managed Instance is implemented with Azure Active Directory and Kerberos](../managed-instance/winauth-implementation-aad-kerberos.md).
+    To enable Windows authentication for Microsoft Entra principals, you will turn your Microsoft Entra tenant into an independent Kerberos realm and create an incoming trust in the customer domain. Learn [how Windows authentication for Azure SQL Managed Instance is implemented with Microsoft Entra ID and Kerberos](../managed-instance/winauth-implementation-aad-kerberos.md).
 
 > [!IMPORTANT]
 > Managing databases and servers within Azure is controlled by your portal user account's role assignments. For more information on this article, see [Azure role-based access control in Azure portal](/azure/role-based-access-control/overview). Controlling access with firewall rules does *not* apply to **SQL Managed Instance**. Please see the following article on [connecting to a managed instance](../managed-instance/connect-application-instance.md) for more information about the networking configuration needed.

@@ -36,9 +36,9 @@ By using these steps, you can easily create a development or test database from 
   
 2.  Click the **Script** button next to **Max Rows** in the toolbar.  
   
-3.  When the script window opens, make sure Connected is shown in the status bar below the Transact\-SQL script pane. If Disconnected is shown, click the **Connect** button (the leftmost one in the toolbar) and enter your server information and credentials.  
+3.  When the script window opens, make sure Connected is shown in the status bar below the Transact-SQL script pane. If Disconnected is shown, click the **Connect** button (the leftmost one in the toolbar) and enter your server information and credentials.  
   
-4.  In the **Database** dropdown menu next to the **Connect**/**Disconnect** buttons, select **TradeDev**. This is similar to the Transact\-SQL`USE` statement, and will ensure that the script in the code editor will be executed against the **TradeDev** database.  
+4.  In the **Database** dropdown menu next to the **Connect**/**Disconnect** buttons, select **TradeDev**. This is similar to the Transact-SQL`USE` statement, and will ensure that the script in the code editor will be executed against the **TradeDev** database.  
   
 5.  Click the **Execute Query** button to execute the `INSERT` statements. This will insert all the rows from the `Suppliers` table of the `Trade` database to the `Suppliers` table in the `TradeDev` database.  
   

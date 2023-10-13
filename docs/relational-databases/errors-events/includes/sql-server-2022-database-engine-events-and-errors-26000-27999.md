@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 10/11/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -289,7 +289,7 @@ ms.topic: include
 | 27401 | 10 | No | A database was found with the wrong state during an external governance operation. |
 | 27402 | 10 | No | A database was not found during an external governance operation. |
 | 27403 | 10 | No | A schema was not found during an external governance operation. |
-| 27404 | 10 | No | A table was not found during an external governance operation. |
+| 27404 | 10 | No | A relation was not found during an external governance operation. |
 | 27405 | 10 | No | A column was not found during an external governance operation. |
 | 27406 | 10 | No | The database registration was not found during an external governance operation. |
 | 27407 | 10 | No | The database registration attributes could not be obtained during an external governance operation. |
@@ -309,6 +309,11 @@ ms.topic: include
 | 27421 | 16 | No | Cannot create HTTP client for attribute synchronization. |
 | 27422 | 16 | No | Invalid JSON format for reference fetch response. |
 | 27423 | 16 | No | Could not execute a reference fetch because the AAD token could not be created. |
+| 27424 | 10 | No | An object was not found during an external governance operation. |
+| 27425 | 10 | No | No more attr events for the specified token. |
+| 27426 | 16 | Yes | External governance synchronization task failed to acquire lock while trying to synchronize attributes. |
+| 27427 | 16 | Yes | External governance synchronization task failed to initialize attribute synchronization manager. |
+| 27428 | 16 | Yes | '%ls' is not a valid option for the @scope parameter. Enter 'access_policies', 'attributes' or 'full'. |
 | 27500 | 16 | No | An HTTP error occurred. |
 | 27501 | 16 | No | An unsupported connection type HTTP error occurred. |
 | 27502 | 16 | No | An open session HTTP error occurred. |
@@ -337,6 +342,7 @@ ms.topic: include
 | 27525 | 16 | No | A get security flags HTTP error occurred. |
 | 27526 | 16 | No | A set security flags HTTP error occurred. |
 | 27527 | 16 | No | A receive response HTTP error occurred. |
+| 27528 | 16 | No | A 'NotModified' response HTTP error occurred. |
 | 27801 | 10 | Yes | Successfully initialize HPC environment from provider '%ld', device type '%ld' DLL version %ld, and find %ld device(s), %ld of them are used. |
 | 27802 | 16 | Yes | Failed to initialize HPC environment. |
 | 27803 | 10 | Yes | Message reported from (%.\*s) device on device Id (%I64d), code : %d, message : %.\*s . |

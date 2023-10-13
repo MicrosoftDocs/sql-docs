@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure SMB storage failover cluster instance - SQL Server on Linux
 
@@ -239,6 +241,6 @@ valid users = SQLSambaUser
 
 You're now ready to configure the FCI.
 
-## Next steps
+## Related content
 
 - [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)

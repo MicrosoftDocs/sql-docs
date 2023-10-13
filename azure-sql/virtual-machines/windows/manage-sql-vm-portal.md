@@ -4,7 +4,7 @@ description: Learn how to manage SQL Server on Azure VMs in the Azure portal by 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 08/28/2023
+ms.date: 09/25/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -18,13 +18,12 @@ In the [Azure portal](https://portal.azure.com), the [**SQL virtual machines**](
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-manage.png" alt-text="Screenshot of accessing the SQL virtual machines resource in the Azure portal.":::
 
-The **SQL virtual machines** resource management point is different to the **Virtual machine** resource used to manage the VM such as start it, stop it, or restart it. 
+The **SQL virtual machines** resource management point is different to the **Virtual machine** resource used to manage the underlying VM such as to start it, stop it, or restart it. 
 
 
-## Prerequisite 
+## Prerequisites
 
 The **SQL virtual machines** resource is only available to SQL Server VMs that have been [registered with the SQL IaaS Agent extension](sql-agent-extension-manually-register-single-vm.md). 
-
 
 ## Access the resource
 
@@ -42,13 +41,20 @@ To access the **SQL virtual machines** resource, do the following:
 
    :::image type="content" source="./media/manage-sql-vm-portal/all-sql-vms.png" alt-text="Screenshot of the Azure portal, the SQL virtual machines resource page, with a VM selected.":::
 
-   Selecting your SQL Server VM opens the **SQL virtual machines** resource: 
-
-
-   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-resource.png" alt-text="Screenshot of the Azure portal, the overview pane of the SQL virtual machines resource.":::
+Selecting your SQL Server VM opens the **SQL virtual machines** resource. 
 
 > [!TIP]
-> The **SQL virtual machines** resource is for dedicated SQL Server settings. Select the name of the VM in the **Virtual machine** box to open settings that are specific to the VM, but not exclusive to SQL Server. 
+> The **SQL virtual machines** resource is for dedicated SQL Server settings. Select the name of the VM under **Virtual machine** on the **Overview** page to open settings that are specific to the underlying virtual machine. 
+
+## Overview page
+
+The **Overview** page of the SQL virtual machines resource provides basic information about the SQL Server VM, such as the resource group, location, license type, the name of the underlying Azure virtual machine, and storage utilization metrics. 
+
+You can also see the status of the SQL Iaas Agent extension under **Extension health status**. If your status is **Unhealthy**, or **Failed**, you can find out more information from the **Notifications** tab. 
+
+The **Notifications** tab displays information from [SQL best practices assessments](sql-assessment-for-sql-vm.md) and about issues with the [Extension health](sql-agent-extension-troubleshoot-known-issues.md#check-extension-health). 
+
+   :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-resource.png" alt-text="Screenshot of the Azure portal, the overview pane of the SQL virtual machines resource." lightbox="./media/manage-sql-vm-portal/sql-vm-resource.png":::
 
 
 ## License and edition 
@@ -69,7 +75,7 @@ For example, you can extend your storage:
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-storage-configuration.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.":::
 
-It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
+It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
 
 Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration and implement your settings the next time your SQL Server service starts: 
 
@@ -116,7 +122,7 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [Azure Active Directory (Azure AD) authentication](configure-azure-ad-authentication-for-sql-vm.md). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [ authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 

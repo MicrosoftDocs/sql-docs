@@ -5,7 +5,7 @@ description: This article explains the Azure SQL Database connectivity architect
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, mathoma, vanto
-ms.date: 09/06/2022
+ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: conceptual
@@ -49,20 +49,18 @@ Servers in SQL Database and dedicated SQL pools (formerly SQL DW) in Azure Synap
   - When using the Proxy connection policy, refer to the [Gateway IP addresses](#gateway-ip-addresses) list later in this article for your region's IP addresses to allow.
 - **Default:** This is the connection policy in effect on all servers after creation unless you explicitly alter the connection policy to either `Proxy` or `Redirect`. The default policy is `Redirect` for all client connections originating inside of Azure (for example, from an Azure Virtual Machine) and `Proxy` for all client connections originating outside (for example, connections from your local workstation).
 
-We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you will need to meet the additional requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises then you may need to work with your network admin to allow network traffic through your corporate firewall.
+We highly recommend the `Redirect` connection policy over the `Proxy` connection policy for the lowest latency and highest throughput. However, you need to meet the extra requirements for allowing network traffic as outlined above. If the client is an Azure Virtual Machine, you can accomplish this using Network Security Groups (NSG) with [service tags](/azure/virtual-network/network-security-groups-overview#service-tags). If the client is connecting from a workstation on-premises, you may need to work with your network admin to allow network traffic through your corporate firewall.
 
-> [!IMPORTANT]  
-> Connections to private endpoint only support **Proxy** as the [connection policy](connectivity-architecture.md#connection-policy).
 
 ## Connectivity from within Azure
 
-If you are connecting from within Azure your connections have a connection policy of `Redirect` by default. A policy of `Redirect` means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
+If you're connecting from within Azure your connections have a connection policy of `Redirect` by default. A policy of `Redirect` means that after the TCP session is established to Azure SQL Database, the client session is then redirected to the right database cluster with a change to the destination virtual IP from that of the Azure SQL Database gateway to that of the cluster. Thereafter, all subsequent packets flow directly to the cluster, bypassing the Azure SQL Database gateway. The following diagram illustrates this traffic flow.
 
 :::image type="content" source="./media/connectivity-architecture/connectivity-azure.svg" alt-text="Diagram of the architecture overview of Azure SQL connectivity via redirection within Azure.":::
 
 ## Connectivity from outside of Azure
 
-If you are connecting from outside Azure, your connections have a connection policy of `Proxy` by default. A policy of `Proxy` means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway. The following diagram illustrates this traffic flow.
+If you're connecting from outside Azure, your connections have a connection policy of `Proxy` by default. A policy of `Proxy` means that the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway. The following diagram illustrates this traffic flow.
 
 :::image type="content" source="./media/connectivity-architecture/connectivity-outside-azure.svg" alt-text="Diagram that shows how the TCP session is established via the Azure SQL Database gateway and all subsequent packets flow via the gateway.":::
 
@@ -73,7 +71,7 @@ If you are connecting from outside Azure, your connections have a connection pol
 
 The table below lists the individual Gateway IP addresses and Gateway IP address subnets per region.
 
-Periodically, we will retire individual **Gateway IP addresses** and migrate the traffic to **Gateway IP address subnets** as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md). 
+Periodically, we'll retire individual **Gateway IP addresses** and migrate the traffic to **Gateway IP address subnets** as per the process outlined at [Azure SQL Database traffic migration to newer Gateways](gateway-migration.md).
 
 We strongly encourage customers to move away from relying on any individual Gateway IP address (since these will be retired in the future) and instead allow network traffic to reach **all the Gateway IP address subnets** in a region.
 
@@ -99,15 +97,15 @@ We strongly encourage customers to move away from relying on any individual Gate
 | East US              | 40.121.158.30, 40.79.153.12, 40.78.225.32 | 20.42.65.64/29, 20.42.73.0/29, 52.168.116.64/29, 20.62.132.160/29 |
 | East US 2            | 40.79.84.180, 52.177.185.181, 52.167.104.0, 104.208.150.3, 40.70.144.193 | 104.208.150.192/29, 40.70.144.192/29, 52.167.104.192/29,20.62.58.128/27 |
 | France Central       | 40.79.129.1, 40.79.137.8, 40.79.145.12 | 40.79.136.32/29, 40.79.144.32/29, 40.79.128.32/29, 20.43.47.192/27 |
-| France South         | 40.79.177.0, 40.79.177.10 ,40.79.177.12 | 40.79.176.40/29, 40.79.177.32/29, 52.136.185.0/27 |
+| France South         | 40.79.177.0, 40.79.177.10, 40.79.177.12 | 40.79.176.40/29, 40.79.177.32/29, 52.136.185.0/27 |
 | Germany West Central | 51.116.240.0, 51.116.248.0, 51.116.152.0 | 51.116.152.32/29, 51.116.240.32/29, 51.116.248.32/29, 51.116.149.32/27 |
 | Germany North        | 51.116.56.0 | 51.116.57.32/29, 51.116.54.96/27 |
-| Central India        | 104.211.96.159, 104.211.86.30 , 104.211.86.31, 40.80.48.32, 20.192.96.32  | 104.211.86.32/29, 20.192.96.32/29, 40.80.48.32/29, 20.192.43.160/29 |
+| Central India        | 104.211.96.159, 104.211.86.30, 104.211.86.31, 40.80.48.32, 20.192.96.32  | 104.211.86.32/29, 20.192.96.32/29, 40.80.48.32/29, 20.192.43.160/29 |
 | South India          | 104.211.224.146    | 40.78.192.32/29, 40.78.193.32/29, 52.172.113.96/27 |
 | West India           | 104.211.160.80, 104.211.144.4 | 104.211.144.32/29, 104.211.145.32/29, 52.136.53.160/27 |
 | Japan East           | 40.79.184.8, 40.79.192.5, 13.78.104.32, 40.79.184.32 | 13.78.104.32/29, 40.79.184.32/29, 40.79.192.32/29, 20.191.165.160/27 |
 | Japan West           | 104.214.148.156, 40.74.97.10 | 40.74.96.32/29, 20.18.179.192/29, 20.189.225.160/27 |
-| Korea Central        | 52.231.32.42, 52.231.17.22 ,52.231.17.23, 20.44.24.32, 20.194.64.33 | 20.194.64.32/29, 20.44.24.32/29, 52.231.16.32/29,20.194.73.64/27 |
+| Korea Central        | 52.231.32.42, 52.231.17.22, 52.231.17.23, 20.44.24.32, 20.194.64.33 | 20.194.64.32/29, 20.44.24.32/29, 52.231.16.32/29,20.194.73.64/27 |
 | Korea South          | 52.231.151.96 | 52.231.151.96/27, 52.231.151.88/29, 52.147.112.160/27 |
 | North Central US     | 52.162.104.33, 52.162.105.9 | 52.162.105.200/29, 52.162.105.192/29, 20.49.119.32/27, 20.125.171.192/29 |
 | North Europe         | 52.138.224.1, 13.74.104.113 | 13.69.233.136/29, 13.74.105.192/29, 52.138.229.72/29, 52.146.133.128/27  |

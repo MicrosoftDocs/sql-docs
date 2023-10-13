@@ -45,7 +45,7 @@ Returns CPU usage and storage data for a database in Azure SQL Database. The dat
 |avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL Database process.|
 |avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL Database process.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
-|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL Database](/azure/azure-sql/database/file-space-manage)|
   
 > [!TIP]  
 >  For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models).  

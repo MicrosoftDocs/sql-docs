@@ -7,6 +7,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Security limitations for SQL Server on Linux
 
@@ -14,7 +16,7 @@ ms.topic: conceptual
 
 [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux currently has the following limitations:
 
-- A standard password policy is provided. `MUST_CHANGE` is the only option you may configure. The `CHECK_POLICY` option isn't supported.
+- A standard password policy is provided. `MUST_CHANGE` is the only option you might configure. The `CHECK_POLICY` option isn't supported.
 - Extensible Key Management isn't supported.
 - [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] authentication mode can't be disabled.
 - Password expiration is hard-coded to 90 days if you use [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] authentication.
@@ -26,7 +28,7 @@ ms.topic: conceptual
 
 For more information about security features available in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], see the [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
-## Next steps
+## Related content
 
 - [Get started with security features of SQL Server on Linux](sql-server-linux-security-get-started.md)
 - [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md)

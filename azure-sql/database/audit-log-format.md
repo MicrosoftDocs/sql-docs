@@ -63,6 +63,7 @@ Audit events are written to Log Analytics workspace defined during auditing conf
 | N/A | is_server_level_audit_s | Flag indicating if this audit is at the server level | N/A | string |
 | object_ id | object_id_d | The ID of the entity on which the audit occurred. This includes the : server objects, databases, database objects, and schema objects. 0 if the entity is the server itself or if the audit is not performed at an object level | int | int |
 | object_name | object_name_s | The name of the entity on which the audit occurred. This includes the : server objects, databases, database objects, and schema objects. 0 if the entity is the server itself or if the audit is not performed at an object level | sysname | string |
+| obo_middle_tier_app_id | obo_middle_tier_app_id_s | The application id of the middle tier application which connected to SQL Database using OBO access. | varchar(120) | string |
 | permission_bitmask | permission_bitmask_s | When applicable, shows the permissions that were granted, denied, or revoked | varbinary(16) | string |
 | response_rows | response_rows_d | Number of rows returned in the result set | bigint | int |
 | schema_name | schema_name_s | The schema context in which the action occurred. NULL for audits occurring outside a schema | sysname | string |

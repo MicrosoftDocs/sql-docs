@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # SQL Server on Linux VDI client SDK specification
 
@@ -82,7 +84,7 @@ int ClientVirtualDeviceSet::Create (
 
 | Parameters | Argument | Explanation |
 | --- | --- | --- |
-| | **name** | This identifies the virtual device set. The rules for names used by `CreateFileMapping()` must be followed. Any character except backslash (`\`) may be used. This is a character string. Prefixing the string with the user's product or company name and database name is recommended. |
+| | **name** | This identifies the virtual device set. The rules for names used by `CreateFileMapping()` must be followed. Any character except backslash (`\`) might be used. This is a character string. Prefixing the string with the user's product or company name and database name is recommended. |
 | | **cfg** | This is the configuration for the virtual device set. |
 
 | Return values | Argument | Explanation |
@@ -123,7 +125,7 @@ int ClientVirtualDeviceSet::GetConfiguration (
 
 #### Remarks
 
-This function blocks in an `Alertable` state. After successful invocation, the devices in the virtual device set may be opened.
+This function blocks in an `Alertable` state. After successful invocation, the devices in the virtual device set might be opened.
 
 ## ClientVirtualDeviceSet::OpenDevice
 
@@ -155,7 +157,7 @@ int ClientVirtualDeviceSet::OpenDevice (
 
 #### Remarks
 
-`VD_E_OPEN` may be returned without problem. The client may call `OpenDevice` by means of a loop until this code is returned.
+`VD_E_OPEN` might be returned without problem. The client might call `OpenDevice` by means of a loop until this code is returned.
 If more than one device is configured, for example *n* devices, the virtual device set returns *n* unique device interfaces.
 
 The `GetConfiguration` function can be used to wait until the devices can be opened.
@@ -252,7 +254,7 @@ int ClientVirtualDeviceSet::SignalAbort ();
 
 #### Remarks
 
-At any time, the client may choose to abort the `BACKUP` or `RESTORE` operation. This routine signals that all operations should cease. The state of the overall virtual device set enters an `Abnormally Terminated` state. No further commands are returned on any devices. All uncompleted commands are automatically completed, returning `ERROR_OPERATION_ABORTED` as a completion code. The client should call `ClientVirtualDeviceSet::Close` after it's safely terminated any outstanding use of buffers provided to the client.
+At any time, the client might choose to abort the `BACKUP` or `RESTORE` operation. This routine signals that all operations should cease. The state of the overall virtual device set enters an `Abnormally Terminated` state. No further commands are returned on any devices. All uncompleted commands are automatically completed, returning `ERROR_OPERATION_ABORTED` as a completion code. The client should call `ClientVirtualDeviceSet::Close` after it's safely terminated any outstanding use of buffers provided to the client.
 
 ## ClientVirtualDeviceSet::Close
 
@@ -282,7 +284,7 @@ The invocation of `Close` is a client declaration that all resources used by the
 
 The client is permitted to issue a `Create` call on the virtual device set interface after the `Close` call is returned. Such a call would create a new virtual device set for a subsequent `BACKUP` or `RESTORE` operation.
 
-If `Close` is called when one or more virtual devices are still open, `VD_E_OPEN` is returned. In this case, `SignalAbort` is internally triggered, to ensure a proper shutdown if possible. VDI resources are released. The client should wait for a `VD_E_CLOSE` indication on each device before invoking `ClientVirtualDeviceSet::Close`. If the client knows that the virtual device set is already in an `Abnormally Terminated` state, then it shouldn't expect a `VD_E_CLOSE` indication from `GetCommand`, and may invoke `ClientVirtualDeviceSet::Close` as soon as activity on the shared buffers is terminated.
+If `Close` is called when one or more virtual devices are still open, `VD_E_OPEN` is returned. In this case, `SignalAbort` is internally triggered, to ensure a proper shutdown if possible. VDI resources are released. The client should wait for a `VD_E_CLOSE` indication on each device before invoking `ClientVirtualDeviceSet::Close`. If the client knows that the virtual device set is already in an `Abnormally Terminated` state, then it shouldn't expect a `VD_E_CLOSE` indication from `GetCommand`, and might invoke `ClientVirtualDeviceSet::Close` as soon as activity on the shared buffers is terminated.
 
 ## ClientVirtualDeviceSet::OpenInSecondary
 
@@ -314,7 +316,7 @@ int ClientVirtualDeviceSet::OpenInSecondary (
 
 #### Purpose
 
-Some applications may require more than one process to operate on the buffers returned by `ClientVirtualDevice::GetCommand`. In such cases, the process that receives the command can use `GetBufferHandle` to obtain a process independent handle that identifies the buffer. This handle can then be communicated to any other process that also has the same Virtual Device Set open. That process would then use `ClientVirtualDeviceSet::MapBufferHandle` to obtain the address of the buffer. The address will likely be a different address than in its partner because each process may be mapping buffers at different addresses.
+Some applications might require more than one process to operate on the buffers returned by `ClientVirtualDevice::GetCommand`. In such cases, the process that receives the command can use `GetBufferHandle` to obtain a process independent handle that identifies the buffer. This handle can then be communicated to any other process that also has the same Virtual Device Set open. That process would then use `ClientVirtualDeviceSet::MapBufferHandle` to obtain the address of the buffer. The address will likely be a different address than in its partner because each process might be mapping buffers at different addresses.
 
 #### Syntax
 

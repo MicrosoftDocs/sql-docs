@@ -1,11 +1,12 @@
 ---
 author: rwestMSFT
 ms.author: randolphwest
-ms.reviewer: randolphwest
-ms.date: 10/12/2022
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 ## Considerations for multiple network interfaces (NICs)
 
@@ -19,22 +20,22 @@ When setting up high availability with servers that have multiple NICs, follow t
 
 The changes to the `corosync.conf` file example are highlighted below:
 
-<pre>
+```output
   nodelist {
     node {
-        ring0_addr: <b>ip_address_of_node1_NIC1</b>
-        name: <b>hostname_of_node1</b>
+        ring0_addr: <ip_address_of_node1_NIC1>
+        name: <hostname_of_node1>
         nodeid: 1
     }
     node {
-        ring0_addr: <b>ip_address_of_node2_NIC1</b>
-        name: <b>hostname_of_node2</b>
+        ring0_addr: <ip_address_of_node2_NIC1>
+        name: <hostname_of_node2>
         nodeid: 2
     }
     node {
-        ring0_addr: <b>ip_address_of_node3_NIC1</b>
-        name: <b>hostname_of_node3</b>
+        ring0_addr: <ip_address_of_node3_NIC1>
+        name: <hostname_of_node3>
         nodeid: 3
     }
   }
-</pre>
+```

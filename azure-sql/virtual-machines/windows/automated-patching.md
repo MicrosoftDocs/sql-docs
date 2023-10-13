@@ -1,14 +1,14 @@
 ---
 title: Automated Patching
 description: This article explains the Automated Patching feature for SQL Server on Azure VMs.
-author: bluefooted
-ms.author: pamela
+author: tarynpratt
+ms.author: tarynpratt
 ms.reviewer: mathoma, randolphwest
-ms.date: 08/28/2023
+ms.date: 09/08/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: article
-ms.custom: devx-track-azurepowershell
+ms.custom:
 tags: azure-resource-manager
 ---
 # Automated Patching for SQL Server on Azure virtual machines
@@ -87,25 +87,30 @@ After provisioning your SQL VM, use PowerShell to configure Automated Patching.
 In the following example, PowerShell is used to configure Automated Patching on an existing SQL Server VM. The **New-AzVMSqlServerAutoPatchingConfig** command configures a new maintenance window for automatic updates.
 
 ```azurepowershell
-$vmname = "vmname"
-$resourcegroupname = "resourcegroupname"
-$aps = New-AzVMSqlServerAutoPatchingConfig -Enable -DayOfWeek "Thursday" -MaintenanceWindowStartingHour 11 -MaintenanceWindowDuration 120  -PatchCategory "Important"
-s
-Set-AzVMSqlServerExtension -AutoPatchingSettings $aps -VMName $vmname -ResourceGroupName $resourcegroupname
+Update-AzSqlVM -ResourceGroupName 'resourcegroupname' -Name 'vmname' `
+-AutoPatchingSettingDayOfWeek Thursday `
+-AutoPatchingSettingMaintenanceWindowDuration 120 `
+-AutoPatchingSettingMaintenanceWindowStartingHour 11 `
+-AutoPatchingSettingEnable
 ```
 
 Based on this example, the following table describes the practical effect on the target Azure VM:
 
 | Parameter | Effect |
 | --- | --- |
-| **DayOfWeek** | Patches installed every Thursday. |
-| **MaintenanceWindowStartingHour** | Begin updates at 11:00am. |
-| **MaintenanceWindowsDuration** | Patches must be installed within 120 minutes. Based on the start time, they must complete by 1:00pm. |
-| **PatchCategory** | The only possible setting for this parameter is **Important**. This installs Windows update marked Important; it doesn't install any SQL Server updates that aren't included in this category. |
+| **AutoPatchingSettingDayOfWeek** | Patches installed every Thursday. |
+| **AutoPatchingSettingMaintenanceWindowDuration** | Patches must be installed within 120 minutes. Based on the start time, they must complete by 1:00pm. |
+| **AutoPatchingSettingMaintenanceWindowStartingHour** | Begin updates at 11:00am. |
+| **AutoPatchingSettingEnable** | Enables Automated Patching |
 
 It could take several minutes to install and configure the SQL Server IaaS Agent.
 
-To disable Automated Patching, run the same script without the **-Enable** parameter to the **New-AzVMSqlServerAutoPatchingConfig**. The absence of the **-Enable** parameter signals the command to disable the feature.
+To disable Automated Patching, run the following script with the value of **$false** on the **-AutoPatchingSettingEnable**.
+
+```azurepowershell
+Update-AzSqlVM -ResourceGroupName 'resourcegroupname' -Name 'vmname' -AutoPatchingSettingEnable:$false
+```
+
 
 ## Next steps
 

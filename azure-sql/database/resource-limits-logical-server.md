@@ -4,7 +4,7 @@ description: This article provides an overview of resource management in Azure S
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 08/30/2023
+ms.date: 09/21/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: reference
@@ -86,7 +86,7 @@ If you observe high storage space utilization, mitigation options include:
 - If the database is in an elastic pool, then alternatively the database can be moved outside of the pool, so that its storage space isn't shared with other databases.
 - Shrink a database to reclaim unused space. In elastic pools, shrinking a database provides more storage for other databases in the pool. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 - Check if high space utilization is due to a spike in the size of Persistent Version Store (PVS). PVS is a part of each database, and is used to implement  [Accelerated Database Recovery](../accelerated-database-recovery.md). To determine current PVS size, see [PVS troubleshooting](/sql/relational-databases/accelerated-database-recovery-management#troubleshooting). A common reason for large PVS size is a transaction that is open for a long time (hours), preventing cleanup of row older versions in PVS.
-- For databases and elastic pools in Premium and Business Critical service tiers that consume large amounts of storage, you may receive an out-of-space error even though used space in the database or elastic pool is below its maximum data size limit. This may happen if `tempdb` or transaction log files consume a large amount of storage toward the maximum local storage limit. [Fail over](high-availability-sla.md#testing-application-fault-resiliency) the database or elastic pool to reset `tempdb` to its initial smaller size, or [shrink](file-space-manage.md#shrinking-transaction-log-file) transaction log to reduce local storage consumption.
+- For databases and elastic pools in Premium and Business Critical service tiers that consume large amounts of storage, you may receive an out-of-space error even though used space in the database or elastic pool is below its maximum data size limit. This may happen if `tempdb` or transaction log files consume a large amount of storage toward the maximum local storage limit. [Fail over](high-availability-sla.md#testing-application-fault-resiliency) the database or elastic pool to reset `tempdb` to its initial smaller size, or [shrink](file-space-manage.md#shrink-transaction-log-file) transaction log to reduce local storage consumption.
 
 ### Sessions, workers, and requests
 
@@ -146,12 +146,14 @@ If you get out-of-memory errors, mitigation options include:
 
 ## Resource consumption by user workloads and internal processes
 
-Azure SQL Database requires compute resources to implement core service features such as high availability and disaster recovery, database backup and restore, monitoring, Query Store, Automatic tuning, etc. The system sets aside a certain limited portion of the overall resources for these internal processes using [resource governance](#resource-governance) mechanisms, making the remainder of resources available for user workloads. When internal processes aren't using compute resources, the system makes them available to user workloads.
+Azure SQL Database requires compute resources to implement core service features such as high availability and disaster recovery, database backup and restore, monitoring, Query Store, Automatic tuning, etc. The system sets aside a limited portion of the overall resources for these internal processes using [resource governance](#resource-governance) mechanisms, making the remainder of resources available for user workloads. At times when internal processes aren't using compute resources, the system makes them available to user workloads.
 
 Total CPU and memory consumption by user workloads and internal processes is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_instance_cpu_percent` and `avg_instance_memory_percent` columns. This data is also reported via the `sql_instance_cpu_percent` and `sql_instance_memory_percent` Azure Monitor metrics, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
 > [!NOTE]
 > The `sql_instance_cpu_percent` and `sql_instance_memory_percent` Azure Monitor metrics are available since July 2023. They are fully equivalent to the previously available `sqlserver_process_core_percent` and `sqlserver_process_memory_percent` metrics, respectively. The latter two metrics remain available, but will be removed in the future. To avoid an interruption in database monitoring, do not use the older metrics.
+> 
+> These metrics are not available for databases using Basic, S1, and S2 service objectives. The same data is available in the dynamic management views referenced below.
 
 CPU and memory consumption by user workloads in each database is reported in the [sys.dm_db_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database) and [sys.resource_stats](/sql/relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database) views, in `avg_cpu_percent` and `avg_memory_usage_percent` columns. For elastic pools, pool-level resource consumption is reported in the [sys.elastic_pool_resource_stats](/sql/relational-databases/system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database) view (for historical reporting scenarios) and in [sys.dm_elastic_pool_resource_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-elastic-pool-resource-stats-azure-sql-database) for real-time monitoring. User workload CPU consumption is also reported via the `cpu_percent` Azure Monitor metric, for [single databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases) and [elastic pools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) at the pool level.
 
@@ -160,9 +162,15 @@ A more detailed breakdown of recent resource consumption by user workloads and i
 > [!TIP]
 > When monitoring or troubleshooting workload performance, it's important to consider both **user CPU consumption** (`avg_cpu_percent`, `cpu_percent`), and **total CPU consumption** by user workloads and internal processes (`avg_instance_cpu_percent`,`sql_instance_cpu_percent`). Performance may be noticeably impacted if *either* of these metrics is in the 70-100% range.
 
-**User CPU consumption** is calculated as a percentage of the user workload limits in each service objective. **User CPU utilization** in the 70-100% range indicates that the user workload is reaching the limit of the service objective. However, when **total CPU consumption** reaches the 70-100% range, it's possible to see user workload throughput flattening out and query latency increasing, even if reported **user CPU consumption** remains significantly below 100%. This is more likely to occur when using smaller service objectives with a moderate allocation of compute resources, but relatively intense user workloads, such as in [dense elastic pools](elastic-pool-resource-management.md). This can also occur with smaller service objectives when internal processes temporarily require more resources, for example when creating a new replica of the database, or backing up the database.
+**User CPU consumption** is defined as a percentage toward the user workload CPU limit in each service objective. Likewise, **total CPU consumption** is defined as the percentage toward the CPU limit for all workloads. Because the two limits are different, the user and total CPU consumption are measured on different scales, and are not directly comparable with each other.
 
-When **total CPU consumption** is high, mitigation options are the same as noted in the [Compute CPU](#compute-cpu) section, and include service objective increase and/or user workload optimization.
+If **user CPU consumption** reaches 100%, it means that the user workload is fully using the CPU capacity available to it in the selected service objective, even if **total CPU consumption** remains below 100%.
+
+When **total CPU consumption** reaches the 70-100% range, it's possible to see user workload throughput flattening and query latency increasing, even if **user CPU consumption** remains significantly below 100%. This is more likely to occur when using smaller service objectives with a moderate allocation of compute resources, but relatively intense user workloads, such as in [dense elastic pools](elastic-pool-resource-management.md). This can also occur with smaller service objectives when internal processes temporarily require additional resources, for example when creating a new replica of the database, or backing up the database.
+
+Likewise, when **user CPU consumption** reaches the 70-100% range, user workload throughput will flatten and query latency will increase, even though **total CPU consumption** may be well below its limit.
+
+When either **user CPU consumption** or **total CPU consumption** is high, mitigation options are the same as noted in the [Compute CPU](#compute-cpu) section, and include service objective increase and/or user workload optimization.
 
 > [!NOTE]
 > Even on a completely idle database or elastic pool, **total CPU consumption** is never at zero because of background database engine activities. It can fluctuate in a wide range depending on the specific background activities, compute size, and previous user workload.

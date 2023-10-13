@@ -89,7 +89,7 @@ These database roles exist only in the virtual `master` database. Their permissi
 |**loginmanager** | Can create and delete logins in the virtual `master` database.|
 
 > [!NOTE]
-> The server-level principal and the Azure Active Directory administrator (if configured) have all permissions in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse Analytics without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage).
+> The server-level principal and the Microsoft Entra administrator (if configured) have all permissions in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse Analytics without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage).
 
 Some database roles aren't applicable to Azure SQL or Azure Synapse:
 

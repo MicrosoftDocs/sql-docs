@@ -7,7 +7,9 @@ ms.date: 11/22/2021
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - linux-related-content
 ---
 
 # What's new for SQL Server 2019 on Linux
@@ -46,7 +48,7 @@ The updates have been made in SQL Server 2019 on Linux:
 | Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) for more details. |
 
-## Next steps
+## Related content
 
 To install SQL Server on Linux, use one of the following tutorials:
 

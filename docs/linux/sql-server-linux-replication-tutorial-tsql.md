@@ -9,13 +9,15 @@ ms.date: 12/09/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # Configure Replication with T-SQL
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL. The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
+In this tutorial, configure SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL (T-SQL). The publisher and distributor will be the same instance, and the subscriber will be on a separate instance.
 
 > [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
@@ -109,7 +111,7 @@ To complete this tutorial, you will need:
    GO
    ```
 
-1. Configure publisher. Run the following TSQL commands on the publisher.
+1. Configure publisher. Run the following T-SQL commands on the publisher.
 
    ```sql
    DECLARE @publisher AS sysname
@@ -134,7 +136,7 @@ To complete this tutorial, you will need:
    GO
    ```
 
-1. Configure publication job. Run the following TSQL commands on the publisher.
+1. Configure publication job. Run the following T-SQL commands on the publisher.
 
    ```sql
    DECLARE @replicationdb AS sysname
@@ -174,7 +176,7 @@ To complete this tutorial, you will need:
    ```
 
 1. Create articles from the sales table
-   Run the following TSQL commands on the publisher.
+   Run the following T-SQL commands on the publisher.
 
    ```sql
    use [Sales]
@@ -194,7 +196,7 @@ To complete this tutorial, you will need:
    @vertical_partition = N'false'
    ```
 
-1. Configure Subscription. Run the following TSQL commands on the publisher.
+1. Configure Subscription. Run the following T-SQL commands on the publisher.
 
    ```sql
    DECLARE @subscriber AS sysname
@@ -261,7 +263,7 @@ To complete this tutorial, you will need:
    GO
    ```
 
-1. Connect subscriber and query replicated data.	
+1. Connect subscriber and query replicated data.    
 
    On the subscriber, check that the replication is working by running the following query:
 
@@ -269,7 +271,7 @@ To complete this tutorial, you will need:
    SELECT * from [Sales].[dbo].[CUSTOMER]
    ```
 
-In this tutorial, you configured SQL Server snapshot replication on Linux with two instances of SQL Server using Transact-SQL.
+In this tutorial, you configured SQL Server snapshot replication on Linux with two instances of SQL Server using T-SQL.
 
 > [!div class="checklist"]
 > * Enable SQL Server replication agents on Linux
@@ -281,12 +283,8 @@ In this tutorial, you configured SQL Server snapshot replication on Linux with t
 > * Configure subscriber 
 > * Run the replication jobs
 
-## See also
+## Related content
 
-For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
-
-## Next steps
-
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+- [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md)
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

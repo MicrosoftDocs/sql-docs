@@ -8,6 +8,8 @@ ms.date: 02/24/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 helpviewer_keywords:
   - "SQL Server on Linux, startup options"
   - "Database Engine [SQL Server], starting and stopping services on Linux"
@@ -93,8 +95,8 @@ The [!INCLUDE[ssDE](../includes/ssde-md.md)] can be stopped by using the **SHUTD
     ```
 
 For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transact-SQL&#41;](../t-sql/language-elements/shutdown-transact-sql.md).
-  
-## Next steps
+
+## Related content
 
 - [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md)
 - [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)

@@ -7,6 +7,8 @@ ms.date: "07/14/2020"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 
 # Creating the Server Connection Files (DB2ToSQL)

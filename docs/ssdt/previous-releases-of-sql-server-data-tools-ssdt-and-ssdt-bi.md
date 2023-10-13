@@ -1116,7 +1116,7 @@ Using SqlPackage.exe and the DacFx APIs you can now generate a deployment report
 
 For SqlPackage's Publish and Script actions, two new arguments have been added.
 
-* DeployScriptPath (shortname: dsp). This is an optional path to write the deployment script to. For Azure deployment, if there were TSQL commands to create of modify the DB a master script will be written to the same path but with "Filename_Master.sql" as the output file name.
+* DeployScriptPath (shortname: dsp). This is an optional path to write the deployment script to. For Azure deployment, if there were Transact-SQL commands to create of modify the DB a master script will be written to the same path but with "Filename_Master.sql" as the output file name.
 * DeployReportPath (shortname: drp). This is an optional path to write the deployment report to.
 
 For the Script action, either the existing Output Path arguments or the new script/report-specific arguments should be used, but not both.

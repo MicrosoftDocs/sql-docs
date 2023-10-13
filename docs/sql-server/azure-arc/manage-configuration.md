@@ -5,12 +5,13 @@ description: Explains how to manage SQL Server licensing options. Also demonstra
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 08/17/2023
+ms.date: 09/12/2023
 ms.topic: conceptual
 ---
+
 # Configure Azure Arc-enabled SQL Server
 
-Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. The Arc-enabled SQL Server overview blade reflects how the SQL Server Configuration effects a particular instance.
+Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. In Azure portal, the Azure Arc-enabled SQL Server **Overview** reflects how the SQL Server Configuration effects a particular instance.
 
 Azure portal SQL Server Configuration allows you to perform the following management tasks:
 
@@ -59,7 +60,7 @@ SQL Server license type identifies the type of license for SQL Server instances 
 
 **License type** is a required parameter when you install Azure Extension for SQL Server and each supported onboarding method includes the license type options. It allows you to track your SQL Server license inventory from using Azure Resource Graph. You can also track the software usage in the Cost Management + Billing portal.
 
-For your convenience, the overview blade of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
+For your convenience, **Overview** of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
 
 > [!NOTE]
 > [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
@@ -94,7 +95,6 @@ The billing granularity is one hour. Pay-as-you-go charges are calculated based 
 * The instance with the highest edition defines what license is required.
 * If two or more instances of the same edition are installed, the first instance in alphabetical order is billed.
 * The combination of the **Host License Type** and the winning SQL Server edition defines which billing meters will be sent every hour. 
-
 
 The next table shows the meter SKUs that are used for different license types and SQL Server editions:
 
@@ -137,7 +137,7 @@ Extended Security Updates (ESU) is available for qualified SQL Server instances 
 
 You can exclude certain instances from the at-scale onboarding operations driven by Azure policy or by automatic onboarding processes. To exclude specific instances from these operations, add the instance names to the **Skip Instances** list. For details about at-scale onboarding options, see [Alternate deployment options for Azure Arc-enabled SQL Server](deployment-options.md).
 
-## Modifying SQL Server Configuration
+## Modify SQL Server configuration
 
 You can use Azure portal, PowerShell or CLI to change all or some configuration settings on a specific Arc-enabled server to the desired state.
 
@@ -146,19 +146,23 @@ To modify the SQL Server Configuration for a larger scope, such as a resource gr
 > [!TIP]  
 > Run the script from Azure Cloud shell as it has the required Azure PowerShell modules pre-installed and you will be automatically authenticated. For details, see [Running the script using Cloud Shell](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/modify-license-type#running-the-script-using-cloud-shell).
 
-
 ### [Azure portal](#tab/azure)
 
-There are two ways to open the SQL Server Configuration blade.
+There are two ways to configure the SQL Server host in Azure portal.
 
-1. Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
+* Open the Arc-enabled Server overview page and click **SQL Server Configuration** as shown.
 
-   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled SQL Server in Azure portal.":::
-  
+   :::image type="content" source="media/billing/overview-of-sql-server-azure-arc.png" alt-text="Screenshot of the Azure Arc-enabled Server in Azure portal."  lightbox="media/billing/overview-of-sql-server-azure-arc.png" :::
 
-1. Open the Arc-enabled SQL Server overview page and click on `Host license type` or `ESU status` values as shown.
+  Or
 
-   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration.":::
+* Open the Arc-enabled SQL Server overview page, and select **Properties**. Under **Host configuration properties**, select the setting you need to modify:
+
+  * **License type**
+  * **ESU Status**
+  * **Automated patching**
+
+   :::image type="content" source="media/billing/sql-server-instance-configuration.png" alt-text="Screenshot of Azure portal SQL Server instance configuration."  lightbox="media/billing/sql-server-instance-configuration.png" :::
 
 #### Set **License Type** property
 
@@ -196,11 +200,11 @@ $Settings = @{
 // Command stays the same as before, only settings is changed above:
 New-AzConnectedMachineExtension -Name "WindowsAgent.SqlServer" -ResourceGroupName {your resource group name} -MachineName {your machine name} -Location {azure region} -Publisher "Microsoft.AzureData" -Settings $Settings -ExtensionType "WindowsAgent.SqlServer"
 ```
-> [!IMPORTANT]  
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
-
+> [!IMPORTANT]
+>  
+> * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+> * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details.
 
 ### [Azure CLI](#tab/az)
 
@@ -209,16 +213,17 @@ The following command will set the license type to "PAYG":
 ```azurecli
 az connectedmachine extension update --machine-name "simple-vm" -g "<resource-group>" --name "WindowsAgent.SqlServer" --type "WindowsAgent.SqlServer" --publisher "Microsoft.AzureData" --settings '{"LicenseType":"PAYG", "SqlManagement": {"IsEnabled":true}}'    
 ```
-> [!IMPORTANT]  
-> - The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
-> - If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
+
+> [!IMPORTANT]
+>
+> * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
+> * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
 ---
 
+## Query SQL Server configuration
 
-## Query SQL Server Configuration
-
-You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the SQL Server Configuration settings within a selected scope. See the following examples.
+You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the SQL Server configuration settings within a selected scope. See the following examples.
 
 ### Count by license type
 
@@ -265,6 +270,35 @@ resources
 
 ```
 
+#### List Arc-enabled servers with SQL Server
+
+This query identifies Azure Arc-enabled servers with SQL Server discovered on them.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines"
+| where properties.detectedProperties.mssqldiscovered == "true"
+//| summarize count()
+```
+
+This query returns Azure Arc-enabled servers that have SQL Server, but the Arc SQL Server extension is not installed. This query only applies to Windows servers.
+
+```kusto
+resources
+| where type == "microsoft.hybridcompute/machines"
+| where properties.detectedProperties.mssqldiscovered == "true"
+| project machineIdHasSQLServerDiscovered = id
+| join kind= leftouter (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"
+    | where properties.type == "WindowsAgent.SqlServer"
+    | project machineIdHasSQLServerExtensionInstalled = substring(id, 0, indexof(id, "/extensions/WindowsAgent.SqlServer")))
+on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
+| where isempty(machineIdHasSQLServerExtensionInstalled)
+| project machineIdHasSQLServerDiscoveredButNotTheExtension = machineIdHasSQLServerDiscovered
+
+```
+
 For more examples of Azure Resource Graph Queries, see [Starter Resource Graph queries](/azure/governance/resource-graph/samples/starter).
 
 ## Next steps
@@ -273,5 +307,6 @@ For more examples of Azure Resource Graph Queries, see [Starter Resource Graph q
 - [Install SQL Server 2022 using the pay-as-you-go activation option](../../database-engine/install-windows/install-sql-server.md)
 - [Learn about Extended Security Updates for SQL Server](../end-of-support/sql-server-extended-security-updates.md).  
 - [Frequently asked questions](faq.yml#billing)
-- [Configure automated patching for Arc-enabled SQL Servers preview](patch.md)
+- [Configure automated patching for Arc-enabled SQL Servers](patch.md)
+
 

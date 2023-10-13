@@ -325,7 +325,7 @@ For scenarios where requirements for minimal logging and parallel insert are met
 
 ::: moniker range="=fabric"
 
-For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using TSQL](/fabric/data-warehouse/ingest-data-tsql).
+For more information on using INSERT on your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using Transact-SQL](/fabric/data-warehouse/ingest-data-tsql).
 
 ::: moniker-end
 

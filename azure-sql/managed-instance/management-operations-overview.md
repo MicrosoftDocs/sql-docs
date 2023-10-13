@@ -67,7 +67,7 @@ The following tables summarize operations and typical overall durations, based o
 
 |Operation  |Long-running segment  |Estimated duration  |
 |---------|---------|---------|
-|Instance property change (admin password, Azure AD login, Azure Hybrid Benefit flag)|N/A|Up to 1 minute.|
+|Instance property change (admin password, Microsoft Entra login, Azure Hybrid Benefit flag)|N/A|Up to 1 minute.|
 |Instance storage scaling up/down (General Purpose)|No long-running segment|99% of operations finish in 5 minutes.|
 |Instance storage scaling up/down (Business Critical)|- Virtual cluster resizing<br>- Always On availability group seeding|90% of operations finish in 2.5 hours + time to seed all databases (220 GB/hour).|
 |Instance compute (vCores) scaling up and down (General Purpose)|- Virtual cluster resizing|90% of operations finish in 2.5 hours.|

@@ -28,7 +28,7 @@ You set up a dynamic data masking policy in the Azure portal by selecting the **
 
 ### Dynamic data masking policy
 
-- **SQL users excluded from masking:** A set of SQL users or Azure AD identities that get unmasked data in the SQL query results. Users with administrative rights like Server Admin, Azure AD Admin or db_owner role could view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
+- **SQL users excluded from masking:** A set of SQL users, which can include identities from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), that get unmasked data in the SQL query results. Users with administrative rights like server admin, Microsoft Entra admin and db_owner role can view the original data without any mask. (Note: It also applies to sysadmin role in SQL Server)
 - **Masking rules:** A set of rules that define the designated fields to be masked and the masking function that is used. The designated fields can be defined using a database schema name, table name, and column name.
 - **Masking functions:** A set of methods that control the exposure of data for different scenarios.
 
@@ -105,7 +105,7 @@ To learn more about permissions when using dynamic data masking with T-SQL comma
 
 ## Granular permission example
 
-Prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke UNMASK permission at the database-level, schema-level, table-level or at the column-level to a database user, Azure AD identity, Azure AD group, or database role. Using UNMASK permission provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
+Prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke UNMASK permissions at the database-level, schema-level, table-level or at the column-level to any database user or role. Combined with Microsoft Entra authentication, UNMASK permissions can be managed for users, groups, and applications maintained within your Azure environment. The UNMASK permission provides a granular way to control and limit unauthorized access to data stored in the database and improve data security management.
 
 1. Create schema to contain user tables:
 

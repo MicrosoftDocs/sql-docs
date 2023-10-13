@@ -5,6 +5,8 @@ ms.date: 07/29/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 The following sections describe known issues with [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] on Linux.
 

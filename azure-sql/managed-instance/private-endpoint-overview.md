@@ -71,6 +71,10 @@ Some Azure PaaS and SaaS services can use private endpoints to access your data 
 > [!NOTE]
 > Azure SQL Managed Instance requires the connection string from the SQL client to bear the name of the instance as the domain name's first segment (for example: `<instance-name>.<dns-zone>.database.windows.net`). PaaS and SaaS services that attempt to connect to Azure SQL Managed Instance's private endpoint via its IP address will not be able to connect.
 
+## Create a cross-tenant private endpoint
+
+Private endpoints to Azure SQL Managed Instance can also be created in different Azure tenants. To do this, the administrator of the virtual network in which the private endpoint should appear must first obtain the full resource ID of the Azure SQL Managed Instance from which they are about to request a private endpoint. With this information, a new private endpoint can be created in Private Link Center. As before, the administrator of the Azure SQL Managed Instance will receive a request that they can review and approve or reject, as per [Review and approve a request to create a private endpoint](#review-and-approve-a-request-to-create-a-private-endpoint).
+
 ## Review and approve a request to create a private endpoint
 
 Once a request to create a private endpoint is made, the SQL administrator can manage the private endpoint connection to Azure SQL Managed Instance. The first step to managing a new private endpoint connection is to review and approve the private endpoint. This step is automatic if the user or service creating the private endpoint has sufficient Azure RBAC permissions on the Azure SQL Managed Instance resource. If the user does not have sufficient permissions, then the review and approval of the private endpoint must be done manually. 

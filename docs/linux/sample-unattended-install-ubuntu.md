@@ -9,6 +9,8 @@ ms.date: 05/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
 
@@ -31,7 +33,7 @@ This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Ubun
 
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
-The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
+The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line might resolve this issue.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.
@@ -209,7 +211,7 @@ The first thing the bash script does is set a few variables. These variables can
 
 1. Create a new server administrator user if `SQL_INSTALL_USER` and `SQL_INSTALL_USER_PASSWORD` are both set.
 
-## Next steps
+## Unattended install
 
 Simplify multiple unattended installs and create a stand-alone bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own bash script.
 
@@ -228,4 +230,6 @@ Then run the bash script as follows:
 . ./my_script_name.sh
 ```
 
-For more information about SQL Server on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).
+## Related content
+
+- [SQL Server on Linux overview](sql-server-linux-overview.md)

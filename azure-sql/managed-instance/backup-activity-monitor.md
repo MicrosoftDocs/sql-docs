@@ -160,4 +160,4 @@ The following screenshot shows an example of an output of a differential backup 
 
 Once your backup has completed, you can then [restore to a point in time](point-in-time-restore.md) or [configure a long-term retention policy](long-term-backup-retention-configure.md). 
 
-To learn more, see [automated backups](../database/automated-backups-overview.md). 
+To learn more, see [automated backups](automated-backups-overview.md).

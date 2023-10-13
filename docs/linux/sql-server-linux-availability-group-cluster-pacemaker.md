@@ -8,6 +8,8 @@ ms.date: 03/06/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure a Pacemaker cluster for SQL Server availability groups
 

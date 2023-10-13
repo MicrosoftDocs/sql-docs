@@ -82,7 +82,7 @@ landingContent:
             url: security-best-practice.md
           - text: Logins, user accounts, roles, and permissions
             url: logins-create-manage.md
-          - text: Azure Active Directory
+          - text: Microsoft Entra ID (formerly Azure Active Directory)
             url: authentication-aad-overview.md
           - text: Auditing
             url: auditing-overview.md 
@@ -217,5 +217,3 @@ landingContent:
             url: maintenance-window-configure.md
           - text: Maintenance window notifications
             url: advance-notifications.md
-
-

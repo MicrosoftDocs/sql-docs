@@ -8,14 +8,16 @@ ms.date: 02/15/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-monikerRange: ">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
+ms.custom:
+  - linux-related-content
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Rotate keytabs for SQL Server on Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Based on your organization's security best practices, you may be required to rotate the password regularly for the Windows Active Directory account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on Linux.
+Based on your organization's security best practices, you might be required to rotate the password regularly for the Windows Active Directory account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on Linux.
 
 The **adutil** tool is used to update the keytab. The **adutil** command must be run from a domain-joined machine. For more information about **adutil** and how to download the tool, see [Introduction to adutil - Active Directory Utility](sql-server-linux-ad-auth-adutil-introduction.md).
 
@@ -144,7 +146,7 @@ klist -kte /var/opt/mssql/secrets/mssql.keytab
 
 The last step is to update the password of the **network.privilegedadaccount** or the account that owns the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] SPNs in Windows Active Directory. In the previous scenario, we have to update the password for `sqluser@CONTOSO.COM` in Active Directory. Change the password to the `<newpassword>` that you provided in the step 3 in the previous section. Active Directory authentication should continue to work, and without the need for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service to restart.
 
-## Next steps
+## Related content
 
 - [Use adutil to configure Active Directory authentication with SQL Server on Linux](sql-server-linux-ad-auth-adutil-tutorial.md)
 - [Configure Active Directory authentication with SQL Server on Linux containers](sql-server-linux-containers-ad-auth-adutil-tutorial.md)

@@ -58,7 +58,7 @@ The **Schema - New** dialog box also offers options on two additional pages: **P
   
 - The **Extended properties** page allows you to add custom properties to database users.  
   
-## <a name="TsqlProcedure"></a> Using transact-SQL to create a schema
+## <a name="TsqlProcedure"></a> Using Transact-SQL to create a schema
   
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

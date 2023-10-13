@@ -9,7 +9,7 @@ ms.date: 03/25/2023
 ms.service: sql-managed-instance
 ms.subservice: backup-restore
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell
+ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 # Restore a database in Azure SQL Managed Instance to a previous point in time
 
@@ -394,4 +394,4 @@ Use one of the following methods to connect to the database in your managed inst
 
 ## Next steps
 
-Learn about [automated backups](../database/automated-backups-overview.md).
+Learn about [automated backups](automated-backups-overview.md).

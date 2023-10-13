@@ -7,7 +7,9 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom: intro-get-started
+ms.custom:
+  - intro-get-started
+  - linux-related-content
 ---
 # Walkthrough for the security features of SQL Server on Linux
 
@@ -277,6 +279,6 @@ GO
 
 For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
-## Next steps
+## Related content
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)

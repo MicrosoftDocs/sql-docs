@@ -8,6 +8,8 @@ ms.date: 05/14/2021
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: IBM Db2 to Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqldb-sqlmi](../../includes/appliesto-sqlmi.md)]

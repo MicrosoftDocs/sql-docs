@@ -9,7 +9,9 @@ ms.date: 06/14/2023
 ms.service: sql
 ms.subservice: machine-learning-services
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
+  - linux-related-content
 monikerRange: "=sql-server-ver15||=sql-server-linux-ver15"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Docker
@@ -75,7 +77,7 @@ Complete the following steps to build the docker image:
     ```
 
    > [!NOTE]  
-   > To build the Docker image, you must install packages that are several GBs in size. The script may take some time to finish running, depending on network bandwidth.
+   > To build the Docker image, you must install packages that are several GBs in size. The script might take some time to finish running, depending on network bandwidth.
 
 ## Run the SQL Server Linux container image
 
@@ -115,7 +117,7 @@ EXEC sp_configure  'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE
 ```
 
-## Next steps
+## Related content
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 

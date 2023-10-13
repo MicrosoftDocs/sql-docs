@@ -9,6 +9,8 @@ ms.date: 09/24/2018
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"
 ---
 # Configure replication with non-default ports (SQL Server Linux)
@@ -20,7 +22,7 @@ You can configure replication with SQL Server on Linux instances listening on an
 1. Replication set-up involves an instance of SQL Server on Linux
 2. Any instance (Windows or Linux) is listening on a non-default port. 
 
-The server name of an instance can be found by running @@servername on the instance. Do not use the IP address instead of the server name. Using the IP address for the publisher, distributor, or subscriber may result in an error.
+The server name of an instance can be found by running @@servername on the instance. Do not use the IP address instead of the server name. Using the IP address for the publisher, distributor, or subscriber might result in an error.
 
 > [!NOTE]
 > Creating SQL Server replication on Linux with non-default port will only work with SQL Server 2019 and above.
@@ -51,9 +53,7 @@ exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
 ```
 
-## Next steps
+## Related content
 
-[Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
-
-[Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
-
+- [Concepts: SQL Server replication on Linux](sql-server-linux-replication.md)
+- [Replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

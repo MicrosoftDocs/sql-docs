@@ -8,7 +8,7 @@ ms.date: 02/09/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-monikerRange: "= sql-server-ver16"
+monikerRange: ">= sql-server-2016"
 ---
 
 # SQL Server 2022 release notes

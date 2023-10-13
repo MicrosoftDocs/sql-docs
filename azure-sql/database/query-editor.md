@@ -37,7 +37,7 @@ Similar to the query experience in SQL Server Management Studio, use the Query e
 
 ## Connect via the query editor
 
-There are two authentication options for query editor: SQL Authentication or Azure Active Directory (Azure AD) Authentication.
+There are two authentication options for query editor: SQL authentication or authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
 ### Authentication to Azure SQL Database
 
@@ -45,7 +45,7 @@ For examples, see [Quickstart: Use the Azure portal query editor (preview) to qu
 
 - To use SQL Authentication to connect to an Azure SQL database via the query editor, you must have a login in the logical server's `master` database or a contained SQL user in the desired user database. For more information, see [Logins](logins-create-manage.md).
     - Enter your username and password, then select **OK**.
-- To use Active Directory authentication to connect to an Azure SQL database via the query editor, your organization must have AD set up, and you must have an [Azure AD user created in the database](authentication-azure-ad-logins-tutorial.md). The Azure portal shows your current AD account.
+- To use Microsoft Entra authentication to connect to an Azure SQL database via the query editor, your database must be configured with Microsoft Entra authentication, and you must have a [Microsoft Entra user created in the database](authentication-azure-ad-logins-tutorial.md).
     - Select `Continue as <user@domain>`.
 
 ### Permissions required to access the query editor
@@ -103,7 +103,7 @@ To access data editor, in the object explorer expand **Tables**, then select the
 
 **To add a new row**, select **Create New Row** and enter the values you want to add. There are certain data types you can't add or work with in this context.
 
-- If the column is an identity column, you can't add a value in that field. You'll see the error: "Save failed: Can not set value in identity columns *column_name*" at the bottom. 
+- If the column is an identity column, you can't add a value in that field. You'll see the error: "Save failed: Cannot set value in identity columns *column_name*" at the bottom. 
 - Columns with default constraints aren't honored. The data editor won't generate the default value, it expects you to enter a value. It isn't recommended to use the data editor for tables that have default column constraints. 
 - Computed columns aren't calculated. You'll see the error "Save failed: Failed to execute query. Error: The column *column_name* cannot be modified because it is either a computed column or is the result of a UNION operator." It is not recommended to use the data editor for tables that have computed columns.
 
@@ -149,7 +149,7 @@ In addition to the Azure portal Query editor for Azure SQL Database, consider th
 
 - If you see the error message "Login failed for user `<token-identified principal>`. The server is not currently configured to accept this token." when you attempt to use AD authentication, your user does not have access to the database.
 
-  - For more information on creating a user from an Azure AD principal, see [Configure and manage Azure AD authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
+  - For more information on creating a database user from a Microsoft Entra principal, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
 
 - You might get one of the following errors in the query editor:
 

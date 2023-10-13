@@ -40,11 +40,6 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
 ## Samples
 
 * [Sample JDBC driver applications](sample-jdbc-driver-applications.md)
-* [Getting started with Java on Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Getting started with Java on macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Getting started with Java on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Getting started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Getting started with Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
 
 ## Also see
 

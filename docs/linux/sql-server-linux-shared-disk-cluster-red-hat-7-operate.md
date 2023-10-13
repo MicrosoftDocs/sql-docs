@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Operate RHEL failover cluster instance (FCI) for SQL Server
 
@@ -71,7 +73,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
    ip addr show
    ```
 
-1. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`.
+1. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name might not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`.
 
    ```bash
    sudo vi /etc/hosts
@@ -245,7 +247,7 @@ In the example, `partition with quorum` means that a majority quorum of nodes is
 
 `PCSD Status` shows the cluster status for each node.
 
-### Reasons why a node may be offline
+### Reasons why a node might be offline
 
 Check the following items when a node is offline.
 
@@ -261,7 +263,7 @@ Check the following items when a node is offline.
 
 - **Node name mappings**
 
-## Next steps
+## Related content
 
-- [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
+- [Cluster from Scratch (from Pacemaker)](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 - [Configure Red Hat Enterprise Linux shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

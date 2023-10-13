@@ -4,7 +4,7 @@ description: "Learn what's new and changed in released versions of the Microsoft
 author: v-chojas
 ms.author: v-chojas
 ms.reviewer: v-davidengel
-ms.date: 07/31/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -27,6 +27,22 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 18.3.2, October 2023
+
+| New item | Details |
+| :------- | :------ |
+| New distribution supported. | Debian 12  |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+
+## 17.10.5, October 2023
+
+| New item | Details |
+| :------- | :------ |
+| New distribution supported. | Debian 12  |
+| Improved Performance | More efficient packet buffer memory allocation |
+| New Managed Identity (MSI) Authentication Support | Support for MSI authentication for Azure Arc and Azure Cloud Shell and updated to a newer Azure App Service API version |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 18.3.1, July 2023
 
@@ -170,7 +186,7 @@ GeneMi.  2019/04/03.
 | :------------ | :------ |
 | SQL_COPT_SS_SPID connection attribute to retrieve SPID without round trip to server | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Support for indicating EULA acceptance via `debconf` on Debian and Ubuntu | See [Installing the Driver](./installing-the-microsoft-odbc-driver-for-sql-server.md). |
-| New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
+| New distributions supported. | &bull; &nbsp; &nbsp; Alpine Linux (3.10, 3.11).<br/>&bull; &nbsp; &nbsp; Oracle Linux 8.<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10.<br/>&bull; &nbsp; &nbsp; macOS 10.15. |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 
 ## 17.4.2, October 2019
@@ -198,7 +214,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 
 | New item | Details |
 | :------- | :------ |
-| New distributions supported. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| New distributions supported. | &bull; &nbsp; &nbsp; SUSE 15.<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10.<br/>&bull; &nbsp; &nbsp; macOS 10.14. |
 | Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | For more information, see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
@@ -212,7 +228,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | Support UTF-8 server encoding. | &nbsp; |
 | `SQLBrowseConnect` | &nbsp; |
 | Dynamic dependency on `libcurl`. | Starting with this version, the `libcurl` package isn't an explicit dependency.<br/>The `libcurl` package for OpenSSL or NSS is required when using Azure Key Vault or Azure Active Directory authentication.<br/>If you encounter an error regarding `libcurl`, ensure it's installed. |
-| Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL`(read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency](../connection-resiliency.md). |
+| Idle Connection Resiliency with ConnectRetryCount and ConnectRetryInterval keywords in connection string. | &bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_COUNT`(read only) to retrieve the number of connection retry attempts.<br/><br/>&bull; &nbsp; &nbsp; Use `SQL_COPT_SS_CONNECT_RETRY_INTERVAL` (read only) to retrieve the length of the connection retry interval.<br/><br/>See [Connection Resiliency](../connection-resiliency.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 
 ## 17.1, March 2018

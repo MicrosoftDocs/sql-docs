@@ -115,6 +115,8 @@ Connectivity between the virtual network subnets hosting primary and secondary i
 Global virtual network peering is supported for instances hosted in subnets created since September 22, 2020. To be able to use global virtual network peering for SQL managed instances hosted in subnets created before September 22, 2020, consider configuring non-default [maintenance window](../database/maintenance-window.md) on the instance, as it will move the instance into a new virtual cluster that supports global virtual network peering.
 
 Regardless of the connectivity mechanism, there are requirements that must be fulfilled for geo-replication traffic to flow:
+
+- Route table and network security groups assigned to managed instance subnets are not shared across the two peered virtual networks.
 - The Network Security Group (NSG) rules on the subnet hosting **primary** instance allow:
   - **Inbound** traffic on port 5022 and port range 11000-11999 from the subnet hosting the secondary instance.
   - **Outbound** traffic on port 5022 and port range 11000-11999 to the subnet hosting the secondary instance.

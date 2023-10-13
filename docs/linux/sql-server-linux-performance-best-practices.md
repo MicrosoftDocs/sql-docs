@@ -8,6 +8,8 @@ ms.date: 06/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Performance best practices and configuration guidelines for SQL Server on Linux
 
@@ -98,7 +100,7 @@ For the filesystem configuration on Persistent Memory devices, the block allocat
 
 #### Open file limitation
 
-Your production environment may require more connections than the default open file limit of 1024. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
+Your production environment might require more connections than the default open file limit of 1024. We recommend you set a soft limit of 16000, and a hard limit of 32727. For example, in [RHEL](https://access.redhat.com/solutions/61334), edit the `/etc/security/limits.d/99-mssql-server.conf` file to have the following values:
 
 ```ini
 mssql hard nofile 32727
@@ -235,7 +237,7 @@ Using the `mssql` TuneD profile configures the `kernel.numa_balancing` option.
 
 ### Kernel settings for virtual address space
 
-The default setting of `vm.max_map_count` (which is 65536) may not be high enough for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] installation. For this reason, change the `vm.max_map_count` value to at least 262144 for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] deployment, and refer to the [Proposed Linux settings using a TuneD mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The maximum value for `vm.max_map_count` is 2147483647.
+The default setting of `vm.max_map_count` (which is 65536) might not be high enough for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] installation. For this reason, change the `vm.max_map_count` value to at least 262144 for a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] deployment, and refer to the [Proposed Linux settings using a TuneD mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The maximum value for `vm.max_map_count` is 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=1600000
@@ -437,7 +439,7 @@ Like there are storage and CPU recommendations, there are Network specific recom
 
 ### Advanced kernel and OS configuration
 
-- For best storage I/O performance, use Linux multiqueue scheduling for block devices, which enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distribution. In most other cases, booting the kernel with `scsi_mod.use_blk_mq=y` enables it, though documentation of the Linux distribution in use may have further guidance on it. This is consistent with the upstream Linux kernel.
+- For best storage I/O performance, use Linux multiqueue scheduling for block devices, which enables the block layer performance to scale well with fast solid-state drives (SSDs) and multi-core systems. Check the documentation if it is enabled by default in your Linux distribution. In most other cases, booting the kernel with `scsi_mod.use_blk_mq=y` enables it, though documentation of the Linux distribution in use might have further guidance on it. This is consistent with the upstream Linux kernel.
 
 - As multipath I/O is often used for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] deployments, configure the device mapper (DM) multi-queue target to use the `blk-mq` infrastructure, by enabling the `dm_mod.use_blk_mq=y` kernel boot option. The default value is `n` (disabled). This setting, when the underlying SCSI devices are using `blk-mq`, reduces locking overhead at the DM layer. For more information on how to configure multipath I/O, refer to your Linux distribution's documentation.
 
@@ -465,7 +467,7 @@ Because a [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux in
 
 ### Advanced configuration
 
-The following recommendations are optional configuration settings that you may choose to perform after installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. These choices are based on the requirements of your workload and configuration of your Linux OS.
+The following recommendations are optional configuration settings that you might choose to perform after installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. These choices are based on the requirements of your workload and configuration of your Linux OS.
 
 #### Set a memory limit with mssql-conf
 
@@ -473,7 +475,7 @@ In order to ensure There's enough free physical memory for the Linux OS, the [!I
 
 When changing this setting, be careful not to set this value too high. If you don't leave enough memory, you could experience problems with the Linux OS and other Linux applications.
 
-## Next steps
+## Related content
 
 - [Get started with Performance features](sql-server-linux-performance-get-started.md)
 - [Overview of SQL Server on Linux](sql-server-linux-overview.md)

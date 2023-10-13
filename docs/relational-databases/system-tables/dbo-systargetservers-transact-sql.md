@@ -33,6 +33,6 @@ dev_langs:
 |**status**|**int**|Status of the target server:<br /><br /> **1** = Normal<br /><br /> **2** = Re-sync Pending<br /><br /> **4** = Suspected Offline|  
 |**local_time_at_last_poll**|**datetime**|Date and time the target server was last polled for job operations.|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|Username of the person executing **sp_msx_enlist** on the target server.|  
-|**poll_internal**|**int**|Number of seconds to elapse before the target server polls the master server for new download instructions.|  
+|**poll_interval**|**int**|Number of seconds to elapse before the target server polls the master server for new download instructions.|  
   
   

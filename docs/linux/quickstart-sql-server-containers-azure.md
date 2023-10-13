@@ -10,6 +10,7 @@ ms.topic: quickstart
 ms.custom:
   - template-quickstart
   - intro-deployment
+  - linux-related-content
 ---
 # Quickstart: Deploy a SQL Server container cluster on Azure
 
@@ -644,7 +645,7 @@ If you don't plan on going through the tutorials that follow, clean up your unne
 az group delete --name <MyResourceGroup> --yes --no-wait
 ```
 
-## Next steps
+## Related content
 
 - [Introduction to Kubernetes](/azure/aks/intro-kubernetes)
 - [Quickstart: Run SQL Server container images with Docker](quickstart-install-connect-docker.md)

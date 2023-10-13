@@ -231,12 +231,7 @@ The sections below describe the requirements to keep in mind when installing a [
 
 ### SQL Server edition and operating system considerations
 
-For information about the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that support a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, see:
-
-- [Editions and supported features of SQL Server 2016](../../editions-and-components-of-sql-server-2016.md)
-- [Editions and supported features of SQL Server 2017](../../editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2019](../../editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2022](../../editions-and-components-of-sql-server-2022.md)
+[!INCLUDE [editions-supported-features-windows](../../../includes/editions-supported-features-windows.md)]
 
 To create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, you must first create the Windows Server multi-site failover cluster on multiple subnets.
 

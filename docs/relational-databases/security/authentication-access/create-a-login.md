@@ -27,6 +27,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This article describes how to create a login in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] or Azure [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] by using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A login is the identity of the person or process that is connecting to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
+
 ## <a name="Background"></a> Background
 
 A login is a security principal, or an entity that can be authenticated by a secure system. Users need a login to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. You can create a login based on a Windows principal (such as a domain user or a Windows domain group) or you can create a login that isn't based on a Windows principal (such as an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login).  
@@ -34,9 +36,9 @@ A login is a security principal, or an entity that can be authenticated by a sec
 > [!NOTE]
 > To use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must use mixed mode authentication. For more information, see [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).
 >
-> Azure SQL has introduced [Azure Active Directory server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) to be used to authenticate to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools only).
+> Azure SQL has introduced [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) to be used to authenticate to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics (dedicated SQL pools only).
 >
-> SQL Server 2022 also introduces [Azure Active Directory authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
+> SQL Server 2022 also introduces [Microsoft Entra authentication for SQL Server](azure-ad-authentication-sql-server-overview.md).
   
  As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for example, the **CREATE ENDPOINT** permission) can be granted to a login.  
   
@@ -281,5 +283,5 @@ After creating a login, the login can connect to [!INCLUDE[ssNoVersion](../../..
 ## See also
 
 - [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-- [Azure Active Directory server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins)
-- [Tutorial: Create and utilize Azure Active Directory server logins](/azure/azure-sql/database/authentication-azure-ad-logins-tutorial)
+- [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins)
+- [Tutorial: Create and utilize Microsoft Entra server logins](/azure/azure-sql/database/authentication-azure-ad-logins-tutorial)

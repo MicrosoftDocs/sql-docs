@@ -8,6 +8,8 @@ ms.date: 02/24/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: troubleshooting
+ms.custom:
+  - linux-related-content
 ---
 # Troubleshoot [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux
 
@@ -121,7 +123,7 @@ This mode is useful if the setting of a configuration value (for example, over-c
 
 ### Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode
 
-Sometimes you may have to start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode by using the startup option **-m**. For more information, see [startup parameters](../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options). For example, you may want to change server configuration options or recover a damaged `master` database or other system database.
+Sometimes you might have to start an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single-user mode by using the startup option **-m**. For more information, see [startup parameters](../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options). For example, you might want to change server configuration options or recover a damaged `master` database or other system database.
 
 For example, use the following script to start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in single user mode:
 

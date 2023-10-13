@@ -97,10 +97,9 @@ The following software client applications are available on the Microsoft Downlo
 > * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] is the single point for creation of mobile reports. Connect to an SSRS server to access data sources and create reports. Then publish them to the SSRS server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] stand alone with local data sources. However, SQL Server Mobile Report Publisher is deprecated for all releases of SQL Server Reporting Services after SQL Server Reporting Services 2019.
 > * Whether you use [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution, you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
-## Next steps
+## Related content
 
-* Read about [Features supported by the editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md). 
+- [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
+- [Planning a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation.md)
 
-* [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md).
-
-* More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
+More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

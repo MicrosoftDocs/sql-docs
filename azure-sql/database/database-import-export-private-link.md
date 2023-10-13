@@ -8,7 +8,9 @@ ms.date: 12/22/2022
 ms.service: sql-database
 ms.subservice: migration
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom:
+  - sqldbrb=1
+  - sql-migration-content
 ---
 # Import or export an Azure SQL Database using private link
 

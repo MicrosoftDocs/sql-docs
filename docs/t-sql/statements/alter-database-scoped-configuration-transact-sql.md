@@ -331,7 +331,7 @@ Allows you to enable or disable row mode memory grant feedback at the database s
 
 #### MEMORY_GRANT_FEEDBACK_PERCENTILE_GRANT = { ON | OFF }
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] 
 
 Allows you to disable memory grant feedback percentile for all query executions originating from the database. Default is **ON**. For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
 
@@ -340,7 +340,7 @@ Allows you to disable memory grant feedback percentile for all query executions 
 
 #### MEMORY_GRANT_FEEDBACK_PERSISTENCE = { ON | OFF }
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)])
+**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2022](../../includes/sssql22-md.md)]), [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)] 
 
 Allows you to disable memory grant feedback persistence for all query executions originating from the database. Default is **ON**. For complete information, see [Percentile and persistence mode memory grant feedback](../../relational-databases/performance/intelligent-query-processing-feedback.md#percentile-and-persistence-mode-memory-grant-feedback).
 

@@ -126,7 +126,7 @@ By default, backup storage redundancy of the geo-secondary is same as for the pr
 
 ## Cross-subscription geo-replication
 
-To create a geo-secondary in a subscription different from the subscription of the primary (whether under the same Azure Active Directory tenant or not), follow the steps in this section.
+To create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or not), follow the steps in this section.
 
 1. Add the IP address of the client machine executing the T-SQL commands in this example, to the server firewalls of **both** the primary and secondary servers. You can confirm that IP address by executing the following query while connected to the primary server from the same client machine.
   
@@ -193,7 +193,7 @@ To create a geo-secondary in a subscription different from the subscription of t
 > 
 > Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
 > 
-> Creating a geo-secondary on a logical server in a different Azure tenant is not supported when [Azure Active Directory only](https://techcommunity.microsoft.com/t5/azure-sql/azure-active-directory-only-authentication-for-azure-sql/ba-p/2417673) authentication for Azure SQL is active (enabled) on either primary or secondary logical server.
+> Creating a geo-secondary on a logical server in a different Microsoft Entra tenant is not supported when [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) is enabled on either primary or secondary logical server.
 
 ## <a name="keeping-credentials-and-firewall-rules-in-sync"></a> Keep credentials and firewall rules in sync
 

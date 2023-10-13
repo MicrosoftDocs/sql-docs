@@ -7,6 +7,8 @@ ms.date: "01/19/2017"
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
+ms.custom:
+  - sql-migration-content
 ---
 # User Interface Reference (MySQLToSQL)
 This section includes Help topics for SQL Server Migration Assistant (SSMA) for MySQL.  

@@ -61,11 +61,11 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 
 ## Set up database recovery and backup
 
-All databases that will be replicated via the link must be in full recovery mode and have at least one backup. Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
+All databases that will be replicated via the link must be in the full recovery model and have at least one backup. Run the following code on SQL Server for all databases you wish to replicate. Replace `<DatabaseName>` with your actual database name.
 
 ```sql
 -- Run on SQL Server
--- Set full recovery mode for all databases you want to replicate.
+-- Set full recovery model for all databases you want to replicate.
 ALTER DATABASE [<DatabaseName>] SET RECOVERY FULL
 GO
 

@@ -5,10 +5,12 @@ ms.date: 09/15/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 ## Add a database to the availability group
 
-Ensure that the database you add to the availability group is in full recovery mode and has a valid log backup. If this is a test database or a newly created database, take a database backup. On the primary SQL Server, run the following Transact-SQL script to create and back up a database called `db1`:
+Ensure that the database you add to the availability group is in the full recovery model and has a valid log backup. If this is a test database or a newly created database, take a database backup. On the primary SQL Server, run the following Transact-SQL script to create and back up a database called `db1`:
 
 ```sql
 CREATE DATABASE [db1];

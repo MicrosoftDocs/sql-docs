@@ -44,15 +44,15 @@ Subnets that are marked as **Not ready** don't fulfill all the requirements for 
 - attaching a route table
 - attaching a network security group
 
-In the case that subnet is part of some other virtual network, extra requirement is
- - [bi-directional peering](/azure/virtual-network/virtual-network-peering-overview) between current and destination virtual network.
+In the case that subnet is part of some other virtual network, extra requirements are
+ - [Bi-directional peering](/azure/virtual-network/virtual-network-peering-overview) between current and destination virtual network.
+ - Current and destination subnets use separate route tables and network security groups.
 
 After all requirements are satisfied, the subnet moves from the **Not ready** to the **Ready for Managed Instance** category and can be used for a managed instance. 
 
 Subnet that is already in use (subnets used for instance deployments can't contain other resources), or the subnet has a different DNS zone (a cross-subnet instance move limitation) are always part of the **Not ready** category.
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the Azure SQL Managed Instance subnet dropdown](./media/vnet-subnet-move-instance/subnet-grouping-per-state.png)
+:::image type="content" source="./media/vnet-subnet-move-instance/subnet-grouping-per-state.png" alt-text="Screenshot of the Azure SQL Managed Instance subnet options.":::
 
 
 Depending on the subnet state and designation, the following adjustments may be made to the destination subnet: 
@@ -127,9 +127,7 @@ The first step of the move operation is to prepare the destination subnet for de
 
 Monitor instance move operations from the **Overview** blade of the Azure portal. Select the notification to open an additional blade containing information about the current step, the total steps, and a button to cancel the operation. 
 
-> [!div class="mx-imgBorder"]
-> ![How to monitor instance move operation](./media/vnet-subnet-move-instance/monitor-subnet-move-operation.png)
-
+:::image type="content" source="./media/vnet-subnet-move-instance/monitor-subnet-move-operation.png" alt-text="Screenshot shows the Overview page where you can monitor the move operation and cancel it." lightbox="./media/vnet-subnet-move-instance/monitor-subnet-move-operation.png":::
 
 # [PowerShell](#tab/azure-powershell)
 

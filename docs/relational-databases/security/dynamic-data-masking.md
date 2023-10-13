@@ -29,6 +29,8 @@ The purpose of dynamic data masking is to limit exposure of sensitive data, prev
 
 Dynamic data masking is available in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)], and is configured by using [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. For more information about configuring dynamic data masking by using the Azure portal, see [Get started with SQL Database Dynamic Data Masking (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview).
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 ## Define a dynamic data mask
 
 A masking rule may be defined on a column in a table, in order to obfuscate the data in that column. Five types of masks are available.
@@ -122,7 +124,7 @@ It's important to properly manage the permissions on the database, and to always
 
 ## <a id="granular"></a> Granular permissions introduced in SQL Server 2022
 
-Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user, database role, Azure AD identity or Azure AD group. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
+Starting with [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)], you can prevent unauthorized access to sensitive data and gain control by masking it to an unauthorized user at different levels of the database. You can grant or revoke **UNMASK** permission at the database-level, schema-level, table-level or at the column-level to a user, database role, Microsoft Entra identity or Microsoft Entra group. This enhancement provides a more granular way to control and limit unauthorized access to data stored in the database and improve data security management.
 
 ## Examples
 

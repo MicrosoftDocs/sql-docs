@@ -7,6 +7,8 @@ ms.reviewer: dmarinkovic, randolphwest
 ms.date: 09/13/2022
 ms.service: sql-database
 ms.topic: faq
+ms.custom:
+  - sql-migration-content
 ---
 # Migrate SQL Server workloads (FAQ)
 
@@ -166,13 +168,13 @@ Alternatively, the outsourcing software management terms applicable to SQL Serve
 
 Both General Purpose and Business Critical tiers of SQL Managed Instance and SQL Database are built on top of inherent [high availability architecture](../database/high-availability-sla.md). This way, there's no extra charge for HA. For SQL Database Hyperscale tier HA replica is charged.
 
-#### Do I have to pay for HA and DR replicas for Azure SQL?
+#### Do I have to pay for HA and DR replicas for Azure SQL VM?
 
 If you have Software Assurance, on Azure SQL VM you can implement high availability (HA) and disaster recovery (DR) plans with SQL Server without incurring additional licensing costs for the passive disaster recovery instance. See the [SQL VM documentation](../virtual-machines/windows/business-continuity-high-availability-disaster-recovery-hadr-overview.md#free-dr-replica-in-azure) for more details.
 
 #### Do I have to pay for disaster recovery (DR) in SQL Managed Instance and SQL Database?
 
-Yes. These are separate costs.
+SQL Managed Instance provides the possibility to [configure a license-free standby replica](../managed-instance/auto-failover-group-standby-replica-how-to-configure.md), which means that SQL Server licensing costs for the vCores that the secondary standby replica uses are not charged.
 
 #### Can I centrally manage Azure Hybrid Benefit for SQL Server across the entire Azure subscription?
 
@@ -256,7 +258,7 @@ Most Azure SQL BCDR concepts have an equivalent in on-premises SQL Server implem
 
 #### How are backups handled in Azure SQL PaaS services?
 
-You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md) and [SQL Database](../database/automated-backups-overview.md) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
+You can check documentation for automated backups in [SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true) and [SQL Database](../database/automated-backups-overview.md?view=azuresql-db&preserve-view=true) to learn about RPO, RTO, retention, scheduling and other backup capabilities and features.
 
 #### How is high availability (HA) achieved in SQL Managed Instance and SQL Database?
 

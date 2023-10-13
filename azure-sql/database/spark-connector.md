@@ -16,7 +16,9 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 > [!NOTE]
 > As of Sep 2020, this connector is not actively maintained. However, [Apache Spark Connector for SQL Server and Azure SQL](/sql/connect/spark/connector) is now available, with support for Python and R bindings, an easier-to use interface to bulk insert data, and many other improvements. We strongly encourage you to evaluate and use the new connector instead of this one. The information about the old connector (this page) is only retained for archival purposes.
 
-The Spark connector enables databases in Azure SQL Database, Azure SQL Managed Instance, and SQL Server to act as the input data source or output data sink for Spark jobs. It allows you to utilize real-time transactional data in big data analytics and persist results for ad hoc queries or reporting. Compared to the built-in JDBC connector, this connector provides the ability to bulk insert data into your database. It can outperform row-by-row insertion with 10x to 20x faster performance. The Spark connector supports Azure Active Directory (Azure AD) authentication to connect to Azure SQL Database and Azure SQL Managed Instance, allowing you to connect your database from Azure Databricks using your Azure AD account. It provides similar interfaces with the built-in JDBC connector. It is easy to migrate your existing Spark jobs to use this new connector.
+The Spark connector enables databases in Azure SQL Database, Azure SQL Managed Instance, and SQL Server to act as the input data source or output data sink for Spark jobs. It allows you to utilize real-time transactional data in big data analytics and persist results for ad hoc queries or reporting. Compared to the built-in JDBC connector, this connector provides the ability to bulk insert data into your database. It can outperform row-by-row insertion with 10x to 20x faster performance. The Spark connector supports authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) to connect to Azure SQL Database and Azure SQL Managed Instance, allowing you to connect your database from Azure Databricks using your Microsoft Entra account. It provides similar interfaces with the built-in JDBC connector. It is easy to migrate your existing Spark jobs to use this new connector.
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Download and build a Spark connector
 
@@ -138,15 +140,17 @@ val config = Config(Map(
 sqlContext.sqlDBQuery(config)
 ```
 
-## Connect from Spark using Azure AD authentication
+<a name='connect-from-spark-using-azure-ad-authentication'></a>
 
-You can connect to Azure SQL Database and SQL Managed Instance using Azure AD authentication. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication.
+## Connect from Spark using Microsoft Entra authentication
+
+You can connect to SQL Database and SQL Managed Instance using Microsoft Entra authentication. Use Microsoft Entra authentication to centrally manage identities of database users and as an alternative to SQL authentication.
 
 ### Connecting using ActiveDirectoryPassword Authentication Mode
 
 #### Setup requirement
 
-If you are using the ActiveDirectoryPassword authentication mode, you need to download [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path.
+If you are using the ActiveDirectoryPassword authentication mode, you need to download [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path.
 
 ```scala
 import com.microsoft.azure.sqldb.spark.config.Config
@@ -169,9 +173,9 @@ collection.show()
 
 #### Setup requirement
 
-If you are using the access token-based authentication mode, you need to download [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path.
+If you are using the access token-based authentication mode, you need to download [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) and its dependencies, and include them in the Java build path.
 
-See [Use Azure Active Directory Authentication for authentication](authentication-aad-overview.md) to learn how to get an access token to your database in Azure SQL Database or Azure SQL Managed Instance.
+See [Use Microsoft Entra authentication](authentication-aad-overview.md) to learn how to get an access token to your database in Azure SQL Database or Azure SQL Managed Instance.
 
 ```scala
 import com.microsoft.azure.sqldb.spark.config.Config

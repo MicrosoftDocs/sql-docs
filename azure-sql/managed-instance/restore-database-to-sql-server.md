@@ -30,7 +30,7 @@ Restoring databases from managed instances to SQL Server 2022 instances unlocks 
 The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 is available by default in all existing and any new deployed instances.
 
 > [!IMPORTANT]
-> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022). When this period expires, the ability to restore copy-only full backups of SQL Managed Instance databases will be available only to the next major version of SQL Server after SQL Server 2022.
+> The ability to restore copy-only full backups of databases from SQL Managed Instance to SQL Server 2022 will be available until the end of [mainstream support for SQL Server 2022](/lifecycle/products/sql-server-2022).
 
 ## Take a backup on SQL Managed Instance 
 
@@ -40,11 +40,11 @@ You can create your credential by using a managed identity or a shared access si
 
 ### [Managed identity](#tab/managed-identity)
 
-A *managed identity* is a feature of Azure Active Directory (Azure AD) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Azure AD, the system-assigned managed identity. 
+A *managed identity* is a feature of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) that provides instances of Azure services, such as Azure SQL Managed Instance, with an automatically managed identity in Microsoft Entra ID, the system-assigned managed identity. 
 
 You can use this identity to authorize requests for data access to other Azure resources, including storage accounts. Services such as Azure SQL Managed Instance have a system assigned managed identity, and can also have one or more [user-assigned managed identities](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). You can use either system-assigned managed identities or user-assigned managed identities to authorize the requests.
 
-Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the instance is done the same way as granting permissions to any other Azure AD user. For example:
+Before the Azure storage administrator writes a backup file to a storage account, they must grant permissions to the managed identity to write the data. Granting permissions to the managed identity of the instance is done the same way as granting permissions to any other Microsoft Entra user. For example:
 
 1. In the Azure portal, on the **Access Control (IAM)** pane of a storage account, select **Add role assignment**.  
 1. Select the **Storage Blob Data Contributor** built-in Azure role-based access control (RBAC) role. This provides read/write access to the managed identity for the necessary Azure Blob Storage containers.

@@ -6,43 +6,42 @@ items:
 - name: Previous versions 2005-2014
   href: sql-server/previous-versions-sql-server.md
 - name: Overview
+  expanded: true
   items:
-  - name: Get started
-    items:
-    - name: What is SQL Server?
-      href: sql-server/what-is-sql-server.md
-    - name: Connect to the Database Engine
-      href: sql-server/connect-to-database-engine.md
+  - name: What is SQL Server?
+    href: sql-server/what-is-sql-server.md
+  - name: Connect to the Database Engine
+    href: sql-server/connect-to-database-engine.md
   - name: What's new?
     items:
     - name: SQL Server 2022
-      href: sql-server/what-s-new-in-sql-server-2022.md
+      href: sql-server/what-s-new-in-sql-server-2022.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/what-s-new-in-sql-server-2019.md
+      href: sql-server/what-s-new-in-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/what-s-new-in-sql-server-2017.md
+      href: sql-server/what-s-new-in-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/what-s-new-in-sql-server-2016.md
+      href: sql-server/what-s-new-in-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Editions and features
     items:
     - name: SQL Server 2022
-      href: sql-server/editions-and-components-of-sql-server-2022.md
+      href: sql-server/editions-and-components-of-sql-server-2022.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/editions-and-components-of-sql-server-2019.md
+      href: sql-server/editions-and-components-of-sql-server-2019.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/editions-and-components-of-sql-server-2017.md
+      href: sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/editions-and-components-of-sql-server-2016.md
+      href: sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016&preserve-view=true
   - name: Release notes
     items:
     - name: SQL Server 2022
-      href: sql-server/sql-server-2022-release-notes.md
+      href: sql-server/sql-server-2022-release-notes.md?view=sql-server-ver16&preserve-view=true
     - name: SQL Server 2019
-      href: sql-server/sql-server-2019-release-notes.md
+      href: sql-server/sql-server-2019-release-notes.md?view=sql-server-ver15&preserve-view=true
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md
+      href: sql-server/sql-server-2017-release-notes.md?view=sql-server-2017&preserve-view=true
     - name: SQL Server 2016
-      href: sql-server/sql-server-2016-release-notes.md
+      href: sql-server/sql-server-2016-release-notes.md?view=sql-server-2016&preserve-view=true
     - name: SQL Server 2014
       href: sql-server/sql-server-2014-release-notes.md
     - name: SQL Server 2012 Service Pack release notes
@@ -397,8 +396,6 @@ items:
         href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       - name: Availability modes
         href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
-      - name: Technology & capabilities
-        href: database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: Prerequisites, restrictions, & recommendations
         href: database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
       - name: Interoperability
@@ -1183,20 +1180,20 @@ items:
       href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
     - name: Get Information
       href: relational-databases/service-broker/get-information-about-event-notifications.md
-  - name: Filestream, Filetable & BLOB
+  - name: FILESTREAM, FileTable & BLOB
     href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
     items:
     - name: Overview
       items:
-      - name: Filestream
+      - name: FILESTREAM
         href: relational-databases/blob/filestream-sql-server.md
-      - name: Filetable
+      - name: FileTable
         href: relational-databases/blob/filetables-sql-server.md
       - name: Compare Options for Storing Blobs
         href: relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: Remote Blob Store (RBS)
         href: relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: FILESTREAM
       items:
       - name: Enable & Configure
         href: relational-databases/blob/enable-and-configure-filestream.md
@@ -3023,7 +3020,7 @@ items:
         href: relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
       - name: Fetch rows from a result set
         href: relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-      - name: Filestream & OLE DB
+      - name: FILESTREAM & OLE DB
         href: relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
       - name: Read a FILESTREAM column to file using IBCPSession
         href: relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
@@ -4427,19 +4424,20 @@ items:
     - name: Upgrade edition
       href: database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md
     - name: Upgrade Database Engine
-      href: database-engine/install-windows/upgrade-database-engine.md
       items:
-      - name: Choose a Method
+      - name: Overview
+        href: database-engine/install-windows/upgrade-database-engine.md
+      - name: Choose a method
         href: database-engine/install-windows/choose-a-database-engine-upgrade-method.md
       - name: Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
-      - name: Plan & Test the Upgrade Plan
+      - name: Plan & test the upgrade plan
         href: database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md
-      - name: Complete the Upgrade
+      - name: Complete the upgrade
         href: database-engine/install-windows/complete-the-database-engine-upgrade.md
-      - name: Change the Database Compatibility Mode & use the Query Store
+      - name: Change the database compatibility mode & use the Query Store
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
-      - name: Change the Database Compatibility Mode with Query Tuning Assistant
+      - name: Change the database compatibility mode with Query Tuning Assistant
         href: relational-databases/performance/upgrade-dbcompat-using-qta.md
       - name: Latest updates for SQL Server
         href: /troubleshoot/sql/releases/download-and-install-latest-updates?toc=/sql/toc.json&bc=/sql/breadcrumb/toc.json
@@ -6828,6 +6826,11 @@ items:
             href: relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
           - name: Assess benefits
             href: relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+          - name: Hardware for In-Memory
+            displayName: Hardware considerations for In-Memory OLTP in SQL Server
+            href: relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+          - name: Compare storage
+            href: relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
           - name: Evaluate with PowerShell
             href: relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
           - name: Memory-optimization advisor
@@ -6842,8 +6845,10 @@ items:
             href: relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
           - name: Migrate triggers
             href: relational-databases/in-memory-oltp/migrating-triggers.md
+          - name: In-Memory on Azure SQL Database and SQL Managed Instance
+            href: /azure/sql-database/sql-database-in-memory            
         - name: Natively compiled
-          href: relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+          href: relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
           items:
           - name: Tables and stored procs
             href: relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
@@ -6855,13 +6860,6 @@ items:
             href: relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
           - name: Interpreted access of In-Memory tables
             href: relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-        - name: Performance of In-Memory
-          href: relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-          items:
-          - name: Hardware for In-Memory
-            href: relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
-          - name: In-Memory on Azure SQL Database
-            href: /azure/sql-database/sql-database-in-memory
         - name: Administration of In-Memory
           href: relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
           items:
@@ -6882,8 +6880,6 @@ items:
           items:
           - name: Storage
             href: relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-          - name: Compare storage modes
-            href: relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
           - name: Durability
             href: relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
           - name: Garbage collection
@@ -6891,6 +6887,9 @@ items:
         - name: T-SQL for In-Memory
           href: relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
+          - name: Guide to query processing
+            displayName: Guide to Query Processing for Memory-Optimized Tables
+            href: relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
           - name: Supported T-SQL
             href: relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
           - name: Unsupported T-SQL
@@ -7994,8 +7993,9 @@ items:
       - name: Azure Active Directory authentication
         href: relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md
     - name: Encryption
-      href: relational-databases/security/encryption/sql-server-encryption.md
       items:
+      - name: Overview
+        href: relational-databases/security/encryption/sql-server-encryption.md
       - name: Choose an algorithm
         href: relational-databases/security/encryption/choose-an-encryption-algorithm.md
       - name: Hierarchy
@@ -8415,6 +8415,8 @@ items:
       href: tools/sqlcmd/sqlcmd-use-scripting-variables.md
     - name: Edit SQLCMD scripts with Query Editor
       href: tools/sqlcmd/edit-sqlcmd-scripts-query-editor.md
+    - name: Create new local database in a container with sqlcmd
+      href: tools/sqlcmd/quickstart-sqlcmd-create-container.md
   - name: SSB Diagnose
     href: tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
     items:
@@ -10391,8 +10393,6 @@ items:
   items:
   - name: Azure Synapse Analytics >
     href: /azure/synapse-analytics/overview-what-is
-  - name: Azure Arc-enabled data services >
-    href: /azure/azure-arc/data/overview
   - name: Azure SQL
     items: 
     - name: Azure SQL >
@@ -10403,84 +10403,80 @@ items:
       href: /azure/azure-sql/managed-instance/sql-managed-instance-paas-overview
     - name: SQL Server on Azure VMs >
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
-- name: Azure Arc-enabled SQL Server
+- name: Azure Arc
   items:
     - name: Azure Arc-enabled SQL Server
-      href: sql-server/azure-arc/index.yml
-    - name: Overview
       items:
+      - name: Documentation
+        href: sql-server/azure-arc/index.yml
       - name: What is Azure Arc-enabled SQL Server?
         href: sql-server/azure-arc/overview.md
       - name: Release notes
         href: sql-server/azure-arc/release-notes.md
-    - name: Quickstarts
-      items:
-      - name: Deploy Azure Arc-enabled SQL Server
-        href: sql-server/azure-arc/quick-enabled-sql-server.md
-    - name: How-to guides
-      items:
-      - name: Test Arc-enabled SQL Server on Azure VM
-        href: sql-server/azure-arc/plan-evaluate-on-azure-virtual-machine.md
-      - name: Deploy
+      - name: Prerequisites
+        href: sql-server/azure-arc/prerequisites.md
+      - name: How-to guides
         items:
-        - name: Prerequisites
-          href: sql-server/azure-arc/prerequisites.md
         - name: Connect SQL Server to Azure using Arc
           href: sql-server/azure-arc/automatically-connect.md
+        - name: Manage auto deploy
+          href: sql-server/azure-arc/manage-autodeploy.md
         - name: Alternate methods to connect
           items:
-            - name: Deployment options
-              href: sql-server/azure-arc/deployment-options.md
-            - name: Connect when machine not connected to Azure
-              href: sql-server/azure-arc/connect.md
-            - name: Connect with installer (.msi)
-              href: sql-server/azure-arc/connect-with-installer.md
-            - name: Connect when machine already connected to Azure
-              href: sql-server/azure-arc/connect-already-enabled.md
-            - name: Azure policy
-              href: sql-server/azure-arc/connect-at-scale-policy.md
-            - name: Script
-              href: sql-server/azure-arc/connect-at-scale-script.md
-            - name: Automatically connect
-              href: sql-server/azure-arc/connect-at-scale-autodeploy.md
-            - name: Connect machines using Configuration Manager custom task sequence
-              href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
-    - name: Manage
-      items:
-      - name: Assess
-        href: sql-server/azure-arc/assess.md
-      - name: View databases
-        href: sql-server/azure-arc/view-databases.md
-      - name: Configure SQL Server
-        href: sql-server/azure-arc/manage-configuration.md
-      - name: Automated patching
-        href: sql-server/azure-arc/patch.md
-      - name: Automated backups
-        href: sql-server/azure-arc/point-in-time-restore.md
-      - name: Delete from or restore to Azure Arc
-        href: sql-server/azure-arc/delete-from-azure-arc.md
-    - name: Monitor
-      items:
-      - name: Activity Logs
-        href: sql-server/azure-arc/activity-logs.md
-    - name: Secure
-      items:
-      - name: Configure advanced data Security
-        href: sql-server/azure-arc/configure-advanced-data-security.md
-      - name: Certificate rotation
-        href: sql-server/azure-arc/rotate-certificates.md
-      - name: Extended Security Updates
-        href: sql-server/azure-arc/extended-security-updates.md
-    - name: FAQ
-      href: sql-server/azure-arc/faq.yml
-    - name: Data collection and reporting
-      href: sql-server/azure-arc/data-collection.md
-    - name: Troubleshoot
-      items:
-      - name: Troubleshoot deployment
-        href: sql-server/azure-arc/troubleshoot-deployment.md
-      - name: Troubleshoot best practices assessment
-        href: sql-server/azure-arc/troubleshoot-assessment.md
+          - name: Deployment options
+            href: sql-server/azure-arc/deployment-options.md
+          - name: Connect when machine not connected to Azure
+            href: sql-server/azure-arc/connect.md
+          - name: Connect with installer (.msi)
+            href: sql-server/azure-arc/connect-with-installer.md
+          - name: Connect when machine already connected to Azure
+            href: sql-server/azure-arc/connect-already-enabled.md
+          - name: Azure policy
+            href: sql-server/azure-arc/connect-at-scale-policy.md
+          - name: Script
+            href: sql-server/azure-arc/connect-at-scale-script.md
+          - name: Connect machines using Configuration Manager custom task sequence
+            href: sql-server/azure-arc/onboard-configuration-manager-custom-task.md
+      - name: Manage
+        items:
+        - name: Assess
+          href: sql-server/azure-arc/assess.md
+        - name: View databases
+          href: sql-server/azure-arc/view-databases.md
+        - name: Configure SQL Server
+          href: sql-server/azure-arc/manage-configuration.md
+        - name: View Always On failover cluster instances
+          href: sql-server/azure-arc/support-for-fci.md  
+        - name: Automate patching
+          href: sql-server/azure-arc/patch.md
+        - name: Automate backups
+          href: sql-server/azure-arc/point-in-time-restore.md
+        - name: Delete from or restore to Azure Arc
+          href: sql-server/azure-arc/delete-from-azure-arc.md
+        - name: Monitor
+          href: sql-server/azure-arc/sql-monitoring.md
+        - name: Use activity logs
+          href: sql-server/azure-arc/activity-logs.md
+      - name: Secure
+        items:
+        - name: Configure advanced data Security
+          href: sql-server/azure-arc/configure-advanced-data-security.md
+        - name: Certificate rotation
+          href: sql-server/azure-arc/rotate-certificates.md
+        - name: Extended Security Updates
+          href: sql-server/azure-arc/extended-security-updates.md
+      - name: FAQ
+        href: sql-server/azure-arc/faq.yml
+      - name: Data collection and reporting
+        href: sql-server/azure-arc/data-collection.md
+      - name: Troubleshoot
+        items:
+        - name: Troubleshoot deployment
+          href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot best practices assessment
+          href: sql-server/azure-arc/troubleshoot-assessment.md
+    - name: Azure Arc-enabled data services >
+      href: /azure/azure-arc/data/overview
 
 
 - name: Big Data Clusters
@@ -11661,8 +11657,6 @@ items:
           href: relational-databases/errors-events/mssqlserver-19419-database-engine-error.md
         - name: 19421
           href: relational-databases/errors-events/mssqlserver-19421-database-engine-error.md
-      - name: Errors 20,000 to 33,999
-        items:
         - name: 20557
           href: relational-databases/errors-events/mssqlserver-20557-database-engine-error.md
         - name: 20572
@@ -12427,7 +12421,7 @@ items:
         href: relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
       - name: sys.external_file_formats
         href: relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md
       items:
       - name: sys.database_filestream_options
@@ -13281,7 +13275,7 @@ items:
         href: relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md
       - name: sys.dm_xe_sessions
         href: relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_filestream_file_io_handles
@@ -13736,7 +13730,7 @@ items:
         href: relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md
       - name: snapshots.fn_trace_getdata
         href: relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md
-    - name: Filestream & FileTable
+    - name: FILESTREAM & FileTable
       href: relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md
       items:
       - name: FileTableRootPath

@@ -4,6 +4,8 @@ ms.author: randolphwest
 ms.date: 07/11/2023
 ms.service: sql
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 <a id="ubuntu"></a>
 

@@ -29,12 +29,7 @@ The underlying [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] is
 - [[!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/overview-what-is)
 - [[!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]](/azure/azure-sql-edge/overview)
 
-You can view the complete list of features and components from the following links:
-
-- [Editions and supported features of SQL Server 2022](editions-and-components-of-sql-server-2022.md)
-- [Editions and supported features of SQL Server 2019](editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+[!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## SQL Server components and technologies
 
@@ -72,7 +67,7 @@ Machine Learning Services (In-Database) integrates R and Python with [!INCLUDE [
 
 ### Master Data Services
 
-[Master Data Services Overview (MDS)](../master-data-services/master-data-services-overview-mds.md) is the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis are based on the right information. Using [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.
+[Master Data Services](../master-data-services/master-data-services-overview-mds.md) (MDS) is the [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis are based on the right information. Using [!INCLUDE [ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.
 
 ## Azure integration
 
@@ -92,7 +87,7 @@ You can use Azure services and management capabilities, introduce DevOps practic
 
 ### Azure Kubernetes Service (AKS)
 
-Azure Kubernetes Service (AKS) is a managed Kubernetes service for deploying and managing container clusters. With [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers, you can [deploy a SQL Server Linux container to AKS using Helm charts](../linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md).
+[Azure Kubernetes Service](/azure/aks/intro-kubernetes) (AKS) is a managed Kubernetes service for deploying and managing container clusters. With [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers, you can [deploy a SQL Server Linux container to AKS using Helm charts](../linux/sql-server-linux-containers-deploy-helm-charts-kubernetes.md).
 
 > [!NOTE]  
 > You can also set up [Azure Arc-enabled SQL Managed Instance](/azure/azure-arc/data/managed-instance-overview) on a Kubernetes infrastructure of your choice, which allows you to manage the service in Azure while your data stays in the location you prefer.

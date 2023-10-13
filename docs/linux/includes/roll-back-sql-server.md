@@ -5,6 +5,8 @@ ms.date: 12/20/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 To roll back or downgrade [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] to a previous release, use the following steps:
 

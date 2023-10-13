@@ -7,7 +7,7 @@ ms.date: 11/04/2019
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: "article"
-monikerRange: "= sql-server-ver15"
+monikerRange: ">= sql-server-2016"
 ---
 # [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] release notes
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
@@ -32,7 +32,11 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
-## SQL Server installation may fail if SSMS 18.x is installed
+## Known Issues
+
+This section identifies known issues you may experience with this product. 
+
+### SQL Server installation may fail if SSMS 18.x is installed
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] installation fails when the following installations happen in this order:
   1. SQL Server Management Studio (SSMS) version 18.0, 18.1, 18.2, or 18.3 is installed on the server.
@@ -45,7 +49,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
-## UTF-8 collations
+### UTF-8 collations can't be used with certain features
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with the following features:
   - [In-Memory OLTP tables](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
@@ -59,7 +63,7 @@ The RTM build number for SQL Server 2019 is `15.0.2000.5`.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
-## Master Data Service notification email contains broken link
+### Master Data Service notification email contains broken link
 
 - **Issue and customer impact**: The notification email from Master Data Services (MDS) contains a broken link. The link navigates to a page that returns an error like the following message:
 

@@ -75,10 +75,12 @@ Offers restricted to dev/test usage only are not eligible (like Pay-As-You-Go De
 
 Choosing a maintenance window other than the default is available on all SLOs **except for**:
 
-- Instance pools
-- Basic, S0 and S1
-- DC, Fsv2, M-series
-- Hyperscale service tier with zone redundancy 
+- Azure SQL Managed Instance pools
+- Azure SQL Database DTU Basic, S0 and S1 tiers
+- DC hardware
+- Fsv2 hardware
+- Hyperscale service tier with zone redundancy
+- Hyperscale Serverless databases
 
 <!-- Check Known limitations in azure-sql/database/service-tier-hyperscale.md as well -->
 

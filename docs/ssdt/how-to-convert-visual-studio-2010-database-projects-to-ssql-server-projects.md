@@ -14,14 +14,14 @@ f1_keywords:
 
 # How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform
 
-In SQL Server Data Tools (SSDT), you can convert existing SQL Server Database, CLR, and Data-Tier Application projects created in Visual Studio 2010 to the new SQL Server database project. By doing so, you can take advantage of the new database development experience that SSDT provides, such as an updated Transact\-SQL editing experience, and the ability to retarget your project to Microsoft SQL Server 2012 and SQL Azure with code validation. The conversion process converts objects (table, views, stored-procedures, property files, or scripts) that have an equivalent type in SSDT, including their permissions and DAC policy files. Artifacts that cannot be converted are highlighted in a conversion log report.  
+In SQL Server Data Tools (SSDT), you can convert existing SQL Server Database, CLR, and Data-Tier Application projects created in Visual Studio 2010 to the new SQL Server database project. By doing so, you can take advantage of the new database development experience that SSDT provides, such as an updated Transact-SQL editing experience, and the ability to retarget your project to Microsoft SQL Server 2012 and SQL Azure with code validation. The conversion process converts objects (table, views, stored-procedures, property files, or scripts) that have an equivalent type in SSDT, including their permissions and DAC policy files. Artifacts that cannot be converted are highlighted in a conversion log report.  
   
 The following table lists all the project artifacts that can or cannot be converted by SSDT.  
   
 |Project artifacts that can be converted|Project artifacts that cannot be converted|  
 |-------------------------------------------|----------------------------------------------|  
 |Project Files<br /><br />.dbproj (Visual Studio 2010 Database and Server projects, Data-Tier Application projects) project files<br /><br />.csproj and .vbproj CLR project files can be converted, but may result in data loss|Database Unit Test Projects<br /><br />Partial Projects such as .files items|  
-|Properties Files<br /><br />*.sqldeployment, .sqlsettings, and .sqlpolicy files are converted to their corresponding Project Property pages<br /><br />.sqlpermissions files are converted to Transact\-SQL scripts|Project Properties<br /><br />Server.sqlsettings<br /><br />SQLCMD variables defined in .sqlcmd files|  
+|Properties Files<br /><br />*.sqldeployment, .sqlsettings, and .sqlpolicy files are converted to their corresponding Project Property pages<br /><br />.sqlpermissions files are converted to Transact-SQL scripts|Project Properties<br /><br />Server.sqlsettings<br /><br />SQLCMD variables defined in .sqlcmd files|  
 |.sql files are imported using their existing folder structure.|Extensibility files.|  
 |Pre-Deployment and Post-Deployment scripts|Database references will have to manually re-established after project conversion.|  
 |Schema Compare files|Data Generation files.|  

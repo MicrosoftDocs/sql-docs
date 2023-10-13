@@ -8,6 +8,8 @@ ms.date: 06/30/2020
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 
@@ -352,7 +354,7 @@ For more information on iSCSI initiator for the supported distributions, consult
 
 17.	When Linux starts, it will mount the file system. To ensure that only Pacemaker can mount the iSCSI disk, rebuild the root filesystem image. 
 
-    Run the following command which may take a few moments to complete. You will get no message back if successful.
+    Run the following command which might take a few moments to complete. You will get no message back if successful.
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
@@ -391,9 +393,9 @@ You are now ready to configure the FCI.
 | Red Hat Enterprise Linux with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
 | SUSE Linux Enterprise Server with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
-## Next steps
+## Related content
 
-[Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

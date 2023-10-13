@@ -1,6 +1,6 @@
 ---
-description: "Learn to configure Transactional or Snapshot replication with Azure AD authentication."
-title: "Configure replication with Azure AD authentication for Azure Arc-enabled SQL Server"
+description: "Learn to configure Transactional or Snapshot replication with Microsoft Entra authentication."
+title: "Configure replication with Microsoft Entra authentication for Azure Arc-enabled SQL Server"
 tittleSuffix: Arc-enabled SQL Server
 ms.custom: ""
 ms.date: 07/15/2023
@@ -11,25 +11,25 @@ ms.topic: how-to
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
-# Configure replication with Azure AD authentication - Arc-enabled SQL Server
+# Configure replication with Microsoft Entra authentication - Arc-enabled SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article provides steps to configure Transactional and Snapshot replication by using Azure Active Directory (Azure AD) authentication for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
+This article provides steps to configure Transactional and Snapshot replication by using authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for [Azure-Arc enabled SQL Server](../../sql-server/azure-arc/overview.md). 
 
 ## Overview
 
-Support for Azure AD authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring replication with Azure AD authentication for Arc-enabled SQL Server, the only step that's different is the first step, when you create an Azure AD login, and grant sysadmin permissions. Then use that Azure AD login in the replication stored procedures to configure replication. 
+Support for Microsoft Entra authentication with SQL Server replication was added in SQL Server 2022 CU 6. When configuring replication with Microsoft Entra authentication for Arc-enabled SQL Server, the only step that's different is the first step, when you create a Microsoft Entra login, and grant sysadmin permissions. Then use that Microsoft Entra login in the replication stored procedures to configure replication. 
 
 > [!NOTE]
-> Starting with SQL Server 2022 CU 6, disable Azure AD authentication for replication by using session trace flag 11561.
+> Starting with SQL Server 2022 CU 6, disable Microsoft Entra authentication for replication by using session trace flag 11561.
 
 
 ## Prerequisites
 
-To configure replication with Azure AD authentication, you must meet the following prerequisites: 
+To configure replication with Microsoft Entra authentication, you must meet the following prerequisites: 
 
 - Have [Azure Arc-enabled](../../sql-server/azure-arc/connect.md) SQL Server 2022 starting with [Cumulative Update 6](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate6). 
-- Configured Azure AD authentication for every server in the replication topology. Review [Tutorial: Set up Azure AD authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
+- Configured Microsoft Entra authentication for every server in the replication topology. Review [Tutorial: Set up Microsoft Entra authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md) to learn more. 
 - [SQL Server Management Studio (SSMS) v19.1 or higher](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md). 
 - The user connecting to the publisher and subscriber is a member of the **sysadmin** fixed server role.
 - The connection must be encrypted using a certificate from a trusted Certificate Authority (CA) or a self-signed certificate.
@@ -38,19 +38,21 @@ To configure replication with Azure AD authentication, you must meet the followi
 
 ## Limitations
 
-Configuring your replication with Azure AD authentication currently has the following limitations: 
+Configuring your replication with Microsoft Entra authentication currently has the following limitations: 
 
 - It's currently only possible to configure replication using Transact-SQL (T-SQL) and the replication stored procedures, the Replication Wizard in SSMS v19.1 or higher, or Azure Data Studio. It's not currently possible to configure replication using RMO replication objects or other command line languages. 
 - Every server in the replication topology must be on at least SQL Server 2022 CU 6. Previous versions of SQL Server aren't supported.
 
-## Create SQL login from Azure AD
+<a name='create-sql-login-from-azure-ad'></a>
 
-When configuring replication with Azure AD authentication, you first need to [create the Azure AD login](../../t-sql/statements/create-login-transact-sql.md), and grant it the sysadmin role. 
+## Create SQL login from Microsoft Entra ID
 
-To create the SQL login from Azure AD, and give it sysadmin permissions, use the following Transact-SQL (T-SQL) command: 
+When configuring replication with Microsoft Entra authentication, you first need to [create the Microsoft Entra login](../../t-sql/statements/create-login-transact-sql.md), and grant it the `sysadmin` role. 
+
+To create the Microsoft Entra login and assign it as a `sysadmin`, use the following Transact-SQL (T-SQL) command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [login_name] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin' 
 ```
@@ -58,7 +60,7 @@ EXEC sp_addsrvrolemember @loginame='login_name', @rolename='sysadmin'
 For example, to add the login name for `newuser@tenant.com`, use this command: 
 
 ```sql
-USE MASTER
+USE master
 CREATE LOGIN [newuser@tenant.com] FROM EXTERNAL PROVIDER
 EXEC sp_addsrvrolemember @loginame='newuser@tenant.com', @rolename='sysadmin' 
 ```
@@ -147,7 +149,7 @@ exec sp_addpublication @publication = N'AdvWorksProducTrans',
 ```
 
 
-Then, create the snapshot agent and store the snapshot files for the Publisher by using the Azure AD for the `@publisher_login` and defining a password for the Publisher:
+Then, create the Snapshot Agent and store the snapshot files for the Publisher by using the Microsoft Entra login for the `@publisher_login` and defining a password for the Publisher:
 
 ```sql
 use [AdventureWorksDB] 
@@ -189,7 +191,7 @@ EXEC sp_addpublication @publication = N'AdvWorksProducTrans',
 @allow_queued_tran = N'false', @allow_dts = N'false', @replicate_ddl = 1 
 ```
 
-Next, Create the snapshot agent and store the snapshot files for the Publisher by using the Azure AD for the `@publisher_login` and defining a password for the Publisher:
+Next, create the Snapshot Agent and store the snapshot files for the Publisher by using the Microsoft Entra login for the `@publisher_login` and defining a password for the Publisher:
 
 ```sql
 EXEC sp_addpublication_snapshot @publication = N'TestPub', @frequency_type = 4, @frequency_interval = 1, 
@@ -216,7 +218,7 @@ EXEC sp_addarticle @publication = N'TestPub', @article = N'testtable',
 
 ## Create Subscription 
 
-Use [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to add your Subscriber, and then use either [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) on the Publisher to create a push subscription or [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) on the Subscriber to create a pull subscription. Use the Azure AD login for the `@subscriber_login`. 
+Use [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to add your Subscriber, and then use either [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) on the Publisher to create a push subscription or [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) on the Subscriber to create a pull subscription. Use the Microsoft Entra login for the `@subscriber_login`. 
 
 The following sample script adds the subscription: 
 
@@ -241,7 +243,7 @@ EXEC sp_addpushsubscription_agent @publication = N'testpub', @subscriber = N'<su
 
 ## Replication stored procedures
 
-The following parameters in these replication stored procedures were modified in CU 6 for SQL Server 2022 to support Azure AD authentication for replication: 
+The following parameters in these replication stored procedures were modified in CU 6 for SQL Server 2022 to support Microsoft Entra authentication for replication: 
 
 - [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md): `@distributor_security_mode`
 - [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md): `@subscriber_security_mode`
@@ -255,11 +257,11 @@ The following parameters in these replication stored procedures were modified in
 The following values define the security modes for these stored procedures: 
 - **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. 
 - **1** specifies Windows Authentication.  
-- **2** specifies Azure Active Directory (Azure AD) Password Authentication starting with SQL Server 2022 CU 6. 
-- **3** specifies Azure AD Integrated Authentication starting with SQL Server 2022 CU 6. 
-- **4** specifies Azure AD Token Authentication starting with SQL Server 2022 CU 6. 
+- **2** specifies Microsoft Entra password authentication starting with SQL Server 2022 CU 6. 
+- **3** specifies Microsoft Entra integrated authentication starting with SQL Server 2022 CU 6. 
+- **4** specifies Microsoft Entra token authentication starting with SQL Server 2022 CU 6. 
 
 
 ## Next steps
 
-To learn more, review [SQL Server Replication](sql-server-replication.md) and [Azure AD authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)
+To learn more, review [SQL Server Replication](sql-server-replication.md) and [Microsoft Entra authentication for SQL Server](../security/authentication-access/azure-ad-authentication-sql-server-overview.md)

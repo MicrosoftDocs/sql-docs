@@ -8,6 +8,8 @@ ms.date: 12/09/2019
 ms.service: sql
 ms.subservice: linux
 ms.topic: article
+ms.custom:
+  - linux-related-content
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017"
 ---
 # SQL Server Replication on Linux
@@ -24,7 +26,7 @@ An instance of SQL Server can participate in any replication role:
 * Distributor
 * Subscriber
 
-A replication schema can mix and match operating system platforms. For example, a replication schema may include an instance of SQL Server on Linux for publisher and distributor, and the subscribers include instances of SQL Server on Windows as well as Linux.
+A replication schema can mix and match operating system platforms. For example, a replication schema might include an instance of SQL Server on Linux for publisher and distributor, and the subscribers include instances of SQL Server on Windows as well as Linux.
 
 SQL Server instances on Linux can participate in any type of replication.
 
@@ -52,8 +54,7 @@ The following features are not supported:
 * Peer-to-Peer replication
 * Oracle publishing
 
-## Next steps
+## Related content
 
-[Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
-
-[Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)
+- [Configure SQL Server replication on Linux](sql-server-linux-replication-tutorial-tsql.md)
+- [Sample: Configure SQL Server replication on Linux](sql-server-linux-replication-configure.md)

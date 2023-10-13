@@ -6,6 +6,8 @@ ms.date: 08/10/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 | Platform | File system | Installation guide | Get |
 | --- | --- | --- | --- |

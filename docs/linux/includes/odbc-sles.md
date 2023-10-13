@@ -4,6 +4,8 @@ ms.author: randolphwest
 ms.date: 07/11/2023
 ms.service: sql
 ms.topic: include
+ms.custom:
+  - linux-related-content
 ---
 <a id="SLES"></a>
 
@@ -44,8 +46,16 @@ Use the following steps to install the **mssql-tools18** on SUSE Linux Enterpris
 
 1. Install **mssql-tools18** with the unixODBC developer package.
 
+   - For SLES 15, use the following command:
+
    ```bash
-   sudo zypper install -y mssql-tools18 unixODBC-devel
+   zypper install -y mssql-tools18 unixODBC-devel glibc-locale-base
+   ```
+
+   - For SLES 12, use the following command:
+
+   ```bash
+   zypper install -y mssql-tools18 unixODBC-devel
    ```
 
    > [!NOTE]  

@@ -41,7 +41,7 @@ helpviewer_keywords:
 |**server_instance_name**|Name of the server instance where the audit occurred. Uses the standard machine\instance format.|**nvarchar(120)**|Yes|  
 |**database_name**|The database context in which the action occurred.|**sysname**|No|  
 |**schema_name**|The schema context in which the action occurred.|**sysname**|No|  
-|**object_name**|The name of the entity on which the audit occurred. This name can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects<br /><br /> TSQL statement (if any)|**sysname**|No|  
+|**object_name**|The name of the entity on which the audit occurred. This name can be:<br /><br /> server objects<br /><br /> databases<br /><br /> database objects<br /><br /> schema objects<br /><br /> Transact-SQL statement (if any)|**sysname**|No|  
 |**statement**|TSQL statement (if any)|**nvarchar(4000)**|No|  
 |**additional_information**|Any additional information about the event, stored as XML.|**nvarchar(4000)**|No|  
   

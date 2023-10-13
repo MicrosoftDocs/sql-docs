@@ -46,9 +46,9 @@ To complete this walkthrough, you must be able to connect to a database server (
   
 3.  In the **Templates** list, click **Sql File**, and then click **Open**.  
   
-    The Transact\-SQL editor opens.  
+    The Transact-SQL editor opens.  
   
-4.  Copy the following Transact\-SQL code, and paste it into the Transact\-SQL editor.  
+4.  Copy the following Transact-SQL code, and paste it into the Transact-SQL editor.  
   
     ```  
     PRINT N'Creating Sales...';  
@@ -287,7 +287,7 @@ By default, when you press F5, you deploy (or publish) the database to a LocalDB
   
 10. Click **OK**.  
   
-    The test project builds and the SQL Server Unit Test Designer appears. Next, you will update test logic in the Transact\-SQL script of the unit tests.  
+    The test project builds and the SQL Server Unit Test Designer appears. Next, you will update test logic in the Transact-SQL script of the unit tests.  
   
 ## <a name="DefineTestLogic"></a>Define Test Logic  
 This very simple database has two tables, Customer and Order. You update the database by using the following stored procedures:  
@@ -324,7 +324,7 @@ The tests assume that the database starts in a clean state. You will create test
   
     After you perform the previous step, you can create the test script for the test action in the unit test.  
   
-2.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+2.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     -- ssNoVersion unit test for Sales.uspNewCustomer  
@@ -354,7 +354,7 @@ The tests assume that the database starts in a clean state. You will create test
   
     After you perform this step, you can create the test script for the test action in the unit test.  
   
-2.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+2.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     -- ssNoVersion unit test for Sales.uspPlaceNewOrder  
@@ -392,7 +392,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 7.  Click **Click here to create** to create a pre-test script.  
   
-8.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+8.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     /*  
@@ -430,7 +430,7 @@ The tests assume that the database starts in a clean state. You will create test
   
     After you perform this step, you can create the test script for the test action in the unit test.  
   
-2.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+2.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     -- ssNoVersion unit test for Sales.uspFillOrder  
@@ -469,7 +469,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 7.  Click **Click here to create** to create a pre-test script.  
   
-8.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+8.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     /*  
@@ -520,7 +520,7 @@ The tests assume that the database starts in a clean state. You will create test
   
     After you perform this step, you can create the test script for the test action in the unit test.  
   
-2.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+2.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     -- ssNoVersion unit test for Sales.uspFillOrder  
@@ -554,7 +554,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 7.  Click **Retrieve**. (If necessary, click **Retrieve** until you see data.)  
   
-    The Transact\-SQL body of your unit test is executed, and the resulting schema appears in the dialog box. Because the pre-test code was not executed, no data is returned. As you are only verifying the schema and not the data, this is fine.  
+    The Transact-SQL body of your unit test is executed, and the resulting schema appears in the dialog box. Because the pre-test code was not executed, no data is returned. As you are only verifying the schema and not the data, this is fine.  
   
 8.  Click **OK**.  
   
@@ -564,7 +564,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 10. Click **Click here to create** to create a pre-test script.  
   
-11. Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+11. Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     /*  
@@ -617,7 +617,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 15. In the **Configuration for checksumCondition1** dialog box, specify a connection to your database.  
   
-16. Replace the Transact\-SQL in the dialog box (under the **Edit Connection** button) with the following code:  
+16. Replace the Transact-SQL in the dialog box (under the **Edit Connection** button) with the following code:  
   
     ```  
     BEGIN TRANSACTION  
@@ -677,11 +677,11 @@ The tests assume that the database starts in a clean state. You will create test
     SELECT @RC AS RC;  
     ```  
   
-    This code combines the Transact\-SQL code from the pre-test with the Transact\-SQL from the test itself. You need both to return the same results that the test will return when you run it.  
+    This code combines the Transact-SQL code from the pre-test with the Transact-SQL from the test itself. You need both to return the same results that the test will return when you run it.  
   
 17. Click **Retrieve**. (If necessary, click **Retrieve** until you see data.)  
   
-    The Transact\-SQL that you specified is executed, and a checksum is calculated for the returned data.  
+    The Transact-SQL that you specified is executed, and a checksum is calculated for the returned data.  
   
 18. Click **OK**.  
   
@@ -699,11 +699,11 @@ The tests assume that the database starts in a clean state. You will create test
   
 2.  In the **Test View** window (Visual Studio 2010), click **Refresh** on the toolbar to update the list of tests. To see the list of tests in **Test Explorer** (Visual Studio 2012), build the solution.  
   
-    The **Test View** or **Test Explorer** window lists the tests that you created earlier in this walkthrough and to which you added Transact\-SQL statements and test conditions. The test that is named TestMethod1 is empty and is not used in this walkthrough.  
+    The **Test View** or **Test Explorer** window lists the tests that you created earlier in this walkthrough and to which you added Transact-SQL statements and test conditions. The test that is named TestMethod1 is empty and is not used in this walkthrough.  
   
 3.  Right-click **Sales_uspNewCustomerTest**, and click **Run Selection**.  
   
-    Visual Studio uses the privileged context that you specified to connect to the database and apply the data generation plan. Visual Studio then switches to the execution context before it runs the Transact\-SQL script in the test. Finally, Visual Studio evaluates the results of the Transact\-SQL script against those that you specified in the test condition, and a result of either pass or fail appears in the **Test Results** window.  
+    Visual Studio uses the privileged context that you specified to connect to the database and apply the data generation plan. Visual Studio then switches to the execution context before it runs the Transact-SQL script in the test. Finally, Visual Studio evaluates the results of the Transact-SQL script against those that you specified in the test condition, and a result of either pass or fail appears in the **Test Results** window.  
   
 4.  View the result in the **Test Results** window.  
   
@@ -721,9 +721,9 @@ The tests assume that the database starts in a clean state. You will create test
   
 #### To correct the error in Sales.uspFillOrder  
   
-1.  In the **SQL Server Object Explorer** Projects node for your database, double-click the **uspFillOrder** stored procedure to open its definition in the Transact\-SQL editor.  
+1.  In the **SQL Server Object Explorer** Projects node for your database, double-click the **uspFillOrder** stored procedure to open its definition in the Transact-SQL editor.  
   
-2.  In the definition, find the following Transact\-SQL statement:  
+2.  In the definition, find the following Transact-SQL statement:  
   
     ```  
     UPDATE [Sales].[Customer]  
@@ -764,7 +764,7 @@ To create and verify a negative test, you must perform the following tasks:
   
 1.  In the **SQL Server Object Explorer** Projects node for the SimpleUnitTestDB database, expand the Programmability node, expand the Stored Procedures node, and double-click uspCancelOrder.  
   
-2.  In the Transact\-SQL editor, update the procedure definition to match the following code:  
+2.  In the Transact-SQL editor, update the procedure definition to match the following code:  
   
     ```  
     CREATE PROCEDURE [Sales].[uspCancelOrder]  
@@ -847,7 +847,7 @@ To create and verify a negative test, you must perform the following tasks:
   
     After you perform this step, you can create the test script for the test action in the unit test.  
   
-2.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+2.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     -- ssNoVersion unit test for Sales.uspFillOrder  
@@ -883,7 +883,7 @@ To create and verify a negative test, you must perform the following tasks:
   
 7.  Click **Click here to create** to create a pre-test script.  
   
-8.  Update the Transact\-SQL statements in the Transact\-SQL editor to match the following statements:  
+8.  Update the Transact-SQL statements in the Transact-SQL editor to match the following statements:  
   
     ```  
     /*  

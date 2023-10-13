@@ -49,7 +49,7 @@ The following console application demonstrates how to load data using the <xref:
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## Performing a bulk copy operation using transact-SQL and the command class  
+## Performing a bulk copy operation using Transact-SQL and the command class  
 The following example illustrates how to use the <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method to execute the BULK INSERT statement.  
   
 > [!NOTE]

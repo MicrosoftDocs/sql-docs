@@ -8,6 +8,8 @@ ms.date: 10/19/2022
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # SQL Server availability basics for Linux deployments
 
@@ -27,7 +29,7 @@ On Windows, FCIs always require an underlying Windows Server failover cluster (W
 
 ## A quick Linux primer
 
-While some Linux installations may be installed with an interface, most aren't, meaning that nearly everything at the operating system layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
+While some Linux installations might be installed with an interface, most aren't, meaning that nearly everything at the operating system layer is done via command line. The common term for this command line in the Linux world is a *bash shell*.
 
 In Linux, many commands need to be executed with elevated privileges, much like many things need to be done in Windows Server as an administrator. There are two main methods to execute with elevated privileges:
 
@@ -57,7 +59,7 @@ This section covers tasks that are common to all Linux-based [!INCLUDE[ssnoversi
 
 Copying files from one server to another is a task that anyone using [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux should be able to do. This task is very important for AG configurations.
 
-Things like permission issues can exist on Linux and on Windows-based installations. However, those familiar with how to copy from server to server on Windows may not be familiar with how it is done on Linux. A common method is to use the command-line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself may not be installed. If it isn't, OpenSSH needs to be installed first. For more information on configuring OpenSSH, see the information at the following links for each distribution:
+Things like permission issues can exist on Linux and on Windows-based installations. However, those familiar with how to copy from server to server on Windows might not be familiar with how it is done on Linux. A common method is to use the command-line utility `scp`, which stands for secure copy. Behind the scenes, `scp` uses OpenSSH. SSH stands for secure shell. Depending on the Linux distribution, OpenSSH itself might not be installed. If it isn't, OpenSSH needs to be installed first. For more information on configuring OpenSSH, see the information at the following links for each distribution:
 
 - [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 - [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
@@ -69,7 +71,7 @@ When using `scp`, you must provide the credentials of the server if it isn't the
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-copies the file MyAGCert.cer to the folder specified on the other server. You must have permissions - and possibly ownership - of the file to copy it, so `chown` may also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
+copies the file MyAGCert.cer to the folder specified on the other server. You must have permissions - and possibly ownership - of the file to copy it, so `chown` might also need to be employed before copying. Similarly, on the receiving side, the right user needs access to manipulate the file. For example, to restore that certificate file, the `mssql` user must be able to access it.
 
 Samba, which is the Linux variant of server message block (SMB), can also be used to create shares accessed by UNC paths such as `\\SERVERNAME\SHARE`. For more information on configuring Samba, see the information at the following links for each distribution:
 
@@ -85,7 +87,7 @@ Finally, using a network file system (NFS) share is an option. Using NFS isn't a
 
 ### Configure the firewall
 
-Similar to Windows, Linux distributions have a built-in firewall. If your company is using an external firewall to the servers, disabling the firewalls in Linux may be acceptable. However, regardless of where the firewall is enabled, ports need to be opened. The following table documents the common ports needed for highly available [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments on Linux.
+Similar to Windows, Linux distributions have a built-in firewall. If your company is using an external firewall to the servers, disabling the firewalls in Linux might be acceptable. However, regardless of where the firewall is enabled, ports need to be opened. The following table documents the common ports needed for highly available [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] deployments on Linux.
 
 | Port Number | Type | Description |
 | --- | --- | --- |
@@ -111,7 +113,7 @@ Similar to Windows, Linux distributions have a built-in firewall. If your compan
 | Variable | TCP/UDP | NFS - port for `MOUNTD_PORT` (found in `/etc/sysconfig/nfs` on RHEL) |
 | Variable | TCP/UDP | NFS - port for `STATD_PORT` (found in `/etc/sysconfig/nfs` on RHEL) |
 
-For additional ports that may be used by Samba,see [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
+For additional ports that might be used by Samba,see [Samba Port Usage](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
 Conversely, the name of the service under Linux can also be added as an exception instead of the port; for example, `high-availability` for Pacemaker. Refer to your distribution for the names if this is the direction you wish to pursue. For example, on RHEL the command to add in Pacemaker is
 
@@ -152,7 +154,7 @@ To provide high availability and disaster recovery for your [!INCLUDE [ssnoversi
 | **[HPE Serviceguard](https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html)** | HPE SGLX offers context-sensitive monitoring and recovery options for Failover Cluster Instance and Always On Availability Groups. Maximize uptime with HPE SGLX without compromising data integrity and performance.<br /><br />- [Tutorial: Set up a three node Always On availability group with HPE Serviceguard for Linux](sql-server-availability-group-ha-hpe.md). |
 | **[Pacemaker](https://www.clusterlabs.org/pacemaker/)** | Pacemaker is an open source high-availability cluster resource manager. With Corosync, an open source group communication system, Pacemaker can detect component failures and orchestrate necessary failover procedures to minimize interruptions to applications.<br /><br />- [Pacemaker for AGs and FCIs on Linux](sql-server-linux-pacemaker-basics.md)<br />- [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md) |
 
-## Next steps
+## Related content
 
 - [Pacemaker for availability groups and failover cluster instances on Linux](sql-server-linux-pacemaker-basics.md)
 - [Deploy a Pacemaker cluster for SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

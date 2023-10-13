@@ -81,14 +81,7 @@ The following table details the benefits available through the SQL IaaS Agent ex
 
 ## Permissions models
 
-By default, the SQL IaaS Agent extension uses the least privilege mode permission model. The least privilege permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature.
-
-SQL Server VMs deployed prior to October 2022 use the older sysadmin model where the SQL IaaS Agent extension takes sysadmin rights by default. If you have a SQL Server VM using this older permission model, you can enable the least privilege permissions model in the Azure portal. 
-
-To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Security Configuration** under **Security** and then check the box next to **Enable least privilege mode**: 
-
-:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Security Configuration page, enable least privilege highlighted.":::
-
+Starting in October 2022, newly deployed SQL Server VMs use the least privilege mode permissions model by default. The least privilege permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature. SQL Server VMs deployed prior to October 2022 use the older sysadmin permissions model, where the SQL IaaS Agent extension has sysadmin rights by default. If you have a SQL Server VM using this older permissions model, you can enable the least privilege permissions model in the Azure portal. 
 
 The following table defines the permissions and custom roles used by each feature of the extension: 
 
@@ -105,6 +98,10 @@ The following table defines the permissions and custom roles used by each featur
 |[Storage configuration](storage-configuration.md)|Server permission - ALTER ANY DATABASE|SqlIaaSExtension_StorageConfig       |
 |[Status reporting](manage-sql-vm-portal.md#access-the-resource) |Server permission - VIEW ANY DEFINITION, VIEW SERVER STATE, ALTER ANY LOGIN, CONNECT SQL         | SqlIaaSExtension_StatusReporting          |
 
+
+SQL Server VMs deployed after October 2022 no longer have the least privilege mode setting available in the portal. For SQL Server VMs provisioned before October 2022, you can enable the least privilege permissions model by going to your [SQL virtual machines resource](manage-sql-vm-portal.md), choosing **Security Configuration** under **Security** and then checking the box next to **Enable least privilege mode**: 
+
+:::image type="content" source="media/sql-server-iaas-agent-extension-automate-management/least-privilege.png" alt-text="Screenshot of the Azure portal SQL virtual machines resource, Security Configuration page, with enable least privilege highlighted.":::
 
 
 ## Installation
@@ -197,7 +194,8 @@ The SQL IaaS Agent extension only supports:
 - SQL Server VMs deployed through the Azure Resource Manager. SQL Server VMs deployed through the classic model aren't supported. 
 - SQL Server VMs deployed to the public or Azure Government cloud. Deployments to other private or government clouds aren't supported. 
 - SQL Server FCIs with limited functionality. SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
-- VMs with a single named instance, or VMs with multiple named instances, if a default instance exists. 
+- VMs with a default instance, or a single named instance. 
+- If the VM has multiple named instances, then one of the instances must be the default instance to work with the SQL IaaS Agent extension. 
 - SQL Server instance images only. The SQL IaaS Agent extension does not support Reporting Services or Analysis services, such as the following images: SQL Server Reporting Services, Power BI Report Server, SQL Server Analysis Services. 
 
 ## <a id="in-region-data-residency"></a> Privacy statements

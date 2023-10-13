@@ -52,7 +52,7 @@ To deploy the project to Azure SQL Database, get the connection information you 
 
 If you're deploying to a SQL Server with the Deployment Wizard, you have to use Windows authentication; you can't use SQL Server authentication.
 
-If you're deploying to an Azure SQL Database server, you have to use SQL Server authentication or Azure Active Directory authentication; you can't use Windows authentication.
+If you're deploying to the logical server for your Azure SQL Database, you have to use SQL Server authentication or authenticate with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)); you can't use Windows authentication.
 
 ## Connect to the SSISDB database
 

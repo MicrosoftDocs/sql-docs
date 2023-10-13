@@ -8,6 +8,8 @@ ms.date: 08/23/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
+ms.custom:
+  - linux-related-content
 ---
 # Configure RHEL failover cluster instance (FCI) cluster for SQL Server
 
@@ -372,7 +374,7 @@ A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Ente
     pcsd: active/enabled
    ```
 
-## Next steps
+## Related content
 
 - [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)
 - [Operate SQL Server on Red Hat Enterprise Linux shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

@@ -783,7 +783,7 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 
 ## Remarks
 
-There is limited TSQL functionality in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)]. For more information, see [TSQL Surface Area in [!INCLUDE[fabric](../../includes/fabric.md)]](/fabric/data-warehouse/tsql-surface-area).
+There is limited Transact-SQL functionality in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)]. For more information, see [TSQL Surface Area in [!INCLUDE[fabric](../../includes/fabric.md)]](/fabric/data-warehouse/tsql-surface-area).
 
 ## <a id="LockingBehavior"></a> Locking behavior
  Takes a Schema-Modification lock on the table, a shared lock on the DATABASE, and a Schema-Stability lock on the SCHEMA.  

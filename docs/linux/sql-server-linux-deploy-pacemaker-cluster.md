@@ -154,7 +154,7 @@ The process for creating a Pacemaker cluster is different on SLES than it's on R
    sudo ha-cluster-init
    ```
 
-   You may be prompted that NTP isn't configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES's built-in fencing that is storage-based. NTP and watchdog can be configured later.
+   You might be prompted that NTP isn't configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES's built-in fencing that is storage-based. NTP and watchdog can be configured later.
 
 1. You're prompted to configure Corosync. You're asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you're using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
 

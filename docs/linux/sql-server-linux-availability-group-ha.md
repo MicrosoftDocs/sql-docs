@@ -81,7 +81,7 @@ An availability group with two synchronous replicas provides read-scale and data
 
 ## Two synchronous replicas and a configuration only replica
 
-An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The following diagram represents this architecture:
+An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and might also provide high availability. The following diagram represents this architecture:
 
 :::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Diagram showing a configuration-only availability group.":::
 

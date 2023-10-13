@@ -35,7 +35,7 @@ For more information on Microsoft Entra authentication in Azure SQL, see [Use Mi
 The following permissions are required to utilize or create Microsoft Entra logins in the virtual `master` database.
 
 - Microsoft Entra admin permission or membership in the `loginmanager` server role. The first Microsoft Entra login can only be created by the Microsoft Entra admin.
-- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Database 
+- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Database.
 
 By default, the standard permission granted to newly created Microsoft Entra login in the `master` database is **VIEW ANY DATABASE**. 
 

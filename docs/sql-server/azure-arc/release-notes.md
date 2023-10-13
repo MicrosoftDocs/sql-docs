@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 10/16/2023
+ms.date: 10/13/2023
 ms.topic: conceptual
 ---
 
@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 ## October 2023
 
-This release is published October 10, 2023. The extension is updated on October 16, 2023.
+This release is published October 10, 2023. The extension is updated on October 13, 2023.
 
 ### Extension versions
 

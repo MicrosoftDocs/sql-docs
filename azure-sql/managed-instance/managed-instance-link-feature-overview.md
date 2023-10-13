@@ -130,7 +130,7 @@ For existing instances, go to your SQL managed Instance resource in the [Azure p
 
 If you designate a managed instance replica for disaster recovery only, Microsoft doesn't charge you SQL Server licensing costs for the vCores that the secondary instance uses. However, because the instance is billed for the entire hour, you might still be charged licensing costs for the entire hour if the state change is made in the middle of the hour. 
 
-The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the pasive replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
+The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the passive replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
 
 For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance as standby only.
 

@@ -131,7 +131,7 @@ For a thorough list comparing compatible features between SQL Server and Azure S
 
 ### Key differences between SQL Server on-premises and SQL Managed Instance
 
-SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server may be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
+SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server might be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
 
 Some key differences:
 

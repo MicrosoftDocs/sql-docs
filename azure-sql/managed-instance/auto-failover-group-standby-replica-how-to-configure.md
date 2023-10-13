@@ -15,14 +15,16 @@ ms.topic: how-to
 
 This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance.
 
+> [!NOTE]
+> The **Failover benefit** is only applicable when you configure a secondary instance as standby _within an auto-failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-replica) instead. 
+
 ## Overview
 
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.
 
-When a secondary instance is designated as a standby instance, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
+When a secondary instance is designated for standby, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
 
 Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
-
 
 ## Cost benefit
 
@@ -98,7 +100,7 @@ You can use the Azure portal, Azure PowerShell, and the Azure CLI to update fail
 
 To update the failover rights for an existing failover group by using the Azure portal, follow these steps: 
 
-1. In the [Azure portal](https://portal.azure.com), go to your SQL Managed Instance resource.
+1. In the [Azure portal](https://portal.azure.com), go to your _secondary_ SQL Managed Instance resource.
 1. In the left menu under **Data management**, select **Failover groups**.
 1. In the command bar, select **Edit Configurations**.
 
@@ -111,6 +113,9 @@ To update the failover rights for an existing failover group by using the Azure 
 1. Select **Apply** to save your new settings and close the configuration pane.
 
 Alternatively, you can enable failover rights in **Compute + storage** for your *secondary* managed instance. To learn more, review [View licensing rights](#view-licensing-rights).
+
+> [!IMPORTANT]
+> If you see **Hybrid failover rights** and not **Failover rights**, you are likely on the *primary* managed instance. Go to your *secondary* managed instance to correctly activate **Failover rights**. Activating **Hybrid failover rights** on the primary instance does not save you on licensing costs for the secondary instance when used with auto-failover groups. 
 
 ### [Azure PowerShell](#tab/azure-powershell)
 

@@ -44,7 +44,7 @@ Prepare your environment for PowerShell.
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, however, future development will be done in the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
-For **Get-AzSqlInstanceDatabaseLongTermRetentionBackup** and **Restore-AzSqlInstanceDatabase**, you need to be a member of one of the following roles:
+For `Get-AzSqlInstanceDatabaseLongTermRetentionBackup` and `Restore-AzSqlInstanceDatabase`, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
 - SQL Managed Instance Contributor role or
@@ -53,7 +53,7 @@ For **Get-AzSqlInstanceDatabaseLongTermRetentionBackup** and **Restore-AzSqlInst
   - `Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionManagedInstanceBackups/read`
   - `Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases/longTermRetentionManagedInstanceBackups/read`
 
-For **Remove-AzSqlInstanceDatabaseLongTermRetentionBackup**, you need to be a member of one of the following roles:
+For `Remove-AzSqlInstanceDatabaseLongTermRetentionBackup`, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
 - Custom role with the following permission:
@@ -94,11 +94,11 @@ You can configure SQL Managed Instance to [retain automated backups](../database
 
 1. In the Azure portal, select your managed instance and then select **Backups**. On the **Retention policies** tab, select the database(s) on which you want to set or modify long-term backup retention policies. Changes will not apply to any databases left unselected. 
 
-   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-ltr.png" alt-text="Manage backups link.":::
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-ltr.png" alt-text="A screenshot from the Azure portal showing the Manage backups link.":::
 
 1. In the **Configure policies** pane, specify your desired retention period for weekly, monthly, or yearly backups. Choose a retention period of '0' to indicate that no long-term backup retention should be set.
 
-   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-policies.png" alt-text="Configure policies.":::
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-configure-policies.png" alt-text="A screenshot from the Azure portal showing how to Configure policies.":::
 
 1. When complete, select **Apply**.
 
@@ -185,11 +185,11 @@ To view available long-term backups from the Azure portal, follow these steps:
 
 1. In the Azure portal, select your managed instance and then select **Backups**. On the **Available backups** tab, select the database for which you want to see available backups. Select **Manage**.
 
-   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-select-database.png" alt-text="Select database." lightbox="./media/long-term-backup-retention-configure/ltr-available-backups-select-database.png":::
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups-select-database.png" alt-text="A screenshot from the Azure portal showing the option to select a database." lightbox="./media/long-term-backup-retention-configure/ltr-available-backups-select-database.png":::
 
 1. In the **Manage backups** pane, review the available backups.
 
-   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups.png" alt-text="View backups.":::
+   :::image type="content" source="./media/long-term-backup-retention-configure/ltr-available-backups.png" alt-text="A screenshot from the Azure portal showing the page to view backups.":::
 
 You can also restore from this page by choosing the backup and selecting **Restore**.
 

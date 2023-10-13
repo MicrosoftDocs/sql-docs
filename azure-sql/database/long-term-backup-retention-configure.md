@@ -4,7 +4,7 @@ description: Learn how to store and restore automated backups for Azure SQL Data
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/10/2023
+ms.date: 10/12/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: how-to
@@ -15,9 +15,13 @@ monikerRange: "=azuresql||=azuresql-db"
 ---
 
 # Manage Azure SQL Database long-term backup retention
-[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-With Azure SQL Database, you can set a [long-term backup retention](long-term-retention-overview.md) policy (LTR) to automatically retain backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups using the Azure portal, Azure CLI, or PowerShell. Long-term retention policies are also supported for [Azure SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md).
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](long-term-backup-retention-configure.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/long-term-backup-retention-configure.md?view=azuresql-mi&preserve-view=true)
+
+With Azure SQL Database, you can set a [long-term backup retention](long-term-retention-overview.md) (LTR) policy to automatically retain backups in separate Azure Blob storage containers for up to 10 years. You can then recover a database using these backups using the Azure portal, Azure CLI, or PowerShell.
 
 ## Prerequisites
 
@@ -40,7 +44,7 @@ Prepare your environment for PowerShell.
 > [!IMPORTANT]
 > The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the Az.Sql module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the Az module and in the AzureRm modules are substantially identical.
 
-For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you need to have one of the following roles:
+For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
 - SQL Server Contributor role or
@@ -50,7 +54,28 @@ For `Get-AzSqlDatabaseLongTermRetentionBackup` and `Restore-AzSqlDatabase`, you 
    `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionBackups/read`
    `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/read`
 
-For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to have one of the following roles:
+For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to be a member of one of the following roles:
+
+- Subscription Owner role or
+- Custom role with the following permission:
+
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`
+
+---
+
+## Permissions
+
+To view and restore LTR backups, you need:
+
+- Subscription Owner role or
+- SQL Server Contributor role or
+- Custom role with the following permissions:
+
+   `Microsoft.Sql/locations/longTermRetentionBackups/read`
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionBackups/read`
+   `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/read`
+
+To delete LTR backups, you need to be a member of one of the following roles:
 
 - Subscription Owner role or
 - Custom role with the following permission:
@@ -60,11 +85,9 @@ For `Remove-AzSqlDatabaseLongTermRetentionBackup`, you need to have one of the f
 > [!NOTE]
 > The SQL Server Contributor role does not have permission to delete LTR backups.
 
-Azure role-based access control (RBAC) permissions could be granted in either *subscription* or *resource group* scope. However, to access LTR backups that belong to a dropped server, the permission must be granted in the *subscription* scope of that server.
+Azure role-based access control (RBAC) permissions could be granted in either *subscription* or *resource group* scope. However, to access LTR backups that belong to a dropped server, this permission must be granted in the *subscription* scope of that server:
 
    `Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases/longTermRetentionBackups/delete`
-
----
 
 ## Create long-term retention policies
 
@@ -170,7 +193,7 @@ View the backups that are retained for a specific database with an LTR policy, a
 1. When the restore job is completed, open the **SQL databases** page to view the newly restored database.
 
 > [!NOTE]
-> From here, you can connect to the restored database using SQL Server Management Studio to perform needed tasks, such as to [extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name](recovery-using-backups.md#point-in-time-restore).
+> From here, you can connect to the restored database using [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) to perform needed tasks, such as to [extract a bit of data from the restored database to copy into the existing database or to delete the existing database and rename the restored database to the existing database name](recovery-using-backups.md#point-in-time-restore).
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -303,8 +326,9 @@ Delete backups that are retained for a specific database with an LTR policy.
 
 # [Portal](#tab/portal)
 
-1. In the Azure portal, navigate to your server and then select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the **Available LTR backups** column. A pane appears with a list of the available LTR backups for the selected database.
-1. In the **Available LTR backups** pane that appears, review the available backups. Select a backup to delete. Select **Delete**. 
+1. In the Azure portal, navigate to the logical server of the Azure SQL Database. 
+1. Select **Backups**. To view the available LTR backups for a specific database, select **Manage** under the **Available LTR backups** column. A pane appears with a list of the available LTR backups for the selected database.
+1. In the **Available LTR backups** pane that appears, review the available backups. Select a backup to delete. Select **Delete**.
 
 # [Azure CLI](#tab/azure-cli)
 

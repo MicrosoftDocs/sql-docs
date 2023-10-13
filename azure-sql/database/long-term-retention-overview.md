@@ -90,3 +90,8 @@ Because database backups protect data from accidental corruption or deletion, th
 - [Business continuity overview for Azure SQL Managed Instance](../managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview.md?view=azuresql-mi&preserve-view=true)
 - [Automated backups in Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true)
 - [Automated backups in Azure SQL Managed Instance](../managed-instance/automated-backups-overview.md?view=azuresql-mi&preserve-view=true)
+
+For a tutorial on configuring and managing LTR backups, visit:
+
+- [Manage Azure SQL Database long-term backup retention](long-term-backup-retention-configure.md)
+- [Manage Azure SQL Managed Instance long-term backup retention](../managed-instance/long-term-backup-retention-configure.md)

@@ -51,7 +51,7 @@ SQL Managed Instance combines the best features that are available both in Azure
 
 | **PaaS benefits** | **Business continuity** |
 | --- | --- |
-|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [Hybrid Disaster recovery with failover (preview)](managed-instance-link-feature-overview.md) between SQL Managed Instance and SQL Server 2022. <br>Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
+|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [SQL Server disaster recovery to SQL Managed Instance](managed-instance-link-feature-overview.md). <br>Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
 |**Security and compliance** | **Management**|
 |Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Microsoft Entra authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Microsoft Entra server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows authentication for Microsoft Entra principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
 
@@ -88,6 +88,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     - [Native backup and restore](restore-sample-database-quickstart.md)
     - Configurable database file layout
     - Migrations at scale with [DMS](/azure/dms/tutorial-sql-server-managed-instance-online-ads)
+    - [Migrate with Managed Instance link](managed-instance-link-feature-overview.md)
     :::column-end:::
     :::column:::
     **Operational**
@@ -101,6 +102,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     - [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker)
     - [Transactional Replication](replication-transactional-overview.md)
     - [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
+    - [Disaster recovery with Managed Instance link](managed-instance-link-feature-overview.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -129,7 +131,7 @@ For a thorough list comparing compatible features between SQL Server and Azure S
 
 ### Key differences between SQL Server on-premises and SQL Managed Instance
 
-SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server may be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
+SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server might be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
 
 Some key differences:
 
@@ -206,6 +208,19 @@ Find more information about the differences between service tiers in [SQL Manage
 ## Management operations
 
 Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found in [Azure SQL Managed Instance management operations overview](management-operations-overview.md).
+
+## Managed Instance link 
+
+The [Managed Instance link](managed-instance-link-feature-overview.md) uses distributed availability group technology to synchronize databases between SQL Server and Azure SQL Managed Instance, unlocking a number of scenarios, such as: 
+
+- Using Azure services without migrating to the cloud 
+- Offloading read-only workloads to Azure 
+- Disaster recovery 
+- Migrating to Azure
+
+## License-free DR benefit 
+
+With Azure SQL Managed Instance, you can save on vCore licensing costs by designating a secondary replica for disaster recovery (DR) only. To learn more, review [License-free DR benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
 
 ## Advanced security and compliance
 

@@ -22,10 +22,10 @@ As general guideline, better performance can be obtained via the [.NET Core vers
 1. Unzip archive as directed on the download page.
 1. Open a command prompt and change directory (`cd`) to the SqlPackage folder.
 
-It is important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
+It's important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
 
 ### Substitute SqlPackage for the Import/Export Service
-If you have attempted to use the Import/Export Service to import or export your database, you may be interested in using SqlPackage to perform the same operation with more control on optional parameters and properties.
+If you have attempted to use the Import/Export Service to import or export your database, you might be interested in using SqlPackage to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
 
@@ -39,7 +39,7 @@ For Export, an example command is:
 ./SqlPackage /Action:Export /tf:<target-bacpac-file-path> /ssn:<full-source-server-name> /sdn:<source-database-name> /su:<source-server-username> /sp:<source-server-password> /df:<log-file>
 ```
 
-Alternative to username and password, [multi-factor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview) can be used to authenticate via Microsoft Entra authentication (formerly Azure Active Directory) with multi-factor authentication. Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`.
+Alternative to username and password, [multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview) can be used to authenticate via Microsoft Entra authentication (formerly Azure Active Directory) with multifactor authentication. Substitute the username and password parameters for `/ua:true` and `/tid:"yourdomain.onmicrosoft.com"`.
 
 ## Common issues
 
@@ -53,18 +53,18 @@ For issues related to timeouts, the following properties can be used to tune the
 
 ### Client resource consumption
 
-For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement may be large and is relative to the full size of the data to be exported.  Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
+For the export and extract commands, table data is passed to a temporary directory to buffer before being written to the bacpac/dacpac file. This storage requirement can be large and is relative to the full size of the data to be exported.  Specify an alternative temporary directory with the property `/p:TempDirectoryForTableData=<path>`.
 
-The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage may be significant.
+The schema model is compiled in memory, so for large database schemas the memory requirement on the client machine running SqlPackage can be significant.
 
 
 ### Low server resource consumption
 
-By default, SqlPackage sets the maximum server parallelism to 8.  If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter may improve performance.
+By default, SqlPackage sets the maximum server parallelism to 8.  If you note low server resource consumption, increasing the value of the `MaxParallelism` parameter can improve performance.
 
 ### Access token
 
-Using the `/AccessToken:` or `/at:` parameter enables token-based authentication for SqlPackage, however passing the token to the command can be tricky.  If you are parsing an access token object in PowerShell either explicitly pass the string value or wrap the reference to the token property in $().  For example:
+Using the `/AccessToken:` or `/at:` parameter enables token-based authentication for SqlPackage, however passing the token to the command can be tricky.  If you're parsing an access token object in PowerShell either explicitly pass the string value or wrap the reference to the token property in $().  For example:
 
 ```powershell
 $Account = Connect-AzAccount -ServicePrincipal -Tenant $Tenant -Credential $Credential
@@ -78,12 +78,12 @@ SqlPackage /at:$($AccessToken_Object.Token)
 
 ### Connection
 
-If SqlPackage is failing to connect, the server may not have encryption enabled or the configured certificate may not be issued from a trusted certificate authority (such as a self-signed certificate).  You can change the SqlPackage command to either connect without encryption or to trust the server certificate.  The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
+If SqlPackage is failing to connect, the server might not have encryption enabled or the configured certificate might not be issued from a trusted certificate authority (such as a self-signed certificate).  You can change the SqlPackage command to either connect without encryption or to trust the server certificate.  The [best practice](../../relational-databases/security/securing-sql-server.md) is to ensure that a trusted encrypted connection to the server can be established.
 
 - Connect without encryption: /SourceEncryptConnection=False or /TargetEncryptConnection=False
 - Trust server certificate: /SourceTrustServerCertificate=True or /TargetTrustServerCertificate=True
 
-You may see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters may require changes to connect to the server:
+You might see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters could require changes to connect to the server:
 
 ```output
 The settings for connection encryption or server certificate trust may lead to connection failure if the server is not properly configured.
@@ -105,23 +105,23 @@ ALTER TABLE [HumanResources].[Department]
     ADD CONSTRAINT [DF_Department_ModifiedDate_] DEFAULT ('') FOR [ModifiedDate];
 ```
 
-These are the causes and solutions to work around this error:
+Here are the causes and solutions to work around this error:
 
-1. Verify that the destination you are importing into is an empty database.
-1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) as well as an explicitly named constraint, you may have an issue where a constraint with the same name is attempted to be created twice. It is recommended to use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
+1. Verify that the destination you're importing into is an empty database.
+1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) and an explicitly named constraint, you might have an issue where a constraint with the same name is attempted to be created twice. It's recommended to use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
 1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of .bacpac corruption.
 
 ## Diagnostics
 Logs are essential to troubleshooting. Capture the diagnostic logs to a file with the `/DiagnosticsFile:<filename>` parameter.
 
-Additional performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage.  To set this environment variable in PowerShell, use the following command:
+More performance-related trace data can be logged by setting the environment variable `DACFX_PERF_TRACE=true` before running SqlPackage.  To set this environment variable in PowerShell, use the following command:
 
 ``` powershell
 Set-Item -Path Env:DACFX_PERF_TRACE -Value true
 ```
 
 ## Import action tips
-For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` may improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage Import](sqlpackage-import.md) operation.
+For imports that contain large tables or tables with many indexes, the use of `/p:RebuildIndexesOfflineForDataPhase=True` or `/p:DisableIndexesForDataPhase=False` can improve performance. These properties modify the index rebuild operation to occur offline or not occur, respectively. Those and other properties are available to tune the [SqlPackage Import](sqlpackage-import.md) operation.
 
 ## Export action tips
 A common cause of performance degradation during export is unresolved object references, which causes SqlPackage to attempt to resolve the object multiple times. For example, a view is defined that references a table and the table no longer exists in the database. If unresolved references appear in the export log, consider correcting the schema of the database to improve the export performance.
@@ -137,7 +137,7 @@ To obtain the database schema and data while skipping the schema validation, per
 The following tips are specific to running import or export against Azure SQL Database from an Azure virtual machine (VM):
 
 - Use Business Critical or Premium tier database for best performance.
-- Use SSD storage on the VM and ensure there is enough room to unzip the bacpac.
+- Use SSD storage on the VM and ensure there's enough room to unzip the bacpac.
 - Execute SqlPackage from a VM in the same region as the database.
 - Enable accelerated networking in the VM.
 

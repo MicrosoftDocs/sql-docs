@@ -4,11 +4,10 @@ description: This article describes how the SQL Server IaaS Agent extension help
 author: ebruersan
 ms.author: ebrue
 ms.reviewer: mathoma
-ms.date: 08/23/2023
+ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: conceptual
-ms.custom:
 tags: azure-resource-manager
 ---
 # Automate management with the Windows SQL Server IaaS Agent extension
@@ -62,8 +61,6 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    $ az sql vm list --query "[?sqlServerLicenseType=='AHUB']"
    ```
    ---
-
-
 
 Enable [auto upgrade](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
 
@@ -210,14 +207,12 @@ When using SQL Server on Azure VMs and the SQL IaaS Agent extension, consider th
 
 - **In-region data residency**: SQL Server on Azure VMs and the SQL IaaS Agent extension don't move or store customer data out of the region in which the VMs are deployed.
 
+## Related content
 
- 
-## Next steps
-
-- To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). For problem resolution, read [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
-
-To learn more, review the following articles:
-
+- [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md)
+- [Single VMs](sql-agent-extension-manually-register-single-vm.md)
+- [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md)
+- [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md)
 - [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 - [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
 - [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)

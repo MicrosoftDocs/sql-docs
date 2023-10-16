@@ -4,11 +4,12 @@ description: This detailed guide explains available configuration options when d
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 08/23/2023
+ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: deployment
 ms.topic: how-to
-ms.custom: contperf-fy22q1-portal
+ms.custom:
+  - contperf-fy22q1-portal
 tags: azure-resource-manager
 ---
 # Provision SQL Server on Azure VM (Azure portal)
@@ -185,7 +186,7 @@ Under **Log storage**, you can choose to use the same drive as the data drive fo
 Configure your `tempdb` database settings under **TempDb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB.
 
 - Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
-- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension will manage the folder and permissions needed upon re-provisioning.
+- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension will manage the folder and permissions needed upon re-provisioning. 
 
 :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png" alt-text="Screenshot that shows where you can configure the tempdb storage for your SQL VM.":::
 
@@ -279,7 +280,6 @@ The following sections show how to connect over the internet to your SQL Server 
 
 SQL Server images from Azure Marketplace install the SQL Server binaries to the C drive. It is not currently possible to change this during deployment. The only available workaround is to manually uninstall SQL Server from within the VM, then reinstall SQL Server and choose a different location for the binary files during the installation process. 
 
+## Related content
 
-## Next steps
-
-- For other information about using SQL Server in Azure, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md) and the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
+For other information about using SQL Server in Azure, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md) and the [Frequently Asked Questions](frequently-asked-questions-faq.yml).

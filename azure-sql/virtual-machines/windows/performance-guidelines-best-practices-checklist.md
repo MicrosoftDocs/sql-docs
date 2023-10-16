@@ -108,16 +108,13 @@ The checklist in this section covers the [HADR best practices](hadr-cluster-best
 
 [!INCLUDE [HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
 
-## Next steps
-
-To learn more, see the other articles in this best practices series:
+## Related content
 
 - [VM size](performance-guidelines-best-practices-vm-size.md)
 - [Storage](performance-guidelines-best-practices-storage.md)
 - [Security](security-considerations-best-practices.md)
 - [HADR settings](hadr-cluster-best-practices.md)
 - [Collect baseline](performance-guidelines-best-practices-collect-baseline.md)
-
-- Consider enabling [SQL Assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
-
-- Review other SQL Server Virtual Machine articles at [SQL Server on Azure Virtual Machines Overview](sql-server-on-azure-vm-iaas-what-is-overview.md). If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
+- [SQL Assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md)
+- [SQL Server on Azure Virtual Machines Overview](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [Frequently Asked Questions](frequently-asked-questions-faq.yml)

@@ -18,7 +18,6 @@ This article teaches you how to configure your storage for your SQL Server on Az
 
 SQL Server VMs deployed through marketplace images automatically follow default [storage best practices](performance-guidelines-best-practices-storage.md) which can be modified during deployment. Some of these configuration settings can be changed after deployment.
 
-
 ## Prerequisites
 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
@@ -46,7 +45,7 @@ The disk configuration is completely customizable so that you can configure the 
 Configure your `tempdb` database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB.
 
 - Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
-- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension manages the folders and permissions needed upon re-provisioning.
+- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension manages the folders and permissions needed upon re-provisioning. This does not require that you created the SQL virtual machine with an image from the Azure Marketplace.
 
 ![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
 

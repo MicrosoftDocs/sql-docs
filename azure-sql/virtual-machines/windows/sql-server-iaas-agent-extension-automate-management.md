@@ -82,7 +82,7 @@ The following table details the benefits available through the SQL IaaS Agent ex
 
 By default, the SQL IaaS Agent extension uses the least privilege mode permission model. The least privilege permission model grants the minimum permissions required for each feature that you enable. Each feature that you use is assigned a custom role in SQL Server, and the custom role is only granted permissions that are required to perform actions related to the feature.
 
-SQL Server VMs deployed prior to October 2022 use the older sysadmin model where the SQL IaaS Agent extension takes sysadmin rights by default. If you have a SQL Server VM using this older permission model, you can enable the least privilege permissions model in the Azure portal. 
+SQL Server VMs deployed prior to October 2022 use the older sysadmin model where the SQL IaaS Agent extension takes sysadmin rights by default. For SQL Server VMs provisioned before October 2022, you can enable the least privilege permissions model by going to your [SQL virtual machines resource](manage-sql-vm-portal.md), choosing **Security Configuration** under **Security** and then checking the box next to **Enable least privilege mode**.
 
 To enable the least privilege permissions model, go to your [SQL virtual machines resource](manage-sql-vm-portal.md), choose **Security Configuration** under **Security** and then check the box next to **Enable least privilege mode**: 
 
@@ -209,10 +209,10 @@ When using SQL Server on Azure VMs and the SQL IaaS Agent extension, consider th
 
 ## Related content
 
-- [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md)
-- [Single VMs](sql-agent-extension-manually-register-single-vm.md)
-- [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md)
-- [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md)
+To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). For problem resolution, read [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+
+To learn more, review the following articles:
+
 - [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
 - [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
 - [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)

@@ -15,7 +15,7 @@ tags: azure-service-management
 ---
 # Checklist: Best practices for SQL Server on Azure VMs
 
-[!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
+[!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article provides a quick checklist as a series of best practices and guidelines to optimize performance of your SQL Server on Azure Virtual Machines (VMs).
 
@@ -44,19 +44,19 @@ There's typically a trade-off between optimizing for costs and optimizing for pe
 
 The checklist in this section covers the [VM size best practices](performance-guidelines-best-practices-vm-size.md) for SQL Server on Azure VMs.
 
-[!INCLUDE[vm size best practices](../../includes/virtual-machines-best-practices-vm-size.md)]
+[!INCLUDE [vm size best practices](../../includes/virtual-machines-best-practices-vm-size.md)]
 
 ## Storage
 
 The checklist in this section covers the [storage best practices](performance-guidelines-best-practices-storage.md) for SQL Server on Azure VMs.
 
-[!INCLUDE[storage best practices](../../includes/virtual-machines-best-practices-storage.md)]
+[!INCLUDE [storage best practices](../../includes/virtual-machines-best-practices-storage.md)]
 
 ## Security
 
 The checklist in this section covers the [security best practices](security-considerations-best-practices.md) for SQL Server on Azure VMs.
 
-[!INCLUDE[security best practices](../../includes/virtual-machines-best-practices-security.md)]
+[!INCLUDE [security best practices](../../includes/virtual-machines-best-practices-security.md)]
 
 
 ## SQL Server features
@@ -92,27 +92,21 @@ The following is a quick checklist of best practices for SQL Server configuratio
 The following is a quick checklist of best practices for Azure-specific guidance when running your SQL Server on Azure VM:
 
 - Register with [the SQL IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md) to unlock a number of [feature benefits](sql-server-iaas-agent-extension-automate-management.md#feature-benefits).
-- Leverage the best [backup and restore strategy](backup-restore.md#decision-matrix) for your SQL Server workload.
+- Use the best [backup and restore strategy](backup-restore.md#decision-matrix) for your SQL Server workload.
 - Ensure [Accelerated Networking is enabled](/azure/virtual-network/create-vm-accelerated-networking-cli#portal-creation) on the virtual machine.
-- Leverage [Microsoft Defender for Cloud](/azure/security-center/index) to improve the overall security posture of your virtual machine deployment.
-- Leverage [Microsoft Defender for Cloud](/azure/security-center/azure-defender), integrated with [Microsoft Defender for Cloud](https://azure.microsoft.com/services/security-center/), for specific [SQL Server VM coverage](/azure/security-center/defender-for-sql-introduction) including vulnerability assessments, and just-in-time access, which reduces the attack service while allowing legitimate users to access virtual machines when necessary. To learn more, see [vulnerability assessments](/azure/security-center/defender-for-sql-on-machines-vulnerability-assessment), [enable vulnerability assessments for SQL Server VMs](/azure/security-center/defender-for-sql-on-machines-vulnerability-assessment) and [just-in-time access](/azure/security-center/just-in-time-explained).
-- Leverage [Azure Advisor](/azure/advisor/advisor-overview) to address [performance](/azure/advisor/advisor-performance-recommendations), [cost](/azure/advisor/advisor-cost-recommendations), [reliability](/azure/advisor/advisor-high-availability-recommendations), [operational excellence](/azure/advisor/advisor-operational-excellence-recommendations), and [security recommendations](/azure/advisor/advisor-security-recommendations).
-- Leverage [Azure Monitor](/azure/azure-monitor/vm/monitor-virtual-machine) to collect, analyze, and act on telemetry data from your SQL Server environment. This includes identifying infrastructure issues with [VM insights](/azure/azure-monitor/vm/vminsights-overview) and monitoring data with [Log Analytics](/azure/azure-monitor/logs/log-query-overview) for deeper diagnostics.
+- Use [Microsoft Defender for Cloud](/azure/security-center/index) to improve the overall security posture of your virtual machine deployment.
+- Use [Microsoft Defender for Cloud](/azure/security-center/azure-defender), integrated with [Microsoft Defender for Cloud](https://azure.microsoft.com/services/security-center/), for specific [SQL Server VM coverage](/azure/security-center/defender-for-sql-introduction) including vulnerability assessments, and just-in-time access, which reduces the attack service while allowing legitimate users to access virtual machines when necessary. To learn more, see [vulnerability assessments](/azure/security-center/defender-for-sql-on-machines-vulnerability-assessment), [enable vulnerability assessments for SQL Server VMs](/azure/security-center/defender-for-sql-on-machines-vulnerability-assessment) and [just-in-time access](/azure/security-center/just-in-time-explained).
+- Use [Azure Advisor](/azure/advisor/advisor-overview) to address [performance](/azure/advisor/advisor-performance-recommendations), [cost](/azure/advisor/advisor-cost-recommendations), [reliability](/azure/advisor/advisor-high-availability-recommendations), [operational excellence](/azure/advisor/advisor-operational-excellence-recommendations), and [security recommendations](/azure/advisor/advisor-security-recommendations).
+- Use [Azure Monitor](/azure/azure-monitor/vm/monitor-virtual-machine) to collect, analyze, and act on telemetry data from your SQL Server environment. This includes identifying infrastructure issues with [VM insights](/azure/azure-monitor/vm/vminsights-overview) and monitoring data with [Log Analytics](/azure/azure-monitor/logs/log-query-overview) for deeper diagnostics.
 - Enable [Autoshutdown](/azure/automation/automation-solution-vm-management) for development and test environments.
 - Implement a high availability and disaster recovery (HADR) solution that meets  your business continuity SLAs, see the [HADR options](business-continuity-high-availability-disaster-recovery-hadr-overview.md#deployment-architectures) options available for SQL Server on Azure VMs.
 - Use the Azure portal (support + troubleshooting) to evaluate [resource health](/azure/service-health/resource-health-overview) and history; submit new support requests when needed.
-
-
 
 ## HADR configuration
 
 The checklist in this section covers the [HADR best practices](hadr-cluster-best-practices.md) for SQL Server on Azure VMs.
 
-[!INCLUDE[HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
-
-
-
-
+[!INCLUDE [HADR best practices](../../includes/virtual-machines-best-practices-hadr.md)]
 
 ## Next steps
 
@@ -124,6 +118,6 @@ To learn more, see the other articles in this best practices series:
 - [HADR settings](hadr-cluster-best-practices.md)
 - [Collect baseline](performance-guidelines-best-practices-collect-baseline.md)
 
-Consider enabling [SQL Assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
+- Consider enabling [SQL Assessment for SQL Server on Azure VMs](sql-assessment-for-sql-vm.md).
 
-Review other SQL Server Virtual Machine articles at [SQL Server on Azure Virtual Machines Overview](sql-server-on-azure-vm-iaas-what-is-overview.md). If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
+- Review other SQL Server Virtual Machine articles at [SQL Server on Azure Virtual Machines Overview](sql-server-on-azure-vm-iaas-what-is-overview.md). If you have questions about SQL Server virtual machines, see the [Frequently Asked Questions](frequently-asked-questions-faq.yml).

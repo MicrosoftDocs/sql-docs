@@ -12,7 +12,7 @@ ms.custom:
 tags: azure-resource-manager
 ---
 # Automate management with the Windows SQL Server IaaS Agent extension
-[!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
+[!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!div class="op_single_selector"]
 > * [Windows](sql-server-iaas-agent-extension-automate-management.md)
@@ -63,6 +63,8 @@ The SQL Server IaaS Agent extension allows for integration with the Azure portal
    ```
    ---
 
+
+
 Enable [auto upgrade](manage-sql-vm-portal.md#sql-iaas-agent-extension-settings) to ensure you're getting the latest updates to the extension each month. 
 
 ## Management modes
@@ -94,7 +96,7 @@ The following table defines the permissions and custom roles used by each featur
 |Feature  |Permissions  |Custom role (Server / DB)  |
 |---------|---------|---------|
 |[SQL best practices assessment](sql-assessment-for-sql-vm.md) | Server permission - CONTROL SERVER | SqlIaaSExtension_Assessment   |
-|[Automated backups](automated-backup.md) |  Server permission - CONTROL SERVER  </br> Database permission - `db_ddladmin` on `master`,  `db_backupoperator` on `msdb` | SqlIaaSExtension_AutoBackup |
+|[Automated backups](automated-backup.md) |  Server permission - CONTROL SERVER  <br /> Database permission - `db_ddladmin` on `master`,  `db_backupoperator` on `msdb` | SqlIaaSExtension_AutoBackup |
 |[Azure Backup Service](/azure/backup/backup-overview) | sysadmin | |
 |[Credential management](azure-key-vault-integration-configure.md)  | Server permission - CONTROL SERVER|SqlIaaSExtension_CredentialMgmt |
 |[Availability group portal management](manage-sql-vm-portal.md#high-availability-preview) |sysadmin| |
@@ -146,7 +148,7 @@ Alternatively, to use a named instance with an Azure Marketplace SQL Server imag
    1. Restart the virtual machine. 
    1. [Register the VM with the SQL IaaS Agent Extension](sql-agent-extension-manually-register-single-vm.md#register-with-extension). 
 
-### Failover Clustered Instance support 
+### Failover Clustered Instance support
 
 Registering your SQL Server Failover Clustered Instance (FCI) is supported with limited functionality. Due to the limited functionality, SQL Server FCIs registered with the extension do not support features that require the agent, such as automated backup, patching, and advanced portal management. 
 
@@ -163,7 +165,7 @@ Verify the extension is installed in the Azure portal.
 
 Go to your **Virtual machine** resource in the Azure portal (not the *SQL virtual machines* resource, but the resource for your VM). Select **Extensions** under **Settings**.  You should see the **SqlIaasExtension** extension listed, as in the following example: 
 
-![Status of the SQL Server IaaS Agent extension in the Azure portal](./media/sql-server-iaas-agent-extension-automate-management/azure-rm-sql-server-iaas-agent-portal.png)
+:::image type="content" source="./media/sql-server-iaas-agent-extension-automate-management/azure-rm-sql-server-iaas-agent-portal.png" alt-text="Screenshot from the Azure portal of the status of the SQL Server IaaS Agent extension.":::
 
 ### [PowerShell](#tab/azure-powershell)
 
@@ -212,11 +214,11 @@ When using SQL Server on Azure VMs and the SQL IaaS Agent extension, consider th
  
 ## Next steps
 
-To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). For problem resolution, read [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
+- To install the SQL Server IaaS extension to SQL Server on Azure VMs, see the articles for [Automatic installation](sql-agent-extension-automatic-registration-all-vms.md), [Single VMs](sql-agent-extension-manually-register-single-vm.md), or [VMs in bulk](sql-agent-extension-manually-register-vms-bulk.md). For problem resolution, read [Troubleshoot known issues with the extension](sql-agent-extension-troubleshoot-known-issues.md).
 
 To learn more, review the following articles:
 
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
-* [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)
+- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on a Azure VMs](../windows/pricing-guidance.md)
+- [What's new for SQL Server on Azure VMs](../windows/doc-changes-updates-release-notes-whats-new.md)

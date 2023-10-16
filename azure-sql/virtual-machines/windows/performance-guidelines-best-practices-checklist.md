@@ -4,7 +4,7 @@ description: Provides a quick checklist to review your best practices and guidel
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma, randolphwest
-ms.date: 10/06/2023
+ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: performance
 ms.topic: conceptual
@@ -80,6 +80,7 @@ The following is a quick checklist of best practices for SQL Server configuratio
 - Enable [automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning) on mission critical application databases.
 - Ensure that all [tempdb best practices](/sql/relational-databases/databases/tempdb-database#optimizing-tempdb-performance-in-sql-server) are followed.
 - [Use the recommended number of files](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention#resolution), using multiple `tempdb` data files starting with one file per core, up to eight files.
+- If available, configure the `tempdb` [data and log files on the D: local SSD volume](manage-sql-vm-portal.md#storage). The SQL IaaS Agent extension will handle the folder and permissions needed upon re-provisioning.
 - Schedule SQL Server Agent jobs to run [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#a-checking-both-the-current-and-another-database), [index reorganize](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#reorganize-an-index), [index rebuild](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes#rebuild-an-index), and [update statistics](/sql/t-sql/statements/update-statistics-transact-sql#examples) jobs.
 - Monitor and manage the health and size of the SQL Server [transaction log file](/sql/relational-databases/logs/manage-the-size-of-the-transaction-log-file#Recommendations).
 - Take advantage of any new [SQL Server features](/sql/sql-server/what-s-new-in-sql-server-ver15) available for the version being used.

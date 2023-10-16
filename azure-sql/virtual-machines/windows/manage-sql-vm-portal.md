@@ -4,7 +4,7 @@ description: Learn how to manage SQL Server on Azure VMs in the Azure portal by 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 09/25/2023
+ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -69,19 +69,21 @@ Changing the license and edition metadata in the Azure portal is only supported 
 
 ## Storage 
 
-Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. Review [storage configuration](storage-configuration.md) to learn more. 
+Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. Review [storage configuration](storage-configuration.md) to learn more.
+
+If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension manages the folder and permissions needed upon re-provisioning.
 
 For example, you can extend your storage: 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-storage-configuration.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.":::
 
-It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
+It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page.
 
 Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration and implement your settings the next time your SQL Server service starts: 
 
 :::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page. ":::
 
-Restart your SQL Server service to apply your changes. 
+Restart your SQL Server service to apply your changes.
 
 ## Updates
 

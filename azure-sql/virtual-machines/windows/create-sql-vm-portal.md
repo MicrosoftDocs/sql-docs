@@ -22,7 +22,6 @@ This article provides a detailed description of the available configuration opti
 
 An Azure subscription. Create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) to get started. 
 
-
 ## <a id="select"></a> Choose Marketplace image
 
 Use the Azure Marketplace to choose one of several pre-configured images from the virtual machine gallery. 
@@ -36,7 +35,6 @@ To choose an image, follow these steps:
 1. Select **Azure SQL** in the left-hand menu of the Azure portal. If **Azure SQL** is not in the list, select **All services**, then type *Azure SQL* in the search box. You can select the star next to **Azure SQL** to save it as a favorite to pin it to the left-hand navigation. 
 
 1. Select **+ Create** to open the **Select SQL deployment option** page. Select the **Image** dropdown list and then type **2019** in the SQL Server image search box. Choose a SQL Server image, such as **Free SQL Server License: SQL 2019 on Windows Server 2019** from the dropdown list.  Choose **Show details** for additional information about the image. 
-
 
    :::image type="content" source="./media/create-sql-vm-portal/select-sql-vm-image-portal.png" alt-text="Screenshot from the Azure portal of the select a SQL VM image deployment option.":::
 
@@ -187,11 +185,11 @@ Under **Log storage**, you can choose to use the same drive as the data drive fo
 Configure your `tempdb` database settings under **TempDb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB.
 
 - Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
-- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension manages the folder and permissions needed upon re-provisioning.
+- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension will manage the folder and permissions needed upon re-provisioning.
 
 :::image type="content" source="./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png" alt-text="Screenshot that shows where you can configure the tempdb storage for your SQL VM.":::
 
-Select **OK** to save your storage configuration settings. 
+Select **OK** to save your storage configuration settings.
 
 ### SQL instance settings
 

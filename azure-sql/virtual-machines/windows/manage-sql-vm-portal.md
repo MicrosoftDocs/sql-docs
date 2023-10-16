@@ -79,9 +79,9 @@ For example, you can extend your storage:
 
 It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page.
 
-Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration and implement your settings the next time your SQL Server service starts: 
+Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration and implement your settings the next time your SQL Server service starts. This does not require that you created the Azure SQL VM with an image from the Azure Marketplace.  
 
-:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page. ":::
+:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page.":::
 
 Restart your SQL Server service to apply your changes.
 

@@ -196,7 +196,7 @@ Select **OK** to save your storage configuration settings.
 
 Select **Change SQL instance settings** to modify SQL Server configuration options, such as the server collation, max degree of parallelism (MAXDOP), SQL Server min and max memory limits, and whether you want to enable the **optimize for ad hoc workloads** option. 
 
-:::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot that shows where you can configure the SQL Server settings for your SQL VM instance."::: .
+:::image type="content" source="./media/create-sql-vm-portal/sql-instance-settings.png" alt-text="Screenshot that shows where you can configure the SQL Server settings for your SQL VM instance.":::
 
 ### SQL Server license
 

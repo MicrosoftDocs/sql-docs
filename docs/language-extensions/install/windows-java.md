@@ -64,7 +64,7 @@ Java 11 is currently the supported version on Windows. The Java Runtime Environm
 
 There are two ways to install and use Java with SQL Server 2019:
 
-1. Use the default Java runtime which is included with the SQL Server installation.
+1. Use the default Java runtime, which is included with the SQL Server installation.
 
     The following table lists the default versions of Java that are included in the setup:
 
@@ -111,7 +111,7 @@ For local installations, you must run Setup as an administrator. If you install 
     
     :::image type="content" source="../media/windows-java/2019/sql-install-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
 
-    1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
+    1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page is displayed.
 
         Install the default Java included with this installation. The option to **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
 
@@ -149,7 +149,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`. 
     
-    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the path in the previous example. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
 ::: moniker-end
 
@@ -182,7 +182,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 5. Register language extension. Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
-    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file. If you have not installed the default Java from SQL Server Setup, please ensure that the JRE version matches the one that is downloaded from GitHub. If you prefer to use your own installed JRE version, you might need to compile `java-lang-extension` from GitHub source code.
+    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file. If you have not installed the default Java from SQL Server Setup, ensure that the JRE version matches the one that is downloaded from GitHub. If you prefer to use your own installed JRE version, you might need to compile `java-lang-extension` from GitHub source code.
     
     1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
     

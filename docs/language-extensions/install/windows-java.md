@@ -2,13 +2,15 @@
 title: Install Java Language Extension on Windows
 titleSuffix: SQL Server Language Extensions
 description: Learn how to install the SQL Server Java Language Extension feature on Windows.
-author: rothja
-ms.author: jroth
-ms.date: 11/11/2020
+author: WilliamDassafMSFT
+ms.author: wiassaf
+ms.reviewer: monamaki
+ms.date: 10/17/2023
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
-ms.custom: intro-installation
+ms.custom:
+  - intro-installation
 monikerRange: ">=sql-server-ver15"
 ---
 
@@ -26,7 +28,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 ## Pre-install checklist
 
 > [!NOTE]
-> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown list to choose the appropriate version of SQL Server.
 
 + SQL Server Setup is required if you want to install support for the Java Language Extension.
 
@@ -48,7 +50,7 @@ Learn how to install the [Java Language Extension](../java-overview.md) componen
 ## Java JRE or JDK
 
 > [!NOTE]
-> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown to choose the appropriate version of SQL Server.
+> Feature capabilities and installation options vary between versions of SQL Server. Use the version selector dropdown list to choose the appropriate version of SQL Server.
 
 ::: moniker range=">=sql-server-ver16"
 
@@ -62,25 +64,32 @@ Java 11 is currently the supported version on Windows. The Java Runtime Environm
 
 There are two ways to install and use Java with SQL Server 2019:
 
-1. Use the default Java runtime, Zulu Open JRE version 11.0.3. This runtime is supported and included with the SQL Server installation.
+1. Use the default Java runtime, which is included with the SQL Server installation.
+
+    The following table lists the default versions of Java that are included in the setup:
+
+    | SQL Server version    | Default Java version |
+    | :-- | :-- |
+    |SQL Server 2019 CU23 and later versions | Microsoft Build of OpenJDK 11.0.19|
+    |SQL Server 2019 RTM - CU22 | Azul Zulu JRE 11.0.3|
 
 1. Use your preferred Java distribution instead of the default Java runtime.
 
     Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
 > [!NOTE]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for SQL Server 2019 is Java 11.
+> Given that Java is backward compatible, earlier versions might work, but the supported and tested version for SQL Server 2019 is Java 11.
 
 ::: moniker-end
 
 
 ## Get the installation media
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
+[!INCLUDE [GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## Run Setup
 
-For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
+For local installations, you must run Setup as an administrator. If you install [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
 1. Start the setup wizard for SQL Server.
   
@@ -94,20 +103,20 @@ For local installations, you must run Setup as an administrator. If you install 
     
     **Machine Learning Services and Language Extensions**: This option installs the Language Extensions component that support Java code execution.
     
-    If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
+    - If you want to install the default Java runtime, select both **Machine Learning Services and Language Extensions** and **Java**.
     
-    If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
+    - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select **Java**.
     
-    If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+    - If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
     
     :::image type="content" source="../media/windows-java/2019/sql-install-feature-selection.png" alt-text="Screenshot of the Feature options for Language Extensions.":::
 
-    1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
+    1. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page is displayed.
 
-        Select the **Install Open JRE 11.0.3 included with this installation**. The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
-        
+        Install the default Java included with this installation. The option to **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+
         :::image type="content" source="../media/windows-java/2019/sql-install-openjdk.png" alt-text="Screenshot of the Java install location.":::
-            
+
 ::: moniker-end
 ::: moniker range=">=sql-server-ver16"
 
@@ -140,7 +149,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`. 
     
-    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the path in the previous example. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
 ::: moniker-end
 
@@ -173,11 +182,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 5. Register language extension. Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
-    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file.
+    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file. If you have not installed the default Java from SQL Server Setup, ensure that the JRE version matches the one that is downloaded from GitHub. If you prefer to use your own installed JRE version, you might need to compile `java-lang-extension` from GitHub source code.
     
-    2. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
+    1. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
     
-    3. Modify the path in this statement to reflect the location of the downloaded language extension zip file (java-lang-extension-windows-release.zip) and the location your custom Java installation (`%ProgramFiles%\Python`).
+    1. Modify the path in this statement to reflect the location of the downloaded language extension zip file (java-lang-extension-windows-release.zip) and the location your custom Java installation (`%ProgramFiles%\Python`).
     
     ```sql
     CREATE EXTERNAL LANGUAGE [Java]
@@ -191,7 +200,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-    2. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
+    1. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
 
 ::: moniker-end
 
@@ -199,8 +208,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ## Grant access to non-default JRE folder
 
-::: moniker range=">=sql-server-ver15"
-If you did not install the default Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps.
+::: moniker range="=sql-server-ver15"
+If you did not install the default Java that was included with SQL Server and did not install the Java under `/Program Files`, you need to perform the following steps.
+::: moniker-end
+::: moniker range=">=sql-server-ver16"
+If you did not install the Java under program files, you need to perform the following steps.
 ::: moniker-end
 
 Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
@@ -215,7 +227,7 @@ Run the **icacls** commands from an *elevated* line to grant access to the **SQL
     
     You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
-2. Give AppContainer permissions. This command grants permissions to the computer SID **S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+1. Give AppContainer permissions. This command grants permissions to the computer SID **S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
     ```cmd
     icacls "<PATH to JRE>" /grant *S-1-15-2-1:(OI)(CI)RX /T
@@ -232,7 +244,7 @@ You can restart the service using the right-click **Restart** command for the in
 
 ## Enable script execution
 
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
+1. Open [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Connect to the instance where you installed Language Extensions, select **New Query** to open a query window, and run the following command:
 
     ```sql
     EXEC sp_configure;
@@ -280,7 +292,7 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** is now set to 1.
 
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
+1. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md).
 
 ## Additional configuration
 
@@ -312,9 +324,9 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Optimize the server for Java Language Extension
 
-The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for language extensions are sometimes restricted or throttled, particularly in memory-intensive operations.
+The default settings for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for language extensions are sometimes restricted or throttled, particularly in memory-intensive operations.
 
-To ensure that language extensions jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+To ensure that language extensions jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE [rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
 + To configure a resource pool for managing external resources, see [Create an external resource pool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
   
@@ -322,8 +334,9 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
   
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
 
-## Next steps
+## Next step
 
 Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following link:
 
-+ [Tutorial: Regular expressions with Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
+> [!div class="nextstepaction"]
+> [Tutorial: Regular expressions with Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

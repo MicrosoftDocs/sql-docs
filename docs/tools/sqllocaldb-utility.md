@@ -47,7 +47,7 @@ Creates a new of instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 
 
 Shares the specified private instance of **LocalDB** using the specified shared name. If the user SID or account name is omitted, it defaults to the current user.
 
-#### [ unshared | u ]
+#### [ unshare | u ]
 
 Stops the sharing of the specified shared instance of **LocalDB**.
 

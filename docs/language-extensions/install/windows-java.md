@@ -2,9 +2,10 @@
 title: Install Java Language Extension on Windows
 titleSuffix: SQL Server Language Extensions
 description: Learn how to install the SQL Server Java Language Extension feature on Windows.
-author: rothja
-ms.author: jroth
-ms.date: 11/11/2020
+author: WilliamDassafMSFT
+ms.author: wiassaf
+ms.reviewer: monamaki
+ms.date: 10/06/2023
 ms.service: sql
 ms.subservice: language-extensions
 ms.topic: how-to
@@ -173,7 +174,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 5. Register language extension. Follow these steps to download and register the Java language extension, which is used for the Java custom runtime.
     
-    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file.
+    1. Download the **java-lang-extension-windows-release.zip** file from [the Java language extension for SQL Server GitHub repo](https://github.com/microsoft/sql-server-language-extensions/releases). Download the latest Windows `java-lang-extension-windows.zip` file. If you have not installed the default Java from SQL Server Setup, please ensure that the JRE version matches the one that is downloaded from GitHub. If you prefer to use your own installed JRE version, you may need to compile `java-lang-extension` from GitHub source code.
     
     2. Use [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) to connect to your SQL Server instance and run the following T-SQL command to register the Java language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
     

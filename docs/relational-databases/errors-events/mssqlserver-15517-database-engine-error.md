@@ -206,12 +206,10 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
 1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
 
     ```output
-    /* 
     Owner_Name                                                                                     SID
     -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
     (1 row affected) 
-    */
     ```
 
 1. Try again to run the test stored procedure. Notice that it now runs successfully.

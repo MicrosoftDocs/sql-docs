@@ -65,7 +65,7 @@ You can use the following client tools to manage your Hyperscale databases in an
 
 - Azure PowerShell: [Az.Sql.3.11.0 or higher](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). PowerShell AzureRM.Sql isn't supported.
 - The Azure CLI: [Az version 2.40.0 or higher](/cli/azure/install-azure-cli).
-- Transact-SQL (T-SQL) starting with: [SQL Server Management Studio (SSMS) v18.12.1](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio v1.39.1](/sql/azure-data-studio/download-azure-data-studio).
+- Transact-SQL (T-SQL) starting with: [SQL Server Management Studio (SSMS) v18.12.1](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio v1.39.1](/azure-data-studio/download-azure-data-studio).
 
 ## Resource limits
 

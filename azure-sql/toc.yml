@@ -425,7 +425,7 @@
       - name: The Azure SQL DB emulator
         href: database/local-dev-experience-sql-database-emulator.md      
       - name: SQL Database Projects extension >> 
-        href: /sql/azure-data-studio/extensions/sql-database-project-extension
+        href: /azure-data-studio/extensions/sql-database-project-extension
       - name: The mssql extension >> 
         href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
 
@@ -619,7 +619,7 @@
       - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database
+          href: /azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
         - name: Azure portal query editor

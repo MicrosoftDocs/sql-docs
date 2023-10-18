@@ -140,7 +140,7 @@ $params = @{
 
 ### Transact-SQL
   
-  You can use the [Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) to execute T-SQL queries against your Azure SQL Database.
+  You can use the [Azure portal query editor](query-editor.md), [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), or [Azure Data Studio](/azure-data-studio/download-azure-data-studio) to execute T-SQL queries against your Azure SQL Database.
 
 1.  Open a new query window.
 

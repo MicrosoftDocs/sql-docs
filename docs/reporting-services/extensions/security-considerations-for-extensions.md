@@ -18,7 +18,7 @@ helpviewer_keywords:
   
  Before requesting permissions, you need to be aware of the resources and protected operations your extension code is planning to use, and you also need to know which permissions protect those resources and operations. In addition, you need to keep track of any resources accessed by any class library methods that are called by the extension components. For more information, see "Requesting Permissions" in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Developer's Guide.  
   
- Extensions deployed to a report server must run as fully trusted, meaning that your extension needs to be part of a code group that is granted the **FullTrust** permission set. This also means that your extension may have access to certain server resources and operations available through the CLR depending on the user that is being authenticated for a particular report. For more information about code groups and extensions, see [Code Access Security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
+ Extensions deployed to a report server must run as fully trusted, meaning that your extension needs to be part of a code group that is granted the **FullTrust** permission set. This also means that your extension may have access to certain server resources and operations available through the CLR depending on the user that is being authenticated for a particular report. For more information about code groups and extensions, see [Code access security in Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enforces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] security for all of its extensions.  
@@ -38,8 +38,9 @@ helpviewer_keywords:
 ## Initialization of extension assemblies  
  When extensions are first loaded into memory by the report server, they use the service account credentials, because some extension assemblies require specific permissions to access system resources, to read configuration files, and to load other, dependent assemblies. After an assembly has been loaded and initialized, however, all subsequent calls to extension assemblies use the credentials of the user account that is currently logged on.  
   
-## See also  
- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services extension library](../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Reporting Services extension library](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

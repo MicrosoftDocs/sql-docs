@@ -28,16 +28,16 @@ helpviewer_keywords:
  [Security considerations for extensions](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  Describes security issues related to developing and deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensions.  
   
- [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
+ [Implementing a data processing extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
  Describes the requirements and steps for implementing a data processing extension for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementing a Delivery Extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
+ [Implementing a delivery extension](../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)  
  Describes the requirements and steps for implementing a delivery extension for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementing a Rendering Extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
+ [Implementing a rendering extension](../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)  
  Contains an introduction to developing rendering extensions.  
   
- [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+ [Implementing a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
  Describes the requirements and steps for implementing a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] security extension.  
   
  [Reporting Services extension library](../../reporting-services/extensions/reporting-services-extension-library.md)  

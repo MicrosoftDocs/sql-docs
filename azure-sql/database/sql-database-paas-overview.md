@@ -214,7 +214,7 @@ SQL Database makes building and maintaining applications easier and more product
 |Tool|Description|
 |:---|:---|
 |[The Azure portal](https://portal.azure.com/)|A web-based application for managing all Azure services.|
-|[Azure Data Studio](/sql/azure-data-studio/)|A cross-platform database tool that runs on Windows, macOS, and Linux.|
+|[Azure Data Studio](/azure-data-studio/)|A cross-platform database tool that runs on Windows, macOS, and Linux.|
 |[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)|A free, downloadable client application for managing any SQL infrastructure, from SQL Server to SQL Database.|
 |[SQL Server Data Tools in Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt)|A development tool for SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.|
 |[Visual Studio Code](https://code.visualstudio.com/docs)|A free, downloadable, open-source code editor for Windows, macOS, and Linux. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying Microsoft SQL Server, Azure SQL Database, and Azure Synapse Analytics.|

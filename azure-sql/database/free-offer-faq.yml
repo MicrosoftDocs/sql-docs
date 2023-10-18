@@ -28,7 +28,7 @@ sections:
       - question: My vCore seconds are being used faster than I expected, how can I see what is using the vCore seconds?  
         answer: |
          - Review the Azure SQL Database serverless [auto-pause troubleshooting article](/azure/azure-sql/database/serverless-tier-overview?tabs=general-purpose#auto-pause-troubleshooting) for tips on saving vCore seconds.
-         - Disconnect querying tools such as [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
+         - Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
 
       - question: Can the serverless auto-pause setting be adjusted to less than 1 hour for the Azure SQL Database free offer?
         answer: |

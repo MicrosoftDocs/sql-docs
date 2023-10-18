@@ -68,7 +68,7 @@ To create and configure managed instances with [Azure CLI](/cli/azure), use the 
 
 ## Transact-SQL: Create and configure instance databases
 
-To create and configure instance databases after the managed instance is created, use the following T-SQL commands. You can issue these commands using the Azure portal, [SQL Server Management Studio](/sql/ssms/use-sql-server-management-studio), [Azure Data Studio](/sql/azure-data-studio/what-is), [Visual Studio Code](https://code.visualstudio.com/docs), or any other program that can connect to a server and pass Transact-SQL commands.
+To create and configure instance databases after the managed instance is created, use the following T-SQL commands. You can issue these commands using the Azure portal, [SQL Server Management Studio](/sql/ssms/use-sql-server-management-studio), [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), [Visual Studio Code](https://code.visualstudio.com/docs), or any other program that can connect to a server and pass Transact-SQL commands.
 
 > [!TIP]
 > For quickstarts showing you how to configure and connect to a managed instance using SQL Server Management Studio on Microsoft Windows, see [Quickstart: Configure Azure VM to connect to Azure SQL Managed Instance](connect-vm-instance-configure.md) and [Quickstart: Configure a point-to-site connection to Azure SQL Managed Instance from on-premises](point-to-site-p2s-configure.md).

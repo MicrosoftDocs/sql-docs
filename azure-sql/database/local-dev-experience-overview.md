@@ -34,7 +34,7 @@ A common example would be to push a project to a GitHub repository that leverage
 
 ## Visual Studio Code and Azure Data Studio extensions
 
-To use the Azure SQL Database local development experience, install the appropriate extension depending on whether you are using [Visual Studio Code](https://code.visualstudio.com/Docs) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+To use the Azure SQL Database local development experience, install the appropriate extension depending on whether you are using [Visual Studio Code](https://code.visualstudio.com/Docs) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 
 | Extension | Description | Visual Studio Code | Azure Data Studio |

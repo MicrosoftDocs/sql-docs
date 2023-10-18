@@ -20,7 +20,7 @@ Before you configure the local development environment for Azure SQL Database, m
 
 - Software requirements:
     - Currently supported on Windows 10 or later release, macOS Mojave or later release, and Linux (preferably Ubuntu 18.04 or later release)
-    - [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) or [VSCode](https://code.visualstudio.com/Docs)
+    - [Azure Data Studio](/azure-data-studio/download-azure-data-studio) or [VSCode](https://code.visualstudio.com/Docs)
 - Minimum hardware requirements:
     - 8 GB RAM
     - 10 GB available disk space
@@ -62,7 +62,7 @@ To install the extension:
 
 # [Azure Data Studio](#tab/ads)
 
-If you are using [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), install the [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode). The SQL Database Projects extension enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit a database schema to version control. You can also publish a database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service. You may publish an entire database, or incremental changes to a database.
+If you are using [Azure Data Studio](/azure-data-studio/download-azure-data-studio), install the [SQL Database Projects extension (Preview)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode). The SQL Database Projects extension enables you to capture an existing database schema and/or design new database objects using a declarative database design model. You can commit a database schema to version control. You can also publish a database schema to a database running in the Azure SQL Database emulator, or to a database running in the global Azure SQL Database service. You may publish an entire database, or incremental changes to a database.
 
 To install the SQL Database Projects extension:
 

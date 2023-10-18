@@ -96,7 +96,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Transact-SQL](#tab/t-sql)
 
-To migrate an existing database in Azure SQL Database to the Hyperscale service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+To migrate an existing database in Azure SQL Database to the Hyperscale service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 You must specify both the edition and service objective in the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current) statement.
 
@@ -261,7 +261,7 @@ You can [monitor operations for a Hyperscale database](#monitor-operations-for-a
 
 # [Transact-SQL](#tab/t-sql)
 
-To reverse migrate a Hyperscale database to the General Purpose service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) .
+To reverse migrate a Hyperscale database to the General Purpose service tier with Transact-SQL, first connect to the `master` database on your [logical SQL server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio) .
 
 You must specify both the edition and service objective in the [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current) statement.
 
@@ -333,7 +333,7 @@ Get-AzSqlDatabaseActivity -ResourceGroupName $resourceGroupName -ServerName $ser
 
 # [Transact-SQL](#tab/t-sql)
 
-To monitor operations for a Hyperscale database, first connect to the `master` database on your [logical server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio), or the client of your choice to run Transact-SQL commands.
+To monitor operations for a Hyperscale database, first connect to the `master` database on your [logical server](logical-servers.md) using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms), [Azure Data Studio](/azure-data-studio/download-azure-data-studio), or the client of your choice to run Transact-SQL commands.
 
 Query the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) Dynamic Management View to review information about recent operations performed on databases on your [logical server](logical-servers.md].
 
@@ -398,7 +398,7 @@ Review the **Edition** column to identify databases in the Hyperscale service ti
 
 # [Transact-SQL](#tab/t-sql)
 
-To review the service tiers of all Hyperscale databases on a [logical server](logical-servers.md) with Transact-SQL, first connect to the `master` database using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+To review the service tiers of all Hyperscale databases on a [logical server](logical-servers.md) with Transact-SQL, first connect to the `master` database using [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](/azure-data-studio/download-azure-data-studio).
 
 Query the [sys.database_service_objectives](/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database) system catalog view to review databases in the Hyperscale service tier:
 

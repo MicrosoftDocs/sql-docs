@@ -357,7 +357,7 @@ Remove-AzResourceGroup -Name $resourceGroupName
 [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages:
 
 - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-- [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
+- [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
 
 ## Next step
 

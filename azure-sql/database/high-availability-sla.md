@@ -39,7 +39,7 @@ There are three high availability architectural models:
 - **Hyperscale model** which uses a distributed system of highly available components such as compute nodes, page servers, log service, and persistent storage. Each component supporting a Hyperscale database provides its own redundancy and resiliency to failures. Compute nodes, page servers, and log service run on Azure Service Fabric, which controls health of each component and performs failovers to available healthy nodes as necessary. Persistent storage uses Azure Storage with its native high availability and redundancy capabilities. To learn more, see [Hyperscale architecture](hyperscale-architecture.md).
 
 
-Within each of the three availability models, SQL Database supports local redundancy and zonal redundancy options. Local redundancy provides resiliency against regional outages, while zonal redundancy improves resiliency further by protecting against outages of an availability zone within a region.
+Within each of the three availability models, SQL Database supports local redundancy and zonal redundancy options. Local redundancy provides resiliency within a datacenter, while zonal redundancy improves resiliency further by protecting against outages of an availability zone within a region.
 
 The following table shows the availability options based on service tiers: 
 
@@ -59,7 +59,7 @@ The following table shows the availability options based on service tiers:
 
 Locally redundant availability is based on storing your database to [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. LRS is the lowest-cost redundancy option and offers the least durability compared to other options.  If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account using LRS may be lost or unrecoverable. As such, to further protect your data when using the locally redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy). This does not apply to Hyperscale databases, where the same storage is used for both data files and backups. 
 
-Locally redundant availability is available to all databases in all service tiers. 
+Locally redundant availability is available to all databases in all service tiers and Recovery Point Objective (RPO) which indicates the amount of data loss is zero. 
 
 ### <a id="general-purpose-service-tier-zone-redundant-availability"></a> Basic, Standard and General Purpose service tiers 
 
@@ -105,7 +105,7 @@ For more information on high availability in Hyperscale, see [Database High Avai
 
 Zone-redundant availability is based on storing your database to [zone-redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage), which copies your data across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
-Zone-redundant availability is available to databases in the General Purpose, Premium, Business Critical and Hyperscale service tiers of the vCore purchasing model, and not the Basic and Standard service tiers of the DTU-based purchasing model. 
+Zone-redundant availability is available to databases in the General Purpose, Premium, Business Critical and Hyperscale service tiers of the vCore purchasing model, and not the Basic and Standard service tiers of the DTU-based purchasing model. Zone-redundant availability ensures Recovery Point Objective (RPO) which indicates the amount of data loss is zero.
 
 ### <a id="general-purpose-service-tier-zone-redundant-availability"></a> General Purpose service tier
 

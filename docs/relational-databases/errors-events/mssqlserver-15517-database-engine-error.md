@@ -91,145 +91,136 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
    - Query 1: Check the value of the `Owner_Name` value in sys.databases.
 
      ```sql
-        SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
-        FROM sys.databases
-        WHERE NAME = N'Demodb_15517';
+     SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
+     FROM sys.databases
+     WHERE NAME = N'Demodb_15517';
      ```
 
-    ```output
-     Database_Name                                                                                                                    owner_sid                                                                                 OwnerName
-     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-     Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                        login1
-     (1 row affected)
-    ```
+     ```output
+     Database_Name         owner_sid                               OwnerName
+     --------------------- -------------------------------------- ----------------------------
+     Demodb_15517          0xDB79ED7B6731CF4E8DC7DF02871E3E36      login1
+     ```
 
    - Query 2: Check the `Owner_Name` value in the `sys.database_principals` table within the demonstration database:
 
-    ```sql
-        SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
-        FROM Demodb_15517.sys.database_principals 
-        WHERE NAME = N'dbo'; 
-    ```
+     ```sql
+     SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
+     FROM Demodb_15517.sys.database_principals 
+     WHERE NAME = N'dbo'; 
+     ```
 
-    ```output
-       Owner_Name                                                                               SID
-       ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-       login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
-        (1 row affected)
-    ```
+     ```output
+     Owner_Name    SID
+     ------------- ------------------------------------------------ 
+     login1        0xDB79ED7B6731CF4E8DC7DF02871E3E36
+     ```
 
 1. Back up the demonstration database by using a query that resembles the following script:
 
-      ```sql
-        BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10 
-        GO 
-      ```
+   ```sql
+   BACKUP DATABASE [Demodb_15517] TO DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH NOFORMAT, NOINIT, NAME = N'Demodb_15517 Full backup', SKIP, EWIND, NOUNLOAD, STATS = 10 
+   GO
+   ```
 
 1. Drop the demonstration database and `login1`:
 
-      ```sql
-        DROP DATABASE demodb_15517
-        GO
-        DROP login login1
-        GO
-      ```
+   ```sql
+   DROP DATABASE demodb_15517
+   GO
+   DROP login login1
+   GO
+   ```
 
 1. Log in to SQL Server as `login2`.
 
 1. Restore the demonstration database from the backup by using a statement that resembles the following script:
 
-      ```sql
-        USE [master] 
-        RESTORE DATABASE [Demodb_15517] FROM   
-        DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH FILE = 1,   
-        MOVE N'Demodb_15517' TO N'C:\SQLBackups\Demodb_15517.mdf',   
-        MOVE N'Demodb_15517_log' TO N'C:\SQLBackups\\Demodb_155172_log.ldf',   
-        NOUNLOAD, STATS = 5 
-        GO 
-      ```
+   ```sql
+   USE [master] 
+   RESTORE DATABASE [Demodb_15517] FROM   
+   DISK = N'C:\SQLBackups\Demodb_15517.bak' WITH FILE = 1,   
+   MOVE N'Demodb_15517' TO N'C:\SQLBackups\Demodb_15517.mdf',   
+   MOVE N'Demodb_15517_log' TO N'C:\SQLBackups\\Demodb_155172_log.ldf',   
+   NOUNLOAD, STATS = 5 
+   GO 
+   ```
 
 1. Rerun Query 1 and Query 2.
 
 1. In Query 1, check the value of the `Owner_Name` value in `sys.databases`. The value now reflects `login2`.
 
-      ```sql
-        SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
-        FROM sys.databases 
-        WHERE NAME = N'Demodb_15517';
-      ```
-
-      ```output
-      Database_Name  owner_sid                                                                                OwnerName
-      ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
-        (1 row affected)
-      ```
-
-1. In Query 2, check the value of the `Owner_Name` value in the `sys.database_principals` table within the demonstration database. The value now reflects `NULL`.
-
-      ```sql
-        SELECT SUSER_SNAME(sid) AS Owner_Name, sid
-        FROM Demodb_15517.sys.database_principals
-        WHERE NAME = N'dbo';
-      ```
-
-      ```output
-        Owner_Name
-        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-        sid 
-        NULL                                                                                   0xDB79ED7B6731CF4E8DC7DF02871E3E36 
-        (1 row affected)
-      ```
-
-1. Run the `testexec` stored procedure. You should now see the "15517" error message.
-
-      ```sql
-        USE Demodb_15517 
-        GO 
-        EXEC dbo.testexec 
-        GO
-      ```
-
-      ```output
-        /* 
-        Msg 15517, Level 16, State 1, Procedure dbo.testexec, Line 0 [Batch Start Line 19] 
-        Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission. 
-        */ 
-      ```
-
-1. To resolve the error, change the dbo to a valid user (`login2`) by using the following command:
-
-      ```sql
-        ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
-      ```
-
-1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
-
-    ```output
-    Owner_Name                                                                                     SID
-    -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-    login2                                                                                         0xD63086DD7277BC4EB88013D359AF73A6 
-    (1 row affected) 
-    ```
-
-1. Try again to run the test stored procedure. Notice that it now runs successfully.
-
-    ```sql
-    USE Demodb_15517 
-    GO 
-    EXEC dbo.testexec 
-    GO
+   ```sql
+   SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
+   FROM sys.databases 
+   WHERE NAME = N'Demodb_15517';
    ```
 
    ```output
-    /* -- You get an output that resembles the following 
-    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-    Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
-    May 29 2022 15:55:47  
-    Copyright (C) 2019 Microsoft Corporation 
-    Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hypervisor) 
-    (1 row affected) 
-    */ 
+   Database_Name  owner_sid                               OwnerName
+   -------------- --------------------------------------- ---------------------
+   Demodb_15517   0xD63086DD7277BC4EB88013D359AF73A6      login2
+   ```
+
+1. In Query 2, check the value of the `Owner_Name` value in the `sys.database_principals` table within the demonstration database. The value now reflects `NULL`.
+
+   ```sql
+   SELECT SUSER_SNAME(sid) AS Owner_Name, sid
+   FROM Demodb_15517.sys.database_principals
+   WHERE NAME = N'dbo';
+   ```
+
+   ```output
+   Owner_Name         sid 
+	 ------------------ -----------------------------------------------
+   NULL               0xDB79ED7B6731CF4E8DC7DF02871E3E36 
+   ```
+
+1. Run the `testexec` stored procedure. You should now see the "15517" error message.
+
+   ```sql
+   USE Demodb_15517 
+   GO 
+   EXEC dbo.testexec 
+   GO
+   ```
+
+   ```output
+   Msg 15517, Level 16, State 1, Procedure dbo.testexec, Line 0 [Batch Start Line 19] 
+   Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission. 
+   ```
+
+1. To resolve the error, change the dbo to a valid user (`login2`) by using the following command:
+
+   ```sql
+   ALTER AUTHORIZATION ON DATABASE:: Demodb_15517 TO [login2]   
+   ```
+
+1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
+
+   ```output
+   Owner_Name          SID
+   ---------------------------------------------------------------- 
+   login2              0xD63086DD7277BC4EB88013D359AF73A6 
+   ```
+
+1. Try again to run the test stored procedure. Notice that it now runs successfully.
+
+   ```sql
+   USE Demodb_15517 
+   GO 
+   EXEC dbo.testexec 
+   GO
+   ```
+
+   ```output
+   /* -- You get an output that resembles the following 
+   ---------------------------------------------------------------------------------------------------------
+   Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
+   May 29 2022 15:55:47  
+   Copyright (C) 2019 Microsoft Corporation 
+   Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hypervisor) 
+   */ 
    ```
 
 ## See Also

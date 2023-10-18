@@ -18,8 +18,10 @@ ms.custom:
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
+> * [SQL Server on Azure VMs](../virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
+
 
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md).
 
@@ -34,7 +36,6 @@ The following table lists the features of Azure SQL Database that are currently 
 
 | Feature | Details |
 | --- | --- |
-| [Free Azure SQL Database](free-offer.md) | Try Azure SQL Database for free, for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. |
 | [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. |
 | [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | Azure Functions supports function triggers for the Azure SQL and SQL Server products. |
 | [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) | DC-series hardware from 10 to 40 vCores is now in preview for in General Purpose, Business Critical, and Hyperscale provisioned compute. |
@@ -42,6 +43,7 @@ The following table lists the features of Azure SQL Database that are currently 
 | [Elastic jobs](elastic-jobs-overview.md) | The elastic jobs feature is the SQL Server Agent replacement for Azure SQL Database as a PaaS offering. |
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
+| [Free Azure SQL Database](free-offer.md) | Try Azure SQL Database for free, for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. |
 | [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. |
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [Invoke External REST endpoints](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | Invoke HTTPS REST endpoint natively using a new system stored procedure. |
@@ -76,7 +78,7 @@ The following table lists the new generally available (GA) features of Azure SQL
 | [Time series](/sql/t-sql/functions/generate-series-transact-sql) | November 2022 | Generates a series of numbers within a given interval. For more information, review [GENERATE_SERIES](/sql/t-sql/functions/generate-series-transact-sql) and [DATE_BUCKET](/sql/t-sql/functions/date-bucket-transact-sql). |
 | [Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Database. |
 | [Database copy from Hyperscale replica](service-tier-hyperscale.md) | October 2022 | Use a Hyperscale geo-secondary replica as source for a database copy. |
-| [Reverse migrate from Hyperscale](manage-hyperscale-database.md#reverse-migrate-from-hyperscale) | September 2022 | Reverse migration to the General Purpose service tier allows customers who have recently migrated an existing database in Azure SQL Database to the Hyperscale service tier, to move back in an emergency, should Hyperscale not meet their needs. While reverse migration is initiated by a service tier change, it's essentially a size-of-data move between different architectures. |
+
 
 ## Documentation changes
 
@@ -87,17 +89,17 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | Changes | Details |
 | --- | --- |
 | **BASE64_ENCODE and BASE64_DECODE support** | The [BASE64_ENCODE](/sql/t-sql/functions/base64-encode-transact-sql) and [BASE64_DECODE](/sql/t-sql/functions/base64-decode-transact-sql) are now available in Azure SQL Database. |
-| **Database level CMK with TDE** | [Database level CMK](transparent-data-encryption-byok-database-level-overview.md) allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is now generally available. |
+| **Database level CMK with TDE GA** | [Database level CMK](transparent-data-encryption-byok-database-level-overview.md) allows setting the TDE protector as a customer-managed key individually for each database within the server. This feature is now generally available. |
 | **Hyperscale short-term and long-term retention GA** | [Long-term retention](long-term-retention-overview.md) and [short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) are now both generally available for Hyperscale databases. For more information, read about [the GA of long-term retention (LTR) for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616) and [the GA of short-term retention for Hyperscale](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |
 | **Microsoft Entra ID rebrand**| Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
 | **Optimized locking additional diagnostic information** | Additional wait types, wait and lock resources, and deadlock graph elements are available for [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
-| **Try Azure SQL Database for free** preview | [Try Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. This offer is currently in preview. |
+| **Try Azure SQL Database for free preview** | [Try Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. This offer is currently in preview. |
 
 ### August 2023
 
 | Changes | Details |
 | --- | --- |
-| External REST Endpoint Invocation GA | [External REST Endpoint Invocation](https://techcommunity.microsoft.com/t5/azure-sql-blog/external-rest-endpoint-invocation-is-now-ga/ba-p/3909108) using [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&preserve-view=true) makes it possible for developers to call REST/GraphQL endpoints from other Azure Services from right in the Azure SQL Database. |
+| **External REST Endpoint Invocation GA** | [External REST Endpoint Invocation](https://techcommunity.microsoft.com/t5/azure-sql-blog/external-rest-endpoint-invocation-is-now-ga/ba-p/3909108) using [sp_invoke_external_rest_endpoint](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql?view=azuresqldb-current&preserve-view=true) makes it possible for developers to call REST/GraphQL endpoints from other Azure Services from right in the Azure SQL Database. |
 | **XML compression GA** | [XML compression](https://techcommunity.microsoft.com/t5/azure-sql-blog/general-availability-of-xml-compression-for-azure-sql-database/ba-p/3888861) for Azure SQL Database is now generally available. You can use [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql?view=azuresqldb-current&preserve-view=true#xml_compression) to apply XML compression to existing [XML indexes](/sql/relational-databases/xml/xml-indexes-sql-server?view=azuresqldb-current&preserve-view=true). |
 | **TDS 8.0 GA** | Azure SQL Database now supports [TDS 8.0](/sql/relational-databases/security/networking/tds-8?view=azuresqldb-current&preserve-view=true) for strict encryption of data in transit. |
 
@@ -121,7 +123,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | --- | --- |
 | **Azure SQL bindings for Azure Functions GA** | Azure Functions supports input bindings, and output bindings for the Azure SQL and SQL Server products. This feature is now generally available. For more information, review [Azure SQL bindings for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql). |
 | **Azure SQL triggers for Azure Functions preview** | Azure Functions supports function triggers for the Azure SQL and SQL Server products. This feature is currently in preview. For more information, review [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger). |
-| **Cross-tenant CMK with TDE GA** | Cross-tenant CMK with TDE allows SQL databases to be in a separate tenant than the tenant holding the Azure Key Vault resource used to encrypt the databases. This feature is now generally available. For more information, review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md). |
+| **Cross-tenant CMK with TDE GA** | Cross-tenant CMK with TDE allows placing SQL databases into a separate tenant than the tenant that holds the Azure Key Vault resource used to encrypt the databases. This feature is now generally available. For more information, review [Cross-tenant CMK with TDE](transparent-data-encryption-byok-cross-tenant.md). |
 | **Hyperscale elastic pools preview** | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. This feature is now in preview. For more information, review [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). |
 | **Optimized locking available in Hyperscale GA** | Optimized locking is a new Database Engine capability that offers an improved locking mechanism that reduces lock memory consumption and blocking among concurrent transactions. This fundamentally improves concurrency and lowers lock memory. Optimized locking is now available in all DTU and vCore service tiers, including provisioned and serverless. This feature is generally available. For more information, review [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
 

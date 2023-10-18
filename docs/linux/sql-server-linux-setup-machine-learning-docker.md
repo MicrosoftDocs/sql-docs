@@ -77,7 +77,7 @@ Complete the following steps to build the docker image:
     ```
 
    > [!NOTE]  
-   > To build the Docker image, you must install packages that are several GBs in size. The script may take some time to finish running, depending on network bandwidth.
+   > To build the Docker image, you must install packages that are several GBs in size. The script might take some time to finish running, depending on network bandwidth.
 
 ## Run the SQL Server Linux container image
 

@@ -44,9 +44,9 @@ To connect as a contained database user, the connection string must always conta
 
 The activity of the contained database user is limited to the authenticating database. The database user account must be independently created in each database that the user needs. To change databases, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] users must create a new connection. Contained database users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change databases if an identical user is present in another database.
 
-In Azure, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supports contained database users who use [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] authentication, but [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't. For more information, see [Connect to SQL Database by using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview).
+In Azure, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] support identities from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supports contained database users who use [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] authentication, but [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)] doesn't. For more information, see [Connect to SQL Database by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
-When you're using Azure Active Directory authentication, users can make connections from SQL Server Management Studio by using Active Directory Universal Authentication. Administrators can configure Universal Authentication to require Multi-Factor Authentication, which verifies identity by using a phone call, text message, smart card with PIN, or mobile app notification. For more information, see [Using Azure AD Multi-Factor Authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
+When you're using Microsoft Entra authentication, users can make connections from SQL Server Management Studio by using Microsoft Entra universal authentication. Administrators can configure universal authentication to require multifactor authentication, which verifies identity by using a phone call, text message, smart card with PIN, or mobile app notification. For more information, see [Using Microsoft Entra multifactor authentication](/azure/azure-sql/database/authentication-mfa-ssms-overview).
 
 For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], the database name is always required in the connection string. So you don't need to change the connection string when you're switching from the traditional model to the contained database user model. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections, the name of the database must be added to the connection string, if it's not already present.
 
@@ -135,9 +135,9 @@ WHERE name='Test'
 - Because contained database users are database-level principals, you need to create contained database users in every database where you would use them. The identity is confined to the database. The identity is independent (in all aspects) from a user who has the same name and the same password in another database in the same server.
 - Use the same strength of passwords that you would normally use for logins.
 
-## See also
+## Related content
 
 - [Contained databases](../../relational-databases/databases/contained-databases.md)
 - [Security best practices with contained databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)
 - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
-- [Connect to SQL Database by using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+- [Connect to Azure SQL Database by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)

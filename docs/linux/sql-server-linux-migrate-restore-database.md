@@ -158,7 +158,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
 
    You should get a message the database is successfully restored.
 
-   `RESTORE DATABASE` may return an error like the following example:
+   `RESTORE DATABASE` might return an error like the following example:
 
    ```bash
    File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.

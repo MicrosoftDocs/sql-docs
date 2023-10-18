@@ -31,11 +31,11 @@ This article introduces the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-m
 
 - **back up [verb]**: Copies the data or log records from a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] database or its transaction log to a backup device, such as a disk, to create a data backup or log backup.
 
-**backup [noun]**: A copy of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.
+- **backup [noun]**: A copy of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data that can be used to restore and recover the data after a failure. A backup of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data is created at the level of a database or one or more of its files or filegroups. Table-level backups cannot be created. In addition to data backups, the full recovery model requires creating backups of the transaction log.
 
 - **[recovery model](recovery-models-sql-server.md)**: A database property that controls transaction log maintenance on a database. Three recovery models exist: simple, full, and bulk-logged. The recovery model of database determines its backup and restore requirements.
 
-**[restore](restore-and-recovery-overview-sql-server.md)**: A multi-phase process that copies all the data and log pages from a specified [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.
+- **[restore](restore-and-recovery-overview-sql-server.md)**: A multi-phase process that copies all the data and log pages from a specified [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] backup to a specified database, and then rolls forward all the transactions that are logged in the backup by applying logged changes to bring the data forward in time.
 
 ## Types of backups
 
@@ -55,7 +55,7 @@ This article introduces the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-m
 
 - **[file backup](full-file-backups-sql-server.md)**: A backup of one or more database files or filegroups.
 
-**[partial backup](partial-backups-sql-server.md)**: Contains data from only some of the filegroups in a database, including the data in the primary filegroup, every read/write filegroup, and any optionally specified read-only files.
+- **[partial backup](partial-backups-sql-server.md)**: Contains data from only some of the filegroups in a database, including the data in the primary filegroup, every read/write filegroup, and any optionally specified read-only files.
 
 ## Backup media terms and definitions
 

@@ -12,5 +12,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md
 - Red Hat Enterprise Linux (RHEL) 8 (x64)
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
+Support for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] failover cluster instances (FCI) is introduced as preview in October, 2023.
+
 > [!IMPORTANT]  
-> Windows Server 2012 and Windows Server 2012 R2 support ends on October 10, 2023. For more information, see [SQL Server 2012 and Windows Server 2012/2012 R2 end of support](/lifecycle/announcements/sql-server-2012-windows-server-2012-2012-r2-end-of-support).
+> Windows Server 2012 and Windows Server 2012 R2 support ended on October 10, 2023. For more information, see [SQL Server 2012 and Windows Server 2012/2012 R2 end of support](/lifecycle/announcements/sql-server-2012-windows-server-2012-2012-r2-end-of-support).

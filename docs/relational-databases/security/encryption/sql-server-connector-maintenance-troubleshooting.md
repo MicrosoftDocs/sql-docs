@@ -18,6 +18,9 @@ helpviewer_keywords:
 
   Supplemental information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
 
+
+[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
+
 ## <a id="AppendixA"></a> A. Maintenance Instructions for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 
 ### Key Rollover
@@ -130,9 +133,9 @@ Deep links to older versions of the SQL Server Connector
 - [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.5.0.msi)
 - [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494f2-bac9-4388-ad07-7eaf9745d77b/SQL%20Server%20Connector%20for%20Microsoft%20Azure%20Key%20Vault%201.0.4.0.msi)
 
-### Rolling the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Service Principal
+### Rolling the [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] service principal
 
-[!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault. Service Principal has a Client ID and Authentication Key. A [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**. The **Authentication Key** is valid for a certain period of time (one or two years). Before the time period expires a new key must be generated in Azure AD for the Service Principal. Then the credential has to be changed in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] should be restarted.
+[!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] uses service principals created in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) as credentials to access the Key Vault. The service principal has a Client ID and Authentication Key. A [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**. The **Authentication Key** is valid for a certain period of time (one or two years). Before the time period expires a new key must be generated in Microsoft Entra ID for the service principal. Then the credential has to be changed in [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE [ssManStudio](../../../includes/ssmanstudio-md.md)] should be restarted.
 
 ### Key Backup and Recovery
 
@@ -194,21 +197,23 @@ Though you could perform all the configuration steps as a member of the sysadmin
 
 - To create an asymmetric key, requires `CREATE ASYMMETRIC KEY` permission.
 
-**How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE [ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
+**How do I change my default Microsoft Entra directory so my key vault is created in the same subscription and directory as the service principal I created for the [!INCLUDE [ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
-:::image type="content" source="../../../relational-databases/security/encryption/media/sql-server-connector-maintenance-troubleshooting/azure-ad-change-default-directory-helpsteps.png" alt-text="Screenshot showing Azure AD change default directory help steps.":::
+:::image type="content" source="../../../relational-databases/security/encryption/media/sql-server-connector-maintenance-troubleshooting/azure-ad-change-default-directory-helpsteps.png" alt-text="Screenshot showing Microsoft Entra ID change default directory help steps.":::
 
 1. Go to the [Azure portal](https://portal.azure.com/).
 1. On the upper-right corner of the page, select the settings icon, or your user profile.
-1. On the **Directories + subscriptions** page, select **All Directories** to see all the Azure Active Directories that you belong to.
+1. On the **Directories + subscriptions** page, select **All Directories** to see all the Microsoft Entra directories that you belong to.
 1. You can change your **Startup directory**, or switch to a different directory if you have multiple directories.
 
     > [!NOTE]  
-    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the Azure AD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
+    > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the Microsoft Entra service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
 
-To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
+To learn more about Microsoft Entra ID, read [How Azure subscriptions are related to Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
 
-## <a id="AppendixC"></a> C. Error Code Explanations for [!INCLUDE [ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
+## <a id="AppendixC"></a> C. Error Code Explanations for SQL Server Connector
+
+[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
 
 **Provider Error Codes:**
 

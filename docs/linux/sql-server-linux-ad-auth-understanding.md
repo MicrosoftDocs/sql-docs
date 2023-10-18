@@ -84,9 +84,9 @@ contoso.com = CONTOSO.COM
 
 - `libdefaults` - the `default_realm` value must be present. This value specifies the domain to which the host machine belongs.
 
-- `realms` (optional) - For each realm, the `kdc` value may be set to specify which Key Distribution Centers the machine should contact when looking up Active Directory accounts. If you have set more than one KDC, the KDC for each connection will be selected by round-robin.
+- `realms` (optional) - For each realm, the `kdc` value might be set to specify which Key Distribution Centers the machine should contact when looking up Active Directory accounts. If you have set more than one KDC, the KDC for each connection will be selected by round-robin.
 
-- `domain_realm` (optional) - Mappings for each realm may be provided. If not, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux assumes that the domain `contoso.com` maps to the realm `CONTOSO.COM`.
+- `domain_realm` (optional) - Mappings for each realm might be provided. If not, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux assumes that the domain `contoso.com` maps to the realm `CONTOSO.COM`.
 
 ### The Kerberos authentication process
 
@@ -130,7 +130,7 @@ Active Directory authentication for [!INCLUDE[ssNoVersion](../includes/ssnoversi
 
 For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] containers, you can create the `krb5.conf` file inside the container. The host node running the container doesn't need to be part of the domain, but should be able to reach to the domain controller to which the container will try to connect.
 
-Because we are connecting to a container, the server name in the client connection may be different than just the hostname. It could be the hostname, the container name, or another alias. In addition, there is a good chance that the exposed port for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] won't be the default **1433**.
+Because we are connecting to a container, the server name in the client connection might be different than just the hostname. It could be the hostname, the container name, or another alias. In addition, there is a good chance that the exposed port for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] won't be the default **1433**.
 
 You must use the SPN that is stored in `mssql.keytab` to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] container. For example, if the SPN in `mssql.keytab` is `MSSQLSvc/sqlcontainer.domain.com:8000`, you would use `sqlcontainer.domain.com,8000` as your connection string in the client (including **sqlcmd**, SQL Server Management Studio, and Azure Data Studio).
 
@@ -138,7 +138,7 @@ You must use the SPN that is stored in `mssql.keytab` to connect to the [!INCLUD
 
 ## SQL Server group refresh
 
-You may be wondering why there is a user account in the keytab if you only need a Service Principal Name to authenticate.
+You might be wondering why there is a user account in the keytab if you only need a Service Principal Name to authenticate.
 
 Imagine you have a user *adUser*, which is a member of a group *adGroup*. If *adGroup* is added as a login to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], that means *adUser* has permission to sign in to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance as well. While *adUser* is still connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a domain admin might remove *adUser* from *adGroup*. Now *adUser* should no longer have permission to sign in to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but they have already passed the Kerberos authentication process and are connected.
 

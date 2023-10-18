@@ -18,7 +18,7 @@ ms.custom: ignite-fall-2021
 
 This article provides an overview of the Managed Instance link feature, which enables near real-time data replication from SQL Server to Azure SQL Managed Instance. The link provides hybrid flexibility and database mobility as it unlocks several scenarios, such as scaling read-only workloads, offloading analytics and reporting to Azure, and migrating to the cloud. And, with SQL Server 2022, the link feature enables disaster recovery. 
 
-If you have product improvement suggestions or comments, or you want to report issues, contact our team through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
+If you have product improvement suggestions or comments, or you want to report issues, contact the product group through [Managed Instance link user feedback](https://aka.ms/mi-link-feedback).
 
 
 ## Overview
@@ -31,10 +31,8 @@ Though the link supports replicating one database per link, it's possible to rep
 
 The link feature currently offers the following functionality:
 
-- **One-way replication (SQL Server versions 2016 and 2019)**: Use the link feature to replicate data one way from a SQL Server instance to your managed instance. Although you can manually fail over to your managed instance if there's a disaster, doing so breaks the link, and failing back isn't supported. 
-- **Disaster recovery (SQL Server 2022)**: Use the link feature to replicate data from a SQL Server 2022 instance to your managed instance, manually fail over to your managed instance during a disaster, and fail back to the SQL Server instance after you've mitigated the disaster.  
-
-    This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview. 
+- **One-way replication (SQL Server versions 2016 and 2019)**: Use the link feature to replicate data one way from a SQL Server instance to your managed instance for migration to Azure or disaster recovery. Although you can manually fail over to your managed instance if there's a disaster, doing so breaks the link, and failing back isn't supported. 
+- **Disaster recovery with fail back (SQL Server 2022)**: Use the link feature to replicate data from a SQL Server 2022 instance to your managed instance, manually fail over to your managed instance during a disaster, and fail back to the SQL Server instance after you've mitigated the disaster.   This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview. 
 
 You can keep running the link for as long as you need it, for months and even years at a time. And for your modernization journey, if or when you're ready to migrate to Azure, the link enables a considerably improved migration experience. It offers minimal downtime, compared to all other options available today, and it provides a true online migration to your SQL Managed Instance deployment.
 
@@ -119,6 +117,24 @@ If you're running SQL Server 2022, you can use the Managed Instance link for dis
 This feature is currently in limited public preview. [You must sign up for limited public preview](https://aka.ms/mi-link-dr-preview-signup) so that the product group can configure your environment for the preview.  
 
 :::image type="content" source="media/managed-instance-link-feature-overview/disaster-recovery-scenario.png" alt-text="Diagram showing the disaster recovery scenario.":::
+
+## License-free passive replica
+
+For disaster recovery only secondary SQL managed instances that don't have any workloads, you can save on vCore licensing costs by activating the [hybrid failover benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas) and designating your secondary SQL managed instance as a passive DR replica. 
+
+For new instances, on the **Basics** tab of the **Create Azure SQL Managed Instance** page, select **Configure Managed Instance** under **Compute + Storage** to open the **Compute + Storage** page and then choose **Hybrid failover rights** under **SQL Server license**. 
+
+For existing instances, go to your SQL managed Instance resource in the [Azure portal](https://portal.azure.com) and from the **Compute + Storage** page, choose **Hybrid failover rights** under **SQL Server license**. 
+
+### Cost benefit
+
+If you designate a managed instance replica for disaster recovery only, Microsoft doesn't charge you SQL Server licensing costs for the vCores that the secondary instance uses. However, because the instance is billed for the entire hour, you might still be charged licensing costs for the entire hour if the state change is made in the middle of the hour. 
+
+The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the passive replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
+
+For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance as standby only.
+
+In another example, if you have 16 Azure Hybrid Benefit licenses and your secondary SQL managed instance uses 8 vCores, after you designate the secondary instance as standby, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
 
 ## Use the link feature
 

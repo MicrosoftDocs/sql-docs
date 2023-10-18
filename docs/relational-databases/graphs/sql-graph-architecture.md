@@ -103,12 +103,12 @@ The implicit columns in an edge table are:
 |---  |---|---|---  |
 |`graph_id_\<hex_string>`    |BIGINT    |1    |Internal graph ID value.  |
 |`$edge_id_\<hex_string>`    |NVARCHAR    |0    | Character representation of the edge ID. |
-|`from_obj_id_\<hex_string>`    |INT    |1    |Internal `object_id` value for the "from node". |
-|`from_id_\<hex_string>`    |BIGINT    |1    |Internal graph ID value for the "from node".  |
-|`$from_id_\<hex_string>`    |NVARCHAR    |0    | character representation of the "from node".  |
-|`to_obj_id_\<hex_string>`    |INT    |1    |Internal `object_id` for the "to node".  |
-|`to_id_\<hex_string>`    |BIGINT    |1    |Internal graph ID value for the "to node".  |
-|`$to_id_\<hex_string>`    |NVARCHAR    |0    | External, character representation of the "to node".  |
+|`from_obj_id_\<hex_string>`    |INT    |1    |Internal `object_id` value for the "from node." |
+|`from_id_\<hex_string>`    |BIGINT    |1    |Internal graph ID value for the "from node."  |
+|`$from_id_\<hex_string>`    |NVARCHAR    |0    | character representation of the "from node."  |
+|`to_obj_id_\<hex_string>`    |INT    |1    |Internal `object_id` for the "to node."  |
+|`to_id_\<hex_string>`    |BIGINT    |1    |Internal graph ID value for the "to node."  |
+|`$to_id_\<hex_string>`    |NVARCHAR    |0    | External, character representation of the "to node."  |
 
 ### <a id="SystemFunctions"></a> System functions
 
@@ -131,7 +131,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 
 |Task    |Related Article  |Notes |
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` is now extended to support creating a table AS NODE or AS EDGE. An edge table may or may not have any user-defined attributes.  |
+|CREATE TABLE |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` is now extended to support creating a table AS NODE or AS EDGE. An edge table isn't required to have any user-defined attributes.  |
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Node and edge tables can be altered the same way a relational table is, using the `ALTER TABLE`. Users can add or modify user-defined columns, indexes or constraints. However, altering internal graph columns, like `$node_id` or `$edge_id`, results in an error.  |
 |CREATE INDEX    |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |Users can create indexes on pseudo-columns and user-defined columns in node and edge tables. All index types are supported, including clustered and nonclustered columnstore indexes.  |
 |CREATE EDGE CONSTRAINTS    |[EDGE CONSTRAINTS (Transact-SQL)](../../relational-databases/tables/graph-edge-constraints.md)  |Users can now create edge constraints on edge tables to enforce specific semantics and also maintain data integrity  |
@@ -163,6 +163,7 @@ There are certain limitations on node and edge tables:
 - Node and edge tables can't be memory optimized tables.
 - Users can't update the `$from_id` and `$to_id` columns of an edge using UPDATE statement. To update nodes that are referenced by an edge, users have to insert a new edge pointing to new nodes, and delete the previous one.
 - Cross database queries on graph objects aren't supported.
+- Graph pseudo-columns (`node_id`, `$from_id`, `$to_id` and `edge_id`) can't be used as the sort columns for an [ordered clustered columnstore index](../indexes/columnstore-indexes-design-guidance.md#choose-the-best-columnstore-index-for-your-needs). Attempting to use any graph pseudo-columns as the sort columns for ordered clustered columnstore results in an `Msg 102: Incorrect syntax` error.
 
 ## See also
 

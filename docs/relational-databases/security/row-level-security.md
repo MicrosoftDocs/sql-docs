@@ -1,6 +1,6 @@
 ---
-title: "Row-Level security"
-description: Learn how Row-Level security uses group membership or execution context to control access to rows in a database table in SQL Server.
+title: "Row-level security"
+description: Learn how row-level security uses group membership or execution context to control access to rows in a database table in SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: wiassaf
@@ -16,21 +16,24 @@ helpviewer_keywords:
   - "predicate based security"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
 ---
-# Row-Level security
+# Row-level security
 
 [!INCLUDE [sql-asdb-asdbmi-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-fabricse-fabricdw.md)]
 
   :::image type="content" source="media/row-level-security/row-level-security-graphic.png" alt-text="Decorative graphic of row level security.":::
 
-Row-Level security enables you to use group membership or execution context to control access to rows in a database table.
+Row-level security (RLS) enables you to use group membership or execution context to control access to rows in a database table.
 
-Row-Level security (RLS) simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their department. Another example is to restrict customers' data access to only the data relevant to their company.
+Row-level security simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their department. Another example is to restrict customers' data access to only the data relevant to their company.
 
 The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes your security system more reliable and robust by reducing the surface area of your security system.
 
 Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md) [!INCLUDE [tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 Row-level security was first introduced to [!INCLUDE [sssql16-md](../../includes/sssql16-md.md)].
+
+> [!NOTE]
+> This article is focused on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL platforms. For [!INCLUDE [fabric](../../includes/fabric.md)], see [Row-level security in Microsoft Fabric](/fabric/data-warehouse/row-level-security).
 
 ## <a id="Description"></a> Description
 
@@ -302,7 +305,7 @@ This short example creates three users and an external table with six rows. It t
 ### Prerequisites
 
 1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. The server hosting your dedicated SQL pool must be registered with Microsoft Entra and you must have an Azure storage account with `Storage Blog Data Contributor` permissions. Follow the steps to [Use virtual network service endpoints and rules for servers in Azure SQL Database](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. The server hosting your dedicated SQL pool must be registered with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) and you must have an Azure storage account with `Storage Blog Data Contributor` permissions. Follow the steps to [Use virtual network service endpoints and rules for servers in Azure SQL Database](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Create a file system for your Azure Storage account. Use [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/#overview) to view your storage account. Right-click on **containers** and select **Create file system**.
 
 Once you have the prerequisites in place, create three user accounts that demonstrate different access capabilities.
@@ -685,7 +688,7 @@ DROP SCHEMA Sample;
 
 We can demonstrate row-level security [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] and [!INCLUDE [fabricse](../../includes/fabric-se.md)] in [!INCLUDE [fabric](../../includes/fabric.md)].
 
-The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you cannot `CREATE TABLE`, you can `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
+The following example creates sample tables that will work with [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], but in [!INCLUDE [fabricse](../../includes/fabric-se.md)] use existing tables. In the [!INCLUDE [fabricse](../../includes/fabric-se.md)], you cannot use `CREATE TABLE`, but you can use `CREATE SCHEMA`, `CREATE FUNCTION`, and `CREATE SECURITY POLICY`.
 
 In this example, first create a schema `sales`, a table `sales.Orders`. 
 
@@ -723,7 +726,7 @@ Create a `Security` schema, a function `Security.tvf_securitypredicate`, and a s
 -- Creating schema for Security
 CREATE SCHEMA Security;
 GO
- 
+
 -- Creating a function for the SalesRep evaluation
 CREATE FUNCTION Security.tvf_securitypredicate(@SalesRep AS nvarchar(50))
     RETURNS TABLE
@@ -745,13 +748,13 @@ After applying the security policy and creating the function, the users `Sales1@
 
 ## Related content
 
-- [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)</br>
-- [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)</br>
-- [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)</br>
-- [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)</br>
-- [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)</br>
-- [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)</br>
-- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)</br>
-- [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)</br>
+- [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)
+- [ALTER SECURITY POLICY (Transact-SQL)](../../t-sql/statements/alter-security-policy-transact-sql.md)
+- [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)
+- [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)
+- [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md)
+- [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)
+- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)
+- [sys.security_predicates (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)
 - [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)
 - [GRANT Object Permissions (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)

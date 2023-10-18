@@ -46,7 +46,7 @@ For this article, we are going to focus on connecting via SSMS. If you are inter
 
 #### SQL Server Management Studio (Windows only)
 
-- On current versions of Windows, on the **Start** page, type SSMS, and then select **MicrosoftSQL ServerManagement Studio**.
+- On current versions of Windows, on the **Start** page, type SSMS, and then select **Microsoft SQL Server Management Studio**.
 - When using older versions of Windows, on the **Start** menu, point to **All Programs**, point to [!INCLUDE [ssCurrentUI](../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**.
 
 ## <a id="connect"></a> Connect with SSMS
@@ -82,11 +82,11 @@ At least one administrator account was selected when [!INCLUDE [ssNoVersion_md](
 
 1. Select **Database Engine**.
 
-:::image type="content" source="media/lesson-1-connecting-to-the-database-engine/object-explorer.png" alt-text="Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out." lightbox="media/lesson-1-connecting-to-the-database-engine/object-explorer.png":::
+   :::image type="content" source="media/lesson-1-connecting-to-the-database-engine/object-explorer.png" alt-text="Screenshot of the Object Explorer showing the Connect dropdown list and the Database Engine option called out." lightbox="media/lesson-1-connecting-to-the-database-engine/object-explorer.png":::
 
 1. In the **Server name** box, type the name of the instance of the Database Engine. For the default instance of SQL Server, the server name is the computer name. The server name for a named instance of SQL Server is the *\<computer_name\>***\\***\<instance_name\>*, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (unnamed) instance of [!INCLUDE [ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named `PracticeComputer`. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication, you can't change the user name.
 
-:::image type="content" source="media/lesson-1-connecting-to-the-database-engine/connect-to-server.png" alt-text="Screenshot of the Connect to Server dialog box with the Server name text box called out." lightbox="media/lesson-1-connecting-to-the-database-engine/connect-to-server.png":::
+   :::image type="content" source="media/lesson-1-connecting-to-the-database-engine/connect-to-server.png" alt-text="Screenshot of the Connect to Server dialog box with the Server name text box called out." lightbox="media/lesson-1-connecting-to-the-database-engine/connect-to-server.png":::
 
 1. Select **Connect**.
 
@@ -95,7 +95,7 @@ At least one administrator account was selected when [!INCLUDE [ssNoVersion_md](
 
 ## <a id="additional"></a> Authorize extra connections
 
-Now that you've connected to SQL Server as an administrator, one of your first tasks is authorizing other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in SQL Server and are independent of your Windows credentials. Extra login options include Azure Active Directory logins, which you can learn more about from the following article - [Use Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview).
+Now that you've connected to SQL Server as an administrator, one of your first tasks is authorizing other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be created using Windows authentication, SQL authentication, or Microsoft Entra authentication. Windows authentication logins use credentials from Windows. SQL authentication logins store the authentication information in SQL Server and are independent of your Windows credentials. Logins from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) use credentials from cloud-based identities. You can learn more about this method from the following article - [Use Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
 Use Windows Authentication whenever possible.
 
@@ -108,7 +108,7 @@ Use Windows Authentication whenever possible.
 
 1. On the **General** page, in the **Login name** box, type a Windows login in the format: `<domain>\<login>`
 
-:::image type="content" source="media/lesson-1-connecting-to-the-database-engine/new-login.png" alt-text="Screenshot of the Login - New dialog box with the Login name text box called out.":::
+   :::image type="content" source="media/lesson-1-connecting-to-the-database-engine/new-login.png" alt-text="Screenshot of the Login - New dialog box with the Login name text box called out.":::
 
 1. In the **Default database** box, select the AdventureWorks database if available. Otherwise, select the `master` database.
 

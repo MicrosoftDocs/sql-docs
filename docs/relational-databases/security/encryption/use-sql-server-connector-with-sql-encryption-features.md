@@ -27,11 +27,14 @@ helpviewer_keywords:
 > [!NOTE]  
 >  Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."  
   
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
+
 ## Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault
 
 After completing Parts I through IV of the topic Setup Steps for Extensible Key Management Using the Azure Key Vault, use the Azure Key Vault key to encrypt the database encryption key using TDE. For more information about rotating keys using PowerShell, see [Rotate the Transparent Data Encryption (TDE) protector using PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
  
-[!IMPORTANT] Do not delete previous versions of the key after a rollover. When keys are rolled over, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.
+> [!IMPORTANT] 
+> Do not delete previous versions of the key after a rollover. When keys are rolled over, some data is still encrypted with the previous keys, such as older database backups, backed-up log files and transaction log files.
 
 You will need to create a credential and a login, and create a database encryption key which will encrypt the data and logs in the database. To encrypt a database requires **CONTROL** permission on the database. The following graphic shows the hierarchy of the encryption key when using the Azure Key Vault.  
   
@@ -39,7 +42,7 @@ You will need to create a credential and a login, and create a database encrypti
   
 1.  **Create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential for the Database Engine to use for TDE**  
   
-     The Database Engine uses the credential to access the Key Vault during database load. We recommend creating another Azure Active Directory **Client ID** and **Secret** in Part I for the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], to limit the Key Vault permissions that are granted.  
+     The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] uses the Microsoft Entra application credentials to access the Key Vault during database load. We recommend creating another **Client ID** and **Secret**, as described in [Step 1](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-1-set-up-an-azure-ad-service-principal), for the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], to limit the Key Vault permissions that are granted.  
   
      Modify the [!INCLUDE[tsql](../../../includes/tsql-md.md)] script below in the following ways:  
   
@@ -47,7 +50,7 @@ You will need to create a credential and a login, and create a database encrypti
         - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
         - If you're using a **private Azure cloud** (ex. Azure Government, Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
   
-    -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.
+    -   Replace the first part of the `SECRET` argument with the Microsoft Entra application **Client ID** from [Step 1](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  You must remove the hyphens from the **Client ID**.  
@@ -136,7 +139,7 @@ You will need to create a credential and a login, and create a database encrypti
   
 ## Encrypting Backups by Using an Asymmetric Key from the Key Vault  
  Encrypted backups are supported starting with [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. The following example creates and restores a backup encrypted a data encryption key protected by the asymmetric key in the key vault.  
-The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when accessing the Key Vault during database load. We recommend creating another Azure Active Directory Client ID and Secret in Part I for the Database Engine, to limit the Key Vault permissions that are granted.  
+The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] uses the Microsoft Entra application credentials to access the Key Vault during database load. We recommend creating another **Client ID** and **Secret**, as described in [Step 1](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-1-set-up-an-azure-ad-service-principal), for the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], to limit the Key Vault permissions that are granted.
   
 1.  **Create a SQL Server credential for the Database Engine to use for Backup Encryption**  
   
@@ -146,7 +149,7 @@ The [!INCLUDE[ssDE](../../../includes/ssde-md.md)] needs the credential when acc
         - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
         - If you're using a **private Azure cloud** (ex. Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.    
   
-    -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Replace the first part of the `SECRET` argument with the Microsoft Entra application **Client ID** from [Step 1](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  You must remove the hyphens from the **Client ID**.  

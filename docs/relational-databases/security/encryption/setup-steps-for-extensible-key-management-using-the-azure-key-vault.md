@@ -19,10 +19,9 @@ helpviewer_keywords:
 
 [!INCLUDE [sql-windows-only](../../../includes/applies-to-version/sql-windows-only.md)]
 
-In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.
+In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault. Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#Unsupported) for SQL Server on Linux.
 
-> [!NOTE]  
-> Extensible Key Management is [not supported](../../../linux/sql-server-linux-editions-and-components-2019.md#Unsupported) for SQL Server on Linux.
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -32,7 +31,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Install [Azure PowerShell version 5.2.0 or later](/powershell/azure/).
 
-- Create an Azure Active Directory (Azure AD) instance.
+- Create a Microsoft Entra tenant.
 
 - Familiarize yourself with the principles of Extensible Key Management (EKM) storage with Azure Key Vault by reviewing [EKM with Azure Key Vault (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md).
 
@@ -45,27 +44,29 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
 
 - Familiarize yourself with [Access Azure Key Vault behind a firewall](/azure/key-vault/general/access-behind-firewall) if you plan to use the SQL Server Connector for Azure Key Vault behind a firewall or with a proxy server.
 
-## Step 1: Set up an Azure AD service principal
+<a name='step-1-set-up-an-azure-ad-service-principal'></a>
 
-To grant your SQL Server instance access permissions to your Azure key vault, you need a service principal account in Azure AD.
+## Step 1: Set up a Microsoft Entra service principal
+
+To grant your SQL Server instance access permissions to your Azure key vault, you need a service principal account in Microsoft Entra ID.
 
 1. Sign in to the [Azure portal](https://ms.portal.azure.com/), and do either of the following:
 
-    - Select the **Azure Active Directory** button.
+    - Select the **Microsoft Entra ID** button.
 
       :::image type="content" source="media/ekm/ekm-part1-login-portal.png" alt-text="Screenshot of the Azure services pane.":::
 
-    - Select **More services** and then, in the **All services** box, type **Azure Active Directory**.
+    - Select **More services** and then, in the **All services** box, type **Microsoft Entra ID**.
 
       :::image type="content" source="media/ekm/ekm-part1-select-aad.png" alt-text="Screenshot of the All Azure services pane.":::
 
-1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
+1. Register an application with Microsoft Entra ID by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
 
-   1. On the **Azure Active Directory Overview** pane, select **App registrations**.
+   1. On the **Overview** page of your **Microsoft Entra ID** resource, select **App registrations**.
 
-      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Azure Active Directory Overview pane.":::
+      :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-app-register.png" alt-text="Screenshot of the Microsoft Entra ID Overview page in the Azure portal.":::
 
-   1. On the **App registrations** pane, select **New registration**.
+   1. On the **App registrations** page, select **New registration**.
 
       :::image type="content" source="media/ekm/ekm-part1-azure-active-directory-new-registration.png" alt-text="Screenshot of the App registrations pane.":::
 
@@ -97,7 +98,7 @@ Select the method you want to use to create a key vault.
 
 ### Create a key vault by using the Azure portal
 
-You can use the Azure portal to create the key vault and then add an Azure AD principal to it.
+You can use the Azure portal to create the key vault and then add a Microsoft Entra principal to it.
 
 1. Create a resource group.
 
@@ -129,7 +130,7 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 
 1. In the left pane, select the **Select principal** tab, and then do the following:
 
-   1. In the **Principal** pane, under **Select**, start typing the name of your Azure AD application and then, in the results list, select the application you want to add.
+   1. In the **Principal** pane, under **Select**, start typing the name of your Microsoft Entra application and then, in the results list, select the application you want to add.
 
       :::image type="content" source="media/ekm/ekm-part2-select-principal.png" alt-text="Screenshot of application search box on the Principal pane.":::
 
@@ -170,7 +171,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 The key vault and key that you create here are used by the [!INCLUDE [ssdenoversion-md](../../../includes/ssdenoversion-md.md)] for encryption key protection.
 
 > [!IMPORTANT]  
-> The subscription where the key vault is created must be in the same default Azure AD instance where the Azure AD service principal was created. If you want to use an Azure AD instance other than your default instance for creating a service principal for the SQL Server Connector, you must change the default Azure AD instance in your Azure account before you create your key vault. To learn how to change the default Azure AD instance to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
+> The subscription where the key vault is created must be in the same default Microsoft Entra tenant where the Microsoft Entra service principal was created. If you want to use a Microsoft Entra tenant other than your default tenant to create a service principal for the SQL Server Connector, you must change the default Microsoft Entra tenant in your Azure account before you create your key vault. To learn how to change the default Microsoft Entra tenant to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](sql-server-connector-maintenance-troubleshooting.md#AppendixB).
 
 1. Install and sign in to [Azure PowerShell 5.2.0 or later](/powershell/azure/) by using the following command:
 
@@ -250,14 +251,14 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
    Tags                             :
    ```
 
-1. Grant permissions for the Azure AD service principal to access the Azure key vault.
+1. Grant permissions for the Microsoft Entra service principal to access the Azure key vault.
 
-   You can authorize other users and applications to use your key vault.  For our example, let's use the service principal that you created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal) to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.
+   You can authorize other users and applications to use your key vault.  For our example, let's use the service principal that you created in [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal) to authorize the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.
 
    > [!IMPORTANT]  
-   > The Azure AD service principal must have at least the *get*, *list*,*wrapKey*, and *unwrapKey* permissions for the key vault.
+   > The Microsoft Entra service principal must have at least the *get*, *list*, *wrapKey*, and *unwrapKey* permissions for the key vault.
 
-   As shown in the following command, you use the **App (Client) ID** from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal) for the `ServicePrincipalName` parameter. `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.
+   As shown in the following command, you use the **App (Client) ID** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal) for the `ServicePrincipalName` parameter. `Set-AzKeyVaultAccessPolicy` runs silently with no output if it runs successfully.
 
    ```powershell
    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `
@@ -265,7 +266,7 @@ The key vault and key that you create here are used by the [!INCLUDE [ssdenovers
      -PermissionsToKeys get, list, wrapKey, unwrapKey
    ```
 
-   Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under `Access Policies`, you should see your Azure AD application name listed as another tenant that has access to this key vault.
+   Call the `Get-AzKeyVault` cmdlet to confirm the permissions. In the statement output under `Access Policies`, you should see your Microsoft Entra application name listed as another tenant that has access to this key vault.
 
 1. Generate an asymmetric key in the key vault. You can do so in either of two ways: import an existing key or create a new key.
 
@@ -426,12 +427,12 @@ For a note about the minimum permission levels needed for each action in this se
    - Edit the `IDENTITY` argument (`ContosoEKMKeyVault`) to point to your Azure key vault.
      - If you're using *global Azure*, replace the `IDENTITY` argument with the name of your Azure key vault from [Step 2: Create a key vault](#step-2-create-a-key-vault).
      - If you're using a *private Azure cloud* (for example, Azure Government, Microsoft Azure operated by 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that's returned in step 3 of the [Create a key vault and key by using PowerShell](#create-a-key-vault-and-key-by-using-powershell) section. Don't include "https://" in the Vault URI.
-   - Replace the first part of the `SECRET` argument with the Azure Active Directory Client ID from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
+   - Replace the first part of the `SECRET` argument with the Microsoft Entra Client ID from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal). In this example, the **Client ID** is `9A57CBC54C4C40E2B517EA677E0EFA00`.
 
      > [!IMPORTANT]  
      > Be sure to remove the hyphens from the App (Client) ID.
 
-   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).  In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
+   - Complete the second part of the `SECRET` argument with **Client Secret** from [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal).  In this example, the Client Secret is `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, without hyphens.
 
      ```sql
      USE master;
@@ -572,7 +573,7 @@ For sample scripts, see the blog at [SQL Server Transparent Data Encryption and 
 
 If the credential has a client secret that is about to expire, a new secret can be assigned to the credential.
 
-1. Update the secret originally created in [Step 1: Set up an Azure AD service principal](#step-1-set-up-an-azure-ad-service-principal).
+1. Update the secret originally created in [Step 1: Set up a Microsoft Entra service principal](#step-1-set-up-an-azure-ad-service-principal).
 
 1. Alter the credential using the same identity and new secret using the following code. Replace `<New Secret>` with your new secret:
 

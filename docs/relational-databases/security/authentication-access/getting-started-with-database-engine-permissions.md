@@ -19,6 +19,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Permissions in the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] are managed at the server level through logins and server roles, and at the database level through database users and database roles. The model for [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exposes the same system within each database, but the server level permissions aren't available. This article reviews some basic security concepts and then describes a typical implementation of the permissions.
 
+[!INCLUDE [entra-id](../../../includes/entra-id.md)]
+
 ## Security principals
 
 Security principal is the official name of the identities that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and that can be assigned permission to take actions. They are usually people or groups of people, but can be other entities that pretend to be people. The security principals can be created and managed using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] listed, or by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].
@@ -61,9 +63,11 @@ For a graphic showing the relationships between Windows users, Windows groups, l
 
 The following example represents a common and recommended method of configuring permissions.
 
-#### In Windows Active Directory or Azure Active Directory
+<a name='in-windows-active-directory-or-azure-active-directory'></a>
 
-1. Create a Windows user for each person.
+#### In Windows Active Directory or Microsoft Entra ID
+
+1. Create a user for each person.
 
 1. Create Windows groups that represent the work units and the work functions.
 

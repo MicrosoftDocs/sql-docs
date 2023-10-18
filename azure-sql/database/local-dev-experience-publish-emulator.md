@@ -30,8 +30,8 @@ Before you can publish a Database Project to the local emulator, you must:
 
 You must first build your Database Project before publishing. To complete this process:
 
-1. First, follow the steps in [Build a Database Project](/sql/azure-data-studio/extensions/sql-database-project-extension-build#publish-to-an-existing-sql-instance).
-1. Then follow the steps in [Publish the SQL project and deploy to a local Container](/sql/azure-data-studio/extensions/sql-database-project-extension-build#publish-the-sql-project-and-deploy-to-a-local-container).
+1. First, follow the steps in [Build a Database Project](/azure-data-studio/extensions/sql-database-project-extension-build#publish-to-an-existing-sql-instance).
+1. Then follow the steps in [Publish the SQL project and deploy to a local Container](/azure-data-studio/extensions/sql-database-project-extension-build#publish-the-sql-project-and-deploy-to-a-local-container).
 
 ## Next steps
 

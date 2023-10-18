@@ -554,7 +554,7 @@ The following schemas in the `msdb` system database in SQL Managed Instance must
 
 ### Error logs
 
-SQL Managed Instance places verbose information in error logs. There are many internal system events that are logged in the error log. Use a custom procedure to read error logs that filters out some irrelevant entries. For more information, see [SQL Managed Instance – sp_readmierrorlog](/archive/blogs/sqlcat/azure-sql-db-managed-instance-sp_readmierrorlog) or [SQL Managed Instance extension(preview)](/sql/azure-data-studio/azure-sql-managed-instance-extension#logs) for Azure Data Studio.
+SQL Managed Instance places verbose information in error logs. There are many internal system events that are logged in the error log. Use a custom procedure to read error logs that filters out some irrelevant entries. For more information, see [SQL Managed Instance – sp_readmierrorlog](/archive/blogs/sqlcat/azure-sql-db-managed-instance-sp_readmierrorlog) or [SQL Managed Instance extension(preview)](/azure-data-studio/extensions/azure-sql-managed-instance-extension#logs) for Azure Data Studio.
 
 Changing the number of retained error logs is unsupported.
 

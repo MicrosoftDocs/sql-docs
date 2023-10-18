@@ -36,7 +36,7 @@ For ODBC, OLEDB, ADO.NET, JDBC, PHP, and Node.js drivers, users need to explicit
 
 ## Tools
 
-Users of [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms), [sqlcmd](/sql/tools/sqlcmd-utility), [Azure Data Studio](/sql/azure-data-studio/what-is), and [SQL Server Data Tools](/sql/ssdt/sql-server-data-tools) need to explicitly specify the DNN listener name and port as the server name in the connection string to connect to the listener.
+Users of [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms), [sqlcmd](/sql/tools/sqlcmd-utility), [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), and [SQL Server Data Tools](/sql/ssdt/sql-server-data-tools) need to explicitly specify the DNN listener name and port as the server name in the connection string to connect to the listener.
 
 Creating the DNN listener via the SQL Server Management Studio (SSMS) GUI is currently not supported.
 

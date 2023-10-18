@@ -110,7 +110,7 @@ You won't be charged for the Azure SQL Database unless you exceed the free datab
 
 ### Tips on managing vCore seconds
 
-1. Disconnect querying tools such as [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
+1. Disconnect querying tools such as [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), including the object explorer, when you're done using them. Leaving connections open may continue to consume credits.
 1. On the **Metrics** tab, [create an alert rule](/azure/azure-monitor/alerts/tutorial-metric-alert) at no cost. Use the **Free amount remaining** metric to send an alert when the amount is less than 10,000 vCore seconds (10% of the monthly limit), so you know when you're running out for the month.
 
 ## Offer limitations
@@ -147,4 +147,4 @@ To delete `myFreeDBResourceGroup` and all its resources using the Azure portal:
 - [Azure SQL Database free offer FAQ](free-offer-faq.yml)
 - [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages
 - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-- [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database)
+- [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database)

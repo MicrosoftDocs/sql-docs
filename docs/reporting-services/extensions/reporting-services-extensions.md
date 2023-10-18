@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services Extensions"
+title: "Reporting Services extensions"
 description: Find out how to extend data processing capabilities in Reporting Services by customizing report data, notification mechanisms, and security systems.
 author: maggiesMSFT
 ms.author: maggies
@@ -25,7 +25,7 @@ helpviewer_keywords:
  Another report server extension, Report Definition Customization Extension (RDCE), can dynamically customize a report definition before it is passed to the processing engine. You might customize reports based on factors such as users or languages. For example, you might want to implement different views for various users such as managers or members of a department, or you might want to customize a report to have a different layout when it is rendered in French or Arabic.  
   
 ## In this section  
- [Security Considerations for Extensions](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [Security considerations for extensions](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  Describes security issues related to developing and deploying [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensions.  
   
  [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  
@@ -40,7 +40,7 @@ helpviewer_keywords:
  [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
  Describes the requirements and steps for implementing a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] security extension.  
   
- [Reporting Services Extension Library](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services extension library](../../reporting-services/extensions/reporting-services-extension-library.md)  
  Contains the programming reference for the extension API library for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] extensibility features.  
   
   

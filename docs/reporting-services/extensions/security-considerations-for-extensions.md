@@ -39,7 +39,7 @@ helpviewer_keywords:
  When extensions are first loaded into memory by the report server, they use the service account credentials, because some extension assemblies require specific permissions to access system resources, to read configuration files, and to load other, dependent assemblies. After an assembly has been loaded and initialized, however, all subsequent calls to extension assemblies use the credentials of the user account that is currently logged on.  
   
 ## See also  
- [Reporting Services Extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services Extension Library](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services extension library](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

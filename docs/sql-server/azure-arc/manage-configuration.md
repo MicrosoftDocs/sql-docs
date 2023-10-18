@@ -258,27 +258,23 @@ This query identifies many details about each instance, including the license ty
 
 ```kusto
 resources
-| where type == "microsoft.hybridcompute/machines"
-| where properties.detectedProperties.mssqldiscovered == "true"
-| extend machineIdHasSQLServerDiscovered = id
-| project name, machineIdHasSQLServerDiscovered, resourceGroup, subscriptionId
-| join kind= leftouter (
-    resources
-    | where type == "microsoft.hybridcompute/machines/extensions"
-    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
-    | extend machineIdHasSQLServerExtensionInstalled = iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), "")
-    | project Extenstion_State = properties.provisioningState,
-    License_Type = properties.settings.LicenseType,
-    ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""),
-    Extension_Version = properties.instanceView.typeHandlerVersion,
-    Exlcuded_instaces = properties.ExcludedSqlInstances,
-    Purview = iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"enabled",""),
-    Entra = iff(notnull(properties.settings.AzureAD),"enabled",""),
-    BPA = iff(notnull(properties.settings.AssessmentSettings),"enabled",""),
-    machineIdHasSQLServerExtensionInstalled)
-on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
-| where isnotempty(machineIdHasSQLServerExtensionInstalled)
-| project-away machineIdHasSQLServerDiscovered, machineIdHasSQLServerExtensionInstalled
+| where type == "microsoft.hybridcompute/machines"| where properties.detectedProperties.mssqldiscovered == "true"| extend machineIdHasSQLServerDiscovered = id
+| project name, machineIdHasSQLServerDiscovered, resourceGroup, subscriptionId
+| join kind= leftouter (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+    | extend machineIdHasSQLServerExtensionInstalled = iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), "")
+    | project Extension_State = properties.provisioningState,
+    License_Type = properties.settings.LicenseType,
+    ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""),
+    Extension_Version = properties.instanceView.typeHandlerVersion,
+    Excluded_instances = properties.ExcludedSqlInstances,
+    Purview = iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"enabled",""),
+    Entra = iff(notnull(properties.settings.AzureAD),"enabled",""),
+    BPA = iff(notnull(properties.settings.AssessmentSettings),"enabled",""),
+    machineIdHasSQLServerExtensionInstalled)on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
+| where isnotempty(machineIdHasSQLServerExtensionInstalled)
+| project-away machineIdHasSQLServerDiscovered, machineIdHasSQLServerExtensionInstalled
 ```
 
 #### List Arc-enabled servers with SQL Server

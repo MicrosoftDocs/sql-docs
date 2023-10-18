@@ -3,7 +3,7 @@ title: "MSSQLSERVER_15517"
 description: "MSSQLSERVER_15517"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "11/10/2023"
+ms.date: "18/10/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"
@@ -90,31 +90,33 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
 
    - Query 1: Check the value of the `Owner_Name` value in sys.databases.
 
-      ```sql
+     ```sql
         SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName
         FROM sys.databases
         WHERE NAME = N'Demodb_15517';
-        /* 
-         Database_Name                                                                                                                    owner_sid                                                                                       OwnerName
-        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-        Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                             login1
-        (1 row affected)
-        */
-      ```
+     ```
+
+    ```output
+     Database_Name                                                                                                                    owner_sid                                                                                 OwnerName
+     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+     Demodb_15517                               0xDB79ED7B6731CF4E8DC7DF02871E3E36                                                        login1
+     (1 row affected)
+    ```
 
    - Query 2: Check the `Owner_Name` value in the `sys.database_principals` table within the demonstration database:
 
-      ```sql
+    ```sql
         SELECT SUSER_SNAME(sid) AS Owner_Name, sid 
         FROM Demodb_15517.sys.database_principals 
         WHERE NAME = N'dbo'; 
-        /* 
-        Owner_Name                                                                                     SID
-        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-        login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
+    ```
+
+    ```output
+       Owner_Name                                                                               SID
+       ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+       login1                                                                                        0xDB79ED7B6731CF4E8DC7DF02871E3E36
         (1 row affected)
-        */
-      ```
+    ```
 
 1. Back up the demonstration database by using a query that resembles the following script:
 
@@ -153,13 +155,14 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
       ```sql
         SELECT NAME AS Database_Name, owner_sid, SUSER_SNAME(owner_sid) AS OwnerName 
         FROM sys.databases 
-        WHERE NAME = N'Demodb_15517'; 
-        /* 
-        Database_Name  owner_sid                                                                                      OwnerName
-        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
+        WHERE NAME = N'Demodb_15517';
+      ```
+
+      ```output
+      Database_Name  owner_sid                                                                                OwnerName
+      ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Demodb_15517 0xD63086DD7277BC4EB88013D359AF73A6                                                             login2
         (1 row affected)
-        */ 
       ```
 
 1. In Query 2, check the value of the `Owner_Name` value in the `sys.database_principals` table within the demonstration database. The value now reflects `NULL`.
@@ -168,13 +171,14 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
         SELECT SUSER_SNAME(sid) AS Owner_Name, sid
         FROM Demodb_15517.sys.database_principals
         WHERE NAME = N'dbo';
-        /* 
+      ```
+
+      ```output
         Owner_Name
         ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
         sid 
-        NULL                                                                                           0xDB79ED7B6731CF4E8DC7DF02871E3E36 
-        (1 row affected) 
-        */ 
+        NULL                                                                                   0xDB79ED7B6731CF4E8DC7DF02871E3E36 
+        (1 row affected)
       ```
 
 1. Run the `testexec` stored procedure. You should now see the "15517" error message.
@@ -183,7 +187,10 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
         USE Demodb_15517 
         GO 
         EXEC dbo.testexec 
-        GO 
+        GO
+      ```
+
+      ```output
         /* 
         Msg 15517, Level 16, State 1, Procedure dbo.testexec, Line 0 [Batch Start Line 19] 
         Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission. 
@@ -198,7 +205,7 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
 
 1. Rerun Query 2 and verify that dbo users now resolve to the login2 user.
 
-    ```sql
+    ```output
     /* 
     Owner_Name                                                                                     SID
     -------------------------------------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
@@ -213,7 +220,10 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
     USE Demodb_15517 
     GO 
     EXEC dbo.testexec 
-    GO 
+    GO
+   ```
+
+   ```output
     /* -- You get an output that resembles the following 
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
     Microsoft SQL Server 2019 (RTM-CU16-GDR) (KB5014353) - 15.0.4236.7 (X64)  
@@ -222,7 +232,7 @@ To resolve the issue that occurs because of an invalid dbo user error, change th
     Express Edition (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 22621: ) (Hypervisor) 
     (1 row affected) 
     */ 
-    ```
+   ```
 
 ## See Also
 

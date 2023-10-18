@@ -3,7 +3,7 @@ title: "MSSQLSERVER_15517"
 description: "MSSQLSERVER_15517"
 author: MashaMSFT
 ms.author: mathoma
-ms.date: "18/10/2023"
+ms.date: "10/18/2023"
 ms.service: sql
 ms.subservice: supportability
 ms.topic: "reference"

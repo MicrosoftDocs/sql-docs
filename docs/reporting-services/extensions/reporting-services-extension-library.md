@@ -29,7 +29,7 @@ helpviewer_keywords:
  **Microsoft.ReportingServices.ReportRendering**  
  Contains classes and interfaces that enable you to extending the rendering capabilities of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Using the members of this namespace along with members of the <xref:Microsoft.ReportingServices.Interfaces> namespace, you can build your own, custom rendering extensions for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## See Also  
+## See also  
  [Reporting Services Extensions](../../reporting-services/extensions/reporting-services-extensions.md)  
   
   

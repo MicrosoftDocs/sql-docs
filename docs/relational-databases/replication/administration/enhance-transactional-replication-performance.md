@@ -113,7 +113,7 @@ The **–SubscriptionStreams** parameter can greatly improve aggregate replicati
   
 A value for this agent parameter can be specified using the `@subscriptionstreams` of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
-For more information on implementing subscription streams, see [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
+For more information on implementing subscription streams, see [Navigating SQL replication subscriptionStream setting](https://repltalk.com/2010/03/01/navigating-sql-replication-subscriptionstreams-setting/).
   
 ### Blocking Monitor Thread
 

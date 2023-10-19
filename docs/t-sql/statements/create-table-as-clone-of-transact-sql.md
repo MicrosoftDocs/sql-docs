@@ -59,7 +59,7 @@ Primary and unique key constraints defined in the source table will be replicate
 ## Limitations
 
 - Table clones across various warehouses within a workspace is currently not supported.
-- The tables present in the Lakehouse generated SQL Endpoint is currently not supported to clone.
+- The tables present in the SQL analytics endpoint of the Lakehouse cannot currently be cloned.
 - Cloned tables do not currently inherit row-level security or dynamic data masking.
 
 ## Examples

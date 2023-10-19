@@ -727,20 +727,20 @@ Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW
 
 ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
 
-#### *PARSER_VERSION = '1.0' | '2.0'*
+#### PARSER_VERSION = { '1.0' | '2.0' }
+
 PARSER_VERSION only applies to CSV. Default is 2.0. Specifies the file parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files. 
 
 Parser version 2.0 has the following limitations: 
 
 - Compressed CSV files are not supported
 - Files with UTF-16 encoding are not supported
-- Scenarios when FIELDTERMINATOR or ROWTERMINATOR are used with more than one character (except for the default \r\n) are not supported
+- Scenarios when FIELDTERMINATOR or ROWTERMINATOR are used with more than one character (except for the default `\r\n`) are not supported
 
 Parser version 1.0 is available for backward compatibility only, and should be used only when these limitations are encountered.  
 
 > [!NOTE]  
-> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to parser 1.0 wihtout user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed. 
- 
+> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to parser 1.0 without user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed.
 
 ## Remarks
 

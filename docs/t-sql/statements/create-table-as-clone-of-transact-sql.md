@@ -46,7 +46,7 @@ Providing the schema name is required when a table is cloned across schemas.
 
 The name of the cloned table. Table names must follow the [rules for identifiers](../../relational-databases/databases/database-identifiers.md?view=fabric&preserve-view=true). *table_name* can be a maximum of 128 characters.
 
-### *point_in_time*
+#### *point_in_time*
 
 At the date and time provided, the table clone accurately mirrors the data as it was at that particular date and time. 'YYYY-MM-DDThh:mm:ss' is the format where 'T' indicates the start of time.
 

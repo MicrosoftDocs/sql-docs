@@ -12,9 +12,9 @@ ms.custom: tools|sos
 
 # SqlPackage with data in Parquet files (preview)
 
-This article covers SqlPackage support for interacting with data stored in Azure Blob Storage that is in Parquet format.  For SQL Server 2022 and Azure SQL Managed Instance, preview support for [extract](#extract-export-data) and [publish](#publish-import-data) with data in Parquet files in Azure Blob Storage is available in SqlPackage 162.1.176. Azure SQL Database and SQL Server 2019 and earlier are not supported at this time. The [import](sqlpackage-import.md) and [export](sqlpackage-export.md) actions continue to be available for SQL Server, Azure SQL Managed Instance, and Azure SQL Database.  Support for Parquet files in Azure Blob Storage continues to be generally available for [Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md).
+This article covers SqlPackage support for interacting with data stored in Azure Blob Storage that is in Parquet format. For SQL Server 2022 and Azure SQL Managed Instance, preview support for [extract](#extract-export-data) and [publish](#publish-import-data) with data in Parquet files in Azure Blob Storage is available in SqlPackage 162.1.176. Azure SQL Database and SQL Server 2019 and earlier aren't supported. The [import](sqlpackage-import.md) and [export](sqlpackage-export.md) actions continue to be available for SQL Server, Azure SQL Managed Instance, and Azure SQL Database. Support for Parquet files in Azure Blob Storage continues to be generally available for [Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md).
 
-With [extract](#extract-export-data), the database schema (`.dacpac` file) is written to the local client running SqlPackage and the data is written to Azure Blob Storage in Parquet format.  The data is stored in individual folders named with 2-part table names.  [CETAS](/sql/t-sql/statements/create-external-table-as-select-transact-sql) is used to write the files in Azure Blob Storage.
+With [extract](#extract-export-data), the database schema (`.dacpac` file) is written to the local client running SqlPackage and the data is written to Azure Blob Storage in Parquet format. The data is stored in individual folders named with two-part table names. [CETAS](/sql/t-sql/statements/create-external-table-as-select-transact-sql) is used to write the files in Azure Blob Storage.
 
 With [publish](#publish-import-data), the database schema (`.dacpac` file) is read from the local client running SqlPackage and the data is read from or written to Azure Blob Storage in Parquet format.
 
@@ -29,15 +29,9 @@ To export data from a database to Azure Blob Storage, the SqlPackage [extract](s
 
 Access for the database to access the blob storage container is authorized via a storage account key. The database schema (.dacpac file) is written to the local client running SqlPackage and the data is written to Azure Blob Storage in Parquet format.
 
-An additional parameter is optional, which sets the storage root path within the container:
-- /p:AzureStorageRootPath
+The parameter `/p:AzureStorageRootPath` is optional, which sets the storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. Data is stored in individual folders named with two-part table names. The number of files created per table depends upon the MAXDOP and available SQL cores at the time of the export.
 
-Without this property, the path defaults to `servername/databasename/timestamp/`.  Data is stored in individual folders named with 2-part table names.  The number of files created per table depends upon the MAXDOP and available SQL cores at the time of the export.
-
-Finally, the tables which have their data exported can be specified with the following property:
-- /p:TableData
-
-The property `/p:TableData` indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the format schema_name.table_identifier. This property may be specified multiple times to indicate multiple tables.
+Finally, the property `/p:TableData` specifies which tables have their data exported. Specify the table name with or without the brackets surrounding the name parts in the format schema_name.table_identifier. This property may be specified multiple times to indicate multiple tables.
 
 ### Example
 
@@ -74,7 +68,7 @@ See [SqlPackage publish](sqlpackage-publish.md#examples) for more examples of au
 
 ### Polybase
 
-[Polybase](/sql/relational-databases/polybase/polybase-guide) is required for SqlPackage operations with Parquet files.  The following query can be used to check if Polybase is enabled:
+[Polybase](/sql/relational-databases/polybase/polybase-guide) is required for SqlPackage operations with Parquet files. The following query can be used to check if Polybase is enabled:
 
 ```sql
 // configuration_id = 16397 is 'allow polybase export'
@@ -83,7 +77,7 @@ SELECT configuration_id, value_in_use FROM sys.configurations
 WHERE configuration_id IN (16397, 16399)
 ```
 
-You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export).  It is recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
+You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export). It's recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
 
 ### Table and data types
 
@@ -91,7 +85,7 @@ Data types supported by [CETAS](/sql/t-sql/statements/create-external-table-as-s
 
 Ledger tables are enabled for extract and publish operations with Parquet files.
 
-Data stored with Always Encrypted is not supported for extract and publish operations with Parquet files.
+Data stored with Always Encrypted isn't supported for extract and publish operations with Parquet files.
 
 
 ## Next Steps

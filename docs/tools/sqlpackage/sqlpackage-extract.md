@@ -99,10 +99,10 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 
 |Property|Value|Description|
 |---|---|---|
-|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure Blob Storage endpoint. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data).|
-|**/p:**|AzureStorageContainer=(STRING)|Azure Blob Storage container. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data).|
-|**/p:**|AzureStorageKey=(STRING)|Azure storage account key. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data).|
-|**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data).|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure Blob Storage endpoint. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
+|**/p:**|AzureStorageContainer=(STRING)|Azure Blob Storage container. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
+|**/p:**|AzureStorageKey=(STRING)|Azure storage account key. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
+|**/p:**|AzureStorageRootPath=(STRING)|Storage root path within the container. Without this property, the path defaults to `servername/databasename/timestamp/`. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
 |**/p:**|CompressionOption=({Normal&#124;Maximum&#124;Fast&#124;SuperFast&#124;NotCompressed} 'Normal')|Specifies the type of compression.|
 |**/p:**|DacApplicationDescription=(STRING)|Defines the Application description to be stored in the DACPAC metadata.|
@@ -121,7 +121,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN 'False')|Specifies whether relationships between users and logins are ignored.|
 |**/p:**|LongRunningCommandTimeout=(INT32 '0')| Specifies the long running command timeout in seconds when executing queries against SQL Server. Use 0 to wait indefinitely.|
 |**/p:**|Storage=({File&#124;Memory})|Specifies the type of backing storage for the schema model used during extraction. 'Memory' is default for .NET Core version of SqlPackage. 'File' is only available and default for .NET Framework version of SqlPackage.|
-|**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier.  This property may be specified multiple times to indicate multiple options.|
+|**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier.  This property may be specified multiple times to indicate multiple options.  Applies to data extracted to both `.dacpac` and Parquet files.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|VerifyExtraction=(BOOLEAN 'False')|Specifies whether the extracted schema model should be verified.|
 

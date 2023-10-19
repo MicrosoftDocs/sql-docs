@@ -10378,7 +10378,7 @@ items:
     - name: Restore the master database
       href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
-      href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
+      href: https://www.microsoft.com/sql-server/sql-server-2022-pricing
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>

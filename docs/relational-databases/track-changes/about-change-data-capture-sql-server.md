@@ -133,7 +133,7 @@ The capture process responsible for populating the change table accommodates a f
 
 ## Interoperability with other features
 
-Change data capture has some limitations when working with other SQL Server features. Review [Interperability](change-data-capture-and-other-sql-server-features.md) to learn more. 
+Change data capture has some limitations when working with other SQL Server features. Review [Interoperability](change-data-capture-and-other-sql-server-features.md) to learn more. 
 
 ## Known issues 
 

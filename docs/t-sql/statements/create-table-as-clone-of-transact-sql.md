@@ -4,7 +4,7 @@ description: "CREATE TABLE AS CLONE OF creates a new table as a clone of another
 author: ajagadish-24
 ms.author: ajagadish
 ms.reviewer: wiassaf
-ms.date: 06/08/2023
+ms.date: 10/19/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
@@ -17,7 +17,7 @@ monikerRange: "=fabric"
 
 Creates a new table as a zero-copy clone of another table in [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]. Only the metadata of the table is copied. The underlying data of the table, stored as parquet files, is not copied.
 
-For more information on cloning a table in [!INCLUDE [fabric](../../includes/fabric.md)], see [Clone table](/fabric/data-warehouse/tutorial-clone-table).
+For more information on cloning a table in [!INCLUDE [fabric](../../includes/fabric.md)], see [Clone table with TSQL in Microsoft Fabric](/fabric/data-warehouse/tutorial-clone-table). You can also clone tables in [!INCLUDE [fabric](../../includes/fabric.md)] via the Fabric portal, for examples see [Clone tables in the Fabric portal](/fabric/data-warehouse/tutorial-clone-table-portal).
 
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -78,8 +78,9 @@ CREATE TABLE dbo.Employee AS CLONE OF dbo.EmployeeUSA;
 CREATE TABLE dbo.Employee AS CLONE OF dbo1.EmployeeUSA;
 ```  
 
-## Next steps
+## Related content
  
 - [Create a table on [!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/create-table)
 - [[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/data-warehousing)
 - [Clone table in [!INCLUDE [fabric](../../includes/fabric.md)]](/fabric/data-warehouse/tutorial-clone-table)
+- [Clone tables in the Fabric portal](/fabric/data-warehouse/tutorial-clone-table-portal)

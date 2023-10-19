@@ -24,8 +24,8 @@ This article lists the features and fixes delivered by the released versions of 
 dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 ```
 
-|Platform|Download|Version|
-|:---|:---|:---|
+|Platform|Download|
+|:---|:---|
 |Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
 |Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
 |macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
@@ -37,18 +37,18 @@ dotnet tool install -g microsoft.sqlpackage --version 162.1.167
 | Feature | Details |
 | :------ | :------ |
 | Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.1) v5.1.1.|
-| Azure Synapse Analytics | Adds support for `PARSER_VERSION` in `FORMAT_OPTIONS` for  Azure Synapse Analytics serverless SQL pools. [Documentation](https://learn.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql?view=sql-server-ver15&tabs=delimited#format_options) |
+| Azure Synapse Analytics | Adds support for `PARSER_VERSION` in `FORMAT_OPTIONS` for  Azure Synapse Analytics serverless SQL pools. [Documentation](/sql/t-sql/statements/create-external-file-format-transact-sql#format_options) |
 | Azure Synapse Analytics | Adds support for mult-column distribution (MCD) in `CREATE VIEW` for Azure Synapse Analytics serverless SQL pools. [GitHub issue](https://github.com/microsoft/DacFx/issues/224) |
 | Azure Synapse Analytics | Adds support for /p:TableData property on extract operations to Parquet files, enabling the ability to specify which tables to export data for.  [GitHub issue](https://github.com/microsoft/DacFx/issues/16) |
-| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities do not support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnified` in SQL database projects. |
-| Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](https://learn.microsoft.com/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types).  Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
+| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities do not support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
+| Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types).  Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
 | Publish | Adds `/p:AllowTableRecreation` property to publish operation.  The default (true) is consistent with previous behavior, where a table change may require that a table is recreated while the table data is preserved however the deployment may take a significant amount of time or change tracking data could be lost.  Setting the property `/p:AllowTableRecreation` to false results in the deployment not starting if recreation is needed for any table.  [GitHub issue](https://github.com/microsoft/DacFx/issues/28) |
 
 ### Fixes
 | Feature | Details |
 | :------ | :------ |
 | Application | Fixes an issue where the SqlPackage CLI would throw an exception when the output was redirected. [GitHub issue](https://github.com/microsoft/DacFx/issues/261) |
-| Azure Synapse Analytics | Fixes an issue where a publish operation fails to parse a statement containing the `filepath()` or `filename()` [functions](https://learn.microsoft.com/azure/synapse-analytics/sql/query-specific-files). |
+| Azure Synapse Analytics | Fixes an issue where a publish operation fails to parse a statement containing the `filepath()` or `filename()` [functions](/azure/synapse-analytics/sql/query-specific-files). |
 | Import | AUTO_DROP option is excluded from statistics when importing a bacpac to a version of SQL Server that does not support AUTO_DROP. |
 | Import | Fixes an issue where imports of databases containing ALTER or CREATE of availability groups would fail to import. |
 | Export | Fixes an issue where dropped ledger columns were inclued in a bacpac export, resulting in an error message during import. |

@@ -48,9 +48,9 @@ The name of the cloned table. Table names must follow the [rules for identifiers
 
 #### *point_in_time*
 
-At the date and time provided, the table clone accurately mirrors the data as it was at that particular date and time. 'YYYY-MM-DDThh:mm:ss' is the format where 'T' indicates the start of time.
+At the date and time provided, the table clone accurately mirrors the data as it was at that particular date and time in UTC. The format of the datetime data type value must be 'YYYY-MM-DDThh:mm:ss', where 'T' indicates the start of time.
 
-Specifying the datetime is not required for creating table clones as of current point in time.
+Specifying the *point_in_time* is not required for creating table clones as of current point in time.
 
 ## Permissions
 

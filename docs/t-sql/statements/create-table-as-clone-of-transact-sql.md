@@ -27,7 +27,7 @@ For more information on cloning a table in [!INCLUDE [fabric](../../includes/fab
 CREATE TABLE 
     { database_name.schema_name.table_name | schema_name.table_name | table_name } 
 AS CLONE OF 
-    { database_name.schema_name.table_name | schema_name.table_name | table_name } AT {point_in_time}
+    { database_name.schema_name.table_name | schema_name.table_name | table_name } [AT {point_in_time}]
 ```  
 
 ## Arguments
@@ -46,25 +46,22 @@ Providing the schema name is required when a table is cloned across schemas.
 
 The name of the cloned table. Table names must follow the [rules for identifiers](../../relational-databases/databases/database-identifiers.md?view=fabric&preserve-view=true). *table_name* can be a maximum of 128 characters.
 
-### *point_in_time
+### *point_in_time*
 
-At the 'datetime' provided, the table clone accurately mirrors the data as it was at that particular date and time. It is a Datetime data type.
+At the date and time provided, the table clone accurately mirrors the data as it was at that particular date and time. 'YYYY-MM-DDThh:mm:ss' is the format where 'T' indicates the start of time.
 
-'YYYY-MM-DDThh:mm:ss' is the format where 'T' indicates the start of time part of the datetime value.
-
-Specifying the *datetime is not required for creating table clones as of current point in time.
-
-Note: This specification is necessary only when there is a need to create a table clone at a specific historical time. In cases where a table clone is intended to be generated based on the current moment, there is no need to explicitly specify this timestamp.
+Specifying the datetime is not required for creating table clones as of current point in time.
 
 ## Permissions
 
-Requires: 
+Requires:
+
  - SELECT permission on the entire source table
  - CREATE TABLE permissions on the schema in which the clone of the table will be created
   
 ## Constraints
 
-Primary and unique key constraints defined in the source table will be replicated when creating a clone.
+Primary and unique key constraints defined in the source table are replicated when creating a clone.
  
 ## Limitations
 
@@ -86,14 +83,14 @@ CREATE TABLE dbo.Employee AS CLONE OF dbo.EmployeeUSA;
 CREATE TABLE dbo.Employee AS CLONE OF dbo1.EmployeeUSA;
 ```  
 
-## C. Create a table clone within the same schema AT a historical point-in-time
+## C. Create a table clone within the same schema at a point in time
 
 ```sql
 --Clone creation within the same schema
 CREATE TABLE dbo.Employee AS CLONE OF dbo.EmployeeUSA AT '2023-05-23T14:24:10.325';
 ```
 
-## D. Create a table clone across schema AT a historical point-in-time
+## D. Create a table clone across schema at a point in time
 
 ```sql
 --Clone creation within the same schema

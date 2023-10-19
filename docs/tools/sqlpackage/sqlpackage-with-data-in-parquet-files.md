@@ -77,7 +77,7 @@ SELECT configuration_id, value_in_use FROM sys.configurations
 WHERE configuration_id IN (16397, 16399)
 ```
 
-You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export). Enabling Polybase on Azure SQL Managed Instance requires [PowerShell or Azure CLI](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current#methods-to-enable-cetas). It's recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
+You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export). Enabling Polybase on Azure SQL Managed Instance requires [PowerShell or Azure CLI](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current&preserve-view=true#methods-to-enable-cetas). It's recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
 
 ### Table and data types
 

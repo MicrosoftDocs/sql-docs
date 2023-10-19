@@ -19,7 +19,7 @@ Creates a new table as a [zero-copy clone of another table](/fabric/data-warehou
 
 For more information on cloning a table in [!INCLUDE [fabric](../../includes/fabric.md)], see [Clone table with TSQL in Microsoft Fabric](/fabric/data-warehouse/tutorial-clone-table). You can also clone tables in [!INCLUDE [fabric](../../includes/fabric.md)] via the Fabric portal, for examples see [Clone tables in the Fabric portal](/fabric/data-warehouse/tutorial-clone-table-portal).
 
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
   
@@ -48,7 +48,8 @@ The name of the cloned table. Table names must follow the [rules for identifiers
 
 ### *point_in_time
 
-At the 'datetime' provided, the table clone accurately mirrors the data as it was at that particular date and time. It is a Datetime datatype.
+At the 'datetime' provided, the table clone accurately mirrors the data as it was at that particular date and time. It is a Datetime data type.
+
 'YYYY-MM-DDThh:mm:ss' is the format where 'T' indicates the start of time part of the datetime value.
 
 Specifying the *datetime is not required for creating table clones as of current point in time.

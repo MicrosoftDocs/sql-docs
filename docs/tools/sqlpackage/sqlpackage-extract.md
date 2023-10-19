@@ -99,6 +99,7 @@ SqlPackage /at:$($AccessToken_Object.Token) /Action:Extract /TargetFile:"C:\Adve
 
 |Property|Value|Description|
 |---|---|---|
+|**/p:**|AzureSharedAccessSignatureToken=(STRING)|Azure shared access signature (SAS) token. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish-import-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
 |**/p:**|AzureStorageBlobEndpoint=(STRING)|Azure Blob Storage endpoint. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
 |**/p:**|AzureStorageContainer=(STRING)|Azure Blob Storage container. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|
 |**/p:**|AzureStorageKey=(STRING)|Azure storage account key. See [SqlPackage for Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract-export-data) and [SqlPackage with data in Parquet files](sqlpackage-with-data-in-parquet-files.md).|

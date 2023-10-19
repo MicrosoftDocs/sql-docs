@@ -25,7 +25,7 @@ In SQL databases hosted in Azure, the extract/publish operations with Parquet fi
 To export data from a database to Azure Blob Storage, the SqlPackage [extract](sqlpackage-extract.md) action is used with following properties:
 - /p:AzureStorageBlobEndpoint
 - /p:AzureStorageContainer
-- /p:AzureStorageKey
+- /p:AzureStorageKey or /p:AzureSharedAccessSignatureToken
 
 Access for the database to access the blob storage container is authorized via a storage account key. The database schema (.dacpac file) is written to the local client running SqlPackage and the data is written to Azure Blob Storage in Parquet format.
 
@@ -77,7 +77,7 @@ SELECT configuration_id, value_in_use FROM sys.configurations
 WHERE configuration_id IN (16397, 16399)
 ```
 
-You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export). It's recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
+You may need to enable [Polybase](/sql/relational-databases/polybase/polybase-installation) or [Polybase export](/sql/database-engine/configure-windows/allow-polybase-export). Enabling Polybase on Azure SQL Managed Instance requires [PowerShell or Azure CLI](/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azuresqldb-mi-current#methods-to-enable-cetas). It's recommended that you evaluate whether enabling Polybase is right for your environment before making configuration changes.
 
 ### Table and data types
 
@@ -92,4 +92,5 @@ Data stored with Always Encrypted isn't supported for extract and publish operat
 - Learn more about [Extract](sqlpackage-extract.md)
 - Learn more about [Publish](sqlpackage-publish.md)
 - Learn more about [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction)
+- Learn more about [Azure Storage shared access signature (SAS)](/azure/storage/common/storage-sas-overview)
 - Learn more about [Azure Storage Account Keys](/azure/storage/common/storage-account-keys-manage)

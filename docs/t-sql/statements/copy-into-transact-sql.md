@@ -572,6 +572,7 @@ WITH
  [ , ROWTERMINATOR = 'row_terminator' ]
  [ , FIRSTROW = first_row ]
  [ , ENCODING = { 'UTF8' | 'UTF16' } ]
+ [ , PARSER_VERSION = { '1.0' | '2.0' } ]
 )
 ```
 
@@ -710,7 +711,7 @@ The COPY command autodetects the compression type based on the file extension wh
 
 *FIELDTERMINATOR* only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can also be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDTERMINATOR.
 
-#### ROW TERMINATOR = 'row_terminator'
+#### ROWTERMINATOR = 'row_terminator'
 
 *ROW TERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is `\r\n`.
 
@@ -725,6 +726,17 @@ Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW
 #### *ENCODING = 'UTF8' | 'UTF16'*
 
 ENCODING only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command.
+
+#### *PARSER_VERSION = '1.0' | '2.0'*
+PARSER_VERSION only applies to CSV. Default is 2.0. Specifies the CSV parser used for ingestion when the source file type is CSV. The 2.0 parser offers improved performance for ingestion of CSV files, but does not support the following scenarios:
+
+- Compressed CSV files
+- Files with UTF-16 encoding
+- When FIELDTERMINATOR or ROWTERMINATOR are used with more than one character (except for the default \r\n). 
+
+> [!NOTE]  
+> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to parser 1.0 wihtout user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed. 
+ 
 
 ## Remarks
 

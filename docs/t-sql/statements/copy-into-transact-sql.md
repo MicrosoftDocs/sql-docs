@@ -713,7 +713,7 @@ The COPY command autodetects the compression type based on the file extension wh
 
 #### ROWTERMINATOR = 'row_terminator'
 
-*ROW TERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. By default, the row terminator is `\r\n`.
+*ROW TERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. Default terminators for PARSER_VERSION = '1.0' are \r\n, \n and \r. Default terminators for PARSER_VERSION = '2.0' are \r\n and \n.
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
@@ -735,7 +735,7 @@ Parser version 2.0 has the following limitations:
 
 - Compressed CSV files are not supported
 - Files with UTF-16 encoding are not supported
-- Scenarios when FIELDTERMINATOR or ROWTERMINATOR are used with more than one character (except for the default `\r\n`) are not supported
+- Multicharacter ROWTERMINATOR, FIELDTERMINATOR, or FIELDQUOTE is not supported. However, '\r\n' is accepted as a default ROWTERMINATOR
 
 Parser version 1.0 is available for backward compatibility only, and should be used only when these limitations are encountered.  
 

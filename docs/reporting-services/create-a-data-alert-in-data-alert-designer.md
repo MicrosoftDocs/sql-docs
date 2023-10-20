@@ -1,5 +1,5 @@
 ---
-title: "Create a Data Alert in Data Alert Designer"
+title: "Create a data alert in Data Alert Designer"
 description: Learn how to create data alert definitions in Data Alert Designer. Also, learn about editing the alerts and saving the edits when you're finished.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,11 +11,11 @@ ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
-# Create a Data Alert in Data Alert Designer
+# Create a data alert in Data Alert Designer
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -33,14 +33,14 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 3.  On the **Actions** menu, click **New Data Alert**.  
   
-     The following picture shows the **Actions** menu.  
+     The following picture shows the **Actions** menu.
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
-  
+     :::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot that shows the Open Alert Designer from SharePoint library, highlighting the New Data Alert Option in the Actions menu."
+
      The Data Alert Designer opens, showing the first 100 rows of the first data feed that the report generates in a table.  
   
     > [!NOTE]  
-    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and Service Applications](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and service applications](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  If the **New Data Alert** option is grayed, the report data source is configured to use integrated security credentials or prompt for credentials. To make the **New Data Alert** option available, you must update the data source to use stored credentials or no credentials.  
   
@@ -48,7 +48,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 4.  Optionally, select a different data feed in the **Report data name** drop-down list.  
   
-     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 5.  Optionally, in the **Alert name** text box, update the default name to be more meaningful.  
   
@@ -97,7 +97,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
      By default, an alert message has no stop date.  
   
     > [!NOTE]  
-    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Optionally, clear the **Send message only if results change** checkbox.  
   
@@ -118,7 +118,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
 ## See Also
 
 [Data Alert Designer](../reporting-services/data-alert-designer.md)   
-[Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+[Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

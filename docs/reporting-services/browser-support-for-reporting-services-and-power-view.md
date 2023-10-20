@@ -1,5 +1,5 @@
 ---
-title: "Browser Support for Reporting Services and Power View"
+title: "Browser support for Reporting Services and Power View"
 description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
 author: maggiesMSFT
 ms.author: maggies
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "components [Reporting Services], browsers"
   - "Web browsers [Reporting Services]"
 ---
-# Browser Support for Reporting Services and Power View
+# Browser support for Reporting Services and Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -149,10 +149,10 @@ The following is the current list of browsers supported for the web portal.
 
 ## Next steps
 
-[Finding and Viewing Reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
-[Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
+[Finding and viewing reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
 [Web portal (SSRS Native Mode)](./web-portal-ssrs-native-mode.md)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
-[URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
+[URL Access parameter reference](../reporting-services/url-access-parameter-reference.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

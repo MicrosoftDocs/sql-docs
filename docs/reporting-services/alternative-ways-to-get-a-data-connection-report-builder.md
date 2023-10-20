@@ -1,5 +1,5 @@
 ---
-title: "Alternative Ways to Get a Data Connection (Report Builder)"
+title: "Alternative ways to get a data connection (Report Builder)"
 description: Learn details about alternative ways to connect to an external data source, such as a SQL Server database.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,14 +9,14 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Alternative Ways to Get a Data Connection (Report Builder)
+# Alternative ways to get a data connection (Report Builder)
 A data connection contains the information to connect to an external data source such as a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. Usually, you get the connection information and the type of credentials to use from the data source owner.  
   
 To specify a data connection, you can use a shared data source from the report server or create an embedded data source that is used only in a specific report.  
   
 In most tutorials you use embedded data sources, but if you have access to shared data sources, then you can use them instead.  
   
-## Getting a Data Connection From a Shared Data Source  
+## Getting a data connection from a shared data source  
 If the report server has available shared data sources that you have permission to use, you can use them instead of an embedded data source. The following procedures tell how to locate the shared data sources and provide any credentials needed to use them.  
   
 To use a shared data source, you browse to a report server and select one. Usually, you get the report server URL from the report server administrator.  
@@ -64,7 +64,7 @@ To use a shared data source, you browse to a report server and select one. Usual
 9. Select **OK**.
   
 ## See Also  
-[Report Datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
-[Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
+[Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+[Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
   
 

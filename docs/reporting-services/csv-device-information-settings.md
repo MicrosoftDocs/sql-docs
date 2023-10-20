@@ -1,5 +1,5 @@
 ---
-title: "CSV Device Information Settings"
+title: "CSV device information settings"
 description: Learn about the CSV device information settings that are available for rendering in text format.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "CSV [Reporting Services]"
   - "device information settings [Reporting Services], CSV rendering"
 ---
-# CSV Device Information Settings
+# CSV device information settings
   The device information settings for the CSV rendering extension allow delimiters and qualifiers to be changed and line break handling to be specified. The extension of the file can also be submitted, as well as the encoding and inclusion of header rows in the output. Because delimiters are likely to be special characters, you should encode them in a CDATA section, if the settings are written as XML.  
   
  The following table lists the device information settings for rendering in Text format.  
@@ -29,10 +29,10 @@ helpviewer_keywords:
 |**SuppressLineBreaks**|Indicates whether line breaks are removed from the data included in the output. The default value is **false**. If the value is **true**, the **FieldDelimiter**, **RecordDelimiter**, and **Qualifier** settings cannot be a space character.|  
 |**UseFormattedValues**|Indicates whether formatted strings are put into the CSV output. The default value is **true** when **ExcelMode** is **true**; otherwise it is **false**.|  
   
-## See Also  
+## See also  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

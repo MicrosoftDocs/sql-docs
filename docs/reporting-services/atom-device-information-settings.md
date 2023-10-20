@@ -1,5 +1,5 @@
 ---
-title: "ATOM Device Information Settings"
+title: "Atom device information settings"
 description: Learn about device information settings for the Atom rendering extension that supports submittal of the Atom feed name and which character encoding to use.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# ATOM Device Information Settings
+# Atom device information settings
   The device information settings for the Atom rendering extension support submittal of the name of an Atom feed and character encoding to use.  
   
  The following table lists the device information settings for rendering to a data service document.  
@@ -21,8 +21,8 @@ ms.custom: updatefrequency5
   
 ## See Also  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

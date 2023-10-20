@@ -21,7 +21,7 @@ helpviewer_keywords:
 
 This topic describes breaking changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade, or in custom scripts or reports.
 
-## Security Extensions
+## Security extensions
 
 Custom security extensions need some modification to work with the new [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Security extensions need to use the IAuthenticationExtension2 interface.
 
@@ -32,7 +32,7 @@ The [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] application name cha
 ## Next steps
 
 [Behavior changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[What's New in Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
+[What's new in Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
 [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
 [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 

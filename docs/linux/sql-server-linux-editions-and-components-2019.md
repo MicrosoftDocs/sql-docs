@@ -235,12 +235,9 @@ The following features and services aren't available for SQL Server 2019 on Linu
 
 <sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
 
-> [!NOTE]  
-> The latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] features that depend on Azure Arc agent, including Microsoft Entra Authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go (PAYG) for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. Azure Arc-enabled SQL Server [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
-
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## Related content
 
-- [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)
+- [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
 - [Product Specifications for SQL Server](../sql-server/index.yml)

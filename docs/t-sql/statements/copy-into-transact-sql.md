@@ -5,7 +5,7 @@ description: Use the COPY statement in Azure Synapse Analytics and Warehouse in 
 author: periclesrocha
 ms.author: procha
 ms.reviewer: wiassaf, mikeray
-ms.date: 06/05/2023
+ms.date: 10/27/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: language-reference
@@ -713,11 +713,11 @@ The COPY command autodetects the compression type based on the file extension wh
 
 #### ROWTERMINATOR = 'row_terminator'
 
-*ROW TERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. Default terminators for PARSER_VERSION = '1.0' are \r\n, \n and \r. Default terminators for PARSER_VERSION = '2.0' are \r\n and \n.
+*ROWTERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. Default terminators for PARSER_VERSION = '1.0' are `\r\n`, `\n`, and `\r`. Default terminators for PARSER_VERSION = '2.0' are `\r\n` and `\n`.
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
-Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW TERMINATOR.
+Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROWTERMINATOR.
 
 #### *FIRSTROW = First_row_int*
 
@@ -740,7 +740,7 @@ Parser version 2.0 has the following limitations:
 Parser version 1.0 is available for backward compatibility only, and should be used only when these limitations are encountered.  
 
 > [!NOTE]  
-> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to parser 1.0 without user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed.
+> When COPY INTO is used with compressed CSV files or files with UTF-16 encoding, COPY INTO automatically switches to PARSER_VERSION 1.0, without user action required. For multi-character terminators on FIELDTERMINATOR or ROWTERMINATOR, the COPY INTO statement will fail. Use PARSER_VERSION = '1.0' if multi-character separators are needed.
 
 ## Remarks
 

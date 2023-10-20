@@ -115,7 +115,13 @@ Stop-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Ser
 
 ### [Azure CLI](#tab/azure-cli)
 
-From a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
+From a Cloud shell terminal, use the following sample command to identify operations currently executing:
+
+```azurecli
+az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv
+```
+
+To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
 
 ```azurecli
 $operationName = (az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv)

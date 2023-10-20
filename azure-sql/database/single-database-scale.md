@@ -97,11 +97,11 @@ First, log in to Azure and set the proper context for your subscription:
 
 ```powershell
 Login-AzAccount
-$SubscriptionID = "<YourSubscriptionIDHERE>"
+$SubscriptionID = "<YourSubscriptionIdHere>"
 Select-AzSubscription -SubscriptionName $SubscriptionID
 ```
 
-To monitor operations on an Azure SQL Database, including scaling operations, use [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity). The following sample returns an `OperationId` for each operation currently executing.
+To monitor operations on a database, including scaling operations, use [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity). The following sample returns an `OperationId` for each operation currently executing.
 
 ```powershell
 Get-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"

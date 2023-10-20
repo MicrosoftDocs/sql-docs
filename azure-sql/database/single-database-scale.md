@@ -4,7 +4,7 @@ description: This article describes how to scale the compute and storage resourc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/01/2022
+ms.date: 10/20/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -81,11 +81,11 @@ A service tier change or compute rescaling operation can be monitored and cancel
 
 ### [Azure portal](#tab/azure-portal)
 
-In the database overview blade, navigate to **Notifications** and click on the tile indicating there's an ongoing operation:
+In the database overview blade, navigate to **Notifications** and select the tile indicating there's an ongoing operation:
 
 ![Screenshot from the Azure portal of an ongoing operation.](./media/single-database-scale/ongoing-operations.png)
 
-Next, click on the button labeled **Cancel this operation**.
+Next, select **Cancel this operation**.
 
 ![Screenshot from the Azure portal of the cancellation of an ongoing operation.](./media/single-database-scale/cancel-ongoing-operation.png)
 

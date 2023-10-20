@@ -283,7 +283,7 @@ In the event of local or GeoDR failover scenarios, if your database has CDC enab
 
 If you create a database in Azure SQL Database as a Microsoft Entra user and enable CDC on it, a SQL user (for example, even one in the `sysadmin` role) won't be able to disable/make changes to CDC artifacts. However, another Microsoft Entra user is able to enable/disable CDC on the same database.
 
-Similarly, if you create a database as a SQL user, enabling/disabling change data capture as an Microsoft Entra user doesn't work.
+Similarly, if you create a database as a SQL user, enabling/disabling change data capture as a Microsoft Entra user doesn't work.
 
 Enabling CDC fails if you create a database in Azure SQL Database as a Microsoft Entra user, don't enable CDC, and then try enabling CDC after restoring the database. 
 
@@ -297,7 +297,7 @@ EXEC sys.sp_cdc_enable_db
 
 ### Point-in-time restore (PITR)
 
-If you enabled CDC on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC in the restored datanase, unless it's restored to a subcore SLO. If restored to subcore SLO, CDC artifacts won't be available.
+If you enabled CDC on your Azure SQL Database as SQL user, point-in-time-restore (PITR) retains the CDC in the restored database, unless it's restored to a subcore SLO. If restored to subcore SLO, CDC artifacts won't be available.
 
 If you enable CDC on your database as a Microsoft Entra user, it's not possible to Point-in-time restore (PITR) to a subcore SLO. Restore the database to the same or higher SLO as the source, and then disable CDC if necessary.
 

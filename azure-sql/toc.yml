@@ -385,6 +385,7 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
+
     - name: Hyperscale
       items: 
       - name: Overview
@@ -835,6 +836,8 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
+      - name: Change data capture (CDC)
+        href: database/change-data-capture-overview.md
     - name: Database sharding
       items:
       - name: Upgrade client library

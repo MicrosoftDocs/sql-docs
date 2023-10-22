@@ -141,7 +141,7 @@ helpviewer_keywords:
   
 -   The maximum number of threads used by availability groups is the configured setting for the maximum number of server threads ('**max worker threads**') minus 40.  
   
--   The availability replicas hosted on a given server instance share a single thread pool.  
+-   The availability replicas hosted on a given server instance share a single thread pool in SQL Server 2019 and previous versions.  
   
      Threads are shared on an on-demand basis, as follows:  
   
@@ -156,6 +156,8 @@ helpviewer_keywords:
     -   Each primary replica uses 1 Log Capture thread for each primary database. In addition, it uses 1 Log Send thread for each secondary database. Log send threads are released after ~15 seconds of inactivity.    
   
     -   A backup on a secondary replica holds a thread on the primary replica for the duration of the backup operation. 
+
+-  SQL Server 2022 introduced Parallel Redo Thread Pool. Instance level thread pool shared with all databases having redo work. With this, each database can take the benefit of parallel redo. The parallel redo thread pool allows multiple threads to process the log records of one database at the same time (in parallel). In SQL Server 2019 and previous versions, the number of available threads for redo is limited to 100.
 
 -  SQL Server 2019 introduced parallel redo for memory optimized availability group databases. In SQL Server 2016 and 2017, disk-based tables do not use parallel redo if a database in an availability group is also memory optimized. 
   

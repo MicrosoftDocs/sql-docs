@@ -6,7 +6,7 @@ ms.service: virtual-machines
 ms.topic: include
 ---
 - Monitor the application and [determine storage bandwidth and latency requirements](/azure/virtual-machines/premium-storage-performance#counters-to-measure-application-performance-requirements) for SQL Server data, log, and `tempdb` files before choosing the disk type.
-- If available, configure the `tempdb` [data and log files on the D: local SSD volume](manage-sql-vm-portal.md#storage). The SQL IaaS Agent extension handles the folder and permissions needed upon re-provisioning.
+- If available, configure the `tempdb` [data and log files on the D: local SSD volume](../virtual-machines/windows/manage-sql-vm-portal.md#storage). The SQL IaaS Agent extension handles the folder and permissions needed upon re-provisioning.
 - To optimize storage performance, plan for highest uncached IOPS available and use data caching as a performance feature for data reads while avoiding [virtual machine and disks capping](/azure/virtual-machines/premium-storage-performance#throttling).
 - Consider using [Azure Elastic SAN](../virtual-machines/windows/performance-guidelines-best-practices-storage.md#azure-elastic-san) for SQL Server workloads for better cost-efficiency due to storage consolidation, shared dynamic performance and the ability to drive higher storage throughput without needing to upgrade a VM. Azure Elastic SAN is currently in preview. 
 - Place data, log, and `tempdb` files on separate drives.

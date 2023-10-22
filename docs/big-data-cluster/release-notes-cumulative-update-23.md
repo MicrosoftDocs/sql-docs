@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 Big Data Clusters CU23 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 21 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 23 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei

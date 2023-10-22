@@ -179,7 +179,7 @@ SQL Server Big Data Clusters CU10 includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
   > [!CAUTION]
-  > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](release-notes-big-data-cluster.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+  > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](known-issues.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
 - Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
@@ -331,6 +331,39 @@ Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Serv
 | Package version | Image tag |
 | --- | --- |
 | 15.0.4023.6 | [2019-CU3-ubuntu-16.04] |
+
+### Resolved issues
+
+SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
+
+- [Deployment with private repository](#deployment-with-private-repository)
+- [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
+
+## <a id="cu2"></a> CU2 (February 2020)
+
+Cumulative Update 2 (CU2) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4013.40.
+
+| Package version | Image tag |
+| --- | --- |
+| 15.0.4013.40 | [2019-CU2-ubuntu-16.04] |
+
+## <a id="cu1"></a> CU1 (January 2020)
+
+Cumulative Update 1 (CU1) release for SQL Server Big Data Clusters. The SQL Server Database Engine version for this release is 15.0.4003.23.
+
+| Package version | Image tag |
+| --- | --- |
+| 15.0.4003.23 | [2019-CU1-ubuntu-16.04] |
+
+## <a id="rtm"></a> GDR1 (November 2019)
+
+SQL Server Big Data Clusters General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
+
+| Package version | Image tag |
+| --- | --- |
+| 15.0.2070.34 | [2019-GDR1-ubuntu-16.04] |
+
+[!INCLUDE[sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## Related content
 

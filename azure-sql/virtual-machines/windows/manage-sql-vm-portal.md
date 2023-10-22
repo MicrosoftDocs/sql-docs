@@ -69,10 +69,9 @@ Changing the license and edition metadata in the Azure portal is only supported 
 
 ## Storage 
 
-Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. Review [storage configuration](storage-configuration.md) to learn more.
+Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. For guidance, review [storage configuration](storage-configuration.md) and [Storage: Performance best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-storage.md).
 
-
-For example, you can extend your storage: 
+For example, you can extend your storage:
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-storage-configuration.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.":::
 
@@ -123,7 +122,7 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [ authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
@@ -152,3 +151,4 @@ From the **SQL IaaS Agent Extension Settings** page, you can [repair the extensi
 - [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
 - [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
 - [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
+- [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)

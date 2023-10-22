@@ -282,4 +282,6 @@ SQL Server images from Azure Marketplace install the SQL Server binaries to the 
 
 ## Related content
 
-For other information about using SQL Server in Azure, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md) and the [Frequently Asked Questions](frequently-asked-questions-faq.yml).
+- [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md) 
+- [Frequently asked questions for SQL Server on Azure VMs](frequently-asked-questions-faq.yml).
+- [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)

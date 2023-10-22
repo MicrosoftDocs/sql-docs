@@ -57,7 +57,7 @@ ms.topic: conceptual
 ### Failed to connect to remote instance of SQL Server 2016 or older
 
 - **Affected releases**: CU10
-- **Issue and customer effect**: When using PolyBase in [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you may observe the following error:
+- **Issue and customer effect**: When using PolyBase in [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] CU10 to connect to an existing SQL Server instance that is using a certificate for channel encryption that was created using the SHA1 algorithm, you might observe the following error:
 
 > `Msg 105082, Level 16, State 1, Line 1`
 > `105082;Generic ODBC error: [Microsoft][ODBC Driver 17 for SQL Server]SSL Provider: An existing connection was forcibly closed by the remote host.`
@@ -151,7 +151,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Affected releases**: New and existing clusters that are using CU5 images
 
-- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may have noticed that the metrics aren't being collected. This is possible in both new and existing deployments of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade doesn't have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod and node metrics won't be collected.
+- **Issue and customer effect**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers might notice that the metrics aren't being collected. This is possible in both new and existing deployments of [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster-wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade doesn't have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod and node metrics won't be collected.
 
 - **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and the big data cluster will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
 
@@ -173,11 +173,11 @@ For other scenarios where  you must provide credentials for accessing service th
 
 Upgrading using different repositories for current and target builds isn't supported.
 
-### Upgrade may fail due to timeout
+### Upgrade might fail due to timeout
 
 - **Affected releases**: GDR1, CU1, CU2. Resolved for CU 3.
 
-- **Issue and customer effect**: An upgrade may fail due to timeout.
+- **Issue and customer effect**: An upgrade might fail due to timeout.
 
   The following code shows what the failure might look like:
 

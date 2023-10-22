@@ -65,8 +65,8 @@ The following table lists the release history for [!INCLUDE[ssbigdataclusters-ve
 
 | Release <sup>1</sup> | [!INCLUDE[ssbigdataclusters-ver15](../includes/ssbigdataclusters-ver15.md)] version | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup> | Release date | Details |
 | --- | --- | --- | --- | --- |
-| [CU23](release-notes-cumulative-update-23.md) | 15.0.4316.3 | 20.3.12 | Jun 15 2023 | Libraries are same as CU19. |
-| [CU22](release-notes-cumulative-update-22.md) | 15.0.4316.3 | 20.3.12 | Jun 15 2023 | Libraries are same as CU19. |
+| [CU23](release-notes-cumulative-update-23.md) | 15.0.4335.1 | 20.3.12 | Jun 15 2023 | Libraries are same as CU19. |
+| [CU22](release-notes-cumulative-update-22.md) | 15.0.4322.2 | 20.3.12 | Jun 15 2023 | Libraries are same as CU19. |
 | [CU21](release-notes-cumulative-update-21.md) | 15.0.4316.3 | 20.3.12 | Jun 15 2023 | Tested configurations, libraries are same as CU19. |
 | [CU20](release-notes-cumulative-update-20.md) | 15.0.4312.2 | 20.3.12 | Apr 14 2023 | Tested configurations, libraries are same as CU19. |
 | [CU19](release-notes-cumulative-update-19.md) | 15.0.4298.1 | 20.3.12 | Feb 16 2023 | |

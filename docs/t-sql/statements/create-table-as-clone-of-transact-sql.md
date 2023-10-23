@@ -52,7 +52,7 @@ At the date and time provided, the table clone accurately mirrors the data as it
 
 Specifying the *point_in_time* is not required for creating table clones as of current point in time.
 
-[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] automatically preserves and maintains the data history for a default period of seven calendar days. For more information, visit [Clone table](/fabric/data-warehouse/clone-table).
+[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] automatically preserves and maintains the data history for seven calendar days. For more information, visit [Clone table](/fabric/data-warehouse/clone-table).
 
 ## Permissions
 

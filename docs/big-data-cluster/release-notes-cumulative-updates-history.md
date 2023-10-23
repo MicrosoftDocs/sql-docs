@@ -337,7 +337,7 @@ Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Serv
 SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
 
 - [Deployment with private repository](known-issues.md#deployment-with-private-repository)
-- [Upgrade may fail due to timeout](known-issues.md#upgrade-might-fail-due-to-timeout)
+- [Upgrade may fail due to timeout](known-issues.md#upgrade-may-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (February 2020)
 

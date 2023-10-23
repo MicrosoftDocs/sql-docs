@@ -16,12 +16,6 @@ Use the following steps to install the **mssql-tools18** on Ubuntu.
 > - Ubuntu 18.04 is supported starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 3.
 > - Ubuntu 20.04 is supported starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] CU 10.
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Import the public repository GPG keys.
 
    ```bash
@@ -33,26 +27,20 @@ Use the following steps to install the **mssql-tools18** on Ubuntu.
    - For Ubuntu 20.04, use the following command:
 
      ```bash
-     curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
      ```
 
    - For Ubuntu 18.04, use the following command:
 
      ```bash
-     curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
      ```
 
    - For Ubuntu 16.04, use the following command:
 
      ```bash
-     curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+     curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
      ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package.
 

@@ -3,11 +3,12 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/17/2023
+ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
-ms.custom: references_regions
+ms.custom:
+  - references_regions
 monikerRange: ">=sql-server-2016"
 ---
 
@@ -54,7 +55,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 - **SQL Server on-premises or in a hosted environment, and not connected to Azure Arc.** You can purchase the ESU SKU through the Volume Licensing Service Center (VLSC), and manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on the Azure portal to receive the patches. For more information, see  [Register disconnected SQL Server instances for ESUs](#register-instances-for-esus) later in this article.
 
   > [!NOTE]  
-  > Connecting or registering instances is free of charge. Both *connected* and *registered* instances do not incur additional charges when downloading ESUs, which are delivered through the Azure portal.
+  > Connecting or registering instances is free of charge. Both *connected* and *registered* instances don't incur additional charges when downloading ESUs, which are delivered through the Azure portal.
 
 [!INCLUDE [msCoName](../../includes/msconame-md.md)] recommends applying ESU patches as soon as they're available to keep your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance protected. For detailed information about ESUs, see the [ESU FAQ page](https://www.microsoft.com/cloud-platform/extended-security-updates).
 
@@ -86,7 +87,7 @@ If you have Software Assurance, you can use Extended Security Updates enabled by
 - Server and Cloud Enrollment (SCE)
 - Enrollment for Education Solutions (EES)
 
-You are billed through your Azure subscription only for the servers that you enabled for ESUs, and only if they run an eligible version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. See instructions on how to [subscribe to Extended Security Updates enabled by Azure Arc](#subscribe-to-extended-security-updates-enabled-by-azure-arc) later in this article.
+You're billed through your Azure subscription only for the servers that you enabled for ESUs, and only if they run an eligible version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. See instructions on how to [subscribe to Extended Security Updates enabled by Azure Arc](#subscribe-to-extended-security-updates-enabled-by-azure-arc) later in this article.
 
 ### On-premises or hosted environments not connected to Azure Arc
 
@@ -111,7 +112,7 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription, which provides you with the flexibility to cancel at any time without having to separately purchase an ESU SKU. The ESU subscription enables automated deployment of the patches as they are released.
 
-You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Manage SQL Server Configuration](../azure-arc/manage-configuration.md)[Manage SQL Server Configuration].
+You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Configure Azure Arc-enabled SQL Server](../azure-arc/manage-configuration.md).
 
 ### [Azure portal](#tab/portal)
 
@@ -155,7 +156,7 @@ If you have multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 - an Azure subscription, or
 - all Azure subscriptions your Azure account has access to.
 
-The script preserves all the existing settings. It is published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
+The script preserves all the existing settings. It's published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
 
 ### [Azure CLI](#tab/cli)
 
@@ -171,81 +172,41 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 > [!IMPORTANT]  
-> If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+> If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
 ### View ESU subscriptions
 
-You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible SQL Server 2012 instances and their ESU subscription status.
+You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances and their ESU subscription status.
 
-```Kusto
-resources     
-| where type == 'microsoft.azurearcdata/sqlserverinstances'     
-| extend Version = properties.version     
-| extend Edition = properties.edition     
-| extend containerId = tolower(tostring (properties.containerResourceId))     
-| where Version contains "2012"     
-| where Edition in ("Enterprise", "Standard")     
-| where isnotempty(containerId)       
-| project containerId, SQL_instance = name, Version, Edition     
-| join kind=inner (         
-	resources         
-	| where type == "microsoft.hybridcompute/machines"         
-	| extend machineId = tolower(tostring(id))         
-	| project machineId, Machine_name = name     
-)      
-on $left.containerId == $right.machineId     
-| join kind=inner (         
-	resources         
-	| where type == "microsoft.hybridcompute/machines/extensions"             
-	| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")         
-	| extend machineIdHasSQLServerExtensionInstalled = tolower(iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), ""))         
-	| project machineIdHasSQLServerExtensionInstalled, Extension_State = properties.provisioningState, License_Type = properties.settings.LicenseType, ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""),             Extension_Version = properties.instanceView.typeHandlerVersion     
-)     
-on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled     
-| project-away machineId, containerId, machineIdHasSQLServerExtensionInstalled       
+```kusto
+resources
+| where type == 'microsoft.azurearcdata/sqlserverinstances'
+| extend Version = properties.version
+| extend Edition = properties.edition
+| extend containerId = tolower(tostring (properties.containerResourceId))
+| where Version contains "2012"
+| where Edition in ("Enterprise", "Standard")
+| where isnotempty(containerId)
+| project containerId, SQL_instance = name, Version, Edition
+| join kind=inner (
+    resources
+    | where type == "microsoft.hybridcompute/machines"
+    | extend machineId = tolower(tostring(id))
+    | project machineId, Machine_name = name
+)
+on $left.containerId == $right.machineId
+| join kind=inner (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"
+    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+    | extend machineIdHasSQLServerExtensionInstalled = tolower(iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), ""))
+    | project machineIdHasSQLServerExtensionInstalled, Extension_State = properties.provisioningState, License_Type = properties.settings.LicenseType, ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""), Extension_Version = properties.instanceView.typeHandlerVersion
+)
+on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled
+| project-away machineId, containerId, machineIdHasSQLServerExtensionInstalled
 ```
 
 ## Cancel Extended Security Updates enabled by Azure Arc
@@ -285,7 +246,7 @@ If you have multiple [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 
 - an Azure subscription, or
 - all Azure subscriptions your Azure account has access to.
 
-The script preserves all the existing settings. It is published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
+The script preserves all the existing settings. It's published as an open source [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] sample and includes step-by-step instructions.
 
 ### [Azure CLI](#tab/cli)
 
@@ -301,54 +262,14 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
-> [!IMPORTANT]
-> Don't cancel Extended Security Updates enabled by Azure Arc before or after migrating to Azure. When you migrate your on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure Virtual Machines or Azure VMware Solutions, the ESU charges will stop automatically, but you will continue to have full access to the Extended Security Updates. For more information, see [Extended Security Updates: frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+> [!IMPORTANT]  
+> Don't cancel Extended Security Updates enabled by Azure Arc before or after migrating to Azure. When you migrate your on-premises [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on Azure Virtual Machines or Azure VMware Solutions, the ESU charges will stop automatically, but you continue to have full access to the Extended Security Updates. For more information, see [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
 ## <a id="register-instances-for-esus"></a> Register Extended Security Updates purchased through volume licensing
 
-If you purchased an ESU product through volume licensing (VL), you must register it to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that are not connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice.
+If you purchased an ESU product through volume licensing (VL), you must register it to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice.
 
 ## <a id="register-instances-on-azure-portal"></a> Register disconnected SQL Server instances on Azure portal
 
@@ -516,7 +437,7 @@ Follow these steps to link an ESU invoice to your Azure Arc [!INCLUDE [ssnoversi
 
    :::image type="content" source="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png" alt-text="Screenshot of SQL Server instances with a valid ESU expiration value." lightbox="media/sql-server-extended-security-updates/extended-security-updates-invoice-linked.png":::
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > If you purchased an ESU VL product for disconnected SQL Servers, you should only select the instances with the **Status** = `Registered`. If you purchased an ESU VL product for Arc-enabled SQL Servers, you should only select the instances with the **Status** = `Connected`.
 
 ## Download ESUs
@@ -545,9 +466,9 @@ Government regions aren't supported. For more information, see [Can customers ge
 
 ## Frequently asked questions
 
-For the full list of frequently asked questions, review the [ESU frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+For the full list of frequently asked questions, review the [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
-## See also
+## Related content
 
 - [SQL Server 2012 lifecycle page](/lifecycle/products/microsoft-sql-server-2012)
 - [SQL Server end of support page](sql-server-end-of-support-overview.md?WT.mc_id=akamseos)
@@ -559,4 +480,3 @@ For the full list of frequently asked questions, review the [ESU frequently aske
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

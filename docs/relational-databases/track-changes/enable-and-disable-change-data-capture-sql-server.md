@@ -63,7 +63,7 @@ GO
 
 ## Enable for a table
 
-After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure `sys.sp_cdc_enable_table`e`. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the `sys.tables` catalog view.
+After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure `sys.sp_cdc_enable_table`. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the `sys.tables` catalog view.
 
 > [!IMPORTANT]  
 > For more information about the `sys.sp_cdc_enable_table` stored procedure arguments, see [sys.sp_cdc_enable_table (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql).

@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 09/22/2023
+ms.date: 11/01/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "renaming tables"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest || = fabric"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # sp_rename (Transact-SQL)
 
@@ -122,7 +122,7 @@ In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.
 
 **Applies to** Azure Synapse Analytics:
 
-In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
+In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `'COLUMN'` in a user object.
 
 ## Permissions
 
@@ -237,7 +237,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 
 ### F. Rename statistics
 
-The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using `sp_rename`. When you rename statistics, the object must be specified in the format schema.table.statistics_name.
+The following example creates a statistics object named `contactMail1` and then renames the statistic to `NewContact` by using `sp_rename`. When you rename statistics, the object must be specified in the format `schema.table.statistics_name``.
 
 ```sql
 CREATE STATISTICS ContactMail1
@@ -254,7 +254,7 @@ EXEC sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 The following example renames the `c1` column in the `table1` table to `col1`.
 
 > [!NOTE]  
-> This [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
+> This [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the `dbo` schema.
 
 ```sql
 CREATE TABLE table1 (c1 INT, c2 INT);
@@ -270,7 +270,7 @@ The following example renames the table `dbo.table1` to `dbo.table2`, using the 
 exec sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
 ```
 
-## Next steps
+## Related content
 
 - [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
 - [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)

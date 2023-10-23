@@ -1,37 +1,37 @@
 ---
-title: SQL Server 2019 Big Data Clusters CU21 release notes
+title: SQL Server 2019 Big Data Clusters CU23 release notes
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 21 contents.
+description: This article describes the SQL Server 2019 Big Data Clusters Cumulative Update 23 contents.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 06/19/2023
+ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
 ---
 
-# SQL Server 2019 Big Data Clusters CU21 release notes
+# SQL Server 2019 Big Data Clusters CU23 release notes
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 21 (CU21).
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] cumulative update 23 (CU23).
 
-## CU21 changes and new capabilities
+## CU23 changes and new capabilities
 
    > [!WARNING]
    > On Cumulative Update 15, __the upgrade order is critical__. Upgrade your big data cluster to CU15 __before__ upgrading the Kubernetes cluster to version 1.21. If the Kubernetes cluster is upgraded to version 1.21 before BDC is upgraded to CU14 or CU15 then the cluster will end up in error state and the BDC upgrade will not succeed. In this case, reverting back to Kubernetes version 1.20 will fix the problem.
    > <br/> This __doesn't affect new deployments__ of SQL Server 2019 Big Data Clusters CU15 on Kubernetes API 1.21 clusters.
 
-For detailed SQL Server engine changes, check the [official SQL Server 2019 CU21 knowledge base article KB 5025808](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
+For detailed SQL Server engine changes, check the [official SQL Server 2019 CU23 knowledge base article KB5030333](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate23).
 
-## Tested configurations for CU21
+## Tested configurations for CU23
 
-[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU21 was tested on the following environment combinations:
+[!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] CU23 was tested on the following environment combinations:
 
 | Container OS | Kubernetes API | Runtime | Data Storage | Log Storage |
 | ------------ | ------- | ------- | ------------ | ----------- |
-| Ubuntu 20.04 LTS | 1.23.1 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
+| Ubuntu 20.04 LTS | 1.25.4 | containerd 1.4.6<br/>CRI-O 1.20.4 | Block only | Block only |
 
 Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)] can be found on the following pages:
 
@@ -41,7 +41,7 @@ Reference Architecture White Papers for [!INCLUDE[big-data-clusters-nover](../in
 ## System environment
 
 * __Operating System__: Ubuntu 20.04.5 LTS
-* __SQL Server__:     15.0.4316.3
+* __SQL Server__:     15.0.4335.1
     * __Java__: Azul Zulu JRE 11.0.9.1
     * __Python__: 3.7.2 (miniconda 4.5.12)
     * __R__: Microsoft R 3.5.2
@@ -348,6 +348,6 @@ codetools | 0.2-15 | parallel | 3.5.2 | yaml | 2.2.0 |
 compiler | 3.5.2 | pillar | 1.3.1 | | |
 config | 0.3 | pkgconfig | 2.0.2 | | |
 
-## Next steps
+## Related content
 
 For more information about [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-nover](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md)

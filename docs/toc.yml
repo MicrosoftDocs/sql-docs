@@ -10495,12 +10495,18 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Known issues
+          href: big-data-cluster/known-issues.md
         - name: Release history
           items:
           - name: Cumulative Update history
             href: big-data-cluster/release-notes-cumulative-updates-history.md
           - name: Past details
             items: 
+            - name: Cumulative Update 23
+              href: big-data-cluster/release-notes-cumulative-update-23.md
+            - name: Cumulative Update 22
+              href: big-data-cluster/release-notes-cumulative-update-22.md
             - name: Cumulative Update 21
               href: big-data-cluster/release-notes-cumulative-update-21.md
             - name: Cumulative Update 20

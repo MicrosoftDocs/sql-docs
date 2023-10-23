@@ -1,5 +1,5 @@
 ---
-title: "Export a Report Using URL Access"
+title: "Export a report using URL access"
 description: "Learn how to export a report using URL access by specifying the format in which to render a report by using the rs:Format URL parameter."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ---
-# Export a Report Using URL Access
+# Export a report using URL access
   You can optionally specify the format in which to render a report by using the *rs:Format* URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) will render in the browser and for other formats, the browser will prompt to save the report output to a local file.  
   
  For example, to get a PDF copy of a report directly from a native mode report server:  
@@ -41,8 +41,8 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  If you do not include the *Format* parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
   
-## See Also  
- [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
+## See also  
+ [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

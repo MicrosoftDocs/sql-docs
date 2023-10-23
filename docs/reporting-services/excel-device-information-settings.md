@@ -1,5 +1,5 @@
 ---
-title: "Excel Device Information Settings"
+title: "Excel device information settings"
 description: Learn details about the various device information settings for rendering in Microsoft Excel format.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], Excel rendering"
   - "Excel [Reporting Services], rendering"
 ---
-# Excel Device Information Settings
+# Excel device information settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] format.  
   
 |Setting|Value|  
@@ -23,10 +23,10 @@ helpviewer_keywords:
 |**DynamicImageDpi**|The resolution of dynamic images like charts, gauges, and maps. The default value is **96**. (Available in Power BI Report Server (January 2020) and later)|  
 
   
-## See Also  
+## See also  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

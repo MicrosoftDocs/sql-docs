@@ -66,11 +66,10 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 
 > [!NOTE]  
 >  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see [Microsoft SQL Server Samples](../../samples/sql-samples-where-are.md). See older samples on [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+  
+## Related content
 
-  
-## See also  
- [Editions and supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
- [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
- [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
+- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+- [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)
+- [Business continuity and database recovery - SQL Server](../sql-server-business-continuity-dr.md)
+- [Upgrade SQL Server Using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)

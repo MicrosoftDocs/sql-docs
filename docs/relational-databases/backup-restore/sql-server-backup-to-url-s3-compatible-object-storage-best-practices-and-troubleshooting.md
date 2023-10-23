@@ -69,7 +69,7 @@ TO URL =  's3://<your-endpoint>/existingBucket/sqlbackups/AdventureWorks2022.bak
 
 ### Create a server-level credential prior to running backup/restore
 
-Before running backup/restore TSQL queries to S3-compatible storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key set up by customers on their S3-compatible object storage server prior to issuing backup/restore queries.
+Before running backup/restore Transact-SQL queries to S3-compatible storage, you must create a server level credential. This credential needs to contain the Access key and Secret Key set up by customers on their S3-compatible object storage server prior to issuing backup/restore queries.
 
 An example of a credential that needs to be created for URL: `s3://<your-endpoint>/myS3Bucket/sqlbackups/AdventureWorks2022.bak` would be the following:
 
@@ -100,7 +100,7 @@ If there are multiple credentials matching search, such as more specific `s3://1
 
 Currently, the BACKUP TSQL option FILE_SNAPSHOT is not supported for S3-compatible object storage. This is an Azure Blob Storage-specific option.
 
-If the user runs the following TSQL for example:
+If the user runs the following Transact-SQL for example:
 
 ```sql
 BACKUP DATABASE AdventureWorks2022

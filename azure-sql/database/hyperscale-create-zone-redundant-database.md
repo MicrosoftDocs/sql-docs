@@ -4,7 +4,7 @@ description: Learn how to create a zone-redundant Hyperscale database.
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
-ms.date: 05/01/2023
+ms.date: 10/12/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -15,7 +15,7 @@ ms.topic: conceptual
 
 This article teaches you to create a zone-redundant Hyperscale database by creating a new database, creating a geo-replica, or using database copy. 
 
-## Create a zone-redunant database
+## Create a zone-redundant database
 
 Use [Azure PowerShell](/powershell/azure/install-az-ps) or the [Azure CLI](/cli/azure/update-azure-cli) to create a zone redundant Hyperscale database. Confirm you have the latest version of the API to ensure support for any recent changes.
 

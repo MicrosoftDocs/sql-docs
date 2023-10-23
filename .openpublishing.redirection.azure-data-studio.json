@@ -1,0 +1,904 @@
+{
+  "redirections": [
+    {
+      "source_path": "docs/azure-data-studio/azure-connectivity.md",
+      "redirect_url": "/azure-data-studio/azure-connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-resource-explorer.md",
+      "redirect_url": "/azure-data-studio/azure-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-sql-managed-instance-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-view.md",
+      "redirect_url": "/azure-data-studio/azure-view",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/build-and-publish-changes-to-table-using-sql-projects.md",
+      "redirect_url": "/azure-data-studio/build-and-publish-changes-to-table-using-sql-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/code-snippets.md",
+      "redirect_url": "/azure-data-studio/code-snippets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/command-line.md",
+      "redirect_url": "/azure-data-studio/command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/connect.md",
+      "redirect_url": "/azure-data-studio/connect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/create-graph-tables-in-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/create-graph-tables-in-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/create-memory-optimized-tables-in-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/create-memory-optimized-tables-in-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/create-temporal-tables-in-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/create-temporal-tables-in-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/dashboard-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/dashboard-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/dashboards.md",
+      "redirect_url": "/azure-data-studio/insight-widgets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/data-virtualization-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/deploy-azure-sql-database.md",
+      "redirect_url": "/azure-data-studio/deploy-azure-sql-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/deploy-azure-sql-edge.md",
+      "redirect_url": "/azure-data-studio/deploy-azure-sql-edge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/deploy-azure-sql-server-vm.md",
+      "redirect_url": "/azure-data-studio/deploy-azure-sql-server-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/deploy-sql-container.md",
+      "redirect_url": "/azure-data-studio/deploy-sql-container",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/download-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/download-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/download.md",
+      "redirect_url": "/azure-data-studio/download-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/enable-kerberos.md",
+      "redirect_url": "/azure-data-studio/enable-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensibility-apis.md",
+      "redirect_url": "/azure-data-studio/extensibility-apis",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensibility.md",
+      "redirect_url": "/azure-data-studio/extensibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extension-authoring.md",
+      "redirect_url": "/azure-data-studio/extensions/extension-authoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions.md",
+      "redirect_url": "/azure-data-studio/extensions/add-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/add-extensions.md",
+      "redirect_url": "/azure-data-studio/extensions/add-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-arc-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-arc-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-cosmos-db-mongodb-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-cosmos-db-mongodb-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-monitor-logs-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-monitor-logs-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-postgresql-migration-extension-troubleshoot.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-postgresql-migration-extension-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-postgresql-migration-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-postgresql-migration-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-sql-managed-instance-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-sql-managed-instance-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/azure-sql-migration-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/azure-sql-migration-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dashboard-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/dashboard-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/data-virtualization-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/data-virtualization-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension-troubleshoot.md",
+      "redirect_url": "/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/database-migration-assessment-for-oracle-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/database-migration-for-mongo-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/database-migration-for-mongo-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/database-migration-for-mongodb-extension-faq.md",
+      "redirect_url": "/azure-data-studio/extensions/database-migration-for-mongodb-extension-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00000.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00000",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00001.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00001",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00002.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00002",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00003.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00003",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00004.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00004",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct00005.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct00005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01000.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01000",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01001.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01001",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01002.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01002",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01100.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01100",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01101.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01101",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01102.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01102",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/conversion-messages/dsct01103.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/conversion-messages/dsct01103",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/database-schema-conversion-toolkit.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/database-schema-conversion-toolkit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/oracle-to-mssql/configure-conversion.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/oracle-to-mssql/configure-conversion",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/oracle-to-mssql/convert-oracle-database-objects-to-mssql.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/oracle-to-mssql/convert-oracle-database-objects-to-mssql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/oracle-to-mssql/database-schema-conversion-toolkit-oracle-to-mssql.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/oracle-to-mssql/database-schema-conversion-toolkit-oracle-to-mssql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/dsct/oracle-to-mssql/install-remove-database-schema-conversion-toolkit-oracle-to-mssql.md",
+      "redirect_url": "/azure-data-studio/extensions/dsct/oracle-to-mssql/install-remove-database-schema-conversion-toolkit-oracle-to-mssql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/extension-authoring.md",
+      "redirect_url": "/azure-data-studio/extensions/extension-authoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/extension-for-oracle.md",
+      "redirect_url": "/azure-data-studio/extensions/extension-for-oracle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/github-copilot-extension-overview.md",
+      "redirect_url": "/azure-data-studio/extensions/github-copilot-extension-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/github-copilot-extension-using-github-copilot.md",
+      "redirect_url": "/azure-data-studio/extensions/github-copilot-extension-using-github-copilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/github-copilot-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/github-copilot-extension-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/jupyter-book-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/jupyter-book-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/keymap-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/keymap-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/kusto-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/kusto-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/machine-learning-extension-import-view-models.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-import-view-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/machine-learning-extension-manage-packages.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-manage-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/machine-learning-extension-predictions.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-predictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/machine-learning-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/mysql-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/mysql-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/notebook-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/notebook-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/postgres-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/postgres-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/powershell-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/powershell-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sanddance-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sanddance-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/schema-compare-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/schema-compare-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-database-project-extension-build.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-build",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-database-project-extension-getting-started.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-getting-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-database-project-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-server-agent-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-agent-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-server-cms-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-cms-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-server-dacpac-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-dacpac-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-server-import-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-import-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/sql-server-profiler-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-profiler-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions/wizard-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/wizard-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/faq.yml",
+      "redirect_url": "/azure-data-studio/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/index.yml",
+      "redirect_url": "/azure-data-studio/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/insight-widgets.md",
+      "redirect_url": "/azure-data-studio/insight-widgets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/integrated-terminal.md",
+      "redirect_url": "/azure-data-studio/integrated-terminal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/keyboard-shortcuts.md",
+      "redirect_url": "/azure-data-studio/keyboard-shortcuts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-import-view-models.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-import-view-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-manage-packages.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-manage-packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-predictions.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension-predictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/machine-learning-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-guidance.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-kqlmagic.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-kqlmagic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-manage-sql-server.md",
+      "redirect_url": "/azure-data-studio/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-python-kernel.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-python-kernel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-azure-monitor-logs.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-azure-monitor-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-guidance.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-kqlmagic.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-kqlmagic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-kusto-kernel.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-kusto-kernel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-parameterization.md",
+      "redirect_url": "/azure-data-studio/notebooks/parameterize-papermill",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-python-kernel.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-python-kernel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-python-offline-installation.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-python-offline-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-sql-kernel.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/notebooks-views.md",
+      "redirect_url": "/azure-data-studio/notebooks/notebooks-views",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/parameterize-papermill.md",
+      "redirect_url": "/azure-data-studio/notebooks/parameterize-papermill",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/parameterize-uri.md",
+      "redirect_url": "/azure-data-studio/notebooks/parameterize-uri",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks/run-with-parameters.md",
+      "redirect_url": "/azure-data-studio/notebooks/run-with-parameters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/postgres-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/postgres-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/powershell-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/powershell-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/preview-features.md",
+      "redirect_url": "/azure-data-studio/preview-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/query-plan-viewer.md",
+      "redirect_url": "/azure-data-studio/query-plan-viewer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-azure-cosmos-db-mongodb.md",
+      "redirect_url": "/azure-data-studio/quickstart-azure-cosmos-db-mongodb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-mysql.md",
+      "redirect_url": "/azure-data-studio/quickstart-mysql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-oracle.md",
+      "redirect_url": "/azure-data-studio/quickstart-oracle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-postgres.md",
+      "redirect_url": "/azure-data-studio/quickstart-postgres",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-sql-database.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-sql-dw.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-dw",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-sql-server.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/quickstart-timescaledb.md",
+      "redirect_url": "/azure-data-studio/quickstart-timescaledb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/release-notes-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/release-notes-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/release-notes.md",
+      "redirect_url": "/azure-data-studio/release-notes-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sanddance-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sanddance-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/schema-compare-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/schema-compare-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/server-groups.md",
+      "redirect_url": "/azure-data-studio/server-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/settings-list.md",
+      "redirect_url": "/azure-data-studio/settings-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/settings.md",
+      "redirect_url": "/azure-data-studio/settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/source-control.md",
+      "redirect_url": "/azure-data-studio/source-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-build-from-command-line.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-build.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-build",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-getting-started.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension-getting-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-database-project-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-notebooks.md",
+      "redirect_url": "/azure-data-studio/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-agent-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-cms-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-cms-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-dacpac-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-dacpac-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-import-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-import-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-profiler-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/sql-server-profiler-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/table-designer-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/troubleshooting.md",
+      "redirect_url": "/azure-data-studio/troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-backup-restore-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-backup-restore-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-build-custom-insight-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-build-custom-insight-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
+      "redirect_url": "/azure-data-studio/extensions/keymap-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-qds-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-qds-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-sql-editor.md",
+      "redirect_url": "/azure-data-studio/tutorial-sql-editor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/tutorial-table-space-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-table-space-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/usage-data-collection.md",
+      "redirect_url": "/azure-data-studio/usage-data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/what-is-azure-data-studio.md",
+      "redirect_url": "/azure-data-studio/what-is-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/what-is.md",
+      "redirect_url": "/azure-data-studio/what-is-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/notebooks-guidance.md",
+      "redirect_url": "/azure-data-studio/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/code-snippets.md",
+      "redirect_url": "/azure-data-studio/code-snippets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/dashboards.md",
+      "redirect_url": "/azure-data-studio/dashboards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/download.md",
+      "redirect_url": "/azure-data-studio/download",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/enable-kerberos.md",
+      "redirect_url": "/azure-data-studio/enable-kerberos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/extensions.md",
+      "redirect_url": "/azure-data-studio/extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/faq.md",
+      "redirect_url": "/azure-data-studio/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/insight-widgets.md",
+      "redirect_url": "/azure-data-studio/insight-widgets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/integrated-terminal.md",
+      "redirect_url": "/azure-data-studio/integrated-terminal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/keyboard-shortcuts.md",
+      "redirect_url": "/azure-data-studio/keyboard-shortcuts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/quickstart-sql-database.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/quickstart-sql-dw.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-dw",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/quickstart-sql-server.md",
+      "redirect_url": "/azure-data-studio/quickstart-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/release-notes.md",
+      "redirect_url": "/azure-data-studio/release-notes-azure-data-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/server-groups.md",
+      "redirect_url": "/azure-data-studio/server-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/settings.md",
+      "redirect_url": "/azure-data-studio/settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/source-control.md",
+      "redirect_url": "/azure-data-studio/source-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/sql-server-agent-extension.md",
+      "redirect_url": "/azure-data-studio/sql-server-agent-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/sql-server-profiler-extension.md",
+      "redirect_url": "/azure-data-studio/sql-server-profiler-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/tutorial-backup-restore-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-backup-restore-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/tutorial-build-custom-insight-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-build-custom-insight-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/tutorial-qds-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-qds-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/tutorial-sql-editor.md",
+      "redirect_url": "/azure-data-studio/tutorial-sql-editor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/tutorial-table-space-sql-server.md",
+      "redirect_url": "/azure-data-studio/tutorial-table-space-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/usage-data-collection.md",
+      "redirect_url": "/azure-data-studio/usage-data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-operations-studio/what-is.md",
+      "redirect_url": "/azure-data-studio/what-is-azure-data-studio",
+      "redirect_document_id": false
+    }
+  ]
+}

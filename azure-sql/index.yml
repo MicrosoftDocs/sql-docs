@@ -171,7 +171,7 @@ landingContent:
         - text: SQL Server Management Studio (SSMS)
           url: /sql/ssms/download-sql-server-management-studio-ssms
         - text: Azure Data Studio 
-          url: /sql/azure-data-studio/download-azure-data-studio
+          url: /azure-data-studio/download-azure-data-studio
         - text: SQL Server Data Tools 
           url: /sql/ssdt/download-sql-server-data-tools-ssdt
         - text: Visual Studio 2019
@@ -199,7 +199,7 @@ landingContent:
           - text: SQL Server Management Studio (SSMS)
             url: database/connect-query-ssms.md
           - text: Azure Data Studio
-            url: /sql/azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
+            url: /azure-data-studio/quickstart-sql-database?toc=/azure/azure-sql/toc.json
           - text: Azure portal
             url: database/connect-query-portal.md 
           - text: Visual Studio (.NET)
@@ -210,7 +210,7 @@ landingContent:
             url: database/connect-query-dotnet-core.md
           - text: Python
             url: database/connect-query-python.md
-          - text: With Azure AD and SqlClient
+          - text: With Microsoft Entra ID (formerly Azure Active Directory) and SqlClient
             url: /sql/connect/ado-net/sql/azure-active-directory-authentication
 
 
@@ -237,10 +237,3 @@ landingContent:
             url: database/design-first-database-tutorial.md
           - text: Design first database (C#)
             url: database/design-first-database-csharp-tutorial.md
-
-
-
-
-
-
-

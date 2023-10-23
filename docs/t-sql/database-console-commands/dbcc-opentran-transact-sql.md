@@ -134,8 +134,9 @@ SELECT * FROM #OpenTranStatus;
 GO
 ```
 
-## See also
+## Related content
 
+- [sys.dm_tran_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)
 - [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)
 - [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)
 - [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

@@ -35,7 +35,7 @@ Select the retention period by opening the **Advanced properties**. Then selec
 
 UMI gives users flexibility to create and maintain their own UMI for a given tenant. UMI can be used as server identities for Azure SQL. UMI is managed by the user, compared to a system-assigned managed identity, which identity is uniquely defined per server, and assigned by the system.
 
-For more information about UMI, see [Managed identities in Azure AD for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
+For more information about UMI, see [Managed identities in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
 ## Configure user-assigned managed identity for Azure SQL Database auditing
 

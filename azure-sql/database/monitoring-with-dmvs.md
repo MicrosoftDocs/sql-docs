@@ -27,7 +27,7 @@ This article provides information on how to detect common performance problems b
 
 - The [SQL query editor in the Azure portal](query-editor.md)
 - [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
-- [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio)
+- [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio)
 
 ## Permissions
 

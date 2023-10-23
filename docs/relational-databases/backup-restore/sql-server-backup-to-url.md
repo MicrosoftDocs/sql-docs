@@ -109,9 +109,9 @@ The following are security considerations and requirements when backing up to or
     > [!IMPORTANT]  
     >  Although the maximum backup size supported by a single block blob is 200 GB, it's possible for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to write in smaller block sizes, which can lead [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reach the 50,000 block limit before the entire backup is transferred. Stripe backups (even if they're smaller than 200 GB) to avoid the block limit, especially when if you use differential or uncompressed backups.
 
-- You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
+- You can issue backup or restore statements by using Transact-SQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.
   
-- Backup to Azure Storage account using Azure Active Directory, User Managed or System Managed Identities is not supported by SQL Server.
+- Backup to Azure Storage account only supports authentication with Shared Access Signature (SAS) tokens or storage account keys. All other authentication methods, including authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), are not supported.
 
 - Creating a logical device name is not supported. So adding URL as a backup device using sp_dumpdevice or through SQL Server Management Studio is not supported.  
 

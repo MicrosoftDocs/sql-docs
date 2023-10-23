@@ -8,6 +8,8 @@ ms.date: 01/06/2023
 ms.service: sql-database
 ms.subservice: migration-guide
 ms.topic: how-to
+ms.custom:
+  - sql-migration-content
 ---
 # Migration guide: SQL Server to Azure SQL Database
 
@@ -32,7 +34,7 @@ For more migration information, see the [migration overview](sql-server-to-sql-d
 For your [SQL Server migration](https://azure.microsoft.com/migration/sql-server/) to Azure SQL Database, make sure you have:
 
 - Chosen your [migration method](sql-server-to-sql-database-overview.md#compare-migration-options) and corresponding tools.
-- Install the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+- Install the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension).
 - Created a target [Azure SQL Database](../../database/single-database-create-quickstart.md).
 - Configured connectivity and proper permissions to access both source and target.
 - Reviewed the database engine features [available in Azure SQL Database](../../database/features-comparison.md).
@@ -66,7 +68,7 @@ You can use the Azure SQL Migration extension for Azure Data Studio to assess da
 
 To assess your environment using the Azure SQL Migration extension, follow these steps:
 
-1. Open the [Azure SQL Migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+1. Open the [Azure SQL Migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension).
 1. Connect to your source SQL Server instance
 1. Click the *Migrate to Azure SQL* button, in the Azure SQL Migration wizard in Azure Data Studio
 1. Select databases for assessment, then click on next
@@ -77,7 +79,7 @@ To assess your environment using the Azure SQL Migration extension, follow these
 
 To get an Azure recommendation using the Azure SQL Migration extension, follow these steps:
 
-1. Open the [Azure SQL Migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+1. Open the [Azure SQL Migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension).
 1. Connect to your source SQL Server instance
 1. Click the *Migrate to Azure SQL* button, in the Azure SQL Migration wizard in Azure Data Studio
 1. Select databases for assessment, then click on next
@@ -96,7 +98,7 @@ If the assessment encounters multiple blockers to confirm that your database is 
 
 #### Scaled assessments and analysis
 
-The [Azure SQL Migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) and  [Azure Migrate](https://azure.microsoft.com/services/azure-migrate) supports performing scaled assessments and consolidation of the assessment reports for analysis.
+The [Azure SQL Migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension) and  [Azure Migrate](https://azure.microsoft.com/services/azure-migrate) supports performing scaled assessments and consolidation of the assessment reports for analysis.
 
 If you have multiple servers and databases that need to be assessed and analyzed at scale to provide a wider view of the data estate, see the following links to learn more:
 
@@ -109,7 +111,7 @@ If you have multiple servers and databases that need to be assessed and analyzed
 
 ### Deploy to an optimally sized managed instance
 
-You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
+You can use the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
 
 Based on the information in the discover and assess phase, create an appropriately sized target Azure SQL Database. You can do so by using the [Quickstart: Create a single database - Azure SQL Database](../../database/single-database-create-quickstart.md).
 
@@ -124,7 +126,7 @@ Migrate your data using your chosen [migration method](sql-server-to-sql-databas
 
 To perform an offline migration using Azure Data Studio, follow the high-level steps below. For a detailed step-by-step tutorial, see [Tutorial: Migrate SQL Server to Azure SQL Database (preview) offline in Azure Data Studio](/azure/dms/tutorial-sql-server-azure-sql-database-offline-ads).
 
-1. Download and install [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) and the [Azure SQL migration extension](/sql/azure-data-studio/extensions/azure-sql-migration-extension).
+1. Download and install [Azure Data Studio](/azure-data-studio/download-azure-data-studio) and the [Azure SQL migration extension](/azure-data-studio/extensions/azure-sql-migration-extension).
 1. Launch the Migrate to Azure SQL Migration wizard in the extension in Azure Data Studio.
 1. Select databases for assessment and view migration readiness or issues (if any). Additionally, collect performance data and get right-sized Azure recommendation.
 1. Select your Azure account and your target Azure SQL Database from your subscription.

@@ -29,7 +29,7 @@ Each type has a different architecture, feature set, purpose, and cost. Based on
 
 ## High Availability replica
 
-A High Availability (HA) replica uses the same page servers as the primary replica, so no data copy is required to add an HA replica. HA replicas are mainly used to increase database availability; they act as hot standbys for failover purposes. If the primary replica becomes unavailable, failover to one of the existing HA replicas is automatic and quick. Connection string doesn't need to change; during failover applications may experience minimal downtime due to active connections being dropped. As usual for this scenario, proper retry logic is recommended. Several drivers already provide some degree of automatic retry logic. If you are using .NET, the [latest Microsoft.Data.SqlClient](https://devblogs.microsoft.com/azure-sql/configurable-retry-logic-for-microsoft-data-sqlclient/) library provides native full support for configurable automatic retry logic.
+A High Availability (HA) replica uses the same page servers as the primary replica, so no data copy is required to add an HA replica. HA replicas are mainly used to increase database availability; they act as hot standbys for failover purposes. If the primary replica becomes unavailable, failover to one of the existing HA replicas is automatic and quick. The connection string doesn't need to change; during failover applications may experience minimal downtime due to active connections being dropped. As usual for this scenario, proper retry logic is recommended. Several drivers already provide some degree of automatic retry logic. If you are using .NET, the [latest Microsoft.Data.SqlClient](https://devblogs.microsoft.com/azure-sql/configurable-retry-logic-for-microsoft-data-sqlclient/) library provides native full support for configurable automatic retry logic.
 
 HA replicas use the same server and database name as the primary replica. Their Service Level Objective is also always the same as for the primary replica. HA replicas are not visible or manageable as a stand-alone resource from the portal or from any API.
 
@@ -60,8 +60,8 @@ There are differences between HA replicas and named replicas:
 
 As a result, named replicas offer several benefits over HA replicas, for what concern read-only workloads:
 
-- Users connected to a named replica will suffer no disconnection if the primary replica is scaled up or down; at the same time, users connected to primary replica will be unaffected by named replicas scaling up or down.
-- Workloads running on any replica, primary or named, will be unaffected by long running queries running on other replicas.
+- Users connected to a named replica will suffer no disconnection if the primary replica is scaled up or down; at the same time, users connected to the primary replica will be unaffected by named replicas scaling up or down.
+- Workloads running on any replica, primary or named, will be unaffected by long-running queries running on other replicas.
 
 The main goal of named replicas is to enable a broad variety of [read scale-out](read-scale-out.md) scenarios, and to improve Hybrid Transactional and Analytical Processing (HTAP) workloads. Examples of how to create such solutions are available here:
 

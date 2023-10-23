@@ -33,7 +33,7 @@ This example installs [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] on Ubun
 
 Save the sample script to a file and then to customize it. You'll need to replace the variable values in the script. You can also set any of the scripting variables as environment variables, as long as you remove them from the script file.
 
-The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
+The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line might resolve this issue.
 
 > [!IMPORTANT]  
 > The `SA_PASSWORD` environment variable is deprecated. Use `MSSQL_SA_PASSWORD` instead.

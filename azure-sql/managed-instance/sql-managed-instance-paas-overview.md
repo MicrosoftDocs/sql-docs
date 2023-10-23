@@ -21,9 +21,12 @@ Azure SQL Managed Instance is a scalable cloud database service that's always ru
 If you're new to Azure SQL Managed Instance, check out the *Azure SQL Managed Instance* video from our in-depth [Azure SQL video series](/shows/Azure-SQL-for-Beginners/?WT.mc_id=azuresql4beg_azuresql-ch9-niner):
 > [!VIDEO https://learn.microsoft.com/shows/Azure-SQL-for-Beginners/Azure-SQL-Managed-Instance-Overview-6-of-61/player]
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
+
 ## Overview
 
-Azure SQL Managed Instance is a PaaS service that has near 100% compatibility with the latest Enterprise Edition SQL Server database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable to existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance provides all PaaS capabilities (automatic patching and version updates, [automated backups](automated-backups-overview.md), [high availability](../database/high-availability-sla.md)) to drastically reduce management overhead and the total cost of ownership (TCO).
+Azure SQL Managed Instance is a PaaS service that has near 100% compatibility with the latest Enterprise Edition SQL Server database engine, providing a native [virtual network (VNet)](/azure/virtual-network/virtual-networks-overview) implementation that addresses common security concerns, and a [business model](https://azure.microsoft.com/pricing/details/sql-database/) favorable to existing SQL Server customers. SQL Managed Instance allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal application and database changes. At the same time, SQL Managed Instance provides all PaaS capabilities (automatic patching and version updates, [automated backups](automated-backups-overview.md), [high availability](high-availability-sla.md)) to drastically reduce management overhead and the total cost of ownership (TCO).
 
 SQL Managed Instance is designed for customers looking to migrate a large number of apps from an on-premises or IaaS, self-built, or ISV provided environment to a fully managed PaaS cloud environment, with as low a migration effort as possible. Using the fully automated [Azure Data Migration Service](/azure/dms/tutorial-sql-server-to-managed-instance#create-an-azure-database-migration-service-instance), or the [Managed Instance link](managed-instance-link-feature-overview.md), customers can lift and shift their existing SQL Server database or SQL Server instance to SQL Managed Instance, which offers compatibility with SQL Server and complete isolation of customer instances with native VNet support. 
 
@@ -48,9 +51,9 @@ SQL Managed Instance combines the best features that are available both in Azure
 
 | **PaaS benefits** | **Business continuity** |
 | --- | --- |
-|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [Hybrid Disaster recovery with failover (preview)](managed-instance-link-feature-overview.md) between SQL Managed Instance and SQL Server 2022. <br>Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
+|No purchasing or managing hardware <br>No management overhead to manage underlying infrastructure <br>Quick provisioning and service scaling <br>Automated patching and version upgrade <br /> You can [stop and start](instance-stop-start-how-to.md) the instance to save on costs <br>Integration with other PaaS data services |99.99% uptime SLA  <br>Built-in [high availability](high-availability-sla.md) <br> [SQL Server disaster recovery to SQL Managed Instance](managed-instance-link-feature-overview.md). <br>Data protected with [automated backups](automated-backups-overview.md) <br>Customer configurable backup retention period <br>User-initiated [backups](/sql/t-sql/statements/backup-transact-sql?preserve-view=true&view=azuresqldb-mi-current) that can be [restored to SQL Server 2022](restore-database-to-sql-server.md) <br>[Point-in-time database restore](../database/recovery-using-backups.md#point-in-time-restore) capability |
 |**Security and compliance** | **Management**|
-|Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Azure Active Directory (Azure AD) authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Azure AD server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows Authentication for Azure AD principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
+|Isolated environment ([VNet integration](connectivity-architecture-overview.md), single tenant service, dedicated compute and storage) <br> Adheres to the same compliance standards as Azure SQL Database <br>[Transparent data encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)<br>[Microsoft Entra authentication](../database/authentication-aad-overview.md), single sign-on support <br> [Microsoft Entra server principals (logins)](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true) <br>[Windows authentication for Microsoft Entra principals](winauth-azuread-overview.md)  <br>[SQL auditing](auditing-configure.md) <br>[Advanced Threat Protection](threat-detection-configure.md) |Azure Resource Manager API for automating service provisioning and scaling <br>Azure portal functionality for manual service provisioning and scaling <br>Data Migration Service
 
 > [!IMPORTANT]
 > Azure SQL Managed Instance has been certified against a number of compliance standards. For more information, see the [Microsoft Azure Compliance Offerings](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=44bbae63-bf4d-4e3b-9d3d-c96fb25ec363&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_FAQ_and_White_Papers), where you can find the most current list of SQL Managed Instance compliance certifications, listed under **SQL Database**.
@@ -85,6 +88,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     - [Native backup and restore](restore-sample-database-quickstart.md)
     - Configurable database file layout
     - Migrations at scale with [DMS](/azure/dms/tutorial-sql-server-managed-instance-online-ads)
+    - [Migrate with Managed Instance link](managed-instance-link-feature-overview.md)
     :::column-end:::
     :::column:::
     **Operational**
@@ -98,6 +102,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     - [Service Broker](/sql/database-engine/configure-windows/sql-server-service-broker)
     - [Transactional Replication](replication-transactional-overview.md)
     - [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
+    - [Disaster recovery with Managed Instance link](managed-instance-link-feature-overview.md)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -110,7 +115,7 @@ The following briefly lists SQL Server features that are compatible with Azure S
     :::column-end:::
     :::column:::
     **Security**
-    - [Integrated authentication with Azure AD](../database/authentication-aad-overview.md)
+    - [Integrated authentication with Microsoft Entra ID](../database/authentication-aad-overview.md)
     - [TDE](/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql)
     - [Always Encrypted](/sql/relational-databases/security/encryption/always-encrypted-database-engine)
     - [SQL Auditing](auditing-configure.md)
@@ -126,14 +131,14 @@ For a thorough list comparing compatible features between SQL Server and Azure S
 
 ### Key differences between SQL Server on-premises and SQL Managed Instance
 
-SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server may be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
+SQL Managed Instance benefits from being always-up-to-date in the cloud, which means that some features in SQL Server might be obsolete, retired, or have alternatives. There are specific cases when tools need to recognize that a particular feature works in a slightly different way or that the service is running in an environment you don't fully control.
 
 Some key differences:
 
 - High availability is built in and preconfigured using technology similar to [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 - There are only automated backups and point-in-time restore. Customers can initiate `copy-only` backups that don't interfere with the automatic backup chain.
 - Specifying full physical paths is unsupported, so all corresponding scenarios have to be supported differently: RESTORE DB doesn't support WITH MOVE, CREATE DB doesn't allow physical paths, BULK INSERT works with Azure blobs only, etc.
-- SQL Managed Instance supports [Azure AD authentication](../database/authentication-aad-overview.md) and [Windows Authentication for Azure Active Directory principals (Preview)](winauth-azuread-overview.md).
+- SQL Managed Instance supports [Microsoft Entra authentication](../database/authentication-aad-overview.md) and [Windows Authentication for Microsoft Entra principals (Preview)](winauth-azuread-overview.md).
 - SQL Managed Instance automatically manages XTP filegroups and files for databases containing In-Memory OLTP objects.
 - SQL Managed Instance supports SQL Server Integration Services (SSIS) and can host an SSIS catalog (SSISDB) that stores SSIS packages, but they're executed on a managed Azure-SSIS Integration Runtime (IR) in Azure Data Factory. See [Create Azure-SSIS IR in Data Factory](/azure/data-factory/create-azure-ssis-integration-runtime). To compare the SSIS features, see [Compare SQL Database to SQL Managed Instance](/azure/data-factory/create-azure-ssis-integration-runtime#comparison-of-sql-database-and-sql-managed-instance).
 - SQL Managed Instance supports connectivity only through the TCP protocol. It doesn't support connectivity through named pipes.
@@ -149,7 +154,7 @@ Azure SQL Managed Instance doesn't have the Business Intelligence suite natively
 
 ### Administration features
 
-SQL Managed Instance enables system administrators to spend less time on administrative tasks because the service either performs them for you or greatly simplifies those tasks. For example, [OS/RDBMS installation and patching](../database/high-availability-sla.md), [dynamic instance resizing and configuration](../database/single-database-scale.md), [backups](automated-backups-overview.md), [database replication](replication-between-two-instances-configure-tutorial.md) (including system databases), [high availability configuration](../database/high-availability-sla.md), and configuration of health and [performance monitoring](/azure/azure-monitor/insights/azure-sql) data streams.
+SQL Managed Instance enables system administrators to spend less time on administrative tasks because the service either performs them for you or greatly simplifies those tasks. For example, [OS/RDBMS installation and patching](../database/high-availability-sla.md), [dynamic instance resizing and configuration](../database/single-database-scale.md), [backups](automated-backups-overview.md), [database replication](replication-between-two-instances-configure-tutorial.md) (including system databases), [high availability configuration](high-availability-sla.md), and configuration of health and [performance monitoring](/azure/azure-monitor/insights/azure-sql) data streams.
 
 For more information, see [a list of supported and unsupported SQL Managed Instance features](../database/features-comparison.md), and [T-SQL differences between SQL Managed Instance and SQL Server](transact-sql-tsql-differences-sql-server.md).
 
@@ -172,7 +177,7 @@ SQL Managed Instance is available in two service tiers:
 - **General Purpose**: Designed for applications with typical performance and I/O latency requirements.
 - **Business Critical**: Designed for applications with low I/O latency requirements and minimal impact of underlying maintenance operations on the workload.
 
-Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](../database/high-availability-sla.md).
+Both service tiers guarantee 99.99% availability and enable you to independently select storage size and compute capacity. For more information on the high availability architecture of Azure SQL Managed Instance, see [High availability and Azure SQL Managed Instance](high-availability-sla.md).
 
 ### General Purpose service tier
 
@@ -180,7 +185,7 @@ The following list describes key characteristics of the General Purpose service 
 
 - Designed for the majority of business applications with typical performance requirements
 - High-performance Azure Blob storage (16 TB)
-- Built-in [high availability](../database/high-availability-sla.md#locally-redundant-availability) based on reliable Azure Blob storage and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
+- Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on reliable Azure Blob storage and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 
 For more information, see [Storage layer in the General Purpose tier](https://medium.com/azure-sqldb-managed-instance/file-layout-in-general-purpose-azure-sql-managed-instance-cf21fff9c76c) and [Storage performance best practices and considerations for SQL Managed Instance (General Purpose)](/archive/blogs/sqlcat/storage-performance-best-practices-and-considerations-for-azure-sql-db-managed-instance-general-purpose).
 
@@ -194,7 +199,7 @@ The following list outlines the key characteristics of the Business Critical ser
 
 - Designed for business applications with highest performance and HA requirements
 - Comes with super-fast local SSD storage (up to 4 TB on standard series (Gen5), up to 5.5 TB on premium series and up to 16 TB on memory optimized premium-series)
-- Built-in [high availability](../database/high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
+- Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 - Additional built-in [read-only database replicas](../database/read-scale-out.md) that can be used for reporting and other read-only workloads
 - [In-Memory OLTP](../in-memory-oltp-overview.md) that can be used for workload with high-performance requirements  
 
@@ -203,6 +208,19 @@ Find more information about the differences between service tiers in [SQL Manage
 ## Management operations
 
 Azure SQL Managed Instance provides management operations that you can use to automatically deploy new managed instances, update instance properties, and delete instances when no longer needed. Detailed explanation of management operations can be found in [Azure SQL Managed Instance management operations overview](management-operations-overview.md).
+
+## Managed Instance link 
+
+The [Managed Instance link](managed-instance-link-feature-overview.md) uses distributed availability group technology to synchronize databases between SQL Server and Azure SQL Managed Instance, unlocking a number of scenarios, such as: 
+
+- Using Azure services without migrating to the cloud 
+- Offloading read-only workloads to Azure 
+- Disaster recovery 
+- Migrating to Azure
+
+## License-free DR benefit 
+
+With Azure SQL Managed Instance, you can save on vCore licensing costs by designating a secondary replica for disaster recovery (DR) only. To learn more, review [License-free DR benefit](business-continuity-high-availability-disaster-recover-hadr-overview.md#license-free-dr-replicas). 
 
 ## Advanced security and compliance
 
@@ -238,21 +256,23 @@ Azure SQL Managed Instance provides a set of advanced security features that can
 
 Migration of an encrypted database to SQL Managed Instance is supported via Azure Database Migration Service or native restore. If you plan to migrate an encrypted database using native restore, migration of the existing TDE certificate from the SQL Server instance to SQL Managed Instance is a required step. For more information about migration options, see [SQL Server to Azure SQL Managed Instance Guide](../migration-guides/managed-instance/sql-server-to-managed-instance-guide.md).
 
-## Azure Active Directory integration
+<a name='azure-active-directory-integration'></a>
 
-SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Azure Active Directory (Azure AD). Azure AD server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Azure AD server principals (logins) enable you to specify users and groups from your Azure AD tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
+## Microsoft Entra integration
 
-SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Azure AD integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure AD supports [multi-factor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
+SQL Managed Instance supports traditional SQL Server database engine logins and logins integrated with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Microsoft Entra server principals (logins) are an Azure cloud version of on-premises database logins that use in your on-premises environment. Microsoft Entra server principals (logins) enable you to specify users and groups from your Microsoft Entra tenant as true instance-scoped principals, capable of performing any instance-level operation, including cross-database queries within the same managed instance.
 
-A new syntax is introduced to create Azure AD server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision an Azure Active Directory administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
+SQL Managed Instance enables you to centrally manage identities of database users and other Microsoft services with [Microsoft Entra integration](../database/authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID supports [multifactor authentication](../database/authentication-mfa-ssms-overview.md) to increase data and application security while supporting a single sign-on process.
+
+A new syntax is introduced to create Microsoft Entra server principals (logins), **FROM EXTERNAL PROVIDER**. For more information on the syntax, see [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current&preserve-view=true), and review the [Provision a Microsoft Entra administrator for SQL Managed Instance](../database/authentication-aad-configure.md#provision-azure-ad-admin-sql-managed-instance) article.
 
 ## Authentication
 
 SQL Managed Instance authentication refers to how users prove their identity when connecting to the database. SQL Managed Instance supports three types of authentication:  
 
 - **SQL Authentication**: This authentication method uses a username and password.
-- **Azure Active Directory Authentication**: This authentication method uses identities managed by Azure Active Directory and is supported for managed and integrated domains. Use Active Directory authentication (integrated security) [whenever possible](/sql/relational-databases/security/choose-an-authentication-mode).
-- **Windows Authentication for Azure AD Principals**: [Kerberos authentication for Azure AD Principals](../managed-instance/winauth-azuread-overview.md) enables Windows Authentication for Azure SQL Managed Instance. Windows Authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
+- **Microsoft Entra authentication**: This authentication method uses identities managed by Microsoft Entra ID and is supported for managed and integrated domains. Use Active Directory authentication (integrated security) [whenever possible](/sql/relational-databases/security/choose-an-authentication-mode).
+- **Windows authentication for Microsoft Entra principals**: [Kerberos authentication for Microsoft Entra principals](../managed-instance/winauth-azuread-overview.md) enables Windows authentication for Azure SQL Managed Instance. Windows authentication for managed instances empowers customers to move existing services to the cloud while maintaining a seamless user experience and provides the basis for infrastructure modernization.
 
 ### Authorization
 

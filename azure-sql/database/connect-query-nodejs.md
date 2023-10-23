@@ -169,7 +169,7 @@ Open a command prompt and create a folder named *sqltest*. Open the folder you c
     ```
 
 > [!NOTE]
-> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Azure Active Directory are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
+> For more information about using managed identity for authentication, complete the tutorial to [access data via managed identity](/azure/app-service/tutorial-connect-msi-sql-database). Details about the Tedious configuration options for Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) are available in the [Tedious documentation](http://tediousjs.github.io/tedious/api-connection.html).
 
 
 ## Run the code

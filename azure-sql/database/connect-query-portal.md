@@ -27,14 +27,16 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to run SQL queries against Azure SQL Database in the Azure portal. In this quickstart, you connect to an Azure SQL database in the Azure portal and use query editor to run Transact-SQL (T-SQL) queries.
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Prerequisites
 
 - This quickstart uses the `AdventureWorksLT` sample database in an Azure SQL database. If you don't have one already, you can [create a database using sample data in Azure SQL Database](single-database-create-quickstart.md).
 
 - A user account with permissions to connect to the database and query editor. You can either:
 
-  - Have or set up a user that can connect to the database with SQL Authentication.
-  - Have or set up a user that can connect to the database with Azure Active Directory (Azure AD) authentication.
+  - Have or set up a user that can connect to the database with SQL authentication.
+  - Have or set up a user that can authenticate to the database with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 
 ## Connect to the query editor
 
@@ -42,13 +44,13 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
    :::image type="content" source="./media/connect-query-portal/find-query-editor.png" alt-text="Screenshot that shows selecting query editor.":::
 
-1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL authentication or Azure AD.
+1. On the sign-in screen, provide credentials to connect to the database. You can connect using SQL or Microsoft Entra authentication.
 
    - To connect with SQL authentication, under **SQL server authentication**, enter a **Login** and **Password** for a user that has access to the database, and then select **OK**. You can always use the login and password for the server admin.
 
      :::image type="content" source="./media/connect-query-portal/login-menu.png" alt-text="Screenshot showing sign-in with SQL authentication.":::
 
-   - To connect using Azure AD, if you're the Azure AD server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
+   - To connect using Microsoft Entra ID, if you're the Microsoft Entra server admin, select **Continue as \<your user or group ID>**. If sign-in is unsuccessful, try refreshing the page.
 
 ## Query the database
 
@@ -133,6 +135,6 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL sta
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
 - [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)

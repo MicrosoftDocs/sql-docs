@@ -36,4 +36,4 @@ WHERE object_name LIKE '%Availability Group%';
 
  - [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  - [Availability Replica Object](../../relational-databases/performance-monitor/sql-server-availability-replica.md)
- - [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ - [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

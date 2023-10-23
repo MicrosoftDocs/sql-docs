@@ -15,21 +15,6 @@ helpviewer_keywords:
 
 This page discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-<!--
-Hello, We are standardizing the format of content inside our Release Notes (or What's New) articles.
-Instead of bullets (or paragraphs), we have shifted to the 2-column format you see for H2 **What's New in Version 5.6**.
-It is not necessary to reformat all the older H2 sections in this Release Notes file, but.....
-
-Going forward, please be sure to use the 2-column format.
-
-Also, all Release Notes .md file names now must begin with 'release-notes-*.md'.  And no filler words.
-The 5.6 edition of this file is being renamed.....
-FROM:  'release-notes-for-the-php-sql-driver.md'
-TO  :  'release-notes-php-sql-driver.md'
-
-For any questions, ask GeneMi or CraigG.
-Thanks a lot.  2019-03-28  (DevO= 1467988)
--->
 ## 5.11.1
 
 :::image type="icon" source="../../includes/media/download.svg" border="false"::: **[Download Microsoft Drivers for PHP for SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2246325)**  

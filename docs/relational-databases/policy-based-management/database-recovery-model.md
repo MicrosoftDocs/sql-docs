@@ -16,11 +16,11 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-For SQL Server Enterprise and Standard editions, this rule checks for non-read-only user databases that have recovery set to simple. For production databases, we recommend that you use the full recovery model instead of the simple recovery model. Full recovery mode enables point-in-time recovery. This approach helps reduce data loss if there's a disaster recovery.
+For SQL Server Enterprise and Standard editions, this rule checks for non-read-only user databases that have recovery set to simple. For production databases, we recommend that you use the full recovery model instead of the simple recovery model. The full recovery model enables point-in-time recovery. This approach helps reduce data loss if there's a disaster recovery.
   
 ## Best practices recommendations  
 
-Production databases should be in full recovery mode. The transaction log should be backed up frequently to help ensure recoverability with minimum data loss.
+Production databases should be in the full recovery model. The transaction log should be backed up frequently to help ensure recoverability with minimum data loss.
   
 ## See also
 

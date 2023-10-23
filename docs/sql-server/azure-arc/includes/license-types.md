@@ -18,5 +18,6 @@ The following table identifies features enabled depending on license type:
 |[Govern through Microsoft Purview](/azure/purview/tutorial-register-scan-on-premises-sql-server)|Yes |Yes |Yes |
 |[Automated backups](../point-in-time-restore.md)|No |Yes |Yes |
 |[Automated patching](../patch.md)|No |Yes |Yes |
+|[Failover cluster instances (preview)](../support-for-fci.md) |Yes | Yes | Yes|
 
-<sup>*</sup>License only includes SQL Server instances that are Developer, Express, Web or Evaluation Edition and instances using a Server/CAL license.
+<sup>*</sup>License only includes SQL Server instances that are Developer, Express, Web, or Evaluation Edition and instances using a Server/CAL license.

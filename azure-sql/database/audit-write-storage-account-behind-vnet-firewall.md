@@ -82,7 +82,7 @@ The sample scripts in this section require you to update the script before you r
 
 To configure SQL Audit to write events to a storage account behind a VNet or Firewall:
 
-1. Register your server with Azure Active Directory (Azure AD). Use either PowerShell or REST API.
+1. Register your server with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). Use either PowerShell or REST API.
 
    **PowerShell**
 
@@ -117,7 +117,7 @@ To configure SQL Audit to write events to a storage account behind a VNet or Fir
    }
    ```
 
-1. Assign the Storage Blob Data Contributor role to the server hosting the database that you registered with Azure Active Directory (Azure AD) in the previous step.
+1. Assign the Storage Blob Data Contributor role to the server hosting the database that you registered with Microsoft Entra ID in the previous step.
 
     For detailed steps, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 

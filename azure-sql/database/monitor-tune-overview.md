@@ -16,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 
 To monitor the performance of a database in Azure SQL Database and Azure SQL Managed Instance, start by monitoring the CPU and IO resources used by your workload relative to the level of database performance you chose in selecting a particular service tier and performance level. To accomplish this, Azure SQL Database and Azure SQL Managed Instance emit resource metrics that can be viewed in the Azure portal or by using one of these SQL Server management tools:
 
- - [Azure Data Studio](/sql/azure-data-studio/what-is), based on [Visual Studio Code](https://code.visualstudio.com/).
+ - [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), based on [Visual Studio Code](https://code.visualstudio.com/).
  - [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS), based on [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 | Monitoring solution | SQL Database | SQL Managed Instance | Requires agent on a customer-owned VM |  

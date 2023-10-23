@@ -104,7 +104,7 @@ GO
 
 #### After switching between the full and bulk-logged recovery models
 
-- After completing the bulk operations, immediately switch back to full recovery mode.
+- After completing the bulk operations, immediately switch back to the full recovery model.
 
 - After switching from the bulk-logged recovery model back to the full recovery model, back up the log.
 

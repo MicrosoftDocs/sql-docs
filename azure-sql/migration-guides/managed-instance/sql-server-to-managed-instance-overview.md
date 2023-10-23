@@ -7,8 +7,11 @@ ms.reviewer: mathoma, danil, randolphwest
 ms.date: 01/06/2023
 ms.service: sql-managed-instance
 ms.subservice: migration-guide
-ms.custom: build-2023, build-2023-dataai
 ms.topic: how-to
+ms.custom:
+  - build-2023
+  - build-2023-dataai
+  - sql-migration-content
 ---
 # Migration overview: SQL Server to Azure SQL Managed Instance
 
@@ -49,7 +52,7 @@ One of the key benefits of migrating your SQL Server databases to SQL Managed In
 
 ## Choose an appropriate target
 
-You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
+You can use the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
 
 The following general guidelines can help you choose the right service tier and characteristics of SQL Managed Instance to help match your [performance baseline](sql-server-to-managed-instance-performance-baseline.md): 
 
@@ -160,14 +163,14 @@ Move SQL logins from the SQL Server source to Azure SQL Managed Instance by usin
 
 By default, Azure Database Migration Service supports migrating only SQL logins. However, you can enable the migration of Windows logins by:
 
-- Ensuring that the target SQL managed instance has Azure Active Directory (Azure AD) read access. A user who has the Global Administrator role can configure that access via the Azure portal.
+- Ensuring that the target SQL managed instance has read access to Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). A user who has the Global Administrator role can configure that access via the Azure portal.
 - Configuring Azure Database Migration Service to enable Windows user or group login migrations. You set this up via the Azure portal, on the **Configuration** page. After you enable this setting, restart the service for the changes to take effect.
 
 After you restart the service, Windows user or group logins appear in the list of logins available for migration. For any Windows user or group logins that you migrate, you're prompted to provide the associated domain name. Service user accounts (accounts with the domain name NT AUTHORITY) and virtual user accounts (accounts with the domain name NT SERVICE) aren't supported. To learn more, see [How to migrate Windows users and groups in a SQL Server instance to Azure SQL Managed Instance using T-SQL](../../managed-instance/migrate-sql-server-users-to-instance-transact-sql-tsql-tutorial.md).
 
 Alternatively, you can use the [PowerShell utility](https://www.microsoft.com/download/details.aspx?id=103111) specially designed by Microsoft data migration architects. The utility uses PowerShell to create a T-SQL script to re-create logins and select database users from the source to the target. 
 
-The PowerShell utility automatically maps Windows Server Active Directory accounts to Azure AD accounts, and it can do a UPN lookup for each login against the source Active Directory instance. The utility scripts custom server and database roles, along with role membership and user permissions. Contained databases aren't yet supported, and only a subset of possible SQL Server permissions is scripted. 
+The PowerShell utility automatically maps Windows Server Active Directory accounts to Microsoft Entra accounts, and it can do a UPN lookup for each login against the source Active Directory instance. The utility scripts custom server and database roles, along with role membership and user permissions. Contained databases aren't yet supported, and only a subset of possible SQL Server permissions is scripted. 
 
 ### Encryption
 
@@ -202,7 +205,7 @@ To learn more about in-memory technologies, see [Optimize performance by using i
 
 Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](../../database/recovery-using-backups.md#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](../../database/high-availability-sla.md). 
 
-To strengthen security, consider using [Azure AD authentication](../../database/authentication-aad-overview.md), [auditing](../../managed-instance/auditing-configure.md), [threat detection](../../database/azure-defender-for-sql.md), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
+To strengthen security, consider using [Microsoft Entra authentication](../../database/authentication-aad-overview.md), [auditing](../../managed-instance/auditing-configure.md), [threat detection](../../database/azure-defender-for-sql.md), [row-level security](/sql/relational-databases/security/row-level-security), and [dynamic data masking](/sql/relational-databases/security/dynamic-data-masking).
 
 In addition to advanced management and security features, SQL Managed Instance provides advanced tools that can help you [monitor and tune your workload](../../database/monitor-tune-overview.md). [Azure SQL Analytics](/azure/azure-monitor/insights/azure-sql) allows you to monitor a large set of managed instances in a centralized way. [Automatic tuning](/sql/relational-databases/automatic-tuning/automatic-tuning#automatic-plan-correction) in managed instances continuously monitors performance of your SQL plan execution and automatically fixes the identified performance problems. 
 
@@ -215,7 +218,7 @@ For more assistance, see the following resources that were developed for real-wo
 |Asset  |Description  |
 |---------|---------|
 |[Data workload assessment model and tool](https://www.microsoft.com/download/details.aspx?id=103130)| This tool provides suggested "best fit" target platforms, cloud readiness, and an application/database remediation level for a workload. It offers simple, one-click calculation and report generation that helps to accelerate large estate assessments by providing an automated and uniform decision process for target platforms.|
-|[Utility to move on-premises SQL Server logins to Azure SQL Managed Instance](https://www.microsoft.com/download/details.aspx?id=103111)|A PowerShell script can create a T-SQL command script to re-create logins and select database users from on-premises SQL Server to Azure SQL Managed Instance. The tool allows automatic mapping of Windows Server Active Directory accounts to Azure AD accounts, along with optionally migrating SQL Server native logins.|
+|[Utility to move on-premises SQL Server logins to Azure SQL Managed Instance](https://www.microsoft.com/download/details.aspx?id=103111)|A PowerShell script can create a T-SQL command script to re-create logins and select database users from on-premises SQL Server to Azure SQL Managed Instance. The tool allows automatic mapping of Windows Server Active Directory accounts to Microsoft Entra accounts, along with optionally migrating SQL Server native logins.|
 |[Perfmon data collection automation by using Logman](https://www.microsoft.com/download/details.aspx?id=103114)|You can use the Logman tool to collect Perfmon data (to help you understand baseline performance) and get migration target recommendations. This tool uses logman.exe to create the command that will create, start, stop, and delete performance counters set on a remote SQL Server instance.|
 
 The Data SQL Engineering team developed these resources. This team's core charter is to unblock and accelerate complex modernization for data platform migration projects to Microsoft's Azure data platform.

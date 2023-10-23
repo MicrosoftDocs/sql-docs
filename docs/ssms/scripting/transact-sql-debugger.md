@@ -62,7 +62,7 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the Transact-SQL debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](./run-the-transact-sql-debugger.md)|  
 |Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](./step-through-transact-sql-code.md)|  
 |Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](./transact-sql-debugger-information.md)|  

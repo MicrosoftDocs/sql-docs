@@ -29,12 +29,7 @@ The underlying [!INCLUDE [ssdenoversion-md](../includes/ssdenoversion-md.md)] is
 - [[!INCLUDE [ssazuresynapse-md](../includes/ssazuresynapse-md.md)]](/azure/synapse-analytics/overview-what-is)
 - [[!INCLUDE [ssazurede-md](../includes/ssazurede-md.md)]](/azure/azure-sql-edge/overview)
 
-You can view the complete list of features and components from the following links:
-
-- [Editions and supported features of SQL Server 2022](editions-and-components-of-sql-server-2022.md)
-- [Editions and supported features of SQL Server 2019](editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
-- [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
+[!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## SQL Server components and technologies
 

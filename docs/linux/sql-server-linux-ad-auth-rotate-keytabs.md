@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-linux-2017||>=sql-server-2017||=sqlallproducts-allve
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Based on your organization's security best practices, you may be required to rotate the password regularly for the Windows Active Directory account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on Linux.
+Based on your organization's security best practices, you might be required to rotate the password regularly for the Windows Active Directory account provided as **network.privilegedadaccount** in **mssql.conf**, or any other account that owns the service principal names (SPN) for the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service. The supported method for changing the password for the account is documented in this article. The password change takes effect without the need to restart the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on Linux.
 
 The **adutil** tool is used to update the keytab. The **adutil** command must be run from a domain-joined machine. For more information about **adutil** and how to download the tool, see [Introduction to adutil - Active Directory Utility](sql-server-linux-ad-auth-adutil-introduction.md).
 

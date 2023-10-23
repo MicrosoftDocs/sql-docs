@@ -3,8 +3,8 @@ title: Create a single database
 description: Create a single database in Azure SQL Database using the Azure portal, PowerShell, or the Azure CLI.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: mathoma
-ms.date: 04/26/2023
+ms.reviewer: mathoma, randolphwest
+ms.date: 09/25/2023
 ms.service: sql-database
 ms.subservice: deployment-configuration
 ms.topic: quickstart
@@ -16,6 +16,9 @@ ms.custom:
 # Quickstart: Create a single database - Azure SQL Database
 
 In this quickstart, you create a [single database](single-database-overview.md) in Azure SQL Database using either the Azure portal, a PowerShell script, or an Azure CLI script. You then query the database using **Query editor** in the Azure portal.
+
+[!INCLUDE [azure-sql-database-free-offer-note](../includes/azure-sql-database-free-offer-note.md)]
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -33,7 +36,7 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. Browse to the [Select SQL Deployment option](https://portal.azure.com/#create/Microsoft.AzureSQL) page.
 1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/select-deployment.png" alt-text="A screenshot of the Select SQL Deployment option page in the Azure portal." lightbox="media/single-database-create-quickstart/select-deployment.png":::
+   :::image type="content" source="media/single-database-create-quickstart/select-deployment.png" alt-text="A screenshot of the Select SQL Deployment option page in the Azure portal." lightbox="media/single-database-create-quickstart/select-deployment.png":::
 
 1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
 1. For **Resource group**, select **Create new**, enter *myResourceGroup*, and select **OK**.
@@ -45,44 +48,44 @@ To create a single database in the Azure portal, this quickstart starts at the A
    - **Authentication method**: Select **Use SQL authentication**.
    - **Server admin login**: Enter *azureuser*.
    - **Password**: Enter a password that meets requirements, and enter it again in the **Confirm password** field.
-   
+
    Select **OK**.
 
 1. Leave **Want to use SQL elastic pool** set to **No**.
-1. For **Workload environment**, specify **Development** for this exercise. 
+1. For **Workload environment**, specify **Development** for this exercise.
 
    The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings.
 
    - Choosing the **development** workload environment sets a few options, including: 
-      - **Backup storage redundancy** option is locally-redundant storage. Locally-redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+      - **Backup storage redundancy** option is locally redundant storage. Locally redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
       - **Compute + storage** is General Purpose, Serverless with a single vCore. By default, there is a [one-hour auto-pause delay](serverless-tier-overview.md?view=azuresql&preserve-view=true&tabs=general-purpose#performance-configuration).
    - Choosing the **Production** workload environment sets: 
       - **Backup storage redundancy** is geo-redundant storage, the default. 
       - **Compute + storage** is General Purpose, Provisioned with 2 vCores and 32 GB of storage. This can be further modified in the next step.
-      
+
 1. Under **Compute + storage**, select **Configure database**.
 1. This quickstart uses a serverless database, so leave **Service tier** set to **General Purpose (Most budget-friendly, serverless compute)** and set **Compute tier** to **Serverless**. Select **Apply**.
-1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy). 
+1. Under **Backup storage redundancy**, choose a redundancy option for the storage account where your backups will be saved. To learn more, see [backup storage redundancy](automated-backups-overview.md#backup-storage-redundancy).
 1. Select **Next: Networking** at the bottom of the page.
 
-   :::image type="content" source="./media/single-database-create-quickstart/new-sql-database-basics.png" alt-text="A screenshot of the Create SQL Database page, Basic tab from the Azure portal.":::
+   :::image type="content" source="media/single-database-create-quickstart/new-sql-database-basics.png" alt-text="A screenshot of the Create SQL Database page, Basic tab from the Azure portal.":::
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules.":::
+   :::image type="content" source="media/single-database-create-quickstart/networking.png" alt-text="Screenshot of the Azure portal showing the networking tab for firewall rules.":::
 
-1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2. 
+1. Under **Connection policy**, choose the **Default** [connection policy](connectivity-architecture.md#connection-policy), and leave the **Minimum TLS version** at the default of TLS 1.2.
 1. Select **Next: Security** at the bottom of the page.
 
-   :::image type="content" source="./media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption.":::
-  
+   :::image type="content" source="media/single-database-create-quickstart/networking-connections.png" alt-text="Screenshot that shows the networking tab for policy and encryption.":::
+
 1. On the **Security** page, you can choose to start a free trial of [Microsoft Defender for SQL](../database/azure-defender-for-sql.md), as well as configure [Ledger](/sql/relational-databases/security/ledger/ledger-overview), [Managed identities](/azure/active-directory/managed-identities-azure-resources/overview) and [Transparent data encryption (TDE)](transparent-data-encryption-byok-overview.md) if you desire.  Select **Next: Additional settings** at the bottom of the page.
-1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure [database collation](/sql/t-sql/statements/collations) and a [maintenance window](maintenance-window.md). 
+1. On the **Additional settings** tab, in the **Data source** section, for **Use existing data**, select **Sample**. This creates an `AdventureWorksLT` sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure [database collation](/sql/t-sql/statements/collations) and a [maintenance window](maintenance-window.md).
 
 1. Select **Review + create** at the bottom of the page:
 
-   :::image type="content" source="./media/single-database-create-quickstart/additional-settings.png" alt-text="A screenshot of the Azure portal showing the Additional settings tab.":::
+   :::image type="content" source="media/single-database-create-quickstart/additional-settings.png" alt-text="A screenshot of the Azure portal showing the Additional settings tab.":::
 
 1. On the **Review + create** page, after reviewing, select **Create**.
 
@@ -100,7 +103,7 @@ The Azure CLI code blocks in this section create a resource group, server, singl
 
 The following values are used in subsequent commands to create the database and required resources. Server names need to be globally unique across all of Azure so the $RANDOM function is used to create the server name.
 
-Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range to match your specific environment. Use the public IP address of the computer you're using to restrict access to the server to only your IP address.
+Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range that matches your specific environment. Use the public IP address of the computer you're using to restrict access to the server to only your IP address.
 
 :::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
 
@@ -141,7 +144,7 @@ az sql db create \
 
 # [Azure CLI (sql up)](#tab/azure-cli-sql-up)
 
-The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process.  With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, standard-series (Gen5), 2 vCores.
+The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-sql-up) command to simplify the database creation process. With it, you can create a database and all of its associated resources with a single command. This includes the resource group, server name, server location, database name, and login information. The database is created with a default pricing tier of General Purpose, Provisioned, standard-series (Gen5), 2 vCores.
 
 [!INCLUDE [quickstarts-free-trial-note](../includes/quickstarts-free-trial-note.md)]
 
@@ -153,18 +156,18 @@ The Azure CLI code blocks in this section use the [az sql up](/cli/azure/sql#az-
 
 The following values are used in subsequent commands to create the database and required resources. Server names need to be globally unique across all of Azure so the $RANDOM function is used to create the server name.
 
-Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range to match your specific environment.
+Change the location as appropriate for your environment. Replace `0.0.0.0` with the IP address range that matches your specific environment.
 
 :::code language="azurecli" source="~/../azure_cli_scripts/sql-database/create-and-configure-database/create-and-configure-database.sh" id="SetParameterValues":::
 
-> [!NOTE]
-> [az sql up](/cli/azure/sql#az-sql-up) is currently in preview and does not currently support the serverless compute tier. Also, the use of non-alphabetic and non-numeric characters in the database name are not currently supported.
+> [!NOTE]  
+> [az sql up](/cli/azure/sql#az-sql-up) is currently in preview and doesn't currently support the serverless compute tier. Also, the use of non-alphabetic and non-numeric characters in the database name aren't currently supported.
 
 ### Create a database and resources
 
 Use the [az sql up](/cli/azure/sql#az-sql-up) command to create and configure a [logical server](logical-servers.md) for Azure SQL Database for immediate use. Make sure to record the generated resource group and server names, so you can manage these resources later.
 
-> [!NOTE]
+> [!NOTE]  
 > When running the `az sql up` command for the first time, Azure CLI prompts you to install the `db-up` extension. This extension is currently in preview. Accept the installation to continue. For more information about extensions, see [Use extensions with Azure CLI](/cli/azure/azure-cli-extensions-overview).
 
 1. Run the `az sql up` command. If any required parameters aren't used, like `--server-name`, that resource is created with a random name and login information assigned to it.
@@ -190,7 +193,6 @@ Use the [az sql up](/cli/azure/sql#az-sql-up) command to create and configure a 
         -n AllowYourIp \
         --start-ip-address $startIp \
         --end-ip-address $endIp
-
     ```
 
 1. All required resources are created, and the database is ready for queries.
@@ -205,7 +207,7 @@ The Azure Cloud Shell is a free interactive shell that you can use to run the st
 
 To open the Cloud Shell, select **Try it** from the upper right corner of a code block. You can also launch Cloud Shell in a separate browser tab by going to [https://shell.azure.com](https://shell.azure.com).
 
-When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions will use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
+When Cloud Shell opens, verify that **PowerShell** is selected for your environment. Subsequent sessions use Azure CLI in a PowerShell environment. Select **Copy** to copy the blocks of code, paste it into the Cloud Shell, and press **Enter** to run it.
 
 ### Set parameter values
 
@@ -227,8 +229,6 @@ The following values are used in subsequent commands to create the database and 
    # Show randomized variables
    Write-host "Resource group name is" $resourceGroupName
    Write-host "Server name is" $serverName
-
-
 ```
 
 ### Create resource group
@@ -293,9 +293,9 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. In the portal, search for and select **SQL databases**, and then select your database from the list.
 1. On the page for your database, select **Query editor (preview)** in the left menu.
-1. Enter your **SQL server authentication** server admin login information or use **Azure Active Directory authentication**.
+1. Enter your **SQL authentication** server admin login information or use **Microsoft Entra authentication**.
 
-   :::image type="content" source="./media/single-database-create-quickstart/query-editor-login.png" alt-text="A screenshot of the Query editor login page in the Azure portal.":::
+   :::image type="content" source="media/single-database-create-quickstart/query-editor-login.png" alt-text="A screenshot of the Query editor login page in the Azure portal.":::
 
 1. Enter the following query in the **Query editor** pane.
 
@@ -308,7 +308,7 @@ Once your database is created, you can use the **Query editor (preview)** in the
 
 1. Select **Run**, and then review the query results in the **Results** pane.
 
-   :::image type="content" source="./media/single-database-create-quickstart/query-editor-results.png" alt-text="A screenshot of Query editor results." lightbox="media/single-database-create-quickstart/query-editor-results.png":::
+   :::image type="content" source="media/single-database-create-quickstart/query-editor-results.png" alt-text="A screenshot of Query editor results." lightbox="media/single-database-create-quickstart/query-editor-results.png":::
 
 1. Close the **Query editor** page, and select **OK** when prompted to discard your unsaved edits.
 
@@ -352,13 +352,14 @@ Remove-AzResourceGroup -Name $resourceGroupName
 
 ---
 
-## Next steps
+## Related content
 
 [Connect and query](connect-query-content-reference-guide.md) your database using different tools and languages:
-> [!div class="nextstepaction"]
-> [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
->
-> [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
+
+- [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
+- [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
+
+## Next step
 
 Want to optimize and save on your cloud spending?
 

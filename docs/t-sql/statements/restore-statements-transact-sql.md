@@ -249,7 +249,7 @@ For descriptions of the arguments, see [RESTORE Arguments](../../t-sql/statement
 
 - Complete database restore
 
-  Restores the entire database, beginning with a full database backup, which may be followed by restoring a differential database backup (and log backups). For more information, see [Complete Database Restores - Simple Recovery Mode](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores - Full Recovery Model](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).
+  Restores the entire database, beginning with a full database backup, which may be followed by restoring a differential database backup (and log backups). For more information, see [Complete Database Restores - Simple Recovery Model](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores - Full Recovery Model](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).
 
 - File restore
 
@@ -856,7 +856,7 @@ The following database options are set/overridden and cannot be changed later:
 - NEW_BROKER (if broker is not enabled in .bak file)
 - ENABLE_BROKER (if broker is not enabled in .bak file)
 - AUTO_CLOSE=OFF (if a database in .bak file has AUTO_CLOSE=ON)
-- RECOVERY FULL (if a database in .bak file has SIMPLE or BULK_LOGGED recovery mode)
+- RECOVERY FULL (if a database in .bak file has SIMPLE or BULK_LOGGED recovery model)
 - Memory optimized filegroup is added and called XTP if it was not in the source .bak file. Any existing memory optimized filegroup is renamed to XTP
 - SINGLE_USER and RESTRICTED_USER options are converted to MULTI_USER
 

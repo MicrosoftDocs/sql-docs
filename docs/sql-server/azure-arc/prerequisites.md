@@ -79,29 +79,11 @@ az account list-locations -o table
 
 ## Supported SQL Server versions and operating systems
 
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] supports [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] and later versions, running on one of the following versions of the Windows or Linux operating system:
+[!INCLUDE [supported-configurations](includes/supported-configurations.md)]
 
-- [!INCLUDE [winserver2012-md](../../includes/winserver2012-md.md)] and later versions
-- Ubuntu 20.04 (x64)
-- Red Hat Enterprise Linux (RHEL) 8 (x64)
-- SUSE Linux Enterprise Server (SLES) 15 (x64)
+## Unsupported configurations
 
-> [!IMPORTANT]  
-> Windows Server 2012 and Windows Server 2012 R2 support ends on October 10, 2023. For more information, see [SQL Server 2012 and Windows Server 2012/2012 R2 end of support](/lifecycle/announcements/sql-server-2012-windows-server-2012-2012-r2-end-of-support).
-
-Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] doesn't currently support the following configurations:
-
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] running in containers.
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Failover Cluster Instances (FCI).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] roles other than the Database Engine, such as Analysis Services (SSAS), Reporting Services (SSRS), or Integration Services (SSIS).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] editions: Business Intelligence.
-- [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)], [!INCLUDE [sql2008r2-md](../../includes/sql2008r2-md.md)], and older versions.
-- Installing the Arc agent and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] extension can't be done as part of sysprep image creation.
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in Azure Virtual Machines.
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Azure VMware Solution.
-
-> [!NOTE]  
-> Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Quickstart: Connect SQL Server machines to Azure Arc](quick-enabled-sql-server.md).
+[!INCLUDE [unsupported-configurations](includes/unsupported-configurations.md)]
 
 ## Register resource providers
 

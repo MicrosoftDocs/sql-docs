@@ -71,16 +71,16 @@
         href: /azure/defender-for-cloud/sql-azure-vulnerability-assessment-overview?toc=/azure/azure-sql/toc.json
       - name: Logins, user accounts, roles, and permissions
         href: database/logins-create-manage.md
-      - name: Azure AD authentication
+      - name: Microsoft Entra authentication
         items:
-        - name: Azure AD authentication documentation
+        - name: Microsoft Entra authentication documentation
           href: database/authentication-azure-ad-landing.yml
-          displayName: Azure Active Directory authentication
-        - name: Azure AD authentication overview
+          displayName: Microsoft Entra authentication
+        - name: Microsoft Entra authentication overview
           href: database/authentication-aad-overview.md
-        - name: Configure Azure AD auth
+        - name: Configure Microsoft Entra authentication
           href: database/authentication-aad-configure.md
-        - name: Azure AD multi-factor auth
+        - name: Microsoft Entra multifactor authentication
           href: database/authentication-mfa-ssms-overview.md
         - name: Conditional Access
           href: database/conditional-access-configure.md
@@ -90,9 +90,9 @@
           href: database/authentication-aad-service-principal.md
         - name: Directory Readers role
           href: database/authentication-aad-directory-readers-role.md
-        - name: Azure AD-only authentication
+        - name: Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication.md
-        - name: Azure Policy for Azure AD-only authentication
+        - name: Azure Policy for Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication-policy.md
         - name: Managed identity
           href: database/authentication-azure-ad-user-assigned-managed-identity.md
@@ -182,19 +182,19 @@
 
     - name: Security  
       items:
-      - name: Azure AD Authentication
+      - name: Microsoft Entra authentication
         items:
-        - name: Create Azure AD guest users and set as an Azure AD admin
+        - name: Create Microsoft Entra guest users and set as a Microsoft Entra admin
           href: database/authentication-aad-guest-users.md
         - name: Assign Directory Readers role to groups
           href: database/authentication-aad-directory-readers-role-tutorial.md
-        - name: Enable Azure AD-only authentication
+        - name: Enable Microsoft Entra-only authentication
           href: database/authentication-azure-ad-only-authentication-tutorial.md
-        - name: Enforce Azure AD-only authentication using Azure Policy
+        - name: Enforce Microsoft Entra-only authentication using Azure Policy
           href: database/authentication-azure-ad-only-authentication-policy-how-to.md
-        - name: Create server with Azure AD-only authentication enabled
+        - name: Create server with Microsoft Entra-only authentication enabled
           href: database/authentication-azure-ad-only-authentication-create-server.md
-        - name: Create and utilize Azure AD server logins
+        - name: Create and utilize Microsoft Entra server logins
           href: database/authentication-azure-ad-logins-tutorial.md  
       - name: Configure TDE with BYOK
         href: database/transparent-data-encryption-byok-configure.md
@@ -277,9 +277,10 @@
       href: database/sql-database-paas-overview.md
     - name: What's new?
       href: database/doc-changes-updates-release-notes-whats-new.md
-    - name: Try for free
-      href: database/free-sql-db-free-account-how-to-deploy.md
-
+    - name: Try Azure SQL Database free
+      href: database/free-offer.md
+    - name: Try Azure SQL Database free FAQ
+      href: database/free-offer-faq.yml
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -384,6 +385,7 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
+
     - name: Hyperscale
       items: 
       - name: Overview
@@ -424,7 +426,7 @@
       - name: The Azure SQL DB emulator
         href: database/local-dev-experience-sql-database-emulator.md      
       - name: SQL Database Projects extension >> 
-        href: /sql/azure-data-studio/extensions/sql-database-project-extension
+        href: /azure-data-studio/extensions/sql-database-project-extension
       - name: The mssql extension >> 
         href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
 
@@ -611,7 +613,6 @@
     items:
     - name: T-SQL differences
       href: database/transact-sql-tsql-differences-sql-server.md
-
     - name: Plan and manage costs 
       href: database/cost-management.md      
     - name: Connect and query
@@ -619,7 +620,7 @@
       - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database
+          href: /azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
         - name: Azure portal query editor
@@ -835,6 +836,8 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
+      - name: Change data capture (CDC)
+        href: database/change-data-capture-overview.md
     - name: Database sharding
       items:
       - name: Upgrade client library
@@ -1045,7 +1048,8 @@
       href: https://azure.microsoft.com/resources/samples/?service=sql-database
     - name: Azure Resource Graph queries
       href: database/resource-graph-samples.md
-
+    - name: Try Azure SQL Database free with Azure free account (old offer)
+      href: database/free-sql-db-free-account-how-to-deploy.md
 - name: Azure SQL Managed Instance (SQL MI)
   items:
   - name: Documentation
@@ -1056,10 +1060,6 @@
       href: managed-instance/sql-managed-instance-paas-overview.md
     - name: What's new?
       href: managed-instance/doc-changes-updates-release-notes-whats-new.md
-    - name: Resource limits
-      href: managed-instance/resource-limits.md
-    - name: vCore purchasing model
-      href: managed-instance/service-tiers-managed-instance-vcore.md
     - name: Frequently asked questions
       displayName: faq
       href: managed-instance/frequently-asked-questions-faq.yml
@@ -1140,6 +1140,10 @@
 
   - name: Concepts
     items:
+    - name: vCore purchasing model
+      href: managed-instance/service-tiers-managed-instance-vcore.md
+    - name: Resource limits
+      href: managed-instance/resource-limits.md
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
     - name: T-SQL differences
@@ -1362,31 +1366,31 @@
         href: managed-instance/public-endpoint-overview.md
       - name: Server trust groups
         href: managed-instance/server-trust-group-overview.md
-      - name: Windows Auth for Azure AD Principals
+      - name: Windows Auth for Microsoft Entra principals
         items:
         - name: Overview
-          displayName: Windows Authentication for Azure AD Principals with Kerberos Overview
+          displayName: Windows Authentication for Microsoft Entra Principals with Kerberos Overview
           href: managed-instance/winauth-azuread-overview.md
         - name: Implementation with Kerberos
-          displayName: Windows Authentication for Azure AD Principals Implementation with Kerberos
+          displayName: Windows Authentication for Microsoft Entra Principals Implementation with Kerberos
           href: managed-instance\winauth-implementation-aad-kerberos.md
         - name: Setup summary
-          displayName: Windows Authentication for Azure AD Principals with Kerberos Setup
+          displayName: Windows Authentication for Microsoft Entra Principals with Kerberos Setup
           href: managed-instance\winauth-azuread-setup.md
         - name: Set up the modern interactive flow
-          displayName: Windows authentication for Azure AD with the modern interactive flow
+          displayName: Windows authentication for Microsoft Entra with the modern interactive flow
           href: managed-instance\winauth-azuread-setup-modern-interactive-flow.md
         - name: Set up the incoming trust-based flow
-          displayName: Windows authentication for Azure AD with the incoming trust-based flow
+          displayName: Windows authentication for Microsoft Entra with the incoming trust-based flow
           href: managed-instance\winauth-azuread-setup-incoming-trust-based-flow.md
         - name: Set up managed instances
-          displayName: Set up managed instances for Windows authentication for Azure AD using Kerberos
+          displayName: Set up managed instances for Windows authentication for Microsoft Entra using Kerberos
           href: managed-instance\winauth-azuread-kerberos-managed-instance.md
         - name: Run a trace using Windows Auth
-          displayName: Run a trace using Windows authentication for Azure AD with Kerberos
+          displayName: Run a trace using Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-run-trace-managed-instance.md
         - name: Troubleshoot
-          displayName: Troubleshoot Windows authentication for Azure AD with Kerberos
+          displayName: Troubleshoot Windows authentication for Microsoft Entra with Kerberos
           href: managed-instance\winauth-azuread-troubleshoot.md
   - name: How to
     items:
@@ -1635,7 +1639,7 @@
           href: virtual-machines/windows/change-sql-server-version.md
         - name: Storage
           href: virtual-machines/windows/storage-configuration.md
-        - name: Azure AD authentication
+        - name: Microsoft Entra authentication
           href: virtual-machines/windows/configure-azure-ad-authentication-for-sql-vm.md
         - name: Azure Update Manager
           href: virtual-machines/azure-update-manager-sql-vm.md

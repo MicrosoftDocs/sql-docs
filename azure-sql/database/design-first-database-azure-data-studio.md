@@ -15,7 +15,7 @@ ms.custom: sqldbrb=1
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Cloud (Azure). In this tutorial, you learn how to use the Azure portal and [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio) (ADS) to:
+Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsoft Cloud (Azure). In this tutorial, you learn how to use the Azure portal and [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) (ADS) to:
 
 > [!div class="checklist"]
 >
@@ -38,7 +38,7 @@ Azure SQL Database is a relational database-as-a-service (DBaaS) in the Microsof
 
 To complete this tutorial, make sure you've installed:
 
-- [Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio) (latest version)
+- [Azure Data Studio](/azure-data-studio/download-azure-data-studio) (latest version)
 - [BCP and SQLCMD](https://www.microsoft.com/download/details.aspx?id=36433) (latest version)
 
 ## Sign in to the Azure portal
@@ -113,7 +113,7 @@ Your IP address can now pass through the IP firewall. You can now connect to you
 
 ## Connect to the database
 
-Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio) to establish a connection to your database.
+Use [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) to establish a connection to your database.
 
 1. Open Azure Data Studio.
 2. In the **New Connection** from the Object Explorer to create a new connection and enter the following information:
@@ -136,7 +136,7 @@ Use [Azure Data Studio](/sql/azure-data-studio/what-is-azure-data-studio) to est
 
 ## Create tables in your database
 
-Create a database schema with four tables that model a student management system for universities using [the Table Designer](/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio):
+Create a database schema with four tables that model a student management system for universities using [the Table Designer](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio):
 
 - Person
 - Course
@@ -149,7 +149,7 @@ The following diagram shows how these tables are related to each other. Some of 
 
 1. In **Object Explorer**, Select *yourDatabase* which expands the dropdown menu of all processes stored in this database, right-click the **Tables** folder, select **New Table**. A blank Table Designer opens that is connected to your database.
 
-2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](/sql/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio) :
+2. Use the Table Designer interface to create these four tables in your database. To learn more about creating tables using the Table Designer, refer to [the Table Designer documentation](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio) :
 
     - Person Table
 

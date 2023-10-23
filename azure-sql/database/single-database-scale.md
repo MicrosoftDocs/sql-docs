@@ -4,7 +4,7 @@ description: This article describes how to scale the compute and storage resourc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 08/01/2022
+ms.date: 10/20/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -25,7 +25,10 @@ After initially picking the number of vCores or DTUs, you can scale a single dat
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).
 
+[!INCLUDE [entra-id](../includes/entra-id.md)]
+
 ## Impact
+
 
 Changing the service tier or compute size of mainly involves the service performing the following steps:
 
@@ -72,23 +75,53 @@ WHERE s.type_desc IN ('ROWS', 'LOG');
 > [!TIP]
 > To monitor in-progress operations, see: [Manage operations using the SQL REST API](/rest/api/sql/operations/list), [Manage operations using CLI](/cli/azure/sql/db/op), [Monitor operations using T-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) and these two PowerShell commands: [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity) and [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/stop-azsqldatabaseactivity).
 
-## Cancelling changes
+## Monitor or cancel scaling changes
 
-A service tier change or compute rescaling operation can be canceled.
+A service tier change or compute rescaling operation can be monitored and canceled.
 
-### The Azure portal
+### [Azure portal](#tab/azure-portal)
 
-In the database overview blade, navigate to **Notifications** and click on the tile indicating there's an ongoing operation:
+In the database overview blade, navigate to **Notifications** and select the tile indicating there's an ongoing operation:
 
-![Ongoing operation](./media/single-database-scale/ongoing-operations.png)
+![Screenshot from the Azure portal of an ongoing operation.](./media/single-database-scale/ongoing-operations.png)
 
-Next, click on the button labeled **Cancel this operation**.
+Next, select **Cancel this operation**.
 
-![Cancel ongoing operation](./media/single-database-scale/cancel-ongoing-operation.png)
+![Screenshot from the Azure portal of the cancellation of an ongoing operation.](./media/single-database-scale/cancel-ongoing-operation.png)
 
-### PowerShell
+### [PowerShell](#tab/azure-powershell)
 
-From a PowerShell command prompt, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
+In order to invoke the PowerShell commands on a computer, [Az package version 9.7.0](https://www.powershellgallery.com/packages/Az/9.7.0) or a newer version must be installed locally. Or, consider using the [Azure Cloud Shell](/azure/cloud-shell/overview) to run Azure PowerShell at [shell.azure.com](https://shell.azure.com/).
+
+First, log in to Azure and set the proper context for your subscription:
+
+```powershell
+Login-AzAccount
+$SubscriptionID = "<YourSubscriptionIdHere>"
+Select-AzSubscription -SubscriptionName $SubscriptionID
+```
+
+To monitor operations on a database, including scaling operations, use [Get-AzSqlDatabaseActivity](/powershell/module/az.sql/get-azsqldatabaseactivity). The following sample returns an `OperationId` for each operation currently executing.
+
+```powershell
+Get-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+```
+
+To cancel an asynchronous operation like a database scale, identify the operation then use [Stop-AzSqlDatabaseActivity](/powershell/module/az.sql/stop-azsqldatabaseactivity) with a specific `OperationId`, as in the following sample.
+
+```powershell
+Stop-AzSqlDatabaseActivity -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -OperationId af97005d-9243-4f8a-844e-402d1cc855f5
+```
+
+### [Azure CLI](#tab/azure-cli)
+
+From a Cloud shell terminal, use the following sample command to identify operations currently executing:
+
+```azurecli
+az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv
+```
+
+To stop an asynchronous operation like a database scale, from a Cloud shell terminal, set the `$resourceGroupName`, `$serverName`, and `$databaseName`, and then run the following command:
 
 ```azurecli
 $operationName = (az sql db op list --resource-group $resourceGroupName --server $serverName --database $databaseName --query "[?state=='InProgress'].name" --out tsv)
@@ -101,9 +134,11 @@ else {
 }
 ```
 
+---
+
 ## Permissions
 
-To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Azure AD admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
+To scale databases via T-SQL, ALTER DATABASE permissions are needed. To scale a database a login must be either the server admin login (created when the Azure SQL Database logical server was provisioned), the Microsoft Entra admin of the server, a member of the dbmanager database role in `master`, a member of the db_owner database role in the current database, or `dbo` of the database. For more information, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true#permissions-1).
 
 To scale databases via the Azure portal, PowerShell, Azure CLI, or REST API, Azure RBAC permissions are needed, specifically the Contributor, SQL DB Contributor role, or SQL Server Contributor Azure RBAC roles. For more information, visit [Azure RBAC built-in roles](/azure/role-based-access-control/built-in-roles).
 
@@ -155,10 +190,10 @@ More than 1 TB of storage in the Premium tier is currently available in all regi
 
 - If the max size for a P11 or P15 database was ever set to a value greater than 1 TB, then can it only be restored or copied to a P11 or P15 database.  Subsequently, the database can be rescaled to a different compute size provided the amount of space allocated at the time of the rescaling operation doesn't exceed max size limits of the new compute size.
 - For active geo-replication scenarios:
-  - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute size are rejected as secondaries since they aren't capable of supporting more than 1 TB.
+  - Setting up a geo-replication relationship: If the primary database is P11 or P15, the secondary(ies) must also be P11 or P15. Lower compute sizes are rejected as secondaries since they aren't capable of supporting more than 1 TB.
   - Upgrading the primary database in a geo-replication relationship: Changing the maximum size to more than 1 TB on a primary database triggers the same change on the secondary database. Both upgrades must be successful for the change on the primary to take effect. Region limitations for the more than 1-TB option apply. If the secondary is in a region that doesn't support more than 1 TB, the primary isn't upgraded.
 - Using the Import/Export service for loading P11/P15 databases with more than 1 TB isn't supported. Use SqlPackage to [import](database-import.md) and [export](database-export.md) data.
 
-## Next steps
+## Related content
 
 For overall resource limits, see [Azure SQL Database vCore-based resource limits - single databases](resource-limits-vcore-single-databases.md) and [Azure SQL Database DTU-based resource limits - single databases](resource-limits-dtu-single-databases.md).

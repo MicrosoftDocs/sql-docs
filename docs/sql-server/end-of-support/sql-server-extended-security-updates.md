@@ -10,6 +10,7 @@ ms.topic: conceptual
 ms.custom: references_regions
 monikerRange: ">=sql-server-2016"
 ---
+
 # What are Extended Security Updates for SQL Server?
 
 [!INCLUDE [esu-table](includes/esu-table.md)]
@@ -170,10 +171,82 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 > [!IMPORTANT]  
 > If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
+
+### View ESU subscriptions
+
+You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible SQL Server 2012 instances and their ESU subscription status.
+
+```Kusto
+resources     
+| where type == 'microsoft.azurearcdata/sqlserverinstances'     
+| extend Version = properties.version     
+| extend Edition = properties.edition     
+| extend containerId = tolower(tostring (properties.containerResourceId))     
+| where Version contains "2012"     
+| where Edition in ("Enterprise", "Standard")     
+| where isnotempty(containerId)       
+| project containerId, SQL_instance = name, Version, Edition     
+| join kind=inner (         
+	resources         
+	| where type == "microsoft.hybridcompute/machines"         
+	| extend machineId = tolower(tostring(id))         
+	| project machineId, Machine_name = name     
+)      
+on $left.containerId == $right.machineId     
+| join kind=inner (         
+	resources         
+	| where type == "microsoft.hybridcompute/machines/extensions"             
+	| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")         
+	| extend machineIdHasSQLServerExtensionInstalled = tolower(iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), ""))         
+	| project machineIdHasSQLServerExtensionInstalled, Extension_State = properties.provisioningState, License_Type = properties.settings.LicenseType, ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""),             Extension_Version = properties.instanceView.typeHandlerVersion     
+)     
+on $left.machineId == $right.machineIdHasSQLServerExtensionInstalled     
+| project-away machineId, containerId, machineIdHasSQLServerExtensionInstalled       
+```
 
 ## Cancel Extended Security Updates enabled by Azure Arc
 
@@ -227,6 +300,46 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -335,9 +448,9 @@ Now you can continue to the [Confirmation](#confirmation) section.
 
 1. We recommend you use a year-specific tag to link your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances to your ESU invoice number for easy reference. For example:
 
-   - First year: `Year1OrderID`
-   - Second year: `Year2OrderID`
-   - Third year: `Year3OrderID`
+   - First year: `Year1InvoiceID`
+   - Second year: `Year2InvoiceID`
+   - Third year: `Year3InvoiceID`
 
    > [!NOTE]  
    > If you use Azure services such as Azure Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), you can set the ESU invoice number to `InvoiceNotNeeded`.
@@ -446,3 +559,4 @@ For the full list of frequently asked questions, review the [ESU frequently aske
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
+

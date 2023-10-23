@@ -68,10 +68,10 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 
 - **Upgrade:** SharePoint 2010 with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-In installed, cannot be upgraded in-place to SharePoint 2013. SharePoint 2013 requires SQL Server 2012 SP1 or later of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in and report server. For more information on upgrade, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-## Next steps
+## Related content
 
- [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   
- [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+- [Where to find the Reporting Services add-in for SharePoint Products](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)
+- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
+- [SQL Server 2016 and 2017: Hardware and software requirements](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

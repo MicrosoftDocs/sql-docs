@@ -88,7 +88,7 @@ ms.custom:
 | Parameter | Description |
 | --- | --- |
 | [Agent](#agent) | Enable [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Agent |
-| [Authenticate with Azure AD](#azure-ad) | Settings for Azure Active Directory authentication. |
+| [Authenticate with Microsoft Entra ID](#azure-ad) | Settings for authenticating with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). |
 | [Authenticate with Windows](#windows-active-directory) | Settings for Windows Server Active Directory authentication. |
 | [Collation](#collation) | Set a new collation for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] sends feedback to Microsoft. |
@@ -191,13 +191,15 @@ If you want to capture all levels, use `7` as the value.
 sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
 ```
 
-## <a id="azure-ad"></a> Configure Azure Active Directory authentication
+## <a id="azure-ad"></a> Configure Microsoft Entra authentication
 
-Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Azure Active Directory (Azure AD) for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To configure Azure AD, you must install the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] following the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For information on how to configure Azure AD, see [Tutorial: Set up Azure Active Directory authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
+Starting with [!INCLUDE [sssql22-md](../includes/sssql22-md.md)], you can configure Microsoft Entra ID for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. To configure Microsoft Entra ID, you must install the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] following the installation of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. For information on how to configure Microsoft Entra ID, see [Tutorial: Set up Microsoft Entra authentication for SQL Server](../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-setup-tutorial.md).
 
-### Change the default Azure AD certificate path
+<a name='change-the-default-azure-ad-certificate-path'></a>
 
-By default, the Azure AD certificate file is stored in `/var/opt/mssql/aadsecrets/`. You can change this path if you use a certificate store or an encrypted drive. To change the path, you can use the following command:
+### Change the default Microsoft Entra ID certificate path
+
+By default, the Microsoft Entra certificate file is stored in `/var/opt/mssql/aadsecrets/`. You can change this path if you use a certificate store or an encrypted drive. To change the path, you can use the following command:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/location.pfx
@@ -205,38 +207,40 @@ sudo /opt/mssql/bin/mssql-conf set network.aadcertificatefilepath /path/to/new/l
 
 In the previous example, `/path/to/new/location.pfx` is your preferred path *including* the certificate name.
 
-The certificate for Azure AD authentication, downloaded by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], is stored at this location. You can't change it to `/var/opt/mssql/secrets`.
+The certificate for Microsoft Entra authentication, downloaded by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], is stored at this location. You can't change it to `/var/opt/mssql/secrets`.
 
 > [!NOTE]  
-> The default Azure AD certificate path can be changed at any time after [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is installed, but must be changed *before* enabling Azure AD.
+> The default Microsoft Entra ID certificate path can be changed at any time after [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is installed, but must be changed *before* enabling Microsoft Entra ID.
 
-### Azure AD configuration options
+<a name='azure-ad-configuration-options'></a>
 
-The following options are used by Azure AD authentication for an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on Linux.
+### Microsoft Entra ID configuration options
+
+The following options are used by Microsoft Entra authentication for an instance of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] running on Linux.
 
 > [!WARNING]  
-> Azure AD parameters are configured by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and shouldn't be reconfigured manually. They are listed here for information purposes.
+> Microsoft Entra ID parameters are configured by the Azure extension for [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], and shouldn't be reconfigured manually. They are listed here for informational purposes.
 
 | Option | Description |
 | --- | --- |
-| `network.aadauthenticationendpoint` | Endpoint for Azure AD authentication |
-| `network.aadcertificatefilepath` | Path to certificate file for authenticating to Azure AD |
-| `network.aadclientcertblacklist` | Azure AD Client Certificate blocklist |
-| `network.aadclientid` | Azure AD Client GUID |
-| `network.aadfederationmetadataendpoint` | Endpoint for Azure AD Federation Metadata |
+| `network.aadauthenticationendpoint` | Endpoint for Microsoft Entra authentication |
+| `network.aadcertificatefilepath` | Path to certificate file for authenticating to Microsoft Entra ID |
+| `network.aadclientcertblacklist` | Microsoft Entra ID Client Certificate blocklist |
+| `network.aadclientid` | Microsoft Entra Client GUID |
+| `network.aadfederationmetadataendpoint` | Endpoint for Microsoft Entra Federation Metadata |
 | `network.aadgraphapiendpoint` | Endpoint for Azure AD Graph API |
 | `network.aadgraphendpoint` | Azure AD Graph Endpoint |
-| `network.aadissuerurl` | Azure AD Issuer URL |
-| `network.aadmsgraphendpoint` | Azure AD MS Graph Endpoint |
-| `network.aadonbehalfofauthority` | Azure AD On Behalf of Authority |
-| `network.aadprimarytenant` | Azure AD Primary Tenant GUID |
-| `network.aadsendx5c` | Azure AD Send X5C |
-| `network.aadserveradminname` | Name of the Azure AD account that will be made sysadmin |
-| `network.aadserveradminsid` | SID of the Azure AD account that will be made sysadmin |
-| `network.aadserveradmintype` | Type of the Azure AD account that will be made sysadmin |
-| `network.aadserviceprincipalname` | Azure AD Service Principal Name |
-| `network.aadserviceprincipalnamenoslash` | Azure AD Service Principal Name, with no slash |
-| `network.aadstsurl` | Azure AD STS URL |
+| `network.aadissuerurl` | Microsoft Entra Issuer URL |
+| `network.aadmsgraphendpoint` | Microsoft Entra MS Graph Endpoint |
+| `network.aadonbehalfofauthority` | Microsoft Entra ID On Behalf of Authority |
+| `network.aadprimarytenant` | Microsoft Entra Primary Tenant GUID |
+| `network.aadsendx5c` | Microsoft Entra ID Send X5C |
+| `network.aadserveradminname` | Name of the Microsoft Entra account that will be made sysadmin |
+| `network.aadserveradminsid` | SID of the Microsoft Entra account that will be made sysadmin |
+| `network.aadserveradmintype` | Type of the Microsoft Entra account that will be made sysadmin |
+| `network.aadserviceprincipalname` | Microsoft Entra service principal name |
+| `network.aadserviceprincipalnamenoslash` | Microsoft Entra service principal name, with no slash |
+| `network.aadstsurl` | Microsoft Entra STS URL |
 
 ## <a id="windows-active-directory"></a> Configure Windows Active Directory authentication
 
@@ -511,7 +515,7 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-If an exception or crash occurs in one of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] creates a memory dump. Capturing a memory dump may take a long time and take up significant space. To save resources and avoid repeated memory dumps, you can disable automatic dump capture using the `coredump.disablecoredump` option.
+If an exception or crash occurs in one of the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] processes, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] creates a memory dump. Capturing a memory dump might take a long time and take up significant space. To save resources and avoid repeated memory dumps, you can disable automatic dump capture using the `coredump.disablecoredump` option.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set coredump.disablecoredump <true or false>

@@ -4,7 +4,7 @@ description: Table hints override the default behavior of the query optimizer du
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/18/2023
+ms.date: 10/04/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -52,7 +52,7 @@ Table hints are used to override the default behavior of the query optimizer dur
 - [UPDATE](../../t-sql/queries/update-transact-sql.md)
 - [MERGE](../../t-sql/statements/merge-transact-sql.md)
 
- :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+:::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
@@ -60,7 +60,7 @@ Table hints are used to override the default behavior of the query optimizer dur
 WITH  ( <table_hint> [ [ , ] ...n ] )
 
 <table_hint> ::=
-{ NOEXPAND [ , INDEX ( <index_value> [ , ...n ] ) | INDEX = ( <index_value> ) ]
+{ NOEXPAND
   | INDEX ( <index_value> [ , ...n ] ) | INDEX = ( <index_value> )
   | FORCESEEK [ ( <index_value> ( <index_column_name> [ , ... ] ) ) ]
   | FORCESCAN
@@ -368,7 +368,7 @@ This option works for both manual and automatic grid tessellations.
 
 Specifies that the acquired lock is applied at the table level. The type of lock that is acquired depends on the statement being executed. For example, a SELECT statement may acquire a shared lock. By specifying `TABLOCK`, the shared lock is applied to the entire table instead of at the row or page level. If `HOLDLOCK` is also specified, the table lock is held until the end of the transaction.
 
-When importing data into a heap by using the `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` statement, you can enable minimal logging and optimized locking for the statement by specifying the `TABLOCK` hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. The `TABLOCK` hint also enables parallel inserts to heaps or clustered columnstore indexes. For more information, see [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
+When importing data into a heap by using the `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` statement, you can enable minimal logging and optimal locking for the statement by specifying the `TABLOCK` hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. The `TABLOCK` hint also enables parallel inserts to heaps or clustered columnstore indexes. For more information, see [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
 
 When used with the [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) bulk rowset provider to import data into a table, `TABLOCK` enables multiple clients to concurrently load data into the target table with optimized logging and locking. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
@@ -403,7 +403,7 @@ If a table contains computed columns that are computed by expressions or functio
 
 ## Filtered index hints
 
- A filtered index can be used as a table hint, but will cause the query optimizer to generate error 8622 if it doesn't cover all of the rows that the query selects. The following is an example of an invalid filtered index hint. The example creates the filtered index `FIBillOfMaterialsWithComponentID` and then uses it as an index hint for a SELECT statement. The filtered index predicate includes data rows for ComponentIDs 533, 324, and 753. The query predicate also includes data rows for ComponentIDs 533, 324, and 753 but extends the result set to include ComponentIDs 855 and 924, which aren't in the filtered index. Therefore, the query optimizer can't use the filtered index hint and generates error 8622. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).
+A filtered index can be used as a table hint, but will cause the query optimizer to generate error 8622 if it doesn't cover all of the rows that the query selects. The following is an example of an invalid filtered index hint. The example creates the filtered index `FIBillOfMaterialsWithComponentID` and then uses it as an index hint for a SELECT statement. The filtered index predicate includes data rows for ComponentIDs 533, 324, and 753. The query predicate also includes data rows for ComponentIDs 533, 324, and 753 but extends the result set to include ComponentIDs 855 and 924, which aren't in the filtered index. Therefore, the query optimizer can't use the filtered index hint and generates error 8622. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).
 
 ```sql
 IF EXISTS (SELECT name FROM sys.indexes
@@ -430,12 +430,7 @@ The query optimizer won't consider an index hint if the SET options don't have t
 
 For more information, see [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md#use-hints-with-indexed-views).
 
-For a list of features that are supported by the editions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)], see:
-
-- [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-- [Editions and supported features of SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md)
-- [Editions and supported features of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-2019.md)
-- [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md)
+[!INCLUDE [editions-supported-features-windows](../../includes/editions-supported-features-windows.md)]
 
 However, for the query optimizer to consider indexed views for matching, or use an indexed view that is referenced with the `NOEXPAND` hint, the following SET options must be set to ON.
 
@@ -450,9 +445,9 @@ However, for the query optimizer to consider indexed views for matching, or use 
 
 Also, the NUMERIC_ROUNDABORT option must be set to OFF.
 
- To force the query optimizer to use an index for an indexed view, specify the `NOEXPAND` option. This hint can be used only if the view is also named in the query. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide a hint to force a particular indexed view to be used in a query that doesn't name the view directly in the FROM clause. However, the query optimizer considers using indexed views, even if they aren't referenced directly in the query. The [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] will only automatically create statistics on an indexed view when a `NOEXPAND` table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that can't be resolved by creating statistics manually.  
+To force the query optimizer to use an index for an indexed view, specify the `NOEXPAND` option. This hint can be used only if the view is also named in the query. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't provide a hint to force a particular indexed view to be used in a query that doesn't name the view directly in the FROM clause. However, the query optimizer considers using indexed views, even if they aren't referenced directly in the query. The [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] will only automatically create statistics on an indexed view when a `NOEXPAND` table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that can't be resolved by creating statistics manually.
 
- During query optimization, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] uses view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
+During query optimization, the [!INCLUDE [ssDE-md](../../includes/ssde-md.md)] uses view statistics that were created automatically or manually when the query references the view directly and the `NOEXPAND` hint is used.
 
 ## Use a table hint as a query hint
 
@@ -466,7 +461,7 @@ The KEEPIDENTITY, IGNORE_CONSTRAINTS, and IGNORE_TRIGGERS hints require `ALTER` 
 
 ### A. Use the TABLOCK hint to specify a locking method
 
- The following example specifies that a shared lock is taken on the `Production.Product` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and is held until the end of the UPDATE statement.
+The following example specifies that a shared lock is taken on the `Production.Product` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and is held until the end of the UPDATE statement.
 
 ```sql
 UPDATE Production.Product
@@ -478,7 +473,7 @@ GO
 
 ### B. Use the FORCESEEK hint to specify an index seek operation
 
- The following example uses the `FORCESEEK` hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+The following example uses the `FORCESEEK` hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE [ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
 
 ```sql
 SELECT *
@@ -490,7 +485,7 @@ AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
 GO
 ```
 
- The following example uses the `FORCESEEK` hint with an index to force the query optimizer to perform an index seek operation on the specified index and index column.
+The following example uses the `FORCESEEK` hint with an index to force the query optimizer to perform an index seek operation on the specified index and index column.
 
 ```sql
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty
@@ -517,8 +512,8 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);
 ```
 
-## Next steps
+## Related content
 
-- [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)
-- [Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)
-- [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
+- [OPENROWSET (Transact-SQL)](../functions/openrowset-transact-sql.md)
+- [Hints (Transact-SQL)](hints-transact-sql.md)
+- [Hints (Transact-SQL) - Query](hints-transact-sql-query.md)

@@ -1,10 +1,10 @@
 ---
-title: "Install using graphical user interface"
+title: Install using graphical user interface
 description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: pijocoder
-ms.date: 07/28/2023
+ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -112,7 +112,7 @@ The Installation Wizard runs the [!INCLUDE [ssNoVersion](../../includes/ssnovers
 
 #### <a id="product-key-2016-2017"></a> 3. Product Key
 
-On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 To continue, select **Next**.
 
@@ -151,7 +151,7 @@ If this is the first installation of [!INCLUDE [ssNoVersion](../../includes/ssno
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
-A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) or [Editions and components of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 
@@ -322,7 +322,7 @@ The Installation Wizard runs the [!INCLUDE [ssNoVersion](../../includes/ssnovers
 
 #### <a id="product-key-2019"></a> 3. Product Key
 
-On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2019.md).
+On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 To continue, select **Next**.
 
@@ -331,7 +331,7 @@ To continue, select **Next**.
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
 > [!NOTE]  
-> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a License Key that supports the operating system maximum number of processors.
+> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when simultaneous multithreading (SMT) is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a License Key that supports the operating system maximum number of processors.
 
 > [!NOTE]  
 > [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
@@ -364,7 +364,7 @@ If this is the first installation of [!INCLUDE [ssNoVersion](../../includes/ssno
 
 On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE [ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
-A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) or [Editions and components of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
+A description for each component group appears in the **Feature description** pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2022](../../sql-server/editions-and-components-of-sql-server-2022.md).
 
 The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.
 
@@ -514,11 +514,11 @@ The **Ready to Install** page shows a tree view of the installation options that
 
    To continue, select **Install**. [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.
 
-####  <a id="installation-progress-2019"></a> 21. Installation Progress
+#### <a id="installation-progress-2019"></a> 21. Installation Progress
 
 During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.
 
-####  <a id="complete-2019"></a> 22. Complete
+#### <a id="complete-2019"></a> 22. Complete
 
 After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
 
@@ -560,7 +560,7 @@ To continue, select **Next**.
 On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [Privacy Statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.
 
 > [!NOTE]  
-> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
+> If an Enterprise Server/CAL license product key is entered, and the machine has more than 20 physical cores, or 40 logical cores when simultaneous multithreading (SMT) is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or select Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or select **Back** and enter a product key that supports the operating system maximum number of processors.
 
 > [!NOTE]  
 > [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
@@ -587,7 +587,7 @@ On the **Install Rules** page, Setup checks for potential problems that might oc
 
 #### <a id="azure-extension-for-sql-server-2022"></a> 10. Azure Extension for SQL Server
 
-On the **Azure Extension for SQL Server** page, you can configure [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Azure Active Directory and others. This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
+On the **Azure Extension for SQL Server** page, you can configure [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to connect to Azure. [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] introduces this extension to enable using Azure services such as Microsoft Defender for Cloud, Microsoft Purview, Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), and others. This feature is selected by default. If you wish to proceed without connecting to Azure, you can unselect **Azure Extension for SQL Server**.
 
 - If you're installing [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on a VMware ESX host or an Azure VMware Solution (AVS) host, you won't see the **Azure Extension for SQL Server** page during installation. You can [install the extension during setup using the command line parameters](install-sql-server-from-the-command-prompt.md) or you can install [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] without the Azure Extension for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] first and then later install the [Azure Extension for SQL Server](../../sql-server/azure-arc/connect.md).
 
@@ -756,16 +756,12 @@ If you're instructed to restart the computer, do so now.
 
 ::: moniker-end
 
-## Next steps
+## Related content
 
-- [Configure your new [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).
-
-- To reduce the attack surface of a system, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).
-
-## See also
-
+- [Database Engine Instances (SQL Server)](../configure-windows/database-engine-instances-sql-server.md)
+- [Surface area configuration](../../relational-databases/security/surface-area-configuration.md)
 - [Validate a SQL Server Installation](validate-a-sql-server-installation.md)
 - [Repair a failed SQL Server installation](repair-a-failed-sql-server-installation.md)
 - [View and read SQL Server Setup log files](view-and-read-sql-server-setup-log-files.md)
 - [Upgrade to SQL Server by using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)
-- [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)
+- [Install SQL Server from the command prompt](install-sql-server-from-the-command-prompt.md)

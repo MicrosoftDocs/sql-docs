@@ -60,16 +60,15 @@ For detailed deployment steps, see the [Quickstart: Deploy SQL Server to a confi
 
 Recommendations for disk encryption are different for confidential VMs than for the other VM sizes. See [disk encryption](security-considerations-best-practices.md#azure-confidential-vms) to learn more.
 
-## Azure AD authentication
+<a name='azure-ad-authentication'></a>
 
-Starting with SQL Server 2022, you can connect to SQL Server using one of the following Azure Active Directory (Azure AD) identity authentication methods:
+## Microsoft Entra authentication
 
-- Azure AD Password
-- Azure AD Integrated
-- Azure AD Universal with Multi-Factor Authentication
-- Azure Active Directory access token
+Starting with SQL Server 2022, you can connect to SQL Server using any of the following authentication methods with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)):
 
-To get started, review [Configure Azure AD authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). 
+[!INCLUDE [entra-authentication-options](../../includes/entra-authentication-options.md)]
+
+To get started, review [Configure Microsoft Entra authentication for your SQL Server VM](configure-azure-ad-authentication-for-sql-vm.md). 
 
 ## Azure Advisor
 
@@ -174,7 +173,7 @@ You don't want attackers to easily guess account names or passwords. Use the fol
   - If you must use the **SA** login, enable the login after provisioning and assign a new strong password.
 
 > [!NOTE]  
-> Connecting to a SQL Server instance that's running on an Azure virtual machine (VM) is not supported using Azure Active Directory or Azure Active Directory Domain Services. Use an Active Directory domain account instead.
+> Connecting to a SQL Server VM using Microsoft Entra Domain Services isn't supported - use an Active Directory domain account instead.
 
 ## Auditing and reporting
 

@@ -1,18 +1,17 @@
 ---
 title: Azure Private Link
 titleSuffix: Azure SQL Database and Azure Synapse Analytics
-description: Overview of Private endpoint feature.
+description: Overview of private endpoint feature.
 author: rohitnayakmsft
 ms.author: rohitna
 ms.reviewer: wiassaf, vanto, mathoma, randolphwest
-ms.date: 09/21/2023
+ms.date: 10/11/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: overview
 ms.custom:
   - sqldbrb=1
   - fasttrack-edit
-  - references_regions
 ---
 
 # Azure Private Link for Azure SQL Database and Azure Synapse Analytics
@@ -38,37 +37,39 @@ Private Endpoints can be created using the Azure portal, PowerShell, or the Azur
 
 Once the network admin creates the Private Endpoint (PE), the SQL admin can manage the Private Endpoint Connection (PEC) to SQL Database.
 
-1. Navigate to the server resource in the Azure portal as per steps shown in the following screenshot.
+1. Navigate to the server resource in the [Azure portal](https://portal.azure.com).
 
-   - (1) Select the Private endpoint connections in the left pane
-   - (2) Shows a list of all Private Endpoint Connections (PECs)
-   - (3) Corresponding Private Endpoint (PE) created
+1. Select **Networking** in the left pane.
+1. Select the **Private access** tab. The page shows the following:
 
-   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot showing all of the PECs." lightbox="media/private-endpoint/pec-list-before.png":::
+   - A list of all Private Endpoint Connections (PECs)
+   - Private endpoints (PE) created
 
-1. Choose an individual PEC from the list by selecting it.
+   :::image type="content" source="media/private-endpoint/pec-list-before.png" alt-text="Screenshot that shows how to locate the list of private endpoint connections for the server resource." lightbox="media/private-endpoint/pec-list-before.png" border="false":::
 
-   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot showing the selected PEC." lightbox="media/private-endpoint/pec-select.png":::
+1. If there are no private endpoints, create one using the **Create a private endpoint** button. Otherwise, choose an individual PEC from the list by selecting it.
+
+   :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot that shows how to select a private endpoint connection in the Azure portal." lightbox="media/private-endpoint/pec-select.png":::
 
 1. The SQL admin can choose to approve or reject a PEC and optionally add a short text response.
 
-   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot showing the PEC approval." lightbox="media/private-endpoint/pec-approve.png":::
+   :::image type="content" source="media/private-endpoint/pec-approve.png" alt-text="Screenshot that shows how to approve a PEC in the Azure portal." lightbox="media/private-endpoint/pec-approve.png":::
 
 1. After approval or rejection, the list will reflect the appropriate state along with the response text.
 
-   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot of all PECs after approval." lightbox="media/private-endpoint/pec-list-after.png":::
+   :::image type="content" source="media/private-endpoint/pec-list-after.png" alt-text="Screenshot that shows the PEC in the Approved state after approval by the admin." lightbox="media/private-endpoint/pec-list-after.png":::
 
-1. Finally selecting the private endpoint name
+1. Finally, select the private endpoint name
 
    :::image type="content" source="media/private-endpoint/pec-select.png" alt-text="Screenshot showing PEC details with the endpoint name." lightbox="media/private-endpoint/pec-select.png":::
 
-   leads to the Network Interface details
+   This takes you to the **Private endpoint** overview page. Select the **Network interfaces** link to get the network interface details for the private endpoint connection.
 
-   :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot showing the NIC details." lightbox="media/private-endpoint/pec-nic-click.png":::
+   :::image type="content" source="media/private-endpoint/pec-nic-click.png" alt-text="Screenshot that shows the NIC details for the private endpoint connection." lightbox="media/private-endpoint/pec-nic-click.png":::
 
-   which finally leads to the IP address for the private endpoint
+   The **Network interface** page shows the private IP address for the private endpoint connection.
 
-   :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot showing the private IP address." lightbox="media/private-endpoint/pec-ip-display.png":::
+   :::image type="content" source="media/private-endpoint/pec-ip-display.png" alt-text="Screenshot that shows the Private IP address for the private endpoint connection." lightbox="media/private-endpoint/pec-ip-display.png":::
 
 > [!IMPORTANT]  
 > When you add a private endpoint connection, public routing to your logical server isn't blocked by default. In the **Firewall and virtual networks** pane, the setting **Deny public network access** isn't selected by default. To disable public network access, ensure that you select **Deny public network access**.
@@ -82,7 +83,7 @@ First, ensure that your private endpoint connections are enabled and configured.
 1. Go to the **Networking** page of your logical server.
 1. Select the **Deny public network access** checkbox.
 
-   :::image type="content" source="media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows selecting the Deny public network access option." lightbox="media/private-endpoint/pec-deny-public-access.png":::
+   :::image type="content" source="media/private-endpoint/pec-deny-public-access.png" alt-text="Screenshot that shows how to disable public network access for the private endpoint connection." lightbox="media/private-endpoint/pec-deny-public-access.png":::
 
 ## Test connectivity to SQL Database from an Azure VM in same virtual network
 
@@ -99,7 +100,7 @@ For this scenario, assume you've created an Azure Virtual Machine (VM) running a
 
 ### Check connectivity using Telnet
 
-[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you may need to enable this feature explicitly.
+[Telnet Client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293%28v%3dws.10%29) is a Windows feature that can be used to test connectivity. Depending on the version of the Windows OS, you might need to enable this feature explicitly.
 
 Open a Command Prompt window after you have installed Telnet. Run the **Telnet** command and specify the IP address and private endpoint of the database in SQL Database.
 
@@ -174,21 +175,16 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;
 ```
 
-## Using Redirect connection policy with private endpoints
+## Use Redirect connection policy with private endpoints
 
 We recommend that customers use the private link with the redirect connection policy for reduced latency and improved throughput. For connections to use this mode, clients need to:
 
-- Allow outbound communication from the VNET hosting the private endpoint to port range 1433 to 65535. 
+- Allow outbound communication from the VNET hosting the private endpoint to port range 1433 to 65535.
 - Use the latest version of drivers that have redirect support built in. Redirect support is included in ODBC, OLEDB, NET SqlClient Data Provider, Core .NET SqlClient Data Provider, and JDBC (version 9.4 or above) drivers. Connections originating from all other drivers are proxied.
 
 To use a private endpoint with the redirect connection policy, change [connection policy to redirect](connectivity-architecture.md#connection-policy).
 
 If it isn't feasible to modify the firewall settings to allow outbound access on the 1433-65535 port range, an alternative solution is to change the connection policy to Proxy.
-
-> [!NOTE]  
-> The following regions support redirect with private endpoints: Australia Central, Australia Central 2, Australia East, Australia Southeast, Brazil South, Canada Central, Canada East, Central US, East Asia, East US, East US 2, France Central, Germany West Central,Central India, South India, West India, Japan East, Japan West, Korea Central, Korea South, North Central US, North Europe, Norway East,South Africa North, South Central US, South East Asia, Switzerland North,UAE North, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3.
->
-> Regions missing from this list are in the process of being enabled for private endpoints with the redirect connection policy.
 
 ## On-premises connectivity over private peering
 
@@ -242,8 +238,8 @@ At the end of this setup, the Azure VM can connect only to a database in SQL Dat
 
 With Private Link, customers can now set up network access controls like NSGs to restrict access to the private endpoint. Individual Azure PaaS resources are then mapped to specific private endpoints. A malicious insider can only access the mapped PaaS resource (for example a database in SQL Database) and no other resource.
 
-## Next steps
+## Related content
 
-- [Securing your database](security-overview.md)
-- [Azure SQL Connectivity Architecture](connectivity-architecture.md)
+- [An overview of Azure SQL Database and SQL Managed Instance security capabilities](security-overview.md)
+- [Azure SQL Database and Azure Synapse Analytics connectivity architecture](connectivity-architecture.md)
 - [Web app with private connectivity to Azure SQL database](/azure/architecture/example-scenario/private-web-app/private-web-app)

@@ -99,7 +99,7 @@ Follow theses instructions to configure and create the HPE Serviceguard cluster.
 
 ## Create the availability group and add a sample database
 
-In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and may also provide high availability. The following diagram represents this architecture:
+In this step, create an availability group with two (or more) synchronous replicas and a configuration only replica, which provides data protection and might also provide high availability. The following diagram represents this architecture:
 
 :::image type="content" source="media/sql-server-linux-availability-group-ha/2-configuration-only.png" alt-text="Screenshot showing how the primary replica synchronizes user data and configuration data with the secondary replica. The primary replica only synchronizes configuration data with the configuration only replica. The configuration only replica doesn't have user data replicas.":::
 
@@ -273,7 +273,7 @@ Connect to the primary replica and run the following T-SQL commands to:
 CREATE DATABASE [db1];
 GO
 
--- set the database in full recovery mode
+-- set the database in full recovery model
 ALTER DATABASE [db1] SET RECOVERY FULL; 
 GO
 

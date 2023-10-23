@@ -201,9 +201,11 @@ SQL Database helps secure your data by providing encryption. For data in motion,
 
 [Data discovery and classification](data-discovery-and-classification-overview.md) provides capabilities built into Azure SQL Database for discovering, classifying, labeling, and protecting the sensitive data in your databases. It provides visibility into your database classification state, and tracks the access to sensitive data within the database and beyond its borders.
 
-### Azure Active Directory integration and multi-factor authentication
+<a name='azure-active-directory-integration-and-multi-factor-authentication'></a>
 
-SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Azure Active Directory integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Azure Active Directory supports [multi-factor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
+### Microsoft Entra integration and multifactor authentication
+
+SQL Database enables you to centrally manage identities of database user and other Microsoft services with [Microsoft Entra integration](authentication-aad-overview.md). This capability simplifies permission management and enhances security. Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) supports [multifactor authentication](authentication-mfa-ssms-overview.md) to increase data and application security, while supporting a single sign-in process.
 
 ## Easy-to-use tools
 
@@ -212,7 +214,7 @@ SQL Database makes building and maintaining applications easier and more product
 |Tool|Description|
 |:---|:---|
 |[The Azure portal](https://portal.azure.com/)|A web-based application for managing all Azure services.|
-|[Azure Data Studio](/sql/azure-data-studio/)|A cross-platform database tool that runs on Windows, macOS, and Linux.|
+|[Azure Data Studio](/azure-data-studio/)|A cross-platform database tool that runs on Windows, macOS, and Linux.|
 |[SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)|A free, downloadable client application for managing any SQL infrastructure, from SQL Server to SQL Database.|
 |[SQL Server Data Tools in Visual Studio](/sql/ssdt/download-sql-server-data-tools-ssdt)|A development tool for SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.|
 |[Visual Studio Code](https://code.visualstudio.com/docs)|A free, downloadable, open-source code editor for Windows, macOS, and Linux. It supports extensions, including the [mssql extension](https://aka.ms/mssql-marketplace) for querying Microsoft SQL Server, Azure SQL Database, and Azure Synapse Analytics.|

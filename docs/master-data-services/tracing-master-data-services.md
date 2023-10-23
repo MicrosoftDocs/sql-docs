@@ -231,7 +231,7 @@ To produce a concise and helpful log file, follow these steps:
 
 An example of an API response error that has been written to the log file:
 
-```XML
+```xml
 MDS Error: 0 :
 <ArrayOfError xmlns="http://schemas.microsoft.com/sqlserver/masterdataservices/2009/09" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"> 
      <Error> 

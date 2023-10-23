@@ -3,7 +3,7 @@ title: "Backup & restore with S3-compatible object storage"
 description: "SQL Server backup and restore with S3-compatible object storage"
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/18/2023
+ms.date: 10/09/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver16||>=sql-server-linux-ver16"
 
 [!INCLUDE [SQL Server 2022](../../includes/applies-to-version/sqlserver2022.md)]
 
-This article introduces the concepts, requirements and components necessary to use S3-compatible object storage as a backup destination. 
+This article introduces the concepts, requirements, and components necessary to use S3-compatible object storage as a backup destination. 
 
 ## Overview
 
@@ -63,15 +63,15 @@ The S3 endpoint must have been configured as follows:
 
 ## Performance best practices
 
-It's recommended to check with your S3-compatible object storage provider for guidance on performance best practices optimization as well as initial setup and configuration. Due to a wide variety of solutions and setups, the recommended values for backup and restore parameters and throughput can change.
+It's recommended to check with your S3-compatible object storage provider for guidance on performance best practices optimization, initial setup, and configuration. Due to a wide variety of solutions and setups, the recommended values for backup and restore parameters and throughput can change.
 
 By using S3 parts in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)], you can stripe your backup set to support files size up to 12.8 TB.
 
 ## Known issues and limitations
 
-Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They may be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
+Due to the current limitation of S3 Standard REST API, the temporary uncommitted data files are not removed in case of failures. They can be created in the S3-compatible object store due to an ongoing multipart upload operation while the BACKUP T-SQL command is running. These uncommitted data blocks persist in the S3-compatible object storage in the case the BACKUP T-SQL command fails or is canceled. If the backup succeeds, the object store automatically removes these temporary files to form the final backup file. Some S3-providers handle temporary file cleanup through their garbage collector system.
 
-## Next steps
+## Related content
 
 - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md).
 - [SQL Server back up to URL for S3-compatible object storage best practices and troubleshooting](sql-server-backup-to-url-s3-compatible-object-storage-best-practices-and-troubleshooting.md)
@@ -123,7 +123,7 @@ Due to the current limitation of S3 Standard REST API, the temporary uncommitted
 
 [redhat_docs]:  https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.8
 [redhat_sheet]: https://www.redhat.com/rhdc/managed-files/cl-ocs3-datasheet-f19840wg-201911-en.pdf
-[redhat_webs]:  https://access.redhat.com/products/red-hat-openshift-container-storage
+[redhat_webs]:  https://www.redhat.com/technologies/cloud-computing/openshift
 
 [scality_docs]: https://docs.scality.com
 [scality_sheet]: https://go.scality.com/l/893901/2021-08-17/23c52m/893901/1629719058hjLdj34t/Artesca_Datasheet_Letter_Web_210818.pdf

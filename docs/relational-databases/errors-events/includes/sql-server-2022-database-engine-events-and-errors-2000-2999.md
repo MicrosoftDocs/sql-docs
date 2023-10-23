@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 10/11/2023
 ms.topic: include
 ---
 | Error | Severity | Event logged | Description |
@@ -394,3 +394,4 @@ ms.topic: include
 | 2815 | 10 | No | A possible infinite recompile was detected for the natively compiled module with ID '%d' in database with ID '%d'. |
 | 2816 | 16 | No | The metadata for object with id %d has changed. Retry the statement. |
 | 2817 | 16 | No | '%.\*ls' is not supported on the '%.\*ls' platform. |
+| 2818 | 16 | No | The stored procedure '%.\*ls' cannot be run since this server has not been enabled for external governance. |

@@ -8,7 +8,9 @@ ms.date: 08/03/2023
 ms.service: sql
 ms.subservice: ssma
 ms.topic: conceptual
-ms.custom: intro-whats-new
+ms.custom:
+  - intro-whats-new
+  - sql-migration-content
 ---
 # What's New in SSMA for MySQL (MySQLToSQL)
 

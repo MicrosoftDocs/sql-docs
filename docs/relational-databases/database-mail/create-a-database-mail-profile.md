@@ -83,7 +83,7 @@ helpviewer_keywords:
     ```sql
     EXECUTE msdb.dbo.sysmail_add_profile_sp
       @profile_name = 'Profile Name'  
-    , @description = 'Desciption';
+    , @description = 'Description';
     ```
 
     In the previous script, *@profile_name* is the name of the profile, and *@description* is the description of the profile. This parameter is optional.  

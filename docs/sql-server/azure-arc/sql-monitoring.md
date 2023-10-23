@@ -16,16 +16,41 @@ This article explains how to prevent your Arc-enabled SQL Server instances from 
 
 ## Disable or enable collection
 
-To disable the collection of monitoring data, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
+> [!IMPORTANT]
+> In order to disable or enable data collection, the `sqlServer` extension must be on `v1.1.2451.59` or later. [Upgrade VM extensions using the Azure Portal.](/azure/azure-arc/servers/manage-vm-extensions-portal)
+
+### Enable the feature flag
+
+Prior to disabling or enabling monitoring data collection, you must first enable the `SqlManagement` feature flag. This is a feature flag that will automatically be enabled in a future release. However, it is required to toggle the `monitoring.enabled` property on your Arc-enabled SQL Server using the Azure CLI.
+
+1. Download the [`set-feature-flags.ps1`](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/azure-arc-enabled-sql-server/monitoring/set-feature-flags.ps1) PowerShell script from GitHub. 
+
+1. Configure and run `set-feature-flags.ps1` in a PowerShell terminal on your Azure Arc-enabled Server.
+
+   ```powershell
+   set-feature-flags.ps1 `
+       -Subscription "<Your-subscription-ID>" `
+       -ResourceGroup "contoso-rg" `
+       -MachineName "contoso-sql-host" `
+       -FeatureFlagsToEnable ("SqlManagement")
+   ```
+
+### Disable monitoring data collection
+
+After enabling the SqlManagement feature flag, run the following command in the Azure CLI to disable monitoring data collection for your Azure Arc-enabled SQL Server. Replace the placeholders for subscription ID, resource group, and resource name:
+
 
 ```azurecli
-az resource patch --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" -p '{\"monitoring\": {\"enabled\": false}}' --api-version 2023-09-01-preview
+az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=false' --api-version 2023-09-01-preview
 ```
+
+### Enable monitoring data collection
 
 To enable the monitoring data collection for an Azure Arc-enabled SQL Server, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
 
+
 ```azurecli
-az resource patch --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" -p '{\"monitoring\": {\"enabled\": true}}' --api-version 2023-09-01-preview
+az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
 ## Collected data
@@ -55,3 +80,5 @@ Initially, the monitoring data is:
   
 - [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
 - [Azure Arc-enabled SQL Server data collection and reporting](data-collection.md)
+
+

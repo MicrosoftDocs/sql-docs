@@ -5,7 +5,7 @@ description: A how-to guide for configuring geo replication for transparent data
 author: strehan1993
 ms.author: strehan
 ms.reviewer: vanto
-ms.date: 09/19/2023
+ms.date: 09/29/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli, devx-track-azurepowershell
@@ -18,11 +18,11 @@ monikerRange: "= azuresql || = azuresql-db"
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!NOTE]
-> Database Level TDE CMK is in public preview.
->
-> This preview feature is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
+> Database Level TDE CMK is available for Azure SQL Database (all SQL Database editions). It is not available for Azure SQL Managed Instance, SQL Server on-premises, Azure VMs, and Azure Synapse Analytics (dedicated SQL pools (formerly SQL DW)).
 
-In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and [customer-managed keys (CMK) at the database level](transparent-data-encryption-byok-database-level-overview.md), utilizing a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#creating-a-user-assigned-managed-identity) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). The Azure Key Vault is in an Azure Active Directory (Azure AD) that is in the same tenant as the Azure SQL logical server tenant for this guide, but they can be in different tenants.
+In this guide, we go through the steps to configure geo replication and backup restore on an Azure SQL Database. The Azure SQL Database is configured with transparent data encryption (TDE) and [customer-managed keys (CMK) at the database level](transparent-data-encryption-byok-database-level-overview.md), utilizing a [user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity.md#creating-a-user-assigned-managed-identity) to access [Azure Key Vault](/azure/key-vault/general/quick-create-portal). Both the Azure Key Vault and logical server for Azure SQL are in the same Microsoft Entra tenant for this guide, but they can be in different tenants.
+
+[!INCLUDE [entra-id](../includes/entra-id.md)]
 
 ## Prerequisites
 
@@ -118,7 +118,7 @@ For Az PowerShell module installation instructions, see [Install Azure PowerShel
     ```
 
 - Select the user-assigned managed identity (and federated client ID if configuring cross tenant access).
-- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector ` (and if necessary, `-FederatedClientId`) parameters.
+- Create a new database as a secondary using the command [New-AzSqlDatabaseSecondary](/powershell/module/az.sql/new-azsqldatabasesecondary) and provide the prepopulated list of keys obtained from the source database and the above identity (and federated client ID if configuring cross tenant access) in the API call using the `-KeyList`, `-AssignIdentity`, `-UserAssignedIdentityId`, `-EncryptionProtector` (and if necessary, `-FederatedClientId`) parameters.
 
     ```powershell
     # Create a secondary replica with Active Geo Replication with the same name as the primary database

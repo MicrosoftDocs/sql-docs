@@ -467,7 +467,7 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
-| Credential Type | <code>KeyStoreAuthentication</code> | <code>KeyStorePrincipalId</code> | <code>KeyStoreSecret</code> |
+| Credential Type | `KeyStoreAuthentication` | `KeyStorePrincipalId` | `KeyStoreSecret` |
 |--|--|--|--|
 | Username/password | `KeyVaultPassword` | User Principal Name | Password |
 | Client ID/secret | `KeyVaultClientSecret` | Client ID | Secret |
@@ -684,7 +684,7 @@ When using the **bcp** utility: To control the `ColumnEncryption` setting, use t
 
 The following table provides a summary of the actions when operating on an encrypted column:
 
-| <code>ColumnEncryption</code> | BCP Direction | Description |
+| `ColumnEncryption` | BCP direction | Description |
 |--|--|--|
 | `Disabled` | OUT (to client) | Retrieves ciphertext. The observed datatype is **varbinary(max)**. |
 | `Enabled` | OUT (to client) | Retrieves plaintext. The driver will decrypt the column data. |

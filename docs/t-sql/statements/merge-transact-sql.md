@@ -4,7 +4,7 @@ description: MERGE (Transact-SQL)
 author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf
-ms.date: "05/24/2022"
+ms.date: "10/23/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -412,11 +412,15 @@ MERGE is a fully reserved keyword when the database compatibility level is set t
 
 ::: moniker range="=azure-sqldw-latest"
 ### Troubleshooting
-In certain scenarios, a MERGE statement may result in the error `"CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns."`, even when neither Target nor Source table has 1024 columns. This scenario can arise when all the below conditions are met:
+In certain scenarios, a MERGE statement may result in the error `"CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns."`, even when neither Target nor Source table has 1024 columns. This scenario can arise when any the below conditions are met:
 - Multiple columns are specified in an UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
 - Any column in the JOIN condition has a Non-Clustered Index (NCI)
+- Target table is Hash Distributed
 
-If this error is found, the suggested workaround is to remove the Non-Clustered Index (NCI) from the JOIN columns, or join on columns without an NCI. If you later update the underlying tables to include an NCI on the JOIN columns, your MERGE statement may be susceptible to this error at runtime. See [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) to learn how to drop the Non-Clustered Index.
+If this error is found, the suggested workarounds are as follows:
+
+- Remove the Non-Clustered Index (NCI) from the JOIN columns or join on columns without an NCI. If you later update the underlying tables to include an NCI on the JOIN columns, your MERGE statement might be susceptible to this error at runtime. For more information, see [DROP INDEX](drop-index-transact-sql.md).
+- Use [UPDATE](../queries/update-transact-sql.md) and [INSERT](insert-transact-sql.md) statements instead of MERGE.
 ::: moniker-end
 
 ## Trigger implementation

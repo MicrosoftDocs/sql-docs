@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 SQL Server Reporting Services provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.
 
-:::image type="content" source="../reporting-services/media/rs-alertmanagersite.gif" alt-text="Screenshot of the Alert Manager for SharePoint site administrators.":::
+:::image type="content" source="../reporting-services/media/rs-alertmanagersite.gif" alt-text="Screenshot of the Alert Manager for SharePoint site administrators." lightbox="../reporting-services/media/rs-alertmanagersite.gif":::
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -38,7 +38,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
 ##  <a name="ViewingAlerts"></a> Viewing data alert information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators click the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  
 
-:::image type="content" source="../reporting-services/media/rs-sitesettings.gif" alt-text="Screenshot of the Reporting Services section of Site Settings page, highlighting the Manage Data Alerts option.":::
+:::image type="content" source="../reporting-services/media/rs-sitesettings.gif" alt-text="Screenshot of the Reporting Services section of Site Settings page, highlighting the Manage Data Alerts option." lightbox="../reporting-services/media/rs-sitesettings.gif":::
   
  Data Alert Manager includes a table that lists the alert name, report name, the name of the alert owner, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the alert message. If the alert cannot be generated or generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -57,7 +57,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
   
   
 ##  <a name="DeleteAlerts"></a> Delete data alerts  
- You delete alerts definitions from Data Alert Manager. Every data alert definition has an owner, the SharePoint user who created it. Owners can delete only the alert definitions that they created. For more information, see [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ You delete alerts definitions from Data Alert Manager. Every data alert definition has an owner, the SharePoint user who created it. Owners can delete only the alert definitions that they created. For more information, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  A SharePoint alerting administrators can list and then delete alert definitions created by all users of the site. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   

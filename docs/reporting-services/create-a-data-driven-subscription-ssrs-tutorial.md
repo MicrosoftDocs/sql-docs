@@ -40,7 +40,7 @@ The following diagram illustrates the basic workflow of the tutorial:
 | (3)     | Information from the Adventureworks database is filtered and return in the report. |
 | (4)     | The reports are created in the file formats specified in the Orderinfo table. |
 
-  :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-flow.png" alt-text="Screenshot of a diagram that shows the the basic workflow of the tutorial."
+  :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-flow.png" alt-text="Screenshot of a diagram that shows the the basic workflow of the tutorial.":::
   
 ## Requirements  
 Data-driven subscriptions are typically created and maintained by report server administrators. The steps to create data-driven subscriptions require building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.  

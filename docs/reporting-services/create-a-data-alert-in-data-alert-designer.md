@@ -35,7 +35,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
      The following picture shows the **Actions** menu.
   
-     :::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot that shows the Open Alert Designer from SharePoint library, highlighting the New Data Alert Option in the Actions menu."
+     :::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot of the Open Alert Designer from SharePoint library, highlighting the New Data Alert Option in the Actions menu." lightbox="../reporting-services/media/rs-openalertdesigneriw.gif":::
 
      The Data Alert Designer opens, showing the first 100 rows of the first data feed that the report generates in a table.  
   
@@ -97,7 +97,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
      By default, an alert message has no stop date.  
   
     > [!NOTE]  
-    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+    >  Stopping an alert message does not delete the alert definition. After you stop an alert message, you can restart it by updating the start and stop dates. For information about deleting alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Optionally, clear the **Send message only if results change** checkbox.  
   

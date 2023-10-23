@@ -46,14 +46,14 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 > [!NOTE]  
 >  Because the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts feature is available only when you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, the report on which you want to create an alert must be saved, deployed, or uploaded to a SharePoint document library.  
 >   
->  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify credential and connection information for report rata sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  To open Data Alert Designer, you click the **New Data Alert** option on the **Actions** menu on the report toolbar. If you do not see the **New Data Alert** option, the report is not configured to use stored credentials. You can update the credential type by updating the report data source from the SharePoint library.  
   
 ##  <a name="AlertDesigner"></a> Data Alert Designer user interface  
  The Data Alert Designer is divided into areas. The area where you select the report data feed, the area where you create simple or complex conditions by adding rules to conditions, and so on. The following picture shows the areas in Data Alert Designer.  
   
-:::image type="content" source="../reporting-services/media/rs-alertdesigner.gif" alt-text="Screenshot of the areas within the Alert Designer user interface."
+:::image type="content" source="../reporting-services/media/rs-alertdesigner.gif" alt-text="Screenshot of the areas within the Alert Designer user interface." lightbox="../reporting-services/media/rs-alertdesigner.gif":::
   
   
 ### Alert data  
@@ -63,7 +63,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
   
  If the report is parameterized and you do not see the data and columns that you expect in the report data feed, rerun the report using the appropriate parameter values. The columns and values must be present in the report to be included in the data feed.  
   
- Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data.. For more information about how data feeds are generated from reports, see [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate data feeds from a report &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Depending on the layout of the report, it might not be intuitive how many data feeds a report has, nor what data is included in which data feed. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Atom rendering extension generates the data feeds that you use with alerts. The Atom rendering extension provides report data as flattened rowsets, a tabular format in which all columns have the same number of rows. These rowsets are the contents of the data feeds. Because report layout is often complex and contains multiple peer or nested data regions, multiple data feeds are needed to make available all the report data. For more information about how data feeds are generated from reports, see [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) and see [Generate data feeds from a report &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  When you choose a data feed, the data from the feed displays in a table with rows and columns in the alert data pane of Data Alert Designer. The metadata from the data source that the report uses or the report itself specifies the column names and the data feed populates the field list that you use to define rules in the data condition. The data feed also provides metadata such as the data types of table columns that restrict the values and comparison operators that you can use with fields when you create the rules.  
   
@@ -72,7 +72,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ### Alert name  
  By default, the alert definition has the same name as the report. You can change the alert name to be more meaningful. This makes it easier for you to manage your alerts, determining which alerts to update, delete and so on.  
   
- You can create multiple alerts on a report. It is possible to have multiple alert definitions with the same name, but it is recommended that you make alert names unique. It makes it easier to differentiate and manage alert definitions. You can view a list of all the alerts you created in Data Alert Manager. For more information, see [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ You can create multiple alerts on a report. It is possible to have multiple alert definitions with the same name, but it is recommended that you make alert names unique. It makes it easier to differentiate and manage alert definitions. You can view a list of all the alerts you created in Data Alert Manager. For more information, see [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### Rules and clauses  
  The scope of data changes and the in the alert rules define the data changes that trigger the alert. The scope of the data changes are as follow:  
@@ -175,7 +175,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ##  <a name="CreateAlert"></a> Create a data alert definition  
  If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
 
-:::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot that shows the New Data Alert option on the Actions menu."
+:::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot of the New Data Alert option on the Actions menu." lightbox="../reporting-services/media/rs-openalertdesigneriw.gif":::
   
  For more information, see [Create a data alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -194,7 +194,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
   
  To edit a data alert definition, you right-click it in Data Alert Manager and click **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
 
-:::image type="content" source="../reporting-services/media/rs-alertmanageriwopendesigner.gif" alt-text="Screenshot of the context menu for a data alert defention that highlights the edit option."
+:::image type="content" source="../reporting-services/media/rs-alertmanageriwopendesigner.gif" alt-text="Screenshot of the context menu for a data alert defention that highlights the edit option." lightbox="../reporting-services/media/rs-alertmanageriwopendesigner.gif":::
   
  For more information, see [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   

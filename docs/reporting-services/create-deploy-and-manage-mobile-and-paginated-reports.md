@@ -24,7 +24,7 @@ helpviewer_keywords:
 
 SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage paginated reports. Download [**SQL Server 2022 Reporting Services**](https://www.microsoft.com/download/details.aspx?id=104502) from the Microsoft Download Center.
 
-:::image type="content" source="../reporting-services/media/report-server-2022-coho-winery.png" alt-text="Screenshot showing SQL Server 2022 Reporting Services report."
+:::image type="content" source="../reporting-services/media/report-server-2022-coho-winery.png" alt-text="Screenshot of a SQL Server 2022 Reporting Services report.":::
 
 Looking for Power BI Report Server? See [What is Power BI Report Server?](/power-bi/report-server/get-started)
 
@@ -48,7 +48,7 @@ See [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-s
 
 ## Paginated reports
 
-:::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Image of paginated reports on a desktop screen and a tablet device."
+:::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Image of paginated reports on a desktop screen and a tablet device.":::
 
 Reporting Services is associated with paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
@@ -63,7 +63,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 
 ## Mobile reports
 
-:::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Image of mobile reports on a desktop screen and a tablet device."
+:::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Image of mobile reports on a desktop screen and a tablet device.":::
 
 Mobile computing has shifted the devices we need to work, meaning people today have a different reporting need. The fixed-layout report experience doesn't work well when you introduce tablets and phones. Something designed for a wide PC screen isn't the optimal experience on a small phone screen that's not just smaller but a portrait or landscape orientation.
 
@@ -76,7 +76,7 @@ As you create visualizations, Mobile Report Publisher automatically generates sa
 
 ## Web portal
 
-:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot that shows the Reporting Services web portal."
+:::image type="content" source="../reporting-services/media/report-server-2022-web-portal.png" alt-text="Screenshot of the Reporting Services web portal.":::
 
 For end users of Reporting Services, the front door is a modern web portal you can view in most browsers. You can access all your Reporting Services reports and KPIs in the new portal. KPIs can surface key business metrics at a glance in the browser, without having to open a report.
 

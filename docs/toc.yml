@@ -10455,7 +10455,7 @@ items:
           href: sql-server/azure-arc/patch.md
         - name: Automate backups
           href: sql-server/azure-arc/point-in-time-restore.md
-        - name: Delete from or restore to Azure Arc
+        - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
         - name: Monitor
           href: sql-server/azure-arc/sql-monitoring.md

@@ -79,6 +79,8 @@ IDENTITY [ (seed , increment) ]
  Only one identity column can be created per table.  
   
  In memory-optimized tables the seed and increment must be set to 1,1. Setting the seed or increment to a value other than 1 results in the following error: The use of seed and increment values other than 1 is not supported with memory optimized tables.  
+
+ Once the identity property is set on a column, it cannot be removed. The data type can be changed as long as the new data type is compatible with the identity property.
   
 ## Examples  
   

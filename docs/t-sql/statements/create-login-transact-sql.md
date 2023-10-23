@@ -3,7 +3,7 @@ title: "CREATE LOGIN (Transact-SQL)"
 description: CREATE LOGIN (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/14/2022
+ms.date: 10/23/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -681,7 +681,10 @@ GO
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics
 CREATE LOGIN login_name
- { WITH <option_list> }
+  { 
+    FROM EXTERNAL PROVIDER
+    | WITH <option_list> [,..] 
+  }
 
 <option_list> ::=
     PASSWORD = { 'password' }
@@ -690,11 +693,19 @@ CREATE LOGIN login_name
 
 ## Arguments
 
+> [!NOTE]
+> [Microsoft Entra server principals (logins)](/azure/azure-sql/database/authentication-azure-ad-logins) are currently in public preview.
+When used with the **FROM EXTERNAL PROVIDER** clause, the login specifies the Microsoft Entra principal, which is a Microsoft Entra user, group, or application. Otherwise, the login represents the name of the SQL login that was created.
+
+Microsoft users and service principals (Microsoft Entra applications) that are members of more than 2048 Microsoft Entra security groups are not supported to login into the database in SQL Database, SQL Managed Instance, or Azure Synapse.
+
+#### FROM EXTERNAL PROVIDER </br>
+Specifies that the login is for Microsoft Entra authentication.
+
 #### *login_name*
 Specifies the name of the login that is created. 
 
 To create accounts for Microsoft Entra ID users, use the [CREATE USER](create-user-transact-sql.md) statement.
-
 
 #### PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.

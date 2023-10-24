@@ -38,7 +38,7 @@ helpviewer_keywords:
 |:::image type="icon" source="../reporting-services/media/printer-icon.gif":::|**Printer icon**|Open a Print dialog box so that you can specify print options and print a report. On first use, clicking this icon prompts you to download the print control.|  
 ||**Show and hide icons**|Show or hide parameter value fields and the **View Report** button in a report that includes parameters.|  
 |:::image type="icon" source="../reporting-services/media/htmlviewer-refresh.gif":::|**Report refresh icon**|Refresh the report. Data for live reports will be refreshed. Cached reports will be reloaded from where they are stored.|  
-|![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Data feed icon**|Generated data feeds from reports.|  
+|:::image type="icon" source="../reporting-services/media/htmlviewer-datafeed.gif":::|**Data feed icon**|Generated data feeds from reports.|  
 |:::image type="icon" source="../reporting-services/media/ssrs-powerbi-button-reportwviewer.png":::|**Pin to Power BI Dashboard**|Pin support report items to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. If the button is not visible, the report server has not been integrated with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  For more information, see [Power BI Report Server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
 ### About export formats  

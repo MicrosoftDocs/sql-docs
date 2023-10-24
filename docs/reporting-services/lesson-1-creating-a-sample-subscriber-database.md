@@ -60,10 +60,10 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
 + Next, you will modify the data source properties of the report to use stored credentials. 
 + You will also modify the report design to include a parameter that the subscription will use with the subscriber data. [Lesson 2: Modifying the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
-## Next steps
+## See also
 
 [Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
-[Create a satabase](../relational-databases/databases/create-a-database.md)  
+[Create a database](../relational-databases/databases/create-a-database.md)  
 [Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

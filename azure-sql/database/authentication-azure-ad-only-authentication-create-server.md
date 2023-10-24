@@ -1,7 +1,7 @@
 ---
 title: Create server with Microsoft Entra-only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL Authentication
+description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL Authentication.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
@@ -416,7 +416,7 @@ For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsq
 
 # [REST API](#tab/rest-api)
 
-The [Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
+The [SQL Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
@@ -766,7 +766,7 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 
 ### Grant Directory Readers permissions
 
-Once the deployment is complete for your managed instance, you may notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by clicking on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra for Azure SQL](authentication-aad-directory-readers-role.md).
+Once the deployment is complete for your managed instance, you might notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by clicking on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra for Azure SQL](authentication-aad-directory-readers-role.md).
 
 :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-portal-read-permissions.png" alt-text="Screenshot of the Microsoft Entra admin menu in Azure portal showing Read permissions needed.":::
 

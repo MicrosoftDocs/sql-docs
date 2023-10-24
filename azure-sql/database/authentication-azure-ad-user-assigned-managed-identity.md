@@ -177,7 +177,7 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 #### Azure SQL Managed Instance
 
 - To provision a new managed instance with a UMI, use the [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create) command.
-- To obtain the system-assigned and user-assigned MI's for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
+- To obtain the system-assigned and user-assigned managed identities for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
     - For example, to retrieve the UMI(s) for a managed instance, look for the `principalId` of each:
     ```azurecli
     az sql mi show --resource-group "resourcegroupnamehere" --name "sql-mi-name-here" --query identity.userAssignedIdentities

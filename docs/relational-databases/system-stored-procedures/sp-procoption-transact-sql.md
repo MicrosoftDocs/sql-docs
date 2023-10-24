@@ -45,7 +45,7 @@ sp_procoption [ @ProcName = ] 'procedure'
  0 (success) or error number (failure)  
   
 ## Remarks  
- Startup procedures must be in the **master** database and cannot contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
+ Startup procedures must be in the **dbo** schema of the **master** database and cannot contain INPUT or OUTPUT parameters. Execution of the stored procedures starts when all databases are recovered and the "Recovery is completed" message is logged at startup.  
   
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role.  

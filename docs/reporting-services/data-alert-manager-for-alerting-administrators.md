@@ -38,7 +38,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
 ##  <a name="ViewingAlerts"></a> Viewing data alert information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators click the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  
 
-:::image type="content" source="../reporting-services/media/rs-sitesettings.gif" alt-text="Screenshot of the Reporting Services section of Site Settings page, highlighting the Manage Data Alerts option." lightbox="../reporting-services/media/rs-sitesettings.gif":::
+:::image type="content" source="../reporting-services/media/rs-sitesettings.gif" alt-text="Screenshot of the Reporting Services section of the Site Settings page, highlighting the Manage Data Alerts option." lightbox="../reporting-services/media/rs-sitesettings.gif":::
   
  Data Alert Manager includes a table that lists the alert name, report name, the name of the alert owner, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the alert message. If the alert cannot be generated or generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -69,7 +69,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
   
 -   [Manage all data alerts on a SharePoint Site in data alert manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## See Also
+## See also
 
 [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 

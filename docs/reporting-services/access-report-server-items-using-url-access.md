@@ -85,6 +85,6 @@ helpviewer_keywords:
   
  The user interface you see is similar to the directory browsing mode used by [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). The version number, including the build number, of the report server is also displayed below the folder listing.  
   
-## See Also  
+## See also  
  [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL access parameter reference](../reporting-services/url-access-parameter-reference.md) 

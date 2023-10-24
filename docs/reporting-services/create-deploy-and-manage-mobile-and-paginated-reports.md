@@ -48,7 +48,7 @@ See [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-s
 
 ## Paginated reports
 
-:::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Image of paginated reports on a desktop screen and a tablet device.":::
+:::image type="content" source="../reporting-services/media/ssrs-paginated-reports.png" alt-text="Diagram of paginated reports on a desktop screen and a tablet device.":::
 
 Reporting Services is associated with paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
@@ -63,7 +63,7 @@ That core BI workload still exists today, so we've modernized it. Now you can cr
 
 ## Mobile reports
 
-:::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Image of mobile reports on a desktop screen and a tablet device.":::
+:::image type="content" source="../reporting-services/media/ssrs-mobile-reports.png" alt-text="Diagram of mobile reports on a desktop screen and a tablet device.":::
 
 Mobile computing has shifted the devices we need to work, meaning people today have a different reporting need. The fixed-layout report experience doesn't work well when you introduce tablets and phones. Something designed for a wide PC screen isn't the optimal experience on a small phone screen that's not just smaller but a portrait or landscape orientation.
 

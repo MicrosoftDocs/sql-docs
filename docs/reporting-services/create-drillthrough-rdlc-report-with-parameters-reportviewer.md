@@ -31,6 +31,6 @@ Use Visual Studio 2015, and the ASP.NET Web Application, to create an ASP.NET we
 [Lesson 8: Create a aata filter](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
-## See Also  
+## See also  
 [Reporting Services tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
 [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

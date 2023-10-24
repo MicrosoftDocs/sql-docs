@@ -63,7 +63,7 @@ These permissions should be granted before you provision a logical server or man
 
 ### Grant permissions
 
-The following sample PowerShell script grants the necessary permissions for a UMI or an SMI. This sample assigns permissions to the UMI `umiservertest`.
+The following sample PowerShell script grants the necessary permissions for a managed identity. This sample assigns permissions to the user-assigned managed identity `umiservertest`.
 
 To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
 
@@ -152,7 +152,7 @@ To set the user-managed identity for the Azure SQL Database logical server or Az
 1. Go to your **SQL server** or **SQL managed instance** resource.
 1. Under **Security**, select the **Identity** setting.
 1. Under **User assigned managed identity**, select **Add**.
-1. Select a subscription, and then for **Primary identity**, select a UMI for the subscription. Then choose the **Select** button.
+1. Select a subscription, and then for **Primary identity**, select a managed identity for the subscription. Then choose the **Select** button.
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/existing-server-select-managed-identity.png" alt-text="Azure portal screenshot of selecting a user-assigned managed identity when configuring an existing server identity.":::
 
@@ -162,15 +162,15 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 
 #### Azure SQL Database managed identity using the Azure CLI
 
-- To provision a new server with a UMI, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
+- To provision a new server with a user-assigned managed identity, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
 - To obtain the managed identities for a logical server, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command.
-  - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
+  - For example, to retrieve the user-assigned managed identities of a logical server, look for the `principalId` of each:
 
     ```azurecli
     az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.userAssignedIdentities
     ```
 
-  - To retrieve the SMI of an Azure SQL Database logical server:
+  - To retrieve the system-assigned managed identity of an Azure SQL Database logical server:
 
     ```azurecli
     az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.principalId

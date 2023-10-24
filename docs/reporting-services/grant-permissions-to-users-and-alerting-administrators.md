@@ -1,5 +1,5 @@
 ---
-title: "Grant Permissions to Users and Alerting Administrators"
+title: "Grant permissions to users and alerting administrators"
 description: Learn how to grant permissions to users and alerting administrators in SQL Server Reporting Services (SSRS).
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
-# Grant Permissions to Users and Alerting Administrators
+# Grant permissions to users and alerting administrators
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -45,9 +45,9 @@ To learn more about SharePoint permissions, see [User permissions and permission
   
 6.  Select **OK**.
 
-## See Also
+## See also
 
-[Set Permissions for Report Server Items on a SharePoint Site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
-[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+[Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

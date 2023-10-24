@@ -1,5 +1,5 @@
 ---
-title: "Lesson 1: Creating a Sample Subscriber Database"
+title: "Lesson 1: Creating a sample subscriber database"
 description: Learn how to create a small subscriber database to store subscription data that will be used by a data-driven subscription.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Lesson 1: Creating a Sample Subscriber Database
+# Lesson 1: Creating a sample subscriber database
 
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data that will be used by a data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they are created.  
   
 This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] to create a SQL Server database.  
   
-### To create a sample Subscriber database  
+### To create a sample subscriber database  
   
 1.  Start [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], and open a connection to an instance of the [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)].  
   
@@ -55,15 +55,15 @@ This lesson assumes you are using [!INCLUDE[ssManStudioFull_md](../includes/ssma
   
 8.  Use a SELECT statement to verify that you have three rows of data. For example: `select * from OrderInfo`  
   
-## Next Steps  
+## Next steps  
 + You have successfully created the subscription data that will drive report distribution and vary the report output for each subscriber. 
 + Next, you will modify the data source properties of the report to use stored credentials. 
-+ You will also modify the report design to include a parameter that the subscription will use with the subscriber data. [Lesson 2: Modifying the Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ You will also modify the report design to include a parameter that the subscription will use with the subscriber data. [Lesson 2: Modifying the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## Next steps
 
-[Create a Data-Driven Subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
-[Create a Database](../relational-databases/databases/create-a-database.md)  
-[Create a Basic Table Report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+[Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
+[Create a satabase](../relational-databases/databases/create-a-database.md)  
+[Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

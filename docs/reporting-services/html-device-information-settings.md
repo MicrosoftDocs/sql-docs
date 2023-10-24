@@ -1,5 +1,5 @@
 ---
-title: "HTML Device Information Settings"
+title: "HTML device information settings"
 description: Learn about the various device information settings that are available for rendering in HTML format.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "HTML [Reporting Services], rendering"
   - "device information settings [Reporting Services], HTML rendering"
 ---
-# HTML Device Information Settings
+# HTML device information settings
 The following table lists the device information settings for rendering in HTML format.  
   
 > [!IMPORTANT]  
->  The device information settings listed in the table below with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
+>  The device information settings listed in the table below with a **(\*)** have been deprecated and they should not be used in new applications. For more information, see [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
 |Setting|Value|  
 |-------------|-----------|  
@@ -45,9 +45,9 @@ The following table lists the device information settings for rendering in HTML 
 |**Zoom (\*)**|The report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.|  
 |**DataVisualizationFitSizing**|Indicates data visualization fit behavior when inside a tablix. This includes chart, gauge, and map.<br /><br /> The possible values are **Approximate** and **Exact**.<br /><br /> The default value is **Approximate**. If the setting is removed from the **rsreportserver.config** file then the default behavior is **Exact**.<br /><br /> Enabling **Exact** may have performance impact because the processing to determine the exact size may take longer.|  
   
-## See Also  
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## See also  
+ [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -42,7 +42,7 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 1. Fill out the mandatory information required on the **Basics** tab for **Project details** and **Managed Instance details**. This is a minimum set of information required to provision a SQL Managed Instance.
 
-   :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-create-basic.png" alt-text="Azure portal screenshot of the create Managed Instance basic tab":::
+   :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-create-basic.png" alt-text="Azure portal screenshot of creating the SQL Managed Instance basic tab":::
 
    For more information on the configuration options, see [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 

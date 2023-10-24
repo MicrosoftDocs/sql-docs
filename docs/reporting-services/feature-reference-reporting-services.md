@@ -29,7 +29,7 @@ helpviewer_keywords:
  [HTML Viewer and the report toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Provides help for the HTML Viewer component used for viewing reports in a Web browser.  
   
-## See Also  
+## See also  
  [Reporting Services concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   

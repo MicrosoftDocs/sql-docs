@@ -1,7 +1,7 @@
 ---
 title: Create a logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
-description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
+description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity.
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
@@ -383,4 +383,4 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 ## Related content
 
 - [User-assigned managed identity in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
-- [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).
+- [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)

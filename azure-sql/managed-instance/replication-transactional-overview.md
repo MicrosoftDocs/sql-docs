@@ -200,6 +200,22 @@ If a **subscriber** SQL managed instance is in a failover group, the publication
 - For a failover with data loss, replication works as well. It replicates the lost changes again.
 - For a failover with data loss, but the data loss is outside of the distribution database retention period, the SQL managed instance administrator needs to reinitialize the subscription database.
 
+## Troubleshoot common issues
+
+### Transaction log and Transactional Replication
+
+In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There are also automatic process that allow safe truncation of the transaction log, and this process reduces the used storage space for the log.
+When publishing for Transactional Replication is configured, transaction log truncation is prevented until all changes in the log are processed by the Transactional Replication. In some circumstances, processing of the transaction log by Transactional Replication is effectively blocked, and that state can lead to filling up entire storage reserved for transaction log. When there is no free space for transaction log, and there is no more space for transaction log to grow, we have full transaction log. In this state, the database can no longer process any write workload, and effectively becomes read-only database. 
+
+#### Disabled log reader agent
+
+In case when Transactional Replication publication is configured for a database, but log reader agent is not configured to run, changes are accumulating in the transaction log, and they are not being processed. This will lead to constant growth of transactional log, and eventually to the full transcation log.
+User should make sure that log reader job exists and is active. Alternative would be to disable Transactional Replication, if it's not needed.
+
+#### Log reader agent query timeouts
+
+Sometimes, log reader job cannot make effective progress due to repeated query timeouts. A way to fix this is to increase the query timeout setting for the log reader agent job.
+
 ## Next steps
 
 For more information about configuring transactional replication, see the following tutorials:

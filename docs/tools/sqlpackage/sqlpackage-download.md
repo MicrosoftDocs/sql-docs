@@ -99,7 +99,6 @@ To uninstall SqlPackage, run the following command:
 
    ```bash
    sudo apt-get install libunwind8
-
    ```
 
 ### macOS

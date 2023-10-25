@@ -1,7 +1,7 @@
 ---
 title: Transactional replication
 titleSuffix: Azure SQL Managed Instance
-description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance
+description: Learn about using SQL Server transactional replication with Azure SQL Managed Instance.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, randolphwest
@@ -43,7 +43,7 @@ The key components in transactional replication are the **Publisher**, **Distrib
 
 The **Publisher** publishes changes made on some tables (articles) by sending the updates to the Distributor. The publisher can be an Azure SQL managed instance or a SQL Server instance.
 
-The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it is equal to or higher than the Publisher version).
+The **Distributor** collects changes in the articles from a Publisher and distributes them to the Subscribers. The Distributor can be either an Azure SQL managed instance or a SQL Server instance (any version as long it's equal to or higher than the Publisher version).
 
 The **Subscriber** receives changes made on the Publisher. A SQL Server instance and Azure SQL managed instance can both be push and pull subscribers, though a pull subscription isn't supported when the distributor is an Azure SQL managed instance and the subscriber isn't. A database in Azure SQL Database can only be a push subscriber.
 
@@ -147,7 +147,7 @@ Transactional replication has some limitations that are specific to Azure SQL Ma
 
 Azure SQL Managed Instance is using user configured Azure Storage Account for snapshot files used for transactional replication. Unlike SQL Server in the on-premises environment, Azure SQL Managed Instance isn't deleting snapshot files from Azure Storage Account. **Once files are no longer needed, you should delete them.** This can be done via Azure Storage interface on Azure portal, [Microsoft Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/), or via command line clients (Azure PowerShell or CLI) or Azure Storage Management REST API.
 
-Here is an example of how you can delete file and how you can delete an empty folder.
+Here's an example of how you can delete file and how you can delete an empty folder.
 
 ``` CLI
 az storage file delete-batch --source <file_path> --account-key <account_key> --account-name <account_name>
@@ -204,7 +204,7 @@ If a **subscriber** SQL managed instance is in a failover group, the publication
 
 ### Transaction log and Transactional Replication
 
-In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There is also an automatic process that allows safe truncation of the transaction log, and this process reduces the used storage space for the log.
+In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There's also an automatic process that allows safe truncation of the transaction log, and this process reduces the used storage space for the log.
 When publishing for Transactional Replication is configured, transaction log truncation is prevented until changes in the log are processed by the log reader job. In some circumstances, processing of the transaction log is effectively blocked, and that state can lead to filling up entire storage reserved for transaction log. When there's no free space for transaction log, and there's no more space for transaction log to grow, we have full transaction log. In this state, the database can no longer process any write workload, and effectively becomes read-only database. 
 
 #### Disabled log reader agent
@@ -220,8 +220,8 @@ Sometimes, log reader job can't make effective progress due to repeated query ti
 
 For more information about configuring transactional replication, see the following tutorials:
 
-- [Configure replication between a SQL Managed Instance publisher and subscriber](../managed-instance/replication-between-two-instances-configure-tutorial.md)
-- [Configure replication between a SQL Managed Instance publisher, SQL Managed Instance distributor, and SQL Server subscriber](../managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md)
+- [Configure replication between a SQL Managed Instance publisher and subscriber](../managed-instance/replication-between-two-instances-configure-tutorial.md).
+- [Configure replication between a SQL Managed Instance publisher, SQL Managed Instance distributor, and SQL Server subscriber](../managed-instance/replication-two-instances-and-sql-server-configure-tutorial.md).
 - [Create a publication](/sql/relational-databases/replication/publish/create-a-publication).
 - [Create a push subscription](/sql/relational-databases/replication/create-a-push-subscription) by using the server name as the subscriber (for example `N'azuresqldbdns.database.windows.net`), and the database in Azure SQL Database name as the destination database (for example, `Adventureworks`).
 

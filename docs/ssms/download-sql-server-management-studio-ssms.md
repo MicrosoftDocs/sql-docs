@@ -31,13 +31,13 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer or in the cloud.
 
-For customers in need of a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
+For customers needing a cross-platform companion to SSMS for managing SQL and other Azure databases, use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
 ## Download SSMS
 
 :::image type="icon" source="../includes/media/download.svg" border="false":::**[Free Download for SQL Server Management Studio (SSMS) 19.1](https://aka.ms/ssmsfullsetup)**
 
-SSMS 19.1 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, you should uninstall it before installing SSMS 19.1.  If you have SSMS 19.x installed, installing SSMS 19.1 upgrades it to 19.1.
+SSMS 19.1 is the latest general availability (GA) version. If you have a *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.1.  If you have SSMS 19.x installed, installing SSMS 19.1 upgrades it to 19.1.
 
 - Release number: 19.1
 - Build number: 19.1.56.0
@@ -45,7 +45,7 @@ SSMS 19.1 is the latest general availability (GA) version. If you have a *previe
 
 By using SQL Server Management Studio, you agree to its [license terms](/Legal/sql/sql-server-management-studio-license-terms) and [privacy statement](https://privacy.microsoft.com/privacystatement). If you have comments or suggestions or want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 
-The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available for use. However, if you have an earlier *preview* version of SSMS 19 installed, you must uninstall it before installing SSMS 19.1. You can see if you have a preview version by going to the **Help > About** window.
+The SSMS 19.x installation doesn't upgrade or replace SSMS versions 18.x or earlier. SSMS 19.x installs alongside previous versions, so both versions are available. However, if you have an earlier *preview* version of SSMS 19 installed, uninstall it before installing SSMS 19.1. You can see if you have a preview version by going to the **Help > About** window.
 
 If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio v19.1**.
 
@@ -78,7 +78,7 @@ This article is for the latest version of SSMS only. To download previous versio
 
 You can install SSMS using PowerShell.
 
-Follow the steps below if you want to install SSMS in the background with no GUI prompts.
+Follow the steps below to install SSMS in the background with no GUI prompts.
 
 1. Launch PowerShell with elevated permissions.
 
@@ -118,7 +118,7 @@ Follow the steps below if you want to install SSMS in the background with no GUI
 
 ## Uninstall
 
-SSMS may install shared components if it's determined they're missing during SSMS installation. SSMS won't automatically uninstall these components when you uninstall SSMS.
+SSMS might install shared components if it's determined they're missing during SSMS installation. SSMS won't automatically uninstall these components when you uninstall SSMS.
 
 The shared components are:
 
@@ -130,13 +130,14 @@ The shared components are:
 - Microsoft Visual C++ 2017 Redistributable (x64)
 - Microsoft Visual Studio Tools for Applications 2019
 
-These components aren't uninstalled because they can be shared with other products. If uninstalled, you may run the risk of disabling other products.
+These components aren't uninstalled because they can be shared with other products. If uninstalled, you might run the risk of disabling other products.
 
 ## Supported SQL offerings
 
-- This version of SSMS works with SQL Server 2014 and higher and provides the most significant level of support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
+- This version of SSMS works with SQL Server 2014 and higher.
+  - It provides the most significant level of support for working with the latest cloud features in Azure SQL Database, Azure Synapse Analytics, and Microsoft Fabric.
 - Additionally, SSMS 19.x can be installed alongside with SSMS 18.x, SSMS 17.x, SSMS 16.x.
-- SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
+- SQL Server Integration Services (SSIS) - SSMS version 17.x or later doesn't support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. See [SSIS Catalog](../integration-services/catalog/ssis-catalog.md) for details.
 
 ## SSMS System Requirements
 
@@ -163,7 +164,7 @@ Supported hardware:
 - Hard disk space: Minimum of 2 GB up to 10 GB of available space
 
 > [!NOTE]  
-> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, and Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md).
+> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Visit [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md), for more details.
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

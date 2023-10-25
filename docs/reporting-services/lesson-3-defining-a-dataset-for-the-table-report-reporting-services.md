@@ -54,7 +54,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the :::image type="icon" source="media/ssrs-querydesigner-run.png"::: **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
 
 8. Select **OK** to exit the **Query Designer**.
 
@@ -62,7 +62,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
 The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
-   :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.png":::
+   :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields." lightbox="media/ssrs-adventureworksdataset.png":::
 
 ## Next steps
 

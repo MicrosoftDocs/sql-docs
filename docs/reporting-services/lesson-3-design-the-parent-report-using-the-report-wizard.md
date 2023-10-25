@@ -41,7 +41,7 @@ After you create a data connection and a data table for the parent report, your 
 8.  Save the .rdlc file.  
   
 ## Next task  
-You have successfully designed the parent report using the Report Wizard. Next, you will create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+You have successfully designed the parent report using the Report Wizard. Next, you will create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
   
   

@@ -80,7 +80,6 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 
 To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). The results should display as below:
 
-   ![Preview: Basic table with grand total]( "Preview: Basic table with grand total")
     :::image type="content" source="media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted." lightbox="media/rs-basictablesumgrandtotalpreview.gif":::
 
 ## Publishing the report to the *Report Server* (Optional)
@@ -119,7 +118,7 @@ An optional step is to publish the completed report to the Report Server so you 
 
 8. Select the Tutorial folder, and then select the "Sales Orders" report to view the report.
 
-    ![ssrs_tutorial_tutorialfolder](media/ssrs-tutorial-tutorialfolder.png)  
+    :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in Home." lightbox="media/ssrs-tutorial-tutorialfolder.png":::
 
 You've successfully completed the **Creating a Basic Table Report tutorial**.
 

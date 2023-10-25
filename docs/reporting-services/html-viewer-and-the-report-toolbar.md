@@ -24,7 +24,7 @@ helpviewer_keywords:
   
  The report toolbar is similar to the one shown in the following illustration. The report toolbar that you see may differ from the illustration based on report features or the rendering options that are available.  
   
- :::image type="content" source="../reporting-services/media/ssrs-htmlviewer-toolbar.png" alt-text="Screenshot of the report toolbar.":::
+ :::image type="content" source="../reporting-services/media/ssrs-htmlviewer-toolbar.png" alt-text="Screenshot of the Reporting Services report toolbar.":::
   
  The following table describes commonly used features of the report toolbar. Each feature is identified by the control that you use to access it.  
   

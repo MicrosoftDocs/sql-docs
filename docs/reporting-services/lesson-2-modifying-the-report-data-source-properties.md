@@ -24,7 +24,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
  **Note:** The web *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  
 3.  Browse to the folder containing the **Sales Orders** report and in the context menu of the report, click **Manage**.  
 
- :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png" alt-text="Screenshot of the context menu of Sales Orders":::
+ :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png" alt-text="Screenshot of the context menu of Sales Orders.":::
   
 3.  Click **Data Sources** in the left pane.  
   

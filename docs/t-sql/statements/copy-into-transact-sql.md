@@ -37,7 +37,7 @@ Use COPY for the following capabilities:
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS)
 - Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION)
 - Customize default values for each target column and specify source data fields to load into specific target columns
-- Specify a custom row terminator for CSV files
+- Specify a custom row terminator, field terminator, and field quote for CSV files
 - Use SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
 - Automatic schema discovery simplifies the process of defining and mapping source data into target tables
@@ -79,7 +79,7 @@ WITH
 
 #### *schema_name*
 
-Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY is canceled, and an error message is returned.
+Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the schema of the specified table, COPY is canceled, and an error message is returned.
 
 #### *table_name*
 
@@ -97,7 +97,7 @@ Don't specify a *column_list* when `AUTO_CREATE_TABLE = 'ON'`.
 
 - *Column_name* - the name of the column in the target table.
 - *Default_value* - the default value that replaces any NULL value in the input file. Default value applies to all file formats. COPY attempts to load NULL from the input file when a column is omitted from the column list or when there's an empty input file field. Default value precedes the keyword 'default'
-- *Field_number* - the input file field number that is mapped to the target column name.
+- *Field_number* - the input file field number that is mapped to the target column.
 - The field indexing starts at 1.
 
 When a column list isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
@@ -195,9 +195,12 @@ Multiple file locations can only be specified from the same storage account and 
 
 *ERRORFILE* only applies to CSV. Specifies the directory within the COPY statement where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one is created on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
+> [!NOTE]
+> When a relative path is passed to *ERRORFILE*, the path is relative to the container path specified in *external_location*. 
+
 Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the reason (Error) file and the data (Row) file each preappending with the queryID, distributionID, and a file guid. Because the data and the reason are in separate files, corresponding files have a matching prefix.
 
-If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used.
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used. When the same credential that is used for the source data is used for ERRORFILE, restrictions that apply to ERRORFILE_CREDENTIAL also apply
 
 #### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
 
@@ -236,7 +239,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 #### *MAXERRORS = max_errors*
 
-*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that can't be imported by the COPY operation is ignored and counted as one error. If max_errors isn't specified, the default is 0.
 
 #### *COMPRESSION = { 'DefaultCodec ' | 'Snappy' | 'GZIP' | 'NONE'}*
 
@@ -255,14 +258,14 @@ The COPY command autodetects the compression type based on the file extension wh
 
 #### *FIELDQUOTE = 'field_quote'*
 
-*FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDQUOTE.
+*FIELDQUOTE* applies to CSV and specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter).
 
 #### *FIELDTERMINATOR = 'field_terminator'*
 
-*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDTERMINATOR.
+*FIELDTERMINATOR* Only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDTERMINATOR.
 
 #### ROW TERMINATOR = 'row_terminator'
 
@@ -270,7 +273,7 @@ The COPY command autodetects the compression type based on the file extension wh
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
-Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROW TERMINATOR.
+Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROW TERMINATOR.
 
 #### *FIRSTROW = First_row_int*
 
@@ -354,7 +357,7 @@ The default values of the COPY command are:
 
 - COMPRESSION default is uncompressed
 
-- FIELDQUOTE = ''
+- FIELDQUOTE = '"'
 
 - FIELDTERMINATOR = ','
 
@@ -549,7 +552,7 @@ Use COPY for the following capabilities:
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS).
 - Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION).
 - Customize default values for each target column and specify source data fields to load into specific target columns.
-- Specify a custom row terminator for CSV files.
+- Specify a custom row terminator, field terminator, and field quote for CSV files
 - Specify wildcards and multiple files in the storage location path.
 - For more on data ingestion options and best practices, see [Ingest data into your [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] using the COPY statement](/fabric/data-warehouse/ingest-data-copy).
 
@@ -584,7 +587,7 @@ Optional if the current warehouse for the user performing the operation is the w
 
 #### *schema_name*
 
-Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the specified table, COPY fails, and an error message is returned.
+Optional if the default schema for the user performing the operation is the schema of the specified table. If *schema* isn't specified, and the default schema of the user performing the COPY operation is different from the schema of the specified table, COPY is canceled, and an error message is returned.
 
 #### *table_name*
 
@@ -600,7 +603,7 @@ An optional list of one or more columns used to map source data fields to target
 
 - *Column_name* - the name of the column in the target table.
 - *Default_value* - the default value that replaces any NULL value in the input file. Default value applies to all file formats. COPY attempts to load NULL from the input file when a column is omitted from the column list or when there's an empty input file field. Default value is preceded by the keyword 'default'
-- *Field_number* - applies only to CSV. The input file field number that is mapped to the target column name. For Parquet, columns are always bound by name.
+- *Field_number* - The input file field number that is mapped to the target column. 
 - The field indexing starts at 1.
 
 When *column_list* isn't specified, COPY maps columns based on the source and target order: Input field 1 goes to target column 1, field 2 goes to column 2, etc.
@@ -669,9 +672,12 @@ Multiple file locations can only be specified from the same storage account and 
 
 *ERRORFILE* only applies to CSV. Specifies the directory where the rejected rows and the corresponding error file should be written. The full path from the storage account can be specified or the path relative to the container can be specified. If the specified path doesn't exist, one is created on your behalf. A child directory is created with the name "\_rejectedrows". The "\_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter.
 
+> [!NOTE]
+> When a relative path is passed to *ERRORFILE*, the path is relative to the container path specified in *external_location*. 
+
 Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder a folder with the statement ID is created, and under that folder two types of files are written: an error.Json file containing the reject reasons, and a row.csv file containing the rejected rows.
 
-If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used.
+If ERRORFILE has the full path of the storage account defined, then the ERRORFILE_CREDENTIAL is used to connect to that storage. Otherwise, the value mentioned for CREDENTIAL is used. When the same credential that is used for the source data is used for ERRORFILE, restrictions that apply to ERRORFILE_CREDENTIAL also apply.
 
 #### *ERRORFILE_CREDENTIAL = (IDENTITY= '', SECRET = '')*
 
@@ -687,7 +693,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 
 #### *MAXERRORS = max_errors*
 
-*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
+*MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation fails. Each row that the COPY operation can't import is ignored and counted as one error. If max_errors isn't specified, the default is 0.
 
 #### *COMPRESSION = { 'Snappy' | 'GZIP' | 'NONE'}*
 
@@ -702,22 +708,22 @@ The COPY command autodetects the compression type based on the file extension wh
 
 #### *FIELDQUOTE = 'field_quote'*
 
-*FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDQUOTE.
+*FIELDQUOTE* only applies to CSV. Specifies a single character that is used as the quote character (string delimiter) in the CSV file. If not specified, the quote character (") is used as the quote character as defined in the RFC 4180 standard. Hexadecimal notation is also supported for FIELDQUOTE. Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDQUOTE.
 
 > [!NOTE]  
 > FIELDQUOTE characters are escaped in string columns where there is a presence of a double FIELDQUOTE (delimiter).
 
 #### *FIELDTERMINATOR = 'field_terminator'*
 
-*FIELDTERMINATOR* only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can also be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters and aren't supported with UTF-8 for FIELDTERMINATOR.
+*FIELDTERMINATOR* only applies to CSV. Specifies the field terminator that is used in the CSV file. The field terminator can also be specified using hexadecimal notation. The field terminator can be multi-character. The default field terminator is a (,). Extended ASCII and multi-byte characters aren't supported with UTF-8 for FIELDTERMINATOR.
 
 #### ROWTERMINATOR = 'row_terminator'
 
-*ROWTERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. Default terminators for PARSER_VERSION = '1.0' are `\r\n`, `\n`, and `\r`. Default terminators for PARSER_VERSION = '2.0' are `\r\n` and `\n`.
+*ROWTERMINATOR* only applies to CSV. Specifies the row terminator that is used in the CSV file. The row terminator can be specified using hexadecimal notation. The row terminator can be multi-character. The default terminators are `\r\n`, `\n`, and `\r`.
 
 The COPY command prefixes the `\r` character when specifying `\n` (newline) resulting in `\r\n`. To specify only the `\n` character, use hexadecimal notation (`0x0A`). When specifying multi-character row terminators in hexadecimal, don't specify 0x between each character.
 
-Extended ASCII and multi-byte characters and aren't supported with UTF-8 for ROWTERMINATOR.
+Extended ASCII and multi-byte characters aren't supported with UTF-8 for ROWTERMINATOR.
 
 #### *FIRSTROW = First_row_int*
 
@@ -735,7 +741,9 @@ Parser version 2.0 has the following limitations:
 
 - Compressed CSV files are not supported
 - Files with UTF-16 encoding are not supported
-- Multicharacter ROWTERMINATOR, FIELDTERMINATOR, or FIELDQUOTE is not supported. However, '\r\n' is accepted as a default ROWTERMINATOR
+- Multicharacter or multibyte ROWTERMINATOR, FIELDTERMINATOR, or FIELDQUOTE is not supported. However, '\r\n' is accepted as a default ROWTERMINATOR
+
+When using parser version 1.0 with UTF-8 files, multibyte and multicharacter terminators are not supported for FIELDTERMINATOR. 
 
 Parser version 1.0 is available for backward compatibility only, and should be used only when these limitations are encountered.  
 
@@ -767,7 +775,7 @@ The default values of the COPY command are:
 
 - COMPRESSION default is uncompressed
 
-- FIELDQUOTE = ''
+- FIELDQUOTE = '"'
 
 - FIELDTERMINATOR = ','
 
@@ -854,11 +862,11 @@ WITH (
 
 ### What is the file splitting guidance for the COPY command loading compressed CSV files?
 
-Consider splitting large CSV files, but keep files at a minimum of 4 MB each for better performance.
+Consider splitting large CSV files, especially when the number of files is small, but keep files at a minimum of 4 MB each for better performance.
 
 ### What is the file splitting guidance for the COPY command loading Parquet files?
 
-There's no need to split Parquet because the COPY command splits files automatically. Parquet files in the Azure storage account should be 256 MB or larger for best performance.
+Consider splitting large Parquet files, especially when the number of files is small. 
 
 ### Are there any limitations on the number or size of files?
 

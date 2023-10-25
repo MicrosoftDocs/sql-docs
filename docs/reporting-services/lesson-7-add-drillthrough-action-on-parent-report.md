@@ -1,5 +1,5 @@
 ---
-title: "Lesson 7: Add Drillthrough Action on Parent Report"
+title: "Lesson 7: Add a drillthrough action on the parent report"
 description: Learn how to add a drillthrough action on the parent report after you add a ReportViewer control to the website application.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 7: Add Drillthrough Action on Parent Report
+# Lesson 7: Add a drillthrough action on the parent report
 After you add a ReportViewer control to the website application, your next step is to add a drillthrough action on the parent report.  
   
 ### To add drillthrough action on the parent report  
@@ -33,8 +33,8 @@ After you add a ReportViewer control to the website application, your next step 
   
 8.  Select **Ok** to finish.  
   
-## Next Task  
-You have successfully added a drillthrough action on the parent report. Next, you will create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a Data Filter](../reporting-services/lesson-8-create-a-data-filter.md).  
+## Next task  
+You have successfully added a drillthrough action on the parent report. Next, you will create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a data filter](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Adding Grouping and Totals (Reporting Services)"
+title: "Lesson 6: Adding grouping and totals (Reporting Services)"
 description: Learn how to add grouping and totals to your Reporting Services report to organize and summarize your data.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Lesson 6: Adding Grouping and Totals (Reporting Services)
+# Lesson 6: Adding grouping and totals (Reporting Services)
 
 In the final tutorial lesson, you're going to add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
 
@@ -23,17 +23,18 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
     > [!NOTE]
     > Note that the row handle now has a bracket in it, to indicate a group. The table now also has two `[Date]` expression columns, one on both sides of a vertical dotted line.
     >
-    >![date group added](media/rs-basictablegroups1design.png "date group added")
+    >:::image type="content" source="media/rs-basictablegroups1design.png" alt-text="Screenshot of a table showing the row handle and two Date expression columns." lightbox="media/rs-basictablegroups1design.png":::
+
 4. From the **Report Data** pane, drag the `[Order]` field to the **Row Groups** pane. Place it below **Date** and above **= (Details)**.
 
-    ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
+    :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details." lightbox="media/ssrs-ssdt-addorderfield.png":::
 
     > [!NOTE]
     > Note that now the row handle has two brackets in it, ![ssrs_ssdt_rowgroupdoublehandles](media/ssrs-ssdt-rowgroupdoublehandles.png) to indicate two groups. The table now also has two `[Order]` expression columns.
 
 5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
-    ![Select columns to delete](media/rs-basictablegroupsdeletecols.gif "Select columns to delete")
+    :::image type="content" source="media/rs-basictablegroupsdeletecols.gif" alt-text="Screenshot of the the two columns selected in the table." lightbox="media/rs-basictablegroupsdeletecols.gif":::
 
 6. To format the new `[Date]` column, right-click the data region cell that contains the `[Date]` expression, and select **Text Box Properties**.
 7. Select **Number** in the left-most column list box, and **Date** from the **Category** list box.
@@ -41,7 +42,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 9. Select **OK** to apply the format.
 10. Again, preview the report. It should look as below:
 
-    ![rs_BasicTableGroupsPreview](media/rs-basictablegroupspreview.png)
+    :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table." lightbox="media/rs-basictablegroupspreview.png":::
 
 ## Adding totals to a report
 
@@ -53,7 +54,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 6. From the **Format** menu, select **Background Color** > **Light Gray** square.
 7. Select **OK** to apply the format.
 
-   ![Design view: Basic table with order total](media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")
+    :::image type="content" source="media/rs-basictablesumlinetotaldesign.gif" alt-text="Screenshot of the formatted table with the order total." lightbox="media/rs-basictablesumlinetotaldesign.gif":::
 
 ## Add the daily total to the report
 
@@ -63,7 +64,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. From the **Format** menu, select **Background Color** > **Orange** square.
 5. Select **OK** to apply the format.
 
-   ![Set background color to Orange](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+    :::image type="content" source="media/rs-basictablesumdaytotaldesign.gif" alt-text="Screenshot of the formatted table with the daily total." lightbox="media/rs-basictablesumdaytotaldesign.gif":::
 
 ## Add the grand total to the report
 
@@ -73,13 +74,14 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. From the **Format** menu, select **Background Color** > **Light Blue** square.
 5. Select **OK** to apply the format.
 
-    ![Design view: Grand total in basic table](media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")
+    :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with the grand total." lightbox="media/rs-basictablesumgrandtotaldesign.gif":::
 
 ## Preview the report
 
 To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). The results should display as below:
 
-   ![Preview: Basic table with grand total](media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")
+   ![Preview: Basic table with grand total]( "Preview: Basic table with grand total")
+    :::image type="content" source="media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted." lightbox="media/rs-basictablesumgrandtotalpreview.gif":::
 
 ## Publishing the report to the *Report Server* (Optional)
 
@@ -123,4 +125,4 @@ You've successfully completed the **Creating a Basic Table Report tutorial**.
 
 ## See also
 
-[Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+[Filter, group, and sort data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

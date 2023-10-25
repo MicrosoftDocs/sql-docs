@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Formatting a Report (Reporting Services)"
+title: "Lesson 5: Formatting a report (Reporting Services)"
 description: Learn how to format the date and currency fields and the column headers after you've added a data region and some fields to the Sales Orders report.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 Now that you've added a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.
 
-## <a name="bkmk_format_date"></a>Format the Date
+## <a name="bkmk_format_date"></a>Format the date
 
 The Date field expression displays date and time information by default. You can format it to display only the date.
 
@@ -24,7 +24,7 @@ The Date field expression displays date and time information by default. You can
 5. Select **OK** to apply the format.
 6. Preview the report to see the change to the `[Date]` field formatting, and then change back to design view.
 
-## <a name="bkmk_format_currency"></a>Format the Currency
+## <a name="bkmk_format_currency"></a>Format the currency
 
 The LineTotal field expression displays a general number. You can format it to display the number as currency.
 
@@ -38,7 +38,7 @@ The LineTotal field expression displays a general number. You can format it to d
 5. Select **OK** to apply the format.
 6. Preview the report to see the change to the `[LineTotal]` expression column and then change back to design view.  
 
-## <a name="bkmk_change_textstyle"></a>Change Text Style and Column Widths
+## <a name="bkmk_change_textstyle"></a>Change text style and column widths
 
 You can add other formatting to your report by highlighting the header row, and adjusting the widths of the data columns.
 
@@ -47,13 +47,14 @@ You can add other formatting to your report by highlighting the header row, and 
 1. Select the table so that column and row handles appear above and next to the table. The gray bars along the top and side of the table are the column and row handles.
 
 2. Point to the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
-    ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
+
+    :::image type="content" source="media/rs-basictabledetailsdesign.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns." lightbox="media/rs-basictabledetailsdesign.png":::
 
 3. Select the row containing column header labels and from the **Format** menu, select **Font** > **Bold**.
 
 4. Preview your report. It should display as below:
 
-    ![Preview of table with bold column headers](media/rs-basictabledetailsformattedpreview.png "Preview of table with bold column headers")  
+    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers." lightbox="media/rs-basictabledetailsformattedpreview.png":::
 
 5. From the **File** menu, select **Save All** to save the report.
 

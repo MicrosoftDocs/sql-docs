@@ -1,5 +1,5 @@
 ---
-title: "Lesson 8: Create a Data Filter"
+title: "Lesson 8: Create a data filter"
 description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 8: Create a Data Filter
+# Lesson 8: Create a data filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  
   
 You can create a table-based filter **or** a query filter for the drillthrough report. This lesson provides instructions for both options.  
   
-## Table-Based Filter  
+## Table-based filter  
 You need to complete the following tasks to implement a table-based filter.  
   
 -   Add a filter expression to the tablix in the child report.  
@@ -47,9 +47,9 @@ You need to complete the following tasks to implement a table-based filter.
   
 2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object, and does the following.  
   
-    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a Data Connection and Data Table for Child Report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a Data Connection and DataTable for Child Report**.  
+    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data donnection and data table for the child report**.  
   
     3.  The query will return unfiltered data.  
   
@@ -144,7 +144,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 6.  Save the file.  
   
-## Query Filter  
+## Query filter  
 You need to complete the following tasks to implement a query filter.  
   
 -   Create a function that selected filtered data from the **PurchaseOrderDetail** table.  
@@ -157,9 +157,9 @@ You need to complete the following tasks to implement a query filter.
   
 2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object and does the following.  
   
-    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a Data Connection and Data Table for Child Report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Create a connection to the SqlServer database to execute the query defined **Lesson 4: Define a Data Connection and DataTable for Child Report**.  
+    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data connection and data table for the child report**.  
   
     3.  The query will include a parameter, **productid**, to make sure the data returned is filtered based on the **ProductID** selected in the parent report.  
   
@@ -280,8 +280,8 @@ You need to complete the following tasks to implement a query filter.
   
 6.  Save the file.  
   
-## Next Task  
-You have successfully created a data filter for the data table that you defined for the child report. Next, you will build and run the website application. See [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md).  
+## Next task  
+You have successfully created a data filter for the data table that you defined for the child report. Next, you will build and run the website application. See [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

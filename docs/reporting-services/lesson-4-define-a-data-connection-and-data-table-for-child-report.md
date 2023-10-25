@@ -1,5 +1,5 @@
 ---
-title: "Lesson 4: Define a Data Connection and Data Table for Child Report"
+title: "Lesson 4: Define a data connection and data table for the child report"
 description: Learn how to use Reporting Services to create a data connection and a data table for the child report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 4: Define a Data Connection and Data Table for Child Report
+# Lesson 4: Define a data connection and data table for the child report
 After you design the parent report, you next step is to create a data connection and a data table for the child report.
 
 [!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   
-### To define a data connection and DataTable by adding a DataSet (for child report)  
+### To define a data connection and DataTable by adding a DataSet (for the child report)  
   
 1.  On the **Website** menu, select **Add New Item**.  
   
@@ -63,5 +63,5 @@ After you design the parent report, you next step is to create a data connection
   
 12. To preview the data, select **Preview Data** on the **Data** menu, and then select **Preview**.  
   
-## Next Task  
-You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the Child Report using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+## Next task  
+You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the child report using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  

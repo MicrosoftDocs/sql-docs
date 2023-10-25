@@ -144,11 +144,17 @@ The current release of SSMS supports the following 64-bit platforms when used wi
 
 Supported Operating Systems:
 
-- Windows 11 (64-bit)
-- Windows 10 (64-bit) version 1607 (10.0.14393) or later
-- Windows Server 2022 (64-bit)
-- Windows Server 2019 (64-bit)
-- Windows Server 2016 (64-bit)
+- Windows 11 (x64)
+- Windows 10 (x64) version 1607 (10.0.14393) or later
+- Windows Server 2022 (x64)
+- Windows Server Core 2022 (x64)
+- Windows Server 2019 (x64)
+- Windows Server Core 2019 (x64)
+- Windows Server 2016 (x64)
+
+> [!NOTE]
+> To install SSMS on Windows Server Core, you must install the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand).
+> The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server installations at any time, beginning with Windows Server 2019.
 
 Supported hardware:
 

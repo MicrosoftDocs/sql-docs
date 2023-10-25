@@ -653,6 +653,21 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_
 
 ::: moniker-end
 
+> [!NOTE]  
+> When using SQL Server docker containers,
+You could make use of mssql-conf utility to set sql server parameters. 
+
+For example, In order to set memory limits for a SQL Server docker container,
+You could run the sample command.
+
+First step is to exec into the container, execute the command as root user, and make use of mssql-conf utility, to set the parameter of your choice.
+
+docker exec -it sqlcontainer "bash"
+
+docker exec -u root -it e03f54ab51c4 "bash"  (execute as root)
+
+ /opt/mssql/bin/mssql-conf set memory.memorylimitmb 2048
+
 ## Examples of custom Docker containers
 
 For examples of custom Docker containers, see <https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples>. The examples include:

@@ -204,17 +204,17 @@ If a **subscriber** SQL managed instance is in a failover group, the publication
 
 ### Transaction log and Transactional Replication
 
-In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There are also automatic process that allow safe truncation of the transaction log, and this process reduces the used storage space for the log.
-When publishing for Transactional Replication is configured, transaction log truncation is prevented until changes in the log are processed by the log reader job. In some circumstances, processing of the transaction log is effectively blocked, and that state can lead to filling up entire storage reserved for transaction log. When there is no free space for transaction log, and there is no more space for transaction log to grow, we have full transaction log. In this state, the database can no longer process any write workload, and effectively becomes read-only database. 
+In usual circumstances, transcation log is used for recording changes of the data within a database. Changes are recorded in the transaction log, and that makes the log storage consumption to grow. There is also an automatic process that allows safe truncation of the transaction log, and this process reduces the used storage space for the log.
+When publishing for Transactional Replication is configured, transaction log truncation is prevented until changes in the log are processed by the log reader job. In some circumstances, processing of the transaction log is effectively blocked, and that state can lead to filling up entire storage reserved for transaction log. When there's no free space for transaction log, and there's no more space for transaction log to grow, we have full transaction log. In this state, the database can no longer process any write workload, and effectively becomes read-only database. 
 
 #### Disabled log reader agent
 
-Sometimes Transactional Replication publication is configured for a database, but log reader agent is not configured to run. In that case, changes are accumulating in the transaction log, and they are not being processed. This leads to constant growth of transactional log, and eventually to the full transcation log.
+Sometimes Transactional Replication publication is configured for a database, but log reader agent isn't configured to run. In that case, changes are accumulating in the transaction log, and they aren't being processed. This leads to constant growth of transactional log, and eventually to the full transcation log.
 User should make sure that log reader job exists and is active. Alternative would be to disable Transactional Replication, if it's not needed.
 
 #### Log reader agent query timeouts
 
-Sometimes, log reader job cannot make effective progress due to repeated query timeouts. A way to fix query timeouts is to increase the query timeout setting for the log reader agent job.
+Sometimes, log reader job can't make effective progress due to repeated query timeouts. A way to fix query timeouts is to increase the query timeout setting for the log reader agent job.
 
 ## Next steps
 

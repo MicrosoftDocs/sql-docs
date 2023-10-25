@@ -34,6 +34,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |filestream_filegroup_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Indicates the ID of the FILESTREAM filegroup stored on this partition.|  
 |data_compression|**tinyint**|Indicates the state of compression for each partition:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE : **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later<br />4 = COLUMNSTORE_ARCHIVE : **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later<br /><br /> **Note:** Full text indexes will be compressed in any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |data_compression_desc|**nvarchar(60)**|Indicates the state of compression for each partition. Possible values for rowstore tables are NONE, ROW, and PAGE. Possible values for columnstore tables are COLUMNSTORE and COLUMNSTORE_ARCHIVE.|  
+|xml_compression|**bit**|Indicates the state of XML compression for each partition:<br /><br /> 0 = OFF <br />1 = ON|
+|xml_compression_desc|**varchar(3)**|Indicates the state of XML compression for each partition. Possible values are OFF and ON.|
   
 ## Permissions  
  Requires membership in the **public** role. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

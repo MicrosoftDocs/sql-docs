@@ -9,14 +9,14 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 3: Defining a data-driven dubscription
+# Lesson 3: Defining a data-driven subscription
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
   
 > [!NOTE]  
 > Before you start, verify that **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).
 This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the report data Source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
-## <a name="bkmk_startwizard"></a>Start the data-driven subscription wizard  
+## <a name="bkmk_startwizard"></a>Start the data-driven Subscription Wizard  
   
 1.  In [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, click **Home**, and navigate to the folder containing the **Sales Orders** report.  
   

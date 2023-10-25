@@ -14,7 +14,7 @@ In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial l
   
 You will also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
   
-## <a name="bkmk_modify_datasource"></a>To Modify the data source to use stored credentials  
+## <a name="bkmk_modify_datasource"></a>To modify the data source to use stored credentials  
   
 1.  Browse to the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
  
@@ -48,7 +48,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 11. View the report to verify that the report runs with the credentials you specified. .  
   
-## <a name="bkmk_modify_dataset"></a>To Modify the AdventureWorksDataset  
+## <a name="bkmk_modify_dataset"></a>To modify the AdventureWorksDataset  
  In the following steps you will modify the dataset to use a parameter to filter the data set based an order number.
 1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -77,7 +77,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 4.  Click **OK**  
  In the following steps you will add a parameter to the report.  The report parameter feeds the dataset parameter. 
-## <a name="bkmk_add_reportparameter"></a>To Add a Report Parameter and Republish the Report  
+## <a name="bkmk_add_reportparameter"></a>To add a report parameter and republish the report  
   
 1.  In the **Report Data** pane expand the parameters folder and double-click the **Ordernumber** parameter.  It was created automatically as part of the previous steps when you added the parameter to the dataset. click **New** and then click **Parameter...**  
 

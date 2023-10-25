@@ -155,7 +155,6 @@ Supported Operating Systems:
 
 > [!NOTE]
 > To install SSMS on Windows Server Core, you must install the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand).
-> The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server installations at any time, beginning with Windows Server 2019.
 
 Supported hardware:
 

@@ -491,7 +491,7 @@ ms.topic: include
 | 8753 | 16 | No | Get multiple nodes from XML DOM failed. |
 | 8754 | 16 | No | Error while creating an XML parser instance. |
 | 8755 | 16 | No | Variant type change failed. |
-| 8756 | 16 | No | Loading XML DOM from byte strean failed. |
+| 8756 | 16 | No | Loading XML DOM from byte stream failed. |
 | 8757 | 16 | No | Get document element XML DOM failed. |
 | 8758 | 16 | No | Get next node from XML DOM node failed. |
 | 8759 | 16 | No | Get length of node list from XML DOM node failed. |

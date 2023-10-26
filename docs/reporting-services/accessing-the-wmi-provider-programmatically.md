@@ -12,10 +12,10 @@ ms.custom: updatefrequency5
 # Accessing the WMI Provider programmatically
 
 ## WMI Provider overview  
- The namespace used to obtain information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in the code samples shown in this topic is the **System.Management** namespace, found in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. The **System.Management** namespace provides a set of managed code classes through which [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] applications can access and manipulate management information. For more information on using the Reporting Services WMI classes using the **System.Management** namespace, see "Accessing Management Information with System.Management" in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
+ The namespace used to obtain information about [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in the code samples shown in this article is the **System.Management** namespace, found in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. The **System.Management** namespace provides a set of managed code classes through which [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] applications can access and manipulate management information. For more information on using the Reporting Services WMI classes with the **System.Management** namespace, see "Accessing Management Information with System.Management" in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
   
 ## Finding a report server instance  
- The preferred way of finding information on your report server installations is to enumerate through the WMI instance collection. The example below shows how to find properties on every report server instance by creating a collection, and looping through the collection to display the properties.  
+ The preferred way of finding information on your report server installations is to enumerate through the WMI instance collection. The following example shows how to find properties on every report server instance by creating a collection, and looping through the collection to display the properties.  
   
 ```vb  
 Imports System  

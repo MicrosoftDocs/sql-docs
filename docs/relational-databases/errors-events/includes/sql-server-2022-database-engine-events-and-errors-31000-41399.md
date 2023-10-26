@@ -1893,7 +1893,7 @@ ms.topic: include
 | 40916 | 16 | No | The Failover Group '%.\*ls' already exists on server '%.\*ls' |
 | 40917 | 16 | No | The Failover Group '%.\*ls' does not exist on server '%.\*ls' |
 | 40918 | 16 | No | The Failover Group '%.\*ls' is busy with another operation and cannot perform the '%.\*ls' operation. Please try again later |
-| 40919 | 16 | No | The server '%.\*ls' is currently the primary server in the Failover Group and cannot initate failover |
+| 40919 | 16 | No | The server '%.\*ls' is currently the primary server in the Failover Group and cannot initiate failover |
 | 40920 | 16 | No | The database '%.\*ls' is already included in another Failover Group |
 | 40921 | 16 | No | The operation to add database '%.\*ls' to Failover Group is in progress, please wait for this operation to finish |
 | 40922 | 16 | No | The operation to remove database '%.\*ls' from Failover Group is in progress, please wait for this operation to finish |

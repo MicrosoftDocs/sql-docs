@@ -1,6 +1,6 @@
 ---
 title: "Lesson 1: Creating a sample subscriber database"
-description: Learn how to create a small subscriber database to store subscription data that will be used by a data-driven subscription.
+description: Learn how to create a small subscriber database to store subscription data for your data-driven subscription.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/30/2017
@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 
 # Lesson 1: Creating a sample subscriber database
 
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data that will be used by a data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they're created.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data for your data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they're created.  
   
 This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] to create a SQL Server database.  
   

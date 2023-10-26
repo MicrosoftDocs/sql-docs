@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Lesson 1: Create a new website
 In this lesson you'll learn how to create a new website project using the ASP.NET website template for Visual C#.  
   
-## To create a new website  
+## Create a new website  
   
 1.  Open Microsoft Visual Studio 2015.  
   

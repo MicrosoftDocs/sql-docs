@@ -68,7 +68,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 2.  Specify a time-out of 30 seconds.  
   
-3.  Selecr **Validate query**, and then choose **Apply**.
+3.  Select **Validate query**, and then choose **Apply**.
 
 ## Delivery options
 Fill in the following values:

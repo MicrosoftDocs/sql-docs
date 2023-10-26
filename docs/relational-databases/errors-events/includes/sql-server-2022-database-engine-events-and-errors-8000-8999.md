@@ -357,7 +357,7 @@ ms.topic: include
 | 8573 | 10 | Yes | %ls '%ls' resolves to '%ls' IP address. |
 | 8574 | 16 | Yes | The provided host FQDN '%ls' is invalid. |
 | 8575 | 16 | Yes | NetBIOS hostname extracted from the provided FQDN is invalid. |
-| 8576 | 16 | Yes | RPC Endpoint Mappper on host '%ls' ('%ls') was unreachable. |
+| 8576 | 16 | Yes | RPC Endpoint Mapper on host '%ls' ('%ls') was unreachable. |
 | 8577 | 16 | Yes | DTC for Azure SQL Managed Instance %ls is disabled. To learn how to enable DTC, see: [https://learn.microsoft.com/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
 | 8578 | 10 | Yes | %ls test %ls. |
 | 8579 | 10 | Yes | Testing connection to '%ls' ('%ls') succeeded. |

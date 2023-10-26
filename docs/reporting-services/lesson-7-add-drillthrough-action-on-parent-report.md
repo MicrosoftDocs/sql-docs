@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Lesson 7: Add a drillthrough action on the parent report
 After you add a ReportViewer control to the website application, your next step is to add a drillthrough action on the parent report.  
   
-### To add drillthrough action on the parent report  
+### Add drillthrough action on the parent report  
   
 1.  Go to the parent report.  
   

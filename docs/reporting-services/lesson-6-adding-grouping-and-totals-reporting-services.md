@@ -14,7 +14,7 @@ ms.custom: updatefrequency5
 
 In the final tutorial lesson, you're going to add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
 
-## To group data in a report
+## Group data in a report
 
 1. Select the **Design** tab.
 2. If you don't see the **Row Groups** pane, right-click the design surface and select **View** >**Grouping**.
@@ -34,7 +34,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 
 5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
-    :::image type="content" source="media/rs-basictablegroupsdeletecols.gif" alt-text="Screenshot of the the two columns selected in the table." lightbox="media/rs-basictablegroupsdeletecols.gif":::
+    :::image type="content" source="media/rs-basictablegroupsdeletecols.gif" alt-text="Screenshot of the two columns selected in the table." lightbox="media/rs-basictablegroupsdeletecols.gif":::
 
 6. To format the new `[Date]` column, right-click the data region cell that contains the `[Date]` expression, and select **Text Box Properties**.
 7. Select **Number** in the left-most column list box, and **Date** from the **Category** list box.

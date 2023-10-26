@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 4: Define a data connection and data table for the child report
-After you design the parent report, you next step is to create a data connection and a data table for the child report.
+After you design the parent report, your next step is to create a data connection and a data table for the child report.
 
 [!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   

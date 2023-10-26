@@ -41,7 +41,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 8.  Save the .rdlc file.  
   
-### To create a function that selects unfiltered data from the PurchaseOrdeDetail table  
+### Create a function that selects unfiltered data from the PurchaseOrdeDetail table  
   
 1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
@@ -49,7 +49,7 @@ You need to complete the following tasks to implement a table-based filter.
   
     1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data donnection and data table for the child report**.  
+    2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data connection and data table for the child report**.  
   
     3.  The query will return unfiltered data.  
   
@@ -93,7 +93,7 @@ You need to complete the following tasks to implement a table-based filter.
             }  
         ```  
   
-### To add an event handler that binds the PurchaseOrderDetail DataTable to the child report  
+### Add an event handler that binds the PurchaseOrderDetail DataTable to the child report  
   
 1.  Open Default.aspx in designer view.  
   
@@ -111,7 +111,7 @@ You need to complete the following tasks to implement a table-based filter.
     }  
     ```  
   
-5.  Complete the event handler. It should include the following functionalty.  
+5.  Complete the event handler. It should include the following functionality.  
   
     1.  Fetch the child report object reference from the *DrillthroughEventArgs* parameter.  
   
@@ -151,7 +151,7 @@ You need to complete the following tasks to implement a query filter.
   
 -   Add an event handler that retrieves parameter values and binds the **PurchaseOrdeDetail** DataTable to the child report.  
   
-### To create a function that selects filtered data from the PurchaseOrderDetail table  
+### Create a function that selects filtered data from the PurchaseOrderDetail table  
   
 1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
@@ -209,7 +209,7 @@ You need to complete the following tasks to implement a query filter.
             }  
         ```  
   
-### To add an event handler that retrieves parameter values and binds the PurchaseOrdeDetail DataTable to the child report  
+### Add an event handler that retrieves parameter values and binds the PurchaseOrdeDetail DataTable to the child report  
   
 1.  Open Default.aspx in designer view.  
   

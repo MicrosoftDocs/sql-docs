@@ -12,13 +12,13 @@ ms.custom: updatefrequency5
 # Lesson 5: Design the child report using the Report Wizard
 After you create a data connection and data table for the child report, your next step is to design the child report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-### To design the child report using the Report Wizard  
+### Design the child report using the Report Wizard  
   
 1.  Make sure that the top-level website is selected in **Solution Explorer**.  
   
 2.  Right-click on the website and select **Add New Item**.  
   
-3.  In the **Add New Item** dialog box, click **Report Wizard**, enter a name for the report file, and then select **Add**.  
+3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
   
     This launches the Report Wizard.  
   
@@ -46,7 +46,7 @@ After you create a data connection and data table for the child report, your nex
   
     3.  Confirm that **Integer** is selected in the **Data Type** list box.  
   
-    4.  Click **OK**.  
+    4.  Select **OK**.  
   
 9. Save the .rdlc file.  
   

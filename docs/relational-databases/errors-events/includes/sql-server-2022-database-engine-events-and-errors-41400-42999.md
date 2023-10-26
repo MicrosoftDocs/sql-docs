@@ -249,7 +249,7 @@ ms.topic: include
 | 41949 | 16 | No | Managed Instance link cannot replicate data because maximum number of %u files were reached on Azure SQL Managed Instance. Consider reducing the number of files on the source and try again. |
 | 41950 | 16 | No | Source database on SQL Server must not use FileStream or FileTables for data replication to Azure SQL Managed Instance. Consider removing FileStream and FileTables on the source database on SQL Server and try again. |
 | 41951 | 16 | No | Azure SQL Managed Instance link cannot be created with source database '%.\*ls' on SQL Server, because the database contains files in DEFUNCT state. Remove the faulty files and retry again. |
-| 41952 | 16 | No | Azure SQL Managed Instance link cannot be created with source database '%.\*ls' on SQL Server, bacause the database contains unsupported feature '%.\*ls'. |
+| 41952 | 16 | No | Azure SQL Managed Instance link cannot be created with source database '%.\*ls' on SQL Server, because the database contains unsupported feature '%.\*ls'. |
 | 41953 | 16 | No | Functionality cannot be used as it is not available on Azure SQL Managed Instance. |
 | 41954 | 21 | No | Transient error occurred on database '%.\*ls' while trying to change managed instance role to primary. The system will automatically retry the operation. If the issue persists, contact Microsoft Support for Azure SQL Managed Instance. |
 | 41955 | 21 | No | Transient error occurred while trying to retrieve backup metadata for database '%.\*ls'. The system will automatically retry the operation. If the issue persists, contact Microsoft Support for Azure SQL Managed Instance. |

@@ -536,6 +536,6 @@ ms.topic: include
 | 6994 | 16 | No | Invalid restriction for type '%s'. The attribute wildcard in the restricted type must be a valid subset of the corresponding attribute wildcard in the base type, and the processContents may not be more permissive. |
 | 6995 | 16 | No | Invalid definition for type '%s'. SQL Server does not permit the built-in XML Schema types 'ID' and 'IDREF' or types derived from them to be used as the type of an element or as the basis for derivation by extension. |
 | 6996 | 16 | No | Invalid type definition for type '%s'. A type may not have both 'minInclusive' and 'minExclusive' or 'maxInclusive' and 'maxExclusive' facets. |
-| 6997 | 16 | No | Invalid definition for element '%s'. An element which has a fixed value may not also be nullable. |
+| 6997 | 16 | No | Invalid definition for element '%s'. An element which has a fixed value may not also be nillable. |
 | 6998 | 16 | No | Invalid type definition: Type or content model '%s' is too complicated. It may be necessary to reduce the number of enumerations or the size of the content model. |
 | 6999 | 16 | No | Invalid definition for element or attribute '%s'. Value constraints on components of type QName are not supported in this release. |

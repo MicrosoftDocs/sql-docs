@@ -160,7 +160,7 @@ ms.topic: include
 | 5182 | 10 | Yes | New log file '%.\*ls' was created. |
 | 5183 | 16 | No | Cannot create the file "%ls". Use WITH MOVE to specify a usable physical file name. Use WITH REPLACE to overwrite an existing file. |
 | 5184 | 16 | No | Cannot use file '%.\*ls' for clustered server. Only formatted files on which the cluster resource of the server has a dependency can be used. Either the disk resource containing the file is not present in the cluster group or the cluster resource of the Sql Server does not have a dependency on it. |
-| 5185 | 16 | No | Cannot find the matching log file for FILESTRAM file '%.\*ls'. |
+| 5185 | 16 | No | Cannot find the matching log file for FILESTREAM file '%.\*ls'. |
 | 5186 | 16 | No | Encountered an error (NT status code 0x%x) while attempting to start the Transactional File System Resource Manager '%.\*ls'. |
 | 5188 | 16 | No | Encountered error (NT status code 0x%x) while attempting to perform redo for transactional file system resource manager '%.\*ls'. |
 | 5189 | 16 | No | Encountered error (NT status code 0x%x) while attempting to perform undo for transactional file system resource manager '%.\*ls'. |

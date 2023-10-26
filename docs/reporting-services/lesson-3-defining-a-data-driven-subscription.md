@@ -18,22 +18,22 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 ## <a name="bkmk_startwizard"></a>Start the data-driven Subscription Wizard  
   
-1.  In [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, click **Home**, and navigate to the folder containing the **Sales Orders** report.  
+1.  In [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal, select **Home**, and navigate to the folder containing the **Sales Orders** report.  
   
-2.  In the context menu :::image type="icon" source="../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png"::: of the report, click **Manage**, and then click **Subscriptions** in the left pane.  
+2.  In the context menu :::image type="icon" source="../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png"::: of the report, select **Manage**, and then choose **Subscriptions** in the left pane.  
   
-3. Click **+ New Subscription**. If you do not see this button, you do not have Content Manager permissions.
+3. Select **+ New Subscription**. If you do not see this button, you do not have Content Manager permissions.
   
 ## Define a description  
 1.  Type **Sales Order delivery** in description.
 
 ## Type
-1.  click **Data-driven subscription**..  
+1. Select **Data-driven subscription**. 
 
 ## Schedule
-1. In the schedule section click **Report-specific schedule**.
-2. Click **Edit schedule**.
-3. In **Schedule Details**, click **Once**.  
+1. In the schedule section select **Report-specific schedule**.
+2. Select **Edit schedule**.
+3. In **Schedule Details**, select **Once**.  
 4. Specify a start time that is a few minutes ahead of the current time.  
 5. Specify the **Start and end dates**.
 6. Select **Apply**.
@@ -42,7 +42,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 1.  In the Destination section, select **Windows File Share** for the method of delivery.  
 
 ## Dataset
-1. click **Edit Dataset**.
+1. Select **Edit Dataset**.
 2. Select **A custom data source**.
 3. Select **Microsoft SQL Server** as the data source **Connection** type.
 4. In Connection string, type the following connection string. *Subscribers* is the database you created in lesson 1. 
@@ -68,7 +68,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 2.  Specify a time-out of 30 seconds.  
   
-3.  Click **Validate query**, and then click **Apply**.
+3.  Selecr **Validate query**, and then choose **Apply**.
 
 ## Delivery options
 Fill in the following values:
@@ -85,7 +85,7 @@ Parameter  |Source of value  | Value/field
 **Use file share account** | Enter value | False
 
 ## Report parameters
- 1. In the **OrderNumber** field , select **Get value from dataset**. In Value, select **Order**. 
+ 1. In the **OrderNumber** field, select **Get value from dataset**. In Value, select **Order**. 
  2. Select **Create Subscription**.
    
 ## Next steps  

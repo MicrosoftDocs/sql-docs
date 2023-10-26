@@ -21,7 +21,7 @@ In this lesson, you create a *report server project* and a *report definition (.
 
 When you create reports with Report Designer, it creates a report server project that contains the report files and other resource files used by the report(s).
 
-## To create a report server project
+## Create a report server project
   
 1. From the **File** menu, select **New** > **Project**.  
 

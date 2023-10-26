@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 2: Modifying the report data source properties
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you'll define will distribute the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you'll modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
   
-You will also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
+You'll also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
   
-## <a name="bkmk_modify_datasource"></a>To modify the data source to use stored credentials  
+## <a name="bkmk_modify_datasource"></a>Modify the data source to use stored credentials  
   
-1.  Browse to the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and click **Run as administrator**.  
+1.  Browse to the [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] web portal with administrator privileges, for example, right-click the icon for Internet Explorer and select **Run as administrator**.  
  
 2.    Browse to the web portal URL.  For example:   
     `https://<server name>/reports`.  
     `https://localhost/reports`
  **Note:** The web *portal* URL is "Reports", not the Report *Server* URL of "Reportserver".  
-3.  Browse to the folder containing the **Sales Orders** report and in the context menu of the report, click **Manage**.  
+3.  Browse to the folder containing the **Sales Orders** report and in the context menu of the report, select **Manage**.  
 
- :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png" alt-text="Screenshot of the context menu of Sales Orders.":::
+    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-manage-report.png" alt-text="Screenshot of the context menu of Sales Orders.":::
   
-3.  Click **Data Sources** in the left pane.  
+3.  Select **Data Sources** in the left pane.  
   
 4.  Verify the **Connection Type** is **Microsoft SQL Server**.  
   
@@ -36,23 +36,23 @@ You will also modify the dataset and report to use a parameter to filter the rep
     Data source=localhost; initial catalog=AdventureWorks2022  
     ```  
   
-6.  Click **Use the following credentials**.  
+6.  Select **Use the following credentials**.  
   
 7. In the **Type of credentials**, select **Windows user name and password**
-8. Type your user name (use the format *domain\user*) and password. If you do not have permission to access the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, specify a login that does.  
+8. Type your user name (use the format *domain\user*) and password. If you don't have permission to access the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] database, specify a sign-in that does.  
     
-9. Click **Test Connection** to verify you can connect to the data source.  
+9. Select **Test Connection** to verify you can connect to the data source.  
   
-10. Click **Save**.
-11. Click **Cancel**  
+10. Select **Save**.
+11. Select **Cancel**  
   
-11. View the report to verify that the report runs with the credentials you specified. .  
+11. View the report to verify that the report runs with the credentials you specified.  
   
-## <a name="bkmk_modify_dataset"></a>To modify the AdventureWorksDataset  
- In the following steps you will modify the dataset to use a parameter to filter the data set based an order number.
+## <a name="bkmk_modify_dataset"></a>Modify the AdventureWorksDataset  
+ In the following steps, you'll modify the dataset to use a parameter to filter the data set based an order number.
 1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
-2.  Right-click the dataset `AdventureWorksDataset` and click **Dataset Properties**.
+2.  Right-click the dataset `AdventureWorksDataset` and select **Dataset Properties**.
 
     :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png" alt-text="Screenshot of the context menu for AdventureWorksDataset highlighting the Dataset Properties option." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png":::
 
@@ -75,13 +75,13 @@ You will also modify the dataset and report to use a parameter to filter the rep
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  Click **OK**  
- In the following steps you will add a parameter to the report.  The report parameter feeds the dataset parameter. 
-## <a name="bkmk_add_reportparameter"></a>To add a report parameter and republish the report  
+4.  Select **OK**  
+ In the following steps you'll add a parameter to the report.  The report parameter feeds the dataset parameter. 
+## <a name="bkmk_add_reportparameter"></a>Add a report parameter and republish the report  
   
-1.  In the **Report Data** pane expand the parameters folder and double-click the **Ordernumber** parameter.  It was created automatically as part of the previous steps when you added the parameter to the dataset. click **New** and then click **Parameter...**  
+1.  In the Report Data pane, expand the parameters folder and double-click the **Ordernumber** parameter.  It was created automatically as part of the previous steps when you added the parameter to the dataset. Select **New** and then choose **Parameter...**  
 
- :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png" alt-text="Screenshot of the Report Data pane highlighting the Ordernumber parameter." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png" alt-text="Screenshot of the Report Data pane highlighting the Ordernumber parameter." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png":::
 
 1.  Verify the **Name** is `OrderNumber`.  
   
@@ -91,13 +91,13 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 5.  Select **Allow null value**.  
   
-6.  Click **OK**.  
+6.  Select **OK**.  
   
-7.  Click the **Preview** tab to run the report. Note the parameter input box at the top of the report. You can either:  
+7.  Select the **Preview** tab to run the report. Note the parameter input box at the top of the report. You can either:  
   
-    -   Click View Report to see the full report without using a parameter.  
+    -   Select View Report to see the full report without using a parameter.  
   
-    -   Unselect the **Null** option and type an order number, for example *so71949*, then click **View Report** to view only the one order in the report.  
+    -   Unselect the **Null** option and type an order number, for example *so71949*, then select **View Report** to view only the one order in the report.  
 
     :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png" alt-text="Screenshot of the preview tab and the View Report button highlighted." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png":::
  
@@ -106,7 +106,7 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
 1.  Re-deploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-2.  On the toolbar click **Build** and then click **Deploy tutorial**.  
+2.  On the toolbar, select **Build** and then choose **Deploy tutorial**.  
   
 ## Next steps  
 + You successfully configured the report to get data using stored credentials and the data can be filtered with a parameter. 

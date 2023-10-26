@@ -21,7 +21,7 @@ The following table lists the device information settings for rendering in HTML 
 |Setting|Value|  
 |-------------|-----------|  
 |**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.|  
-|**ActionScript(\*)**|Specifies the name of the JavaScript function to use when an action event occurs, such as a drillthrough or bookmark click. If this parameter is specified, an action event will trigger the named JavaScript function instead of a postback to the server.|  
+|**ActionScript(\*)**|Specifies the name of the JavaScript function to use when an action event occurs, such as a drillthrough or bookmark selection. If this parameter is specified, an action event will trigger the named JavaScript function instead of a postback to the server.|  
 |**BookmarkID**|The bookmark ID to jump to in the report.|  
 |**DocMap**|Indicates whether to show or hide the report document map. The default value of this parameter is **true**.|  
 |**ExpandContent**|Indicates whether the report should be enclosed in a table structure which constricts horizontal size.|  
@@ -35,7 +35,7 @@ The following table lists the device information settings for rendering in HTML 
 |**OutlookCompat**|Indicates whether to render with extra metadata that makes the report look better in Outlook. For others, the default value is **false**.|  
 |**Parameters**|Indicates whether to show or hide the parameters area of the toolbar. If you set this parameter to a value of **true**, the parameters area of the toolbar is displayed. The default value of this parameter is **true**.|  
 |**PrefixId**|When used with **HTMLFragment**, adds the specified prefix to all **ID** attributes in the HTML fragment that is created.|  
-|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user's click to a custom page.|  
+|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user's selection to a custom page.|  
 |**ResourceStreamRoot(\*)**|The string to prepend to the URL for all image resources, such as images for toggle or sort.|  
 |**Section**|The page number of the report to render. A value of **0** indicates that all sections of the report are rendered. The default value is **1**.|  
 |**StreamRoot (\*)**|The path used for prefixing the value of the **src** attribute of the IMG element in the HTML report returned by the report server. By default, the report server provides the path. You can use this setting to specify a root path for the images in a report (for example, **https://\<servername>/resources/companyimages**).|  

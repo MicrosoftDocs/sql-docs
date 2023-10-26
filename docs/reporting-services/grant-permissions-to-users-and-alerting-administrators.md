@@ -29,11 +29,11 @@ To learn more about SharePoint permissions, see [User permissions and permission
   
 1.  Go to the SharePoint site to which you want to grant permissions.  
   
-2.  On the toolbar, click **Site Actions** and then click **Site Permissions**.  
+2.  On the toolbar, select **Site Actions** and then choose **Site Permissions**.  
   
      If you do not see this option, you do not sufficient permission to grant permissions to others.  
   
-3.  Click **Grant Permissions**.  
+3.  Select **Grant Permissions**.  
   
 4.  In **Users/Groups**, type the user names, group names, or e-mail addresses you want grant permission to.  
   

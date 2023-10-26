@@ -14,7 +14,7 @@ After you create a new website project using the ASP.NET website template for Vi
 
 [!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   
-## To define a data connection and data table by adding a DataSet (for the parent report)  
+## Define a data connection and data table by adding a DataSet (for the parent report)  
   
 1.  On the **Website** menu, select **Add New Item**.  
   

@@ -32,7 +32,7 @@ The benefits in the feature wave include:
 These new preview features were introduced in the wave:
 
 - [Instance stop/start](instance-stop-start-how-to.md): You can start and stop your instance at your discretion to save on billing costs for vCores and SQL Server licensing.
-- [Zone redundancy for Business Critical tier](../database/high-availability-sla.md): You can deploy your Business Critical tier managed instance across multiple availability zones to improve the availability of your service.
+- [Zone redundancy for Business Critical tier](..//managed-instance/high-availability-sla.md): You can deploy your Business Critical tier managed instance across multiple availability zones to improve the availability of your service.
 - [Managed DTC](distributed-transaction-coordinator-dtc.md): Run distributed transactions in mixed environments.
 
 For more information, see [Frequently asked questions](frequently-asked-questions-faq.yml#november-2022-feature-wave).

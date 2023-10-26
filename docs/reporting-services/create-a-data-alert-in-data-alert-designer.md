@@ -24,14 +24,14 @@ You create data alert definitions in Data Alert Designer. After you save the ale
  
 1.  Locate the SharePoint library that contains the report that you want to create a data alert definition for.  
   
-2.  Click the report.  
+2.  Select the report.  
   
      The report runs. If the report is parameterized, verify that the report shows the data that you want to receive alert messages about. If you do not see the columns or values you are interested in, you might want to rerun the report, using different parameter values.  
   
     > [!NOTE]  
     >  The parameter values you chose to run the report are saved in the alert definition and will be used when report is rerun as a step in processing the alert definition. To use different parameter values, you must create a new alert definition.  
   
-3.  On the **Actions** menu, click **New Data Alert**.  
+3.  On the **Actions** menu, select **New Data Alert**.  
   
      The following picture shows the **Actions** menu.
   
@@ -56,39 +56,39 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
-7.  Click **Add rule**.  
+7.  Select **Add rule**.  
   
      A list of the columns in the data feed appears.  
   
 8.  In the list, select the column that you want to use in the rule, and then select a comparison operator and enter the threshold value.  
   
-     Depending on the data type of the selected column, different comparison operators are listed. If the column has a date data type, a calendar icon displays next to threshold value for the rule. You can enter a data by clicking a date in the calendar or typing the date.  
+     Depending on the data type of the selected column, different comparison operators are listed. If the column has a date data type, a calendar icon displays next to threshold value for the rule. You can enter a data by selecting a date in the calendar or typing the date.  
   
      Data Alert Designer provides two comparison modes: **Value Entry Mode** and **Field Selection Mode**. The default mode is **Value Entry Mode**. You can add OR clauses only when you are in **Value Entry Mode** and are using the **is** comparison.  
   
-9. To add an OR clause, click the down-arrow, and then click **Value Entry Mode**.  
+9. To add an OR clause, select the down-arrow, and then choose **Value Entry Mode**.  
   
 10. Type the comparison value.  
   
-11. Optionally, click the ellipsis **(...)** again.  
+11. Optionally, select the ellipsis **(...)** again.  
   
      The ellipsis **(...)** appears on the line that contains the first clause.  
   
      An OR clause is added below and within the AND rule.  
   
-12. Optionally, click the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
+12. Optionally, select the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
   
-     You will notice that the ellipsis **(...)** that you click to add OR clauses has disappeared.  
+     You will notice that the ellipsis **(...)** that you select to add OR clauses has disappeared.  
   
-13. Optionally, click **Add rule** again to add additional rules.  
+13. Optionally, select **Add rule** again to add additional rules.  
   
      The rules are combined by using the AND logical operator.  
   
 14. Select an option in the recurrence list. Depending on the type of recurrence, enter an interval.  
   
-15. Optionally, click **Advanced**.  
+15. Optionally, select **Advanced**.  
   
-16. Optionally, change the date that the alert message starts on by typing a different date or opening the calendar, and then clicking a date in the calendar.  
+16. Optionally, change the date that the alert message starts on by typing a different date or opening the calendar, and then selecting a date in the calendar.  
   
      The default start date is the current date.  
   
@@ -113,7 +113,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 21. Optionally, in the **Description** text box, type a description of the alert message.  
   
-22. Click **Save**.  
+22. Select **Save**.  
 
 ## See also
 

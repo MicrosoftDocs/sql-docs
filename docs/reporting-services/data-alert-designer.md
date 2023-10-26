@@ -48,7 +48,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 >   
 >  Data alerts cannot be created on reports that use Windows Integrated authentication or prompts for credentials. The reports must use stored credentials. For more information, see [Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
- To open Data Alert Designer, you click the **New Data Alert** option on the **Actions** menu on the report toolbar. If you do not see the **New Data Alert** option, the report is not configured to use stored credentials. You can update the credential type by updating the report data source from the SharePoint library.  
+ To open Data Alert Designer, you select the **New Data Alert** option on the **Actions** menu on the report toolbar. If you do not see the **New Data Alert** option, the report is not configured to use stored credentials. You can update the credential type by updating the report data source from the SharePoint library.  
   
 ##  <a name="AlertDesigner"></a> Data Alert Designer user interface  
  The Data Alert Designer is divided into areas. The area where you select the report data feed, the area where you create simple or complex conditions by adding rules to conditions, and so on. The following picture shows the areas in Data Alert Designer.  
@@ -75,13 +75,13 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
  You can create multiple alerts on a report. It is possible to have multiple alert definitions with the same name, but it is recommended that you make alert names unique. It makes it easier to differentiate and manage alert definitions. You can view a list of all the alerts you created in Data Alert Manager. For more information, see [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md) and [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### Rules and clauses  
- The scope of data changes and the in the alert rules define the data changes that trigger the alert. The scope of the data changes are as follow:  
+ The scope of data changes and the alert rules define the data changes that trigger the alert. The scope of the data changes is as follows:  
   
 -   **Any data has**-at least one value in the data satisfies the rules that the condition specifies.  
   
 -   **No data has**-no value in the data satisfied the rules that the condition specifies.  
   
- A rule contains zero, one, or many clauses. Multiple rules are combined by the AND logical operator. A rule can include multiple clause combined by the OR operator if the column has the string data type. The following shows basic rules that use only one clause, multiple rules combined by using the AND operator, multiple rules that with one or more OR clauses.  
+ A rule contains zero, one, or many clauses. Multiple rules are combined by the AND logical operator. A rule can include multiple clauses combined by the OR operator if the column has the string data type. The following shows basic rules that use only one clause, multiple rules combined by using the AND operator, multiple rules that with one or more OR clauses.  
   
  **Simple rules**  
   
@@ -135,7 +135,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
   
 -   String data type comparisons are: **is**, **is not**, and **contains**  
   
- When you create a rule, you specify whether to use to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
+ When you create a rule, you specify whether to use a value or field in the comparison by choosing **Value Entry Mode** or **Field Selection Mode**. If you choose **Value Entry Mode**, you provide a list of values to compare to. A comparison that includes multiple OR clauses is very similar to the IN logical comparison in [!INCLUDE[tsql](../includes/tsql-md.md)], which is a list of values to test for a match. For more information, see [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
   
  If you choose **Field Selection Mode**, the comparison is between two fields, row by row. The two fields must have compatible data types (for example, two numeric fields) or the comparison is not valid. A list of fields displays automatically when you choose **Field Selection Mode**.  
   
@@ -173,7 +173,7 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
  For more information about how the email is generated, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
   
 ##  <a name="CreateAlert"></a> Create a data alert definition  
- If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that you are interested in appears in the report. After the report is open, you click the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
+ If you are granted the SharePoint View Items and Create Alerts permissions you can create a data alert definition for any report that you have permission to view as long as the report uses stored credentials or no credentials. You run the report from a SharePoint library. The data that is available for you to use in Data Alert Designer comes from the report. If the report is parameterized, you might need to run the report using different parameter values to ensure the data that you are interested in appears in the report. After the report is open, you select the **New Data Alert** option on the **Actions** menu on the report toolbar to open Data Alert Designer. The following picture shows you how to open Data Alert Designer.  
 
 :::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot of the New Data Alert option on the Actions menu." lightbox="../reporting-services/media/rs-openalertdesigneriw.gif":::
   
@@ -192,9 +192,9 @@ You create and edit data alert definitions in Data Alert Designer. An alert defi
 ##  <a name="EditAlert"></a> Edit a data alert definition  
  After you save your data alert definition, you can reopen and then edit it in Data Alert Designer. You can add, change, or delete rules and clauses and change the schedule and email settings. If the report data feed that the alert uses has changed and no longer provides the fields that the alert rules reference or the data types or other metadata of the fields have changed, the alert definition is no longer valid, and you must correct it before you can resave it. If you want to use a different data feed, you must create a new alert definition.  
   
- To edit a data alert definition, you right-click it in Data Alert Manager and click **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
+ To edit a data alert definition, you right-click it in Data Alert Manager and select **Edit**. The following picture shows you the context menu on a data alert in Data Alert Manager.  
 
-:::image type="content" source="../reporting-services/media/rs-alertmanageriwopendesigner.gif" alt-text="Screenshot of the context menu for a data alert defention that highlights the edit option." lightbox="../reporting-services/media/rs-alertmanageriwopendesigner.gif":::
+:::image type="content" source="../reporting-services/media/rs-alertmanageriwopendesigner.gif" alt-text="Screenshot of the context menu for a data alert definition that highlights the edit option." lightbox="../reporting-services/media/rs-alertmanageriwopendesigner.gif":::
   
  For more information, see [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   

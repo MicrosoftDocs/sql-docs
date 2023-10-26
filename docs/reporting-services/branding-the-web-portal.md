@@ -273,7 +273,7 @@ You can also **Download** or **Remove** the package. Removing the package resets
 }  
 ```
 
-##  <a name="bkmk_download_samples"></a> To download the Sample Branding Packages
+##  <a name="bkmk_download_samples"></a> Download the Sample Branding Packages
  Download the samples from the GitHub site [Sample Branding Packages](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/reporting-services/branding) to a local folder. For more information, see the section [Applying the brand package to the web portal](#applying-the-brand-package-to-the-web-portal) in this article. 
 
 ## Next steps

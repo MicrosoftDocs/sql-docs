@@ -4,7 +4,7 @@ description: Learn about dynamic data masking, which limits sensitive data expos
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 04/13/2023
+ms.date: 10/31/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -17,6 +17,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sq
 :::image type="content" source="media/dynamic-data-masking/dynamic-data-masking.png" alt-text="Diagram of dynamic data masking.":::
 
 Dynamic data masking (DDM) limits sensitive data exposure by masking it to nonprivileged users. It can be used to greatly simplify the design and coding of security in your application.
+
+This content applies to dynamic data masking in SQL Server, Azure SQL, and Azure Synapse platforms. For dynamic data masking in Microsoft Fabric, see [Dynamic data masking in Fabric data warehousing](/fabric/data-warehouse/dynamic-data-masking.md).
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to specify how much sensitive data to reveal with minimal effect on the application layer. DDM can be configured on designated database fields to hide sensitive data in the result sets of queries. With DDM, the data in the database isn't changed. DDM is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
@@ -104,9 +106,9 @@ Cross database queries spanning two different Azure SQL databases or databases h
 
 ## Security Note: Bypassing masking using inference or brute-force techniques
 
-Dynamic Data Masking is designed to simplify application development by limiting data exposure in a set of predefined queries used by the application. While Dynamic Data Masking can also be useful to prevent accidental exposure of sensitive data when accessing a production database directly, it's important to note that unprivileged users with ad hoc query permissions can apply techniques to gain access to the actual data. If there's a need to grant such ad hoc access, Auditing should be used to monitor all database activity and mitigate this scenario.
+Dynamic data masking is designed to simplify application development by limiting data exposure in a set of predefined queries used by the application. While Dynamic Data Masking can also be useful to prevent accidental exposure of sensitive data when accessing a production database directly, it's important to note that unprivileged users with ad hoc query permissions can apply techniques to gain access to the actual data. If there's a need to grant such ad hoc access, Auditing should be used to monitor all database activity and mitigate this scenario.
 
-As an example, consider a database principal that has sufficient privileges to run ad hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value of a set of Employees:
+As an example, consider a database principal that has sufficient privileges to run ad hoc queries on the database, and tries to 'guess' the underlying data and ultimately infer the actual values. Assume that we have a mask defined on the `[Employee].[Salary]` column, and this user connects directly to the database and starts guessing values, eventually inferring the `[Salary]` value in the `Employees` table:
 
 ```sql
 SELECT ID, Name, Salary FROM Employees
@@ -118,7 +120,7 @@ WHERE Salary > 99999 and Salary < 100001;
 > |  62543 | Jane Doe | 0 |  
 > |  91245 | John Smith | 0 |
 
-This demonstrates that Dynamic Data Masking shouldn't be used as an isolated measure to fully secure sensitive data from users running ad hoc queries on the database. It's appropriate for preventing accidental sensitive data exposure, but doesn't protect against malicious intent to infer the underlying data.
+This demonstrates that dynamic data masking shouldn't be used alone to fully secure sensitive data from users running ad hoc queries on the database. It's appropriate for preventing accidental sensitive data exposure, but doesn't protect against malicious intent to infer the underlying data.
 
 It's important to properly manage the permissions on the database, and to always follow the minimal required permissions principle. Also, remember to have Auditing enabled to track all activities taking place on the database.
 

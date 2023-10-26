@@ -59,14 +59,14 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
   
   
 ##  <a name="EditAlerts"></a> Edit data alerts  
- As an information worker, you open your alert definitions for edit from Data Alert Manger. You can edit the alert definitions that you created, but not those created by others. When you right-click the alert definition and click **Edit** the Data Alert Designer opens, displaying the alert definition. For more information see, [Data Alert Designer](../reporting-services/data-alert-designer.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
+ As an information worker, you open your alert definitions for edit from Data Alert Manger. You can edit the alert definitions that you created, but not those created by others. When you right-click the alert definition and select **Edit**, the Data Alert Designer opens, displaying the alert definition. For more information see, [Data Alert Designer](../reporting-services/data-alert-designer.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
   
 ##  <a name="RunAlerts"></a> Run data alerts  
  Data Alert Manager includes information about the last time the alerting service processed the data alert definition and the number of times the data alert message has been sent. You might want to run and send the alert message immediately, instead of waiting for the time the schedule specifies. When you run an alert from Data Alert Manager, the alert schedule is overwritten and processing of the alert definition starts within one to five minutes, depending on the time needed to run the report and how busy the report server is at the time that you chose to run the alert. However, if you specified a message be sent only if results change and the results did not change, then no message is created or sent. For more information, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
->  After you click the **Run**  option, it takes a few seconds to update the value of the **Status** column to indicate the alert is processing. If you click the **Run**  option multiple times, the alert will be processed multiple times. This consumes resources on the report server unnecessarily and might impact performance of the report server. To see updated information about the alert, click the Web browser refresh button to check for status updates as well as other information about the alert.  
+>  After you select the **Run**  option, it takes a few seconds to update the value of the **Status** column to indicate the alert is processing. If you select the **Run**  option multiple times, the alert will be processed multiple times. This consumes resources on the report server unnecessarily and might impact performance of the report server. To see updated information about the alert, select the Web browser refresh button to check for status updates as well as other information about the alert.  
   
   
 ##  <a name="HowTo"></a> Related tasks  

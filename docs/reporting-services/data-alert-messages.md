@@ -50,7 +50,7 @@ The owner of the data alert definition also can view information about the data 
   
 7.  **Contextual values** list the names and values of report items that are outside of the report data regions. The items are typically text boxes. For example, a text box with a constant value such as the subject or description of a report.  
   
- The only difference between the two message types is item 5, **Alert Results**. If an error occurs when a data alert instance or data alert message is created, **Alert Results** displays an error message that describes the problem. The error message, sent to all recipients, let them know that the alert results that they are expecting and might rely on to make business decisions are not available.  
+ The only difference between the two message types is item 5, **Alert Results**. If an error occurs when a data alert instance or data alert message is created, **Alert Results** displays an error message that describes the problem. The error message sent to all recipients lets them know that the alert results that they are expecting and might rely on to make business decisions are not available.  
   
   
 ##  <a name="HowTo"></a> Related tasks  

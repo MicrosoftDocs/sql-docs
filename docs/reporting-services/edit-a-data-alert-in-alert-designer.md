@@ -32,9 +32,9 @@ You open the data alert definition that you want to edit from Data Alert Manager
   
  The following procedure includes the steps to open the alert definition for editing in Data Alert Designer from Data Alert Manager.  
   
-### To edit a data alert definition in Data Alert Designer  
+### Edit a data alert definition in Data Alert Designer  
   
-1.  In Data Alert Manager, right-click the data alert definition that you want to edit and click **Edit**.  
+1.  In Data Alert Manager, right-click the data alert definition that you want to edit and select **Edit**.  
   
      The alert definition opens in Data Alert Designer.  
   
@@ -43,7 +43,7 @@ You open the data alert definition that you want to edit from Data Alert Manager
     > [!NOTE]  
     >  You cannot choose a different data feed. To use a different data feed, you must create a new data alert definition.  
   
-3.  Click **Save**.  
+3.  Select **Save**.  
   
     > [!NOTE]  
     >  If the report has changed and the data feeds generated from the report have changed the alert definition might no longer be valid. This occurs when a column that the alert definition references in its rules is deleted from the report or changes data type or the report is deleted or moved. You can open an alert definition that is not valid, but you cannot resave it until it is valid based on the current version of the report data feed that it is built upon. To learn more about how data feeds are generated from reports, see [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  

@@ -96,7 +96,7 @@ ms.topic: include
 | 41651 | 16 | No | Invalid partition id in replica manager |
 | 41652 | 17 | No | The replica manager is unavailable or not ready. |
 | 41653 | 21 | No | Database '%.\*ls' encountered an error (error type: %d '%.\*ls') causing failure of the availability group '%.\*ls'. Refer to the SQL Server error log for information about the errors that were encountered. If this condition persists, contact the system administrator. |
-| 41654 | 17 | No | Failed to start the clean up nonexistant DBs thread during replica manager startup. |
+| 41654 | 17 | No | Failed to start the clean up nonexistent DBs thread during replica manager startup. |
 | 41655 | 10 | No | Could not submit logical reseeding task for '%ls' (URI: '%ls', partition id: '%ls') . Encountered error (error code: 0x%08X). |
 | 41656 | 17 | No | Failed to start the windows fabric load balancer reporting thread during replica manager startup. |
 | 41657 | 16 | No | Database '%ls' (ID %d) of Windows Fabric partition '%ls' (partition ID '%ls') failed the call to UseDB. |

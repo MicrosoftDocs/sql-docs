@@ -42,7 +42,7 @@ The LineTotal field expression displays a general number. You can format it to d
 
 You can add other formatting to your report by highlighting the header row, and adjusting the widths of the data columns.
 
-### To format header rows and table columns
+### Format header rows and table columns
 
 1. Select the table so that column and row handles appear above and next to the table. The gray bars along the top and side of the table are the column and row handles.
 

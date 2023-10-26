@@ -14,7 +14,7 @@ After you design the parent report, your next step is to create a data connectio
 
 [!INCLUDE [article-uses-adventureworks](../includes/article-uses-adventureworks.md)]
   
-### To define a data connection and DataTable by adding a DataSet (for the child report)  
+### Define a data connection and DataTable by adding a DataSet (for the child report)  
   
 1.  On the **Website** menu, select **Add New Item**.  
   

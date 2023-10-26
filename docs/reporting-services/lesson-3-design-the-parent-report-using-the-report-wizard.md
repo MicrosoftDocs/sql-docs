@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Lesson 3: Design the parent report using the Report Wizard
 After you create a data connection and a data table for the parent report, your next step is to design the parent report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-### To design the parent report using the Report Wizard  
+### Design the parent report using the Report Wizard  
   
 1.  Make sure that the top-level website is selected in **Solution Explorer**.  
   

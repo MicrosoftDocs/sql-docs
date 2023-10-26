@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Lesson 9: Build and run the application
 After you create a data filter for the data table, your next step is to build and run the website application.  
   
-### To build and run the application  
+### Build and run the application  
   
 1.  Press **CTRL+F5** to run the Default.aspx page without debugging, or press F5 to run the page with debugging.  
   

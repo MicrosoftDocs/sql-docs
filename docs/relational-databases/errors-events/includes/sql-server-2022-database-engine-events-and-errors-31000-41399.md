@@ -1248,7 +1248,7 @@ ms.topic: include
 | 39005 | 10 | No | STDOUT message(s) from external script: %.\*ls%.\*ls |
 | 39006 | 10 | No | External script execution status: %.\*ls. |
 | 39007 | 16 | No | The specified language '%.\*ls' does not exist or you do not have permission. |
-| 39008 | 16 | No | Invlid Parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
+| 39008 | 16 | No | Invalid Parameter name '%ls' specified for Procedure. This clashes with internal parameters. |
 | 39009 | 16 | No | Output parameter in external script execution is not yet supported. |
 | 39010 | 16 | No | External script execution for '%.\*s' script encountered an unexpected error (HRESULT = 0x%x) for request id: %ls. |
 | 39011 | 16 | No | SQL Server was unable to communicate with the LaunchPad service for request id: %ls. Please verify the configuration of the service. |

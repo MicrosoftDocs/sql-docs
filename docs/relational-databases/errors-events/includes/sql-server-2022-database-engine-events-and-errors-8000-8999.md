@@ -248,7 +248,7 @@ ms.topic: include
 | 8431 | 16 | No | The message type '%.\*ls' is not part of the service contract. |
 | 8432 | 16 | No | The message cannot be sent because the message type '%.\*ls' is marked SENT BY TARGET in the contract, however this service is an Initiator. |
 | 8433 | 16 | No | The message body may not be NULL. A zero-length UNICODE or binary string is allowed. |
-| 8434 | 16 | No | The message cannot be sent because the message type '%.\*ls' is marked SENT BY INTITIATOR in the contract, however this service is a Target. |
+| 8434 | 16 | No | The message cannot be sent because the message type '%.\*ls' is marked SENT BY INITIATOR in the contract, however this service is a Target. |
 | 8435 | 16 | No | The conversation handle "%.\*ls" at position %d is not found. |
 | 8436 | 16 | No | The conversation group "%.\*ls" is not found. |
 | 8437 | 16 | No | The message received was sent by a Target service, but the message type '%.\*ls' is marked SENT BY INITIATOR in the contract. |

@@ -74,13 +74,13 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. From the **Format** menu, select **Background Color** > **Light Blue** square.
 5. Select **OK** to apply the format.
 
-    :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with the grand total." lightbox="media/rs-basictablesumgrandtotaldesign.gif":::
+    :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with grand total." lightbox="media/rs-basictablesumgrandtotaldesign.gif":::
 
 ## Preview the report
 
-To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). The results should display as below:
+To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as below:
 
-    :::image type="content" source="media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted." lightbox="media/rs-basictablesumgrandtotalpreview.gif":::
+   :::image type="content" source="media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table." lightbox="media/rs-basictablesumgrandtotalpreview.gif":::
 
 ## Publishing the report to the *Report Server* (Optional)
 
@@ -118,7 +118,7 @@ An optional step is to publish the completed report to the Report Server so you 
 
 8. Select the Tutorial folder, and then select the "Sales Orders" report to view the report.
 
-    :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in Home." lightbox="media/ssrs-tutorial-tutorialfolder.png":::
+    :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in the Home panel." lightbox="media/ssrs-tutorial-tutorialfolder.png":::
 
 You've successfully completed the **Creating a Basic Table Report tutorial**.
 

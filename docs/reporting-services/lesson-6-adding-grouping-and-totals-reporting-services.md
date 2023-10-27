@@ -80,7 +80,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 
 To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as below:
 
-    :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table." lightbox="./media/rs-basictablesumgrandtotalpreview.gif":::
+    :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
 ## Publishing the report to the *Report Server* (Optional)
 

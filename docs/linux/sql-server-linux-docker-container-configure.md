@@ -655,20 +655,19 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=MyStrongPassword" -e "MSSQL_
 
 ## Use mssql-config to configure SQL Server inside a container
 
-You can use the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md) to set parameters in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers.
+You can use the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md) to set parameters in [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] containers. You must connect as the root user.
 
 For example, you can set a memory limit for the instance using the following steps:
 
-1. Connect directly to the container using `docker exec`. Replace `sqlcontainer` with your container name.
+1. Connect directly to the container using `docker exec` as the root user. Replace `sqlcontainer` with your container name.
 
    ```bash
-   docker exec -it sqlcontainer "bash"
+   docker exec -u root -it sqlcontainer "bash"
    ```
 
-1. Use **mssql-conf** to change a setting. You must run this command as the root user. This example changes the `memory.memorylimitmb` setting to 2 GB (2,048 MB).
+1. Use **mssql-conf** to change a setting. This example changes the `memory.memorylimitmb` setting to 2 GB (2,048 MB).
 
    ```bash
-   docker exec -u root -it e03f54ab51c4 "bash"
    /opt/mssql/bin/mssql-conf set memory.memorylimitmb 2048
    ```
 

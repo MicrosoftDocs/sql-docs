@@ -50,7 +50,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 The following diagram shows a table data region that has been populated with these fields: Date, Order, Product, Qty, and Line Total.
 
-    :::image type="content" source="media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region that has been populated with the fields: Date, Order, Product, Qty, and Line Total." lightbox="media/rs-basictabledetailsdesign.png":::
+    :::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region that has been populated with the fields: Date, Order, Product, Qty, and Line Total." lightbox="./media/rs-basictabledetailsdesign.png":::
 
 ## Preview your report
 
@@ -60,11 +60,11 @@ Previewing a report enables you to view the rendered report without having to fi
 
 - Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
-    :::image type="content" source="media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer." lightbox="media/ssrs-ssdt-preview.png":::
+    :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer." lightbox="media/ssrs-ssdt-preview.png":::
 
 The following diagram shows part of the report in **Preview** view.
 
-    :::image type="content" source="media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view."  lightbox="media/rs-basictabledetailspreview.png":::
+    :::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view."  lightbox="media/rs-basictabledetailspreview.png":::
 
 Look at the Date and Line Total values. In the next lesson, you're going to learn how to format them to display more neatly.
 

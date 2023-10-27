@@ -4,7 +4,7 @@ description: Describes how to configure automated backups
 author: dnethi
 ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
-ms.date: 05/10/2023
+ms.date: 05/11/2023
 ms.topic: conceptual
 ---
 # Configure automatic backups

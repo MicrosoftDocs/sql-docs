@@ -3,7 +3,7 @@ title: "Start SQL Server in Single-User Mode"
 description: "Learn about single-user mode in SQL Server. See when it is useful and how to use the startup option -m to start an instance of SQL Server in this mode."
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.service: sql
 ms.subservice: configuration
 ms.topic: conceptual

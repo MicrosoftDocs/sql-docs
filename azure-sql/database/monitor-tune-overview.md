@@ -4,7 +4,7 @@ description: An overview of monitoring and performance tuning capabilities and m
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 11/30/2022
+ms.date: 10/27/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
@@ -71,6 +71,9 @@ In the Azure portal, Azure SQL Database and Azure SQL Managed Instance provide m
 You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is approaching the limits of CPU, memory, IO, or storage resources. High DTU, CPU or IO utilization may indicate that your workload needs more resources. It might also indicate that queries need to be optimized. See [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases), [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) and [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances) for supported metrics in Azure SQL Database and Azure SQL Managed Instance.
 
   ![Resource metrics](./media/monitor-tune-overview/resource-metrics.png)
+
+> [!NOTE]
+> Storage-related metrics in Azure portal, such as **Data space used**, are reported in power-of-two values, but using power-of-ten units. For example, 1 MB of storage space refers to 1,048,576 bytes, not 1,000,000 bytes. The newer units used for power-of-two values are KiB, MiB, GiB, etc. For compatibility and consistency with the historically established usage within the database engine, Azure SQL storage metrics use the older units such as KB, MB, GB, etc.
 
 ### Database advisors in Azure SQL Database
 

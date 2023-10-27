@@ -131,8 +131,10 @@ Consider the following when configuring your General Purpose databases with zone
   - (Asia Pacific) Southeast Asia
   - (Asia Pacific) Central India
   - (Asia Pacific) China North 3
+  - (Asia Pacific) UAE North
   - (Europe) France Central
   - (Europe) North Europe
+  - (Europe) Norway East
   - (Europe) West Europe
   - (Europe) UK South
   - (Europe) Switzerland North

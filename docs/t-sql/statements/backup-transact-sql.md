@@ -104,7 +104,7 @@ BACKUP LOG
   { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
   [ <MIRROR TO clause> ] [ next-mirror-to ]
-  [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]
+  [ WITH { <general_WITH_options> | <log_specific_options> } [ ,...n ] ]
 [;]
 
 --Back up all the databases on an instance of SQL Server (a server)
@@ -195,13 +195,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
    { REWIND | NOREWIND }
  | { UNLOAD | NOUNLOAD }
 
+--Encryption Options
+ ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
+   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+
+<log_specific_options> [ ,...n ]::=
 --Log-specific Options
    { NORECOVERY | STANDBY = undo_file_name }
  | NO_TRUNCATE
-
---Encryption Options
- ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## Arguments

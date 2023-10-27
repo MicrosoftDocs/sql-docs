@@ -10064,8 +10064,9 @@ items:
     - name: "Lesson 3: Delete database objects"
       href: t-sql/lesson-3-deleting-database-objects.md
 - name: SQL Server on Linux
-  href: linux/sql-server-linux-overview.md
   items:
+  - name: What is SQL Server on Linux?
+    href: linux/sql-server-linux-overview.md
   - name: Overview
     items:
     - name: What's new?

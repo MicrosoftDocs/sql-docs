@@ -35,7 +35,7 @@ The classes for the distributed transaction implementation are as follows:
 
 The following extra guidelines apply to tightly coupled transactions:
 
-- When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and work that loosely coupled XA branches perform is isolated from one another.
+- When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you might notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and work that loosely coupled XA branches perform is isolated from one another.
 
 - MS DTC also supports tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -112,7 +112,7 @@ You can configure the JDBC driver distributed transaction components by followin
 
 3. To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role.
 
-You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications may need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications might need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 There are three ways to verify the version of sqljdbc_xa.dll currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:
 

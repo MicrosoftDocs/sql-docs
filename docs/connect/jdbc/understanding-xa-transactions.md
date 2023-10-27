@@ -3,7 +3,7 @@ title: Understanding XA transactions
 description: The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 04/17/2023
+ms.date: 10/27/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -97,6 +97,8 @@ Skip to the [Configuring server-side timeout settings for automatic rollback of 
 #### SQL Server 2017 CU15 and lower
 
 > [!NOTE]
+> This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
+>
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.
 
 You can configure the JDBC driver distributed transaction components by following these steps:
@@ -123,6 +125,9 @@ There are three ways to verify the version of sqljdbc_xa.dll currently installed
 3. Set the logging functionality as shown in the code example in the next section. Search for "Server XA DLL version:..." phrase in the output log file.
 
 #### Upgrading sqljdbc_xa.dll
+
+> [!NOTE]
+> This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 
 When you install a new version of the JDBC driver, you should also use sqljdbc_xa.dll from the new version to upgrade sqljdbc_xa.dll on the server.
 

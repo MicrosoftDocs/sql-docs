@@ -216,6 +216,17 @@ User should make sure that log reader job exists and is active. Alternative woul
 
 Sometimes, log reader job can't make effective progress due to repeated query timeouts. A way to fix query timeouts is to increase the query timeout setting for the log reader agent job.
 
+Increasing query timeout for log reader job can be done with SSMS. In the object explorer, under SQL Server Agent, find the job you'd like to modify. First stop it, and then open its properties. Find `step 2` and edit it. Append the command value with `-QueryTimeout <timeout_in_seconds>`. For the query timeout value try `21600` or higher. Finally, start the job again.
+
+#### Log storage size reached max limit of 2 TB
+
+When transaction log storage size reaches max limit, which is 2 TB, log physically can't grow more than that. In this case, the only available mitigation is marking all transactions that are to be replicated as processed, to allow transaction log to be truncated. This effectively means that remaining transactions in the log will not be replicated, and you need to reinitialize the replication.
+
+> [!NOTE]
+> After performing mitigation you will need to reinitialize the replication, which means replicating entire data set again. This is size of data operation, and might be long running, depending on the amount of data that should be replicated.
+
+To perform the mitigation, first you need to stop the log reader agent on the distributor. Then you should run the `sp_repldone` stored procedure with `reset` flag set to `1` on the publisher database, to allow transaction log truncation. This command should look like this `EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0,  @time = 0, @reset = 1`. After this, you'll need to reinitialize the replication.
+
 ## Next steps
 
 For more information about configuring transactional replication, see the following tutorials:

@@ -4,7 +4,7 @@ description: Learn how to manage SQL Server on Azure VMs in the Azure portal by 
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 09/25/2023
+ms.date: 10/16/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
@@ -69,19 +69,19 @@ Changing the license and edition metadata in the Azure portal is only supported 
 
 ## Storage 
 
-Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. Review [storage configuration](storage-configuration.md) to learn more. 
+Use the **Storage Configuration** page of the SQL virtual machines resource to extend your data, log, and `tempdb` drives. For guidance, review [storage configuration](storage-configuration.md) and [Storage: Performance best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-storage.md).
 
-For example, you can extend your storage: 
+For example, you can extend your storage:
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-storage-configuration.png" alt-text="Screenshot of the Azure portal, SQL virtual machines resource, showing where to extend storage.":::
 
-It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page. 
+It's also possible to modify your `tempdb` settings using the **Storage configuration** page, such as the number of `tempdb` files, as well as the initial size, and the autogrowth ratio. Select **Configure** next to **tempdb** to open the **tempdb Configuration** page.
 
-Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration and implement your settings the next time your SQL Server service starts: 
+Choose **Yes** next to **Configure tempdb data files** to modify your settings, and then choose **Yes** next to **Manage tempdb database folders on restart** to allow Azure to manage your `tempdb` configuration, folder and permissions the next time your SQL Server service starts. This does not require that you created the SQL virtual machine with an image from the Azure Marketplace.  
 
-:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page. ":::
+:::image type="content" source="media/manage-sql-vm-portal/tempdb-configuration.png" alt-text="Screenshot of the tempdb configuration page of the Azure portal from the SQL virtual machines resource page.":::
 
-Restart your SQL Server service to apply your changes. 
+Restart your SQL Server service to apply your changes.
 
 ## Updates
 
@@ -122,7 +122,7 @@ To learn more, see [SQL best practices assessment for SQL Server on Azure VMs](s
 
 ## Security Configuration 
 
-Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [ authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
+Use the **Security Configuration** page of the SQL virtual machines resource to configure SQL Server security settings such as Azure Key Vault integration, [least privilege mode](sql-server-iaas-agent-extension-automate-management.md) or if you're on SQL Server 2022, [authentication](configure-azure-ad-authentication-for-sql-vm.md) with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). 
 
 :::image type="content" source="./media/manage-sql-vm-portal/sql-vm-security-configuration.png" alt-text="Screenshot of the Azure portal, the SQL Server security page, where you can enable authentication.":::
 
@@ -145,11 +145,10 @@ From the **SQL IaaS Agent Extension Settings** page, you can [repair the extensi
 
 :::image type="content" source="media/manage-sql-vm-portal/sql-iaas-agent-settings.png" alt-text="Screenshot of the SQL IaaS Agent Extension Settings page for your SQL virtual machines resource in the Azure portal.":::
 
-## Next steps
+## Related content
 
-For more information, see the following articles: 
-
-* [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
-* [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
-* [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
-* [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
+- [Overview of SQL Server on a Windows VM](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [FAQ for SQL Server on a Windows VM](frequently-asked-questions-faq.yml)
+- [Pricing guidance for SQL Server on a Windows VM](pricing-guidance.md)
+- [What's new for SQL Server on Azure VMs](doc-changes-updates-release-notes-whats-new.md)
+- [Checklist: Best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-checklist.md)

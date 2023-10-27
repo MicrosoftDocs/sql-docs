@@ -52,7 +52,7 @@ One of the key benefits of migrating your SQL Server databases to SQL Managed In
 
 ## Choose an appropriate target
 
-You can use the [Azure SQL migration extension for Azure Data Studio](/sql/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
+You can use the [Azure SQL migration extension for Azure Data Studio](/azure-data-studio/extensions/azure-sql-migration-extension) to get right-sized Azure SQL Managed Instance recommendation. The extension collects performance data from your source SQL Server instance to provide right-sized Azure recommendation that meets your workload's performance needs with minimal cost. To learn more, see [Get right-sized Azure recommendation for your on-premises SQL Server database(s)](/azure/dms/ads-sku-recommend)
 
 The following general guidelines can help you choose the right service tier and characteristics of SQL Managed Instance to help match your [performance baseline](sql-server-to-managed-instance-performance-baseline.md): 
 

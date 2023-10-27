@@ -60,7 +60,7 @@ Table hints are used to override the default behavior of the query optimizer dur
 WITH  ( <table_hint> [ [ , ] ...n ] )
 
 <table_hint> ::=
-{ NOEXPAND [ , INDEX ( <index_value> [ , ...n ] ) | INDEX = ( <index_value> ) ]
+{ NOEXPAND
   | INDEX ( <index_value> [ , ...n ] ) | INDEX = ( <index_value> )
   | FORCESEEK [ ( <index_value> ( <index_column_name> [ , ... ] ) ) ]
   | FORCESCAN

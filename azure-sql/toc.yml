@@ -385,6 +385,7 @@
       href: database/logical-servers.md
     - name: Serverless
       href: database/serverless-tier-overview.md
+
     - name: Hyperscale
       items: 
       - name: Overview
@@ -425,7 +426,7 @@
       - name: The Azure SQL DB emulator
         href: database/local-dev-experience-sql-database-emulator.md      
       - name: SQL Database Projects extension >> 
-        href: /sql/azure-data-studio/extensions/sql-database-project-extension
+        href: /azure-data-studio/extensions/sql-database-project-extension
       - name: The mssql extension >> 
         href: /sql/tools/visual-studio-code/sql-server-develop-use-vscode
 
@@ -619,7 +620,7 @@
       - name: Connect and run ad hoc queries
         items:
         - name: Azure Data Studio
-          href: /sql/azure-data-studio/quickstart-sql-database
+          href: /azure-data-studio/quickstart-sql-database
         - name: SSMS
           href: database/connect-query-ssms.md
         - name: Azure portal query editor
@@ -835,6 +836,8 @@
         href: database/replication-to-sql-database.md
       - name: Replicate schema changes (Data sync)
         href: database/sql-data-sync-update-sync-schema.md
+      - name: Change data capture (CDC)
+        href: database/change-data-capture-overview.md
     - name: Database sharding
       items:
       - name: Upgrade client library

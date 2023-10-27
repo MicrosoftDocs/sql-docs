@@ -239,5 +239,5 @@ The following features and services aren't available for SQL Server 2019 on Linu
 
 ## Related content
 
-- [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)
+- [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
 - [Product Specifications for SQL Server](../sql-server/index.yml)

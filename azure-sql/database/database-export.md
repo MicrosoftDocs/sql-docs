@@ -73,7 +73,7 @@ SqlPackage /a:Export /tf:testExport.BACPAC /scs:"Data Source=apptestserver.datab
 
 ## Azure Data Studio
 
-[Azure Data Studio](/sql/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/sql/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
+[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, Mac, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import.  See the extension's [documentation page](/azure-data-studio/extensions/sql-server-dacpac-extension) for more information on installing and using the extension.
 
 ## SQL Server Management Studio (SSMS)
 

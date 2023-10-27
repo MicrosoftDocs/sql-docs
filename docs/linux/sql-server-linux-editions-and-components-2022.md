@@ -4,7 +4,7 @@ description: "Editions and supported features of SQL Server 2022 on Linux"
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 12/01/2022
+ms.date: 10/20/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -232,10 +232,13 @@ The following features and services aren't available for [!INCLUDE[sssql22](../i
 
 <sup>2</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package isn't supported.
 
+> [!NOTE]  
+> The latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] features that depend on Azure Arc agent, including Microsoft Entra Authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go (PAYG) for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. Azure Arc-enabled SQL Server [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
+
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 
 ## Related content
 
 - [What's new in SQL Server 2022 - Windows](../sql-server/what-s-new-in-sql-server-2022.md)
-- [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)
+- [SQL Server installation guide](../database-engine/install-windows/install-sql-server.md)
 - [Product Specifications for SQL Server](../sql-server/index.yml)

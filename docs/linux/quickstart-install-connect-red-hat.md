@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server on Red Hat Enterprise Linux (RHEL) and then create and query a database with sqlcmd.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 08/10/2023
+ms.date: 10/24/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -44,7 +44,7 @@ For more information on supported platforms, see [Release notes for [!INCLUDE [s
 ::: moniker-end
 
 > [!TIP]  
-> This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> This tutorial requires user input and an internet connection. If you're interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 If you choose to have a pre-installed SQL Server VM on RHEL ready to run your production-based workload, then please follow the [best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist) for creating the SQL Server VM.
 
 <!--SQL Server 2019 on Linux-->
@@ -72,7 +72,7 @@ You must have a RHEL 8.x machine with **at least 2 GB** of memory.
 
 To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
 
-If you've previously installed a Community Technology Preview (CTP) or Release Candidate (RC) of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server](sql-server-linux-change-repo.md).
+If you've previously installed a Community Technology Preview (CTP) or Release Candidate (RC) of [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)], you must first remove the old repository before following these steps. For more information, see [Configure repositories for installing and upgrading SQL Server on Linux](sql-server-linux-change-repo.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -314,9 +314,13 @@ At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is run
 
 ::: moniker-end
 
+## Disable the `sa` account as a best practice
+
+[!INCLUDE [connect-with-sa](includes/connect-with-sa.md)]
+
 ## <a id="tools"></a> Install the SQL Server command-line tools
 
-To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd](../tools/sqlcmd/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
+To create a database, you need to connect with a tool that can run Transact-SQL statements on [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)]. The following steps install the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] command-line tools: [sqlcmd utility](../tools/sqlcmd/sqlcmd-utility.md) and [bcp utility](../tools/bcp-utility.md).
 
 [!INCLUDE [odbc-redhat](includes/odbc-redhat.md)]
 

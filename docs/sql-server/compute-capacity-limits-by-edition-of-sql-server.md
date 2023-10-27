@@ -4,7 +4,7 @@ description: This article discusses compute capacity limits for SQL Server 2019 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
-ms.date: 09/27/2023
+ms.date: 10/10/2023
 ms.service: sql
 ms.subservice: release-landing
 ms.topic: conceptual
@@ -84,7 +84,7 @@ The following table specifies the compute capacity limits for a single instance 
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) licensing is limited to 20 cores per [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] instance. (This licensing isn't available for new agreements.) There are no limits under the Core-based Server Licensing model.
 
 > [!NOTE]  
-> [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] limits the number of logical processors per NUMA node to 64.
+> [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] limits the number of logical processors per NUMA node to 64. On servers with more than 64 logical processors per NUMA node, you can use a BIOS / firmware configuration to change the number of NUMA nodes per physical socket presented to the operating system, to limit to a maximum of 64 logical processors.
 
 In a virtualized environment, the compute capacity limit is based on the number of logical processors, not cores. The reason is that the processor architecture isn't visible to the guest applications.
 

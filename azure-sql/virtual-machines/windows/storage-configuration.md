@@ -4,28 +4,28 @@ description: This topic describes how Azure configures storage for SQL Server VM
 author: bluefooted
 ms.author: pamela
 ms.reviewer: mathoma
-ms.date: 03/29/2023
+ms.date: 10/22/2023
 ms.service: virtual-machines-sql
 ms.subservice: management
 ms.topic: how-to
+ms.custom:
+  - devx-track-arm-template
 tags: azure-resource-manager
-ms.custom: devx-track-arm-template
 ---
 # Configure storage for SQL Server VMs
-[!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
+[!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 This article teaches you how to configure your storage for your SQL Server on Azure Virtual Machines (VMs).
 
 SQL Server VMs deployed through marketplace images automatically follow default [storage best practices](performance-guidelines-best-practices-storage.md) which can be modified during deployment. Some of these configuration settings can be changed after deployment.
 
-
 ## Prerequisites
 
 To use the automated storage configuration settings, your virtual machine requires the following characteristics:
 
-* Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing).
-* Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
-* Uses [premium SSDs](/azure/virtual-machines/disks-types).
+- Provisioned with a [SQL Server gallery image](sql-server-on-azure-vm-iaas-what-is-overview.md#licensing).
+- Uses the [Resource Manager deployment model](/azure/azure-resource-manager/management/deployment-models).
+- Uses [premium SSDs](/azure/virtual-machines/disks-types).
 
 ## New VMs
 
@@ -35,23 +35,26 @@ The following sections describe how to configure storage for new SQL Server virt
 
 When provisioning an Azure VM using a SQL Server gallery image, select **Change configuration** under **Storage** on the **SQL Server Settings** tab to open the **Configure storage** page. You can either leave the values at default, or modify the type of disk configuration that best suits your needs based on your workload.
 
-![Screenshot that highlights the SQL Server settings tab and the Change configuration option.](./media/storage-configuration/sql-vm-storage-configuration-provisioning.png)
+:::image type="content" source="./media/storage-configuration/sql-vm-storage-configuration-provisioning.png" alt-text="Screenshot that highlights the SQL Server settings tab and the Change configuration option.":::
 
 Choose the drive location for your data files and log files, specifying the disk type, and number of disks. Use the IOPS values to determine the best storage configuration to meet your business needs. Choosing premium storage  sets the caching to *ReadOnly* for the data drive, and *None* for the log drive as per [SQL Server VM performance best practices](./performance-guidelines-best-practices-checklist.md).
 
-![SQL Server VM Storage Configuration During Provisioning](./media/storage-configuration/sql-vm-storage-configuration.png)
+:::image type="content" source="./media/storage-configuration/sql-vm-storage-configuration.png" alt-text="Screenshot from the Azure portal of the SQL Server VM Storage Configuration page during provisioning.":::
 
 The disk configuration is completely customizable so that you can configure the storage topology, disk type and IOPs you need for your SQL Server VM workload. You also have the ability to use UltraSSD (preview) as an option for the **Disk type** if your SQL Server VM is in one of the supported regions (East US 2, SouthEast Asia and North Europe) and you've enabled [ultra disks for your subscription](/azure/virtual-machines/disks-enable-ultra-ssd).
 
-Configure your `tempdb` database settings under **Tempdb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB. Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
+Configure your `tempdb` database settings under **TempDb storage**, such as the location of the database files, as well as the number of files, initial size, and autogrowth size in MB.
 
-![Screenshot that shows where you can configure the tempdb storage for your SQL VM](./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png)
+- Currently, during deployment, the max number of `tempdb` files is 8, but more files can be added after the SQL Server VM is deployed.
+- If you configure the SQL Server instance `tempdb` on the D: local SSD volume as recommended, the SQL IaaS Agent extension manages the folders and permissions needed upon re-provisioning. This does not require that you created the SQL virtual machine with an image from the Azure Marketplace.
+
+:::image type="content" source="./media/create-sql-vm-portal/storage-configuration-tempdb-storage.png" alt-text="Screenshot that shows where you can configure the tempdb storage for your SQL VM.":::
 
 Additionally, you have the ability to set the caching for the disks. Azure VMs have a multi-tier caching technology called [Blob Cache](/azure/virtual-machines/premium-storage-performance#disk-caching) when used with [Premium Disks](/azure/virtual-machines/disks-types#premium-ssds). Blob Cache uses a combination of the Virtual Machine RAM and local SSD for caching.
 
 Disk caching for Premium SSD can be *ReadOnly*, *ReadWrite* or *None*.
 
-- *ReadOnly* caching is highly beneficial for SQL Server data files that are stored on Premium Storage. *ReadOnly* caching brings low read latency, high read IOPS, and throughput as, reads are performed from cache, which is within the VM memory and local SSD. These reads are much faster than reads from data disk, which is from Azure Blob storage. Premium storage does not count the reads served from cache towards the disk IOPS and throughput. Therefore, your applicable is able to achieve higher total IOPS and throughput.
+- *ReadOnly* caching is highly beneficial for SQL Server data files that are stored on Premium Storage. *ReadOnly* caching brings low read latency, high read IOPS, and throughput as, reads are performed from cache, which is within the VM memory and local SSD. These reads are much faster than reads from data disk, which is from Azure Blob storage. Premium storage does not count the reads served from cache toward the disk IOPS and throughput. Therefore, your applicable is able to achieve higher total IOPS and throughput.
 - *None* cache configuration should be used for the disks hosting SQL Server Log file as the log file is written sequentially and does not benefit from *ReadOnly* caching.
 - *ReadWrite* caching should not be used to host SQL Server files as SQL Server does not support data consistency with the *ReadWrite* cache. Writes waste capacity of the *ReadOnly* blob cache and latencies slightly increase if writes go through *ReadOnly* blob cache layers.
 
@@ -62,11 +65,11 @@ Disk caching for Premium SSD can be *ReadOnly*, *ReadWrite* or *None*.
 
 Based on your choices, Azure performs the following storage configuration tasks after creating the VM:
 
-* Creates and attaches Premium SSDs to the virtual machine.
-* Configures the data disks to be accessible to SQL Server.
-* Configures the data disks into a storage pool based on the specified size and performance (IOPS and throughput) requirements.
-* Associates the storage pool with a new drive on the virtual machine.
-* Optimizes this new drive based on your specified workload type (Data warehousing, Transactional processing, or General).
+- Creates and attaches Premium SSDs to the virtual machine.
+- Configures the data disks to be accessible to SQL Server.
+- Configures the data disks into a storage pool based on the specified size and performance (IOPS and throughput) requirements.
+- Associates the storage pool with a new drive on the virtual machine.
+- Optimizes this new drive based on your specified workload type (Data warehousing, Transactional processing, or General).
 
 For a full walkthrough of how to create a SQL Server VM in the Azure portal, see [the provisioning tutorial](./create-sql-vm-portal.md).
 
@@ -76,47 +79,45 @@ For a full walkthrough of how to create a SQL Server VM in the Azure portal, see
 
 If you use the following Resource Manager templates, two premium data disks are attached by default, with no storage pool configuration. However, you can customize these templates to change the number of premium data disks that are attached to the virtual machine.
 
-* [Create VM with Automated Backup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-autobackup)
-* [Create VM with Automated Patching](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-autopatching)
-* [Create VM with AKV Integration](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-keyvault)
+- [Create VM with Automated Backup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-autobackup)
+- [Create VM with Automated Patching](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-autopatching)
+- [Create VM with AKV Integration](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-sql-full-keyvault)
 
 ### Quickstart template
 
 You can use the following quickstart template to deploy a SQL Server VM using storage optimization.
 
-* [Create VM with storage optimization](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/)
-* [Create VM using UltraSSD](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
-
+- [Create VM with storage optimization](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage/)
+- [Create VM using UltraSSD](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sqlvirtualmachine/sql-vm-new-storage-ultrassd)
 
 > [!NOTE]
-> Some VM sizes may not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, tempdb data and log files are placed in the data folder. 
+> Some VM sizes might not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, `tempdb` data and log files are placed in the data folder. 
 
-## Existing VMs
+## <a id="existing-vms"></a> Exist VMs
 
 For existing SQL Server VMs, you can modify some storage settings in the Azure portal. Open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), and select **Overview**. The SQL Server **Overview** page shows the current storage usage of your VM. All drives that exist on your VM are displayed in this chart. For each drive, the storage space displays in four sections:
 
-* SQL data
-* SQL log
-* Other (non-SQL storage)
-* Available
+- SQL data
+- SQL log
+- Other (non-SQL storage)
+- Available
 
 To modify the storage settings, select **Storage configuration** under **Settings**.
 
-![Screenshot that highlights the Configure option and the Storage Usage section.](./media/storage-configuration/sql-vm-storage-configuration-existing.png)
+:::image type="content" source="./media/storage-configuration/sql-vm-storage-configuration-existing.png" alt-text="Screenshot that highlights the Configure option and the Storage Usage section.":::
 
-You can modify the disk settings for the drives that were configured during the SQL Server VM creation process. Selecting **Configure** opens the drive modification page, allowing you to change the disk type, as well as add additional disks.
+You can modify the disk settings for the drives that were configured during the SQL Server VM creation process. Selecting **Configure** opens the **Extend Data drive** page, allowing you to change the disk type, as well as add additional disks.
 
-![Configure Storage for Existing SQL Server VM](./media/storage-configuration/sql-vm-storage-extend-drive.png)
+:::image type="content" source="./media/storage-configuration/sql-vm-storage-extend-drive.png" alt-text="A screenshot from the Azure portal showing the Extend Data drive page, used to configure storage for an existing SQL Server VM.":::
 
-You can also configure the settings for `tempdb` directly from the Azure portal, such as the number of data files, their initial size, and the autogrowth ratio. See [configure tempdb](manage-sql-vm-portal.md#storage) to learn more. 
-
+You can also configure the settings for `tempdb` directly from the Azure portal, such as the number of data files, their initial size, and the autogrowth ratio. For more information, see [configure tempdb](manage-sql-vm-portal.md#storage).
 
 ## Automated changes
 
 This section provides a reference for the storage configuration changes that Azure automatically performs during SQL Server VM provisioning or configuration in the Azure portal.
 
-* Azure configures a storage pool from storage selected from your VM. The next section of this topic provides details about storage pool configuration.
-* Automatic storage configuration always uses [premium SSDs](/azure/virtual-machines/disks-types) P30 data disks. Consequently, there is a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
+- Azure configures a storage pool from storage selected from your VM. The next section of this topic provides details about storage pool configuration.
+- Automatic storage configuration always uses [premium SSDs](/azure/virtual-machines/disks-types) P30 data disks. Consequently, there is a 1:1 mapping between your selected number of Terabytes and the number of data disks attached to your VM.
 
 For pricing information, see the [Storage pricing](https://azure.microsoft.com/pricing/details/storage) page on the **Disk Storage** tab.
 
@@ -160,11 +161,11 @@ To change your caching policy in the Azure portal, follow these steps:
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to your virtual machine, select **Disks** under **Settings**.
 
-   ![Screenshot showing the VM disk configuration blade in the Azure portal.](./media/storage-configuration/disk-in-portal.png)
+   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration blade in the Azure portal.":::
 
-1. Choose the appropriate caching policy for your disk from the drop-down.
+1. Choose the appropriate caching policy for your disk from the dropdown list.
 
-   ![Screenshot showing the disk caching policy configuration in the Azure portal.](./media/storage-configuration/azure-disk-config.png)
+   :::image type="content" source="./media/storage-configuration/azure-disk-config.png" alt-text="Screenshot showing the disk caching policy configuration in the Azure portal.":::
 
 1. After the change takes effect, restart the SQL Server VM and start the SQL Server service.
 
@@ -183,24 +184,24 @@ To enable Write Acceleration using the Azure portal, follow these steps:
 1. Sign into the [Azure portal](https://portal.azure.com).
 1. Navigate to your virtual machine, select **Disks** under **Settings**.
 
-   ![Screenshot showing the VM disk configuration blade in the Azure portal.](./media/storage-configuration/disk-in-portal.png)
+   :::image type="content" source="./media/storage-configuration/disk-in-portal.png" alt-text="Screenshot showing the VM disk configuration blade in the Azure portal.":::
 
-1. Choose the cache option with **Write Accelerator** for your disk from the drop-down.
+1. Choose the cache option with **Write Accelerator** for your disk from the dropdown list.
 
-   ![Screenshot showing the write accelerator cache policy.](./media/storage-configuration/write-accelerator.png)
+   :::image type="content" source="./media/storage-configuration/write-accelerator.png" alt-text="Screenshot showing the write accelerator cache policy.":::
 
 1. After the change takes effect, start the virtual machine and SQL Server service.
 
 ## Disk striping
 
-For more throughput, you can add additional data disks and use disk striping. To determine the number of data disks, analyze the throughput and bandwidth required for your SQL Server data files, including the log and tempdb. Throughput and bandwidth limits vary by VM size. To learn more, see [VM Size](/azure/virtual-machines/sizes)
+For more throughput, you can add additional data disks and use disk striping. To determine the number of data disks, analyze the throughput and bandwidth required for your SQL Server data files, including the log and `tempdb`. Throughput and bandwidth limits vary by VM size. To learn more, see [VM Size](/azure/virtual-machines/sizes)
 
 
-* For Windows 8/Windows Server 2012 or later, use [Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) with the following guidelines:
+- For Windows 8/Windows Server 2012 or later, use [Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) with the following guidelines:
 
   1. Set the interleave (stripe size) to 64 KB (65,536 bytes) to avoid performance impact due to partition misalignment. This must be set with PowerShell.
 
-  2. Set column count = number of physical disks. Use PowerShell when configuring more than 8 disks (not Server Manager UI).
+  1. Set column count = number of physical disks. Use PowerShell when configuring more than 8 disks (not Server Manager UI).
 
 For example, the following PowerShell creates a new storage pool with the interleave size to 64 KB and the number of columns equal to the amount of physical disk in the storage pool:
 
@@ -259,6 +260,7 @@ The **Storage Configuration** blade can be grayed out in the Azure portal if you
 
 There is no option to remove the unallocated space from a disk that belongs to a storage pool.
 
-## Next steps
+## Related content
 
-For other topics related to running SQL Server in Azure VMs, see [SQL Server on Azure Virtual Machines](sql-server-on-azure-vm-iaas-what-is-overview.md).
+- [What is SQL Server on Windows Azure Virtual Machines?](sql-server-on-azure-vm-iaas-what-is-overview.md)
+- [Storage: Performance best practices for SQL Server on Azure VMs](performance-guidelines-best-practices-storage.md)

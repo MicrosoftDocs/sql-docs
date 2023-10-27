@@ -5,7 +5,7 @@ description: Learn how to run T-SQL queries all from within the browser via the 
 author: grrlgeek
 ms.author: jeschult
 ms.reviewer: wiassaf, mbarickman
-ms.date: 07/06/2023
+ms.date: 10/22/2023
 ms.service: sql-database
 ms.subservice: development
 ms.topic: conceptual
@@ -27,7 +27,7 @@ monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 The Query editor (preview) is a tool to run T-SQL queries in the Azure portal in the browser against Azure SQL Database. This article details authentication, capabilities, and other details on the Azure portal Query editor for Azure SQL Database.
 
 - For a quickstart on the Azure portal Query editor, see [Quickstart: Use the Azure portal query editor (preview)](connect-query-portal.md).
-- For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
+- For more advanced object explorer capabilities and management functions, use [Azure Data Studio](/azure-data-studio/quickstart-sql-database) or [SQL Server Management Studio (SSMS)](connect-query-ssms.md).
 
 ## Query your Azure SQL Database from the Azure portal
 
@@ -129,7 +129,7 @@ The following considerations and limitations apply when connecting to and queryi
 
 In addition to the Azure portal Query editor for Azure SQL Database, consider the following quickstarts for other tools:
 
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
 - [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)
 
@@ -151,45 +151,51 @@ In addition to the Azure portal Query editor for Azure SQL Database, consider th
 
   - For more information on creating a database user from a Microsoft Entra principal, see [Configure and manage Microsoft Entra authentication with Azure SQL](authentication-aad-configure.md) and use `CREATE USER [group or user] FROM EXTERNAL PROVIDER` in the user database.
 
-- You might get one of the following errors in the query editor:
+### Port 443 and 1443 connectivity
+
+You might get one of the following errors in the query editor:
 
   - "Your local network settings might be preventing the Query Editor from issuing queries. Please click here for instructions on how to configure your network settings."
   - "A connection to the server could not be established. This might indicate an issue with your local firewall configuration or your network proxy settings."
 
   These errors occur because the query editor is unable to communicate through ports 443 and 1443. You need to enable outbound HTTPS traffic on these ports. The following instructions walk you through this process, depending on your OS. Your corporate IT department might need to grant approval to open this connection on your local network.
 
-  **For Windows:**
+#### Allow 443 and 1443 in Windows Defender Firewall
 
-  1. Open **Windows Defender Firewall**.
-  1. On the left menu, select **Advanced settings**.
-  1. In **Windows Defender Firewall with Advanced Security**, select **Outbound rules** on the left menu.
-  1. Select **New Rule** on the right menu.
-  1. In the **New outbound rule wizard**, follow these steps:
+1. Open **Windows Defender Firewall**.
+1. On the left menu, select **Advanced settings**.
+1. In **Windows Defender Firewall with Advanced Security**, select **Outbound rules** on the left menu.
+1. Select **New Rule** on the right menu.
+1. In the **New outbound rule wizard**, follow these steps:
+  1. Select **port** as the type of rule you want to create, and then select **Next**.
+  1. Select **TCP**.
+  1. Select **Specific remote ports**, enter `443, 1443`, and then select **Next**.
+  1. Select **Allow the connection if it is secure**, select **Next**, and then select **Next** again.
+  1. Keep **Domain**, **Private**, and **Public** selected.
+  1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
 
-     1. Select **port** as the type of rule you want to create, and then select **Next**.
-     1. Select **TCP**.
-     1. Select **Specific remote ports**, enter `443, 1443`, and then select **Next**.
-     1. Select **Allow the connection if it is secure**, select **Next**, and then select **Next** again.
-     1. Keep **Domain**, **Private**, and **Public** selected.
-     1. Give the rule a name, for example *Access Azure SQL query editor*, and optionally provide a description. Then select **Finish**.
+#### Allow 443 and 1443 in MacOS
 
-  **For MacOS:**
-  1. On the Apple menu, open **System Preferences**.
-  1. Select **Security & Privacy**, and then select **Firewall**.
-  1. If **Firewall** is off, select **Click the lock to make changes** at the bottom, and select **Turn on Firewall**.
-  1. Select **Firewall Options**.
-  1. In the **Security & Privacy** window, select **Automatically allow signed software to receive incoming connections**.
+1. On the Apple menu, open **System Preferences**.
+1. Select **Security & Privacy**, and then select **Firewall**.
+1. If **Firewall** is off, select **Click the lock to make changes** at the bottom, and select **Turn on Firewall**.
+1. Select **Firewall Options**.
+1. In the **Security & Privacy** window, select **Automatically allow signed software to receive incoming connections**.
 
-  **For Linux:**
+#### Allow 443 and 1443 in Linux
 
-  Run these commands to update `iptables`:
+Run these commands to update `iptables`:
 
-  ```bash
-  sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
-  sudo iptables -A OUTPUT -p tcp --dport 1443 -j ACCEPT
-  ```
+```bash
+sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --dport 1443 -j ACCEPT
+```
 
-## Next steps
+#### Allow 443 and 1443 in Azure VM
+
+When using Azure VMs, you have an [Azure network security group](/azure/virtual-network/network-security-group-how-it-works) blocking connectivity. A network security group can filter inbound and outbound network traffic to and from Azure resources in an Azure virtual network. You need to add an [outbound security rule](/azure/virtual-network/network-security-groups-overview#security-rules) to the network security group. For an example, see [Create security rules](/azure/virtual-network/tutorial-filter-network-traffic#create-security-rules).
+
+## Related content
 
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)

@@ -69,7 +69,7 @@ Use the following steps to delete the resources that you created during this qui
 
 - Learn how to [connect and query](connect-query-content-reference-guide.md) your database using your favorite tools or languages, including:
   - [Connect and query using SQL Server Management Studio](connect-query-ssms.md)
-  - [Connect and query using Azure Data Studio](/sql/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
+  - [Connect and query using Azure Data Studio](/azure-data-studio/quickstart-sql-database?toc=/azure/sql-database/toc.json)
 - Learn how to design your first database, create tables, and insert data, see one of these tutorials:
   - [Design your first single database in Azure SQL Database using SSMS](design-first-database-tutorial.md)
   - [Design a single database in Azure SQL Database and connect with C# and ADO.NET](design-first-database-csharp-tutorial.md)

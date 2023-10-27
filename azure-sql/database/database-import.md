@@ -79,7 +79,7 @@ SqlPackage /a:Import /sf:testExport.bacpac /tdn:NewDacFX /tsn:apptestserver.data
 
 ## Azure Data Studio
 
-[Azure Data Studio](/sql/azure-data-studio) is a free, open-source tool and is available for Windows, macOS, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import. For more information on installing and using the extension, see the [SQL Server dacpac extension documentation](/sql/azure-data-studio/extensions/sql-server-dacpac-extension).
+[Azure Data Studio](/azure-data-studio) is a free, open-source tool and is available for Windows, macOS, and Linux.  The "SQL Server dacpac" extension provides a wizard interface to SqlPackage operations including export and import. For more information on installing and using the extension, see the [SQL Server dacpac extension documentation](/azure-data-studio/extensions/sql-server-dacpac-extension).
 
 ## Use PowerShell
 
@@ -181,7 +181,7 @@ You can also use these wizards.
 
 ## Related content
 
-- To learn how to connect to and query Azure SQL Database from Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database).
+- To learn how to connect to and query Azure SQL Database from Azure Data Studio, see [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database).
 - To learn how to connect to and query a database in Azure SQL Database, see [Quickstart: Azure SQL Database: Use SQL Server Management Studio to connect to and query data](connect-query-ssms.md).
 - For a SQL Server Customer Advisory Team blog about migrating using .bacpac files, see [Migrating from SQL Server to Azure SQL Database using BACPAC Files](https://techcommunity.microsoft.com/t5/DataCAT/Migrating-from-SQL-Server-to-Azure-SQL-Database-using-Bacpac/ba-p/305407).
 - For a discussion of the entire SQL Server database migration process, including performance recommendations, see [SQL Server database migration to Azure SQL Database](migrate-to-database-from-sql-server.md).

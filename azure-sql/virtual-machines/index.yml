@@ -138,7 +138,7 @@ landingContent:
         - text: SQL Server Management Studio (SSMS)
           url: /sql/ssms/download-sql-server-management-studio-ssms
         - text: Azure Data Studio 
-          url: /sql/azure-data-studio/download-azure-data-studio
+          url: /azure-data-studio/download-azure-data-studio
         - text: SQL Server Data Tools 
           url: /sql/ssdt/download-sql-server-data-tools-ssdt
         - text: Visual Studio 2019

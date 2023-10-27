@@ -30,8 +30,10 @@ public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnico
   
 ## Remarks  
  If the sendStringParametersAsUnicode property is set to **true**, which is the default value, string parameters are sent to the server in UNICODE format. If sendStringParametersAsUnicode is set to **false** string parameters are sent to the server in an ASCII/MBCS format, not in UNICODE. If sendStringParametersAsUnicode is not set, [getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) returns the default value of **true**.  
-  
- For more information about the sendStringParametersAsUnicode connection property, see [Setting the Connection Properties](../../../connect/jdbc/setting-the-connection-properties.md).  
+
+Note: Changing this value can affect sorting of results from the database. The sorting differences are due to different sorting rules for Unicode versus non-Unicode characters.
+
+For more information about the sendStringParametersAsUnicode connection property, see [Setting the Connection Properties](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## See Also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

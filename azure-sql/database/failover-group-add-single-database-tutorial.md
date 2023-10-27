@@ -10,7 +10,7 @@ ms.subservice: high-availability
 ms.topic: tutorial
 ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
 ---
-# Tutorial: Add an Azure SQL Database to an auto-failover group
+# Tutorial: Add an Azure SQL Database to an failover group
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
@@ -139,8 +139,7 @@ Create your failover group and add your database to it using PowerShell. In each
       -ServerName $serverName `
       -PartnerServerName $drServerName  `
       –FailoverGroupName $failoverGroupName `
-      –FailoverPolicy Automatic `
-      -GracePeriodWithDataLossHours 2
+      –FailoverPolicy Manual     
    $failovergroup
 
    # Add the database to the failover group
@@ -205,9 +204,9 @@ This portion of the tutorial uses the following Azure CLI cmdlets:
 
 ---
 
-## 3 - Test failover
+## 3 - Test failover (no data loss)
 
-In this step, you will fail your failover group over to the secondary server, and then fail back using the Azure portal.
+In this step, you will failover your failover group over to the secondary server, and then fail back using the Azure portal.
 
 # [Azure portal](#tab/azure-portal)
 

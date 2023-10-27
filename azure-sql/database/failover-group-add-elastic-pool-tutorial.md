@@ -20,7 +20,7 @@ ms.custom: sqldbrb=1, devx-track-azurecli, devx-track-azurepowershell
 > - [Azure SQL Database (elastic pool)](failover-group-add-elastic-pool-tutorial.md?view=azuresql-db&preserve-view=true)
 > - [Azure SQL Managed Instance](../managed-instance/failover-group-add-instance-tutorial.md?view=azuresql-mi&preserve-view=true)
 
-Configure an [auto-failover group](auto-failover-group-sql-db.md) for an Azure SQL Database elastic pool and test failover using the Azure portal.
+Configure an [failover group](auto-failover-group-sql-db.md) for an Azure SQL Database elastic pool and test failover using the Azure portal.
 
 In this tutorial, you'll learn how to:
 
@@ -261,8 +261,7 @@ Create your failover group using PowerShell.
       -ServerName $serverName `
       -PartnerServerName $drServerName  `
       FailoverGroupName $failoverGroupName `
-      FailoverPolicy Automatic `
-      -GracePeriodWithDataLossHours 2
+      FailoverPolicy Manual
    Write-host "Failover group created successfully."
 
    # Add elastic pool to the failover group
@@ -343,7 +342,7 @@ This portion of the tutorial uses the following Azure CLI cmdlets:
 
 ---
 
-## 4 - Test failover
+## 4 - Test failover (no data loss)
 
 In this step, you'll fail your failover group over to the secondary server, and then fail back using the Azure portal.
 

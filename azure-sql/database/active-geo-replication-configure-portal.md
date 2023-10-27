@@ -16,7 +16,7 @@ ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershe
 
 This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
 
-For best practices using auto-failover groups, see [Auto-failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Auto-failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
+For best practices using failover groups, see [Failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
 
 ## Prerequisites
 
@@ -184,9 +184,6 @@ Set-AzSqlDatabaseSecondary @parameters -Failover
 The command immediately switches the secondary database into the primary role. This process normally should complete within 30 seconds or less.
 
 There's a short period during which both databases are unavailable, on the order of 0 to 25 seconds, while the roles are switched. If the primary database has multiple secondary databases, the command automatically reconfigures the other secondaries to connect to the new primary. The entire operation should take less than a minute to complete under normal circumstances.
-
-> [!NOTE]
-> This command is designed for quick recovery of the database in case of an outage. It triggers failover without data synchronization, or forced failover.  If the primary is online and committing transactions when the command is issued some data loss may occur.
 
 ## Remove secondary database
 

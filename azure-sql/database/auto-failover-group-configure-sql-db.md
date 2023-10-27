@@ -12,17 +12,17 @@ ms.topic: how-to
 ms.custom: azure-sql-split, devx-track-azurepowershell
 zone_pivot_groups: azure-sql-deployment-option-single-elastic
 ---
-# Configure an auto-failover group for Azure SQL Database
+# Configure a failover group for Azure SQL Database
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](auto-failover-group-configure-sql-db.md?view=azuresql-db&preserve-view=true)
 > * [Azure SQL Managed Instance](../managed-instance/auto-failover-group-configure-sql-mi.md?view=azuresql-mi&preserve-view=true)
 
-This topic teaches you how to configure an [auto-failover group](auto-failover-group-sql-db.md) for single and pooled databases in Azure SQL Database by using the Azure portal and Azure PowerShell.  For an end-to-end experience, review the [Auto-failover group tutorial](failover-group-add-single-database-tutorial.md). 
+This topic teaches you how to configure an [failover group](auto-failover-group-sql-db.md) for single and pooled databases in Azure SQL Database by using the Azure portal and Azure PowerShell.  For an end-to-end experience, review the [failover group tutorial](failover-group-add-single-database-tutorial.md). 
 
 > [!NOTE]
-> This article covers auto-failover groups for Azure SQL Database. For Azure SQL Managed Instance, see [Configure auto-failover groups in Azure SQL Managed Instance](../managed-instance/auto-failover-group-configure-sql-mi.md). 
+> This article covers failover groups for Azure SQL Database. For Azure SQL Managed Instance, see [Configure failover groups in Azure SQL Managed Instance](../managed-instance/auto-failover-group-configure-sql-mi.md). 
 
 
 ::: zone pivot="azure-sql-single-db"
@@ -90,8 +90,7 @@ Create your failover group and add your database to it using PowerShell.
       -ServerName $serverName `
       -PartnerServerName $drServerName  `
       FailoverGroupName $failoverGroupName `
-      FailoverPolicy Automatic `
-      -GracePeriodWithDataLossHours 2
+      FailoverPolicy Manual       
    $failovergroup
 
    # Add the database to the failover group
@@ -108,11 +107,11 @@ Create your failover group and add your database to it using PowerShell.
    ```
 
 > [!NOTE]
-> It's possible to deploy your auto-failover group across subscriptions by using the `-PartnerSubscriptionId` parameter in Azure Powershell starting with [Az.SQL 3.11.0](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). To learn more, review the following [Example](/powershell/module/az.sql/new-azsqldatabasefailovergroup#example-3). 
+> It's possible to deploy your failover group across subscriptions by using the `-PartnerSubscriptionId` parameter in Azure Powershell starting with [Az.SQL 3.11.0](https://www.powershellgallery.com/packages/Az.Sql/3.11.0). To learn more, review the following [Example](/powershell/module/az.sql/new-azsqldatabasefailovergroup#example-3). 
 
 ---
 
-## Test failover
+## Test failover (no data loss)
 
 Test failover of your failover group using the Azure portal or PowerShell.
 
@@ -258,8 +257,7 @@ Create your failover group and add your elastic pool to it using PowerShell.
        -ServerName $serverName `
        -PartnerServerName $drServerName  `
        FailoverGroupName $failoverGroupName `
-       FailoverPolicy Automatic `
-       -GracePeriodWithDataLossHours 2
+       FailoverPolicy Manual      
    Write-host "Failover group created successfully."
 
    # Add elastic pool to the failover group
@@ -280,7 +278,7 @@ Create your failover group and add your elastic pool to it using PowerShell.
 
 ---
 
-## Test failover
+## Test failover (no data loss)
 
 Test failover of your elastic pool using the Azure portal or PowerShell.
 
@@ -423,7 +421,7 @@ The following table lists specific permission scopes for Azure SQL Database:
 ## Remarks
 
 - Removing a failover group for a single or pooled database does not stop replication, and it does not delete the replicated database. You will need to manually stop geo-replication and delete the database from the secondary server if you want to add a single or pooled database back to a failover group after it's been removed. Failing to do either may result in an error similar to `The operation cannot be performed due to multiple errors` when attempting to add the database to the failover group.
-- Auto-failover group name is subject to [naming restrictions](/azure/azure-resource-manager/management/resource-name-rules).
+- Failover group name is subject to [naming restrictions](/azure/azure-resource-manager/management/resource-name-rules).
 
 ## Next steps
 
@@ -433,4 +431,4 @@ For detailed steps configuring a failover group, see the following tutorials:
 - [Add an elastic pool to a failover group](failover-group-add-elastic-pool-tutorial.md)
 - [Add a managed instance to a failover group](../managed-instance/failover-group-add-instance-tutorial.md)
 
-For an overview of Azure SQL Database high availability options, see [geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md).
+For an overview of Azure SQL Database high availability options, see [geo-replication](active-geo-replication-overview.md) and [failover groups](auto-failover-group-sql-db.md).

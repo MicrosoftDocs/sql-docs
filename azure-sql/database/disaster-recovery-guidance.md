@@ -53,43 +53,45 @@ In the event of a service outage impacting application resources, consider the f
 
 ## Outage recovery guidance
 
-If the Azure SQL Database outage in a region hasn't been mitigated for an extended period of time and is affecting your application's service-level agreement (SLA), consider the follow these steps:
+If the Azure SQL Database outage in a region hasn't been mitigated for an extended period of time and is affecting your application's service-level agreement (SLA), consider to follow these steps:
 
-### Planned failover (no data loss) to geo-replicated secondary server
+### Failover (no data loss) to geo-replicated secondary server
 
-If [active geo-replication](active-geo-replication-overview.md) or [auto-failover groups](auto-failover-group-sql-db.md) are enabled, check if the primary and secondary database resource status is **Online** in the Azure portal. If so, the data plane for both primary and secondary database is healthy. Initiate a planned failover of active geo-replication or auto-failover groups to the secondary region by using the Azure portal, T-SQL, PowerShell, or Azure CLI. 
+If [active geo-replication](active-geo-replication-overview.md) or [failover groups](auto-failover-group-sql-db.md) are enabled, check if the primary and secondary database resource status is **Online** in the Azure portal. If so, the data plane for both primary and secondary database is healthy. Initiate a failover of active geo-replication or failover groups to the secondary region by using the Azure portal, T-SQL, PowerShell, or Azure CLI. 
 
 > [!NOTE]
-> A planned failover requires full data synchronization before switching roles and does not result in data loss. Depending on the type of service outage there is no guarantee that planned failover without data loss will succeed, but it is worth trying as the first recovery option.
+> A failover requires full data synchronization before switching roles and does not result in data loss. Depending on the type of service outage there is no guarantee that failover without data loss will succeed, but it is worth trying as the first recovery option.
 
-To initiate a planned failover, use the following links:
+To initiate a failover, use the following links:
 
 | Technology | Method | Steps |
 |:--|:--|:--|
 |**Active geo-replication**| PowerShell | [Failover to geo-replication secondary via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-1-initiate-a-planned-failover) |
 | | T-SQL | [Failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#e-failover-to-a-geo-replication-secondary) |
-| **Auto-failover groups** | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) |
-| | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover) | 
-| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) | 
+| **Failover groups** | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover-no-data-loss) |
+| | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?&tabs=azure-portal#3---test-failover-no-data-loss) | 
+| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover-no-data-loss) | 
 
-### Unplanned failover (potential data loss) to geo-replicated secondary server
+### Forced failover (potential data loss) to geo-replicated secondary server
 
-If planned failover doesn't complete gracefully and experiences errors, or if the primary database status is not **Online**, carefully consider an unplanned failover with potential data loss to the secondary region.
+If failover doesn't complete gracefully and experiences errors, or if the primary database status is not **Online**, carefully consider forced failover with potential data loss to the secondary region.
+
+To initiate a forced failover, use the following links:
 
 | Technology | Method | Steps |
 |:--|:--|:--|
-|**Active geo-replication**| Azure CLI | [Initiate a forced failover via Azure CLI](active-geo-replication-configure-portal.md?tabs=azure-cli#initiate-a-failover) |
-| | Azure portal | [Initiate a forced failover via the Azure portal](active-geo-replication-configure-portal.md?tabs=portal#initiate-a-failover) |
-| | PowerShell | [Initiate a forced failover via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-2-initiate-a-forced-failover-(with-potential-data-loss)) |
-| | T-SQL | [Unplanned failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#f-force-failover-to-a-geo-replication-secondary-with-data-loss) |
-| **Auto-failover groups** | Azure portal | [Failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?tabs=azure-portal#test-forced-failover-portal) |
-| | Azure CLI  | [Failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover) but use `--allow-data-loss`|
-| | PowerShell | [Failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover) but use `-AllowDataLoss`|
+|**Active geo-replication**| Azure CLI | [Forced failover to geo-replication secondary via Azure CLI](active-geo-replication-configure-portal.md?tabs=azure-cli#initiate-a-failover) |
+| | Azure portal | [Forced failover to geo-replication secondary via the Azure portal](active-geo-replication-configure-portal.md?tabs=portal#initiate-a-failover) |
+| | PowerShell | [Forced failover to geo-replication secondary via PowerShell](/powershell/module/az.sql/set-azsqldatabasesecondary#example-2-initiate-a-forced-failover-(with-potential-data-loss)) |
+| | T-SQL | [Forced failover to geo-replication secondary via T-SQL](/sql/t-sql/statements/alter-database-transact-sql?preserve-view=true&view=azuresqldb-current&tabs=sqlpool#f-force-failover-to-a-geo-replication-secondary-with-data-loss) |
+| **failover groups** | Azure portal | [Forced failover to secondary server via Azure portal](failover-group-add-single-database-tutorial.md?tabs=azure-portal#test-forced-failover-portal) |
+| | Azure CLI  | [Forced failover to secondary server via Azure CLI](failover-group-add-single-database-tutorial.md?&tabs=azure-powershell#3---test-failover-no-data-loss) but use `--allow-data-loss`|
+| | PowerShell | [Forced failover to secondary server via PowerShell](failover-group-add-single-database-tutorial.md?&tabs=azure-cli#3---test-failover-no-data-loss) but use `-AllowDataLoss`|
 
 
 ### Geo-restore
 
-If you have not enabled active geo-replication or auto-failover groups, then as a last resort you can use geo-restore to recover from an outage. Geo-restore uses geo-replicated backups as the source. You can restore a database on any logical server in any Azure region from the most recent geo-replicated backups. You can request a geo-restore even if an outage has made the database or the entire region inaccessible. 
+If you have not enabled active geo-replication or failover groups, then as a last resort you can use geo-restore to recover from an outage. Geo-restore uses geo-replicated backups as the source. You can restore a database on any logical server in any Azure region from the most recent geo-replicated backups. You can request a geo-restore even if an outage has made the database or the entire region inaccessible. 
 
 For more information to request a geo-restore via Azure CLI, the Azure portal, PowerShell, or the REST API, see [geo-restore of an Azure SQL database](recovery-using-backups.md#geo-restore). 
 
@@ -104,7 +106,7 @@ If you are using geo-failover or geo-restore to recover from an outage, you must
 
 - If you are using [Active geo-replication](active-geo-replication-overview.md) or [geo-restore](recovery-using-backups.md#geo-restore), you must make sure that the connectivity to the new databases is properly configured so that the normal application function can be resumed. Because your recovered database resides in a different server, you need to update your application's connection string to point to that server. For more information about changing connection strings, see the appropriate development language for your [connection library](connect-query-content-reference-guide.md#libraries).
 
-- If you are using [auto-failover groups](auto-failover-group-sql-db.md) to recover from an outage and use [read-write and read-only listeners](auto-failover-group-sql-db.md#using-read-write-listener-for-oltp-workload) in your application connection strings, then no further action is needed as connections will be automatically directed to new primary.
+- If you are using [failover groups](auto-failover-group-sql-db.md) to recover from an outage and use [read-write and read-only listeners](auto-failover-group-sql-db.md#using-read-write-listener-for-oltp-workload) in your application connection strings, then no further action is needed as connections will be automatically directed to new primary.
 
 ### Configure firewall rules
 
@@ -129,6 +131,6 @@ If auditing is required to access your database, you need to enable Auditing aft
 - To learn about business continuity design and recovery scenarios, see [Continuity scenarios](business-continuity-high-availability-disaster-recover-hadr-overview.md)
 - To learn about using automated backups for recovery, see [restore a database from the service-initiated backups](recovery-using-backups.md)
 - Learn more about [active geo-replication](active-geo-replication-overview.md)
-- Learn more about [auto-failover groups](auto-failover-group-sql-db.md)
+- Learn more about [failover groups](auto-failover-group-sql-db.md)
 - Learn more about [geo-restore](recovery-using-backups.md#point-in-time-restore)
 - Learn more about [zone-redundant databases](high-availability-sla.md)

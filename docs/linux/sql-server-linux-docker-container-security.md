@@ -180,7 +180,7 @@ Following is an example of how the connection can be encrypted to [!INCLUDE [ssn
    > [!NOTE]  
    > If you are using RHEL 8 and above, you can also use `podman run` command instead of `docker run`.
 
-Follow the "Register the certificate on your client machine" and "Example connection strings" sections documented in [Client Initiated Encryption](sql-server-linux-encrypted-connections.md#client-initiated-encryption) to start encrypting connections to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers.
+Follow the "Register the certificate on your client machine" and "Example connection strings" sections documented in [Client Initiated Encryption](sql-server-linux-encrypted-connections.md?tabs=client#overview) to start encrypting connections to [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Linux containers.
 
 ## Related content
 

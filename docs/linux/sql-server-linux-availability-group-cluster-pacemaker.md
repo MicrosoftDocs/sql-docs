@@ -47,7 +47,7 @@ The steps to create an availability group on Linux servers for high availability
    The way to configure a cluster resource manager depends on the specific Linux distribution.
 
    > [!IMPORTANT]  
-   > Production environments require a fencing agent for high availability. The demonstrations in this documentation don't use fencing agents. The demonstrations are for testing and validation only.
+   > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
    >
    > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891).
 
@@ -282,7 +282,7 @@ The procedure for creating an availability group for high availability differs b
    > [!IMPORTANT]  
    > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
    >
-   > A Pacemaker cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing isn't available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-all/cha-ha-fencing.html).
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-all/cha-ha-fencing.html).
 
 1. [Add the availability group as a resource in the cluster](#configure-an-availability-group)
 
@@ -602,9 +602,10 @@ The steps to create an availability group on Linux servers for high availability
 
    The way to configure a cluster resource manager depends on the specific Linux distribution.
 
-   Production environments require a fencing agent for high availability. The demonstrations in this documentation don't use fencing agents. The demonstrations are for testing and validation only.
-
-   A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing isn't available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891).
+   > [!IMPORTANT]  
+   > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
+   >
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments.
 
    Fencing is normally implemented at the operating system and is dependent on the environment. Find instructions for fencing in the operating system distributor documentation.
 

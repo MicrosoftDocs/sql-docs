@@ -12474,6 +12474,14 @@ items:
         href: relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md
       - name: sys.servers
         href: relational-databases/system-catalog-views/sys-servers-transact-sql.md
+    - name: Fabric query insights
+      items:
+      - name: queryinsights.exec_requests_history
+        href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.frequently_run_queries
+        href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
+      - name: queryinsights.long_running_queries
+        href: relational-databases/system-views/queryinsights-long-running-queries-transact-sql.md
     - name: Object
       href: relational-databases/system-catalog-views/object-catalog-views-transact-sql.md
       items:

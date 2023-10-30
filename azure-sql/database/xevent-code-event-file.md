@@ -8,9 +8,7 @@ ms.date: 10/22/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: sample
-ms.custom:
-  - sqldbrb=1
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1
 ms.devlang: PowerShell
 monikerRange: "=azuresql || =azuresql-db"
 ---

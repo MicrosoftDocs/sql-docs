@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to configure SQL Server settings on Linux.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 09/06/2023
+ms.date: 10/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -117,7 +117,7 @@ ms.custom:
 ::: moniker-end
 
 > [!TIP]  
-> Some of these settings can also be configured with environment variables. For more information, see [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md).
+> Some of these settings can also be configured with environment variables. For more information, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ## Usage tips
 
@@ -163,7 +163,7 @@ To change this setting, use the following steps:
    sudo systemctl restart mssql-server
    ```
 
-### <a id="dbmail"></a> Set the default database mail profile for SQL Server on Linux
+### <a id="dbmail"></a> Set the default Database Mail profile for SQL Server on Linux
 
 The `sqlagent.databasemailprofile` allows you to set the default DB Mail profile for email alerts.
 
@@ -293,7 +293,7 @@ The `telemetry.customerfeedback` setting changes whether [!INCLUDE [ssnoversion-
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md) and the [SQL Server Privacy Statement](../sql-server/sql-server-privacy.md).
+For more information, see [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md) and the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 
@@ -567,8 +567,8 @@ sudo systemctl restart mssql-server
 
 For information on how this is used with availability groups, see the following two articles.
 
-- [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
-- [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
+- [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md)
+- [Configure a SQL Server Availability Group for read-scale on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 ## <a id="localaudit"></a> Set local audit directory
 
@@ -599,7 +599,7 @@ The `telemetry.userrequestedlocalauditdirectory` setting enables Local Audit and
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
+For more information, see [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 ## <a id="lcid"></a> Change the SQL Server locale
 
@@ -662,9 +662,9 @@ The `network.rpcport` and `distributedtransaction.servertcpport` settings are us
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
    ```
 
-In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure MSDTC on Linux](sql-server-linux-configure-msdtc.md).
+In addition to setting these values, you must also configure routing and update the firewall for port 135. For more information on how to do this, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md).
 
-There are several other settings for **mssql-conf** that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
+There are several other settings for **mssql-conf** that you can use to monitor and troubleshoot MSDTC. The following table briefly describes these settings. For more information on their use, see the details in the Windows support article, [How to enable diagnostic tracing for MS DTC](/troubleshoot/windows/win32/enable-diagnostic-tracing-ms-dtc).
 
 | Option | Description |
 | --- | --- |
@@ -782,7 +782,7 @@ The following options configure TLS for an instance of [!INCLUDE [ssnoversion-md
 | `network.tlsciphers` | Specifies which ciphers are allowed by [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/manmaster/man1/ciphers.html). In general, you shouldn't need to change this option.<br />By default, the following ciphers are allowed:<br />`ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | `network.kerberoskeytabfile` | Path to the Kerberos keytab file |
 
-For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
+For an example of using the TLS settings, see [Encrypt connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
 ## <a id="network"></a> Network settings
 
@@ -867,7 +867,7 @@ The results provide various configuration options and a short description for ea
 
 ## <a id="mssql-conf-format"></a> mssql.conf format
 
-The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in  [Customer Feedback](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
+The following `/var/opt/mssql/mssql.conf` file provides an example for each setting. You can use this format to manually make changes to the `mssql.conf` file as needed. If you do manually change the file, you must restart [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] before the changes are applied. To use the `mssql.conf` file with Docker, you must have Docker [persist your data](sql-server-linux-docker-container-deployment.md). First add a complete `mssql.conf` file to your host directory and then run the container. There's an example of this in [Configure usage & diagnostic data collection for SQL Server on Linux](usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="=sql-server-linux-2017 || =sql-server-2017"
@@ -981,7 +981,8 @@ traceflag = 3456
 
 ## Related content
 
-- [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md)
-- [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+- [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md)
+- [Choose the right tool to manage SQL Server on Linux](sql-server-linux-management-overview.md)
+- [Configure and customize SQL Server Docker containers](sql-server-linux-docker-container-configure.md)
 
 [!INCLUDE [contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

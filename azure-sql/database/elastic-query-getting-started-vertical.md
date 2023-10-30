@@ -82,7 +82,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     (TYPE = RDBMS,
     LOCATION = '<server_name>.database.windows.net',
     DATABASE_NAME = 'Customers',
-    CREDENTIAL = ElasticDBQueryCred,
+    CREDENTIAL = ElasticDBQueryCred
 ) ;
 ```
 

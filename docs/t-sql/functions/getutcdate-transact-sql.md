@@ -3,7 +3,7 @@ title: "GETUTCDATE (Transact-SQL)"
 description: "GETUTCDATE (Transact-SQL)"
 author: markingmyname
 ms.author: maghan
-ms.date: 09/13/2023
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -131,7 +131,7 @@ Result set:
  GETUTCDATE()         01:25:01.6930000
 ```
   
-## Next steps
+## Related content
 
 - [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
 - [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)

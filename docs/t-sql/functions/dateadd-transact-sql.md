@@ -3,7 +3,7 @@ title: "DATEADD (Transact-SQL)"
 description: "Transact-SQL reference for the DATEADD function. This function returns a date that has been modified by the specified date part."
 author: markingmyname
 ms.author: maghan
-ms.date: 09/13/2023
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -66,11 +66,11 @@ The part of *date* to which `DATEADD` adds an **integer** *number*. This table l
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-#### *number*  
+#### *number*
 
 An expression that can resolve to an [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) that `DATEADD` adds to a *datepart* of *date*. `DATEADD` accepts user-defined variable values for *number*. `DATEADD` truncates a specified *number* value that has a decimal fraction. It will not round the *number* value in this situation.
   
-#### *date*  
+#### *date*
 
 An expression that can resolve to one of the following values: 
 
@@ -382,6 +382,6 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
 
-## Next steps
+## Related content
 
 - [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

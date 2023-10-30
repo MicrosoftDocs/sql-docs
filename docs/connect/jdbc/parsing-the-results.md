@@ -4,7 +4,7 @@ description: Learn about fully processing results, including multiple result set
 author: DavidEngel
 ms.author: v-davidengel
 ms.reviewer: v-davidengel
-ms.date: 10/12/2023
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -71,7 +71,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-If statement execution generates multiple result sets, each result set needs to be processed until the one with the exception is reached.
+If statement execution generates multiple result sets, each result set needs to be processed until the one with the exception is reached. Additionally, not only does each result set need to be processed, they need to be processed before retrieving any output parameters from the stored procedures.
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";

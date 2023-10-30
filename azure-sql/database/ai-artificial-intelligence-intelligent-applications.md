@@ -43,7 +43,7 @@ RAG is a technique that enhances the LLM's ability to produce relevant and infor
 1. Create an Azure OpenAI GPT4 model and connect it to Azure Cognitive Search.
 1. Chat and ask questions about your data using the trained Azure OpenAI model from your application and from Azure SQL Database.
 
-The RAG pattern, with prompt engineering, serves the purpose of enhancing response quality by offering more contextual information to the model. RAG enables the model to apply a broader knowledgebase by incorporating relevant external sources into the generation process, resulting in more comprehensive and informed responses. For more information on *grounding* LLMs, see [Gounding LLMs - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857).
+The RAG pattern, with prompt engineering, serves the purpose of enhancing response quality by offering more contextual information to the model. RAG enables the model to apply a broader knowledgebase by incorporating relevant external sources into the generation process, resulting in more comprehensive and informed responses. For more information on *grounding* LLMs, see [Grounding LLMs - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857).
 
 ### Prompts and prompt engineering
 
@@ -106,7 +106,7 @@ FROM OPENJSON(JSON_QUERY(@response, '$.result.data[0].embedding'));
 
 Using a call to a REST service to get embeddings is just one of the integration options you have when working with SQL Database and OpenAI. You can let any of the [available models](/azure/ai-services/openai/concepts/models) access data stored in Azure SQL Database to create solutions where your users can interact with the data, such as the following example.
 
-:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/data-chatbot.png" alt-text="Screenshot of an AI bot answering answering the question using data stored in Azure SQL Database.":::
+:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/data-chatbot.png" alt-text="Screenshot of an AI bot answering the question using data stored in Azure SQL Database.":::
 
 For additional examples on using SQL Database and OpenAI, see the following articles:
 

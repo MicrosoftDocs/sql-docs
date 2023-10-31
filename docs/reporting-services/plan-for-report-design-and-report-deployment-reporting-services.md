@@ -16,7 +16,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  RDL files are authored in Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and in Report Builder. RDLC files are authored by using the ReportViewer controls that are included in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL Schema Versions  
+##  <a name="bkmk_rdl_schema_versions"></a> RDL schema versions  
  The following table lists each available schema version and the abbreviation that is used throughout the rest of this topic:  
   
 |Abbreviation|Schema version|  
@@ -35,7 +35,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](/previous-versions/ms251671(v=vs.140)).  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> Report Server and RDL Schema Support  
+##  <a name="bkmk_report_server_rdl_schema_support"></a> Report server and RDL schema support  
  A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server in the following ways:  
   
 -   **Report Designer:** Deploy a report from Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
@@ -72,9 +72,9 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
  To upgrade the report definition, you must open the report in a report authoring environment, such as SQL Server Data Tools or Report Builder, and then save it.  
   
- For more information about report upgrades and the schema versions that are supported, see [Upgrade Reports](../reporting-services/install-windows/upgrade-reports.md).  
+ For more information about report upgrades and the schema versions that are supported, see [Upgrade reports](../reporting-services/install-windows/upgrade-reports.md).  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> Report Authoring and Deployment Support  
+##  <a name="bkmk_report_authoring_and_deployment"></a> Report authoring and deployment support  
  Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  
   
  The following table summarizes support for authoring and deploying report definitions for different schema versions:  
@@ -89,12 +89,12 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
  For more information on SQL Server Data Tools (SSDT), see the following:  
   
--   [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+-   [Deployment and version support in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
 -   [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer Controls  
- A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer control can display an .rdlc report in local preview mode or in remote mode, the control can display an .rdl file hosted on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The following table provides the list of RDL versions supported by the ReportViewer controls for local processing (.rdlc). Server side RDL support is summarized in the section [Report Server and RDL Schema Support](#bkmk_report_server_rdl_schema_support).  
+##  <a name="bkmk_reportviewer"></a> ReportViewer controls  
+ A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer control can display an .rdlc report in local preview mode or in remote mode, the control can display an .rdl file hosted on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The following table provides the list of RDL versions supported by the ReportViewer controls for local processing (.rdlc). Server side RDL support is summarized in the section [Report server and RDL schema support](#bkmk_report_server_rdl_schema_support).  
   
 |ReportViewer control in product|Version of RDL for local preview|  
 |-------------------------------------|--------------------------------------|  
@@ -109,8 +109,8 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
 -   [Adding and Configuring the ReportViewer Controls](/previous-versions/ms252104(v=vs.140))  
   
-## See Also  
- [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+## See also  
+ [Reports, report parts, and report definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)   
+ [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

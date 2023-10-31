@@ -1,5 +1,5 @@
 ---
-title: "PDF Device Information Settings"
+title: "PDF device information settings"
 description: Learn about the device information settings that are available for rendering reports in PDF format.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], PDF rendering"
   - "PDF [Reporting Services]"
 ---
-# PDF Device Information Settings
+# PDF device information settings
   The following table lists the device information settings for rendering reports in PDF format.  
   
 |Setting|Value|  
@@ -32,9 +32,9 @@ helpviewer_keywords:
 |**PageWidth**|The page width, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 8.5in). This value overrides the report's original settings.|  
 |**StartPage**|The first page of the report to render. A value of **0** indicates that all pages are rendered. The default value is **1**.|  
   
-## See Also  
- [Passing Device Information Settings to Rendering Extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize Rendering Extension Parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical Reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## See also  
+ [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

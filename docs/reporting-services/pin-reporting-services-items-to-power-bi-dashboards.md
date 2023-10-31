@@ -27,7 +27,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 -   The report server is configured for [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integration. For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). If the report server has not been configured, you won't see the **Pin to Power BI Dashboard** button on the report viewer toolbar.  
   
-    :::image type="content" source="../reporting-services/media/ssrs-report-powerbi.png" alt-text="Screenshot of the report viewer toolbar highlighting the Pin to Power BI Dashboard button." lightbox="../reporting-services/media/ssrs-report-powerbi.png"::
+    :::image type="content" source="../reporting-services/media/ssrs-report-powerbi.png" alt-text="Screenshot of the report viewer toolbar highlighting the Pin to Power BI Dashboard button." lightbox="../reporting-services/media/ssrs-report-powerbi.png":::
   
 -   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], for example, `https://myserver/Reports`.  You can't pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server URL.  For example,  `https://myserver/ReportServer`.  
   
@@ -53,19 +53,19 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 1. Verify you  are signed into [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. See [My Settings for Power BI integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md) for more information.
 
-    :::image type="content" source="../reporting-services/media/ssrs-webportal-mysettings.png" alt-text="Screenshot of the web portal highlighting My Settings in the Settings dropdown." lightbox="../reporting-services/media/ssrs-webportal-mysettings.png"::
+    :::image type="content" source="../reporting-services/media/ssrs-webportal-mysettings.png" alt-text="Screenshot of the web portal highlighting My Settings in the Settings dropdown." lightbox="../reporting-services/media/ssrs-webportal-mysettings.png":::
   
 2. Navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] folder  that contains your report, and then view the report.  
   
 3. While viewing the report, select the **Pin to Power BI** button the toolbar.  You will be prompted to sign in, if you are not already signed in.  If the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] button is not visible, the report server has not been integrated with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. For more information, see [Power BI Report Server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-    :::image type="content" source="../reporting-services/media/ssrs-report-powerbi.png" alt-text="Screenshot of the report viewer toolbar highlighting the Pin to Power BI button." lightbox="../reporting-services/media/ssrs-report-powerbi.png"::
+    :::image type="content" source="../reporting-services/media/ssrs-report-powerbi.png" alt-text="Screenshot of the report viewer toolbar highlighting the Pin to Power BI button." lightbox="../reporting-services/media/ssrs-report-powerbi.png":::
   
 4. Select the report item you want to pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. You can only pin one item at a time.  The report viewer presents a shaded view of your report and the report items you can pin are highlighted while the items that you can't pin, will be shaded dark.  
   
     **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard.   ![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
   
-    :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog box." lightbox="../reporting-services/media/ssrs-pin-to-powerbi.png"::
+    :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog box." lightbox="../reporting-services/media/ssrs-pin-to-powerbi.png":::
   
 5. Select **Pin**  
   
@@ -87,7 +87,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 
 **(5)** If you select the tile itself, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] uses the **(4) custom link** to navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] page of the registered report server. the link was set when the item was pinned from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you do not have internet connectivity to the report server, you will see an error in the browser.  
 
-:::image type="content" source="../reporting-services/media/ssrs-pinned-tile-details.png" alt-text="Screenshot of the tiles in the dashboard." lightbox="../reporting-services/media/ssrs-pinned-tile-details.png"::
+:::image type="content" source="../reporting-services/media/ssrs-pinned-tile-details.png" alt-text="Screenshot of the tiles in the dashboard." lightbox="../reporting-services/media/ssrs-pinned-tile-details.png":::
   
 ##  <a name="bkmk-troubleshoot"></a> Troubleshoot issues  
   

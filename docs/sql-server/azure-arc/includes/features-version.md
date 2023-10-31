@@ -17,6 +17,7 @@ The following table identifies features available by SQL Server version:
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Purview: DevOps policies](/azure/purview/how-to-policies-devops-authoring-generic) | No | No | No | No | No | Yes |
 | [Microsoft Purview: data owner policies (preview)](/azure/purview/how-to-policies-data-owner-authoring-generic) | No | No | No | No | No | Yes |
-| [Automated backups](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Point in time restore (preview)](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](../patch.md) | No | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Yes | Yes | Yes | Yes |
+| [Always On availability groups (preview)](../manage-availability-group.md) | Yes | Yes | Yes | Yes | Yes | Yes |

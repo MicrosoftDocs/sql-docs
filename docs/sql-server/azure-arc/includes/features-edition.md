@@ -16,8 +16,8 @@ The following table identifies features available by SQL Server edition:
 | [Microsoft Entra ID authentication](../../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-sql-usage) | Yes | Yes | Yes | Yes <sup>1</sup>| Yes | Yes |
 | [Microsoft Purview: Govern using DevOps and data owner policies](/azure/purview/tutorial-register-scan-on-premises-sql-server) | Yes | Yes | Yes | Yes | Yes | Yes |
-| [Automated backups](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Point in time restore (preview)](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](../patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
-
+| [Always On availability groups (preview)](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 <sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)

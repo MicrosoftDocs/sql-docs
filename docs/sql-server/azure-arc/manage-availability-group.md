@@ -16,14 +16,14 @@ An Always On availability group is an enterprise level high availability and dis
 
 Follow the steps to view the availability groups that are configured for the Azure Arc-enabled SQL Server:
 
-1. Browse to the overview page of the Arc-enabled SQL Server in your Azure portal
+1. In your Azure portal, browse to the overview page of the Arc-enabled SQL Server 
 1. Select **Availability Groups**
 
    Azure portal will display the availability groups configured for the SQL Server instance on the right
 
 1. Select the availability group that you want to review
 
-Azure portal displays the health and status of the availability group similar to the availability group dashboard shown in SQL Server Management Studio, is displayed. This includes:
+Azure portal displays the health and status of the Always on Availability Group similar to the Availability Group dashboard shown in SQL Server Management Studio. This includes:
 
 - The current primary replica
 - Availability group state
@@ -46,13 +46,13 @@ Azure Arc-Arc enabled SQL Server supports planned manual failover.
 
 Follow the steps below to initiate a planned manual failover:
 
-1. Browse to the overview page of the Arc enabled SQL Server in your Azure portal
-1. Select **Availability Groups**
+1. In Azure portal, browse to the overview page of the Arc enabled SQL Server for the secondary replica that you want to failover to
+1. Select **Availability Groups** tab on the left
 
    Azure portal will display the availability groups configured for the SQL Server instance on the right
 
-1. Select the availability group that you want to fail over
-1. Select **Failover**
+1. Select the availability group that you want to perform a failover on
+1. In the Availability Group dashboard on the right, select **Failover**
 
 This will initiate a planned, manual failover on the AG replica.
 

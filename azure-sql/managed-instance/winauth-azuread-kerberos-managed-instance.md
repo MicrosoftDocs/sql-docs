@@ -25,7 +25,7 @@ The following prerequisites are required to configure a managed instance for Win
 |Prerequisite  | Description  |
 |---------|---------|
 |Az.Sql PowerShell module | This PowerShell module provides management cmdlets for Azure SQL resources.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module -Name Az.Sql`   |
-|Microsoft Graph PowerShell Module  | This module provides management cmdlets for Microsoft Entra administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name AzureAD`  |
+|Microsoft Graph PowerShell Module  | This module provides management cmdlets for Microsoft Entra administrative tasks such as user and service principal management.<BR/><BR/> Install this module by running the following PowerShell command: `Install-Module –Name Microsoft.Graph`  |
 | A managed instance | You may [create a new managed instance](instance-create-quickstart.md) or use an existing managed instance. You must [enable Microsoft Entra authentication](../database/authentication-aad-configure.md) on the managed instance. |
 
 <a name='configure-azure-ad-authentication-for-azure-sql-managed-instance'></a>

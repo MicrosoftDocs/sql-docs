@@ -4238,20 +4238,21 @@ items:
           href: relational-databases/wmi-provider-configuration-classes/clientsettings-class-instancename-property.md
         - name: SetDefaults Method
           href: relational-databases/wmi-provider-configuration-classes/clientsettings-class-setdefaults-method.md
-    - name: Server Events Concepts
-      href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+    - name: Server Events concepts
       items:
-      - name: "Sample: Creating a SQL Server Agent Alert with the WMI Provider"
+      - name: Overview
+        href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+      - name: "Sample: Create a SQL Server Agent Alert with the WMI Provider"
         href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-      - name: "Sample: Using the WMI Event Provider with the .NET Framework"
+      - name: "Sample: Use the WMI Event Provider with the .NET Framework"
         href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
-      - name: Understanding Server Events
+      - name: Understand Server Events
         href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
-      - name: Using WQL Server Events
+      - name: Use WQL Server Events
         href: relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
-      - name: Server Events Classes & Properties
+      - name: Server Events classes and properties
         href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
-      - name: Working with Server Events
+      - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & Architecture
   href: relational-databases/sql-server-guides.md
@@ -12481,6 +12482,14 @@ items:
         href: relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md
       - name: sys.servers
         href: relational-databases/system-catalog-views/sys-servers-transact-sql.md
+    - name: Fabric query insights
+      items:
+      - name: queryinsights.exec_requests_history
+        href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.frequently_run_queries
+        href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
+      - name: queryinsights.long_running_queries
+        href: relational-databases/system-views/queryinsights-long-running-queries-transact-sql.md
     - name: Object
       href: relational-databases/system-catalog-views/object-catalog-views-transact-sql.md
       items:

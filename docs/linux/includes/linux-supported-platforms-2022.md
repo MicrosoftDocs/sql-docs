@@ -13,7 +13,7 @@ ms.custom:
 | --- | --- | --- | --- |
 | Red Hat Enterprise Linux 8.x Server (and 9.x Server in preview) | XFS or EXT4 | [Installation guide](../quickstart-install-connect-red-hat.md) | [Get RHEL 8](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) |
 | SUSE Enterprise Linux Server v15 (SP1 - SP4) | XFS or EXT4 | [Installation guide](../quickstart-install-connect-suse.md) | [Get SLES v15](https://www.suse.com/products/server) |
-| Ubuntu 20.04 LTS (and 22.04 LTS in preview) | XFS or EXT4 | [Installation guide](../quickstart-install-connect-ubuntu.md) | [Get Ubuntu 20.04](https://releases.ubuntu.com/20.04/) |
+| Ubuntu 20.04 (and 22.04 in preview) | XFS or EXT4 | [Installation guide](../quickstart-install-connect-ubuntu.md) | [Get Ubuntu 20.04](https://releases.ubuntu.com/20.04/) |
 | Docker Engine 1.8+ on Linux | N/A | [Installation guide](../quickstart-install-connect-docker.md) | [Get Docker](https://www.docker.com/get-started) |
 
 > [!TIP]  

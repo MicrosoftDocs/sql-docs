@@ -44,7 +44,9 @@ If the *month_to_add* argument has a value, then `EOMONTH` adds the specified nu
  **date**  
   
 ## Remarks  
-The `EOMONTH` function can remote to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] servers and higher. It cannot be remote to servers with a version lower than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+The `EOMONTH` function can remote to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] servers and higher. It cannot be remote to servers with a version lower than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+
+Use `DATETRUNC(MONTH, @date)` to calculate start of month "SOMONTH". See [DATETRUNC](./datetrunc-transact-sql.md).
   
 ## Examples  
   

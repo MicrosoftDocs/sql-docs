@@ -18,7 +18,7 @@ If the Azure Arc-enabled SQL Server is configured as a failover cluster instance
 
 ## View cluster configuration, SQL Server, and database properties
 
-All the information about the SQL Server configuration such as server configuration, database inventory and metadata, backups, cluster configuration, and etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
+All the information about the SQL Server configuration such as server configuration, database inventory and metadata, backups, cluster configuration, Defender status etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
 
  - The name of the Azure Arc-enabled SQL resource following the pattern `<NetworkName>_<InstanceName>`.
  - The `Always On role` property in the Essentials pane in Azure portal would show `Failover cluster instance`.

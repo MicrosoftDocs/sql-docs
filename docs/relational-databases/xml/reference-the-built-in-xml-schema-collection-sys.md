@@ -32,7 +32,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
 (no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP
 ```
 
-The **sqltypes** namespace contains components that can be referenced from any user-created XML schema collection. The built-in components include the following:
+The **sqltypes** namespace contains components that can be referenced from any user-created XML schema collection. You can download the **sqltypes** schema from this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=31850). The built-in components include the following:
 
 - XSD types
 

@@ -10453,9 +10453,11 @@ items:
           href: sql-server/azure-arc/manage-configuration.md
         - name: View Always On failover cluster instances
           href: sql-server/azure-arc/support-for-fci.md  
+        - name: Manage availability group
+          href: sql-server/azure-arc/manage-availability-group.md
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
-        - name: Automate backups
+        - name: Restore to a point-in-time
           href: sql-server/azure-arc/point-in-time-restore.md
         - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md

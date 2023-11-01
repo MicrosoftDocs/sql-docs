@@ -333,7 +333,7 @@ Database users who access a DATABASE SCOPED CREDENTIAL must have permission to u
 To use the credential, a database user must have `REFERENCES` permission on a specific credential:
 
 ```sql
-GRANT REFERENCES ON CREDENTIAL::[<CREDENTIAL_NAME>] TO [<PRINCIPAL>];
+GRANT REFERENCES ON DATABASE SCOPED CREDENTIAL::[<CREDENTIAL_NAME>] TO [<PRINCIPAL>];
 ```
 
 ## Remarks

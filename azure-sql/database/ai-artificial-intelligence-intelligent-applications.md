@@ -149,7 +149,7 @@ Implement RAG-patterns with Azure SQL Database and Azure Cognitive Search. You c
 
 Azure SQL Database can be used to build intelligent applications that include AI features, such as recommenders, and Retrieval Augmented Generation (RAG) as the following diagram demonstrates: 
 
-:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different A I features to build intelligent applications with Azure SQL Database.":::
+:::image type="content" source="media/ai-artificial-intelligence-intelligent-applications/session-recommender-architecture.png" alt-text="Diagram of different AI features to build intelligent applications with Azure SQL Database.":::
 
 For an end-to-end sample to build a recommender using session abstract as a sample dataset, see [How I built a session recommender in 1 hour using Open AI](https://devblogs.microsoft.com/azure-sql/how-i-built-a-session-recommender-in-1-hour-using-open-ai/).
 

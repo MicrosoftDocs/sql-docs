@@ -71,7 +71,7 @@ INSERT INTO [dbo].[CustomerInformation] ([CustomerID], [CustomerName], [Company]
 
     The "master_key_password" is a strong password of your choosing used to encrypt the connection credentials. 
     The "username" and "password" should be the username and password used to log in into the Customers database (create a new user in Customers database if one does not already exists).
-    Authentication using Microsoft Entra ID ([formerly Azure Active Directory](https://learn.microsoft.com/azure/active-directory/fundamentals/new-name)) with elastic queries is not currently supported.
+    Authentication using Microsoft Entra ID ([formerly Azure Active Directory](/entra/fundamentals/new-name)) with elastic queries is not currently supported.
 
 ### External data sources
 

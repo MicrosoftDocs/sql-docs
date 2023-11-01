@@ -220,7 +220,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 - Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
-- Premium-series memory optimized option offers double the amount of memory relative to premium-series.
+- Premium-series memory optimized option offers double the amount of memory relative to Standard-series.
 
 - For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  

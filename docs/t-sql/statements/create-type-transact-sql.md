@@ -42,11 +42,10 @@ dev_langs:
 -- User-defined Data Type syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    [
+    
       FROM base_type   
       [ ( precision [ , scale ] ) ]  
       [ NULL | NOT NULL ]
-    ]
     | EXTERNAL NAME assembly_name [ .class_name ]   
     | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
       [ <table_constraint> ] [ ,... n ]    

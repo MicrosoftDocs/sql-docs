@@ -1,10 +1,10 @@
 ---
 title: "Shrink a database"
-description: Learn how to shrink a database by using Object in SQL Server by using SQL Server Management Studio or Transact-SQL.
+description: Learn how to shrink a database in SQL Server by using SQL Server Management Studio or Transact-SQL.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 04/04/2023
+ms.date: 11/01/2023
 ms.service: sql
 ms.subservice: supportability
 ms.topic: conceptual
@@ -102,7 +102,7 @@ For information on file management and shrink operations specific to Azure SQL D
 
 [!code-sql[DBCC#DBCC_SHRINKDB1](codesnippet/tsql/shrink-a-database_1.sql)]
 
-## <a id="FollowUp"></a> Follow Up: After you shrink a database
+## <a id="FollowUp"></a> After you shrink a database
 
  Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking. For more information, see [Rebuild an index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md#rebuild-an-index).
 

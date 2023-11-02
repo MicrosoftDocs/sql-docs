@@ -37,7 +37,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
     "Power BI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential."
  
-    See the section "Configure stored credentials for a report-specific data source (Native mode)" in [Store credentials in a Reporting Services data source](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+    See the section "Configure stored credentials for a report-specific data source (Native mode)" in [Store credentials in a Reporting Services data source](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). 
   
 ##  <a name="bkmk_supported_items"></a> Items you can pin  
  The following report items can be pinned to a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard.  You can't pin items that are nested inside a data region. For example, you can't pin an item that is nested inside a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] table or list.  
@@ -63,7 +63,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 4. Select the report item you want to pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. You can only pin one item at a time.  The report viewer presents a shaded view of your report and the report items you can pin are highlighted while the items that you can't pin, will be shaded dark.  
   
-    **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard.   ![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
+    **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard. The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
   
     :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog box." lightbox="../reporting-services/media/ssrs-pin-to-powerbi.png":::
   
@@ -93,7 +93,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
 -   **No [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] button on the report viewer toolbar:**  This message indicates the report server has not been integrated with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **Cannot Pin**: When you attempt to pin an item, you see the following error message: See the section [Items You Can Pin](#bkmk_supported_items).  
+- **Cannot Pin**: When you attempt to pin an item, you see the following error message: See the section [Items you can pin](#bkmk_supported_items).  
   
     "Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]."  
   
@@ -133,7 +133,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 ## See also  
  [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
  [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)  
- [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+ [Introduction to dashboards for Power BI designers](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]

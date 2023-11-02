@@ -29,11 +29,11 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  For more information on RDL and RDL schemas, see the following:  
   
--   [Report Definition Language Specifications](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
+-   [Report Definition Language file format](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- For more information about ReportViewer controls, see [ReportViewer Controls (Visual Studio)](/previous-versions/ms251671(v=vs.140)).  
+ For more information about ReportViewer controls, see [ReportViewer controls (Visual Studio)](/previous-versions/ms251671(v=vs.140)).  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Report server and RDL schema support  
  A report definition file can be deployed to a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server in the following ways:  
@@ -72,7 +72,7 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
  To upgrade the report definition, you must open the report in a report authoring environment, such as SQL Server Data Tools or Report Builder, and then save it.  
   
- For more information about report upgrades and the schema versions that are supported, see [Upgrade reports](../reporting-services/install-windows/upgrade-reports.md).  
+ For more information about report upgrades and the schema versions that are supported, see [Upgrade reports (SSRS)](../reporting-services/install-windows/upgrade-reports.md).  
   
 ##  <a name="bkmk_report_authoring_and_deployment"></a> Report authoring and deployment support  
  Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  
@@ -91,7 +91,7 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
 -   [Deployment and version support in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
+-   [Download SQL Server Data Tools (SSDT) for Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer controls  
  A [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer control can display an .rdlc report in local preview mode or in remote mode, the control can display an .rdl file hosted on a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The following table provides the list of RDL versions supported by the ReportViewer controls for local processing (.rdlc). Server side RDL support is summarized in the section [Report server and RDL schema support](#bkmk_report_server_rdl_schema_support).  
@@ -103,11 +103,11 @@ In a SharePoint mode deployment, browse to the document library, select the repo
   
  For more information, see the following:  
   
--   [Converting RDLC Files to RDL Files](/previous-versions/ms252109(v=vs.140))  
+-   [Converting RDLC files to RDL files](/previous-versions/ms252109(v=vs.140))  
   
--   [ReportViewer Controls (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
+-   [ReportViewer controls (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
   
--   [Adding and Configuring the ReportViewer Controls](/previous-versions/ms252104(v=vs.140))  
+-   [Adding and configuring the ReportViewer controls](/previous-versions/ms252104(v=vs.140))  
   
 ## See also  
  [Reports, report parts, and report definitions &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   

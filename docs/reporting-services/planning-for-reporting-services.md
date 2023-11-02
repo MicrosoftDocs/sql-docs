@@ -12,15 +12,15 @@ ms.custom: updatefrequency5
 # Planning for Reporting Services
   Use these topics to better understand [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Learn how to install and configure the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment to best fit your needs.  
   
- ![Small File Folder Icon](/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **General Reporting Services Feature Planning and Architecture**  
- [Browser support for Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+**General Reporting Services Feature Planning and Architecture**  
+ [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  [Plan for report design and report deployment | Reporting Services](./plan-for-report-design-and-report-deployment-reporting-services.md)  
   
- [View Reporting Services reports on Microsoft Surface devices and  Apple iOS devices](./what-s-new-in-sql-server-reporting-services-ssrs.md)  
+ [What's new in SQL Server Reporting Services (SSRS)](./what-s-new-in-sql-server-reporting-services-ssrs.md)  
 
-:::image type="icon" source="/analysis-services/analysis-services/media/filefolder-small.png"::: **Reporting Services setup**  
- [Reporting Services report server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+**Reporting Services setup**  
+ [Comparing native and SharePoint Reporting Services report servers](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
  [Deployment checklist: Install Reporting Services into an existing SharePoint farm](/previous-versions/sql/sql-server-2016/hh231676(v=sql.130))  
   

@@ -101,7 +101,7 @@ https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Repor
 ```  
   
 ## See also  
- [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL Access parameter reference](../reporting-services/url-access-parameter-reference.md)  
+ [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

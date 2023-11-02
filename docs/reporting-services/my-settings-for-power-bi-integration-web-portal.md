@@ -36,9 +36,9 @@ Once you sign in, a new security token will be created.  Your dashboard tiles wi
 
 ## Next steps
 
-[Power BI report server integration](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
-[Pin Reporting Services items to Power BI dashboards](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
-[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
-[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Power BI report server integration (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
+[Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Introduction to dashboards for Power BI designers](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

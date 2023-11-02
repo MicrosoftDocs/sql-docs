@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017"
 
 This article describes changes in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), for versions 2017 and later.
 
-For the release notes for Report Viewer controls, see [Release Notes for the Report Viewer controls for WebForms and WinForms of SSRS](application-integration/release-notes-ssrs-application-integration.md).
+For the release notes for Report Viewer controls, see [Release notes for the Report Viewer controls for WebForms and WinForms of SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -193,7 +193,7 @@ Initial release.
 ## 14.0.601.20, 2023/02/14
 *(Product Version: 14.0.601.20)*
 
-- New [Power BI Migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
+- New [Power BI migration experience](/power-bi/guidance/migrate-ssrs-reports-to-power-bi#migration-tool-for-sql-server-2022) in the portal.
 
 | Fixed issue | Details |
 | :---------- | :------ |
@@ -340,7 +340,7 @@ Initial release.
 
 ## Next steps
 
-[What's New in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
+[What's new in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
 

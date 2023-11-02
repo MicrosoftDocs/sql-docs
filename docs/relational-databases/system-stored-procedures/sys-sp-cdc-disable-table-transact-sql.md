@@ -4,7 +4,7 @@ description: "Disables change data capture for the specified source table and ca
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 06/13/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -42,21 +42,21 @@ sys.sp_cdc_disable_table
 
 #### [ @source_schema = ] '*source_schema*'
 
-The name of the schema in which the source table is contained. *@source_schema* is **sysname**, with no default, and can't be NULL.
+The name of the schema in which the source table is contained. *@source_schema* is **sysname**, with no default, and can't be `NULL`.
 
 *@source_schema* must exist in the current database.
 
 #### [ @source_name = ] '*source_name*'
 
-The name of the source table from which change data capture is to be disabled. *@source_name* is **sysname**, with no default, and can't be NULL.
+The name of the source table from which change data capture is to be disabled. *@source_name* is **sysname**, with no default, and can't be `NULL`.
 
 *@source_name* must exist in the current database.
 
 #### [ @capture_instance = ] { '*capture_instance*' | 'all' }
 
-The name of the capture instance to disable for the specified source table. *@capture_instance* is **sysname** and can't be NULL.
+The name of the capture instance to disable for the specified source table. *@capture_instance* is **sysname** and can't be `NULL`.
 
-When `'all'` is specified, all capture instances defined for *@source_name* are disabled.
+When `all` is specified, all capture instances defined for *@source_name* are disabled.
 
 ## Return code values
 
@@ -88,6 +88,6 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';
 ```
 
-## See also
+## Related content
 
 - [sys.sp_cdc_enable_table (Transact-SQL)](sys-sp-cdc-enable-table-transact-sql.md)

@@ -4,7 +4,7 @@ description: "Returns information about Windows users and Windows groups."
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 05/26/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -36,7 +36,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 
 #### [ @acctname = ] '*@acctname*'
 
-The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of `NULL`. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `'CONTOSO\macraes'`, or `'BUILTIN\Administrators'`.
+The name of a Windows user or group granted access to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. *@acctname* is **sysname**, with a default of `NULL`. If *@acctname* isn't specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *@acctname* must be fully qualified. For example, `CONTOSO\macraes`, or `BUILTIN\Administrators`.
 
 #### [ @option = ] 'all' | 'members' ]
 
@@ -44,7 +44,7 @@ Specifies whether to report information about all permission paths for the accou
 
 #### [ @privilege = ] '*variable_name*' OUTPUT ]
 
-An output parameter that returns the privilege level of the specified Windows account. *@privilege* is **varchar(10)**, with a default of `'Not wanted'`. The privilege level returned is **user**, **admin**, or **null**.
+An output parameter that returns the privilege level of the specified Windows account. *@privilege* is **varchar(10)**, with a default of `Not wanted`. The privilege level returned is **user**, **admin**, or **null**.
 
 When `OUTPUT` is specified, this option puts *@privilege* in the output parameter.
 
@@ -86,10 +86,10 @@ The following example displays information about the `BUILTIN\Administrators` Wi
 EXEC xp_logininfo 'BUILTIN\Administrators';
 ```
 
-## See also
+## Related content
 
 - [sp_denylogin (Transact-SQL)](sp-denylogin-transact-sql.md)
 - [sp_grantlogin (Transact-SQL)](sp-grantlogin-transact-sql.md)
 - [sp_revokelogin (Transact-SQL)](sp-revokelogin-transact-sql.md)
 - [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
-- [General extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)
+- [General Extended stored procedures (Transact-SQL)](general-extended-stored-procedures-transact-sql.md)

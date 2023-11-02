@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 06/29/2023
+ms.date: 11/01/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -18,18 +18,15 @@ helpviewer_keywords:
   - "renaming tables"
 dev_langs:
   - "TSQL"
-monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current || =azure-sqldw-latest"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=fabric"
 ---
 # sp_rename (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
+[!INCLUDE [sql-asdb-asa-fabricse-fabricdw](../../includes/applies-to-version/sql-asdb-asa-fabricse-fabricdw.md)]
 
 Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE [msCoName](../../includes/msconame-md.md)]
 
 [!INCLUDE [dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.
-
-> [!NOTE]  
-> In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a COLUMN in a user object.
 
 [!INCLUDE [synapse-analytics-severless-sql-pools-tsql](Includes/synapse-analytics-severless-sql-pools-tsql.md)]
 
@@ -52,6 +49,13 @@ Syntax for `sp_rename` (preview) in Azure Synapse Analytics:
 ```syntaxsql
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
     , [ @objtype = ] 'COLUMN'
+```
+
+Syntax for `sp_rename` in [!INCLUDE [fabric](../../includes/fabric.md)]:
+
+```syntaxsql
+sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
+    [ , [ @objtype = ] 'OBJECT' ]
 ```
 
 ## Arguments
@@ -82,11 +86,15 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 | STATISTICS | **Applies to**: [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)].<br /><br />Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well. |
 | USERDATATYPE | A [CLR user-defined type](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](sp-addtype-transact-sql.md). |
 
-#### [ @objtype = ] '*COLUMN*'
-
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It's a **varchar(13)** with no default value and must always be included in the `sp_rename` (preview) statement. A column can only be renamed if it's not a distribution column.
+In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `COLUMN` is a mandatory value specifying that the object type to be renamed is a column, and must always be included in the `sp_rename` statement. A column can only be renamed if it's not a distribution column.
+
+**Applies to**: [!INCLUDE [fabric](../../includes/fabric.md)]
+
+In `sp_rename` for the Warehouse in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*.
+
+In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.md)], `OBJECT` is the only supported value for *@objtype*. Tables cannot be renamed.
 
 ## Return code values
 
@@ -111,6 +119,10 @@ In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresy
 - You can change the name of an object or data type in the current database only. The names of most system data types and system objects can't be changed.
 
 - If you use more than 128 characters for the new name, only the first 128 characters are used and the rest is truncated.
+
+**Applies to** Azure Synapse Analytics:
+
+In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `'COLUMN'` in a user object.
 
 ## Permissions
 
@@ -225,7 +237,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 
 ### F. Rename statistics
 
-The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using `sp_rename`. When you rename statistics, the object must be specified in the format schema.table.statistics_name.
+The following example creates a statistics object named `contactMail1` and then renames the statistic to `NewContact` by using `sp_rename`. When you rename statistics, the object must be specified in the format `schema.table.statistics_name``.
 
 ```sql
 CREATE STATISTICS ContactMail1
@@ -242,7 +254,7 @@ EXEC sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
 The following example renames the `c1` column in the `table1` table to `col1`.
 
 > [!NOTE]  
-> This [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the **dbo** schema.
+> This [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)] feature is still in preview for dedicated SQL pools and is currently available only for objects in the `dbo` schema.
 
 ```sql
 CREATE TABLE table1 (c1 INT, c2 INT);
@@ -250,7 +262,15 @@ EXEC sp_rename 'table1.c1', 'col1', 'COLUMN';
 GO
 ```
 
-## See also
+### H. Rename an object
+
+The following example renames the table `dbo.table1` to `dbo.table2`, using the `'OBJECT'` type.
+
+```sql
+exec sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
+```
+
+## Related content
 
 - [sys.sql_expression_dependencies (Transact-SQL)](../system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)
 - [sys.sql_modules (Transact-SQL)](../system-catalog-views/sys-sql-modules-transact-sql.md)

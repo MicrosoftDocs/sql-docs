@@ -1,6 +1,6 @@
 ---
 title: "My Settings for Power BI integration (web portal)"
-description: Learn about the My Settings page in the Reporting Services web portal and how it is used by individual users to manage their sign-in with Power BI.
+description: Learn about the My Settings page in the Reporting Services web portal and how it's used by individual users to manage their sign-in with Power BI.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 08/17/2017
@@ -18,21 +18,21 @@ f1_keywords:
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-The **My Settings** page in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] is used by individual users to manage their sign-in with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. When you  go through the steps to pin a report item, you will automatically be prompted to sign.  However,  you can use the **My Settings** page if you need to manually sign in or if you need to sign out.  If the **My Settings** menu option is not visible, the report server has not been integrated with  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+The **My Settings** page in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] is used by individual users to manage their sign-in with [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. When you  go through the steps to pin a report item, you'll automatically be prompted to sign.  However,  you can use the **My Settings** page if you need to manually sign in or if you need to sign out.  If the **My Settings** menu option isn't visible, the report server hasn't been integrated with  [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-mysettings.png" alt-text="Screenshot of the web portal highlighting My Settings in the Settings dropdown." lightbox="../reporting-services/media/ssrs-webportal-mysettings.png":::
   
 ## Why sign in
 
- When you sign in, you establish a relationship between your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] user account and  your [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] account.  The sign-in creates a security token that is good for 90 days. If the token expires, and you have items pinned to Power BI, you will see a notification.  
+ When you sign in, you establish a relationship between your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] user account and  your [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] account.  The sign-in creates a security token that is good for 90 days. If the token expires, and you have items pinned to Power BI, you'll see a notification.  
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-powerbi-notification.png" alt-text="Screenshot of the notification dropdown showing the message, 'We couldn't refresh some tiles in Power BI'." lightbox="../reporting-services/media/ssrs-webportal-powerbi-notification.png":::
    
-Tiles within [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboards will not refresh until you sign in again through **MySettings**.  
+Tiles within [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboards won't refresh until you sign in again through **MySettings**.  
 
 :::image type="content" source="../reporting-services/media/ssrs-webportal-powerbi-signin-again.png" alt-text="Screenshot of the Sign In section of My Settings." lightbox="../reporting-services/media/ssrs-webportal-powerbi-signin-again.png":::
   
-Once you sign in, a new security token will be created.  Your dashboard tiles will begin updating on their previously configured schedules.  
+Once you sign in, a new security token will be created.  Your dashboard tiles begin updating on their previously configured schedules.  
 
 ## Next steps
 

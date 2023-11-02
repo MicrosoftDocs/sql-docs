@@ -28,22 +28,22 @@ SharePoint users can view a list of the data alerts that they created and inform
   
 1.  Go to the SharePoint library where you saved the reports on which you created data alerts.  
   
-2.  Click the icon for the expand dropdown menu on a report and click **Manage Data Alerts**. The following picture shows the dropdown menu.  
+2.  Select the icon for the expand dropdown menu on a report and select **Manage Data Alerts**. The following picture shows the dropdown menu.  
 
     :::image type="content" source="../reporting-services/media/rs-openalertmanager.gif" alt-text="Screenshot of the dropdown menu highlighting Manage Data Alerts." lightbox="../reporting-services/media/rs-openalertmanager.gif":::
   
      Data Alert Manager opens. By default, it lists the alerts for the report that you selected in the library.  
   
-3.  Click the down arrow next to the **View alerts for report** list and select a report to view its alerts, or click **Show All** to list all alerts.  
+3.  Select the down arrow next to the **View alerts for report** list and select a report to view its alerts, or select **Show All** to list all alerts.  
   
     > [!NOTE]  
-    >  If the report that you selected does not have any alerts, you do not have to return to the SharePoint library to locate and select a report that hasalerts. Instead, click **Show All** to see a list of all your alerts.  
+    >  If the report that you selected does not have any alerts, you do not have to return to the SharePoint library to locate and select a report that hasalerts. Instead, select **Show All** to see a list of all your alerts.  
   
      A table lists the alert name, report name, your name as the creator of the alert, the number the alert was sent, the last time the alert definition was modified, and the status of the alert. If the alert cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
   
 ### Edit an alert definition  
   
--   Right-click the data alert for which you want to edit the alert definition and click **Edit**.  
+-   Right-click the data alert for which you want to edit the alert definition and select **Edit**.  
   
      The alert definition opens in Data Alert Designer. For more information, see [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md) and [Data Alert Designer](../reporting-services/data-alert-designer.md).  
   
@@ -55,13 +55,13 @@ SharePoint users can view a list of the data alerts that they created and inform
   
 ### Delete an alert definition  
   
--   Right-click the data alert that you want to delete and click **Delete**.  
+-   Right-click the data alert that you want to delete and select **Delete**.  
   
      When you delete the alert, no further alert messages are sent.  
   
 ### Run an alert  
   
--   Right-click the data alert that you want to run and click **Run**.  
+-   Right-click the data alert that you want to run and select **Run**.  
   
      The alert instance is created and the data alert message is immediately sent, regardless of the schedule options you specified in Data Alert Designer. For example, an alert configured to be sent weekly and then only if the results change is sent.  
 

@@ -28,21 +28,21 @@ SharePoint alerting administrators can view a list of the data alerts that were 
   
 1.  Go to the SharePoint site where data alerts definitions are saved.  
   
-2.  On the Home page, click **Site Actions**.  
+2.  On the Home page, select **Site Actions**.  
   
-3.  Scroll to the bottom of the list and click **Site Settings**.  
+3.  Scroll to the bottom of the list and select **Site Settings**.  
   
-4.  Under **Reporting Services**, click **Manage Data Alerts**.  
+4.  Under **Reporting Services**, select **Manage Data Alerts**.  
   
-5.  Click the down arrow by the **View alerts for user** list and select the user whose alerts you want to view.  
+5.  Select the down arrow by the **View alerts for user** list and select the user whose alerts you want to view.  
   
-6.  Click the down arrow next to the **View alerts for report** list and select a specific alert to view, or click **Show All** to list all alerts created by the selected user.  
+6.  Select the down arrow next to the **View alerts for report** list and select a specific alert to view, or select **Show All** to list all alerts created by the selected user.  
   
      A table lists the name, report name, name of the person who created the data alert, the number times the data alert was sent, the last time the data alert definition was modified, and the status of the data alert. If the data alert cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
   
 ## Delete an alert definition  
   
--   Right-click the data alert that you want to delete and click **Delete**.  
+-   Right-click the data alert that you want to delete and select **Delete**.  
   
     > [!NOTE]  
     >  After you delete the alert, no further alert messages are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  

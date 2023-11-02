@@ -31,7 +31,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
 
 -   [Microsoft SQL Server XML schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Report Definition Language file forma](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
+-   [Report Definition Language file format](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
@@ -64,11 +64,11 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself is not upgraded.  
   
- You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and click **Download**. 
+ You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and choose **Download**. 
 
 ::: moniker range="=sql-server-2016"
 
-In a SharePoint mode deployment, browse to the document library, select the report and click **Download a Copy**.  
+In a SharePoint mode deployment, browse to the document library, select the report and select **Download a Copy**.  
 
 ::: moniker-end
   

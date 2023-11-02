@@ -4,7 +4,7 @@ description: "Creates a new Database Mail account holding information about an S
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 05/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -51,15 +51,15 @@ The name of the account to add. *@account_name* is **sysname**, with no default.
 
 #### [ @email_address = ] '*email_address*'
 
-The e-mail address to send the message from. This address must be an internet e-mail address. *@email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address `SqlAgent@adventure-works.com`.
+The e-mail address to send the message from. This address must be an internet e-mail address. *@email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent might send e-mail from the address `SqlAgent@adventure-works.com`.
 
 #### [ @display_name = ] '*display_name*'
 
-The display name to use on e-mail messages from this account. *@display_name* is **nvarchar(128)**, with a default of `NULL`. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name `SQL Server Agent Automated Mailer` on e-mail messages.
+The display name to use on e-mail messages from this account. *@display_name* is **nvarchar(128)**, with a default of `NULL`. For example, an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent might display the name `SQL Server Agent Automated Mailer` on e-mail messages.
 
 #### [ @replyto_address = ] '*replyto_address*'
 
-The address that responses to messages from this account are sent to. *@replyto_address* is **nvarchar(128)**, with a default of `NULL`. For example, replies to an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, `danw@adventure-works.com`.
+The address that responses to messages from this account are sent to. *@replyto_address* is **nvarchar(128)**, with a default of `NULL`. For example, replies to an account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent might go to the database administrator, `danw@adventure-works.com`.
 
 #### [ @description = ] '*description*'
 
@@ -71,7 +71,7 @@ The name or IP address of the SMTP mail server to use for this account. The comp
 
 #### [ @mailserver_type = ] '*server_type*'
 
-The type of e-mail server. *@mailserver_type* is **sysname**, with a default of `'SMTP'`.
+The type of e-mail server. *@mailserver_type* is **sysname**, with a default of `SMTP`.
 
 #### [ @port = ] *port_number*
 
@@ -79,11 +79,11 @@ The port number for the e-mail server. *@port* is **int**, with a default of `25
 
 #### [ @username = ] '*username*'
 
-The user name to use to log on to the e-mail server. *@username* is **nvarchar(128)**, with a default of `NULL`. When this parameter is NULL, Database Mail doesn't use authentication for this account. If the mail server doesn't require authentication, use NULL for the username.
+The user name to use to log on to the e-mail server. *@username* is **nvarchar(128)**, with a default of `NULL`. When this parameter is `NULL`, Database Mail doesn't use authentication for this account. If the mail server doesn't require authentication, use `NULL` for the username.
 
 #### [ @password = ] '*password*'
 
-The password to use to log on to the e-mail server. *@password* is **nvarchar(128)**, with a default of `NULL`. There is no need to provide a password unless a username is specified.
+The password to use to log on to the e-mail server. *@password* is **nvarchar(128)**, with a default of `NULL`. There's no need to provide a password unless a username is specified.
 
 #### [ @use_default_credentials = ] *use_default_credentials*
 
@@ -105,7 +105,7 @@ Returns the account ID for the new account. *@account_id* is **int**, with a def
 
 Database Mail provides separate parameters for *@email_address*, *@display_name*, and *@replyto_address*. The *@email_address* parameter is the address from which the message is sent. The *@display_name* parameter is the name shown in the `From:` field of the e-mail message. The *@replyto_address* parameter is the address where replies to the e-mail message will be sent. For example, an account used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail messages from an e-mail address that is only used for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Messages from that address should display a friendly name, so recipients can easily determine that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent sent the message. If a recipient replies to the message, the reply should go to the database administrator rather than the address used by [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For this scenario, the account uses `SqlAgent@adventure-works.com` as the e-mail address. The display name is set to `SQL Server Agent Automated Mailer`. The account uses `danw@adventure-works.com` as the reply to address, so replies to messages sent from this account go to the database administrator rather than the e-mail address for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent. By providing independent settings for these three parameters, Database Mail allows you to configure messages to suit your needs.
 
-The *@mailserver_type* parameter supports the value `'SMTP'`.
+The *@mailserver_type* parameter supports the value `SMTP`.
 
 When *@use_default_credentials* is `1`, mail is sent to the SMTP server using the credentials of the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)]. When *@use_default_credentials* is `0` and a *@username* and *@password* are specified for an account, the account uses SMTP authentication. The *@username* and *@password* are the credentials the account uses for the SMTP server, not credentials for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or the network that the computer is on.
 
@@ -128,7 +128,7 @@ EXEC msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.adventure-works.com';
 ```
 
-## See also
+## Related content
 
 - [Database Mail](../database-mail/database-mail.md)
 - [Create a Database Mail Account](../database-mail/create-a-database-mail-account.md)

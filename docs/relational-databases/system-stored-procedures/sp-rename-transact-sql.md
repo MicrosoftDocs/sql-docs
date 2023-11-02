@@ -88,7 +88,7 @@ The type of object being renamed. *object_type* is **varchar(13)**, with a defau
 
 **Applies to**: Azure Synapse Analytics
 
-In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `COLUMN` is a mandatory value specifying that the object type to be renamed is a column, and must always be included in the `sp_rename` statement. A column can only be renamed if it's not a distribution column.
+In `sp_rename` (preview) for [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `COLUMN` is a mandatory value specifying that the object type to be renamed is a column, and must always be included in the `sp_rename` statement. A column can only be renamed if it isn't a distribution column.
 
 **Applies to**: [!INCLUDE [fabric](../../includes/fabric.md)]
 
@@ -122,7 +122,7 @@ In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.
 
 **Applies to** Azure Synapse Analytics:
 
-In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `'COLUMN'` in a user object.
+In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `COLUMN` in a user object.
 
 ## Permissions
 
@@ -264,10 +264,10 @@ GO
 
 ### H. Rename an object
 
-The following example renames the table `dbo.table1` to `dbo.table2`, using the `'OBJECT'` type.
+The following example renames the table `dbo.table1` to `dbo.table2`, using the `OBJECT` type.
 
 ```sql
-exec sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
+EXEC sp_rename @objname = 'dbo.table1', @newname = 'table2', @objtype = 'OBJECT';
 ```
 
 ## Related content

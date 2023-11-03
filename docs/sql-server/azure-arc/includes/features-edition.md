@@ -20,4 +20,5 @@ The following table identifies features available by SQL Server edition:
 | [Automated patching](../patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
 | [Always On availability groups (preview)](../manage-availability-group.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
+
 <sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)

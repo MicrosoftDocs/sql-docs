@@ -19,5 +19,6 @@ The following table identifies features enabled depending on license type:
 |[Automated backups](../point-in-time-restore.md)|No |Yes |Yes |
 |[Automated patching](../patch.md)|No |Yes |Yes |
 |[Failover cluster instances (preview)](../support-for-fci.md) |Yes | Yes | Yes|
+|[Monitoring (preview)](../sql-monitoring.md) |No | Yes | Yes|
 
 <sup>*</sup>License only includes SQL Server instances that are Developer, Express, Web, or Evaluation Edition and instances using a Server/CAL license.

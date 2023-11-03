@@ -22,5 +22,6 @@ The following table identifies features available by operating system:
 | [Automated patching](../patch.md) | Yes | No |
 | [SQL Server 2012 extended security updates](../../end-of-support/sql-server-extended-security-updates.md) | Yes | Not applicable |
 | [Failover cluster instances (preview)](../support-for-fci.md) | Yes | Not applicable |
+| [Monitoring (preview)](../sql-monitoring.md) | Yes | No |
 
 <sup>1</sup> [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] only.

@@ -9299,14 +9299,12 @@ items:
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
-        - name: Connection Properties Dialog Box
-          href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Database Engine
-          href: ssms/f1-help/connect-to-server-database-engine.md
-        - name: Connect to Server - Properties Page - Database Engine
-          href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Login - Database Engine
+        - name: Connect to Server - Login Page - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
+        - name: Connect to Server - Connection Properties Page - Database Engine
+          href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
+        - name: Connect to Server - Always Encrypted Page - Database Engine
+          href: ssms/f1-help/connect-to-server-always-encrypted-page-database-engine.md
         - name: Login - Connect to SSAS Server
           href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS

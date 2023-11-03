@@ -25,7 +25,7 @@ As general guideline, better performance can be obtained via the [.NET Core vers
 It's important to use the latest available version of SqlPackage as performance improvements and bug fixes are released regularly.
 
 ### Substitute SqlPackage for the Import/Export Service
-If you have attempted to use the Import/Export Service to import or export your database, you might be interested in using SqlPackage to perform the same operation with more control on optional parameters and properties.
+If you have attempted to use the Import/Export Service to import or export your database, you can use SqlPackage to perform the same operation with more control on optional parameters and properties.
 
 For Import, an example command is:
 
@@ -83,7 +83,7 @@ If SqlPackage is failing to connect, the server might not have encryption enable
 - Connect without encryption: /SourceEncryptConnection=False or /TargetEncryptConnection=False
 - Trust server certificate: /SourceTrustServerCertificate=True or /TargetTrustServerCertificate=True
 
-You might see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters could require changes to connect to the server:
+You could see any of the following warning messages when connecting to a SQL instance, indicating that command line parameters could require changes to connect to the server:
 
 ```output
 The settings for connection encryption or server certificate trust may lead to connection failure if the server is not properly configured.
@@ -108,7 +108,7 @@ ALTER TABLE [HumanResources].[Department]
 Here are the causes and solutions to work around this error:
 
 1. Verify that the destination you're importing into is an empty database.
-1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) and an explicitly named constraint, you might have an issue where a constraint with the same name is attempted to be created twice. It's recommended to use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
+1. If your database has constraints that are using the DEFAULT attribute (where SQL Server assigns a random name to the constraint) and an explicitly named constraint, a constraint with the same name might be created twice. You should use all explicitly named constraints (not using DEFAULT), or all system-defined names (using DEFAULT).
 1. Manually edit the model.xml and rename the constraint with the name experiencing the error to a unique name. This option should be undertaken only if directed by Microsoft support and poses a risk of .bacpac corruption.
 
 ## Diagnostics
@@ -144,7 +144,7 @@ The following tips are specific to running import or export against Azure SQL Da
 For more information on utilizing a PowerShell script to collect more information about an import operation, see [Lesson Learned #211: Monitoring SQLPackage Import Process](https://techcommunity.microsoft.com/t5/azure-database-support-blog/lesson-learned-211-monitoring-sqlpackage-import-process/ba-p/3556382).
 
 
-## Next steps
+## Related content
 
 - [SqlPackage overview](sqlpackage.md)
 - Learn more about [SqlPackage Import](sqlpackage-import.md)

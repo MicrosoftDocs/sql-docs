@@ -2,7 +2,7 @@
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 07/06/2023
+ms.date: 11/16/2023
 ms.topic: include
 ---
 > [!NOTE]
@@ -531,7 +531,7 @@ ms.topic: include
 | 35230 | 16 | No | The specified computer name is either an empty string or is longer than %d Unicode characters. Reenter the command specifying a valid computer name. |
 | 35231 | 16 | No | The specified server instance name, '%ls', is invalid. Reenter the command specifying a valid instance name. |
 | 35232 | 16 | No | The specified endpoint URL '%.\*ls' is invalid. Reenter the command specifying the correct URL. For information about specifying the endpoint URL for an availability replica, see SQL Server Books Online. |
-| 35233 | 16 | No | Cannot create an availability group containing %d availability replica(s).	The maximum number of availability replicas in an availability group %ls is %d. Reenter your CREATE AVAILABILITY GROUP command specifying fewer availability replicas. |
+| 35233 | 16 | No | Cannot create an availability group containing %d availability replica(s). The maximum number of availability replicas in an availability group %ls is %d. Reenter your CREATE AVAILABILITY GROUP command specifying fewer availability replicas. |
 | 35234 | 16 | No | Database name '%ls' was specified more than once. Reenter the command, specifying each database name only once. |
 | 35235 | 16 | No | The system name '%ls' was specified more than once in the REPLICA ON clause of this command. Reenter the command, specifying a different instance of SQL Server for each replica. |
 | 35236 | 15 | No | The endpoint URL was not specified for the availability replica hosted by server instance '%.\*ls'. Reenter the command, specifying the endpoint URL of this instance of SQL Server. |

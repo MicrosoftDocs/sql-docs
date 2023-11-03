@@ -188,7 +188,7 @@ Azure SQL Database and Azure SQL Managed Instance support various data tools tha
 | --- | --- | --- |
 | Azure portal | Yes | Yes |
 | Azure CLI | Yes | Yes|
-| [Azure Data Studio](/sql/azure-data-studio/what-is) | Yes | Yes |
+| [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio) | Yes | Yes |
 | Azure PowerShell | Yes | Yes |
 | [BACPAC file (export)](/sql/relational-databases/data-tier-applications/export-a-data-tier-application) | Yes, see [SQL Database export](database-export.md?view=azuresql-db&preserve-view=true) | Yes, see [SQL Managed Instance export](database-export.md?view=azuresql-mi&preserve-view=true) |
 | [BACPAC file (import)](/sql/relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database) | Yes, see [SQL Database import](database-import.md?view=azuresql-db&preserve-view=true) | Yes, see [SQL Managed Instance import](database-import.md?view=azuresql-mi&preserve-view=true) |

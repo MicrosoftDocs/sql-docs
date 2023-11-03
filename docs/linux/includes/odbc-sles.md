@@ -11,17 +11,11 @@ ms.custom:
 
 Use the following steps to install the **mssql-tools18** on SUSE Linux Enterprise Server.
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Import the Microsoft package signing key.
 
    ```bash
    curl -O https://packages.microsoft.com/keys/microsoft.asc
-   rpm --import microsoft.asc
+   sudo rpm --import microsoft.asc
    ```
 
 1. Add the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] repository to Zypper.
@@ -29,33 +23,27 @@ Use the following steps to install the **mssql-tools18** on SUSE Linux Enterpris
    - For SLES 15, use the following command:
 
      ```bash
-     zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+     sudo zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
      ```
 
    - For SLES 12, use the following command:
 
      ```bash
-     zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+     sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
      ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
 
 1. Install **mssql-tools18** with the unixODBC developer package.
 
    - For SLES 15, use the following command:
 
    ```bash
-   zypper install -y mssql-tools18 unixODBC-devel glibc-locale-base
+   sudo zypper install -y mssql-tools18 unixODBC-devel glibc-locale-base
    ```
 
    - For SLES 12, use the following command:
 
    ```bash
-   zypper install -y mssql-tools18 unixODBC-devel
+   sudo zypper install -y mssql-tools18 unixODBC-devel
    ```
 
    > [!NOTE]  

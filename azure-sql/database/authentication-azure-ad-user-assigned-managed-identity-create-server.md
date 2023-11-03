@@ -1,10 +1,11 @@
 ---
 title: Create a logical server using a user-assigned managed identity
 titleSuffix: Azure SQL Database
-description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity
+description: This article guides you through creating an Azure SQL logical server using a user-assigned managed identity.
 author: nofield
 ms.author: nofield
-ms.date: 09/27/2023
+ms.reviewer: vanto
+ms.date: 10/24/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: how-to
@@ -15,8 +16,8 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
+> - [Azure SQL Database](authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Managed Instance](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
 
 This how-to guide outlines the steps to create a [logical server](logical-servers.md) for Azure SQL Database with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Microsoft Entra ID for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md).
 
@@ -26,8 +27,8 @@ To retrieve the system-assigned managed identity (SMI) or user-assigned managed 
 
 ## Prerequisites
 
--  To provision a SQL Database server with a user-assigned managed identity, the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role (or a role with greater permissions), along with an Azure RBAC role containing the following action is required:
-   - Microsoft.ManagedIdentity/userAssignedIdentities/*/assign/action - For example, the [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) has this action.
+- To provision a SQL Database server with a user-assigned managed identity, the [SQL Server Contributor](/azure/role-based-access-control/built-in-roles#sql-server-contributor) role (or a role with greater permissions), along with an Azure RBAC role containing the following action is required:
+  - Microsoft.ManagedIdentity/userAssignedIdentities/*/assign/action - For example, the [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) has this action.
 - Create a user-assigned managed identity and assign it the necessary permission to be a server or managed instance identity. For more information, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) and [user-assigned managed identity permissions for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md#permissions).
 - [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or higher is required when using PowerShell for user-assigned managed identities.
 - [The Azure CLI 2.26.0](/cli/azure/install-azure-cli) or higher is required to use the Azure CLI with user-assigned managed identities.
@@ -44,53 +45,53 @@ The following steps outline the process of creating a new Azure SQL Database log
 
 1. Browse to the [Select SQL deployment](https://portal.azure.com/#create/Microsoft.AzureSQL) option page in the Azure portal.
 
-2. If you aren't already signed in to Azure portal, sign in when prompted.
+1. If you aren't already signed in to Azure portal, sign in when prompted.
 
-3. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
+1. Under **SQL databases**, leave **Resource type** set to **Single database**, and select **Create**.
 
-4. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
+1. On the **Basics** tab of the **Create SQL Database** form, under **Project details**, select the desired Azure **Subscription**.
 
-5. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
+1. For **Resource group**, select **Create new**, enter a name for your resource group, and select **OK**.
 
-6. For **Database name** enter your desired database name.
+1. For **Database name** enter your desired database name.
 
-7. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
+1. For **Server**, select **Create new**, and fill out the **New server** form with the following values:
 
-    - **Server name**: Enter a unique server name. Server names must be globally unique for all servers in Azure, not just unique within a subscription.
-    - **Server admin login**: Enter an admin login name, for example: `azureuser`.
-    - **Password**: Enter a password that meets the password requirements, and enter it again in the **Confirm password** field.
-    - **Location**: Select a location from the dropdown list
-    
-8. Select **Next: Networking** at the bottom of the page.
+   - **Server name**: Enter a unique server name. Server names must be globally unique for all servers in Azure, not just unique within a subscription.
+   - **Server admin login**: Enter an admin login name, for example: `azureuser`.
+   - **Password**: Enter a password that meets the password requirements, and enter it again in the **Confirm password** field.
+   - **Location**: Select a location from the dropdown list
 
-9. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
+1. Select **Next: Networking** at the bottom of the page.
 
-10. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
+1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
 
-11. Select **Next: Security** at the bottom of the page.
+1. For **Firewall rules**, set **Add current client IP address** to **Yes**. Leave **Allow Azure services and resources to access this server** set to **No**.
 
-12. On the Security tab, under **Identity**, select **Configure Identities**.
+1. Select **Next: Security** at the bottom of the page.
+
+1. On the Security tab, under **Identity**, select **Configure Identities**.
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/create-server-configure-identities.png" alt-text="Screenshot of Azure portal security settings of the create database process.":::
 
-13. On the **Identity** blade, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
+1. On the **Identity** blade, under **User assigned managed identity**, select **Add**. Select the desired **Subscription** and then under **User assigned managed identities** select the desired user assigned managed identity from the selected subscription. Then select the **Select** button. 
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/user-assigned-managed-identity-configuration.png" alt-text="Azure portal screenshot of adding user assigned managed identity when configuring server identity.":::
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/select-a-user-assigned-managed-identity.png" alt-text="Azure portal screenshot of user assigned managed identity when configuring server identity":::
 
-14. Under **Primary identity**, select the same user-assigned managed identity selected in the previous step.
+1. Under **Primary identity**, select the same user-assigned managed identity selected in the previous step.
 
     :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/select-a-primary-identity.png" alt-text="Azure portal screenshot of selecting primary identity for server":::
 
     > [!NOTE]
     > If the system-assigned managed identity is the primary identity, the **Primary identity** field must be empty.
 
-15. Select **Apply**
+1. Select **Apply**
 
-16. Select **Review + create** at the bottom of the page
+1. Select **Review + create** at the bottom of the page
 
-17. On the **Review + create** page, after reviewing, select **Create**.
+1. On the **Review + create** page, after reviewing, select **Create**.
 
 # [The Azure CLI](#tab/azure-cli)
 
@@ -112,13 +113,33 @@ Replace the following values in the example:
 - `<Location>`: Location of the server, such as `westus`, or `centralus`
 
 ```azurecli
-az sql server create --assign-identity --identity-type UserAssigned --user-assigned-identity-id /subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity> --primary-user-assigned-identity-id /subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity> --enable-ad-only-auth --external-admin-principal-type User --external-admin-name <AzureADAccount> --external-admin-sid <AzureADAccountSID> -g <ResourceGroupName> -n <ServerName> -l <Location>
+subscription_id=<subscriptionId>
+resource_group=<ResourceGroupName>
+managed_identity=<managedIdentity>
+primary_identity=<primaryIdentity>
+azure_ad_account=<AzureADAccount>
+azure_ad_account_sid=<AzureADAccountSID>
+server_name=<ServerName>
+location=<Location>
+
+az sql server create \
+  --assign-identity \
+  --identity-type UserAssigned \
+  --user-assigned-identity-id /subscriptions/$subscription_id/resourceGroups/$resource_group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/$managed_identity \
+  --primary-user-assigned-identity-id /subscriptions/$subscription_id/resourceGroups/$resource_group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/$primary_identity \
+  --enable-ad-only-auth \
+  --external-admin-principal-type User \
+  --external-admin-name $azure_ad_account \
+  --external-admin-sid $azure_ad_account_sid \
+  -g $resource_group \
+  -n $server_name \
+  -l $location
 ```
 
 For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create).
 
 > [!NOTE]
-> The above example provisions a server with only a user-assigned managed identity. You could set the `--identity-type` to be `UserAssigned,SystemAssigned` if you wanted both types of managed identities to be created with the server. 
+> The above example provisions a server with only a user-assigned managed identity. You could set the `--identity-type` to be `UserAssigned,SystemAssigned` if you wanted both types of managed identities to be created with the server.
 
 To check the server status after creation, see the following command:
 
@@ -145,13 +166,26 @@ Replace the following values in the example:
 - `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 
 ```powershell
-New-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -Location "<Location>" -ServerName "<ServerName>" -ServerVersion "12.0" -AssignIdentity -IdentityType "UserAssigned" -UserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>" -PrimaryUserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication
+$server = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    Location = "<Location>"
+    ServerName = "<ServerName>"
+    ServerVersion = "12.0"
+    AssignIdentity = $true
+    IdentityType = "UserAssigned"
+    UserAssignedIdentityId = "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>"
+    PrimaryUserAssignedIdentityId = "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity>"
+    ExternalAdminName = "<AzureADAccount>"
+    EnableActiveDirectoryOnlyAuthentication = $true
+}
+
+New-AzSqlServer @server
 ```
 
 For more information, see [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver).
 
 > [!NOTE]
-> The above example provisions a server with only a user-assigned managed identity. You could set the `-IdentityType` to be `"UserAssigned,SystemAssigned"` if you wanted both types of managed identities to be created with the server. 
+> The above example provisions a server with only a user-assigned managed identity. You could set the `-IdentityType` to be `"UserAssigned,SystemAssigned"` if you wanted both types of managed identities to be created with the server.
 
 To check the server status after creation, see the following command:
 
@@ -346,7 +380,7 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ---
 
-## Next steps
+## Related content
 
 - [User-assigned managed identity in Microsoft Entra for Azure SQL](authentication-azure-ad-user-assigned-managed-identity.md)
-- [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md).
+- [Create an Azure SQL Managed Instance with a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md)

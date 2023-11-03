@@ -16,6 +16,60 @@ ms.custom: tools|sos
 This article lists the features and fixes delivered by the released versions of SqlPackage.
 
 
+## 162.1.167 SqlPackage
+
+**Release date:** October 19, 2023
+
+```bash
+dotnet tool install -g microsoft.sqlpackage --version 162.1.167
+```
+
+|Platform|Download|
+|:---|:---|
+|Windows .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249738)|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2249478)|
+|macOS .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249674)|
+|Linux .NET 6 |[.zip file](https://go.microsoft.com/fwlink/?linkid=2249739)|
+
+
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Platform | References [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/5.1.1) v5.1.1.|
+| Azure Synapse Analytics | Adds support for `PARSER_VERSION` in `FORMAT_OPTIONS` for  Azure Synapse Analytics serverless SQL pools. [Documentation](../../t-sql/statements/create-external-file-format-transact-sql.md#format_options) |
+| Azure Synapse Analytics | Adds support for multi-column distribution (MCD) in `CREATE VIEW` for Azure Synapse Analytics dedicated SQL pools. [GitHub issue](https://github.com/microsoft/DacFx/issues/224) |
+| Azure Synapse Analytics | Adds support for /p:TableData property on extract operations to Parquet files, enabling the ability to specify which tables to export data for.  [GitHub issue](https://github.com/microsoft/DacFx/issues/16) |
+| Fabric Data Warehouse | Adds support for extract and publish for Fabric Data Warehouse databases.  Publish capabilities do not support changes that require existing tables to be altered.  The target platform enum value is `SqlDwUnifiedDatabaseSchemaProvider` in SQL database projects. |
+| Parquet | Adds preview support for extract and publish with data stored in Parquet files in Azure Blob Storage with Azure SQL Managed Instance and SQL Server 2022. Azure SQL Database and SQL Server 2019 and earlier are not supported. Data must be in supported data types for [CETAS](/azure/synapse-analytics/sql/develop-tables-cetas#supported-data-types).  Extract and publish with Parquet files offers performance improvements over import/export to bacpac files in many scenarios.|
+| Publish | Adds `/p:AllowTableRecreation` property to publish operation.  The default (true) is consistent with previous behavior, where a table change may require that a table is recreated while the table data is preserved however the deployment may take a significant amount of time or change tracking data could be lost.  Setting the property `/p:AllowTableRecreation` to false results in the deployment not starting if recreation is needed for any table.  [GitHub issue](https://github.com/microsoft/DacFx/issues/28) |
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Application | Fixes an issue where the SqlPackage CLI would throw an exception when the output was redirected. [GitHub issue](https://github.com/microsoft/DacFx/issues/261) |
+| Azure Synapse Analytics | Fixes an issue where a publish operation fails to parse a statement containing the `filepath()` or `filename()` [functions](/azure/synapse-analytics/sql/query-specific-files). |
+| Import | AUTO_DROP option is excluded from statistics when importing a bacpac to a version of SQL Server that does not support AUTO_DROP. |
+| Import | Fixes an issue where imports of databases containing ALTER or CREATE of availability groups would fail to import. |
+| Export | Fixes an issue where dropped ledger columns were inclued in a bacpac export, resulting in an error message during import. |
+| Export | Fixes an issue where /p:CompressionOption was not honored when exporting to a bacpac file. |
+| Extract | Fixes an issue where /p:ExtractTarget options for non-dacpac options still required the target file to have a .dacpac extension. [GitHub issue](https://github.com/microsoft/DacFx/issues/128) |
+| Ledger | Fixes an issue where import or publish of a database containing a dropped ledger table fails due to attempting to create permissions for the dropped table. |
+| Ledger | Fixes an issue where import of a database containing a dropped ledger table fails due to attempting to import data to the dropped table. |
+| Polybase | Fixes an issue where Azure SQL Managed Instance databases with RDBMS external tables could not be exported or extracted. [GitHub issue](https://github.com/microsoft/DacFx/issues/199) |
+| Publish | DropObjectsNotInSource does not drop objects that are permissions or role memberships. Use DropPermissionsNotInSource or DropRoleMembersNotInSource to enable dropping permissions or role memberships. [GitHub issue](https://github.com/microsoft/DacFx/issues/339) |
+| Publish | Fixes an issue where the publish operation fails when the user connecting does not have access to `master` in Azure SQL Database. |
+| Publish | Fixes an issue where deployments that include interactions with column encryption would experience intermittent execution timeout errors. |
+| Publish | Fixes an issue where deploying a dacpac built with .NET/.NET Core would fail if RegisterDataTierApplication was set to true. [GitHub issue](https://github.com/microsoft/DacFx/issues/18) |
+| Publish | Fixes an issue where system versioned table is modified and a new schema is created results in the deployment failing. [GitHub issue](https://github.com/microsoft/DacFx/issues/309) |
+
+
+### Known Issues
+| Feature | Details | Workaround |
+| :------ | :------ |:------ |
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) isn't yet supported. | N/A |
+| ScriptDOM | Parsing a very large file can result in a stack overflow. | None |
+
 ## 162.0.52 SqlPackage
 
 **Release date:** May 11, 2023

@@ -29,6 +29,8 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
   
  For more information on RDL and RDL schemas, see the following:  
   
+-   [Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
+  
 -   [Report Definition Language Specifications](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

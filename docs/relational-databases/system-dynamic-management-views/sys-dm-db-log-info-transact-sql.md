@@ -4,7 +4,7 @@ description: "The sys.dm_db_log_info (Transact-SQL) dynamic management function 
 author: "savjani"
 ms.author: "pariks"
 ms.reviewer: wiassaf
-ms.date: "06/19/2023"
+ms.date: "10/26/2023"
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: conceptual
@@ -21,6 +21,7 @@ dev_langs:
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-asdbmi.md)]
 
 Returns [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) information of the transaction log. Note all transaction log files are combined in the table output. Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
@@ -29,16 +30,17 @@ Returns [virtual log file (VLF)](../../relational-databases/sql-server-transacti
   
 ```syntaxsql
 sys.dm_db_log_info ( database_id )  
-``` 
+```
 
 ## Arguments  
 
-#### *database_id* | NULL | DEFAULT  
- Is the ID of the database. *database_id* is **int**. Valid inputs are the ID number of a database, NULL, or DEFAULT. The default is NULL. NULL and DEFAULT are equivalent values in the context of current database.
- 
- Specify NULL to return VLF information of the current database.
+#### *database_id* | NULL | DEFAULT
 
- The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified. When using `DB_ID` without specifying a database name, the compatibility level of the current database must be 90 or greater.  
+Is the ID of the database. *database_id* is **int**. Valid inputs are the ID number of a database, NULL, or DEFAULT. The default is NULL. NULL and DEFAULT are equivalent values in the context of current database.
+
+Specify NULL to return VLF information of the current database.
+
+The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified. When using `DB_ID` without specifying a database name, the compatibility level of the current database must be 90 or greater.  
 
 ## Table Returned  
 
@@ -54,14 +56,16 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parity of [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Used internally to determine the end of log within a VLF.|
 |vlf_first_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the first log record in the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Log sequence number (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) of the log record that created the [virtual log file (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Applies to:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br><br> Shows the thumbprint of the encryptor of the VLF if the VLF is encrypted using [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), otherwise `NULL`. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Applies to:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] and later <br><br> Shows the thumbprint of the encryptor of the VLF if the VLF is encrypted using [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), otherwise `NULL`. |
 
 ## Remarks
+
 The `sys.dm_db_log_info` dynamic management function replaces the `DBCC LOGINFO` statement.
 
 The formula for how many VLFs are created based on a growth event is detailed in the [SQL Server Transaction Log Architecture and Management Guide](../sql-server-transaction-log-architecture-and-management-guide.md#virtual-log-files-vlfs). This formula changed slightly starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)].
 
-## Permissions  
+## Permissions
+
 Requires the `VIEW SERVER STATE` permission in the database.  
 
 ### Permissions for SQL Server 2022 and later
@@ -71,6 +75,7 @@ Requires VIEW DATABASE PERFORMANCE STATE permission on the database.
 ## Examples  
   
 ### A. Determine databases in a SQL Server instance with high number of VLFs
+
 The following query determines the databases with more than 100 VLFs in the log files, which can affect the database startup, restore, and recovery time.
 
 ```sql
@@ -109,7 +114,7 @@ FROM cte_vlf_cnt;
 GO
 ```
 
-## Next steps
+## Related content
 
 - [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](system-dynamic-management-views.md)   
 - [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](database-related-dynamic-management-views-transact-sql.md)   

@@ -1,11 +1,11 @@
 ---
 title: Create an Azure SQL Managed Instance using a user-assigned managed identity
 titleSuffix: Azure SQL Managed Instance
-description: This article guides you through creating an Azure SQL Managed Instance using a user-assigned managed identity
+description: This article guides you through creating an Azure SQL Managed Instance using a user-assigned managed identity.
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto
-ms.date: 09/27/2023
+ms.date: 10/24/2023
 ms.service: sql-managed-instance
 ms.subservice: security
 ms.topic: how-to
@@ -16,8 +16,8 @@ ms.topic: how-to
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](../database/authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
+> - [Azure SQL Database](../database/authentication-azure-ad-user-assigned-managed-identity-create-server.md?view=azuresql-db&preserve-view=true)
+> - [Azure SQL Managed Instance](authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md?view=azuresql-mi&preserve-view=true)
 
 This how-to guide outlines the steps to create an [Azure SQL Managed Instance](sql-managed-instance-paas-overview.md) with a [user-assigned managed identity](/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types) from Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)). For more information on the benefits of using a user-assigned managed identity for the server identity in Azure SQL Database, see [User-assigned managed identity in Microsoft Entra for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md).
 
@@ -25,8 +25,8 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 ## Prerequisites
 
--  To provision a Managed Instance with a user-assigned managed identity, the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role (or a role with greater permissions), along with an Azure RBAC role containing the following action is required:
-   - Microsoft.ManagedIdentity/userAssignedIdentities/*/assign/action - For example, the [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) has this action.
+- To provision a SQL Managed Instance with a user-assigned managed identity, the [SQL Managed Instance Contributor](/azure/role-based-access-control/built-in-roles#sql-managed-instance-contributor) role (or a role with greater permissions), along with an Azure RBAC role containing the following action is required:
+  - Microsoft.ManagedIdentity/userAssignedIdentities/*/assign/action - For example, the [Managed Identity Operator](/azure/role-based-access-control/built-in-roles#managed-identity-operator) has this action.
 - Create a user-assigned managed identity and assign it the necessary permission to be a server or managed instance identity. For more information, see [Manage user-assigned managed identities](/azure/active-directory/managed-identities-azure-resources/how-manage-user-assigned-managed-identities) and [user-assigned managed identity permissions for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md#permissions).
 - [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or higher is required when using PowerShell for user-assigned managed identities.
 - [The Azure CLI 2.26.0](/cli/azure/install-azure-cli) or higher is required to use the Azure CLI with user-assigned managed identities.
@@ -42,7 +42,7 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 1. Fill out the mandatory information required on the **Basics** tab for **Project details** and **Managed Instance details**. This is a minimum set of information required to provision a SQL Managed Instance.
 
-   :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-create-basic.png" alt-text="Azure portal screenshot of the create Managed Instance basic tab":::
+   :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance/managed-instance-create-basic.png" alt-text="Azure portal screenshot of creating the SQL Managed Instance basic tab":::
 
    For more information on the configuration options, see [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 
@@ -71,7 +71,7 @@ This how-to guide outlines the steps to create an [Azure SQL Managed Instance](s
 
 1. You can leave the rest of the settings default. For more information on other tabs and settings, follow the guide in the article [Quickstart: Create an Azure SQL Managed Instance](../managed-instance/instance-create-quickstart.md).
 
-1. Once you are done with configuring your settings, select **Review + create** to proceed. Select **Create** to start provisioning the managed instance.
+1. Once you're done with configuring your settings, select **Review + create** to proceed. Select **Create** to start provisioning the managed instance.
 
 # [The Azure CLI](#tab/azure-cli)
 
@@ -96,7 +96,30 @@ Replace the following values in the example:
 - The `subnet` parameter needs to be updated with the `<subscriptionId>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`.
 
 ```azurecli
-az sql mi create --assign-identity --identity-type UserAssigned --user-assigned-identity-id /subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity> --primary-user-assigned-identity-id /subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity> --enable-ad-only-auth --external-admin-principal-type User --external-admin-name <AzureADAccount> --external-admin-sid <AzureADAccountSID> -g <ResourceGroupName> -n <managedinstancename> --subnet /subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>
+# Define variables for resources
+subscriptionId="<subscriptionId>"
+resourceGroupName="<ResourceGroupName>"
+managedIdentity="<managedIdentity>"
+primaryIdentity="<primaryIdentity>"
+AzureADAccount="<AzureADAccount>"
+AzureADAccountSID="<AzureADAccountSID>"
+VNetName="<VNetName>"
+SubnetName="<SubnetName>"
+managedinstancename="<managedinstancename>"
+
+# Create a managed instance with a user-assigned managed identity
+az sql mi create \
+  --assign-identity \
+  --identity-type UserAssigned \
+  --user-assigned-identity-id "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/$managedIdentity" \
+  --primary-user-assigned-identity-id "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/$primaryIdentity" \
+  --enable-ad-only-auth \
+  --external-admin-principal-type User \
+  --external-admin-name $AzureADAccount \
+  --external-admin-sid $AzureADAccountSID \
+  -g $resourceGroupName \
+  -n $managedinstancename \
+  --subnet "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.Network/virtualNetworks/$VNetName/subnets/$SubnetName"
 ```
 
 For more information, see [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create).
@@ -126,9 +149,26 @@ Replace the following values in the example:
 - `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 - The `SubnetId` parameter needs to be updated with the `<subscriptionId>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`.
 
-
 ```powershell
-New-AzSqlInstance -Name "<managedinstancename>" -ResourceGroupName "<ResourceGroupName>" -AssignIdentity -IdentityType "UserAssigned" -UserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>" -PrimaryUserAssignedIdentityId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication -Location "<Location>" -SubnetId "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen5
+$instanceName = @{
+    Name = "<managedinstancename>"
+    ResourceGroupName = "<ResourceGroupName>"
+    AssignIdentity = $true
+    IdentityType = "UserAssigned"
+    UserAssignedIdentityId = "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentity>"
+    PrimaryUserAssignedIdentityId = "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<primaryIdentity>"
+    ExternalAdminName = "<AzureADAccount>"
+    EnableActiveDirectoryOnlyAuthentication = $true
+    Location = "<Location>"
+    SubnetId = "/subscriptions/<subscriptionId>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>"
+    LicenseType = "LicenseIncluded"
+    StorageSizeInGB = 1024
+    VCore = 16
+    Edition = "GeneralPurpose"
+    ComputeGeneration = "Gen5"
+}
+
+New-AzSqlInstance @instanceName
 ```
 
 For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance).
@@ -138,12 +178,12 @@ For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsq
 
 # [REST API](#tab/rest-api)
 
-The [Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with a user-assigned managed identity.
+The [SQL Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with a user-assigned managed identity.
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
 
-The script below will provision a managed instance with a user-assigned managed identity, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md). The instance SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
+The following script will provision a managed instance with a user-assigned managed identity, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](../database/authentication-azure-ad-only-authentication.md). The instance SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 
 The Microsoft Entra admin, `<AzureADAccount>` can be used to manage the instance when the provisioning is complete.
 
@@ -157,7 +197,6 @@ Replace the following values in the example:
 - `<Location>`: Location of the server, such as `westus2`, or `centralus`
 - `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **User** pane, search for the Microsoft Entra user and find their **Object ID**
 - The `subnetId` parameter needs to be updated with the `<ResourceGroupName>`, the `Subscription ID`, `<VNetName>`, and `<SubnetName>`
-
 
 ```rest
 Import-Module Azure
@@ -500,6 +539,6 @@ To get your user-assigned managed identity **Resource ID**, search for **Managed
 
 ---
 
-## See also
+## Related content
 
 - [User-assigned managed identity in Microsoft Entra ID for Azure SQL](../database/authentication-azure-ad-user-assigned-managed-identity.md)

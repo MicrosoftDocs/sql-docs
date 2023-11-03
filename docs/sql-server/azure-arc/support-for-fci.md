@@ -18,7 +18,7 @@ If the Azure Arc-enabled SQL Server is configured as a failover cluster instance
 
 ## View cluster configuration, SQL Server, and database properties
 
-All the information about the SQL Server configuration is available on the clustered, database inventory, backups, cluster configuration, and other capabilities like Defender, Best Practices Assessment and etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
+All the information about the SQL Server configuration such as server configuration, database inventory and metadata, backups, cluster configuration, Defender status etc. is available on the clustered resource. The clustered resource can be differentiated from the other resources in the resource group by one of two ways:
 
  - The name of the Azure Arc-enabled SQL resource following the pattern `<NetworkName>_<InstanceName>`.
  - The `Always On role` property in the Essentials pane in Azure portal would show `Failover cluster instance`.
@@ -48,6 +48,7 @@ The portal displays the databases on the SQL Server instance.
 
 - All the Windows and SQL Server instances that are part of the failover clustering should be in same resource group.
 - Always On availability groups on a failover cluster instance aren't supported for Azure Arc-enabled SQL Server at this time.
+- Currently, best practices assessment is not supported with Always On failover cluster instance.
 - Automated backups and point-in-time restore is not supported for failover cluster instances at this time.
 
 ## Related tasks

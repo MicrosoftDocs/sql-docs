@@ -4,7 +4,7 @@ description: Learn to create a three-node cluster on Red Hat, SUSE, or Ubuntu, a
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh-msft
-ms.date: 03/06/2023
+ms.date: 10/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -19,7 +19,7 @@ This article describes how to create a three-node cluster on Linux using Pacemak
 
 [!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
-SQL Server isn't as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering (WSFC). A SQL Server instance isn't aware of the cluster, and all orchestration is from the outside in. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering; there is no equivalent in Pacemaker. Availability group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. To create a listener for transparent reconnection after failover, manually register the listener name in DNS with the IP used to create the virtual IP resource.
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] isn't as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering (WSFC). A [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance isn't aware of the cluster, and all orchestration is from the outside in. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering; there's no equivalent in Pacemaker. Availability group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. To create a listener for transparent reconnection after failover, manually register the listener name in DNS with the IP used to create the virtual IP resource.
 
 You can still [create a listener](sql-server-linux-availability-group-overview.md#the-listener-under-linux) for transparent reconnection after failover, but you have to manually register the listener name in the DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
@@ -47,9 +47,9 @@ The steps to create an availability group on Linux servers for high availability
    The way to configure a cluster resource manager depends on the specific Linux distribution.
 
    > [!IMPORTANT]  
-   > Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only.
-
-   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440).
+   > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
+   >
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891).
 
 1. [Add the availability group as a resource in the cluster](#create-availability-group-resource).
 
@@ -111,20 +111,20 @@ After Pacemaker is configured, use `pcs` to interact with the cluster. Execute a
 
 [!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
-### Configure fencing (STONITH)
+### Configure a fencing device
 
-Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. STONITH stands for "shoot the other node in the head." When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing brings the cluster to a known state again.
+Pacemaker cluster vendors require fencing a failed node, using a fencing device configured for a supported cluster setup. When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing brings the cluster to a known state again.
 
-A STONITH device provides a fencing agent. [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) provides an example of how to create a STONITH device for this cluster in Azure. Modify the instructions for your environment.
+A fencing device provides a fencing agent. [Setting up Pacemaker on Red Hat Enterprise Linux in Azure](/azure/sap/workloads/high-availability-guide-rhel-pacemaker?tabs=msi#create-a-fencing-device) provides an example of how to create a fencing device for this cluster in Azure. Modify the instructions for your environment.
 
-Resource level fencing ensures that there is no data corruption in an outage by configuring a resource. For example, you can use resource level fencing to mark the disk on a node as outdated when the communication link goes down.
+Resource level fencing ensures that there's no data corruption in an outage by configuring a resource. For example, you can use resource level fencing to mark the disk on a node as outdated when the communication link goes down.
 
 Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node. Pacemaker supports a great variety of fencing devices. Examples include an uninterruptible power supply or management interface cards for servers.
 
-For information about STONITH, and fencing, see the following articles:
+For information about fencing a failed node, see the following articles:
 
-- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
-- [Fencing and STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
+- [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
 - [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_administration/s1-fenceconfig-haaa)
 
 > [!NOTE]  
@@ -134,11 +134,11 @@ For information about STONITH, and fencing, see the following articles:
 > sudo pcs property set stonith-enabled=false
 > ```  
 >
-> Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled.
+> Disabling fencing is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a fencing implementation depending on your environment and keep it enabled.
 
 ### Set cluster property cluster-recheck-interval
 
-`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60 seconds and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a small value isn't recommended.
+`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints, or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60 seconds and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a small value isn't recommended.
 
 To update the property value to `2 minutes` run:
 
@@ -146,7 +146,7 @@ To update the property value to `2 minutes` run:
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
 Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
 
@@ -180,7 +180,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 #### RHEL 8
 
-With the availability of **RHEL 8**, the create syntax has changed. If you are using **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command:
+With the availability of **RHEL 8**, the create syntax has changed. If you use **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command:
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
@@ -196,7 +196,7 @@ To create the virtual IP address resource, run the following command on one node
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-There is no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name instead of an IP address, register the virtual IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.
+There's no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name instead of an IP address, register the virtual IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.
 
 ### Add colocation constraint
 
@@ -253,19 +253,19 @@ sudo pcs constraint order promote ag_cluster-clone then start virtualip
 ```
 
 > [!IMPORTANT]  
-> After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs` and in SLES use `crm` tools.
+> After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs` and in SLES use `crm` tools.
 
 Manually fail over the availability group with `pcs`. Don't initiate failover with Transact-SQL. For instructions, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
-## Next steps
+## Related content
 
-- [Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)
+- [Always On Availability Group failover on Linux](sql-server-linux-availability-group-failover-ha.md)
 
 # [SUSE Linux Enterprise Server](#tab/sles)
 
 The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/).
 
-For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/).
 
 ### Roadmap
 
@@ -280,9 +280,9 @@ The procedure for creating an availability group for high availability differs b
    The way to configure a cluster resource manager depends on the specific Linux distribution.
 
    > [!IMPORTANT]  
-   > Production environments require a fencing agent, like STONITH for high availability. The examples in this article do not use fencing agents. They are for testing and validation only.
+   > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
    >
-   > A Pacemaker cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see [SUSE Linux Enterprise High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-all/cha-ha-fencing.html).
 
 1. [Add the availability group as a resource in the cluster](#configure-an-availability-group)
 
@@ -296,7 +296,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 #### Install and configure SQL Server service on each cluster node
 
-1. Install and setup SQL Server service on all nodes. For detailed instructions, see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service on all nodes. For detailed instructions, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
@@ -317,7 +317,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   For more information, see the [SLES Administration Guide - Miscellaneous section](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   For more information, see the [SLES Administration Guide - Miscellaneous section](https://documentation.suse.com/sles/12-SP4/html/SLES-all/part-trouble.html).
 
 ### Create a SQL Server login for Pacemaker
 
@@ -325,15 +325,15 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ### Configure an availability group
 
-On Linux servers, configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+On Linux servers, configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ### Install and configure Pacemaker on each cluster node
 
 1. Install the High Availability extension
 
-   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
+   For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://documentation.suse.com/sle-ha/12-SP4/html/SLE-HA-install-quick/art-ha-install-quick.html).
 
-1. Install SQL Server resource agent package on both nodes.
+1. Install [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] resource agent package on both nodes.
 
    ```bash
    sudo zypper install mssql-server-ha
@@ -341,7 +341,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
 ### Set up the first node
 
-   Refer to [SLES installation instructions](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Refer to [SLES installation instructions](https://documentation.suse.com/sle-ha/12-SP4/).
 
 1. Sign in as `root` to the physical or virtual machine you want to use as cluster node.
 1. Start the bootstrap script by executing:
@@ -362,7 +362,7 @@ On Linux servers, configure the availability group and then configure the cluste
 
    1. Enter a multicast port. The script proposes 5405 as default.
 
-   1. To configure `SBD ()`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster.  
+   1. To configure `SBD ()`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster.
    Finally, the script will start the Pacemaker service to bring the one-node cluster online and enable the Web management interface Hawk2. The URL to use for Hawk2 is displayed on the screen.
 
 1. For any details of the setup process, check `/var/log/sleha-bootstrap.log`. You now have a running one-node cluster. Check the cluster status with crm status:
@@ -397,9 +397,9 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
    If NTP hasn't been configured to start at boot time, a message appears.
 
-1. If you decide to continue anyway, you will be prompted for the IP address of an existing node. Enter the IP address.
+1. If you decide to continue anyway, you're prompted for the IP address of an existing node. Enter the IP address.
 
-1. If you haven't already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node.
+1. If you haven't already configured a passwordless SSH access between both machines, you're also prompted for the root password of the existing node.
 
    After logging in to the specified node, the script copies the Corosync configuration, configures SSH and `Csync2`, and brings the current machine online as new cluster node. Apart from that, it starts the service needed for Hawk. If you have configured shared storage with `OCFS2`, it also automatically creates the mountpoint directory for the `OCFS2` file system.
 
@@ -407,13 +407,13 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 1. For details of the process, check `/var/log/ha-cluster-bootstrap.log`.
 
-1. Check the cluster status with `sudo crm status`. If you have successfully added a second node, the output will be similar to the following:
+1. Check the cluster status with `sudo crm status`. If you have successfully added a second node, the output is similar to the following:
 
    ```bash
    sudo crm status
    ```
 
-   You will see output similar to the following example.
+   You see output similar to the following example.
 
    ```output
    3 nodes configured
@@ -430,7 +430,7 @@ After adding all nodes, check if you need to adjust the no-quorum-policy in the 
 
 ### Set cluster property cluster-recheck-interval
 
-`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60 seconds and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a small value isn't recommended.
+`cluster-recheck-interval` indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints, or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. We recommend that you set failure-timeout to 60 seconds and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a small value isn't recommended.
 
 To update the property value to `2 minutes` run:
 
@@ -438,9 +438,9 @@ To update the property value to `2 minutes` run:
 crm configure property cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.  
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
-Additionally, the AG resource needs to be updated to include the `failover-timeout` property.  
+Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
 
 To update the property value to `true` run:
 
@@ -456,36 +456,36 @@ crm configure edit ag1
 
 In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s.
 
-For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+For more information on Pacemaker cluster properties, see [Configuring Cluster Resources](https://documentation.suse.com/sle-ha/15-SP1/).
 
 [!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
-### Configure fencing (STONITH)
+### Configure a fencing device
 
-Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
+Pacemaker cluster vendors require fencing a failed node, using a fencing device configured for a supported cluster setup. When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing brings the cluster to a known state again.
 
-Resource level fencing ensures mainly that there is no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
+Resource level fencing ensures mainly that there's no data corruption during an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
 
-Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
+Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation is called STONITH. Pacemaker supports a great variety of fencing devices, such as an uninterruptible power supply or management interface cards for servers.
 
 For more information, see:
 
-- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
-- [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html)
-- [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch)
+- [Fencing and STONITH](https://clusterlabs.org/pacemaker/doc/crm_fencing.html)
+- [SUSE HA documentation: Fencing and STONITH](https://documentation.suse.com/sle-ha/15-SP1/)
 
-At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running following command:
+At cluster initialization time, fencing is disabled if no configuration is detected. It can be enabled later by running following command:
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
 
 > [!IMPORTANT]  
-> Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+> Disabling fencing is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a fencing implementation depending on your environment and keep it enabled. SUSE doesn't provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor doesn't offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
 ### Configure the cluster resources for SQL Server
 
-Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+Refer to the [SLES Administration Guide](https://documentation.suse.com/sle-ha/12-SP4/).
 
 ### Enable Pacemaker
 
@@ -545,7 +545,7 @@ primitive admin_addr \
 
 #### Add colocation constraint
 
-Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource can't run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we define a colocation constraint with a score of INFINITY.
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource can't run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it's only a recommendation. A score of INFINITY means it's a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we define a colocation constraint with a score of INFINITY.
 
 To set colocation constraint for the virtual IP to run on same node as the primary node, run the following command on one node:
 
@@ -562,7 +562,7 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 
 1. User issues `resource migrate` to the availability group primary from node1 to node2.
 1. The virtual IP resource stops on node 1.
-1. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
+1. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary.
 1. The availability group master on node 1 is demoted.
 1. The availability group on node 2 is promoted to master.
 
@@ -575,19 +575,18 @@ sudo crm configure \
 ```
 
 > [!IMPORTANT]  
-> After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`.
+> After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`.
 
 Manually fail over the availability group with `crm`. Don't initiate failover with Transact-SQL. For more information, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 For more information, see:
 
-- [Managing cluster resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)
-- [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
+- [SUSE Linux Enterprise High Availability Extension 12 SP4](https://documentation.suse.com/sle-ha/12-SP4/)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/sphinx/Pacemaker_Administration/pcs-crmsh.rst)
 
-## Next steps
+## Related content
 
-- [Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)
+- [Always On Availability Group failover on Linux](sql-server-linux-availability-group-failover-ha.md)
 
 # [Ubuntu Linux](#tab/ubuntu)
 
@@ -595,17 +594,18 @@ For more information, see:
 
 The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps:
 
-1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+1. [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
-1. [Create the availability group](sql-server-linux-availability-group-configure-ha.md).
+1. [Configure SQL Server Always On Availability Group for high availability on Linux](sql-server-linux-availability-group-configure-ha.md).
 
 1. Configure a cluster resource manager, like Pacemaker. These instructions are in this article.
 
    The way to configure a cluster resource manager depends on the specific Linux distribution.
 
-   Production environments require a fencing agent, like [STONITH](#stonith) for high availability. The demonstrations in this documentation don't use fencing agents. The demonstrations are for testing and validation only.
-
-   A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing isn't available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440).
+   > [!IMPORTANT]  
+   > Production environments require a fencing agent for high availability. The examples in this article don't use fencing agents. They are for testing and validation only.
+   >
+   > A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments.
 
    Fencing is normally implemented at the operating system and is dependent on the environment. Find instructions for fencing in the operating system distributor documentation.
 
@@ -613,7 +613,7 @@ The steps to create an availability group on Linux servers for high availability
 
 ### Install and configure Pacemaker on each cluster node
 
-1. On all nodes, open the firewall ports. Open the port for the Pacemaker high-availability service, SQL Server instance, and the availability group endpoint. The default TCP port for server running SQL Server is 1433.
+1. On all nodes, open the firewall ports. Open the port for the Pacemaker high-availability service, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] instance, and the availability group endpoint. The default TCP port for server running [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is `1433`.
 
    ```bash
    sudo ufw allow 2224/tcp
@@ -647,7 +647,7 @@ The steps to create an availability group on Linux servers for high availability
 
 ### Create the cluster
 
-1. Prior to creating a cluster, you must create an authentication key on the primary server, and copy it to the other servers participating in the AG.
+1. Before creating a cluster, you must create an authentication key on the primary server, and copy it to the other servers participating in the AG.
 
    Use the following script to create an authentication key on the primary server:
 
@@ -662,7 +662,7 @@ The steps to create an availability group on Linux servers for high availability
    sudo scp /etc/corosync/authkey dbadmin@server-03:/etc/corosync
    ```
 
-2. To create the cluster, edit the `/etc/corosync/corosync.conf` file on the primary server:
+1. To create the cluster, edit the `/etc/corosync/corosync.conf` file on the primary server:
 
    ```bash
    sudo vim /etc/corosync/corosync.conf
@@ -733,15 +733,15 @@ The steps to create an availability group on Linux servers for high availability
 
 [!INCLUDE [Considerations for multiple NICs](includes/availability-group-multiple-network-interfaces.md)]
 
-### <a id="stonith"></a> Configure fencing (STONITH)
+### Configure a fencing device
 
-Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. (STONITH stands for "shoot the other node in the head".) When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
+Pacemaker cluster vendors require fencing a failed node, using a fencing device configured for a supported cluster setup. When the cluster resource manager can't determine the state of a node or of a resource on a node, fencing brings the cluster to a known state again.
 
 Resource level fencing ensures that no data corruption occurs if there's an outage. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
 
-Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation of it is called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
+Node level fencing ensures that a node doesn't run any resources. This is done by resetting the node, and the Pacemaker implementation is called STONITH. Pacemaker supports a great variety of fencing devices, for example, an uninterruptible power supply or management interface cards for servers.
 
-For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) and [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html).
+For more information, see [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/deprecated/en-US/Pacemaker/1.1/html/Clusters_from_Scratch) and [Fencing and Stonith](https://clusterlabs.org/pacemaker/doc/crm_fencing.html).
 
 Because the node level fencing configuration depends heavily on your environment, we disable it for this tutorial (it can be configured at a later time). Run the following script on the primary node:
 
@@ -749,11 +749,11 @@ Because the node level fencing configuration depends heavily on your environment
 sudo crm configure property stonith-enabled=false
 ```
 
-In this example, disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Contact the operating system vendor for information about fencing agents for any specific distribution.
+In this example, disabling fencing is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a fencing implementation depending on your environment and keep it enabled. Contact the operating system vendor for information about fencing agents for any specific distribution.
 
 ### Set cluster property cluster-recheck-interval
 
-The `cluster-recheck-interval` property indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. You should set `failure-timeout` to 60 seconds, and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a smaller value isn't recommended.
+The `cluster-recheck-interval` property indicates the polling interval at which the cluster checks for changes in the resource parameters, constraints, or other cluster options. If a replica goes down, the cluster tries to restart the replica at an interval that is bound by the `failure-timeout` value and the `cluster-recheck-interval` value. For example, if `failure-timeout` is set to 60 seconds and `cluster-recheck-interval` is set to 120 seconds, the restart is tried at an interval that is greater than 60 seconds but less than 120 seconds. You should set `failure-timeout` to 60 seconds, and `cluster-recheck-interval` to a value that is greater than 60 seconds. Setting `cluster-recheck-interval` to a smaller value isn't recommended.
 
 To update the property value to `2 minutes` run:
 
@@ -761,7 +761,7 @@ To update the property value to `2 minutes` run:
 sudo crm configure property cluster-recheck-interval=2min
 ```
 
-If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users will notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
+If you already have an availability group resource managed by a Pacemaker cluster, Pacemaker package 1.1.18-11.el7 introduced a behavior change for the `start-failure-is-fatal` cluster setting when its value is `false`. This change affects the failover workflow. If a primary replica experiences an outage, the cluster is expected to fail over to one of the available secondary replicas. Instead, users notice that the cluster keeps trying to start the failed primary replica. If that primary never comes online (because of a permanent outage), the cluster never fails over to another available secondary replica. Because of this change, a previously recommended configuration to set `start-failure-is-fatal` is no longer valid, and the setting needs to be reverted back to its default value of `true`.
 
 Additionally, the AG resource needs to be updated to include the `failover-timeout` property.
 
@@ -867,10 +867,10 @@ To add an ordering constraint, run the following command on one node:
 sudo crm configure order ag-before-listener Mandatory: ms-ag1:promote virtualip-group:start
 ```
 
-After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The SQL Server service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.
+After you configure the cluster and add the availability group as a cluster resource, you can't use Transact-SQL to fail over the availability group resources. [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] cluster resources on Linux aren't coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). The [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] service isn't aware of the presence of the cluster. All orchestration is done through the cluster management tools.
 
-### Next steps
+## Related content
 
-- [Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)
+- [Always On Availability Group failover on Linux](sql-server-linux-availability-group-failover-ha.md)
 
 ---

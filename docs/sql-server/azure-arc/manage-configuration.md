@@ -50,6 +50,7 @@ Run:
 az provider register --namespace 'Microsoft.AzureArcData'
 ```
 
+
 ---
 
 ## License types
@@ -63,7 +64,7 @@ SQL Server license type identifies the type of license for SQL Server instances 
 For your convenience, **Overview** of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
 
 > [!NOTE]
-> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup.
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup. See [Install Azure Extension for SQL Server from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#azure-extension-for-sql-server-2022).
 
 The following license types are supported:
 
@@ -219,6 +220,7 @@ az connectedmachine extension update --machine-name "simple-vm" -g "<resource-gr
 > * The update command overwrites all settings. If your extension settings have a list of excluded SQL Server instances, make sure to specify the full exclusion list with the update command.
 > * If you already have an older version of the Azure extension installed, make sure to upgrade it first, and then use one the modify methods to set the correct license type. For details, see [How to upgrade a machine extension](/azure/azure-arc/servers/manage-automatic-vm-extension-upgrade) for details. 
 
+
 ---
 
 ## Query SQL Server configuration
@@ -253,21 +255,26 @@ resources
 
 This query identifies many details about each instance, including the license type, ESU setting and enabled features.
 
+
 ```kusto
 resources
-| where type == "microsoft.hybridcompute/machines/extensions"
-| where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
-| project name, resourceGroup, subscriptionId,
-    Provisioning_State = properties.provisioningState,
+| where type == "microsoft.hybridcompute/machines"| where properties.detectedProperties.mssqldiscovered == "true"| extend machineIdHasSQLServerDiscovered = id
+| project name, machineIdHasSQLServerDiscovered, resourceGroup, subscriptionId
+| join kind= leftouter (
+    resources
+    | where type == "microsoft.hybridcompute/machines/extensions"    | where properties.type in ("WindowsAgent.SqlServer","LinuxAgent.SqlServer")
+    | extend machineIdHasSQLServerExtensionInstalled = iff(id contains "/extensions/WindowsAgent.SqlServer" or id contains "/extensions/LinuxAgent.SqlServer", substring(id, 0, indexof(id, "/extensions/")), "")
+    | project Extension_State = properties.provisioningState,
     License_Type = properties.settings.LicenseType,
-    ESU_enabled = properties.settings.enableExtendedSecurityUpdates,
-    Message = properties.instanceView.status.message,
-    Version = properties.instanceView.typeHandlerVersion,
-    Exlcuded_instaces = properties.ExcludedSqlInstances,
-    iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"Purview enabled",""),
-    iff(notnull(properties.settings.AzureAD),"Azure AD enabled",""),
-    iff(notnull(properties.settings.AssessmentSettings),"BPA enabled","")
-
+    ESU = iff(notnull(properties.settings.enableExtendedSecurityUpdates), iff(properties.settings.enableExtendedSecurityUpdates == true,"enabled","disabled"), ""),
+    Extension_Version = properties.instanceView.typeHandlerVersion,
+    Excluded_instances = properties.ExcludedSqlInstances,
+    Purview = iff(notnull(properties.settings.ExternalPolicyBasedAuthorization),"enabled",""),
+    Entra = iff(notnull(properties.settings.AzureAD),"enabled",""),
+    BPA = iff(notnull(properties.settings.AssessmentSettings),"enabled",""),
+    machineIdHasSQLServerExtensionInstalled)on $left.machineIdHasSQLServerDiscovered == $right.machineIdHasSQLServerExtensionInstalled
+| where isnotempty(machineIdHasSQLServerExtensionInstalled)
+| project-away machineIdHasSQLServerDiscovered, machineIdHasSQLServerExtensionInstalled
 ```
 
 #### List Arc-enabled servers with SQL Server

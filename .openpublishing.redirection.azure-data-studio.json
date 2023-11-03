@@ -897,7 +897,7 @@
     },
     {
       "source_path": "docs/sql-operations-studio/what-is.md",
-      "redirect_url": "/sql/azure-data-studio/what-is",
+      "redirect_url": "/azure-data-studio/what-is-azure-data-studio",
       "redirect_document_id": false
     }
   ]

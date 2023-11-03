@@ -135,6 +135,6 @@ Run the following [DELETE](/sql/t-sql/statements/delete-transact-sql/) T-SQL sta
 - [What is Azure SQL?](../azure-sql-iaas-vs-paas-what-is-overview.md)
 - [Azure SQL glossary of terms](../glossary-terms.md)
 - [T-SQL differences between SQL Server and Azure SQL Database](transact-sql-tsql-differences-sql-server.md)
-- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/sql/azure-data-studio/quickstart-sql-database)
+- [Quickstart: Use Azure Data Studio to connect and query Azure SQL Database](/azure-data-studio/quickstart-sql-database)
 - [Quickstart: Use SSMS to connect to and query Azure SQL Database or Azure SQL Managed Instance](connect-query-ssms.md)
 - [Quickstart: Use Visual Studio Code to connect and query](connect-query-vscode.md)

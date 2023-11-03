@@ -21,3 +21,4 @@ The following table identifies features available by SQL Server version:
 | [Automated patching](../patch.md) | No | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Yes | Yes | Yes | Yes |
 | [Always On availability groups (preview)](../manage-availability-group.md) | Yes | Yes | Yes | Yes | Yes | Yes |
+| [Monitoring (preview)](../sql-monitoring.md) | Yes | Yes | Yes | Yes | Yes | Yes |

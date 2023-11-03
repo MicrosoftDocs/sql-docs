@@ -3,7 +3,7 @@ title: Step 3 - Connecting to SQL using pyodbc
 description: Step 3 is a PoC, which shows how you can connect to SQL Server using Python and pyodbc. The basic examples demonstrate selecting and inserting data.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 08/22/2023
+ms.date: 11/01/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: how-to
@@ -24,6 +24,7 @@ This sample proof of concept uses `pyodbc` to connect to an SQL database. This s
   - Prefer to not use your own environment? Open as a devcontainer using [GitHub Codespaces](https://github.com/features/codespaces).
     - [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/github/codespaces-blank?quickstart=1).
 - `pyodbc` package from PyPI.
+- [Install the Microsoft ODBC Driver 18 for SQL Server](step-1-configure-development-environment-for-pyodbc-python-development.md#install-the-odbc-driver)
 - An SQL database and credentials.
 
 ## Connect and query data

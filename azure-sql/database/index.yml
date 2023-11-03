@@ -71,6 +71,14 @@ landingContent:
         - text: Educational SQL resources
           url: /sql/sql-server/educational-sql-resources
 
+  # Card
+  - title: Artificial Intelligence
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Intelligent Applications
+          url: ai-artificial-intelligence-intelligent-applications.md
+
   # Card 
   - title: Advanced security
     linkLists:
@@ -124,7 +132,6 @@ landingContent:
             url: recovery-using-backups.md 
           - text: Long-term backup retention  
             url: long-term-retention-overview.md
-
 
   # Card 
   - title: Reference 
@@ -197,7 +204,6 @@ landingContent:
             url: design-first-database-tutorial.md
           - text: Design first database (C#)
             url: design-first-database-csharp-tutorial.md
-
 
   # Card 
   - title: Planned maintenance

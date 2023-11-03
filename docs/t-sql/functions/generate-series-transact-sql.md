@@ -1,10 +1,10 @@
 ---
 title: "GENERATE_SERIES (Transact-SQL)"
-description: "GENERATE_SERIES (Transact-SQL)"
+description: "Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user."
 author: kendalvandyke
 ms.author: kendalv
 ms.reviewer: randolphwest
-ms.date: 07/28/2022
+ms.date: 10/27/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,42 +16,46 @@ helpviewer_keywords:
   - "analytic functions, GENERATE_SERIES"
 dev_langs:
   - "TSQL"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=fabric"
+
 ---
 # GENERATE_SERIES (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [sqlserver2022-asdb-asmi-fabricse-fabricdw](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw.md)]
 
 Generates a series of numbers within a given interval. The interval and the step between series values are defined by the user.
 
+::: moniker range="=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 #### Compatibility level 160
 
-GENERATE_SERIES requires the compatibility level to be at least 160. When the compatibility level is less than 160, SQL Server is unable to find the GENERATE_SERIES function.
+`GENERATE_SERIES` requires the compatibility level to be at least 160. When the compatibility level is less than 160, the [!INCLUDE [ssde-md](../../includes/ssde-md.md)] is unable to find the `GENERATE_SERIES` function.
 
 To change the compatibility level of a database, refer to [View or change the compatibility level of a database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
+::: moniker-end
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## Syntax
 
 ```syntaxsql
-GENERATE_SERIES ( start, stop [, step ] )
+GENERATE_SERIES ( start , stop [ , step ] )
 ```
 
 ## Arguments
 
 #### *start*
 
-The first value in the interval. *start* is specified as a variable, a literal, or a scalar [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**.
+The first value in the interval. *start* is specified as a variable, a literal, or a scalar [expression](../language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**.
 
 #### *stop*
 
-The last value in the interval. *stop* is specified as a variable, a literal, or a scalar [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**. The series stops once the last generated step value exceeds the *stop* value.
+The last value in the interval. *stop* is specified as a variable, a literal, or a scalar [expression](../language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**. The series stops once the last generated step value exceeds the *stop* value.
 
 The data type for *stop* **must** match the data type for *start*.
 
-#### *[ step ]*
+#### [ *step* ]
 
-Indicates the number of values to increment or decrement between steps in the series. *step* is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**. *step* can be either negative or positive, but can't be zero (`0`).
+Indicates the number of values to increment or decrement between steps in the series. *step* is an [expression](../language-elements/expressions-transact-sql.md) of type **tinyint**, **smallint**, **int**, **bigint**, **decimal**, or **numeric**. *step* can be either negative or positive, but can't be zero (`0`).
 
 This argument is optional. The default value for *step* is 1 if *start* is less than *stop*, otherwise, the default value is -1 if *start* is greater than *stop*.
 
@@ -63,11 +67,11 @@ Returns a single-column table containing a sequence of values in which each diff
 
 ## Permissions
 
-No permissions are required for GENERATE_SERIES. However, the user needs EXECUTE permission on the database, and permission to query any data that is used as inputs.
+No permissions are required for `GENERATE_SERIES`. However, the user needs EXECUTE permission on the database, and permission to query any data that is used as inputs.
 
 ## Examples
 
-The following examples demonstrate the syntax for calling GENERATE_SERIES.
+The following examples demonstrate the syntax for calling `GENERATE_SERIES`.
 
 ### A. Generate a series of integer values between 1 and 10 in increments of 1 (default)
 
@@ -76,7 +80,7 @@ SELECT value
 FROM GENERATE_SERIES(1, 10);
 ```
 
-Here's the result set.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 value
@@ -100,7 +104,7 @@ SELECT value
 FROM GENERATE_SERIES(1, 50, 5);
 ```
 
-Here's the result set.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 value
@@ -128,7 +132,7 @@ SELECT value
 FROM GENERATE_SERIES(@start, @stop, @step);
 ```
 
-Here's the result set.
+[!INCLUDE [ssresult-md](../../includes/ssresult-md.md)]
 
 ```output
 value
@@ -146,7 +150,7 @@ value
 1.0
 ```
 
-## See also
+## Related content
 
 - [SEQUENCES (Transact-SQL)](../../relational-databases/system-information-schema-views/sequences-transact-sql.md)
 - [Relational operators (Transact-SQL)](../language-elements/relational-operators-transact-sql.md)

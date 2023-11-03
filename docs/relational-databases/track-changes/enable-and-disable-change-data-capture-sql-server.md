@@ -28,7 +28,7 @@ The `sysadmin` permissions are required to enable or disable change data capture
 
 Before you can create a capture instance for individual tables, you must enable change data capture for the database.
 
-To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) in the database context. To determine if a database already has CDC enabled, query the **is_cdc_enabled** column in the `sys.databases` catalog view.
+To enable change data capture, run the stored procedure [sys.sp_cdc_enable_db (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) in the database context. To determine if a database already has CDC enabled, query the **is_cdc_enabled** column in the `sys.databases` catalog view.
 
 When a database has change data capture enabled, the **cdc** schema, **cdc** user, metadata tables, and other system objects are created for the database. The **cdc** schema contains the change data capture metadata tables and, after source tables are enabled for change data capture, the individual change tables serve as a repository for change data. The **cdc** schema also contains associated system functions used to query for change data.
 
@@ -66,7 +66,7 @@ GO
 After a database has been enabled for change data capture, members of the **db_owner** fixed database role can create a capture instance for individual source tables by using the stored procedure `sys.sp_cdc_enable_table`. To determine whether a source table has already been enabled for change data capture, examine the is_tracked_by_cdc column in the `sys.tables` catalog view.
 
 > [!IMPORTANT]  
-> For more information about the `sys.sp_cdc_enable_table` stored procedure arguments, see [sys.sp_cdc_enable_table (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql).
+> For more information about the `sys.sp_cdc_enable_table` stored procedure arguments, see [sys.sp_cdc_enable_table (Transact-SQL)](../system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).
 
 The following options can be specified when creating a capture instance:
 
@@ -112,9 +112,9 @@ GO
 
 **A function to query for net changes.**
 
-A capture instance always includes a table valued function (TVF) for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to `cdc.fn_cdc_get_all_changes_``. For more information, see [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql).
+A capture instance always includes a table valued function (TVF) for returning all change table entries that occurred within a defined interval. This function is named by appending the capture instance name to `cdc.fn_cdc_get_all_changes_``. For more information, see [cdc.fn_cdc_get_all_changes_<capture_instance> (Transact-SQL)](../system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).
 
-If the parameter *\@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).
+If the parameter *\@supports_net_changes* is set to 1, a net changes function is also generated for the capture instance. This function returns only one change for each distinct row changed in the interval specified in the call. For more information, see [cdc.fn_cdc_get_net_changes_<capture_instance> (Transact-SQL)](../system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).
 
 To support net changes queries, the source table must have a primary key or unique index to uniquely identify rows. If a unique index is used, the name of the index must be specified using the *\@index_name* parameter. The columns defined in the primary key or unique index must be included in the list of source columns to be captured.
 
@@ -157,7 +157,7 @@ GO
 
 ## See also
 
-- [Track Data Changes (SQL Server)](/sql/relational-databases/track-changes/track-data-changes-sql-server)
-- [About change data capture (SQL Server)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
-- [Work with Change Data (SQL Server)](/sql/relational-databases/track-changes/work-with-change-data-sql-server)
-- [Administer and Monitor change data capture (SQL Server)](/sql/relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server)
+- [Track Data Changes (SQL Server)](track-data-changes-sql-server.md)
+- [About change data capture (SQL Server)](about-change-data-capture-sql-server.md)
+- [Work with Change Data (SQL Server)](work-with-change-data-sql-server.md)
+- [Administer and Monitor change data capture (SQL Server)](administer-and-monitor-change-data-capture-sql-server.md)

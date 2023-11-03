@@ -24,7 +24,7 @@ For Azure SQL Database, see [Known issues with CDC in Azure SQL Database](/azure
 
 For CDC to function properly, you shouldn't manually modify any CDC metadata such as `CDC schema`, change tables, CDC system stored procedures, default `cdc user` permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename the `cdc user`.
 
-Any objects in [sys.objects](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) with `is_ms_shipped` property set to `1` shouldn't be modified.
+Any objects in [sys.objects](../system-catalog-views/sys-objects-transact-sql.md) with `is_ms_shipped` property set to `1` shouldn't be modified.
 
 ```sql
 SELECT    name AS object_name   
@@ -106,10 +106,10 @@ Using variables with partition switching on databases or tables with change data
 
 This section steps to troubleshoot errors associated with CDC on SQL Server, and Azure SQL Managed Instance. CDC-related errors may obstruct the proper functioning of the capture process and lead to the expansion of the database transaction log.
 
-To examine these errors, you can query the dynamic management view [sys.dm_cdc_errors](/sql/relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors). If [sys.dm_cdc_errors](/sql/relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors) dynamic management view returns any errors,  refer to the following section to understand the mitigation steps.
+To examine these errors, you can query the dynamic management view [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md). If [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md) dynamic management view returns any errors,  refer to the following section to understand the mitigation steps.
 
 > [!NOTE]
-> For more information on a particular error code, see [Database Engine events and errors](/sql/relational-databases/errors-events/database-engine-events-and-errors).  
+> For more information on a particular error code, see [Database Engine events and errors](../errors-events/database-engine-events-and-errors.md).  
 
 These are the different troubleshooting categories included in this section:
 
@@ -128,7 +128,7 @@ These are the different troubleshooting categories included in this section:
 * **Recommendation**: To address this problem, you need to disable and re-enable CDC for your database. When enabling change data capture for a database, it creates the cdc schema, cdc user, metadata tables, and other system objects for the database.
 
 > [!NOTE]
-> Objects found in the [**sys.objects**](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) system catalog view with **is_ms_shipped=1 and schema_name='cdc'** should not be altered or dropped.
+> Objects found in the [**sys.objects**](../system-catalog-views/sys-objects-transact-sql.md) system catalog view with **is_ms_shipped=1 and schema_name='cdc'** should not be altered or dropped.
 
 #### Error 1202 - Database principal doesn't exist, or user isn't a member
 
@@ -146,7 +146,7 @@ These are the different troubleshooting categories included in this section:
 
 * **Cause**: This error happens when SQL Server can't find or access the replication system table '%s.' This could be because the table is missing or unreachable. For CDC to function properly, you shouldn't manually modify any CDC metadata such as `CDC schema`, change tables, CDC system stored procedures, default `cdc user` permissions ([`sys.database_principals`](../system-catalog-views/sys-database-principals-transact-sql.md)) or rename the `cdc user`.
 
-* **Recommendation**: Verify that the system table exists and is accessible by querying the table directly. Query the [**sys.objects**](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql) system catalog, set predicate clause with **is_ms_shipped=1 and schema_name='cdc'** to list all CDC-related objects. If the query doesn't return any objects, you should disable and then re-enable CDC for your database. Enabling change data capture for a database creates the cdc schema, cdc user, metadata tables, and other system objects for the database.
+* **Recommendation**: Verify that the system table exists and is accessible by querying the table directly. Query the [**sys.objects**](../system-catalog-views/sys-objects-transact-sql.md) system catalog, set predicate clause with **is_ms_shipped=1 and schema_name='cdc'** to list all CDC-related objects. If the query doesn't return any objects, you should disable and then re-enable CDC for your database. Enabling change data capture for a database creates the cdc schema, cdc user, metadata tables, and other system objects for the database.
 
 #### Error 21050 - Only members of the sysadmin or db_owner fixed server role can perform this operation
 
@@ -162,7 +162,7 @@ These are the different troubleshooting categories included in this section:
 
 * **Recommendation**: To resolve this issue, delete any unnecessary data within your database to free up space. Identify unused tables, indexes, or other objects in the filegroup that can be safely removed. Monitor space utilization closely, for more information, see [Manage file space for databases in Azure SQL Database](/azure/azure-sql/database/file-space-manage)
 
-    In case dropping unnecessary data/objects is **not an option**, consider allocating more space for your database transaction log. For more information about transaction log management, see [SQL Server transaction log architecture and management guide](/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)
+    In case dropping unnecessary data/objects is **not an option**, consider allocating more space for your database transaction log. For more information about transaction log management, see [SQL Server transaction log architecture and management guide](../sql-server-transaction-log-architecture-and-management-guide.md)
 
 ### CDC limitation
 
@@ -170,7 +170,7 @@ These are the different troubleshooting categories included in this section:
 
 * **Cause**: Changing the size of columns of a CDC-enabled table using DDL statements can cause issues with the subsequent CDC capture process. The 'sys.dm_cdc_errors' Dynamic Management View (DMV) is a useful for checking any CDC for any reported issues, like errors number 2628 and 8115.
 
-* **Recommendation**: Before making any changes to column size, you must assess whether the alteration is compatible with the existing data in CDC change tables.  To address this problem, you need to disable and re-enable CDC for your database. For more information about enabling CDC for a database or a table, see [**Enable CDC for a database**](/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server#enable-for-a-database) and [**Enable CDC for a table**](/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server#enable-for-a-table).
+* **Recommendation**: Before making any changes to column size, you must assess whether the alteration is compatible with the existing data in CDC change tables.  To address this problem, you need to disable and re-enable CDC for your database. For more information about enabling CDC for a database or a table, see [**Enable CDC for a database**](enable-and-disable-change-data-capture-sql-server.md#enable-for-a-database) and [**Enable CDC for a table**](enable-and-disable-change-data-capture-sql-server.md#enable-for-a-table).
 
 #### Error 913 - CDC capture job fails when processing changes for a table with system CLR datatype
 
@@ -218,6 +218,6 @@ EXEC sp_addrolemember 'db_owner' , 'cdc';
 
 ## Next steps
 
-- For an overview of CDC for SQL Server, see [What is change data capture (CDC)?](/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
+- For an overview of CDC for SQL Server, see [What is change data capture (CDC)?](about-change-data-capture-sql-server.md)
 - For more information about known issues and limitations for CDC with Azure SQL Database, see [CDC known issues and limitations with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview#known-issues-and-limitations)
-- For more information on how to enable and disable CDC, see [Enable and disable change data capture](/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server)
+- For more information on how to enable and disable CDC, see [Enable and disable change data capture](enable-and-disable-change-data-capture-sql-server.md)

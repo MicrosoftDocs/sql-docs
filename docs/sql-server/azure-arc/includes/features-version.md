@@ -20,4 +20,3 @@ The following table identifies features available by SQL Server version:
 | [Automated backups](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](../patch.md) | No | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Yes | Yes | Yes | Yes |
-| [Monitoring (preview)](../sql-monitoring.md)| Yes | Yes | Yes | Yes | Yes | Yes |

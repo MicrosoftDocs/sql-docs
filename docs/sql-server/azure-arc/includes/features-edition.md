@@ -19,6 +19,5 @@ The following table identifies features available by SQL Server edition:
 | [Automated backups](../point-in-time-restore.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Automated patching](../patch.md) | Yes | Yes | Yes | Yes | Yes | Yes |
 | [Failover cluster instances (preview)](../support-for-fci.md)| Yes | Yes | Not applicable | Not applicable | Yes | Not applicable |
-| [Monitoring (preview)](../sql-monitoring.md)| Yes | Yes | No | No | No | No |
 
 <sup>1</sup> [Express LocalDB isn't supported.](/azure/purview/register-scan-on-premises-sql-server#supported-capabilities)

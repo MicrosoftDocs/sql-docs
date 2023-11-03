@@ -32,10 +32,10 @@ Enable this option when connecting to a database configured to use Always Encryp
 ## Enclave attestation
 
 **Protocol:**
-Select the attestation protocol to use when connecting to a database configured to use Always Encrypted with secure enclaves. The protocol value determines
+Select the attestation protocol to use when connecting to a database configured to use Always Encrypted with secure enclaves. The protocol value determines:
 
-1. if the client app uses attestation, and, if so,
-1. it specifies the type of the attestation service it uses.  
+- If the client app uses attestation, and, if so,
+- It specifies the type of the attestation service it uses.  
 
 Available options are **None**,**Host Guardian Service**, and **Microsoft Azure Attestation**. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
 

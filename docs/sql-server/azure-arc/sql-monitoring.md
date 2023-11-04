@@ -16,11 +16,10 @@ Monitor the performance of Azure Arc-enabled SQL Servers within the Azure portal
 
 In order for monitoring data to be collected on an Azure Arc-enabled SQL Server, the following conditions must be met:
 
-* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is "1.1.2496" or later
+* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is "1.1.2497" or later
 * Azure Arc-enabled SQL Server is running on Windows operating system
 * Azure Arc-enabled SQL Server is a Standard or Enterprise (Core) Edition
 * The license type on the Azure Arc-enabled SQL Server is set to "License with Software Assurance" or "Pay-as-you-go"
-* The SQL Server built-in login NT AUTHORITY\SYSTEM is the member of SQL Server sysadmin server role
 
 ## Collected data
 

@@ -17,8 +17,8 @@ Monitor the performance of Azure Arc-enabled SQL Servers within the Azure portal
 In order for monitoring data to be collected on an Azure Arc-enabled SQL Server, the following conditions must be met:
 
 * The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is "1.1.2496" or later
-* Azure Arc-enabled SQL Servers is running on Windows operating system
-* Azure Arc-enabled SQL Servers is a Standard or Enterprise (Core) Edition
+* Azure Arc-enabled SQL Server is running on Windows operating system
+* Azure Arc-enabled SQL Server is a Standard or Enterprise (Core) Edition
 * The license type on the Azure Arc-enabled SQL Server is set to "License with Software Assurance" or "Pay-as-you-go"
 * The SQL Server built-in login NT AUTHORITY\SYSTEM is the member of SQL Server sysadmin server role
 
@@ -62,7 +62,7 @@ Collection Frequency: 10 seconds\
 
 Description: Includes database options and other database metadata.\
 Dataset Name: SqlServerDatabaseProperties\
-Collection Frequency: 5 Minutes\
+Collection Frequency: 5 minutes\
 **Collected Fields:**
 
 * collation_name
@@ -113,7 +113,7 @@ Collection Frequency: 5 Minutes\
 
 Description: Includes its storage usage and persistent version store.\
 Dataset Name: SqlServerDatabaseStorageUtilization\
-Collection Frequency: 1 Minute\
+Collection Frequency: 1 minute\
 **Collected Fields:**
 
 * collection_time_utc
@@ -150,7 +150,7 @@ Collection Frequency: 10 seconds\
 
 Description: Includes common performance counters recorded by SQL Server.\
 Dataset Name: SqlServerPerformanceCountersCommon\
-Collection Frequency: 10 seconds\
+Collection Frequency: 1 minute\
 **Collected Counters:**
 
 * Active Temp Tables
@@ -198,7 +198,7 @@ Collection Frequency: 10 seconds\
 
 Description: Includes detailed performance counters recorded by SQL Server.\
 Dataset Name: SqlServerPerformanceCountersDetailed\
-Collection Frequency: 10 seconds\
+Collection Frequency: 1 minute\
 **Collected Counters:**
 
 * Average Wait Time (ms)
@@ -284,8 +284,8 @@ Collection Frequency: 10 seconds\
 ### Using the Azure Portal
 
 * On the resource page for an Azure Arc-enabled SQL Server, select the "Performance Dashboard (preview)" section
-* At the top of the "Performance Dashboard" page, click the Configue button. A panel "Configure monitoring settings" will open on the right-hand side of the screen.
-* In the configure monitoring settings panel, toggle the option for monitoring data collection on or off. 
+* At the top of the "Performance Dashboard" page, click the Configure button. A panel "Configure monitoring settings" will open on the right-hand side of the screen.
+* In the configure monitoring settings panel, toggle the option for monitoring data collection on or off.
 * Select Apply settings
 
 ### Using the Azure CLI
@@ -305,6 +305,8 @@ To enable the monitoring data collection for an Azure Arc-enabled SQL Server, ru
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
+
+Please note that this command may run successfully but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
 
 ## Limitations
 

@@ -44,7 +44,7 @@ Backups can also be configured to run on a **default** schedule which is as foll
 
 ## Assign permissions
 
-The current backup service within the Azure extension for Arc-enabled Server uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
+The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] uses `[NT AUTHORITY\SYSTEM]` account to perform the backups. As such, you need to grant the following permissions to this account.
 
    > [!NOTE]  
    > This requirement applies to the preview release.
@@ -79,47 +79,59 @@ After you have assigned permissions, you can enable automated backups.
 
 To enable automated backups in Azure portal:
 
+1. Disable any existing backup routines.
 1. Browse to the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for which you want to enable automated backups.
 1. Select **Backups**.
-1. Select on**Configure policies**.
-1. From the Configure policies options:
+1. Select **Configure policies**.
+1. From the configure policies options:
    - Set a value for backup retention days - between 1 and 35.
    - Set a schedule for the full, differential, and transactional log backups.
 1. Select **Apply** to enable this configuration.
 
 Once the automated backups are configured, the Arc SQL extension will initiate a backup of all the databases to the default backup location configured.
 
-Once the backups are enabled, a full back for each user database is initiated right away. The backups are native [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] backups which means all backup history is available in the backup related tables in the `msdb` database. 
+Once the backups are enabled, a full backup for each user database is initiated right away. The backups are native [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] backups which means all backup history is available in the backup related tables in the `msdb` database. 
 
 ### [Azure CLI](#tab/az)
 
 To enable automated backups using `az` CLI:
 
 1. Disable any existing backup routines.
-1. After you disable existing backup routines, run the following command(s):
+1. After you disable existing backup routines, run the following command:
 
-   a. Enable the extension:
+   a. Add the extension:
 
    ```azurecli
    --Install the arcdata extension if not already done
    az extension add --name arcdata
    ```
 
-   b. Configure either **default** schedule **or** a **custom** schedule
+   b. Configure either the default schedule or a custom schedule:
+   
+
+    **Default schedule**
 
     ```azurecli
-    -- default schedule
     az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays>
+    ```
 
-    --Example:
+    Example:
+
+    ```azurecli
     az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24
-        
-    --custom schedule
-    az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <num in minutes>
+    ```
 
-    --Example:
+    **Custom schedule**
+
+    ```azurecli
+    az sql server-arc backups-policy set --name <arc-server-name> --resource-group <resourcegroup> --retention-days <retentiondays> --full-backup-days <num of days> --diff-backup-hours <12 or 24 hours> --tlog-backup-mins <num in minutes>
+    ```
+
+    Example:
+
+    ```azurecli
     az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24 --full-backup-days 7 --diff-backup-hours 24 --tlog-backup-mins 30
-   ```
+    ```
 
 ---
 
@@ -180,7 +192,6 @@ When the built-in automated backups are enabled on an Arc-enabled [!INCLUDE [ssn
 - Automated backups are currently not supported for Always On failover cluster instances
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model are not automatically backed up.
 - Automated backups are only supported on the primary replica of an Always On availability group.
-- Currently the backups can only be restored back to the same Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).
 
 ## Related tasks

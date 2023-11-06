@@ -1,4 +1,4 @@
-![image](https://github.com/MicrosoftDocs/sql-docs-pr/assets/28012337/e26cedf7-d449-4a29-bdf0-1370d34ccaa6)---
+---
 title: High availability
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the Azure SQL Managed Instance service high availability capabilities and features.

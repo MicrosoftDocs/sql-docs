@@ -12,7 +12,7 @@ Passwordless connections use Microsoft Entra authentication to connect to Azure 
 - [Microsoft Entra authentication overview](/azure/azure-sql/database/authentication-aad-overview)
 - [Configure Microsoft Entra auth](/azure/azure-sql/database/authentication-aad-configure)
 
-For this migration guide, ensure you have a Microsot Entra admin assigned to your Azure SQL Database.
+For this migration guide, ensure you have a Microsoft Entra admin assigned to your Azure SQL Database.
 
 1) Navigate to the **Microsoft Entra** page of your logical server.
 

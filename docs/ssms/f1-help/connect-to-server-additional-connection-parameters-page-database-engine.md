@@ -34,7 +34,7 @@ Parameters are entered with the property name and followed by the value for the 
 
 When entering multiple parameters, separate them with a semicolon. For example, ```ApplicationIntent=ReadOnly; InitialCatalog=WideWorldImporters```.
 
-For a complete list of parameters, see [Properties](/../../dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder?view=sqlclient-dotnet-standard-3.1#properties).
+For a complete list of parameters, see [Properties](/../../dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder?view=sqlclient-dotnet-standard-3.1#properties&preserve-view=true).
 
 > [!CAUTION]
 > Negative potential consequences of an action

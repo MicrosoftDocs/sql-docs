@@ -1,11 +1,11 @@
----
+![image](https://github.com/MicrosoftDocs/sql-docs-pr/assets/28012337/e26cedf7-d449-4a29-bdf0-1370d34ccaa6)---
 title: High availability
 titleSuffix: Azure SQL Managed Instance
 description: Learn about the Azure SQL Managed Instance service high availability capabilities and features.
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/01/2023
+ms.date: 11/06/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -95,13 +95,15 @@ During preview, zone redundancy for SQL Managed Instance is available in the Bus
 
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
-| Brazil South | North Europe | Qatar Central | South Africa North | Australia East |
-| Canada Central | Norway East | UAE North | | India Central |
-| Central US | UK South | | | Japan East |
-| East US | West Europe | | | Korea Central |
-| South Central US | Sweden Central | | | East Asia |
-| West US 2 | Switzerland North | | | |
-| West US 3 | | | | |
+| Brazil South | France Central | Qatar Central | South Africa North | Australia East |
+| Canada Central | Germany West Central | | | Central India |
+| Central US | Norway East | | | Japan East |
+| East US | North Europe | | | Korea Central |
+| East US 2 | UK South | | | East Asia |
+| South Central US | West Europe | | | |
+| West US 2 | Sweden Central | | | |
+| West US 3 | Switzerland North | | | |
+| | Poland Central | | | |
 
 
 

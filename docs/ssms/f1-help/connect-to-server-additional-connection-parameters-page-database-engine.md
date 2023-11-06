@@ -16,25 +16,25 @@ f1_keywords:
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Use this tab to enter additional, advanced parameters when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Access this tab by selecting **Options >>** on the login tab.
+Use this tab to enter advanced parameters when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde-md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Access this tab by selecting **Options >>** on the login tab.
   
 [!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ## Additional parameters
 
-The Additional Connection Parameters dialog box allows you to enter connection properties that do not have an equivalent exposed in any other tab, usually to support an advanced scenario. The parameters entered in the Additional Connection Parameters dialog box are added to any options selected or altered in the **Login** and **Connection Properties** dialogs.
+The Additional Connection Parameters dialog box allows you to enter connection properties that don't have an equivalent option exposed in any other tab, usually to support an advanced scenario. The parameters entered in the Additional Connection Parameters dialog box are added to any options selected or altered in the **Login** and **Connection Properties** dialogs.
 
 > [!IMPORTANT]
 > Essential information required for user success
-Any parameters entered in this dialog box override selections made on the **Login** and **Connection Properties** dialogs.  Parameters are transmitted as clear text; do not include sensitive information in the dialog.
+Any parameters entered in this dialog box override selections made on the **Login** and **Connection Properties** dialogs.  Parameters are transmitted as clear text; don't include sensitive information in the dialog.
 
 ## Adding a parameter
 
-Parameters are entered with the property name and followed by the value for the property. For scenarios that include Availability Groups, to connect to a secondary replica that supports read-intent so you can execute read-only queries, enter ```ApplicationIntent=ReadOnly```.  If you connect to an Availability Group with replicas in multiple subnets and specify the Listener in the **Server name** dialog on the **Login** page, enter ```MultiSubnetFailover=True``` for faster detection of, and connection to, the (currently) active server.
+Parameters are entered with the property name and followed by the value for the property. For scenarios that include Availability Groups, to connect to a secondary replica that supports read-intent so you can execute read-only queries, enter ```ApplicationIntent=ReadOnly```. If you connect to an Availability Group with replicas in multiple subnets and specify the Listener in the **Server name** dialog on the **Login** page, enter ```MultiSubnetFailover=True``` for faster detection of, and connection to, the (currently) active server.
 
 When entering multiple parameters, separate them with a semicolon. For example, ```ApplicationIntent=ReadOnly; InitialCatalog=WideWorldImporters```.
 
-For a complete list of parameters see [Properties](/../../dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder?view=sqlclient-dotnet-standard-3.1#properties).
+For a complete list of parameters, see [Properties](/../../dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder?view=sqlclient-dotnet-standard-3.1#properties).
 
 > [!CAUTION]
 > Negative potential consequences of an action

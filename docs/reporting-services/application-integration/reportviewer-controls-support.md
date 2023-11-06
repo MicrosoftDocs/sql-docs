@@ -23,7 +23,7 @@ For a version history of the Report Viewer control, see the following links:
 
 ## Application server and report server combinations
 
-Some features of the Report Viewer control rely on the operating system's default behaviors. Thus, they may require running the same version for both the client (the application server running the Report Viewer control) and the server (running Reporting Services). The following combinations of application server and report server are supported:
+Some features of the Report Viewer control rely on the operating system's default behaviors. Thus, they might require running the same version for both the client (the application server running the Report Viewer control) and the server (running Reporting Services). The following combinations of application server and report server are supported:
 
 | Application server | Report server |
 | :----------------- | :------ |

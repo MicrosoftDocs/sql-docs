@@ -1,6 +1,6 @@
 ---
-title: Connect to Server (Additional Connection Parameters Page) Database Engine
-description: "Connect to Server (Additional Connection Parameters Page) Database Engine"
+title: Connect to Server (Additional Connection Parameters page) Database Engine
+description: "Connect to Server (Additional Connection Parameters page) Database Engine"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
@@ -38,7 +38,7 @@ For a complete list of parameters, see [Properties](/../../dotnet/api/microsoft.
 > [!CAUTION]
 > Additional parameters are not typically required and exist to support advanced scenarios. If you determine that a connection is not working as expected, check the **Additional Connection Parameters** dialog to see if any unexpected options exist.  It is not uncommon that users enter options for testing purposes and then forget to remove them.
 
-## See Also  
+## See also  
 
 [Connect to Server (Login Page) Database Engine](connect-to-server-login-page-database-engine.md)
 [Connect to Server (Connection Properties Page) Database Engine](connect-to-server-connection-properties-page-database-engine.md)

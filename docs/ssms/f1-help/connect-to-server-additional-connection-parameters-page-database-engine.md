@@ -25,8 +25,7 @@ Use this tab to enter advanced parameters when connecting to an instance of [!IN
 The Additional Connection Parameters dialog box allows you to enter connection properties that don't have an equivalent option exposed in any other tab, usually to support an advanced scenario. The parameters entered in the Additional Connection Parameters dialog box are added to any options selected or altered in the **Login** and **Connection Properties** dialogs.
 
 > [!IMPORTANT]
-> Essential information required for user success
-Any parameters entered in this dialog box override selections made on the **Login** and **Connection Properties** dialogs.  Parameters are transmitted as clear text; don't include sensitive information in the dialog.
+> Any parameters entered in this dialog box override selections made on the **Login** and **Connection Properties** dialogs.  Parameters are transmitted as clear text; don't include sensitive information in the dialog.
 
 ## Adding a parameter
 
@@ -37,8 +36,7 @@ When entering multiple parameters, separate them with a semicolon. For example, 
 For a complete list of parameters, see [Properties](/../../dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder?view=sqlclient-dotnet-standard-3.1&preserve-view=true#properties).
 
 > [!CAUTION]
-> Negative potential consequences of an action
-Additional parameters are not typically required and exist to support advanced scenarios. If you determine that a connection is not working as expected, check the **Additional Connection Parameters** dialog to see if any unexpected options exist.  It is not uncommon that users enter options for testing purposes and then forget to remove them.
+> Additional parameters are not typically required and exist to support advanced scenarios. If you determine that a connection is not working as expected, check the **Additional Connection Parameters** dialog to see if any unexpected options exist.  It is not uncommon that users enter options for testing purposes and then forget to remove them.
 
 ## See Also  
 

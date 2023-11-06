@@ -21,7 +21,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
 
     You can use .NET Framework 4.6 or any newer version.
 
-    :::image type="content" source="media/reporting-services-create-new-aspnet-project-4-6.png" alt-text="Screenshot of Visual Studio creating a new ASP.NET Empty Web Site." lightbox="media/reporting-services-create-new-aspnet-project-4-6.png":::
+    :::image type="content" source="media/reporting-services-create-new-aspnet-project-4-6.png" alt-text="Screenshot of Visual Studio, highlighting a new ASP.NET Empty Web Site." lightbox="media/reporting-services-create-new-aspnet-project-4-6.png":::
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
@@ -137,7 +137,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
     You can use .NET Framework 4.6 or any newer version.
     
-    :::image type="content" source="media/reporting-services-create-new-winforms-project-4-6.png" alt-text="Screenshot of Visual Studio creating a new Windows Forms Application." lightbox="media/reporting-services-create-new-winforms-project-4-6.png":::
+    :::image type="content" source="media/reporting-services-create-new-winforms-project-4-6.png" alt-text="Screenshot of Visual Studio, highlighting a new Windows Forms Application." lightbox="media/reporting-services-create-new-winforms-project-4-6.png":::
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 

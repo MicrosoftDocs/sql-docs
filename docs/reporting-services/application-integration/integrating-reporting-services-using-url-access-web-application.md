@@ -49,7 +49,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
   
  With POST requests (METHOD="POST" and input fields), the name/value pairs are transferred in the header and not the URL. Therefore, the name/value pairs of the query string aren't part of the URL, thus enabling you to provide longer and more complex parameter lists.  
   
- A user can use direct access to see the URL for the report server. They might be able to modify the query string or note the particular URL request and report server parameters for later use.  
+ A user can use direct access to see the URL for the report server. The user might be able to modify the query string or note the particular URL request and report server parameters for later use.  
   
  The following sample HTML demonstrates the use of a form that you can use to target a report server with a specific URL and pass query string parameters as part of the form's input fields.  
   

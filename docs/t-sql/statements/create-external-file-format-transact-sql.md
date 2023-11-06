@@ -68,7 +68,7 @@ WITH (
 {
     FIELD_TERMINATOR = field_terminator
     | STRING_DELIMITER = string_delimiter
-    | FIRST_ROW = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
+    | FIRST_ROW = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS AND SQL SERVER 2022
     | DATE_FORMAT = datetime_format
     | USE_TYPE_DEFAULT = { TRUE | FALSE }
     | ENCODING = {'UTF8' | 'UTF16'}
@@ -277,7 +277,9 @@ Examples:
 
 #### FIRST_ROW = *first_row_int*
 
-Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1 - 15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
+Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1 - 15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table. 
+
+FIRST_ROW format option is only available for Azure Synapse Analytics and SQL Server 2022.
 
 #### DATE_FORMAT = *datetime_format*
 

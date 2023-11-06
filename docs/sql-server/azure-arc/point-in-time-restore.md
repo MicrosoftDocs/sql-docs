@@ -16,7 +16,7 @@ This task creates a new database as a copy of another database. The new database
 
 You can restore a database to a point-in-time:
 
-- From an existing databaseF
+- From an existing database
 - To a new database on the same Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
@@ -59,7 +59,7 @@ az sql db-arc restore --dest-name "new_db" --resouce-group "my-rg" --name "mysou
 
 ## Limitations
 
-- The process described in this article requires the backup take by an Azure Arc-enabled SQL Server automated backup. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+- The process described in this article requires the backup be taken by an Azure Arc-enabled SQL Server automated backup. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
 
 ## Related tasks
 

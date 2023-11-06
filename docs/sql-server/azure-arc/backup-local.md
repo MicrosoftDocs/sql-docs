@@ -107,7 +107,6 @@ To enable automated backups using `az` CLI:
    ```
 
    b. Configure either the default schedule or a custom schedule:
-   
 
     **Default schedule**
 

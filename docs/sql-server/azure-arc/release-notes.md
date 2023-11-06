@@ -28,7 +28,7 @@ ms.topic: conceptual
 - Configure backups at instance level using custom schedule for Azure Arc-enabled SQL Server instances for both portal and CLI - public preview.
   - Configure Automated Backups with a custom schedule and custom retention period, on an Arc enabled SQL Server.
   
-  For more information, review [Backup frequency and retention days](point-in-time-restore.md#backup-frequency-and-retention-days).
+  For more information, review [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
 
 - Point-in-time-restore using Azure CLI and Azure portal - public preview.
   - Restore a database to a point-in-time restore of their databases, if automatic backups are enabled. Restore can be done either from Azure portal or via az CLI.

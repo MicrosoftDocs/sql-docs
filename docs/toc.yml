@@ -12384,6 +12384,22 @@ items:
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md
       - name: sys.master_files
         href: relational-databases/system-catalog-views/sys-master-files-transact-sql.md
+    - name: Elastic job views
+      items:
+      - name: jobs.job_executions
+        href: relational-databases/system-catalog-views/jobs-job-executions-elastic-jobs-transact-sql.md
+      - name: jobs.jobs
+        href: relational-databases/system-catalog-views/jobs-jobs-elastic-jobs-transact-sql.md
+      - name: jobs.job_versions
+        href: relational-databases/system-catalog-views/jobs-job-versions-elastic-jobs-transact-sql.md
+      - name: jobs.jobsteps
+        href: relational-databases/system-catalog-views/jobs-jobsteps-elastic-jobs-transact-sql.md
+      - name: jobs.jobstep_versions
+        href: relational-databases/system-catalog-views/jobs-jobstep-versions-elastic-jobs-transact-sql.md
+      - name: jobs.target_groups
+        href: relational-databases/system-catalog-views/jobs-target-groups-elastic-jobs-transact-sql.md
+      - name: jobs.target_group_members
+        href: relational-databases/system-catalog-views/jobs-target-group-members-elastic-jobs-transact-sql.md
     - name: Endpoints
       href: relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md
       items:
@@ -14397,6 +14413,34 @@ items:
         href: relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md
       - name: sp_testlinkedserver
         href: relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md
+    - name: Elastic jobs
+      items:
+      - name: sp_add_job
+        href: relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql.md
+      - name: sp_update_job
+        href: relational-databases/system-stored-procedures/sp-update-job-elastic-jobs-transact-sql.md
+      - name: sp_delete_job
+        href: relational-databases/system-stored-procedures/sp-delete-job-elastic-jobs-transact-sql.md
+      - name: sp_add_jobstep
+        href: relational-databases/system-stored-procedures/sp-add-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_update_jobstep
+        href: relational-databases/system-stored-procedures/sp-update-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_delete_jobstep
+        href: relational-databases/system-stored-procedures/sp-delete-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_start_job
+        href: relational-databases/system-stored-procedures/sp-start-job-elastic-jobs-transact-sql.md
+      - name: sp_stop_job
+        href: relational-databases/system-stored-procedures/sp-stop-job-elastic-jobs-transact-sql.md
+      - name: sp_add_target_group
+        href: relational-databases/system-stored-procedures/sp-add-target-group-elastic-jobs-transact-sql.md
+      - name: sp_delete_target_group
+        href: relational-databases/system-stored-procedures/sp-delete-target-group-elastic-jobs-transact-sql.md
+      - name: sp_add_target_group_member
+        href: relational-databases/system-stored-procedures/sp-add-target-group-member-elastic-jobs-transact-sql.md
+      - name: sp_delete_target_group_member
+        href: relational-databases/system-stored-procedures/sp-delete-target-group-member-elastic-jobs-transact-sql.md
+      - name: sp_purge_jobhistory
+        href: relational-databases/system-stored-procedures/sp-purge-jobhistory-elastic-jobs-transact-sql.md
     - name: FILESTREAM and FileTable
       items:
       - name: Overview

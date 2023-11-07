@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "sp_help_jobstep"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

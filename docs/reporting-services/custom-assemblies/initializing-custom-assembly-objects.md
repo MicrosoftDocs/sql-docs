@@ -1,5 +1,5 @@
 ---
-title: "Initializing Custom Assembly Objects"
+title: "Initializing custom assembly objects"
 description: Learn to initialize custom classes with values available to you from the report's global object collections.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,10 +13,10 @@ helpviewer_keywords:
   - "custom assemblies [Reporting Services], initializing"
   - "OnInit method"
 ---
-# Initializing Custom Assembly Objects
+# Initializing custom assembly objects
   In some cases, you may need to initialize property and field values in your custom assembly classes when you instantiate them. You will most likely need to initialize your custom classes with values available to you from the report's global object collections. You do this by overriding the **OnInit** method of the **Code** object of a report. To access **OnInit**, use the **Code** element of the report definition. There are two techniques for initializing property or field values of the classes in a custom assembly that you plan to use in your report: You can either declare and create a new instance of your class using **OnInit**, or you can call a publicly available method using **OnInit**.  
   
-## Global Object Collections and Initialization  
+## Global object collections and initialization  
  Several collections are available to you for initializing your custom class variables. You can use the **Globals** and **User** collections. The **Parameters**, **Fields** and **ReportItems** collections are not available to you at the point in the report lifecycle when the **OnInit** method is invoked. To use the shared collections, **Globals** or **User**, you need to include the **Report** object reference. For example, to initialize your custom class based on the current language of the user accessing the report, your **Code** element might look like the following:  
   
 ```vbnet
@@ -43,7 +43,7 @@ End Sub
   
  For more information about the global object collections, see [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
-## See Also  
+## See also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

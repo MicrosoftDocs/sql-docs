@@ -1,5 +1,5 @@
 ---
-title: "Using Strong-Named Custom Assemblies"
+title: "Using strong-named custom assemblies"
 description: Learn to use a strong-named custom assembly to uniquely identify an assembly to the common language runtime (CLR) and ensure binary integrity.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], strong names"
   - "custom assemblies [Reporting Services], strong-named"
 ---
-# Using Strong-Named Custom Assemblies
+# Using strong-named custom assemblies
   A strong name identifies an assembly and includes the assembly's text name, four-part version number, culture information (if provided), a public key, and a digital signature stored in the assembly's manifest. A strong name uniquely identifies an assembly to the common language runtime (CLR) and ensures binary integrity.  
   
 ## Using AllowPartiallyTrustedCallersAttribute  
@@ -34,7 +34,7 @@ helpviewer_keywords:
 > [!CAUTION]  
 >  When **AllowPartiallyTrustedCallersAttribute** is present, the default **FullTrustLinkDemand** security checks are prevented, making the assembly callable from any other partially trusted assembly. All security checks, including class-level or method-level declarative security attributes, must be explicitly stated.  
   
-## See Also  
+## See also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Report Definition Language, referencing assemblies"
   - "report definition files [Reporting Services]"
 ---
-# Referencing Assemblies in an RDL File
+# Referencing assemblies in an RDL file
   To support the use of custom code assemblies in report definition files, two Report Definition Language (RDL) elements are included in the RDL specification: the **CodeModules** element and the **Classes** element.  
   
  The **CodeModules** element enables you to refer to managed code assemblies in report expressions. **CodeModules** is a top-level element that contains the reference to the assembly that you use in your report definition files to call specialized functions. An entry in a report definition that supports the use of a custom assembly might look like the following:  
@@ -41,7 +41,7 @@ helpviewer_keywords:
   
  For more information, see [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
-## See Also  
+## See also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

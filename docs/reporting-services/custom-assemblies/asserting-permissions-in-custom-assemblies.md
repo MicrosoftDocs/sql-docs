@@ -1,5 +1,5 @@
 ---
-title: "Asserting Permissions in Custom Assemblies"
+title: "Asserting permissions in custom assemblies"
 description: Learn how to assert permissions so you can implement a custom assembly that makes secured calls to protected resources within your security system.
 author: maggiesMSFT
 ms.author: maggies
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "limited permission sets"
   - "security configuration files [Reporting Services]"
 ---
-# Asserting Permissions in Custom Assemblies
+# Asserting permissions in custom assemblies
   By default, custom assembly code runs with the limited **Execution** permission set. In some cases, you may wish to implement a custom assembly that makes secured calls to protected resources within your security system (such as a file or the registry). In order to accomplish this, you must do the following:  
   
 1.  Identify the exact permissions that your code needs in order to make the secured call. If this method is part of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] library, this information should be included in the method documentation.  
@@ -81,7 +81,7 @@ try
   
  For more information, see ".NET Framework Security" in the .NET Framework Developer's Guide.  
   
-## See Also  
+## See also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

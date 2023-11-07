@@ -17,8 +17,8 @@ Secure, passwordless connections to Azure SQL Database require certain database 
         > - [Configure Azure SQL Database firewall rules](/azure/azure-sql/database/firewall-configure).
         > - [Configure a virtual network with private endpoints](/azure/private-link/tutorial-private-endpoint-sql-portal).
 
-1) The server must also have Azure AD authentication enabled with an Azure Active Directory admin account assigned. For local development connections, the Azure Active Directory admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Azure AD authentication enabled on the **Azure Active Directory** page.
+1) The server must also have Microsoft Entra authentication enabled and have a Microsoft Entra admin account assigned. For local development connections, the Microsoft Entra admin account should be an account you can also log into Visual Studio or the Azure CLI with locally. You can verify whether your server has Microsoft Entra authentication enabled on the **Microsoft Entra ID** page of your logical server.
 
-    :::image type="content" source="../database/media/passwordless-connections/enable-active-directory-small.png" lightbox="../database/media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Active Directory authentication.":::
+    :::image type="content" source="../database/media/passwordless-connections/enable-active-directory-small.png" lightbox="../database/media/passwordless-connections/enable-active-directory.png" alt-text="A screenshot showing how to enable Microsoft Entra authentication.":::
 
-1) If you're using a personal Azure account, make sure you have [Azure Active Directory setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Azure Active Directory will most likely already be configured for you.
+1) If you're using a personal Azure account, make sure you have [Microsoft Entra setup and configured for Azure SQL Database](../database/authentication-aad-configure.md) in order to assign your account as a server admin. If you're using a corporate account, Microsoft Entra ID will most likely already be configured for you.

@@ -81,7 +81,7 @@ Use [Microsoft Entra (formerly Azure Active Directory)](authentication-aad-overv
 You can use a database-scoped credential in the job database and in each target server/database for authentication. In the past, database-scoped credentials were the only option available with elastic jobs.
 
 > [!NOTE]
-> If a UMI is assigned to the Job Agent, SQL Authentication will not be used to connect to its targets. Job Agent will only use Entra authentication with the UMI to connect to all of its target databases.
+> If a UMI is assigned to the Job Agent, SQL Authentication will not be used to connect to its targets. Job Agent will only use Microsoft Entra authentication with the UMI to connect to all of its target databases.
 
 1. Create a database-scoped credential in the *job database*.
     1. Use [PowerShell to create a database-scoped credential](elastic-jobs-powershell-create.md#create-the-job-credentials)

@@ -47,7 +47,7 @@ The elastic job agent must be able to authenticate to each target server or data
 
 ### Use Microsoft Entra authentication with a UMI for job execution
 
-To use the recommended method of Microsoft Entra (formerly Azure Active Directory) authentication to a user-assigned managed identity (UMI), follow these steps. The elastic job agent connects to the desired target logical server(s)/databases(s) via Entra authentication.
+To use the recommended method of Microsoft Entra (formerly Azure Active Directory) authentication to a user-assigned managed identity (UMI), follow these steps. The elastic job agent connects to the desired target logical server(s)/databases(s) via Microsoft Entra authentication.
 
 In addition to the login and database users, note the addition of the `GRANT` commands in the following script. These permissions are required for the script we chose for this example job. Your jobs might require different permissions. Because the example creates a new table in the targeted databases, the database user in each target database needs the proper permissions to successfully run.
 
@@ -128,7 +128,7 @@ GRANT CREATE TABLE TO job_credential;
 Create a contained database user if a login is not needed on the logical server. Typically you would only do this if you have a single database to manage with this elastic job agent.
 
 ```sql
---Create a contained database user on a user database mapped to an Entra account
+--Create a contained database user on a user database mapped to a Microsoft Entra account
 CREATE USER [job_credential] WITH PASSWORD='<Enter_same_StrongPassword_as_database_scoped_credential>';
 
 -- Grant permissions as necessary to execute your jobs. For example, ALTER and CREATE TABLE:

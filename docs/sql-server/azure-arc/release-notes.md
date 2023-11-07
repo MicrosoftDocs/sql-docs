@@ -14,7 +14,7 @@ ms.topic: conceptual
 
 ## November 14, 2023
 
-**Extension version**: `To be announced`
+**Extension version**: `1.1.2501.92`
 
 ### Azure extension for SQL Server
 

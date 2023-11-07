@@ -10,20 +10,20 @@ ms.topic: conceptual
 
 # Monitor Azure Arc-enabled SQL Server
 
-Monitor the performance of Azure Arc-enabled SQL Servers within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible Azure Arc-enabled SQL Servers and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of an Azure Arc-enabled SQL Server. Monitoring data collection is automatic, assuming all prerequisites are met.
+Monitor the performance of Azure Arc-enabled SQL Server within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible Azure Arc-enabled SQL Server and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of an Azure Arc-enabled SQL Server. Monitoring data collection is automatic, assuming all prerequisites are met.
 
 ## Prerequisites
 
 In order for monitoring data to be collected on an Azure Arc-enabled SQL Server, the following conditions must be met:
 
-* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is "1.1.2497" or later
+* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is update to the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
 * Azure Arc-enabled SQL Server is running on Windows operating system
-* Azure Arc-enabled SQL Server is a Standard or Enterprise (Core) Edition
+* Azure Arc-enabled SQL Server is a Standard or Enterprise Edition
 * The license type on the Azure Arc-enabled SQL Server is set to "License with Software Assurance" or "Pay-as-you-go"
 
 ## Collected data
 
-The following lists reflect the monitoring data is collected from DMV datasets on Azure Arc-enabled SQL Servers when the monitoring feature is enabled.  No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+The following lists reflect the monitoring data that is collected from DMV datasets on Azure Arc-enabled SQL Server when the monitoring feature is enabled.  No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
 
 ### Active Sessions
 
@@ -278,7 +278,7 @@ Collection Frequency: 10 seconds\
 ## Disable or enable collection
 
 > [!IMPORTANT]
-> In order to disable or enable data collection, the `sqlServer` extension must be on `v1.1.2496` or later. [Upgrade VM extensions using the Azure Portal.](/azure/azure-arc/servers/manage-vm-extensions-portal)
+> In order to disable or enable data collection, the `sqlServer` extension must be on the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
 
 ### Using the Azure Portal
 
@@ -305,11 +305,11 @@ To enable the monitoring data collection for an Azure Arc-enabled SQL Server, ru
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
-Please note that this command may run successfully but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
+Please note that this command may run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
 
 ## Limitations
 
-* After adding or removing a SQL instance on your Windows machine, you must restart the sqlServer extension service for the update to take effect.
+* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
 
 ## Next steps
   

@@ -1,6 +1,6 @@
 ---
 title: "sp_add_jobschedule (Transact-SQL)"
-description: "Creates a schedule for a SQL Server Agent job."
+description: "sp_add_jobschedule creates a schedule for a SQL Server Agent job."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -15,10 +15,11 @@ helpviewer_keywords:
   - "sp_add_jobschedule"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_add_jobschedule (Transact-SQL)
 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates a schedule for a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 

@@ -719,10 +719,12 @@
         href: database/block-geo-redundant-backup-storage.md
     - name: Elastic jobs (preview)
       items:
-      - name: Job automation with elastic jobs
+      - name: Job automation overview
         href: database/job-automation-overview.md
-      - name: Configure jobs
+      - name: Elastic jobs in Azure SQL Database
         href: database/elastic-jobs-overview.md
+      - name: Elastic jobs tutorial
+        href: database/elastic-jobs-tutorial.md
       - name: Create and manage (PowerShell)
         href: database/elastic-jobs-powershell-create.md
       - name: Create and manage (T-SQL)

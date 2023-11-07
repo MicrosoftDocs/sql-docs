@@ -1,9 +1,9 @@
 ---
 title: "sp_delete_jobstep (Transact-SQL)"
-description: "sp_delete_jobstep (Transact-SQL)"
+description: "sp_delete_jobstep (Transact-SQL) removes a jobstep from an existing job in the SQL Agent service."
 author: markingmyname
 ms.author: maghan
-ms.date: "08/09/2016"
+ms.date: 08/15/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -14,54 +14,63 @@ helpviewer_keywords:
   - "sp_delete_jobstep"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_delete_jobstep (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Removes a job step from a job.  
-  
- 
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+
+  Removes a job step from a job in the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent service.
+   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
-```  
-  
+```syntaxsql
 sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,   
      [ @step_id = ] step_id   
 ```  
   
-## Arguments  
-`[ @job_id = ] job_id`
- The identification number of the job from which the step will be removed. *job_id*is **uniqueidentifier**, with a default of NULL.  
+## Arguments
+
+#### @job_id
+
+ The identification number of the job from which the step will be removed. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
-`[ @job_name = ] 'job_name'`
- The name of the job from which the step will be removed. *job_name*is **sysname**, with a default of NULL.  
+#### @job_name
+
+ The name of the job from which the step will be removed. *job_name* is **sysname**, with a default of NULL.  
   
-> [!NOTE]  
-> Either *job_id* or *job_name* must be specified; both cannot be specified.  
+ Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
-`[ @step_id = ] step_id`
- The identification number of the step being removed. *step_id*is **int**, with no default.  
+#### @step_id
+
+ The identification number of the step being removed. *step_id* is **int**, with no default.  
   
-## Return Code Values  
+## Return Code Values
+
  **0** (success) or **1** (failure)  
   
-## Result Sets  
+## Result Sets
+
  None  
   
-## Remarks  
+## Remarks
+
  Removing a job step automatically updates the other job steps that reference the deleted step.  
   
- For more information about the steps associated with a particular job, run **sp_help_jobstep**.  
+ For more information about the steps associated with a particular job, run `sp_help_jobstep``.  
   
 > [!NOTE]  
-> Calling **sp_delete_jobstep** with a *step_id* value of zero deletes all job steps for the job.  
+> Calling `sp_delete_jobstep` with a *step_id* value of zero deletes all job steps for the job.  
   
  Microsoft SQL Server Management Studio provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
+
+This stored procedure shares the name of `sp_delete_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_delete_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-delete-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).  
   
-## Permissions  
- By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the **msdb** database:  
+## Permissions
+
+ By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted one of the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles in the `msdb` database:  
   
 -   **SQLAgentUserRole**  
   
@@ -73,10 +82,11 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Only members of **sysadmin** can delete a job step that is owned by another user.  
   
-## Examples  
+## Examples
+
  The following example removes job step `1` from the job `Weekly Sales Data Backup`.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -86,11 +96,10 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## See Also  
- [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+## Next steps
+
+- [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)
+- [sp_add_jobstep (Transact-SQL)](sp-add-jobstep-transact-sql.md)
+- [sp_update_jobstep (Transact-SQL)](sp-update-jobstep-transact-sql.md)
+- [sp_help_jobstep (Transact-SQL)](sp-help-jobstep-transact-sql.md)
+- [System Stored Procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

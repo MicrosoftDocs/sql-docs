@@ -24,7 +24,7 @@ helpviewer_keywords:
   
 > [!NOTE]  
 >  On a 64-bit computer, you must run packages that connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact data sources in 32-bit mode. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact provider that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact data sources is available only in a 32-bit version. 
-SQL Server Compact Edition Connection Manager only supported in VS2019, deprecated in VS2022.   
+The Compact Connection Manager only supported in VS2019, deprecated in VS2022.   
   
 ## Configuration the SQL Server Compact Edition Connection Manager  
  When you add a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact connection manager to a package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  

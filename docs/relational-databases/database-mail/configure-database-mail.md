@@ -144,7 +144,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Encrypts communication using Secure Sockets Layer.  
 
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is peformed via NTLM authentication, an option only available to Exchange on-premises. For more information, see [Authentication and EWS in Exchange](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange).
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is performed via NTLM authentication, an option only available to Exchange on-premises. For more information, see [Authentication and EWS in Exchange](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange).
 
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  

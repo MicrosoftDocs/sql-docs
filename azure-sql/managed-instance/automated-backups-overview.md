@@ -240,7 +240,7 @@ For example, assume that a heavy write activity, such as index rebuild,  runs ju
 - In the next differential backup.
 - In every differential backup taken until the next full backup occurs.
 
-For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large. If differential backup size becomes larger than 750 GB and becomes equal to 75% of database size, it will be promoted to full backup. This reduces the size of all differential backups until the following full backup. 
+For the last scenario in larger databases, an optimization in the service creates a full backup instead of a differential backup if a differential backup would be excessively large. If differential backup size becomes larger than 750 GB and becomes equal to 75% of database size, and last full was taken more than 24 hours ago, it will be promoted to full backup. This reduces the size of all differential backups until the following full backup. 
 
 ### Monitor costs
 

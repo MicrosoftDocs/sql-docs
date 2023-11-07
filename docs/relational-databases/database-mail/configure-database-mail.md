@@ -3,7 +3,7 @@ title: "Configure Database Mail"
 description: "Configure Database Mail using the Database Mail Configuration Wizard or T-SQL commands."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 02/23/2023
+ms.date: 11/07/2023
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -144,7 +144,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Encrypts communication using Secure Sockets Layer.  
 
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is peformed via NTLM authentication, an option only available to Exchange on-premises. See [Authentication and EWS in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange) for further details.
 
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  

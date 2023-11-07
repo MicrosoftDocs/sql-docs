@@ -64,7 +64,7 @@ SQL Server license type identifies the type of license for SQL Server instances 
 For your convenience, **Overview** of each Arc-enabled SQL Server resource shows the license type under **Host License Type**.
 
 > [!NOTE]
-> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select a pay-as-you-go billing option during setup. See [Install Azure Extension for SQL Server from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#azure-extension-for-sql-server-2022).
+> [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] allows you to select the license type, including the pay-as-you-go billing option, during setup. See [Install Azure Extension for SQL Server from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md#azure-extension-for-sql-server-2022).
 
 The following license types are supported:
 

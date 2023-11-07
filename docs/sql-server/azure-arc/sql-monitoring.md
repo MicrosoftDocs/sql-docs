@@ -1,6 +1,6 @@
 ---
 title: Monitor Azure Arc-enabled SQL Server in Azure portal
-description: Describes the 
+description: Describes the monitoring capabilities of Azure Arc-enabled SQL Server.
 author: lcwright
 ms.author: lancewright
 ms.reviewer: mikeray

@@ -3,7 +3,7 @@ title: "Type mapping with PolyBase"
 description: Refer to these tables for mapping between PolyBase external data sources and SQL Server. Define external tables with Transact-SQL CREATE EXTERNAL TABLE.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/30/2022
+ms.date: 11/07/2023
 ms.service: sql
 ms.subservice: polybase
 ms.topic: conceptual
@@ -50,6 +50,9 @@ For external tables that reference files in external data sources, the column an
 | decimal       | Decimal                   | decimal        | BigDecimalWritable    | Applies to Hive0.11 and later. |
 
 <sup>1</sup> Starting in [!INCLUDE[sssql22-md](../../includes/sssql22-md.md)] Hadoop is no longer supported.
+
+## Parquet and Delta Type mapping reference
+Parquet and Delta external table type mapping to SQL Server datatypes can be found in [How to use OPENROWSET using serverless SQL pool in Azure Synapse Analytics article](https://learn.microsoft.com/en-us/azure/synapse-analytics/sql/develop-openrowset#type-mapping-for-parquet).
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 "

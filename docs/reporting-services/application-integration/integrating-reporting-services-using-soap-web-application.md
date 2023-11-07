@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ---
-# Integrating Reporting Services using SOAP - Web application
+# Integrating Reporting Services by using SOAP - Web application
   You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service and enables you to use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report management functionality is just as easily accessed from a Web application as from a Windows application. From a Web application, you can add and remove items from the report server database, set item security, modify report server database items, manage scheduling and delivery, and more.  

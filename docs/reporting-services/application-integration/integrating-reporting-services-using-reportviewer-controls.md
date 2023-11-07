@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "Report Viewer controls"
   - "integrating reports [Reporting Services]"
 ---
-# Integrate Reporting Services using Report Viewer controls
+# Integrate Reporting Services by using Report Viewer controls
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 provides two Report Viewer controls for integrating report viewing functionality into your applications. There's a version for Windows Forms-based applications and one for Web Forms applications. Each control provides similar functionality but each is designed to target their individual environments. Both controls can process reports that are deployed to a report server (remote processing mode) or are copied to a computer where [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't installed (local processing mode).  
   
  The Report Viewer control doesn't include built-in support for dynamically adapting to different devices with different screen resolutions.  

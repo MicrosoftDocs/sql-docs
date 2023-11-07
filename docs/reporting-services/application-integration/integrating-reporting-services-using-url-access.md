@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "URL access [Reporting Services], about URL access"
   - "integrating reports [Reporting Services]"
 ---
-# Integrate Reporting Services using URL access
+# Integrate Reporting Services by using URL access
   With URL access, you access reports through a report server URL. A URL request enables you to access a specific report server and the reports, resources, and other items in the report server database. You can also customize the report viewing and navigation experience for your users. The query string of the URL contains device information settings and report parameters targeted at your report and the chosen rendering output. The way the report server handles URL requests depends on the parameters, parameter prefixes, and type of item that you're accessing through the URL.  
   
  You can use URL access to embed hyperlinks to reports and other report server items in the applications that you develop, whether in a Windows or Web environment.  

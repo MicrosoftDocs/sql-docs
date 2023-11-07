@@ -34,13 +34,13 @@ monikerRange: "= sql-server-2016"
   
 ## In this section
 
- [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+ [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation and management into your existing business applications using the Report Server Web service.  
   
- [Integrating Reporting Services Using the Report Viewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Integrating Reporting Services by using the Report Viewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Describes how to integrate report viewing into your existing applications using the Report Viewer controls.  
   
- [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Describes how to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation into your existing business applications using URL access.  
   
 ## Next steps

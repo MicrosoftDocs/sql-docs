@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "browser controls [Reporting Services]"
   - "URL access [Reporting Services], Windows applications"
 ---
-# Integrating Reporting Services using URL access - Windows application
+# Integrating Reporting Services by using URL access - Windows application
   Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
   
 -   Display a report from a Windows Form application by starting a Web browser programmatically.  
@@ -75,7 +75,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
 ```  
   
 ## Embedding a browser control on a Windows Form  
- If you don't want to view your report in an external Web browser, you can embed a Web browser seamlessly as part of your Windows Form using the <xref:System.Windows.Forms.WebBrowser> control.  
+ If you don't want to view your report in an external Web browser, you can embed a Web browser seamlessly as part of your Windows Form by using the <xref:System.Windows.Forms.WebBrowser> control.  
   
 ###### To add the WebBrowser control to your Windows Form  
   
@@ -107,9 +107,9 @@ webBrowser1.Navigate(url);
   
 ## See also  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrating Reporting Services Using URL Access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Integrating Reporting Services Using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
- [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
+ [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
+ [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)   
  [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   
   

@@ -11,7 +11,7 @@ ms.custom:
   - intro-get-started
   - updatefrequency5
 ---
-# Integrate Reporting Services using the Report Viewer controls - get started
+# Integrate Reporting Services by using the Report Viewer controls - get started
 
 The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. For detailed information about recent updates, see the [changelog](./release-notes-ssrs-application-integration.md).
 

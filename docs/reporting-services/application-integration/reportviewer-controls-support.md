@@ -35,4 +35,4 @@ Some features of the Report Viewer control rely on the operating system's defaul
 
 ## Next steps
 
-For more information about the Report Viewer control, see [Get started integrating Reporting Services using the Report Viewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md).
+For more information, see [Get started integrating Reporting Services using the ReportViewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md).

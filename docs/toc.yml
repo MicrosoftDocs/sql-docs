@@ -9305,6 +9305,8 @@ items:
           href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
         - name: Connect to Server - Always Encrypted Page - Database Engine
           href: ssms/f1-help/connect-to-server-always-encrypted-page-database-engine.md
+        - name: Connect to Server - Additional Connection Parameters Page - Database Engine
+          href: ssms/f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md
         - name: Login - Connect to SSAS Server
           href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS

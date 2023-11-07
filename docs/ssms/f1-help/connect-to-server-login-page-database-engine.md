@@ -4,7 +4,7 @@ description: "Connect to Server (Login Page) Database Engine"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 11/03/2023
+ms.date: 11/06/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -108,3 +108,4 @@ Select to display the **Connection Properties**, **Always Encrypted** and **Addi
 
 [Connect to Server (Connection Properties Page) Database Engine](connect-to-server-connection-properties-page-database-engine.md)
 [Connect to Server (Always Encrypted Page) Database Engine](connect-to-server-always-encrypted-page-database-engine.md)
+[Connect to Server (Additional Connection Parameters Page) Database Engine](connect-to-server-additional-connection-parameters-page-database-engine.md)

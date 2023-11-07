@@ -280,7 +280,7 @@ Collection Frequency: 10 seconds\
 > [!IMPORTANT]
 > In order to disable or enable data collection, the `sqlServer` extension must be on the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
 
-### Using the Azure Portal
+### Using the Azure portal
 
 * On the resource page for an Azure Arc-enabled SQL Server, select the "Performance Dashboard (preview)" section
 * At the top of the "Performance Dashboard" page, click the Configure button. A panel "Configure monitoring settings" will open on the right-hand side of the screen.
@@ -305,7 +305,7 @@ To enable the monitoring data collection for an Azure Arc-enabled SQL Server, ru
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
-Please note that this command may run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
+Please note that this command might run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
 
 ## Limitations
 

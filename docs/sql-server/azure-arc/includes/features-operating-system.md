@@ -24,5 +24,6 @@ The following table identifies features available by operating system:
 | [SQL Server 2012 extended security updates](../../end-of-support/sql-server-extended-security-updates.md) | Yes | Not applicable |
 | [Failover cluster instances (preview)](../support-for-fci.md) | Yes | Not applicable |
 | [Always On availability groups (preview)](../manage-availability-group.md) | Yes | Not applicable |
+| [Monitoring (preview)](../sql-monitoring.md) | Yes | No |
 
 <sup>1</sup> [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] only.

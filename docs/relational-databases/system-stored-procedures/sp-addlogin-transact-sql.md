@@ -4,7 +4,7 @@ description: Creates a new SQL Server login that allows a user to connect to a S
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ The login password. *@passwd* is **sysname**, with a default of `NULL`.
 
 #### [ @defdb = ] N'*defdb*'
 
-The default database of the login (the database to which the login is first connected after logging in). *@defdb* is **sysname**, with a default of `'master'`.
+The default database of the login (the database to which the login is first connected after logging in). *@defdb* is **sysname**, with a default of `master`.
 
 #### [ @deflanguage = ] N'*deflanguage*'
 
@@ -145,7 +145,7 @@ The following example creates a [!INCLUDE [ssNoVersion](../../includes/ssnoversi
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2022', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF
 ```
 
-## See also
+## Related content
 
 - [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
 - [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)

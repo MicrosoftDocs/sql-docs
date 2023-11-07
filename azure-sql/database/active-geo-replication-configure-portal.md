@@ -42,11 +42,11 @@ After the secondary is created and seeded, data begins replicating from the prim
 
 2. On the SQL Database page, select your database, scroll to **Data management**, select **Replicas**, and then select **Create replica**.
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-cli-create-geo-replica.png" alt-text="Configure geo-replication":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-cli-create-geo-replica.png" alt-text="Screenshot that shows the Configure geo-replication option.":::
 
 3. Select or create the server for the secondary database, and configure the **Compute + storage** options if necessary. You can select any region for your secondary server, but we recommend the [paired region](/azure/availability-zones/cross-region-replication-azure).
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-create-and-configure-replica.png" alt-text="{alt-text}":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-create-and-configure-replica.png" alt-text="Screenshot that shows the Create and configure replica screen." lightbox="media/active-geo-replication-configure-portal/azure-portal-create-and-configure-replica.png":::
 
     Optionally, you can add a secondary database to an elastic pool. To create the secondary database in a pool, select **Yes** next to **Want to use SQL elastic pool?** and select a pool on the target server. A pool must already exist on the target server. This workflow doesn't create a pool.
 
@@ -54,15 +54,15 @@ After the secondary is created and seeded, data begins replicating from the prim
 
 5. The secondary database is created and the deployment process begins.
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-geo-replica-deployment.png" alt-text="Screenshot that shows the deployment status of the secondary database.":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-geo-replica-deployment.png" alt-text="Screenshot that shows the deployment status of the secondary database." lightbox="media/active-geo-replication-configure-portal/azure-portal-geo-replica-deployment.png":::
 
 6. When the deployment is complete, the secondary database displays its status.
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-sql-database-secondary-status.png" alt-text="Screenshot that shows the secondary database status after deployment.":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-sql-database-secondary-status.png" alt-text="Screenshot that shows the secondary database status after deployment." lightbox="media/active-geo-replication-configure-portal/azure-portal-sql-database-secondary-status.png":::
 
 7. Return to the primary database page, and then select **Replicas**. Your secondary database is listed under **Geo replicas**.
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-sql-db-geo-replica-list.png" alt-text="Screenshot that shows the SQL database primary and geo replicas.":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-sql-db-geo-replica-list.png" alt-text="Screenshot that shows the SQL database primary and geo replicas.":::
 
 # [Azure CLI](#tab/azure-cli)
 
@@ -152,7 +152,7 @@ The secondary database can be switched to become the primary.
 2. Scroll to **Data management**, and then select **Replicas**.
 3. In the **Geo replicas** list, select the database you want to become the new primary, select the ellipsis, and then select **Forced failover**.
 
-    :::image type="content" source="./media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png" alt-text="Screenshot that shows selecting forced failover from the drop-down.":::
+    :::image type="content" source="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png" alt-text="Screenshot that shows selecting forced failover from the drop-down." lightbox="media/active-geo-replication-configure-portal/azure-portal-select-forced-failover.png":::
 4. Select **Yes** to begin the failover.
 
 # [Azure CLI](#tab/azure-cli)

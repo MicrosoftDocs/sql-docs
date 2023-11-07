@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], custom assemblies"
 ---
 # How to: Debug custom assemblies
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../includes/vsprvs2008-md.md)].  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use depends on what you are trying to accomplish. This example uses [!INCLUDE[vsprvs2008](../../includes/vsprvs2008-md.md)].  
   
  The recommended way to design, develop, and test custom assemblies for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is to create a solution that contains both your test reports and your custom assembly.  
   
@@ -22,7 +22,7 @@ helpviewer_keywords:
   
 1.  Create a new report project using [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-     At the time you create a report project, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] also creates a solution to contain it.  
+     When you create a report project, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] also creates a solution to contain it.  
   
 2.  Add a new Class Library project to the existing solution. Make sure that the report project is set as the startup project. For more information about how to accomplish this, see your [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation.  
   
@@ -44,9 +44,9 @@ helpviewer_keywords:
   
 9. Select the **Build** tab if you're in a C# project or the **Compile** tab if you're in a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] project.  
   
-10. On the **Build**/**Compile** page, enter the path to the Report Designer folder. By default, this is C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) in the **Output Path** text box. This builds and deploys an updated version of your custom assembly directly to Report Designer before your report is executed.  
+10. On the **Build**/**Compile** page, enter the path to the Report Designer folder. The default path is C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) in the **Output Path** text box. This builds and deploys an updated version of your custom assembly directly to Report Designer before your report is executed.  
   
-11. Once you have designed your report and developed your custom assembly, set breakpoints in your custom assembly code.  
+11. Once you design your report and developed your custom assembly, set breakpoints in your custom assembly code.  
   
 12. Run the report under **DebugLocal** mode by pressing the F5 key. When the report executes in the pop-up preview window, the debugger hits any breakpoints that correspond to executable code in your assembly. Use F11 to step through your custom assembly code.  
   
@@ -66,9 +66,9 @@ helpviewer_keywords:
   
 6.  From the list of processes, select the devenv.exe process that corresponds to your Report Project and select **Attach**.  
   
-7.  Define the expressions that you will use in your report from your custom assembly and design your report.  
+7.  Define the expressions that you'll use in your report from your custom assembly and design your report.  
   
-8.  When you are finished designing your report, select the **Preview** tab.  
+8.  When you're finished designing your report, select the **Preview** tab.  
   
      The report executes, and the custom assembly code should break at your predefined break points.  
   

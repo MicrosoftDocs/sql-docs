@@ -81,7 +81,7 @@ If the error states that the Azure Monitor Agent (AMA) upload failed, verify tha
    2. AMA with required version should be successfully provisioned.
 1. The data collection rule (DCR) and data collection endpoint (DCE) must be in the same location as the Log Analytics workspace.
    1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
-   2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sql-bpa-**.
+   2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sqlbpa-**.
    3. Verify that the **DCR** and **DCE** are in the same location as the Log Analytics workspace.
 1. The data collection Rule (DCR) should be configured correctly.
    1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.

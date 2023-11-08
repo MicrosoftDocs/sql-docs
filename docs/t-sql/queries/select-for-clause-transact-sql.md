@@ -21,7 +21,7 @@ dev_langs:
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL Endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL analytics endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   

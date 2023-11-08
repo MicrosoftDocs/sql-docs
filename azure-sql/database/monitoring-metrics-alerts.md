@@ -16,7 +16,7 @@ monikerRange: "= azuresql || = azuresql-db"
 
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-You can use Azure Monitor [metrics](/azure/azure-monitor/essentials/data-platform-metrics) to monitor database and elastic pool resource consumption and health. You can create [alerts](/azure/azure-monitor/alerts/alerts-overview) to send notifications when metric values indicate a potential problem.
+You can use Azure Monitor [metrics](/azure/azure-monitor/essentials/data-platform-metrics) to monitor database and elastic pool resource consumption and health. You can use [alerts](/azure/azure-monitor/alerts/alerts-overview) to send notifications when metric values indicate a potential problem.
 
 ## Metrics
 
@@ -47,13 +47,13 @@ The following table describes commonly used metrics in Azure SQL Database.
 
 | Metric name | Metric ID | Description |
 |:--|:--|:--|
-| **CPU percentage** | `cpu_percent` | This metric shows CPU consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). |
+| **CPU percentage** | `cpu_percent` | This metric shows CPU consumption toward the user workload limit of a database or an elastic pool, expressed as a percentage. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). |
 | **SQL instance CPU percent** | `sql_instance_cpu_percent` | This metric shows the total CPU consumption by the user and system workloads, expressed as a percentage. Because this metric and the **CPU percentage** metric are measured on different scales, they are not directly comparable with each other. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes).|
-| **Data IO percentage** | `physical_data_read_percent` | This metric shows the data file IO consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Data IO governance](resource-limits-logical-server.md#data-io-governance). |
-| **Log IO percentage** | `log_write_percent` | This metric shows the transaction log write throughput consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Transaction log rate governance](resource-limits-logical-server.md#transaction-log-rate-governance). |
-| **Workers percentage** | `workers_percent` | This metric shows the consumption of [worker](resource-limits-logical-server.md#sessions-workers-and-requests) threads toward the user workload limit for a database or an elastic pool, expressed as a percentage. |
-| **DTU percentage** | `dtu_consumption_percent` | This metric shows [DTU](service-tiers-dtu.md) consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. **DTU percentage** is derived from three other metrics: **CPU percentage**, **Data IO percentage**, and **Log IO percentage**. At any point in time, **DTU percentage** matches the highest value among these three metrics. |
-| **CPU used** | `cpu_used` | This metric shows CPU consumption toward the user workload limit for a database or an elastic pool, expressed as the number of vCores. |
+| **Data IO percentage** | `physical_data_read_percent` | This metric shows the data file IO consumption toward the user workload limit of a database or an elastic pool, expressed as a percentage. For more information, see [Data IO governance](resource-limits-logical-server.md#data-io-governance). |
+| **Log IO percentage** | `log_write_percent` | This metric shows the transaction log write throughput consumption toward the user workload limit of a database or an elastic pool, expressed as a percentage. For more information, see [Transaction log rate governance](resource-limits-logical-server.md#transaction-log-rate-governance). |
+| **Workers percentage** | `workers_percent` | This metric shows the consumption of [worker](resource-limits-logical-server.md#sessions-workers-and-requests) threads toward the user workload limit of a database or an elastic pool, expressed as a percentage. |
+| **DTU percentage** | `dtu_consumption_percent` | This metric shows [DTU](service-tiers-dtu.md) consumption toward the user workload limit of a database or an elastic pool, expressed as a percentage. **DTU percentage** is derived from three other metrics: **CPU percentage**, **Data IO percentage**, and **Log IO percentage**. At any point in time, **DTU percentage** matches the highest value among these three metrics. |
+| **CPU used** | `cpu_used` | This metric shows CPU consumption toward the user workload limit of a database or an elastic pool, expressed as the number of vCores. |
 | **DTU used** | `dtu_used` | This metric shows the number of [DTUs](service-tiers-dtu.md#database-transaction-units-dtus) used by a database or an elastic pool. |
 | **App CPU billed** | `app_cpu_billed` | For serverless databases, this metric shows the amount of compute (CPU and memory) billed, expressed in vCore seconds. For more information, see [Billing in the serverless compute tier](serverless-tier-overview.md#billing). |
 | **App CPU percentage** | `app_cpu_percent` | For serverless databases, this metric shows CPU consumption toward the app package maximum vCore limit, expressed as a percentage. For more information, see [Monitoring in the serverless compute tier](serverless-tier-overview.md#monitoring). |
@@ -65,24 +65,26 @@ The following table describes commonly used metrics in Azure SQL Database.
 | **Data space used percent** | `storage_percent` | For databases, this metric shows the amount of storage space used in the data files of a database toward the data size limit of a database. For elastic pools, it shows the amount of storage space used in the data files of all databases in an elastic pool, expressed as a percentage toward the data size limit of an elastic pool. The data size limit for a database or an elastic pool might be configured lower than the *maximum* data size limit. To find the *maximum* data size limit, see resource limits for [vCore databases](resource-limits-vcore-single-databases.md), [vCore elastic pools](resource-limits-vcore-elastic-pools.md), [DTU databases](resource-limits-dtu-single-databases.md), and [DTU elastic pools](resource-limits-vcore-elastic-pools.md). |
 | **Data space allocated percent** | `allocated_data_storage_percent` | For elastic pools, this metric shows the the amount of storage space occupied by the data files of all databases in an elastic pool toward the data size limit of the pool, expressed as a percentage. |
 | **Tempdb Percent Log Used** | `tempdb_log_used_percent` | This metric shows the consumption of the transaction log space in the `tempdb` database toward the maximum log size, expressed as a percentage. |
-| **Successful Connections** | `connection_successful` | This metric shows the number of successfully established connections to a database. This metric can be split by two dimensions: `SslProtocol` and `ValidatedDriverNameAndVersion`, to see the number of connections using a specific encryption protocol version, or using a specific client driver. |
-| **Failed Connections : System Errors** | `connection_failed` | This metric shows the number of connection attempts to a database that failed because of internal service errors. Most commonly, such errors are transient. This metric can be split by two dimensions: `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
-| **Failed Connections : User Errors** | `connection_failed_user_error` | This metric shows the number of connection attempts to a database that failed because of user-correctable errors, such as an incorrect password or connection being blocked by firewall. This metric can be split by two dimensions: `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
+| **Successful Connections** | `connection_successful` | This metric shows the number of successfully established connections to a database. This metric can be split by two dimensions, `SslProtocol` and `ValidatedDriverNameAndVersion`, to see the number of connections using a specific encryption protocol version, or using a specific client driver. |
+| **Failed Connections : System Errors** | `connection_failed` | This metric shows the number of connection attempts to a database that failed because of internal service errors. Most commonly, such errors are transient. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
+| **Failed Connections : User Errors** | `connection_failed_user_error` | This metric shows the number of connection attempts to a database that failed because of user-correctable errors, such as an incorrect password or connection being blocked by firewall. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Deadlocks** | `deadlock` | This metric shows the number of [deadlocks](analyze-prevent-deadlocks.md) in a database. |
 
 ## Alerts
 
-You can use Azure Monitor alerts for Azure SQL databases and elastic pools. You can create alert rules to notify you that the value of one metric or multiple metrics is outside of an expected range. You can set the scope of an alert rule to a database or an elastic pool, or broaden the scope to include all databases or elastic pools in a resource group or a subscription within an Azure region, or in all regions.
+You can create alert rules to notify you that the value of one metric or multiple metrics is outside of an expected range. You can set the scope of an alert rule to a database or an elastic pool, or broaden the scope to include all databases or elastic pools in a resource group or a subscription within an Azure region, or in all regions.
 
-If an alert rule is triggered, you are notified according to your notification preferences. For example, you can receive an email, an SMS or voice notification. An alert rule can also trigger actions such as webhooks, [automation](/azure/automation/overview) runbooks, [functions](/azure/azure-functions/functions-overview), [logic apps](/azure/logic-apps/logic-apps-overview), etc. You can [integrate](/azure/azure-monitor/alerts/itsmc-overview) alerts with supported IT Service Management products.
+Alert rules evaluate aggregated metric values over a lookback period, comparing them to a threshold value. You can configure the threshold value, evaluation frequency, and lookback period.
 
-To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with the alerting capabilities specific to metrics, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Create or edit an alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs=metric), and [Action groups](/azure/azure-monitor/alerts/action-groups).
+If an alert rule is triggered, you are notified according to your notification preferences. For example, you can receive an email, an SMS, or a voice notification. An alert rule can also trigger actions such as webhooks, [automation](/azure/automation/overview) runbooks, [functions](/azure/azure-functions/functions-overview), [logic apps](/azure/logic-apps/logic-apps-overview), etc. You can [integrate](/azure/azure-monitor/alerts/itsmc-overview) alerts with supported IT Service Management products.
+
+To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with metric alerts, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Create or edit an alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs=metric), and [Action groups](/azure/azure-monitor/alerts/action-groups).
 
 ## Recommended alert rules
 
 The metrics and thresholds to use in alert rules vary across the wide spectrum of customer workloads in Azure SQL Database. The table below is an example of a typical alert rule configuration.
 
-The recommended alerts in this table are a starting point to help you define the optimal alerting configuration for your Azure SQL Database resources. Depending on your requirements, your optimal configuration might differ from this example. You might prefer different thresholds, create additional alerts, or use different alert rule configurations depending on application and environment.
+The recommended alerts in this table are a starting point to help you define the optimal alerting configuration for your Azure SQL Database resources. Depending on your requirements, your optimal configuration might differ from this example. You might use different thresholds, frequencies, and lookback periods, create additional alerts, or use different alert rule configurations for different applications and environments.
 
 | Alert rule name | Metric (signal) | Alert logic | When to evaluate | Suggested severity |
 |:--|:--|:--|:--|:--|
@@ -95,7 +97,7 @@ The recommended alerts in this table are a starting point to help you define the
 | Deadlocks | **Deadlocks** | Threshold: `Dynamic`</br>Aggregation: `Total`</br>Operator: `Greater than`</br>Threshold sensitivity: `Medium` | Check every: `15 minutes`</br>Lookback period: `1 hour` | 3 - Informational |
 | Failed connections (user errors) | **Failed Connections : User Errors** | Threshold: `Dynamic`</br>Aggregation: `Total`</br>Operator: `Greater than`</br>Threshold sensitivity: `Medium` | Check every: `5 minutes`</br>Lookback period: `15 minutes` | 2 - Warning |
 | Failed connections (system errors) | **Failed Connections : System Errors** | Threshold: `Static`</br>Aggregation: `Total`</br>Operator: `Greater than`</br>Unit: `Count`</br>Threshold value: `10` | Check every: `1 minute`</br>Lookback period: `5 minutes` | 2 - Warning |
-| Abnormal connection rate | **Successful Connections** | Threshold: `Dynamic`</br>Aggregation: `Total`</br>Operator: `Greater or Less than`</br>Threshold sensitivity: `Low` | Check every: `5 minutes`</br>Lookback period: `15 minutes` | 2 - Warning |
+| Anomalous connection rate | **Successful Connections** | Threshold: `Dynamic`</br>Aggregation: `Total`</br>Operator: `Greater or Less than`</br>Threshold sensitivity: `Low` | Check every: `5 minutes`</br>Lookback period: `15 minutes` | 2 - Warning |
 
 Some of the recommended alert rules use dynamic thresholds to detect anomalous metric patterns that might require attention. Alert rules based on dynamic thresholds do not trigger until sufficient historical data has been collected to establish normal patterns. For more information, see [Dynamic thresholds in metric alerts](/azure/azure-monitor/alerts/alerts-dynamic-thresholds).
 
@@ -103,10 +105,12 @@ By default, metric alerts are stateful. This means that once an alert rule is tr
 
 ## Related content
 
+- [Azure Monitor metrics overview](/azure/azure-monitor/essentials/data-platform-metrics)
+- [Analyze metrics with Azure Monitor metrics explorer](/azure/azure-monitor/essentials/analyze-metrics)
+- [Azure Monitor metrics aggregation and display explained](/azure/azure-monitor/essentials/metrics-aggregation-explained)
+- [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview)
+- [Tutorial: Create a metric alert for an Azure resource](/azure/azure-monitor/alerts/tutorial-metric-alert)
+- [Best practices for Azure Monitor alerts](/azure/azure-monitor/best-practices-alerts)
+- [Troubleshooting problems in Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-troubleshoot)
 - [Monitoring and performance tuning in Azure SQL Database and Azure SQL Managed Instance](monitor-tune-overview.md)
 - [Configure streaming export of Azure SQL Database and SQL Managed Instance diagnostic telemetry](metrics-diagnostic-telemetry-logging-streaming-export-configure.md)
-- [Detectable database performance patterns](intelligent-insights-troubleshoot-performance.md#detectable-database-performance-patterns)
-- [Detectable types of query performance bottlenecks in Azure SQL Database](identify-query-performance-issues.md)
-- [Query Performance Insight for Azure SQL Database](query-performance-insight-use.md)
-- [Tune applications and databases for performance in Azure SQL Database and Azure SQL Managed Instance](performance-guidance.md)
-- [Monitor Microsoft Azure SQL Database performance using dynamic management views](monitoring-with-dmvs.md)

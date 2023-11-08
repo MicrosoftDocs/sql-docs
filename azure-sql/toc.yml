@@ -124,6 +124,8 @@
         href: database/monitoring-tuning-index.yml
       - name: Overview
         href: database/monitor-tune-overview.md
+      - name: Metrics and alerts
+        href: database/monitoring-metrics-alerts.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics

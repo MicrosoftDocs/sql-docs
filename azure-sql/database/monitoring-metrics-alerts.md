@@ -5,7 +5,7 @@ author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma
 ms.date: 11/03/2023
-ms.service: sql-db
+ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom: sqldbrb=2
@@ -49,7 +49,7 @@ The following table describes commonly used metrics in Azure SQL Database.
 |:--|:--|:--|
 | **CPU percentage** | `cpu_percent` | This metric shows CPU consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes). |
 | **SQL instance CPU percent** | `sql_instance_cpu_percent` | This metric shows the total CPU consumption by the user and system workloads, expressed as a percentage. Because this metric and the **CPU percentage** metric are measured on different scales, they are not directly comparable with each other. For more information, see [Resource consumption by user workloads and internal processes](resource-limits-logical-server.md#resource-consumption-by-user-workloads-and-internal-processes).|
-| **Data IO percentage** | `physical_data_read_percent` | This metric shows the data file IO consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Data IO governance](resource-limits-logical-server#data-io-governance). |
+| **Data IO percentage** | `physical_data_read_percent` | This metric shows the data file IO consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Data IO governance](resource-limits-logical-server.md#data-io-governance). |
 | **Log IO percentage** | `log_write_percent` | This metric shows the transaction log write throughput consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. For more information, see [Transaction log rate governance](resource-limits-logical-server.md#transaction-log-rate-governance). |
 | **Workers percentage** | `workers_percent` | This metric shows the consumption of [worker](resource-limits-logical-server.md#sessions-workers-and-requests) threads toward the user workload limit for a database or an elastic pool, expressed as a percentage. |
 | **DTU percentage** | `dtu_consumption_percent` | This metric shows [DTU](service-tiers-dtu.md) consumption toward the user workload limit for a database or an elastic pool, expressed as a percentage. **DTU percentage** is derived from three other metrics: **CPU percentage**, **Data IO percentage**, and **Log IO percentage**. At any point in time, **DTU percentage** matches the highest value among these three metrics. |

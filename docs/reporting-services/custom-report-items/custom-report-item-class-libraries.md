@@ -22,7 +22,7 @@ helpviewer_keywords:
 >  The following tables are not complete listings; they include only the most commonly used properties and methods for each class.  
   
 ### Microsoft.ReportDesigner.CustomReportItemDesigner  
- This is the main custom report item class. The main class of your custom report item implementation must inherit from this class.  
+ Microsoft.ReportDesigner.CustomReportItemDesigner is the main custom report item class. The main class of your custom report item implementation must inherit from this class.  
   
 #### Public properties  
   
@@ -35,7 +35,7 @@ helpviewer_keywords:
 |**Height**|The height of the custom report item control.|  
 |**Width**|The width of the custom report item control.|  
 |**Report**|A container for the report-level properties, such as the list of datasets in the report.|  
-|**AltReportItem**|The alternate report item object, to be used where the custom report item run-time control is not supported.|  
+|**AltReportItem**|The alternate report item object, to be used where the custom report item run-time control isn't supported.|  
 |**Style**|The style properties for the custom report item.|  
 |**Adornment**|An adornment window used for interactive editing of the control.|  
 |**Site**|The **ISite** of the component.|  
@@ -48,14 +48,14 @@ helpviewer_keywords:
 |**BeginEdit**|Activates interactive editing for the control.|  
 |**DoDefaultAction**|Called in response to double-clicking or pressing Return on the control.|  
 |**EndEdit**|Deactivates interactive editing for the control.|  
-|**GetService**|Returns an object which represents a service.|  
+|**GetService**|Returns an object, which represents a service.|  
 |**InitializeNewComponent**|Called when a new custom report item is created.|  
 |**Invalidate**|Repaints the entire surface of the control.|  
 |**OnDragEnter**<br /><br /> **OnDragDrop**|Called when an object is dragged onto the control.|  
 |**OnPaint**|Called in response to the **Paint** event.|  
   
 ### Microsoft.ReportDesigner.CustomReportItemAttribute  
- This is the attribute used to identify the type of the custom report item. The name must match the value of the \<**Name**> attribute of the **ReportItem** element in the Report Designer configuration file.  
+ Microsoft.ReportDesigner.CustomReportItemAttribute is the attribute used to identify the type of the custom report item. The name must match the value of the \<**Name**> attribute of the **ReportItem** element in the Report Designer configuration file.  
   
 #### Public methods  
   
@@ -64,7 +64,7 @@ helpviewer_keywords:
 |**CustomReportItemAttribute**|Constructs the CustomReportItemAttribute object.|  
   
 ### Microsoft.ReportDesigner.LocalizedNameAttribute  
- This is the attribute used to specify display name to use for the custom report item designer.  
+ Microsoft.ReportDesigner.LocalizedNameAttribute is the attribute used to specify display name to use for the custom report item designer.  
   
 #### Public methods  
   

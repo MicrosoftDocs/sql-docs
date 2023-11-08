@@ -12,14 +12,14 @@ helpviewer_keywords:
   - "custom report items"
 ---
 # Custom report item implementation requirements
-  This topic will discuss the prerequisites for developing and deploying custom report items.  
+  This article discusses the prerequisites for developing and deploying custom report items.  
   
 ## Development and deployment requirements  
- Developing a custom report item for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires the following:  
+ Developing a custom report item for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires the following criteria:  
   
 -   Administrative access to a server running [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)] or above with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] software development kit (SDK) installed.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs2005](../../includes/vsprvs2005-md.md)] or newer with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] software development kit (SDK) installed.  
   
 -   Access to the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   

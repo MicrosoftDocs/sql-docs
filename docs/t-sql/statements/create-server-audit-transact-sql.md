@@ -73,20 +73,23 @@ CREATE SERVER AUDIT audit_name
  TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } 
  Determines the location of the audit target. The options are a binary file, The Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
- Note: `URL` target is not supported for SQL Server.
+ **Note:** `URL` target is not supported for SQL Server.
 
 > [!IMPORTANT]
 > In Azure SQL Managed Instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  The path of the audit log. The file name is generated based on the audit name and audit GUID.  
+ **Note:** `FILEPATH` target is not supported for Azure SQL Managed Instance. You need to use PATH instead of.
   
  MAXSIZE = { *max_size }*  
  Specifies the maximum size to which the audit file can grow. The *max_size* value must be an integer followed by MB, GB, TB, or UNLIMITED. The minimum size that you can specify for *max_size* is 2 MB and the maximum is 2,147,483,647 TB. When UNLIMITED is specified, the file grows until the disk is full. (0 also indicates UNLIMITED.) Specifying a value lower than 2 MB raises the error MSG_MAXSIZE_TOO_SMALL. The default value is UNLIMITED.  
+ **Note:** `MAXSIZE` target is not supported for Azure SQL Managed Instance.
   
  MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
  Specifies the maximum number of files to retain in the file system in addition to the current file. The *MAX_ROLLOVER_FILES* value must be an integer or UNLIMITED. The default value is UNLIMITED. This parameter is evaluated whenever the audit restarts (which can happen when the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts or when the audit is turned off and then on again) or when a new file is needed because the MAXSIZE has been reached. When *MAX_ROLLOVER_FILES* is evaluated, if the number of files exceeds the *MAX_ROLLOVER_FILES* setting, the oldest file is deleted. As a result, when the setting of *MAX_ROLLOVER_FILES* is 0 a new file is created each time the *MAX_ROLLOVER_FILES* setting is evaluated. Only one file is automatically deleted when *MAX_ROLLOVER_FILES* setting is evaluated, so when the value of *MAX_ROLLOVER_FILES* is decreased, the number of files does not shrink unless old files are manually deleted. The maximum number of files that can be specified is 2,147,483,647.  
-  
+**Note:** `MAX_ROLLOVER_FILES` is not supported for Azure SQL Managed Instance.
+
  MAX_FILES =*integer*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
@@ -94,6 +97,7 @@ CREATE SERVER AUDIT audit_name
   
  RESERVE_DISK_SPACE = { ON | OFF }  
  This option pre-allocates the file on the disk to the MAXSIZE value. It applies only if MAXSIZE is not equal to UNLIMITED. The default value is OFF.  
+ **Note:** `RESERVE_DISK_SPACE` target is not supported for Azure SQL Managed Instance.
   
  QUEUE_DELAY =*integer*  
  Determines the time, in milliseconds, that can elapse before audit actions are forced to be processed. A value of 0 indicates synchronous delivery. The minimum settable query delay value is 1000 (1 second), which is the default. The maximum is 2,147,483,647 (2,147,483.647 seconds or 24 days, 20 hours, 31 minutes, 23.647 seconds). Specifying an invalid number, raises the MSG_INVALID_QUEUE_DELAY error.  
@@ -237,4 +241,6 @@ GO
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
- [Create a Server Audit and Server Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)
+ [Create a Server Audit and Server Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 
+ 
+ [Get Started with Azure SQL Managed Instance Auditing](https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/auditing-configure?view=azuresql)

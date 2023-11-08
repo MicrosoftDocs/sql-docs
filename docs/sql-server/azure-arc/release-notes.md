@@ -23,6 +23,10 @@ ms.topic: conceptual
 - Track the provision state and (extension service) status of Azure extension for SQL Server - general availability.
   - Beginning with this release, you can track the provisioning status of Azure Arc extension for SQL Server and Azure Arc guest agent in the properties tab for Arc enabled SQL Server.
 
+For information about server monitoring capabilities, review [Automatically connect your SQL Server to Azure Arc](automatically-connect.md).
+
+For information about database status and inventory capabilities, review [View SQL Server databases - Azure Arc](view-databases.md).
+
 #### Back up and restore
 
 - Configure backups at instance level using custom schedule for Azure Arc-enabled SQL Server instances for both portal and CLI - public preview.

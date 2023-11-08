@@ -4,7 +4,7 @@ description: View databases in Azure from an instance of Azure Arc-enabled SQL S
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/19/2023
+ms.date: 11/07/2023
 ms.topic: conceptual
 ---
 
@@ -31,8 +31,6 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 1. **Select** the SQL Server resource.
 1. Under **Data management**, select **Databases**.
 
-   :::image type="content" source="media/view-databases/databases.png" alt-text="Screenshot of Azure portal, SQL Server databases - Azure Arc.":::
-
 The Azure portal shows **SQL Server databases - Azure Arc**. Use this area to view the databases that belong to the instance.
 
 ## View database properties
@@ -42,6 +40,17 @@ To view database properties for a specific database, select the database on the 
 After you create, modify, or delete a database, changes are visible in the Azure portal within an hour.
 
 :::image type="content" source="media/view-databases/database-properties.png" alt-text="Screenshot of Azure portal, SQL Server database properties.":::
+
+On Database properties the page describes:
+
+- Information about the data collection and upload:
+  - Last collected time
+  - Upload status
+- Information about each database:
+  - Name
+  - Status
+  - Creation time
+  - Earliest restore point
 
 ## How to use Azure Resource Graph to query data
 

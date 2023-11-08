@@ -46,6 +46,14 @@ In Azure portal, go to **Azure Arc > SQL Server** and open the newly registered 
 
 If the Arc-enabled SQL Server resource does not appear in the same resource group as the Arc Server, follow the [Azure extension for SQL Server](troubleshoot-deployment.md) guide to troubleshoot the issue.
 
+Use this page in the portal to review current information about an Azure Arc-enabled SQL Server. For example:
+
+- The last time usage data is uploaded to Azure
+- Azure extension for SQL Server version
+- Provisioning state
+- Automatic upgrade status
+- The last time that inventory was reported
+
 ## Evaluate Azure Arc-enabled SQL Server on an Azure VM
 
 Normally, you wouldn't use Azure Arc-enabled SQL Server on an Azure virtual machine. However, you can use an Azure SQL Virtual machine to evaluate Arc-enabled SQL Server on an Azure VM.

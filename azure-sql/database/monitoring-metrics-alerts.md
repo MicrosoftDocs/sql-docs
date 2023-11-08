@@ -74,17 +74,17 @@ The following table describes commonly used metrics in Azure SQL Database.
 
 You can create alert rules to notify you that the value of one metric or multiple metrics is outside of an expected range. You can set the scope of an alert rule to a database or an elastic pool, or broaden the scope to include all databases or elastic pools in a resource group or a subscription within an Azure region, or in all regions.
 
-Alert rules evaluate aggregated metric values over a lookback period, comparing them to a threshold value. You can configure the threshold value, evaluation frequency, and lookback period.
+Alert rules periodically evaluate aggregated metric values over a lookback period, comparing them to a threshold value. You can configure the threshold value, evaluation frequency, and lookback period.
 
-If an alert rule is triggered, you are notified according to your notification preferences. For example, you can receive an email, an SMS, or a voice notification. An alert rule can also trigger actions such as webhooks, [automation](/azure/automation/overview) runbooks, [functions](/azure/azure-functions/functions-overview), [logic apps](/azure/logic-apps/logic-apps-overview), etc. You can [integrate](/azure/azure-monitor/alerts/itsmc-overview) alerts with supported IT Service Management products.
+If an [alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs=metric) is triggered, you are notified according to your notification preferences, which you specify in the [action group](/azure/azure-monitor/alerts/action-groups) linked to the alert rule. For example, you can receive an email, an SMS, or a voice notification. An alert rule can also trigger actions such as webhooks, [automation](/azure/automation/overview) runbooks, [functions](/azure/azure-functions/functions-overview), [logic apps](/azure/logic-apps/logic-apps-overview), etc. You can [integrate](/azure/azure-monitor/alerts/itsmc-overview) alerts with supported IT Service Management products.
 
-To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with metric alerts, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Create or edit an alert rule](/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs=metric), and [Action groups](/azure/azure-monitor/alerts/action-groups).
+To learn more about Azure Monitor alerts, see [Azure Monitor alerts overview](/azure/azure-monitor/alerts/alerts-overview). To get familiar with metric alerts, review [Metric alerts](/azure/azure-monitor/alerts/alerts-types#metric-alerts), [Manage alert rules](/azure/azure-monitor/alerts/alerts-manage-alert-rules), and [Action groups](/azure/azure-monitor/alerts/action-groups).
 
-## Recommended alert rules
+### Recommended alert rules
 
-The metrics and thresholds to use in alert rules vary across the wide spectrum of customer workloads in Azure SQL Database. The table below is an example of a typical alert rule configuration.
+The metrics and optimal thresholds to use in alert rules vary across the wide spectrum of customer workloads in Azure SQL Database. The table below is an example of a typical alert rule configuration.
 
-The recommended alerts in this table are a starting point to help you define the optimal alerting configuration for your Azure SQL Database resources. Depending on your requirements, your optimal configuration might differ from this example. You might use different thresholds, frequencies, and lookback periods, create additional alerts, or use different alert rule configurations for different applications and environments.
+The recommended alerts in this table are a starting point to help you define the optimal alerting configuration for your Azure SQL Database resources. Depending on your requirements, your configuration might differ from this example. You might use different thresholds, evaluation frequencies, and lookback periods, create additional alerts, or use different alert rule configurations for different applications and environments.
 
 | Alert rule name | Metric (signal) | Alert logic | When to evaluate | Suggested severity |
 |:--|:--|:--|:--|:--|

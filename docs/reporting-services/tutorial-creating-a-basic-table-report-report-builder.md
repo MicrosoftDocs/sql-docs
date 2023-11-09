@@ -19,7 +19,7 @@ Estimated time to complete this tutorial: 20 minutes.
 ## Requirements  
 For more information about requirements, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="CreateTable"></a>1. Create a report using a wizard  
+## <a name="CreateTable"></a>1. Create a report by using a wizard  
 Create a table report with the Table or Matrix wizard. There are two modes: report design and shared dataset design. In report design mode, you specify data in the Report Data pane and the report layout on the design surface. In shared dataset design mode, you create dataset queries to share with others. In this tutorial, you will be using report design mode.  
   
 ### Create a report  

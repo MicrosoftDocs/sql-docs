@@ -14,7 +14,7 @@ This tutorial teaches you how to create two kinds of [!INCLUDE[ssRSnoversion_md]
 
 The following illustration shows the reports you will create, and shows how the field value, Games and Toys, in the main report displays in the drillthrough report's title. The data in the drillthrough report pertains to the Games and Toys product category.  
 
-:::image type="content" source="../reporting-services/media/rs-drillthroughcubetutorial.gif" alt-text="Screenshot that shows how a drillthrough report relates to its origin report" lightbox="../reporting-services/media/rs-drillthroughcubetutorial.gif ":::
+:::image type="content" source="../reporting-services/media/rs-drillthroughcubetutorial.gif" alt-text="Screenshot that shows how a drillthrough report relates to its origin report." lightbox="../reporting-services/media/rs-drillthroughcubetutorial.gif ":::
 
 Estimated time to complete this tutorial: 30 minutes.  
   

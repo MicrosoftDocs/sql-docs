@@ -31,6 +31,7 @@ sp_validate_redirected_publisher
     [ @original_publisher = ] N'original_publisher'
     , [ @publisher_db = ] N'publisher_db'
     , [ @redirected_publisher = ] N'redirected_publisher' OUTPUT
+    , [ @multi_subnet_failover = ] [0 | 1]
 [ ; ]
 ```
 
@@ -47,6 +48,13 @@ The name of the database being published. *@publisher_db* is **sysname**, with n
 #### [ @redirected_publisher = ] N'*redirected_publisher*' OUTPUT
 
 The target of redirection specified when `sp_redirect_publisher` was called for the publisher/database pair. *@redirected_publisher* is an OUTPUT parameter of type **sysname**.
+
+#### [ @multi_subnet_failover = ] [0 | 1]
+
+Used to pass information for the creation of the dynamic linked server. If 0, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter. If 1, the dynamic linked server is created with the `MultiSubnetFailover` parameter as 1. *multi_subnet_failover* is **bit**, with a default of 0.
+
+> [!NOTE]
+> The `@multi_subnet_failover` parameter only applies to SQL Server 2022 CU10 and later versions.
 
 ## Return code values
 

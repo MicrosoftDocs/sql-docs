@@ -27,7 +27,8 @@ dev_langs:
 sp_get_redirected_publisher   
     [ @original_publisher = ] 'original_publisher',  
     [ @publisher_db = ] 'database_name',   
-    [ @bypass_publisher_validation = ] [0 | 1 ]  
+    [ @bypass_publisher_validation = ] [0 | 1 ],
+    [ @multi_subnet_failover = ] [0 | 1 ]
 ```  
   
 ## Arguments  
@@ -39,7 +40,13 @@ sp_get_redirected_publisher
   
 `[ @bypass_publisher_validation = ] [0 | 1 ]`
  Used to bypass validation of the redirected publisher. If 0, validation is performed . If 1, validation is not performed. *bypass_publisher_validation* is **bit**, with a default of 0.  
-  
+
+`[ @multi_subnet_failover = ] [0 | 1 ]`
+ Used to pass information for the creation of the dynamic linked server. If 0, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter. If 1, the dynamic linked server is created with the `MultiSubnetFailover` parameter as 1. *multi_subnet_failover* is **bit**, with a default of 0.
+
+> [!NOTE]
+> The `@multi_subnet_failover` parameter only applies to SQL Server 2022 CU10 and later versions.
+
 ## Return Code Values  
  **0** (success) or **1** (failure)  
   

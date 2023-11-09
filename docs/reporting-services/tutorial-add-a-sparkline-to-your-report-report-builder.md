@@ -16,7 +16,7 @@ In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], 
   
 Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
 
-:::image type="content" source="../reporting-services/media/report-builder-sparkline-final.png" alt-text="Screenshot that shows the report builder sparkline." lightbox="../reporting-services/media/report-builder-sparkline-final.png":::
+:::image type="content" source="../reporting-services/media/report-builder-sparkline-final.png" alt-text="Screenshot that shows the Report Builder sparkline." lightbox="../reporting-services/media/report-builder-sparkline-final.png":::
 
 Estimated time to complete this tutorial: 30 minutes.  
   
@@ -149,9 +149,9 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 14. The table is added to the design surface. The table has three columns and three rows.  
   
-    Look in the Grouping pane. If you can't see the Grouping pane, on the **View** menu, select **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that is retrieved by the dataset query.  
+    Look in the Grouping pane. If you can't see the Grouping pane on the **View** menu, select **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that is retrieved by the dataset query.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-grouping-pane.png" alt-text="Screenshot that shows the report builder grouping pane." lightbox="../reporting-services/media/report-builder-sparkline-grouping-pane.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-grouping-pane.png" alt-text="Screenshot that shows the Report Builder grouping pane." lightbox="../reporting-services/media/report-builder-sparkline-grouping-pane.png":::
   
 15. Select **Run** to preview the report.  
 
@@ -166,9 +166,9 @@ By default, the summary data for the **Sales** field displays a general number. 
   
 3.  On the **Home** tab > **Number** group, select **Currency**. The cells change to show the formatted currency.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-currency.png" alt-text="Screenshot that shows the sim sales replaced by placeholder currency values." lightbox="../reporting-services/media/report-builder-placeholder-currency.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-currency.png" alt-text="Screenshot that shows the sales replaced by placeholder currency values." lightbox="../reporting-services/media/report-builder-placeholder-currency.png":::
   
-    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value, in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
+    If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
     :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot that shows the Sample Values option selected." lightbox="../reporting-services/media/report-builder-placeholder-value-button.png":::
    
@@ -247,7 +247,7 @@ Now all the bars in each sparkline align with the bars in the other sparklines, 
 :::image type="content" source="../reporting-services/media/report-builder-sparkline-aligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is aligned." lightbox="../reporting-services/media/report-builder-sparkline-aligned.png":::
   
 ## <a name="Width"></a>7. (Optional) Change column widths  
-By default, each cell in a table contains a text box. A text box expands vertically to accommodate text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no affect on the height of the row in the rendered report.  
+By default, each cell in a table contains a text box. A text box expands vertically to accommodate text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no effect on the height of the row in the rendered report.  
   
 To reduce the amount of vertical space each row takes, expand the column width to accommodate the expected contents of the text boxes in the column on one line.  
   
@@ -264,9 +264,9 @@ To reduce the amount of vertical space each row takes, expand the column width t
 ## <a name="Title"></a>8. (Optional) Add a report title  
 A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
   
-The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
-### To add a report title  
+### Add a report title  
   
 1.  On the design surface, select **Click to add title**.  
   
@@ -283,7 +283,7 @@ The text can be further enhanced by applying different font styles, sizes, and c
 ## <a name="Save"></a>9. Save the report  
 Save the report to a report server or your computer. If you do not save the report to the report server, a number of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features such as subreports are not available.  
   
-### To save the report on a report server  
+### Save the report on a report server  
   
 1.  From the **Report Builder** button, select **Save As**.  
   
@@ -299,7 +299,7 @@ Save the report to a report server or your computer. If you do not save the repo
   
 The report is saved to the report server. The name of report server that you are connected to appears in the status bar at the bottom of the window.  
   
-### To save the report on your computer  
+### Save the report on your computer  
   
 1.  From the **Report Builder** button, select **Save As**.  
   

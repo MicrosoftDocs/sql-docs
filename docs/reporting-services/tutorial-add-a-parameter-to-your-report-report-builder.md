@@ -17,7 +17,7 @@ In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../includ
 Report parameters are created automatically for each query parameter that you include in a dataset query. The parameter data type determines how it appears on the report view toolbar. 
    
 > [!NOTE]  
-> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, choose a data source, and create a dataset, see the first tutorial in this series: [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, choose a data source, and create a dataset, see the first tutorial in this series: [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Estimated time to complete this tutorial: 25 minutes.  
   
@@ -76,7 +76,7 @@ Create a matrix report, a data source, and a dataset.
   
 11. On the query designer toolbar, Select **Run** (**!**) to see the data.   
   
-    The result set consists of 11 rows of data that show the quantity of items sold for each subcategory for four stores, in the following columns: StoreID, Subcategory, Quantity.The store name is not part of the result set. Later in this tutorial, you will look up the name of the store that corresponds to the store identifier from a separate dataset.  
+    The result set consists of 11 rows of data that show the quantity of items sold for each subcategory for four stores, in the following columns: StoreID, Subcategory, Quantity. The store name is not part of the result set. Later in this tutorial, you will look up the name of the store that corresponds to the store identifier from a separate dataset.  
   
     This query does not contain query parameters. You will add query parameters later in this tutorial.   
   
@@ -121,7 +121,7 @@ The report runs on the report server and displays the title and the time the rep
   
 So far the column headings display the store identifier but not the store name. Later, you will add an expression to look up the store name in a dataset that contains store identifier/store name pairs.  
   
-## <a name="Query"></a>3. Add a Query Parameter to Create a Report Parameter  
+## <a name="Query"></a>3. Add a query parameter to create a report parameter  
 When you add a query parameter to a query, Report Builder automatically creates a single-valued report parameter with default properties for name, prompt, and data type.  
   
 ### Add a query parameter  
@@ -212,7 +212,7 @@ To make sure your report readers type only valid values for a parameter, you can
 ## <a name="AvailableValues"></a>4b. Specify available values to show in a list 
 After you create a dataset to provide available values, you change the report properties to specify which dataset and which field to use to populate the drop-down list of valid values on the Report Viewer toolbar.  
   
-### To provide available values for a parameter from a dataset  
+### Provide available values for a parameter from a dataset  
   
 1.  In the Report Data pane, right-click the parameter *\@StoreID*, then select **Parameter Properties**.  
   
@@ -226,7 +226,7 @@ After you create a dataset to provide available values, you change the report pr
   
 6.  Select **General**.  
   
-7.  In **Prompt**, change **Store Identifer?** to **Store name?**  
+7.  In **Prompt**, change **Store Identifier?** to **Store name?**  
   
     Report readers will now select from a list of store names instead of store identifiers. Note that the parameter data type remains **Integer** because the parameter is based on the store identifier, not the store name.  
   
@@ -243,7 +243,7 @@ The report displays the quantity sold for Accessories, Camcorders, and Digital S
 ## <a name="DefaultValues"></a>4c. Specify a default value 
 You can specify a default value for each parameter so the report runs automatically.  
   
-### To specify a default value from a dataset  
+### Specify a default value from a dataset  
   
 1.  Switch to Design view.  
   
@@ -332,7 +332,7 @@ When your report readers have questions about a report, it helps to know which p
 ## <a name="Filter"></a>6. Use the report parameter in a filter  
 Filters help control which data to use in a report after it is retrieved from an external data source. To let report readers control the data they want to see, you can include the report parameter in a filter for the matrix.  
   
-### To specify a parameter in a matrix filter  
+### Specify a parameter in a matrix filter  
   
 1.  Switch to Design view.  
   
@@ -473,7 +473,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 ## <a name="Save"></a>10. Save the report  
   
-### To save the report on a report server  
+### Save the report on a report server  
   
 1.  From the **Report Builder** button, select **Save As**.  
   

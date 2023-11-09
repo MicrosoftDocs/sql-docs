@@ -26,7 +26,7 @@ The following illustration shows the bar chart that you will create, with sales 
   
  
 > [!NOTE]  
-> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, create a dataset, and choose a data source, see the first tutorial in this series: [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, create a dataset, and choose a data source, see the first tutorial in this series: [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Estimated time to complete this tutorial: 15 minutes.  
   
@@ -49,7 +49,7 @@ In which you create an embedded dataset, choose a shared data source, and create
       
 2.  In the left pane, verify that **New Report** is selected.  
   
-3.  In the right pane, elect **Chart Wizard**.  
+3.  In the right pane, select **Chart Wizard**.  
   
 4.  On the **Choose a dataset** page, select **Create a dataset**, and then choose **Next**.  
   
@@ -262,7 +262,7 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 1.  On the design surface, select **Click to add title**.  
   
-2.  Type **Sales Bar Chart**, press ENTER, and then type **Top Five Sellers for 2015**, so it looks like this:  
+2.  Type **Sales Bar Chart**. Press ENTER, and then type **Top Five Sellers for 2015**, so it looks like this:  
   
     **Sales Bar Chart**  
   

@@ -26,7 +26,7 @@ This topic provides the installation prerequisites and instructions for installi
 
 ## Prerequisites
 
-SSMA is designed to work with DB2 on z/OS version 9.0 and 10.0, DB2 on LUW version 9.8 and 10.1 or later versions, DB2 for i version 7.1 or greater and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later versions.
+SSMA is designed to work with DB2 on z/OS version 9.0 and 10.0 or later versions, DB2 on LUW version 9.8 and 10.1 or later versions, DB2 for i version 7.1 or greater and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or later versions.
 
 Before you install SSMA, make sure that the computer meets the following requirements:
 

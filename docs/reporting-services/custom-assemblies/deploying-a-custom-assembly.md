@@ -22,7 +22,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  There are two preview modes for Report Designer: the Preview tab and the pop-up preview window that is launched when your report project is started in **DebugLocal** mode. The Preview tab executes all report expressions using the **FullTrust** permission set and does not apply security policy settings. The pop-up preview window is meant to simulate the report server functionality and therefore has a policy configuration file that you or an administrator must modify to use custom assemblies in Report Designer. This pop-up preview also locks the custom assembly. Therefore, you need to close the preview window in order to modify or update your custom assembly code.  
   
-## To deploy a custom assembly in Reporting Services  
+## Deploy a custom assembly in Reporting Services  
   
 1.  Copy your custom assembly from your build location to the report server bin folder or the Report Designer folder. 
 
@@ -107,7 +107,7 @@ helpviewer_keywords:
      ```    
 3.  Add a code group for your custom assembly. For more information, see [Secure Development &#40;Reporting Services&#41;](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
-## Updating custom assemblies  
+## Update custom assemblies  
  At some point, you might need to update a version of a custom assembly that's referenced by several published reports. If that assembly already exists in the bin directory of the report server or Report Designer, and the version number of the assembly is incremented or changed in some way, the currently published reports won't work properly. You'll need to update the version of the assembly that is referenced in the **CodeModules** element of the report definition and republish the reports. If you know that you'll frequently update a custom assembly, and your currently published reports need to reference the new assembly, you might want to consider using the same version number across all updates of a particular assembly.  
   
  If you don't need your currently published reports to reference the new version of the assembly, you can deploy your custom assembly to the global assembly cache. The global assembly cache can maintain multiple versions of the same assembly, so that your current reports can reference the previous version of your assembly and your newly published reports can reference the updated assembly. Yet another approach would be to set the binding redirect of the report server to force a redirect of all requests for the old assembly to the new assembly. You would need to modify the report server Web.config file and the report server ReportingServicesService.exe.config file. The entry might look like the following example:  

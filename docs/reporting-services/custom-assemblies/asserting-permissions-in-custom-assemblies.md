@@ -28,7 +28,7 @@ helpviewer_keywords:
   
 4.  Mark the custom assembly with **AllowPartiallyTrustedCallersAttribute** if it's signed with a strong name. This is required because custom assemblies are called from a report expression that is part of the report expression host assembly, which, by default, isn't granted **FullTrust**; thus it's a "partially trusted" caller. For more information, see [Using Strong-Named Custom Assemblies](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
   
-## Implementing a Secure Call  
+## Implement a Secure Call  
  You can modify the policy configuration files to grant your assembly specific permissions. For example, if you were writing a custom assembly to handle currency conversion, you might need to read the current currency exchange rates from a file. To retrieve the rate information, you would need to add an extra security permission, **FileIOPermission**, to your permission set for the assembly. You can make the following additional entry in the policy configuration file:  
   
 ```  

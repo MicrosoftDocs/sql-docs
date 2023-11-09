@@ -194,7 +194,7 @@ Once the move finishes, remove the resources in the source region to avoid unnec
 
 1. Delete the failover group using [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup). This will drop the failover group configuration and terminate geo-replication links between the two instances.
 1. Delete the source managed instance using [Remove-AzSqlInstance](/powershell/module/az.sql/remove-azsqlinstance).
-1. Remove any additional resources in the resource group, such as the virtual cluster, virtual network, and security group.
+1. Remove any additional resources in the resource group, such as the virtual network and security group.
 
 ## Next steps
 

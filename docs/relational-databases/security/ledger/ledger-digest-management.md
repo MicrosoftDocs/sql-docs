@@ -4,7 +4,7 @@ description: This article provides information on digest management for a ledger
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 05/23/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -99,7 +99,7 @@ Generating database digests requires the `GENERATE LEDGER DIGEST` permission. Fo
 Restoring the database back to an earlier point in time, also known as [Point in Time Restore](/azure/azure-sql/database/recovery-using-backups#point-in-time-restore), is an operation frequently used when a mistake occurs and users need to quickly revert the state of the database back to an earlier point in time. When uploading the generated digests to Azure Storage or Azure Confidential Ledger, the *create time* of the database is captured that these digests map to. Every time the database is restored, it's tagged with a new *create time* and this technique allows us to store the digests across different "incarnations" of the database. For SQL Server, the *create time* is the current UTC time when the digest upload is enabled for the first time. Ledger preserves the information regarding when a restore operation occurred, allowing the verification process to use all the relevant digests across the various incarnations of the database. Additionally, users can inspect all digests for different create times to identify when the database was restored and how far back it was restored to. Since this data is written in immutable storage, this information will be protected as well.
 
 > [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview. If you perform a native restore of a database backup, you need to change the digest path manually using the Azure Portal, PowerShell or the Azure CLI.
+> If you perform a native restore of a database backup in Azure SQL Managed Instance, you need to change the digest path manually using the Azure Portal, PowerShell or the Azure CLI.
 
 ### Active geo-replication and Always On availability groups
 
@@ -108,10 +108,7 @@ Active geo-replication or auto-failover groups can be configured for Azure SQL D
 If failover group is deleted or you drop the link, both databases will behave as primary databases.
 At that point the digest path of the previous secondary database will change and we will add a folder RemovedSecondaryReplica to the path.
 
-When your database is part of an Always On availability group in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
-
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview. The Managed Instance link feature is not supported.
+When your database is part of an Always On availability group or a Managed Instance link in SQL Server, the same principle as active geo-replication is used. The upload of the digests is only done if all transactions have been replicated to the secondary replicas.
 
 ## Next steps
 

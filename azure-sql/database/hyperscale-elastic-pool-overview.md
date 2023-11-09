@@ -4,7 +4,7 @@ description: Manage and scale multiple Hyperscale databases in Azure SQL Databas
 author: arvindshmicrosoft
 ms.author: arvindsh
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/04/2023
+ms.date: 10/26/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
@@ -71,15 +71,15 @@ You can use the following client tools to manage your Hyperscale databases in an
 
 The following lists the supported limits for working with Hyperscale databases within elastic pools:
 
-- Supported hardware generation: Standard-series (Gen5) only.
-- vCore maximum per pool: 80 vCores.
+- Supported hardware generation: Standard-series (Gen5), premium-series, and premium-series memory optimized.
+- vCore maximum per pool: 80 or 128 vCores, depending on the service level objective.
 - Maximum supported data size per database: 100 TB.
 - Maximum supported total data size across DBs in the pool: 100 TB.
 - Maximum supported transaction log throughput per database: 100 MB.
-- Maximum supported total transaction log throughput across databases in the pool: 130 MB/second.
+- Maximum supported total transaction log throughput across databases in the pool: 131.25 MB/second.
 - Each Hyperscale elastic pool can have up to 25 databases.
 
-For greater detail, see the [Hyperscale elastic pool resource limits](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5).
+For greater detail, see the resource limits of Hyperscale elastic pools for [standard-series](resource-limits-vcore-elastic-pools.md#hyperscale---provisioned-compute---standard-series-gen5),  [premium-series](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series), and [premium-series memory optimized](resource-limits-vcore-elastic-pools.md#hyperscale---premium-series-memory-optimized).
 
 > [!NOTE]  
 > Performance profiles, supported capabilities, and published limits are subject to change while the feature is in preview. As such, it's best to validate your use case with regular functional, performance, and scale testing of workloads.

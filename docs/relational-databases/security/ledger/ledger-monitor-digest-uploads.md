@@ -3,7 +3,7 @@ title: "Monitor digest uploads"
 description: This article provides information on monitoring the digest uploads for ledger.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/23/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -51,8 +51,7 @@ We recommend you configure an alert on event number *37417 - Uploading ledger di
 
 ::: zone pivot="as1-azure-sql-managed-instance"
 
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview and does not support digest upload alerts.
+We recommend you to use custom SQL Agent jobs to read and process an Extended Event session and alert using Database Mail. Another option is to use a scheduled Azure function, in case Database Mail cannot be used due to any reason.
 
 ::: zone-end
 

@@ -5,7 +5,7 @@ description: Learn about the new features and documentation improvements for Azu
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/06/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
@@ -22,10 +22,12 @@ ms.custom:
 > * [Azure SQL Managed Instance](../managed-instance/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 > * [SQL Server on Azure VMs](../virtual-machines/windows/doc-changes-updates-release-notes-whats-new.md?view=azuresql&preserve-view=true)
 
-
 This article summarizes the documentation changes associated with new features and improvements in the recent releases of [Azure SQL Database](https://azure.microsoft.com/products/azure-sql/database/). For more information about Azure SQL Database, see [What is Azure SQL Database?](sql-database-paas-overview.md).
 
 [!INCLUDE [entra-id](../includes/entra-id.md)]
+
+> [!TIP]
+> Lower, simplified pricing for SQL Database Hyperscale starts December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Preview
 
@@ -36,18 +38,17 @@ The following table lists the features of Azure SQL Database that are currently 
 
 | Feature | Details |
 | --- | --- |
-| [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | Take advantage of rich confidential queries and in-place cryptographic operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. |
-| [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | Azure Functions supports function triggers for the Azure SQL and SQL Server products. |
-| [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) | DC-series hardware from 10 to 40 vCores is now in preview for in General Purpose, Business Critical, and Hyperscale provisioned compute. |
 | [Degrees of Parallelism (DOP) feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#degree-of-parallelism-dop-feedback) | DOP Feedback is currently available as a limited preview. For more information and how to apply for the preview, see [Announcing Degree of Parallelism Feedback Limited Preview](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-degree-of-parallelism-feedback-limited-preview/ba-p/3806924). |
 | [Elastic jobs](elastic-jobs-overview.md) | Updated with a preview refresh and new capabilities in November 2023, elastic jobs are the SQL Server Agent replacement for Azure SQL Database. Elastic jobs now support Microsoft Entra (formerly Azure Active Directory) authentication, Azure Private links, management via REST APIs, Azure Alerts, and new capabilities and user interface in the Azure portal. Job Agents now provide four capacity tiers to scale concurrency for job execution. | 
 | [Elastic queries](elastic-query-overview.md) | The elastic queries feature allows for cross-database queries in Azure SQL Database. |
 | [Elastic transactions](elastic-transactions-overview.md) | Elastic transactions allow you to execute transactions distributed among cloud databases in Azure SQL Database. |
 | [Free Azure SQL Database](free-offer.md) | Try Azure SQL Database for free, for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. |
 | [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md) | Manage and scale multiple Hyperscale databases in Azure SQL Database by using Hyperscale elastic pools. |
+| [Hyperscale elastic pools Premium-series hardware](hyperscale-elastic-pool-overview.md) | Premium-series and premium-series memory optimized hardware is in preview for Hyperscale elastic pools. |
 | [Hyperscale RA-GZRS](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | Store your Hyperscale database backups on read access geo-zone-redundancy (RA-GZRS) storage. |
 | [Invoke External REST endpoints](/sql/relational-databases/system-stored-procedures/sp-invoke-external-rest-endpoint-transact-sql) | Invoke HTTPS REST endpoint natively using a new system stored procedure. |
-| [Maintenance window advance notifications](../database/advance-notifications.md) | Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
+| [License-free standby replica](standby-replica-how-to-configure.md) | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. | 
+| [Maintenance window advance notifications](advance-notifications.md) | Advance notifications are available for databases configured to use a non-default [maintenance window](maintenance-window.md). Advance notifications for maintenance windows are in public preview for Azure SQL Database. |
 | [Query editor in the Azure portal](query-editor.md) | The query editor in the portal allows you to run queries against your Azure SQL Database directly from the [Azure portal](https://portal.azure.com). |
 | [Serverless Hyperscale](serverless-tier-overview.md) | Automatically scale your Hyperscale databases up and down based on usage when using the serverless compute tier. |
 | [SQL Analytics](/azure/azure-monitor/insights/azure-sql) | Azure SQL Analytics is an advanced cloud monitoring solution for monitoring performance of all of your Azure SQL databases at scale and across multiple subscriptions in a single view. Azure SQL Analytics collects and visualizes key performance metrics with built-in intelligence for performance troubleshooting. |
@@ -59,6 +60,9 @@ The following table lists the new generally available (GA) features of Azure SQL
 
 | Feature | GA Month | Details |
 | --- | --- | --- |
+| [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) | November 2023 | Take advantage of rich confidential queries and in-place encryption operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. |
+| [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql-trigger) | November 2023 | Azure Functions supports function triggers for Azure SQL Database. |
+| [DC-series hardware up to 40 vCores](resource-limits-vcore-single-databases.md) | November 2023 | DC-series hardware from 10 to 40 vCores for General Purpose, Business Critical, and Hyperscale provisioned compute. |
 | [Database level CMK with TDE](transparent-data-encryption-byok-database-level-overview.md) | September 2023 | Database level CMK allows setting the TDE protector as a customer-managed key individually for each database within the server. |
 | [Hyperscale long-term retention](long-term-retention-overview.md) | September 2023 | Save your Hyperscale database backups for up to 10 years [with the GA of long-term retention (LTR)](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-long/ba-p/3930616). |
 | [Hyperscale short-term retention](hyperscale-automated-backups-overview.md#data-and-backup-storage-redundancy) | September 2023 | In line with other Azure SQL Database tiers, Hyperscale databases now [retain backups from 1 up to 35 days](automated-backups-overview.md) [with the GA of short-term retention](https://techcommunity.microsoft.com/t5/azure-sql-blog/announcing-general-availability-of-sql-database-hyperscale-short/ba-p/3930640). |
@@ -76,20 +80,23 @@ The following table lists the new generally available (GA) features of Azure SQL
 | [Azure Synapse Link for Azure SQL Database](/azure/synapse-analytics/synapse-link/sql-synapse-link-overview) | November 2022 | Azure Synapse Link for SQL enables near real time analytics over operational data in Azure SQL Database or SQL Server 2022. |
 | [Restore progress](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) | November 2022 | Restore progress tracked in the `percent_complete` column `sys.dm_operation_status`. |
 | [Time series](/sql/t-sql/functions/generate-series-transact-sql) | November 2022 | Generates a series of numbers within a given interval. For more information, review [GENERATE_SERIES](/sql/t-sql/functions/generate-series-transact-sql) and [DATE_BUCKET](/sql/t-sql/functions/date-bucket-transact-sql). |
-| [Automated key rotation for TDE with CMK](../database/transparent-data-encryption-byok-overview.md#rotation-of-tde-protector) | October 2022 | Automatically switch to a new key when using a customer-managed key (CMK) for TDE with Azure SQL Database. |
-| [Database copy from Hyperscale replica](service-tier-hyperscale.md) | October 2022 | Use a Hyperscale geo-secondary replica as source for a database copy. |
 
 
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Database documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
-### November 2023
+
+### November 2023 
 
 | Changes | Details |
 | --- | --- |
-| **Elastic jobs (preview)** | The [elastic jobs](elastic-jobs-overview.md) feature is the SQL Server Agent replacement for Azure SQL Database. New features and documentation enhancements have been added in a preview refresh in November 2023. Elastic jobs now support Microsoft Entra (formerly Azure Active Directory) authentication, Private links, management via REST APIs, Azure Alerts, and new capabilities and user interface in the Azure portal. Job Agents now provide four capacity tiers to scale concurrency for job execution. | 
-
+|**Always Encrypted with VBS enclaves GA** | Take advantage of rich confidential queries and in-place encryption operations for Azure SQL Database with Always Encrypted with virtualization-based security (VBS) enclaves. This feature is now generally available. Review [Always Encrypted with VBS enclaves](always-encrypted-enclaves-getting-started-vbs.md) to get started. |
+|**Azure SQL triggers for Azure Functions GA** | Azure Functions supports function triggers for Azure SQL Managed Instance. This feature is now generally available. Review [Azure SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more. | 
+|**DC-series hardware up to 40 vCores GA** | DC-series hardware from 10 to 40 vCores is now generally available for General Purpose, Business Critical, and Hyperscale provisioned compute. Review [Resource limits](resource-limits-vcore-single-databases.md) for more information. |
+| **Elastic jobs preview** | The [elastic jobs](elastic-jobs-overview.md) feature is the SQL Server Agent replacement for Azure SQL Database. New features and documentation enhancements have been added in a preview refresh in November 2023. Elastic jobs now support authentication with Microsoft Entra ID (formerly Azure Active Directory), Private links, management via REST APIs, Azure Alerts, and new capabilities and user interface in the Azure portal. Job Agents now provide four capacity tiers to scale concurrency for job execution. | 
+|**License-free standby replica preview** | Save on licensing costs by configuring your secondary database replica for disaster recovery standby. This feature is currently in preview. Review [License-free standby replica](standby-replica-how-to-configure.md) to learn more.  | 
+|**Premium-series hardware for Hyperscale elastic pools preview** | Premium-series and premium-series memory optimized hardware is now in preview for [Hyperscale elastic pools](hyperscale-elastic-pool-overview.md). |
 
 ### October 2023
 
@@ -107,6 +114,8 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 | **Microsoft Entra ID rebrand**| Azure Active Directory has been rebranded to [Microsoft Entra ID](/azure/active-directory/fundamentals/new-name). | 
 | **Optimized locking additional diagnostic information** | Additional wait types, wait and lock resources, and deadlock graph elements are available for [Optimized locking](/sql/relational-databases/performance/optimized-locking). |
 | **Try Azure SQL Database for free preview** | [Try Azure SQL Database for free](free-offer.md), for the life of your subscription. This free offer provides a General Purpose database with 100,000 vCore seconds of compute every month. This offer is currently in preview. |
+
+
 
 ### August 2023
 

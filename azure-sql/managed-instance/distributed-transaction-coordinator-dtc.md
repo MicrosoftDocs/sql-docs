@@ -1,7 +1,7 @@
 ---
-title: Distributed Transaction Coordinator (DTC) (preview)
+title: Distributed Transaction Coordinator (DTC)
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview) to run distributed transactions in a mixed environment. 
+description: Learn how to use Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance to run distributed transactions in a mixed environment. 
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
@@ -10,13 +10,11 @@ ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: how-to
 ---
-# Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview)
+# Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance
 
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article provides an overview of Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance (preview). You can use DTC to run distributed transactions in mixed environments, including across managed instances, SQL Server instances, other relational database management systems (RDBMSs), custom applications, and other transaction participants that are hosted in any environment that can establish network connectivity to Azure.
-
-DTC for Azure SQL Managed Instance is currently in preview.
+This article provides an overview of Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance. You can use DTC to run distributed transactions in mixed environments, including across managed instances, SQL Server instances, other relational database management systems (RDBMSs), custom applications, and other transaction participants that are hosted in any environment that can establish network connectivity to Azure.
 
 > [!NOTE]
 > DTC for Azure SQL Managed Instance is part of the November 2022 feature wave. To learn more about the timeline for the feature wave rollout, see [November 2022 feature wave](https://aka.ms/sqlmi-fwnov2022).

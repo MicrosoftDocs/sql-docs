@@ -19,6 +19,9 @@ ms.custom:
 
 The [Hyperscale service tier](service-tier-hyperscale.md) utilizes an architecture with highly scalable and separate storage and compute tiers. This article describes the components that enable customers to quickly scale Hyperscale databases while benefiting from nearly instantaneous backups and highly scalable transaction logging.
 
+> [!TIP]
+> Lower, simplified pricing for SQL Database Hyperscale starts December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+
 ## Hyperscale architecture overview
 
 Traditional database engines centralize data management functions in a single process: even so-called distributed databases in production today have multiple copies of a monolithic data engine.
@@ -43,7 +46,7 @@ The compute node is where the relational engine lives. The compute node is where
 
 Compute nodes have local SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is an intelligent low-latency data cache that minimizes the need to fetch data from remote page servers.
 
-Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. Up to four high-availability secondary compute nodes can be added on demand. They act as hot standby nodes for failover purposes and may serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable various additional OLTP [read-scale out](read-scale-out.md) scenarios and to better support Hybrid Transactional and Analytical Processing (HTAP) workloads. A [geo secondary](active-geo-replication-overview.md) compute node can be added for disaster recovery purposes and to serve as a read-only compute node to offload read workloads in a different Azure region.
+Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. Up to four high-availability secondary compute nodes can be added on demand. They act as hot standby nodes for failover purposes and can serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable various additional OLTP [read-scale out](read-scale-out.md) scenarios and to better support Hybrid Transactional and Analytical Processing (HTAP) workloads. A [geo secondary](active-geo-replication-overview.md) compute node can be added for disaster recovery purposes and to serve as a read-only compute node to offload read workloads in a different Azure region.
 
 In serverless, the primary replica and any high availability replicas or named replicas each independently autoscale based on their usage. The compute autoscaling range for the primary replica and any named replicas are configured independently. The autoscaling range of any high-availability replicas is inherited from the autoscaling configuration specified by their associated primary replica or named replica.
 
@@ -67,7 +70,7 @@ The log for Hyperscale is practically infinite, with the restriction that a sing
 
 ## Azure storage
 
-Azure Storage contains all data files in a database. Page servers keep data files in Azure Storage up to date. This storage is also used for backup purposes and may be replicated between regions based on choice of storage redundancy.
+Azure Storage contains all data files in a database. Page servers keep data files in Azure Storage up to date. This storage is also used for backup purposes and can be replicated between regions based on choice of storage redundancy.
 
 Backups are implemented using storage snapshots of data files. Restore operations using snapshots are fast regardless of data size. A database can be restored to any point in time within its backup retention period.
 

@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 10/19/2023
+ms.date: 11/07/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -221,8 +221,9 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 - Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
 - Premium-series memory optimized option offers double the amount of memory relative to Standard-series.
+- Standard-series, premium-series, and premium-series memory optimized are available for [Hyperscale elastic pools (preview)](hyperscale-elastic-pool-overview.md).
 
-- For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
+For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
@@ -279,7 +280,7 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-<a id="gen4gen5-1"></a> <a id="gen5"> </a>
+<a id="gen4gen5-1"></a> <a id="gen5"></a>
 
 #### Standard-series (Gen5)
 
@@ -287,7 +288,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
+Hyperscale service tier premium-series and premium-series memory optimized hardware is available for single databases and elastic pools in the following regions:
 
 - Australia East
 - Brazil South

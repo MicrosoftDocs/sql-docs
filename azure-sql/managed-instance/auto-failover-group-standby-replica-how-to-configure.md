@@ -13,7 +13,11 @@ ms.topic: how-to
 # Configure a license-free standby replica for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article describes how you can save on licensing costs by designating your read-only secondary managed instance for stand-by when using Azure SQL Managed Instance.
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](../database/standby-replica-how-to-configure.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](auto-failover-group-standby-replica-how-to-configure.md?view=azuresql-mi&preserve-view=true)
+
+This article describes how you can save on licensing costs by designating your secondary managed instance for standby when using Azure SQL Managed Instance.
 
 > [!NOTE]
 > The **Failover benefit** is only applicable when you configure a secondary instance as standby _within an auto-failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-replica) instead. 
@@ -22,17 +26,17 @@ This article describes how you can save on licensing costs by designating your r
 
 If you use a secondary Azure SQL Managed Instance deployment as a standby for disaster recovery and the secondary instance doesn't have any read workloads or applications connected to it, you can save on licensing costs by designating the replica as a *standby instance*.
 
-When a secondary instance is designated for standby, Microsoft provides you with the number of vCores that are licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
+When a secondary instance is designated for standby, Microsoft provides you with the number of vCores licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
 
 Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
 
 ## Cost benefit
 
-If you designate a managed instance replica as standby, Microsoft doesn't charge you SQL Server licensing costs for the vCores that the secondary standby replica uses. However, because the instance is billed for the entire hour, you might still be charged licensing costs for the entire hour if the state change is made in the middle of the hour. 
+When you designate a managed instance replica as standby, Microsoft doesn't charge you SQL Server licensing costs for the vCores used by the standby replica. However, because the instance is billed for the entire hour, you might still be charged licensing costs for the entire hour if the state change is made in the middle of the hour. 
 
 The benefit translates differently between customers who use the pay-as-you-go model and customers who use the [Azure Hybrid Benefit](../azure-hybrid-benefit.md) model. For a pay-as-you-go customer, the vCores are discounted on their invoice. For a customer who uses the Azure Hybrid Benefit for the standby replica, the number of vCores that the secondary replica uses are returned to their licensing pool.
 
-For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance as standby only.
+For example, as a pay-as-you-go customer, if you have 16 vCores assigned to the secondary instance, a discount for 16 vCores appears on your invoice if you designate your secondary instance for standby only.
 
 In another example, if you have 16 Azure Hybrid Benefit licenses and you deploy two managed instances that have 8 vCores each to a failover group, after you designate the secondary instance as standby, 8 vCores are returned to your license pool for you to use with other Azure SQL deployments.
 
@@ -50,7 +54,7 @@ The following table describes the functional capabilities of a standby secondary
 |RPO and RTO | The standby replica provides the same Recovery Point Object (RPO) and Recovery Time Objective (RTO) as a readable secondary replica.          |
 |Removing a failover group  | If the failover group is removed via a method like using the [Remove-AzSqlDatabaseInstanceFailoverGroup](/powershell/module/az.sql/remove-azsqldatabaseinstancefailovergroup) cmdlet, the standby replica becomes a read/write standalone instance. The licensing model returns to what it was before it was designated as standby (either Azure Hybrid Benefit or pay-as-you-go).  |
 
-The secondary instance must be used only for disaster recovery. No production applications can be connected to the replica. The following lists the only activities that are permitted on the standby replica:
+The standby instance must _only_ be used for disaster recovery. No production applications can be connected to the replica. The following lists the only activities that are permitted on the standby replica:
 
 - Run backups
 - Perform maintenance operations, such as checkDB
@@ -177,6 +181,6 @@ A value of `Standby` for the `secondaryType` parameter indicates failover rights
 
 - For a detailed tutorial, see [Add SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
 - For a sample script, see [Use PowerShell to create an auto-failover group in SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
-- For a business continuity overview and scenarios, see [Business continuity with Azure SQL Database and Azure SQL Managed Instance](../database/business-continuity-high-availability-disaster-recover-hadr-overview.md).
-- To learn about automated backups, see [SQL Database automated backups](../database/automated-backups-overview.md).
-- To learn about using automated backups for recovery, see [Restore a database from service-initiated backups](../database/recovery-using-backups.md).
+- For a business continuity overview and scenarios, see [Business continuity with Azure SQL Database and Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+- To learn about automated backups, see [SQL Database automated backups](automated-backups-overview.md).
+- To learn about using automated backups for recovery, see [Restore a database from service-initiated backups](recovery-using-backups.md).

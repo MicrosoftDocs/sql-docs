@@ -33,6 +33,8 @@ To add a secondary database, you must be the subscription owner or co-owner.
 The secondary database has the same name as the primary database and has, by default, the same service tier and compute size. The secondary database can be a single database or a pooled database. For more information, see [DTU-based purchasing model](service-tiers-dtu.md) and [vCore-based purchasing model](service-tiers-vcore.md).
 After the secondary is created and seeded, data begins replicating from the primary database to the new secondary database.
 
+If your secondary replica is used _only_ for disaster recovery (DR) and doesn't have any read or write workloads, you can save on licensing costs by designating the database for standby when you configure a new active geo-replication relationship. Review [license-free standby replica](standby-replica-how-to-configure.md) to learn more. 
+
 > [!NOTE]
 > If the partner database already exists, (for example, as a result of terminating a previous geo-replication relationship) the command fails.
 
@@ -226,8 +228,82 @@ Remove-AzSqlDatabaseSecondary @parameters
 
 ---
 
+## Cross-subscription geo-replication
+
+Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from the subscription of the primary (whether under the same tenant of Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) or not), follow the steps in this section.
+
+1. Add the IP address of the client machine executing the T-SQL commands in this example, to the server firewalls of **both** the primary and secondary servers. You can confirm that IP address by executing the following query while connected to the primary server from the same client machine.
+  
+   ```sql
+   select client_net_address from sys.dm_exec_connections where session_id = @@SPID;
+   ``` 
+
+   For more information, see [Configure firewall](firewall-configure.md).
+
+2. In the `master` database on the **primary** server, create a SQL authentication login dedicated to active geo-replication setup. Adjust login name and password as needed.
+
+   ```sql
+   create login geodrsetup with password = 'ComplexPassword01';
+   ```
+
+3. In the same database, create a user for the login, and add it to the `dbmanager` role:
+
+   ```sql
+   create user geodrsetup for login geodrsetup;
+   alter role dbmanager add member geodrsetup;
+   ```
+
+4. Take note of the SID value of the new login. Obtain the SID value using the following query.
+
+   ```sql
+   select sid from sys.sql_logins where name = 'geodrsetup';
+   ```
+
+5. Connect to the **primary** database (not the `master` database), and create a user for the same login.
+
+   ```sql
+   create user geodrsetup for login geodrsetup;
+   ```
+
+6. In the same database, add the user to the `db_owner` role.
+
+   ```sql
+   alter role db_owner add member geodrsetup;
+   ```
+
+7. In the `master` database on the **secondary** server, create the same login as on the primary server, using the same name, password, and SID. Replace the hexadecimal SID value in the sample command below with the one obtained in Step 4.
+
+   ```sql
+   create login geodrsetup with password = 'ComplexPassword01', sid=0x010600000000006400000000000000001C98F52B95D9C84BBBA8578FACE37C3E;
+   ```
+
+8. In the same database, create a user for the login, and add it to the `dbmanager` role.
+
+   ```sql
+   create user geodrsetup for login geodrsetup;
+   alter role dbmanager add member geodrsetup;
+   ```
+
+9. Connect to the `master` database on the **primary** server using the new `geodrsetup` login, and initiate geo-secondary creation on the secondary server. Adjust database name and secondary server name as needed. Once the command is executed, you can monitor geo-secondary creation by querying the [sys.dm_geo_replication_link_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database) view in the **primary** database, and the [sys.dm_operation_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) view in the `master` database on the **primary** server. The time needed to create a geo-secondary depends on the primary database size.
+
+   ```sql
+   alter database [dbrep] add secondary on server [servername];
+   ```
+
+10. After the geo-secondary is successfully created, the users, logins, and firewall rules created by this procedure can be removed.
+
+> [!NOTE]
+> Cross-subscription geo-replication operations including setup and geo-failover are only supported using REST API & T-SQL commands.
+> 
+> Adding a geo-secondary using T-SQL is not supported when connecting to the primary server over a [private endpoint](private-endpoint-overview.md). If a private endpoint is configured but public network access is allowed, adding a geo-secondary is supported when connected to the primary server from a public IP address. Once a geo-secondary is added, [public network access can be denied](connectivity-settings.md#deny-public-network-access).
+> 
+> Creating a geo-secondary on a logical server in a different Microsoft Entra tenant is not supported when [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md) is enabled on either primary or secondary logical server.
+
+
+
 ## Next steps
 
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
 * To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md)
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+* Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).

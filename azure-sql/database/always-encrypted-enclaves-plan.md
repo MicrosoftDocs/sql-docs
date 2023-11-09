@@ -4,7 +4,7 @@ description: Plan the deployment of Always Encrypted with secure enclaves in Azu
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
@@ -45,7 +45,7 @@ SGX enclaves are recommended for workloads that require the strongest data confi
 
 VBS enclaves are the recommended solution for customers who seek protection for data in use from high-privileged users in the customer's organization, including Database Administrators (DBAs). Without having the cryptographic keys protecting the data, a DBA won't be able to access the data in plaintext.
 
-VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps within a VM hosting your database. The plaintext data processed in an enclave doesn't show up in memory dumps, providing the code inside the enclave and its properties haven't been maliciously altered. However, VBS enclaves in Azure SQL Database can't address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. Also, regardless of attestation, VBS enclaves don't provide any protection from attacks using privileged system accounts originating from the host. It's important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multi-factor authentication, and security monitoring. Nevertheless, customers who require strong security isolation may prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
+VBS enclaves can also help prevent some OS-level threats, such as exfiltrating sensitive data from memory dumps within a VM hosting your database. The plaintext data processed in an enclave doesn't show up in memory dumps, providing the code inside the enclave and its properties haven't been maliciously altered. However, VBS enclaves in Azure SQL Database can't address more sophisticated attacks, such as replacing the enclave binary with malicious code, due to the current lack of enclave attestation. Also, regardless of attestation, VBS enclaves don't provide any protection from attacks using privileged system accounts originating from the host. It's important to note that Microsoft has implemented multiple layers of security controls to detect and prevent such attacks in the Azure cloud, including just-in-time access, multifactor authentication, and security monitoring. Nevertheless, customers who require strong security isolation might prefer Intel SGX enclaves with the DC-series hardware configuration over VBS enclaves.
 
 ## Plan for enclave attestation in Azure SQL Database
 

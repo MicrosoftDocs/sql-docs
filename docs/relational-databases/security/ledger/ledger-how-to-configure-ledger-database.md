@@ -4,7 +4,7 @@ description: This article discusses how to configure a ledger database in Azure 
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 05/23/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
 ms.custom: devx-track-azurecli
@@ -114,9 +114,6 @@ az sql db create \
 
 This article provides information on configuring a [ledger database](ledger-overview.md) using T-SQL, PowerShell, or the Azure CLI for **Azure SQL Managed Instance**. For information on creating a ledger database in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] or Azure SQL Database, use the switch at the top of this page.
 
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview.
-
 ## Prerequisites
 
 - Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
@@ -126,46 +123,6 @@ This article provides information on configuring a [ledger database](ledger-over
 
 > [!NOTE]
 > Enabling the ledger functionality at the database level will make all tables in this database updatable ledger tables. This option cannot be changed after the database is created. Creating a table with the option `LEDGER = OFF` will throw an error message.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # [T-SQL](#tab/t-sql2)
 

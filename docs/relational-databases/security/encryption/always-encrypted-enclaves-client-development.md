@@ -1,10 +1,10 @@
 ---
 title: "Develop applications using Always Encrypted with secure enclaves"
 description: "Develop applications using Always Encrypted with secure enclaves"
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.date: "02/15/2023"
+ms.date: "11/14/2023"
 ms.service: sql
 ms.subservice: security
 ms.topic: conceptual
@@ -37,7 +37,7 @@ Your environment needs to meet the following requirements to support Always Encr
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
     | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves (preview)  | None |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves | None |
 
   - Sets an attestation URL that is valid for your environment, if you're using attestation.
 

@@ -14,26 +14,28 @@ ms.custom:
 
 Service-aided subnet configuration provides automated network configuration management for subnets hosting managed instances. With service-aided subnet configuration user stays in full control of access to data (TDS traffic flows) while managed instance takes responsibility to ensure uninterrupted flow of management traffic in order to fulfill SLA.
 
-Automatically configured network security groups and route table rules are visible to customer and annotated with prefix _Microsoft.Sql-managedInstances_UseOnly__.
+Automatically configured network security groups and route table rules are visible to customer and annotated with prefix `Microsoft.Sql-managedInstances_UseOnly_.
 
 Service-aided configuration is enabled automatically once you turn on [subnet-delegation](/azure/virtual-network/subnet-delegation-overview) for `Microsoft.Sql/managedInstances` resource provider.
 
 > [!IMPORTANT] 
-> Once subnet-delegation is turned on you could not turn it off until the very last virtual cluster is removed from the subnet. For more details on virtual cluster lifetime see the following [article](virtual-cluster-delete.md).
+> Once subnet-delegation is turned on, you can't turn it off until the virtual cluster is removed from the subnet. For lifetime details of the virtual cluster, see how to [delete a subnet after deleting SQL Managed Instance](virtual-cluster-architecture.md#delete-a-subnet-after-deleting-an-azure-sql-managed-instance).
 
-> [!NOTE] 
-> As service-aided subnet configuration is essential feature for maintaining SLA, starting May 1st 2020, it won't be possible to deploy managed instances in subnets that are not delegated to managed instance resource provider. On July 1st 2020 all subnets containing managed instances will be automatically delegated to managed instance resource provider. 
 
 ## Enabling subnet-delegation for new deployments
-To deploy managed instance in to empty subnet you need to delegate it to `Microsoft.Sql/managedInstances` resource provider as described in following [article](/azure/virtual-network/manage-subnet-delegation). _Please note that referenced article uses `Microsoft.DBforPostgreSQL/serversv2` resource provider for example. You'll need to use `Microsoft.Sql/managedInstances` resource provider instead._
+
+To deploy a managed instance to an empty subnet, you need to delegate it to the `Microsoft.Sql/managedInstances` resource provider as described in [Manage subnet delegation](/azure/virtual-network/manage-subnet-delegation). _The referenced article uses `Microsoft.DBforPostgreSQL/serversv2` resource provider as an example but you need to use the `Microsoft.Sql/managedInstances` resource provider instead._
 
 ## Enabling subnet-delegation for existing deployments
 
-In order to enable subnet-delegation for your existing managed instance deployment you need to find out virtual network subnet where it is placed. 
+In order to enable subnet-delegation for your existing managed instance deployment, you need to find out virtual network subnet where it is placed. 
 
-To learn this you can check `Virtual network/subnet` at the `Overview` portal blade of your managed instance.
+To find the subnet, check the value under **Virtual network/subnet** on the **Overview** page of your SQL Managed Instance resource in the [Azure portal](https://portal.azure.com).
 
-As an alternative, you could run the following PowerShell commands to learn this. Replace **subscription-id** with your subscription ID. Also replace **rg-name** with the resource group for your managed instance, and replace **mi-name** with the name of your managed instance.
+Alternatively, you could run the following PowerShell commands to find the virtual network subnet for your instance. Replace the following values in the sample:
+- **subscription-id** with your subscription ID
+- **rg-name** with the resource group for your managed instance
+- **mi-name** with the name of your managed instance
 
 ```powershell
 Install-Module -Name Az
@@ -54,7 +56,7 @@ $mi = Get-AzSqlInstance -ResourceGroupName {rg-name} -Name {mi-name}
 $mi.SubnetId
 ```
 
-Once you find managed instance subnet you need to delegate it to `Microsoft.Sql/managedInstances` resource provider as described in following [article](/azure/virtual-network/manage-subnet-delegation). _Please note that referenced article uses `Microsoft.DBforPostgreSQL/serversv2` resource provider for example. You'll need to use `Microsoft.Sql/managedInstances` resource provider instead._
+Once you determine the managed instance subnet, you need to delegate it to the `Microsoft.Sql/managedInstances` resource provider as described in [Manage subnet delegation](/azure/virtual-network/manage-subnet-delegation). _While the referenced article uses the `Microsoft.DBforPostgreSQL/serversv2` resource provider as an example, you need to use the `Microsoft.Sql/managedInstances` resource provider instead._
 
 
 > [!IMPORTANT]

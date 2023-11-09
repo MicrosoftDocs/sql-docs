@@ -220,7 +220,7 @@ Instead of showing sales and sales returns as currency values, the report shows 
   
 1.  To switch to design view, select **Design**.  
   
-2.  In the Total group of the matrix, right-click the **Sales Amount** column, select **Insert Column**, and then select **Right**.  
+2.  In the Total group of the matrix, right-click the **Sales Amount** column, select **Insert Column**, and then choose **Right**.  
   
     An empty column is added to the right of **Sales Amount**.  
   

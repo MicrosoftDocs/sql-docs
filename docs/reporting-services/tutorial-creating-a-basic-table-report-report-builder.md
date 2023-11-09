@@ -55,7 +55,7 @@ In this tutorial, you will use an embedded data source. To learn more about usin
     Data Source=<servername>  
     ```  
   
-    Because you will use a query that contains the data instead of retrieving the data from a database, the connection string does not include the database name. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+    Because you will use a query that contains the data instead of retrieving the data from a database, the connection string does not include the database name. For more information, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 6. Select the **Credentials** tab. Enter the credentials that you need to access the external data source.  
   
@@ -255,7 +255,7 @@ To reduce the amount of vertical space each row takes, expand the column width t
 ## <a name="Title"></a>5. Add a report title  
 A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this tutorial, you will use the text box that is automatically placed at the top of the report body.  
   
-The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+The text can be further enhanced by applying different font styles, sizes, and colors to phrases and individual characters of the text. For more information, see [Format text in a text box in paginated reports (Report Builder)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### Add a report title  
   

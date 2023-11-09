@@ -16,7 +16,7 @@ In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ss
 
 After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
 
-:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot of a formatted report builder report." lightbox="../reporting-services/media/report-build-format-report.png":::
+:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot of a formatted Report Builder report." lightbox="../reporting-services/media/report-build-format-report.png":::
   
 In one step, you make a mistake on purpose so you can see why it is a mistake. Then you correct the mistake to achieve the desired effect.  
     
@@ -178,7 +178,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 3.  On the **Arrange fields** page, drag the **Territory**, **LinkText**, and **Product** fields to **Row groups**, drag the **Sales** field to **Values**, then select **Next**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-text-arrange-fields.png" alt-text="Screenshot that shows how to arrange text fields in report builder." lightbox="../reporting-services/media/report-builder-text-arrange-fields.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-text-arrange-fields.png" alt-text="Screenshot that shows how to arrange text fields in Report Builder." lightbox="../reporting-services/media/report-builder-text-arrange-fields.png":::
   
 4.  On the **Choose the layout** page, clear the **Expand/collapse groups** check box so you can see the whole table, then select **Next**. 
   
@@ -188,7 +188,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
     The table looks OK, but it has two Total rows. The **LinkText** column doesn't need a Total row.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-2-totals.png" alt-text="Screenshot that shows two totals in the report builder report." lightbox="../reporting-services/media/report-builder-format-2-totals.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-2-totals.png" alt-text="Screenshot that shows two totals in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-2-totals.png":::
   
 8.  Select **Design** to return to design view.  
   
@@ -196,13 +196,13 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 11. With those three cells selected, right-click one of those cells and select **Delete Rows**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-delete-rows.png" alt-text="Screenshot that shows how to delete rows from a report builder report." lightbox="../reporting-services/media/report-builder-format-delete-rows.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-delete-rows.png" alt-text="Screenshot that shows how to delete rows from a Report Builder report." lightbox="../reporting-services/media/report-builder-format-delete-rows.png":::
   
 12. Select **Run**.  
 
     Now it has only one Total row.
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-one-total.png" alt-text="Screenshot that shows one total in the report builder report." lightbox="../reporting-services/media/report-builder-format-one-total.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-one-total.png" alt-text="Screenshot that shows one total in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-one-total.png":::
   
 ## <a name="AddHyperlink"></a>Add a hyperlink to the report  
 In this section, you add a hyperlink to text in the table from the previous section.  
@@ -225,7 +225,7 @@ In this section, you add a hyperlink to text in the table from the previous sect
   
     The text now looks like a link.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-hyperlink.png" alt-text="Screenshot that shows hyperlinked text in the report builder report." lightbox="../reporting-services/media/report-builder-format-hyperlink.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-hyperlink.png" alt-text="Screenshot that shows hyperlinked text in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-hyperlink.png":::
   
 10. Select a link. If the computer is connected to the Internet, a browser will open to a Report Builder Help topic.  
   
@@ -245,7 +245,7 @@ In this section, you rotate some of the text in the table from the previous sect
     > [!NOTE]  
     > When the properties in the Properties pane are organized into categories, WritingMode is in the **Localization** category. Be sure you have selected the cell and not the text. WritingMode is a property of the text box, not of the text.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot of the Territory field in the report builder report." lightbox="../reporting-services/media/report-builder-select-territory-cell.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot of the Territory field in the Report Builder report." lightbox="../reporting-services/media/report-builder-select-territory-cell.png":::
    
 6.  On the **Home** tab > **Paragraph** section, select **Middle** and **Center** to locate the text in the center of the cell both vertically and horizontally.  
   
@@ -352,7 +352,7 @@ The report is saved to the report server. The name of the report server that you
 
 There are many ways to format text in Report Builder. [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.  
 
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
+[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 

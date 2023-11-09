@@ -14,7 +14,7 @@ This tutorial teaches you to create a [!INCLUDE[ssRSnoversion_md](../includes/ss
 
 You also create an adjacent column group, format columns, and rotate text. The following illustration shows a report similar to the one you will create.  
 
-:::image type="content" source="../reporting-services/media/report-builder-matrix-tutorial.png" alt-text="Screenshot of a report builder matrix report." lightbox="../reporting-services/media/report-builder-matrix-tutorial.png":::
+:::image type="content" source="../reporting-services/media/report-builder-matrix-tutorial.png" alt-text="Screenshot of a Report Builder matrix report." lightbox="../reporting-services/media/report-builder-matrix-tutorial.png":::
 
 Estimated time to complete this tutorial: 20 minutes.  
   
@@ -113,7 +113,7 @@ Use the wizard to provide a starting design on which to display data. The previe
   
     Steps 5 and 6 specify the data to display in the matrix data cells.
 
-    :::image type="content" source="../reporting-services/media/report-builder-arrange-fields-report-wizard.png" alt-text="Screenshot that shows the report builder arrange fields report wizard." lightbox="../reporting-services/media/report-builder-matrix-tutorial.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-arrange-fields-report-wizard.png" alt-text="Screenshot that shows the Report Builder arrange fields Report Wizard." lightbox="../reporting-services/media/report-builder-matrix-tutorial.png":::
   
 7.  Select **Next**.  
   
@@ -129,7 +129,7 @@ Use the wizard to provide a starting design on which to display data. The previe
   
     The matrix is added to the design surface. The Row Groups pane shows two row groups: Territory and SalesDate. The Column Groups pane shows two column groups: Subcategory and Product. Detail data is all the data that is retrieved by the dataset query.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-row-and-column-groups.png" alt-text="Screenshot that shows the report builder Row Groups and Column Groups." lightbox="../reporting-services/media/report-builder-row-and-column-groups.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-row-and-column-groups.png" alt-text="Screenshot that shows the Report Builder Row Groups and Column Groups." lightbox="../reporting-services/media/report-builder-row-and-column-groups.png":::
   
 14. Select **Run** to preview the report.  
   
@@ -137,7 +137,7 @@ Use the wizard to provide a starting design on which to display data. The previe
 
 14. Expand a subcategory. You can see the report quickly gets quite wide.
 
-:::image type="content" source="../reporting-services/media/report-builder-expand-matrix.png" alt-text="Screenshot that shows an expanded report builder matrix report." lightbox="../reporting-services/media/report-builder-expand-matrix.png":::
+:::image type="content" source="../reporting-services/media/report-builder-expand-matrix.png" alt-text="Screenshot that shows an expanded Report Builder matrix report." lightbox="../reporting-services/media/report-builder-expand-matrix.png":::
   
 ## <a name="FormatData"></a>3. Format data  
 By default, the summary data for the Sales field displays a general number and the SalesDate field displays both date and time information. In this section, you format the Sales field to display the number as currency and the SalesDate field to display only the date. Toggle **Placeholder Styles** to display formatted text boxes and placeholder text as sample values.  
@@ -152,7 +152,7 @@ By default, the summary data for the Sales field displays a general number and t
   
     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value.png" alt-text="Screenshot of the report builder Sample Values option." lightbox="../reporting-services/media/report-builder-placeholder-value.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value.png" alt-text="Screenshot of the Report Builder Sample Values option." lightbox="../reporting-services/media/report-builder-placeholder-value.png":::
   
 4.  Select the cell that contains `[SalesDate]`.  
   
@@ -205,7 +205,7 @@ In this section, you add a column group adjacent to the Subcategory column group
   
 The report includes columns named Monday and Tuesday. The dataset contains only data for these two days.  
 
-:::image type="content" source="../reporting-services/media/report-builder-matrix-weekdays.png" alt-text="Screenshot that shows weekdays displayed in the report builder matrix report." lightbox="../reporting-services/media/report-builder-matrix-weekdays.png":::
+:::image type="content" source="../reporting-services/media/report-builder-matrix-weekdays.png" alt-text="Screenshot that shows weekdays displayed in the Report Builder matrix report." lightbox="../reporting-services/media/report-builder-matrix-weekdays.png":::
   
 > [!NOTE]  
 > If the data included other days, the report would include columns for them as well. Each column has the column header, **Sales**, and sales totals by territory.  
@@ -227,7 +227,7 @@ A report that includes a matrix typically expands horizontally as well as vertic
   
     The gray bars along the top and side of the table are the column and row handles.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-handles.png" alt-text="Screenshot for the column and row handles in the report builder matrix report." lightbox="../reporting-services/media/report-builder-column-handles.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-handles.png" alt-text="Screenshot for the column and row handles in the Report Builder matrix report." lightbox="../reporting-services/media/report-builder-column-handles.png":::
   
 5.  To resize the QTY column farthest to the left, point to the line between column handles so that the cursor changes into a double arrow. Drag the column towards the left until it is 1/2 an inch wide.  
   
@@ -332,7 +332,7 @@ A text box can also display text as horizontal, vertical (top to bottom). For mo
     > [!NOTE]  
     > Select the cell, not the text. The WritingMode property is only available for the cell.
 
-    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot showing the Territory cell in the report builder matrix report." lightbox="../reporting-services/media/report-builder-select-territory-cell.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot showing the Territory cell in the Report Builder matrix report." lightbox="../reporting-services/media/report-builder-select-territory-cell.png":::
   
 3.  In the Properties pane, locate the WritingMode property and change it from **Default** to **Rotate270**.  
   

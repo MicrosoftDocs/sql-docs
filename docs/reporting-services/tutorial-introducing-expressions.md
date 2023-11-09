@@ -23,7 +23,7 @@ This illustration shows a report similar to the one you will create.
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+For information about requirements, see [Prerequisites for tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="Setup"></a>1. Create a table report and dataset from the table or Matrix Wizard  
 In this section, you create a table report, a data source, and a dataset. When you lay out the table, you will include only a few fields. After you complete the wizard you will manually add columns. The wizard makes it easy to lay out the table.  
@@ -128,13 +128,13 @@ In this section, you create a table report, a data source, and a dataset. When y
   
 4.  Select **OK**.
   
-### To update the default name of the dataset  
+### Update the default name of the dataset  
   
 1.  In the Report Data pane, expand the **Datasets** folder.  
   
 2.  Right-click **DataSet1** and select **Dataset Properties**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png" alt-text="Screenshot that shows how access the Dataset Properties in report builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png" alt-text="Screenshot that shows how access the Dataset Properties in Report Builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png":::
   
 3.  In the **Name** box, type **Expressions**  
   
@@ -185,7 +185,7 @@ In this section, you use the **Left** function and the **Concatenate** (**&**) o
   
 12. Select **Run** to preview the report.  
 
-## <a name="DateFormat"></a>(optional) Format the date and currency columns and header row  
+## <a name="DateFormat"></a>(Optional) Format the date and currency columns and header row  
 In this section, you format the **Last Purchase** column, which contains dates, and the YTDPurchase column, which contains currency. You also format the header row.  
   
 ### Format the date column  
@@ -198,7 +198,7 @@ In this section, you format the **Last Purchase** column, which contains dates, 
   
 3.  Also in the **Number** section, select the arrow next to **Placeholder Styles** and select **Sample Values**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-sample-values.png" alt-text="Screenshot that shows the Sample Values option in report builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-sample-values.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-sample-values.png" alt-text="Screenshot that shows the Sample Values option in Report Builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-sample-values.png":::
 
     Now you can see an example of the formatting you selected. 
   
@@ -212,7 +212,7 @@ In this section, you format the **Last Purchase** column, which contains dates, 
 
 2. On the **Home** tab > **Paragraph** section, select **Left**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-format-headings.png" alt-text="Screenshot that shows how to format headings in report builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-format-headings.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-format-headings.png" alt-text="Screenshot that shows how to format headings in Report Builder." lightbox="../reporting-services/media/report-builder-expression-tutorial-format-headings.png":::
 
 3. Select **Run** to preview the report. 
 
@@ -273,7 +273,7 @@ To keep the color you've applied in that table cell when you make the report a b
   
 7.  Type **="Female",** (including the comma). 
 
-8. In the **Category** list, select **Constants**, and in the **Values** box, select **Tomato**.
+8. In the **Category** list, select **Constants**, and in the **Values** box, choose **Tomato**.
 
 13. Type a closing parenthesis **)** after it. 
   
@@ -311,7 +311,7 @@ In this section, you create the CountryRegion dataset and use the **Lookup** fun
   
 1.  Select **Design** to return to design view.  
   
-2.  In the Report Data pane, select **New** and then select **Dataset**.  
+2.  In the Report Data pane, select **New** and then choose **Dataset**.  
   
 3.  In **Dataset Properties**, select **Use a dataset embedded in my report**.  
   
@@ -491,7 +491,7 @@ Configuring the indicator and its states takes many steps. If you want, you can 
   
 32. Select the row with the horizontal-pointing arrow and select **Delete**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png" alt-text="Screenshot that shows how to Delete an indicator." lightbox="../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png" alt-text="Screenshot that shows how to delete an indicator." lightbox="../reporting-services/media/report-builder-expression-tutorial-delete-indicator-state.png":::
     
     Now there are only two arrows, either up or down.
   

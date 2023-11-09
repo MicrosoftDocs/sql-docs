@@ -61,13 +61,14 @@ The `Force Strict Encryption` option added with TDS 8.0 in SQL Server Network Co
 
 The following is a list of features or tools that still use previous version of drivers that don't support TDS 8.0, and as such, may not work with the `strict` connection encryption:
 
-- Always On availability groups
-- Always On failover cluster instance (FCI)
+- Always On Availability Groups
+- Always On Failover Cluster Instance (FCI)
 - SQL Server Replication
 - SQL Server Management Studio (SSMS)
 - **sqlcmd** utility
 - **bcp** utility
 - SQL Server CEIP service
+- SQL Server Agent
 
 ## Additional changes to connection string encryption properties
 

@@ -41,7 +41,7 @@ namespace PolygonsCRI
 ...  
 ```  
   
-### Initializing the component  
+### Initialize the component  
  You pass user-specified properties for a custom report item using a <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class. Your implementation of the **CustomReportItemDesigner** class should override the **InitializeNewComponent** method to create a new instance of your component's <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class and set it to default values.  
   
  The following code example shows an example of a custom report item design-time component class overriding the **CustomReportItemDesigner.InitializeNewComponent** method to initialize the component's <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> class:  

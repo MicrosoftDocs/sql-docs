@@ -59,6 +59,7 @@ This will initiate a planned, manual failover on the AG replica.
 ### Considerations
 
 - Currently, manual planned failover is the only mode of failover supported
+- Azure Arc-enabled SQL Server features are not supported for availability groups on failover cluster instances.
 
 ## Related content
 

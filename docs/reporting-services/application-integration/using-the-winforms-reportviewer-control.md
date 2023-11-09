@@ -14,7 +14,7 @@ helpviewer_keywords:
 # Use the WinForms ReportViewer control
   To view reports that are deployed to a report server or reports that exist on the local file system, use the WinForms ReportViewer control to render them in a Windows application.  
   
-## To add the ReportViewer control to a Windows application  
+## Add the ReportViewer control to a Windows application  
   
 1.  Create a new Windows application using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
@@ -134,7 +134,7 @@ Public Class Form1
 End Class  
 ```  
   
-## Viewing reports in local processing mode  
+## View reports in local processing mode  
  The following example demonstrates how to render a report that is part of the Windows application and isn't deployed to a report server.  
   
 ### To add the Sales Order Detail report to a Windows application  

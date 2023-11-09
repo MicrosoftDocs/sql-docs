@@ -9,7 +9,7 @@ ms.subservice: application-integration
 ms.topic: reference
 ms.custom: updatefrequency5
 ---
-# Integrate Reporting Services using ReportViewer controls - data collection
+# Integrate Reporting Services by using ReportViewer controls - data collection
 
 The control collects anonymous usage data to better understand how customers make use of the product. Usage data enables future development to be focused on improvements that are most relevant to customers.
 

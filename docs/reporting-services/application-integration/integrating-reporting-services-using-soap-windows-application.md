@@ -14,10 +14,10 @@ helpviewer_keywords:
   - "Windows Forms [Reporting Services]"
   - "SOAP [Reporting Services], Windows applications"
 ---
-# Integrating Reporting Services by using SOAP - Windows application
+# Integrate Reporting Services by using SOAP - Windows application
   You can access the full functionality of the report server through the Reporting Services SOAP API. The SOAP API is a Web service and, as such, can be easily accessed to provide enterprise reporting features to your custom business applications. You can access the Web service in a Windows application simply by writing code that makes calls to the service. By using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Web service. You can then use a familiar infrastructure and tools to build business applications built on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
   
-## Integrating Report Management functionality using Windows Forms  
+## Integrate Report Management functionality using Windows Forms  
  Unlike URL access, the SOAP API exposes the complete set of management functions that are available through the report server. This means that the entire administrative functionality of Report Manager is available to developers through SOAP. As such, you can develop a complete management and administration tool using Windows Forms. For example, in your Windows application, you might want to enable your users to retrieve the contents of the report server namespace. You can use the Web service <xref:ReportService2010.ReportingService2010.ListChildren%2A> method to list all the items in the report server database and then use a Listview, Treeview, or Combobox control to display those items to your users. The following Web service code might be used to retrieve the current list of available reports in a user's My Reports folder when a user selects a button on a form:  
   
 ```vb  
@@ -68,7 +68,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  From there, you might enable users to select the report from the Combo box and preview the report on the form either using a Web browser control or an image control.  
   
-## Enabling Report Viewing and navigation using Windows Forms  
+## Enable Report Viewing and navigation using Windows Forms  
  There are two methods available for integrating reports into your Windows Forms applications.  
   
  You can use the SOAP API to render reports to any of the supported rendering formats using the <xref:ReportExecution2005.ReportExecutionService.Render%2A> method. There are slight disadvantages to enabling report viewing and navigation through SOAP:  

@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Web applications [Reporting Services]"
   - "hyperlinks [Reporting Services]"
 ---
-# Integrating Reporting Services by using URL access - Web application
+# Integrate Reporting Services by using URL access - Web application
   URL access in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is designed to enable access to individual reports over a network. This type of access is best for integrating report viewing and navigation into a custom Web application. To use URL access in Web applications, you can:  
   
 -   Address a URL to a specific report server from a Web site or portal.  

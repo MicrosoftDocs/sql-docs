@@ -14,7 +14,7 @@ helpviewer_keywords:
 # Use the WebForms ReportViewer control
   To view reports deployed to a report server or reports that exist on the local file system, you can use the WebForms ReportViewer control to render them in a Web application.  
   
-## To use the ReportViewer control in a Web application  
+## Use the ReportViewer control in a Web application  
   
 1.  Create a new [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web Site using either [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
@@ -50,7 +50,7 @@ helpviewer_keywords:
   
 -   **ShowZoomControl**  
   
-## Viewing reports in remote processing mode  
+## View reports in remote processing mode  
  The following example demonstrates how to render a report that is deployed to a report server. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
   
  The example uses integrated Windows Authentication so you first must enable impersonation. To do this insert the following line into the **web.config** file:  
@@ -132,7 +132,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## Viewing reports in local processing mode  
+## View reports in local processing mode  
  The following example demonstrates how to render a report that is part of the Windows application and isn't deployed to a report server.  
   
 ###### To add the Sales Order Detail report to a Web site  

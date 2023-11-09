@@ -15,12 +15,12 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ---
-# Integrating Reporting Services by using SOAP - Web application
+# Integrate Reporting Services by using SOAP - Web application
   You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. By using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service. You can then use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report management functionality is easily accessed from a Web application or from a Windows application. From a Web application, you can add and remove items from the report server database, set item security, modify report server database items, manage scheduling and delivery, and more.  
   
-## Enabling impersonation  
+## Enable impersonation  
  The first step in configuring your Web application is to enable impersonation from the Web service client. With impersonation, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications can execute with the identity of the client on whose behalf they're operating. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] relies on [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) to authenticate the user and either pass an authenticated token to the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application or, if unable to authenticate the user, pass an unauthenticated token. In either case, the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application impersonates whichever token is received if impersonation is enabled. You can enable impersonation on the client, by modifying the Web.config file of the client application as follows:  
   
 ```asp.net  
@@ -33,7 +33,7 @@ helpviewer_keywords:
   
  For more information about [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impersonation, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation.  
   
-## Managing the Report Server by using SOAP API  
+## Manage the Report Server by using SOAP API  
 
 ::: moniker range="=sql-server-2016"
 

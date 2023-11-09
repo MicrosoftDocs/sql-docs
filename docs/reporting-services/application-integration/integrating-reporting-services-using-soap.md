@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "integrating reports [Reporting Services]"
   - "Web service [Reporting Services], application integration"
 ---
-# Integrating Reporting Services by using SOAP
+# Integrate Reporting Services by using SOAP
   The [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API provides several Web service endpoints for developing custom reporting solutions. The endpoints currently fall into two categories: management and execution. The management functionality is exposed through the <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010> endpoints. The <xref:ReportService2005> endpoint is used for managing a report server that is configured in native mode. The <xref:ReportService2006> endpoint is used for managing a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage a report server that is configured for either native or SharePoint integrated mode.  
   
 > [!NOTE]  

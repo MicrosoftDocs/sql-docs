@@ -15,14 +15,14 @@ helpviewer_keywords:
   - "browser controls [Reporting Services]"
   - "URL access [Reporting Services], Windows applications"
 ---
-# Integrating Reporting Services by using URL access - Windows application
+# Integrate Reporting Services by using URL access - Windows application
   Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  
   
 -   Display a report from a Windows Form application by starting a Web browser programmatically.  
   
 -   Use the <xref:System.Windows.Forms.WebBrowser> control on a Windows Form to display a report.  
   
-## Starting Internet Explorer from a Windows Form  
+## Start Internet Explorer from a Windows Form  
  You can use the <xref:System.Diagnostics.Process> class to access a process that is running on a computer. The <xref:System.Diagnostics.Process> class is a useful [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] construct for starting, stopping, controlling, and monitoring applications. To view a specific report in your report server database, you can start the **IExplore** process, passing in the URL to the report. The following code example can be used to start [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer and pass a specific report URL when the user selects a button on a Windows Form.  
   
 ```vb  
@@ -74,7 +74,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## Embedding a browser control on a Windows Form  
+## Embed a browser control on a Windows Form  
  If you don't want to view your report in an external Web browser, you can embed a Web browser seamlessly as part of your Windows Form by using the <xref:System.Windows.Forms.WebBrowser> control.  
   
 ###### To add the WebBrowser control to your Windows Form  

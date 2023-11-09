@@ -27,7 +27,7 @@ dev_langs:
 sp_get_redirected_publisher   
     [ @original_publisher = ] 'original_publisher',  
     [ @publisher_db = ] 'database_name',   
-    [ @bypass_publisher_validation = ] [0 | 1 ]
+    [ @bypass_publisher_validation = ] [0 | 1 ],
     [ @multi_subnet_failover = ] [0 | 1 ]
 ```  
   

@@ -490,7 +490,7 @@ To change a parameter from single to multivalued, you must change the query and 
 The report is saved to the report server. The report server that you are connected to appears in the status bar at the bottom of the window.  
   
 ## Next steps  
-This concludes the walkthrough for how to add a parameter to your report. To learn more about parameters, see [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+This concludes the walkthrough for how to add a parameter to your report. For more information about parameters, see [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## See also  
 * [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)

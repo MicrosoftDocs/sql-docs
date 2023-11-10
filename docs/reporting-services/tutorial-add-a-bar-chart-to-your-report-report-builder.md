@@ -278,7 +278,7 @@ The chart shows the top five salesperson names from the 2015 sales data.
   
 6.  Select **Run** to preview the report.  
   
-## <a name="Save"></a>10. Save the Report  
+## <a name="Save"></a>10. Save the report  
   
 1.  Switch to report design view.  
   
@@ -291,7 +291,7 @@ The chart shows the top five salesperson names from the 2015 sales data.
 4.  Select **Save**.   
   
 ## Next steps  
-You have successfully completed the Adding a Bar Chart to Your Report tutorial. To learn more about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
+You have successfully completed the Adding a Bar Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Bar charts in a paginated report (Report Builder)](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
 ## See also  
 [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  

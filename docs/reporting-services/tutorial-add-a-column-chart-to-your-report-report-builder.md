@@ -293,7 +293,7 @@ The chart displays a line that shows the moving average for total sales by date,
 4.  Select **Save**.  
   
 ## Next steps  
-You have successfully completed the Adding a Column Chart to Your Report tutorial. To learn more about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+You have successfully completed the Adding a Column Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## See also  
 -    [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 

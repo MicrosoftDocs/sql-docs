@@ -93,7 +93,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
 
 11. Select **Next**.  
   
-## <a name="CompleteWizard"></a>2. Organize data and choose layout in the wizard  
+## <a name="CompleteWizard"></a>2. Organize data and choose a layout in the wizard  
 The Table or Matrix wizard provides a starting design in which to display data. The preview pane in the wizard helps you to visualize the result of grouping data before you complete the table or matrix design.  
   
 ### Organize data into groups and choose a layout 

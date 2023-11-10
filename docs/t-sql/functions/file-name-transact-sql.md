@@ -26,7 +26,7 @@ dev_langs:
 # FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdbmi.md)]
 
-This function returns the logical file name for a given file identification (ID) number, within the context of current database.
+This function returns the logical file name for a given file identification (ID) number, in the context of the current database.
   
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

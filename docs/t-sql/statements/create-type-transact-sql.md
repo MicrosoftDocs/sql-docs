@@ -42,7 +42,6 @@ dev_langs:
 -- User-defined Data Type syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    
       FROM base_type   
       [ ( precision [ , scale ] ) ]  
       [ NULL | NOT NULL ]

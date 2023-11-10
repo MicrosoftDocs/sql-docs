@@ -95,6 +95,8 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Replication | Addressed error 'Property Password cannot be changed or read after a connection string has been set' when adding a SQL Server subscriber in the New Subscription Wizard dialog. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e). |
 | Replication | Resolved issue where Replication Publication Wizard couldn't support two objects with identical names added as articles in the same publication. |
 | Replication | Added support for Replication Monitor with Azure SQL Managed Instance. |
+| Replication | Resolved issue where Replication Monitor connected using Windows Authentication only. |
+| Replication | Added ability to use Microsoft Entra Service Principal Authentication for Replication Monitor. |
 | Reports | Fixed error 'An error occurred during local report processing' when drilling into the blue bar in the CPU utilization report. |
 | Result Sets | Updated results grid to respect the user-specified setting **Maximum Characters Retrieved** when selecting output from JSON data types. |
 

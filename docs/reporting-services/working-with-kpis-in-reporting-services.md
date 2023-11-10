@@ -90,7 +90,7 @@ To use data from a shared dataset, you can do the following steps.
 
 When you choose **Mobile Report**, you can choose the destination in a dialog.
 
-    :::image type="content" source="media/rscreatekpi-related-content-mobile-report.png" alt-text="Screenshot that shows the Related content option set to Mobile report and the Choose a mobile report option set to Not set." lightbox="media/rscreatekpi-related-content-mobile-report.png":::
+:::image type="content" source="media/rscreatekpi-related-content-mobile-report.png" alt-text="Screenshot that shows the Related content option set to Mobile report and the Choose a mobile report option set to Not set." lightbox="media/rscreatekpi-related-content-mobile-report.png":::
 
 When you now select the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown. Selecting this thumbnail can directly navigate you to this report.
 
@@ -104,7 +104,7 @@ It's only possible to add one mobile report or one custom URL.
  
 ## Set up a cache refresh plan for a KPI  
   
-You need to set up a cache refresh plan for the shared dataset that your KPI is based on. Otherwise, the KPI data won't refresh. The [Caching section](../reporting-services/work-with-shared-datasets-web-portal.md#caching) of the *Work with Shared Datasets* article explains how to set up cache refresh plans.  
+You need to set up a cache refresh plan for the shared dataset that your KPI is based on. Otherwise, the KPI data won't refresh. The [Caching section](../reporting-services/work-with-shared-datasets-web-portal.md#cache) of the *Work with Shared Datasets* article explains how to set up cache refresh plans.  
 
 ## Remove a KPI  
   

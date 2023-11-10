@@ -36,10 +36,10 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details |
 | ---------- | ------- |
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.47.0. |
-| Always Encrypted | Added support for secure enclaves with Azure SQL Database in the New Database dialog, , Database Properties, and Always Encrypted Wizard. |
+| Always Encrypted | Added support for secure enclaves with Azure SQL Database in the New Database dialog, Database Properties dialog, and Always Encrypted Wizard. |
 | Always Encrypted | Improved performance for the Always Encrypted Wizard. |
 | Azure SQL Managed Instance | Added the **Page Verify** database option on the Options page within Database Properties. |
-| Client Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.5.1) and  MSOLEDBSQL.MSI (18.6.7).  Noe that the inclusion of these new versions may require users who also have older versions of the drivers to reboot after installing SSMS 19.2. |
+| Client Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.5.1) and  MSOLEDBSQL.MSI (18.6.7).  The inclusion of these new versions could require users who also have older versions of the drivers to reboot after installing SSMS 19.2. |
 | Connection | References to Azure Active Directory (Azure AD) updated to Microsoft Entra.  See [Azure AD is Becoming Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436) for details. |
 | Connection | Updated F1 links for the [Always Encrypted](f1-help/connect-to-server-always-encrypted-page-database-engine.md) and [Additional Connection Parameters](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) pages in the Connection dialog. |
 | Extended Events | Added support for **Watch Live Data** for event sessions created in Azure SQL Database and Azure SQL Managed Instance.  For Azure SQL Database, you must specify the database name in the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details.  The ability to Watch Live Data is currently in preview. |
@@ -66,7 +66,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Accessibility | Addressed issues with keyboard focus landing in the incorrect location when classifying data, and improved color contrast in the View Facets dialog. |
 | Accessibility | Improved the screen reader for status messages, and for the automatic button in the Options page in Database Properties.  The screen reader was also improved when reading the database name text within the Permissions page in Database Properties. |
 | Always Encrypted | Improved Always Encrypted wizard to no longer allow the option to encrypt Ledger and history tables. |
-| Always Encrypted | Fixed error 'Cannot read property AllowEnclaveComputation1s' when using the Always Encrypted Wizard in SQL Server 2016 and SQL Server 2017. |
+| Always Encrypted | Fixed error 'Cannot read property AllowEnclaveComputations' when using the Always Encrypted Wizard in SQL Server 2016 and SQL Server 2017. |
 | Always Encrypted | Addressed issue where Always Encrypted Wizard fails when a randomly encrypted column (using an enclave enabled key) already exists with an index on the column. |
 | Always Encrypted | Updated Always Encrypted Wizard to preserve table ownership for encryption and decryption operations. |
 | Always Encrypted | Fixed Always Encrypted Wizard to not allow the unsupported behavior of encrypting computed columns. |
@@ -76,8 +76,8 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | General | Updated start menu entry to display **SQL Server Management Studio 19**. |
 | General | Fixed displaying of SQL Managed Instance hardware generations when accessing resource properties. |
 | General | Fixed 4k display problem in **New Filegroup** dialog. |
-| Import/Export Data-Tier Application | Addressed inability to import a .dacpac file from, or export a .dacpac file to, an Azure Storage Container/blob. |
-| Import/Export | Added support for Microsoft Entra users when importing a .bacpac file. |
+| Import/Export Data-Tier Application | Addressed inability to import a dacpac file from, or export a dacpac file to, an Azure Storage Container/blob. |
+| Import/Export | Added support for Microsoft Entra users when importing a bacpac file. |
 | Installation | Improved SSMS installer to address scenarios where setup-related registry keys are partially removed and installation hangs with 'Loading packages. Please wait...'. |
 | Installation | Updated installer to properly update native binaries when upgrading from earlier versions of SSMS 19.x |
 | Installation | Updated installer to no longer uninstall native driver SDKs (MSODBCSQL and MSOLEDBSQL) when the driver version on the machine is less than the one installed by SSMS.  See [Installation of SSMS 19.1 removes SQL_SNAC_SDK registry key after installing MS SQL Server 2022 standard edition](/answers/questions/1298826). |
@@ -92,7 +92,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Object Explorer | Updated logic in Object Explorer to only execute sp_verify_dtc_configuration for Azure SQL Managed Instance. See [SQL Server Management Studio 19.1 DTC status node causes error reports when logging enabled on message 2812 on on-premises SQL installations](https://feedback.azure.com/d365community/idea/5531a64e-9a53-ee11-a81c-000d3ae37d1e). |
 | Query Plan | Fixed XML error 'Instance validation error: 'CONCAT' is not a valid value for ArithmeticOperationType.' when viewing an execution plan for a query with double pipe (``||``) syntax. |
 | Replication | Fixed error 'When executing sp_adddistributor for a remote Distributor, you must use a password. The password specified for the @password parameter must be the same when the procedure is executed at the Publisher and at the Distributor.' when configuring a Remote Distributor for Replication. |
-| Replication | Addressed error 'Property Password cannot be changed or read after a connection string has been set' when adding a SQL Server subscriber in the New Subscription Wizard dialog. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e). |
+| Replication | Addressed error 'Property Password cannot be changed or read after a connection string has been set' when adding a SQL Server subscriber in the New Subscription Wizard dialog. See [SSMS 19 - Issue while connecting to subscriber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e). |
 | Replication | Resolved issue where Replication Publication Wizard couldn't support two objects with identical names added as articles in the same publication. |
 | Replication | Added support for Replication Monitor with Azure SQL Managed Instance. |
 | Replication | Resolved issue where Replication Monitor connected using Windows Authentication only. |
@@ -104,13 +104,13 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
-| Analysis Services | When connecting to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS are required. |
+| Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS are required. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
-| Link feature for Azure SQL Managed Instance | After removing an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use Powershell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" exists in the Azure SQL Managed Instance. If so, use Powershell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
+| Link feature for Azure SQL Managed Instance | After you remove an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use PowerShell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" exists in the Azure SQL Managed Instance. If so, use PowerShell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
 | PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which isn't in the same vNet as the publisher, you won't be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Managed Instance publisher. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which isn't in the same vNet as the publisher, you won't be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Azure SQL Managed Instance publisher. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
@@ -144,7 +144,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Azure Data Studio installation integration | The installation of SSMS installs Azure Data Studio 1.44. |
 | Always Encrypted | Added support for secure enclaves and in-place encryption in the Always Encrypted Wizard. See [Configure column encryption using Always Encrypted Wizard](../relational-databases/security/encryption/always-encrypted-wizard.md). |
 | Azure SQL Managed Instance | Introduced visibility to the status of the Distributed Transaction Coordinator (DTC) service for Azure SQL Managed Instance. Object Explorer can be used to determine if DTC is enabled on the Azure SQL Managed Instance (within the Management node). See [Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance](/azure/azure-sql/managed-instance/distributed-transaction-coordinator-dtc). |
-| Backup/Restore | Added capability to restore backup files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
+| Back up/Restore | Added capability to restore back up files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
 | General SSMS | Updated File Version for ssms.exe to align with product version. |
 | General SSMS | Removed deprecated hardware from the list of available service-level objects. |
 | General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser is used, instead of the legacy embedded browser. |
@@ -172,7 +172,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | General | Delayed the initialization of the output window to prevent slow SSMS startup. |
 | Intellisense | Added support for SORT_IN_TEMPDB T-SQL syntax when creating a primary key using ALTER TABLE. |
 | Intellisense | Updated Intellisense to identify invalid index operations for ALTER TABLE T-SQL syntax. |
-| Intellisense | Introduced support for SQL Server 2022 new compression algorithm for backups. |
+| Intellisense | Introduced support for SQL Server 2022 new compression algorithm for back ups. |
 | Intellisense | Added Intellisense support for new functions introduced in SQL Server 2022 (for example, JSON_ARRAY, ISJSON, WINDOW, BIT_COUNT, etc.). |
 | Link feature for Azure SQL Managed Instance | Updated T-SQL script generated by the wizard to enclose the certificate name. |
 | PolyBase | Resolved a crash that occurred when accessing the Permission table of an existing External Data Source or External File Format. |
@@ -183,7 +183,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | SMO/Scripting | Fixed inability to generate scripts for tables from selected wizards. |
 | SSIS | Resolved inability to connect using Azure SSIS Integration runtime. |
 | Storage Account | Fixed issue that prevented deleting a container from an Azure storage account. |
-| Table Editor | Fixed issue with application hanging when editing a NVARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](/answers/questions/1032195/). |
+| Table Editor | Fixed issue with application hanging when editing an NVARCHAR(255) column in a table.  See [SSMS v18.12.1 (also) crashes in edit mode when update a field (varchar(255)) of specific record](/answers/questions/1032195/). |
 | Table Editor | Addressed incorrect information displayed when editing data in a table that contains a period (.) in an Azure SQL Database.  See [SSMS Table in Azure - Design shows < Unknown >](/answers/questions/1187830/). |
 
 #### Known issues (19.1)
@@ -191,7 +191,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
 | Always Encrypted | Always Encrypted Wizard error "Cannot read property AllowEnclaveComputations" occurs for SQL Server 2016 or SQL Server 2017. | Use an earlier version of SSMS (19.02 or 18.12.1) with SQL Server 2016 and SQL Server 2017. |
-| Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users see issues when they edit a NVARCHAR(255) column in a table.  In addition, users see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions are incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
@@ -237,11 +236,10 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
-| Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. |
+| Query Editor | When SSMS opens after double-clicking on an `.sql` file, the Object Explorer window is displayed as a separate window. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
@@ -264,7 +262,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | New Item | Details |
 | -------- | ------- |
-| Maintenance Plan | Fixed issue that generated "Failed to retrieve data for this request" error when using backup to NUL in the Back Up Database Task. |
+| Maintenance Plan | Fixed issue that generated "Failed to retrieve data for this request" error when using back up to NUL in the Back Up Database Task. |
 | Object Explorer | Fixed a regression, which caused Object Explorer to not show database objects for Azure SQL DB Basic SLO. |
 
 ### 19.0
@@ -318,13 +316,13 @@ Download previous SSMS versions by selecting the download link in the related se
 | Analysis Services | Connection to Analysis Services is now available. |
 | Always Encrypted | Addressed issue where users couldn't sign in to the Column Master Key dialog after signing out. |
 | Availability Group Dashboard | Fixed the issue when connecting to the Availability Group Dashboard for an AG on SQL Server 2016, which resulted in "unknown property ClusterType" error. |
-| Backup | Added ability to create a NUL backup device against SQL Server 2017. |
+| Back up | Added ability to create a NUL back up device against SQL Server 2017. |
 | Central Management Servers | Provided ability to view SQL ERRORLOGs from Central Management Servers before SQL 2022. |
 | Column Master Key | Increased width of Column Master Key name in the rotation dialog, so the full name is visible. |
 | Connection | Fixed an issue with authentication that doesn't use Azure Resource Manager and Microsoft Purview Information Protection. |
 | Connection | Addressed issue with logging into Azure with a non-SQL authenticated on a machine not joined to a domain. |
 | Copy Database Wizard | Fixed the log provider type error, which occurred when copying a database using The SQL Management Object method. |
-| Database Restore | Resolved error generated when restoring a backup to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
+| Database Restore | Resolved error generated when restoring a back up to an existing database. See [Unexpected behavior by SSMS](https://feedback.azure.com/d365community/idea/95b549d0-6f70-ed11-a81b-000d3adb7ffd). |
 | Database Tuning Advisor | Added ability to ignore unexpected elements in showplan XML when generating recommendations. |
 | Database Tuning Advisor | Resolved failure to populate the tuning log table issue. |
 | Database Tuning Advisor | Implemented security fixes, including replacing ZeroMemory with SecureZeroMemory. |
@@ -354,10 +352,9 @@ Download previous SSMS versions by selecting the download link in the related se
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
-| Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Query Editor | When SSMS opens after double-clicking on a .sql file, the Object Explorer window is displayed as a separate window. |
+| Query Editor | When SSMS opens after double-clicking on an `.sql` file, the Object Explorer window is displayed as a separate window. |
 | Storage Account | Trying to delete a container from a storage account fails with a (400) Bad Request error. | Use the Azure portal for container deletion. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
@@ -402,9 +399,9 @@ SQL Server utility is no longer available in versions 17.x and newer.
 
 #### Bug fixes in 17.9.1
 
-- Fixed an issue where users may experience their connection being closed and reopened with each query invocation when using "Azure Active Directory - Universal with MFA support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly and sometimes a new SPID given to the connection.
+- Fixed an issue where users could experience their connection being closed and reopened with each query invocation when using "Azure Active Directory - Universal with MFA support" authentication with the SQL query editor. Side effects of the connection closing included global temporary tables being dropped unexpectedly and sometimes a new SPID given to the connection.
 - Fixed a long outstanding issue where a restore plan would fail to find a restore plan or generate an inefficient one under certain conditions.
-- Fixed an issue in the "Import Data-tier Application" wizard, which could result in an error when connected to an Azure SQL Database.
+- Fixed issue in the "Import Data-tier Application" wizard, which could result in an error when connected to an Azure SQL Database.
 
 > [!NOTE]  
 > Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/kb/2862966) if installed on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
@@ -443,7 +440,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 #### Bug fixes in 16.5.3
 
-- Fixed an issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
+- Fixed issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
 - Users can deploy SSIS packages containing OData Connection Manager, which connects to a Microsoft Dynamics AX/CRM Online resource to the SSIS catalog. For more information, For details, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
 
@@ -453,7 +450,7 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 - The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
 
-- When encrypting with Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
+- When you encrypt with Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
 
 - *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 

@@ -1,5 +1,5 @@
 ---
-title: "Working with snapshots (web portal)"
+title: "Work with snapshots (web portal)"
 description: Create a cache snapshot to allow for faster loading of specific execution properties. You can also work with history snapshots to capture points in time.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Working with snapshots (web portal)
+# Work with snapshots (web portal)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -21,11 +21,13 @@ You can control if snapshots are created for a report by selecting the **ellipsi
    
 You can create a cache snapshot, to allow for faster loading of specific execution properties. You can also work with history snapshots to capture points in time.  
   
-## Creating a cache snapshot  
+## Create a cache snapshot  
   
 You can create a snapshot by doing the following.  
-  
-![Screenshot showing the Caching screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.](../reporting-services/media/ssrswebportal-report-caching4.png)  
+
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching4.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot." lightbox="../reporting-services/media/ssrswebportal-report-caching4.png":::
+
+
   
 1.  On the **Caching** page, select **Always run this report against pregenerated snapshots** to enable the options for creating a snapshot.  
   
@@ -42,9 +44,9 @@ Use the **History Snapshots** page to view report snapshots that are generated a
 Report history is always viewed within the context of the report from which it originates. You cannot view the history of all reports on a report server in one place.  
   
 To generate a history snapshot, the report must be able to run unattended (that is, it must use stored credentials; parameterized reports must contain default parameter values for all parameters). Report history can be generated manually or as a scheduled operation. History properties on the report determine the ways in which report history can be created.  
-  
-![Screenshot showing the History Snapshots screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
-   
+
+:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots1.png" alt-text="Screenshot that shows the History Snapshots screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot." lightbox="../reporting-services/media/ssrswebportal-historysnapshots1.png":::
+
 1.  To create a history snapshot, select **+ New History Snapshot**. This will process the report and add an entry to the list.  
   
 2.  You can go into the settings to define schedules and retention policies.  
@@ -54,9 +56,9 @@ To generate a history snapshot, the report must be able to run unattended (that 
 ### Schedule and settings  
   
 Selecting **Schedule and Settings** will provide additional options to schedule and control retention of created snapshots.  
-  
-![Screenshot showing the Schedule and Advanced sections.](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
-   
+
+:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots2.png" alt-text="Screenshot that shows the Schedule and Advanced sections." lightbox="../reporting-services/media/ssrswebportal-historysnapshots2.png":::
+
 You can optionally create a schedule for the snapshots to get created. You can also prevent other people from creating new snapshots. Unchecking **Allow people to create snapshots manually** will disable the **+ New Snapshot History button**.  
   
 You can also define how you want to retain snapshots.  
@@ -67,8 +69,8 @@ Selecting this will copy a report snapshot that you generate based on report exe
 
 ## Next steps
 
-[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Working with paginated reports](working-with-paginated-reports-web-portal.md)  
-[Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+[The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Work with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)  
+[Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

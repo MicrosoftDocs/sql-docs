@@ -46,7 +46,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Extended Events | Introduced ability to use the XEvent Profiler for Azure SQL Database.  For Azure SQL Database, you must specify the database name in the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details. The ability to use XEvent Profiler is currently in preview. |
 | Extended Events | Exposed the histogram target for event sessions in Azure SQL Database. |
 | Import Flat File | Updated Import Flat File wizard to improve file encoding detection. |
-| General | Introduced on-demand logging of Azure API calls from  SSMS enabling customer-facing monitoring and troubleshooting for Azure-connected features, which can be accessed within Tools -> Options -> Output Window.  See [Options (Output Window - General)](menu-help/options-output-window-page.md) for more information. |
+| General | Introduced on-demand logging of Azure API calls from  SSMS enabling customer-facing monitoring and troubleshooting for Azure-connected features, which can be accessed within **Tools -> Options -> Output Window**.  See [Options (Output Window - General)](menu-help/options-output-window-page.md) for more information. |
 | General | Updated **Help -> Technical Support** and **Help -> Send Feedback** to direct to appropriate links. |
 | Ledger | Added support for creating a Ledger database in Azure SQL Managed Instance. |
 | Link feature for Azure SQL Managed Instance | Improved wizard for performing failover on Managed Instance link. Supports unidirectional failover to Azure and bi-directional failover between SQL Server 2022 and Azure SQL Managed Instance. |
@@ -79,7 +79,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Import/Export Data-Tier Application | Addressed inability to import a .dacpac file from, or export a .dacpac file to, an Azure Storage Container/blob. |
 | Import/Export | Added support for Microsoft Entra users when importing a .bacpac file. |
 | Installation | Improved SSMS installer to address scenarios where setup-related registry keys are partially removed and installation hangs with 'Loading packages. Please wait...'. |
-| Installation | Updated installer to properly update native binaries when upgrading from SSMS 19.0.2. |
+| Installation | Updated installer to properly update native binaries when upgrading from earlier versions of SSMS 19.x |
 | Installation | Updated installer to no longer uninstall native driver SDKs (MSODBCSQL and MSOLEDBSQL) when the driver version on the machine is less than the one installed by SSMS.  See [Installation of SSMS 19.1 removes SQL_SNAC_SDK registry key after installing MS SQL Server 2022 standard edition](/answers/questions/1298826). |
 | Intellisense | Fixed error when using $PARTITION.partition_function_name(expression) syntax. |
 | Maintenance Plans | Fixed Maintenance Plan Wizard to include **Finish** button after navigating through the configuration of a maintenance plan. |
@@ -93,7 +93,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Query Plan | Fixed XML error 'Instance validation error: 'CONCAT' is not a valid value for ArithmeticOperationType.' when viewing an execution plan for a query with double pipe (``||``) syntax. |
 | Replication | Fixed error 'When executing sp_adddistributor for a remote Distributor, you must use a password. The password specified for the @password parameter must be the same when the procedure is executed at the Publisher and at the Distributor.' when configuring a Remote Distributor for Replication. |
 | Replication | Addressed error 'Property Password cannot be changed or read after a connection string has been set' when adding a SQL Server subscriber in the New Subscription Wizard dialog. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e). |
-| Replication | Resolved issue where Replication Publication Wizard could not support two objects with identical names added as articles in the same publication. |
+| Replication | Resolved issue where Replication Publication Wizard couldn't support two objects with identical names added as articles in the same publication. |
 | Replication | Added support for Replication Monitor with Azure SQL Managed Instance. |
 | Reports | Fixed error 'An error occurred during local report processing' when drilling into the blue bar in the CPU utilization report. |
 | Result Sets | Updated results grid to respect the user-specified setting **Maximum Characters Retrieved** when selecting output from JSON data types. |
@@ -106,9 +106,9 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | Link feature for Azure SQL Managed Instance | After removing an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use Powershell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" exists in the Azure SQL Managed Instance. If so, use Powershell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
-| PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
+| PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which is not in the same vNet as the publisher, you will not be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Managed Instance publisher. |
+| Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which isn't in the same vNet as the publisher, you won't be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Managed Instance publisher. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
@@ -158,7 +158,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | New Item | Details |
 | -------- | ------- |
 | Accessibility | Introduced multiple screen reader improvements in the installation window and on the main page. |
-| Attach Database | Addressed issue where attaching a database with a log file that did not reside in the default directory displayed the message "Transaction log file not found. A new empty log will be created." |
+| Attach Database | Addressed issue where attaching a database with a log file that didn't reside in the default directory displayed the message "Transaction log file not found. A new empty log will be created." |
 | Azure SQL Managed Instance | Fixed controls that were incorrectly disabled in "New Linked Servers" wizard and prevented customers from creating a linked server using the MSOLEDBSQL driver. |
 | Azure SQL Managed Instance | Addressed inability to configure Integration Services tasks in a SQL Server Agent Job in Azure SQL Managed Instance.  See [Configuration of SSIS Task for Agent Job in SSMS 19.0.1 Does Not Work in Azure SQL Managed Instance](https://feedback.azure.com/d365community/idea/22be840e-01af-ed11-a81b-6045bd79fc6e). |
 | Backup/Restore | Updated database backup dialog to enable "OK" button when connect to an Availability Group via the Listener or IP address. |
@@ -166,7 +166,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Connection | Addressed intermittent application crash when closing SSMS immediately after connection dialog closes. |
 | Connection | Updated authentication process for an alias-based email to allow the authentication token for subsequent connections for the same login. |
 | Data Classification | Resolved freeze in SSMS that occurred when trying to set Microsoft Information Protection Policy. |
-| Full Text Indexing | Fixed issue that did not permit viewing the properties of a full text index. |
+| Full Text Indexing | Fixed issue that didn't permit viewing the properties of a full text index. |
 | General | Delayed the initialization of the output window to prevent slow SSMS startup. |
 | Intellisense | Added support for SORT_IN_TEMPDB T-SQL syntax when creating a primary key using ALTER TABLE. |
 | Intellisense | Updated Intellisense to identify invalid index operations for ALTER TABLE T-SQL syntax. |
@@ -195,9 +195,9 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users see issues when they edit a NVARCHAR(255) column in a table.  In addition, users see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions are incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
 | Import/Export Data-Tier Application | Using Export to Data-Tier Application with a Microsoft Azure Storage Account generates the error "An error occurred while loading data." | Use SSMS 19.0.2 or earlier. |
 | Object Explorer | Modifying a stored procedure when using Azure AD Authentication generates a "Cannot open server" error. | Use a non-Azure AD login, or SSMS 18.12.1. |
-| PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
+| PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Query Editor | When SSMS opens after double-clicking on a `.sql` file, the Object Explorer window is displayed as a separate window. | No current alternative. |
+| Query Editor | When SSMS opens after double-clicking on an `.sql` file, the Object Explorer window is displayed as a separate window. | No current alternative. |
 | Server Audit | Error "Item has already been added. Key in dictionary: 'MNDO'  Key being added: 'MNDO'" when viewing Logs for an Audit. | No current workaround. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 

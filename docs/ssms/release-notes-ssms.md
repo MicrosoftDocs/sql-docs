@@ -40,14 +40,13 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Always Encrypted | Improved performance for the Always Encrypted Wizard. |
 | Azure SQL Managed Instance | Added the **Page Verify** database option on the Options page within Database Properties. |
 | Client Drivers | Updated SSMS to use the latest driver versions for MSODBCSQL.MSI (17.10.5.1) and  MSOLEDBSQL.MSI (18.6.7).  Noe that the inclusion of these new versions may require users who also have older versions of the drivers to reboot after installing SSMS 19.2. |
-| Connection | References to Azure Active Directory (Azure AD) have been updated to Microsoft Entra, see [Azure AD is Becoming Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436) for details. |
+| Connection | References to Azure Active Directory (Azure AD) have been updated to Microsoft Entra.  See [Azure AD is Becoming Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/azure-ad-is-becoming-microsoft-entra-id/ba-p/2520436) for details. |
 | Connection | Updated F1 links for the [Always Encrypted](f1-help/connect-to-server-always-encrypted-page-database-engine.md) and [Additional Connection Parameters](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) pages in the Connection dialog. |
-| Connection | Introduced connection pooling for Intellisense to reduce the number of new connections made and keep connections open between refreshes. |
-| Extended Events | Added support for **Watch Live Data** for event sessions created in Azure SQL Database and Azure SQL Managed Instance.  For Azure SQL Database, this requires specifying the database within the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details.  Note that the ability to Watch Live Data is currently in preview. |
-| Extended Events | Introduced ability to use the XEvent Profiler for Azure SQL Database.  For Azure SQL Database, this requires specifying the database within the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details. Note that the ability to use XEvent Profiler is currently in preview. |
+| Extended Events | Added support for **Watch Live Data** for event sessions created in Azure SQL Database and Azure SQL Managed Instance.  For Azure SQL Database, you must specify the database name in the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details.  The ability to Watch Live Data is currently in preview. |
+| Extended Events | Introduced ability to use the XEvent Profiler for Azure SQL Database.  For Azure SQL Database, you must specify the database name in the **Connect to database** field in the Connection Properties tab of the Connection dialog, see [Connect to Server (Additional Connection Parameters Page) Database Engine](f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md) for details. Note that the ability to use XEvent Profiler is currently in preview. |
 | Extended Events | Exposed the histogram target for event sessions in Azure SQL Database. |
-| Import | Updated Import Flat File wizard to improve file encoding detection. |
-| General | Introduced on-demand logging of Azure API calls from  SSMS enabling customer-facing monitoring and troubleshooting for Azure-connected features, which can be accessed within Tools -> Options -> Output Window.  See <ADD LINK> for more information. |
+| Import Flat File | Updated Import Flat File wizard to improve file encoding detection. |
+| General | Introduced on-demand logging of Azure API calls from  SSMS enabling customer-facing monitoring and troubleshooting for Azure-connected features, which can be accessed within Tools -> Options -> Output Window.  See [Options (Output Window - General)](menu-help/options-output-window-page.md) for more information. |
 | General | Updated **Help -> Technical Support** and **Help -> Send Feedback** to direct to appropriate links. |
 | Ledger | Added support for creating a Ledger database in Azure SQL Managed Instance. |
 | Link feature for Azure SQL Managed Instance | Improved wizard for performing failover on Managed Instance link. Supports unidirectional failover to Azure and bi-directional failover between SQL Server 2022 and Azure SQL Managed Instance. |
@@ -57,58 +56,59 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Linked servers | Introduced Azure SQL resources browser in linked servers wizard facilitating linked servers setup for Azure SQL Database and Azure SQL Managed Instance. |
 | Object Explorer | Reduced load time for the New Database dialog in Azure SQL Database. |
 | Object Explorer | Added support for the External File Format node under External Resources node for Azure SQL Database. |
+| Query Editor | Introduced connection pooling for Intellisense to reduce the number of new connections made and keep connections open between refreshes. |
+| SSIS | The IS Deployment Wizard now supports the Microsoft Entra Interactive Authentication Login method for Project Deployment. |
 
 #### Bug fixes in 19.2
 
 | New Item | Details |
 | -------- | ------- |
-| Accessibility | Addressed issues with keyboard focus landing in the incorrect location on a control and improved color contrast in the View Facets dialog. |
-| Accessibility | Improved the screen reader for status messages, for the automatic button in the Options page in Database Properties, and for the database name text within the Permissions page in Database Properties. |
-| Always Encrypted | Improved Always Encrypted wizard to no longer display Ledger and history tables. |
+| Accessibility | Addressed issues with keyboard focus landing in the incorrect location when classifying data, and improved color contrast in the View Facets dialog. |
+| Accessibility | Improved the screen reader for status messages, and for the automatic button in the Options page in Database Properties.  The screen reader was also improved when reading the database name text within the Permissions page in Database Properties. |
+| Always Encrypted | Improved Always Encrypted wizard to no longer allow the option to encrypt Ledger and history tables. |
 | Always Encrypted | Fixed error 'Cannot read property AllowEnclaveComputation1s' when using the Always Encrypted Wizard in SQL Server 2016 and SQL Server 2017. |
-| Always Encrypted | Addressed issue where Always Encrypted Wizard failed if a randomly encrypted column using an enclave enabled key already existed with an index on the column. |
+| Always Encrypted | Addressed issue where Always Encrypted Wizard fails when a randomly encrypted column (using an enclave enabled key) already exists with an index on the column. |
 | Always Encrypted | Updated Always Encrypted Wizard to preserve table ownership for encryption and decryption operations. |
-| Always Encrypted | Removed the ability to encrypt computed columns via Always Encrypted. |
+| Always Encrypted | Fixed Always Encrypted Wizard to not allow the unsupported behavior of encrypting computed columns. |
 | Connection | Updated default value for Encrypt Connection to **False** when a server is selected after using **< browse for more… >** in the connection dialog. |
 | Database Properties | Updated **Is Ledger Database** option to be read-only. |
 | Extended Events | Fixed exception generated when using Extended Events in Azure SQL Database in a database with a catalog collation that differs from the server collation. |
-| General | Updated startup menu entry to display **SQL Server Management Studio 19**. |
+| General | Updated start menu entry to display **SQL Server Management Studio 19**. |
 | General | Fixed displaying of SQL Managed Instance hardware generations when accessing resource properties. |
 | General | Fixed 4k display problem in **New Filegroup** dialog. |
 | Import/Export Data-Tier Application | Addressed inability to import a .dacpac file from, or export a .dacpac file to, an Azure Storage Container/blob. |
 | Import/Export | Added support for Microsoft Entra users when importing a .bacpac file. |
-| Installation | Improved SSMS installer to address scenarios where setup-related registry keys have been partially removed and installation hangs with 'Loading packages. Please wait...'. |
+| Installation | Improved SSMS installer to address scenarios where setup-related registry keys are partially removed and installation hangs with 'Loading packages. Please wait...'. |
 | Installation | Updated installer to properly update native binaries when upgrading from SSMS 19.0.2. |
 | Installation | Updated installer to no longer uninstall native driver SDKs (MSODBCSQL and MSOLEDBSQL) when the driver version on the machine is less than the one installed by SSMS.  See [Installation of SSMS 19.1 removes SQL_SNAC_SDK registry key after installing MS SQL Server 2022 standard edition](/answers/questions/1298826). |
 | Intellisense | Fixed error when using $PARTITION.partition_function_name(expression) syntax. |
 | Maintenance Plans | Fixed Maintenance Plan Wizard to include **Finish** button after navigating through the configuration of a maintenance plan. |
-| Object Explorer | Addressed behavior where Microsoft Entra users in Azure SQL Database were prompted for credentials when trying to modify a stored procedure, even though authentication had occurred. See [SSMS 19 forgets connection when clicking 'modify' on a stored procedure from Object Explorer](https://feedback.azure.com/d365community/idea/643a6811-f8d8-ed11-a81c-6045bdb23064) and [Authentication Issues](https://feedback.azure.com/d365community/idea/52bc1ac3-f8f3-ed11-a81c-0022485030d1). |
+| Object Explorer | Addressed behavior where Microsoft Entra users in Azure SQL Database are prompted for credentials when modifying a stored procedure, even though the user is authenticated. See [SSMS 19 forgets connection when clicking 'modify' on a stored procedure from Object Explorer](https://feedback.azure.com/d365community/idea/643a6811-f8d8-ed11-a81c-6045bdb23064) and [Authentication Issues](https://feedback.azure.com/d365community/idea/52bc1ac3-f8f3-ed11-a81c-0022485030d1). |
 | Object Explorer | Resolved error 'Cannot show requested dialog.' when trying to view properties for a Microsoft Entra database user in Azure SQL Managed Instance. |
 | Object Explorer | Updated database role mapping to default to **public** as the only role for new logins. |
 | Object Explorer | Fixed error 'Object reference not set to an instance of an object.' when viewing properties for a server role or properties for domain login, in SQL Server 2017. |
 | Object Explorer | Removed menu options to create a new key, constraint, trigger, index or statistic on a dropped Ledger table. |
 | Object Explorer | Added support for **Edit Top N Rows** scripting menu option when a table's column names are keywords such as ALTER, MERGE, PRECISION, etc. See [SSMS Edit top 200 rows error: Incorrect syntax near the keyword 'merge'](https://feedback.azure.com/d365community/idea/2b8674dc-cb42-ee11-a81c-000d3ae37d1e). |
 | Object Explorer | Updated logic in Object Explorer to only execute sp_verify_dtc_configuration for Azure SQL Managed Instance. See [SQL Server Management Studio 19.1 DTC status node causes error reports when logging enabled on message 2812 on on-premises SQL installations](https://feedback.azure.com/d365community/idea/5531a64e-9a53-ee11-a81c-000d3ae37d1e). |
-| Query Plan | Fixed XML error 'Instance validation error: 'CONCAT' is not a valid value for ArithmeticOperationType.' when viewing an execution plan for a query with double pipe ( || ) syntax. |
+| Query Plan | Fixed XML error 'Instance validation error: 'CONCAT' is not a valid value for ArithmeticOperationType.' when viewing an execution plan for a query with double pipe (``||``) syntax. |
 | Replication | Fixed error 'When executing sp_adddistributor for a remote Distributor, you must use a password. The password specified for the @password parameter must be the same when the procedure is executed at the Publisher and at the Distributor.' when configuring a Remote Distributor for Replication. |
 | Replication | Addressed error 'Property Password cannot be changed or read after a connection string has been set' when adding a SQL Server subscriber in the New Subscription Wizard dialog. See [SSMS 19 - Issue while connecting to subsciber during replication configuration](https://feedback.azure.com/d365community/idea/4e9073b7-1dad-ed11-a81b-6045bd79fc6e). |
 | Replication | Resolved issue where Replication Publication Wizard could not support two objects with identical names added as articles in the same publication. |
 | Replication | Added support for Replication Monitor with Azure SQL Managed Instance. |
 | Reports | Fixed error 'An error occurred during local report processing' when drilling into the blue bar in the CPU utilization report. |
 | Result Sets | Updated results grid to respect the user-specified setting **Maximum Characters Retrieved** when selecting output from JSON data types. |
-| SSIS | Added ability to select an account when authenticating with Microsoft Entra Interactive Authentication. |
 
 #### Known issues (19.2)
 
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
-| Analysis Services | After connecting to Analysis Services with Microsoft Entra MFA, when adding a new role or opening properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS will be required. |
+| Analysis Services | When connecting to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS will be required. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
 | Link feature for Azure SQL Managed Instance | After removing an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use Powershell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" has been uploaded to the SQL Managed Instance previously. If so, use Powershell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
 | PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
-| Replication | Unable to insert a tracer token via Replication Monitor when using Azure SQL Managed Instance as the publisher, and SSMS is running on a machine which is not in the same vNet as the publisher Managed Instance. | Use Replication Monitor in SSMS from a machine that is in the same vNet as the Managed Instance publisher to insert tracer tokens. |
+| Replication | Unable to insert a tracer token via Replication Monitor when using Azure SQL Managed Instance as the publisher if SSMS is running on a machine which is not in the same vNet as the publisher. | Use Replication Monitor in SSMS on a machine that is in the same vNet as the Managed Instance publisher to insert tracer tokens. |
 | Stretch DB | Removed Stretch DB Wizard. | Use T-SQL to configure Stretch DB or use SSMS 18.9.1 or earlier to use the Stretch DB Wizard. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
@@ -145,10 +145,10 @@ Download previous SSMS versions by selecting the download link in the related se
 | Backup/Restore | Added capability to restore backup files from S3-compatible storage to SQL Server 2022 and Azure SQL Managed Instance. |
 | General SSMS | Updated File Version for ssms.exe to align with product version. |
 | General SSMS | Removed deprecated hardware from the list of available service-level objects. |
-| General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser will be used, instead of the legacy embedded browser. |
+| General SSMS | Changed the system browser setting, within **Tools > Options > Azure Services**, to default to True. The external browser is used, instead of the legacy embedded browser. |
 | General SSMS | Removed Vulnerability Assessment from SSMS. |
-| Link feature for Azure SQL Managed Instance | Added Network Checker wizard, providing the capability to test the network connection and ports prior to creating [the link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). |
-| Link feature for Azure SQL Managed Instance | Added an advanced network troubleshooting capability within the existing link creation wizard.  This provides the capability to troubleshoot network connectivity issues while [link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) creation is in progress. |
+| Link feature for Azure SQL Managed Instance | Added Network Checker wizard, providing the capability to test the network connection and ports before creating [the link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview). |
+| Link feature for Azure SQL Managed Instance | Added an advanced network troubleshooting capability within the existing link creation wizard.  This change provides the capability to troubleshoot network connectivity issues while [link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) creation is in progress. |
 | Object Explorer | Removed script header text when selecting the top 1000 rows.  See [Remove the /****** Script for SelectTopNRows command from SSMS ******/ comment when "Select Top 1000 Rows](https://feedback.azure.com/d365community/idea/393fae39-3e7a-ed11-a81b-000d3ae5ae95). |
 | PowerShell | Added ability for users to choose the version of PowerShell to use when launched from SSMS. |
 | PowerShell | Introduced more PowerShell options within **Tools > Options > SQL Server Object Explorer > Commands**.  For more information, visit [Options (SQL Server Object Explorer - Commands)](menu-help/options-sql-server-object-explorer-commands.md). |
@@ -192,7 +192,7 @@ Download previous SSMS versions by selecting the download link in the related se
 | Azure SQL Managed Instance | Viewing database properties for a SQL MI database may return the error "Subquery returned more than one value. This isn't permitted when the subquery follows =, !=, <, <=, >, >= or when the subquery is used as an expression. (.NET SqlClient Data Provider)". | There's a known problem due to incorrect data in `msdb`. To resolve, remove back up history. For example, `EXEC`msdb`..sp_delete_backuphistory @oldest_date = '<current date>'`. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import setting from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
-| General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users will still have issues editing a NVARCHAR(255) column in a table, users will see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions will be incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
+| General SSMS | Upgrading from SSMS 19.0.2 to 19.1 results in some bug fixes not appearing to be resolved.  Specifically, users will see issues when they edit a NVARCHAR(255) column in a table.  In addition, users will see an unknown table name when editing data if the database name in Azure contains a period (.), and SSMS file versions will be incorrect. | Uninstall SSMS 19.1 and then re-install SSMS 19.1. |
 | Import/Export Data-Tier Application | Using Export to Data-Tier Application with a Microsoft Azure Storage Account generates the error "An error occurred while loading data." | Use SSMS 19.0.2 or earlier. |
 | Object Explorer | Modifying a stored procedure when using Azure AD Authentication generates a "Cannot open server" error. | Use a non-Azure AD login, or SSMS 18.12.1. |
 | PolyBase | PolyBase node is not visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |

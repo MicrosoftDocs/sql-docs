@@ -48,7 +48,7 @@ Additionally, if you want to use Forms authentication or a custom authentication
 
 5.  Save the file.
 
-6.  Open the Web.config file for the report server. By default, it is located in the same folder as the rsreportserver.config file (see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md#bkmk_file_location).
+6.  Open the Web.config file for the report server. By default, it is located in the same folder as the rsreportserver.config file (see [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md#bkmk_file_location)).
 
 7.  Find **authentication mode** and set it to **Forms**.
 

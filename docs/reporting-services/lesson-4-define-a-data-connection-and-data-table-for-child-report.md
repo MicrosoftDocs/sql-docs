@@ -64,4 +64,4 @@ After you design the parent report, your next step is to create a data connectio
 12. To preview the data, select **Preview Data** on the **Data** menu, and then select **Preview**.  
   
 ## Next task  
-You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the child report using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the child report by using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  

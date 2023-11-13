@@ -56,7 +56,7 @@ The following diagram shows a table data region that has been populated with the
 
 Previewing a report enables you to view the rendered report without having to first publish it to a report server. Preview your report frequently while designing it. By doing so, you validate the design and data connections allowing you to correct errors and issues as you go.
 
-### To preview a report
+### Preview a report
 
 - Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
@@ -73,7 +73,7 @@ Look at the Date and Line Total values. In the next lesson, you're going to lear
 
 ## Next steps
 
-You've successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Formatting a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+You've successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
 ## See also
 

@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Adding grouping and totals (Reporting Services)"
+title: "Lesson 6: Add grouping and totals (Reporting Services)"
 description: Learn how to add grouping and totals to your Reporting Services report to organize and summarize your data.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Lesson 6: Adding grouping and totals (Reporting Services)
+# Lesson 6: Add grouping and totals (Reporting Services)
 
 In the final tutorial lesson, you're going to add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
 
@@ -30,7 +30,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
     :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details." lightbox="media/ssrs-ssdt-addorderfield.png":::
 
     > [!NOTE]
-    > Note that now the row handle has two brackets in it, ![ssrs_ssdt_rowgroupdoublehandles](media/ssrs-ssdt-rowgroupdoublehandles.png) to indicate two groups. The table now also has two `[Order]` expression columns.
+    > Note that now the row handle has two brackets in it, :::image type="icon" source="media/ssrs-ssdt-rowgroupdoublehandles.png"::: to indicate two groups. The table now also has two `[Order]` expression columns.
 
 5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
@@ -44,7 +44,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 
     :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table." lightbox="media/rs-basictablegroupspreview.png":::
 
-## Adding totals to a report
+## Add totals to a report
 
 1. Switch to the **Design** view.
 2. Right-click the data region cell that contains the `[LineTotal]` expression, and select **Add Total**. Report Designer adds a row with a sum of the dollar amount for each order.
@@ -82,7 +82,7 @@ To preview the format changes, select the **Preview** tab. In the **Preview** to
 
     :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
-## Publishing the report to the *Report Server* (Optional)
+## Publish the report to the *Report Server* (Optional)
 
 An optional step is to publish the completed report to the Report Server so you can view the report in the web portal.
 

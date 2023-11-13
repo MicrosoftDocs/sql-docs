@@ -23,7 +23,7 @@ You need to complete the following tasks to implement a table-based filter.
   
 -   Add an event handler that binds the **PurchaseOrderDetail** DataTable to the child report.  
   
-### To add a filter expression to the tablix in the child report  
+### Add a filter expression to the tablix in the child report  
   
 1.  Open the child report.  
   

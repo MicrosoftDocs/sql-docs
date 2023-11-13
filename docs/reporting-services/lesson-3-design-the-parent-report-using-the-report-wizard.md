@@ -22,7 +22,7 @@ After you create a data connection and a data table for the parent report, your 
   
     This launches the Report Wizard.  
   
-4.  On the **Dataset Properties** page, in the **Data source** box, select the **DataSet1** you created in [Lesson 2: Define a Data Connection and Data Table for Parent Report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  On the **Dataset Properties** page, in the **Data source** box, select the **DataSet1** you created in [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
     The **Available datasets** box is automatically updated with the **DataTable** you created above.  
   

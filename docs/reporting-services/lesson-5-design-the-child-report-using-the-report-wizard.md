@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Design the child report using the Report Wizard"
+title: "Lesson 5: Design the child report by using the Report Wizard"
 description: Learn how to design the child report using the Report Wizard in Report Designer after you create a data connection and data table for your child report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,10 +9,10 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 5: Design the child report using the Report Wizard
+# Lesson 5: Design the child report by using the Report Wizard
 After you create a data connection and data table for the child report, your next step is to design the child report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
-### Design the child report using the Report Wizard  
+### Design the child report by using the Report Wizard  
   
 1.  Make sure that the top-level website is selected in **Solution Explorer**.  
   

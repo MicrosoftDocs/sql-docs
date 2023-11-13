@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5: Formatting a report (Reporting Services)"
+title: "Lesson 5: Format a report (Reporting Services)"
 description: Learn how to format the date and currency fields and the column headers after you've added a data region and some fields to the Sales Orders report.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 5: Formatting a report (Reporting Services)
+# Lesson 5: Format a report (Reporting Services)
 
 Now that you've added a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.
 
@@ -60,9 +60,9 @@ You can add other formatting to your report by highlighting the header row, and 
 
 ## Next steps
 
-In this lesson, you successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report. Continue with [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+In this lesson, you successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report. Continue with [Lesson 6: Add Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## See also
 
-[Formatting Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
+[Format Numbers and Dates &#40;Report Builder and SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
 [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

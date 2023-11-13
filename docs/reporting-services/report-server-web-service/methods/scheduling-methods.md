@@ -30,7 +30,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.ListSchedules%2A>|Returns a list of all shared schedules at the report server or the SharePoint site.|  
 |<xref:ReportService2010.ReportingService2010.ListScheduleStates%2A>|Returns a list of supported schedule states.|  
 |<xref:ReportService2010.ReportingService2010.PauseSchedule%2A>|Pauses the execution of a given schedule.|  
-|<xref:ReportService2010.ReportingService2010.ResumeSchedule%2A>|Resumes a shared schedule that has been paused.|  
+|<xref:ReportService2010.ReportingService2010.ResumeSchedule%2A>|Resumes a shared schedule that is paused.|  
 |<xref:ReportService2010.ReportingService2010.SetCacheRefreshPlanProperties%2A>|Sets the properties of a cache refresh plan.|  
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|Sets the value of properties of a shared schedule.|  
   

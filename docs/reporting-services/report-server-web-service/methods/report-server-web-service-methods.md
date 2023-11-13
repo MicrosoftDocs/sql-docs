@@ -1,6 +1,6 @@
 ---
 title: "Report Server Web service methods"
-description: Report Server Web services include methods based on component features provided through Web service endpoints which are exposed through generated classes.
+description: Report Server Web services include methods based on component features provided through Web service endpoints, which are exposed through generated classes.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -22,7 +22,7 @@ helpviewer_keywords:
 ## Endpoints and methods  
  The following table lists the endpoints of the Report Server Web service, and the categories of methods provided by the <xref:ReportService2010.ReportingService2010> endpoint. For information on the methods available in the other endpoints, see [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md).  
   
-|Topic|Description|  
+|Article|Description|  
 |-----------|-----------------|  
 |[Report Server Web Service Endpoints](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|Describes the management and execution endpoints of the Report Server Web service.|  
 |[Report Server Namespace Management Methods](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|Describes methods that you can use to manage the report server database. Specifically you can manage folders and resources and set item properties.|  

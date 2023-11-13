@@ -25,7 +25,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.DeleteSubscription%2A>|Deletes a subscription from the report server database.|  
 |<xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A>|Returns the properties of a subscription.|  
 |<xref:ReportService2010.ReportingService2010.ListMySubscriptions%2A>|Retrieves a list of subscriptions that have been created by the current user of the report server or SharePoint site for the given catalog item.|  
-|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>|Retrieves a list of subscriptions that have been created for a given item.|  
+|<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>|Retrieves a list of subscriptions for a given item.|  
 |<xref:ReportService2010.ReportingService2010.PrepareQuery%2A>|Returns a data set containing the fields retrieved by the delivery query for a data-driven subscription.|  
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|Sets the values of properties of a data-driven subscription.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|Sets the values of properties of a subscription.|  

@@ -1,5 +1,5 @@
 ---
-title: "Authorization Methods"
+title: "Authorization methods"
 description: In Reporting Services, you can use these authorization methods to manage tasks, roles, and policies on the report server.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "tasks [Reporting Services]"
   - "roles [Reporting Services], methods"
 ---
-# Authorization Methods
+# Authorization methods
   You can use these methods to manage tasks, roles, and policies on the report server.  
   
 |Method|Action|  
@@ -36,7 +36,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.SetRoleProperties%2A>|Sets role metadata properties and associates a set of tasks with a role. This method applies to native mode only.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|Sets the system policy that defines groups and their associated roles. This method applies to native mode only.|  
   
-## See Also  
+## See also  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

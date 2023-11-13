@@ -1,5 +1,5 @@
 ---
-title: "Report Server Web Service Methods"
+title: "Report Server Web service methods"
 description: Report Server Web services include methods based on component features provided through Web service endpoints which are exposed through generated classes.
 author: maggiesMSFT
 ms.author: maggies
@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "Report Server Web service, features"
   - "XML Web service [Reporting Services], methods"
 ---
-# Report Server Web Service Methods
+# Report Server Web service methods
   The Report Server Web services include several categories of methods that are based on component features. These methods are provided through several Web service endpoints (three for report management and one for report execution) which are exposed as members of the <xref:ReportService2010.ReportingService2010> and <xref:ReportExecution2005.ReportExecutionService> classes. These classes can be generated through a proxy class tool such as wsdl.exe, which is included with the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. For more information about the Report Server Web services and the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], see [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
-## Endpoints and Methods  
+## Endpoints and methods  
  The following table lists the endpoints of the Report Server Web service, and the categories of methods provided by the <xref:ReportService2010.ReportingService2010> endpoint. For information on the methods available in the other endpoints, see [Technical Reference &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md).  
   
 |Topic|Description|  
@@ -36,7 +36,7 @@ helpviewer_keywords:
 |[Subscription and Delivery Methods](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Describes methods that you can use to create and manage subscriptions and report delivery.|  
 |[Linked Reports Methods](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Describes methods that you can use to create and manage linked reports.|  
   
-## See Also  
+## See also  
  [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

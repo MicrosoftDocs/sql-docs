@@ -1,5 +1,5 @@
 ---
-title: "Report Server Web Service Endpoints"
+title: "Report Server Web service endpoints"
 description: The Report Server Web service provides three endpoints for managing a report server as well as executing and navigating reports.
 author: maggiesMSFT
 ms.author: maggies
@@ -15,10 +15,10 @@ helpviewer_keywords:
   - "execution endpoints [Reporting Services]"
   - "Report Server Web service, endpoints"
 ---
-# Report Server Web Service Endpoints
+# Report Server Web service endpoints
   The Report Server Web service provides several endpoints for managing a report server as well as executing and navigating reports.  
   
-## The Management Endpoints  
+## The management endpoints  
  There are three endpoints available for managing objects on a report server, <xref:ReportService2005>, <xref:ReportService2006>, and <xref:ReportService2010>. The <xref:ReportService2005> endpoint is used for managing objects on a report server that is configured for native mode. The <xref:ReportService2006> endpoint is used for managing objects on a report server that is configured for SharePoint integrated mode. The <xref:ReportService2010> endpoint merges the functionalities of <xref:ReportService2005> and <xref:ReportService2006> and can manage objects on a report server that are configured for either native or SharePoint integrated mode.  
   
 > [!IMPORTANT]  
@@ -52,7 +52,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
   
  For more information, please see [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
-## SharePoint Proxy Endpoints  
+## SharePoint proxy endpoints  
  When a report server is configured for SharePoint integrated mode and the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in has been installed, a set of proxy endpoints are installed on the SharePoint server. The proxy endpoints are the primary API for developing report solutions when a report server is configured for SharePoint integrated mode. When developing against the proxy endpoints, the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in manages the exchange of credentials between the SharePoint server and the report server in Trusted account authentication mode. When developing against the report server endpoints, the calling application will have to manage the credential exchange in Trusted account authentication mode. The following table lists the endpoints that are installed with the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Add-in.  
   
 |Proxy Endpoint|Description|  
@@ -76,7 +76,7 @@ https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 https://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
-## See Also  
+## See also  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

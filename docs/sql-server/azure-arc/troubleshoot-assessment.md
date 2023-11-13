@@ -14,11 +14,25 @@ ms.topic: troubleshooting
 
 Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
 
-Check the logs location. The extension log is created in this folder:
+## Log file locations
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`
+### Extension log
 
-Azure Monitor Agent creates logs in this folder:
+The extension log file is at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
+
+The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+
+   `unifiedagent.log`
+
+For extension version `1.1.24724.69` and earlier, the log file is:
+
+   `ExtensionLog_0.log`
+
+### Azure monitor agent log
+
+The Azure monitor agent log is at:
 
 `C:\ProgramData\GuestConfig\extension_logs\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\Extension.1.log`
 

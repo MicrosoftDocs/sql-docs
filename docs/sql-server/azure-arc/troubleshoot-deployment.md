@@ -13,7 +13,7 @@ ms.topic: troubleshooting-general
 
 Before you start, note the logs locations.
 
-## Log files
+## Log file locations
 
 ### Extension log
 

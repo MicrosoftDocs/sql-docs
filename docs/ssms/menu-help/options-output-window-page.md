@@ -4,7 +4,7 @@ description: "Output Window in SQL Server Management Studio"
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/10/2023
+ms.date: 11/13/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference

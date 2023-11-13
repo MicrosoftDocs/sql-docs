@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/10/2023
+ms.date: 11/13/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -27,7 +27,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - Release number: 19.2
 - Build number: 19.2.56.2
-- Release date: November 10, 2023
+- Release date: November 13, 2023
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2252307&clcid=0x40a) |
 
@@ -53,7 +53,7 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | Link feature for Azure  SQL Managed Instance | Improved wizard for creating the link between SQL Server and Azure SQL Managed Instance. Supports link creation from SQL Server to Azure SQL Managed Instance and from Azure SQL Managed Instance to SQL Server 2022. |
 | Link feature for Azure SQL Managed Instance | Improved wizard for testing connectivity between SQL Server and Azure SQL Managed Instance. Creates a temporary testing endpoint if none exists and can be invoked from a database replica on either SQL Server or Azure SQL Managed Instance. |
 | Link feature for Azure SQL Managed Instance | **Always On High Availability** menu is now available in Object Explorer for Azure SQL Managed Instance and lists established Managed Instance links. |
-| Linked servers | Introduced Azure SQL resources browser in linked servers wizard facilitating linked servers setup for Azure SQL Database and Azure SQL Managed Instance. |
+| Linked servers | Introduced Azure SQL resources browser in linked servers wizard facilitating linked servers setup for Azure SQL Managed Instance. |
 | Object Explorer | Reduced load time for the New Database dialog in Azure SQL Database. |
 | Object Explorer | Added support for the External File Format node under External Resources node for Azure SQL Database. |
 | Query Editor | Introduced connection pooling for Intellisense to reduce the number of new connections made and keep connections open between refreshes. |

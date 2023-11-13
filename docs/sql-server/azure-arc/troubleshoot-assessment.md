@@ -85,7 +85,7 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL 
 
 ### Azure Monitor Agent upload failed
 
-If the error states that the Azure Monitor Agent (AMA) upload failed, verify that the AMA is provisioned and configured correctly. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
+If the error states that the upload failed for Azure Monitor Agent (AMA), verify that the AMA is provisioned and configured correctly. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
 1. The linked Log Analytics workspace must have a table named `SqlAssessment_CL`.
    1. Navigate to the **Tables** tab under the linked Log Analytics workspace.

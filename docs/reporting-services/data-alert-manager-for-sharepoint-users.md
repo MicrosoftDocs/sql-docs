@@ -37,7 +37,7 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
 >  Before you can use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alerting features, an administrator must grant you permissions. For information about the required permissions, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
   
 ##  <a name="ViewingAlerts"></a> View data alert information  
- You can view a list of data alerts that you created in Data Alert Designer. To open Data Alert Manager, you right-click a report published to a SharePoint library. The following picture shows the **Manage Data Alerts** option on the report right-click menu.  
+ You can view a list of data alerts that you created in Data Alert Designer. To open Data Alert Manager, right-click a report published to a SharePoint library. The following picture shows the **Manage Data Alerts** option on the report right-click menu.  
 
 :::image type="content" source="../reporting-services/media/rs-openalertmanager.gif" alt-text="Screenshot of the Manage Data Alerts option after right-clicking a report." lightbox="../reporting-services/media/rs-openalertmanager.gif":::
   

@@ -34,5 +34,5 @@ helpviewer_keywords:
  [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [Getting started with Report Builder](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)   
- [Designing and implementing reports using Report Builder 1.0](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))  
+ [Design and implement reports using Report Builder 1.0](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))  
   

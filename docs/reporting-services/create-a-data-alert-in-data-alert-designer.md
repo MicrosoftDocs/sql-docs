@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage my data alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -48,7 +48,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 4.  Optionally, select a different data feed in the **Report data name** drop-down list.  
   
-     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generate data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 5.  Optionally, in the **Alert name** text box, update the default name to be more meaningful.  
   

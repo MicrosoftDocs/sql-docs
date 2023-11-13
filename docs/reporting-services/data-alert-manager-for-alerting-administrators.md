@@ -35,12 +35,12 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
 > [!NOTE]  
 >  As an alerting administrator, you can grant permission to information workers to access the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts features. For more information about the required permissions, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Viewing data alert information  
+##  <a name="ViewingAlerts"></a> View data alert information  
  When Reporting Services is installed and configured in SharePoint, the Site Settings SharePoint page includes the **Reporting Services** options. Alerting administrators select the **Manage Data Alerts** option within Reporting Service to open Data Alert Manager. The following picture shows from where on the Site Settings page you open Data Alert Manager.  
 
 :::image type="content" source="../reporting-services/media/rs-sitesettings.gif" alt-text="Screenshot of the Reporting Services section of the Site Settings page, highlighting the Manage Data Alerts option." lightbox="../reporting-services/media/rs-sitesettings.gif":::
   
- Data Alert Manager includes a table that lists the alert name, report name, the name of the alert owner, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the alert message. If the alert cannot be generated or generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Data Alert Manager includes a table that lists the alert name, report name, the name of the alert owner, the number the alert message was sent, the last time the alert was run, the last time the alert definition was modified, and the status of the alert message. If the alert cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the alert. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  The following table shows sample data from a table in Data Alert Manager. When an error occurs, the error message and the identifier of the entry in the log (a GUID) are included in the **Status** field in the table.  
   
@@ -61,7 +61,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
   
  A SharePoint alerting administrators can list and then delete alert definitions created by all users of the site. For more information, see [Manage all data alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
- After you delete the alert definition, no further alerts are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
+ After you delete the alert definition, no further alerts are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean-up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
   
   
 ##  <a name="HowTo"></a> Related tasks  

@@ -43,17 +43,17 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE [ss
 
 ## Next steps
 
-[Lesson 1: Creating a report server project &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
+[Lesson 1: Create a report server project &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-[Lesson 2: Specifying connection information &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
+[Lesson 2: Specify connection information &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
 
-[Lesson 3: Defining a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+[Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 
-[Lesson 4: Adding a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+[Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
-[Lesson 5: Formatting a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
+[Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
 
-[Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[Lesson 6: Add grouping and totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
 ## See also
 

@@ -1,5 +1,5 @@
 ---
-title: "Branding the web portal"
+title: "Brand the web portal"
 description: Learn to brand your web portal's appearance to your business through a brand package. The brand package is designed so that you don't need deep CSS knowledge.
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Branding the web portal
+# Brand the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirs](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -18,7 +18,7 @@ You can alter the appearance of the web portal by branding it to your business. 
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/m08kLuofwFA]
 
-## Creating the brand package
+## Create the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.
   
@@ -117,13 +117,13 @@ The first time you connect to a server with the Mobile Report Publisher that has
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.
 ::: moniker-end 
  
-### Using a logo
+### Use a logo
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290 px x 60 px.  
    
-## <a name="#applying-the-brand-package-to-the-web-portal"></a>Applying the brand package to the web portal
+## <a name="#applying-the-brand-package-to-the-web-portal"></a>Apply the brand package to the web portal
   
 Follow these steps to add, download, or remove a brand package.  
   

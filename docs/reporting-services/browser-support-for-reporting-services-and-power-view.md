@@ -149,10 +149,10 @@ The following is the current list of browsers supported for the web portal.
 
 ## Next steps
 
-[Finding and viewing reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Find and view reports in the web portal](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
 [Web portal (SSRS Native Mode)](./web-portal-ssrs-native-mode.md)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML Viewer and the report toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access parameter reference](../reporting-services/url-access-parameter-reference.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -35,7 +35,7 @@ You can create a snapshot by doing the following.
   
 3.  Select **Create a cache snapshot when I click Apply on this page** if you want to create a cache snapshot right now. If you select only this option, the snapshot will not be refreshed.  
   
-## Create, Modify, and Delete history snapshots  
+## Create, modify, and delete history snapshots  
   
 To work with history snapshots, manage a report and select **History Snapshots**.  
   

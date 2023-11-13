@@ -217,7 +217,8 @@ For more information on browser support, see [Browser Support for Reporting Serv
 2. Select the dashboard you want to pin the item to.
 3. Select how frequently you want the tile updated in the dashboard.
 
-![note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
+> [!NOTE]
+> The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
 
 :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot that shows the Pin to Power BI Dashboard dialog box." lightbox="../reporting-services/media/ssrs-pin-to-powerbi.png":::
 
@@ -225,7 +226,7 @@ For more information, see [Power BI report server integration &#40;Configuration
 
 **PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
-![Screenshot showing the Export dropdown list with the PowerPoint option called out.](../reporting-services/media/ssrs-export-powerpoint.png) 
+:::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot that shows the Export dropdown list with the PowerPoint option called out." lightbox="../reporting-services/media/ssrs-export-powerpoint.png":::
 
 You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, the following  URL command in your browser exports a report from a named instance of the report server.  
 

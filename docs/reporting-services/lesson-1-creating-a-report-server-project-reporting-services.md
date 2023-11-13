@@ -41,7 +41,7 @@ When you create reports with Report Designer, it creates a report server project
 
 5. Select **OK** to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
   
-## Creating a report definition file (RDL)  
+## Create a report definition file (RDL)  
   
 1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** menu > **Solution Explorer**.
 

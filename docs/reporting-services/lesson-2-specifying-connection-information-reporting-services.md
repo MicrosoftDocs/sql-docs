@@ -52,11 +52,13 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
 
 Report Designer adds the data source AdventureWorks2022 to the **Report Data** pane.
 
-![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
+:::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2016 data source." lightbox="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png":::
+
+
 
 ## Next steps
 
-In this lesson, you've successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Defining a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
+In this lesson, you've successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
 
 ## See also
 

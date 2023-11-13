@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Defining a data-driven subscription"
+title: "Lesson 3: Define a data-driven subscription"
 description: Use the Reporting Services web portal's data-driven subscription pages to connect to a subscription data source and build a query that retrieves subscription data.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Lesson 3: Defining a data-driven subscription
+# Lesson 3: Define a data-driven subscription
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
   
 > [!NOTE]  

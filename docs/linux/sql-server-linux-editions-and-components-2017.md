@@ -162,7 +162,7 @@ The Developer edition continues to support only one client for [SQL Server Distr
 | Direct query of indexed views (using NOEXPAND hint) | Yes | Yes | Yes | Yes |
 | Automatic indexed views maintenance | Yes | Yes | Yes | No |
 | Distributed partitioned views | Yes | No | No | No |
-| Parallel indexed operations | Yes | No | No | No |
+| Parallel index operations | Yes | No | No | No |
 | Automatic use of indexed view by query optimizer | Yes | No | No | No |
 | Parallel consistency check | Yes | No | No | No |
 | SQL Server Utility Control Point | Yes | No | No | No |

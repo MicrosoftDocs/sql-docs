@@ -214,7 +214,6 @@ Learn more about partitioned tables and index strategies in the following articl
 - [SQL Server and Azure SQL index architecture and design guide](../sql-server-index-design-guide.md)
 - [Partitioned Table and Index Strategies Using SQL Server 2008](https://download.microsoft.com/download/D/B/D/DBDE7972-1EB9-470A-BA18-58849DB3EB3B/PartTableAndIndexStrat.docx)    
 - [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
-- [Bulk Loading into a Partitioned Table](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
-- [Project REAL: Data Lifecycle--Partitioning](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+- [Bulk Loading into a Partitioned Table](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))      
 - [Query Processing Enhancements on Partitioned Tables and Indexes](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 - [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) in _SQLCAT's Guide to: Relational Engineering_

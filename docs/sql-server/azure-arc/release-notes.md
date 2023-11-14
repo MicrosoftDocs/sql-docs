@@ -6,6 +6,7 @@ ms.author: sashan
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # Release notes - Azure Arc-enabled SQL Server

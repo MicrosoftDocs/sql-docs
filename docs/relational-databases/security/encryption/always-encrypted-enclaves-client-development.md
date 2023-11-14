@@ -10,6 +10,7 @@ ms.subservice: security
 ms.topic: conceptual
 dev_langs:
   - "CSharp"
+ms.custom: ignite-2023
 monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Develop applications using Always Encrypted with secure enclaves

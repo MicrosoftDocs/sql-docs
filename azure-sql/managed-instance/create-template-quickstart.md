@@ -8,7 +8,7 @@ ms.date: 06/22/2020
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: quickstart
-ms.custom: subject-armqs, mode-arm, devx-track-arm-template
+ms.custom: subject-armqs, mode-arm, devx-track-arm-template, ignite-2023
 ---
 
 # Quickstart: Create an Azure SQL Managed Instance using an ARM template

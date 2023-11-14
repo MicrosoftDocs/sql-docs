@@ -6,6 +6,7 @@ ms.author: rajpo
 ms.reviewer: mikeray, maghan
 ms.date: 07/18/2023
 ms.service: sql
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 

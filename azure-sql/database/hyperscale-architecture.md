@@ -8,9 +8,7 @@ ms.date: 10/04/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom:
-  - build-2023
-  - build-2023-dataai
+ms.custom: build-2023, build-2023-dataai, ignite-2023
 ---
 
 # Hyperscale distributed functions architecture

@@ -9,7 +9,7 @@ ms.date: 10/23/2023
 ms.service: sql-db-mi
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom: references_regions
+ms.custom: references_regions, ignite-2023
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

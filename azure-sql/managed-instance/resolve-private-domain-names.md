@@ -8,6 +8,7 @@ ms.reviewer: mathoma, srbozovi
 ms.date: 09/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Resolve private domain names in Azure SQL Managed Instance
@@ -94,4 +95,3 @@ A user that is synchronizing DNS server configurations across a virtual network:
 - For more on DNS resolution in Azure virtual networks, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-using-your-own-dns-server.md).
 - For a tutorial showing you how to create a new managed instance, see [Create a managed instance](instance-create-quickstart.md).
 - For information about configuring a virtual network for a managed instance, see [VNet configuration for managed instances](connectivity-architecture-overview.md).
-

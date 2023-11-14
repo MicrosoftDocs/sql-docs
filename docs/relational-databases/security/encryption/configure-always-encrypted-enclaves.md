@@ -7,6 +7,7 @@ ms.reviewer: "vanto"
 ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Configure and use Always Encrypted with secure enclaves

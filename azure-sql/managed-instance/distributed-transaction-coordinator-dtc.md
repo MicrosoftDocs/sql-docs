@@ -1,13 +1,14 @@
 ---
 title: Distributed Transaction Coordinator (DTC)
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance to run distributed transactions in a mixed environment. 
+description: Learn how to use Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance to run distributed transactions in a mixed environment.
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil
 ms.date: 11/16/2022
 ms.service: sql-managed-instance
 ms.subservice: data-movement
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 # Distributed Transaction Coordinator (DTC) for Azure SQL Managed Instance

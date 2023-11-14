@@ -8,7 +8,7 @@ ms.date: 07/26/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, ignite-2023
 ---
 
 # Active geo-replication

@@ -9,9 +9,7 @@ ms.date: 03/22/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: conceptual
-ms.custom:
-  - sqldbrb=1
-  - ignite-fall-2021
+ms.custom: sqldbrb=1, ignite-fall-2021, ignite-2023
 ---
 # Azure SQL Managed Instance content reference
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

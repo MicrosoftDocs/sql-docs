@@ -9,7 +9,7 @@ ms.date: 06/25/2019
 ms.service: sql-db-mi
 ms.subservice: data-movement
 ms.topic: how-to
-ms.custom: sqldbrb=2
+ms.custom: sqldbrb=2, ignite-2023
 monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
 ---
 

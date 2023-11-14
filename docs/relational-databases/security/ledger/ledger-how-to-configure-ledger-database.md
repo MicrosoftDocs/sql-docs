@@ -7,7 +7,7 @@ ms.reviewer: mathoma
 ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
@@ -205,5 +205,3 @@ For more information, see [CREATE DATABASE (Transact-SQL)](../../../t-sql/statem
 - [Append-only ledger tables](ledger-append-only-ledger-tables.md)
 - [Updatable ledger tables](ledger-updatable-ledger-tables.md)
 - [Enable automatic digest storage](ledger-how-to-enable-automatic-digest-storage.md)
-
-

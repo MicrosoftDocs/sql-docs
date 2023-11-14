@@ -8,7 +8,7 @@ ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: intro-overview, UpdateFrequency5
+ms.custom: intro-overview, UpdateFrequency5, ignite-2023
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"

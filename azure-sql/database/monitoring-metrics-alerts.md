@@ -93,7 +93,7 @@ The metrics and optimal thresholds to use in alert rules vary across the wide sp
 
 The recommended alerts in the following table are a starting point to help you define the optimal alerting configuration for your Azure SQL Database resources. Depending on your requirements, your configuration might differ from this example. You might use different thresholds, evaluation frequencies, or lookback periods. You might choose to create additional alerts, or use different alert rule configurations for different applications and environments.
 
-The following table is an example of a typical alert rule configuration.
+Here are examples of typical alert rule configurations.
 
 | Alert rule name | Metric (signal) | Alert logic | When to evaluate | Suggested severity |
 |:--|:--|:--|:--|:--|

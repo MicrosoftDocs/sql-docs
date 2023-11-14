@@ -73,7 +73,7 @@ The following table describes commonly used metrics in Azure SQL Database.
 
 You can create alert rules to notify you that the value of one metric or multiple metrics is outside of an expected range. 
 
-You can set the scope of an alert rule to:
+You can set the scope of an alert rule in multiple ways to suit your needs. For example, alert rule scope can be set to:
 
 - A single database
 - An elastic pool

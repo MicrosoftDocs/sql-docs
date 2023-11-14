@@ -485,7 +485,7 @@ In certain scenarios, a MERGE statement might result in the error `CREATE TABLE 
 If this error is found, the suggested workarounds are as follows:
 
 - Remove the nonclustered index (NCI) from the JOIN columns or join on columns without an NCI. If you later update the underlying tables to include an NCI on the JOIN columns, your MERGE statement might be susceptible to this error at runtime. For more information, see [DROP INDEX](drop-index-transact-sql.md).
-- Use [UPDATE](../queries/update-transact-sql.md), [DELETE](delete-transact-sql), and [INSERT](insert-transact-sql.md) statements instead of MERGE.
+- Use [UPDATE](../queries/update-transact-sql.md), [DELETE](delete-transact-sql.md), and [INSERT](insert-transact-sql.md) statements instead of MERGE.
 ::: moniker-end
 
 ## Trigger implementation

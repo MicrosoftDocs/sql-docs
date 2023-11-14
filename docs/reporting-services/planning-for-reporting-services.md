@@ -1,5 +1,5 @@
 ---
-title: "Planning for Reporting Services"
+title: "Plan for Reporting Services"
 description: Learn how to install and configure the SQL Server Reporting Services (SSRS) environment to best fit your needs.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Planning for Reporting Services
+# Plan for Reporting Services
   Use these topics to better understand [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Learn how to install and configure the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] environment to best fit your needs.  
   
 **General Reporting Services Feature Planning and Architecture**  
@@ -20,7 +20,7 @@ ms.custom: updatefrequency5
  [What's new in SQL Server Reporting Services (SSRS)](./what-s-new-in-sql-server-reporting-services-ssrs.md)  
 
 **Reporting Services setup**  
- [Comparing native and SharePoint Reporting Services report servers](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [Compare native and SharePoint Reporting Services report servers](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
  [Deployment checklist: Install Reporting Services into an existing SharePoint farm](/previous-versions/sql/sql-server-2016/hh231676(v=sql.130))  
   

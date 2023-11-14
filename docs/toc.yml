@@ -10485,6 +10485,8 @@ items:
         items:
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot connectivity to DPS or telemetry endpoints
+          href: sql-server/azure-arc/troubleshoot-connectivity.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >

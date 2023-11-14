@@ -4,7 +4,7 @@ description: Learn how to create an elastic job agent and run scripts across man
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/06/2023
+ms.date: 11/13/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -234,6 +234,8 @@ SELECT * FROM jobs.target_group_members WHERE target_group_name = N'PoolGroup';
 ## Create a job and steps
 
 With T-SQL, create jobs using system stored procedures in the jobs database: [jobs.sp_add_job](/sql/relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql?view=azuresql-db&preserve-view=true) and [jobs.sp_add_jobstep](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-elastic-jobs-transact-sql?view=azuresql-db&preserve-view=true). The T-SQL commands are syntax are similar to the steps needed to create SQL Agent jobs and job steps in SQL Server.
+
+You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures in the `jobs` schema on your *job database*.
 
 - When using Microsoft Entra authentication for a Microsoft Entra ID or user-assigned managed identity to authenticate to target server(s)/database(s), the *@credential_name* argument shouldn't be provided for `sp_add_jobstep` or `sp_update_jobstep`. Similarly, omit the optional *@output_credential_name* and *@refresh_credential_name* arguments.
 - When using database-scoped credentials to authenticate to target server(s)/database(s), the *@credential_name* parameter is required for `sp_add_jobstep` and `sp_update_jobstep`.

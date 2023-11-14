@@ -30,9 +30,9 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
 -   The name of a SQL Server instance and credentials sufficient for read-only access to any database. The dataset queries in the tutorials use literal data, but each query must be processed by a SQL Server instance to return the metadata that is required for a report dataset. For example, the following connection string specifies only a server: `data source=<servername>`. You must have read access to the default database that is assigned to you by the system administrator who grants you permission to access the server. You can also specify a database, as shown in the following connection string: `data source=<servername>;initial catalog=<database>`.  
   
--   For the [Tutorial: Map report (Report Builder)](tutorial-map-report-report-builder.md), the report server must be configured to support Bing maps as a background. For more information, see [Plan for map report support](./report-design/plan-a-map-report-report-builder-and-ssrs.md).   
+-   For the [Tutorial: Map report (Report Builder)](tutorial-map-report-report-builder.md), the report server must be configured to support Bing maps as a background. For more information, see [Plan a map paginated report (Report Builder)](./report-design/plan-a-map-report-report-builder-and-ssrs.md).   
 
--   The [Tutorial: Creating drillthrough and main reports (Report Builder)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) tutorial requires access to the Contoso Sales cube. See the tutorial for more information. 
+-   The [Tutorial: Create drillthrough and main reports (Report Builder)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) tutorial requires access to the Contoso Sales cube. See the tutorial for more information. 
   
 The report server administrator must grant you the necessary permissions on the report server, configure [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] folder locations, and configure Report Builder default options. For more information, see [Install Report Builder](install-windows/install-report-builder.md).  
 

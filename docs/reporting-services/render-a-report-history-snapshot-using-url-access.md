@@ -18,7 +18,7 @@ helpviewer_keywords:
 # Render a report history snapshot using URL access
   You can render a report based on a report history snapshot by supplying the *rs:Snapshot* parameter and setting its value to a valid snapshot ID. The parameter value is in the format YYYY-MM-DDTHH:MM:SS, based on the International Organization for Standardization (ISO) 8601 standard.  
   
- If you omit this parameter, the report is rendered according to the report execution and cache management option settings of the report server. For more information about report execution, see [Set Report Processing Properties](../reporting-services/report-server/set-report-processing-properties.md).  
+ If you omit this parameter, the report is rendered according to the report execution and cache management option settings of the report server. For more information about report execution, see [Set report processing properties](../reporting-services/report-server/set-report-processing-properties.md).  
   
 ## Example  
  The following example shows a URL that retrieves a report history snapshot:  

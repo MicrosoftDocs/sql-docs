@@ -43,7 +43,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  The following diagram shows the workflow of creating and saving a data alert definition, creating a SQL Agent job to begin processing an instance of the data alert, and sending data alert messages that contain the report data that triggered the alert to one or more recipients by email.  
   
-:::image type="content" source="../reporting-services/media/rs-alertingworkflow.gif" alt-text="Diagram of the data alerts architechture and workflow." lightbox="../reporting-services/media/rs-alertingworkflow.gif":::
+:::image type="content" source="../reporting-services/media/rs-alertingworkflow.gif" alt-text="Diagram of the data alerts architecture and workflow." lightbox="../reporting-services/media/rs-alertingworkflow.gif":::
 
 ### Reports supported by data alerts  
  You can create data alerts on all types of professional reports that are written in the report definition language (RDL) and created in Report Designer or Report Builder. Reports that include data regions such as tables and charts, reports with subreports, and complex reports with multiple parallel column groups and nested data regions. The only requirements are the report includes at least one data region of any type and the report data source is configured to use stored credentials or no credentials. If the report has no data regions, you can't create an alert on it.  
@@ -144,7 +144,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
 |Event Handler|Description|  
 |-------------------|-----------------|  
-|FireAlert|You click **Run**  in Data Alert Manager to initiate immediate processing of an alert definition.|  
+|FireAlert|You select **Run**  in Data Alert Manager to initiate immediate processing of an alert definition.|  
 |FireSchedule|SQL Server Agent launches the job schedule for an alert definition.|  
 |CreateSchedule|You create a data alert definition and a SQL Server Agent job schedule is created based on the frequency interval specified in the alert definition.|  
 |UpdateSchedule|You update the frequency interval of the data alert definition and the SQL Server Agent job schedule is updated.|  
@@ -195,7 +195,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ##  <a name="Permissions"></a> Permissions for data alerts  
  Before you can create data alerts on reports, you must have permission to run the report and create alerts on the SharePoint site. To learn more about report permissions, see the following.  
   
--   [Generating data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [Generate data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
 -   [Set permissions for report server items on a SharePoint site &#40;Reporting Services in SharePoint Integrated Mode&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
@@ -221,7 +221,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ### Logs  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a number of logs that can help you learn more the reports that are run when processing data alert definitions, the data alert instances that are created and so forth. Three logs are particularly useful: the alerting execution log, the report server execution log, and the report server trace log.  
   
- For information about other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] logs, see [Reporting Services Log Files and Sources](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ For information about other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] logs, see [Reporting Services log files and sources](../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 #### Alerting execution log  
  The alerting runtime service writes entries in the ExecutionLogView table in the alerting database. You can query the table or run the following stored procedures to get richer diagnostic information about the data alerts saved to the alerting database.  
@@ -264,7 +264,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 |GenerateAlert|Alerting: events processed - GenerateAlert|  
 |DeliverAlert|Alerting: events processed - DeliverAlert|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides performance counters for other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Performance counters for the ReportServer:Service  and ReportServerSharePoint:Service performance objects](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Performance counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service performance objects &#40;Native Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md), and [Performance counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode performance objects &#40;SharePoint Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides performance counters for other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Performance counters - ReportServer Service,  performance objects](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Performance counters MSRS 2016 Native Mode, performance objects](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md), and [Performance counters MSRS 2016 SharePoint Mode, performance objects](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
 ##  <a name="SupportForSSL"></a> Support for TLS  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can use the HTTP SSL service to establish encrypted connections to a report server or SharePoint site. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL).
@@ -307,7 +307,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
 -   [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Manage all data alerts on a SharePoint dite in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Manage all data alerts on a SharePoint site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
 -   [Grant permissions to users and alerting administrators](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   

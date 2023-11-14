@@ -1,5 +1,5 @@
 ---
-title: "Reporting Services Developer Documentation"
+title: Reporting Services developer documentation
 description: Use the documentation to understand Reporting Services features and capabilities to build custom reporting and management tools into Web sites and Windows applications.
 author: maggiesMSFT
 ms.author: maggies
@@ -23,7 +23,7 @@ helpviewer_keywords:
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include programming samples and tutorials to help you get started. For more information, see [Reporting Services Samples](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) and [Developer's guide: Tutorials (Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## In this section  
- [Integrating Reporting Services into applications](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
+ [Integrate Reporting Services into applications](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Provides an overview of how to use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to integrate reporting into custom applications. Describes when to use direct URL access and when to use the Web service to access the report server.  
   
  [Report Server Web service for ASP.net and traditional applications](../reporting-services/report-server-web-service/report-server-web-service.md)  
@@ -41,7 +41,7 @@ helpviewer_keywords:
  [Custom report items](../reporting-services/custom-report-items/custom-report-items.md)  
  Describes how to create Custom Report Items to add functionality to RDL or extend functionality of existing controls.  
   
- [Using custom assemblies with reports](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [Use custom assemblies with reports](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  Describes how to use custom assemblies with Reports by including code references within the report definition.  
   
  [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  

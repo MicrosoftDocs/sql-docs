@@ -259,7 +259,7 @@ Initial release.
 | System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
 | An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
 | Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
-| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is clicked | &nbsp; |
+| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is selected | &nbsp; |
 | Unable to use date field in Data Driven Subscription parameter | &nbsp; |
 | Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |
 | Subscriptions with DateTime Parameter error out after user with different Locale edits the Subscription | &nbsp; |
@@ -296,7 +296,7 @@ The following issue has been fixed:
 | Fixed issue | Details |
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
-| Text size isn't scaling if pageHeight is less than 0.5 inch. | &nbsp; |
+| Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |

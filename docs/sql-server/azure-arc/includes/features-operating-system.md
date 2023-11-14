@@ -4,6 +4,7 @@ ms.author: mikeray
 ms.reviewer: randolphwest
 ms.date: 05/10/2023
 ms.topic: include
+ms.custom: ignite-2023
 ---
 The following table identifies features available by operating system:
 

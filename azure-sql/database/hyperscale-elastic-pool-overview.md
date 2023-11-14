@@ -7,6 +7,7 @@ ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 10/26/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Hyperscale elastic pools overview in Azure SQL Database

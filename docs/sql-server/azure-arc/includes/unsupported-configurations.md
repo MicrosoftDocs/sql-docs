@@ -3,6 +3,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/03/2023
 ms.topic: include
+ms.custom: ignite-2023
 ---
 
 Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't currently support the following configurations:

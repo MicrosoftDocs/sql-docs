@@ -9,6 +9,7 @@ ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 monikerRange: "=fabric"
 ---
 # CREATE TABLE AS CLONE OF

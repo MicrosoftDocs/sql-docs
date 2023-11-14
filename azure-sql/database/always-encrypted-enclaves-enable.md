@@ -7,7 +7,7 @@ ms.reviewer: vanto
 ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ms.topic: conceptual
 ---
 # Enable Always Encrypted with secure enclaves in Azure SQL Database

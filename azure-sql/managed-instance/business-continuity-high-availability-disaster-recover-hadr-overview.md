@@ -9,7 +9,7 @@ ms.date: 05/01/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "azure-sql-split"
+ms.custom: azure-sql-split, ignite-2023
 keywords:
   - "business continuity"
   - "cloud business continuity"

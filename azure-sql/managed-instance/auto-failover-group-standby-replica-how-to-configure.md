@@ -7,6 +7,7 @@ ms.reviewer: mathoma
 ms.date: 07/30/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 

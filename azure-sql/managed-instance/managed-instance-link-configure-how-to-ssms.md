@@ -8,6 +8,7 @@ ms.reviewer: mathoma, danil
 ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 # Configure link with SSMS - Azure SQL Managed Instance

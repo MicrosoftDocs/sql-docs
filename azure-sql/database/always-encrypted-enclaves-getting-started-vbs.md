@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: tutorial
 ---
 # Tutorial: Getting started using Always Encrypted with VBS enclaves in Azure SQL Database

@@ -8,9 +8,7 @@ ms.date: 11/07/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split, ignite-2023
 ---
 # vCore purchasing model - Azure SQL Database
 

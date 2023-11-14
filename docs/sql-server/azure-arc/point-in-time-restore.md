@@ -6,6 +6,7 @@ ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/25/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # Restore to a point-in-time on Azure Arc-enabled SQL Server

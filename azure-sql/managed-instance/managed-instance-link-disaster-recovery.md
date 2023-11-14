@@ -1,13 +1,14 @@
 ---
 title: Disaster recovery with Managed Instance link
 titleSuffix: Azure SQL Managed Instance
-description: Learn how to use the Managed Instance link to recover your SQL Server data to Azure SQL Managed Instance in the event of a disaster. 
+description: Learn how to use the Managed Instance link to recover your SQL Server data to Azure SQL Managed Instance in the event of a disaster.
 author: danimir
 ms.author: danil
 ms.reviewer: mathoma
 ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 

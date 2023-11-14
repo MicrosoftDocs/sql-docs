@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: 09/26/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 

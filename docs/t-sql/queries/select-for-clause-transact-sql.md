@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "FOR clause [Transact-SQL]"
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
@@ -271,4 +272,3 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
 ## See Also
 
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-

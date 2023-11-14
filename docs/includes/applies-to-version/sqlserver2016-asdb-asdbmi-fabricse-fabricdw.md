@@ -3,6 +3,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.date: 10/04/2023
 ms.service: sql
+ms.custom: ignite-2023
 ms.topic: include
 ---
 

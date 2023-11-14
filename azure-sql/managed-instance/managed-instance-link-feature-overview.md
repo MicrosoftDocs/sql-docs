@@ -9,7 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.topic: conceptual
-ms.custom: ignite-fall-2021
+ms.custom: ignite-fall-2021, ignite-2023
 ---
 
 # Overview of the Managed Instance link

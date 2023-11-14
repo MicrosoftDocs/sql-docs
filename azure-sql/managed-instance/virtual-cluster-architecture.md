@@ -1,13 +1,14 @@
 ---
 title: Virtual cluster architecture
 titleSuffix: Azure SQL Managed Instance
-description: Learn about the architecture of the virtual cluster that hosts Azure SQL Managed Instance, which is based on an isolated set of virtual machines that form the cluster. 
+description: Learn about the architecture of the virtual cluster that hosts Azure SQL Managed Instance, which is based on an isolated set of virtual machines that form the cluster.
 author: urosmil
 ms.author: urmilano
 ms.reviewer: mathoma, zoranrilak
 ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 

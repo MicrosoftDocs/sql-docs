@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: "10/30/2019"
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.alwaysencryptedwizard.f1"

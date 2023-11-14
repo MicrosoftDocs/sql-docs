@@ -6,6 +6,7 @@ ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
 ms.date: 10/20/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # Always On availability groups inventory and status

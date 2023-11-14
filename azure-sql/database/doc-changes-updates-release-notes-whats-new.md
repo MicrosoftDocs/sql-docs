@@ -9,9 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom:
-  - "sqldbrb=2"
-  - "references_regions"
+ms.custom: sqldbrb=2, references_regions, ignite-2023
 ---
 # What's new in Azure SQL Database?
 

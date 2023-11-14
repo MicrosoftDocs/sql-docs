@@ -478,14 +478,14 @@ GO
 
 In certain scenarios, a MERGE statement might result in the error `CREATE TABLE failed because column <> in table <> exceeds the maximum of 1024 columns.`, even when the target or source table don't have 1,024 columns. This scenario can arise when any of the following conditions are met:
 
-- Multiple columns are specified in an UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
+- Multiple columns are specified in an DELETE, UPDATE SET or INSERT operation within MERGE (not specific to any WHEN [NOT] MATCHED clause)
 - Any column in the JOIN condition has a nonclustered index (NCI)
 - Target table is HASH distributed
 
 If this error is found, the suggested workarounds are as follows:
 
 - Remove the nonclustered index (NCI) from the JOIN columns or join on columns without an NCI. If you later update the underlying tables to include an NCI on the JOIN columns, your MERGE statement might be susceptible to this error at runtime. For more information, see [DROP INDEX](drop-index-transact-sql.md).
-- Use [UPDATE](../queries/update-transact-sql.md) and [INSERT](insert-transact-sql.md) statements instead of MERGE.
+- Use [UPDATE](../queries/update-transact-sql.md), [DELETE](delete-transact-sql) and [INSERT](insert-transact-sql.md) statements instead of MERGE.
 ::: moniker-end
 
 ## Trigger implementation

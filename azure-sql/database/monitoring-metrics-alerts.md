@@ -67,7 +67,7 @@ The following table describes commonly used metrics in Azure SQL Database.
 | **Successful Connections** | `connection_successful` | This metric shows the number of successfully established connections to a database. This metric can be split by two dimensions, `SslProtocol` and `ValidatedDriverNameAndVersion`, to see the number of connections using a specific encryption protocol version, or using a specific client driver. |
 | **Failed Connections : System Errors** | `connection_failed` | This metric shows the number of connection attempts to a database that failed because of internal service errors. Most commonly, such errors are transient. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
 | **Failed Connections : User Errors** | `connection_failed_user_error` | This metric shows the number of connection attempts to a database that failed because of user-correctable errors, such as an incorrect password or connection being blocked by firewall. This metric can be split by two dimensions, `Error` and `ValidatedDriverNameAndVersion`, to see the number of failed connection attempts due to a specific error, or from a specific client driver. |
-| **Deadlocks** | `deadlock` | This metric shows the number of [deadlocks](analyze-prevent-deadlocks.md) in a database. For more information, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md). |
+| **Deadlocks** | `deadlock` | This metric shows the number of [deadlocks](analyze-prevent-deadlocks.md) in a database.|
 
 ## Alerts
 

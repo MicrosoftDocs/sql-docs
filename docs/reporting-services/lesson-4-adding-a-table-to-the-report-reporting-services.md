@@ -50,7 +50,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 The following diagram shows a table data region that has been populated with these fields: Date, Order, Product, Qty, and Line Total.
 
-    :::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region that has been populated with the fields: Date, Order, Product, Qty, and Line Total.":::
+:::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region that has been populated with the fields: Date, Order, Product, Qty, and Line Total.":::
 
 ## Preview your report
 
@@ -64,7 +64,7 @@ Previewing a report enables you to view the rendered report without having to fi
 
 The following diagram shows part of the report in **Preview** view.
 
-    :::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view.":::
+:::image type="content" source="./media/rs-basictabledetailspreview.png" alt-text="Diagram of part of the report in the Preview view.":::
 
 Look at the Date and Line Total values. In the next lesson, you're going to learn how to format them to display more neatly.
 

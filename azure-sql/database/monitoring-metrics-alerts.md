@@ -32,7 +32,7 @@ In Azure SQL Database portal, several commonly used metrics are charted on the *
 
 :::image type="content" source="media/monitoring-metrics-alerts/portal-overview-metrics.png" alt-text="A screenshot from the Azure portal of a metrics chart shown on the Azure SQL Database Overview page." lightbox="media/monitoring-metrics-alerts/portal-overview-metrics.png":::
 
-You can select on this chart to open [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics) and view all other available metrics for the database or elastic pool resource. In metrics explorer, you can change the time range, granularity, and aggregation type for the chart, change the type of chart, expand the scope to include metrics from other Azure resources, create alert rules, etc. You can also open metrics explorer from the **Metrics** menu item in the **Monitoring** section on the left menu.
+Under **Key metrics**, select **See all metrics** or anywhere inside the chart to open [metrics explorer](/azure/azure-monitor/essentials/analyze-metrics). In the **Metrics** page, you can view all other available metrics for the database or elastic pool resource. In metrics explorer, you can change the time range, granularity, and aggregation type for the chart, change the type of chart, expand the scope to include metrics from other Azure resources, create alert rules, etc. You can also open metrics explorer from the **Metrics** menu item in the **Monitoring** section on the left menu.
 
 ### Use metrics to monitor databases and elastic pools
 

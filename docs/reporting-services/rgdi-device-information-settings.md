@@ -1,5 +1,5 @@
 ---
-title: "RGDI Device Information Settings"
+title: RGDI device information settings
 description: Learn about the RGDI device information settings that are available for rendering in RGDI format.
 author: maggiesMSFT
 ms.author: maggies
@@ -18,7 +18,7 @@ ms.custom: updatefrequency5
 |**RGDIVersion**|This setting has no effect.|  
   
 ## See also  
- [Passing device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   

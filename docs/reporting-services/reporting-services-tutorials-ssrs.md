@@ -18,15 +18,15 @@ helpviewer_keywords:
 
 Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.
 
-## [Create a basic table report](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
+## [Create a basic table report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 Follow the steps in this tutorial to learn how to create your first report. This tutorial shows you how to work with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a data connection (data source), define a simple query (dataset), and configure a data region to contain your data.
 
-## [Create a data-driven subscription](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
+## [Create a data-driven subscription (SSRS Tutorial)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic list of subscribers that will receive the report. Data-driven subscriptions are typically created and maintained by report server administrators. The ability to create data-driven subscriptions requires expertise in building queries, knowledge of data sources that contain subscriber data, and elevated permissions on a report server.
 
-## [Create a drillthrough &#40;RDLC&#41; report with parameters using ReportViewer](../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md)
+## [Create drillthrough (RDLC) report with parameters - ReportViewer](../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md)
 
 Follow the steps in this tutorial to learn how to create a drillthrough report with parameters and a filter using the ReportViewer control.
 

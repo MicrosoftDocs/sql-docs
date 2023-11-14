@@ -1,5 +1,5 @@
 ---
-title: "Search a report using URL access"
+title: Search a report by using URL access
 description: "Learn how to search a report using URL access. For example, set the rc:FindString parameter on the URL equal to the text for which you want to search."
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "text searches [Reporting Services]"
   - "URL access [Reporting Services], report searches"
 ---
-# Search a report using URL access
+# Search a report by using URL access
   You can search a report for a specific set of text using URL access. To search a report, set the value of the *rc:FindString* parameter on the URL equal to the text for which you want to search. Additionally, use the *rc:StartFind* and *rc:EndFind* parameters to narrow your search to specific pages within the report.  
   
 ## Example  

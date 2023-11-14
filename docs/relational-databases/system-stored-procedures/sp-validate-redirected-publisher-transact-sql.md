@@ -31,7 +31,7 @@ sp_validate_redirected_publisher
     [ @original_publisher = ] N'original_publisher'
     , [ @publisher_db = ] N'publisher_db'
     , [ @redirected_publisher = ] N'redirected_publisher' OUTPUT
-    , [ @multi_subnet_failover = ] [ 0 | 1 ]
+    , [ @multi_subnet_failover = ] multi_subnet_failover
 [ ; ]
 ```
 

@@ -100,6 +100,6 @@ The following software client applications are available on the Microsoft Downlo
 ## Related content
 
 - [Editions and supported features of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)
-- [Plan a SQL Server Installation](../sql-server/install/planning-a-sql-server-installation.md)
+- [Plan a SQL Server installation](../sql-server/install/planning-a-sql-server-installation.md)
 
 More questions? Ask the [SQL Server Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

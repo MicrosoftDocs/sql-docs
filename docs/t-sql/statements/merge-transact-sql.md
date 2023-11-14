@@ -4,7 +4,7 @@ description: MERGE (Transact-SQL)
 author: mstehrani
 ms.author: emtehran
 ms.reviewer: wiassaf, randolphwest
-ms.date: 10/24/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference

@@ -106,8 +106,10 @@ In case any of the components are missing, do the following:
 
 To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below. 
 
-1. Disable best practices assessment if it's currently enabled.
+1. Disable best practices assessment if it's currently enabled via the Azure portal.
 1. Make a GET call to the API and get the Azure extension for SQL Server settings
+
+   In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal, go to Arc Server instance and select Ctrl+Shift+I together, go to **Networking**. Find the resource and copy the Bearer token into the GET API authentication section.
 
    ```rest
    GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
@@ -127,9 +129,9 @@ To change the Log Analytics workspace that is linked for the best practices asse
         "startTime": "00:00",
         "WeeklyInterval": 1
       },
-      "WorkspaceResourceId": "/subscriptions/<subscriptionID>/resourceGroups/<Resource group name>/providers/Microsoft.OperationalInsights/workspaces/shivgupta-bpa-test-la-ws",
-      "WorkspaceLocation": "<Region>",
-      "ResourceNamePrefix": "<Log analytics workspace name>",
+      "WorkspaceResourceId": null,
+      "WorkspaceLocation": null,
+      "ResourceNamePrefix": null,
       "settingsSaveTime": 1673278632
     }
     ```

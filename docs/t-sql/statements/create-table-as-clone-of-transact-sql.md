@@ -4,11 +4,12 @@ description: "CREATE TABLE AS CLONE OF creates a new table as a clone of another
 author: ajagadish-24
 ms.author: ajagadish
 ms.reviewer: wiassaf
-ms.date: 10/19/2023
+ms.date: 11/03/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 monikerRange: "=fabric"
 ---
 # CREATE TABLE AS CLONE OF

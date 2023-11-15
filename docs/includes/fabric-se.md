@@ -1,8 +1,9 @@
 ---
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 04/20/2023
+ms.date: 10/18/2023
 ms.service: sql
+ms.custom: ignite-2023
 ms.topic: include
 ---
-SQL Endpoint
+SQL analytics endpoint

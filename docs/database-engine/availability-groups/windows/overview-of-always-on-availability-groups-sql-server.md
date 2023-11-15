@@ -8,7 +8,7 @@ ms.date: 09/27/2023
 ms.service: sql
 ms.subservice: availability-groups
 ms.topic: conceptual
-ms.custom: intro-overview, UpdateFrequency5
+ms.custom: intro-overview, UpdateFrequency5, ignite-2023
 helpviewer_keywords:
   - "secondary databases [SQL Server], in availability group"
   - "primary databases [SQL Server], in availability group"
@@ -23,6 +23,8 @@ helpviewer_keywords:
 This article introduces the [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in the Enterprise edition of [!INCLUDE [ssnoversion](../../../includes/ssnoversion-md.md)]. For the Standard edition, review [Basic availability groups](basic-availability-groups-always-on-availability-groups.md). 
 
 The [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE [ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE [ssHADR](../../../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.
+
+With [Azure Arc-enabled SQL Server](../../../sql-server/azure-arc/overview.md), you can [view availability groups](../../../sql-server/azure-arc/manage-availability-group.md) in Azure portal.
 
 ## Overview
 

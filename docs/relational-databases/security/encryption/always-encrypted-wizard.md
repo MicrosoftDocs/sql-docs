@@ -7,6 +7,7 @@ ms.reviewer: vanto
 ms.date: "10/30/2019"
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.alwaysencryptedwizard.f1"
@@ -23,9 +24,9 @@ The Always Encrypted Wizard is a powerful tool that allows you to set the desire
 
 The wizard allows you to encrypt columns with existing column encryption keys, or you can choose to generate a new column encryption key or both a new column encryption key and a new column master key. 
 
-When your database is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. The wizard removes all dependencies blocking the schema change of the column to be encrypted. It issues an in-place encryption for each column by using the enclave within the database engine. When the encryption is finished, the wizard recreates the dependencies. For more information about Always Encrypted with secure enclaves , see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+When your database is configured with a secure enclave, you can run cryptographic operations in-place, without moving data out of the database. The wizard removes all dependencies blocking the schema change of the column to be encrypted. It issues an in-place encryption for each column by using the enclave within the database engine. When the encryption is finished, the wizard recreates the dependencies. For more information about Always Encrypted with secure enclaves, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
-When your database is *not* configured with a secure enclave or you are *not* using enclave-enabled keys, the wizard works by moving data out of the database and performing cryptographic operations within the SSMS process. The wizard creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s).
+When your database is *not* configured with a secure enclave, the wizard will give you the opportunity to enable a secure enclave. If you choose not to enable a secure enclave or you are *not* using enclave-enabled keys, the wizard works by moving data out of the database and performing cryptographic operations within the SSMS process. The wizard creates a new table (or tables) with the desired encryption configuration in the database, loads all data from the original tables, performs the requested cryptographic operations, uploads the data to the new table(s), and then swaps the original table(s) with the new table(s). 
 
 > [!TIP]
 > Using in-place encryption using Always Encrypted with secure enclaves, if available in your environment, may substantially reduce the time and the reliability of cryptographic operations. 

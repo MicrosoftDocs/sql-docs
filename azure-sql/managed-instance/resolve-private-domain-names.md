@@ -8,6 +8,7 @@ ms.reviewer: mathoma, srbozovi
 ms.date: 09/16/2022
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Resolve private domain names in Azure SQL Managed Instance
@@ -38,16 +39,16 @@ To change the default name resolution behavior and enable the resolution of priv
 
 ## Update SQL Managed Instances
 
-If the DNS server setting is changed in a virtual network which already hosts SQL Managed Instances, then their virtual clusters need to synchronize with the changes in the DNS configuration. You can do so by using Azure PowerShell or the Azure CLI. 
+If the DNS server setting is changed in a virtual network with existing SQL managed instances, then the virtual cluster that hosts those instances, and the underlying machine groups, need to synchronize with the changes in the DNS configuration. You can do so by using Azure PowerShell or the Azure CLI. 
 
 > [!NOTE]
-> Updating a single virtual cluster affects all SQL Managed Instances hosted in it.
+> Updating a virtual cluster affects all SQL Managed Instances hosted in it.
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
 Use Azure PowerShell to update the DNS server settings for an existing virtual cluster. 
 
-First, get the virtual network where the DNS settings have changed, and then use the Azure PowerShell command [Invoke-AzResourceAction](/powershell/module/az.resources/invoke-azresourceaction) to synchronize DNS server configurations for all the virtual clusters in the subnet:
+First, get the virtual network where the DNS settings have changed, and then use the Azure PowerShell command [Invoke-AzResourceAction](/powershell/module/az.resources/invoke-azresourceaction) to synchronize DNS server configurations for the virtual cluster:
 
 ```powershell
 $ResourceGroup = 'enter resource group of virtual network'
@@ -64,7 +65,7 @@ Get-AzSqlVirtualCluster `
 
 Use the Azure CLI to update the DNS server settings for an existing virtual cluster. 
 
-First, get the virtual network where the DNS settings have changed, and then use the Azure CLI command [az resource invoke-action](/cli/azure/resource#az-resource-invoke-action) to synchronize DNS server configurations for all the virtual clusters in the subnet:
+First, get the virtual network where the DNS settings have changed, and then use the Azure CLI command [az resource invoke-action](/cli/azure/resource#az-resource-invoke-action) to synchronize DNS server configurations for the virtual cluster:
 
 
 ```azurecli
@@ -90,7 +91,7 @@ A user that is synchronizing DNS server configurations across a virtual network:
 
 - For an overview, see [What is Azure SQL Managed Instance?](sql-managed-instance-paas-overview.md)
 - For information on how managed instance resolves and directs traffic, see [Connectivity architecture for Azure SQL Managed Instance](connectivity-architecture-overview.md).
+- To learn more, see [Architecture of SQL Managed Instance virtual cluster](virtual-cluster-architecture.md)
 - For more on DNS resolution in Azure virtual networks, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-using-your-own-dns-server.md).
 - For a tutorial showing you how to create a new managed instance, see [Create a managed instance](instance-create-quickstart.md).
 - For information about configuring a virtual network for a managed instance, see [VNet configuration for managed instances](connectivity-architecture-overview.md).
-

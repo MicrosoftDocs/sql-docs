@@ -1,5 +1,5 @@
 ---
-title: Copy or move a database (preview)
+title: Copy or move a database
 titleSuffix: Azure SQL Managed Instance
 description: Learn how to perform an online move or copy operation of your database across instances for Azure SQL Managed Instance.
 author: sasapopo
@@ -8,17 +8,14 @@ ms.reviewer: mathoma, danil, randolphwest
 ms.date: 06/21/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ms.topic: how-to
 ---
-# Copy or move a database (preview) - Azure SQL Managed Instance
+# Copy or move a database - Azure SQL Managed Instance
 
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 This article describes how to copy or move a database online across instances in Azure SQL Managed Instance.
-
-> [!NOTE]  
-> The copy and move feature for Azure SQL Managed Instance is currently in preview.
 
 ## Overview
 

@@ -175,7 +175,7 @@ The following limitations apply to queries on encrypted columns:
   - Columns in [stretch database tables](../../../sql-server/stretch-database/stretch-database.md). (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
 
   > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../../includes/ssnotedepfutureavoid-md.md)]
+  > [!INCLUDE [stretch-database-deprecation](../../../includes/stretch-database-deprecation.md)]
 
   - Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported).
 

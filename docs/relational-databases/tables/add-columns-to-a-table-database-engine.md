@@ -36,7 +36,7 @@ Requires ALTER permission on the table.
 > [!IMPORTANT]
 > Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-The SQL Server Management Studio (SSMS) UI doesn't support all DDL options in Azure Synapse. Use [T-SQL scripts](#use-transact-sql) instead.
+SQL Server Management Studio (SSMS) doesn't support all data definition language (DDL) options in Azure Synapse. Use [T-SQL scripts](#TsqlProcedure) instead.
 
 ### Insert columns into a table with Table Designer
 

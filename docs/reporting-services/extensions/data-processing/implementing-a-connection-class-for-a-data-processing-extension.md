@@ -1,5 +1,5 @@
 ---
-title: "Implementing a Connection Class for a Data Processing Extension"
+title: "Implement a Connection class for a data processing extension"
 description: Implement a Connection object for a data processing extension in Reporting Services. See which interfaces to implement and what to require of clients.
 author: maggiesMSFT
 ms.author: maggies
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ---
-# Implementing a Connection Class for a Data Processing Extension
+# Implement a Connection class for a data processing extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  
   
  To implement a **Connection** object, create a class that implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> and optionally implements <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
@@ -40,9 +40,9 @@ helpviewer_keywords:
 >   
 >  For a sample **Connection** class implementation, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## See also  
+ [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

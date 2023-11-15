@@ -1,5 +1,5 @@
 ---
-title: "Preparing to Implement a Data Processing Extension"
+title: "Prepare to implement a data processing extension"
 description: Discover how to implement a data processing extension in Reporting Services. Learn about available interfaces and required and optional functionality.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "interfaces [Reporting Services]"
   - "data processing extensions [Reporting Services], implementing"
 ---
-# Preparing to Implement a Data Processing Extension
+# Prepare to implement a data processing extension
   Before you implement your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension, you should define the interfaces to implement. You may want to provide extension-specific implementations of the entire set of interfaces, or you may simply want to focus your implementation on a subset, such as the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> and <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces in which clients would interact primarily with a result set as a **DataReader** object and would use your [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing extension as a bridge between the result set and your data source.  
   
  You can implement data processing extensions in one of two ways:  
@@ -26,7 +26,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  A no-operation implementation of a property or method only applies to the properties and methods of those interfaces that you choose to implement. Optional interfaces that you choose not to implement should be left out of your data processing extension assembly. For more information about whether an interface is required or optional, see the table later in this section.  
   
-## Required Extension Functionality  
+## Required extension functionality  
  Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension must provide the following functionality:  
   
 -   Open a connection to a data source.  
@@ -53,7 +53,7 @@ helpviewer_keywords:
   
 -   Aggregate data at the server.  
   
-## Available Extension Interfaces  
+## Available extension interfaces  
  The following table describes the available interfaces and whether implementation is required or optional.  
   
 |Interface|Description|Implementation|  
@@ -72,9 +72,9 @@ helpviewer_keywords:
   
  The data processing extension interfaces are identical to a subset of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces, methods, and properties whenever possible. For more information about implementing a full [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider, see "Implementing a .NET Framework Data Provider" in your [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) documentation.  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Data Processing Extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## See also  
+ [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

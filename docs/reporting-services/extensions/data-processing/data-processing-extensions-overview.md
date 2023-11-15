@@ -1,5 +1,5 @@
 ---
-title: "Data Processing Extensions Overview"
+title: "Data processing extensions overview"
 description: See which data processing extensions are included with Reporting Services, and learn how to add custom data processing to your report server.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "data processing extensions [Reporting Services], about extensions"
 ---
-# Data Processing Extensions Overview
+# Data processing extensions overview
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
   
  The following table lists the data processing extensions included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -31,8 +31,8 @@ helpviewer_keywords:
  Each of the data processing extensions included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a common set of interfaces. This ensures that each extension implements comparable functionality.  
   
  You can develop data processing extensions for your own data sources, or you can use the interfaces to add an additional layer of data processing to common database infrastructures. You can deploy your custom data processing extensions to enable seamless integration of data into the existing report servers in your organization. You can also use them as part of a custom reporting suite that you provide to your consumers.  
-  
- ![Data processing extension architecture](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+
+:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif" alt-text="Screenshot of the Reporting Services data processing extension architecture." lightbox="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif":::  
 Reporting Services data processing extension architecture  
   
  The advantages to implementing a custom [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension include:  
@@ -43,11 +43,10 @@ Reporting Services data processing extension architecture
   
 -   A specific interface for your consumers to access your data source within [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## Data Extension Process Flow  
+## Data extension process flow  
  Before developing your custom data extension, you should understand how the report server uses data extensions to process data. You should also understand the constructors and methods that are called by the report server.  
-  
- ![Process flow for data processing extension](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
-The step-by-step process flow of a data extension that is called by the report server  
+
+:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif" alt-text="Screenshot of the step-by-step process flow of a data extension that is called by the report server." lightbox="../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif":::
   
  The illustration shows the following sequence of events:  
   
@@ -57,7 +56,7 @@ The step-by-step process flow of a data extension that is called by the report s
   
 3.  Once the command object and any parameters are processed, a data reader is generated that returns a result set and enables the report server to associate the report data with the report layout.  
   
-## Developer Requirements  
+## Developer requirements  
  Developing a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension requires you to have:  
   
 -   A deployment computer with Report Designer or a report server installed.  
@@ -70,8 +69,8 @@ The step-by-step process flow of a data extension that is called by the report s
   
 -   Development experience in a [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] language such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## See also  
+ [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

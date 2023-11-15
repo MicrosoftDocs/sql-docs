@@ -18,7 +18,7 @@ In addition to the usual endpoints, the Azure Arc Connected Machine agent connec
 
 - Telemetry endpoint
 
-   The Azure Connected Machine agent logs, the Azure extension for SQL Server logs and the Dynamic Management Views (DMV) data is sent to this endpoint.
+   The Azure Connected Machine agent logs, the Azure extension for SQL Server logs, and the Dynamic Management Views (DMV) data is sent to this endpoint.
 
 Communication to these endpoints uses HTTPS with SSL/TLS and port TCP/443 for encrypted secure connections. Communication is always initiated by the agent to _send_ the data _to_ Azure. Communication is never initiated from Azure. Connectivity to these endpoints is therefore only one way.
 

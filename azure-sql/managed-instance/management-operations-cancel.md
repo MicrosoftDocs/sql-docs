@@ -8,6 +8,7 @@ ms.reviewer: mathoma, bonova
 ms.date: 09/03/2020
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 
@@ -37,7 +38,6 @@ Category  |Operation  |Cancelable  |Estimated cancel duration  |
 |Update |Instance compute (vCores) scaling up and down (Business Critical) |Yes |90% of operations finish in 5 minutes. |
 |Update |Instance service tier change (General Purpose to Business Critical and vice versa) |Yes |90% of operations finish in 5 minutes. |
 |Delete |Instance deletion |No |  |
-|Delete |Virtual cluster deletion (as user-initiated operation) |No |  |
 
 ## Cancel management operation
 

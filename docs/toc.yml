@@ -9299,13 +9299,13 @@ items:
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
-        - name: Connect to Server - Login Page - Database Engine
+        - name: Connect to Server (Login page) - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
-        - name: Connect to Server - Connection Properties Page - Database Engine
+        - name: Connect to Server (Connection Properties page) - Database Engine
           href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Always Encrypted Page - Database Engine
+        - name: Connect to Server (Always Encrypted page) - Database Engine
           href: ssms/f1-help/connect-to-server-always-encrypted-page-database-engine.md
-        - name: Connect to Server - Additional Connection Parameters Page - Database Engine
+        - name: Connect to Server (Additional Connection Parameters page) - Database Engine
           href: ssms/f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md
         - name: Login - Connect to SSAS Server
           href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
@@ -10451,18 +10451,24 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
-        - name: View Always On failover cluster instances
-          href: sql-server/azure-arc/support-for-fci.md  
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
-        - name: Automate backups
-          href: sql-server/azure-arc/point-in-time-restore.md
         - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
         - name: Monitor
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+      - name: Business continuity
+        items:
+        - name: Automated backups to local storage (preview)
+          href: sql-server/azure-arc/backup-local.md
+        - name: Point-in-time restore (preview)
+          href: sql-server/azure-arc/point-in-time-restore.md
+        - name: View Always On failover cluster instances (preview)
+          href: sql-server/azure-arc/support-for-fci.md  
+        - name: View Always On availability group (preview)
+          href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
         - name: Configure advanced data Security
@@ -10479,6 +10485,8 @@ items:
         items:
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot connectivity to DPS or telemetry endpoints
+          href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >

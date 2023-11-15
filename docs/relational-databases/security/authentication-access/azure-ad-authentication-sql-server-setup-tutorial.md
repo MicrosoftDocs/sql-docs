@@ -117,16 +117,29 @@ Select the newly created application, and on the left side menu, select **API Pe
 
    :::image type="content" source="media/upload-certificate-to-application.png" alt-text="Screenshot of certificate and secrets menu in the Azure portal." lightbox="media/upload-certificate-to-application.png":::
 
-1. In the Azure portal, navigate to the Azure Key Vault instance where the certificate is stored, and select **Access policies**
+1. In the Azure portal, navigate to the Azure Key Vault instance where the certificate is stored, and select **Access policies** from the navigation menu.
 
-   1. Select **Add Access Policy**.
-   1. For **Key permissions**, use **0 selected**.
+   1. Select **Create**.
    1. For **Secret permissions**, select **Get** and **List**.
    1. For **Certificate permissions**, select **Get** and **List**.
-   1. For **Select principal**, use the account for your Azure Arc instance, which is the hostname of the SQL Server host.
-   1. Select **Add** and then select **Save**.
+   1. Select **Next**.
+   1. On the **Principal** page, search for the name of your Machine - Azure Arc instance, which is the hostname of the SQL Server host.
 
-      You must **Save** to ensure the permissions are applied. They are not applied after selecting **Add**. To ensure permissions have been stored, refresh the browser window, and check the row for your Azure Arc instance is still present.
+       :::image type="content" source="media/machine-azure-arc-resource.png" alt-text="Screenshot of Azure Arc server resource in portal.":::
+
+   1. Skip the **Application (optional)** page by selecting **Next** twice, or selecting **Review + create**.
+
+      Verify that the "Object ID" of the **Principal** matches the **Principal ID** of the managed identity assigned to the instance.
+
+      :::image type="content" source="media/customer-managed-akv-review-create.png" alt-text="Screenshot of Azure portal to review and create access policy."
+
+      To confirm, go to the resource page and select **JSON View** in the top right of the Essentials box on the Overview page. Under **identity** you'll find the **principalId**
+
+      :::image type="content" source="media/machine-azure-arc-json-view.png" alt-text="Screenshot of portal control of JSON view of machine definition.":::
+
+   1. Select **Create**.
+
+   You must select **Create** to ensure that the permissions are applied. To ensure permissions have been stored, refresh the browser window, and check that the row for your Azure Arc instance is still present.
 
    :::image type="content" source="media/add-access-policy-on-key-vault.png" alt-text="Screenshot of adding access policy to the key vault in the Azure portal.":::
 

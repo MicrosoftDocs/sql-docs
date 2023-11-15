@@ -3,7 +3,7 @@ title: "Add Columns to a Table (Database Engine)"
 description: "Learn how to add columns to an existing table in SQL Server and Azure SQL platforms by using SQL Server Management Studio or Transact-SQL."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 07/18/2023
+ms.date: 11/15/2023
 ms.service: sql
 ms.subservice: table-view-index
 ms.topic: conceptual
@@ -17,13 +17,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-This article describes how to add new columns to a table in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
+This article describes how to add new columns to a table in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)] by using [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE [tsql](../../includes/tsql-md.md)].
 
 ## Remarks
 
  Using the `ALTER TABLE` statement to add columns to a table automatically adds those columns to the end of the table.
 
- If you want the columns in a specific order in the table, you must use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Though it isn't recommended, for more information on reordering tables, see [Change Column Order in a Table](change-column-order-in-a-table.md).
+ If you want the columns in a specific order in the table, you must use [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Though it isn't recommended, for more information on reordering tables, see [Change Column Order in a Table](change-column-order-in-a-table.md).
 
  To query existing columns, use the [sys.columns](../system-catalog-views/sys-columns-transact-sql.md) object catalog view.
 
@@ -36,12 +36,14 @@ Requires ALTER permission on the table.
 > [!IMPORTANT]
 > Always use the latest version of [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
+The SQL Server Management Studio (SSMS) UI doesn't support all DDL options in Azure Synapse. Use [T-SQL scripts](#use-transact-sql) instead.
+
 ### Insert columns into a table with Table Designer
 
 1. In **Object Explorer**, right-click the table to which you want to add columns and choose **Design**.
 1. Select the first blank cell in the **Column Name** column.
 1. Type the column name in the cell. The column name is a required value.
-1. Press the TAB key to go to the **Data Type** cell and select a data type from the dropdown. Data type is a required value, and is assigned the default value if you don't choose one.
+1. Press the TAB key to go to the **Data Type** cell and select a data type from the dropdown list. Data type is a required value, and is assigned the default value if you don't choose one.
 
    > [!NOTE]
    > You can change the default value in the **Options** dialog box under **Database Tools**.
@@ -64,15 +66,12 @@ ALTER TABLE dbo.doc_exa
 ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ```
 
-## See also
+## Related content
 
 - [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)
-- [Column properties](column-properties-general-page.md)
-
-## Next steps
-
-- [Create check constraint](create-check-constraints.md)
-- [Specify default values for columns](specify-default-values-for-columns.md)
+- [Column Properties (General Page)](column-properties-general-page.md)
+- [Create Check Constraints](create-check-constraints.md)
+- [Specify Default Values for Columns](specify-default-values-for-columns.md)
 - [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md)
 - [Create unique constraints](create-unique-constraints.md)
 - [Indexes](../indexes/indexes.md)

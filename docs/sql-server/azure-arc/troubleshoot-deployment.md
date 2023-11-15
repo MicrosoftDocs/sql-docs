@@ -33,6 +33,10 @@ For extension version `1.1.24724.69` and earlier, the log file is:
 
 The deployer logs are deployed at:
 
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\<extension version>\deployer.log`
+
+   Replace `<extension version>` with your extension version. For example:
+
    `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\1.1.0.0\deployer.log`
 
 The failure to create the Arc-enabled SQL Server resource could be caused by several issues.

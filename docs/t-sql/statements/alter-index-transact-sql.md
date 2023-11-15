@@ -62,13 +62,13 @@ Modifies an existing table or view index (rowstore, columnstore, or XML) by disa
 ALTER INDEX { index_name | ALL } ON <object>
 {
       REBUILD {
-            [ PARTITION = ALL ] [ WITH ( <rebuild_index_option> [ ,...n ] ) ]
-          | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> ) [ ,...n ] ]
+            [ PARTITION = ALL [ WITH ( <rebuild_index_option> [ ,...n ] ) ] ]
+          | [ PARTITION = partition_number [ WITH ( <single_partition_rebuild_index_option> [ ,...n ] ) ] ]
       }
     | DISABLE
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]
     | SET ( <set_index_option> [ ,...n ] )
-    | RESUME [WITH (<resumable_index_options>,[...n])]
+    | RESUME [WITH (<resumable_index_option> [, ...n])]
     | PAUSE
     | ABORT
 }
@@ -89,7 +89,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | STATISTICS_INCREMENTAL = { ON | OFF }
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }
     | RESUMABLE = { ON | OFF }
-    | MAX_DURATION = <time> [MINUTES}
+    | MAX_DURATION = <time> [MINUTES]
     | ALLOW_ROW_LOCKS = { ON | OFF }
     | ALLOW_PAGE_LOCKS = { ON | OFF }
     | MAXDOP = max_degree_of_parallelism
@@ -103,19 +103,19 @@ ALTER INDEX { index_name | ALL } ON <object>
       SORT_IN_TEMPDB = { ON | OFF }
     | MAXDOP = max_degree_of_parallelism
     | RESUMABLE = { ON | OFF }
-    | MAX_DURATION = <time> [MINUTES}
-    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE } }
+    | MAX_DURATION = <time> [MINUTES]
+    | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
     | XML_COMPRESSION = { ON | OFF }
     | ONLINE = { ON [ ( <low_priority_lock_wait> ) ] | OFF }
 }
 
-<reorganize_option>::=
+<reorganize_option> ::=
 {
        LOB_COMPACTION = { ON | OFF }
     |  COMPRESS_ALL_ROW_GROUPS =  { ON | OFF}
 }
 
-<set_index_option>::=
+<set_index_option> ::=
 {
       ALLOW_ROW_LOCKS = { ON | OFF }
     | ALLOW_PAGE_LOCKS = { ON | OFF }
@@ -132,7 +132,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | <low_priority_lock_wait>
  }
 
-<low_priority_lock_wait>::=
+<low_priority_lock_wait> ::=
 {
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ] ,
                           ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )

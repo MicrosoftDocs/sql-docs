@@ -3,6 +3,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 10/03/2023
 ms.topic: include
+ms.custom: ignite-2023
 ---
 
 Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doesn't currently support the following configurations:
@@ -16,7 +17,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md
 - Multiple instances of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] installed on the same host operating system with the same instance name.
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in Azure Virtual Machines.
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pay-as-you-go billing in Azure VMware Solution (AVS).
-- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability group on failover cluster instances.
+- The rare combination of availability group on failover cluster instances.
 
 > [!NOTE]  
 > Azure extension for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] fully supports VMware clusters outside of Azure. Although the [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] Setup Installation Wizard does not support installation of the Azure extension for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], this component can be installed from the command line in quiet mode, or by connecting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to Azure Arc. For more information, see [Install and connect to Azure](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#install-and-connect-to-azure) and [Automatically connect your SQL Server to Azure Arc](../automatically-connect.md).

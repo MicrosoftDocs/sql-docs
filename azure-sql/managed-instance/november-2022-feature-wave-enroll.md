@@ -7,6 +7,7 @@ ms.author: mathoma
 ms.date: 07/12/2023
 ms.service: sql-managed-instance
 ms.subservice: service-overview
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 # Rollout of November 2022 feature wave for Azure SQL Managed Instance

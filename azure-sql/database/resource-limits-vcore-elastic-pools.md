@@ -8,9 +8,7 @@ ms.date: 10/23/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: reference
-ms.custom:
-  - sqldbrb=1
-  - references_regions
+ms.custom: sqldbrb=1, references_regions, ignite-2023
 ---
 # Resource limits for elastic pools using the vCore purchasing model
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -8,8 +8,7 @@ ms.date: 10/29/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
-ms.custom:
-  - linux-related-content
+ms.custom: linux-related-content, ignite-2023
 ---
 # Configure a Pacemaker cluster for SQL Server availability groups
 

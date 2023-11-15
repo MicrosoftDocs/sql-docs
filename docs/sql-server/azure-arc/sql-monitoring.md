@@ -6,6 +6,7 @@ ms.author: lancewright
 ms.reviewer: mikeray
 ms.date: 09/08/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # Monitor Azure Arc-enabled SQL Server

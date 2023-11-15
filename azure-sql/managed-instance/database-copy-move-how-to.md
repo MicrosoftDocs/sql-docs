@@ -8,7 +8,7 @@ ms.reviewer: mathoma, danil, randolphwest
 ms.date: 06/21/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ms.topic: how-to
 ---
 # Copy or move a database - Azure SQL Managed Instance

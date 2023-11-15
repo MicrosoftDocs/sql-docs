@@ -8,7 +8,7 @@ ms.date: 11/14/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2022
+ms.custom: ignite-2022, ignite-2023
 tags: azure-service-management
 ---
 # What's new with SQL Server on Azure Virtual Machines?

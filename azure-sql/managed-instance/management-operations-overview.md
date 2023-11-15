@@ -9,7 +9,7 @@ ms.date: 08/20/2021
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: overview
-ms.custom: ignite-fall-2021
+ms.custom: ignite-fall-2021, ignite-2023
 ---
 
 # Overview of Azure SQL Managed Instance management operations

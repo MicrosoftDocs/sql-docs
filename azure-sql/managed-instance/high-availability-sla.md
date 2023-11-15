@@ -9,9 +9,7 @@ ms.date: 05/01/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom:
-  - "references_regions"
-  - "azure-sql-split"
+ms.custom: references_regions, azure-sql-split, ignite-2023
 monikerRange: "= azuresql || = azuresql-mi"
 ---
 

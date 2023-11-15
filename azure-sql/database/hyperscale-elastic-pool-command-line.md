@@ -8,7 +8,7 @@ ms.date: 10/24/2023
 ms.service: sql-database
 ms.subservice: elastic-pools
 ms.topic: conceptual
-ms.custom: devx-track-azurecli, devx-track-azurepowershell
+ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
 ---
 # Working with Hyperscale elastic pools using command-line tools
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]

@@ -9,7 +9,7 @@ ms.date: 11/14/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
 ms.topic: how-to
-ms.custom: sqldbrb=1
+ms.custom: sqldbrb=1, ignite-2023
 ---
 # Determine required subnet size and range for Azure SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]

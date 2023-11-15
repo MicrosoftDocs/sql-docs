@@ -19,6 +19,9 @@ The [Hyperscale service tier](service-tier-hyperscale.md) provides a highly scal
 
 Learn how to create a new Hyperscale database in [Quickstart: Create a Hyperscale database in Azure SQL Database](hyperscale-database-create-quickstart.md).
 
+> [!TIP]
+> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+
 ## Migrate an existing database to Hyperscale
 
 You can migrate existing databases in Azure SQL Database to Hyperscale using the Azure portal, the Azure CLI, PowerShell, or Transact-SQL.

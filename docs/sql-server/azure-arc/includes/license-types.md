@@ -3,6 +3,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 05/22/2023
 ms.topic: include
+ms.custom: ignite-2023
 ---
 
 The following table identifies features enabled depending on license type:

@@ -6,6 +6,7 @@ ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/07/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # View SQL Server databases - Azure Arc
@@ -142,5 +143,3 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 - [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
 - [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
-
-

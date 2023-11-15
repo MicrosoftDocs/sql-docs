@@ -66,7 +66,7 @@ helpviewer_keywords:
 ## Verify the deployment  
  You can verify whether your data processing extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open Report Manager and verify that your extension is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, modify, and delete shared data sources &#40;SSRS&#41;](../../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-## See Also  
+## See also  
  [Deploy a data processing extension](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

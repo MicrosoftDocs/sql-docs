@@ -3,7 +3,7 @@ title: "jobs.jobstep_versions (Azure Elastic Jobs) (Transact-SQL)"
 description: "The jobs.jobstep_versions system view contains all steps in the current version of a job in Azure Elastic jobs. "
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
+ms.date: 11/13/2023
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,6 +53,9 @@ Contains all steps in all versions of jobs in the [Azure Elastic Jobs service fo
 ## Permissions
 
 Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
+
+> [!CAUTION]
+> You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures on your *job database*.
 
 ## Remarks
 

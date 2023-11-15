@@ -4,7 +4,7 @@ description: "Learn about how you can use elastic jobs to run Transact-SQL (T-SQ
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/06/2023
+ms.date: 11/13/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: overview
@@ -171,6 +171,7 @@ For more information on UMI in Azure SQL Database, see [Managed identities for A
 
 > [!IMPORTANT]
 > When using Microsoft Entra ID authentication, create your `jobuser` user from that Microsoft Entra ID in every target database. Grant that user the permissions needed to execute your job(s) in each target database.
+
 Using a system-assigned managed identity (SMI) is not supported.
 
 ### Authentication via database-scoped credentials
@@ -221,6 +222,9 @@ During job agent creation, a schema, tables, and a role called *jobs_reader* are
 |Role name |'jobs' schema permissions |'jobs_internal' schema permissions |
 |---------|---------|---------|
 |**jobs_reader** | SELECT | None |
+
+> [!CAUTION]
+> You should not update internal catalog views in the *job database*, such as [jobs.target_group_members](/sql/relational-databases/system-catalog-views/jobs-target-group-members-elastic-jobs-transact-sql?view=azuresqldb-current&preserve-view=true). Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures on your *job database* to add/delete target groups/members, such as [jobs.sp_add_target_group_member](/sql/relational-databases/system-stored-procedures/sp-add-target-group-member-elastic-jobs-transact-sql?view=azuresqldb-current&preserve-view=true).
 
 > [!IMPORTANT]
 > Consider the security implications before granting any elevated access to the *job database*. A malicious user with permissions to create or edit jobs could create or edit a job that uses a stored credential to connect to a database under the malicious user's control, which could allow the malicious user to determine the credential's password or execute malicious commands.
@@ -278,7 +282,7 @@ Most environments require less than 100 concurrent jobs at any time, so JA100 is
 
 Exceeding the job agent's concurrency capacity tier with job targets will create queuing delays for some target databases/servers. For example, if you start a job with 110 target in the JA100 tier, 10 jobs will wait to start until others finish.
 
-The tier or service objective of an elastic job agent can be modified through the Azure portal, [PowerShell](/powershell/module/az.sql/set-azsqlelasticjobagent), or [the Job Agents REST API](/rest/api/sql/2021-02-01-preview/job-agents). <!-- TODO update /2021-02-01/ when available --> For an example, see [Scale the job agent](elastic-jobs-tutorial.md#scale-the-job-agent).
+The tier or service objective of an elastic job agent can be modified through the Azure portal, [PowerShell](/powershell/module/az.sql/set-azsqlelasticjobagent), or [the Job Agents REST API](/rest/api/sql/job-agents). For an example, see [Scale the job agent](elastic-jobs-tutorial.md#scale-the-job-agent).
 
 ### Limit job impact on elastic pools
 

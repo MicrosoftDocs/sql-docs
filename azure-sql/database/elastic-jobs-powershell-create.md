@@ -4,7 +4,7 @@ description: Learn how to create an elastic job agent and run scripts across man
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/02/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: tutorial
@@ -34,6 +34,8 @@ In this end-to-end tutorial, you learn the steps required to run a query across 
 ## Prerequisites
 
 Elastic database jobs have a set of PowerShell cmdlets.
+
+These cmdlets were updated in November 2023.
 
 ### Install the latest elastic jobs cmdlets
 
@@ -169,15 +171,21 @@ An elastic job agent is an Azure resource for creating, running, and managing jo
 
 The [New-AzSqlElasticJobAgent](/powershell/module/az.sql/new-azsqlelasticjobagent) cmdlet requires a database in Azure SQL Database to already exist, so the `resourceGroupName`, `serverName`, and `databaseName` parameters must all point to existing resources. Similarly, [Set-AzSqlElasticJobAgent](/powershell/module/az.sql/set-azsqlelasticjobagent) can be used to modify the elastic job agent.
 
+To create a new elastic job agent using Microsoft Entra authentication with a user-assigned managed identity, use the `IdentityType` and `IdentityID` arguments of `New-AzSqlElasticJobAgent`:
+
 ```powershell
 Write-Output "Creating job agent..."
 $agentName = Read-Host "Please enter a name for your new elastic job agent"
 $parameters = @{
     Name = $agentName 
+    IdentityType = "UserAssigned" 
+    IdentityID = "/subscriptions/abcd1234-caaf-4ba9-875d-f1234/resourceGroups/contoso-jobDemoRG/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-UMI"
 }
 $jobAgent = $jobDatabase | New-AzSqlElasticJobAgent @parameters
 $jobAgent
 ```
+
+To create a new elastic job agent using database-scoped credentials, `IdentityType` and `IdentityID` are not provided.
 
 ## Create the job authentication
 
@@ -185,11 +193,62 @@ The elastic job agent must be able to authenticate to each target server or data
 
 As covered in [Create job agent authentication](elastic-jobs-tutorial.md#create-job-agent-authentication):
 
-- Use database users mapped to user-assigned managed identity (UMI) to authenticate to target server(s)/database(s).
-    - Using a UMI with Microsoft Entra authentication (formerly Azure Active Directory) is the recommended method.
-    - Using PowerShell cmdlets to configure Microsoft Entra authentication is currently not supported. See [Create and manage elastic jobs by using T-SQL (preview)](elastic-jobs-tsql-create-manage.md).
+- Use database users mapped to [user-assigned managed identity (UMI) to authenticate to target server(s)/database(s)](#use-microsoft-entra-authentication-with-a-umi-for-authentication-to-targets).
+    - Using a UMI with Microsoft Entra authentication (formerly Azure Active Directory) is the recommended method. PowerShell cmdlets now have new arguments to support Microsoft Entra authentication with a UMI.
+    - This is the recommended authentication method.
 - Use database users mapped to [database-scoped credentials](#create-the-job-credentials) in each database.
     - Previously, database-scoped credentials were the only option for the elastic job agent to authenticate to targets.
+
+### Use Microsoft Entra authentication with a UMI for authentication to targets
+
+To use the recommended method of Microsoft Entra (formerly Azure Active Directory) authentication to a user-assigned managed identity (UMI), follow these steps. The elastic job agent connects to the desired target logical server(s)/databases(s) via Entra authentication.
+
+In addition to the login and database users, note the addition of the `GRANT` commands in the following script. These permissions are required for the script we chose for this example job. Your jobs may require different permissions. Because the example creates a new table in the targeted databases, the database user in each target database needs the proper permissions to successfully run.
+
+In each of the target server(s)/database(s), create a contained user mapped to the UMI.
+
+- If the elastic job has logical server or pool targets, you must create the contained user mapped to the UMI in the `master` database of the target logical server.
+- For example, to create a contained database login in the `master` database, and a user in the user database, based on the user-assigned managed identity (UMI) named `job-agent-UMI`:
+
+```powershell
+$targetServer = '<target server name>'
+$adminLogin = '<username>'
+$adminPassword = '<password>'
+
+# For the target logical server, in the master database
+# Create the login named [job-agent-UMI] based on the UMI [job-agent-UMI], and a user
+$params = @{
+  'database' = 'master'
+  'serverInstance' =  $targetServer.ServerName + '.database.windows.net'
+  'username' = $adminLogin
+  'password' = $adminPassword
+  'outputSqlErrors' = $true
+  'query' = 'CREATE LOGIN [job-agent-UMI] FROM EXTERNAL PROVIDER;'
+}
+Invoke-SqlCmd @params
+$params.query = "CREATE USER [job-agent-UMI] FROM LOGIN [job-agent-UMI]"
+Invoke-SqlCmd @params
+
+# For each target database in the target logical server
+# Create a database user from the job-agent-UMI login 
+$targetDatabases = @( $db1.DatabaseName, $Db2.DatabaseName )
+$createJobUserScript =  "CREATE USER [job-agent-UMI] FROM LOGIN [job-agent-UMI]"
+
+# Grant permissions as necessary. For example ALTER and CREATE TABLE:
+$grantAlterSchemaScript = "GRANT ALTER ON SCHEMA::dbo TO [job-agent-UMI]" 
+$grantCreateScript = "GRANT CREATE TABLE TO [job-agent-UMI]"
+
+$targetDatabases | % {
+  $params.database = $_
+  $params.query = $createJobUserScript
+  Invoke-SqlCmd @params
+  $params.query = $grantAlterSchemaScript
+  Invoke-SqlCmd @params
+  $params.query = $grantCreateScript
+  Invoke-SqlCmd @params
+}
+```
+
 
 ### <a id="create-the-job-credentials"></a> Use database-scoped credentials for authentication to targets
 

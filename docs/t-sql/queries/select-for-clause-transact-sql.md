@@ -18,10 +18,11 @@ helpviewer_keywords:
   - "FOR clause [Transact-SQL]"
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL Endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance Fabric Lakehouse SQL analytics endpoint Fabric Synapse Data Warehouse](../../includes/applies-to-version/sql-asdb-asdbmi-fabricse-fabricdw.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   
@@ -271,4 +272,3 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
 ## See Also
 
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-

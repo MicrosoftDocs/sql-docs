@@ -41,7 +41,8 @@ SET
 |   
   { @cursor_variable =   
     { @cursor_variable | cursor_name   
-    | { CURSOR [ FORWARD_ONLY | SCROLL ]   
+    | { CURSOR [ LOCAL | GLOBAL ]
+        [ FORWARD_ONLY | SCROLL ]   
         [ STATIC | KEYSET | DYNAMIC | FAST_FORWARD ]   
         [ READ_ONLY | SCROLL_LOCKS | OPTIMISTIC ]   
         [ TYPE_WARNING ]   
@@ -168,7 +169,7 @@ After a variable is declared, it's initialized to NULL. Use the SET statement to
   
 You can use variables only in expressions, not instead of object names or keywords. To construct dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, use EXECUTE.  
   
-The syntax rules for SET **@**_cursor_variable_ don't include the LOCAL and GLOBAL keywords. When you use the SET **@**_cursor_variable_ = CURSOR... syntax, the cursor is created as GLOBAL or LOCAL, depending on the setting of the default to local cursor database option.  
+Although syntax rules for SET **@**_cursor_variable_  include the LOCAL and GLOBAL keywords, when you use the SET **@**_cursor_variable_ = CURSOR... syntax, the cursor is created as GLOBAL or LOCAL, depending on the setting of the default to local cursor database option.  
   
 Cursor variables are always local, even if they reference a global cursor. When a cursor variable references a global cursor, the cursor has both a global and a local cursor reference. For more information, see [Example D, Using SET with a global cursor](#d-using-set-with-a-global-cursor).  
   

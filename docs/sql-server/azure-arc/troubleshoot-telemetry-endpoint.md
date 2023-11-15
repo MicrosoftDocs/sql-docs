@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot connectivity to the data processing service and telemetry endpoints"
+title: "Troubleshoot connectivity to data processing service and telemetry endpoints"
 description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints on Azure Arc-enabled SQL Server."
 author: twright-msft
 ms.author: twright

@@ -65,7 +65,7 @@ In [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)], many administrati
 > Unless specifically documented otherwise, all system stored procedures return a value of `0` to indicate success. To indicate failure, a nonzero value is returned.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 ## API system stored procedures
 

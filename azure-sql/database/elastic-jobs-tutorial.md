@@ -75,7 +75,9 @@ Use [Microsoft Entra (formerly Azure Active Directory)](authentication-aad-overv
         ```
     - The [REST API can also be used to create or update the elastic job agent](/rest/api/sql/job-agents/create-or-update). 
 1. Create a target group and add targets for the jobs. [Define the target group and targets (the databases you want to run the job against) using PowerShell](elastic-jobs-powershell-create.md#define-target-servers-and-databases) or [define the target group and targets using T-SQL](elastic-jobs-tsql-create-manage.md#define-target-servers-and-databases).
-1. In each of the target server(s)/database(s), [create a contained user mapped to the UMI](#use-microsoft-entra-authentication-with-a-user-assigned-managed-identity-umi).
+1. In each of the target server(s)/database(s), create a contained user mapped to the UMI or database-scoped credential, using T-SQL or PowerShell:
+    1. [Create the job authentication with T-SQL](elastic-jobs-tsql-create-manage.md#create-the-job-authentication).
+    1. [Create the job authentication with PowerShell](elastic-jobs-powershell-create.md#create-the-job-authentication).
 1. In the output database, create and assign permissions to the UMI job user. Connect to the output database and run the following example script for a user named `jobuserUMI`:
    ```sql
    CREATE USER [jobuserUMI] FROM EXTERNAL PROVIDER; 
@@ -94,7 +96,7 @@ You can use a database-scoped credential in the job database and in each target 
 
 1. Create a database-scoped credential in the *job database*.
     1. Use [PowerShell to create a database-scoped credential](elastic-jobs-powershell-create.md#create-the-job-credentials)
-    1. Use [T-SQL to create a database-scoped credential](elastic-jobs-tsql-create-manage.md#create-a-credential-for-job-execution).
+    1. Use [T-SQL to create a database-scoped credential](elastic-jobs-tsql-create-manage.md#use-a-database-scoped-credential-for-job-execution).
 1. [Define the target group (the databases you want to run the job against) using PowerShell](elastic-jobs-powershell-create.md#define-target-servers-and-databases) or [define targets using T-SQL](elastic-jobs-tsql-create-manage.md#define-target-servers-and-databases).
 1. Create a job agent login/user in each target database where the job will run. The login/user on each target server/database must have the same name as the identity of the database-scoped credential for the job user, and the same password as the database-scoped credential for the job user.
     1. Use [PowerShell to add the credential and user to each target database](elastic-jobs-powershell-create.md#create-the-job-credentials).

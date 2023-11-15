@@ -28,7 +28,7 @@ To create a link between SQL Server and Azure SQL Managed Instance, you need the
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with the required service update.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- Decide which server you intend to be the initial primary to determine where you should create the link from. Configuring a link from SQL Managed Instance primary to SQL Server secondary is only supported starting with SQL Server 2022 CU10. 
+- Decide which server you intend to be the initial primary to determine where you should create the link from. Configuring a link from SQL Managed Instance primary to SQL Server secondary is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
 > [!CAUTION]  
 > When you create your SQL managed instance to use with the link feature, take into account the memory requirements for any In-Memory OLTP features SQL Server uses. For more information, see [Overview of Azure SQL Managed Instance resource limits](resource-limits.md).

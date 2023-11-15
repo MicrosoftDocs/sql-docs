@@ -43,7 +43,7 @@ Creating the elastic job agent is not supported in T-SQL, so you must first [cre
 
 ## Create the job authentication
 
-The elastic job agent must be able to authenticate to each target server or database. As covered in [Create job agent authentication](elastic-jobs-tutorial.md#create-job-agent-authentication), the recommended approach is to use [Microsoft Entra authentication (formerly Azure Active Directory)](#use-microsoft-entra-authentication-with-a-umi-for-job-execution) with a user-assigned managed identity (UMI). Previously, [database-scoped credentials](#create-a-credential-for-job-execution) were the only option.
+The elastic job agent must be able to authenticate to each target server or database. As covered in [Create job agent authentication](elastic-jobs-tutorial.md#create-job-agent-authentication), the recommended approach is to use [Microsoft Entra authentication (formerly Azure Active Directory)](#use-microsoft-entra-authentication-with-a-umi-for-job-execution) with a user-assigned managed identity (UMI). Previously, [database-scoped credentials](#use-a-database-scoped-credential-for-job-execution) were the only option.
 
 ### Use Microsoft Entra authentication with a UMI for job execution
 
@@ -81,7 +81,7 @@ GRANT ALTER ON SCHEMA::dbo TO jobuser;
 GRANT CREATE TABLE TO jobuser;
 ```
 
-### Create a credential for job execution
+### Use a database-scoped credential for job execution
 
 A database-scoped credential is used to connect to your target databases for script execution. The credential needs appropriate permissions, on the databases specified by the target group, to successfully execute the script. When using a [logical SQL server](logical-servers.md) and/or pool target group member, it's recommended to create a credential for use to refresh the credential prior to expansion of the server and/or pool at time of job execution. The database-scoped credential is created on the job agent database.
 

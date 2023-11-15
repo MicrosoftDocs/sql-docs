@@ -23,7 +23,7 @@ dev_langs:
 Specifies whether queries against the current Stretch-enabled database and its tables return both local and remote data (the default), or local data only.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

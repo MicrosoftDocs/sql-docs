@@ -38,8 +38,8 @@ Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the fol
 
   - [Stretch Database](../../sql-server/stretch-database/stretch-database.md)
 
-  > [!IMPORTANT]  
-  > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+    > [!IMPORTANT]  
+    > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
   - [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)
 

@@ -25,7 +25,7 @@ This article summarizes the documentation changes associated with new features a
 [!INCLUDE [entra-id](../includes/entra-id.md)]
 
 > [!TIP]
-> Lower, simplified pricing for SQL Database Hyperscale starts December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Preview
 

@@ -368,7 +368,7 @@ EXEC master.dbo.sp_addlinkedserver
     @server = N'MyLinkedServer',
     @srvproduct = N'',
     @provider = N'MSOLEDBSQL',
-    @provstr = N'Server=mi.<managed_instance>.database.windows.net,1433;Authentication=ActiveDirectoryMSI;';
+    @provstr = N'Server=<mi_name>.<dns_zone>.database.windows.net,1433;Authentication=ActiveDirectoryMSI;';
 
 EXEC master.dbo.sp_addlinkedsrvlogin
     @rmtsrvname = N'MyLinkedServer',
@@ -395,7 +395,7 @@ EXEC master.dbo.sp_addlinkedserver
     @server = N'MyLinkedServer',
     @srvproduct = N'',
     @provider = N'MSOLEDBSQL',
-    @datasrc = N'mi.<managed_instance>.database.windows.net,1433';
+    @datasrc = N'<mi_name>.<dns_zone>.database.windows.net,1433';
 ```
 
 With pass-through authentication, security context of the local login is carried over to a remote instance. Pass-through authentication requires the Microsoft Entra principal to be added as login on both local and remote Azure SQL Managed Instance. Both managed instances need to be in a [Server Trust Group](/azure/azure-sql/managed-instance/server-trust-group-overview). When the requirements are met, user can sign in to a local instance and query the remote instance via the linked server object.

@@ -10,15 +10,15 @@ ms.topic: troubleshooting
 
 # Troubleshoot connectivity to the data processing service and telemetry endpoints
 
-In addition to the usual endpoints the Azure Arc connected machine agent connects to, the Azure Arc extension for SQL Server connects to two another endpoints:
+In addition to the usual endpoints, the Azure Arc Connected Machine agent connects to, the Azure Arc extension for SQL Server connects to two other endpoints:
 
 - Data processing service (DPS) endpoint
 
-   This endpoint is where the collected inventory information about SQL Server instances, database, and availability groups as well as the usage data for billing purposes is sent.
+    The collected inventory information about SQL Server instances, databases, availability groups, and usage data for billing purposes is sent to this endpoint.
 
 - Telemetry endpoint
 
-   This endpoint is where the Azure Arc connected machine agent and Azure extension for SQL Server logs and the Dynamic Management Views (DMV) data is sent. This data is ultimately displayed in the performance dashboards in the Azure portal.
+   The Azure Connected Machine agent logs, the Azure extension for SQL Server logs and the Dynamic Management Views (DMV) data is sent to this endpoint.
 
 Communication to these endpoints uses HTTPS with SSL/TLS and port TCP/443 for encrypted secure connections. Communication is always initiated by the agent to _send_ the data _to_ Azure. Communication is never initiated from Azure. Connectivity to these endpoints is therefore only one way.
 
@@ -79,7 +79,7 @@ If your network requires using an HTTPS proxy server for outbound connectivity, 
 
 ## Use proxy bypass for Private Link scope
 
-The DPS and telemetry endpoints don't support Private Link Scope. To use Private Link Scope for other endpoint, but not for DPS and telemetry, you can set the `proxy.bypass` value to `ArcData`. For more information, review, [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints)
+The DPS and telemetry endpoints don't support Private Link Scope. To use Private Link Scope for other endpoints, but not for DPS and telemetry, you can set the `proxy.bypass` value to `ArcData`. For more information, review, [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints)
 
 ## Related content
 

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "URL access [Reporting Services], rendering formats"
 ---
 # Export a report by using URL access
-  You can optionally specify the format in which to render a report by using the *rs:Format* URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) render in the browser and for other formats, the browser prompts to save the report output to a local file.  
+  You can optionally specify the format in which to render a report by using the ``rs:Format`` URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) render in the browser and for other formats, the browser prompts to save the report output to a local file.  
   
  For example, to get a PDF copy of a report directly from a native mode report server:  
   

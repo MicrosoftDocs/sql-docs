@@ -267,7 +267,7 @@ The following lists the resources that should be added to your allowlist:
 
 - The fully qualified domain name (FQDN) of your SQL Managed Instance. For example: *managedinstance1.6d710bcf372b.database.windows.net*.
 - Microsoft Entra Authority
-- Microsoft Entra Endpoint Resource Id
+- Microsoft Entra Endpoint Resource ID
 - Resource Manager Endpoint
 - Service Endpoint 
 
@@ -305,7 +305,7 @@ To use T-SQL to test connectivity, you have to check the connection in both dire
 
 Use SQL Server Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
-1. Connect to SQL Managed Instance, and run the following script to generates parameters you'll need later:
+1. Connect to SQL Managed Instance, and run the following script to generate parameters you'll need later:
 
    ```sql
    SELECT 'DECLARE @serverName NVARCHAR(512) = N''' + value + ''''

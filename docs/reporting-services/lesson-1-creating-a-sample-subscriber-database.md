@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 
 # Lesson 1: Create a sample subscriber database
 
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data for your data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports will be in when they're created.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you create a small "subscriber" database to store subscription data for your data-driven subscription. When the subscription is processed, the report server retrieves this data and uses it to customize report output. For example, the rows of data include specific order numbers to use for filters and what file format generated reports are in when they're created.  
   
 This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] to create a SQL Server database.  
   
@@ -56,9 +56,9 @@ This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssman
 8.  Use a SELECT statement to verify that you have three rows of data. For example: `select * from OrderInfo`  
   
 ## Next steps  
-+ You have successfully created the subscription data that will drive report distribution and vary the report output for each subscriber. 
-+ Next, you'll modify the data source properties of the report to use stored credentials. 
-+ You'll also modify the report design to include a parameter that the subscription will use with the subscriber data. [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ You successfully created the subscription data that drives report distribution and vary the report output for each subscriber. 
++ Next, you modify the data source properties of the report to use stored credentials. 
++ You also modify the report design to include a parameter that the subscription uses with the subscriber data. [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## See also
 

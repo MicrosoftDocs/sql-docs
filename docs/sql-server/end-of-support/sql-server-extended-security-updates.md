@@ -172,6 +172,7 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
+
 ---
 
 > [!IMPORTANT]  
@@ -262,6 +263,7 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
+
 ---
 
 > [!IMPORTANT]  
@@ -269,7 +271,7 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 ## <a id="register-instances-for-esus"></a> Register Extended Security Updates purchased through volume licensing
 
-If you purchased an ESU product through volume licensing (VL), you must register it to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice.
+If you purchased an ESU product through volume licensing (VL), you must register the purchased product on the Azure portal to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice. 
 
 ## <a id="register-instances-on-azure-portal"></a> Register disconnected SQL Server instances on Azure portal
 
@@ -480,3 +482,4 @@ For the full list of frequently asked questions, review the [Extended Security U
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
+

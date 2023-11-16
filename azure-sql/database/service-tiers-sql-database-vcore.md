@@ -4,13 +4,11 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake, mathoma, dfurman
-ms.date: 10/19/2023
+ms.date: 11/07/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom:
-  - references_regions
-  - azure-sql-split
+ms.custom: references_regions, azure-sql-split, ignite-2023
 ---
 # vCore purchasing model - Azure SQL Database
 
@@ -112,7 +110,9 @@ Service tier options in the vCore purchasing model include General Purpose, Busi
 | **Backups** | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years | A choice of geo-redundant, zone-redundant, or locally redundant backup storage, 1-35 day retention (default 7 days) <br/> Long term retention available up to 10 years  | A choice of locally redundant (LRS), zone-redundant (ZRS), or geo-redundant (GRS) storage <br/> 1-35 days (7 days by default) retention, with up to 10 years of long-term retention available |
 |**Availability**|One replica, no read-scale replicas, <br/>zone-redundant high availability (HA) |Three replicas, one [read-scale replica](read-scale-out.md),<br/>zone-redundant high availability (HA)|zone-redundant high availability (HA)|
 |**Pricing/billing**  | [vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |[vCore, reserved storage, and backup storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |  [vCore for each replica and used storage](https://azure.microsoft.com/pricing/details/sql-database/single/) are charged. <br/>IOPS aren't charged. |
-|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
+|**Discount models**| [Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|[Reserved instances](reserved-capacity-overview.md)<br/>[Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions)<br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions  | [Azure Hybrid Benefit](../azure-hybrid-benefit.md) (not available on dev/test subscriptions) <sup>1</sup><br/>[Enterprise](https://azure.microsoft.com/offers/ms-azr-0148p/) and [Pay-As-You-Go](https://azure.microsoft.com/offers/ms-azr-0023p/) Dev/Test subscriptions|
+
+<sup>1</sup> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 For greater details, review resource limits for [logical server](resource-limits-logical-server.md), [single databases](resource-limits-vcore-single-databases.md), and [pooled databases](resource-limits-vcore-elastic-pools.md). 
 
@@ -221,8 +221,9 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 - Premium-series hardware options use the latest CPU and memory technology from Intel and AMD. Premium-series provides a boost to compute performance relative to standard-series hardware.
 - Premium-series option offers faster CPU performance compared to Standard-series and a higher number of maximum vCores.
 - Premium-series memory optimized option offers double the amount of memory relative to Standard-series.
+- Standard-series, premium-series, and premium-series memory optimized are available for [Hyperscale elastic pools (preview)](hyperscale-elastic-pool-overview.md).
 
-- For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
+For more information, see the [Hyperscale premium series blog announcement](https://aka.ms/AAiq28n).
  
 For regions available, see [Hyperscale premium-series availability](#hyperscale-premium-series-availability).
 
@@ -279,7 +280,7 @@ Follow the steps to change configuration, and select hardware configuration as d
 
 For information on previous generation hardware, see [Previous generation hardware availability](#previous-generation-hardware).
 
-<a id="gen4gen5-1"></a> <a id="gen5"> </a>
+<a id="gen4gen5-1"></a> <a id="gen5"></a>
 
 #### Standard-series (Gen5)
 
@@ -287,7 +288,7 @@ Standard-series (Gen5) hardware is available in all public regions worldwide.
 
 #### <a id="hyperscale-premium-series-availability"></a> Hyperscale premium-series
  
-Hyperscale service tier premium-series and premium-series memory optimized hardware is available in the following regions:
+Hyperscale service tier premium-series and premium-series memory optimized hardware is available for single databases and elastic pools in the following regions:
 
 - Australia East
 - Brazil South

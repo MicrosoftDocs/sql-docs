@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 -   Greater than 253 foreign key references aren't currently available for columnstore indexes, memory-optimized tables, Stretch Database, or partitioned foreign key tables.  
 
     > [!IMPORTANT]  
-    > Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+    > [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 ## Indexes on Foreign Key Constraints  
  Unlike primary key constraints, creating a foreign key constraint doesn't automatically create a corresponding index. However, manually creating an index on a foreign key is often useful for the following reasons:  

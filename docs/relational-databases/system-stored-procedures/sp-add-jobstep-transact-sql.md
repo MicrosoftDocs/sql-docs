@@ -1,6 +1,6 @@
 ---
 title: sp_add_jobstep (Transact-SQL)
-description: "Adds a step (operation) to a SQL Server Agent job."
+description: "sp_add_jobstep adds a step (operation) to a SQL Server Agent job."
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
@@ -15,10 +15,11 @@ helpviewer_keywords:
   - "sp_add_jobstep"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Adds a step (operation) to a [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Agent job.
 
@@ -196,7 +197,7 @@ The ID number of the proxy that the job step runs as. *@proxy_id* is **int**, wi
 
 #### [ @proxy_name = ] N'*proxy_name*'
 
-The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, with a default of `NULL`.If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
+The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, with a default of `NULL`. If no *@proxy_id* is specified, no *@proxy_name* is specified, and no *@database_user_name* is specified, the job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
 
 #### [ @step_uid = ] '*step_uid*' OUTPUT
 
@@ -219,6 +220,9 @@ SQL Server Management Studio provides an easy, graphical way to manage jobs, and
 By default, a job step runs as the service account for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Agent unless another proxy is specified. A requirement of this account is to be a member of the **sysadmin** fixed security role.
 
 A proxy might be identified by *@proxy_name* or *@proxy_id*.
+
+This stored procedure shares the name of `sp_add_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_add_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-add-jobstep-elastic-jobs-transact-sql.md?view=azuresql-db&preserve-view=true).
+
 
 ## Permissions
 

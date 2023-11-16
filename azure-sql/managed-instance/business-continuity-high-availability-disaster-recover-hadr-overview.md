@@ -9,7 +9,7 @@ ms.date: 05/01/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
-ms.custom: "azure-sql-split"
+ms.custom: azure-sql-split, ignite-2023
 keywords:
   - "business continuity"
   - "cloud business continuity"
@@ -42,7 +42,7 @@ From an instance perspective, there are four major potential disruption scenario
 - Datacenter outage, possibly caused by a natural disaster. This scenario requires some level of geo-redundancy with application failover to an alternate datacenter.
 - Upgrade or maintenance errors, unanticipated issues that occur during planned infrastructure maintenance or upgrades might require rapid rollback to a prior database state.
 
-To mitigate the local hardware and software failures, SQL Managed Instance includes a [high availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.995% availability SLA.  
+To mitigate local hardware and software failures, SQL Managed Instance includes a [high availability architecture](high-availability-sla.md), which guarantees automatic recovery from these failures with up to 99.99% availability SLA.  
 
 To protect your business from data loss, SQL Managed Instance automatically creates full database backups weekly, differential database backups every 12 hours, and transaction log backups every 10 minutes. By default, the backups are stored in [redundant storage](automated-backups-overview.md#backup-storage-redundancy) for seven days for both service tiers, with a configurable backup retention period for point-in-time restore of 1 to 35 days.
 

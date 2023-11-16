@@ -23,6 +23,7 @@ helpviewer_keywords:
 |Report Server File Share|Used to distribute reports within your organization to network file shares. Provides the ability to automatically copy a report to a file share on a designated schedule.|  
 
 :::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif" alt-text="Screenshot of the Reporting Services delivery extension architecture." lightbox="../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif":::
+
 Reporting Services delivery extension architecture.
   
  Delivery extensions are paired with subscriptions. When a user creates a subscription, they can choose one of the available delivery extensions to determine how the report is delivered. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], subscriptions are located in the report server database. When an event occurs, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] matches the event against subscriptions contained in the report server database. For each subscription tied to the event, the report server creates a notification. For data-driven subscriptions, a notification is created for each recipient. Once a notification is created, the report server invokes a particular delivery extension and passes in values for the extensions settings specified in the notification. The delivery extension sends the notification to the user as specified by the selected delivery extension.  

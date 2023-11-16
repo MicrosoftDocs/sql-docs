@@ -38,7 +38,7 @@ helpviewer_keywords:
 ## Deploy the extension to the report server  
  The report server uses delivery extensions for processing and delivering notifications or reports. You should deploy your delivery extension assembly to the report server as a private assembly. You also need to make an entry in the report server configuration file, RSReportServer.config.  
   
-#### Deploy a deliver extension assembly to a report server  
+#### Deploy a delivery extension assembly to a report server  
   
 1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the delivery extension. The default location of the report server bin directory is %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
   

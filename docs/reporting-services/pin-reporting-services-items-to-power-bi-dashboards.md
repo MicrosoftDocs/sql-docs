@@ -85,7 +85,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
 
 **(3)** The tile subtitle is based on the date and time the tile was pinned or the data was last refreshed from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The refresh schedule is managed by the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscription that was automatically created when you pinned the report item.
 
-**(5)** If you select the tile itself, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] uses the **(4) custom link** to navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] page of the registered report server. the link was set when the item was pinned from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you don't have internet connectivity to the report server, you see an error in the browser.  
+**(5)** If you select the tile itself, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] uses the **(4) custom link** to navigate to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] page of the registered report server. The link was set when the item was pinned from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If you don't have internet connectivity to the report server, you see an error in the browser.  
 
 :::image type="content" source="../reporting-services/media/ssrs-pinned-tile-details.png" alt-text="Screenshot of the tiles in the dashboard." lightbox="../reporting-services/media/ssrs-pinned-tile-details.png":::
   

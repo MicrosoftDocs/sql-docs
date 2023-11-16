@@ -82,7 +82,7 @@ SalesOrderNumber:isnull=true
   
 -   Report name of "team project report" includes spaces and therefore the "+" replaces each space.  
   
--   Passes two parameters of "teamgrouping2" with a value of "xgroup" and "teamgrouping1" with a value of "ygroup".  
+-   Passes two parameters of "teamgrouping2" with a value of ``xgroup`` and "teamgrouping1" with a value of ``ygroup``.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  

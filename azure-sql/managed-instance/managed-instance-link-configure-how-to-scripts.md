@@ -22,7 +22,7 @@ After the link is created, you can then fail over to your secondary replica for 
 
 > [!NOTE]
 > - It's also possible to configure the link with [SQL Server Management Studio (SSMS)](managed-instance-link-configure-how-to-ssms.md). 
-> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with SQL Server 2022 CU10. 
+> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
 
 ## Overview
@@ -90,7 +90,7 @@ As you run scripts from this user guide, it's important not to mistake SQL Serve
 | Resolvable domain name | DNS name that can be resolved to an IP address. For example, running `nslookup sqlserver1.domain.com` should return an IP address such as 10.0.0.1. | Run `nslookup` command from the command prompt. |
 | SQL Server IP | IP address of your SQL Server. In case of multiple IPs on SQL Server, choose IP address that is accessible from Azure. | Run `ipconfig` command from the command prompt of host OS running the SQL Server. |
 
-<sup>1</sup> Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with SQL Server 2022 CU10.
+<sup>1</sup> Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
 ## Set up database recovery and backup
 
@@ -502,7 +502,7 @@ You've successfully modified your database mirroring endpoint for a SQL Managed 
 
 ## Create an availability group on SQL Server
 
-If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with SQL Server 2022 CU10.
+If you don't have an existing availability group, the next step is to create one on SQL Server, regardless of which will be the initial primary. Commands to create the availability group are different if your SQL Managed Instance is the initial primary, which is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10).
 
 While it's possible to establish multiple links for the same database, the link only supports replication of one database per link. If you want to create multiple links for the same database, use the same availability group for all the links, but then create a new distributed availability group for each database link between SQL Server and SQL Managed Instance. 
 

@@ -54,7 +54,7 @@ The Azure SQL Database [Query editor](query-editor.md) (preview) is a tool to ru
 
 If you receive this error, use the following steps to resolve:
 
-    "Cannot open server 'server-name' requested by the login. Client with IP address 'xx.xx.xx.xx' is not allowed to access the server. To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range. It may take up to five minutes for this change to take effect."
+"Cannot open server 'server-name' requested by the login. Client with IP address 'xx.xx.xx.xx' is not allowed to access the server. To enable access, use the Azure Management Portal or run sp_set_firewall_rule on the master database to create a firewall rule for this IP address or address range. It may take up to five minutes for this change to take effect."
 
 1. Return to the **Overview** page of your SQL database.
 1. Select the link for the Azure SQL logical server next to **Server name**.

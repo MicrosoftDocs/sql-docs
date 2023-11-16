@@ -1,5 +1,5 @@
 ---
-title: "Preparing to Implement a Delivery Extension"
+title: "Prepare to implement a delivery extension"
 description: Discover how to implement a delivery extension in Reporting Services. Learn about available interfaces and classes and required and optional functionality.
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "interfaces [Reporting Services]"
   - "delivery extensions [Reporting Services], implementing"
 ---
-# Preparing to Implement a Delivery Extension
+# Prepare to implement a delivery extension
   Before you implement your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, you should define the interfaces to implement. You first need to decide how your delivery extension will be used, what settings your delivery extension will require, and the specific functionality you will need to implement in order to deliver report notifications.  
   
  Each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension must provide the following functionality:  
@@ -40,9 +40,9 @@ helpviewer_keywords:
 |<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> Class|Represents the output from a rendering extension. A <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> object contains the associated file name and type information that is required by the delivery extension in order to process the stream returned by the rendering extension.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> Interface|A user control that represents the means to retrieve delivery extension-specific subscription information from the user in Report Manager (for example, an e-mail address or the path to a file share).|  
   
-## See Also  
- [Reporting Services Extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implementing a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services Extension Library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## See also  
+ [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

@@ -248,7 +248,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 
 1. If you plan to connect remotely, you might also need to open the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] TCP port (default 1433) on your firewall.
 
-### [Ubuntu 22.04 (preview)](#tab/ubuntu2204)
+### [Ubuntu 22.04](#tab/ubuntu2204)
 
 1. Download the public key, convert from ASCII to GPG format, and write it to the required location:
 
@@ -259,7 +259,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
 1. Manually download and register the [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] Ubuntu repository:
 
    ```bash
-   curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-preview.list | sudo tee /etc/apt/sources.list.d/mssql-server-preview.list
+   curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server-2022.list
    ```
 
    > [!TIP]  
@@ -272,19 +272,13 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Ubunt
    sudo apt-get install -y mssql-server
    ```
 
-1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password.
+1. After the package installation finishes, run `mssql-conf setup` and follow the prompts to set the SA password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-   For this preview, only Evaluation edition is available, which is limited to 180 days starting Thursday, July 27, 2023.
-
-   ```output
-   This is a preview version (free, no production use rights, 180-day limit starting Thu Jul 27 02:57:54 GMT 2023), continue? [Yes/No]:
-   ```
-
-   Once you agree to install Evaluation edition, the configuration proceeds, and you can follow the prompts to set the SA password. Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
+   Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
 
 1. Once the configuration is done, verify that the service is running:
 

@@ -239,7 +239,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL,
 
 At this point, [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is running on your RHEL machine and is ready to use!
 
-### [Red Hat 9 (preview)](#tab/rhel9)
+### [Red Hat 9](#tab/rhel9)
 
 Starting with RHEL 9, you can run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application with SELinux enabled. For more information about confined and unconfined applications with SELinux, see [Getting started with SELinux](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux).
 
@@ -247,7 +247,7 @@ To run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined 
 
 - Ensure that [SELinux is enabled and in enforcing mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux).
 
-- Install the `mssql-server-preview` package using the steps mentioned later in this section.
+- Install the `mssql-server` package using the steps mentioned later in this section.
 
 - Install the new `mssql-server-selinux` package.
 
@@ -263,7 +263,7 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL 
 1. Download the [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] Red Hat 9 repository configuration file:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/9/mssql-server-2022.repo
    ```
 
    > [!TIP]  
@@ -278,22 +278,16 @@ To configure [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on RHEL 
    Optionally, if you want to run [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] as a confined application, install the `mssql-server-selinux` package, which enables custom policies.
 
    ```bash
-   sudo yum install -y mssql-server-preview
+   sudo yum install -y mssql-server
    ```
 
-1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password.
+1. After the package installation finishes, run `mssql-conf setup` using its full path, and follow the prompts to set the SA password and choose your edition. As a reminder, the following [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] editions are freely licensed: Evaluation, Developer, and Express.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-   For this preview, only Evaluation edition is available, which is limited to 180 days starting Thursday, July 27th, 2023.
-
-   ```output
-   This is a preview version (free, no production use rights, 180-day limit starting Thu Jul 27 02:57:54 GMT 2023), continue? [Yes/No]:
-   ```
-
-   Once you agree to install Evaluation edition, the configuration proceeds, and you can follow the prompts to set the SA password. Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
+   Remember to specify a strong password for the SA account. You need a minimum length 8 characters, including uppercase and lowercase letters, base-10 digits and/or non-alphanumeric symbols.
 
 1. Once the configuration is done, verify that the service is running:
 

@@ -10,9 +10,6 @@ ms.custom:
 ---
 The following sections describe known issues with [!INCLUDE [sssql22](../../includes/sssql22-md.md)] on Linux.
 
-> [!NOTE]  
-> Support for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] on Red Hat Enterprise Linux 9.x and Ubuntu 22.04 is currently in preview.
-
 ### General
 
 - The length of the hostname where [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed needs to be 15 characters or less.
@@ -169,13 +166,13 @@ The following limitations apply to [!INCLUDE [ssManStudioFull](../../includes/ss
 
 ### High availability and disaster recovery
 
-For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (preview) and Ubuntu 22.04 (preview), when you enable the HA/DR stack with Pacemaker, you can experience issues with automatic and manual failover. These issues are currently limited to the Pacemaker HA stack. Other HA stacks, including HPE Serviceguard and DH2i DxEnterprise, don't have these issues.
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 and Ubuntu 22.04, when you enable the HA/DR stack with Pacemaker, you can experience issues with automatic and manual failover. These issues are currently limited to the Pacemaker HA stack. Other HA stacks, including HPE Serviceguard and DH2i DxEnterprise, don't have these issues.
 
 ### Machine Learning Services
 
-For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (preview) and Ubuntu 22.04 (preview), there are some prerequisites to take into account with `cgroup-v1`, before installing Machine Learning Services.
+For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 and Ubuntu 22.04, there are some prerequisites to take into account with `cgroup-v1`, before installing Machine Learning Services.
 
-#### [RHEL 9 (preview)](#tab/rhel9)
+#### [RHEL 9](#tab/rhel9)
 
 1. As a prerequisite, `cgroup-v1` needs to be enabled as per [Using cgroupfs to manually manage cgroups Red Hat Enterprise Linux 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/managing_monitoring_and_updating_the_kernel/assembly_using-cgroupfs-to-manually-manage-cgroups_managing-monitoring-and-updating-the-kernel#proc_mounting-cgroups-v1_assembly_using-cgroupfs-to-manually-manage-cgroups) from Red Hat.
 
@@ -193,9 +190,9 @@ For [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages for RHEL 9 (p
    sudo systemctl restart mssql-launchpadd
    ```
 
-#### [Ubuntu 22.04 (preview)](#tab/ubuntu22)
+#### [Ubuntu 22.04](#tab/ubuntu22)
 
-For Ubuntu 22.04 (preview), you should reach out to Canonical directly for the exact steps. Based on the available information, here's a summary of the steps that are needed. We don't recommend these steps on a production workload.
+For Ubuntu 22.04, you should reach out to Canonical directly for the exact steps. Based on the available information, here's a summary of the steps that are needed. We don't recommend these steps on a production workload.
 
 1. Open the **grub** bootloader configuration file located at `/etc/default/grub`.
 
@@ -244,6 +241,6 @@ For Ubuntu 22.04 (preview), you should reach out to Canonical directly for the e
    cgroup on /sys/fs/cgroup/misc type cgroup (rw,nosuid,nodev,noexec,relatime,misc)
    ```
 
-   Once you have enabled `cgroup-v1` for Ubuntu 22.04, follow the steps in [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](../sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages), to install and enable SQL Machine Learning Service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] preview packages on Ubuntu 22.04.
+   Once you have enabled `cgroup-v1` for Ubuntu 22.04, follow the steps in [Install SQL Server 2022 Machine Learning Services (Python and R) on Linux](../sql-server-linux-setup-machine-learning-sql-2022.md#install-runtimes-and-packages), to install and enable SQL Machine Learning Service for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] packages on Ubuntu 22.04.
 
 ---

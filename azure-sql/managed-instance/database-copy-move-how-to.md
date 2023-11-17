@@ -19,7 +19,7 @@ This article describes how to copy or move a database online across instances in
 
 ## Overview
 
-You can perform an online copy or move operation of a database across managed instances by using Always On availability group technology. The copy and move feature creates a new database on the destination instance as a copy of the source database. With this feature, data replication is continuous, asynchronous, and near real-time. It also ensures that there's no data loss.
+You can perform an online copy or move operation of a database across managed instances by using Always On availability group technology. The copy and move feature creates a new database on the destination instance as a copy of the source database. With this feature, data replication is reliable, continuous, asynchronous, and near real-time.
 
 When you *copy* a database, the source database remains online during the operation and after it's completed.
 
@@ -61,6 +61,10 @@ Here's the workflow for copying or moving a database:
 An example workflow for a move operation is illustrated in the following diagram:
 
 :::image type="content" source="media/database-copy-move-how-to/database-move-diagram.png" alt-text="Diagram that illustrates the workflow of a move operation.":::
+
+Design of **database move** operation guarantees there is no data loss. When user completes the move operation, source database will be closed for any workload and transaction log will be replicated to destination database. Only then, destination database will become online, and source database dropped. This design ensures all data from the source database is moved to destination database.
+
+Database **copy operation** is continuous, same as database move. Completing database copy operation will stop replicating transaction log to the destination database. Although user explicitly issues command for completing the copy operation, user doesn't have fine grain level of control over when exactly log replication will be stopped.
 
 ## Prerequisites
 

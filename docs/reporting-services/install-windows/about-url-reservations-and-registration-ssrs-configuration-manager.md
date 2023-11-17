@@ -1,5 +1,5 @@
 ---
-title: "URL Reservations & Registration (Configuration Manager)"
+title: "URL reservations & registration (Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "URL registration"
   - "Report Server service, URL reservations"
 ---
-# About URL Reservations and Registration  (Report Server Configuration Manager)
+# About URL reservations and registration (Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and the web portal when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  
   
 -   Setup will create URL reservations using default values. If Setup installs the default configuration, it will reserve two URLs; one for the Report Server Web service, and another for the web portal. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to add more URLs or modify the default URLs that Setup creates.  
@@ -36,7 +36,7 @@ helpviewer_keywords:
  Other published URL-addressable items, such as shared data sources, should not be accessed through URLs as stand-alone items. The report server does not display those items in a meaningful format when viewed in a browser window.  
   
 > [!NOTE]  
-> This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access Report Server Items Using URL Access](../../reporting-services/access-report-server-items-using-url-access.md).  
+> This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access report server items by using URL access](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> URL reservation and registration  
  A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
@@ -94,9 +94,9 @@ helpviewer_keywords:
   
  The `https://localhost` URL is interpreted as `https://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
- [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See also  
- [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL Reservation Syntax  &#40;Report Server Configuration Manager Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configure a URL &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL Reservation Syntax &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
 

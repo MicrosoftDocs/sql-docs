@@ -1,5 +1,5 @@
 ---
-title: "Configure a URL  (Configuration Manager)"
+title: "Configure a URL (Configuration Manager)"
 description: "Configure a URL  (Report Server Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
 ---
-# Configure a URL  (Report Server Configuration Manager)
+# Configure a URL (Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
   
  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.  
@@ -25,7 +25,7 @@ helpviewer_keywords:
   
 -   Set advanced URL properties to define additional URLs.  
   
- For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
+ For more information about how URLs are stored and maintained or interoperability issues, see [About URL reservations and registration &#40;Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services side-by-side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
   
 ## Prerequisites  
  Before you create or modify a URL, remember the following points:  
@@ -38,13 +38,13 @@ helpviewer_keywords:
   
 -   Choose a time that has low report activity. Each time the URL reservation changes, you can expect that the application domains for Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] might be recycled.  
   
--   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
-### To configure a URL for the Report Server Web service  
+### Configure a URL for the report server web service  
   
 1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to a local report server instance.  
   
-2.  Click **Web Service URL**.  
+2.  Select **Web Service URL**.  
   
 3.  Specify the virtual directory. The virtual directory name identifies which application receives the request. Because an IP address and port can be shared by multiple applications, the virtual directory name specifies which application receives the request.  
   
@@ -52,7 +52,7 @@ helpviewer_keywords:
   
      For the Report Server Web service, the default virtual directory name is **ReportServer**.  
   
-4.  Specify the IP address that uniquely identifies the report server computer on the network. If you want to specify a host header or define additional URLs for the same application instance, you must click **Advanced**. For instructions on how to set advanced properties on the URL, see the instructions later in this topic. Otherwise, use the **Web Service URL** page to select from the following values:  
+4.  Specify the IP address that uniquely identifies the report server computer on the network. If you want to specify a host header or define additional URLs for the same application instance, you must select **Advanced**. For instructions on how to set advanced properties on the URL, see the instructions later in this topic. Otherwise, use the **Web Service URL** page to select from the following values:  
   
     -   **All Assigned** specifies that any of the IP addresses that are assigned to the computer can be used in a URL that points to a report server application. This value also encompasses friendly host names (such as computer names) that can be resolved by a domain name server to an IP address that is assigned to the computer. This is the default value for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL.  
   
@@ -62,9 +62,9 @@ helpviewer_keywords:
   
     -   **::1** is the loopback address in IPv6 format.  
   
-    -   Specific IP addresses also appear in this list. IP addresses can be in IPv4 and IPv6 formats. *Nnn.nnn.nnn.nnn* is the 32-bit IPv4 address of a network adapter card on your computer. IPv6 addresses are 128-bit, with eight 4-byte fields separated by colons: \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Specific IP addresses also appear in this list. IP addresses can be in IPv4 and IPv6 formats. *Nnn.nnn.nnn.nnn* is the 32-bit IPv4 address of a network adapter card on your computer. IPv6 addresses are 128-bit, with eight 4-byte fields separated by colons: ``\<prefix>:nnnn:nnnn:nnnn:nnnn:nnnn:nnnn``.
   
-         If you have multiple cards or if your network supports both IPv4 and IPv6 addresses, you will see multiple IP addresses. If you select only one IP address, it will limit application access to the just the IP address (and any host name that a domain name server maps to that address). You cannot use localhost to access a report server, and you cannot use the IP addresses of other network adapter cards that are installed on the report server computer. Typically, if you select this value, it is because you are configuring multiple URL reservations that also specify explicit IP addresses or host names (for example, one for a network adapter card used for intranet connections and a second one used for extranet connections).  
+         If you have multiple cards or if your network supports both IPv4 and IPv6 addresses, you will see multiple IP addresses. If you select only one IP address, it will limit application access to the IP address (and any host name that a domain name server maps to that address). You cannot use localhost to access a report server, and you cannot use the IP addresses of other network adapter cards that are installed on the report server computer. Typically, if you select this value, it is because you are configuring multiple URL reservations that also specify explicit IP addresses or host names (for example, one for a network adapter card used for intranet connections and a second one used for extranet connections).  
   
 5.  Specify the port. Port 80 is the default because it can be shared with other applications. If you want to use a custom port number, remember that you will have to always specify it in the URL used to access the report server. You can use the following techniques to find an available port:  
   
@@ -74,7 +74,7 @@ helpviewer_keywords:
   
     -   Review the Microsoft Support article, [Information about TCP/IP port assignments](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904), to read about TCP port assignments and the differences between Well Known Ports (0 through 1023), Registered Ports (1024 through 49151), and Dynamic or Private Ports (49152 through 65535).  
   
-    -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
+    -   If you are using Windows Firewall, you must open the port. For instructions, see [Configure a firewall for report server access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  If you have not done so already, verify that IIS (if it is installed) does not have virtual directory with the same name you plan to use.  
   
@@ -82,9 +82,9 @@ helpviewer_keywords:
   
 8.  Optionally, if you select a TLS/SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
   
-9. Click **Apply** to create the URL.  
+9. Select **Apply** to create the URL.  
   
-10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Test the URL by selecting the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native mode report server database &#40;Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  If you have existing TLS Bindings and URL Reservations and you want to change the TLS Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
@@ -103,7 +103,7 @@ helpviewer_keywords:
   
 1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance.  
   
-2.  Click **Web Portal URL**.  
+2.  Select **Web Portal URL**.  
   
 3.  Specify the virtual directory. The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] listens on the same IP address and port as the Report Server Web service. If you configured the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to point to a different Report Server Web service, you must modify the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL settings in the RSReportServer.config file.  
   
@@ -111,11 +111,11 @@ helpviewer_keywords:
   
      Optionally, if you select a TLS/SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
   
-5.  Click **Apply** to create the URL.  
+5.  Select **Apply** to create the URL.  
   
-6.  Test the URL by clicking the link in the **URLs** section of page.  
+6.  Test the URL by selecting the link in the **URLs** section of page.  
   
-## Setting Advanced Properties to Specify Additional URLs  
+## Set advanced properties to specify other URLs  
  You can reserve multiple URLs for the Report Server Web service or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] by specifying different ports or host names (either an IP address or a host header name that a domain name server can resolve to an IP address assigned to the computer). By creating multiple URLs, you can set up different access paths to the same report server instance. For example, to enable intranet and extranet access to a report server, you might use the default URL for access across the intranet, and an additional fully qualified host name for extranet access:  
   
 -   `https://myserver01/reportserver`  
@@ -137,26 +137,26 @@ helpviewer_keywords:
   
  Specifies the fully qualified computer name for which the certificate is registered. The name that you specify must be identical to the name for which the certificate is registered.  
   
- You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure TLS connections on a Native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-### To set advanced properties on a URL  
+### Set advanced properties on a URL  
   
-1.  On either the **Web Service URL** or **Web Portal URL** page, click **Advanced**.  
+1.  On either the **Web Service URL** or **Web Portal URL** page, select **Advanced**.  
   
-2.  Click **Add**.  
+2.  Select **Add**.  
   
-3.  Click IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `https://www`.  
+3.  Select IP Address or Host Header Name. If you specify a host header, be sure to specify a name that the DNS service can resolve. If you are specifying publicly available domain name, include the whole URL, including `https://www`.  
   
 4.  Specify the port. If you specify a custom port, the URL to the application must always include the port number.  
   
-5.  Click **OK**.  
+5.  Select **OK**.  
   
 6.  Test the URL by opening a browser window and entering the URL.  
   
-## URLs for Multiple Report Server Instances on the Same Computer  
- If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL Reservations for Multi-Instance Report Server Deployments  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
+## URLs for multiple report server instances on the same computer  
+ If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL reservations for multi-instance report server deployments &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Examples of URL Configurations  
+##  <a name="URLExamples"></a> Examples of URL configurations  
  The following list shows some examples of what a report server URL might resemble:  
   
 -   `https://localhost/reportserver`  
@@ -187,5 +187,5 @@ helpviewer_keywords:
   
 ## See Also
 
- [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
- [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Configure report server URLs &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Report server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

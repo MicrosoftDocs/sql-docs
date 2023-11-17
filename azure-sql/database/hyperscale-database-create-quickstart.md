@@ -15,7 +15,7 @@ ms.topic: quickstart
 In this quickstart, you create a [logical server in Azure](logical-servers.md) and a [Hyperscale](service-tier-hyperscale.md) database in Azure SQL Database using the Azure portal, a PowerShell script, or an Azure CLI script, with the option to create one or more [High Availability (HA) replicas](service-tier-hyperscale-replicas.md#high-availability-replica). If you would like to use an existing logical server in Azure, you can also create a Hyperscale database using Transact-SQL.
 
 > [!TIP]
-> Lower, simplified pricing for SQL Database Hyperscale starts December 2023. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Prerequisites
 
@@ -55,6 +55,10 @@ To create a single database in the Azure portal, this quickstart starts at the A
 1. Under **Compute Hardware**, select **Change configuration**. Review the available hardware configurations and select the most appropriate configuration for your database. For this example, we will select the **Standard-series (Gen5)** configuration.
 1. Select **OK** to confirm the hardware generation.
 1. Under **Save money**, review if you qualify to use Azure Hybrid Benefit for this database. If so, select **Yes** and then confirm you have the required license.
+
+   > [!TIP]
+   > Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
+ 
 1. Optionally, adjust the **vCores** slider if you would like to increase the number of vCores for your database. For this example, we will select 2 vCores.
 1. Adjust the **High-Availability Secondary Replicas** slider to create one [High Availability (HA) replica](service-tier-hyperscale-replicas.md#high-availability-replica).
 1. Select **Apply**.

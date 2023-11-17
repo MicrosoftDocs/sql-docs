@@ -11,13 +11,33 @@ ms.topic: troubleshooting-general
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Before you start, note the logs location. The extension log is created in this folder:
+Before you start, note the logs locations.
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`
+## Log file locations
 
-The deployer logs are created in this folder:
+### Extension log
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\1.1.0.0\deployer.log`
+The extension log file is at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
+
+The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+
+   `unifiedagent.log`
+
+For extension version `1.1.24724.69` and earlier, the log file is:
+
+   `ExtensionLog_0.log`
+
+### Deployer logs
+
+The deployer logs are deployed at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\<extension version>\deployer.log`
+
+   Replace `<extension version>` with your extension version. For example:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\1.1.0.0\deployer.log`
 
 The failure to create the Arc-enabled SQL Server resource could be caused by several issues.
 

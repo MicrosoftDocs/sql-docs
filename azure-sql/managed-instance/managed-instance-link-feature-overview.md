@@ -53,7 +53,7 @@ The following table lists the functionality of the link feature and the minimum 
 
 | Initial primary version  | Operating system (OS)  | One-way replication |  Disaster recovery options |  Servicing update requirement |
 | --- | --- | --- | --- | --- |
-| Azure SQL Managed Instance | Windows Server and Linux | Preview |  [Bi-directional preview](#disaster-recovery) |  SQL Server 2022 CU10 <sup>1</sup> | 
+| Azure SQL Managed Instance | Windows Server and Linux | Preview |  [Bi-directional preview](#disaster-recovery) |  [SQL Server 2022 CU10 (KB5031778)](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10) <sup>1</sup> | 
 | SQL Server 2022 (16.x) | Windows Server and Linux |  Generally available |  [Bi-directional](#disaster-recovery): <br /> Offline (Generally available) <br /> Online (preview) |  SQL Server 2022 RTM | 
 | SQL Server 2019 (15.x) | Windows Server only | Generally available | From SQL Server to SQL MI only | [SQL Server 2019 CU20 (KB5024276)](https://support.microsoft.com/topic/kb5024276-cumulative-update-20-for-sql-server-2019-4b282be9-b559-46ac-9b6a-badbd44785d2) |
 | SQL Server 2017 (14.x) | N/A | N/A | N/A| N/A | 

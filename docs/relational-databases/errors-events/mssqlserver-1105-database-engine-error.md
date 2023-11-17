@@ -22,7 +22,7 @@ helpviewer_keywords:
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|NO_MORE_SPACE_IN_FG|  
-|Message Text|Could not allocate space for object '%.*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|  
+|Message Text|Could not allocate space for object '%.\*ls'%.\*ls in database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|  
   
 ## Explanation  
 No disk space is available in a filegroup.  

@@ -14,11 +14,25 @@ ms.topic: troubleshooting
 
 Before you start, ensure that you have met all the necessary [prerequisites](assess.md#prerequisites) for a successful assessment.
 
-Check the logs location. The extension log is created in this folder:
+## Log file locations
 
-`C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\ExtensionLog_0.log`
+### Extension log
 
-Azure Monitor Agent creates logs in this folder:
+The extension log file is at:
+
+   `C:\ProgramData\GuestConfig\extension_logs\Microsoft.AzureData.WindowsAgent.SqlServer\`
+
+The log file name depends on the version Azure Extension for SQL Server, for the latest version of Azure Extension for SQL Server, the log file is:
+
+   `unifiedagent.log`
+
+For extension version `1.1.24724.69` and earlier, the log file is:
+
+   `ExtensionLog_0.log`
+
+### Azure monitor agent log
+
+The Azure monitor agent log is at:
 
 `C:\ProgramData\GuestConfig\extension_logs\Microsoft.Azure.Monitor.AzureMonitorWindowsAgent\Extension.1.log`
 
@@ -71,7 +85,7 @@ Ensure the SQL Server built-in login NT AUTHORITY\SYSTEM is a member of the SQL 
 
 ### Azure Monitor Agent upload failed
 
-If the error states that the Azure Monitor Agent (AMA) upload failed, verify that the AMA is provisioned and configured correctly. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
+If the error states that the upload failed for Azure Monitor Agent (AMA), verify that the AMA is provisioned and configured correctly. The following components must be configured correctly to ensure that the agent can upload logs to the workspace:
 
 1. The linked Log Analytics workspace must have a table named `SqlAssessment_CL`.
    1. Navigate to the **Tables** tab under the linked Log Analytics workspace.
@@ -81,7 +95,7 @@ If the error states that the Azure Monitor Agent (AMA) upload failed, verify tha
    2. AMA with required version should be successfully provisioned.
 1. The data collection rule (DCR) and data collection endpoint (DCE) must be in the same location as the Log Analytics workspace.
    1. Navigate to the Overview tab of the resource group to which the Log Analytics workspace belongs.
-   2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sql-bpa-**.
+   2. Under the list of resources, the **DCR** and the **DCE** can be identified by their prefixes, **sqlbpa-**.
    3. Verify that the **DCR** and **DCE** are in the same location as the Log Analytics workspace.
 1. The data collection Rule (DCR) should be configured correctly.
    1. Navigate to The **Resources** tab under the relevant DCR. The Arc machine name should be present on the list.

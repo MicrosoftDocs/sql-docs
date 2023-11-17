@@ -23,7 +23,7 @@ dev_langs:
 Reconciles the columns in the remote Azure table to the columns in the Stretch-enabled SQL Server table.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 `sp_rda_reconcile_columns` adds columns to the remote table that exist in the Stretch-enabled SQL Server table but not in the remote table. These columns may be columns that you accidentally deleted from the remote table. However, `sp_rda_reconcile_columns` doesn't delete columns from the remote table that exist in the remote table but not in the SQL Server table.
 

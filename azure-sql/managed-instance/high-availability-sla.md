@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Managed Instance service high availabilit
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 05/01/2023
+ms.date: 11/16/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -23,7 +23,7 @@ monikerRange: "= azuresql || = azuresql-mi"
 This article describes high availability in Azure SQL Managed Instance.
 
 > [!IMPORTANT]
-> Zone-redundant configuration is currently available only for the Business Critical service tier.
+> Zone-redundant configuration is in public preview for the General Purpose service tier and generaly available for the Business Critical service tier.
 
 ## Overview
 
@@ -33,7 +33,7 @@ The goal of the high availability architecture in Azure SQL Managed Instance is 
 - node itself,
 - application layer.
 
-To minimize the impact in case of regional or bigger outages, you can use one of the available techniques cover with our [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+To minimize the impact in case of regional or bigger outages, you can use one of the available techniques covered with our [overview of business continuity](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 
 SQL Managed Instance runs on the latest stable version of the SQL Server Database Engine on the Windows operating system with all applicable patches. SQL Managed Instance automatically handles critical servicing tasks, such as patching, backups, Windows and SQL engine upgrades, and unplanned events such as underlying hardware, software, or network failures. When an instance is patched or fails over, the downtime isn't impactful if you [employ retry logic](../database/develop-overview.md#resiliency) in your app. SQL Managed Instance can quickly recover even in the most critical circumstances, ensuring that your data is always available. Most users do not notice that upgrades are performed continuously.
 
@@ -47,9 +47,7 @@ There are two different high availability architectural models based on the serv
 
 ## Locally redundant availability 
 
-Locally redundant availability is based on storing your compute node and data on [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. LRS is the lowest-cost redundancy option and offers the least durability compared to other options. If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account using LRS might be lost or unrecoverable. As such, to further protect your data when using the locally redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy).
-
-Locally redundant availability is available to instances in either service tier. 
+Locally redundant availability is based on storing your compute nodes and data on within a single datacenter in the primary region and protects your data in the event of local failure, such as a small-scale network or power failure. If a large-scale disaster such as fire or flooding occurs within a region, all replicas of a storage account or data on the compute nodes might be lost or unrecoverable. As such, to further protect your data when using the locally redundant availability option, consider using a more resilient storage option for your [database backups](automated-backups-overview.md#backup-storage-redundancy).
 
 ### General Purpose service tier
 
@@ -60,7 +58,7 @@ The General Purpose service tier uses the remote storage availability architectu
 The remote storage availability model includes two layers:
 
 - A stateless compute layer that runs the database engine process and contains only transient and cached data, such as the `tempdb` and `model` databases on the attached SSD, and plan cache, buffer pool, and columnstore pool in memory. This stateless node is operated by [Azure Service Fabric](/azure/service-fabric/service-fabric-azure-clusters-overview) that initializes database engine, controls health of the node, and performs failover to another node if necessary.
-- A stateful data layer with the database files (`.mdf` and `.ldf`) stored in Azure Blob Storage. Azure Blob Storage has built-in data availability and redundancy features. It guarantees that every record in the log file or page in the data file will be preserved even if database engine process crashes.
+- A stateful data layer with the database files (`.mdf` and `.ldf`) stored in Azure Blob Storage. Azure Blob Storage has built-in data availability and redundancy features. Locally redundant availability is based on storing your data on [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage) which copies your data three times within a single datacenter in the primary region. It guarantees that every record in the log file or page in the data file will be preserved even if database engine process crashes. 
 
 Whenever the database engine or the operating system is upgraded, or a failure is detected, Azure Service Fabric will move the stateless database engine process to another stateless compute node with sufficient free capacity. Data in Azure Blob storage isn't affected by the move, and the data/log files are attached to the newly initialized database engine process. This process guarantees high availability, but a heavy workload might experience some performance degradation during the transition since the new database engine process starts with cold cache.
 
@@ -77,10 +75,11 @@ As an extra benefit, the local storage availability model includes the ability t
 
 ## Zone-redundant availability
 
+Zone-redundant availability is based on placing compute node and storage replicas across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
 
-Zone-redundant availability is based on placing instance replicas across three Azure availability zones in the primary region. Each availability zone is a separate physical location with independent power, cooling, and networking.
+By default, the cluster of nodes for the local storage availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Managed Instance can place different replicas of a Business Critical instance in different availability zones in the same region. In the same way, the stateless compute nodes of a General Purpose service tier are placed in a different availability zone, while stateful storage is using [zone redundant storage (ZRS)](/azure/storage/common/storage-redundancy#zone-redundant-storage) configuration.
 
-By default, the cluster of nodes for the local storage availability model is created in the same datacenter. With the introduction of [Azure Availability Zones](/azure/availability-zones/az-overview), SQL Managed Instance can place different replicas of a Business Critical instance in different availability zones in the same region. To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (ATM). Because the zone-redundant configuration in the Business Critical service tier doesn't create additional database redundancy, you can enable it at no extra cost. By selecting a zone-redundant configuration, you can make your Business Critical instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Business Critical instances to zone-redundant configuration.
+To eliminate a single point of failure, the control ring is also duplicated across multiple zones as three gateway rings (GW). The routing to a specific gateway ring is controlled by [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (ATM). By selecting a zone-redundant configuration, you can make your Business Critical or General Purpose instances resilient to a much larger set of failures, including catastrophic datacenter outages, without any changes to the application logic. You can also convert any existing Business Critical or General Purpose instances to zone-redundant configuration.
 
 Because zone-redundant instances have replicas in different datacenters with some distance between them, the increased network latency might increase the transaction commit time, and thus impact the performance of some OLTP workloads. You can always return to the single-zone configuration by disabling the zone-redundancy setting. This process is an online operation similar to the regular service tier objective upgrade. At the end of the process, the instance is migrated from a zone-redundant ring to a single-zone ring or vice versa.
 
@@ -91,23 +90,37 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 Consider the following when using zone-redundancy: 
 
-- Zone redundancy is only available in the Business Critical service tier for SQL Managed Instance. 
-- For up to date information about the regions that support zone-redundant instances, see [Services support by region](/azure/availability-zones/az-region).
+- For up to date information about the regions that support zone-redundant configurations, see [Services support by region](/azure/availability-zones/az-region).
 - For zone redundant availability, choosing a [maintenance window](../database/maintenance-window.md) other than the default is currently available in [select regions](../database/maintenance-window.md?preserve-view=true&view=azuresql#azure-sql-managed-instance-region-support-for-maintenance-windows).
 
-Zone redundancy for SQL Managed Instance is supported in the following regions:
+### Supported regions for Business Critical instances
+
+Zone redundancy for Business Critical SQL Managed Instance is supported in the following regions:
 
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
-| Brazil South | North Europe | Qatar Central | South Africa North | Australia East |
-| Canada Central | Norway East | UAE North | | India Central |
-| Central US | UK South | | | Japan East |
-| East US | West Europe | | | Korea Central |
-| South Central US | Sweden Central | | | East Asia |
-| West US 2 | Switzerland North | | | |
-| West US 3 | | | | |
+| Brazil South | France Central | Qatar Central | South Africa North | Australia East |
+| Canada Central | Germany West Central | | | Central India |
+| Central US | Norway East | | | Japan East |
+| East US | North Europe | | | Korea Central |
+| South Central US | UK South | | | East Asia |
+| West US 2 | West Europe | | | |
+| West US 3 | Sweden Central | | | |
+| | Switzerland North | | | |
+| | Poland Central | | | |
 
+### Supported regions for General Purpose instances
 
+> [!Note]
+> Zone-redundant configuration is in public preview for the General Purpose service tier.
+
+| Americas | Europe | Middle East | Africa | Asia Pacific |
+|---|---|---|---|---|
+| Brazil South | France Central | Qatar Central | | Australia East |
+| East US | North Europe | | | Japan East |
+| East US 2 | UK South | | | Korea Central |
+| South Central US | West Europe | | | Southeast Asia |
+| West US 2 | | | | East Asia |
 
 ## <a id="testing-application-fault-resiliency"></a> Test application fault resiliency
 

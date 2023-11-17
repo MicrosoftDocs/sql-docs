@@ -4,11 +4,11 @@ description: "Consult this SQL Server error code list (between 13000 and 13999) 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 04/06/2023
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: supportability
 ms.topic: reference
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi||>=aps-pdw-2016-au7||>=sql-server-2016||>=sql-server-linux-2017"
+monikerRange: "=azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7 || >=sql-server-2016 || >=sql-server-linux-2017"
 ---
 # Database Engine events and errors (13000 to 13999)
 
@@ -56,7 +56,7 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 - [SQL Server 2016](?view=sql-server-2016&preserve-view=true)
 :::moniker-end
 
-::: moniker range=">=sql-server-ver16||>=sql-server-linux-ver16||=azuresql||=azuresql-db||=azuresql-mi||>=aps-pdw-2016-au7"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7"
 This article shows events and errors (between the range 13000 and 13999) for [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. If you want to view events and errors for other versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], see:
 
 - [SQL Server 2019](?view=sql-server-ver15&preserve-view=true)
@@ -78,11 +78,11 @@ This article shows events and errors (between the range 13000 and 13999) for [!I
 [!INCLUDE [sql-server-2019-database-engine-events-and-errors-13000-13999](includes/sql-server-2019-database-engine-events-and-errors-13000-13999.md)]
 :::moniker-end
 
-::: moniker range=">=sql-server-ver16||>=sql-server-linux-ver16||=azuresql||=azuresql-db||=azuresql-mi||>=aps-pdw-2016-au7"
+::: moniker range=">=sql-server-ver16 || >=sql-server-linux-ver16 || =azuresql || =azuresql-db || =azuresql-mi || >=aps-pdw-2016-au7"
 [!INCLUDE [sql-server-2022-database-engine-events-and-errors-13000-13999](includes/sql-server-2022-database-engine-events-and-errors-13000-13999.md)]
 :::moniker-end
 
-## See also
+## Related content
 
 - [Database Engine events and errors](database-engine-events-and-errors.md)
 - [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)

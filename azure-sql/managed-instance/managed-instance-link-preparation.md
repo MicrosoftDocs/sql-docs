@@ -28,7 +28,7 @@ To create a link between SQL Server and Azure SQL Managed Instance, you need the
 - An active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
 - [Supported version of SQL Server](managed-instance-link-feature-overview.md#prerequisites) with the required service update.
 - Azure SQL Managed Instance. [Get started](instance-create-quickstart.md) if you don't have it. 
-- Decide which server you intend to be the initial primary to determine where you should create the link from. Configuring a link from SQL Managed Instance primary to SQL Server secondary is only supported starting with SQL Server 2022 CU10. 
+- Decide which server you intend to be the initial primary to determine where you should create the link from. Configuring a link from SQL Managed Instance primary to SQL Server secondary is only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
 > [!CAUTION]  
 > When you create your SQL managed instance to use with the link feature, take into account the memory requirements for any In-Memory OLTP features SQL Server uses. For more information, see [Overview of Azure SQL Managed Instance resource limits](resource-limits.md).
@@ -267,7 +267,7 @@ The following lists the resources that should be added to your allowlist:
 
 - The fully qualified domain name (FQDN) of your SQL Managed Instance. For example: *managedinstance1.6d710bcf372b.database.windows.net*.
 - Microsoft Entra Authority
-- Microsoft Entra Endpoint Resource Id
+- Microsoft Entra Endpoint Resource ID
 - Resource Manager Endpoint
 - Service Endpoint 
 
@@ -305,7 +305,7 @@ To use T-SQL to test connectivity, you have to check the connection in both dire
 
 Use SQL Server Agent on SQL Server to run connectivity tests from SQL Server to SQL Managed Instance.
 
-1. Connect to SQL Managed Instance, and run the following script to generates parameters you'll need later:
+1. Connect to SQL Managed Instance, and run the following script to generate parameters you'll need later:
 
    ```sql
    SELECT 'DECLARE @serverName NVARCHAR(512) = N''' + value + ''''

@@ -16,7 +16,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md
 - Installing the Arc agent and [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] extension can't be done as part of sysprep image creation.
 - Multiple instances of [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] installed on the same host operating system with the same instance name.
 - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in Azure Virtual Machines.
-- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pay-as-you-go billing in Azure VMware Solution (AVS).
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always On availability group on failover cluster instances.
 - The rare combination of availability group on failover cluster instances.
 
 > [!NOTE]  

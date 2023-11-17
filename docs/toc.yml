@@ -9299,13 +9299,13 @@ items:
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
-        - name: Connect to Server - Login Page - Database Engine
+        - name: Connect to Server (Login page) - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
-        - name: Connect to Server - Connection Properties Page - Database Engine
+        - name: Connect to Server (Connection Properties page) - Database Engine
           href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Always Encrypted Page - Database Engine
+        - name: Connect to Server (Always Encrypted page) - Database Engine
           href: ssms/f1-help/connect-to-server-always-encrypted-page-database-engine.md
-        - name: Connect to Server - Additional Connection Parameters Page - Database Engine
+        - name: Connect to Server (Additional Connection Parameters page) - Database Engine
           href: ssms/f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md
         - name: Login - Connect to SSAS Server
           href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
@@ -10485,6 +10485,8 @@ items:
         items:
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot connectivity to DPS or telemetry endpoints
+          href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >

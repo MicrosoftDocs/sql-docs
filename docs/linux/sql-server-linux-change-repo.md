@@ -148,7 +148,7 @@ If necessary, remove the old repository. Use one of the following commands based
 
 | Repository | Command to remove |
 | --- | --- |
-| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 focal main'` |
+| **2022** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022 jammy main'` |
 | **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/mssql-server-2019 focal main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017 bionic main'` |
 

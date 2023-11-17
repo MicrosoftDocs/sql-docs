@@ -62,9 +62,9 @@ An example workflow for a move operation is illustrated in the following diagram
 
 :::image type="content" source="media/database-copy-move-how-to/database-move-diagram.png" alt-text="Diagram that illustrates the workflow of a move operation.":::
 
-Design of **database move** operation guarantees there is no data loss. When user completes the move operation, source database will be closed for any workload and transaction log will be replicated to destination database. Only then, destination database will become online, and source database dropped. This design ensures all data from the source database is moved to destination database.
+The design of the **database move** operation guarantees there is no data loss. When a user completes the move operation, the source database stops accepting any workloads and the transaction is replicated to the destination database. Only then, the destination database becomes online, and the source database dropped. This design ensures all data from the source database is moved to the destination database.
 
-Similar to moving the database, the **database copy** operation is also continuous. Completing the database copy operation stops replication of the transaction log to the destination database. Although the user explicitly issues the command to complete the copy operation, the user doesn't control exactly when log replication stops.
+Similar to moving the database, the **database copy** operation is also continuous. Completing the database copy operation stops replication of the transaction log to the destination database. Although the user explicitly issues the command to complete the copy operation, the user doesn't control exact moment when log replication stops.
 
 ## Prerequisites
 

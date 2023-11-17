@@ -13,6 +13,10 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
+## November 21, 2023
+
+**Extension version**: `1.1.2512.104`
+
 ## November 14, 2023
 
 **Extension version**: `1.1.2504.99`

@@ -17,7 +17,7 @@ helpviewer_keywords:
 # Authentication in Reporting Services
   Authentication is the process of establishing a user's right to an identity. There are many techniques that you can use to authenticate a user. The most common way is to use passwords. When you implement Forms Authentication, for example, you want an implementation that queries users for credentials (usually by some interface that requests a login name and password) and then validates users against a data store, such as a database table or configuration file. If the credentials can't be validated, the authentication process fails and the user will assume an anonymous identity.  
   
-## Custom Authentication in Reporting Services  
+## Custom authentication in Reporting Services  
  In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the Windows operating system handles the authentication of users either through integrated security or through the explicit reception and validation of user credentials. Custom authentication can be developed in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to support additional authentication schemes. This is made possible through the security extension interface <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. All extensions inherit from the <xref:Microsoft.ReportingServices.Interfaces.IExtension> base interface for any extension deployed and used by the report server. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, as well as <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>, are members of the <xref:Microsoft.ReportingServices.Interfaces> namespace.  
   
  The primary way to authenticate against a report server in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] is the <xref:ReportService2010.ReportingService2010.LogonUser%2A> method. This member of the Reporting Services Web service can be used to pass user credentials to a report server for validation. Your underlying security extension implements **IAuthenticationExtension2.LogonUser** which contains your custom authentication code. In the Forms Authentication sample, **LogonUser**, which performs an authentication check against the supplied credentials and a custom user store in a database. An example of an implementation of **LogonUser** looks like this:  
@@ -87,14 +87,14 @@ internal static bool VerifyPassword(string suppliedUserName,
 }  
 ```  
   
-## Authentication Flow  
+## Authentication flow  
  The Reporting Services Web service provides custom authentication extensions to enable Forms Authentication by the web portal and the report server.  
   
  The <xref:ReportService2010.ReportingService2010.LogonUser%2A> method of the Reporting Services Web service is used to submit credentials to the report server for authentication. The Web service uses HTTP headers to pass an authentication ticket (known as a "cookie") from the server to the client for validated logon requests.  
   
  The following illustration depicts the method of authenticating users to the Web service when your application is deployed with a report server configured to use a custom authentication extension.  
-  
- ![Reporting Services security authentication flow](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services security authentication flow")  
+
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif" alt-text="Screenshot of the Reporting Services security authentication flow." lightbox="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif":::
   
  As shown in Figure 2, the authentication process is as follows:  
   
@@ -138,7 +138,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can authenticate and authorize users with either Windows Authentication or custom authentication, but not both. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support simultaneous use of multiple security extensions.  
   
-## See Also  
- [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+## See also  
+ [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

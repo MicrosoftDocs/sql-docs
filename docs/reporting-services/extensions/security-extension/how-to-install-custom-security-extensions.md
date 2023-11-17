@@ -26,7 +26,7 @@ In previous versions, Report Manager was the front-end and could be configured w
 
 In previous versions, extensions could rely on a common assumption that ASP.NET objects would be readily available. Since the new portal doesn't run in ASP.NET, the extension might hit issues with objects being NULL.
 
-The most generic example is accessing HttpContext.Current to read request information such as headers and cookies. In order to allow extensions to make the same decisions, we introduced a new method in the extension that provides request information and is called when authenticating from the portal.
+The most generic example is accessing ``HttpContext.Current`` to read request information such as headers and cookies. In order to allow extensions to make the same decisions, we introduced a new method in the extension that provides request information and is called when authenticating from the portal.
 
 Custom extensions have to implement the <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> interface in order to use this new interface. The extensions will need to implement both versions of the <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A> method, as one is called by the reportserver context and other used in Microsoft.ReportingServices.Portal.WebHost.exe process. The following sample shows one of the simple implementations for the portal where the identity resolved by the reportserver is the one used.
 
@@ -46,7 +46,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## Deployment and configuration
 
-The basic configurations needed for custom security extension are the same as previous releases. Changes are needed for web.config and rsreportserver.config: For more information, see [Configure Custom or Forms Authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+The basic configurations needed for custom security extension are the same as previous releases. Changes are needed for web.config and rsreportserver.config: For more information, see [Configure Custom or Forms authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 There is no longer a separate web.config for the Report Manager, the portal will inherit the same settings as the reportserver endpoint.
 
@@ -88,7 +88,7 @@ Open the Microsoft.ReportingServices.Portal.WebHost.exe.config file for RSWebApp
 
 ## Configure passthrough cookies
 
-The new portal and the reportserver communicate using internal soap APIs for some of its operations (similar to the previous version of the Report Manager). When additional cookies are required to be passed from the portal to the reportserver, the PassThroughCookies property is available to use. For more information, see [Configure the Web Portal to Pass Custom Authentication Cookies](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
+The new portal and the reportserver communicate using internal soap APIs for some of its operations (similar to the previous version of the Report Manager). When additional cookies are required to be passed from the portal to the reportserver, the PassThroughCookies property is available to use. For more information, see [Configure the web portal to pass custom authentication cookies](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
 
 ```xml
 <UI>
@@ -102,7 +102,7 @@ The new portal and the reportserver communicate using internal soap APIs for som
 
 ## Next steps
 
-- [Configure Custom or Forms Authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
-- [Configure Report Manager to Pass Custom Authentication Cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+- [Configure Custom or Forms authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
+- [Configure the web portal to pass custom authentication cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

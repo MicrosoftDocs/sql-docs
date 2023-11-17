@@ -1,5 +1,5 @@
 ---
-title: "Security Extensions Overview"
+title: "Security extensions overview"
 description: Find out about security extensions in Reporting Services. See the situations in which custom authentication and authorization is appropriate.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,12 +11,12 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "security [Reporting Services], extensions"
 ---
-# Security Extensions Overview - Reporting Services (SSRS)
+# Security extensions overview - Reporting Services (SSRS)
   A [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] security extension enables the authentication and authorization of users or groups; that is, it enables different users to log on to a report server and, based on their identities, perform different tasks or operations. By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a Windows-based authentication extension, which uses Windows account protocols to verify the identities of users who claim to have accounts on the system. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses a role-based security system to authorize users. The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] role-based security model is similar to the role-based security models of other technologies.  
   
  Because security extensions are based on an open and extensible API, you can create new authentication and authorization extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following is an example of a typical security extension implementation that uses Forms-based authentication and authorization:  
-  
- ![Reporting Services security extension process](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services security extension process")  
+
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif" alt-text="Screenshot of the Reporting Services security extension process." lightbox="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif":::
   
  As shown in the illustration, authentication and authorization occur as follows:  
   
@@ -46,14 +46,14 @@ helpviewer_keywords:
   
 13. The user continues to request operations on the report server until the session has ended.  
   
-## When to Implement a Security Extension  
+## When to implement a security extension  
  We recommend that you use Windows Authentication if at all possible. However, custom authentication and authorization for [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] may be appropriate in the following two cases:  
   
 -   You have an Internet or extranet application that cannot use Windows accounts.  
   
 -   You have custom-defined users and roles and need to provide a matching authorization scheme in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## See Also  
- [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+## See also  
+ [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
   
   

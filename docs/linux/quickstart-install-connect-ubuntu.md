@@ -34,9 +34,7 @@ For more information on supported platforms, see [Release notes for SQL Server 2
 <!--SQL Server 2022 on Linux-->
 ::: moniker range=">= sql-server-linux-ver16 || >= sql-server-ver16"
 
-In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Ubuntu 20.04. Then you can connect with **sqlcmd** to create your first database and run queries.
-
-[!INCLUDE [ubuntu-support](includes/ubuntu-support.md)]
+In this quickstart, you install [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] on Ubuntu 20.04 or 22.04. Then you can connect with **sqlcmd** to create your first database and run queries.
 
 For more information on supported platforms, see [Release notes for [!INCLUDE [sssql22](../includes/sssql22-md.md)] on Linux](sql-server-linux-release-notes-2022.md).
 

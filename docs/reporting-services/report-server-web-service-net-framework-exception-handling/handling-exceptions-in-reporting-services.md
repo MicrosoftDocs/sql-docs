@@ -1,5 +1,5 @@
 ---
-title: "Handling Exceptions in Reporting Services"
+title: "Handle Exceptions in Reporting Services"
 description: Learn how to handle exceptions that occur in Reporting Services so you can determine the next appropriate action to take in your applications.
 author: maggiesMSFT
 ms.author: maggies
@@ -22,7 +22,7 @@ helpviewer_keywords:
   
 ## See also  
  [Detail Property](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md)   
- [Introducing Exception Handling in Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [Introduction to exception management in Reporting Services](../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException Class](../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   

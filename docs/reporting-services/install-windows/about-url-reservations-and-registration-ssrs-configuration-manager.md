@@ -1,5 +1,5 @@
 ---
-title: "URL reservations & registration (Configuration Manager)"
+title: "URL reservations & registration (Report Server Configuration Manager)"
 description: "URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS."
 author: maggiesMSFT
 ms.author: maggies
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "URL registration"
   - "Report Server service, URL reservations"
 ---
-# About URL reservations and registration (Configuration Manager)
+# About URL reservations and registration (Report Server Configuration Manager)
   URLs for Reporting Services applications are defined as URL reservations in HTTP.SYS. A URL reservation defines the syntax of a URL endpoint to a Web application. URL reservations are defined for both the Report Server Web service and the web portal when you configure the applications on the report server. URL reservations are created for you automatically when configure URLs through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool:  
   
 -   Setup will create URL reservations using default values. If Setup installs the default configuration, it will reserve two URLs; one for the Report Server Web service, and another for the web portal. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to add more URLs or modify the default URLs that Setup creates.  
@@ -39,7 +39,7 @@ helpviewer_keywords:
 > This article does not describe URL access to specific reports that are stored on the report server. For more information about URL access to these items, see [Access report server items by using URL access](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> URL reservation and registration  
- A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace Reservations, Registration, and Routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
+ A URL reservation defines the URLs that can be used to access a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will reserve one or more URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] in HTTP.SYS, and then register them when the service starts. By appending parameters to the URL, you can open reports through the Web service. Reservations and registration are provided by HTTP.SYS. For more information, see [Namespace reservations, registration, and routing](/windows/win32/http/namespace-reservations-registrations-and-routing).  
   
  *URL reservation* is a process by which a URL endpoint to a Web application is created and stored in HTTP.SYS. HTTP.SYS is the common repository of all URL reservations that are defined on a computer and defines a set of common rules that guarantee unique URL reservations.  
   
@@ -87,7 +87,7 @@ helpviewer_keywords:
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservations display the account of the URL reservation. The virtual service account is used for all URLs that are created for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications that run in the same instance.
   
  
- Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
+ Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the report server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ##  <a name="URLlocalAdmin"></a> URLs for local administration  
  You can use `https://localhost/reportserver` or `https://localhost/reports` if you specified a strong or weak wildcard for the URL reservation.  
@@ -97,6 +97,6 @@ helpviewer_keywords:
  [!INCLUDE[winvista](../../includes/winvista-md.md)], [!INCLUDE[winserver2008](../../includes/winserver2008-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native mode report server for local administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## See also  
- [Configure a URL &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL Reservation Syntax &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configure a URL &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL Reservation Syntax &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure a report server database connection (Configuration Manager)"
+title: "Configure a report server database connection (Report Server Configuration Manager)"
 description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
 author: maggiesMSFT
 ms.author: maggies
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 
-# Configure a report server database connection (Configuration Manager)
+# Configure a report server database connection (Report Server Configuration Manager)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server. The initial connection can be created during a report server installation if you are installing the default configuration. In most cases, you will use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the connection after Setup is complete. You can modify the connection at any time to change the account type or reset credentials. For step-by-step instructions on how to create the database and configure the connection, see [Create a Native mode report server database  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server. The initial connection can be created during a report server installation if you are installing the default configuration. In most cases, you will use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the connection after Setup is complete. You can modify the connection at any time to change the account type or reset credentials. For step-by-step instructions on how to create the database and configure the connection, see [Create a Native mode report server database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
 You must configure a report server database connection in the following circumstances:  
 
@@ -23,13 +23,13 @@ You must configure a report server database connection in the following circumst
 
 - Configuring a report server to use a different report server database.  
 
-- Changing the user account or password that is used for the database connection. You only need to update the database connection when the account information is stored in the RSReportServer.config file. If you are using the service account for the connection (which uses Windows integrated security as the credential type), the password is not stored, eliminating the need to update the connection information. For more information about changing accounts, see [Configure the report server service account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+- Changing the user account or password that is used for the database connection. You only need to update the database connection when the account information is stored in the RSReportServer.config file. If you are using the service account for the connection (which uses Windows integrated security as the credential type), the password is not stored, eliminating the need to update the connection information. For more information about changing accounts, see [Configure the Report Server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
 
-- Configuring a report server scale-out deployment. Configuring a scale-out deployment requires that you create multiple connections to a report server database. For more information about how to perform this multi-step operation, see [Configure a Native mode report server scale-out deployment &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+- Configuring a report server scale-out deployment. Configuring a scale-out deployment requires that you create multiple connections to a report server database. For more information about how to perform this multi-step operation, see [Configure a Native mode report server scale-out deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
 ## How Reporting Services connects to the database engine
 
-Report server access to a report server database depends on credentials and connection information, and on encryption keys that are valid for the report server instance that uses that database. Having valid encryption keys is necessary for storing and retrieving sensitive data. Encryption keys are created automatically when you configure the database for the first time. After the keys are created, you must update them if you change the Report Server service identity. For more information about working with encryption keys, see [Configure and manage encryption keys &#40;Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Report server access to a report server database depends on credentials and connection information, and on encryption keys that are valid for the report server instance that uses that database. Having valid encryption keys is necessary for storing and retrieving sensitive data. Encryption keys are created automatically when you configure the database for the first time. After the keys are created, you must update them if you change the Report Server service identity. For more information about working with encryption keys, see [Configure and manage encryption keys &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 The report server database is an internal component, accessed only by the report server. The credentials and connection information you specify for the report server database are used exclusively by the report server. Users who request reports do not require databases permissions or a database login for the report server database.  
 
@@ -45,7 +45,7 @@ To configure the connection, you must use the [!INCLUDE[ssRSnoversion](../../inc
 
 - Name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosting the report server database.  
 
-- Name of the report server database. When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a report server database;Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+- Name of the report server database. When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a report server database;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
 
 - Credential type. You can use the service accounts, a Windows domain account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login.  
 
@@ -95,7 +95,7 @@ If the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is configured
 
 You can use Windows integrated security to connect through the Report Server service account. The account is granted login rights to the report server database. This is the default credential type chosen by Setup if you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration.  
 
-The service account is a trusted account that provides a low-maintenance approach to managing a report server database connection. Because the service account uses Windows integrated security to make the connection, the credentials do not have to be stored. However, if you subsequently change the service account password or identity (for example, switching from a built-in account to a domain account), be sure to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to make the change. The tool automatically updates the database permissions to use the revised account information. For more information, see [Configure the report server service account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+The service account is a trusted account that provides a low-maintenance approach to managing a report server database connection. Because the service account uses Windows integrated security to make the connection, the credentials do not have to be stored. However, if you subsequently change the service account password or identity (for example, switching from a built-in account to a domain account), be sure to use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to make the change. The tool automatically updates the database permissions to use the revised account information. For more information, see [Configure the Report Server service account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
 
 If you configure the database connection to use the service account, the account must have network permissions if the report server database is on a remote computer. Do not use the service account if the report server database is on a different domain, behind a firewall, or if you are using workgroup security instead of domain security. Use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account instead.  
 
@@ -127,7 +127,7 @@ You can configure a report server instance to use a different report server data
 
 ## Configure multiple report servers to use the same report server database
 
-You can configure multiple report servers to use the same report server database. This deployment configuration is called a scale-out deployment. This configuration is a prerequisite if you want to run multiple report servers in a server cluster. However, you can also use this configuration if you want to segment service applications or if you want to test the installation and settings of a new report server instance to compare it with an existing report server installation. For more information, see [Configure a Native mode report server scale-out deployment &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+You can configure multiple report servers to use the same report server database. This deployment configuration is called a scale-out deployment. This configuration is a prerequisite if you want to run multiple report servers in a server cluster. However, you can also use this configuration if you want to segment service applications or if you want to test the installation and settings of a new report server instance to compare it with an existing report server installation. For more information, see [Configure a Native mode report server scale-out deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure a URL (Configuration Manager)"
+title: "Configure a URL (Report Server Configuration Manager)"
 description: "Configure a URL  (Report Server Configuration Manager)"
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,7 @@ ms.custom: updatefrequency5
 helpviewer_keywords:
   - "URL access [Reporting Services], syntax"
 ---
-# Configure a URL (Configuration Manager)
+# Configure a URL (Report Server Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  
   
  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to configure the URLs. All parts of the URL are defined in this tool. Unlike earlier releases, Internet Information Services (IIS) Web sites no longer provide access to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications in [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] and later versions.  
@@ -25,7 +25,7 @@ helpviewer_keywords:
   
 -   Set advanced URL properties to define additional URLs.  
   
- For more information about how URLs are stored and maintained or interoperability issues, see [About URL reservations and registration &#40;Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services side-by-side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
+ For more information about how URLs are stored and maintained or interoperability issues, see [About URL reservations and registration &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services side-by-side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
   
 ## Prerequisites  
  Before you create or modify a URL, remember the following points:  
@@ -38,7 +38,7 @@ helpviewer_keywords:
   
 -   Choose a time that has low report activity. Each time the URL reservation changes, you can expect that the application domains for Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] might be recycled.  
   
--   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs  &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+-   For an overview of URL construction and usage in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 ### Configure a URL for the report server web service  
   
@@ -84,7 +84,7 @@ helpviewer_keywords:
   
 9. Select **Apply** to create the URL.  
   
-10. Test the URL by selecting the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native mode report server database &#40;Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Test the URL by selecting the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native mode report server database &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  If you have existing TLS Bindings and URL Reservations and you want to change the TLS Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
@@ -154,7 +154,7 @@ helpviewer_keywords:
 6.  Test the URL by opening a browser window and entering the URL.  
   
 ## URLs for multiple report server instances on the same computer  
- If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL reservations for multi-instance report server deployments &#40;Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
+ If you are reserving URLs for multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you should follow naming conventions so that you can avoid naming conflicts. For more information, see [URL reservations for multi-instance report server deployments &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md).  
   
 ##  <a name="URLExamples"></a> Examples of URL configurations  
  The following list shows some examples of what a report server URL might resemble:  
@@ -187,5 +187,5 @@ helpviewer_keywords:
   
 ## See Also
 
- [Configure report server URLs &#40;Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
- [Report server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

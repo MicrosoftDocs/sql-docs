@@ -50,7 +50,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 :::image type="content" source="../../reporting-services/install-windows/media/rs-sharepointscale.gif" alt-text="Screenshot of a typical three tier environment showing the numbered items." lightbox="../../reporting-services/install-windows/media/rs-sharepointscale.gif":::
   
- The following steps assume that an administrator is installing and configuring the server. The server is setup as a new application server in the farm and not used as a web front-end (WFE).  
+ The following steps assume that an administrator is installing and configuring the server. The server is set up as a new application server in the farm and not used as a web front-end (WFE).  
   
 |Step|Description and Link|  
 |----------|--------------------------|  

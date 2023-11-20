@@ -5,7 +5,7 @@ description: Learn how to perform an online move or copy operation of your datab
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 06/21/2023
+ms.date: 11/20/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
@@ -230,7 +230,7 @@ Consider the following limitations of the copy and move feature:
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
 
-## Next steps
+## Related content
 
 More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).

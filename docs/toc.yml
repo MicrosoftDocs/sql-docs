@@ -11332,7 +11332,9 @@ items:
         - name: 7357
           href: relational-databases/errors-events/mssqlserver-7357-database-engine-error.md
         - name: 7391
-          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
+          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md
+        - name: 7399
+          href: relational-databases/errors-events/mssqlserver-7399-database-engine-error.md
         - name: 7711
           href: relational-databases/errors-events/mssqlserver-7711-database-engine-error.md
         - name: 7901

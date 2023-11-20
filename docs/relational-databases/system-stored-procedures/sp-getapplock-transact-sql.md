@@ -95,6 +95,7 @@ EXEC @result = sp_getapplock @Resource = 'Form1',
                @LockMode = 'Shared';  
 EXEC @result = sp_getapplock @Resource = 'Form1',   
                @LockMode = 'Exclusive';  
+EXEC @result = sp_releaseapplock @Resource = 'Form1';  
 COMMIT TRANSACTION;  
 GO  
 ```  

@@ -128,7 +128,7 @@ Creating a node or edge table as a temporal table is not supported.
 Stretch database is not supported for node or edge table.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
 

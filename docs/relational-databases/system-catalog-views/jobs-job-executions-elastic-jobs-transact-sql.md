@@ -3,7 +3,7 @@ title: "jobs.job_executions (Azure Elastic Jobs) (Transact-SQL)"
 description: "The jobs.job_executions system view contains information about Azure Elastic job execution history."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 11/03/2023
+ms.date: 11/13/2023
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -65,6 +65,9 @@ The following table lists the possible job execution states in `lifecycle`:
 ## Permissions
 
 Members of the *jobs_reader* role can SELECT from this view. For more information, see [Elastic jobs in Azure SQL Database (preview)](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true#elastic-job-database-permissions).
+
+> [!CAUTION]
+> You should not update internal catalog views in the *job database*. Manually changing these catalog views can corrupt the *job database* and cause failure. These views are for read-only querying only. You can use the stored procedures on your *job database*.
 
 ## Remarks
 

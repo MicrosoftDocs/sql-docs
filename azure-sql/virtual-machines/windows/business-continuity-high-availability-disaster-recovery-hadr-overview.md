@@ -78,7 +78,7 @@ You can have a disaster recovery solution for your SQL Server databases in a hyb
 
 ## Free DR replica in Azure
 
-If you have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot:primaryr3), you can implement hybrid disaster recovery (DR) plans with SQL Server without incurring additional licensing costs for the passive disaster recovery instance.
+If you have [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?rtc=1&activetab=software-assurance-default-pivot:primaryr3), you can implement hybrid disaster recovery (DR) plans with SQL Server without incurring additional licensing costs for the passive disaster recovery instance. You also qualify for license-free DR replicas with pay-as-you-go licensing if all replicas are hosted in Azure.
 
 For example, you can have two free passive secondaries when all three replicas are hosted in Azure:
 

@@ -3,7 +3,7 @@ title: "Lookup Transformation"
 description: "Lookup Transformation"
 author: chugugrace
 ms.author: chugu
-ms.date: "03/14/2017"
+ms.date: "11/19/2023"
 ms.service: sql
 ms.subservice: integration-services
 ms.topic: conceptual
@@ -136,6 +136,12 @@ helpviewer_keywords:
   Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
   
 ### Options  
+
+> [!NOTE]
+> The match output can differ depending on whether Full cache mode, No cache mode, or Partial cache mode is used:
+> - In Full cache mode, the database is queried once during the pre-execute phase of the data flow and the entire reference set is pulled into memory. This means that we will rely on SSIS engine's matching rule that is case sensitive, sensitive with trailing spaces and sensitive with numeric' s precision and scale. 
+> - However, when No cache or Partial cache mode is used,  no caching is done during the pre-execute phase. This means we will use the source database's matching rule.  For example, if source is a SQL Server database and if column collation is case insensitive, then the matching rule should also be case insensitive.
+
  **Full cache**  
  Generate and load the reference dataset into cache before the Lookup transformation is executed.  
   
@@ -191,13 +197,13 @@ helpviewer_keywords:
  Create a new table by using the **Create Table** dialog box.  
   
  **Use results of an SQL query**  
- Choose this option to browse to a preexisting query, build a new query, check query syntax, and preview query results.  
+ Choose this option to browse to a pre-existing query, build a new query, check query syntax, and preview query results.  
   
  **Build query**  
  Create the Transact-SQL statement to run by using **Query Builder**, a graphical tool that is used to create queries by browsing through data.  
   
  **Browse**  
- Use this option to browse to a preexisting query saved as a file.  
+ Use this option to browse to a pre-existing query saved as a file.  
   
  **Parse Query**  
  Check the syntax of the query.  

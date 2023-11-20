@@ -22,7 +22,7 @@ After the link is created, you can then fail over to your secondary replica for 
 
 > [!NOTE]
 > - It's also possible to configure the link by using [scripts](managed-instance-link-configure-how-to-scripts.md). 
-> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with SQL Server 2022 CU10. 
+> - Configuring Azure SQL Managed Instance as your initial primary is currently in preview and only supported starting with [SQL Server 2022 CU10](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10). 
 
 
 ## Overview

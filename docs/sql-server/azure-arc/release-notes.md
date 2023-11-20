@@ -15,7 +15,7 @@ ms.custom: ignite-2023
 
 ## November 14, 2023
 
-**Extension version**: `To be announced`
+**Extension version**: `1.1.2504.99`
 
 ### Azure extension for SQL Server
 

@@ -5,7 +5,7 @@ description: Learn how to perform an online move or copy operation of your datab
 author: sasapopo
 ms.author: sasapopo
 ms.reviewer: mathoma, danil, randolphwest
-ms.date: 06/21/2023
+ms.date: 11/20/2023
 ms.service: sql-managed-instance
 ms.subservice: data-movement
 ms.custom: devx-track-azurecli, devx-track-azurepowershell, ignite-2023
@@ -19,7 +19,7 @@ This article describes how to copy or move a database online across instances in
 
 ## Overview
 
-You can perform an online copy or move operation of a database across managed instances by using Always On availability group technology. The copy and move feature creates a new database on the destination instance as a copy of the source database. With this feature, data replication is continuous, asynchronous, and near real-time. It also ensures that there's no data loss.
+You can perform an online copy or move operation of a database across managed instances by using Always On availability group technology. The copy and move feature creates a new database on the destination instance as a copy of the source database. With this feature, data replication is reliable, consistent, asynchronous, and near real-time.
 
 When you *copy* a database, the source database remains online during the operation and after it's completed.
 
@@ -61,6 +61,10 @@ Here's the workflow for copying or moving a database:
 An example workflow for a move operation is illustrated in the following diagram:
 
 :::image type="content" source="media/database-copy-move-how-to/database-move-diagram.png" alt-text="Diagram that illustrates the workflow of a move operation.":::
+
+The design of the **database move** operation guarantees there is no data loss. When a user completes the move operation, the source database stops accepting any workloads and the transaction is replicated to the destination database. Only then, the destination database becomes online, and the source database dropped. This design ensures all data from the source database is **moved** to the destination database.
+
+The **database copy** operation is very similar to database move. The only important difference is how the operation ends. Completing the database copy operation stops replication of the transaction log to the destination database. Although the user explicitly issues the command to complete the copy operation, the user doesn't control exact moment when log replication stops. Finally, both source and destination database are online, independent and ready for read-write workload.
 
 ## Prerequisites
 
@@ -226,7 +230,7 @@ Consider the following limitations of the copy and move feature:
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
 
-## Next steps
+## Related content
 
 More documentation related to database copy and move.
 - Azure PowerShell documentation for [database copy](/powershell/module/az.sql/copy-azsqlinstancedatabase) and [database move](/powershell/module/az.sql/move-azsqlinstancedatabase).

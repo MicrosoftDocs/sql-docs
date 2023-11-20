@@ -101,11 +101,12 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 |---|---|---|---|---|
 | Brazil South | France Central | Qatar Central | South Africa North | Australia East |
 | Canada Central | Germany West Central | | | Central India |
-| Central US | Norway East | | | Japan East |
-| East US | North Europe | | | Korea Central |
-| South Central US | UK South | | | East Asia |
-| West US 2 | West Europe | | | |
-| West US 3 | Sweden Central | | | |
+| Central US | Italy North | | | Japan East |
+| East US | Norway East | | | Korea Central |
+| South Central US | North Europe | | | East Asia |
+| West US 2 | UK South | | | |
+| West US 3 | West Europe | | | |
+| | Sweden Central | | | |
 | | Switzerland North | | | |
 | | Poland Central | | | |
 
@@ -118,9 +119,9 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 |---|---|---|---|---|
 | Brazil South | France Central | Qatar Central | | Australia East |
 | East US | North Europe | | | Japan East |
-| East US 2 | UK South | | | Korea Central |
-| South Central US | West Europe | | | Southeast Asia |
-| West US 2 | | | | East Asia |
+| South Central US | UK South | | | Korea Central |
+| West US 2 | West Europe | | | Southeast Asia |
+| | | | | East Asia |
 
 ## <a id="testing-application-fault-resiliency"></a> Test application fault resiliency
 

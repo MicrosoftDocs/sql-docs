@@ -409,6 +409,8 @@ If the `-P` option is used with the `-E` option, an error message is generated.
 
 If the `-P` option is followed by more than one argument, an error message is generated and the program exits.
 
+A password containing special characters can generate an error message. You should escape special characters when using `-P`, or use the `SQLCMDPASSWORD` environment variable instead.
+
 #### -S [*protocol*:]*server*[\\*instance_name*][,*port*]
 
 Specifies the instance of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to which to connect. It sets the **sqlcmd** scripting variable `SQLCMDSERVER`.

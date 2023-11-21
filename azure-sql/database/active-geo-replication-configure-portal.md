@@ -8,7 +8,7 @@ ms.date: 06/29/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: tutorial
-ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023
+ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershell
 ---
 # Tutorial: Configure active geo-replication and failover (Azure SQL Database)
 

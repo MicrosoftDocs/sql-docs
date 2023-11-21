@@ -89,6 +89,7 @@ resources
     | parse properties with * 'uploadStatus : ' uploadStatus ';' *
     | project uploadStatus, subscriptionId, resourceGroup, machineName
     | where uploadStatus !in ('OK') //comment this out to see all upload stats
+    | order by uploadStatus desc
 ```
 
 ## Related content

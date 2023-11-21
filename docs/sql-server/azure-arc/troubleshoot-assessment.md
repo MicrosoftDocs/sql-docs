@@ -118,7 +118,7 @@ In case any of the components are missing, do the following:
 
 ## Change the Log Analytics workspace
 
-To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below. 
+To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below.
 
 1. Disable best practices assessment if it's currently enabled via the Azure portal.
 1. Make a GET call to the API and get the Azure extension for SQL Server settings. For more information, review [How to call Azure REST APIs with Postman](

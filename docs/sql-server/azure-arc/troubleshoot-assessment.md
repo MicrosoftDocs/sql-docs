@@ -125,18 +125,18 @@ To change the Log Analytics workspace that is linked for the best practices asse
 
 1. Make a GET call to the API and get the Azure extension for SQL Server settings.
 
-  In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal:
+   In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal:
 
-  1. Navigate to the corresponding **SQL Server - Azure Arc** resource.
-  1. Select Ctrl+Shift+I together, go to **Network** tab.
-  1. Select **Overview** for the **Machine - Azure Arc** resource.
-  1. In the name column, locate and select the entry for **ArcServer name?api-version**.
-  1. On the right window, go to **Request Headers**.
-  1. Copy the complete text for **Authorization: Bearer** to get the bearer authorization token.
+   1. Navigate to the corresponding **SQL Server - Azure Arc** resource.
+   1. Select Ctrl+Shift+I together, go to **Network** tab.
+   1. Select **Overview** for the **Machine - Azure Arc** resource.
+   1. In the name column, locate and select the entry for **ArcServer name?api-version**.
+   1. On the right window, go to **Request Headers**.
+   1. Copy the complete text for **Authorization: Bearer** to get the bearer authorization token.
 
-   ```rest
-   GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
-   ```
+    ```rest
+    GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10
+    ```
 
    The best practices assessment settings before the change.
 

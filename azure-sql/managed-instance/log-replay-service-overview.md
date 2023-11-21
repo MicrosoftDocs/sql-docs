@@ -155,7 +155,7 @@ Consider the following limitations of LRS:
 - If you're using autocomplete mode, the entire backup chain needs to be available in advance on the Blob Storage account. It isn't possible to add new backup files in autocomplete mode. Use continuous mode if you need to add new backup files while migration is in progress.
 - You must start LRS separately for each database that points to the full URI path that contains an individual database folder. 
 - The backup URI path, container name or folder names should not contain `backup` or `backups` as these are reserved keywords.
-- When starting multiple Log Replay restores in parallel targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation.
+- When starting multiple Log Replay restores in parallel, targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation.
 - LRS can support up to 100 simultaneous restore processes per single managed instance.
 - A single LRS job can run for a maximum of 30 days, after which it will be automatically canceled.
 - While it's possible to use an Azure Storage account behind a firewall, extra configuration is necessary, and the storage account and managed instance must either be in the same region, or two paired regions. Review [Configure firewall](log-replay-service-migrate.md#configure-azure-storage-behind-a-firewall) to learn more. 

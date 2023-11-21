@@ -120,10 +120,19 @@ In case any of the components are missing, do the following:
 
 To change the Log Analytics workspace that is linked for the best practices assessment, follow the steps below. 
 
-1. Disable best practices assessment if it's currently enabled via the Azure portal.
-1. Make a GET call to the API and get the Azure extension for SQL Server settings
+1. Disable best practices assessment if it's currently enabled via the Azure portal. For more information, review [How to call Azure REST APIs with Postman](
+/rest/api/azure/#how-to-call-azure-rest-apis-with-postman).
 
-   In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal, go to Arc Server instance and select Ctrl+Shift+I together, go to **Networking**. Find the resource and copy the Bearer token into the GET API authentication section.
+1. Make a GET call to the API and get the Azure extension for SQL Server settings.
+
+  In order to complete this task, you need to obtain the bearer token in order to perform this action against the resource in Azure portal. From Azure portal:
+
+  1. Navigate to the corresponding **SQL Server - Azure Arc** resource.
+  1. Select Ctrl+Shift+I together, go to **Network** tab.
+  1. Select **Overview** for the **Machine - Azure Arc** resource.
+  1. In the name column, locate and select the entry for **ArcServer name?api-version**.
+  1. On the right window, go to **Request Headers**.
+  1. Copy the complete text for **Authorization: Bearer** to get the bearer authorization token.
 
    ```rest
    GET https://edge.management.azure.com/subscriptions/ <subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.HybridCompute/machines/<arc-resource-name>/extensions/WindowsAgent.SqlServer?api-version=2022-03-10

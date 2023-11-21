@@ -4,7 +4,7 @@ description: "Describes how to troubleshoot connectivity to the data processing 
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
-ms.date: 11/14/2023
+ms.date: 11/21/2023
 ms.topic: troubleshooting
 ---
 
@@ -76,6 +76,20 @@ For example, if your Arc machine resource is located in *East US 2* the short na
 ## Use an HTTPS proxy server for outbound connectivity
 
 If your network requires using an HTTPS proxy server for outbound connectivity, you can read more about configuring that at [Update or remove proxy settings](/azure/azure-arc/servers/manage-agent?tabs=windows#update-or-remove-proxy-settings).
+
+## Query Azure Resource Graph for telemetry upload stats
+
+Use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the upload status for your environment.
+
+```kusto
+resources
+    | where type =~ 'microsoft.hybridcompute/machines/extensions'
+    | where properties.type in ('WindowsAgent.SqlServer','LinuxAgent.SqlServer')
+    | parse id with * '/providers/Microsoft.HybridCompute/machines/' machineName '/extensions/' *
+    | parse properties with * 'uploadStatus : ' uploadStatus ';' *
+    | project uploadStatus, subscriptionId, resourceGroup, machineName
+    | where uploadStatus !in ('OK') //comment this out to see all upload stats
+```
 
 ## Related content
 

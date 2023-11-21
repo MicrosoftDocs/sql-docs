@@ -3,7 +3,7 @@ title: "BACKUP (Transact-SQL)"
 description: BACKUP (Transact-SQL) backs up a SQL database.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/17/2022
+ms.date: 11/21/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -1399,6 +1399,8 @@ Full backups and differential backups are stored in separate directories. Naming
 ## Limitations and Restrictions
 
 You cannot perform a differential backup of the `master` database. Only full backups of the `master` database are supported.
+
+Transaction log backups of the `master` system database aren't supported.
 
 The backup files are stored in a format suitable only for restoring the backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance by using the [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) statement.
 

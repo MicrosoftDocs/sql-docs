@@ -6,7 +6,7 @@ ms.author: dinethi
 ms.reviewer: mikeray, randolphwest
 ms.date: 11/14/2023
 ms.topic: conceptual
-ms.custom: ignite-2023, devx-track-azurecli
+ms.custom: ignite-2023
 ---
 
 # Manage automated backups - Azure Arc-enabled SQL Server
@@ -50,16 +50,18 @@ The backup service within the Azure extension for Arc-enabled [!INCLUDE [ssnover
    > [!NOTE]  
    > This requirement applies to the preview release.
 
-1. Add `[NT AUTHORITY\SYSTEM]` user account to the **dbcreator** server role at the server level. Run the following Transact-SQL to add this account:
+1. Add `[NT AUTHORITY\SYSTEM]` account to Logins, and make it a member of the `[dbcreator]` server role at the server level. Run the following Transact-SQL to add this account:
 
    ```sql
    USE master;
+   GO
+   CREATE LOGIN [NT AUTHORITY\SYSTEM] FROM WINDOWS WITH DEFAULT_DATABASE = [master];
    GO
    ALTER SERVER ROLE [dbcreator] ADD MEMBER [NT AUTHORITY\SYSTEM];
    GO
    ```
 
-1. Add `[NT AUTHORITY\SYSTEM]` user account to logins, and make it a member of `[db_backupoperator]` role in `master`, `model`, `msdb`, and each user database.
+1. Add `[NT AUTHORITY\SYSTEM]` account to Users, and make it a member of the `[db_backupoperator]` role in `master`, `model`, `msdb`, and each user database.
 
    For example:
 
@@ -81,7 +83,7 @@ After you have assigned permissions, you can enable automated backups.
 To enable automated backups in Azure portal:
 
 1. Disable any existing backup routines.
-1. Browse to the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for which you want to enable automated backups.
+1. Browse to the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for which you want to enable automated backups.
 1. Select **Backups**.
 1. Select **Configure policies**.
 1. From the configure policies options:
@@ -118,7 +120,7 @@ To enable automated backups using `az` CLI:
     Example:
 
     ```azurecli
-    az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24
+    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource-group my-rg --retention-days 24
     ```
 
     **Custom schedule**
@@ -130,7 +132,7 @@ To enable automated backups using `az` CLI:
     Example:
 
     ```azurecli
-    az sql server-arc backups-policy set --name MyArcServer-SQLServerPROD --resource-group my-rg --retention-days 24 --full-backup-days 7 --diff-backup-hours 24 --tlog-backup-mins 30
+    az sql server-arc backups-policy set --name MyArcServer_SQLServerPROD --resource-group my-rg --retention-days 24 --full-backup-days 7 --diff-backup-hours 24 --tlog-backup-mins 30
     ```
 
 ---
@@ -146,7 +148,7 @@ az sql server-arc backups-policy show --name <arc-server-name> --resource-group 
 Example:
 
 ```azurecli
-az sql server-arc backups-policy show --name MyArcServer-SQLServerPROD --resource-group my-rg
+az sql server-arc backups-policy show --name MyArcServer_SQLServerPROD --resource-group my-rg
 ```
 
 Output:
@@ -163,7 +165,7 @@ Output:
 
 ## Backup system databases
 
-When the built-in automated backups are enabled on an Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the system databases are also backed up into the default backup location. Only full backups are performed for the system databases.
+When the built-in automated backups are enabled on an Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], the system databases are also backed up into the default backup location. Only full backups are performed for the system databases.
 
 ## Considerations
 
@@ -179,17 +181,17 @@ When the built-in automated backups are enabled on an Arc-enabled [!INCLUDE [ssn
   1. Connect to the Arc-enabled SQL Server from SSMS.
   1. Go to **Server properties** > **Database Settings** > **Database default locations**.
 
-- The backups policy is configured at the instance level and applies to all the databases on the instance.
-- The value for `--name` should be the name of the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], which is usually in the [Servername_SQLservername] format.
+- The backup policy is configured at the instance level and applies to all the databases on the instance.
+- The value for `--name` should be the name of the Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], which is usually in the [Servername_SQLservername] format.
 - The value for `--retention-days` can be from 0-35.
 - A value of `0` for `--retention-days` indicates to not perform automated backups for the instance.
 - The backup files are written to the default backup location as configured at the instance level.
-- If there are multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on the same host where the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is installed, you need to turn on automated backups separately for each instance separately.
+- If there are multiple [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances on the same host where the Azure extension for [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is installed, you need to configure automated backups separately for each instance.
 - If you change the `--retention-days` after the `--backups-policy` is already configured, any change will take effect going forward and isn't retroactively applied.
 
 ## Limitations
 
-- Automated backups are currently not supported for Always On failover cluster instances
+- Automated backups are currently not supported for Always On Failover Cluster Instances.
 - The user databases need to be in full recovery model for the backups to be performed. Databases that aren't in full recovery model are not automatically backed up.
 - Automated backups are only supported on the primary replica of an Always On availability group.
 - Automated backups are only available for licenses with Software Assurance, SQL subscription, or pay-as-you-go. For details, see [Feature availability depending on license type](overview.md#feature-availability-depending-on-license-type).

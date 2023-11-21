@@ -77,10 +77,6 @@ For example, if your Arc machine resource is located in *East US 2* the short na
 
 If your network requires using an HTTPS proxy server for outbound connectivity, you can read more about configuring that at [Update or remove proxy settings](/azure/azure-arc/servers/manage-agent?tabs=windows#update-or-remove-proxy-settings).
 
-## Use proxy bypass for Private Link scope
-
-The DPS and telemetry endpoints don't support Private Link Scope. To use Private Link Scope for other endpoints, but not for DPS and telemetry, you can set the `proxy.bypass` value to `ArcData`. For more information, review, [Proxy bypass for private endpoints](/azure/azure-arc/servers/manage-agent?tabs=windows#proxy-bypass-for-private-endpoints)
-
 ## Related content
 
 - [Troubleshoot Azure extension for SQL Server](troubleshoot-deployment.md)

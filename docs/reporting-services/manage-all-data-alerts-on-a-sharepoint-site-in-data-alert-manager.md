@@ -47,9 +47,9 @@ SharePoint alerting administrators can view a list of the data alerts that were 
     > [!NOTE]  
     >  After you delete the alert, no further alert messages are sent. However, if you query the alerting database you might find that the alert definition still exists. The alerting service performs clean up on a schedule and the alert definition is deleted permanently in the next cleanup. The default cleanup interval is 20 minutes. This and other cleanup intervals are configurable. For more information, see [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md).  
 
-## See also
+## Related content
 
-[Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

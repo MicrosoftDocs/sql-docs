@@ -65,9 +65,9 @@ SharePoint users can view a list of the data alerts that they created and inform
   
      The alert instance is created and the data alert message is immediately sent, regardless of the schedule options you specified in Data Alert Designer. For example, an alert configured to be sent weekly and then only if the results change is sent.  
 
-## See also
+## Related content
 
-[Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

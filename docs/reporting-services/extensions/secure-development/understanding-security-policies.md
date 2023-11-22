@@ -67,8 +67,9 @@ helpviewer_keywords:
   
  In some cases, you may need to perform an operation that requires specific code permissions in a report expression. Typically, this means that a report expression needs to make a call to a secured CLR library method (such as one that accesses files or the system registry). The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentation describes the code permissions that are required to make this secure call; to execute the call, the calling code must be granted these specific, secure permissions. If you make the call from a report expression or the **Code** element, the expression host assembly must be granted the appropriate permissions. However, once you grant the expression host the permissions, all code that runs in any expression in any report is now granted that specific permission. It is much more secure to make the call from a custom assembly and grant that custom assembly the specific permissions.  
   
-## See also  
- [Code access security in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+## Related content
+
+- [Code access security in Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
+- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

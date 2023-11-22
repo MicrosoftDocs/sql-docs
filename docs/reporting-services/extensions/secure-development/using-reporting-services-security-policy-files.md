@@ -73,7 +73,8 @@ helpviewer_keywords:
   
  Additional code groups can be added one after another.  
   
-## See also  
- [Understand security policies](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
+## Related content
+
+- [Understand security policies](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
   
   

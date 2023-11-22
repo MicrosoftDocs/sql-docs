@@ -84,7 +84,8 @@ helpviewer_keywords:
 </CodeGroup>  
 ```  
   
-## See also  
- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+## Related content
+
+- [Secure development &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

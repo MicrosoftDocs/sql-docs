@@ -27,8 +27,9 @@ helpviewer_keywords:
 https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
 ```  
   
-## See also  
- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

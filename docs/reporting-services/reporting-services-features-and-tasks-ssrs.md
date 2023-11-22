@@ -44,8 +44,9 @@ helpviewer_keywords:
   
  [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
   
-## See also  
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [What's new in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
+## Related content
+
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+- [What's new in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
   
   

@@ -338,9 +338,9 @@ Resolved the issues with SKU upgrade.
 
 Initial release.
 
-## Next steps
+## Related content
 
-[What's new in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
+- [What's new in Reporting Services (SSRS)?](what-s-new-in-sql-server-reporting-services-ssrs.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).
 

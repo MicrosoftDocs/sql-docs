@@ -311,10 +311,10 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
 -   [Grant permissions to users and alerting administrators](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## See also
+## Related content
 
-[Data Alert Designer](../reporting-services/data-alert-designer.md)   
-[Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Data Alert Manager for SharePoint users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+- [Data Alert Manager for SharePoint users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

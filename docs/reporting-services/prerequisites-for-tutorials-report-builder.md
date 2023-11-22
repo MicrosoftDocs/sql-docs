@@ -38,6 +38,6 @@ The report server administrator must grant you the necessary permissions on the 
 
 ## Next steps
 
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

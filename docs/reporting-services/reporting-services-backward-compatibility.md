@@ -29,6 +29,7 @@ It also describes fundamental changes to the product that are known to break a c
 |[Breaking changes in SQL Server Reporting Services in SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|Describes issues that you might encounter when you upgrade [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
 |[Behavior changes to SQL Server Reporting Services  in SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|Describes features that have changed in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].|  
   
-## See also  
- [Backward compatibility | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15)  
+## Related content
+
+- [Backward compatibility | Analysis Services](/analysis-services/analysis-services-backward-compatibility?viewFallbackFrom=sql-server-ver15)  
   

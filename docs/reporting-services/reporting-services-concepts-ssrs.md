@@ -203,8 +203,9 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
  An exported report is a fully paged report saved in a specific file format. Export formats depend on installed rendering extensions and can be customized. By default, export formats include Excel, Word, XML, PDF, TIFF, and CSV. For more information, see [Export reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-## See also  
- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+## Related content
+
+- [Reporting Services features and tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

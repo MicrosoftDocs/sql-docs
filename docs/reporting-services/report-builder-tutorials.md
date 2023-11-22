@@ -62,10 +62,10 @@ Follow the steps in this tutorial to learn how to create reports for a drillthro
 [Tutorial: Introduce expressions](../reporting-services/tutorial-introducing-expressions.md)  
 Follow the steps in this tutorial to learn how to use expressions to concatenate, calculate, and look up field values and show them a report. You will also learn how to conditionally display different images and indicator states using expressions.  
 
-## Next steps
+## Related content
 
-[Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Create a quick chart report offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+- [Report design view](../reporting-services/report-builder/report-design-view-report-builder.md)  
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+- [Tutorial: Create a quick chart report offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

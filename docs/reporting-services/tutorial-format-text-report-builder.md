@@ -354,8 +354,8 @@ There are many ways to format text in Report Builder. [Tutorial: Create a free f
 
 ## Related content
 
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
-[Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-[Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
+- [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+- [Microsoft Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

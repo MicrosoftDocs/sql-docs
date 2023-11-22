@@ -101,9 +101,10 @@ The subscription page in the web portal will contain the **Last Run** date and *
   
 This step concludes the tutorial "Define a Data-Driven Subscription".   
   
-## See also  
-[Subscriptions and delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
-[Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Create, modify, and delete data-driven subscriptions](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
-[Use an external data source for subscriber data &#40;data-driven subscription&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+## Related content
+
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+- [Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+- [Create, modify, and delete data-driven subscriptions](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
+- [Use an external data source for subscriber data &#40;data-driven subscription&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   

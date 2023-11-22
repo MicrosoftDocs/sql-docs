@@ -44,7 +44,7 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
     >
     > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2022`
     >
-    > For more information about connection strings, you can refer to the `See also` section below.
+    > For more information about connection strings, you can refer to the `Related content` section below.
 
 6. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
 
@@ -60,6 +60,6 @@ Report Designer adds the data source AdventureWorks2022 to the **Report Data** p
 
 In this lesson, you've successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
 
-## See also
+## Related content
 
-[Create data connection strings - Report Builder & SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+- [Create data connection strings - Report Builder & SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

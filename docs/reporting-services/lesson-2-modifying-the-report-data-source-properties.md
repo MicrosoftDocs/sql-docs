@@ -112,11 +112,12 @@ You'll also modify the dataset and report to use a parameter to filter the repor
 + You successfully configured the report to get data using stored credentials and the data can be filtered with a parameter. 
 + In the next lesson, you configure the subscription using the web portal Data-Driven Subscription pages. See [Lesson 3: Defining a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## See also  
-[Manage report data sources](../reporting-services/report-data/manage-report-data-sources.md)  
-[Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-[Create a data-driven subscription &#40;SSRS tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
-[Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+## Related content
+
+- [Manage report data sources](../reporting-services/report-data/manage-report-data-sources.md)  
+- [Specify credential and connection information for report data sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+- [Create a data-driven subscription &#40;SSRS tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
+- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
   
   

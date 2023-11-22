@@ -45,9 +45,10 @@ The following table lists the device information settings for rendering in HTML 
 |**Zoom (\*)**|The report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.|  
 |**DataVisualizationFitSizing**|Indicates data visualization fit behavior when inside a tablix. This includes chart, gauge, and map.<br /><br /> The possible values are **Approximate** and **Exact**.<br /><br /> The default value is **Approximate**. If the setting is removed from the **rsreportserver.config** file then the default behavior is **Exact**.<br /><br /> Enabling **Exact** may have performance impact because the processing to determine the exact size may take longer.|  
   
-## See also  
- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content  
+
+- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+-[Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+-[Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

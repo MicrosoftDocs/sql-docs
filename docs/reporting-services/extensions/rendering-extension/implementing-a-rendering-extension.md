@@ -34,8 +34,9 @@ helpviewer_keywords:
  [Remove a rendering extension](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
  Describes how to remove a rendering extension from a report server.  
   
-## See also  
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

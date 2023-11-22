@@ -48,8 +48,9 @@ helpviewer_keywords:
   
  Writing a custom rendering extension is difficult. A rendering extension must typically support all possible combinations of report elements and requires that you implement hundreds of classes, interfaces, methods, and properties. If you must render a report in a format that is not included with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and decide to write your own managed code implementation of a rendering extension, the rendering extension code must implement the **Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension** interface, which is required by the report server.  
   
-## See also  
- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

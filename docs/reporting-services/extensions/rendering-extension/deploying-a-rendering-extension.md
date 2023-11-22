@@ -63,10 +63,11 @@ helpviewer_keywords:
 ## Verify the deployment  
  You can also open Report Manager and verify that your extension is included in the list of available export types for a report.  
   
-## See also  
- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
- [Implement the IRenderingExtension interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
- [Security considerations for extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
+## Related content
+
+- [Implement a rendering extension](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+- [Rendering extensions overview](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
+- [Implement the IRenderingExtension interface](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
+- [Security considerations for extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   

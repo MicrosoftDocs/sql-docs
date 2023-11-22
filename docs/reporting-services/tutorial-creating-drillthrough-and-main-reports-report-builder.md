@@ -674,6 +674,7 @@ Run the main report, and then select values in the product category column to ru
   
 5.  Optionally, explore other product categories by selecting their names.  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
   

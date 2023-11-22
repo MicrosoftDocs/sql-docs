@@ -344,8 +344,9 @@ In this tutorial, you will export the report to Excel and set a property on the 
 ## Next steps  
 This concludes the walkthrough for how to create a basic table report. For more information about tables, see [Tables, matrices, and lists in paginated reports (Report Builder)](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

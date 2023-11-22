@@ -535,8 +535,9 @@ This concludes the walkthrough for how to add a map to your report.
   
 For more information, see [Maps in a paginated report (Report Builder)](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+- [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+- [Vary polygon, line, and point display in a paginated report by rules and analytical data (Report Builder)](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  

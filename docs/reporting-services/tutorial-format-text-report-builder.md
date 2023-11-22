@@ -350,7 +350,9 @@ The report is saved to the report server. The name of the report server that you
 
 ## Next steps
 
-There are many ways to format text in Report Builder. [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.  
+There are many ways to format text in Report Builder. [Tutorial: Create a free form report (Report Builder)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.
+
+## Related content
 
 [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 [Format paginated report items (Report Builder)](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

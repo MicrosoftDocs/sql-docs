@@ -649,13 +649,14 @@ Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](
 :::image type="content" source="../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png" alt-text="Screenshot of the new report complete with each expression visible." lightbox="../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png":::
 
    
-## See also  
-[Expressions in a paginated report (Report Builder)](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-[Expression examples in paginated reports (Report Builder)](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-[Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-[Images, text boxes, rectangles, and lines in a paginated report (Report Builder)](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
-[Tables in paginated reports (Report Builder)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-[Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+## Related content
+
+- [Expressions in a paginated report (Report Builder)](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+- [Expression examples in paginated reports (Report Builder)](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+- [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+- [Images, text boxes, rectangles, and lines in a paginated report (Report Builder)](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+- [Tables in paginated reports (Report Builder)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
+- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
   

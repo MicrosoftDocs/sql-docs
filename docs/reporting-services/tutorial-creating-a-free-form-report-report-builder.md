@@ -501,7 +501,8 @@ For more information about lists, see:
   
 For more information about query designers, see [Query design tools (SSRS)](report-data/query-design-tools-ssrs.md) and [Text-based query designer user interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
   
 

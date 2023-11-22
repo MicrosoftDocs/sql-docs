@@ -354,8 +354,9 @@ This concludes the tutorial for how to create a matrix report. For more informat
 -    [Tablix data region areas in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Cells, rows, & columns in a tablix in a paginated report (Report Builder)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

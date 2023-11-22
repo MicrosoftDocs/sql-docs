@@ -115,6 +115,6 @@ https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 - [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
 - [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)   
 - [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
-- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+- [Find, view, and manage reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -148,9 +148,9 @@ column_name <data_type>
 }  
   
 < table_index > ::=  
-  INDEX index_name  
-{ [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
-	|  [ NONCLUSTERED ]  ( column [ ASC | DESC ] [ ,... n ] ) 
+  INDEX index_name  [ NONCLUSTERED ]
+{ HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
+	| ( column [ ASC | DESC ] [ ,... n ] ) 
 }  
   
 <table_option> ::=  

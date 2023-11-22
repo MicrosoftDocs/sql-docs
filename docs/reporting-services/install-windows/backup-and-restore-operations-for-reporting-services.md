@@ -80,13 +80,13 @@ For SharePoint mode report servers, see the "Key Management" section of [Manage 
   
  Verify that you have a backup copy of any custom extensions and custom assemblies you are using.  
 
-## Next steps
+## Related content
 
-[Report server database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
-[rskeymgmt utility](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
-[Copy databases with backup and restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
-[Administer a report server database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
-[Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+- [Report server database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+- [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+- [rskeymgmt utility](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)   
+- [Copy databases with backup and restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
+- [Administer a report server database](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+- [Configure and manage encryption keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -141,14 +141,14 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
  If you plan to run the report servers in a load-balanced server cluster, additional configuration is required. For more information, see [Configure a report server on a network load balancing cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
-## Next steps
+## Related content
 
-[Configure a service account](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Create a Native mode report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+- [Configure a service account](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+- [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+- [Create a Native mode report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+- [Configure report server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+- [Configure a report server database connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+- [Add and remove encryption keys for scale-out deployment](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+- [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

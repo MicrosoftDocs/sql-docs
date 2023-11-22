@@ -49,9 +49,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Verify the new server is operational.|1) In SharePoint Central Administration, select **Manage servers in this farm** in the **System Settings** group.<br /><br /> 2) Verify the new server is in the list.|  
 |Update your NLB solution.|If appropriate, update your hardware or software NLB environment to include the new server.|  
 
-## Next steps
+## Related content
 
-[Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
-[Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
+- [Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+- [Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

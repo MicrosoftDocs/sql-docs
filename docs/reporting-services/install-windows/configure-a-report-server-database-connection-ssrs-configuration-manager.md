@@ -129,7 +129,7 @@ You can configure a report server instance to use a different report server data
 
 You can configure multiple report servers to use the same report server database. This deployment configuration is called a scale-out deployment. This configuration is a prerequisite if you want to run multiple report servers in a server cluster. However, you can also use this configuration if you want to segment service applications or if you want to test the installation and settings of a new report server instance to compare it with an existing report server installation. For more information, see [Configure a Native mode report server scale-out deployment &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
-## Next steps
+## Related content
 
 - [Create a report server database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 - [Manage a Reporting Services Native mode report server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

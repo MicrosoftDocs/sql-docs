@@ -355,8 +355,9 @@ helpviewer_keywords:
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## See also
- - [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
- - [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)
+- [Export a report using URL access](../reporting-services/export-a-report-using-url-access.md)
   
   

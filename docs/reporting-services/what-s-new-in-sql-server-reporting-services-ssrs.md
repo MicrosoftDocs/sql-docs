@@ -273,12 +273,12 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 - [High DPI and Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
-## Next steps
+## Related content
 
-[What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
-[Reporting Services backward compatibility](reporting-services-backward-compatibility.md)  
-[SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
-[Upgrade and migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
-[What is SQL Server Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+- [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
+- [Reporting Services backward compatibility](reporting-services-backward-compatibility.md)  
+- [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+- [Upgrade and migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+- [What is SQL Server Reporting Services (SSRS)](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

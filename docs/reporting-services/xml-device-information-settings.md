@@ -27,10 +27,11 @@ helpviewer_keywords:
 |**FileExtension**|The file extension to use for the generated file.||  
 |**Schema**|A value of **true** indicates that an XML schema is rendered. The default value is **false**.|Indicates whether the XML schema definition (XSD) is rendered or whether the actual XML data is rendered.|  
   
-## See also  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content
+
+- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
+- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

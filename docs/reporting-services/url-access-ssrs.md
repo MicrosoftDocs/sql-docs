@@ -110,10 +110,11 @@ https://myspsite/subsite/AdventureWorks2022/Employee_Sales_Summary_2022.rdl
 |Open a report and navigate directly to the location of a string.|[Search a report by using URL access](../reporting-services/search-a-report-using-url-access.md)|  
 |Render a specific report history snapshot.|[Render a report history snapshot by using URL access](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## See also  
- [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)   
- [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+## Related content
+
+- [Pass a report parameter within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)   
+- [Integrate Reporting Services by using URL access](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+- [Find, view, and manage reports &#40;Report Builder and SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -85,11 +85,11 @@ You can then validate the query. You can also define a **query timeout**.
   
 After the query has been created, you can then assign values to the required fields. You can either enter your manual data, or select a field from the dataset you created. 
 
-## Next steps
+## Related content
 
-[Create and manage subscriptions for Native Mode report servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
-[The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Work with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)  
-[Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
+- [Create and manage subscriptions for Native Mode report servers](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
+- [Work with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)  
+- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

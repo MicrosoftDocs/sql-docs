@@ -119,9 +119,9 @@ To remove a KPI, you can do the following steps.
     :::image type="content" source="../reporting-services/media/rsremovekpi2.png" alt-text="Screenshot of the Delete option on the confirmation dialog box." lightbox="../reporting-services/media/rsremovekpi2.png":::
   
  
-## Next steps
+## Related content
   
-[The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
+- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

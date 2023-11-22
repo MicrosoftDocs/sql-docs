@@ -185,9 +185,9 @@ Access to items is defined through role assignments that specify the tasks that 
   
 Select to change how security is defined for the current item.
 
-## Next steps
+## Related content
 
-[The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
+- [The web portal of a report server (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
+- [Work with shared datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

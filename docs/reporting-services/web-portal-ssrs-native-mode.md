@@ -103,14 +103,14 @@ Enter a search term, and see everything you can access. The results are categori
 
 :::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png" alt-text="Screenshot that shows the SQL Server Reporting Servers portal with the Search text box called out." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-search.png":::
 
-## See also
+## Related content
 
 ::: moniker range="<=sql-server-ver15"
-[Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+- [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 ::: moniker-end
-[Configure a URL (Report Server Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
-[Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
-[Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+- [Configure a URL (Report Server Configuration Manager)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
+- [Browser Support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+- [SQL Server Reporting Services features supported by editions](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 More questions? [Try the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

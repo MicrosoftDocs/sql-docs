@@ -23,10 +23,11 @@ helpviewer_keywords:
 |**OmitHyperlinks**|Indicates whether to omit the Hyperlink action on all set items. The default value is **false**|  
 |**OmitDrillthroughs**|Indicates whether to omit the Drillthrough action on all set items. The default value is **false**|  
   
-## See also  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content
+
+- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
+-[Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -65,8 +65,9 @@ Your computer must have the following installed to use this tutorial:
   
 **Estimated time to complete the tutorial:** 30 minutes. An additional 30 minutes if you haven't completed the basic report tutorial.  
   
-## Related content  
-[Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
+## Related content
+
+- [Data-driven subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+- [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

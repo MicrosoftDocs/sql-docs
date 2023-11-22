@@ -115,7 +115,7 @@ Take advantage of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pro
 
 More [Reporting Services developer documentation](../reporting-services/reporting-services-developer-documentation.md).
 
-## Next steps
+## Related content
 
 * [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
 * [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

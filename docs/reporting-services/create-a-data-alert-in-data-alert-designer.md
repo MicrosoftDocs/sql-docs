@@ -117,8 +117,8 @@ You create data alert definitions in Data Alert Designer. After you save the ale
 
 ## Related content
 
-[Data Alert Designer](../reporting-services/data-alert-designer.md)   
-[Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

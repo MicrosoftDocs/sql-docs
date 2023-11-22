@@ -92,6 +92,20 @@ resources
     | order by uploadStatus desc
 ```
 
+## Error codes
+
+The following table shows some of the common DPS upload status values and what you can do to troubleshoot further.
+
+| DPS upload status value | HTTP error code | Troubleshooting suggestions |
+| --- | --- | --- |
+| `0` | | Likely cause: a firewall is blocking the transmission of the data to the DPS. Open the firewall to the DNS endpoint for the DPS (TCP, port: 443).|
+| `OK` | 200 | The connection is working as expected. |
+| `Unauthorized` | 401 | Likely cause: the extension is configured to send data through an HTTP proxy that requires authentication. Using an HTTP proxy that requires authentication is not currently supported. Use an unauthenticated HTTP proxy or no proxy.|
+| `Forbidden` | 403 | If the Azure Connected Machine agent is otherwise working as expected and this error doesn't resolve itself after a reboot, create a support case with Microsoft Support through the Azure portal.|
+| `NotFound` | 404 | The endpoint that the extension is trying to connect to does not exist. You can check which endpoint it is trying to connect to by searching in the logs for "san-af". This can happen if the Azure Connected Machine agent was deployed and connected to an Azure region in which the `Microsoft.AzureArcData` resource provider is not yet available. [Redeploy the Azure Connected Machine agent](/azure/azure-arc/servers/manage-agent?tabs=windows#uninstall-the-agent) in a region that the `Microsoft.AzureArcData` resource provider for SQL Server enabled by Azure Arc is available. [Region availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=azure-arc) |
+| `Conflict` | 409 | Likely cause: temporary error happening inside of the DPS. If this does not resolve itself, create a support case with Microsoft Support through the Azure portal.
+| `InternalServerError` | 500 | This is an error that is happening inside of the DPS. Please create a support case with Microsoft Support through the Azure portal. |
+
 ## Related content
 
 - [Troubleshoot Azure extension for SQL Server](troubleshoot-deployment.md)

@@ -303,7 +303,7 @@ Requires `CREATE TYPE` permission in the current database and `ALTER` permission
 
 If any columns in the `CREATE TABLE` statement are defined to be of a user-defined type, `REFERENCES` permission on the user-defined type is required.
 
-A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permissions need to be added to the `model` database. If this is done, then this data type and permissions will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1)
+A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permissions need to be added to the `model` database. If this is done, then this data type and permissions will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1).
 
 ## Examples
 

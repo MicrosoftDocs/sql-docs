@@ -57,7 +57,7 @@ catch (SoapException ex)
   
  Another way to handle errors is to evaluate the return values of certain methods. For example, the <xref:ReportService2010.ReportingService2010.FindItems%2A> method can be used to search for specific items in the report server database. If no items are found that match the search criteria, a null array of <xref:ReportService2010.CatalogItem> objects is returned. You should evaluate the array, check for **null**, and let the user know if no items were found.  
   
-## See also  
+## Related content  
  <xref:ReportService2010.CatalogItem>   
  [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  

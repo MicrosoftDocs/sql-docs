@@ -72,10 +72,11 @@ helpviewer_keywords:
 ## Verify the deployment  
  Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] on your local computer. After you have ended all current sessions, you can verify whether your data processing extension was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Your extension should be included in the list of available data source types when you create a new data set for your report.  
   
-## See also  
- [Deploy a data processing extension](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Deploy a data processing extension](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a data processing extension](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

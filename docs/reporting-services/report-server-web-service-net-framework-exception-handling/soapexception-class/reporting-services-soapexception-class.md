@@ -22,11 +22,11 @@ helpviewer_keywords:
 |Public property|Description|  
 |---------------------|-----------------|  
 |**Actor**|The code that caused the exception. The value is the URL to the Web service method.|  
-|**Detail**|Application-specific error information. The report server sets the value and is in XML format. For more information, see [Detail property](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md) and [Using the Detail property to handle specific errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md).|  
+|**Detail**|Application-specific error information. The report server sets the value and is in XML format. For more information, see [Detail property](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md) and [Use the Detail property to handle specific errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md).|  
 |**HelpLink**|A URL or URN to a Help file associated with the error. The Web Service usually sets the value and it sets a URL to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Help and Support. Because [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports multiple help links for errors that occur, the report server sets help link information as part of the **Detail** property. For more information, see [HelpLink element](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).|  
 |**Message**|A descriptive, localized message that describes the error. This text might appear in the application UI.|  
   
-## See also  
+## Related content
  [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [SoapException Errors table](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   

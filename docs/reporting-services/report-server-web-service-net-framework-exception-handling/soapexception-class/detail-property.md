@@ -29,7 +29,7 @@ helpviewer_keywords:
  The error message and the error code assigned by the report server.  
   
  **HelpLink**  
- The Help link URL to a Web site at which further information about the error can be found. For more information, see [HelpLink Element](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
+ The Help link URL to a Web site at which further information about the error can be found. For more information, see [HelpLink element](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
   
  **LinkID**  
  The ID assigned to the link.  
@@ -61,7 +61,7 @@ helpviewer_keywords:
  **Warnings**  
  An XML string that contains the warnings returned from report processing.  
   
-## See also  
+## Related content  
  [Introduction to exception management in Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException class](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
  [Use the Detail property to handle specific errors](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  

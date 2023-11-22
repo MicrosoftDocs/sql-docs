@@ -68,8 +68,8 @@ The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
 You've successfully specified a query that retrieves data for your report. Next, you're going to create the report layout. Continue with [Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
-## See also
+## Related content
 
-[Query design tools &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
-[SQL Server connection type &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
-[Tutorial: Writing Transact-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Query design tools &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
+- [SQL Server connection type &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
+- [Tutorial: Writing Transact-SQL statements](../t-sql/tutorial-writing-transact-sql-statements.md)

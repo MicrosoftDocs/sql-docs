@@ -122,6 +122,6 @@ An optional step is to publish the completed report to the Report Server so you 
 
 You've successfully completed the **Creating a Basic Table Report tutorial**.
 
-## See also
+## Related content
 
-[Filter, group, and sort data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
+- [Filter, group, and sort data &#40;Report Builder and SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

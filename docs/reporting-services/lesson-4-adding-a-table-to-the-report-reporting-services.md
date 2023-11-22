@@ -75,7 +75,7 @@ Look at the Date and Line Total values. In the next lesson, you're going to lear
 
 You've successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
-## See also
+## Related content
 
-[Tables &#40;Report Builder and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
-[Dataset fields collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+- [Tables &#40;Report Builder and SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
+- [Dataset fields collection &#40;Report Builder and SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

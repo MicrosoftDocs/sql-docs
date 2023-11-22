@@ -28,7 +28,6 @@ ms.custom: updatefrequency5
 |[RGDI device information settings](../reporting-services/rgdi-device-information-settings.md)|Describes the device information settings that are associated with RGDI rendering output.|  
 |[PPTX device information settings](../reporting-services/pptx-device-information-settings.md)|Describes the device information settings that are associated with PPTX rendering output.|  
   
-## See also  
- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
-  
-  
+## Related content
+
+ [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)

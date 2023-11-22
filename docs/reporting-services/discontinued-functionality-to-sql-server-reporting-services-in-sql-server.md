@@ -72,7 +72,7 @@ These features that are no longer available in SQL Server 2016 Reporting Service
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-## Next steps
+## Related content
 
 * [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 * [Behavior changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  

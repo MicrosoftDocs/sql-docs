@@ -22,11 +22,11 @@ helpviewer_keywords:
 |**SimplePageHeaders**|Indicates whether the page header of the report is rendered to the Excel page header. A value of **false** indicates that the page header is rendered to the first row of the worksheet. The default value is **false**.|  
 |**DynamicImageDpi**|The resolution of dynamic images like charts, gauges, and maps. The default value is **96**. (Available in Power BI Report Server (January 2020) and later)|  
 
-  
-## See also  
- <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+## Related content
+
+- <xref:ReportExecution2005.ReportExecutionService.Render%2A>
+-[Pass device information settings to rendering extensions](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+-[Customize rendering extension parameters in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+- [Technical reference &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

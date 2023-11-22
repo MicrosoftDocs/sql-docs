@@ -41,8 +41,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  If you don't include the *Format* parameter as part of the URL, the report server detects the browser and renders the report in the appropriate HTML format.  
   
-## See also  
- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

@@ -29,10 +29,11 @@ helpviewer_keywords:
  [HTML Viewer and the report toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Provides help for the HTML Viewer component used for viewing reports in a Web browser.  
   
-## See also  
- [Reporting Services concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
- [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [Getting started with Report Builder](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)   
- [Design and implement reports using Report Builder 1.0](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))  
+## Related content
+
+- [Reporting Services concepts &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
+- [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
+- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
+- [Getting started with Report Builder](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)   
+- [Design and implement reports using Report Builder 1.0](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))  
   

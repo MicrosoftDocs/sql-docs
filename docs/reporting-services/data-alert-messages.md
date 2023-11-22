@@ -60,9 +60,9 @@ The owner of the data alert definition also can view information about the data 
   
 -   [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## See also
+## Related content
 
-[Data Alert Designer](../reporting-services/data-alert-designer.md)   
-[Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

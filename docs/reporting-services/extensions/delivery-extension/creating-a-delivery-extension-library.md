@@ -52,9 +52,10 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll
 > [!NOTE]  
 >  You can also design, develop, and build your delivery extension using [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. For more information about developing assemblies in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], see your [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] documentation.  
   
-## See also  
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

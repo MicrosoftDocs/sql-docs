@@ -53,8 +53,9 @@ helpviewer_keywords:
  [Remove a delivery extension](../../../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md)  
  Describes how to remove a delivery extension from a report server.  
   
-## See also  
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

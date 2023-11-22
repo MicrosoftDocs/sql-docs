@@ -85,8 +85,9 @@ helpviewer_keywords:
 ## Verify the deployment  
  You can verify whether your delivery extension was deployed successfully to the report server by using the Web service <xref:ReportService2010.ReportingService2010.ListExtensions%2A> method. You can also open the web portal and verify that your extension is included in the list of available delivery extensions for a subscription. For more information about the web portal and subscriptions, see [Subscriptions and delivery &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## See also  
- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

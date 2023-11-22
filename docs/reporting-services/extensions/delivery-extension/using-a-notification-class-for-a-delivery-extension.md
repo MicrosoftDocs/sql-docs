@@ -30,8 +30,9 @@ The notification is the central object of any delivery
 ## Retry functionality  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] allows you to create a retry queue for notifications that cannot immediately be delivered. After the report server invokes the <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> method of a delivery extension, the delivery extension can request that the report server retry the delivery at a later point in time. If this occurs, the report server places the notification in an internal queue and retries the delivery after a specific period of time has elapsed. Administrators can configure the maximum number of retry attempts that the report server performs and the period between retries in the delivery extension section of the RSReportServer.config file using the **MaxNumberOfRetries** XML element and the **PeriodBetweenRetries** XML element. Notifications are removed from the retry queue if delivery later succeeds or if the maximum number of retry attempts is reached. If delivery fails after the maximum number of retries, the notification is discarded.  
   
-## See also  
- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

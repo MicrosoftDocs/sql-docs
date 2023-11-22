@@ -40,9 +40,10 @@ helpviewer_keywords:
 |<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> Class|Represents the output from a rendering extension. A <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> object contains the associated file name and type information that is required by the delivery extension in order to process the stream returned by the rendering extension.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> Interface|A user control that represents the means to retrieve delivery extension-specific subscription information from the user in Report Manager (for example, an e-mail address or the path to a file share).|  
   
-## See also  
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Implement a delivery extension](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

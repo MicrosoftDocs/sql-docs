@@ -24,8 +24,9 @@ https://servername/reportserver?/SampleReports
 Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG  
 ```  
   
-## See also  
- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
+## Related content
+
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+- [URL access parameter reference](../reporting-services/url-access-parameter-reference.md)  
   
   

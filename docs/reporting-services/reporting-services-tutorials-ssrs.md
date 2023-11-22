@@ -34,7 +34,7 @@ Follow the steps in this tutorial to learn how to create a drillthrough report w
 
 These tutorials introduce you a variety of visualizations you can create in Report Builder, such as maps and sparklines, as well as tutorials on how to use parameters and expressions.
 
-## See also
+## Related content
 
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)
 * [Reporting Services samples on the TechNet wiki](https://go.microsoft.com/fwlink/?LinkId=198283)

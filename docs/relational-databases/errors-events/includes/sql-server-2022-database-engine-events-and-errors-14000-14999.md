@@ -540,7 +540,7 @@ ms.topic: include
 | 14801 | 16 | No | Multiple REMOTE_DATA_ARCHIVE definition. |
 | 14802 | 16 | No | Cannot disable REMOTE_DATA_ARCHIVE because the database contains at least one table having REMOTE_DATA_ARCHIVE enabled. |
 | 14803 | 16 | No | Cannot alter REMOTE_DATA_ARCHIVE option for table '%.\*ls' because REMOTE_DATA_ARCHIVE is not enabled for the database. |
-| 14804 | 16 | No | The database credential '%s' cannot be found or the user doesn't have premission to access the credential. |
+| 14804 | 16 | No | The database credential '%s' cannot be found or the user doesn't have permission to access the credential. |
 | 14806 | 16 | No | The identity specified for the database credential '%s' is invalid. The identity must be a valid username for the remote stretch server administrator. |
 | 14807 | 16 | No | The secret specified for the database credential '%s' is invalid. The secret must be a valid password for the remote stretch server administrator. |
 | 14808 | 16 | No | Cannot disable REMOTE_DATA_ARCHIVE when migration is enabled. |

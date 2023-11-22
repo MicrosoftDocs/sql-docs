@@ -29,9 +29,10 @@ helpviewer_keywords:
  [Authorization in Reporting Services](../../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
  Covers authorization in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## See also  
- <xref:Microsoft.ReportingServices.Interfaces>   
- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+## Related content
+
+- <xref:Microsoft.ReportingServices.Interfaces>
+- [Reporting Services extensions](../../../reporting-services/extensions/reporting-services-extensions.md)   
+- [Reporting Services extension library](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

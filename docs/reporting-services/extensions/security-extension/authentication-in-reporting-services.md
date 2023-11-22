@@ -138,7 +138,8 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] can authenticate and authorize users with either Windows Authentication or custom authentication, but not both. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] does not support simultaneous use of multiple security extensions.  
   
-## See also  
- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+## Related content
+
+- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

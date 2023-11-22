@@ -53,7 +53,8 @@ helpviewer_keywords:
   
 -   You have custom-defined users and roles and need to provide a matching authorization scheme in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## See also  
- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+## Related content
+
+- [Implement a security extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
   
   

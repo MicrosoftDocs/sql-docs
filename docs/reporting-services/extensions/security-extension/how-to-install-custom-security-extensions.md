@@ -100,7 +100,7 @@ The new portal and the reportserver communicate using internal soap APIs for som
 </UI>
 ```
 
-## Next steps
+## Related content
 
 - [Configure Custom or Forms authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
 - [Configure the web portal to pass custom authentication cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)

@@ -117,8 +117,9 @@ class Class1
 }  
 ```  
   
-## See also  
- [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
+## Related content
+
+- [Access the Reporting Services WMI provider](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+- [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

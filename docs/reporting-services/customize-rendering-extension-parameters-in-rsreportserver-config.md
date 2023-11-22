@@ -120,7 +120,7 @@ helpviewer_keywords:
 </Render>  
 ```  
   
-## See also  
+## Related content  
  [RsReportServer.config configuration file](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner configuration file](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV device information settings](../reporting-services/csv-device-information-settings.md)   

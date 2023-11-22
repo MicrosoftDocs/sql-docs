@@ -63,8 +63,9 @@ To use a shared data source, you browse to a report server and select one. Usual
   
 9. Select **OK**.
   
-## See also  
-[Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
+## Related content
+
+- [Report datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
   
 

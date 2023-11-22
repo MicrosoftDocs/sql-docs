@@ -69,7 +69,7 @@ SQL Server Reporting Services provides Data Alert Manager for SharePoint alertin
   
 -   [Manage all data alerts on a SharePoint Site in data alert manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## See also
+## Related content
 
 [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 

@@ -115,7 +115,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 22. Select **Save**.  
 
-## See also
+## Related content
 
 [Data Alert Designer](../reporting-services/data-alert-designer.md)   
 [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

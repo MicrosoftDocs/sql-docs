@@ -205,11 +205,12 @@ Because the pie chart is the only visualization in the report, the chart doesn't
   
 Your report is saved on the report server.  
   
-## Next steps  
+## Next steps
 You have successfully completed the Adding a Pie Chart to Your Report tutorial. For more information about charts, see [Charts in a paginated report (Report Builder)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) and [Sparklines and data bars in a paginated report (Report Builder)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## See also  
-[Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+## Related content
+
+- [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

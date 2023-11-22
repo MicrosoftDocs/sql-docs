@@ -334,7 +334,8 @@ You have successfully completed the Adding a KPI to Your Report tutorial. For mo
 * [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## See also  
+## Related content
+
 * [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 * [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

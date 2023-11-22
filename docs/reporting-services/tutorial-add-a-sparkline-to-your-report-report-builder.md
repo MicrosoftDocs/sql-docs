@@ -311,9 +311,11 @@ The report is saved to the report server. The name of report server that you are
   
 ## Next steps  
 
-This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).
+
+## Related content
   
-[Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
-[Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+- [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
+- [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

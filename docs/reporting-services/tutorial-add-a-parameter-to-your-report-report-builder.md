@@ -492,7 +492,8 @@ The report is saved to the report server. The report server that you are connect
 ## Next steps  
 This concludes the walkthrough for how to add a parameter to your report. For more information about parameters, see [Paginated report parameters (Report Builder)](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## See also  
+## Related content
+
 * [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)
 * [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 * [Report Builder functions - Lookup function in a paginated report (Report Builder)](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

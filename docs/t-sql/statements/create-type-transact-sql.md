@@ -143,14 +143,14 @@ column_name <data_type>
   
 <column_index> ::=  
   INDEX index_name  
-{ [ NONCLUSTERED ] HASH WITH ( BUCKET_COUNT = bucket_count ) 
-     | NONCLUSTERED 
+{ [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count ) 
+     | NONCLUSTERED ( column [ ASC | DESC ] [ ,... n ] )
 }  
   
 < table_index > ::=  
-  INDEX constraint_name  
-{ [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
-	|  [ NONCLUSTERED ]  ( column [ ASC | DESC ] [ ,... n ] ) 
+  INDEX constraint_name
+{ [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count)
+    | [ NONCLUSTERED ] ( column [ ASC | DESC ] [ ,... n ] )
 }  
   
 <table_option> ::=  

@@ -25,7 +25,7 @@ You can now create and utilize server principals from Microsoft Entra ID ([forme
 - Allows Microsoft Entra principals to support geo-replicas. Microsoft Entra principals can connect to the geo-replica of a user database, with a *read-only* permission and *deny* permission to the primary server.
 - Use Microsoft Entra service principal logins with special roles to fully automate user and database creation and maintenance with Microsoft Entra applications.
 
-For more information on Microsoft Entra authentication in Azure SQL, see [Use Microsoft Entra authentication](authentication-aad-overview.md)
+For more information on Microsoft Entra authentication in Azure SQL, see [Use Microsoft Entra authentication](authentication-aad-overview.md).
 
 > [!NOTE]
 > Microsoft Entra server principals (logins) are currently in public preview for Azure SQL Database and Azure Synapse Analytics. Microsoft Entra logins is generally available for Azure SQL Managed Instance and SQL Server 2022.
@@ -35,7 +35,7 @@ For more information on Microsoft Entra authentication in Azure SQL, see [Use Mi
 The following permissions are required to utilize or create Microsoft Entra logins in the virtual `master` database.
 
 - Microsoft Entra admin permission or membership in the `loginmanager` server role. The first Microsoft Entra login can only be created by the Microsoft Entra admin.
-- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Database 
+- Must be a member of Microsoft Entra ID within the same directory used for Azure SQL Database.
 
 By default, newly created Microsoft Entra logins in the `master` database are granted the **VIEW ANY DATABASE** permission. 
 
@@ -121,11 +121,11 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
   - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
   - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
   - Impersonation of Microsoft Entra database principals (users) in a user database is supported.
-- Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, either directly or as a member of a group assigned as the admin, any login created for this user won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
+- Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
   - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
-- When altering permissions for a Microsoft Entra login, the changes take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login are not affected. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This also applies to server role membership changes using [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
-- In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user does not consider whether there is already a Microsoft Entra login in `master` with the same name. It always generates T-SQL for a database contained Microsoft Entra user.
+- When you alter permissions for a Microsoft Entra login, the changes take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
+- In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates T-SQL for a database contained Microsoft Entra user.
 
 ### Microsoft Entra group server principal limitations
 

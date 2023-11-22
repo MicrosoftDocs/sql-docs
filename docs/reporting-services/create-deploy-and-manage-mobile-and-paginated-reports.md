@@ -117,8 +117,8 @@ More [Reporting Services developer documentation](../reporting-services/reportin
 
 ## Related content
 
-* [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-* [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
+- [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
+- [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Install Report Builder](../reporting-services/install-windows/install-report-builder.md)
 
-* More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+- More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

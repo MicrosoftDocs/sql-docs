@@ -5946,22 +5946,22 @@ items:
         href: relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md
       - name: Import Native & Character Format Data from Earlier Versions of SQL Server
         href: relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
-    - name: Format Files for Importing or Exporting Data
+    - name: Format files for importing or exporting data
       href: relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md
       items:
-      - name: Non-XML Format Files
+      - name: Non-XML format files
         href: relational-databases/import-export/non-xml-format-files-sql-server.md
-      - name: XML Format Files
+      - name: XML format files
         href: relational-databases/import-export/xml-format-files-sql-server.md
-      - name: Create a Format File
+      - name: Create a format file with bcp
         href: relational-databases/import-export/create-a-format-file-sql-server.md
-      - name: Use a Format File to Bulk Import Data
+      - name: Use a format file to bulk import data
         href: relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md
-      - name: Use a Format File to Skip a Table Column
+      - name: Use a format file to skip a table column
         href: relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md
-      - name: Use a Format File to Skip a Data Field
+      - name: Use a format file to skip a data field
         href: relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md
-      - name: Use a Format File to Map Table Columns to Data-File Fields
+      - name: Use a format file to map table columns to data-file fields
         href: relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
   - name: Stretch database
     href: sql-server/stretch-database/stretch-database.md

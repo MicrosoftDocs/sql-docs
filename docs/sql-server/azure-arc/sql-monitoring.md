@@ -4,14 +4,18 @@ description: Describes the monitoring capabilities of Azure Arc-enabled SQL Serv
 author: lcwright
 ms.author: lancewright
 ms.reviewer: mikeray
-ms.date: 09/08/2023
+ms.date: 11/26/2023
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Monitor Azure Arc-enabled SQL Server
+# Monitor Azure Arc-enabled SQL Server (preview)
 
 Monitor the performance of Azure Arc-enabled SQL Server within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible Azure Arc-enabled SQL Server and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of an Azure Arc-enabled SQL Server. Monitoring data collection is automatic, assuming all prerequisites are met.
+
+[!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
+
+During the feature preview, monitoring is available for free. Fees for this feature after general availability are to be determined.
 
 ## Prerequisites
 
@@ -283,10 +287,10 @@ Collection Frequency: 10 seconds\
 
 ### Using the Azure portal
 
-* On the resource page for an Azure Arc-enabled SQL Server, select the "Performance Dashboard (preview)" section
-* At the top of the "Performance Dashboard" page, click the Configure button. A panel "Configure monitoring settings" will open on the right-hand side of the screen.
-* In the configure monitoring settings panel, toggle the option for monitoring data collection on or off.
-* Select Apply settings
+* On the resource page for an Azure Arc-enabled SQL Server, select the **Performance Dashboard (preview)** section.
+* At the top of the **Performance Dashboard** page, select **Configure**. The portal opens **Configure monitoring settings** on the right-hand side.
+* In **Configure monitoring settings**, toggle the option for monitoring data collection on or off.
+* Select **Apply settings**.
 
 ### Using the Azure CLI
 

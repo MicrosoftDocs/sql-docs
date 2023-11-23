@@ -31,7 +31,7 @@ When communication to these endpoints is blocked you will have the following sym
 
 ## Azure extension current state
 
-You can view the current state of the Azure extension for SQL Server in the portal.
+You can view the current state of the Azure extension for SQL Server in the portal. The status is refreshed every 15 minutes.
 
 :::row:::
     :::column:::

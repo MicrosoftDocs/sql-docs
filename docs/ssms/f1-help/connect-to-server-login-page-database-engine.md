@@ -71,7 +71,7 @@ The current version of SQL Server Management Studio (SSMS) offers eight authenti
 
 - **Microsoft Entra Managed Identity**: Managed identities are special forms of service principals. There are two types of managed identities: system-assigned and user-assigned. System-assigned managed identities are enabled directly on an Azure resource. User-assigned managed identities are a standalone resource that you can assign to one or more Azure resources.
 
-  To use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have an Microsoft Entra client running with the identity's certificate stored in it. This requirement is most commonly achieved through an Azure VM because you can assign the identity to the machine through the VM's portal pane. For more information, see [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).
+  To use a managed identity to connect to a SQL resource through GUI clients such as SSMS and ADS, the machine running the client application must have a Microsoft Entra client running with the identity's certificate stored in it. This requirement is most commonly achieved through an Azure VM because you can assign the identity to the machine through the VM's portal pane. For more information, see [Managed identities in Azure AD for Azure SQL](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity).
 
 - **Microsoft Entra Default**: This option performs authentication based on password-less and noninteractive mechanisms, including managed identities, Visual Studio, Visual Studio Code, and the Azure CLI.
 

@@ -68,7 +68,7 @@ helpviewer_keywords:
 |Configure the Windows Integrated authentication type.|[Configure Windows authentication on the report server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configure the Basic authentication type.|[Configure Basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configure forms authentication or otherwise a Custom authentication type.|[Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the Web portal to pass custom authentication cookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to handle the custom authentication scenario.|[Configure the web portal to pass custom authentication cookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## Related content
 

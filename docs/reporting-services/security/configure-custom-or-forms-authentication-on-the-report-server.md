@@ -61,7 +61,7 @@ Additionally, you can use Forms authentication or a custom authentication extens
     ```
     <identity impersonate = "false" />  
     ```
-9. Add the **PassThroughCookies** element structure to the configuration file. For more information, see [Configure the Web portal to pass custom authentication cookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Add the **PassThroughCookies** element structure to the configuration file. For more information, see [Configure the web portal to pass custom authentication cookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
 10. Save the file.  
   

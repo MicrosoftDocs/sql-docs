@@ -2655,7 +2655,7 @@ For more information about the syntax conventions, see [Transact-SQL syntax conv
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
-  ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
+  ( [ LOCATION = '<prefix>://<path>[:<port>][;<key_value_pairs>[;...]]]
     [ [ , ] CREDENTIAL = <credential_name> ]
   )
 [ ; ]
@@ -2667,9 +2667,11 @@ WITH
 
 Specifies the user-defined name for the data source. The name must be unique within the database.
 
-#### LOCATION = *`'<prefix>://<path[:port]>'`*
+#### LOCATION = *`'<prefix>://<path[:port][;<key_value_pairs>]>'`*
 
 Provides the connectivity protocol and path to the external data source.
+
+The key_value_pair specifies additional options when connecting over ODBC to an external data source. To use multiple connection options, separate them by a semi-colon. The key_value_pair is the keyword and the value for a specific connection option. The available keywords and values depend on the external data source type. There are different options such as TrustServerCertificate = yes|no that might be required in some connection scenarios.
 
 | External Data Source   | Location prefix | Location path                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
@@ -2835,6 +2837,39 @@ For more examples, see [Create external data source](create-external-data-source
     --Then, query the data via an external table with T-SQL:
     SELECT TOP 10 *
     FROM tbl_TaxiRides;
+    GO
+    ```
+
+### B. Create external data source from Azure SQL Managed Instance to Azure SQL Database Hyperscale private endpoint
+
+1. Create the database master key, if it doesn't exist.
+
+    ```sql
+    -- Optional: Create MASTER KEY if it doesn't exist in the database:
+    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Strong Password>'
+    GO
+    ```
+ 
+1. Create the database scoped credential using database username and password.
+
+    ```sql    
+    CREATE DATABASE SCOPED CREDENTIAL MyCredential
+    WITH IDENTITY = 'DATABASE USER NAME',
+    SECRET = 'DATABASE USER PASSWORD' ;
+    GO
+    ```
+
+1. Create the external data source using the credential.
+
+    ```sql
+    --Create external data source pointing to the Azure SQL Database Hyperscale database over private endpoint, and referencing database-scoped credential:
+    CREATE EXTERNAL DATA SOURCE MyPrivateExternalDataSource
+    WITH (
+        TYPE=RDBMS,
+        LOCATION='server-name.privatelink.database.windows.net,1433;TrustServerCertificate=yes;', -- TrustServerCertificate property does NOT accept True/true value
+        DATABASE_NAME='database-name',
+        CREDENTIAL= [MyCredential]
+    )
     GO
     ```
 

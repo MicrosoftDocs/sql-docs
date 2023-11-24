@@ -59,7 +59,7 @@ The following table describes the code values that users may get, following comp
 | --- | --- |
 | `0` | No error. |
 | `1` | Unknown error. |
-| `3` | The specified event isn't valid. The event may not exist or it's not an appropriate one for the store procedure. |
+| `3` | The specified event isn't valid. The event may not exist or it isn't an appropriate one for the store procedure. |
 | `13` | Out of memory. Returned when there isn't enough memory to perform the specified action. |
 
 ## Remarks

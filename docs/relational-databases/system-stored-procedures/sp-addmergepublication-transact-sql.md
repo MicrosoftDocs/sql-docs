@@ -143,7 +143,7 @@ Specifies a pointer to a `.sql` file location. *@post_snapshot_script* is **nvar
 
 Specifies that the snapshot written to the *@alt_snapshot_folder* location will be compressed into the [!INCLUDE [msCoName](../../includes/msconame-md.md)] CAB format. *@compress_snapshot* is **nvarchar(5)**, with a default of `false`.
 
-- `false` specifies that the snapshot isn't be compressed.
+- `false` specifies that the snapshot isn't to be compressed.
 
 - `true` specifies that the snapshot will be compressed.
 

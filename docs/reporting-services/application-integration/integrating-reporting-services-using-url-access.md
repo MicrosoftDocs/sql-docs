@@ -27,7 +27,7 @@ helpviewer_keywords:
  [Using URL Access in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)  
  Describes how to use URL access to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 environment.  
   
-## See also  
+## Related content  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)  
   

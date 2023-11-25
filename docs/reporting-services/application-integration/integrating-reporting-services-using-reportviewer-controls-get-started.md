@@ -268,6 +268,6 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 
 Let the team know about issues on the [Reporting Services forums](/answers/topics/sql-server-reporting-services.html).
 
-## See also
+## Related content
 
 [Data collection in the Report Viewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

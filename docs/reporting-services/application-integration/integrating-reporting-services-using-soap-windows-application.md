@@ -87,7 +87,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Report Viewer controls are documented in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] online Help. For more information, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] product documentation.  
   
-## See also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Using the SOAP API in a Web Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  

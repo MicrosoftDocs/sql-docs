@@ -473,7 +473,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## See also  
+## Related content  
  [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  [Data collection in ReportViewer Control 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   

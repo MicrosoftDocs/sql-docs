@@ -495,7 +495,7 @@ Public Class Form1
 End Class  
 ```  
   
-## See also  
+## Related content  
  [Integrating Reporting Services by using the ReportViewer controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

@@ -85,7 +85,7 @@ private void Page_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## See also  
+## Related content  
 
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

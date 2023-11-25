@@ -105,7 +105,7 @@ string url = "https://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## See also  
+## Related content  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Integrating Reporting Services by using URL access](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [Integrating Reporting Services by using SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   

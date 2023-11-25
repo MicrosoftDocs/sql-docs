@@ -32,7 +32,7 @@ helpviewer_keywords:
 ## Local processing mode  
  Local processing mode provides an alternative method for viewing and rendering reports when [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't installed. Unlike remote processing, only a subset of the functionality provided by the report server is available in the control. In local processing mode, data processing isn't handled by the control but rather implemented by the hosting application. However report processing is handled by the control itself. In local processing mode, only the PDF, Excel, Word, and Image rendering extensions are available.  
   
-## See also  
+## Related content  
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Using the WebForms Report Viewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)   
  [Using the WinForms Report Viewer Control](../../reporting-services/application-integration/using-the-winforms-reportviewer-control.md)  

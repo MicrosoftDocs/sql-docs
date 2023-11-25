@@ -54,7 +54,7 @@ helpviewer_keywords:
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Sets one or more system properties in the report server or SharePoint farm.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Validates [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension settings.|  
   
-## See also  
+## Related content  
  [Building Applications by using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

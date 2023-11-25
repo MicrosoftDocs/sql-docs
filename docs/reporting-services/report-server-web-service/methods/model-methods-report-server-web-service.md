@@ -28,7 +28,7 @@ ms.custom: updatefrequency5
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|Associates a set of drillthrough reports together with a model.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|Sets security policies on a model item.|  
   
-## See also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Report Server Web Service Methods](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

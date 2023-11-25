@@ -36,7 +36,7 @@ helpviewer_keywords:
 |[Subscription and Delivery Methods](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Describes methods that you can use to create and manage subscriptions and report delivery.|  
 |[Linked Reports Methods](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Describes methods that you can use to create and manage linked reports.|  
   
-## See also  
+## Related content  
  [Accessing the SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Building Applications Using the Web Service and the .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

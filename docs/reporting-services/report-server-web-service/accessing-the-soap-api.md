@@ -51,7 +51,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.  
   
-## See also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

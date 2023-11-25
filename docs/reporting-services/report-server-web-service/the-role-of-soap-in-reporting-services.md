@@ -51,7 +51,7 @@ public void DeleteItem(string item);
   
  The <xref:ReportService2010.ReportingService2010.DeleteItem%2A> method has no return value, so an empty response is returned.  
   
-## See also  
+## Related content  
  [Accessing the SOAP API](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   

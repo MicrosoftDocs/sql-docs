@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Walkthrough: Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features  
   
-## See also  
+## Related content  
  [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   

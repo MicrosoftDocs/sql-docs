@@ -42,7 +42,7 @@ helpviewer_keywords:
  [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  Describes the custom report item infrastructure classes and managed wrapper classes in the **Microsoft.ReportDesigner** namespace.  
   
-## See also  
+## Related content  
  [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

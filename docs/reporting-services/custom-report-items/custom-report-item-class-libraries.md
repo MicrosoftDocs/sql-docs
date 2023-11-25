@@ -122,7 +122,7 @@ helpviewer_keywords:
 |**DataSetName**|The name of the dataset containing the fields to be dropped.|  
 |**Fields**|The collection of fields (**Microsoft.ReportDesigner.Field**) to be dropped.|  
   
-## See also  
+## Related content  
  [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
  [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  

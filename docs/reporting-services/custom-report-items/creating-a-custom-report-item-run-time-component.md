@@ -123,7 +123,7 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## See also  
+## Related content  
  [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
  [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   

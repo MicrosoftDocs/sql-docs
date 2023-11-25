@@ -77,7 +77,7 @@ helpviewer_keywords:
   
 9. Step through your code using the F11 key. For more information about debugging using [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation.  
   
-## See also  
+## Related content  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

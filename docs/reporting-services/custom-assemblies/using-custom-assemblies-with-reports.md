@@ -38,7 +38,7 @@ helpviewer_keywords:
  [How to: Debug Custom Assemblies](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  Describes how to debug your custom assembly code.  
   
-## See also  
+## Related content  
  [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

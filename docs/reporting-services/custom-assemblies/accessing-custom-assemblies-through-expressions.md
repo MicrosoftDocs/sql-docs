@@ -45,7 +45,7 @@ helpviewer_keywords:
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## See also  
+## Related content  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

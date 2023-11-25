@@ -81,7 +81,7 @@ try
   
  For more information, see ".NET Framework Security" in the .NET Framework Developer's Guide.  
   
-## See also  
+## Related content  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

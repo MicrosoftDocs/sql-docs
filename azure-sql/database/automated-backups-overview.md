@@ -5,7 +5,7 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: mathoma, wiassaf, danil
-ms.date: 09/12/2023
+ms.date: 11/27/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -109,7 +109,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 
 | Backup property | PITR | Geo-restore | LTR |
 |---|---|---|---|
-| **Types of SQL backup** | Full, differential, log. | Replicated copies of PITR backups. | Only the full backups. |
+| **Types of SQL backup** | Full, differential, log. | Most recent geo-replicated copies of PITR backups. | Only the full backups. |
 | **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  | One week (or user's policy).|
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 7 days by default, configurable up to 35 days. | Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |

@@ -71,6 +71,7 @@ The following is a list of features or tools that still use previous version of 
 - SQL Server Agent
 - Database Mail
 - Linked Servers
+- Polybase connector to SQL Server
 
 ## Additional changes to connection string encryption properties
 

@@ -89,7 +89,7 @@ ALTER LOGIN [login_name] DISABLE
 When a login is disabled, connections are no longer allowed using that server principal. It also disables all database principals (users) created from that login from being able to connect to their respective databases.
 
 > [!NOTE]
-> - `ALTER LOGIN login_name DISABLE` is not supported for contained users.
+> - `ALTER LOGIN login_name DISABLE` will not affect database contained users, since they aren't associated to logins.
 > - `ALTER LOGIN login_name DISABLE` is not supported for Microsoft Entra groups.
 > - An individual disabled login cannot belong to a user who is part of a login group created in the `master` database (for example, a Microsoft Entra admin group). 
 > - For the `DISABLE` or `ENABLE` changes to take immediate effect, the authentication cache and the **TokenAndPermUserStore** cache must be cleared using the T-SQL commands.
@@ -124,7 +124,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 - Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
   - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
-- When you alter permissions for a Microsoft Entra login, the changes take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. Also [flush the authentication cache and the TokenAndPermUserStore cache](#disable-or-enable-a-login-using-alter-login-syntax). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
+- When you alter permissions for a Microsoft Entra login, by default the changes only take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. To force permissions changes to take immediate effect, you can manually clear the authentication and TokenAndPermUserStore, as described earlier in [disable or enable a login using ALTER LOGIN](#disable-or-enable-a-login-using-alter-login). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
 - In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates T-SQL for a database contained Microsoft Entra user.
 
 ### Microsoft Entra group server principal limitations

@@ -42,6 +42,6 @@ The items listed are specific to the updated Report Viewer web part.
 * The web part can only be used on *classic* SharePoint pages.
 * Only paginated (RDL) reports are supported for embedding in the Report Viewer web part. If you are looking to embed Power BI reports or mobile reports, you can use the *rs:Embed=true* URL parameter.
 
-## Next steps
+## Related content
 
 To get started with the updated Report Viewer web part, see [Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md).

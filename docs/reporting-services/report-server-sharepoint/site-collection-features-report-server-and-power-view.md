@@ -61,7 +61,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
  To deactivate the feature, you can use the same procedure, but click **Deactivate** rather than **Activate.**  
   
-## Next steps
+## Related content
 
 After the feature is activated, you can continue with server integration.
 

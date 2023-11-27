@@ -169,7 +169,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   Add the class to the allow list.  
   
-## See also
+## Related content
 
  [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Report Server Service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  

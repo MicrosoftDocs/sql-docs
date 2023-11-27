@@ -47,7 +47,7 @@ To add a web part to a web page, you must have the Add and Customize Pages permi
   
 9. Click **Apply** at the bottom of the tool pane, and then click **OK** to close the pane.  
   
-## See also
+## Related content
 
  [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)   
  [Customize the Report Viewer web part](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   

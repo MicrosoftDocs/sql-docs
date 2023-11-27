@@ -16,7 +16,7 @@ ms.custom: updatefrequency5
 
 Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
 
-![Report Viewer web part on a SharePoint page](media/sharepoint-report-viewer-web-part-on-page.png)
+:::image type="content" source="media/sharepoint-report-viewer-web-part-on-page.png" alt-text="Screenshot of the Report Viewer web part on a SharePoint page." lightbox="media/sharepoint-report-viewer-web-part-on-page.png":::
 
 ## Prerequisites
 
@@ -30,17 +30,17 @@ Display a report, from SQL Server Reporting Services or Power BI Report Server, 
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Add a page**.
 
-    ![Add a page to a sharepoint site from the gear icon.](media/sharepoint-add-a-page.png)
+    :::image type="content" source="media/sharepoint-add-a-page.png" alt-text="Screenshot of the gear menu, highlighting Add a page." lightbox="media/sharepoint-add-a-page.png":::
 
 2. Give your page a name and select **Create**.
 
 3. Within the page designer, select the **Insert** tab in the ribbon. Then select **web part** within the **Parts** section.
 
-    ![Insert a web part from the office ribbon.](media/sharepoint-insert-web-part.png)
+    :::image type="content" source="media/sharepoint-insert-web-part.png" alt-text="Insert a web part from the office ribbon." lightbox="media/sharepoint-insert-web-part.png":::
 
 4. Under **Categories**, select **SQL Server Reporting Services (Native mode)**. Under **Parts**, select **Report Viewer**. Then select **Add**.
 
-    ![Add Report Viewer web part.](media/sharepoint-report-viewer-web-part.png)
+    :::image type="content" source="media/sharepoint-report-viewer-web-part.png" alt-text="Screenshot of the Add Report Viewer web part." lightbox="media/sharepoint-report-viewer-web-part.png":::
 
     You may initially see an error. The error is because the default report server URL is set to *https://localhost* and may not be available at that location.
 
@@ -50,7 +50,7 @@ To configure the web part to point to your specific report, do the following ste
 
 1. When editing the SharePoint page, select the down arrow in the upper right of the web part and select **Edit web part**.
 
-    ![Edit web page from web part drop down.](media/sharepoint-edit-web-part.png)
+    :::image type="content" source="media/sharepoint-edit-web-part.png" alt-text="Screenshot of the down arrow menu, highlighting Edit Web Part." lightbox="media/sharepoint-edit-web-part.png":::
 
 2. Enter the **Report Server URL** for the report server hosting your report. The URL should look similar to *https://myrsserver/reportserver*.
 
@@ -62,7 +62,7 @@ To configure the web part to point to your specific report, do the following ste
 
 6. Select **Save**, within the Office ribbon, to save the changes to the SharePoint page.
 
-![Report Viewer web part on a SharePoint page](media/sharepoint-report-viewer-web-part-on-page.png)
+:::image type="content" source="media/sharepoint-report-viewer-web-part-on-page.png" alt-text="Screenshot of the Report Viewer web part on a SharePoint page." lightbox="media/sharepoint-report-viewer-web-part-on-page.png":::
 
 ## Considerations and limitations
 

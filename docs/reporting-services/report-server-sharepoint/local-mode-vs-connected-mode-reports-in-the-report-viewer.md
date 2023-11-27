@@ -76,7 +76,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
  For the latest information on using ADS extension with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connected mode, see [Access Services Report in SharePoint Site shows error in data extension 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
-## See also
+## Related content
 
  [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 

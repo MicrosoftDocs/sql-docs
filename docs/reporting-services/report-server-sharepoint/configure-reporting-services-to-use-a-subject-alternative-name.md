@@ -30,8 +30,8 @@ For more information about TLS settings for Reporting Services, see [Configure T
      For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2. On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
-  
-     ![Report Server Configuration Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Report Server Configuration Manager")  
+
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png" alt-text="Screenshot of the Report Server Configuration Manager." lightbox="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png":::
   
      The configuration manager registers the TLS/SSL certificate for the port.  
   
@@ -138,7 +138,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
 
 11. On the **Report Server Status** page of the Report Server Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
   
-## See also
+## Related content
 
  [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

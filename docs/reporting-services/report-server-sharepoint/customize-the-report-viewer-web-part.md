@@ -93,7 +93,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
   
  The Parameters area provides fields for entering values before running the report. It is only used when a report definition includes parameters. When either the Parameters or Credentials areas are displayed, the report view is adjusted to use the remaining width of the web part. You can set properties on the web part to customize the width of Parameters. You can also define the labels that appear next to individual parameters on the page. For more information about how to modify parameter labels, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## See also
+## Related content
 
  [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)   
  [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

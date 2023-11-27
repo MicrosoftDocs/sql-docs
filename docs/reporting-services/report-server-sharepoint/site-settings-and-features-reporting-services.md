@@ -42,7 +42,7 @@ Reporting Services SharePoint mode has several site level custom features and si
 |**Enable accessibility metadata for reports**|Turn on accessibility metadata in the HTML output for reports|  
 |**Enable Exact Data Visualization Fit Sizing for Reports**|Configure data visualization fit behavior when inside a tablix, to fix exactly. This includes chart, gauge, and map. When disabled the behavior is for data visualizations to fit approximately, which may leave some white space. This setting only applies to rendering in the Report Viewer web part. To manage this behavior for server-side rendering, you need to modify the **rsreportserver.config** file. For more information, see the following:<br /><br /> [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).<br /><br /> [Customize Rendering Extension Parameters in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).<br /><br /> [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).<br /><br /> Enabling Exact may have performance impact because the processing to determine the exact size may take longer than an approximate fit.|  
   
-## See also
+## Related content
 
  [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   

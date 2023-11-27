@@ -44,7 +44,7 @@ You can upload report definitions and report models to a SharePoint library. Whe
   
  A report can contain parameters so that users can filter data. You can configure the parameters to use specific values or change how they appear to the user. For more information, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## See also
+## Related content
 
  [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publish a Shared Data Source to a SharePoint Library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   

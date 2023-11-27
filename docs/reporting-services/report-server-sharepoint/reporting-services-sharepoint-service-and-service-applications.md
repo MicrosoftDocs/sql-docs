@@ -71,7 +71,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-## Related tasks
+## Related content
   
 |Task|Link|  
 |----------|----------|  

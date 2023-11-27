@@ -76,7 +76,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
-    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
+    :::image type="Screnshot of the gear menu, highlighting the Site settings." source="media/sharepoint-site-settings.png" alt-text="Image alt text." lightbox="media/sharepoint-site-settings.png":::
 
     By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
 
@@ -86,7 +86,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 5. Select **Activate**.
 
-    ![Activate Report Viewer web part feature](media/web-part-activiate-feature.png)
+    :::image type="Screenshot of the Activate Report Viewer web part feature." source="media/web-part-activiate-feature.png" alt-text="Image alt text." lightbox="media/web-part-activiate-feature.png":::
 
 6. Repeat for additional site collections by opening each site and clicking Site Actions.
 
@@ -116,7 +116,7 @@ Retracting the solution does not remove the Report Viewer web part from the list
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
-    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screnshot of the gear menu, with Site settings highlighted." lightbox="media/sharepoint-site-settings.png":::
 
     By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
 
@@ -125,8 +125,7 @@ Retracting the solution does not remove the Report Viewer web part from the list
 3. Select the **edit icon** next to **ReportViewerNativeMode.dwp**. It may not be listed on the first page of results.
 
 4. Select **Delete Item**.
-
-    ![Edit and delete the Report Viewer Native Mode web part](media/report-viewer-native-mode-edit-delete.png)
+    :::image type="content" source="media/report-viewer-native-mode-edit-delete.png" alt-text="Screenshot of the Web Part Gallery, highlighting Delete Item." lightbox="media/report-viewer-native-mode-edit-delete.png":::
 
 Deletion of the web part can be attempted by using PowerShell, but there is not a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
 
@@ -166,7 +165,7 @@ The following languages are supported with the web part:
     2. Uninstall SSRS
     3. Reinstall the Report Viewer web part
 
-## Next steps
+## Related content
 
 After the Report Viewer web part has been deployed and activated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
 

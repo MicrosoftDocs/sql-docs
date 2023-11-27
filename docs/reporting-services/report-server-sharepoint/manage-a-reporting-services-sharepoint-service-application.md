@@ -96,7 +96,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
  You can view and delete the running jobs, for example jobs that are created by report subscriptions and data-driven subscriptions. The page is not used to manage subscriptions, but rather jobs that are triggered by a subscription. For example a subscription that is scheduled to run once an hour will generate a job once an hour that appears on the **Manage Jobs** page.  
   
- ![manage running jobs](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
+:::image type="content" source="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif" alt-text="Screenshot of the Manage Jobs page." lightbox="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif":::  
   
 ## Key management
  The following table summarizes the Kay Management pages  

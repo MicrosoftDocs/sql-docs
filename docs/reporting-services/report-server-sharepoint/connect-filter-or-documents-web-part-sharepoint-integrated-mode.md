@@ -70,7 +70,7 @@ If you are using a SharePoint product, you can create a dashboard or web part Pa
   
 11. Check in your changes and save the page.  
   
-## See also
+## Related content
 
  [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)   

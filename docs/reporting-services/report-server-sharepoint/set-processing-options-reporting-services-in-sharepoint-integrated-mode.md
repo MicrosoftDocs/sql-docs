@@ -85,7 +85,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 *  Use Windows PowerShell to set the database timeout of a SharePoint report server. For more information, see the "Get and set Properties of the Reporting Service Application Database" section of [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## Next steps
+## Related content
 
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Caching Reports](../../reporting-services/report-server/caching-reports-ssrs.md)   

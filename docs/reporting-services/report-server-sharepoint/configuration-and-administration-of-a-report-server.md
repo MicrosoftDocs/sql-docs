@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services is a server-based reporting platform that provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization, as well as programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.
+SQL Server Reporting Services is a server-based reporting platform. It provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization. It also provides programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.

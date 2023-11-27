@@ -60,7 +60,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-##  Shared service and proxy cmdlets
+## Shared service and proxy cmdlets
 
  The following table contains the PowerShell cmdlets for the Reporting Services SharePoint shared service.  
   
@@ -147,7 +147,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
 
  In addition to the following samples, see the section "Windows PowerShell Script" in the topic [Windows PowerShell script for Steps 1-4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
   
-### Create a reporting services service application and proxy
+### Create a Reporting Services service application and proxy
 
  This sample script completes the following tasks:  
   
@@ -173,7 +173,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
   
 ```  
   
-### Review and update a reporting services delivery extension
+### Review and update a Reporting Services delivery extension
 
  The following PowerShell script example, updates the configuration for the report server e-mail delivery extension for the service application named `My RS Service App`. Update the values for the SMTP server (`<email server name>`) and the FROM email alias (`<your FROM email address>`).  
   
@@ -282,7 +282,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 
  See [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-## Next steps
+## Related content
 
 [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
 [CheckList: Use PowerShell to verify Power Pivot for SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   

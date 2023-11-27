@@ -104,7 +104,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
  After you install the Reporting Services Add-in on SharePoint and configure the two servers for integration, you can upload or publish report server content types to a SharePoint library, and then view and manage those documents from a SharePoint site. Uploading or publishing report server content is an important first step; the web part and pages become available when you select report definitions (.rdl), report models (.smdl) and shared data sources (.rsds) on a SharePoint site.  
   
-##  Language considerations
+## Language considerations
 
  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] and [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] products are available in many more languages than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -130,7 +130,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services tips, tricks, and troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
 
-## Next steps
+## Related content
 
 [Install or uninstall the Reporting Services add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 [Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)

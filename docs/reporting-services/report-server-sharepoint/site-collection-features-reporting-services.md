@@ -31,7 +31,7 @@ Reporting Services SharePoint mode provides three SharePoint site collection fea
 |**Report Server Integration Feature**|Enables rich reporting using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> This feature is Active by default.|  
 |**Power View Integration Feature**|Enables interactive data exploration and visual presentation against [!INCLUDE[power-pivot-md](../../includes/power-pivot-md.md)] work books and Analysis services tabular databases.<br /><br /> The feature can be accessed by the context menus of the following data sources:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> **.bism** connection file<br /><br /> <br /><br /> If Power View does not appear in the context menus, verify the **Power View Integration Feature** is activated.<br /><br /> This feature is deactivated by default.|  
 
-## Next steps
+## Related content
 
 [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
 [Reporting Services Site Settings and Site Features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   

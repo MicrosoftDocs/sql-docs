@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/28/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual

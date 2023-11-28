@@ -3,7 +3,7 @@ title: Create and Update Tables
 description: "Create and update database tables"
 author: markingmyname
 ms.author: maghan
-ms.date: 11/28/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual

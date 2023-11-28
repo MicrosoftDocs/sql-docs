@@ -50,7 +50,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | RHEL 8 | Full-Text Search | 14.0.3465.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm) |
 | RHEL 8 | High Availability | 14.0.3465.1-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |
 | RHEL 7 | SSIS | 14.0.3015.40-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/Packages/m/mssql-server-is-14.0.3015.40-1.x86_64.rpm) |
-| **SUSE Enterprise Linux Server** | | | |
+| **SUSE Linux Enterprise Server** | | | |
 | SLES 12 | Database Engine | 14.0.3465.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-14.0.3465.1-1.x86_64.rpm) |
 | SLES 12 | Full-Text Search | 14.0.3465.1-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-fts-14.0.3465.1-1.x86_64.rpm) |
 | SLES 12 | High Availability | 14.0.3465.1-1 | [High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/Packages/m/mssql-server-ha-14.0.3465.1-1.x86_64.rpm) |

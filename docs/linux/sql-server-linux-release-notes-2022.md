@@ -51,7 +51,7 @@ This section lists the latest versions of each package per distribution, for [!I
 | RHEL 9 | High Availability | 16.0.4095.4-1 | [High Availability RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-ha-16.0.4095.4-1.x86_64.rpm) |
 | RHEL 9 | PolyBase | 16.0.4095.4-1 | [PolyBase RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-polybase-16.0.4095.4-1.x86_64.rpm) |
 | RHEL 8 | SSIS | 16.0.4003.1-1 | [SSIS RPM package](https://packages.microsoft.com/rhel/8/mssql-server-2022/Packages/m/mssql-server-is-16.0.4003.1-1.x86_64.rpm) |
-| **SUSE Enterprise Linux Server** | | | |
+| **SUSE Linux Enterprise Server** | | | |
 | SLES 15 | Database Engine | 16.0.4095.4-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-16.0.4095.4-1.x86_64.rpm) |
 | SLES 15 | Extensibility | 16.0.4095.4-1 | [Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-extensibility-16.0.4095.4-1.x86_64.rpm) |
 | SLES 15 | Full-Text Search | 16.0.4095.4-1 | [Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-fts-16.0.4095.4-1.x86_64.rpm) |

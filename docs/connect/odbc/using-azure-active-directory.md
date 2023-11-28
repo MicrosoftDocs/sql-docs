@@ -208,7 +208,7 @@ You can verify that a suitable Kerberos ticket is available by inspecting the ou
 
 ### Linux
 
-On SuSE 11, the default Kerberos library version of 1.6.x doesn't support the Enterprise Principal option necessary to use alternate UPN suffixes. To use alternate UPN suffixes with Azure AD Integrated authentication, upgrade the Kerberos library to 1.7 or newer.
+On SUSE 11, the default Kerberos library version of 1.6.x doesn't support the Enterprise Principal option necessary to use alternate UPN suffixes. To use alternate UPN suffixes with Azure AD Integrated authentication, upgrade the Kerberos library to 1.7 or newer.
 
 On Alpine Linux, the default `libcurl` doesn't support the SPNEGO/Kerberos authentication required for Azure AD Integrated authentication.
 

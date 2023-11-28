@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot connectivity to data processing service and telemetry endpoints"
-description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints on Azure Arc-enabled SQL Server."
+description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints."
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
@@ -134,5 +134,5 @@ The following table shows some of the common DPS upload status values and what y
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Manage SQL Server license and billing options](manage-configuration.md)
-- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

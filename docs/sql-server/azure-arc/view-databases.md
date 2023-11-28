@@ -1,6 +1,6 @@
 ---
 title: View SQL Server databases
-description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
+description: View databases in Azure from an instance of SQL Server enabled by Azure Arc. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
@@ -29,7 +29,7 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 
 ## Inventory databases
 
-1. Locate the Azure Arc-enabled SQL Server instance in the Azure portal.
+1. Locate the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance in the Azure portal.
 1. **Select** the SQL Server resource.
 1. Under **Data management**, select **Databases**.
 
@@ -56,7 +56,7 @@ On Database properties the page describes:
 
 ## How to use Azure Resource Graph to query data
 
-Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available when viewing Azure Arc-enabled SQL Server databases.
+Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available when viewing [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] databases.
 
 ### Scenario 1: Get 10 databases
 
@@ -142,6 +142,5 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 ## Next steps
 
-- [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
-
+- [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

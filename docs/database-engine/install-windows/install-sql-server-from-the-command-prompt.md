@@ -326,7 +326,7 @@ setup.exe /qs /ACTION=Uninstall /FEATURES=AZUREEXTENSION  /IACCEPTSQLSERVERLIC
 
 For more information about connecting to Azure Arc, see:
 
-- [Azure Arc-enabled SQL Server](../../sql-server/azure-arc/overview.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../../sql-server/azure-arc/overview.md)
 - [Connect your SQL Server to Azure Arc](../../sql-server/azure-arc/connect.md)
 
 ## <a id="SysPrep"></a> SysPrep parameters

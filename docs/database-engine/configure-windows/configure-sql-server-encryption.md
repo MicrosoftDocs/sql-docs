@@ -24,7 +24,7 @@ To configure [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] to us
 
 Depending on the version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager you have access to on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer, use one of the following procedures to install and configure the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance.
 
-### Computers that have SQL Server 2019 Configuration Manager
+### Computers with SQL Server Configuration Manager for SQL Server 2019 and later versions
 
 Starting with [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)], certificate management is integrated into [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, and can be used with earlier versions of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. To add a certificate on a single [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance, in a failover cluster configuration, or in an availability group configuration, see [Certificate Management (SQL Server Configuration Manager)](manage-certificates.md). The Configuration Manager greatly simplifies certificate management by taking care of installing the certificate and configuring [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] for using the installed certificate with just a few steps.
 
@@ -32,7 +32,7 @@ Certificates are stored locally for the users on the computer. To install a cert
 
 You can temporarily install an Express edition of [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] or a later version to use [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager, which supports integrated certificate management.
 
-### Computers that don't have SQL Server 2019 Configuration Manager
+### Computers with earlier version of SQL Server Configuration Manager (SQL Server 2017 and earlier)
 
 If you are using [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] or an earlier version, and [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] Configuration Manager for [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] isn't available, follow these steps to install and configure the certificate on the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer:
 

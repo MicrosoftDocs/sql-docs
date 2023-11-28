@@ -187,7 +187,9 @@ Up to 50 files can be stored in this location, if the folder is not created, whe
 
 ### Object Lock \ delete retention is not supported
 
-SQL Server backup to S3-compatible object storage feature does not support Object Lock, also called, Delete Retention feature. Object Lock prevents files from being deleted or overwritten for the duration of its retention period. If this feature is enabled and configured in your S3-compatible object storage the backup operation will fail with the following message:
+SQL Server backup to S3-compatible object storage feature does not support Object Lock, also called the Delete Retention feature. Object Lock prevents files from being deleted or overwritten for the duration of its retention period.
+
+The bucket and folder location targeted by your backup operation must not have Object Lock enabled. If this feature is enabled and configured in your S3-compatible object storage the backup operation will fail with the following message:
 
     ```
     Msg 3202, Level 16, State 1, Line 13
@@ -195,7 +197,6 @@ SQL Server backup to S3-compatible object storage feature does not support Objec
     Msg 3013, Level 16, State 1, Line 13
     BACKUP DATABASE is terminating abnormally.
     ```
-The bucket and folder location targeted by your backup operation must not have Object Lock enabled.
 
 ## Next steps
 

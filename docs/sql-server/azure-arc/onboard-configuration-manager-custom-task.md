@@ -1,6 +1,6 @@
 ---
 title: Connect SQL Server machines at scale with a Configuration Manager custom task sequence | Arc-enabled SQL Server
-description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc-enabled servers for Azure Arc-enabled SQL Server.
+description: You can use a custom task sequence that can deploy the Connected Machine Agent to onboard a collection of devices to Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -26,7 +26,7 @@ Before you get started, be sure to review the [prerequisites](prerequisites.md) 
 
 ## Generate a service principal
 
-Create a Microsoft Entra ID [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and Azure Arc-enabled SQL Server.
+Create a Microsoft Entra ID [service principal](/azure/active-directory/develop/app-objects-and-service-principals). A service principal is a special limited management identity that is granted only the minimum permission necessary to connect machines to Azure and to create the Azure resources for Azure Arc-enabled server and [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
@@ -104,4 +104,4 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
-- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- Learn how to [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)

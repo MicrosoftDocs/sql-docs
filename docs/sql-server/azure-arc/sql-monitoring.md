@@ -1,6 +1,6 @@
 ---
-title: Monitor Azure Arc-enabled SQL Server in Azure portal
-description: Describes the monitoring capabilities of Azure Arc-enabled SQL Server.
+title: Monitor in Azure portal
+description: Describes the monitoring capabilities of SQL Server enabled by Azure Arc.
 author: lcwright
 ms.author: lancewright
 ms.reviewer: mikeray
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Monitor Azure Arc-enabled SQL Server (preview)
+# Monitor SQL Server enabled by Azure Arc(preview)
 
-Monitor the performance of Azure Arc-enabled SQL Server within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible Azure Arc-enabled SQL Server and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of an Azure Arc-enabled SQL Server. Monitoring data collection is automatic, assuming all prerequisites are met.
+Monitor the performance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] within the Azure portal. Performance metrics are automatically collected from DMV datasets on eligible [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and sent to the Azure telemetry pipeline for near real-time processing. Performance data can then be viewed on the Performance Dashboard section of a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Monitoring data collection is automatic, assuming all prerequisites are met.
 
 [!INCLUDE [azure-arc-sql-preview](includes/azure-arc-sql-preview.md)]
 
@@ -19,16 +19,16 @@ During the feature preview, monitoring is available for free. Fees for this feat
 
 ## Prerequisites
 
-In order for monitoring data to be collected on an Azure Arc-enabled SQL Server, the following conditions must be met:
+In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], the following conditions must be met:
 
 * The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is update to the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
-* Azure Arc-enabled SQL Server is running on Windows operating system
-* Azure Arc-enabled SQL Server is a Standard or Enterprise Edition
-* The license type on the Azure Arc-enabled SQL Server is set to "License with Software Assurance" or "Pay-as-you-go"
+* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
+* [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
+* The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
 
 ## Collected data
 
-The following lists reflect the monitoring data that is collected from DMV datasets on Azure Arc-enabled SQL Server when the monitoring feature is enabled.  No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled.  No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
 
 ### Active Sessions
 
@@ -287,7 +287,7 @@ Collection Frequency: 10 seconds\
 
 ### Using the Azure portal
 
-* On the resource page for an Azure Arc-enabled SQL Server, select the **Performance Dashboard (preview)** section.
+* On the resource page for a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], select the **Performance Dashboard (preview)** section.
 * At the top of the **Performance Dashboard** page, select **Configure**. The portal opens **Configure monitoring settings** on the right-hand side.
 * In **Configure monitoring settings**, toggle the option for monitoring data collection on or off.
 * Select **Apply settings**.
@@ -296,7 +296,7 @@ Collection Frequency: 10 seconds\
 
 #### Disable monitoring data collection
 
-Run the following command in the Azure CLI to disable monitoring data collection for your Azure Arc-enabled SQL Server. Replace the placeholders for subscription ID, resource group, and resource name:
+Run the following command in the Azure CLI to disable monitoring data collection for your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Replace the placeholders for subscription ID, resource group, and resource name:
 
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=false' --api-version 2023-09-01-preview
@@ -304,7 +304,7 @@ az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group
 
 #### Enable monitoring data collection
 
-To enable the monitoring data collection for an Azure Arc-enabled SQL Server, run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
+To enable the monitoring data collection for a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command in the Azure CLI. Replace the placeholders for subscription ID, resource group, and resource name:
 
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
@@ -318,6 +318,6 @@ Please note that this command might run successfully, but all requirements in th
 
 ## Next steps
   
-* [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
-* [Azure Arc-enabled SQL Server data collection and reporting](data-collection.md)
+* [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
+* [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] data collection and reporting](data-collection.md)
 * [Dynamic management views (DMVs)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

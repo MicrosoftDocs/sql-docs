@@ -1,6 +1,6 @@
 ---
-title: Connect SQL Server on a server already connected to Azure Arc
-description: Connect an instance of SQL Server to Azure Arc on a server that is already connected to Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
+title: Connect SQL Server on a server already enabled by Azure Arc
+description: Connect an instance of SQL Server to Azure Arc on a server that is already enabled by Azure Arc. Allows you to manage SQL Server centrally, as an Arc-enabled resource.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, maghan
@@ -8,7 +8,7 @@ ms.date: 07/06/2023
 ms.topic: conceptual
 ---
 
-# Connect your SQL Server to Azure Arc on a server already connected to Azure Arc
+# Connect your SQL Server to Azure Arc on a server already enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -18,7 +18,7 @@ To automatically connect your SQL Server instances, see [Automatically Connect y
 Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 >
 
-Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
+Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 This article explains how to connect your SQL Server instance to Azure Arc on an Arc-enabled server. If the physical or virtual server isn't connected to Azure yet, follow the steps in [Connect your SQL Server to Azure Arc](connect.md).
 
@@ -88,4 +88,4 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
+- [Configure best practices assessment on an [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

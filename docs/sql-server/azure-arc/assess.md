@@ -1,6 +1,6 @@
 ---
-title: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
-description: Configure best practices assessment on an Azure Arc-enabled SQL Server instance
+title: Configure best practices assessment
+description: Explains how to configure best practices assessment on SQL Server instance for SQL Server enabled by Azure Arc.
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,7 @@ ms.date: 06/14/2023
 ms.topic: conceptual
 ---
 
-# Configure SQL best practices assessment
+# Configure SQL best practices assessment - SQL Server enabled by Azure Arc
 
 Best practices assessment provides a mechanism to evaluate the configuration of your SQL Server. After you enable best practices assessment, an assessment scans your SQL Server instance and databases to provide recommendations for things like:
 
@@ -21,7 +21,7 @@ Best practices assessment provides a mechanism to evaluate the configuration of 
 
 Assessment run time depends on your environment (number of databases, objects, and so on), with a duration from a few minutes, up to an hour. Similarly, the size of the assessment result also depends on your environment. Assessment runs against your instance and all databases on that instance. In our testing, we observed that an assessment run can have up to 5-10% CPU impact on the machine. In these tests, the assessment was done while a TPC-C like application was running against the SQL Server.
 
-This article provides instructions for using best practices assessment on an instance of Azure Arc-enabled SQL Server.
+This article provides instructions for using best practices assessment on an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 >[!IMPORTANT]
 >Best practices assessment is available only for SQL Servers purchased through either [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) or [pay-as-you-go (PAYG)](https://www.microsoft.com/sql-server/sql-server-2022-pricing) licensing options.

@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Restore to a point-in-time on Azure Arc-enabled SQL Server
+# Restore to a point-in-time on 
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -24,7 +24,7 @@ You can restore a database to a point-in-time:
 
 ## Prerequisite
 
-Before you can restore a database to a point-in-time with the instructions in this article, you have to enable automatic backups. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+Before you can restore a database to a point-in-time with the instructions in this article, you have to enable automatic backups. For instructions, see [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
 
 Automated backups are disabled by default.
 
@@ -60,7 +60,7 @@ az sql db-arc restore --dest-name "new_db" --resouce-group "my-rg" --name "mysou
 
 ## Limitations
 
-- The process described in this article requires the backup be taken by an Azure Arc-enabled SQL Server automated backup. For instructions, see [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+- The process described in this article requires the backup be taken by an automated backup from an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. For instructions, see [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
 
 ## Related tasks
 

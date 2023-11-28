@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 |xdes_id|**bigint**|A database-specific internal ID for the transaction.|  
 |commit_lbn|**bigint**|The number of the log block that contains the commit log record for the transaction.|  
 |commit_csn|**bigint**|The instance-specific commit sequence number for the transaction.|  
-|commit_time|**smalldatetime**|The time when the transaction was committed.|  
+|commit_time|**datetime**|The time when the transaction was committed.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssazuresynapse-md](../../includes/ssazuresynapse-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Next steps

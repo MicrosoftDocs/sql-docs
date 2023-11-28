@@ -185,6 +185,18 @@ Up to 50 files can be stored in this location, if the folder is not created, whe
 2022-02-05 00:32:10.88 Server      Error searching first file in /var/opt/mssql/security/ca-certificates: 3(The system cannot find the path specified.)
 ```
 
+### Object Lock \ delete retention is not supported
+
+SQL Server backup to S3-compatible object storage feature does not support Object Lock, also called, Delete Retention feature. Object Lock prevents files from being deleted or overwritten for the duration of its retention period. If this feature is enabled and configured in your S3-compatible object storage the backup operation will fail with the following message:
+
+    ```
+    Msg 3202, Level 16, State 1, Line 13
+    Write on 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak' failed: 87 (The parameter is incorrect).
+    Msg 3013, Level 16, State 1, Line 13
+    BACKUP DATABASE is terminating abnormally.
+    ```
+The bucket and folder location targeted by your backup operation must not have Object Lock enabled.
+
 ## Next steps
 
  - [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  

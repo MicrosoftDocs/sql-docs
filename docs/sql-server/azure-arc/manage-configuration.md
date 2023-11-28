@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Configure SQL Server enabled by Azure Arc
 
-Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. In Azure portal, the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] **Overview** reflects how the SQL Server Configuration effects a particular instance.
+Each Azure Arc-enabled server includes a set of properties that apply to all SQL Server instances installed in that server. You can configure these properties after the Azure extension for SQL Server is installed on the machine. However, the properties only take effect if a SQL Server instance or instances are installed. In Azure portal, the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] **Overview** reflects how the SQL Server Configuration affects a particular instance.
 
 Azure portal SQL Server Configuration allows you to perform the following management tasks:
 

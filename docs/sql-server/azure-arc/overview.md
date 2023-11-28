@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Feature overview. Explains how you can mnage instances of SQL Server enabled by Azure Arc.
+description: Feature overview. Explains how you can manage instances of SQL Server enabled by Azure Arc.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest

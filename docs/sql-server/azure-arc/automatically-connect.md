@@ -64,4 +64,4 @@ To test Arc-enabled SQL Server on an Azure VM, follow the steps at [Evaluate Arc
 ## Related content
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

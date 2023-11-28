@@ -1,6 +1,6 @@
 ---
 title: Protect SQL Server with Microsoft Defender for Cloud 
-description: Describes how to use Microsoft Defender for Cloud to protect SQL Server enabled for Azure Arc
+description: Describes how to use Microsoft Defender for Cloud to protect SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest

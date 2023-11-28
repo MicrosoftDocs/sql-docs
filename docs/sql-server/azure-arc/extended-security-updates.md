@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: references_regions
 ---
 
-# SQL Server enable by Azure Arc supports Extended Security Updates
+# SQL Server enabled by Azure Arc supports Extended Security Updates
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

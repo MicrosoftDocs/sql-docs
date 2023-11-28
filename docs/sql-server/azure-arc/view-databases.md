@@ -143,5 +143,4 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 ## Next steps
 
 - [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-- [Configure best practices assessment on an [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)
-
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

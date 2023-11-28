@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Restore to a point-in-time on 
+# Restore to a point-in-time 
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 

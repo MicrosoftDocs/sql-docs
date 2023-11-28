@@ -10455,7 +10455,7 @@ items:
           href: sql-server/azure-arc/patch.md
         - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
-        - name: Monitor
+        - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md

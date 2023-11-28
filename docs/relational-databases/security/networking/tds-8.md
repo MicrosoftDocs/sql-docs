@@ -55,7 +55,7 @@ To use TDS 8.0, [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)] added `
 
 In order to prevent a man-in-the-middle attack with `strict` connection encryption, users aren't able to set the `TrustServerCertificate` option to `true` and trust any certificate the server provided. Instead, users would use the `HostNameInCertificate` option to specify the certificate `ServerName` that should be trusted. The certificate supplied by the server would need to pass the certificate validation.
 
-### Features that don't support strict encryption
+### Features that don't support forcing strict encryption
 
 The `Force Strict Encryption` option added with TDS 8.0 in SQL Server Network Configuration forces all clients to use `strict` as the encryption type. Any clients or features without the `strict` connection encryption fail to connect to SQL Server.
 
@@ -68,6 +68,10 @@ The following is a list of features or tools that still use previous version of 
 - **sqlcmd** utility
 - **bcp** utility
 - SQL Server CEIP service
+- SQL Server Agent
+- Database Mail
+- Linked Servers
+- Polybase connector to SQL Server
 
 ## Additional changes to connection string encryption properties
 

@@ -76,7 +76,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
-    :::image type="Screnshot of the gear menu, highlighting the Site settings." source="media/sharepoint-site-settings.png" alt-text="Image alt text." lightbox="media/sharepoint-site-settings.png":::
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screnshot of the gear menu, highlighting the Site settings." lightbox="media/sharepoint-site-settings.png":::
 
     By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
 
@@ -86,7 +86,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 5. Select **Activate**.
 
-    :::image type="Screenshot of the Activate Report Viewer web part feature." source="media/web-part-activiate-feature.png" alt-text="Image alt text." lightbox="media/web-part-activiate-feature.png":::
+    :::image type="content" source="media/web-part-activiate-feature.png" alt-text="Screenshot that shows the Activate Report Viewer web part feature." lightbox="media/web-part-activiate-feature.png":::
 
 6. Repeat for more site collections by opening each site and clicking Site Actions.
 

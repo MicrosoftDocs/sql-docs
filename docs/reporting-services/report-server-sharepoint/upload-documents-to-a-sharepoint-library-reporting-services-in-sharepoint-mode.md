@@ -16,27 +16,27 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-You can upload report definitions and report models to a SharePoint library. When uploading a report server item, you must select a library or a folder within a library. You cannot upload a report server item to a list or page.  
+You can upload report definitions and report models to a SharePoint library. When uploading a report server item, you must select a library or a folder within a library. You can't upload a report server item to a list or page.  
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
- You cannot upload a data source (.rds) file. However, you can publish .rds files from a design tool, such as Report Designer, to a SharePoint library. During publication, a new .rsds file is created from the original .rds file in the solution. You can also create a new .rsds file in a SharePoint library and then set data source connection properties in the uploaded reports and models to use the new connection.  
+ You can't upload a data source (.rds) file. However, you can publish .rds files from a design tool, such as Report Designer, to a SharePoint library. During publication, a new .rsds file is created from the original .rds file in the solution. You can also create a new .rsds file in a SharePoint library and then set data source connection properties in the uploaded reports and models to use the new connection.  
   
 > [!NOTE]  
 >  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the Reporting Services Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
   
- To upload a document to a library, you must have the "Add Items" permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who have the Contribute level of permission.  
+ To upload a document to a library, you must have the "Add Items" permission at the site level. If you're using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who has the Contribute level of permission.  
   
 ## Add a report definition or report model to a library
   
-1.  Open the library or a folder within a library. If the library is not already open, click its name on the Quick Launch. If the name of your library does not appear, click **View All Site Content**, and then click the name of your library.  
+1.  Open the library or a folder within a library. If the library isn't already open, select its name on the Quick Launch. If the name of your library doesn't appear, select **View All Site Content**, and then select the name of your library.  
   
-2.  On the **Upload** menu, click **Upload document**.  
+2.  On the **Upload** menu, select **Upload document**.  
   
-3.  To upload a single report or report model file, select a report definition (.rdl) or report model (.smdl) file and then click **OK**.  
+3.  To upload a single report or report model file, select a report definition (.rdl) or report model (.smdl) file and then select **OK**.  
   
-     If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, click **Upload Multiple Documents**, specify both files, and then click **OK**.  
+     If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, select **Upload Multiple Documents**, specify both files, and then select **OK**.  
   
  If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).  
   

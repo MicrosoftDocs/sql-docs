@@ -119,11 +119,11 @@ If you need to download the packages for offline installation, all versions are 
 - [Red Hat 7 .rpm packages](https://packages.microsoft.com/rhel/7/prod/)
 - [Red Hat 6 .rpm packages](https://packages.microsoft.com/rhel/6/prod/)
 
-### Suse
+### SUSE
 
-- [SuSE 15 .rpm packages](https://packages.microsoft.com/sles/15/prod/)
-- [SuSE 12 .rpm packages](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages](https://packages.microsoft.com/sles/11/prod/)
+- [SUSE 15 .rpm packages](https://packages.microsoft.com/sles/15/prod/)
+- [SUSE 12 .rpm packages](https://packages.microsoft.com/sles/12/prod/)
+- [SUSE 11 .rpm packages](https://packages.microsoft.com/sles/11/prod/)
 
 ### Ubuntu
 - Ubuntu 23.04 .deb packages: [v18](https://packages.microsoft.com/ubuntu/23.04/prod/pool/main/m/msodbcsql18/)

@@ -4,7 +4,7 @@ description: This article provides details about the configuration and use of th
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 08/10/2023
+ms.date: 11/22/2023
 ms.service: sql
 ms.topic: conceptual
 ms.custom: P360
@@ -231,7 +231,7 @@ This feature effectively removes this bottleneck and unlocks a new level of scal
 
 Watch this seven-minute video for an overview of how and when to use Memory-optimized TempDB metadata:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?show=data-exposed&ep=how-and-when-to-memory-optimized-tempdb-metadata]
 
 ### Configure and use memory-optimized tempdb metadata
 

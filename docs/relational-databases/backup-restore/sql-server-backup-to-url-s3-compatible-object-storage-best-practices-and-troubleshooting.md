@@ -191,12 +191,12 @@ SQL Server backup to S3-compatible object storage feature does not support Objec
 
 The bucket and folder location targeted by your backup operation must not have Object Lock enabled. If this feature is enabled and configured in your S3-compatible object storage the backup operation will fail with the following message:
 
-    ```
-    Msg 3202, Level 16, State 1, Line 13
-    Write on 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak' failed: 87 (The parameter is incorrect).
-    Msg 3013, Level 16, State 1, Line 13
-    BACKUP DATABASE is terminating abnormally.
-    ```
+```
+Msg 3202, Level 16, State 1, Line 13
+Write on 's3://<your-endpoint>/nonExistingBucket/AdventureWorks2022.bak' failed: 87 (The parameter is incorrect).
+Msg 3013, Level 16, State 1, Line 13
+BACKUP DATABASE is terminating abnormally.
+```
 
 ## Related content
 

@@ -30,7 +30,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
   
  You can't extend the Report Viewer web part to support different file types, and you can't replace the report toolbar with a custom toolbar or add new functionality to the existing toolbar. If you require customization of the standard features, you should create a custom web part.  
 
-## Setting web part properties
+## Set web part properties
 
  A web part has custom properties that are used to configure specific functionality. A web part also has common properties that are standard for every web part.  
   
@@ -81,13 +81,13 @@ You can use the Report Viewer web part to view reports that run on a report serv
 |Document Map Area Width|You can choose the measurement and value. The default is 200 pixels. The only requirement for this property is that it's greater than zero.|  
 |Load Parameters|Retrieve parameter properties for the report. Not all reports have parameters. If the report doesn't have parameters, no values are returned. If you set properties for a report that you uploaded, you might get an error indicating that the data source connection is deleted. If this error occurs, reset the connection and then finish setting parameter properties after the connection is specified. For more information about how to set the connection, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).<br /><br /> For best results, select **Apply** before clicking Load Parameters.<br /><br /> After you load parameter properties, you can set them the same way you would in the parameter property pages of the report. For more information about how to set parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 
-## Customizing the toolbar
+## Customize the toolbar
 
  The toolbar appears beneath the title and extends across the top of the report. The toolbar provides an **Actions** menu, page navigation for paginated reports, refresh, and zoom. It includes a document map control for reports that have a document map. The **Actions** menu includes commands for exporting the report, searching for text or numbers within a report, printing the report, and, opening the report in Report Builder.  
   
  You can't add new commands to the  **Actions** menu but you can customize it by changing the options that are visible to users. To change the visibility of toolbar buttons and controls, you change options in the **ToolBar Items Visibility** section of the web part. You can also remove the **Print** command or specific export formats by making these features unavailable on the report server. Page navigation controls are available for reports that have page breaks; otherwise, the report is a single page of variable length. **Refresh** reprocesses the report using the parameters that are current for the report. To display all the controls on one line, set the overall width of the web part to at least 400 pixels.  
 
-## Customizing the viewing area
+## Customize the viewing area
 
  The view area is used to display reports. The report view area is shared with the Parameters and Credentials area, if they're used. If credentials are required, the Credentials area is displayed next to an empty report view area. The Credentials area closes after the user provides credentials and runs the report. To customize the text that prompts users to set credentials, modify the data source connection properties. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).  
   

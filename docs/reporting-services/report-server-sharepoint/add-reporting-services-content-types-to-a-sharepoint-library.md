@@ -39,15 +39,15 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 -   [Enable content types in all document libraries in an existing BI center](#bkmk_enable_all)  
   
--   [To enable content type management for a single document library (SharePoint 2013)](#bkmk_enable_content_management)  
+-   [Enable content type management for a single document library (SharePoint 2013)](#bkmk_enable_content_management)  
   
--   [To add Reporting Services content types (SharePoint 2013)](#bkmk_add_single)  
+-   [Add Reporting Services content types (SharePoint 2013)](#bkmk_add_single)  
   
--   [To enable content type management for a single document library (SharePoint 2010)](#bkmk_enable_content_management_2010)  
+-   [Enable content type management for a single document library (SharePoint 2010)](#bkmk_enable_content_management_2010)  
   
--   [To add report server content types (SharePoint 2010)](#bkmk_add_single_2010)  
+-   [Add report server content types (SharePoint 2010)](#bkmk_add_single_2010)  
   
--   [To enable Content types and content management for multiple BI sites](#bkmk_enable_multiple_sites)  
+-   [Enable Content types and content management for multiple BI sites](#bkmk_enable_multiple_sites)  
   
 ##  <a name="bkmk_enable_all"></a> Enable content types in all document libraries in an existing BI center  
   
@@ -69,7 +69,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
      :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif" alt-text="Screenshot of the Report Server Integration Feature showing the Activate option." lightbox="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif":::  
   
-##  <a name="bkmk_enable_content_management"></a> To enable content type management for a single document library (SharePoint 2013)  
+##  <a name="bkmk_enable_content_management"></a> Enable content type management for a single document library (SharePoint 2013)  
   
 1.  Open the library for which you want to enable multiple content types.  
   
@@ -89,7 +89,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 6.  Select **OK**.  
   
-##  <a name="bkmk_add_single"></a> To add Reporting Services content types (SharePoint 2013)  
+##  <a name="bkmk_add_single"></a> Add Reporting Services content types (SharePoint 2013)  
   
 1.  Open the library for which you want to add Reporting Services content types.  
   
@@ -116,7 +116,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
     -   All of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types are in the library. If all the content types are part of a library, then the group is removed from the **Add Content Types** page. If you delete one or more of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types, then the group **SQL Server Reporting Services Content Types** are visible on the **Add Content Types** page.  
   
-##  <a name="bkmk_enable_content_management_2010"></a> To enable content type management for a single document library (SharePoint 2010)  
+##  <a name="bkmk_enable_content_management_2010"></a> Enable content type management for a single document library (SharePoint 2010)  
   
 1.  Open the library for which you want to enable multiple content types. On the library menu bar, you should see the following menus: **New**, **Upload**, **Actions**, and **Settings**. If you don't see **Settings**, you don't have permission to add a content type.  
   
@@ -132,7 +132,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 6.  Select **OK**.  
   
-##  <a name="bkmk_add_single_2010"></a> To add report server content types (SharePoint 2010)  
+##  <a name="bkmk_add_single_2010"></a> Add report server content types (SharePoint 2010)  
   
 1.  Open the library for which you want to add Reporting Services content types.  
   
@@ -150,7 +150,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 8.  When you finish adding content types, select **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> To enable content types and content management for multiple BI sites  
+##  <a name="bkmk_enable_multiple_sites"></a> Enable content types and content management for multiple BI sites  
   
 1.  For SQL Server Reporting Services 2008 and 2008 R2 report servers, you can enable content types and content management for multiple Business Intelligence Center sites:  
   

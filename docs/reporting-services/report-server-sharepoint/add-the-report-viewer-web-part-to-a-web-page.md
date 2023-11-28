@@ -24,7 +24,7 @@ You can add the Report Viewer web part to a web page if you want to embed a repo
 
 To add a web part to a web page, you must have the Add and Customize Pages permission at the site level. If you use default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission.
 
-## To embed a report in a web page
+## Embed a report in a web page
 
 1.  Open or create the web part page or dashboard.  
   

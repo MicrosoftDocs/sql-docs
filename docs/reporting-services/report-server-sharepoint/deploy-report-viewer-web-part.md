@@ -16,9 +16,9 @@ ms.custom:
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
-The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a SQL Server Reporting Services report server or a Power BI Report Server. This Report Viewer web part cannot be used with Power BI reports hosted in Power BI Report Server.
+The Report Viewer web part is a custom web part that can be used to view SQL Server Reporting Services (native mode) reports within your SharePoint site. You can use the web part to view, navigate, print, and export reports on a report server. The Report Viewer web part is associated with report definition (.rdl) files that either a SQL Server Reporting Services report server or a Power BI Report Server processes. This Report Viewer web part can't be used with Power BI reports hosted in Power BI Report Server.
 
-Use the following instructions to manually deploy the solution package that add the Report Viewer web part to a SharePoint Server 2013, SharePoint Server 2016, or SharePoint Server 2019 environment. Deploying the solution is a required step for configuring the web part.
+Use the following instructions to manually deploy the solution package that adds the Report Viewer web part to a SharePoint Server 2013, SharePoint Server 2016, or SharePoint Server 2019 environment. Deploying the solution is a required step for configuring the web part.
 
 **The Report Viewer web part is a standalone solution package and is not associated with SharePoint integrated mode for SQL Server Reporting Services.**
 
@@ -56,7 +56,7 @@ This section shows you how to deploy the solution package to your SharePoint far
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
-    The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.
+    The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you deploy the solution.
 
 3. Run the [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) cmdlet to deploy the farm solution.
 
@@ -88,7 +88,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
     :::image type="Screenshot of the Activate Report Viewer web part feature." source="media/web-part-activiate-feature.png" alt-text="Image alt text." lightbox="media/web-part-activiate-feature.png":::
 
-6. Repeat for additional site collections by opening each site and clicking Site Actions.
+6. Repeat for more site collections by opening each site and clicking Site Actions.
 
 Optionally, you can also use PowerShell to enable this feature on all sites using the [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature) cmdlet.
 
@@ -102,7 +102,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 ## Remove the solution
 
-Although SharePoint Central Administration provides solution retraction, you do not need to retract the **ReportViewerWebPart.wsp** file unless you are systematically troubleshooting an installation or patch deployment problem.
+Although SharePoint Central Administration provides solution retraction, you don't need to retract the **ReportViewerWebPart.wsp** file unless you're systematically troubleshooting an installation or patch deployment problem.
 
 1. In SharePoint Central Administration, in **System Settings**, select **Manage farm solutions**.
 
@@ -112,7 +112,7 @@ Although SharePoint Central Administration provides solution retraction, you do 
 
 ### Remove the web part from Site settings
 
-Retracting the solution does not remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
+Retracting the solution doesn't remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
@@ -122,12 +122,12 @@ Retracting the solution does not remove the Report Viewer web part from the list
 
 2. Under **Web Designer Galleries**, select **web parts**.
 
-3. Select the **edit icon** next to **ReportViewerNativeMode.dwp**. It may not be listed on the first page of results.
+3. Select the **edit icon** next to **ReportViewerNativeMode.dwp**. It might not be listed on the first page of results.
 
 4. Select **Delete Item**.
     :::image type="content" source="media/report-viewer-native-mode-edit-delete.png" alt-text="Screenshot of the Web Part Gallery, highlighting Delete Item." lightbox="media/report-viewer-native-mode-edit-delete.png":::
 
-Deletion of the web part can be attempted by using PowerShell, but there is not a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+Deletion of the web part can be attempted by using PowerShell, but there isn't a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
 
 ## Supported languages
 
@@ -149,7 +149,7 @@ The following languages are supported with the web part:
 
 * Error when uninstalling SSRS if you have SharePoint integrated mode configured:
 
-    Install-SPRSService : [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService cannot be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
+    Install-SPRSService: [A] Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService can't be cast to [B]Microsoft.ReportingServices.SharePoint.SharedService.Service.ReportingWebService. Type A originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'. Type B originates from 'Microsoft.ReportingServices.SharePoint.SharedService,Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' in the context 'Default' at location 'C:\Windows\assembly\GAC_MSIL\Microsoft.Reporting Services.SharePoint.SharedService.dll'.
     
     Solution:
     1. Remove the Report Viewer web part
@@ -158,7 +158,7 @@ The following languages are supported with the web part:
 
 * Error when trying to upgrade SharePoint if you have SharePoint integrated mode configured:
 
-    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified. 00000000-0000-0000-0000-000000000000
+    Could not load file or assembly 'Microsoft.ReportingServices.Alerting.ServiceContract, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system can't find the file specified. 00000000-0000-0000-0000-000000000000
     
     Solution:
     1. Remove the Report Viewer web part
@@ -167,6 +167,6 @@ The following languages are supported with the web part:
 
 ## Related content
 
-After the Report Viewer web part has been deployed and activated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
+After the Report Viewer web part is deployed and activated, you can add the web part to a SharePoint page. For more information, see [Add Report Viewer web part to a SharePoint page](add-report-viewer-web-part-to-page.md).
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

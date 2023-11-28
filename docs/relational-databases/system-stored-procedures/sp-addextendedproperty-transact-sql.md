@@ -146,7 +146,7 @@ Extended properties are replicated only in the initial synchronization between t
 
 ## Schema versus user
 
-We don't recommend specifying `USER` as a level-0 type when you apply an extended property to a database object, because this can cause name resolution ambiguity. For example, assume user `Mary` owns two schemas (`Mary` and `MySchema`), and these schemas both contain a table named `MyTable`. If Mary adds an extended property to table `MyTable` and specifies `@level0type = N'USER', @level0name = Mary`, it's not clear to which table the extended property is applied. To maintain backward compatibility, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] applies the property to the table that is contained in the schema named `Mary`.
+We don't recommend specifying `USER` as a level-0 type when you apply an extended property to a database object, because this can cause name resolution ambiguity. For example, assume user `Mary` owns two schemas (`Mary` and `MySchema`), and these schemas both contain a table named `MyTable`. If Mary adds an extended property to table `MyTable` and specifies `@level0type = N'USER', @level0name = Mary`, it isn't clear to which table the extended property is applied. To maintain backward compatibility, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] applies the property to the table that is contained in the schema named `Mary`.
 
 ## Permissions
 

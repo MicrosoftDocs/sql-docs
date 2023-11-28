@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot connectivity to data processing service and telemetry endpoints"
-description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints on Azure Arc-enabled SQL Server."
+description: "Describes how to troubleshoot connectivity to the data processing service (DPS) and telemetry endpoints."
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
@@ -28,6 +28,27 @@ When communication to these endpoints is blocked you will have the following sym
 - You don't see data in the SQL Server instance performance dashboards view (if DPS endpoint is unblocked but the telemetry endpoint is blocked)
 - You see an error in the Azure extension for SQL Server status in the Azure portal (details below)
 - You see an error in the Azure extension for SQL Server log (details below)
+
+## Azure extension current state
+
+You can view the current state of the Azure extension for SQL Server in the portal. The status is refreshed every 15 minutes.
+
+:::row:::
+    :::column:::
+
+    Healthy state:
+
+    :::image type="content" source="media/troubleshoot-telemetry-endpoint/healthy-state.png" alt-text="Screenshot of portal for Azure extension for SQL Server in a healthy state.":::
+        
+    :::column-end:::
+    :::column:::
+
+    Unhealthy state:
+
+    :::image type="content" source="media/troubleshoot-telemetry-endpoint/unhealthy-state.png" alt-text="Screenshot of portal for Azure extension for SQL Server in an unhealthy state.":::
+        
+    :::column-end:::
+:::row-end:::
 
 ## Check if you have a problem connecting to the DPS or telemetry endpoints
 
@@ -113,5 +134,5 @@ The following table shows some of the common DPS upload status values and what y
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Manage SQL Server license and billing options](manage-configuration.md)
-- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

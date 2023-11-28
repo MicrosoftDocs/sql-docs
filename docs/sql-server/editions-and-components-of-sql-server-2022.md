@@ -242,7 +242,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Ledger for SQL Server | Yes | Yes | Yes | Yes | Yes |
 | Azure Active Directory authentication <sup>1</sup> | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Requires an Azure Arc-enabled SQL Server
+<sup>1</sup> Requires SQL server enabled by Azure Arc
 
 ## <a id="Replication"></a> Replication
 

@@ -10411,11 +10411,11 @@ items:
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
 - name: Azure Arc
   items:
-    - name: Azure Arc-enabled SQL Server
+    - name: SQL Server enabled by Azure Arc
       items:
       - name: Documentation
         href: sql-server/azure-arc/index.yml
-      - name: What is Azure Arc-enabled SQL Server?
+      - name: Overview
         href: sql-server/azure-arc/overview.md
       - name: Release notes
         href: sql-server/azure-arc/release-notes.md

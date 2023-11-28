@@ -3,7 +3,7 @@ title: "Back up to URL best practices & troubleshooting for S3-compatible object
 description: Learn about best practices and troubleshooting tips for SQL Server backup and restores to S3-compatible object storage.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 05/24/2022
+ms.date: 11/28/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -198,7 +198,7 @@ The bucket and folder location targeted by your backup operation must not have O
     BACKUP DATABASE is terminating abnormally.
     ```
 
-## Next steps
+## Related content
 
  - [SQL Server backup and restore with S3-compatible object storage](sql-server-backup-and-restore-with-s3-compatible-object-storage.md)  
  - [SQL Server backup to URL for S3-compatible object storage](sql-server-backup-to-url-s3-compatible-object-storage.md)

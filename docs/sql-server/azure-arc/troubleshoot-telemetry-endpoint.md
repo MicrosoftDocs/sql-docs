@@ -29,6 +29,27 @@ When communication to these endpoints is blocked you will have the following sym
 - You see an error in the Azure extension for SQL Server status in the Azure portal (details below)
 - You see an error in the Azure extension for SQL Server log (details below)
 
+## Azure extension current state
+
+You can view the current state of the Azure extension for SQL Server in the portal. The status is refreshed every 15 minutes.
+
+:::row:::
+    :::column:::
+
+    Healthy state:
+
+    :::image type="content" source="media/troubleshoot-telemetry-endpoint/healthy-state.png" alt-text="Screenshot of portal for Azure extension for SQL Server in a healthy state.":::
+        
+    :::column-end:::
+    :::column:::
+
+    Unhealthy state:
+
+    :::image type="content" source="media/troubleshoot-telemetry-endpoint/unhealthy-state.png" alt-text="Screenshot of portal for Azure extension for SQL Server in an unhealthy state.":::
+        
+    :::column-end:::
+:::row-end:::
+
 ## Check if you have a problem connecting to the DPS or telemetry endpoints
 
 There are two ways to check if you have connectivity problems to the DPS or telemetry endpoints.

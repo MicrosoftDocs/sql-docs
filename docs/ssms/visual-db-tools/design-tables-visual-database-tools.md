@@ -20,28 +20,30 @@ helpviewer_keywords:
 
 [!INCLUDE[SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). Use the Table Designer in [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) or [Azure Data Studio (ADS)](/azure-data-studio/download-azure-data-studio) to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
+The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). To create, edit, or delete tables, columns, keys, indexes, relationships, and constraints, use the Table Designer in [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) or [Azure Data Studio (ADS)](/azure-data-studio/download-azure-data-studio).  
 
 ## Create a table
 
-1. Right-click the **Tables** node in your database and select  **New** > **Table** in SSMS, or **New Table** in ADS:
+1. Right-click the **Tables** node in your database and select  **New** > **Table** in SSMS, or **New Table** in ADS.
 1. Add [columns](column-properties-visual-database-tools.md) to your table, specifying name, data type, and whether NULL values are allowed for each column.
-1. Additional table properties can be configured in Azure Data Studio including keys, constraints, and indexes.  See [https://learn.microsoft.com/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio) for more information.
-1. In SSMS, close the designer and specify a table name to save your changes.  In Azure Data Studio, ensure the table name has been updated in the **Table name** field, then select the **Publish Changes** icon or close the designer and save the changes to create the table.
+1. Other table properties can be configured in Azure Data Studio including keys, constraints, and indexes. For more information. see [https://learn.microsoft.com/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio).
+1. In SSMS, close the designer and specify a table name to save your changes. In Azure Data Studio, ensure the table name has is updated in the **Table name** field, then select the **Publish Changes** icon or close the designer and save the changes to create the table.
 
 ## Update a table
 
-1. Right-click the table under the **Tables** node of your database and select **Design**
+1. Right-click the table under the **Tables** node of your database and select **Design**.
 1. Update the desired table settings.
-3. Close the designer and save your changes, or use the **Publish Changes** icon in Azure Data Studio.
+1. Close the designer and save your changes, or use the **Publish Changes** icon in Azure Data Studio.
 
 ## Permissions
 
-In order to create table, you must have ```CREATE TABLE``` permissions in the database and ```ALTER``` permission on the schema in which the table is being created.  See [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) for more information.
+In order to create table, you must have ```CREATE TABLE``` permissions in the database and ```ALTER``` permission on the schema in which the table is being created. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
 
-To alter a table, you must have ```ALTER``` permissions on the table.  See [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) for more information.
+To alter a table, you must have ```ALTER``` permissions on the table.  For more information. see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).
 
-## See Also
+## Next steps
+
+Learn more about creating and altering tables in these articles:
 
 - [Tables](../../relational-databases/tables/tables.md)
 - [Table Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)

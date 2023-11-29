@@ -74,7 +74,7 @@ CREATE USER [user_name] FROM LOGIN [login_name]
 
 You can use the `SID` column from **sys.database_principals** to distinguish between a Microsoft Entra contained database user and a Microsoft Entra user created from a login. For a contained database user, the `SID` is a binary string of length 16. For a login-based user, the `SID` is of length 18 with an `AADE` suffix.
 
-To understand the conceptual difference between login-based users and database contained users, see [contained database users](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
+To understand the conceptual difference between login-based users and contained database users, see [contained database users](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
 
 For more information on all create user syntax, see [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql).
 
@@ -89,7 +89,7 @@ ALTER LOGIN [login_name] DISABLE
 When a login is disabled, connections are no longer allowed using that server principal. It also disables all database principals (users) created from that login from being able to connect to their respective databases.
 
 > [!NOTE]
-> - `ALTER LOGIN login_name DISABLE` will not affect database contained users, since they aren't associated to logins.
+> - `ALTER LOGIN login_name DISABLE` won't affect contained database users, since they aren't associated to logins.
 > - `ALTER LOGIN login_name DISABLE` is not supported for Microsoft Entra groups.
 > - An individual disabled login cannot belong to a user who is part of a login group created in the `master` database (for example, a Microsoft Entra admin group). 
 > - For the `DISABLE` or `ENABLE` changes to take immediate effect, the authentication cache and the **TokenAndPermUserStore** cache must be cleared using the T-SQL commands.
@@ -125,7 +125,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 - Changing permissions on specific Microsoft Entra login object isn't supported:
   - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `
 - When you alter permissions for a Microsoft Entra login, by default the changes only take effect the next time the login connects to the Azure SQL Database. Any existing open connections with the login aren't affected. To force permissions changes to take immediate effect, you can manually clear the authentication and TokenAndPermUserStore, as described earlier in [disable or enable a login using ALTER LOGIN](#disable-or-enable-a-login-using-alter-login). This behavior also applies when making server role membership changes with [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql).
-- In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates T-SQL for a database contained Microsoft Entra user.
+- In SQL Server Management Studio and Azure Data Studio, the scripting command to create a user doesn't check if there's already a Microsoft Entra login in `master` with the same name. It always generates the T-SQL for a contained database Microsoft Entra user.
 
 ### Microsoft Entra group server principal limitations
 

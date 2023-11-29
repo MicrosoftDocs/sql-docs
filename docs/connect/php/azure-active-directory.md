@@ -16,8 +16,7 @@ helpviewer_keywords:
 
 [Microsoft Entra ID](/azure/active-directory/active-directory-whatis) is a central user ID management technology that operates as an alternative to [SQL Server authentication](how-to-connect-using-sql-server-authentication.md). Microsoft Entra ID allows connections to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics with [federated](/azure/active-directory/hybrid/connect/whatis-fed) identities in Microsoft Entra ID using a username and password, Windows Integrated Authentication, or a Microsoft Entra access token. The PHP drivers for SQL Server offer partial support for these features.
 
-
- You must configure your Azure SQL data source before you can use Microsoft Entra authentication. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+Before you can use Microsoft Entra authentication, you must [Configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 To use Microsoft Entra ID, use the **Authentication** or **AccessToken** keywords (they are mutually exclusive), as shown in the following table. For more technical details, refer to [Using Microsoft Entra ID with the ODBC Driver](../odbc/using-azure-active-directory.md).
 
@@ -25,12 +24,10 @@ To use Microsoft Entra ID, use the **Authentication** or **AccessToken** keyword
 |-|-|-|
 |**AccessToken**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](connection-options.md). |
 ||A byte string|The Microsoft Entra access token extracted from an OAuth JSON response. The connection string must not contain user ID, password, or the `Authentication` keyword (requires ODBC Driver version 17 or above in Linux or macOS). |
-
 |**Authentication**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](connection-options.md). |
 ||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryPassword`|Authenticate with a Microsoft Entra identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryMsi`|Authenticate using either a Microsoft Entra system-assigned user-assigned managed identity (requires ODBC Driver version 17.3.1.1 or above). For an overview and tutorials, refer to [What are managed identities for Azure resources?](/azure/active-directory/managed-identities-azure-resources/overview).|
-
 ||`ActiveDirectoryServicePrincipal`|Authenticate using service principal objects (requires ODBC Driver version 17.7 or above). For more details and examples, refer to [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals).|
 
 The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, which means the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true (**false** by default). This feature is distinguished from the old, less secure login method, in which the server certificate is validated only when encryption is specifically requested in the connection string.

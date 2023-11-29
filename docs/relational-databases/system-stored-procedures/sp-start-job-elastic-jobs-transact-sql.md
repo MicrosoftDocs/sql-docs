@@ -32,7 +32,7 @@ This stored procedure shares the name of `sp_start_job` with a similar object in
 
 #### @job_name 
 
-The name of the job from which the step will be removed. *job_name* is nvarchar(128), with no default.
+The name of the job to start. *job_name* is nvarchar(128), with no default.
 
 #### @job_execution_id 
 

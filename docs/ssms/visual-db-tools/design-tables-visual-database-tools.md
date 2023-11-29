@@ -4,7 +4,7 @@ description: Create and update database tables.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/28/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -27,7 +27,7 @@ The Table Designer is a visual tool where you design and visualize [database tab
 
 1. Right-click the **Tables** node in your database and select  **New** > **Table** in SSMS, or **New Table** in ADS.
 1. Add [columns](column-properties-visual-database-tools.md) to your table, specifying name, data type, and whether `NULL` values are allowed for each column.
-1. Other table properties can be configured in Azure Data Studio including keys, constraints, and indexes. For more information. see [https://learn.microsoft.com/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio).
+1. Other table properties can be configured in Azure Data Studio including keys, constraints, and indexes. For more information, see [Overview of the table designer in Azure Data Studio](/azure-data-studio/overview-of-the-table-designer-in-azure-data-studio).
 1. In SSMS, close the designer and specify a table name to save your changes. In Azure Data Studio, ensure the table name is updated in the **Table name** field, then select the **Publish Changes** icon, or close the designer and save the changes to create the table.
 
 ## Update a table
@@ -38,7 +38,7 @@ The Table Designer is a visual tool where you design and visualize [database tab
 
 ## Permissions
 
-In order to create table, you must have `CREATE TABLE` permissions in the database and `ALTER` permission on the schema in which the table is being created. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
+In order to create a table, you must have `CREATE TABLE` permissions in the database and `ALTER` permission on the schema in which the table is being created. For more information, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
 
 To alter a table, you must have `ALTER` permissions on the table. For more information, see [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).
 

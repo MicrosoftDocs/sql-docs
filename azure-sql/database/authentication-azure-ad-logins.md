@@ -74,6 +74,9 @@ CREATE USER [user_name] FROM LOGIN [login_name]
 
 You can use the `SID` column from **sys.database_principals** to distinguish between a Microsoft Entra contained database user and a Microsoft Entra user created from a login. For a contained database user, the `SID` is a binary string of length 16. For a login-based user, the `SID` is of length 18 with an `AADE` suffix.
 
+> [!NOTE]
+> Appending the `AADE` suffix to the SID is how we identify a Microsoft Entra user as being created from a login. However, this also means that the SIDs for the login and its user(s) don't match between `sys.server_principals` and `sys.database_principals`. To correlate the user back to its login, the `AADE` suffix must first be removed.
+
 To understand the conceptual difference between login-based users and contained database users, see [contained database users](/sql/relational-databases/security/contained-database-users-making-your-database-portable).
 
 For more information on all create user syntax, see [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql).

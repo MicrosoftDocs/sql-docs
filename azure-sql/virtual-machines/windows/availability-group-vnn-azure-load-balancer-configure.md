@@ -163,6 +163,7 @@ The following table describes the values that you need to update:
 |`ProbePort`|The probe port that you configured in the health probe of the load balancer. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 
+The changes you made do not take effect until the IP address resource is taken offline and brought online again. Perform a failover of the availability group for this change to take effect.
 After you set the cluster probe, you can see all the cluster parameters in PowerShell. Run this script:
 
 ```powershell
@@ -194,6 +195,7 @@ The following table describes the values that you need to update:
 |`ProbePort`|The probe port that you configured in the health probe of the load balancer. Any unused TCP port is valid.|
 |`SubnetMask`| The subnet mask for the cluster parameter. It must be the TCP/IP broadcast address: `255.255.255.255`.| 
 
+The changes you made do not take effect until the IP address resource is taken offline and brought online again. Perform a failover of the availability group for this change to take effect.
 After you set the cluster probe, you can see all the cluster parameters in PowerShell. Run this script:
 
 ```powershell

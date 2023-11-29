@@ -38,9 +38,9 @@ The default settings work best if all client and server computers are in the sam
 
 The following instructions are intended for a native mode report server. If the report server is deployed in SharePoint integrated mode, you must use the default authentication settings that specify Windows integrated security. The report server uses internal features in the default Windows Authentication extension to support report servers in SharePoint integrated mode.
 
-## Extended protection for authentication
+## Extended Protection for authentication
 
-Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. You can determine [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection by specific settings in the RSReportServer.config file. You can update the file by either editing the file or using WMI APIs. For more information, see [Extended protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
+Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. You can determine [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection by specific settings in the RSReportServer.config file. You can update the file by either editing the file or using WMI APIs. For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
 
 ### Configure a report server to use Windows integrated security
 
@@ -94,7 +94,7 @@ Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support f
 
    You can't use **Custom** with the **RSWindows** types.
 
-1. Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries aren't present, the current computer might not be running a version of [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
+1. Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries aren't present, the current computer might not be running a version of [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
 
    ```xml
    <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>
@@ -177,7 +177,7 @@ If you don't want to continue using Extended Protection, then set the configurat
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>
 ```
 
-For more information, see [Extended protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
+For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
 
 #### How the browser chooses Negotiated Kerberos or Negotiated NTLM
 
@@ -216,4 +216,4 @@ You might encounter connection errors that you think are due to authentication f
 - [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
 - [Configure basic authentication on the report server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)
 - [Configure custom or forms authentication on the report server](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)
-- [Extended protection for authentication with reporting services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
+- [Extended Protection for authentication with reporting services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)

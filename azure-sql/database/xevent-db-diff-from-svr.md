@@ -4,7 +4,7 @@ description: Describes extended events (XEvents) in Azure SQL Database, and how 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/22/2023
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: reference

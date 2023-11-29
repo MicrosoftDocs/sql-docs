@@ -1,8 +1,10 @@
 USE AdventureWorks2022;
 GO
-IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL
+
+IF OBJECT_ID('dbo.Gloves', 'U') IS NOT NULL
 DROP TABLE dbo.Gloves;
 GO
+
 -- Create Gloves table.
 SELECT ProductModelID, Name
 INTO dbo.Gloves
@@ -13,10 +15,13 @@ GO
 -- Here is the simple union.
 USE AdventureWorks2022;
 GO
+
 SELECT ProductModelID, Name
 FROM Production.ProductModel
 WHERE ProductModelID NOT IN (3, 4)
+
 UNION
+
 SELECT ProductModelID, Name
 FROM dbo.Gloves
 ORDER BY Name;

@@ -1,11 +1,12 @@
 ---
 title: View SQL Server databases
-description: View databases in Azure from an instance of Azure Arc-enabled SQL Server. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
+description: View databases in Azure from an instance of SQL Server enabled by Azure Arc. Use to inventory databases, and view properties of databases centrally, as Arc-enabled resources.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray, randolphwest
-ms.date: 06/19/2023
+ms.date: 11/07/2023
 ms.topic: conceptual
+ms.custom: ignite-2023
 ---
 
 # View SQL Server databases - Azure Arc
@@ -22,16 +23,15 @@ Before you begin, verify that the SQL Server instance that hosts the databases:
 - Is [!INCLUDE [sssql14-md](../../includes/sssql14-md.md)] or later.
 - Is connected to Azure Arc. See [Connect your SQL Server to Azure Arc](connect.md).
 - Is connected to the internet directly or through a proxy server.
+- Make sure that database names adhere to naming conventions and don't contain reserve words. For a list of reserved words, see [Resolve errors for reserved resource names](/azure/azure-resource-manager/troubleshooting/error-reserved-resource-name).
 - To view the database size and space available, please provide the following permission:
    - The SQL Server built-in login **NT AUTHORITY\SYSTEM** must be the member of SQL Server **sysadmin** server role for all the SQL Server instances running on the machine.
 
 ## Inventory databases
 
-1. Locate the Azure Arc-enabled SQL Server instance in the Azure portal.
+1. Locate the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance in the Azure portal.
 1. **Select** the SQL Server resource.
 1. Under **Data management**, select **Databases**.
-
-   :::image type="content" source="media/view-databases/databases.png" alt-text="Screenshot of Azure portal, SQL Server databases - Azure Arc.":::
 
 The Azure portal shows **SQL Server databases - Azure Arc**. Use this area to view the databases that belong to the instance.
 
@@ -43,9 +43,20 @@ After you create, modify, or delete a database, changes are visible in the Azure
 
 :::image type="content" source="media/view-databases/database-properties.png" alt-text="Screenshot of Azure portal, SQL Server database properties.":::
 
+On Database properties the page describes:
+
+- Information about the data collection and upload:
+  - Last collected time
+  - Upload status
+- Information about each database:
+  - Name
+  - Status
+  - Creation time
+  - Earliest restore point
+
 ## How to use Azure Resource Graph to query data
 
-Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available when viewing Azure Arc-enabled SQL Server databases.
+Here are some example scenarios showing how you use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query data that is available when viewing [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] databases.
 
 ### Scenario 1: Get 10 databases
 
@@ -131,7 +142,5 @@ You can also [create charts and pin them to dashboards](/azure/governance/resour
 
 ## Next steps
 
-- [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
-
-
+- [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

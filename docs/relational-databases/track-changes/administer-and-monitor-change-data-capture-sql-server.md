@@ -88,11 +88,11 @@ When a cleanup is performed, the low watermark for all capture instances is init
 
 ## <a name="Monitor"></a> Monitor the process
 
-Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](/sql/relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions) and [sys.dm_cdc_errors](/sql/relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors).  
+Monitoring the change data capture process lets you determine if changes are being written correctly and with a reasonable latency to the change tables. Monitoring can also help you to identify any errors that might occur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes two dynamic management views to help you monitor change data capture: [sys.dm_cdc_log_scan_sessions](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) and [sys.dm_cdc_errors](../system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
 ### Identify sessions with empty result sets
 
-Every row in `sys.dm_cdc_log_scan_sessions` represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in `sys.dm_cdc_log_scan_sessions` is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if `sys.dm_cdc_log_scan_sessions` already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
+Every row in `sys.dm_cdc_log_scan_sessions` represents a log scan session (except the row with an ID of 0). A log scan session is equivalent to one execution of [sp_cdc_scan](../system-stored-procedures/sys-sp-cdc-scan-transact-sql.md). During a session, the scan can either return changes or return an empty result. If the result set is empty, the empty_scan_count column in `sys.dm_cdc_log_scan_sessions` is set to 1. If there are consecutive empty result sets, such as if the capture job is running continuously, the empty_scan_count in the last existing row is incremented. For example, if `sys.dm_cdc_log_scan_sessions` already contains 10 rows for scans that returned changes and there are five empty results in a row, the view contains 11 rows. The last row has a value of 5 in the empty_scan_count column. To determine sessions that had an empty scan, run the following query:  
 
 ```sql
 SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
@@ -120,7 +120,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 
 #### Configuring data collection
 
-1. Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](/sql/relational-databases/data-collection/manage-data-collection).  
+1. Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../data-collection/manage-data-collection.md).  
   
 2. Execute the following code to create a custom collector for change data capture.  
 
@@ -179,7 +179,7 @@ When you apply cumulatives updates or service packs to an instance, at restart, 
 ## Related content
 
 * [CDC with Azure SQL Database](/azure/azure-sql/database/change-data-capture-overview)
-* [Track Data Changes (SQL Server)](/sql/relational-databases/track-changes/track-data-changes-sql-server)
-* [About change data capture (SQL Server)](/sql/relational-databases/track-changes/about-change-data-capture-sql-server)
-* [Enable and Disable change data capture (SQL Server)](/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server)
-* [Work with Change Data (SQL Server)](/sql/relational-databases/track-changes/work-with-change-data-sql-server)
+* [Track Data Changes (SQL Server)](track-data-changes-sql-server.md)
+* [About change data capture (SQL Server)](about-change-data-capture-sql-server.md)
+* [Enable and Disable change data capture (SQL Server)](enable-and-disable-change-data-capture-sql-server.md)
+* [Work with Change Data (SQL Server)](work-with-change-data-sql-server.md)

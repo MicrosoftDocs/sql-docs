@@ -14,6 +14,8 @@ ms.topic: conceptual
 
 This article describes the logical server in Azure used by databases in Azure SQL Database and Azure Synapse Analytics. In the Azure portal, the logical server is named SQL server and is different to the SQL Server product. 
 
+## Overview 
+
 In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md). A logical server can be in a different region than its resource group. The logical server must exist before you can create a database in Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. All databases managed by a single logical server are created within the same region as the logical server.
 
 This logical server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or dedicated SQL pool in relation to the server that manages them. Azure SQL Database and Azure Synapse don't expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.

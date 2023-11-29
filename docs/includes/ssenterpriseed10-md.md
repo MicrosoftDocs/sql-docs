@@ -1,1 +1,1 @@
- SQL Server 2008 Enterprise 
+ SQL Server 2008 (10.0.x) Enterprise 

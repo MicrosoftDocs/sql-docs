@@ -73,7 +73,7 @@ To upgrade the SQL Server Connector (Version: 1.0.5.0 with a Date Published: Sep
 - SQL Server 2012 SP1 CU6 Enterprise 64-bit
 - SQL Server 2008 R2 SP2 CU8 Enterprise 64-bit
 
-On SQL Server 2008 and 2012 versions lower than the ones listed above, the patch specified in the following KB article needs to be installed:  [https://support2.microsoft.com/kb/2859713](https://support2.microsoft.com/kb/2859713).
+On SQL Server 2008 and 2012 versions lower than the ones listed above, the patch specified in the following KB article needs to be installed: [KB2859713](https://support.microsoft.com/kb/2859713).
 
 The SQL Server Connector for Microsoft Azure Key Vault also requires .NET Version 4.5.1 on the Microsoft SQL Server Virtual Machine on Azure. This library should be installed before you install the SQL Server Connector.
 

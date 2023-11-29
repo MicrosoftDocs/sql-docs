@@ -4,11 +4,12 @@ description: "CREATE TABLE AS CLONE OF creates a new table as a clone of another
 author: ajagadish-24
 ms.author: ajagadish
 ms.reviewer: wiassaf
-ms.date: 10/19/2023
+ms.date: 11/03/2023
 ms.service: sql
 ms.topic: reference
 dev_langs:
   - "TSQL"
+ms.custom: ignite-2023
 monikerRange: "=fabric"
 ---
 # CREATE TABLE AS CLONE OF
@@ -52,6 +53,8 @@ At the date and time provided, the table clone accurately mirrors the data as it
 
 Specifying the *point_in_time* is not required for creating table clones as of current point in time.
 
+[!INCLUDE [fabric-dw](../../includes/fabric-dw.md)] automatically preserves and maintains the data history for seven calendar days. For more information, visit [Clone table](/fabric/data-warehouse/clone-table).
+
 ## Permissions
 
 Requires:
@@ -69,28 +72,28 @@ For limitations, see [Clone table limitations](/fabric/data-warehouse/clone-tabl
 
 ## Examples
 
-## A. Create a table clone within the same schema
+### A. Create a table clone within the same schema
 
 ```sql
 --Clone creation within the same schema
 CREATE TABLE dbo.Employee AS CLONE OF dbo.EmployeeUSA;
 ```  
 
-## B. Create a table clone across schemas within the same data warehouse
+### B. Create a table clone across schemas within the same data warehouse
 
 ```sql
 --Clone creation across schemas
 CREATE TABLE dbo.Employee AS CLONE OF dbo1.EmployeeUSA;
 ```  
 
-## C. Create a table clone within the same schema at a point in time
+### C. Create a table clone within the same schema at a point in time
 
 ```sql
 --Clone creation within the same schema
 CREATE TABLE dbo.Employee AS CLONE OF dbo.EmployeeUSA AT '2023-05-23T14:24:10.325';
 ```
 
-## D. Create a table clone across schema at a point in time
+### D. Create a table clone across schema at a point in time
 
 ```sql
 --Clone creation within the same schema

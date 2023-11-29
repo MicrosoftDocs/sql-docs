@@ -1,12 +1,13 @@
 ---
 title: "Run Transact-SQL statements using secure enclaves"
 description: "Run Data Definition Language (DDL) statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
-author: jaszymas
-ms.author: jaszymas
+author: Pietervanhove
+ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 02/15/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: conceptual
 ---
 # Run Transact-SQL statements using secure enclaves
@@ -50,7 +51,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 
 ### DBCC commands using secure enclaves
 
-[DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes may also require secure enclaves if the database contains indexes on enclave-enabled columns using randomized encryption. For example, [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+[DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes might also require secure enclaves if the database contains indexes on enclave-enabled columns using randomized encryption. For example, [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
 
 ## Prerequisites for running statements using secure enclaves
 
@@ -77,7 +78,7 @@ Your environment needs to meet the following requirements to support executing s
     |:---|:---|:---|
     | [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] and later | VBS enclaves | Host Guardian Service, None |
     | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | SGX enclaves (in DC-series databases) | Microsoft Azure Attestation |
-    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves (preview)  | None |
+    | [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)] | VBS enclaves | None |
 
 - Specify an attestation URL that is valid for your environment if you're using attestation.
 
@@ -113,16 +114,15 @@ For more information, see [Enabling and disabling Always Encrypted for a databas
 ### Prerequisites for running T-SQL statements using enclaves in Azure Data Studio
 
 The minimum recommended version **1.23** or higher is recommended.
-> [!NOTE]
-> Azure Data Studio currently does not support using VBS enclaves without attestation.
-
 Make sure you run your statements from a query window that uses a connection that has Always Encrypted enabled and both the correct attestation protocol and the attestation URL configured.
 
 1. In the **Connection** dialog, select **Advanced...**.
 2. To enable Always Encrypted for the connection, set the **Always Encrypted** field to **Enabled**.
+3. To enable secure enclaves, set the **Secure enclaves** field to **Enabled**.
 3. Specify the attestation protocol and the attestation URL.
     - If you're using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set **Attestation Protocol** to **Host Guardian Service** and enter your Host Guardian Service attestation URL in the **Enclave Attestation URL** field.
-    - If you're using if you're using a DC-series database with Intel SGX in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
+    - If you're using a DC-series database with Intel SGX in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], set **Attestation Protocol** to **Azure Attestation** and enter the attestation URL, referencing your policy in Microsoft Azure Attestation in the **Enclave Attestation URL** field.
+    - If you're using a database with VBS enclaves enabled in [!INCLUDE [ssazure-sqldb](../../../includes/ssazure-sqldb.md)], set **Attestation Protocol** to **None**.
 
     ![Connect to server with attestation using Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
 

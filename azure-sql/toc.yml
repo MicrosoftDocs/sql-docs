@@ -283,6 +283,8 @@
       href: database/free-offer.md
     - name: Try Azure SQL Database free FAQ
       href: database/free-offer-faq.yml
+    - name: Intelligent applications and AI
+      href: database/ai-artificial-intelligence-intelligent-applications.md
   - name: Quickstarts
     href: database/quickstart-content-reference-guide.md
     items:
@@ -650,45 +652,6 @@
       - name: Publish a database project to the local emulator
         href: database/local-dev-experience-publish-emulator.md
 
-    - name: Migrate
-      items: 
-      - name: Migrate DTU to vCore
-        href: database/migrate-dtu-to-vcore.md
-      - name: Manage SQL Database after migration
-        href: database/manage-data-after-migrating-to-database.md
-      - name: Migrate to availability zone
-        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
-      - name: Migrate to passwordless
-        items: 
-        - name: Migrate a .NET application
-          href: database/azure-sql-passwordless-migration.md
-        - name: Migrate a Node.js application
-          href: database/azure-sql-passwordless-migration-nodejs.md
-        - name: Migrate a Python application
-          href: database/azure-sql-passwordless-migration-python.md
-
-
-    - name: Monitor & Tune
-      items:
-        - name: Identify query performance bottlenecks
-          href: database/identify-query-performance-issues.md
-        - name: Use DMVs to monitor performance
-          href: database/monitoring-with-dmvs.md
-        - name: Azure Monitor for SQL Database
-          href: database/monitoring-sql-database-azure-monitor.md 
-        - name: Azure Monitor for SQL Database reference 
-          href: database/monitoring-sql-database-azure-monitor-reference.md
-    - name: Hyperscale databases
-      items: 
-      - name: Manage Hyperscale databases
-        href: database/manage-hyperscale-database.md
-      - name: Create zone-redundant database
-        href: database/hyperscale-create-zone-redundant-database.md
-      - name: Hyperscale performance diagnostics
-        href: database/hyperscale-performance-diagnostics.md
-      - name: Use command-line with Hyperscale elastic pool
-        href: database/hyperscale-elastic-pool-command-line.md
-        
     - name: Manage
       items:
       - name: Management API reference
@@ -719,14 +682,56 @@
         href: database/block-geo-redundant-backup-storage.md
     - name: Elastic jobs (preview)
       items:
-      - name: Job automation with elastic jobs
+      - name: Job automation overview
         href: database/job-automation-overview.md
-      - name: Configure jobs
+      - name: Elastic jobs in Azure SQL Database
         href: database/elastic-jobs-overview.md
+      - name: Elastic jobs tutorial
+        href: database/elastic-jobs-tutorial.md
       - name: Create and manage (PowerShell)
         href: database/elastic-jobs-powershell-create.md
       - name: Create and manage (T-SQL)
         href: database/elastic-jobs-tsql-create-manage.md
+
+    - name: Business continuity
+      items: 
+      - name: Change automated backup settings
+        href: database/automated-backups-change-settings.md
+      - name: Configure backup retention using Azure Blob storage
+        href: database/long-term-backup-retention-configure.md
+      - name: Recover using backups
+        href: database/recovery-using-backups.md
+      - name: Create auto-failover group
+        href: database/auto-failover-group-configure-sql-db.md
+      - name: Configure geo-replication - Portal
+        href: database/active-geo-replication-configure-portal.md
+      - name: Configure security for geo-replicas
+        href: database/active-geo-replication-security-configure.md
+      - name: Configure license-free standby replica 
+        href: database/standby-replica-how-to-configure.md
+
+    - name: Monitor & Tune
+      items:
+        - name: Identify query performance bottlenecks
+          href: database/identify-query-performance-issues.md
+        - name: Use DMVs to monitor performance
+          href: database/monitoring-with-dmvs.md
+        - name: Azure Monitor for SQL Database
+          href: database/monitoring-sql-database-azure-monitor.md 
+        - name: Azure Monitor for SQL Database reference 
+          href: database/monitoring-sql-database-azure-monitor-reference.md
+    - name: Hyperscale databases
+      items: 
+      - name: Manage Hyperscale databases
+        href: database/manage-hyperscale-database.md
+      - name: Create zone-redundant database
+        href: database/hyperscale-create-zone-redundant-database.md
+      - name: Hyperscale performance diagnostics
+        href: database/hyperscale-performance-diagnostics.md
+      - name: Use command-line with Hyperscale elastic pool
+        href: database/hyperscale-elastic-pool-command-line.md
+        
+
     - name: Security
       items: 
       - name: Audit to storage account behind VNet or firewall
@@ -782,21 +787,6 @@
       - name: vNet endpoints - PowerShell
         href: database/scripts/vnet-service-endpoint-rule-powershell-create.md
 
-    - name: Business continuity
-      items: 
-      - name: Change automated backup settings
-        href: database/automated-backups-change-settings.md
-      - name: Configure backup retention using Azure Blob storage
-        href: database/long-term-backup-retention-configure.md
-      - name: Recover using backups
-        href: database/recovery-using-backups.md
-      - name: Create auto-failover group
-        href: database/auto-failover-group-configure-sql-db.md
-      - name: Configure geo-replication - Portal
-        href: database/active-geo-replication-configure-portal.md
-      - name: Configure security for geo-replicas
-        href: database/active-geo-replication-security-configure.md
-
     - name: Performance
       items:
       - name: Use Query Performance Insights
@@ -823,6 +813,23 @@
         href: database/configure-max-degree-of-parallelism.md
       - name: Optimized locking
         href: /sql/relational-databases/performance/optimized-locking
+
+    - name: Migrate
+      items: 
+      - name: Migrate DTU to vCore
+        href: database/migrate-dtu-to-vcore.md
+      - name: Manage SQL Database after migration
+        href: database/manage-data-after-migrating-to-database.md
+      - name: Migrate to availability zone
+        href: /azure/reliability/migrate-sql-database?toc=/azure/azure-sql/toc.json&bc=/azure/bread/toc.json
+      - name: Migrate to passwordless
+        items: 
+        - name: Migrate a .NET application
+          href: database/azure-sql-passwordless-migration.md
+        - name: Migrate a Node.js application
+          href: database/azure-sql-passwordless-migration-nodejs.md
+        - name: Migrate a Python application
+          href: database/azure-sql-passwordless-migration-python.md
 
     - name: Load and move data 
       items: 
@@ -1146,6 +1153,8 @@
       href: managed-instance/service-tiers-managed-instance-vcore.md
     - name: Resource limits
       href: managed-instance/resource-limits.md
+    - name: Virtual cluster architecture
+      href: managed-instance/virtual-cluster-architecture.md
     - name: Connectivity architecture
       href: managed-instance/connectivity-architecture-overview.md
     - name: T-SQL differences
@@ -1462,8 +1471,6 @@
         href: managed-instance/private-endpoint-overview.md
       - name: Move SQL MI to another subnet
         href: managed-instance/vnet-subnet-move-instance.md
-      - name: Delete subnet after deleting SQL MI
-        href: managed-instance/virtual-cluster-delete.md
       - name: Resolve private domain names
         href: managed-instance/resolve-private-domain-names.md
       - name: Find management endpoint IP address
@@ -1483,16 +1490,14 @@
       items:
       - name: Prepare environment for link 
         href: managed-instance/managed-instance-link-preparation.md
-      - name: SQL Server 2016 prerequisites
+      - name: Prepare SQL Server 2016 environment
         href: managed-instance/managed-instance-link-preparation-wsfc.md
-      - name: Replicate databases in SSMS
-        href: managed-instance/managed-instance-link-use-ssms-to-replicate-database.md
-      - name: Replicate databases with scripts
-        href: managed-instance/managed-instance-link-use-scripts-to-replicate-database.md
-      - name: Failover databases in SSMS
-        href: managed-instance/managed-instance-link-use-ssms-to-failover-database.md
-      - name: Failover databases with scripts
-        href: managed-instance/managed-instance-link-use-scripts-to-failover-database.md
+      - name: Configure link with SSMS
+        href: managed-instance/managed-instance-link-configure-how-to-ssms.md
+      - name: Configure link with scripts
+        href: managed-instance/managed-instance-link-configure-how-to-scripts.md
+      - name: Disaster recovery
+        href: managed-instance/managed-instance-link-disaster-recovery.md
       - name: Best practices
         href: managed-instance/managed-instance-link-best-practices.md
 

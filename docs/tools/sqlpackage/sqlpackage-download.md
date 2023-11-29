@@ -80,7 +80,7 @@ To uninstall SqlPackage, run the following command:
    ```
 
    > [!NOTE]
-   > On Debian, Red Hat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
+   > You may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
 
    **Debian:**
 
@@ -99,12 +99,6 @@ To uninstall SqlPackage, run the following command:
 
    ```bash
    sudo apt-get install libunwind8
-
-   # install the libicu library based on the Ubuntu version
-   sudo apt-get install libicu55      # for 16.x
-   sudo apt-get install libicu57      # for 17.x
-   sudo apt-get install libicu60      # for 18.x
-   sudo apt-get install libicu66      # for 20.x
    ```
 
 ### macOS

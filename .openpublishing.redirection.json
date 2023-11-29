@@ -59574,6 +59574,11 @@
       "source_path": "docs/ssdt/release-notes-ssdt.md",
       "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
+      "redirect_document_id": false
     }
  ]
 }

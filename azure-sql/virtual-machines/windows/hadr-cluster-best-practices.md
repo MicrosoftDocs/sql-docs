@@ -170,7 +170,7 @@ To learn more, see [Tuning Failover Cluster Network Thresholds](/windows-server/
 
 ## Relaxed monitoring
 
-If tuning your cluster heartbeat and threshold settings as recommended is insufficient tolerance and you're still seeing failures due to transient issues rather than true outages, you can configure your AG or FCI monitoring to be more relaxed. In some scenarios, it may be beneficial to temporarily relax the monitoring for a period of time given the level of activity. For example, you may want to relax the monitoring when you're doing IO intensive workloads such as database backups, index maintenance, DBCC CHECKDB, etc. Once the activity is complete, set your monitoring to less relaxed values.
+If tuning your cluster heartbeat and threshold settings as recommended is insufficient tolerance and you're still seeing failovers due to transient issues rather than true outages, you can configure your AG or FCI monitoring to be more relaxed. In some scenarios, it may be beneficial to temporarily relax the monitoring for a period of time given the level of activity. For example, you may want to relax the monitoring when you're doing IO intensive workloads such as database backups, index maintenance, DBCC CHECKDB, etc. Once the activity is complete, set your monitoring to less relaxed values.
 
 > [!WARNING]  
 > Changing these settings may mask an underlying problem, and should be used as a temporary solution to reduce, rather than eliminate, the likelihood of failure. Underlying issues should still be investigated and addressed.

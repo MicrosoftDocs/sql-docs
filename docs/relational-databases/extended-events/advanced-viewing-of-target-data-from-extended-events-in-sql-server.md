@@ -96,7 +96,7 @@ The data display is updated at an interval you can specify. See **Maximum dispat
 
 ### View event data with the sys.fn_xe_file_target_read_file() function
 
-The [sys.fn_xe_file_target_read_file()](../system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function returns a rowset with each row representing a captured event. Event data is returned as XML. [XQuery](/sql/xquery/xquery-language-reference-sql-server) can be used to present event data relationally.
+The [sys.fn_xe_file_target_read_file()](../system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function returns a rowset with each row representing a captured event. Event data is returned as XML. [XQuery](../../xquery/xquery-language-reference-sql-server.md) can be used to present event data relationally.
 
 ## Export target data
 

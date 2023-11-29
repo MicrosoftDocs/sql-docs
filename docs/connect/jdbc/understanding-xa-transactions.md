@@ -3,7 +3,7 @@ title: Understanding XA transactions
 description: The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions.
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 04/17/2023
+ms.date: 10/27/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -35,7 +35,7 @@ The classes for the distributed transaction implementation are as follows:
 
 The following extra guidelines apply to tightly coupled transactions:
 
-- When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and work that loosely coupled XA branches perform is isolated from one another.
+- When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you might notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and work that loosely coupled XA branches perform is isolated from one another.
 
 - MS DTC also supports tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -97,6 +97,8 @@ Skip to the [Configuring server-side timeout settings for automatic rollback of 
 #### SQL Server 2017 CU15 and lower
 
 > [!NOTE]
+> This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
+>
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.
 
 You can configure the JDBC driver distributed transaction components by following these steps:
@@ -110,7 +112,7 @@ You can configure the JDBC driver distributed transaction components by followin
 
 3. To grant permissions to a specific user to participate in distributed transactions with the JDBC driver, add the user to the SqlJDBCXAUser role.
 
-You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications may need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications might need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 There are three ways to verify the version of sqljdbc_xa.dll currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:
 
@@ -123,6 +125,9 @@ There are three ways to verify the version of sqljdbc_xa.dll currently installed
 3. Set the logging functionality as shown in the code example in the next section. Search for "Server XA DLL version:..." phrase in the output log file.
 
 #### Upgrading sqljdbc_xa.dll
+
+> [!NOTE]
+> This only applies to SQL Server 2017 CU15 and lower. The functions provided by sqljdbc_xa.dll are already included in SQL Server 2017 CU16 and higher.
 
 When you install a new version of the JDBC driver, you should also use sqljdbc_xa.dll from the new version to upgrade sqljdbc_xa.dll on the server.
 

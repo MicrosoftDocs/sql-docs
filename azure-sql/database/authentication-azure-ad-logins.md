@@ -22,7 +22,7 @@ You can now create and utilize server principals from Microsoft Entra ID ([forme
 - Support multiple Microsoft Entra users with [special roles for SQL Database](/sql/relational-databases/security/authentication-access/database-level-roles#special-roles-for--and-azure-synapse), such as the `loginmanager` and `dbmanager` roles.
 - Functional parity between SQL logins and Microsoft Entra logins.
 - Increase functional improvement support, such as utilizing [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). Microsoft Entra-only authentication allows SQL authentication to be disabled, which includes the SQL server admin, SQL logins and users.
-- Allows Microsoft Entra principals to support geo-replicas. Microsoft Entra principals can connect to the geo-replica of a user database, with a *read-only* permission and *deny* permission to the primary server.
+- Allows Microsoft Entra principals to support geo-replicas. Microsoft Entra principals can connect to the geo-replica of a user database, with *read-only* and *deny* permissions to the primary server.
 - Use Microsoft Entra service principal logins with special roles to fully automate user and database creation and maintenance with Microsoft Entra applications.
 
 For more information on Microsoft Entra authentication in Azure SQL, see [Use Microsoft Entra authentication](authentication-aad-overview.md).

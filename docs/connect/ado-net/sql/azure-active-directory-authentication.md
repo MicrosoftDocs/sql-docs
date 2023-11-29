@@ -20,10 +20,11 @@ dev_langs:
 
 This article describes how to connect to Azure SQL data sources by using Microsoft Entra authentication from a .NET application with SqlClient.
 
+[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
 
 ## Overview
 
-Microsoft Entra authentication uses identities in Microsoft Entra ID to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Microsoft Entra credentials in different authentication modes when they're connecting to Azure SQL Database. To use Microsoft Entra authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
+Microsoft Entra authentication uses identities in Microsoft Entra ID to access data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. The **Microsoft.Data.SqlClient** namespace allows client applications to specify Microsoft Entra credentials in different authentication modes when they're connecting to Azure SQL Database and Azure SQL Managed Instance. To use Microsoft Entra authentication with Azure SQL, you must [configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 When you set the `Authentication` connection property in the connection string, the client can choose a preferred Microsoft Entra authentication mode according to the value provided:
 
@@ -53,7 +54,7 @@ When the application is connecting to Azure SQL data sources by using Microsoft 
 
 <sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated`, and `Active Directory Interactive` authentication modes are supported only on .NET Framework.
 
-## Using Active Directory Password authentication
+## Using password authentication
 
 `Active Directory Password` authentication mode supports authentication to Azure data sources with Microsoft Entra ID for native or federated Microsoft Entra users. When you're using this mode, user credentials must be provided in the connection string. The following example shows how to use `Active Directory Password` authentication.
 
@@ -66,7 +67,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 }
 ```
 
-## Using Active Directory Integrated authentication
+## Using integrated authentication
 
 To use `Active Directory Integrated` authentication mode, you must have an on-premises Active Directory instance that is [joined](/entra/identity/devices/concept-directory-join) to Microsoft Entra ID in the cloud. You can [federate](/azure/active-directory/hybrid/connect/whatis-fed) by using Active Directory Federation Services (AD FS), for example.
 
@@ -90,7 +91,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 }
 ```
 
-## Using Active Directory Interactive authentication
+## Using interactive authentication
 
 `Active Directory Interactive` authentication supports multi-factor authentication technology to connect to Azure SQL data sources. If you provide this authentication mode in the connection string, an Azure authentication screen will appear and ask the user to enter valid credentials. You can't specify the password in the connection string.
 
@@ -115,7 +116,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 }
 ```
 
-## Using Active Directory Service Principal authentication
+## Using service principal authentication
 
 In `Active Directory Service Principal` authentication mode, the client application can connect to Azure SQL data sources by providing the client ID and secret of a service principal identity. Service principal authentication involves:
 
@@ -134,7 +135,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 }
 ```
 
-## Using Active Directory Device Code Flow authentication
+## Using device code flow authentication
 
 With [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) for .NET (MSAL.NET), `Active Directory Device Code Flow` authentication enables the client application to connect to Azure SQL data sources from devices and operating systems that don't have an interactive web browser. Interactive authentication will be performed on another device. For more information about device code flow authentication, see [OAuth 2.0 Device Code Flow](/azure/active-directory/develop/v2-oauth2-device-code). 
 
@@ -154,7 +155,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 }
 ```
 
-## Using Active Directory Managed Identity authentication
+## Using managed identity authentication
 
 Authentication with Managed Identities for Azure resources is the recommended authentication method for programmatic access to SQL. A client application can use the system-assigned or user-assigned managed identity of a resource to authenticate to SQL with Microsoft Entra ID, by providing the identity and using it to obtain access tokens. This eliminates the need to manage credentials and secrets, and can simplify access management.
 
@@ -229,7 +230,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 }
 ```
 
-## Using Active Directory Default authentication
+## Using default authentication
 
 This authentication mode widens the possibilities of user authentication, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
 
@@ -264,11 +265,11 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 }
 ```
 
-## Customizing Active Directory authentication
+## Customizing Microsoft Entra authentication
 
-Besides using the Active Directory authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Active Directory authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider) abstract class. 
+Besides using the Microsoft Entra authentication built into the driver, **Microsoft.Data.SqlClient** 2.1.0 and later provide applications the option to customize Microsoft Entra authentication. The customization is based on the `ActiveDirectoryAuthenticationProvider` class, which is derived from the [`SqlAuthenticationProvider`](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider) abstract class. 
 
-During Active Directory authentication, the client application can define its own `ActiveDirectoryAuthenticationProvider` class by either:
+During Microsoft Entra authentication, the client application can define its own `ActiveDirectoryAuthenticationProvider` class by either:
 
 - Using a customized callback method.
 - Passing an application client ID to the MSAL library via SqlClient driver for fetching access tokens.
@@ -277,7 +278,7 @@ The following example displays how to use a custom callback when `Active Directo
 
 [!code-csharp [AADAuthenticationCustomDeviceFlowCallback#1](~/../sqlclient/doc/samples/AADAuthenticationCustomDeviceFlowCallback.cs#1)]
 
-With a customized `ActiveDirectoryAuthenticationProvider` class, a user-defined application client ID can be passed to SqlClient when a supported Active Directory authentication mode is in use. Supported Active Directory authentication modes include `Active Directory Password`, `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, and `Active Directory Device Code Flow`.
+With a customized `ActiveDirectoryAuthenticationProvider` class, a user-defined application client ID can be passed to SqlClient when a supported Microsoft Entra authentication mode is in use. Supported Microsoft Entra authentication modes include `Active Directory Password`, `Active Directory Integrated`, `Active Directory Interactive`, `Active Directory Service Principal`, and `Active Directory Device Code Flow`.
 
 The application client ID is also configurable via `SqlAuthenticationProviderConfigurationSection` or `SqlClientAuthenticationProviderConfigurationSection`. The configuration property `applicationClientId` applies to .NET Framework 4.6+ and .NET Core 2.1+.
 
@@ -309,7 +310,7 @@ The following example shows how to set an application client ID through a config
 
 ## Support for a custom SQL authentication provider
 
-Given more flexibility, the client application can also use its own provider for Active Directory authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
+Given more flexibility, the client application can also use its own provider for Microsoft Entra authentication instead of using the `ActiveDirectoryAuthenticationProvider` class. The custom authentication provider needs to be a subclass of `SqlAuthenticationProvider` with overridden methods. It then must register the custom provider, overriding one or more of the existing `Active Directory*` authentication methods.
 
 The following example shows how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
 

@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 Specify the method of authentication, and set up Microsoft SQL Server advanced-client entries and the login and password the ODBC driver for SQL Server will use to connect to SQL Server while configuring the data source.
 
+[!INCLUDE [entra-id](../../../includes/entra-id-hard-coded.md)]
+
 ## Options
 
 ### With Integrated Windows Authentication

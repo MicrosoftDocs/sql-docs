@@ -90,10 +90,10 @@ The following example shows how to use `authentication=ActiveDirectoryManagedIde
 Replace the server/database name with your server/database name in the following lines to run the example:
 
 ```java
-ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
 ```
 
 The example to use `ActiveDirectoryMSI` authentication mode:
@@ -105,15 +105,15 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADMSI {
+public class MsEntraMSI {
     public static void main(String[] args) throws Exception {
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
+        ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of user-assigned managed identity to be used
 
         try (Connection connection = ds.getConnection();
                 Statement stmt = connection.createStatement();
@@ -135,11 +135,11 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADManagedIdentity {
+public class MSEntraManagedIdentity {
     public static void main(String[] args) throws Exception {
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryManagedIdentity"); // ActiveDirectoryManagedIdentity for JDBC driver version v12.2.0+
         // Optional
@@ -198,11 +198,11 @@ The following example demonstrates how to use `authentication=ActiveDirectoryDef
     
     import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
     
-    public class AADDefault {
+    public class MSEntraDefault {
         public static void main(String[] args) throws Exception {
     
             SQLServerDataSource ds = new SQLServerDataSource();
-            ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+            ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
             ds.setDatabaseName("demo"); // Replace with your database name
             ds.setAuthentication("ActiveDirectoryDefault");
     
@@ -232,7 +232,7 @@ The following example shows how to use `authentication=ActiveDirectoryIntegrated
 Replace the server/database name with your server/database name in the following lines before executing the example:
 
 ```java
-ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 ```
 
@@ -245,11 +245,11 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADIntegrated {
+public class MSEntraIntegrated {
     public static void main(String[] args) throws Exception {
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryIntegrated");
 
@@ -350,7 +350,7 @@ To build and run the example:
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
-    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
@@ -370,12 +370,12 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADUserPassword {
+public class MSEntraUserPassword {
 
     public static void main(String[] args) throws Exception{
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
         ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
         ds.setPassword("password"); // Replace with your password
@@ -398,8 +398,6 @@ If the connection is established, you should see the following message as output
 You have successfully logged on as: <your user name>
 ```
 
-> [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Microsoft Entra user or one of the groups, the specified Microsoft Entra user belongs to, must exist in the database, and must have the CONNECT permission (except for Microsoft Entra server admin or group)
 
 ## Connect using ActiveDirectoryInteractive authentication mode
 
@@ -411,7 +409,7 @@ To build and run the example:
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
-    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
@@ -430,11 +428,11 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADInteractive {
+public class MSEntraInteractive {
     public static void main(String[] args) throws Exception{
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
         ds.setAuthentication("ActiveDirectoryInteractive");
 
@@ -470,9 +468,6 @@ This message only indicates that user authentication was successful but not nece
 You have successfully logged on as: <your user name>
 ```
 
-> [!NOTE]
-> A contained user database must exist and a contained database user that represents the specified Microsoft Entra user or one of the groups the specified Microsoft Entra user belongs to, must exist in the database and must have the CONNECT permission (except for a Microsoft Entra server admin or group)
-
 ## Connect using ActiveDirectoryServicePrincipal authentication mode
 
 The following example shows how to use `authentication=ActiveDirectoryServicePrincipal` mode.
@@ -484,15 +479,15 @@ To build and run the example:
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
-    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
 1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `principalSecret` with the secret.
 
     ```java
-    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
-    String principalSecret = "..."; // Replace with your AAD principal secret.
+    String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+    String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
     ```
 
 1. Set the principal ID and principal secret using `setUser` and `setPassword` in version 10.2 and up, and `setAADSecurePrincipalId` and `setAADSecurePrincipalSecret` in version 9.4 and below.
@@ -506,13 +501,13 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADServicePrincipal {
+public class MSEntraServicePrincipal {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
-        String principalSecret = "..."; // Replace with your AAD principal secret.
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String principalSecret = "..."; // Replace with your Microsoft Entra principal secret.
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
         ds.setAuthentication("ActiveDirectoryServicePrincipal");
         ds.setUser(principalId); // setAADSecurePrincipalId for JDBC Driver 9.4 and below
@@ -535,10 +530,6 @@ If a connection is established, you should see the following message as output:
 You have successfully logged on as: <your app/client ID>
 ```
 
-> [!NOTE]
-> The database must have a user or login for the service principal, with CONNECT permissions, in order for the above code to succeed. The service principal can also belong to a Microsoft Entra group that has a user or login with CONNECT permissions.
-
-
 ## Connect using ActiveDirectoryServicePrincipalCertificate authentication mode
 
 The following example shows how to use `authentication=ActiveDirectoryServicePrincipalCertificate` mode.
@@ -550,16 +541,16 @@ To build and run the example:
 1. Locate the following lines of code and replace the server/database name with your server/database name.
 
     ```java
-    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setServerName("msentra-managed-demo.database.windows.net"); // replace 'msentra-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
 
-1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the Service Principal certificate.
+1. Locate the following lines of code. Replace the value of `principalId` with the Application ID / Client ID of the Microsoft Entra service principal that you want to connect as. Replace the value of `clientCertificate` with the location of the service principal certificate.
 
     ```java
     String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
 
-    String clientCertificate = "..."; // Replace with the location for your AAD service principal certificate.
+    String clientCertificate = "..."; // Replace with the location for your Microsoft Entra service principal certificate.
     ```
 
 1. If the above certificate needs a password, set the principal Secret using `setPassword` in version 10.2 and up or `setAADSecurePrincipalSecret` in version 9.4 and below.
@@ -575,13 +566,13 @@ import java.sql.Statement;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class AADServicePrincipalCertificate {
+public class MSEntraServicePrincipalCertificate {
     public static void main(String[] args) throws Exception{
-        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD service principal ID.
-        String clientCertificate = "..."; // Replace with the location of your Service Principal certificate.
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your Microsoft Entra service principal ID.
+        String clientCertificate = "..."; // Replace with the location of your service principal certificate.
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name
         ds.setDatabaseName("demo"); // Replace with your database
         ds.setAuthentication("ActiveDirectoryServicePrincipalCertificate");
         ds.setUser(principalId); // setAADSecurePrincipalId for JDBC Driver 9.4 and below
@@ -604,29 +595,24 @@ If a connection is established, you should see the following message as output:
 You have successfully logged on as: <your app/client ID>
 ```
 
-> [!NOTE]
-> The database must have a user or login for the service principal, with CONNECT permissions, in order for the above code to succeed. The service principal can also belong to a Microsoft Entra group that has a user or login with CONNECT permissions.
-
 
 ## Connect using access token
 
-Applications/services can retrieve an access token from Microsoft Entra ID and use that to connect to Azure SQL/Synapse Analytics.
+Applications/services can retrieve an access token from Microsoft Entra ID and use that to connect to Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics.
 
 
 > [!NOTE]
 > `accessToken` can only be set using the Properties parameter of the `getConnection()` method in the DriverManager class. It can't be used in the connection string. Starting with driver version 12.2, users can implement and provide an `accessToken` callback to the driver for token renewal in connection pooling scenarios. Connection pooling scenarios require the connection pool implementation to use the standard [JDBC connection pooling classes](using-connection-pooling.md).
 
-The following example contains a simple Java application that connects to Azure SQL Database/Synapse Analytics using access token-based authentication.
+The following example contains a simple Java application that connects to Azure using access token-based authentication.
 
 To build and run the example:
 
 1. Create an application account in Microsoft Entra ID for your service.
     1. Sign in to the Azure portal.
-    2. Select Microsoft Entra ID in the left-hand navigation.
+    2. Go to  [Microsoft Entra ID](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview) in the left-hand navigation.
     3. Select **App registrations**.
-
     4. Select **New registration**.
-
     5. Enter `mytokentest` as a friendly name for the application.
     6. Leave the default selection for supported account types which can use the application.
     7. Select **Register** at the bottom.
@@ -638,6 +624,7 @@ To build and run the example:
     11. Return to the [App registrations](https://ms.portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps) blade for Microsoft Entra ID and find the **Endpoints** tab. Copy the URL under `OAuth 2.0 token endpoint`, this is your STS URL.
 
     ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)
+
 1. Connect to your database as a Microsoft Entra admin and use a T-SQL command to provision a contained database user for your application principal. For more information on how to create a Microsoft Entra admin and a contained database user, see the [Connecting by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview).
 
 
@@ -664,11 +651,11 @@ import com.microsoft.aad.msal4j.ConfidentialClientApplication;
 import com.microsoft.aad.msal4j.IAuthenticationResult;
 import com.microsoft.aad.msal4j.IClientCredential;
 
-public class AADTokenBased {
+public class MSEntraTokenBased {
 
     public static void main(String[] args) throws Exception {
 
-        // Retrieve the access token from the AD.
+        // Retrieve the access token from Microsoft Entra ID.
         String spn = "https://database.windows.net/";
         String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
@@ -693,7 +680,7 @@ public class AADTokenBased {
         // Connect with the access token.
         SQLServerDataSource ds = new SQLServerDataSource();
 
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name.
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replace with your server name.
         ds.setDatabaseName("demo"); // Replace with your database name.
         ds.setAccessToken(accessToken);
 
@@ -734,7 +721,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class AADAccessTokenCallback {
+public class MSEntraAccessTokenCallback {
 
     public static void main(String[] args) {
 
@@ -769,7 +756,7 @@ public class AADAccessTokenCallback {
         };
 
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replaces with your server name.
         ds.setDatabaseName("demo"); // Replace with your database name.
         ds.setAccessTokenCallback(callback);
 
@@ -807,7 +794,7 @@ import java.util.concurrent.Executors;
 
  
 
-public class AADAccessTokenCallbackClass {
+public class MSEntraAccessTokenCallbackClass {
     public static class AccessTokenCallbackClass implements SQLServerAccessTokenCallback {
         @Override
         public SqlAuthenticationToken getAccessToken(String spn, String stsurl) {
@@ -842,7 +829,7 @@ public class AADAccessTokenCallbackClass {
     public static void main(String[] args) throws Exception {
         
         SQLServerDataSource ds = new SQLServerDataSource();
-        ds.setServerName("aad-managed-demo.database.windows.net"); // Replaces with your server name.
+        ds.setServerName("msentra-managed-demo.database.windows.net"); // Replaces with your server name.
         ds.setDatabaseName("demo"); // Replace with your database name.
         ds.setAccessTokenCallbackClass(AccessTokenCallbackClass.class.getName());
         
@@ -868,7 +855,6 @@ You have successfully logged on as: <your client ID>
 Learn more about related concepts in the following articles:
 
 - [Connecting to Azure SQL by using Microsoft Entra authentication](/azure/azure-sql/database/authentication-aad-overview)
-
 - [Microsoft Authentication Library (MSAL) for Java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 - [Microsoft Azure Active Directory Authentication Library (ADAL) for Java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 - [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)

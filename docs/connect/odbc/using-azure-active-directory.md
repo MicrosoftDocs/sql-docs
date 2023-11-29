@@ -13,6 +13,8 @@ ms.topic: conceptual
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
 ## Purpose
 
 The Microsoft ODBC Driver for SQL Server version 13.1 and above allows ODBC applications to connect to Azure SQL Database or Azure SQL Managed Instance using identities in Microsoft Entra ID. Authentication can be done with a username and password, a Microsoft Entra access token, a Microsoft Entra managed identity (17.3+), or Integrated Windows Authentication in a [federated](/azure/active-directory/hybrid/connect/whatis-fed), domain-joined environment (17.6+ on Linux/macOS). For the ODBC Driver version 13.1, Microsoft Entra access token authentication is _Windows only_. The ODBC Driver version 17 and above support this authentication across all platforms (Windows, Linux, and macOS). A new Microsoft Entra interactive authentication method, which supports multifactor authentication, is introduced in ODBC Driver version 17.1 for Windows. A new Microsoft Entra managed identity authentication method was added in ODBC Driver version 17.3.1.1 for both system-assigned and user-assigned managed identities. All of these options are accomplished by using new DSN and connection string keywords, and connection attributes.
@@ -20,7 +22,7 @@ The Microsoft ODBC Driver for SQL Server version 13.1 and above allows ODBC appl
 To use Microsoft Entra authentication, you must configure your Azure SQL data source. For more information, see [Configure and manage Microsoft Entra authentication with Azure SQL](/azure/azure-sql/database/authentication-aad-configure).
 
 > [!NOTE]
-> The ODBC Driver on Linux and macOS before version 17.6 only supports Microsoft Entra authentication directly against Microsoft Entra ID. If you are using Microsoft Entra username/password authentication from a Linux or macOS client and your Active Directory configuration requires the client to authenticate against an Active Directory Federation Services endpoint, authentication may fail. As of driver version 17.6, this limitation has been removed.
+> The ODBC Driver on Linux and macOS before version 17.6 only supports Microsoft Entra authentication directly against Microsoft Entra ID. If you are using Microsoft Entra username/password authentication from a Linux or macOS client and your Microsoft Entra configuration requires the client to authenticate against an Microsoft Entra Federation Services endpoint, authentication may fail. As of driver version 17.6, this limitation has been removed.
 
 ## New and/or Modified DSN and Connection String Keywords
 

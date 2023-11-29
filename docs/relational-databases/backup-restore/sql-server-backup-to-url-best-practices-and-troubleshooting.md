@@ -214,6 +214,8 @@ To resolve this issue, create a configuration file that allows the Backup to URL
 
 1. Place the configuration file in the Binn folder of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Instance. For example, if my [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on the C drive of the machine, place the configuration file in `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.
 
+1. BackuptoURL.exe is not called when using SAS keys but is triggered when using Access key. Make sure you are using Access keys or you may recieve an error "Operating system error 50(The request is not supported.)"
+   
 ## Common errors and solutions
 
 | Issue | Solution |

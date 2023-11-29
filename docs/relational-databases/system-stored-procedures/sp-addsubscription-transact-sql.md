@@ -4,7 +4,7 @@ description: Adds a subscription to a publication and sets the Subscriber status
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/28/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -78,7 +78,7 @@ The name of the publication. *@publication* is **sysname**, with no default.
 
 #### [ @article = ] N'*article*'
 
-The article to which the publication is subscribed. *@article* is **sysname**, with a default of `'all'`. If `all`, a subscription is added to all articles in that publication. Only values of `all` or `NULL` are supported for Oracle Publishers.
+The article to which the publication is subscribed. *@article* is **sysname**, with a default of `all`. If `all`, a subscription is added to all articles in that publication. Only values of `all` or `NULL` are supported for Oracle Publishers.
 
 #### [ @subscriber = ] N'*subscriber*'
 
@@ -86,10 +86,7 @@ The name of the Subscriber. *@subscriber* is **sysname**, with a default of `NUL
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
-
-> [!NOTE]  
-> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled. The use of custom port numbers for remote distributor applies to [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] only.
-
+[!INCLUDE [custom-port](includes/custom-port.md)]
 ::: moniker-end
 
 #### [ @destination_db = ] N'*destination_db*'
@@ -104,9 +101,9 @@ The subscription synchronization type. *@sync_type* is **nvarchar(255)**, and ca
 | --- | --- |
 | `none` <sup>1</sup> | Subscriber already has the schema and initial data for published tables. |
 | `automatic` (default) | Schema and initial data for published tables are transferred to the Subscriber first. |
-| `replication support only` <sup>2</sup> | Provides automatic generation at the Subscriber of article custom stored procedures and triggers that support updating subscriptions, if appropriate. Assumes that the Subscriber already has the schema and initial data for published tables. When configuring a peer-to-peer transactional replication topology, ensure that the data at all nodes in the topology is identical. For more information, see [Peer-to-Peer Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md). |
-| `initialize with backup` <sup>2</sup> | Schema and initial data for published tables are obtained from a backup of the publication database. Assumes that the Subscriber has access to a backup of the publication database. The location of the backup and media type for the backup are specified by *@backupdevicename* and *@backupdevicetype*. When using this option, a peer-to-peer transactional replication topology need not be quiesced during configuration.|
-| `initialize from lsn` | Used when you're adding a node to a peer-to-peer transactional replication topology. Used with @subscriptionlsn to make sure that all relevant transactions are replicated to the new node. Assumes that the Subscriber already has the schema and initial data for published tables. For more information, see [Peer-to-Peer Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md). |
+| `replication support only` <sup>2</sup> | Provides automatic generation at the Subscriber of article custom stored procedures and triggers that support updating subscriptions, if appropriate. Assumes that the Subscriber already has the schema and initial data for published tables. When configuring a peer-to-peer transactional replication topology, ensure that the data at all nodes in the topology is identical. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md). |
+| `initialize with backup` <sup>2</sup> | Schema and initial data for published tables are obtained from a backup of the publication database. Assumes that the Subscriber has access to a backup of the publication database. The location of the backup and media type for the backup are specified by *@backupdevicename* and *@backupdevicetype*. When using this option, a peer-to-peer transactional replication topology need not be quiesced during configuration. |
+| `initialize from lsn` | Used when you're adding a node to a peer-to-peer transactional replication topology. Used with @subscriptionlsn to make sure that all relevant transactions are replicated to the new node. Assumes that the Subscriber already has the schema and initial data for published tables. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md). |
 
 <sup>1</sup> This option has been deprecated. Use replication support only instead.
 
@@ -126,7 +123,7 @@ The subscription status. *@status* is **sysname**, with a default of `NULL`. Whe
 
 #### [ @subscription_type = ] N'*subscription_type*'
 
-The type of subscription. *@subscription_type* is **nvarchar(4)**, with a default of `'push'`. Can be `push` or `pull`. The Distribution Agents of push subscriptions reside at the Distributor, and the Distribution Agents of pull subscriptions reside at the Subscriber. *@subscription_type* can be `pull` to create a named pull subscription that is known to the Publisher. For more information, see [Subscribe to Publications](../replication/subscribe-to-publications.md).
+The type of subscription. *@subscription_type* is **nvarchar(4)**, with a default of `push`. Can be `push` or `pull`. The Distribution Agents of push subscriptions reside at the Distributor, and the Distribution Agents of pull subscriptions reside at the Subscriber. *@subscription_type* can be `pull` to create a named pull subscription that is known to the Publisher. For more information, see [Subscribe to Publications](../replication/subscribe-to-publications.md).
 
 > [!NOTE]  
 > Anonymous subscriptions don't need to use this stored procedure.
@@ -280,7 +277,7 @@ Specifies the type of backup device used when initializing a Subscriber from a b
 | --- | --- |
 | `logical` (default) | The backup device is a logical device |
 | `disk` | The backup device is disk drive |
-| `tape` | The backup device is a tape drive|
+| `tape` | The backup device is a tape drive |
 
 *@backupdevicetype* is only used when *@sync_method* is set to initialize_with_backup.
 
@@ -309,7 +306,7 @@ Specifies if a tape backup device should be unloaded after the initialization fr
 
 #### [ @subscriptionlsn = ] *subscriptionlsn*
 
-Specifies the log sequence number (LSN) at which a subscription should start delivering changes to a node in a peer-to-peer transactional replication topology. *@subscriptionlsn* is **binary({item.DataType.MaximumLength})**, with a default of `NULL`. Used with a *@sync_type* value of `initialize from lsn` to make sure that all relevant transactions are replicated to a new node. For more information, see [Peer-to-Peer Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
+Specifies the log sequence number (LSN) at which a subscription should start delivering changes to a node in a peer-to-peer transactional replication topology. *@subscriptionlsn* is **binary(10)**, with a default of `NULL`. Used with a *@sync_type* value of `initialize from lsn` to make sure that all relevant transactions are replicated to a new node. For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
 
 #### [ @subscriptionstreams = ] *subscriptionstreams*
 
@@ -335,7 +332,7 @@ Indicates that the subscription supports memory optimized tables. *@memory_optim
 
 ## Return code values
 
-0 (success) or 1 (failure)
+`0` (success) or `1` (failure).
 
 ## Remarks
 
@@ -367,13 +364,13 @@ Only members of the **sysadmin** fixed server role or **db_owner** fixed databas
 
 [!code-sql[HowTo#sp_addtranpushsubscription_agent](../replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]
 
-## See also
+## Related content
 
-- [Create a Push Subscription](../replication/create-a-push-subscription.md)
+- [Create a push subscription](../replication/create-a-push-subscription.md)
 - [Create a Subscription for a Non-SQL Server Subscriber](../replication/create-a-subscription-for-a-non-sql-server-subscriber.md)
 - [Subscribe to Publications](../replication/subscribe-to-publications.md)
 - [sp_addpushsubscription_agent (Transact-SQL)](sp-addpushsubscription-agent-transact-sql.md)
 - [sp_changesubstatus (Transact-SQL)](sp-changesubstatus-transact-sql.md)
 - [sp_dropsubscription (Transact-SQL)](sp-dropsubscription-transact-sql.md)
 - [sp_helpsubscription (Transact-SQL)](sp-helpsubscription-transact-sql.md)
-- [System Stored Procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)

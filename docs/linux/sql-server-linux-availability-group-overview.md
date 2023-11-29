@@ -19,7 +19,7 @@ ms.custom:
 This article describes the characteristics of availability groups (AGs) under Linux-based [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] installations. It also covers differences between Linux- and Windows Server failover cluster (WSFC)-based AGs. See the [Windows-based documentation](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) for the basics of AGs, as they work the same on Windows and Linux except for the WSFC.
 
 > [!NOTE]  
-> In availability groups that don't utilize Windows Server Failover Clustering (WSFC), such as [read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md), or availability groups on Linux, columns related to the cluster might display data about an internal default cluster. These columns are for internal use only and can be disregarded.
+> In availability groups that don't utilize Windows Server Failover Clustering (WSFC), such as [read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md), or availability groups on Linux, columns in the [availability groups DMVs](../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md) related to the cluster might display data about an internal default cluster. These columns are for internal use only and can be disregarded.
 
 From a high-level standpoint, availability groups under [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 

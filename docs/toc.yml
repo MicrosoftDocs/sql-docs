@@ -1879,17 +1879,19 @@ items:
   - name: Track changes
     href: relational-databases/track-changes/track-data-changes-sql-server.md
     items:
-    - name: Change data capture
+    - name: Change data capture (CDC)
       href: relational-databases/track-changes/about-change-data-capture-sql-server.md
       items:
       - name: Enable & disable
         href: relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md
       - name: Administer & monitor
         href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
-      - name: Work with
+      - name: Work with change data capture
         href: relational-databases/track-changes/work-with-change-data-sql-server.md
       - name: Interoperability
         href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
+      - name: Known issues and errors
+        href: relational-databases/track-changes/known-issues-and-errors-change-data-capture.md
     - name: Change tracking
       href: relational-databases/track-changes/about-change-tracking-sql-server.md
       items:
@@ -4236,20 +4238,21 @@ items:
           href: relational-databases/wmi-provider-configuration-classes/clientsettings-class-instancename-property.md
         - name: SetDefaults Method
           href: relational-databases/wmi-provider-configuration-classes/clientsettings-class-setdefaults-method.md
-    - name: Server Events Concepts
-      href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+    - name: Server Events concepts
       items:
-      - name: "Sample: Creating a SQL Server Agent Alert with the WMI Provider"
+      - name: Overview
+        href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+      - name: "Sample: Create a SQL Server Agent Alert with the WMI Provider"
         href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-      - name: "Sample: Using the WMI Event Provider with the .NET Framework"
+      - name: "Sample: Use the WMI Event Provider with the .NET Framework"
         href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
-      - name: Understanding Server Events
+      - name: Understand Server Events
         href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
-      - name: Using WQL Server Events
+      - name: Use WQL Server Events
         href: relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
-      - name: Server Events Classes & Properties
+      - name: Server Events classes and properties
         href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
-      - name: Working with Server Events
+      - name: Work with Server Events
         href: relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & Architecture
   href: relational-databases/sql-server-guides.md
@@ -9296,14 +9299,14 @@ items:
           href: ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
-        - name: Connection Properties Dialog Box
-          href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Database Engine
-          href: ssms/f1-help/connect-to-server-database-engine.md
-        - name: Connect to Server - Properties Page - Database Engine
-          href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
-        - name: Connect to Server - Login - Database Engine
+        - name: Connect to Server (Login page) - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
+        - name: Connect to Server (Connection Properties page) - Database Engine
+          href: ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
+        - name: Connect to Server (Always Encrypted page) - Database Engine
+          href: ssms/f1-help/connect-to-server-always-encrypted-page-database-engine.md
+        - name: Connect to Server (Additional Connection Parameters page) - Database Engine
+          href: ssms/f1-help/connect-to-server-additional-connection-parameters-page-database-engine.md
         - name: Login - Connect to SSAS Server
           href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS
@@ -9877,6 +9880,8 @@ items:
         href: tools/sqlpackage/sqlpackage-script.md
     - name: SqlPackage in development pipelines
       href: tools/sqlpackage/sqlpackage-pipelines.md
+    - name: SqlPackage with data in Parquet files
+      href: tools/sqlpackage/sqlpackage-with-data-in-parquet-files.md
     - name: SqlPackage for Azure Synapse Analytics
       href: tools/sqlpackage/sqlpackage-for-azure-synapse-analytics.md
     - name: Troubleshooting SqlPackage
@@ -10060,8 +10065,9 @@ items:
     - name: "Lesson 3: Delete database objects"
       href: t-sql/lesson-3-deleting-database-objects.md
 - name: SQL Server on Linux
-  href: linux/sql-server-linux-overview.md
   items:
+  - name: What is SQL Server on Linux?
+    href: linux/sql-server-linux-overview.md
   - name: Overview
     items:
     - name: What's new?
@@ -10378,7 +10384,7 @@ items:
     - name: Restore the master database
       href: linux/sql-server-linux-restore-master-database-in-single-user-mode.md
     - name: How to License >>
-      href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
+      href: https://www.microsoft.com/sql-server/sql-server-2022-pricing
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
@@ -10405,11 +10411,11 @@ items:
       href: /azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview
 - name: Azure Arc
   items:
-    - name: Azure Arc-enabled SQL Server
+    - name: SQL Server enabled by Azure Arc
       items:
       - name: Documentation
         href: sql-server/azure-arc/index.yml
-      - name: What is Azure Arc-enabled SQL Server?
+      - name: Overview
         href: sql-server/azure-arc/overview.md
       - name: Release notes
         href: sql-server/azure-arc/release-notes.md
@@ -10445,18 +10451,24 @@ items:
           href: sql-server/azure-arc/view-databases.md
         - name: Configure SQL Server
           href: sql-server/azure-arc/manage-configuration.md
-        - name: View Always On failover cluster instances
-          href: sql-server/azure-arc/support-for-fci.md  
         - name: Automate patching
           href: sql-server/azure-arc/patch.md
-        - name: Automate backups
-          href: sql-server/azure-arc/point-in-time-restore.md
-        - name: Delete from or restore to Azure Arc
+        - name: Disconnect and unregister from Azure Arc
           href: sql-server/azure-arc/delete-from-azure-arc.md
-        - name: Monitor
+        - name: Monitor (preview)
           href: sql-server/azure-arc/sql-monitoring.md
         - name: Use activity logs
           href: sql-server/azure-arc/activity-logs.md
+      - name: Business continuity
+        items:
+        - name: Automated backups to local storage (preview)
+          href: sql-server/azure-arc/backup-local.md
+        - name: Point-in-time restore (preview)
+          href: sql-server/azure-arc/point-in-time-restore.md
+        - name: View Always On failover cluster instances (preview)
+          href: sql-server/azure-arc/support-for-fci.md  
+        - name: View Always On availability group (preview)
+          href: sql-server/azure-arc/manage-availability-group.md
       - name: Secure
         items:
         - name: Configure advanced data Security
@@ -10473,6 +10485,8 @@ items:
         items:
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
+        - name: Troubleshoot connectivity to DPS or telemetry endpoints
+          href: sql-server/azure-arc/troubleshoot-telemetry-endpoint.md
         - name: Troubleshoot best practices assessment
           href: sql-server/azure-arc/troubleshoot-assessment.md
     - name: Azure Arc-enabled data services >
@@ -10491,12 +10505,18 @@ items:
       items:
         - name: Platform release notes
           href: big-data-cluster/release-notes-big-data-cluster.md
+        - name: Known issues
+          href: big-data-cluster/known-issues.md
         - name: Release history
           items:
           - name: Cumulative Update history
             href: big-data-cluster/release-notes-cumulative-updates-history.md
           - name: Past details
             items: 
+            - name: Cumulative Update 23
+              href: big-data-cluster/release-notes-cumulative-update-23.md
+            - name: Cumulative Update 22
+              href: big-data-cluster/release-notes-cumulative-update-22.md
             - name: Cumulative Update 21
               href: big-data-cluster/release-notes-cumulative-update-21.md
             - name: Cumulative Update 20
@@ -11312,7 +11332,9 @@ items:
         - name: 7357
           href: relational-databases/errors-events/mssqlserver-7357-database-engine-error.md
         - name: 7391
-          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md  
+          href: relational-databases/errors-events/mssqlserver-7391-database-engine-error.md
+        - name: 7399
+          href: relational-databases/errors-events/mssqlserver-7399-database-engine-error.md
         - name: 7711
           href: relational-databases/errors-events/mssqlserver-7711-database-engine-error.md
         - name: 7901
@@ -12372,6 +12394,22 @@ items:
         href: relational-databases/system-catalog-views/sys-database-automatic-tuning-mode-transact-sql.md
       - name: sys.master_files
         href: relational-databases/system-catalog-views/sys-master-files-transact-sql.md
+    - name: Elastic job views
+      items:
+      - name: jobs.job_executions
+        href: relational-databases/system-catalog-views/jobs-job-executions-elastic-jobs-transact-sql.md
+      - name: jobs.jobs
+        href: relational-databases/system-catalog-views/jobs-jobs-elastic-jobs-transact-sql.md
+      - name: jobs.job_versions
+        href: relational-databases/system-catalog-views/jobs-job-versions-elastic-jobs-transact-sql.md
+      - name: jobs.jobsteps
+        href: relational-databases/system-catalog-views/jobs-jobsteps-elastic-jobs-transact-sql.md
+      - name: jobs.jobstep_versions
+        href: relational-databases/system-catalog-views/jobs-jobstep-versions-elastic-jobs-transact-sql.md
+      - name: jobs.target_groups
+        href: relational-databases/system-catalog-views/jobs-target-groups-elastic-jobs-transact-sql.md
+      - name: jobs.target_group_members
+        href: relational-databases/system-catalog-views/jobs-target-group-members-elastic-jobs-transact-sql.md
     - name: Endpoints
       href: relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md
       items:
@@ -12470,6 +12508,14 @@ items:
         href: relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md
       - name: sys.servers
         href: relational-databases/system-catalog-views/sys-servers-transact-sql.md
+    - name: Fabric query insights
+      items:
+      - name: queryinsights.exec_requests_history
+        href: relational-databases/system-views/queryinsights-exec-requests-history-transact-sql.md
+      - name: queryinsights.frequently_run_queries
+        href: relational-databases/system-views/queryinsights-frequently-run-queries-transact-sql.md
+      - name: queryinsights.long_running_queries
+        href: relational-databases/system-views/queryinsights-long-running-queries-transact-sql.md
     - name: Object
       href: relational-databases/system-catalog-views/object-catalog-views-transact-sql.md
       items:
@@ -14377,6 +14423,34 @@ items:
         href: relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md
       - name: sp_testlinkedserver
         href: relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md
+    - name: Elastic jobs
+      items:
+      - name: sp_add_job
+        href: relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql.md
+      - name: sp_update_job
+        href: relational-databases/system-stored-procedures/sp-update-job-elastic-jobs-transact-sql.md
+      - name: sp_delete_job
+        href: relational-databases/system-stored-procedures/sp-delete-job-elastic-jobs-transact-sql.md
+      - name: sp_add_jobstep
+        href: relational-databases/system-stored-procedures/sp-add-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_update_jobstep
+        href: relational-databases/system-stored-procedures/sp-update-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_delete_jobstep
+        href: relational-databases/system-stored-procedures/sp-delete-jobstep-elastic-jobs-transact-sql.md
+      - name: sp_start_job
+        href: relational-databases/system-stored-procedures/sp-start-job-elastic-jobs-transact-sql.md
+      - name: sp_stop_job
+        href: relational-databases/system-stored-procedures/sp-stop-job-elastic-jobs-transact-sql.md
+      - name: sp_add_target_group
+        href: relational-databases/system-stored-procedures/sp-add-target-group-elastic-jobs-transact-sql.md
+      - name: sp_delete_target_group
+        href: relational-databases/system-stored-procedures/sp-delete-target-group-elastic-jobs-transact-sql.md
+      - name: sp_add_target_group_member
+        href: relational-databases/system-stored-procedures/sp-add-target-group-member-elastic-jobs-transact-sql.md
+      - name: sp_delete_target_group_member
+        href: relational-databases/system-stored-procedures/sp-delete-target-group-member-elastic-jobs-transact-sql.md
+      - name: sp_purge_jobhistory
+        href: relational-databases/system-stored-procedures/sp-purge-jobhistory-elastic-jobs-transact-sql.md
     - name: FILESTREAM and FileTable
       items:
       - name: Overview

@@ -1,11 +1,11 @@
 ---
 title: Managed identity in Microsoft Entra for Azure SQL
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: Learn about system assigned and user assigned managed identities in Microsoft Entra for Azure SQL Database and SQL Managed Instance.
+description: Learn about system assigned and user assigned managed identities in Microsoft Entra for Azure SQL Database and Azure SQL Managed Instance.
 author: nofield
 ms.author: nofield
 ms.reviewer: vanto, wiassaf
-ms.date: 10/11/2022
+ms.date: 10/24/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.custom: has-azure-ad-ps-ref
@@ -63,7 +63,7 @@ These permissions should be granted before you provision a logical server or man
 
 ### Grant permissions
 
-The following sample PowerShell script grants the necessary permissions for a UMI or an SMI. This sample assigns permissions to the UMI `umiservertest`. 
+The following sample PowerShell script grants the necessary permissions for a managed identity. This sample assigns permissions to the user-assigned managed identity `umiservertest`.
 
 To run the script, you must sign in as a user with a Global Administrator or Privileged Role Administrator role.
 
@@ -149,10 +149,10 @@ The Azure portal displays the system-assigned managed identity (SMI) ID in the *
 
 To set the user-managed identity for the Azure SQL Database logical server or Azure SQL Managed Instance in the [Azure portal](https://portal.azure.com):
 
-1. Go to your **SQL server** or **SQL managed instance** resource. 
-1. Under **Security**, select the **Identity** setting. 
-1. Under **User assigned managed identity**, select **Add**. 
-1. Select a subscription, and then for **Primary identity**, select a UMI for the subscription. Then choose the **Select** button. 
+1. Go to your **SQL server** or **SQL managed instance** resource.
+1. Under **Security**, select the **Identity** setting.
+1. Under **User assigned managed identity**, select **Add**.
+1. Select a subscription, and then for **Primary identity**, select a managed identity for the subscription. Then choose the **Select** button.
 
 :::image type="content" source="media/authentication-azure-ad-user-assigned-managed-identity/existing-server-select-managed-identity.png" alt-text="Azure portal screenshot of selecting a user-assigned managed identity when configuring an existing server identity.":::
 
@@ -160,68 +160,84 @@ To set the user-managed identity for the Azure SQL Database logical server or Az
 
 The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 
-#### Azure SQL Database
+#### Azure SQL Database managed identity using the Azure CLI
 
-- To provision a new server with a UMI, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
-- To obtain the managed identities for a logical server, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command. 
-    - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
+- To provision a new server with a user-assigned managed identity, use the [az sql server create](/cli/azure/sql/server#az-sql-server-create) command.
+- To obtain the managed identities for a logical server, use the [az sql server show](/cli/azure/sql/server#az-sql-server-show) command.
+  - For example, to retrieve the user-assigned managed identities of a logical server, look for the `principalId` of each:
+
     ```azurecli
     az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.userAssignedIdentities
     ```
-    - To retrieve the SMI of an Azure SQL Database logical server:
+
+  - To retrieve the system-assigned managed identity of an Azure SQL Database logical server:
+
     ```azurecli
     az sql server show --resource-group "resourcegroupnamehere" --name "sql-logical-server-name-here" --query identity.principalId
-    ``` 
+    ```
+
 - To update the UMI's server setting, use the [az sql server update](/cli/azure/sql/server#az-sql-server-update) command.
 
-#### Azure SQL Managed Instance
+#### Azure SQL Managed Instance managed identity using the Azure CLI
 
 - To provision a new managed instance with a UMI, use the [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create) command.
-- To obtain the system-assigned and user-assigned MI's for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
-    - For example, to retrieve the UMI(s) for a managed instance, look for the `principalId` of each:
+- To obtain the system-assigned and user-assigned managed identities for managed instances, use the [az sql mi show](/cli/azure/sql/mi#az-sql-mi-show) command.
+  - For example, to retrieve the UMI(s) for a managed instance, look for the `principalId` of each:
+  
     ```azurecli
     az sql mi show --resource-group "resourcegroupnamehere" --name "sql-mi-name-here" --query identity.userAssignedIdentities
-    ``` 
-    - To retrieve the SMI of a managed instance:
+    ```
+
+  - To retrieve the SMI of a managed instance:
+  
     ```azurecli
     az sql mi show --resource-group "resourcegroupnamehere" --name "sql-mi-name-here" --query identity.principalId
-    ``` 
+    ```
+
 - To update the UMI's managed instance setting, use the [az sql mi update](/cli/azure/sql/mi#az-sql-mi-update) command.
 
 ### Create or set a managed identity by using PowerShell
 
 [Az.Sql module 3.4](https://www.powershellgallery.com/packages/Az.Sql/3.4.0) or later is required for using PowerShell with a UMI. The [latest version of PowerShell](/powershell/scripting/install/installing-powershell) is recommended, or use the [Azure Cloud Shell in the Azure portal](/azure/cloud-shell/overview).
 
-#### Azure SQL Database
+#### Azure SQL Database managed identity using PowerShell
 
 - To provision a new server with a UMI, use the [New-AzSqlServer](/powershell/module/az.sql/new-azsqlserver) command.
 - To obtain the managed identities for a logical server, use the [Get-AzSqlServer](/powershell/module/az.sql/get-azsqlserver) command.
-    - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
+  - For example, to retrieve the UMI(s) of a logical server, look for the `principalId` of each:
+
     ```powershell
     $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
-    ``` 
-    - To retrieve the SMI of an Azure SQL Database logical server:
+    ```
+
+  - To retrieve the SMI of an Azure SQL Database logical server:
+
     ```powershell
     $MI = get-azsqlserver -resourcegroupname "resourcegroupnamehere" -name "sql-logical-server-name-here"
     $MI.Identity.principalId
     ```
+
 - To update the UMI's server setting, use the [Set-AzSqlServer](/powershell/module/az.sql/set-azsqlserver) command.
 
-#### Azure SQL Managed Instance
+#### Azure SQL Managed Instance managed identity using PowerShell
 
 - To provision a new managed instance with a UMI, use the [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance) command.
 - To obtain the managed identities for a managed instance, use the [Get-AzSqlInstance](/powershell/module/az.sql/get-azsqlinstance) command.
-    - For example, to retrieve the UMI(s) of a managed instance, look for the `principalId` of each:
+  - For example, to retrieve the UMI(s) of a managed instance, look for the `principalId` of each:
+
     ```powershell
     $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
     $MI.Identity.UserAssignedIdentities | ConvertTo-Json 
-    ``` 
-    - To retrieve the SMI of a managed instance:
+    ```
+
+  - To retrieve the SMI of a managed instance:
+
     ```powershell
     $MI = get-azsqlinstance -resourcegroupname "resourcegroupnamehere" -name "sql-mi-name-here"
     $MI.Identity.principalId
     ```
+
 - To update the UMI's managed instance setting, use the [Set-AzSqlInstance](/powershell/module/az.sql/set-azsqlinstance) command.
 
 ### Create or set a managed identity by using the REST API
@@ -229,6 +245,7 @@ The Azure CLI 2.26.0 (or later) is required to run these commands with a UMI.
 To update the UMI settings for the server, you can also use the REST API provisioning script used in [Create a logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md) or [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). Rerun the provisioning command in the guide with the updated user-assigned managed identity property that you want to update.
 
 ### Create or set a managed identity by using an ARM template
+
 To update the UMI settings for the server, you can also use the Azure Resource Manager template (ARM template) used in [Create a logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md) or [Create a managed instance by using a user-assigned managed identity](../managed-instance/authentication-azure-ad-user-assigned-managed-identity-create-managed-instance.md). Rerun the provisioning command in the guide with the updated user-assigned managed identity property that you want to update.
 
 > [!NOTE]
@@ -240,7 +257,7 @@ To update the UMI settings for the server, you can also use the Azure Resource M
 - If you use an SMI or a UMI as the server or instance identity, deleting the identity will make the server or instance unable to access Microsoft Graph. Microsoft Entra authentication and other functions will fail. To restore Microsoft Entra functionality, assign a new SMI or UMI to the server with appropriate permissions.
 - To grant permissions to access Microsoft Graph through an SMI or a UMI, you need to use PowerShell. You can't grant these permissions by using the Azure portal.
 
-## Next steps
+## Related content
 
 > [!div class="nextstepaction"]
 > [Create an Azure SQL logical server by using a user-assigned managed identity](authentication-azure-ad-user-assigned-managed-identity-create-server.md)

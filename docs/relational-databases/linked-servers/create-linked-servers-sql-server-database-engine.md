@@ -281,9 +281,9 @@ When `NULL` is returned for the linked server login, it indicates that the login
 
 If you're using Azure SQL Managed Instance, see the following examples from [sp_addlinkedserver (Transact-SQL)](../system-stored-procedures/sp-addlinkedserver-transact-sql.md):
 
-- [Create SQL Managed Instance linked server with managed identity Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#h-create-sql-managed-instance-linked-server-with-managed-identity-azure-ad-authentication)
+- [Create SQL Managed Instance linked server with managed identity Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#managed-identity-authentication)
 
-- [Create SQL Managed Instance linked server with pass-through Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#i-create-sql-managed-instance-linked-server-with-pass-through-azure-ad-authentication)
+- [Create SQL Managed Instance linked server with pass-through Microsoft Entra authentication](../system-stored-procedures/sp-addlinkedserver-transact-sql.md#pass-through-authentication)
 
 ## Next steps
 

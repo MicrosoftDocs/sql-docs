@@ -1,6 +1,6 @@
 ---
-title: Configure automated patching for Azure Arc-enabled SQL Server
-description: This article explains how to configure Azure Arc-enabled SQL Server automated patching.
+title: Configure automated patching
+description: This article explains how to configure SQL Server enabled by Azure Arc automated patching.
 author: twright-msft
 ms.author: twright
 ms.reviewer: mikeray
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-You can configure automated patching for Azure Arc-enabled SQL Servers.
+You can configure automated patching for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)].
 
 Automated patching:
 

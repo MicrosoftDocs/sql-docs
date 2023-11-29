@@ -64,10 +64,9 @@ See [SqlPackage publish](sqlpackage-publish.md#examples) for more examples of au
 
 Synapse serverless SQL pools are supported for both the extract and publish actions.  The T-SQL surface area of serverless SQL pools is limited by [design](/azure/synapse-analytics/sql/on-demand-workspace-overview#t-sql-support) to external tables, external views, stored procedures, functions, statistics, and credentials.  The following features are included in support for serverless SQL pools:
 
-- delta external file format
-- openrowset provider CosmosDB with PROVIDER, CONNECTION, OBJECT, and CREDENTIAL or SERVER_CREDENTIAL specified
-- openrowset format SStream
-- `with ()` clause on openrowset
+- [Delta](/azure/synapse-analytics/sql/query-delta-lake-format) external file format
+- [OPENROWSET](/azure/synapse-analytics/sql/develop-openrowset) provider CosmosDB with PROVIDER, CONNECTION, OBJECT, and CREDENTIAL or SERVER_CREDENTIAL specified
+- `with ()` clause on [OPENROWSET](/azure/synapse-analytics/sql/develop-openrowset)
 
 ## Next Steps
 - Learn more about [Extract](sqlpackage-extract.md)

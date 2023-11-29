@@ -13,7 +13,7 @@ ms.topic: conceptual
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 Restore a backed up database when necessary to recover from many types of failures, errors, and disasters.
 

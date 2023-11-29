@@ -4,9 +4,10 @@ description: Tutorial on how to create a basic environment for Always Encrypted 
 author: Pietervanhove
 ms.author: pivanho
 ms.reviewer: vanto
-ms.date: 2/1/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
+ms.custom: ignite-2023
 ms.topic: tutorial
 ---
 # Tutorial: Getting started using Always Encrypted with VBS enclaves in Azure SQL Database
@@ -66,8 +67,21 @@ Go to [Quickstart: Create a single database - Azure SQL Database](single-databas
 
 In this step, you'll enable a VBS enclave in the database, which is required for Always Encrypted with secure enclaves. To enable VBS enclaves in your database, you need to set the **preferredEnclaveType** [database property](/azure/templates/microsoft.sql/2022-05-01-preview/servers/databases?pivots=deployment-language-bicep#databaseproperties) to **VBS**.
 
-> [!NOTE]
-> Currently, only PowerShell and Azure CLI support enabling a VBS enclave in a database.
+# [Portal](#tab/azure-portal)
+1. Open the [Azure portal](https://portal.azure.com/) and locate the database for which you want to enable secure enclaves.
+1. In the **Security** settings, select **Data Encryption**.
+1. In the **Data Encryption** menu, select the **Always Encrypted** tab.
+1. Set **Enable secure enclaves** to **ON**. If it is already set to **ON** proceed with the next step.
+
+    :::image type="content" source="./media/always-encrypted-enclaves/portal-enable-secure-enclaves-existing-database.png" alt-text="Screenshot of enabling secure enclaves on an existing database in the Azure portal.":::
+    
+1. Select **Save** to save your Always Encrypted configuration.
+
+# [SSMS](#tab/SSMS)
+1. Open SSMS and connect logical server where you want to modify your database.
+2. Right-click on your database and select **Properties**. 
+3. In the **Configure SLO** page, set the option **Enable Secure Enclaves** to **ON**. If it is already set to **ON**, proceed with the next step.
+4. Select **OK** to save your database properties.
 
 # [PowerShell](#tab/azure-powershell)
 

@@ -1,10 +1,9 @@
 ---
 title: Using Microsoft Entra ID with the ODBC Driver
 description: The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to Azure SQL Database or Azure SQL Managed Instance by authenticating with Microsoft Entra ID.
-
 author: David-Engel
 ms.author: v-davidengel
-ms.date: 05/23/2023
+ms.date: 11/13/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -31,7 +30,6 @@ The `Authentication` keyword can be used when connecting with a DSN or connectio
 |Name|Values|Default|Description|
 |-|-|-|-|
 |`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal` |(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>`SqlPassword`<td>Directly authenticate to SQL using a username and password.<tr><td>`ActiveDirectoryPassword`<td>Authenticate with a Microsoft Entra identity using a username and password.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows, and Linux/Mac 17.6+, driver only_. Authenticate with a Windows credential federated through Microsoft Entra ID with integrated authentication.<tr><td>`ActiveDirectoryInteractive`<td>_Windows driver only_. Authenticate with a Microsoft Entra identity using interactive authentication.<tr><td>`ActiveDirectoryMsi`<td>Authenticate with a Microsoft Entra managed identity. For user-assigned identity, UID is set to the object ID of the user identity.<tr><td>`ActiveDirectoryServicePrincipal`<td>(17.7+) Authenticate with a Microsoft Entra  service principal. UID is set to the client ID of the service principal. PWD is set to the client secret.</table>|
-
 |`Encrypt`|(not set), `Yes`/`Mandatory`(18.0+), `No`/`Optional`(18.0+), `Strict`(18.0+)|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting isn't _`none`_ in the DSN or connection string, the default is `Yes`. The default is also `Yes` in versions 18.0.1+. Otherwise, the default is `No`. If the attribute `SQL_COPT_SS_AUTHENTICATION` overrides the pre-attribute value of `Authentication`, explicitly set the value of Encryption in the DSN or connection string or connection attribute. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
 
 ## New and/or Modified Connection Attributes
@@ -52,14 +50,11 @@ The following pre-connect connection attributes have either been introduced or m
 
 The DSN setup and connection UIs of the driver have been enhanced with the extra options necessary to authenticate with Microsoft Entra ID.
 
-
 ### Creating and editing DSNs in the UI
 
 It's possible to use Microsoft Entra authentication options when creating or editing an existing DSN using the driver's setup UI:
 
-
 `Authentication=ActiveDirectoryIntegrated` for Microsoft Entra integrated authentication to Azure SQL
-
 
 ![The DSN creation and editing screen with Microsoft Entra integrated authentication selected.](windows/create-dsn-ad-integrated.png)
 
@@ -69,14 +64,12 @@ It's possible to use Microsoft Entra authentication options when creating or edi
 
 `Authentication=ActiveDirectoryInteractive` for Microsoft Entra interactive authentication to Azure SQL
 
-
 ![The DSN creation and editing screen with Microsoft Entra Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
 
 > [!NOTE]
 > As of driver version 17.9, the interactive authentication behavior has changed. Users will always be prompted for credentials unless the driver has a valid access token cached. This change prevents users on Microsoft Entra joined devices from skipping the prompt and automatically signing in with cached credentials when using `ActiveDirectoryInteractive` authentication.
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server and Azure SQL
-
 
 ![The DSN creation and editing screen with SQL Server authentication selected.](windows/create-dsn-ad-sql-server.png)
 
@@ -105,53 +98,70 @@ These options correspond to the same six available in the DSN setup UI above.
 ### Example connection strings
 
 1. SQL Server Authentication - legacy syntax. Server certificate isn't validated, and encryption is used only if the server enforces it. The username/password is passed in the connection string.
-`server=Server;database=Database;UID=UserName;PWD=Password;Encrypt=no;TrustServerCertificate=yes;`
+
+   `server=Server;database=Database;UID=UserName;PWD=Password;Encrypt=no;TrustServerCertificate=yes;`
+
 2. SQL Authentication - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
- `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
+
+   `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
+
 3. Integrated Windows Authentication (Kerberos on Linux and macOS) using SSPI (to SQL Server or SQL IaaS) - current syntax. Server certificate isn't validated, unless encryption is required by the server.
-`server=Server;database=Database;Trusted_Connection=yes;Encrypt=no;`
+
+   `server=Server;database=Database;Trusted_Connection=yes;Encrypt=no;`
+
 4. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL Server on Azure VMs) - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`).
 
-`server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
+   `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
+
 5. Microsoft Entra username/password authentication (if the target database is in Azure SQL Database or Azure SQL Managed Instance). Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string.
 
-`server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;Encrypt=yes;`
+   `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;Encrypt=yes;`
+
 6. (_Windows, and Linux/macOS 17.6+, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for a Microsoft Entra access token, assuming the target database is in Azure SQL. Server certificate gets validated, whatever the encryption setting (unless `TrustServerCertificate` is set to `true`). On Linux/macOS, a suitable Kerberos ticket needs to be available. For more information, see the section below on Federated Accounts and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md).
 
-`server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;Encrypt=yes;`
+   `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;Encrypt=yes;`
+
 7. (_Windows driver only_.) Microsoft Entra Interactive Authentication uses Microsoft Entra multifactor authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input additional verification to complete the connection. The username is passed in the connection string.
 
-`server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
-![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
+   `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;Encrypt=yes;`
+
+   ![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
+
 8. Microsoft Entra managed identity authentication uses a system-assigned or user-assigned managed identity for authentication to set up the connection. For a user-assigned identity, the UID is set to the object ID of the user identity.<br>
 
-For system-assigned identity,<br>
-`server=Server;database=Database;Authentication=ActiveDirectoryMsi;Encrypt=yes;`<br>
-For user-assigned identity with object ID equals to myObjectId,<br>
-`server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
+   For system-assigned identity:
+
+   `server=Server;database=Database;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
+
+   For user-assigned identity with object ID equals to `myObjectId`:
+
+   `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;Encrypt=yes;`
+
 9. Microsoft Entra service principal authentication
 
-`server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
+   `server=Server;database=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;Encrypt=yes;`
 
-> [!NOTE]
->
->- When using Microsoft Entra options with the Windows ODBC driver _prior to_ version 17.4.2, ensure that the Active Directory Authentication Library for SQL Server has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
+### Remarks
 
->- When Microsoft Entra configuration includes conditional access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail. Conditional access policies require the use of Web Account Manager (WAM), which is supported in driver version 17.6 or later for Windows. To use WAM, create a new string or DWORD value named `ADALuseWAM` in `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>`, or `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` for global, user DSN, or system DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Conditional Access policies are not supported for Linux or macOS.
+- When using Microsoft Entra options with the Windows ODBC driver _prior to_ version 17.4.2, ensure that the Active Directory Authentication Library for SQL Server has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
 
->- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for Azure SQL since this option enables more secure connection defaults.
->- To connect using a Microsoft Entra account username and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
->- To connect using Windows Integrated or Microsoft Entra Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. For driver versions 17.7 or earlier, `UID` and `PWD` must not be specified. Beginning with driver version 17.8, `UID` and `PWD` are ignored.
+- When Microsoft Entra configuration includes conditional access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail. Conditional access policies require the use of Web Account Manager (WAM), which is supported in driver version 17.6 or later for Windows. To use WAM, create a new string or DWORD value named `ADALuseWAM` in `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>`, or `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` for global, user DSN, or system DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Conditional Access policies are not supported for Linux or macOS.
 
->- To connect using Microsoft Entra interactive authentication (Windows driver only), `UID` must be specified. For driver versions 17.7 and earlier, `PWD` must not be specified. Beginning with driver version 17.8, `PWD` is ignored.
+- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for Azure SQL since this option enables more secure connection defaults.
 
->- Starting with version 18.1, `Trusted_Connection=Yes` no longer uses Microsoft Entra ID federated authentication by default and uses SSPI-integrated instead. To use Microsoft Entra ID for this option, `TrustedConnection_UseAAD=Yes` should be configured.
->- ODBC driver versions 17.7 and lower have a known issue with connection timeout when Microsoft Entra authentication and Force Encryption are enabled on a SQL Server instance. The SQL Server errorlog may contain error messages such as: "_Error: 33155, Severity: 20, State: 1. A disconnect event was raised when server is waiting for Federated Authentication token. This could be due to client close or server timeout expired_.". If you are using high availability solutions such Always On availability groups or failover cluster instances, the internal cluster communication for SQL Server may be affected by this behavior which can affect resource availability. In the cluster log, you may see error messages such as: `[hadrag] Connect to SQL Server ...ODBC Error: [HY000] [Microsoft][ODBC Driver 17 for SQL Server]An unknown error has occurred. Detailed error information is not available. (0)`. ODBC driver versions 17.10 and higher fix this issue and with SQL Server 2022 GDR KB5021522 /CU1 KB5022375, the latest driver which contains this fix is installed with SQL Server installation. You can verify which version of ODBC driver you have installed by referring to the ODBC Data Source Administrator.
+- To connect using a Microsoft Entra account username and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
 
->- Starting with ODBC driver version 18.3, Managed Identity (ActiveDirectoryMSI) authentication is supported on Azure Arc and Azure Cloud Shell.
+- To connect using Windows Integrated or Microsoft Entra Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. For driver versions 17.7 or earlier, `UID` and `PWD` must not be specified. Beginning with driver version 17.8, `UID` and `PWD` are ignored.
+
+- To connect using Microsoft Entra interactive authentication (Windows driver only), `UID` must be specified. For driver versions 17.7 and earlier, `PWD` must not be specified. Beginning with driver version 17.8, `PWD` is ignored.
+
+- Starting with version 18.1, `Trusted_Connection=Yes` no longer uses Microsoft Entra ID federated authentication by default and uses SSPI-integrated instead. To use Microsoft Entra ID for this option, `TrustedConnection_UseAAD=Yes` should be configured.
+
+- ODBC driver versions 17.7 and lower have a known issue with connection timeout when Microsoft Entra authentication and Force Encryption are enabled on a SQL Server instance. The SQL Server errorlog may contain error messages such as: "_Error: 33155, Severity: 20, State: 1. A disconnect event was raised when server is waiting for Federated Authentication token. This could be due to client close or server timeout expired_.". If you are using high availability solutions such Always On availability groups or failover cluster instances, the internal cluster communication for SQL Server may be affected by this behavior which can affect resource availability. In the cluster log, you may see error messages such as: `[hadrag] Connect to SQL Server ...ODBC Error: [HY000] [Microsoft][ODBC Driver 17 for SQL Server]An unknown error has occurred. Detailed error information is not available. (0)`. ODBC driver versions 17.10 and higher fix this issue and with SQL Server 2022 GDR KB5021522 /CU1 KB5022375, the latest driver which contains this fix is installed with SQL Server installation. You can verify which version of ODBC driver you have installed by referring to the ODBC Data Source Administrator.
+
+- Starting with ODBC driver version 18.3, Managed Identity (ActiveDirectoryMSI) authentication is supported on Azure Arc and Azure Cloud Shell.
 
 ## Authenticating with an access token
-
 
 The `SQL_COPT_SS_ACCESS_TOKEN` pre-connection attribute allows the use of an access token obtained from Microsoft Entra ID for authentication instead of username and password, and also bypasses the negotiation and obtaining of an access token by the driver. To use an access token, set the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute to a pointer to an `ACCESSTOKEN` structure:
 
@@ -172,7 +182,6 @@ The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_
 
 ## Microsoft Entra authentication sample code
 
-
 The following sample shows the code required to connect to SQL Server using Microsoft Entra ID with connection keywords. There's no need to change the application code itself. The connection string, or DSN if one is used, is the only modification needed to use Microsoft Entra ID for authentication:
 
 ```cpp
@@ -184,7 +193,6 @@ The following sample shows the code required to connect to SQL Server using Micr
 ```
 
 The following sample shows the code required to connect to SQL Server using Microsoft Entra access token authentication. In this case, it's necessary to modify application code to process the access token and set the associated connection attribute.
-
 
 ```cpp
     SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};Encrypt=yes;"
@@ -207,13 +215,11 @@ The following sample shows the code required to connect to SQL Server using Micr
 
 The following sample connection string is for use with Microsoft Entra interactive authentication. It doesn't contain PWD field as the password would be entered on the Azure Authentication screen.
 
-
 ```cpp
 SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive;Encrypt=yes;"
 ```
 
 The following sample connection string is for use with Microsoft Entra identity authentication. UID is set to the object ID of the user identity when using a user-assigned identity.
-
 
 ```cpp
 // For system-assigned identity,
@@ -227,14 +233,13 @@ SQLCHAR connString[] = "Driver={ODBC Driver 18 for SQL Server};Server={server};U
 
 Starting with version 17.6, the drivers for Linux and macOS support authentication using [Microsoft Entra ADFS-federated accounts](/azure/active-directory/hybrid/connect/whatis-fed) using either username/password (`ActiveDirectoryPassword`) or Kerberos (`ActiveDirectoryIntegrated`). There are some limitations dependent on the platform when using Integrated mode.
 
-
 When authenticating with a user whose UPN suffix is different from the Kerberos realm, that is, an alternate UPN suffix is in use, it's necessary to use the Enterprise Principal option (use the `-E` option with `kinit`, and supply the principal name in the form `user@federated-domain`) when obtaining Kerberos tickets. This way, the driver can correctly determine both the federated domain and the Kerberos realm.
 
 You can verify that a suitable Kerberos ticket is available by inspecting the output of the `klist` command. If the federated domain is the same as the Kerberos realm and UPN suffix, the principal name is of the form `user@realm`. If it's different, the principal name should be of the form `user@federated-domain@realm`.
 
 ### Linux
 
-On SuSE 11, the default Kerberos library version of 1.6.x doesn't support the Enterprise Principal option necessary to use alternate UPN suffixes. To use alternate UPN suffixes with Microsoft Entra integrated authentication, upgrade the Kerberos library to 1.7 or newer.
+On SUSE 11, the default Kerberos library version of 1.6.x doesn't support the Enterprise Principal option necessary to use alternate UPN suffixes. To use alternate UPN suffixes with Microsoft Entra integrated authentication, upgrade the Kerberos library to 1.7 or newer.
 
 On Alpine Linux, the default `libcurl` doesn't support the SPNEGO/Kerberos authentication required for Microsoft Entra integrated authentication.
 
@@ -242,7 +247,7 @@ On Alpine Linux, the default `libcurl` doesn't support the SPNEGO/Kerberos authe
 
 The system Kerberos library `kinit` supports Enterprise Principal with the `--enterprise` option, but also implicitly does name canonicalization, which prevents the use of alternate UPN suffixes. To use alternate UPN suffixes with Microsoft Entra integrated authentication, install a newer Kerberos library via `brew install krb5` and use its `kinit` with the `-E` option as described above.
 
-## See Also
+## Related content
 
-[Token-based authentication support for Azure SQL Database using Microsoft Entra auth](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)  
-[Using Integrated Authentication](linux-mac/using-integrated-authentication.md)  
+- [Token-based authentication support for Azure SQL Database using Microsoft Entra auth](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
+- [Using Integrated Authentication](linux-mac/using-integrated-authentication.md)

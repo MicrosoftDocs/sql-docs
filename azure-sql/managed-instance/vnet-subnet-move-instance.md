@@ -8,6 +8,7 @@ ms.reviewer: mathoma, bonova, srbozovi, wiassaf
 ms.date: 04/12/2023
 ms.service: sql-managed-instance
 ms.subservice: deployment-configuration
+ms.custom: ignite-2023
 ms.topic: how-to
 ---
 # Move Azure SQL Managed Instance across subnets
@@ -55,7 +56,7 @@ Subnet that is already in use (subnets used for instance deployments can't conta
 :::image type="content" source="./media/vnet-subnet-move-instance/subnet-grouping-per-state.png" alt-text="Screenshot of the Azure SQL Managed Instance subnet options.":::
 
 
-Depending on the subnet state and designation, the following adjustments may be made to the destination subnet: 
+Depending on the subnet state and designation, the following adjustments might be made to the destination subnet: 
 
 - **Ready for Managed Instance (contains existing SQL Managed Instance)**: No adjustments are made. These subnets already contain managed instances, and making any change to the subnet could impact existing instances. 
 - **Ready for Managed Instance (empty)**: The workflow validates all the required rules in the network security group and route table, and adds any rules that are necessary but missing. <sup>1</sup>
@@ -86,10 +87,6 @@ For example, if MI1 is in subnet S1, the secondary instance in the failover grou
 
 To learn more about configuring the network for auto-failover groups, review [Enable geo-replication between managed instances](auto-failover-group-configure-sql-mi.md#enabling-connectivity-between-the-instances). 
 
-### Migration from Gen4 hardware
-
-Instances running on Gen4 hardware must be upgraded to newer hardware since Gen4 is being retired. Upgrading hardware and moving to another subnet can be performed in one operation. Migrate [your instance of SQL Managed Instance to a supported hardware generation](resource-limits.md) for a wider range of vCore and storage scalability, accelerated networking, best IO performance, and minimal latency.
-
 ## Operation steps
 
 The following table details the operation steps that occur during the instance move operation: 
@@ -118,7 +115,7 @@ For a full reference of instance management commands, see [Management API refere
 
 The option to choose the instance subnet is located on the **Networking** blade of the Azure portal. The instance move operation starts when you select a subnet and save your changes. 
 
-The first step of the move operation is to prepare the destination subnet for deployment, which may take several minutes. Once the subnet is ready, the instance move management operation starts and becomes visible in the Azure portal. 
+The first step of the move operation is to prepare the destination subnet for deployment, which can take several minutes. Once the subnet is ready, the instance move management operation starts and becomes visible in the Azure portal. 
 
 
 > [!div class="mx-imgBorder"]

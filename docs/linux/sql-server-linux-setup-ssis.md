@@ -4,7 +4,7 @@ description: This article describes how to install SQL Server Integration Servic
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan, randolphwest
-ms.date: 03/01/2023
+ms.date: 10/30/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -193,7 +193,7 @@ To install the **mssql-server-is** package on Ubuntu, follow these steps:
 1. Register the SQL Server Ubuntu repository.
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    ```
 
 1. Run the following commands to install SQL Server Integration Services.

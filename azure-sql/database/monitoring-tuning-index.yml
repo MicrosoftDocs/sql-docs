@@ -14,7 +14,7 @@ metadata:
   author: WilliamDAssafMSFT 
   ms.author: wiassaf 
   ms.reviewer: mathoma
-  ms.date: 10/18/2021 
+  ms.date: 11/08/2023 
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -79,6 +79,8 @@ landingContent:
             url: intelligent-insights-overview.md
       - linkListType: concept
         links:
+          - text: Metrics and alerts
+            url: monitoring-metrics-alerts.md
           - text: Metrics and diagnostics logging
             url: metrics-diagnostic-telemetry-logging-streaming-export-configure.md
           - text: Understand the performance diagnostics log

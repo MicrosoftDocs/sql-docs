@@ -114,7 +114,7 @@ On multiprocessor systems that are running [!INCLUDE[ssNoVersion](../../includes
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-#### Set max degree of parallelism on a new index  
+#### Specify max degree of parallelism when creating a new index
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

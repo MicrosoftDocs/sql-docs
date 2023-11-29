@@ -17,7 +17,7 @@ ms.topic: conceptual
 To automatically connect your SQL Server instances, see [Automatically Connect your SQL Server to Azure Arc](automatically-connect.md).
 Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 >
-This article describes two methods of how to connect multiple instances of SQL Server to Azure Arc as a single task. Before you start complete the [Prerequisites](prerequisites.md#prerequisites).
+This article describes two methods of how to connect multiple instances of SQL Server to Azure Arc as a single task. Before you start complete the [Prerequisites](prerequisites.md).
 
 
 ## Connect at-scale using Azure Policy
@@ -71,4 +71,4 @@ After you connected the SQL Server instances to Azure, go to the [Azure portal](
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 
-- Learn how to [Protect Azure Arc-enabled SQL Server with Microsoft Defender for Cloud](configure-advanced-data-security.md)
+- Learn how to [Protect [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] with Microsoft Defender for Cloud](configure-advanced-data-security.md)

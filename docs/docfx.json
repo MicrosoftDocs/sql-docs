@@ -61,9 +61,11 @@
         }
       },
       "toc_preview": true,
-      "feedback_system": "None",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+      "feedback_help_link_url": "https://learn.microsoft.com/answers/tags/191/sql-server",
+      "feedback_help_link_type": "get-help-at-qna",
       "titleSuffix": "SQL Server",
       "recommendations": true
     },
@@ -76,10 +78,11 @@
         "machine-learning/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "big-data-cluster/**/*.md": "GitHub",
-        "database-engine/**/*.md": "GitHub",
+        "database-engine/**/*.md": "Standard",
         "linux/**/*.md": "GitHub",
         "powershell/**/*.md": "GitHub",
         "sql-server/**/*.md": "GitHub",
+        "sql-server/azure-arc/**/*.md": "Standard",
         "ssms/**/*.md": "GitHub",
         "tools/**/*.md": "GitHub",
         "relational-databases/*.md": "GitHub",
@@ -192,7 +195,8 @@
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
         "data-quality-services/**/*.md": "Data Quality Services (DQS)",
         "azdata/**/*.md": "Azure Data CLI (azdata)",
-        "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway"
+        "tools/synapse-pathway/**/*.md": "Azure Synapse Pathway",
+        "sql-server/azure-arc/**/*.md": "SQL Server enabled by Azure Arc"
       },
 
       "breadcrumb_path": {
@@ -305,6 +309,7 @@
         "data-quality-services/*.md": "UpdateFrequency5",
         "data-quality-services/install-windows/*.md": "UpdateFrequency5",
         "dea/*.md": "UpdateFrequency5",
+        "dmx/*.md": "UpdateFrequency5",
         "integration-services/**/*.md": "UpdateFrequency5",
         "integration-services/catalog/*.md": "UpdateFrequency5",
         "integration-services/change-data-capture/*.md": "UpdateFrequency5",
@@ -334,6 +339,7 @@
         "master-data-services/*.md": "UpdateFrequency5",
         "master-data-services/install-windows/*.md": "UpdateFrequency5",
         "master-data-services/microsoft-excel-add-in/*.md": "UpdateFrequency5",
+        "mdx/*.md": "UpdateFrequency5",
         "odbc/*.md": "UpdateFrequency5",
         "odbc/admin/*.md": "UpdateFrequency5",
         "odbc/microsoft/*.md": "UpdateFrequency5",

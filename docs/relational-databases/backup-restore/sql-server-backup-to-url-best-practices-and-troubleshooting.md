@@ -4,7 +4,7 @@ description: Learn about best practices and troubleshooting tips for SQL Server 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: randolphwest
-ms.date: 07/31/2023
+ms.date: 11/06/2023
 ms.service: sql
 ms.subservice: backup-restore
 ms.topic: conceptual
@@ -123,12 +123,13 @@ When such error occurs, the blob files need to be deleted. For more information 
 
 #### OS error 50: The request isn't supported
 
-When backing up a database, you may see error `Operating system error 50(The request is not supported)` for the following reasons:
+When backing up a database, you might see error `Operating system error 50(The request is not supported)` for the following reasons:
 
 - The specified storage account isn't General Purpose V1/V2.
 - The SAS token had a `?` symbol at the beginning of the token when the credential was created. If yes, then remove it.
 - The current connection is unable to connect to the storage account from the current machine using Storage Explorer or SQL Server Management Studio (SSMS).
 - The policy assigned to the SAS token is expired. Create a new policy using Azure Storage Explorer and either create a new SAS token using the policy or alter the credential and try backing up again.
+- The root certificate is missing in Trusted Root Certification store, see [Azure Root Certificate Authorities](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-authority-details).
 
 #### Authentication errors
 
@@ -155,7 +156,7 @@ Verify the storage account name and key values. The information stored in the cr
 
 #### 400 (Bad Request) errors
 
-Using SQL Server 2012 you may encounter an error performing a backup similar to the following:
+Using SQL Server 2012 you might encounter an error performing a backup similar to the following:
 
 ```output
 Backup to URL received an exception from the remote endpoint. Exception Message:
@@ -166,11 +167,11 @@ This is caused by the TLS version supported by the Azure Storage Account. Changi
 
 ## Proxy errors
 
-If you are using Proxy Servers to access the internet, you may see the following issues:
+If you are using Proxy Servers to access the internet, you might see the following issues:
 
 #### Connection throttling by proxy servers
 
-Proxy servers can have settings that limit the number of connections per minute. The Backup to URL process is a multi-threaded process and hence can go over this limit. If this happens, the proxy server kills the connection. To resolve this issue, change the proxy settings so SQL Server isn't using the proxy. Following are some examples of the types or error messages you may see in the error log:
+Proxy servers can have settings that limit the number of connections per minute. The Backup to URL process is a multi-threaded process and hence can go over this limit. If this happens, the proxy server kills the connection. To resolve this issue, change the proxy settings so SQL Server isn't using the proxy. Following are some examples of the types or error messages you might see in the error log:
 
 ```output
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
@@ -188,7 +189,7 @@ BACKUP DATABASE is terminating abnormally.
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```
 
-If using page blobs, you turn on the verbose logging using the Trace Flag 3051, you may also see the following message in the logs: `HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)`
+If using page blobs, you turn on the verbose logging using the Trace Flag 3051, you might also see the following message in the logs: `HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)`
 
 #### Default proxy settings not picked up
 
@@ -226,12 +227,12 @@ To resolve this issue, create a configuration file that allows the Backup to URL
 | **Exception Message:** The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request. | Identify the blobs in Azure Storage Explorer with a size of 1 TB, [break the lease, delete the blob](deleting-backup-blob-files-with-active-leases.md#manage-orphaned-blobs), and retry the backup operation. |
 | **Error:** The remote server returned an error: (403) Forbidden. | Recreate the storage account, credential, and SAS token to resolve the problem. |
 | **Backup for 1-TB database fails on SQL Server 2012/2014.** | 1-TB backups are a [known limitation](sql-server-backup-to-url.md#limitations) on page blobs prior to SQL Server 2016. Use backup compression by adding the 'WITH COMPRESSION' clause to your T-SQL backup statement or upgrade your SQL Server instance to SQL Server 2016 or later. |
-| **Error:** Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (416) The page range specified is invalid. | You may see this if you're on SQL Server 2012/2014 and your backup size increases to 1 TB. Stripe your backup files and/or use backup compression to resolve. |
+| **Error:** Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (416) The page range specified is invalid. | You might see this if you're on SQL Server 2012/2014 and your backup size increases to 1 TB. Stripe your backup files and/or use backup compression to resolve. |
 | **Backup failed when using a maintenance plan.** | There are a few bugs with the maintenance plan. Try using T-SQL to execute your backup. If T-SQL works, then you can create a SQL Agent job to run to back up your databases. |
-| **Backup failed due to VM limits reached.** | If you're getting errors that the disk IOPS/VM limit has been reached, backups may slow down or fail. To monitor IOPS/VM limits, use [Azure Monitor Metrics](/azure/virtual-machines/disks-metrics) and resize the VM/disk, if necessary, to fix the problem. |
+| **Backup failed due to VM limits reached.** | If you're getting errors that the disk IOPS/VM limit has been reached, backups might slow down or fail. To monitor IOPS/VM limits, use [Azure Monitor Metrics](/azure/virtual-machines/disks-metrics) and resize the VM/disk, if necessary, to fix the problem. |
 | **The remote server returned an error: (409) Conflict for SQL Server 2012/2014**" | Storage accounts with **hierarchical namespace** are equipped for block blobs, not page blobs. Storage accounts without this feature shouldn't be used for BACKUP TO URL in SQL Server 2014. |
 
-## Next steps
+## Related content
 
 - [Restoring From Backups Stored in Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)
 - [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)

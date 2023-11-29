@@ -1,11 +1,11 @@
 ---
 title: SQL Server Big Data Clusters cumulative updates history
 titleSuffix: SQL Server Big Data Clusters
-description: This article describes the updates and known issues for SQL Server Big Data Clusters.
+description: This article describes the updates for SQL Server Big Data Clusters.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei, randolphwest
-ms.date: 06/19/2023
+ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -18,7 +18,24 @@ The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includ
 
 For the latest release notes, see [SQL Server 2019 Big Data Clusters platform release notes](release-notes-big-data-cluster.md).
 
-## <a id="cu19"></a> CU21 (June 2023)
+## <a id="cu23"></a> CU23 (June 2023)
+
+Cumulative Update 23 (CU23) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5030333](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate23).
+
+| Package version | Image tag |  Contents|
+| --- | --- | --- |
+| 15.0.4335.1 | [2019-CU21-ubuntu-20.04] |  [SQL Server Big Data Clusters Cumulative Update 23](release-notes-cumulative-update-23.md) |
+
+## <a id="cu22"></a> CU22 (August 2023)
+
+Cumulative Update 22 (CU22) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5027702](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate22).
+
+| Package version | Image tag |  Contents|
+| --- | --- | --- |
+| 15.0.4322.2 | [2019-CU21-ubuntu-20.04] |  [SQL Server Big Data Clusters Cumulative Update 22](release-notes-cumulative-update-22.md) |
+
+
+## <a id="cu21"></a> CU21 (June 2023)
 
 Cumulative Update 21 (CU21) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5025808](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21).
 
@@ -26,7 +43,7 @@ Cumulative Update 21 (CU21) release for [!INCLUDE[sssql19-md](../includes/sssql1
 | --- | --- | --- |
 | 15.0.4316.3 | [2019-CU21-ubuntu-20.04] |  [SQL Server Big Data Clusters Cumulative Update 21](release-notes-cumulative-update-21.md) |
 
-## <a id="cu19"></a> CU20 (April 2023)
+## <a id="cu20"></a> CU20 (April 2023)
 
 Cumulative Update 20 (CU20) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters, [KB 5024276](https://support.microsoft.com/help/5024276).
 
@@ -75,7 +92,7 @@ Cumulative Update 16 (CU16) GDR release for [!INCLUDE[sssql19-md](../includes/ss
 | --- | --- | --- |
 | 15.0.4236.7 | [2019-CU16-GDR3-ubuntu-20.04] | [SQL Server Big Data Clusters Cumulative Update 17](release-notes-cumulative-update-17.md) |
 
-## <a id="cu16"></a> CU16 (May 2022)
+## <a id="cu16"></a> CU16 ( 2022)
 
 Cumulative Update 16 (CU16) release for [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] Big Data Clusters.
 
@@ -162,7 +179,7 @@ SQL Server Big Data Clusters CU10 includes important capabilities:
 
 - Upgraded base images from Ubuntu 16.04 to Ubuntu 20.04.
   > [!CAUTION]
-  > Ubuntu 20.04 has stricter security requirements and you may see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](release-notes-big-data-cluster.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
+  > Ubuntu 20.04 has stricter security requirements and you  see issues when using BDC to connect to SQL Server instances before SQL Server 2017. For more information, see [Failed to connect to remote instance of SQL Server 2016 or older](known-issues.md#failed-to-connect-to-remote-instance-of-sql-server-2016-or-older).
 - High availability support for Hadoop KMS components.
 - Additional configuration settings for SQL Server networking and process affinity at the resource-scope. See [Master Pool resource-scope settings](reference-config-bdc-overview.md#master-pool-resource-scope-settings).
 - Resource management for Spark-related containers through [cluster-scope settings](reference-config-bdc-overview.md#cluster-scope-settings).
@@ -294,7 +311,7 @@ Cumulative Update 5 (CU5) release for SQL Server Big Data Clusters.
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server Big Data Clusters CU5.
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - [!INCLUDE[azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
-- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- Introduced two new stored procedures, `sp_data_source_objects` and `sp_data_source_table_columns`, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
 - Added support to persist customizations performed in Grafana. Before CU5, customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted.
 - Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role, and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
 - Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
@@ -319,8 +336,8 @@ Cumulative Update 3 (CU3) release for SQL Server Big Data Clusters. The SQL Serv
 
 SQL Server Big Data Clusters CU3 resolves the following issues from previous releases.
 
-- [Deployment with private repository](release-notes-big-data-cluster.md#deployment-with-private-repository)
-- [Upgrade may fail due to timeout](release-notes-big-data-cluster.md#upgrade-may-fail-due-to-timeout)
+- [Deployment with private repository](known-issues.md#deployment-with-private-repository)
+- [Upgrade might fail due to timeout](known-issues.md#upgrade-might-fail-due-to-timeout)
 
 ## <a id="cu2"></a> CU2 (February 2020)
 
@@ -348,6 +365,6 @@ SQL Server Big Data Clusters General Distribution Release 1 (GDR1) - introduces 
 
 [!INCLUDE[sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
-## Next steps
+## Related content
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)

@@ -1,25 +1,25 @@
 ### YamlMime:FAQ
 metadata:
-  title: Azure Arc-enabled SQL Server FAQ | Microsoft Docs
-  description: Provides questions and answers frequently asked about Azure Arc-enabled SQL Server.
+  title: SQL Server enabled by Azure Arc | Microsoft Docs
+  description: Provides questions and answers frequently asked about SQL Server enabled by Azure Arc.
   ms.service: sql
   ms.topic: faq
   services: azure-arc
   ms.date: 12/09/2022
   ms.author: mikeray
   author: MikeRayMSFT
-title: Azure Arc-enabled SQL Server FAQ
+title: SQL Server enabled by Azure Arc FAQ
 summary: |
 
 sections:
 
   - name: General FAQ
     questions:
-      - question: Can I exclude any SQL Server instances when I onboard with Azure Policy with Azure Arc-enabled SQL Server? 
+      - question: Can I exclude any SQL Server instances when I onboard with Azure Policy with SQL Server enabled by Azure Arc? 
         answer: |
           Yes, you can use the `excludedInstances` setting in the Azure Policy to indicate the SQL Server instances that you do not want to include in the onboarding process.
           
-          For example, if you have any standby instances, you may not want to view them in the portal. When you use Azure Policy to onboard, you can exclude such instances based using pattern matching of the instance names. 
+          For example, if you have any standby instances, you might not want to view them in the portal. When you use Azure Policy to onboard, you can exclude such instances based using pattern matching of the instance names. 
 
           1. Create a copy of the definition that we provide in Azure to create a custom definition.
           1. Set the value for excluded instances in the custom definition.
@@ -29,6 +29,10 @@ sections:
         answer: |
            No. Microsoft only captures metadata and information about your SQL Server to help troubleshoot and inventory. The data sent does not include user data or about your utilization of SQL Server.
 
+      - question: Does SQL Server enabled by Azure Arc support Private Link?
+        answer: |
+           Yes. SQL Server enabled by Azure Arc supports Private Link for most endpoints, but some endpoints do not require Private Link and some endpoints are not supported. For specific information, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud#urls).
+           
   - name: Billing
     questions:
       - question: Does pay-as-you-go billing stop charging when connectivity between the SQL Server resource and Azure is temporarily interrupted?
@@ -50,7 +54,7 @@ sections:
         answer: No. When you run your SQL Server instance on a virtual or physical machine, you are required to license the full set of cores that the machine can access. Therefore, your pay-as-you-go charges will be based on the full core count even if you use the affinity mask to limit your SQL Server's usage of these cores.   See  [SQL Server licensing guide](https://www.microsoft.com/licensing/docs/view/SQL-Server) for details.
 
       - question: Can I switch from pay-as-you-go to license and vice versa?
-        answer: Yes, you can change your selection. To change, run Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**. The mode is now changed to Enterprise license. To revert back to pay-as-you-go, you can use the same steps and change the setting.
+        answer: Yes, you can change your selection. To change, run SQL Server Setup again, and choose the **Maintenance** tab, then select **Edition Upgrade**. The mode is now changed to Enterprise license. To revert back to pay-as-you-go, you can use the same steps and change the setting.
 
 additionalContent: |
 

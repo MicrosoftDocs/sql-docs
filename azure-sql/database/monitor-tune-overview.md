@@ -4,7 +4,7 @@ description: An overview of monitoring and performance tuning capabilities and m
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, urmilano
-ms.date: 11/30/2022
+ms.date: 11/08/2023
 ms.service: sql-db-mi
 ms.subservice: performance
 ms.topic: conceptual
@@ -19,8 +19,9 @@ To monitor the performance of a database in Azure SQL Database and Azure SQL Man
  - [Azure Data Studio](/azure-data-studio/what-is-azure-data-studio), based on [Visual Studio Code](https://code.visualstudio.com/).
  - [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS), based on [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
-| Monitoring solution | SQL Database | SQL Managed Instance | Requires agent on a customer-owned VM |  
-|:--|:--|:--| 
+| Monitoring solution | SQL Database | SQL Managed Instance | Requires agent on a customer-owned VM |
+|:--|:--|:--|:--|
+| [Metrics and alerts](monitoring-metrics-alerts.md) | **Yes** | **Yes** | No |
 | [Query Performance Insight](#generate-intelligent-assessments-of-performance-issues) | **Yes** | No | No |
 | [Monitor using DMVs](monitoring-with-dmvs.md) | **Yes** | **Yes** | No |
 | [Monitor using query store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store)  | **Yes** | **Yes** | No |
@@ -71,6 +72,9 @@ In the Azure portal, Azure SQL Database and Azure SQL Managed Instance provide m
 You can quickly monitor a variety of resource metrics in the Azure portal in the **Metrics** view. These metrics enable you to see if a database is approaching the limits of CPU, memory, IO, or storage resources. High DTU, CPU or IO utilization may indicate that your workload needs more resources. It might also indicate that queries need to be optimized. See [Microsoft.Sql/servers/databases](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserversdatabases), [Microsoft.Sql/servers/elasticPools](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlserverselasticpools) and [Microsoft.Sql/managedInstances](/azure/azure-monitor/essentials/metrics-supported#microsoftsqlmanagedinstances) for supported metrics in Azure SQL Database and Azure SQL Managed Instance.
 
   ![Resource metrics](./media/monitor-tune-overview/resource-metrics.png)
+
+> [!NOTE]
+> Storage-related metrics in Azure portal, such as **Data space used**, are reported in power-of-two values, but using power-of-ten units. For example, 1 MB of storage space refers to 1,048,576 bytes, not 1,000,000 bytes. The newer units used for power-of-two values are KiB, MiB, GiB, etc. For compatibility and consistency with the historically established usage within the database engine, Azure SQL storage metrics use the older units such as KB, MB, GB, etc.
 
 ### Database advisors in Azure SQL Database
 
@@ -135,10 +139,11 @@ Stream metrics and resource logs to [Azure Storage](/azure/azure-monitor/essenti
 
 Additionally, you can use [Extended Events](/sql/relational-databases/extended-events/extended-events) for advanced monitoring and troubleshooting in SQL Server, Azure SQL Database, and Azure SQL Managed Instance. Extended Events is a "tracing" tool and event architecture, superior to SQL Trace, that enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem, while mitigating impact to ongoing application performance. Extended Events replace deprecated SQL Trace and SQL Server Profiler features. For information about using extended events in Azure SQL Database, see [Extended events in Azure SQL Database](xevent-db-diff-from-svr.md). In Azure SQL Database and SQL Managed Instance, use an [Event File target hosted in Azure Blob Storage](xevent-code-event-file.md).
 
-## Next steps
+## Related content
 
 - For more information about intelligent performance recommendations for single and pooled databases, see [Database advisor performance recommendations](database-advisor-implement-performance-recommendations.md).
 - For more information about automatically monitoring database performance with automated diagnostics and root cause analysis of performance issues, see [Azure SQL Intelligent Insights](intelligent-insights-overview.md).
+- [Monitor Azure SQL Database with metrics and alerts](monitoring-metrics-alerts.md)
 - [Monitor your SQL deployments with SQL Insights (preview)](/azure/azure-monitor/insights/sql-insights-overview)
 - [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
 - [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

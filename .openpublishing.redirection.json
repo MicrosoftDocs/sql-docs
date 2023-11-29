@@ -41806,11 +41806,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/docs/relational-databases/track-changes/known-issues-and-limitations.md",
-      "redirect_url": "/sql/relational-databases/track-changes/about-change-data-capture-sql-server",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md",
       "redirect_url": "/sql/integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity",
       "redirect_document_id": false
@@ -41848,6 +41843,11 @@
     {
       "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",
       "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/relational-databases/track-changes/known-issues-and-limitations.md",
+      "redirect_url": "/sql/relational-databases/track-changes/known-issues-and-errors-change-data-capture",
       "redirect_document_id": false
     },
     {
@@ -59573,6 +59573,11 @@
     {
       "source_path": "docs/ssdt/release-notes-ssdt.md",
       "redirect_url": "/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/f1-help/connect-to-server-database-engine.md",
+      "redirect_url": "/sql/ssms/f1-help/connect-to-server-login-page-database-engine",
       "redirect_document_id": false
     }
  ]

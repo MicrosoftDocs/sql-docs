@@ -22,7 +22,7 @@ helpviewer_keywords:
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|NOALLOCPG|  
-|Message Text|Could not allocate a new page for database '%.*ls' because of insufficient disk space in filegroup '%.\*ls'. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|  
+|Message Text|Could not allocate a new page for database '%.\*ls' because the '%.\*ls' filegroup is full due to lack of storage space or database files reaching the maximum allowed size. Note that UNLIMITED files are still limited to 16TB. Create the necessary space by dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.|  
   
 ## Explanation  
 No disk space available in a filegroup.  

@@ -5,7 +5,7 @@ description: Use a sample bash script to install SQL Server on Red Hat Enterpris
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: armaha
-ms.date: 05/20/2022
+ms.date: 11/16/2023
 ms.service: sql
 ms.subservice: linux
 ms.topic: conceptual
@@ -19,7 +19,7 @@ ms.custom:
 This sample bash script installs [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the [!INCLUDE [ssde-md](../includes/ssde-md.md)], the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]  
-> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [quickstart for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> If you don't need an unattended installation script, the fastest way to install SQL Server is to follow the [Quickstart: Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
@@ -224,4 +224,4 @@ Then run the bash script as follows:
 
 ## Related content
 
-- [SQL Server on Linux overview](sql-server-linux-overview.md)
+- [What is SQL Server on Linux?](sql-server-linux-overview.md)

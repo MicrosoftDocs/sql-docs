@@ -303,7 +303,7 @@ SQLSRV:
 Using a Microsoft Entra account:
 
 ```php
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$MSEntraUsername, "KeyStoreSecret"=>$MSEntraPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 

@@ -123,7 +123,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix SQLDescribeParam in FMTONLY mode for statements containing comments
 - Fix an issue with federated authentication when using Okta
 - Fix excessive memory usage on multi-processor systems
-- Fix Microsoft Entra authentication for some variants of Azure SQL DB
+- Fix Microsoft Entra authentication for some variants of Azure SQL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -163,7 +163,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fix connection resiliency issue when async notification is enabled where the driver stops responding
 - Fix crash when retrieving diagnostic records for multithreaded connection attempts
 - Fix 'Encryption not supported' upon reconnect after calling SQLGetInfo() with SQL_USER_NAME and SQL_DATA_SOURCE_READ_ONLY
-- Fix COM initialization error during Microsoft Entra Interactive Authentication
+- Fix COM initialization error during Microsoft Entra interactive authentication
 - Fix SQLGetData() for multi-byte UTF8 data
 - Fix retrieving length of sql_variant columns using SQLGetData()
 - Fix importing of sql_variant columns containing more than 7992 bytes using bcp

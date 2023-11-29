@@ -17,17 +17,23 @@ ms.topic: conceptual
 
 ## Purpose
 
-Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
+Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to Azure SQL Database or Azure SQL Managed Instance using a [federated](/azure/active-directory/hybrid/connect/whatis-fed) identity. The new Microsoft Entra authentication methods include:
 
-- Microsoft Entra login ID and password
-- Microsoft Entra ID access token
-- Microsoft Entra integrated authentication
-- SQL login ID and password
 
-Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
+- Username and password
 
-- Microsoft Entra interactive authentication
-- Microsoft Entra managed identity authentication (only from within an [Azure Virtual Machine configured for Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
+- Access token
+
+- Integrated authentication
+
+
+Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following Microsoft Entra authentication methods:
+
+
+- Interactive authentication
+
+- Managed identity authentication (only from within an [Azure Virtual Machine configured with Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
+
 
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 
@@ -36,7 +42,8 @@ Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
 >
-> - Microsoft Entra authentication using login ID and password
+> - Microsoft Entra authentication using username and password
+
 > - Microsoft Entra authentication using access token
 > - Microsoft Entra integrated authentication
 > - Microsoft Entra interactive authentication

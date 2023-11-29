@@ -18,7 +18,8 @@ This topic lists the options that are permitted in the associative array (when u
 
 |Key|Value|Description|Default|  
 |-------|---------|---------------|-----------|  
-|AccessToken|String|The byte string of the Microsoft Entra ID Access Token extracted from an OAuth JSON response.<br /><br />The connection string must not contain a user ID, password, or the `Authentication` keyword. For more information, see [Connect Using Microsoft Entra authentication](azure-active-directory.md)|Not set.|
+|AccessToken|String|The byte string of the Microsoft Entra access token extracted from an OAuth JSON response.<br /><br />The connection string must not contain a user ID, password, or the `Authentication` keyword. For more information, see [Connect Using Microsoft Entra authentication](azure-active-directory.md)|Not set.|
+
 |APP|String|Specifies the application name used in tracing.|Not set.|  
 |ApplicationIntent|String|Declares the application workload type when connecting to a server. Possible values are **ReadOnly** and **ReadWrite**.<br /><br />For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see [Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|
 |AttachDBFileName|String|Specifies which database file the server should attach.|Not set.|

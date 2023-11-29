@@ -28,7 +28,8 @@ For a list of popular features that are supported and not supported in different
  [Performing Asynchronous Operations](../../oledb/features/performing-asynchronous-operations.md)  
  Discusses how OLE DB Driver for SQL Server supports asynchronous operations, which is the ability to return immediately without blocking on the calling thread.  
 
-[Using Microsoft Entra ID](using-azure-active-directory.md)  
+[Using Microsoft Entra ID (formerly Azure Active Directory)](using-azure-active-directory.md)  
+
 Discusses new authentication methods introduced in OLE DB driver 18.2.1 that have more secure default settings and allow connecting to an instance of Azure SQL Database using a federated identity.
 
  [Using Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  

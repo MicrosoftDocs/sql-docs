@@ -29,10 +29,14 @@ Selects the authentication mode from one of the following:
 - **SQL Server** with login ID and password
 - **Windows Integrated** authentication using the currently logged-in user's account
 - **Active Directory Password** with login ID and password
-- **Active Directory Integrated** authentication using the currently logged-in user's account
-- **Active Directory Interactive** authentication with login ID
-- **Managed Service Identity** authentication with Managed Identity
-- **Active Directory Service Principal** authentication with Microsoft Entra service principal
+- **Active Directory Integrated** authentication using the currently logged-in Microsoft Entra user's account
+
+- **Active Directory Interactive** authentication with a Microsoft Entra login ID
+
+- **Managed Service Identity** authentication with Microsoft Entra managed identity
+
+- **Active Directory Service Principal** authentication with a Microsoft Entra service principal
+
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 

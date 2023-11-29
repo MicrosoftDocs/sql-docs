@@ -17,7 +17,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Compile time
 
 - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
-- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Microsoft Entra authentication features and Azure Key Vault feature. (optional)
+- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Entra Authentication Library for JDBC driver version 8.4 and below for Microsoft Entra authentication features and Azure Key Vault feature. (optional)
 - `com.microsoft.azure:msal4j`: Microsoft Authentication Library (MSAL) For Java. (optional)
 - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
 - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.

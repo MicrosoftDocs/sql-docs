@@ -387,17 +387,17 @@ This PR introduces a new SQL Authentication method, **Active Directory Default**
 With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
 
 - **EnvironmentCredential**
-  - Enables authentication to Microsoft Entra ID using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
+  - Enables authentication with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
 - **ManagedIdentityCredential**
-  - Attempts authentication to Microsoft Entra ID using a managed identity that has been assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
+  - Attempts authentication with Microsoft Entra ID using a managed identity that has been assigned to the deployment environment. **The "Client Id" of a "user-assigned managed identity"** is read from the **"User Id" connection property**.
 - **SharedTokenCacheCredential**
   - Authenticates using tokens in the local cache shared between Microsoft applications.
 - **VisualStudioCredential**
-  - Enables authentication to Microsoft Entra ID using data from Visual Studio
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio
 - **VisualStudioCodeCredential**
-  - Enables authentication to Microsoft Entra ID using data from Visual Studio Code.
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio Code.
 - **AzureCliCredential**
-  - Enables authentication to Microsoft Entra ID using Azure CLI to obtain an access token.
+  - Enables authentication with Microsoft Entra ID using Azure CLI to obtain an access token.
 
 > InteractiveBrowserCredential is disabled in the driver implementation of "Active Directory Default", and "Active Directory Interactive" is the only option available to acquire a token using MFA/Interactive authentication.*
 
@@ -542,7 +542,7 @@ Connection string examples:
 
 ### Microsoft Entra Interactive authentication enhancements
 
-Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the "Active Directory Interactive" authentication experience:
+Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the **Microsoft Entra Interactive** authentication experience:
 
 ```csharp
 public class ActiveDirectoryAuthenticationProvider

@@ -35,7 +35,8 @@ Specifies that the driver authenticate to SQL Server using a Microsoft Entra log
 
 ### With Active Directory Interactive authentication
 
-Specifies that the driver authenticate to SQL Server using Microsoft Entra Interactive mode by providing login ID. This option will trigger the Azure Authentication prompt dialog.
+Specifies that the driver authenticate to SQL Server using Microsoft Entra interactive mode by providing a login ID. This option triggers the Azure Authentication prompt dialog.
+
 
 ### With Managed Identity authentication
 
@@ -43,7 +44,8 @@ Specifies that the driver authenticate to SQL Server using a Managed Identity.
 
 ### With Active Directory Service Principal authentication
 
-Specifies that the driver authenticate to SQL Server using a Microsoft Entra service Principal.
+Specifies that the driver authenticate to SQL Server using a Microsoft Entra service principal.
+
 
 ### Login ID
 

@@ -380,24 +380,26 @@ PerfView /onlyProviders=*Microsoft.Data.SqlClient.EventSource:EventCounterInterv
 `SqlDataReader` returns a `DBNull` value instead of an empty `byte[]`. To enable the legacy behavior, you must enable the following AppContext switch on application startup:
 **"Switch.Microsoft.Data.SqlClient.LegacyRowVersionNullBehavior"**
 
-### Active Directory Default authentication support
+### Microsoft Entra default authentication support
 
-This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
+[!INCLUDE [entra-id](../../includes/entra-id-hard-coded.md)]
+
+This PR introduces a new SQL Authentication method, **Active Directory Default**. This authentication mode widens the possibilities of user authentication with Microsoft Entra ID, extending login solutions to the client environment, Visual Studio Code, Visual Studio, Azure CLI etc.
 
 With this authentication mode, the driver acquires a token by passing "[DefaultAzureCredential](/dotnet/api/azure.identity.defaultazurecredential)" from the Azure Identity library to acquire an access token. This mode attempts to use these credential types to acquire an access token in the following order:
 
 - **EnvironmentCredential**
-  - Enables authentication to Azure Active Directory using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
+  - Enables authentication with Microsoft Entra ID using client and secret, or username and password, details configured in the following environment variables: AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_CLIENT_CERTIFICATE_PATH, AZURE_USERNAME, AZURE_PASSWORD ([More details](/dotnet/api/azure.identity.environmentcredential))
 - **ManagedIdentityCredential**
-  - Attempts authentication to Azure Active Directory using a managed identity that has been assigned to the deployment environment. **"Client Id" of "User Assigned Managed Identity"** is read from the **"User Id" connection property**.
+  - Attempts authentication with Microsoft Entra ID using a managed identity that has been assigned to the deployment environment. **The "Client Id" of a "user-assigned managed identity"** is read from the **"User Id" connection property**.
 - **SharedTokenCacheCredential**
   - Authenticates using tokens in the local cache shared between Microsoft applications.
 - **VisualStudioCredential**
-  - Enables authentication to Azure Active Directory using data from Visual Studio
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio
 - **VisualStudioCodeCredential**
-  - Enables authentication to Azure Active Directory using data from Visual Studio Code.
+  - Enables authentication with Microsoft Entra ID using data from Visual Studio Code.
 - **AzureCliCredential**
-  - Enables authentication to Azure Active Directory using Azure CLI to obtain an access token.
+  - Enables authentication with Microsoft Entra ID using Azure CLI to obtain an access token.
 
 > InteractiveBrowserCredential is disabled in the driver implementation of "Active Directory Default", and "Active Directory Interactive" is the only option available to acquire a token using MFA/Interactive authentication.*
 
@@ -490,7 +492,9 @@ Microsoft.Data.SqlClient v2.1 extends support for Always Encrypted on the follow
 > <sup>1</sup> Before Microsoft.Data.SqlClient version v2.1, Always Encrypted is only supported on Windows.
 > <sup>2</sup> Always Encrypted with secure enclaves is not supported on .NET Standard 2.0.
 
-### Azure Active Directory Device Code Flow authentication
+<a name='azure-active-directory-device-code-flow-authentication'></a>
+
+### Microsoft Entra Device Code Flow authentication
 
 Microsoft.Data.SqlClient v2.1 provides support for "Device Code Flow" authentication with MSAL.NET.
 Reference documentation: [OAuth2.0 Device Authorization Grant flow](/azure/active-directory/develop/v2-oauth2-device-code)
@@ -509,9 +513,11 @@ public class ActiveDirectoryAuthenticationProvider
 }
 ```
 
-### Azure Active Directory Managed Identity authentication
+<a name='azure-active-directory-managed-identity-authentication'></a>
 
-Microsoft.Data.SqlClient v2.1 introduces support for Azure Active Directory authentication using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
+### Microsoft Entra managed identity authentication
+
+Microsoft.Data.SqlClient v2.1 introduces support for Microsoft Entra authentication using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview).
 
 The following authentication mode keywords are supported:
 
@@ -534,9 +540,11 @@ Connection string examples:
 "Server={serverURL}; Authentication=Active Directory Managed Identity; Encrypt=True; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 ```
 
-### Azure Active Directory Interactive authentication enhancements
+<a name='azure-active-directory-interactive-authentication-enhancements'></a>
 
-Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the "Active Directory Interactive" authentication experience:
+### Microsoft Entra Interactive authentication enhancements
+
+Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the **Microsoft Entra Interactive** authentication experience:
 
 ```csharp
 public class ActiveDirectoryAuthenticationProvider
@@ -561,9 +569,11 @@ Microsoft.Data.SqlClient v2.1 introduces a new configuration section, `SqlClient
 
 The new section allows application config files to contain both a SqlAuthenticationProviders section for System.Data.SqlClient and a SqlClientAuthenticationProviders section for Microsoft.Data.SqlClient.
 
-### Azure Active Directory authentication using an application client ID
+<a name='azure-active-directory-authentication-using-an-application-client-id'></a>
 
-Microsoft.Data.SqlClient v2.1 introduces support for passing a user-defined application client ID to the Microsoft Authentication Library. Application Client ID is used when authenticating with Azure Active Directory.
+### Microsoft Entra authentication using an application client ID
+
+Microsoft.Data.SqlClient v2.1 introduces support for passing a user-defined application client ID to the Microsoft Authentication Library. Application Client ID is used when authenticating with Microsoft Entra ID.
 
 The following new APIs are introduced:
 
@@ -785,7 +795,7 @@ sqlConnection.Open(SqlConnectionOverrides.OpenWithoutRetry);
 
 #### Username support for Active Directory Interactive mode
 
-A username can be specified in the connection string when using Azure Active Directory Interactive authentication mode for both .NET Framework and .NET Core
+A username can be specified in the connection string when using Microsoft Entra Interactive authentication mode for both .NET Framework and .NET Core
 
 Set a username using the **User ID** or **UID** connection string property:
 

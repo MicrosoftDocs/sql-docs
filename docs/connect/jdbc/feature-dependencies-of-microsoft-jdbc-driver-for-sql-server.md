@@ -17,7 +17,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 ## Compile time
 
 - `com.azure:azure-security-keyvault-keys`: Microsoft Azure Client Library For KeyVault Keys for JDBC driver version 9.2 and above or `com.microsoft.azure:azure-keyvault`: Microsoft Azure SDK For Key Vault for JDBC driver version 8.4 and below for Always Encrypted Azure Key Vault feature. (optional)
-- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Azure Active Directory Authentication Library for JDBC driver version 8.4 and below for Azure Active Directory Authentication features and Azure Key Vault feature. (optional)
+- `com.azure:azure-identity`: Microsoft Azure Client Library For Identity for JDBC driver version 9.2 and above or `com.microsoft.azure:adal4j`: Microsoft Entra Authentication Library for JDBC driver version 8.4 and below for Microsoft Entra authentication features and Azure Key Vault feature. (optional)
 - `com.microsoft.azure:msal4j`: Microsoft Authentication Library (MSAL) For Java. (optional)
 - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature. (optional)
 - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
@@ -29,7 +29,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
 
 Projects that require any of the preceding features must explicitly declare the respective dependencies in their POM file that match the dependencies of the version of the driver used.
 
-**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 10.2 and above, you must declare the `azure-identity` dependency in your project POM file. See the following snippet:
+**For example:** If you're using the Microsoft Entra authentication feature with JDBC driver version 10.2 and above, you must declare the `azure-identity` dependency in your project POM file. See the following snippet:
 
 ```xml
 <dependency>
@@ -45,7 +45,7 @@ Projects that require any of the preceding features must explicitly declare the 
 </dependency>
 ```
 
-**For example:** If you're using the Azure Active Directory Authentication feature with JDBC driver version 8.4 and below, you must declare the `adal4j` and `client-runtimes` dependencies in your project POM file. See the following snippet:
+**For example:** If you're using the Microsoft Entra authentication feature with JDBC driver version 8.4 and below, you must declare the `adal4j` and `client-runtimes` dependencies in your project POM file. See the following snippet:
 
 ```xml
 <dependency>
@@ -146,7 +146,9 @@ If you're using Maven to build or test your project, Maven automatically downloa
 >
 > This problem is resolved with latest driver version(s) (7.0.0 onwards). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
 
-### Work with Azure Active Directory authentication
+<a name='work-with-azure-active-directory-authentication'></a>
+
+### Work with Microsoft Entra authentication
 
 - JDBC driver version 12.4.0—Dependency versions: Azure-identity (version 1.9.0), `Msal4j` (version 1.13.8), and their dependencies.
 - JDBC driver version 12.2.0—Dependency versions: Azure-identity (version 1.7.0), `Msal4j` (version 1.13.3), and their dependencies.

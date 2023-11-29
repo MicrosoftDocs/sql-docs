@@ -165,12 +165,12 @@ Use Microsoft Azure Databricks as a replacement for [!INCLUDE[ssbigdataclusters-
 - An interactive workspace for exploration and visualization.
 - Fully managed SQL endpoints in the cloud.
 - SQL queries that run on fully managed SQL endpoints sized according to query latency and number of concurrent users.
-- Integration with Azure Active Directory.
+- Integration with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)).
 - Role-based access for fine-grained user permissions for notebooks, clusters, jobs, and data.
 - Enterprise-grade SLAs.
 - Dashboards for sharing insights, combining visualizations and text to share insights drawn from your queries.
 - Alerts help you monitor and integrate, and notification when a field returned by a query meets a threshold. Use alerts to monitor your business or integrate them with tools to start workflows such as user onboarding or support tickets.
-- Enterprise security, including Azure Active Directory integration, role-based controls, and SLAs that protect your data and your business.
+- Enterprise security, including Microsoft Entra ID integration, role-based controls, and SLAs that protect your data and your business.
 - Integration with Azure services and Azure databases and stores including Synapse Analytics, Cosmos DB, Data Lake Store, and Blob storage.
 - Integration with Power BI and other BI tools, such as Tableau Software.
 

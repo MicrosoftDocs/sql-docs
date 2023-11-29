@@ -78,7 +78,7 @@ Create your failover group and add your database to it using the Azure portal.
    - **Secondary server**: Select the option to *configure required settings* and then choose to **Create a new server**. Alternatively, you can choose an already-existing server as the secondary server. After entering the following values, select **Select**.
       - **Server name**: Type in a unique name for the secondary server, such as `mysqlsecondary`.
       - **Server admin login**: Type `azureuser`
-      - **Password**: Type a complex password that meets password requirements.
+      - **Password**: Type the same password as your primary server, and type it again in the **Confirm password** field.
       - **Location**: Choose a location from the drop-down, such as `East US`. This location can't be the same location as your primary server.
 
      > [!NOTE]

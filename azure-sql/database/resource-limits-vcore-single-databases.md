@@ -603,7 +603,7 @@ The following table covers these SLOs: `HS_MOPRMS_12`, `HS_MOPRMS_14`, `HS_MOPRM
 
 Compute sizes (service level objectives, or SLOs) for Hyperscale premium-series memory optimized databases follow the naming convention `HS_MOPRMS_` followed by the number of vCores. 
 
-The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64`, and `HS_MOPRMS_128`:
+The following table covers these SLOs: `HS_MOPRMS_24`, `HS_MOPRMS_32`, `HS_MOPRMS_40`, `HS_MOPRMS_64`, and `HS_MOPRMS_80`:
 
 | vCores | 24 | 32 | 40 | 64 | 80 |
 |:-|-:|-:|-:|-:|-:|

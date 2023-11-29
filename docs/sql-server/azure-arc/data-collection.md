@@ -1,6 +1,6 @@
 ---
-title: Azure Arc-enabled SQL Server data collection and reporting
-description: Explains data that Microsoft collects for reporting for Azure Arc-enabled SQL Server
+title: Data collection and reporting
+description: Explains data that Microsoft collects for reporting for SQL Server enabled by Azure Arc, and how to configure related settings.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -8,7 +8,7 @@ ms.date: 10/03/2023
 ms.topic: conceptual
 ms.custom: references_regions
 ---
-# Azure Arc-enabled SQL Server data collection and reporting
+# Data collection and reporting for SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -22,7 +22,7 @@ Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] 
 
 - Azure Arc-enabled servers
 
-## Azure Arc-enabled SQL Server
+## SQL Server enabled by Azure Arc
 
 The following data is collected for Azure Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances:
 

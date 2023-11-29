@@ -4,7 +4,7 @@ description: Creates an article and adds it to a publication. This stored proced
 author: mashamsft
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -83,7 +83,7 @@ The name of the destination (subscription) table, if different from *@source_tab
 
 #### [ @vertical_partition = ] N'*vertical_partition*'
 
-Enables and disables column filtering on a table article. *@vertical_partition* is **nchar(5)**, with a default of `N'false'`.
+Enables and disables column filtering on a table article. *@vertical_partition* is **nchar(5)**, with a default of `false`.
 
 - `false` indicates there's no vertical filtering and publishes all columns.
 
@@ -188,7 +188,7 @@ A restriction (WHERE) clause that defines a horizontal filter. When entering the
 A bitmask of the schema generation option for the given article. *@schema_option* is **varbinary(8)**, with a default of `NULL`, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:
 
 > [!NOTE]  
-> If this value is NULL, the system auto-generates a valid schema option for the article depending on other article properties. The [Default schema options](#default-schema-options) shows the value that will be chosen based upon the combination of the article type and the replication type.
+> If this value is `NULL`, the system auto-generates a valid schema option for the article depending on other article properties. The [Default schema options](#default-schema-options) shows the value that will be chosen based upon the combination of the article type and the replication type.
 
 | Value | Description |
 | --- | --- |
@@ -227,14 +227,14 @@ A bitmask of the schema generation option for the given article. *@schema_option
 | `0x80000000` | Attempt to drop dependencies to any objects that aren't part of the publication. |
 | `0x100000000` | Use this option to replicate the FILESTREAM attribute if it's specified on **varbinary(max)** columns. Don't specify this option if you're replicating tables to [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have FILESTREAM columns to [!INCLUDE [ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers isn't supported, regardless of how this schema option is set.<br /><br />See related option **0x800000000**. |
 | `0x200000000` | Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) introduced in [!INCLUDE [sql2008-md](../../includes/sql2008-md.md)] to data types that are supported on earlier versions of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. |
-| `0x400000000` | Replicates the compression option for data and indexes. For more information, see [Data Compression](../data-compression/data-compression.md). |
+| `0x400000000` | Replicates the compression option for data and indexes. For more information, see [Data compression](../data-compression/data-compression.md). |
 | `0x800000000` | Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option isn't set, FILESTREAM data is stored on the default filegroup. Replication doesn't create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br />See related option **0x100000000**. |
 | `0x1000000000` | Converts common language runtime (CLR) user-defined types (UDTs) that are larger than 8000 bytes to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. |
 | `0x2000000000` | Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md). |
-| `0x4000000000` | Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create Filtered Indexes](../indexes/create-filtered-indexes.md). |
+| `0x4000000000` | Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create filtered indexes](../indexes/create-filtered-indexes.md). |
 | `0x8000000000` | Converts the **geography** and **geometry** data types to **varbinary(max)** so that columns of these types can be replicated to Subscribers that are running [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]. |
 | `0x10000000000` | Replicates indexes on columns of type **geography** and **geometry**. |
-| `0x20000000000` | Replicates the SPARSE attribute for columns. For more information about this attribute, see [Use Sparse Columns](../tables/use-sparse-columns.md). |
+| `0x20000000000` | Replicates the SPARSE attribute for columns. For more information about this attribute, see [Use sparse columns](../tables/use-sparse-columns.md). |
 | `0x40000000000` | Enable scripting by the snapshot agent to create memory-optimized table on the subscriber. |
 | `0x80000000000` | Converts clustered index to nonclustered index for memory-optimized articles. |
 | `0x400000000000` | Replicates any nonclustered columnstore indexes on the table(s) |
@@ -255,7 +255,7 @@ The name of the owner of the destination object. *@destination_owner* is **sysna
 | Published from a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. | Defaults to the owner of the destination database. |
 | Publication uses character-mode bulk copy to generate the initial snapshot, which supports non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. | Not assigned. |
 
-To support non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *@destination_owner* must be NULL.
+To support non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *@destination_owner* must be `NULL`.
 
 #### [ @status = ] *status*
 
@@ -318,11 +318,11 @@ The percentage value that controls when the Distribution Agent assigns a new ide
 
 #### [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*
 
-Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *@force_invalidate_snapshot* is **bit**, with a default of `0`.
+Acknowledges that the action taken by this stored procedure can invalidate an existing snapshot. *@force_invalidate_snapshot* is **bit**, with a default of `0`.
 
 - `0` specifies that adding an article doesn't cause the snapshot to be invalid. If the stored procedure detects that the change requires a new snapshot, an error occurs and no changes are made.
 
-- `1` specifies that adding an article may cause the snapshot to be invalid, and if subscriptions exist that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot to be generated.
+- `1` specifies that adding an article can cause the snapshot to be invalid, and if subscriptions exist that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot to be generated.
 
 #### [ @use_default_datatypes = ] *use_default_datatypes*
 
@@ -346,7 +346,7 @@ Specifies how identity range management is handled for the article. *@identityra
 | `none` | Replication does no explicit identity range management. This option is recommended only for backward compatibility with earlier versions of SQL Server. Not allowed for peer replication. |
 | `manual` | Marks the identity column using NOT FOR REPLICATION to enable manual identity range handling. |
 | `auto` | Specifies automatic management of identity ranges. |
-| NULL(default) | Defaults to `none` when the value of *@auto_identity_range* isn't `true`. Defaults to `manual` in a peer-to-peer topology default (*@auto_identity_range* is ignored). |
+| `NULL` (default) | Defaults to `none` when the value of *@auto_identity_range* isn't `true`. Defaults to `manual` in a peer-to-peer topology default (*@auto_identity_range* is ignored). |
 
 For backward compatibility, when the value of *@identityrangemanagementoption* is `NULL`, the value of *@auto_identity_range* is checked. However, when the value of *@identityrangemanagementoption* isn't `NULL`, then the value of *@auto_identity_range* is ignored.
 
@@ -360,7 +360,7 @@ Specifies a non-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Publi
 
 #### [ @fire_triggers_on_snapshot = ] N'*fire_triggers_on_snapshot*'
 
-If replicated user triggers are executed when the initial snapshot is applied. *@fire_triggers_on_snapshot* is **nvarchar(5)**, with a default of `N'false'`. `true` means that user triggers on a replicated table are executed when the snapshot is applied. In order for triggers to be replicated, the bitmask value of *@schema_option* must include the value `0x100`.
+If replicated user triggers are executed when the initial snapshot is applied. *@fire_triggers_on_snapshot* is **nvarchar(5)**, with a default of `false`. `true` means that user triggers on a replicated table are executed when the snapshot is applied. In order for triggers to be replicated, the bitmask value of *@schema_option* must include the value `0x100`.
 
 ## Return code values
 
@@ -386,7 +386,7 @@ When adding an article to a publication that supports peer-to-peer transactional
 
 - A value of `SQL` can't be specified for *@ins_cmd*, *@upd_cmd*, and *@del_cmd*.
 
-For more information, see [Peer-to-Peer Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
+For more information, see [Peer-to-Peer - Transactional Replication](../replication/transactional/peer-to-peer-transactional-replication.md).
 
 When you publish objects, their definitions are copied to Subscribers. If you're publishing a database object that depends on one or more other objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.
 
@@ -455,7 +455,7 @@ This table describes the allowable values of *@schema_option* based upon the rep
 
 Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute `sp_addarticle`.
 
-## See also
+## Related content
 
 - [Define an Article](../replication/publish/define-an-article.md)
 - [sp_articlecolumn (Transact-SQL)](sp-articlecolumn-transact-sql.md)

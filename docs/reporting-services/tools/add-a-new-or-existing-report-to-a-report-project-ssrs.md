@@ -3,7 +3,7 @@ title: "Add a New or Existing Report to a Report Project"
 description: Learn how to add a new or existing report to a report project using the Report Wizard in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 03/17/2017
+ms.date: 10/26/2023
 ms.service: reporting-services
 ms.subservice: tools
 ms.topic: conceptual
@@ -27,7 +27,7 @@ helpviewer_keywords:
   
     -   **Select a Data Source.** The first step in creating a report is to define a data source. Report Wizard provides a list of all shared data sources in the report project, in addition to an option to create a new data source.  
   
-    -   **Design a Query.** The next step is to design a query. You can type the query string, build it using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services Query Designers](/previous-versions/sql/).  
+    -   **Design a Query.** The next step is to design a query. You can type the query string, build it using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services Query Designers](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
     -   **Choose a Report Type.** The next step is to select the type of report you want. You can choose a tabular or matrix report. A tabular report has a fixed number of columns. A matrix, or crosstab, report has a variable number of columns based on the results of the query. A map report displays analytical against a geographic background.  
   

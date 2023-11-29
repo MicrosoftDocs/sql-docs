@@ -127,7 +127,7 @@ ms.topic: include
 | 7396 | 16 | No | Varchar(max), nvarchar(max), varbinary(max) and large CLR type data types are not supported as return value or output parameter to remote queries. |
 | 7397 | 16 | No | Remote function returned varchar(max), nvarchar(max), varbinary(max) or large CLR type value which is not supported. |
 | 7398 | 16 | No | The OLE DB provider '%ls' for linked server '%ls' reported an error committing the current inserts. |
-| 7399 | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
+| [7399](../mssqlserver-7399-database-engine-error.md) | 16 | No | The OLE DB provider "%ls" for linked server "%ls" reported an error. %ls |
 | 7401 | 16 | No | The OLE DB provider "%ls" returned invalid literal prefix/suffix string. |
 | 7403 | 16 | No | The OLE DB provider "%ls" has not been registered. |
 | 7404 | 16 | No | The server could not load DCOM. |

@@ -3,7 +3,7 @@ title: "Configure Database Mail"
 description: "Configure Database Mail using the Database Mail Configuration Wizard or T-SQL commands."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 02/23/2023
+ms.date: 11/07/2023
 ms.service: sql
 ms.topic: conceptual
 f1_keywords:
@@ -126,16 +126,16 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Type a description of the account. The description is optional.  
 
  **E-mail address**  
- Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address SqlAgent@Adventure-Works.com.  
+ Type the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can send e-mail from the address SqlAgent@Adventure-Works.com.  
 
  **Display name**  
- Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
+ Type the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can display the name "SQL Server Agent Automated Mailer" on e-mail messages.  
 
  **Reply e-mail**  
- Type the e-mail address that is used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, danw@Adventure-Works.com.  
+ Type the e-mail address that is used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can go to the database administrator, danw@Adventure-Works.com.  
 
  **Server name**  
- Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.**_<your_company>_**.com**. For help with this, consult your mail administrator.  
+ Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to `smtp.<your_company>.com`. For help with this, consult your mail administrator.  
 
  **Port number**  
  Type the port number of the SMTP server for this account. Most SMTP servers use port 25 or 587, or port 465 for SSL connections.
@@ -144,7 +144,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  Encrypts communication using Secure Sockets Layer.  
 
  **Windows Authentication using Database Engine service credentials**  
- Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service.  
+ Connection is made to the SMTP server using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Authentication to the mail server with the service credentials is performed via NTLM authentication, an option only available to Exchange on-premises. For more information, see [Authentication and EWS in Exchange](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange).
 
  **Basic Authentication**  
  Specify the user name and password required by the SMTP server.  
@@ -175,16 +175,16 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  View or update the description of the account. The description is optional.  
 
  **E-mail address**  
- View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent may send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
+ View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent can send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
 
  **Display name**  
- View or update the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for SQL Server Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
+ View or update the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for SQL Server Agent can display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
 
  **Reply e-mail**  
- View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent may go to the database administrator, **danw\@Adventure-Works.com**.  
+ View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent can go to the database administrator, **danw\@Adventure-Works.com**.  
 
  **Server name**  
- View or update the name of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.<your_company>.com**. For help with this, consult your mail administrator.  
+ View or update the name of the SMTP server the account uses to send e-mail. Typically this is in a format similar to `smtp.<your_company>.com`. For help with this, consult your mail administrator.  
 
  **Port number**  
  View or update the port number of the SMTP server for this account. Most SMTP servers use port 25 or 587, or port 465 for SSL connections.  
@@ -317,7 +317,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
  Profiles are either public or private. A private profile is accessible only to specific users or roles. A public profile allows any user or role with access to the mail host database (`msdb`) to send e-mail using that profile.  
 
- A profile may be a default profile. In this case, users or roles can send e-mail using the profile without explicitly specifying the profile. If the user or role sending the e-mail message has a default private profile, Database Mail uses that profile. If the user or role has no default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If there's no default private profile for the user or role and no default public profile for the database, `sp_send_dbmail` returns an error. Only one profile can be marked as the default profile.  
+ A profile can be a default profile. In this case, users or roles can send e-mail using the profile without explicitly specifying the profile. If the user or role sending the e-mail message has a default private profile, Database Mail uses that profile. If the user or role has no default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If there's no default private profile for the user or role and no default public profile for the database, `sp_send_dbmail` returns an error. Only one profile can be marked as the default profile.  
 
  **Public**  
  Select this option to make the specified profile public.  
@@ -340,7 +340,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
  Profiles are either public or private. A private profile is accessible only to specific users or roles. A public profile allows any user or role with access to the mail host database (`msdb`) to send e-mail using that profile.  
 
- A profile may be a default profile. In this case, users or roles can send e-mail using the profile without explicitly specifying the profile. If the user or role sending the e-mail message has a default private profile, Database Mail uses that profile. If the user or role has no default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If there's no default private profile for the user or role and no default public profile for the database, `sp_send_dbmail` returns an error.  
+ A profile can be a default profile. In this case, users or roles can send e-mail using the profile without explicitly specifying the profile. If the user or role sending the e-mail message has a default private profile, Database Mail uses that profile. If the user or role has no default private profile, `sp_send_dbmail` uses the default public profile for the `msdb` database. If there's no default private profile for the user or role and no default public profile for the database, `sp_send_dbmail` returns an error.  
 
  **User name**  
  Select the name of a user or role in the `msdb` database.  
@@ -352,7 +352,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  View the name of the profile.  
 
  **Is Default Profile**  
- Select whether the profile is the default profile for the user or role. Each user or role may have only one default profile.  
+ Select whether the profile is the default profile for the user or role. Each user or role can have only one default profile.  
 
  **Show only existing private profiles for this user**  
  Select this option to display only profiles that the specified user or role already has access to.  
@@ -436,7 +436,7 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
 
 1. The script doesn't grant any database users access to the profile. Therefore, by default, the profile can only be used by members of the **sysadmin** fixed security role. For more information about granting access to profiles, see [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
 
-## Next steps
+## Related content
 
 - [Configure SQL Server Agent Mail to Use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)
 - [Automate management tasks using SQL Agent jobs in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/job-automation-managed-instance)

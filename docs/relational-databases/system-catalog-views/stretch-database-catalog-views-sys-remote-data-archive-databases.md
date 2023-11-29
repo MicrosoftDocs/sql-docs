@@ -25,7 +25,7 @@ dev_langs:
 Contains one row for each remote database that stores data from a Stretch-enabled local database.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

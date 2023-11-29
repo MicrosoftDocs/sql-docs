@@ -1,514 +1,153 @@
 ---
-title: XEvent Event File code
-description: Provides PowerShell and Transact-SQL for a two-phase code sample that demonstrates the Event File target in an extended event on Azure SQL Database and SQL Managed Instance. Azure Storage is a required part of this scenario.
+title: Create a session with an event_file target in Azure Storage
+description: Provides example steps to create a database-scoped event session in Azure SQL, using Azure Storage for the event_file target.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.reviewer: wiassaf, mathoma
-ms.date: 05/25/2023
+ms.reviewer: wiassaf, mathoma, randolphwest
+ms.date: 10/22/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: sample
-ms.custom:
-  - sqldbrb=1
-  - devx-track-azurepowershell
+ms.custom: sqldbrb=1
 ms.devlang: PowerShell
-monikerRange: "= azuresql || = azuresql-db || = azuresql-mi"
+monikerRange: "=azuresql || =azuresql-db"
 ---
-# Event File target code for extended events in Azure SQL Database and SQL Managed Instance
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb-sqlmi.md)]
+# Create a session with an event_file target in Azure Storage
+
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 [!INCLUDE [sql-database-xevents-selectors-1-include](../includes/sql-database-xevents-selectors-1-include.md)]
 
-You want a complete code sample for a robust way to capture and report information for an extended event.
+The high-level steps in this walkthrough are:
 
-- In Microsoft SQL Server, the [Event File target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server) is used to store event outputs into a locally-stored `.xel` file. 
-- Since local storage is not available to Azure SQL Database or SQL Managed Instance, use Azure Blob Storage to support the Event File target.
+1. Create an Azure Storage account, or find an existing suitable account to use
+1. Create a container in this storage account
+1. Create a SAS token with the required access for this container
+1. Create a credential to store the SAS token in the database where you create the event session
+1. Create, start, and use an event session
 
-This article presents a two-phase code sample:
+## Create a storage account and container
 
-- PowerShell, to create an Azure Storage container in the cloud.
-- Transact-SQL:
-  - To assign the Azure Storage container to an Event File target.
-  - To create and start the event session, and so on.
+For a detailed description of how to create a storage account in Azure Storage, see [Create a storage account](/azure/storage/common/storage-account-create). You learn how to create a storage account using Azure portal, PowerShell, Azure SQL, an ARM template, or a Bicep template.
 
-## Prerequisites
+We recommended you use an account that:
 
-[!INCLUDE [updated-for-az](../includes/updated-for-az.md)]
+- Is a `Standard general-purpose v2` account.
+- Has its redundancy type matching the redundancy of the Azure SQL database or elastic pool where event sessions are created.
+  - For [locally redundant](high-availability-sla.md#locally-redundant-availability) Azure SQL resources, use LRS, GRS, or RA-GRS. For [zone-redundant](high-availability-sla.md#zone-redundant-availability) Azure SQL resources, use ZRS, GZRS, or RA-GZRS. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy).
+- Uses the `Hot` [blob access tier](/azure/storage/blobs/access-tiers-overview).
+- Is in the same Azure region as the Azure SQL database or elastic pool.
 
-> [!IMPORTANT]
-> The PowerShell Azure Resource Manager module is still supported by Azure SQL Database, but all future development is for the `Az.Sql` module. For these cmdlets, see [AzureRM.Sql](/powershell/module/AzureRM.Sql/). The arguments for the commands in the `Az` module and in the AzureRm modules are substantially identical.
+Next, [create a container](/azure/storage/blobs/blob-containers-portal#create-a-container) in this storage account using Azure portal. You can also create a container [using PowerShell](/azure/storage/blobs/blob-containers-powershell#create-a-container), or [using Azure CLI](/azure/storage/blobs/blob-containers-cli#create-a-container).
 
-- An Azure account and subscription. You can sign up for a [free trial](https://azure.microsoft.com/pricing/free-trial/).
-- Any database you can create a table in.
+Note the names of the *storage account* and *container* you use.
 
-  - Optionally you can [create an `AdventureWorksLT` demonstration database](single-database-create-quickstart.md) in minutes.
+## Create a SAS token
 
-- SQL Server Management Studio (ssms.exe): [Download SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms)
+The [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] running the event session needs specific access to the storage container. You grant this access by creating a [SAS token](/azure/storage/common/storage-sas-overview#sas-token) for the container. This token must satisfy the following requirements:
 
-- You must have the [Azure PowerShell modules](/powershell/azure/install-azure-powershell) installed.
+- Have the `rwl` (`Read`, `Write`, `List`) permissions
+- Have the start time and expiry time that encompass the lifetime of the event session
+- Have no IP address restrictions
 
-  - The modules provide commands, such as `New-AzStorageAccount`.
+In Azure portal, find the storage account and container that you created. Select the container, and navigate to **Settings > Shared access tokens**. Set **Permissions** to `Read`, `Write`, `List`, and set the **Start** and **Expiry** date and time. The SAS token you create only works within this time interval.
 
-## Phase 1: PowerShell code for Azure Storage container
+Select the **Generate SAS token and URL** button. The SAS token is in the **Blob SAS token** box. You can copy it to use in the next step.
 
-This PowerShell is phase 1 of the two-phase code sample.
+> [!IMPORTANT]  
+> The SAS token provides read and write access to this container. Treat it as you would treat a password or any other secret.
 
-The script starts with commands to clean up after a possible previous run, and is rerunnable.
+:::image type="content" source="media/xevents/create-sas-token.png" alt-text="Screenshot of the Shared Access Tokens screen for an Azure Storage container, with a generated SAS token for an example container.":::
 
-1. Paste the PowerShell script into a simple text editor such as Notepad.exe, and save the script as a file with the extension `.ps1`.
-1. Start PowerShell ISE as an Administrator.
-1. At the prompt, type<br/>`Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser`<br/>and then press **Enter**.
-1. In PowerShell ISE, open your **.ps1** file. Run the script.
-1. The script first starts a new window in which you sign in to Azure.
+## Create a database-scoped credential
 
-   - If you rerun the script without disrupting your session, you have the convenient option of commenting out the [Add-AzureAccount](/powershell/module/servicemanagement/azure/add-azureaccount) cmdlet.
+Next, store the SAS token in a database-scoped [credential](/sql/relational-databases/security/authentication-access/credentials-database-engine). Using a client tool such as SSMS or ADS, connect to the database where you create the event session, and paste the following T-SQL batch into a new query window. Make sure you're connected to your user database, and not to the `master` database.
 
-:::image type="content" source="./media/xevent-code-event-file/event-file-powershell-ise-b30.png" alt-text="A screenshot of the PowerShell ISE, with Azure module installed, ready to run script.":::
-
-### PowerShell code
-
-This PowerShell script assumes you've already installed the `Az` module. For information, see [Install the Azure PowerShell module](/powershell/azure/install-Az-ps).
-
-```powershell
-## TODO: Before running, find all 'TODO' and make each edit!!
-
-cls;
-
-#--------------- 1 -----------------------
-
-'Script assumes you have already logged your PowerShell session into Azure.
-But if not, run  Connect-AzAccount (or  Connect-AzAccount), just one time.';
-#Connect-AzAccount;   # Same as  Connect-AzAccount.
-
-#-------------- 2 ------------------------
-
-'
-TODO: Edit the values assigned to these variables, especially the first few!
-';
-
-# Ensure the current date is between
-# the Expiry and Start time values that you edit here.
-
-$subscriptionName    = 'YOUR_SUBSCRIPTION_NAME';
-$resourceGroupName   = 'YOUR_RESOURCE-GROUP-NAME';
-
-$policySasExpiryTime = '2018-08-28T23:44:56Z';
-$policySasStartTime  = '2017-10-01';
-
-$storageAccountLocation = 'YOUR_STORAGE_ACCOUNT_LOCATION';
-$storageAccountName     = 'YOUR_STORAGE_ACCOUNT_NAME';
-$containerName          = 'YOUR_CONTAINER_NAME';
-$policySasToken         = ' ? ';
-
-$policySasPermission = 'rwl';  # Leave this value alone, as 'rwl'.
-
-#--------------- 3 -----------------------
-
-# The ending display lists your Azure subscriptions.
-# One should match the $subscriptionName value you assigned
-#   earlier in this PowerShell script.
-
-'Choose an existing subscription for the current PowerShell environment.';
-
-Select-AzSubscription -Subscription $subscriptionName;
-
-#-------------- 4 ------------------------
-
-'
-Clean up the old Azure Storage Account after any previous run,
-before continuing this new run.';
-
-if ($storageAccountName) {
-    Remove-AzStorageAccount `
-        -Name              $storageAccountName `
-        -ResourceGroupName $resourceGroupName;
-}
-
-#--------------- 5 -----------------------
-
-[System.DateTime]::Now.ToString();
-
-'
-Create a storage account.
-This might take several minutes, will beep when ready.
-  ...PLEASE WAIT...';
-
-New-AzStorageAccount `
-    -Name              $storageAccountName `
-    -Location          $storageAccountLocation `
-    -ResourceGroupName $resourceGroupName `
-    -SkuName           'Standard_LRS';
-
-[System.DateTime]::Now.ToString();
-[System.Media.SystemSounds]::Beep.Play();
-
-'
-Get the access key for your storage account.
-';
-
-$accessKey_ForStorageAccount = `
-    (Get-AzStorageAccountKey `
-        -Name              $storageAccountName `
-        -ResourceGroupName $resourceGroupName
-        ).Value[0];
-
-"`$accessKey_ForStorageAccount = $accessKey_ForStorageAccount";
-
-'Azure Storage Account cmdlet completed.
-Remainder of PowerShell .ps1 script continues.
-';
-
-#--------------- 6 -----------------------
-
-# The context will be needed to create a container within the storage account.
-
-'Create a context object from the storage account and its primary access key.
-';
-
-$context = New-AzStorageContext `
-    -StorageAccountName $storageAccountName `
-    -StorageAccountKey  $accessKey_ForStorageAccount;
-
-'Create a container within the storage account.
-';
-
-$containerObjectInStorageAccount = New-AzStorageContainer `
-    -Name    $containerName `
-    -Context $context;
-
-'Create a security policy to be applied to the SAS token.
-';
-
-New-AzStorageContainerStoredAccessPolicy `
-    -Container  $containerName `
-    -Context    $context `
-    -Policy     $policySasToken `
-    -Permission $policySasPermission `
-    -ExpiryTime $policySasExpiryTime `
-    -StartTime  $policySasStartTime;
-
-'
-Generate a SAS token for the container.
-';
-try {
-    $sasTokenWithPolicy = New-AzStorageContainerSASToken `
-        -Name    $containerName `
-        -Context $context `
-        -Policy  $policySasToken;
-}
-catch {
-    $Error[0].Exception.ToString();
-}
-
-#-------------- 7 ------------------------
-
-'Display the values that YOU must edit into the Transact-SQL script next!:
-';
-
-"storageAccountName: $storageAccountName";
-"containerName:      $containerName";
-"sasTokenWithPolicy: $sasTokenWithPolicy";
-
-'
-REMINDER: sasTokenWithPolicy here might start with "?" character, which you must exclude from Transact-SQL.
-';
-
-'
-(Later, return here to delete your Azure Storage account. See the preceding  Remove-AzStorageAccount -Name $storageAccountName)';
-
-'
-Now shift to the Transact-SQL portion of the two-part code sample!';
-
-# EOFile
-```
-
-Take note of the few named values that the PowerShell script prints when it ends. You must edit those values into the Transact-SQL script that follows as phase 2.
-
-<!--
-TODO:   Consider whether the preceding PowerShell code example deserves to be updated to the latest package (AzureRM.SQL?).
-2020/June/06   Adding the !NOTE below about "ADLS Gen2 storage accounts".
-Related to   https://github.com/MicrosoftDocs/azure-docs/issues/56520
--->
-
-> [!NOTE]
-> In the preceding PowerShell code example, SQL extended events are not compatible with the ADLS Gen2 storage accounts.
-
-## Phase 2: Transact-SQL code that uses Azure Storage container
-
-- In phase 1 of this code sample, you ran a PowerShell script to create an Azure Storage container.
-- Next in phase 2, the following Transact-SQL script must use the container.
-
-The script starts with commands to clean up after a possible previous run, and is rerunnable.
-
-The PowerShell script printed a few named values when it ended. You must edit the Transact-SQL script to use those values. Find **TODO** in the Transact-SQL script to locate the edit points.
-
-1. Open SQL Server Management Studio (ssms.exe).
-1. Connect to your database in Azure SQL Database or SQL Managed Instance.
-1. Select to open a new query pane.
-1. Paste the following Transact-SQL script into the query pane.
-1. Find every **TODO** in the script and make the appropriate edits.
-1. Save, and then run the script.
-
-> [!WARNING]
-> The SAS key value generated by the preceding PowerShell script might begin with a '?' (question mark). When you use the SAS key in the following T-SQL script, you must *remove the leading '?'*. Otherwise your efforts might be blocked by security.
-
-### Transact-SQL code
+> [!NOTE]  
+> Executing the following T-SQL batch requires the `CONTROL` database permission, which is held by the database owner (`dbo`), by the members of the `db_owner` database role, and by the administrator of the logical server.
 
 ```sql
----- TODO: First, run the earlier PowerShell portion of this two-part code sample.
----- TODO: Second, find every 'TODO' in this Transact-SQL file, and edit each.
+/*
+Create a master key to protect the secret of the credential
+*/
+IF NOT EXISTS (
+              SELECT 1
+              FROM sys.symmetric_keys
+              WHERE name = '##MS_DatabaseMasterKey##'
+              )
+CREATE MASTER KEY;
 
----- Transact-SQL code for Event File target on Azure SQL Database or SQL Managed Instance.
+/*
+(Re-)create a database scoped credential.
+The name of the credential must match the URL of the blob container.
+*/
+IF EXISTS (
+          SELECT *
+          FROM sys.database_credentials
+          WHERE name = 'https://exampleaccount4xe.blob.core.windows.net/xe-example-container'
+          )
+    DROP DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container];
 
-SET NOCOUNT ON;
-GO
-
-----  Step 1.  Establish one little table, and  ---------
-----  insert one row of data.
-
-IF EXISTS
-    (SELECT * FROM sys.objects
-        WHERE type = 'U' and name = 'gmTabEmployee')
-BEGIN
-    DROP TABLE gmTabEmployee;
-END
-GO
-
-CREATE TABLE gmTabEmployee
-(
-    EmployeeGuid         uniqueIdentifier   not null  default newid()  primary key,
-    EmployeeId           int                not null  identity(1,1),
-    EmployeeKudosCount   int                not null  default 0,
-    EmployeeDescr        nvarchar(256)          null
-);
-GO
-
-INSERT INTO gmTabEmployee ( EmployeeDescr )
-    VALUES ( 'Jane Doe' );
-GO
-
-------  Step 2.  Create key, and  ------------
-------  Create credential (your Azure Storage container must already exist).
-
-IF NOT EXISTS
-    (SELECT * FROM sys.symmetric_keys
-        WHERE symmetric_key_id = 101)
-BEGIN
----- TODO: Provide a strong password in the next line.
-    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'add strong password here'
-END
-GO
-
-IF EXISTS
-    (SELECT * FROM sys.database_scoped_credentials
-        -- TODO: Assign AzureStorageAccount name, and the associated Container name.
-        WHERE name = 'https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent')
-BEGIN
-    DROP DATABASE SCOPED CREDENTIAL
-        -- TODO: Assign AzureStorageAccount name, and the associated Container name.
-        [https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent] ;
-END
-GO
-
-CREATE
-    DATABASE SCOPED
-    CREDENTIAL
-        -- use '.blob.',   and not '.queue.' or '.table.' etc.
-        -- TODO: Assign AzureStorageAccount name, and the associated Container name.
-        [https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent]
-    WITH
-        IDENTITY = 'SHARED ACCESS SIGNATURE',  -- "SAS" token.
-        -- TODO: Paste in the long SasToken string here for Secret, but exclude any leading '?'.
-        SECRET = 'sv=2014-02-14&sr=c&si=gmpolicysastoken&sig=Ej...t8gOKTts%3D'
-    ;
-GO
-
-------  Step 3.  Create (define) an event session.  --------
-------  The event session has an event with an action,
-------  and a has a target.
-
-IF EXISTS
-    (SELECT * from sys.database_event_sessions
-        WHERE name = 'gmeventsessionname240b')
-BEGIN
-    DROP
-        EVENT SESSION
-            gmeventsessionname240b
-        ON DATABASE;
-END
-GO
-
-CREATE
-    EVENT SESSION
-        gmeventsessionname240b
-    ON DATABASE
-
-    ADD EVENT
-        sqlserver.sql_statement_starting
-            (
-            ACTION (sqlserver.sql_text)
-            WHERE statement LIKE 'UPDATE gmTabEmployee%'
-            )
-    ADD TARGET
-        package0.event_file
-            (
-            -- TODO: Assign AzureStorageAccount name, and the associated Container name.
-            -- Also, tweak the .xel file name at end, if you like.
-            SET filename =
-                'https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent/anyfilenamexel242b.xel'
-            )
-    WITH
-        (MAX_MEMORY = 10 MB,
-        MAX_DISPATCH_LATENCY = 3 SECONDS)
-    ;
-GO
-
-------  Step 4.  Start the event session.  ----------------
-------  Issue the SQL Update statements that will be traced.
-------  Then stop the session.
-
-------  Note: If the target fails to attach,
-------  the session must be stopped and restarted.
-
-ALTER
-    EVENT SESSION
-        gmeventsessionname240b
-    ON DATABASE
-    STATE = START;
-GO
-
-SELECT 'BEFORE_Updates', EmployeeKudosCount, * FROM gmTabEmployee;
-
-UPDATE gmTabEmployee
-    SET EmployeeKudosCount = EmployeeKudosCount + 2
-    WHERE EmployeeDescr = 'Jane Doe';
-
-UPDATE gmTabEmployee
-    SET EmployeeKudosCount = EmployeeKudosCount + 13
-    WHERE EmployeeDescr = 'Jane Doe';
-
-SELECT 'AFTER__Updates', EmployeeKudosCount, * FROM gmTabEmployee;
-GO
-
-ALTER
-    EVENT SESSION
-        gmeventsessionname240b
-    ON DATABASE
-    STATE = STOP;
-GO
-
--------------- Step 5.  Select the results. ----------
-
-SELECT
-        *, 'CLICK_NEXT_CELL_TO_BROWSE_ITS_RESULTS!' as [CLICK_NEXT_CELL_TO_BROWSE_ITS_RESULTS],
-        CAST(event_data AS XML) AS [event_data_XML]  -- TODO: In ssms.exe results grid, double-click this cell!
-    FROM
-        sys.fn_xe_file_target_read_file
-            (
-                -- TODO: Fill in Storage Account name, and the associated Container name.
-                -- TODO: The name of the .xel file needs to be an exact match to the files in the storage account Container (You can use Storage Account explorer from the portal to find out the exact file names or you can retrieve the name using the following DMV-query: select target_data from sys.dm_xe_database_session_targets. The 3rd xml-node, "File name", contains the name of the file currently written to.)
-                'https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent/anyfilenamexel242b',
-                null, null, null
-            );
-GO
-
--------------- Step 6.  Clean up. ----------
-
-DROP
-    EVENT SESSION
-        gmeventsessionname240b
-    ON DATABASE;
-GO
-
-DROP DATABASE SCOPED CREDENTIAL
-    -- TODO: Assign AzureStorageAccount name, and the associated Container name.
-    [https://gmstorageaccountxevent.blob.core.windows.net/gmcontainerxevent]
-    ;
-GO
-
-DROP TABLE gmTabEmployee;
-GO
-
-PRINT 'Use PowerShell Remove-AzStorageAccount to delete your Azure Storage account!';
-GO
+/*
+The secret is the SAS token for the container. The Read, Write, and List permissions are set.
+*/
+CREATE DATABASE SCOPED CREDENTIAL [https://exampleaccount4xe.blob.core.windows.net/xe-example-container]
+WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+     SECRET = 'sp=rwl&st=2023-10-17T23:28:32Z&se=2023-10-18T07:28:32Z&spr=https&sv=2022-11-02&sr=c&sig=REDACTED';
 ```
 
-If the target fails to attach when you run, you must stop and restart the event session:
+Before executing this batch, make the following changes:
+
+- In all three occurrences of `https://exampleaccount4xe.blob.core.windows.net/xe-example-container`, replace `exampleaccount4xe` with the name of your storage account, and replace `xe-example-container` with the name of your container.
+- Replace the entire string between the single quotes in the `SECRET` clause with the SAS token you copied in the previous step.
+
+## Create, start, and stop an Event session
+
+Once the credential with the SAS token is created, you can create the event session. Creating an event session doesn't require the `CONTROL` permission. If the credential with the correct SAS token already exists in the database, you can create event sessions even if you have a more restricted set of permissions. See [permissions](xevent-db-diff-from-svr.md#permissions) for the specific permissions needed.
+
+To create a new event session in SSMS, expand the same database in Object Explorer and then expand **Extended Events**. Right-click on the **Sessions** folder, and select **New Session...**. On the **General** page, enter a name for the session, which is `example-session` in this example. On the **Events** page, select one or more events to add to the session. In this example, we selected the `sql_batch_starting` event.
+
+:::image type="content" source="media/xevents/create-event-session-events.png" alt-text="Screenshot of the New Session SSMS dialog showing the event selection page with the sql_batch_starting event selected.":::
+
+On the **Data Storage** page, select `event_file` as the target type, and paste the URL of the storage container in the **Storage URL** box. Type a forward slash (`/`) at the end of this URL, followed by the file (blob) name. In our example, the blob name is `example-session.xel`, and the entire URL is `https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel`.
+
+:::image type="content" source="media/xevents/create-event-session-data-storage-event-file.png" alt-text="Screenshot of the New Session SSMS dialog showing the data storage selection page with an event_file target selected and an entered storage URL.":::
+
+Now that the session is configured, you can optionally select the **Script** button to create a T-SQL script of the session, to save it for later. Here's the script for our example session:
 
 ```sql
-ALTER EVENT SESSION gmeventsessionname240b
-    ON DATABASE STATE = STOP;
-GO
-ALTER EVENT SESSION gmeventsessionname240b
-    ON DATABASE STATE = START;
+CREATE EVENT SESSION [example-session] ON DATABASE
+ADD EVENT sqlserver.sql_batch_starting
+ADD TARGET package0.event_file(SET filename=N'https://exampleaccount4xe.blob.core.windows.net/xe-example-container/example-session.xel')
 GO
 ```
 
-## Output
+Select **OK** to create the session.
 
-When the Transact-SQL script completes, select a cell under the `event_data_XML` column header. One `<event>` element is displayed which shows one UPDATE statement.
+In Object Explorer, expand the **Sessions** folder to see the event session you created. By default, the session isn't started when it's created. To start the session, right-click on the session name, and select **Start Session**. You can later stop it by similarly selecting **Stop Session**, once the session is running.
 
-Here is one `<event>` element that was generated during testing:
+As T-SQL batches are executed in this database, the session writes events to the `example-session.xel` blob in the `xe-example-container` storage container.
 
-```xml
-<event name="sql_statement_starting" package="sqlserver" timestamp="2015-09-22T19:18:45.420Z">
-  <data name="state">
-    <value>0</value>
-    <text>Normal</text>
-  </data>
-  <data name="line_number">
-    <value>5</value>
-  </data>
-  <data name="offset">
-    <value>148</value>
-  </data>
-  <data name="offset_end">
-    <value>368</value>
-  </data>
-  <data name="statement">
-    <value>UPDATE gmTabEmployee
-    SET EmployeeKudosCount = EmployeeKudosCount + 2
-    WHERE EmployeeDescr = 'Jane Doe'</value>
-  </data>
-  <action name="sql_text" package="sqlserver">
-    <value>
+To stop the session, right-click it in Object Explorer, and select **Stop Session**.
 
-SELECT 'BEFORE_Updates', EmployeeKudosCount, * FROM gmTabEmployee;
+## View event data
 
-UPDATE gmTabEmployee
-    SET EmployeeKudosCount = EmployeeKudosCount + 2
-    WHERE EmployeeDescr = 'Jane Doe';
+You can view event data in the SQL Server Management Studio (SSMS) event viewer UI, where you can use filters and aggregations to analyze the data you captured. To do that, download the `xel` blob for the session from the storage container and save it as a local file. In Azure portal, find the storage account you used, select **Containers** under **Data storage**, and select the container you created for your event session. The blob for the session has the session name as the first part of its name, with a numeric suffix. Select the ellipsis (**...**) to show the context menu for the blob, and select **Download**.
 
-UPDATE gmTabEmployee
-    SET EmployeeKudosCount = EmployeeKudosCount + 13
-    WHERE EmployeeDescr = 'Jane Doe';
+You can install [Azure Storage Explorer](https://azure.microsoft.com/products/storage/storage-explorer/) to download multiple `xel` blobs in one operation.
 
-SELECT 'AFTER__Updates', EmployeeKudosCount, * FROM gmTabEmployee;
-</value>
-  </action>
-</event>
-```
+Once the `xel` file is downloaded, open it in SSMS. On the SSMS main menu, go to **File** and select **Open**. If you have a single `xel` file, select **File...** and browse to the file you downloaded. If you have multiple `xel` files generated by the same event session (known as rollover files), you can use the **Merge Extended Event Files...** dialog to open all of them in the event viewer.
 
-- The preceding Transact-SQL script used the [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql) system function to read the event_file.
-- For an explanation of advanced options for the viewing of data from extended events, see [Advanced Viewing of Target Data from Extended Events](/sql/relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server).
+For more information on using the event viewer in SSMS, see [View event data in SSMS](/sql/relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server).
 
-## Convert the code sample to run on SQL Server
+To read event session data using T-SQL, use the [sys.fn_xe_file_target_read_file()](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#sysfn_xe_file_target_read_file-function) function. To use this function in a database different from the one where the event session is created, [create a database-scoped credential](#create-a-database-scoped-credential) to give the [!INCLUDE [ssde-md](../../docs/includes/ssde-md.md)] access to the storage container with the event blobs.
 
-Suppose you wanted to run the preceding Transact-SQL sample on Microsoft SQL Server.
+For a more detailed walkthrough, see [Create an event session in SSMS](/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server#create-an-event-session-in-ssms).
 
-- For simplicity, you would want to completely replace use of the Azure Storage container with a simple file such as `C:\myeventdata.xel`. The file would be written to the local hard drive of the computer that hosts SQL Server.
-- You would not need any kind of Transact-SQL statements for `CREATE MASTER KEY` and `CREATE CREDENTIAL`.
-- In the `CREATE EVENT SESSION` statement, in its `ADD TARGET` clause, you would replace the http value assigned made to `filename=` with a full path string like `C:\myfile.xel`. For more information, see [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql).
+## Related content
 
-  - An Azure Storage account is not needed.
-
-## Next steps
-
-For more info about accounts and containers in the Azure Storage service, see:
-
-- [How to use Blob storage from .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
-- [Naming and Referencing Containers, Blobs, and Metadata](/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata)
-- [Working with the Root Container](/rest/api/storageservices/Working-with-the-Root-Container)
-- [Lesson 1: Create a stored access policy and a shared access signature on an Azure container](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#1---create-stored-access-policy-and-shared-access-storage)
-- [Lesson 2: Create a SQL Server credential using a shared access signature](/sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016#2---create-a-sql-server-credential-using-a-shared-access-signature)
-- [Extended Events for Microsoft SQL Server](/sql/relational-databases/extended-events/extended-events)
+- [Extended Events in Azure SQL Database](xevent-db-diff-from-svr.md)
+- [Extended Events](/sql/relational-databases/extended-events/extended-events)
+- [event_file target](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_file-target)
+- [CREATE EVENT SESSION (Transact-SQL)](/sql/t-sql/statements/create-event-session-transact-sql)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-database-scoped-credential-transact-sql)

@@ -3,7 +3,7 @@ title: "BACKUP (Transact-SQL)"
 description: BACKUP (Transact-SQL) backs up a SQL database.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 08/17/2022
+ms.date: 11/21/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -104,7 +104,7 @@ BACKUP LOG
   { database_name | @database_name_var }
   TO <backup_device> [ ,...n ]
   [ <MIRROR TO clause> ] [ next-mirror-to ]
-  [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]
+  [ WITH { <general_WITH_options> | <log_specific_options> } [ ,...n ] ]
 [;]
 
 --Back up all the databases on an instance of SQL Server (a server)
@@ -195,13 +195,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
    { REWIND | NOREWIND }
  | { UNLOAD | NOUNLOAD }
 
+--Encryption Options
+ ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
+   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+
+<log_specific_options> [ ,...n ]::=
 --Log-specific Options
    { NORECOVERY | STANDBY = undo_file_name }
  | NO_TRUNCATE
-
---Encryption Options
- ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## Arguments
@@ -1398,6 +1399,8 @@ Full backups and differential backups are stored in separate directories. Naming
 ## Limitations and Restrictions
 
 You cannot perform a differential backup of the `master` database. Only full backups of the `master` database are supported.
+
+Transaction log backups of the `master` system database aren't supported.
 
 The backup files are stored in a format suitable only for restoring the backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance by using the [RESTORE DATABASE - Analytics Platform System](../../t-sql/statements/restore-statements-transact-sql.md) statement.
 

@@ -456,6 +456,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/managed-instance/managed-instance-link-use-ssms-to-replicate-database.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/managed-instance-link-configure-how-to-ssms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/managed-instance-link-use-ssms-to-failover-database.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/managed-instance-link-configure-how-to-ssms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/managed-instance-link-use-scripts-to-failover-database.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/managed-instance-link-configure-how-to-scripts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/managed-instance/managed-instance-link-use-scripts-to-replicate-database.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/managed-instance-link-configure-how-to-scripts",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/database/service-tier-hyperscale-named-replicas-faq.yml",
       "redirect_url": "/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq#read-scale-out-questions",
       "redirect_document_id": true
@@ -631,8 +651,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/azure-sql/database/change-data-capture-overview.md",
-      "redirect_url": "/sql/relational-databases/track-changes/about-change-data-capture-sql-server",
+      "source_path_from_root": "/azure-sql/managed-instance/virtual-cluster-delete.md",
+      "redirect_url": "/azure/azure-sql/managed-instance/virtual-cluster-architecture",
       "redirect_document_id": false
     }
   ]

@@ -4,7 +4,7 @@ description: Creates a new SQL Server login that allows a user to connect to a S
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 08/30/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ The login password. *@passwd* is **sysname**, with a default of `NULL`.
 
 #### [ @defdb = ] N'*defdb*'
 
-The default database of the login (the database to which the login is first connected after logging in). *@defdb* is **sysname**, with a default of `'master'`.
+The default database of the login (the database to which the login is first connected after logging in). *@defdb* is **sysname**, with a default of `master`.
 
 #### [ @deflanguage = ] N'*deflanguage*'
 
@@ -84,7 +84,7 @@ Specifies whether the password is passed in as clear text or as the hash of the 
 
 ## Remarks
 
-[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logins can contain from 1 to 128 characters, including letters, symbols, and numbers. Logins can't contain a backslash (`\`); be a reserved login name, for example **sa** or **public**, or already exist; or be NULL or an empty string (`''`).
+[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logins can contain from 1 to 128 characters, including letters, symbols, and numbers. Logins can't contain a backslash (`\`); be a reserved login name, for example **sa** or **public**, or already exist; or be `NULL` or an empty string.
 
 If the name of a default database is supplied, you can connect to the specified database without executing the `USE` statement. However, you can't use the default database until you're given access to that database by the database owner (by using [sp_adduser](sp-adduser-transact-sql.md), [sp_addrolemember](sp-addrolemember-transact-sql.md)), or [sp_addrole](sp-addrole-transact-sql.md).
 
@@ -145,7 +145,7 @@ The following example creates a [!INCLUDE [ssNoVersion](../../includes/ssnoversi
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2022', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF
 ```
 
-## See also
+## Related content
 
 - [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)
 - [sp_droplogin (Transact-SQL)](sp-droplogin-transact-sql.md)

@@ -133,7 +133,7 @@ To ensure security, backup files should have extensions that follow proper conve
   
 -   Are changes likely to occur in only a small part of the database or in a large part of the database?  
   
-     For a large database in which changes are concentrated in a part of the files or filegroups, partial backups and or file backups can be useful. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) and [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
+     For a large database in which changes are concentrated in a part of the files or filegroups, partial backups and or full file backups can be useful. For more information, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) and [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
   
 -   How much disk space will a full database backup require?  
 -   How far in the past does your business require to maintain backups? 

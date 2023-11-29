@@ -1,6 +1,6 @@
 ---
-title: Azure Arc-enabled SQL Server prerequisites
-description: Describes prerequisites required by of Azure Arc-enabled SQL Server.
+title: Prerequisites
+description: Describes prerequisites required for SQL Server enabled by Azure Arc.
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.custom: references_regions
 ---
 
-# Prerequisites
+# Prerequisites - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
@@ -59,7 +59,9 @@ Users can be assigned to built-in roles that have these permissions, for example
 
 ### Connect to Azure Arc data processing service
 
-Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service. Each virtual or physical server requires connectivity to:
+Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] requires outbound connection to Azure Arc data processing service.
+
+Each virtual or physical server requires connectivity to:
 
 - URL: `san-af-<region>-prod.azurewebsites.net`
 - Port: 443
@@ -76,6 +78,9 @@ For a list of all regions, run this command:
 ```azcli
 az account list-locations -o table
 ```
+
+> [!NOTE]
+> You can't use Azure Private Link connections to the Azure Arc data processing service. See [Unsupported configurations](#unsupported-configurations).
 
 ## Supported SQL Server versions and operating systems
 

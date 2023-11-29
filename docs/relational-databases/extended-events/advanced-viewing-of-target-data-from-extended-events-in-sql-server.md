@@ -1,316 +1,189 @@
 ---
-title: "Advanced view of target data from Extended Events"
-description: Use the advanced features of SQL Server Management Studio to view target data from Extended Events in rich detail. You can view, export, and manipulate data.
+title: View event data in SQL Server Management Studio
+description: Use SQL Server Management Studio to view target data from Extended Events in detail. You can view, export, filter, and aggregate event data.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "05/24/2019"
+ms.reviewer: randolphwest
+ms.date: 10/22/2023
 ms.service: sql
 ms.subservice: xevents
 ms.topic: tutorial
-monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-2017 || =azuresqldb-mi-current"
 ---
-# Advanced Viewing of Target Data from Extended Events in SQL Server
+# View event data in SQL Server Management Studio
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-
-This article illustrates how you can use the advanced features of SQL Server Management Studio (SSMS.exe) to view the target data from Extended Events in rich detail. The article explains how to:
-
+This article describes how you can use SQL Server Management Studio (SSMS) to view target data from Extended Events. The article explains how to:
 
 - Open and view the target data, in various ways.
 - Export the target data to various formats, by using the special menu or toolbar for Extended Events.
-- Manipulate the data while viewing, or before exporting.
-
-
+- Manipulate the data while viewing, or before exporting. You can view, export, filter, and aggregate event data.
 
 ### Prerequisites
 
 The present article assumes you already know how to create and start an event session. Instructions on how to create an event session are demonstrated early in the following article:
 
-[Quick Start: Extended Events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[Quickstart: Extended Events](quick-start-extended-events-in-sql-server.md)
 
-
-This article also assumes you have installed a very recent monthly release of SSMS. Installation help is at:
-
-- [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
-
-
+We recommend using a recent release of SSMS. Download it from [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ### Differences with Azure SQL Database
 
+There are certain differences between Extended Events in SQL Server and in Azure SQL Database.
 
-There is a high degree of parity in the implementation and capabilities of Extended Events in the two products Microsoft SQL Server and Azure SQL Database. But there are some differences that affect the SSMS UI (user interface).
+- For Azure SQL Database, the `event_file` target can't be a file on the local disk drive. Instead, an Azure Storage container must be used. When you're connected to database in Azure SQL Database, the SSMS UI asks for a storage container, instead of a local path and file name.
+- In the SSMS UI, **Watch live data** is disabled. This is because that feature isn't available for Azure SQL Database.
+- A few Extended Events sessions are installed with SQL Server, for example the `system_health` session. These sessions aren't available for Azure SQL Database.
 
+The present article is written from the perspective of SQL Server. The article uses the `event_file` target, which is implemented differently in Extended Events for SQL Server and for Azure SQL Database.
 
-- For SQL Database, the package0.event_file target cannot be a file on the local disk drive. Instead, an Azure Storage container must be used. Therefore when you are connected to SQL Database, the SSMS UI asks for a storage container, instead of a local path and file name.
+For documentation about Extended Events that is specific to Azure SQL Database, see [Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
+## Open the SSMS event viewer UI
 
-- In the SSMS UI when you see the check box **Watch live data** is grayed and disabled, it is because that feature is not available for SQL Database.
+The SSMS event viewer UI can be accessed in one of the following ways:
 
+- Main menu **File** > **Open** > **File**, then browse for an `xel` file
+- Right-click on **Extended Events** in **Object Explorer > Management**
+- The **Extended Events** menu, and the **Extended Events** toolbar
+- Right-clicks in the tabbed pane that displays the target data
 
-- A few Extended Events sessions are installed with SQL Server. Under the **Sessions** node we can see **AlwaysOn_health** plus a couple others. These are not visible when connected to SQL Database because they do not exist for SQL Database.
+## View event_file data in SSMS
 
+There are various ways to view the `event_file` target data in the SSMS UI. When you specify an `event_file` target, you set its file path and name, including the `xel` extension.
 
-The present article is written from the perspective of SQL Server. The article uses the event_file target, which is one area of differences. Further mentions of any differences are limited to important or non-obvious differences.
+- Each time the event session is started, Extended Events adds a numeric suffix to the file name, to make the file name unique.
+  - *Example:* Checkpoint_Begins_ES_**0_131103935140400000**.xel
+- `xel` files are binary files. They shouldn't be opened in a text editor such as Notepad.
+  - Use the **File** > **Open** > **Merge Extended Event Files** dialog to open multiple event files in the SSMS event viewer UI.
 
+SSMS can display data for most Extended Events targets. But the displays are different for the various targets. For example:
 
-For documentation about Extended Events that is specific to Azure SQL Database, see:
+- *event_file:* Data from an event_file target is displayed in the event viewer, with filtering, aggregation, and other features available.
+- *ring_buffer:* Data from a ring-buffer target is displayed as XML.
 
-- [Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
+SSMS can't display data from the `etw_classic_sync_target` target.
 
+### Open an xel file using File > Open > File
 
+You can open a single `xel` file from the SSMS main menu, using **File** > **Open** > **File**. You can also drag-and-drop an `xel` file into SSMS.
 
-## A. General options
+### View target data
 
+The **View Target Data** option displays the data that has thus far been captured. In **Object Explorer**, you can expand the nodes and then right-click:
 
-Generally the advanced options are accessed by the following means:
+- **Management** > **Extended Events** > **Sessions** > **[your-session]** > **[your-target-node]** > **View Target Data**.
 
+The target data is displayed in a tabbed pane in SSMS as follows:
 
-- The regular menu of **File** > **Open** > **File**.
-- Right-clicks in the **Object Explorer** under **Management** > **Extended Events**.
-- The special menu **Extended Events**, and the special toolbar for Extended Events.
-- Right-clicks in the tabbed pane that displays the target data.
+:::image type="content" source="media/xevents-ssms-ui20-viewtargetdata.png" alt-text="Screenshot of your target > View Target Data.":::
 
+> [!NOTE]  
+> **View Target Data** displays data from all `xel` files associated with the sessions. Each **Start**-**Stop** cycle creates a file with a later time-derived numeric value added to the file name, but each file shares the same root name. Additional rollover `xel` files are also created when file size exceed the maximum file size specified with the `MAX_FILE_SIZE` parameter.
 
+#### Watch live data
 
-## B. Bring target data into SSMS for display
+When your event session is running, you might want to watch the event data in real time, as it is received by the target.
 
+- **Management** > **Extended Events** > **Sessions** > **[your-session]** > **Watch Live Data**.
 
-There are various ways to bring event_file target data into the SSMS UI. When you specify an event_file target, you set its file path and name:
-
-- .XEL is the extension of the file name.
-
-
-- Each time the event session is started, the system embeds a large integer into a new file name, to make the file name unique and different from the preceding occasion the session was started.
-  - *Example:* Checkpoint_Begins_ES_0_131103935140400000.xel
-
-
-- The contents inside a .XEL are not plain text that can be viewed with Notepad.exe.
-  - If you want, the way to append several .XEL files together is to use the menu **File** > **Open** > **Merge Extended Event Files**.
-
-
-
-SSMS can display data from any target. But the displays are different for the various targets:
-
-- *event_file:* Data from an event_file target is displayed very well, with rich features available.
-
-
-- *ring_buffer:* Data from a ring-buffer target is displayed as raw XML.
-
-
-- For other targets the power of the display is somewhere between that of event_file versus ring_buffer.
-  - Such other targets include event_counter, histogram, and pair_matching.
-
-
-- *etw_classic_sync_target:* SSMS cannot display data from the target type etw_classic_sync_target.
-
-
-
-### B.1 Open .XEL with menu File > Open > File
-
-
-You can open an individual .XEL file with the standard menu **File** > **Open** > **File**.
-
-You can also drag-and-drop an .XEL file onto the tab bar in the SSMS UI.
-
-
-
-### B.2 View Target Data
-
-
-The **View Target Data** option displays the data that has thus far been captured.
-
-
-In the **Object Explorer** pane, you can expand the nodes and then right-click:
-
-- **Management** > **Extended Events** > **Sessions** > *[your-session]* > *[your-target-node]* > **View Target Data**.
-
-
-The target data is displayed in a tabbed pane in SSMS. This is shown in the following screenshot.
-
-
-![your target > View Target Data](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
-
-
-> [!NOTE] 
-> **View Target Data** displays the *accumulated data from multiple .XEL files* from the given event session. Each **Start**-**Stop** cycle creates a file with a later time-derived integer embedded in its name, but each file shares the same root name.
-
-
-
-#### B.3 Watch Live Data
-
-
-When your event session is currently active, you might want to watch the event data in real time, as it is received by the target.
-
-
-- **Management** > **Extended Events** > **Sessions** > *[your-session]* > **Watch Live Data**.
-
-
-![your session > Watch Live Data](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
-
+:::image type="content" source="media/xevents-ssms-ui55-watchlivedata.png" alt-text="Screenshot of your session > Watch Live Data.":::
 
 The data display is updated at an interval you can specify. See **Maximum dispatch latency** at:
 
-- **Extended Events** > **Sessions** > *[your-session]* > **Properties** > **Advanced** > **Maximum dispatch latency**
+- **Extended Events** > **Sessions** > **[your-session]** > **Properties** > **Advanced** > **Maximum dispatch latency**
 
+### View event data with the sys.fn_xe_file_target_read_file() function
 
+The [sys.fn_xe_file_target_read_file()](../system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) function returns a rowset with each row representing a captured event. Event data is returned as XML. [XQuery](../../xquery/xquery-language-reference-sql-server.md) can be used to present event data relationally.
 
-### B.4 View .XEL with sys.fn_xe_file_target_read_file function
+## Export target data
 
+Once you have event data displayed in the SSMS event viewer, you can export it to various formats by doing the following:
 
-For batch processing, the following system function can generate XML for the records in a .XEL file:
+:::image type="content" source="media/xevents-ssms-ui75-menuextevent-exportto-xel.png" alt-text="Screenshot of exporting displayed data, Extended Events > Export to.":::
 
-- [sys.fn\_xe\_file\_target\_read\_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
+1. Select **Extended Events** on the main menu.
+1. Select **Export to**, and then choose a format.
 
-
-
-## C. Export the target data
-
-
-After you have the target data in SSMS, you can export the data to various formats by doing the following:
-
-
-1. Give focus to the data display.
-
-    - Suddenly a new toolbar and a new menu item for Extended Events both become visible.
-
-	![Export displayed data, Extended Events > Export to > (.csv, or .xel, or to a table)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)
-
-2. Click the new menu item **Extended Events**.
-3. Click **Export to**, and then choose a format.
-
-
-
-## D. Manipulate data in the display
-
+## Manipulate data in the display
 
 The SSMS UI offers you several ways to manipulate the data, beyond merely viewing the data as is.
 
-
-
-### D.1 Context menus in the data display
-
+### Context menus in the data display
 
 Different places in the data display offer different context menus when you right-click.
 
-
-
-#### D.1.1 Right-click a data cell
-
+#### Right-click a data cell
 
 The following screenshot shows the content menu you get when you right-click cell in the data display. The screenshot also shows the expansion of the **Copy** menu item.
 
+:::image type="content" source="media/xevents-ssms-ui25-rightclickcell.png" alt-text="Screenshot showing right-click a cell, in the data display.":::
 
-![Right-click a cell, in the data display](../../relational-databases/extended-events/media/xevents-ssms-ui25-rightclickcell.png)
-
-
-
-#### D.1.2 Right-click a column header
-
+#### Right-click a column header
 
 The following screenshot shows the context menu from a right-click of the **timestamp** header.
 
+:::image type="content" source="media/xevents-ssms-ui40-toolbar.png" alt-text="Screenshot showing right-click a column header, in the data display, or details grid.":::
 
-![Right-click a column header, in the data display. Also, details grid.](../../relational-databases/extended-events/media/xevents-ssms-ui40-toolbar.png)
+### Choose columns, merge columns
 
-
-The preceding screenshot also shows the special toolbar for Extended Events. The brightness of the Details button indicates the button is active. Therefore the image also shows the **Details** tab and grid is present as a second portion of the data display.
-
-
-
-### D.2 Choose columns, Merge columns
-
-
-The **Choose Columns** option enables you to control which data columns are and are not displayed. You can find the **Choose Columns** menu item in a few different places:
+The **Choose Columns** option enables you to control which data columns are displayed. You can find the **Choose Columns** menu item in a few different places:
 
 - On the **Extended Events** menu.
-- On the Extended Events toolbar.
+- On the **Extended Events** toolbar.
 - On the context menu of a header in the data display.
 
+When you select **Choose Columns**, the dialog of the same name is displayed.
 
-When you click **Choose Columns**, the dialog of the same name is displayed.
+:::image type="content" source="media/xevents-ssms-ui35-choosecolumns.png" alt-text="Screenshot showing choose Columns dialog, also offers Merge columns options.":::
 
+#### Merge columns
 
-![Choose Columns dialog, also offers Merge columns options](../../relational-databases/extended-events/media/xevents-ssms-ui35-choosecolumns.png)
+The **Choose Columns** dialog has a section devoted to the merging of multiple columns into one, for the purposes of display and data export.
 
+### Filters
 
+The filters in the SSMS event viewer can:
 
-#### D.2.1 Merge columns
+- Restrict returned data by the **timestamp** column
+- Filter by a column value
 
+The relationship between the time filter and columns filter is a Boolean `AND`.
 
-The **Choose Columns** dialog has a section devoted to the merging of multiple columns into one, for purposes of:
+:::image type="content" source="media/xevents-ssms-ui45-filters.png" alt-text="Screenshot of time range, and column filters, on the Filters dialog.":::
 
-- Display.
-- Export.
-
-
-
-### D.3 Filters
-
-
-In the area of Extended Events there are two major type of filters that you can specify:
-
-- *Pre-target filters:* Filters that reduce the amount of data that is sent by the events engine to your target.
-
-- *Post-target filters:* Filters you can select in the SSMS UI to exclude some target records from the display.
-
-
-The SSMS display filters are the following:
-
-- A *time range* filter, which examines the **timestamp** column.
-- A *column values* filter.
-
-
-The relationship between the time filter and columns filter is a Boolean '*AND*'.
-
-
-![Time range, and column filters, on the Filters dialog](../../relational-databases/extended-events/media/xevents-ssms-ui45-filters.png)
-
-
-
-### D.4 Grouping and aggregation
-
+### <a id="grouping-and-aggregation"></a> Group and aggregation
 
 Grouping rows together by matching values in a given column, is the first step toward the summary aggregation of data.
 
+#### Grouping
 
+On the **Extended Events** toolbar, the **Grouping** button starts a dialog you can use to group the displayed data by a given column. The next screenshot shows a dialog being used to group by the *name* column.
 
-#### D.4.1 Grouping
+:::image type="content" source="media/xevents-ssms-ui53-grouping.png" alt-text="Screenshot showing the toolbar with Grouping selected and the Grouping dialog box.":::
 
+After grouping is completed, the display has a new look, as shown next.
 
-On the Extended Events toolbar, the **Grouping** button starts a dialog you can use to group the displayed data by a given column. The next screenshot shows a dialog being used to group by the *name* column.
+:::image type="content" source="media/xevents-ssms-ui54-grouped.png" alt-text="Screenshot of new display look after Grouping.":::
 
-![Screenshot showing the toolbar with Grouping selected and the Grouping dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+#### Aggregation
 
-After the grouping is achieved, the display has a new look, as shown next.
+After the displayed data has been grouped, you can proceed to aggregate data in other columns. The next screenshot shows the grouped data is being aggregated by *count*.
 
-![New display look after Grouping](../../relational-databases/extended-events/media/xevents-ssms-ui54-grouped.png)
+:::image type="content" source="media/xevents-ssms-ui51-aggregdialogcount.png" alt-text="Screenshot showing the toolbar with Aggregation selected and the Aggregation dialog box.":::
 
+After the aggregation is completed, the display has a new look, as shown next.
 
+:::image type="content" source="media/xevents-ssms-ui52-aggregnewdisplay.png" alt-text="Screenshot of the display showing that a COUNT value has been added.":::
 
-#### D.4.2 Aggregation
+### View run time query plan
 
+The `query_post_execution_showplan` event enables you to see the actual query plan (with runtime statistics included) in the SSMS UI. When the **Details** pane is visible, you can see the graphical query plan in the **Query Plan** tab. By hovering over a node on the query plan, you can see a list of property names and their values for the plan node.
 
-After the displayed data has been grouped, you can proceed to aggregate data in other columns.  The next screenshot shows the grouped data is being aggregated by *count*.
+:::image type="content" source="media/xevents-ssms-ui60-showplangraph.png" alt-text="Screenshot of Query Plan, with properties list for one node.":::
 
-![Screenshot showing the toolbar with Aggregation selected and the Aggregation dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+## Related content
 
-After the aggregation is achieved, the display has a new look, as shown next.
-
-![Screenshot of the display showing that a COUNT value has been added.](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
-
-
-
-### D.5 View run time query plan
-
-
-The **query_post_execution_showplan** event enables you to see the actual query plan in the SSMS UI. When the **Details** pane is visible, you can see a graph of the query plan on the **Query Plan** tab. By hovering over a node on the query plan, you can see a list of property names and their values for the node.
-
-
-![Query Plan, with properties list for one node](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
-## See also
-
-[XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.
-
-[Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer), released July 2019.
+- [Extended Events overview](extended-events.md)

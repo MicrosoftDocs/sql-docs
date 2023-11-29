@@ -206,7 +206,7 @@ If your Linux machine doesn't have access to the online repositories used in the
 
 ## Licensing and pricing
 
-[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is licensed the same for Linux and Windows. For more information about [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+[!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] is licensed the same for Linux and Windows. For more information about [!INCLUDE [ssnoversion-md](../includes/ssnoversion-md.md)] licensing and pricing, see [How to license SQL Server](https://www.microsoft.com/sql-server/sql-server-2022-pricing).
 
 ## Optional SQL Server features
 

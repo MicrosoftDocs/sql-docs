@@ -1,11 +1,11 @@
 ---
 title: Create server with Microsoft Entra-only authentication enabled
 titleSuffix: Azure SQL Database & Azure SQL Managed Instance
-description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL Authentication
+description: This article guides you through creating an Azure SQL logical server or managed instance with Microsoft Entra-only authentication enabled, which disables connectivity using SQL Authentication.
 author: nofield
 ms.author: nofield
 ms.reviewer: wiassaf, vanto, mathoma
-ms.date: 09/27/2023
+ms.date: 10/24/2023
 ms.service: sql-db-mi
 ms.subservice: security
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
@@ -71,7 +71,7 @@ In our examples, we're enabling Microsoft Entra-only authentication during serve
    - Select **Set admin**, to open the **Microsoft Entra ID** pane and select a Microsoft Entra principal as your logical server Microsoft Entra administrator. When you're finished, use the **Select** button to set your admin.
 
    :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-portal-create-server.png" alt-text="screenshot of creating a server with Use Microsoft Entra-only authentication enabled.":::
-    
+
 1. Select **Next: Networking** at the bottom of the page.
 
 1. On the **Networking** tab, for **Connectivity method**, select **Public endpoint**.
@@ -105,7 +105,13 @@ Replace the following values in the example:
 - `<ServerName>`: Use a unique logical server name
 
 ```azurecli
-az sql server create --enable-ad-only-auth --external-admin-principal-type User --external-admin-name <AzureADAccount> --external-admin-sid <AzureADAccountSID> -g <ResourceGroupName> -n <ServerName>
+az sql server create \
+    --enable-ad-only-auth \
+    --external-admin-principal-type User \
+    --external-admin-name <AzureADAccount> \
+    --external-admin-sid <AzureADAccountSID> \
+    -g <ResourceGroupName> \
+    -n <ServerName>
 ```
 
 For more information, see [az sql server create](/cli/azure/sql/server#az-sql-server-create).
@@ -132,7 +138,16 @@ Replace the following values in the example:
 - `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
 
 ```powershell
-New-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -Location "<Location>" -ServerName "<ServerName>" -ServerVersion "12.0" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication
+$server = @{
+    ResourceGroupName = "<ResourceGroupName>"
+    Location = "<Location>"
+    ServerName = "<ServerName>"
+    ServerVersion = "12.0"
+    ExternalAdminName = "<AzureADAccount>"
+    EnableActiveDirectoryOnlyAuthentication = $true
+}
+
+New-AzSqlServer @server
 ```
 
 Here's an example of specifying the server admin name (instead of letting the server admin name being automatically created) at the time of logical server creation. As mentioned earlier, this login isn't usable when Microsoft Entra-only authentication is enabled.
@@ -348,7 +363,14 @@ Replace the following values in the example:
 - The `subnet` parameter needs to be updated with the `<Subscription ID>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`. Your subscription ID can be found in the Azure portal
 
 ```azurecli
-az sql mi create --enable-ad-only-auth --external-admin-principal-type User --external-admin-name <AzureADAccount> --external-admin-sid <AzureADAccountSID> -g <ResourceGroupName> -n <managedinstancename> --subnet /subscriptions/<Subscription ID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>
+az sql mi create \
+    --enable-ad-only-auth \
+    --external-admin-principal-type User \
+    --external-admin-name <AzureADAccount> \
+    --external-admin-sid <AzureADAccountSID> \
+    -g <ResourceGroupName> \
+    -n <managedinstancename> \
+    --subnet /subscriptions/<Subscription ID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>
 ```
 
 For more information, see [az sql mi create](/cli/azure/sql/mi#az-sql-mi-create).
@@ -368,20 +390,33 @@ Replace the following values in the example:
 
 - `<managedinstancename>`: Name the managed instance you want to create
 - `<ResourceGroupName>`: Name of the resource group for your managed instance. The resource group should also include the virtual network and subnet created
-- `<Location>`: Location of the server, such as `West US`, or `Central US`
 - `<AzureADAccount>`: Can be a Microsoft Entra user or group. For example, `DummyLogin`
+- `<Location>`: Location of the server, such as `West US`, or `Central US`
 - The `SubnetId` parameter needs to be updated with the `<Subscription ID>`, `<ResourceGroupName>`, `<VNetName>`, and `<SubnetName>`. Your subscription ID can be found in the Azure portal
 
-
 ```powershell
-New-AzSqlInstance -Name "<managedinstancename>" -ResourceGroupName "<ResourceGroupName>" -ExternalAdminName "<AzureADAccount>" -EnableActiveDirectoryOnlyAuthentication -Location "<Location>" -SubnetId "/subscriptions/<SubscriptionID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>" -LicenseType LicenseIncluded -StorageSizeInGB 128 -VCore 4 -Edition "GeneralPurpose" -ComputeGeneration Gen5
+$instanceName = @{
+    Name = "<managedinstancename>"
+    ResourceGroupName = "<ResourceGroupName>"
+    ExternalAdminName = "<AzureADAccount>"
+    EnableActiveDirectoryOnlyAuthentication = $true
+    Location = "<Location>"
+    SubnetId = "/subscriptions/<SubscriptionID>/resourceGroups/<ResourceGroupName>/providers/Microsoft.Network/virtualNetworks/<VNetName>/subnets/<SubnetName>"
+    LicenseType = "LicenseIncluded"
+    StorageSizeInGB = 128
+    VCore = 4
+    Edition = "GeneralPurpose"
+    ComputeGeneration = "Gen5"
+}
+
+New-AzSqlInstance $instanceName
 ```
 
 For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsqlinstance).
 
 # [REST API](#tab/rest-api)
 
-The [Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
+The [SQL Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.
@@ -400,7 +435,6 @@ Replace the following values in the example:
 - `<Location>`: Location of the server, such as `westus2`, or `centralus`
 - `<objectId>`: Can be found by going to the [Azure portal](https://portal.azure.com), and going to your **Microsoft Entra ID** resource. In the **User** pane, search for the Microsoft Entra user and find their **Object ID**. If you're using an application (service principal) as the Microsoft Entra admin, replace this value with the **Application ID**. You'll need to update the `principalType` as well.
 - The `subnetId` parameter needs to be updated with the `<ResourceGroupName>`, the `Subscription ID`, `<VNetName>`, and `<SubnetName>`
-
 
 ```rest
 Import-Module Azure
@@ -732,7 +766,7 @@ Use a [Custom deployment in the Azure portal](https://portal.azure.com/#create/M
 
 ### Grant Directory Readers permissions
 
-Once the deployment is complete for your managed instance, you may notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by clicking on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra for Azure SQL](authentication-aad-directory-readers-role.md).
+Once the deployment is complete for your managed instance, you might notice that the SQL Managed Instance needs **Read** permissions to access Microsoft Entra ID. Read permissions can be granted by clicking on the displayed message in the Azure portal by a person with enough privileges. For more information, see [Directory Readers role in Microsoft Entra for Azure SQL](authentication-aad-directory-readers-role.md).
 
 :::image type="content" source="media/authentication-azure-ad-only-authentication/azure-ad-portal-read-permissions.png" alt-text="Screenshot of the Microsoft Entra admin menu in Azure portal showing Read permissions needed.":::
 
@@ -741,7 +775,7 @@ Once the deployment is complete for your managed instance, you may notice that t
 - To reset the server administrator password, Microsoft Entra-only authentication must be disabled.
 - If Microsoft Entra-only authentication is disabled, you must create a server with a server admin and password when using all APIs.
 
-## Next steps
+## Related content
 
 - If you already have a logical server or SQL managed instance, and just want to enable Microsoft Entra-only authentication, see [Tutorial: Enable Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication-tutorial.md).
 - For more information on the Microsoft Entra-only authentication feature, see [Microsoft Entra-only authentication with Azure SQL](authentication-azure-ad-only-authentication.md).

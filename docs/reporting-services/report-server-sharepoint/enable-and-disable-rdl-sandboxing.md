@@ -71,7 +71,7 @@ The Report Definition Language (RDL) sandboxing feature lets you detect and rest
 |**Namespace**|Attribute for **Allow** that is the namespace that contains one or more types that apply to Value. This property is case-insensitive.|  
 |**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed in RDL expressions or in an RDL **\<Class>** element.<br /><br /> When **RDLSandboxing** is enabled, new arrays can't be created in RDL expressions, regardless of the setting of **AllowNew**.|  
 |**Value**|Value for **Allow** that is the name of the type to allow in RDL expressions. The value **\*** indicates that all types in the namespace are allowed. This property is case-insensitive.|  
-|**Members**|For the list of types that are in the **\<Types>** element, the list of member names that aren't allowed in RDL expressions.|  
+|**Members**|Value for the list of types that are in the **\<Types>** element, and the list of member names that aren't allowed in RDL expressions.|  
 |**Deny**|The name of a member that isn't allowed in RDL expressions. This property is case-insensitive.<br /><br /> When **Deny** is specified for a member, all members with this name for all types aren't allowed.|  
   
 ## Working with expressions when RDL sandboxing is enabled

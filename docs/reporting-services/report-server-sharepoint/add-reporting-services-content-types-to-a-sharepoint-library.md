@@ -1,6 +1,6 @@
 ---
 title: "Add Reporting Services content types to a SharePoint library"
-description: Add a Report Builder Report, Report Model, and Report Data Source content type to a library enables the New command to create new documents of that type.
+description: Add a Report Builder Report, Report Model, and Report Data Source content type to a library to enable the New command to create new documents of that type.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/25/2017
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Add a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Add a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library to enable the **New** command so that you can create new documents of that type.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.

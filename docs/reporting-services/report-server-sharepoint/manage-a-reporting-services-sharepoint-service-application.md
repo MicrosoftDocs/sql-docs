@@ -51,7 +51,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |-------------|--------------|  
 |External Images Timeout|Default is 600 seconds.|  
 |Snapshot Compression|Default is SQL|  
-|System Report Timeout|Default is 1800 seconds.<br /><br /> Specify whether report processing times out on the report server after several seconds. This value applies to report processing on a report server. It doesn't affect data processing on the database server that provides the data for your report. The report processing timer clock begins when the report is selected and ends when the report opens. The value that you specify must be sufficient to complete both data processing and report processing.|  
+|System Report Timeout|Default is 1800 seconds.<br /><br /> Specify whether report processing times out on the report server after a certain number of seconds. This value applies to report processing on a report server. It doesn't affect data processing on the database server that provides the data for your report. The report processing timer clock begins when the report is selected and ends when the report opens. The value that you specify must be sufficient to complete both data processing and report processing.|  
 |System Snapshot Limit|Default is -1, which is no limit.<br /><br /> Set a site-wide default value for the number of copies of report history to retain. The default value provides an initial setting that establishes the number of snapshots that can be stored for each report. You can specify different limits in property pages for specific reports.|  
 |Stored Parameters Lifetime|Default is 180|  
 |Stored Parameters Threshold|Default is 1500 days.|  

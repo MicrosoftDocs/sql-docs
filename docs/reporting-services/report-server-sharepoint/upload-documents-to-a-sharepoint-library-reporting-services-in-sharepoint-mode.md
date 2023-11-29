@@ -26,7 +26,7 @@ You can upload report definitions and report models to a SharePoint library. Whe
 > [!NOTE]  
 >  The report server must be configured for SharePoint mode, and the instance of the SharePoint product must have the Reporting Services Add-in that provides program files for storing and accessing report server items from a SharePoint site.  
   
- To upload a document to a library, you must have the "Add Items" permission at the site level. If you're using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who has the Contribute level of permission.  
+ To upload a document to a library, you must have the "Add Items" permission at the site level. If you use default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission and to the **Members** group who has the Contribute level of permission.  
   
 ## Add a report definition or report model to a library
   

@@ -129,7 +129,7 @@ BEGIN
 END;  
 ELSE  
 BEGIN  
-/* Re-encryption worked, so go ahead and drop the existing RBS credential store   
+/* Re-encryption worked, so drop the existing RBS credential store   
  symmetric key and replace it with a new symmetric key.*/  
 DROP SYMMETRIC KEY [mssqlrbs_encryption_skey];  
   

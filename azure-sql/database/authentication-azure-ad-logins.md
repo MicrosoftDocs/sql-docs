@@ -43,7 +43,7 @@ By default, newly created Microsoft Entra logins in the `master` database are gr
 
 ## Microsoft Entra principals syntax
 
-SQL supports the following syntax to create and manage Microsoft Entra server and database principals.
+Use the following syntax to create and manage Microsoft Entra server and database principals.
 
 ### Create login
 

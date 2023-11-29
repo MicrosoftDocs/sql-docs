@@ -4,7 +4,7 @@ description: Latest release notes
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/30/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
@@ -13,7 +13,7 @@ ms.custom: ignite-2023
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-## November 30, 2023
+## December 1, 2023
 
 **Extension version**: `1.1.2512.104`
 

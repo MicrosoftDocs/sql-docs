@@ -83,7 +83,8 @@ Virtual log file (VLF) creation follows this method:
   - If growth is from 64 MB up to 1 GB, create 8 VLFs that cover the growth size (for example, for 512-MB growth, create 8 VLFs of size 64 MB).
   - If growth is larger than 1 GB, create 16 VLFs that cover the growth size for example, for 8-GB growth, create 16 VLFs of size 512 MB).
 
-If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, and log backup and restore operations.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, log backup and restore operations, and cause transactional replication/CDC and Always On redo latency.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
 
 We recommend that you create your log files close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
 
@@ -106,6 +107,8 @@ During the initial stages of a database recovery process, SQL Server discovers a
 - Attempts to attach a database take a very long time to complete.
 - When you try to set up database mirroring, you encounter error messages 1413, 1443, and 1479, indicating a timeout.
 - You encounter memory-related errors like 701 when you attempt to restore a database.
+- Transactional replication or change data capture may experience significant latency.
+
 
 When you examine the SQL Server Error log, you may notice that a significant amount of time is spent before the *analysis* phase of the database recovery process.
 For example:

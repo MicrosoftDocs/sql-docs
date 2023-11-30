@@ -32,9 +32,11 @@ To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 For a list of operating systems that support OLE DB Driver for SQL Server, see [Support policies for OLE DB Driver for SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
-## Azure Active Directory authentication requirements  
+<a name='azure-active-directory-authentication-requirements--'></a>
 
-When using Azure Active Directory authentication methods with versions of the OLE DB driver for SQL Server ***prior to*** 18.3, ensure that the Active Directory Authentication Library for SQL Server has been installed. (Version 18.3 includes the dependency as part of its installer package.) This requirement isn't needed for the other authentication methods or OLE DB operations. For more information, see: [Using Azure Active Directory](features/using-azure-active-directory.md).
+## Microsoft Entra authentication requirements  
+
+When using Microsoft Entra authentication methods with versions of the OLE DB driver for SQL Server ***prior to*** 18.3, ensure that the Active Directory Authentication Library for SQL Server has been installed. (Version 18.3 includes the dependency as part of its installer package.) This requirement isn't needed for the other authentication methods or OLE DB operations. For more information, see: [Using Microsoft Entra ID](features/using-azure-active-directory.md).
 
 ## SQL Server requirements  
 

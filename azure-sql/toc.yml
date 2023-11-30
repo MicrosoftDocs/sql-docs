@@ -1818,12 +1818,14 @@
         href: virtual-machines/linux/sql-iaas-agent-extension-register-vm-linux.md
     - name: Tutorials
       items:
-      - name: Set up Azure RHEL VM availability group with STONITH
-        href: virtual-machines/linux/rhel-high-availability-stonith-tutorial.md
-      - name: Set up Azure SLES VM availability group with STONITH
-        href: virtual-machines/linux/sles-high-availability-stonith-tutorial.md
-      - name: Configure availability group listener for SQL Server on RHEL virtual machines in Azure
-        href: virtual-machines/linux/rhel-high-availability-listener-tutorial.md
+      - name: Set up Azure RHEL VM availability group with fencing
+        href: virtual-machines/linux/rhel-high-availability-fencing-tutorial.md
+      - name: Set up Azure SLES VM availability group with fencing
+        href: virtual-machines/linux/sles-high-availability-fencing-tutorial.md
+      - name: Set up Azure Ubuntu VM availability group with fencing
+        href: virtual-machines/linux/ubuntu-high-availability-fencing-tutorial.md
+      - name: Configure availability group listener for SQL Server on Linux virtual machines in Azure
+        href: virtual-machines/linux/high-availability-listener-tutorial.md
       - name: Set up Always On availability group with DH2i DxEnterprise
         href: virtual-machines/linux/dh2i-high-availability-tutorial.md
     - name: Resources

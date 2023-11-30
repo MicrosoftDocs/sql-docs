@@ -161,13 +161,28 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-fencing-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/sles-high-availability-stonith-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/sles-high-availability-fencing-tutorial",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-rhel-ha-listener-tutorial.md",
-      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-listener-tutorial",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/high-availability-listener-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/virtual-machines/linux/rhel-high-availability-listener-tutorial.md",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/high-availability-listener-tutorial",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/azure-sql/virtual-machines/linux/sql/sql-server-linux-rhel-ha-stonith-tutorial.md",
-      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-stonith-tutorial",
+      "redirect_url": "/azure/azure-sql/virtual-machines/linux/rhel-high-availability-fencing-tutorial",
       "redirect_document_id": false
     },
     {

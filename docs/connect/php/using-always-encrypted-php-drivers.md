@@ -288,7 +288,7 @@ Azure Key Vault offers a way to store encryption keys, passwords, and other secr
 
 - `KeyStoreAuthentication` can take one of two possible string values: `KeyVaultPassword` and `KeyVaultClientSecret`. These values control what kind of authentication credentials are used with the other two keywords.
 - `KeyStorePrincipalId` takes a string representing an identifier for the account seeking to access the Azure Key Vault.
-  - If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStorePrincipalId` must be the name of an Azure ActiveDirectory user.
+  - If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStorePrincipalId` must be the name of a Microsoft Entra user.
   - If `KeyStoreAuthentication` is set to `KeyVaultClientSecret`, then `KeyStorePrincipalId` must be an application client ID.
 - `KeyStoreSecret` takes a string representing a credential secret.
   - If `KeyStoreAuthentication` is set to `KeyVaultPassword`, then `KeyStoreSecret` must be the user's password.
@@ -300,10 +300,10 @@ The following examples show how to connect to SQL Server using Azure Key Vault.
 
 SQLSRV:
 
-Using an Azure Active Directory account:
+Using a Microsoft Entra account:
 
 ```php
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$MSEntraUsername, "KeyStoreSecret"=>$MSEntraPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
@@ -315,7 +315,7 @@ $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV:
-Using an Azure Active Directory account:
+Using a Microsoft Entra account:
 
 ```php
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";

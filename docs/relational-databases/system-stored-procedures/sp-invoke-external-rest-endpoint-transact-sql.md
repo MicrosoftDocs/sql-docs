@@ -200,6 +200,10 @@ Only calls to endpoints in the following services are allowed:
 | Azure Files | *.file.core.windows.net |
 | Azure Queue Storage | *.queue.core.windows.net |
 | Azure Table Storage | *.table.core.windows.net |
+| Azure Communication Services | *.communications.azure.com |
+| Bing Search | api.bing.microsoft.com |
+| Azure Key Vault | *.vault.azure.net |
+| Azure AI Search | *.search.windows.net |
 
 [Outbound Firewall Rules](/azure/azure-sql/database/outbound-firewall-rule-overview) control mechanism can be used to further restrict outbound access to external endpoints.
 

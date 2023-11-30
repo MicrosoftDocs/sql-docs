@@ -610,6 +610,7 @@ If LRS fails to start after some time and you get an error, check for the most c
 - Are the permissions granted for the SAS token Read and List _only_?
 - Did you copy the SAS token for LRS after the question mark (`?`), with content that looks like `sv=2020-02-10...`? 
 - Is the SAS token validity time appropriate for the time window of starting and completing the migration? There might be mismatches because of the different time zones used for your SQL Managed Instance deployment and the SAS token. Try regenerating the SAS token and extending the token validity of the time window before and after the current date.
+- When starting multiple Log Replay restores in parallel targeting the same storage container, ensure that the same valid SAS token is provided for every restore operation. 
 - Are the database name, resource group name, and managed instance name spelled correctly?
 - If you started LRS in autocomplete mode, was a valid file name for the last backup file specified?
 - Does the backup URI path contain keywords `backup` or `backups`? Rename the container or folders that are using `backup` or `backups` as these are reserved keywords.

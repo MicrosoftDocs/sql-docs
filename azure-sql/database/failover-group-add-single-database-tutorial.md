@@ -214,7 +214,7 @@ In this step, you will fail your failover group over to the secondary server, an
 Test failover using the Azure portal.
 
 1. Select **Azure SQL** in the left-hand menu of the [Azure portal](https://portal.azure.com). If **Azure SQL** isn't in the list, select **All services**, then type Azure SQL in the search box. (Optional) Select the star next to **Azure SQL** to favorite it and add it as an item in the left-hand navigation.
-1. Select the database created in the section 2, such as `mySampleDatbase`.
+1. Select the database created in the section 2, such as `mySampleDatabase`.
 1. Select the name of the server under **Server name** to open the settings for the server.
 
    ![Open server for database](./media/failover-group-add-single-database-tutorial/open-sql-db-server.png)

@@ -18,6 +18,9 @@ ms.custom:
 
 This tutorial explains how to configure SQL Server Always On availability groups for SQL Server Linux based containers deployed to an Azure Kubernetes Service (AKS) Kubernetes cluster, using DH2i DxEnterprise. You can choose between a [sidecar configuration](/azure/architecture/patterns/sidecar) (preferred), or build your own custom container image.
 
+> [!NOTE]  
+> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
+
 # [Sidecar configuration](#tab/sidecar)
 
 Using the steps mentioned in this article, learn how to deploy a StatefulSet and use the DH2i DxEnterprise solution to create and configure an availability group (AG). This tutorial consists of the following steps:
@@ -231,9 +234,6 @@ In this tutorial, Azure Kubernetes Service (AKS) is used as the Kubernetes clust
 > - Configure `Read_Write_Routing_URL` for listener functionality (optional)
 
 For more information about DxEnterprise, see [DH2i DxEnterprise](https://dh2i.com/dxenterprise-high-availability/).
-
-> [!NOTE]  
-> Microsoft supports data movement, availability group, and SQL Server components. DH2i is responsible for support of the DxEnterprise product, which includes cluster and quorum management.
 
 ## Prerequisites
 

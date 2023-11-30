@@ -107,7 +107,8 @@ During the initial stages of a database recovery process, SQL Server discovers a
 - Attempts to attach a database take a very long time to complete.
 - When you try to set up database mirroring, you encounter error messages 1413, 1443, and 1479, indicating a timeout.
 - You encounter memory-related errors like 701 when you attempt to restore a database.
-- Transactional replication or Change Data Capture may experience significant latency
+- Transactional replication or change data capture may experience significant latency.
+
 
 When you examine the SQL Server Error log, you may notice that a significant amount of time is spent before the *analysis* phase of the database recovery process.
 For example:

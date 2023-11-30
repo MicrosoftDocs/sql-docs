@@ -61,7 +61,7 @@ Logs are grouped into **Category groups**. Category groups are a collection of d
 
 You can analyze metrics for Azure SQL Database alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
 
-For a list of the platform metrics collected for Azure SQL Database, see [Monitoring Azure SQL Database data reference metrics](monitoring-sql-database-azure-monitor-reference.md#metrics)  
+For typical alert rule configurations for Azure SQL Database, see [Recommended alert rules](monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true#recommended-alert-rules). For a list of the platform metrics collected for Azure SQL Database, see [Monitoring Azure SQL Database data reference metrics](monitoring-sql-database-azure-monitor-reference.md#metrics).
 
 For reference, you can see a list of [all resource metrics supported in Azure Monitor](/azure/azure-monitor/essentials/metrics-supported).
 
@@ -149,8 +149,9 @@ The following table lists common and recommended alert rules for Azure SQL Datab
 
 \* Alerting on deadlocks may be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
 
-## Next steps
+## Related content
 
+- Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).
 - See [Monitoring Azure SQL Database data reference](monitoring-sql-database-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created by Azure SQL Database.
 - See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource) for details on monitoring Azure resources.
 - [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

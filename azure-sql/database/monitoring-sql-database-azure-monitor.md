@@ -4,12 +4,13 @@ description: Start here to learn how to monitor Azure SQL Database with Azure Mo
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
-ms.date: 08/10/2023
+ms.date: 11/29/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
-ms.custom: subject-monitoring
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom:
+  - subject-monitoring
+monikerRange: "=azuresql||=azuresql-db"
 ---
 
 # Monitor Azure SQL Database with Azure Monitor
@@ -55,9 +56,9 @@ For more information on the resource logs and diagnostics available, see [Diagno
 
 See [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/essentials/diagnostic-settings) for the detailed process for creating a diagnostic setting using the Azure portal, CLI, or PowerShell. When you create a diagnostic setting, you specify which categories of logs to collect. The categories for Azure SQL Database are listed in [Azure SQL Database monitoring data reference](monitoring-sql-database-azure-monitor-reference.md#resource-logs).
 
-Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and may change over time as new resource logs become available and are added to the category group. Note that this may incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
+Logs are grouped into **Category groups**. Category groups are a collection of different logs to help you achieve different monitoring goals. These groups are defined dynamically and might change over time as new resource logs become available and are added to the category group. This might incur additionally charges. The **audit** resource log category group allows you to select the resource logs that are necessary for auditing your resource. For more information, see [Diagnostic settings in Azure Monitor: Resource logs](/azure/azure-monitor/essentials/diagnostic-settings).
 
-## Analyzing metrics
+## <a id="analyzing-metrics"></a> Analyze metrics
 
 You can analyze metrics for Azure SQL Database alongside metrics from other Azure services using the metrics explorer by opening **Metrics** from the **Monitor** menu in the Azure portal. See [Getting started with Azure Metrics Explorer](/azure/azure-monitor/essentials/metrics-getting-started) for details on using this tool. 
 
@@ -65,7 +66,7 @@ For typical alert rule configurations for Azure SQL Database, see [Recommended a
 
 For reference, you can see a list of [all resource metrics supported in Azure Monitor](/azure/azure-monitor/essentials/metrics-supported).
 
-## Analyzing logs
+## <a id="analyzing-logs"></a> Analyze logs
 
 Data in Azure Monitor Logs is stored in tables where each table has its own set of unique properties. This data is optionally collected via Diagnostic settings.
 
@@ -85,7 +86,7 @@ For a list of the tables used by Azure Monitor Logs and queryable by Log Analyti
 > [!NOTE]
 > Occasionally, it might take up to 15 minutes between when an event is emitted and when it [appears in a Log Analytics workspace](/azure/azure-monitor/logs/data-ingestion-time).
 
-Use the following queries to monitor your database. You may see different options available depending on your purchasing model.
+Use the following queries to monitor your database. You might see different options available depending on your purchasing model.
 
 Example A: **Log_write_percent** from the past hour
 
@@ -134,11 +135,11 @@ AzureMetrics
 
 Azure Monitor alerts proactively notify you when important conditions are found in your monitoring data. These metrics in Azure Monitor are always collected. They allow you to identify and address issues in your databases or elastic pools before your customers notice them. You can set alerts on [metrics](/azure/azure-monitor/alerts/alerts-metric-overview), [logs](/azure/azure-monitor/alerts/alerts-unified-log), and the [activity log](/azure/azure-monitor/alerts/activity-log-alerts).
 
-If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) may offer additional types of alerts.
+If you are creating or running an application in Azure, [Azure Monitor Application Insights](/azure/azure-monitor/overview#application-insights) can offer additional types of alerts.
 
 You can also configure alerts with the Azure CLI or PowerShell. For example, see [Use PowerShell to monitor and scale a single database in Azure SQL Database](./scripts/monitor-and-scale-database-powershell.md).
 
-The following table lists common and recommended alert rules for Azure SQL Database. You may see different options available depending on your purchasing model.
+The following table lists common and recommended alert rules for Azure SQL Database. You might see different options available depending on your purchasing model.
 
 | Signal name | Operator | Aggregation type  | Threshold value | Description |
 |:---|:---|:---|:---|:---|
@@ -147,7 +148,7 @@ The following table lists common and recommended alert rules for Azure SQL Datab
 | Deadlocks\* | Greater than | Count | 1 | Whenever the count of deadlocks is greater than 1. |
 | CPU percentage | Greater than | Average | 80 | Whenever the average cpu percentage is greater than 80% | 
 
-\* Alerting on deadlocks may be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
+\* Alerting on deadlocks might be unnecessary and noisy in some applications where deadlocks are expected and properly handled.
 
 ## Related content
 

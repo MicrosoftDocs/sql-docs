@@ -83,7 +83,8 @@ Virtual log file (VLF) creation follows this method:
   - If growth is from 64 MB up to 1 GB, create 8 VLFs that cover the growth size (for example, for 512-MB growth, create 8 VLFs of size 64 MB).
   - If growth is larger than 1 GB, create 16 VLFs that cover the growth size for example, for 8-GB growth, create 16 VLFs of size 512 MB).
 
-If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, and log backup and restore operations, and cause transactional replication/CDC and Always On Redo latency.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+If the log files grow to a large size in many small increments, they end up with many virtual log files. **This can slow down database startup, log backup and restore operations, and cause transactional replication/CDC and Always On redo latency.** Conversely, if the log files are set to a large size with few or just one increment, they contain few very large virtual log files. For more information on properly estimating the **required size** and **autogrow** setting of a transaction log, see the *Recommendations* section of [Manage the size of the transaction log file](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).
+
 
 We recommend that you create your log files close to the final size required, using the increments needed to achieve optimal VLF distribution, and have a relatively large *growth_increment* value.
 

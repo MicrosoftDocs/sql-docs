@@ -124,8 +124,6 @@
         href: database/monitoring-tuning-index.yml
       - name: Overview
         href: database/monitor-tune-overview.md
-      - name: Metrics and alerts
-        href: database/monitoring-metrics-alerts.md
       - name: Intelligent Insights
         href: database/intelligent-insights-overview.md
       - name: SQL Analytics
@@ -718,6 +716,8 @@
           href: database/monitoring-with-dmvs.md
         - name: Azure Monitor for SQL Database
           href: database/monitoring-sql-database-azure-monitor.md 
+        - name: Azure Monitor metrics and alerts for SQL Database
+          href: database/monitoring-metrics-alerts.md          
         - name: Azure Monitor for SQL Database reference 
           href: database/monitoring-sql-database-azure-monitor-reference.md
     - name: Hyperscale databases

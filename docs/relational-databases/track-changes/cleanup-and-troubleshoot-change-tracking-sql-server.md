@@ -58,7 +58,7 @@ To enable or disable change tracking see [Enable and Disable Change Tracking (SQ
 
 If auto cleanup is on, the auto cleanup thread was likely stopped due to unexpected errors. Currently, restarting the auto cleanup thread isn't feasible. You must initiate a failover to a secondary server (or restart the server in the absence of a secondary), and confirm that the auto cleanup setting is enabled for the database.
 
-## Auto cleanup runs but isn't making progress
+### Auto cleanup runs but isn't making progress
 
 If one or more side tables show significant storage consumption, or contain a large number of records beyond configured retention, follow the steps in this section, which describe remedies for a single side table. The same steps can be repeated for more tables if necessary.
 

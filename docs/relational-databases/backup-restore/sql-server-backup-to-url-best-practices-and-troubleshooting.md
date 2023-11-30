@@ -214,7 +214,9 @@ To resolve this issue, create a configuration file that allows the Backup to URL
 
 1. Place the configuration file in the Binn folder of the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Instance. For example, if my [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] is installed on the C drive of the machine, place the configuration file in `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.
 
-1. `BackuptoURL.exe` is not called when using [SAS keys](/azure/storage/blobs/storage-blob-user-delegation-sas-create-powershell) but is triggered when using an [access key](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal). Make sure you are using access keys or you may receive an error "Operating system error 50(The request is not supported.)"
+1. `BackuptoURL.exe` isn't called when using [SAS keys](/azure/storage/blobs/storage-blob-user-delegation-sas-create-powershell), but is triggered when using an [access key](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal). Make sure you use access keys, or you may receive the following error:
+
+> Operating system error 50(The request is not supported.)
    
 ## Common errors and solutions
 

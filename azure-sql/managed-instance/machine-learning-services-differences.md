@@ -82,7 +82,7 @@ If you encounter out of memory errors in Azure SQL Managed Instance, review [sys
 
 Machine Learning Services is currently not supported on [Azure SQL Managed Instance pools (preview)](instance-pools-overview.md).
 
-## Network access
+## Outbound network access
 
 Network access is disallowed or blocked and cannot be enabled. The outbound network connection for Azure SQL Managed Instance is not avaialble for Machine Learning Services.
 

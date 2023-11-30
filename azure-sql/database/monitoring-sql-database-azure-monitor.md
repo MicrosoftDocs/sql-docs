@@ -153,6 +153,6 @@ The following table lists common and recommended alert rules for Azure SQL Datab
 ## Related content
 
 - Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).
-- See [Monitoring Azure SQL Database data reference](monitoring-sql-database-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created by Azure SQL Database.
-- See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource) for details on monitoring Azure resources.
+- Review [Monitoring Azure SQL Database data reference](monitoring-sql-database-azure-monitor-reference.md) for a reference of the metrics, logs, and other important values created by Azure SQL Database.
+- Review [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/insights/monitor-azure-resource) for details on monitoring Azure resources.
 - [Monitor Azure SQL Managed Instance with Azure Monitor](../managed-instance/monitoring-sql-managed-instance-azure-monitor.md)

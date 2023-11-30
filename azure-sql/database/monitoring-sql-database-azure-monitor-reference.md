@@ -57,5 +57,5 @@ For more information on the schema of Activity Log entries, see [Activity Log sc
 ## Related content
 
 - Review [the Azure Monitor metrics and alerts](monitoring-metrics-alerts.md) including [Recommended alert rules](monitoring-metrics-alerts.md#recommended-alert-rules).
-- See [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
-- See [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.
+- Review [Monitoring Azure SQL Database with Azure Monitor](../database/monitoring-sql-database-azure-monitor.md) for a description of monitoring Azure SQL Database.
+- Review [Monitoring Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) for details on monitoring Azure resources.

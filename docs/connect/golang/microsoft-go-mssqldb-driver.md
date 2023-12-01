@@ -4,7 +4,7 @@ description: "Learn how to use the Golang driver for SQL Server and Azure SQL Da
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest
-ms.date: 11/30/2023
+ms.date: 12/01/2023
 ms.service: sql
 ms.subservice: connectivity
 ms.topic: conceptual
@@ -17,7 +17,7 @@ You can connect to a database on SQL Server and Azure SQL using Go on Windows, L
 
 ## Get started
 
-[Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance](/azure/azure-sql/database/connect-query-go) guides you through the configuration of the environment, and running a simple test application to connect to a SQL Server data source.
+[Quickstart: Use Golang to query a database in Azure SQL Database or Azure SQL Managed Instance](/azure/azure-sql/database/connect-query-go) guides you through the configuration of the environment. It also includes a simple test application to connect to a SQL Server data source.
 
 ## Documentation
 
@@ -25,4 +25,4 @@ Documentation for the `go-mssqldb` driver is available on [GitHub](https://githu
 
 ## Samples
 
-Several samples have been created. For more information, see [Developing applications with Go and Azure SQL](/samples/azure-samples/azuresqlgettingstartedsamples/developing-applications-with-go-and-azure-sql).
+Several samples are available in [Developing applications with Go and Azure SQL](/samples/azure-samples/azuresqlgettingstartedsamples/developing-applications-with-go-and-azure-sql).

@@ -5,7 +5,7 @@ description: "Quickstart: Use Go to create a program that connects to a database
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 11/30/2023
+ms.date: 12/01/2023
 ms.service: sql-database
 ms.subservice: connect
 ms.topic: quickstart

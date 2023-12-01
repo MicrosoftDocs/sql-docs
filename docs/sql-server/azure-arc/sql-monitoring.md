@@ -21,9 +21,12 @@ During the feature preview, monitoring is available for free. Fees for this feat
 
 In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], the following conditions must be met:
 
-* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is update to the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
+* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
+   - Versions of Windows Server 2008 and 2012 are not presently supported
+
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
+* The server has connectivity to telemetry.<region>.arcdataservices.com (see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud)for more information)
 * The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
 
 ## Collected data
@@ -321,3 +324,4 @@ Please note that this command might run successfully, but all requirements in th
 * [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 * [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] data collection and reporting](data-collection.md)
 * [Dynamic management views (DMVs)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+

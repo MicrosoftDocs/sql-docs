@@ -28,6 +28,9 @@ Creates a classifier object for use in workload management.  The classifier assi
 > [!NOTE]
 > Classifying managed identities (MI) behavior differs between the dedicated SQL pool in Azure Synapse workspaces and the standalone dedicated SQL pool (formerly SQL DW).  While the standalone dedicated SQL pool MI maintains the assigned identity, Azure Synapse workspaces adds MI to the **dbo** role.  This cannot be changed.  The dbo role, by default, is classified  to smallrc.  Creating a classifier for the dbo role allows for assigning requests to a workload group other than smallrc.  If dbo alone is too generic for classification and has broader impacts, consider using label, session or time-based classification in conjunction with the dbo role classification.
 
+> [!NOTE]
+> The maximum number of user-defined classifiers is 100. Additional configurations beyond this limit are not supported. It is recommended to group classifiers under a common category for efficient application of a single setting across multiple workloads or users.
+
  :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax

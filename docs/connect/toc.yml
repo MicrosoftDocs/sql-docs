@@ -302,6 +302,13 @@
 
 
 
+- name: Go
+  items:
+  - name: Microsoft Golang driver for SQL Server
+    href: ../connect/golang/microsoft-go-mssqldb-driver.md
+
+
+
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server

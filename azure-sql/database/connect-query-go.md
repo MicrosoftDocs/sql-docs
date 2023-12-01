@@ -46,7 +46,7 @@ To complete this quickstart, you need:
 
 - [Go](https://go.dev/doc/install) and related software for your operating system installed.
 
-- The latest version of **[sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility?tabs=go)** for your operating system installed.
+- The latest version of **[sqlcmd](/sql/tools/sqlcmd/sqlcmd-utility?tabs=go#download-and-install-sqlcmd)** for your operating system installed.
 
 - The [Azure PowerShell Az module](/powershell/azure/install-azure-powershell) for your operating system installed.
 

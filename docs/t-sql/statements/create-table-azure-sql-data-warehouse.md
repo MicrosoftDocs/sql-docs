@@ -654,7 +654,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | varchar [ ( n ) ] 
     | char [ ( n ) ]  
     | varbinary [ ( n ) ] 
-    | binary [ ( n ) ]  
     | uniqueidentifier  
 ```
 
@@ -776,9 +775,10 @@ Permissions in [!INCLUDE[fabric](../../includes/fabric.md)] are different from p
 
 ## <a id="LimitationsRestrictions"></a> Limitations and restrictions
 
-- Table names cannot be greater than 128 characters.
+- Table names can't be greater than 128 characters.
 - Table names in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)] cannot include the characters `/` or `\`.
-- Column names cannot be greater than 128 characters.
+- Column names can't be greater than 128 characters.
+- Tables have a maximum of 1024 columns per table.
 - The default and only collation supported in [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] is Latin1_General_100_BIN2_UTF8.
 
 ## Remarks

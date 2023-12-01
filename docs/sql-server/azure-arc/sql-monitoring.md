@@ -318,6 +318,7 @@ Note that this command might run successfully, but all requirements in the [Prer
 ## Limitations
 
 * After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+* FCI clusters aren't supported at this time
 
 ## Next steps
   

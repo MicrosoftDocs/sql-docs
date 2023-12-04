@@ -41,6 +41,18 @@ landingContent:
             url: /training/modules/protect-monitor-tuning-migrated-database/
 
   # Card (optional)
+  - title: Azure Monitor and Azure SQL Database
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Monitor Azure SQL Database with metrics and alerts
+            url: monitoring-metrics-alerts.md?view=azuresql-db&preserve-view=true
+      - linkListType: concept
+        links:
+          - text: Monitor Azure SQL Database with Azure Monitor
+            url: monitoring-sql-database-azure-monitor.md?view=azuresql-db&preserve-view=true
+
+  # Card (optional)
   - title: Azure SQL Database intelligent performance recommendations
     linkLists:
       - linkListType: concept

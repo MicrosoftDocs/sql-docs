@@ -16,9 +16,15 @@ ms.custom:
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
 
+## SSMA v9.5
+
+The v9.5 release of SSMA for DB2 contains the following changes:
+ - Support for large data migration using Azure Data factory
+ - Fixes to improve code conversion
+
 ## SSMA v9.4.1
 The v9.4.1 release of SSMA for DB2 
- - Bugfix for Table Loading in I-series DB2 Instances
+ - Bug fix for Table Loading in I-series DB2 Instances
 
 ## SSMA v9.4
 

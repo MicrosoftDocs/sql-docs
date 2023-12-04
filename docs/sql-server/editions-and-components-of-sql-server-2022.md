@@ -233,7 +233,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Dynamic data masking | Yes | Yes | Yes | Yes | Yes |
 | Server audit | Yes | Yes | Yes | Yes | Yes |
 | Database audit | Yes | Yes | Yes | Yes | Yes |
-| Transparent Database Encryption (TDE) | Yes | Yes | Yes | No | No |
+| Transparent data encryption (TDE) | Yes | Yes | Yes | No | No |
 | Extensible key management (EKM) | Yes | Yes | No | No | No |
 | User-defined roles | Yes | Yes | Yes | Yes | Yes |
 | Contained databases | Yes | Yes | Yes | Yes | Yes |
@@ -242,7 +242,7 @@ SQL Server 2022 includes features for connecting to [Azure Synapse Analytics](/a
 | Ledger for SQL Server | Yes | Yes | Yes | Yes | Yes |
 | Azure Active Directory authentication <sup>1</sup> | Yes | Yes | Yes | Yes | Yes |
 
-<sup>1</sup> Requires an Azure Arc-enabled SQL Server
+<sup>1</sup> Requires SQL server enabled by Azure Arc
 
 ## <a id="Replication"></a> Replication
 

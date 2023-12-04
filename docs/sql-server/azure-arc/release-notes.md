@@ -1,17 +1,21 @@
 ---
-title: Azure Arc-enabled SQL Server - Release notes
-description: Latest release notes
+title: Release notes
+description: Latest release notes for SQL Server enabled by Azure Arc
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray, randolphwest
-ms.date: 11/14/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.custom: ignite-2023
 ---
 
-# Release notes - Azure Arc-enabled SQL Server
+# Release notes - SQL Server enabled by Azure Arc
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+## December 1, 2023
+
+**Extension version**: `1.1.2512.104`
 
 ## November 14, 2023
 
@@ -30,10 +34,10 @@ For information about database status and inventory capabilities, review [View S
 
 #### Back up and restore
 
-- Configure backups at instance level using custom schedule for Azure Arc-enabled SQL Server instances for both portal and CLI - public preview.
+- Configure backups at instance level using custom schedule for [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instances for both portal and CLI - public preview.
   - Configure Automated Backups with a custom schedule and custom retention period, on an Arc enabled SQL Server.
   
-  For more information, review [Manage automated backups - Azure Arc-enabled SQL Server](backup-local.md).
+  For more information, review [Manage automated backups - [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](backup-local.md).
 
 - Point-in-time-restore using Azure CLI and Azure portal - public preview.
   - Restore a database to a point-in-time restore of their databases, if automatic backups are enabled. Restore can be done either from Azure portal or via az CLI.
@@ -42,9 +46,9 @@ For information about database status and inventory capabilities, review [View S
 
 #### Monitoring
 
-- Performance dashboards of an individual Azure Arc-enabled SQL Server instance in the Azure portal - public preview.
+- Performance dashboards of an individual [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance in the Azure portal - public preview.
 
-For more information, review [Monitor Azure Arc-enabled SQL Server](sql-monitoring.md).
+For more information, review [Monitor [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](sql-monitoring.md).
 
 #### High availability
 
@@ -69,7 +73,7 @@ For information, review [Proxy bypass for private endpoints](/azure/azure-arc/se
 
 - Enable extended support updates (ESU) for failover clusters (general availability).
 
-- Azure Arc-enabled SQL Server failover cluster (preview).
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] failover cluster (preview).
 
   - Features include:
     - Render failover cluster instances in Azure portal.
@@ -133,7 +137,7 @@ For information, review [Proxy bypass for private endpoints](/azure/azure-arc/se
 ### Azure extension for SQL Server
 
 - Support for automated backups for all supported versions of SQL Server. For information, review [Configure automatic backups](point-in-time-restore.md).
-- Provide a name for the server that host an Azure Arc-enabled SQL Server instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
+- Provide a name for the server that hosts a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance when you enable SQL Server for Azure Arc. Use parameter `--machineName <"ArcServerName">`. For information, see [Connect your SQL Server to Azure Arc with installer (.msi)](connect-with-installer.md), or [Connect SQL Server machines at scale with a Configuration Manager custom task sequence](onboard-configuration-manager-custom-task.md).
 
 ### Additional improvements
 
@@ -184,7 +188,7 @@ For information, review [Proxy bypass for private endpoints](/azure/azure-arc/se
   The SQL best practices assessment feature of the Azure portal:
 
   - Identifies possible performance issues
-  - Evaluates that your Azure Arc-enabled SQL Server is configured to follow best practices
+  - Evaluates that your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is configured to follow best practices
   - Provides comprehensive mitigation guidance
   - To experience best practices assessment, upgrade to the latest extension version.
 - Azure Arc-enabled Database resource populates the earliest restore time and last backup time for database resources as a resource

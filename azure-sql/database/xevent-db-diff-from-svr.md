@@ -4,7 +4,7 @@ description: Describes extended events (XEvents) in Azure SQL Database, and how 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 11/06/2023
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: reference
@@ -38,6 +38,8 @@ There are two examples to help you get started with Extended Events in Azure SQL
 
 - [Create a session with an event_file target in Azure Storage](xevent-code-event-file.md). This example shows you how to capture event data in a file (blob) in Azure Storage using the `event_file` target. Use this if you need to persist captured event data, or if you want to use event viewer in SQL Server Management Studio (SSMS) to analyze captured data.
 - [Create a session with a ring_buffer target in memory](xevent-code-ring-buffer.md). This example shows you how to capture the latest events from an event session in memory using the `ring_buffer` target. Use this as a quick way to look at recent events during ad hoc investigations or troubleshooting, without having to store captured event data.
+
+Extended Events can be used to monitor read-only replicas. For more information, see [Read queries on replicas](read-scale-out.md#monitor-read-only-replicas-with-extended-events).
 
 ## Best practices
 

@@ -4,7 +4,7 @@ description: Release notes for SQL Server Management Studio (SSMS).
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan
-ms.date: 11/13/2023
+ms.date: 11/29/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: conceptual
@@ -105,9 +105,13 @@ SSMS 19.2 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details | Workaround |
 | -------- | ------- | ---------- |
 | Analysis Services | When you connect to Analysis Services with Microsoft Entra MFA, if you add a new role or open properties for a role, the message “the identity of the user being added to the role is not fetched properly” appears. | This error is benign and can be ignored.  It will be addressed within the Azure infrastructure soon, and no updates to SSMS are required. |
+| Analysis Services | After adding a new role, or when opening properties for an existing role, you can't use **Search by name or email address** to add a user. | A user can be added with the **Manual Entry** option. |
+| Availability Groups | The primary server name looks empty in the Availability Group Dashboard because the text is white. | Select another entry in the dashboard and the primary server name will appear, or use an earlier version of SSMS 19. |
 | Database Designer | Selecting the Design option for a view that references a table using spatial data causes SSMS to crash. | Use T-SQL to make changes to the view. |
 | General SSMS | Import settings from SSMS 17 option not available. | Settings can be imported from SSMS 18. |
+| Installer | Users may be prompted to update to the new release of SQL Server Management Studio, even if version 19.2 is installed, with the automatic check for updates enabled. | Use Add/Remove Programs to remove the extra installation. |
 | Link feature for Azure SQL Managed Instance | After you remove an existing mirroring endpoint certificate on SQL Server, link creation through the wizard might fail due to unestablished trust between SQL Server and Azure SQL Managed Instance, even though all checks are successful. | Use PowerShell command ``Get-AzSqlInstanceServerTrustCertificate`` to check whether SQL Server mirroring endpoint certificate named "<SQL_Server_Instance_Name>" exists in the Azure SQL Managed Instance. If so, use PowerShell command ``Remove-AzSqlInstanceServerTrustCertificate`` to remove it before a new link creation attempt. |
+| Linked servers | Creating a linked server to Azure SQL Database with SQL Server selected as Server type connects to the master database. | To create a linked server to Azure SQL Database, select **Other data source** for the **Server type**, and select **Microsoft OLE DB Provider for SQL Server** or **Microsoft OLE DB Driver for SQL Server** as the **Provider**. Enter logical server name in the Data source field, and enter database name in the Catalog field. |
 | PolyBase | PolyBase node isn't visible in Object Explorer when connecting to SQL 2022. | Use SSMS 18.12.1. |
 | Profiler | The Profiler menu isn't localized. | No current alternative. |
 | Replication | If Azure SQL Managed Instance is the publisher and SSMS is running on a machine which isn't in the same vNet as the publisher, you won't be able to insert a tracer token via Replication Monitor. | To insert tracer tokens, use Replication Monitor in SSMS on a machine that is in the same vNet as the Azure SQL Managed Instance publisher. |

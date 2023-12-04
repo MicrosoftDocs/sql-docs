@@ -44,13 +44,13 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 - **SQL Server on Azure Virtual Machines.** ESUs are free and enabled by default.
 
-- **SQL Server on-premises or a hosted environment.** ESUs are free and enabled by default on the following Azure services:
+- **SQL Server on-premises or a hosted environment.** ESUs are free on the following Azure services:
 
   - Azure Stack HCI
 
   - Azure Stack Hub
 
-- **SQL Server on-premises or a hosted environment, and connected to Azure Arc.** You can use Extended Security Updates enabled by Azure Arc to enable ESU as a monthly subscription. The updates are automatically installed when they're available. You also benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides. If you migrate your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure or upgrade the subscription, charges then automatically stop. You can cancel the ESU subscription manually at any time.
+- **SQL Server on-premises or a hosted environment, and connected to Azure Arc.** You can use Extended Security Updates enabled by Azure Arc to enable ESU as a monthly subscription. The updates can be automatically installed when they're available. You also benefit from the features that [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../azure-arc/overview.md) provides. If you migrate your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure or upgrade the subscription, charges then automatically stop. You can cancel the ESU subscription manually at any time.
 
 - **SQL Server on-premises or in a hosted environment, and not connected to Azure Arc.** You can purchase the ESU SKU through the Volume Licensing Service Center (VLSC), and manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on the Azure portal to receive the patches. For more information, see  [Register disconnected SQL Server instances for ESUs](#register-instances-for-esus) later in this article.
 
@@ -112,7 +112,7 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription, which provides you with the flexibility to cancel at any time without having to separately purchase an ESU SKU. The ESU subscription enables automated deployment of the patches as they are released.
 
-You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Configure Azure Arc-enabled SQL Server](../azure-arc/manage-configuration.md).
+You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Configure [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../azure-arc/manage-configuration.md).
 
 ### [Azure portal](#tab/portal)
 
@@ -171,7 +171,6 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
-
 
 ---
 
@@ -262,7 +261,6 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
-
 
 ---
 

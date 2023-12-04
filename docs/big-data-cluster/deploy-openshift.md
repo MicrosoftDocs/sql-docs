@@ -122,7 +122,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    - [Other customizations](deployment-custom-configuration.md)
 
    > [!NOTE]
-   > Integrating with Azure Active Directory for BDC is not supported, hence you can not use this authentication method when deploying on ARO.
+   > Integration with Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)) for BDC is not supported, hence you can't use this authentication method when deploying on ARO.
 
 1. Set [environment variables](deployment-guidance.md#env)
 

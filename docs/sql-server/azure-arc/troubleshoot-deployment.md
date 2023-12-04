@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Azure Arc-enabled SQL Server deployment"
-description: "Describes how to troubleshoot Azure Arc-enabled SQL Server deployment."
+title: "Troubleshoot deployment"
+description: "Describes how to troubleshoot SQL Server enabled by Azure Arc deployment."
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 02/01/2023

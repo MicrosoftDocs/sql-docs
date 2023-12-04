@@ -1,21 +1,22 @@
 ---
 title: Configure availability groups for SQL Server on SLES virtual machines in Azure - Linux virtual machines
 description: Learn about setting up high availability in an SLES cluster environment and set up STONITH
-author: rwestMSFT
-ms.author: randolphwest
-ms.reviewer: amitkh
-ms.date: 09/25/2023
+author: aravindmahadevan-ms
+ms.author: armaha
+ms.reviewer: amitkh-msft, randolphwest
+ms.date: 11/29/2023
 ms.service: virtual-machines-sql
 ms.subservice: hadr
-ms.custom: devx-track-azurecli
 ms.topic: tutorial
+ms.custom:
+  - devx-track-azurecli
 ---
 # Tutorial: Configure availability groups for SQL Server on SLES virtual machines in Azure
 
-[!INCLUDE[appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
+[!INCLUDE [appliesto-sqlvm](../../includes/appliesto-sqlvm.md)]
 
 > [!NOTE]  
-> We use [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] with SUSE Linux Enterprise Server (SLES) v15 in this tutorial, but it is possible to use [!INCLUDE [sssql19-md](../../../docs/includes/sssql19-md.md)] with SLES v12 or SLES v15, to configure high availability.
+> We use [!INCLUDE [sssql22-md](../../../docs/includes/sssql22-md.md)] with SUSE Linux Enterprise Server (SLES) v15 in this tutorial, but it's possible to use [!INCLUDE [sssql19-md](../../../docs/includes/sssql19-md.md)] with SLES v12 or SLES v15, to configure high availability.
 
 In this tutorial, you learn how to:
 
@@ -163,7 +164,7 @@ You should get the following results once the command completes:
    This tutorial uses `SUSE:sles-15-sp3-byos:gen1:2022.11.10`.
 
    > [!IMPORTANT]  
-   > Machine names must be less than 15 characters in length to set up an availability group. Usernames cannot contain upper case characters, and passwords must have between 12 and 72 characters.
+   > Machine names must be less than 15 characters in length to set up an availability group. Usernames can't contain upper case characters, and passwords must have between 12 and 72 characters.
 
 1. Create three VMs in the availability set. Replace these values in the following command:
 
@@ -235,7 +236,7 @@ Type `exit` to leave the SSH session.
 
 In order to complete this tutorial, your VMs must be registered with SUSEConnect to receive updates and support. You can then install the High Availability Extension module, or *pattern*, which is a set of packages that enables HA.
 
-It is easier to open an SSH session on each of the VMs (nodes) simultaneously, as the same commands must be run on each VM throughout the article.
+It's easier to open an SSH session on each of the VMs (nodes) simultaneously, as the same commands must be run on each VM throughout the article.
 
 If you're copying and pasting multiple `sudo` commands and are prompted for a password, the additional commands won't run. Run each command separately.
 
@@ -275,7 +276,7 @@ The required SSH key size is 4,096 bits. On each VM, change to the `/root/.ssh` 
 ssh-keygen -t rsa -b 4096
 ```
 
-During this step, you may be prompted to overwrite an existing SSH file. You must agree to this prompt. You don't need to enter a passphrase.
+During this step, you might be prompted to overwrite an existing SSH file. You must agree to this prompt. You don't need to enter a passphrase.
 
 ### Copy the public SSH keys
 
@@ -323,7 +324,7 @@ For this tutorial, your first VM (`sles1`) is **node 1**, your second VM (`sles2
 
 ### Cluster installation
 
-1. Run the following command to install the `ha-cluster-bootstrap` package on node 1, and then restart the node. In this example, it is the `sles1` VM.
+1. Run the following command to install the `ha-cluster-bootstrap` package on node 1, and then restart the node. In this example, it's the `sles1` VM.
 
    ```bash
    sudo zypper install ha-cluster-bootstrap
@@ -347,16 +348,16 @@ For this tutorial, your first VM (`sles1`) is **node 1**, your second VM (`sles2
      Generating csync2 shared key (this may take a while)...done
      csync2 checking files...done
      Detected cloud platform: microsoft-azure
-    
+
    Configure Corosync (unicast):
      This will configure the cluster messaging layer.  You will need
      to specify a network address over which to communicate (default
      is eth0's network, but you can use the network address of any
      active interface).
-    
+
      Address for ring0 [10.0.0.85]
      Port for ring0 [5405]
-    
+
    Configure SBD:
      If you have shared storage, for example a SAN or iSCSI target,
      you can use it avoid split-brain scenarios by configuring SBD.
@@ -365,7 +366,7 @@ For this tutorial, your first VM (`sles1`) is **node 1**, your second VM (`sles2
      across all nodes in the cluster, so /dev/disk/by-id/* devices
      are a good choice.  Note that all data on the partition you
      specify here will be destroyed.
-    
+
    Do you wish to use SBD (y/n)? n
    WARNING: Not configuring SBD - STONITH will be disabled.
      Hawk cluster interface is now running. To see cluster status, open:
@@ -374,25 +375,25 @@ For this tutorial, your first VM (`sles1`) is **node 1**, your second VM (`sles2
    WARNING: You should change the hacluster password to something more secure!
      Waiting for cluster..............done
      Loading initial cluster configuration
-    
+
    Configure Administration IP Address:
      Optionally configure an administration virtual IP
      address. The purpose of this IP address is to
      provide a single IP that can be used to interact
      with the cluster, rather than using the IP address
      of any specific cluster node.
-    
+
    Do you wish to configure a virtual IP address (y/n)? y
      Virtual IP []10.0.0.89
      Configuring virtual IP (10.0.0.89)....done
-    
+
    Configure Qdevice/Qnetd:
      QDevice participates in quorum decisions. With the assistance of
      a third-party arbitrator Qnetd, it provides votes so that a cluster
      is able to sustain more node failures than standard quorum rules
      allow. It is recommended for clusters with an even number of nodes
      and highly recommended for 2 node clusters.
-    
+
    Do you want to configure QDevice (y/n)? n
    Done (log saved to /var/log/crmsh/ha-cluster-bootstrap.log)
    ```
@@ -477,14 +478,14 @@ For this tutorial, your first VM (`sles1`) is **node 1**, your second VM (`sles2
     Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
     Last updated: Mon Mar  6 18:01:17 2023
     Last change:  Mon Mar  6 17:10:09 2023 by root via cibadmin on sles1
-   
+
    3 nodes configured
    1 resource instance configured
-   
+
    Online: [ sles1 sles2 sles3 ]
-   
+
    Full list of resources:
-   
+
     admin-ip       (ocf::heartbeat:IPaddr2):       Started sles1
    ```
 
@@ -589,22 +590,20 @@ Description    : A set of scripts to interface with several services
                  Pacemaker and rgmanager service managers.
 ```
 
-<a name='register-new-application-in-azure-active-directory'></a>
+### <a id="register-new-application-in-azure-active-directory"></a> Register new application in Microsoft Entra ID
 
-### Register new application in Microsoft Entra ID
+To register a new application in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), follow these steps:
 
-To register a new application in Microsoft Entra ID ([formerly Azure Active Directory](/azure/active-directory/fundamentals/new-name)), follow these steps: 
- 
- 1. Go to https://portal.azure.com
- 2. Open the [Microsoft Entra ID Properties blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties) and write down the `Tenant ID`. 
- 3. Select [**App registrations**](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
- 4. Select **New registration**.
- 5. Enter a **Name** like `<resourceGroupName>-app`. For **supported account types** select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
- 6. Select _Web_ for **Redirect URI**, and enter a URL (for example, http://localhost) and select **Add**. The sign-on URL can be any valid URL. Once done, select **Register**. 
- 7. Choose **Certificates and secrets** for your new App registration, then select **New client secret**.
- 8. Enter a description for a new key (client secret), and then select **Add**. 
- 9. Write down the value of the secret. It is used as the password for the Service Principal.
-10. Select **Overview**. Write down the Application ID. It is used as the username (login ID in the steps below) of the Service Principal.
+1. Go to <https://portal.azure.com>.
+1. Open the [Microsoft Entra ID Properties pane](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties) and write down the `Tenant ID`.
+1. Select **[App registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)**.
+1. Select **New registration**.
+1. Enter a **Name** like `<resourceGroupName>-app`. For **supported account types** select **Accounts in this organizational directory only (Microsoft only - Single tenant)**.
+1. Select *Web* for **Redirect URI**, and enter a URL (for example, http://localhost) and select **Add**. The sign-on URL can be any valid URL. Once done, select **Register**.
+1. Choose **Certificates and secrets** for your new App registration, then select **New client secret**.
+1. Enter a description for a new key (client secret), and then select **Add**.
+1. Write down the value of the secret. It's used as the password for the *service principal*.
+1. Select **Overview**. Write down the Application ID. It's used as the username (login ID in the steps below) of the service principal.
 
 ### Create custom role for the fence agent
 
@@ -863,7 +862,7 @@ sudo systemctl restart mssql-server
 1. Connect to **all nodes** using SQL Server Management Studio (SSMS) or **sqlcmd**. Run the following commands to enable an AlwaysOn_health session and create a master key:
 
    > [!IMPORTANT]  
-   > If you are connecting remotely to your SQL Server instance, you will need to have port 1433 open on your firewall. You'll also need to allow inbound connections to port 1433 in your NSG for each VM. For more information, see [Create a security rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) for creating an inbound security rule.
+   > If you're connecting remotely to your SQL Server instance, you'll need to have port 1433 open on your firewall. You'll also need to allow inbound connections to port 1433 in your NSG for each VM. For more information, see [Create a security rule](/azure/virtual-network/manage-network-security-group#create-a-security-rule) for creating an inbound security rule.
 
    - Replace the `<MasterKeyPassword>` with your own password.
 
@@ -1064,14 +1063,14 @@ On all SQL Server instances, save the credentials used for the SQL Server login.
    GRANT ALTER, CONTROL, VIEW DEFINITION
        ON AVAILABILITY GROUP::ag1 TO pacemakerLogin;
    GO
-   
+
    GRANT VIEW SERVER STATE TO pacemakerLogin;
    GO
    ```
 
 1. Once the secondary replicas are joined, you can see them in SSMS Object Explorer by expanding the **Always On High Availability** node:
 
-   :::image type="content" source="./media/sles-high-availability-stonith-tutorial/availability-group-joined.png" alt-text="Screenshot shows the primary and secondary availability replicas.":::
+   :::image type="content" source="media/sles-high-availability-fencing-tutorial/availability-group-joined.png" alt-text="Screenshot shows the primary and secondary availability replicas.":::
 
 ### Add a database to the availability group
 
@@ -1174,23 +1173,22 @@ sudo systemctl enable pacemaker
 
    ```output
    Cluster Summary:
-    Stack: corosync
-    Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
-    Last updated: Mon Mar  6 18:38:17 2023
-    Last change:  Mon Mar  6 18:38:09 2023 by root via cibadmin on sles1
-   
-   3 nodes configured
-   5 resource instances configured
+     * Stack: corosync
+     * Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
+     * Last updated: Mon Mar  6 18:38:17 2023
+     * Last change:  Mon Mar  6 18:38:09 2023 by root via cibadmin on sles1
+     * 3 nodes configured
+     * 5 resource instances configured
 
    Node List:
-    Online: [ sles1 sles2 sles3 ]
+     * Online: [ sles1 sles2 sles3 ]
 
    Full List of Resources:
-    admin-ip    (ocf::heartbeat:IPaddr2):        Started sles1
-    rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
-    Clone Set: ms-ag_cluster [ag_cluster] (promotable):
-     Masters: [ sles1 ]
-     Slaves: [ sles2 sles3 ]
+     * admin-ip    (ocf::heartbeat:IPaddr2):                Started sles1
+     * rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
+     * Clone Set: ms-ag_cluster [ag_cluster] (promotable):
+       * Masters: [ sles1 ]
+       * Slaves: [ sles2 sles3 ]
    ```
 
 1. Run the following command to review the constraints:
@@ -1269,45 +1267,43 @@ To ensure that the configuration has succeeded so far, test a failover. For more
 
    ```output
    Cluster Summary:
-    Stack: corosync
-    Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
-    Last updated: Mon Mar  6 18:40:02 2023
-    Last change:  Mon Mar  6 18:39:53 2023 by root via crm_resource on sles1
-
-   3 nodes configured
-   5 resource instances configured
+     * Stack: corosync
+     * Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
+     * Last updated: Mon Mar  6 18:40:02 2023
+     * Last change:  Mon Mar  6 18:39:53 2023 by root via crm_resource on sles1
+     * 3 nodes configured
+     * 5 resource instances configured
 
    Node List:
-    Online: [ sles1 sles2 sles3 ]
+     * Online: [ sles1 sles2 sles3 ]
 
    Full List of Resources:
-    admin-ip    (ocf::heartbeat:IPaddr2):        Stopped
-    rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
-    Clone Set: ms-ag_cluster [ag_cluster] (promotable):
-     Slaves: [ sles1 sles2 sles3 ]
+     * admin-ip    (ocf::heartbeat:IPaddr2):                Stopped
+     * rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
+     * Clone Set: ms-ag_cluster [ag_cluster] (promotable):
+       * Slaves: [ sles1 sles2 sles3 ]
    ```
 
 1. After some time, the `sles2` VM is now the primary, and the other two VMs are secondaries. Run `sudo crm status` once again, and review the output, which is similar to the following example:
 
    ```output
    Cluster Summary:
-    Stack: corosync
-    Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
-    Last updated: Tue Mar  6 22:00:44 2023
-    Last change:  Mon Mar  6 18:42:59 2023 by root via cibadmin on sles1
-
-   3 nodes configured
-   5 resource instances configured
+     * Stack: corosync
+     * Current DC: sles1 (version 2.0.5+20201202.ba59be712-150300.4.30.3-2.0.5+20201202.ba59be712) - partition with quorum
+     * Last updated: Tue Mar  6 22:00:44 2023
+     * Last change:  Mon Mar  6 18:42:59 2023 by root via cibadmin on sles1
+     * 3 nodes configured
+     * 5 resource instances configured
 
    Node List:
-    Online: [ sles1 sles2 sles3 ]
+     * Online: [ sles1 sles2 sles3 ]
 
    Full List of Resources:
-    admin-ip    (ocf::heartbeat:IPaddr2):        Started sles2
-    rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
-    Clone Set: ms-ag_cluster [ag_cluster] (promotable):
-     Masters: [ sles2 ]
-     Slaves: [ sles1 sles3 ]
+     * admin-ip    (ocf::heartbeat:IPaddr2):                Started sles2
+     * rsc_st_azure        (stonith:fence_azure_arm):       Started sles2
+     * Clone Set: ms-ag_cluster [ag_cluster] (promotable):
+       * Masters: [ sles2 ]
+       * Slaves: [ sles1 sles3 ]
    ```
 
 1. Check your constraints again, using `crm config show`. Observe that another constraint was added because of the manual failover.
@@ -1328,6 +1324,7 @@ You can test STONITH by running the following command. Try running the below com
 sudo crm node fence sles3
 ```
 
-## See also
+## Next step
 
-- [Tutorial: Configure an availability group listener for SQL Server on RHEL virtual machines in Azure](rhel-high-availability-listener-tutorial.md)
+> [!div class="nextstepaction"]
+> [Tutorial: Configure an availability group listener on Linux virtual machines](high-availability-listener-tutorial.md)

@@ -5,16 +5,18 @@ description: Learn how Azure SQL Database automatically backs up all databases a
 author: SudhirRaparla
 ms.author: nvraparl
 ms.reviewer: mathoma, wiassaf, danil
-ms.date: 09/12/2023
+ms.date: 11/27/2023
 ms.service: sql-database
 ms.subservice: backup-restore
 ms.topic: conceptual
-ms.custom: references_regions, azure-sql-split
-monikerRange: "= azuresql || = azuresql-db"
+ms.custom:
+  - references_regions
+  - azure-sql-split
+monikerRange: "=azuresql||=azuresql-db"
 ---
 # Automated backups in Azure SQL Database
 
-[!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](automated-backups-overview.md?view=azuresql-db&preserve-view=true)
@@ -55,9 +57,9 @@ The storage redundancy mechanism stores multiple copies of your data so that it'
 
 By default, new databases in Azure SQL Database store backups in geo-redundant [storage blobs](/azure/storage/common/storage-redundancy) that are replicated to a [paired region](/azure/availability-zones/cross-region-replication-azure). Geo-redundancy helps protect against outages that affect backup storage in the primary region. It also allows you to restore your databases in a different region in the event of a regional outage. 
 
-The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only.
+The Azure portal provides a **Workload environment** option that helps to preset some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only.
 
-- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally redundant storage. Locally redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally redundant storage. Locally redundant storage incurs less cost and is appropriate for preproduction environments that do not require the redundance of zone- or geo-replicated storage. 
 - Choosing the **Production** workload environment sets the **Backup storage redundancy** to geo-redundant storage, the default. 
 - The **Workload environment** option also changes the initial setting for compute, though this can be overridden. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings. 
 
@@ -103,13 +105,13 @@ You can use automatically created backups in the following scenarios:
 - [Restore a database from a specific long-term backup](long-term-retention-overview.md) of a single or pooled database, if the database has been configured with an LTR policy. LTR allows you to [restore an older version of the database](long-term-backup-retention-configure.md) by using the Azure portal, the Azure CLI, or Azure PowerShell to satisfy a compliance request or to run an older version of the application. For more information, see [Long-term retention](long-term-retention-overview.md).
 
 
-## <a id="restore-capabilities"></a>Restore capabilities and features
+## <a id="restore-capabilities"></a> Restore capabilities and features
 
 This table summarizes the capabilities and features of [point-in-time restore (PITR)](recovery-using-backups.md#point-in-time-restore), [geo-restore](recovery-using-backups.md#geo-restore), and [long-term retention](long-term-retention-overview.md).
 
 | Backup property | PITR | Geo-restore | LTR |
 |---|---|---|---|
-| **Types of SQL backup** | Full, differential, log. | Replicated copies of PITR backups. | Only the full backups. |
+| **Types of SQL backup** | Full, differential, log. | Most recent geo-replicated copies of PITR backups. | Only the full backups. |
 | **Recovery point objective (RPO)** | 10 minutes, based on compute size and amount of database activity. | Up to 1 hour, based on geo-replication.\*  | One week (or user's policy).|
 | **Recovery time objective (RTO)** | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). | Restore usually takes less than 12 hours but could take longer, depending on size and activity. See [Recovery](recovery-using-backups.md#recovery-time). |
 | **Retention** | 7 days by default, configurable between 1 and 35 days (except Basic databases, which are configurable between 1 and 7 days). | Enabled by default, same as source.\*\* | Not enabled by default. Retention is up to 10 years. |
@@ -175,17 +177,17 @@ Azure SQL Database computes your total used backup storage as a cumulative value
 
 For vCore databases in Azure SQL Database, the storage that each type of backup (full, differential, and log) consumes is reported on the database monitoring pane as a separate metric. The following screenshot shows how to monitor the backup storage consumption for a single database. 
 
-:::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal.":::
+:::image type="content" source="./media/automated-backups-overview/backup-metrics.png" alt-text="Screenshot that shows selections for monitoring database backup consumption in the Azure portal." lightbox="./media/automated-backups-overview/backup-metrics.png":::
 
 For instructions on how to monitor consumption in Hyperscale, see [Monitor Hyperscale backup consumption](hyperscale-automated-backups-overview.md#monitor-backup-storage-consumption).
 
 ### Fine-tune backup storage consumption
 
-Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption will depend on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
+Backup storage consumption up to the maximum data size for a database is not charged. Excess backup storage consumption depends on the workload and maximum size of the individual databases. Consider some of the following tuning techniques to reduce your backup storage consumption:
 
 - Reduce the [backup retention period](automated-backups-change-settings.md#change-short-term-retention-policy) to the minimum for your needs.
 - Avoid doing large write operations, like index rebuilds, more often than you need to.
-- For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of non-clustered indexes.
+- For large data load operations, consider using [clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview) and following related [best practices](/sql/relational-databases/indexes/columnstore-indexes-data-loading-guidance). Also consider reducing the number of nonclustered indexes.
 - In the General Purpose service tier, the provisioned data storage is less expensive than the price of the backup storage. If you have continually high excess backup storage costs, you might consider increasing data storage to save on the backup storage.
 - Use `tempdb` instead of permanent tables in your application logic for storing temporary results or transient data.
 - Use locally redundant backup storage whenever possible (for example, dev/test environments).
@@ -215,13 +217,13 @@ For SQL Database, you can configure full long-term retention (LTR) backups for u
 
 To meet various compliance requirements, you can select different retention periods for weekly, monthly, and/or yearly full backups. The frequency depends on the policy. For example, setting `W=0, M=1` would create an LTR copy monthly. For more information about LTR, see [Long-term retention](long-term-retention-overview.md). 
 
-Updating the backup storage redundancy for an existing database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database will continue to reside in the existing storage blob. New backups will be replicated based on the configured backup storage redundancy. 
+Updating the backup storage redundancy for an existing database applies the change only to subsequent backups taken in the future and not for existing backups. All existing LTR backups for the database continue to reside in the existing storage blob. New backups are replicated based on the configured backup storage redundancy. 
 
 Storage consumption depends on the selected frequency and retention periods of LTR backups. You can use the [LTR pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=sql-database) to estimate the cost of LTR storage.
 
 When restoring a Hyperscale database from an LTR backup, the read scale property is disabled. To enable, read scale on the restored database, update the database after it has been created. You need to specify the target service level objective when restoring from an LTR backup. 
 
-Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers after June 2022. LTR support for all other Hyperscale databases will be added over the next several weeks. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you will receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
+Long-term retention can be enabled for Hyperscale databases created or migrated from other service tiers. If you attempt to enable LTR for a Hyperscale database where it is not yet supported, you receive the following error: "An error has occurred while enabling Long-term backup retention for this database. Please reach out to Microsoft support to enable long-term backup retention." In this case, reach out to Microsoft support and please create a support ticket to resolve this.
 
 ## Backup storage costs
 
@@ -286,15 +288,15 @@ You can monitor total backup storage consumption for each backup type (full, dif
 To understand backup storage costs, go to **Cost Management + Billing** in the Azure portal. Select **Cost Management**, and then select **Cost analysis**. Select the desired subscription for **Scope**, and then filter for the time period and service that you're interested in as follows:
 
 1. Add a filter for **Service name**.
-2. In the dropdown list, select **sql database** for a single database or an elastic database pool.
-3. Add another filter for **Meter subcategory**.
-4. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters will show up only if backup storage consumption exists.
+1. In the dropdown list, select **sql database** for a single database or an elastic database pool.
+1. Add another filter for **Meter subcategory**.
+1. To monitor PITR backup costs, in the dropdown list, select **single/elastic pool pitr backup storage** for a single database or an elastic database pool. Meters will show up only if backup storage consumption exists.
    
    To monitor LTR backup costs, in the dropdown list, select **ltr backup storage** for a single database or an elastic database pool. Meters will show up only if backup storage consumption exists.
 
 The **Storage** and **compute** subcategories might also interest you, but they're not associated with backup storage costs.
 
-:::image type="content" source="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs.":::
+:::image type="content" source="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png" alt-text="Screenshot that shows an analysis of backup storage costs." lightbox="./media/automated-backups-overview/check-backup-storage-cost-sql-mi.png":::
 
 > [!IMPORTANT]
 > Meters are visible only for counters that are currently in use. If a counter is not available, it's likely that the category is not currently being used. For example, storage counters won't be visible for resources that are not consuming storage. If there is no PITR or LTR backup storage consumption, these meters won't be visible.
@@ -309,7 +311,7 @@ If your database is encrypted with TDE, backups are automatically encrypted at r
 
 On an ongoing basis, the Azure SQL engineering team automatically tests the restore of automated database backups. Upon point-in-time restore, databases also receive DBCC CHECKDB integrity checks.
 
-Any issues found during an integrity check will result in an alert to the engineering team. For more information, see [Data integrity in SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/).
+Any issues found during an integrity check result in an alert to the engineering team. For more information, see [Data integrity in SQL Database](https://azure.microsoft.com/blog/data-integrity-in-azure-sql-database/).
 
 All database backups are taken with the CHECKSUM option to provide additional backup integrity.
 
@@ -326,16 +328,16 @@ If you have data residency requirements that require you to keep all your data i
 
 Azure Policy is a service that you can use to create, assign, and manage policies that apply rules to Azure resources. Azure Policy helps you to keep these resources compliant with your corporate standards and service-level agreements. For more information, see [Overview of Azure Policy](/azure/governance/policy/overview). 
 
-### Built-in backup storage redundancy policies 
+### Built-in backup storage redundancy policies
 
 To enforce data residency requirements at an organizational level, you can assign policies to a subscription by using the [Azure portal](/azure/governance/policy/assign-policy-portal) or [Azure PowerShell](/azure/governance/policy/assign-policy-powershell). For example, if you assign the following built-in policy, users in the subscription won't be able to create a database with geo-redundant backup storage via the Azure portal or Azure PowerShell: [SQL Database should avoid using GRS backup redundancy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fb219b9cf-f672-4f96-9ab0-f5a3ac5e1c13).
 
-For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md). 
+For a full list of built-in policy definitions for SQL Database, review the [policy reference](./policy-reference.md).
 
 > [!IMPORTANT]
 > Azure policies are not enforced when you're creating a database via T-SQL. To specify data residency when you're creating a database by using T-SQL, [use LOCAL or ZONE as input to the BACKUP_STORAGE_REDUNDANCY parameter in the CREATE DATABASE statement](/sql/t-sql/statements/create-database-transact-sql#create-database-using-zone-redundancy-for-backups).
 
-## Next steps
+## Related content
 
 - To learn about other SQL Database business continuity solutions, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To change backup settings, see [Change settings](automated-backups-change-settings.md). 

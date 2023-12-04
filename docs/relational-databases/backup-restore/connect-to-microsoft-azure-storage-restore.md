@@ -20,7 +20,7 @@ The dialog box in SQL Server Management Studio (SSMS) allows you to specify the 
 ## Azure Storage Account
 
  **Storage account**  
- Select, type or paste the name of the Azure storage account you want to use. The dropdown box lists the accounts previously used.  
+ Select, type or paste the name of the Azure storage account you want to use. The dropdown list box lists the accounts previously used.  
   
  **Account key**  
  Specify the Azure storage account access key.  

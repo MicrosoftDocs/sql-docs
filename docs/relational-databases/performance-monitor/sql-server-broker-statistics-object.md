@@ -27,17 +27,17 @@ helpviewer_keywords:
 |**Enqueued Local Messages Total**|The number of messages that have been put into the queues in the instance, counting only messages that did not arrive through the network.|  
 |**Enqueued Local Messages/sec**|The number of messages per second that have been put into the queues in the instance, counting only messages that did not arrive through the network.|  
 |**Enqueued Messages Total**|The total number of messages that have been put into the queues in the instance.|  
-|**Enqueued Messages/sec**|The number of messages per second that have been put into the queues in the instance. This includes messages of all priority levels.|  
-|**Enqueued P1 Msgs/sec**|The number of priority 1 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P2 Msgs/sec**|The number of priority 2 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P3 Msgs/sec**|The number of priority 3 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P4 Msgs/sec**|The number of priority 4 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P5 Msgs/sec**|The number of priority 5 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P6 Msgs/sec**|The number of priority 6 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P7 Msgs/sec**|The number of priority 7 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P8 Msgs/sec**|The number of priority 8 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P9 Msgs/sec**|The number of priority 9 messages per second that have been put into the queues in the instance.|  
-|**Enqueued P10 Msgs/sec**|The number of priority 10 messages per second that have been put into the queues in the instance.|  
+|**Enqueued Messages/sec**|The number of messages from local endpoints and the transport that are successfully delivered into local target queues per second, including messages of all priority levels.|  
+|**Enqueued P1 Msgs/sec**|The number of priority 1 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P2 Msgs/sec**|The number of priority 2 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P3 Msgs/sec**|The number of priority 3 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P4 Msgs/sec**|The number of priority 4 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P5 Msgs/sec**|The number of priority 5 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P6 Msgs/sec**|The number of priority 6 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P7 Msgs/sec**|The number of priority 7 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P8 Msgs/sec**|The number of priority 8 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P9 Msgs/sec**|The number of priority 9 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
+|**Enqueued P10 Msgs/sec**|The number of priority 10 messages from local endpoints and the transport that are successfully delivered into local target queues, per second.|  
 |**Enqueued Transmission Msgs/sec**|The number of messages that have been placed in the [!INCLUDE [ssSB](../../includes/sssb-md.md)] transmission queue per second.|  
 |**Enqueued Transport Msg Frag Tot**|The number of message fragments that have been put into the queues in the instance, counting only messages that arrived through the network.|  
 |**Enqueued Transport Msg Frags/sec**|The number of message fragments per second that have been put into the queues in the instance.|  

@@ -22,9 +22,9 @@ helpviewer_keywords:
 |**SQL Server Buffer Node** counters|Description|  
 |-------------------------------------|-----------------|  
 |**Database pages**|Indicates the number of pages in the buffer pool on this node with database content.|  
-|**Local node page lookups/sec**|Indicates the number of lookup requests from this node which were satisfied from this node.|  
-|**Page life expectancy**|Indicates the minimum number of seconds a page will stay in the buffer pool on this node without references.|  
-|**Remote node page lookups/sec**|Indicates the number of lookup requests from this node which were satisfied from other nodes.|  
+|**Local node page lookups/sec**|Indicates the number of lookup requests from this node that were satisfied from this node.|  
+|**Page life expectancy**|Indicates the minimum number of seconds a page stays in the buffer pool on this node without references.|  
+|**Remote node page lookups/sec**|Indicates the number of lookup requests from this node that were satisfied from other nodes.|  
   
  If SQL Server is running on non-NUMA hardware, the counters of **Buffer Node** and **Buffer Manager** objects should match.  
   

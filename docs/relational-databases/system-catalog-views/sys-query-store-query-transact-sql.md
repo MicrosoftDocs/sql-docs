@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sq
 |**context_settings_id**|**bigint**|Foreign key. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Note:** Azure Synapse Analytics will always return one (1).|  
 |**object_id**|**bigint**|ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). 0 if the query is not executed as part of a database object (ad hoc query).<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
 |**batch_sql_handle**|**varbinary(64)**|ID of the statement batch the query is part of. Populated only if query references temporary tables or table variables.<br/>**Note:** Azure Synapse Analytics will always return *NULL*.|  
-|**query_hash**|**binary(8)**|MD5 hash of the individual query, based on the logical query tree. Includes optimizer hints.|  
+|**query_hash**|**binary(8)**|Zobrist hash over the shape of the individual query, based on the bound (input) logical query tree. Query hints are not included as part of the hash.|  
 |**is_internal_query**|**bit**|The query was generated internally.<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
 |**query_parameterization_type**|**tinyint**|Kind of parameterization:<br /><br /> 0 - None<br /><br /> 1 - User<br /><br /> 2 - Simple<br /><br /> 3 - Forced<br/>**Note:** Azure Synapse Analytics will always return zero (0).|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Textual description for the parameterization type.<br/>**Note:** Azure Synapse Analytics will always return *None*.|  

@@ -8,7 +8,7 @@ ms.reviewer: wiassaf, mikeray
 ms.date: 10/27/2023
 ms.service: sql
 ms.subservice: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
   - "COPY_TSQL"
   - "COPY INTO"

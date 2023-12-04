@@ -4,7 +4,7 @@ description: Learn how to create an elastic job agent and run scripts across man
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/13/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -315,7 +315,7 @@ EXEC jobs.sp_add_jobstep
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = '<resultsdb>',
-@output_table_name = '<resultstable>';
+@output_table_name = '<output_table_name>';
 
 --Create a job to monitor pool performance
 
@@ -361,7 +361,7 @@ SELECT elastic_pool_name , end_time, elastic_pool_dtu_limit, avg_cpu_percent, av
 @output_type = 'SqlDatabase',
 @output_server_name = 'server1.database.windows.net',
 @output_database_name = 'resultsdb',
-@output_table_name = 'resultstable';
+@output_table_name = '<output_table_name>';
 ```
 
 ## Run the job

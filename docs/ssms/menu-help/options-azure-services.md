@@ -18,7 +18,7 @@ dev_langs:
 
 Use this page to specify options related to Azure cloud services. To access this dialog box, go to **Tools > Options > Azure Services** from the top menu bar.
 
-[!INCLUDE [entra-id](../../includes/entra-id.md)
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
 
 ## Miscellaneous
 

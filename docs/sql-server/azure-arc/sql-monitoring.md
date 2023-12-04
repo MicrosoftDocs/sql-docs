@@ -29,6 +29,11 @@ In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../i
 * The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 * The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
 
+### Current Limitations
+* FCI clusters aren't supported at this time
+* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+
+
 ## Collected data
 
 The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
@@ -314,11 +319,6 @@ az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group
 ```
 
 Note that this command might run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
-
-## Limitations
-
-* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
-* FCI clusters aren't supported at this time
 
 ## Next steps
   

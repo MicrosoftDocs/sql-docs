@@ -57,7 +57,7 @@ By default, new databases in Azure SQL Database store backups in geo-redundant [
 
 The Azure portal provides a **Workload environment** option that helps to pre-set some configuration settings. These settings can be overridden. This option applies to the **Create SQL Database** portal page only.
 
-- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally-redundant storage. Locally-redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
+- Choosing the **development** workload environment sets the **Backup storage redundancy** option to use locally redundant storage. Locally redundant storage incurs less cost and is appropriate for pre-production environments that do not require the redundance of zone- or geo-replicated storage. 
 - Choosing the **Production** workload environment sets the **Backup storage redundancy** to geo-redundant storage, the default. 
 - The **Workload environment** option also changes the initial setting for compute, though this can be overridden. Otherwise, the **Workload environment** option has no impact on licensing or other database configuration settings. 
 
@@ -69,7 +69,7 @@ You can choose one of the following storage redundancies for backups:
 
 - **Locally redundant storage (LRS)**:  Copies your backups synchronously three times within a single physical location in the primary region. LRS is the least expensive storage option, but we don't recommend it for applications that require resiliency to regional outages or a guarantee of high data durability.
 
-   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally-redundant storage (LRS) option.":::
+   :::image type="content" source="../database/media/automated-backups-overview/multi-paired-lrs.svg" alt-text="Diagram showing the locally redundant storage (LRS) option.":::
 
 - **Zone-redundant storage (ZRS)**: Copies your backups synchronously across three Azure availability zones in the primary region. It's currently available in only [certain regions](/azure/storage/common/storage-redundancy#zone-redundant-storage). 
 

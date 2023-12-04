@@ -28,9 +28,9 @@ helpviewer_keywords:
   
  Monitoring disk activity involves two areas of focus:  
   
--   Monitoring Disk I/O and Detecting Excess Paging  
+-   Monitoring disk I/O and detecting excess paging  
   
--   Isolating Disk Activity That [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Creates  
+-   Isolating disk activity that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] creates  
   
  For more information, see [Monitoring Disk Usage](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx). 
  

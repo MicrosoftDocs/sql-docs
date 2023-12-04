@@ -3,10 +3,10 @@ title: "SQL Server Agent, Jobs object"
 description: Learn about the SQL Server Agent Jobs performance object, which contains performance counters that report information about SQL Server Agent jobs.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLAgent:Jobs"
   - "Jobs object"
@@ -36,9 +36,8 @@ helpviewer_keywords:
 |**Others**|Information for jobs that were not started by alerts or schedules. Typically these are jobs started manually using `sp_start_job`.|  
 |**Schedules**|Information for jobs started by schedules.|  
   
-## See also  
- [Implement Jobs](../../ssms/agent/implement-jobs.md)   
- [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Implement Jobs](../../ssms/agent/implement-jobs.md)
+- [Use Performance Objects](../../ssms/agent/use-performance-objects.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

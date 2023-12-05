@@ -125,7 +125,7 @@
   - name: Transparent Data Encryption
     href: ./transparent-data-encryption.md
   - name: Provision a certificate
-    href: ./provision-certificate.md
+    href: ./pdw-certificate-provisioning.md
   - name: Configure domain trusts
     href: ./configure-domain-trusts.md
 - name: Appliance management tasks

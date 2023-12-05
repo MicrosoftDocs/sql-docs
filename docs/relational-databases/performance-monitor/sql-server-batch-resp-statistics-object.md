@@ -3,10 +3,10 @@ title: "SQL Server, Batch Resp Statistics object"
 description: "Learn about the SQLServer:Batch Resp Statistics performance object, which provides counters to track SQL Server batch response times."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:Batch Resp Statistics"
 ---
@@ -58,6 +58,7 @@ WHERE object_name LIKE '%Batch Resp Statistics%';
 ```  
 
 
-## See also
-[SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
-[Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+## Related content
+
+- [SQL Server, Plan Cache object](sql-server-plan-cache-object.md)
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

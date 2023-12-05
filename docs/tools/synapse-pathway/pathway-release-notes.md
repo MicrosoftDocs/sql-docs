@@ -3,10 +3,10 @@ title: Release notes - Azure Synapse Pathway
 description: Azure Synapse Pathway release notes
 author: prlangad
 ms.author: prlangad
-ms.date: 02/10/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: tools-other
-ms.topic: overview
+ms.topic: release-notes
 ms.custom:
   - template-overview
   - intro-overview
@@ -33,7 +33,7 @@ This release of Synapse Pathway includes:
 - Fix for proper negative money values in Microsoft SQL Server.
 - Fix for warning/message emission as comment simplifying code deployments.
 
-```
+```sql
 ERROR_TRANSLATE(... 'ERROR')
 
 /* ERROR_TRANSLATE(... 'WARNING | MESSAGE' ...)
@@ -71,6 +71,7 @@ The initial release of Azure Synapse Pathway includes a GUI and console applicat
 > [!NOTE] 
 > Like any other Azure Service, all preview services are eligible for support, just without SLA's in place.
 
-## Next steps
+## Next step
 
-[Download Azure Synapse Pathway](synapse-pathway-download.md)
+> [!div class="nextstepaction"]
+> [Azure Synapse Pathway download](synapse-pathway-download.md)

@@ -11,9 +11,9 @@ ms.topic: how-to
 ---
 
 # PDW certificate provisioning - Analytics Platform System (PDW)
-The **PDW Certificate Provisioning** page of the Analytics Platform System **Configuration Manager** imports or removes the certificate used by the PDW region. Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads.  
+The **PDW Certificate Provisioning** page of the Analytics Platform System **Configuration Manager** imports or removes the certificate used by the PDW region. 
 
-Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads. 
+Using a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads.
   
 ## Prerequisites
 Before installing the certificate, do the following:  
@@ -69,7 +69,7 @@ SQL Server PDW will not encrypt current connection by using the imported certifi
 SQL Server PDW will continue to encrypt current connections, but will not use the removed certificate for new connections.  
   
 :::image type="content" source="./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png" alt-text="A screenshot of the Microsoft Analytics Platform System Configuration Manager, showing the Certificates page.":::
-  
+
 ## Related content
 
 - [Launch the Configuration Manager in Analytics Platform System](launch-the-configuration-manager.md)

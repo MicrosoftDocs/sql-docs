@@ -41,7 +41,7 @@ helpviewer_keywords:
   
 -   View Application Pages  
   
- If you're using predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, if you're using custom permission levels or editing the permissions assigned to a particular user or group, you must add the permission manually.  
+ If you're using predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, you must add the permission if you're using custom permission levels or editing the permissions assigned to a particular user or group.  
   
  "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server returns the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user '\<domain>\\<user\>' are insufficient for performing this operation."  
   

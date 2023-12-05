@@ -21,15 +21,15 @@ helpviewer_keywords:
   
  The default security settings might not provide the level of access that you want. If they don't, you can use the information provided in the following sections to learn which permissions are necessary for specific operations:  
   
--   [Permissions for viewing and managing reports](#permissionReports)  
+-   [Permissions to view and manage reports](#permissionReports)  
   
--   [Permissions for creating reports and using Report Builder](#permissionReportBuilder)  
+-   [Permissions create reports and use Report Builder](#permissionReportBuilder)  
   
--   [Permissions for creating and managing shared schedules](#permissionSharedSchedules)  
+-   [Permissions to create and manage shared schedules](#permissionSharedSchedules)  
   
--   [Permissions for creating and managing subscriptions](#permissionSubscriptions)  
+-   [Permissions to create and manage subscriptions](#permissionSubscriptions)  
   
--   [Permissions for creating and managing shared data sources and report models](#permissionDataSources)  
+-   [Permissions to create and manage shared data sources and report models](#permissionDataSources)  
   
  A few key permissions are required to complete almost any operation on a SharePoint site. These permissions aren't listed in the following task and permission tables, but you must include them if you're creating custom permission levels:  
   
@@ -45,7 +45,7 @@ helpviewer_keywords:
   
  "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server returns the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user '\<domain>\\<user\>' are insufficient for performing this operation."  
   
-##  <a name="permissionReports"></a> Permissions for viewing and managing reports  
+##  <a name="permissionReports"></a> Permissions to view and manage reports  
  Report definition permissions are defined through List permissions on the library that contains the report, but you can set permissions on individual reports if you want to restrict access. The following table provides a list of tasks and permissions that support each one.  
   
 |Task|Permission|  
@@ -63,7 +63,7 @@ helpviewer_keywords:
 |Delete snapshots in report history, and delete specific versions of report definitions that are checked out and modified over time.|**Delete Versions** on the library that contains the report for which you're deleting report history.|  
 |View snapshots in report history, and view specific versions of report definitions that are checked out and modified over time.|**Views Versions** on the library that contains the report.|  
   
-##  <a name="permissionReportBuilder"></a> Permissions for creating reports and using Report Builder  
+##  <a name="permissionReportBuilder"></a> Permissions to create reports and use Report Builder  
  Report Builder is a report authoring tool that you can use to create improvised reports. Report Builder uses report models as a data source to support improvised data exploration. You can load a model in Report Builder to create a report, run it, review data in the model, and optionally save the report to a library. Users who have sufficient permission can then open the same report and also perform improvised data exploration.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ helpviewer_keywords:
   
  Permissions to create and use subscriptions, report history, and set report or data processing options on a Report Builder report are the same as those permissions used for performing identical actions on standard report definition files.  
   
-##  <a name="permissionSharedSchedules"></a> Permissions for creating and managing shared schedules  
+##  <a name="permissionSharedSchedules"></a> Permissions to create and manage shared schedules  
  Shared schedules aren't documents stored in a library. For this reason, creating and managing these schedules requires site permissions. You can't restrict access to specific shared schedules. Any shared schedule that you create is available to any user who has Open permission throughout the site.  
   
  The following table provides a list of tasks and permissions for creating, managing, and using shared schedules:  
@@ -94,7 +94,7 @@ helpviewer_keywords:
 |Create, edit, or delete a shared schedule.|**Manage Web Site** on the site.|  
 |Select a shared schedule for subscription processing or data retrieval.|**Open** on the site that contains the library.|  
   
-##  <a name="permissionSubscriptions"></a> Permissions for creating and managing subscriptions  
+##  <a name="permissionSubscriptions"></a> Permissions to create and manage subscriptions  
  SharePoint enforces a dependency between subscription and view permissions. You can't subscribe to a report that you don't have permission to view. If you grant permissions to subscribe to a report, view permissions are granted automatically.  
   
  The following table provides a list of tasks and permissions for creating, managing, and using subscriptions:  
@@ -105,7 +105,7 @@ helpviewer_keywords:
 |Select a shared schedule to use with the subscription.|**Open** on the site that contains the library.|  
 |Create, edit, or delete any subscription throughout a site.|**Manage Alerts** on the site.|  
   
-##  <a name="permissionDataSources"></a> Permissions for creating and managing shared data sources and report models  
+##  <a name="permissionDataSources"></a> Permissions to create and manage shared data sources and report models  
  A shared data source (.rsds) file contains data source connection information that multiple reports and models can use. For standard reports, using an .rsds file to specify data source connection information is optional. For model-driven reports, using an .rsds file is required. A report model always uses an .rsds file to connect to external data sources.  
   
  You can set properties on shared data sources that determine whether individual users can view or manage shared data sources. Permissions to view or manage a shared data source are different from report viewing permissions. You can view a report that uses an .rsds file without having view permission on the .rsds file itself.  

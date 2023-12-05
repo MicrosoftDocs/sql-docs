@@ -1,6 +1,6 @@
 ---
 title: Acquire & configure loading server
-description: This article describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to Parallel Data Warehouse (PDW).
+description: This article describes how to acquire and configure a loading server as a nonappliance Windows system for submitting data loads to Parallel Data Warehouse (PDW).
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
@@ -11,7 +11,7 @@ ms.topic: how-to
 ---
 
 # Acquire and configure a loading server for Parallel Data Warehouse
-This article describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to Parallel Data Warehouse (PDW).  
+This article describes how to acquire and configure a loading server as a nonappliance Windows system for submitting data loads to Parallel Data Warehouse (PDW).  
   
 ## <a id="Basics"></a> Basics
 The loading server:  
@@ -20,7 +20,7 @@ The loading server:
   
 -   Is provided and managed by your own IT team. You might already have a server or servers that can be used for loading data into PDW.  
   
--   Is located in your own non-appliance rack, and cannot be placed within the Analytics Platform System appliance.  
+-   Is located in your own nonappliance rack, and cannot be placed within the Analytics Platform System appliance.  
   
 -   Is connected to the appliance through the Appliance InfiniBand network, or over Ethernet. For performance, we recommend using InfiniBand.  
   
@@ -44,16 +44,17 @@ Supported Operating Systems:
   
 The server must use the EN-US locale in order to use the dwloader Command-Line Loading tool. dwloader does not support other locales.  
   
-### Networking Requirements for Windows Server 2012 and Windows Server 2012 R2
+### Networking requirements for Windows Server 2012 and Windows Server 2012 R2
+
 Although not required for Loading, InfiniBand is the recommended connection type for loading servers. For best performance, use Windows Server 2012 or Windows Server 2012 R2, and the FDR InfiniBand network adapter to connect the Loading server to the appliance InfiniBand network.  
   
 To prepare for a Windows Server 2012 or Windows Server 2012 R2 InfiniBand connection:  
   
-1. Plan to rack the server close enough to the appliance so that you can connect it to the appliance InfiniBand switches. For more information from Mellanox Technologies about InfiniBand, see the whitepaper, [Introduction to InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
+1. Plan to rack the server close enough to the appliance so that you can connect it to the appliance InfiniBand switches. For more information from Mellanox Technologies about InfiniBand, see the whitepaper [Introduction to InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
   
 1. Purchase a Mellanox ConnectX-3 FDR InfiniBand single or dual port network adapter. We recommend purchasing the network adapter with two ports for fault tolerance during data transmission. A two port network adapter is required for high availability.  
   
-1. Purchase 2 FDR InfiniBand cables for a dual port card, or 1 FDR InfiniBand cable for a single port card. The FDR InfiniBand cables will connect the loading server to the appliance InfiniBand network. The cable length depends on the distance between the loading server and the appliance InfiniBand switches, according to your environment.  
+1. Purchase 2 FDR InfiniBand cables for a dual port card, or 1 FDR InfiniBand cable for a single port card. The FDR InfiniBand cables connect the loading server to the appliance InfiniBand network. The cable length depends on the distance between the loading server and the appliance InfiniBand switches, according to your environment.  
   
 ## <a id="Step3"></a> Step 3: Connect the server to the InfiniBand networks
 Use these steps to connect the loading server to the InfiniBand network. If the server is not using the InfiniBand network, skip this step.  
@@ -88,7 +89,7 @@ You are now ready to start loading data. For more information, see:
 1. [Load overview](load-overview.md)  
   
 ## Performance
-For best loading performance on Windows Server 2012 and beyond, turn on Instant File Initialization so that when data is overwritten, the operating system will not overwrite existing data with zeros. If this is a security risk because prior data still exists on the disks, then be sure to turn Instant File Initialization off.  
+For best loading performance on Windows Server 2012 and beyond, turn on Instant File Initialization so that when data is overwritten, the operating system will not overwrite existing data with zeros. If this is a security risk because prior data still exists on the disks, then be sure to turn off Instant File Initialization.  
   
 ## <a id="Security"></a> Security notices
 Since the data to load is not stored on the appliance, your IT team is responsible for managing all aspects of the security for your data to load. For example, this includes managing the security of the data to load, the security of the server used to store loads, and the security of the networking infrastructure that connects the loading server to the SQL Server PDW appliance.  
@@ -98,7 +99,7 @@ Since the data to load is not stored on the appliance, your IT team is responsib
   
 To reduce security risks with your data, we advise the following:  
   
--   Designate one Windows account that is used solely for the purpose of loading data into PDW. Allow this account to have permissions to the load location and nowhere else.  
+-   Designate one Windows account that is used solely for loading data into PDW. Allow this account to have permissions to the load location and nowhere else.  
   
 -   Designate one PDW user that has permissions to load data. Depending on your security requirements, you could have one specific user per database.  
   

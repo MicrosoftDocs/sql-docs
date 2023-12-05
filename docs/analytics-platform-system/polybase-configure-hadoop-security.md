@@ -4,7 +4,7 @@ description: Provides a reference for various configuration settings that affect
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 12/04/2023
+ms.date: 12/05/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: how-to
@@ -130,4 +130,4 @@ If you are using Hadoop encryption zone modify core-site.xml and hdfs-site.xml a
 
 ## Related content
 
--[Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop](polybase-configure-hadoop.md)
+- [Configure PolyBase in Analytics Platform System (PDW) to access external data in Hadoop](polybase-configure-hadoop.md)

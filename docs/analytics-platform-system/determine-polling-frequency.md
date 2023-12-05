@@ -26,7 +26,7 @@ Since PDW doesn't currently support proactive notifications when alerts occur, t
   
 A common interval to poll for alerts, which is also used by System Center Operations Manager, is **every 15 minutes**.  Obviously, you could query more or less frequently, but it isn't recommended to poll less than every six hours.  
   
-Polling more frequently is acceptable, but polling too frequently can clutter the [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV. Polling too frequently can make it difficult for users to diagnose query performance issues when they quickly rolls out of view.  
+Polling more frequently is acceptable, but polling too frequently can clutter the [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV. Polling too frequently can make it difficult for users to diagnose query performance issues when they quickly roll out of view.  
   
 ## Related content
 

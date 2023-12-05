@@ -1,17 +1,17 @@
 ---
 title: Configure System Center Operations Manager to monitor APS
-description: Follow these steps to configure the System Center Operations Manager (SCOM) management packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from SCOM.
+description: Follow these steps to configure the System Center Operations Manager (SCOM) management packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from Operations Manager.
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 12/04/2023
+ms.date: 12/05/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: how-to
 ---
 
 # Configure System Center Operations Manager (SCOM) to Monitor Analytics Platform System
-Follow these steps to configure the System Center Operations Manager (SCOM) Management Packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from SCOM.  
+Follow these steps to configure the System Center Operations Manager (SCOM) Management Packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from Operations Manager.  
   
 ## <a id="BeforeBegin"></a> Before you begin
 
@@ -19,7 +19,7 @@ Follow these steps to configure the System Center Operations Manager (SCOM) Mana
   
 System Center Operations Manager 2007 R2 must be installed and running.  
   
-The management packs must be installed and configured. See [Install the SCOM Management Packs (Analytics Platform System)](install-the-scom-management-packs.md) and [Import the SCOM Management Pack for PDW (Analytics Platform System)](import-the-scom-management-pack-for-pdw.md).  
+The management packs must be installed and configured. See [Install the Operations Manager Management Packs (Analytics Platform System)](install-the-scom-management-packs.md) and [Import the Operations Manager Management Pack for PDW (Analytics Platform System)](import-the-scom-management-pack-for-pdw.md).  
   
 ## <a id="ConfigureRunAsProfile"></a> Configure Run-As Profile in System Center
 To configure System Center, you have to perform following steps:  
@@ -36,7 +36,7 @@ Here are detailed instructions on how to do the tasks:
   
         :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png" alt-text="Screenshot showing the Create Run As Account option.":::
   
-    1. The **Create Run As Account Wizard** dialog will open. On the **Introduction** page, select **Next**.  
+    1. The **Create Run As Account Wizard** dialog opens. On the **Introduction** page, select **Next**.  
   
     1. On the **General Properties** page, select **Windows** from **Run As Account type** and specify "APS Watcher" as the **Display name**.  
   
@@ -65,7 +65,7 @@ Here are detailed instructions on how to do the tasks:
   
         :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png" alt-text="Screenshot showing the Properties option.":::
   
-    1. The **Run As Profile Wizard** dialog will open. Skip the **Introduction** page by selecting **Next**.  
+    1. The **Run As Profile Wizard** dialog opens. Skip the **Introduction** page by selecting **Next**.  
   
     1. On the **General Properties** page, select **Next**.  
   
@@ -81,7 +81,7 @@ Here are detailed instructions on how to do the tasks:
   
         :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png" alt-text="Screenshot showing the Appliances option.":::
   
-    1. Wait until the appliance appears in the list. The name of the appliance should be equal to one specified in the registry. After discovery completes you should see all appliances listed but not monitored. To enable monitoring, follow the next steps.  
+    1. Wait until the appliance appears in the list. The name of the appliance should be equal to one specified in the registry. After discovery completes, you should see all appliances listed but not monitored. To enable monitoring, follow the next steps.  
   
     > [!NOTE]  
     > The next steps can be completed in parallel while you are waiting for the initial appliance discovery to finish.  
@@ -96,7 +96,7 @@ Here are detailed instructions on how to do the tasks:
   
     1. On the **Credentials** page, supply valid credentials to access APS health state DMVs.  
   
-        :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png" alt-text="Screenshot showing the Credentials page of the Create Run As Account Wizard with valid credentials wo access APS health state DMVs.":::
+        :::image type="content" source="./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png" alt-text="Screenshot showing the Credentials page of the Create Run As Account Wizard with valid credentials to access APS health state DMVs.":::
   
 1. Configure the **Microsoft APS Action Account** profile to use the newly created Run As account for the APS instance.  
   

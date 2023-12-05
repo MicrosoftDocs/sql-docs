@@ -18,7 +18,7 @@ This article describes one of the configuration steps for configuring remote tab
 ## Before you begin
 In order to configure SQL Server PDW to use remote table copy, you must:  
   
--   Have a Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and ***appliance_domain*-AD02** nodes.  
+-   Have an Analytics Platform System administrator account with the ability to log directly into the ***appliance_domain*-AD01** and ***appliance_domain*-AD02** nodes.  
   
 -   Know the host name or IP name of the destination server.  
   
@@ -28,7 +28,7 @@ The **CREATE REMOTE TABLE** statement, used for remote table copies, specifies t
   
 The following steps outline how to update the DNS server.  
   
-1. Log on to the active AD node (normally ***appliance_domain*-AD01**).  
+1. Sign in the active AD node (normally ***appliance_domain*-AD01**).  
   
 1. Open the DNS Manager. This is located under **Administrative Tools** in the **Start** menu.  
   

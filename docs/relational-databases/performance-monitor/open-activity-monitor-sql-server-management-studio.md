@@ -18,12 +18,11 @@ helpviewer_keywords:
 
  [Activity Monitor](activity-monitor.md) runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance. We recommend that you [download and install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).  
   
-  
 ## <a id="Permissions"></a> Permissions
  To view actual activity, you must have VIEW SERVER STATE permission. To view the Data File I/O section of Activity Monitor, you must have CREATE DATABASE, ALTER ANY DATABASE, or VIEW ANY DEFINITION permission in addition to VIEW SERVER STATE.  
   
  To KILL a process, a user must be a member of the `sysadmin` or `processadmin` fixed server roles.  
-    
+
 ## Open Activity Monitor
 
 ### Object Explorer
@@ -34,7 +33,7 @@ Right-click on the top-level object for a SQL Server connection, and select **Ac
 
 From the Standard toolbar, select the **Activity Monitor** icon. It is in the middle, just to the right of the undo/redo buttons. To aid in finding it, hover over each icon until you find the **Activity Monitor**. 
   
-Complete the **Connect to Server** dialog box if you are not already connected to an instance of SQL Server you want to monitor.
+Complete the **Connect to Server** dialog box if you aren't already connected to an instance of SQL Server you want to monitor.
   
 ## Launch Activity Monitor and Object Explorer on startup
   
@@ -46,7 +45,7 @@ Complete the **Connect to Server** dialog box if you are not already connected t
 
 1. Select **OK**.
 
-:::image type="content" source="media/open-activity-monitor-sql-server-management-studio/open-object-explorer.png" alt-text="Open_object_explorer.":::
+    :::image type="content" source="media/open-activity-monitor-sql-server-management-studio/open-object-explorer.png" alt-text="Screenshot of the SQL Server Management Studio Options, showing the Startup page.":::
 
 ## Set the Activity Monitor refresh interval
   

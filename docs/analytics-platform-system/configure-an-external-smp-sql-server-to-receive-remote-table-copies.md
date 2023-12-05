@@ -22,7 +22,7 @@ Before you can configure the external SQL Server, you must:
   
 -   A Windows admin account with the ability to configure the SQL Server instance and the Windows system.  
   
--   A SQL Server login account (if SQL Server is already installed) with the ability to create logins and grant permissions on the destination database(s).  
+-   A SQL Server login (if SQL Server is already installed) with the ability to create logins and grant permissions on the destination database(s).  
   
 ## <a id="HowToSQLServer"></a> Configure an External SMP SQL Server To Receive Remote Table Copies
 The remote table copy feature copies tables from the SQL Server PDW appliance to an external SMP SQL Server database that is running on a Windows system. After configuring the external Windows system to receive remote table copies, the next step is to install and configure SQL Server onto the Windows system.  
@@ -33,7 +33,7 @@ To configure SQL Server, use the following steps:
   
 1. Configure SQL Server to accept TCP/IP connections on a fixed TCP port. This configuration is disabled by default and must be enabled to allow SQL Server PDW to connect to the SMP SQL Server.  
   
-1. Either disable Windows firewall or configure the SMP SQL Server TCP port so that it will work with Windows firewall enabled.  
+1. Either disable Windows Firewall or configure the SMP SQL Server TCP port so that it works with Windows Firewall enabled.  
   
 1. Configure SQL Server to allow SQL Server authentication mode. The parallel data export always uses SQL Server accounts for authentication.  
   

@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: conceptual
 ---
 
-# Managing permissions in Parallel Data Warehouse
+# Managing permissions in Analytics Platform System (PDW)
 This article describes the requirements and options for managing database permissions for SQL Server PDW.
 
 ## <a name="BackupRestoreBasics"></a>Database Engine Permission Basics

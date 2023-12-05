@@ -8,7 +8,7 @@ ms.reviewer: hudequei
 ms.date: 01/27/2022
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: release-notes
 ---
 
 # SQL Server Big Data Clusters CU15 release notes

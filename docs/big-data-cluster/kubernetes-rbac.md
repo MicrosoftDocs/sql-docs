@@ -5,7 +5,7 @@ description: This article describes how SQL Server Big Data Clusters uses RBAC w
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: hudequei
-ms.date: 02/11/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 # Kubernetes RBAC model & impact on users and service accounts managing SQL Server 2019 Big Data Clusters
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 This article describes the permissions requirements for users managing big data clusters and the semantics around default service account and Kubernetes access from within the big data cluster.
 
@@ -22,13 +22,13 @@ This article describes the permissions requirements for users managing big data 
 
 ## Role required for deployment
 
-SQL Server 2019 Big Data Clusters uses service accounts (such as `sa-mssql-controller` or `master`) to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When BDC deployment starts (for example, `azdata bdc create`), [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does the following following:
+SQL Server 2019 Big Data Clusters uses service accounts (such as `sa-mssql-controller` or `master`) to orchestrate the provisioning of the cluster pods, services, high availability, monitoring, etc. When a big data cluster deployment starts (for example, `azdata bdc create`), [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does the following following:
 
 1. Checks if provided namespace exists.
-2. If it does not exist, it creates one and applies the `MSSQL_CLUSTER` label.
-3. Creates the `sa-mssql-controller` service account.
-4. Creates a `<namespaced>-admin` role with full permissions on the namespace or project but not cluster level permissions.
-5. Creates a role assignment of that service account to the role.
+1. If it does not exist, it creates one and applies the `MSSQL_CLUSTER` label.
+1. Creates the `sa-mssql-controller` service account.
+1. Creates a `<namespaced>-admin` role with full permissions on the namespace or project but not cluster level permissions.
+1. Creates a role assignment of that service account to the role.
 
 Once these steps complete, the control plane pods are provisioned and the service account deploys the rest of big data cluster.  
 
@@ -77,7 +77,7 @@ Here are the steps to show how to create the required artifacts:
      namespace: <clusterName>
    ```
 
-2. Create the cluster role and the cluster role binding:
+1. Create the cluster role and the cluster role binding:
 
    ```bash
    kubectl create -f metrics-role.yaml
@@ -92,7 +92,7 @@ You can customize these settings in the security section in the `control.json` d
 
 ```json
   "security": {
-    …
+    ...
     "allowNodeMetricsCollection": false,
     "allowPodMetricsCollection": false
   }
@@ -100,7 +100,7 @@ You can customize these settings in the security section in the `control.json` d
 
 If these settings are set to `false`, BDC deployment workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.
 
-## Default service account usage from within a BDC pod
+## Default service account usage from within a big data cluster pod
 
 For a tighter security model, SQL Server 2019 CU5 disabled mounting by default credentials for the default Kubernetes service account within the BDC pods. This applies to both new and upgraded deployments in CU5 or later versions.
 The credential token inside the pods can be used to access the Kubernetes API server, and the level of permissions depends on the Kubernetes authorization policy settings. If you have specific use cases that require reverting to the previous CU5 behavior, in CU6 we are introducing a new feature switch so you can turn on the auto-mount at deployment time only. You can do so by using the control.json configuration deployment file and setting *automountServiceAccountToken* to *true*. Run this command to update this setting in your *control.json* custom configuration file using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]: 
@@ -108,3 +108,8 @@ The credential token inside the pods can be used to access the Kubernetes API se
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"
 ```
+
+## Related content
+
+- [Using RBAC Authorization - Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+- [Using RBAC to define and apply permissions - OpenShift](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html)

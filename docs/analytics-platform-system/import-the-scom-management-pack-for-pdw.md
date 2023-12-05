@@ -13,7 +13,8 @@ ms.topic: conceptual
 # Import the System Center Operations Manager Management Pack - Analytics Platform System
 Follow these steps to import the System Center Operations Manager (SCOM) Management Packs for Analytics Platform System (APS). The management packs are required to monitor Parallel Data Warehouse from Operations Manager. 
   
-## <a id="BeforeBegin"></a> Before You Begin
+## <a id="BeforeBegin"></a> Before you begin
+
 **Prerequisites**  
   
 System Center Operations Manager 2007 R2 must be installed and running.  
@@ -40,7 +41,7 @@ The management packs must be installed. See [Install the System Center Operation
   
 1. Once the two Management Packs were in the bottom selected pane, then select **OK**.  
   
-    :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png" alt-text="Screenshot of the management packs.":::
+    :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png" alt-text="Screenshot of the management packs from catalog page.":::
   
 1. Select **Install**.  
   
@@ -58,9 +59,9 @@ The management packs must be installed. See [Install the System Center Operation
   
     :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png" alt-text="Screenshot of where to right-click Management Packs.":::
   
-1. Go to the location where you extracted the SQL Server PDW Management Packs and choose the three management packs that are in the "Selected Management packs to import" section. You can do this by selecting the first one, selecting Shift, and selecting the last one. Once they are all selected, select **Open**.  
+1. Go to the location where you extracted the SQL Server PDW Management Packs and choose the three management packs that are in the **Selected Management packs to import** section. You can do this by selecting the first one, selecting Shift, and selecting the last one. Once they are all selected, select **Open**.  
   
-    :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png" alt-text="Screenshot of the management packs.":::
+    :::image type="content" source="./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png" alt-text="Screenshot of the management packs to import page.":::
   
 1. Select **Install**.  
   

@@ -1,6 +1,6 @@
 ---
 title: "sys.query_store_query (Transact-SQL)"
-description: Contains  information about the query and its associated overall aggregated runtime execution statistics.
+description: Contains information about the query and its associated overall aggregated runtime execution statistics.
 author: rwestMSFT
 ms.author: randolphwest
 ms.date: 12/04/2023
@@ -23,18 +23,18 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || =azure-sqldw-latest |
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-Contains  information about the query and its associated overall aggregated runtime execution statistics.
+Contains information about the query and its associated overall aggregated runtime execution statistics.
 
 | Column name | Data type | Description |
 | --- | --- | --- |
 | `query_id` | **bigint** | Primary key. |
 | `query_text_id` | **bigint** | Foreign key. Joins to [sys.query_store_query_text (Transact-SQL)](sys-query-store-query-text-transact-sql.md) |
 | `context_settings_id` <sup>1</sup> | **bigint** | Foreign key. Joins to [sys.query_context_settings (Transact-SQL)](sys-query-context-settings-transact-sql.md). |
-| `object_id` <sup>2</sup> | **bigint** | ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). 0 if the query isn't executed as part of a database object (ad hoc query). |
+| `object_id` <sup>2</sup> | **bigint** | ID of the database object that the query is part of (stored procedure, trigger, CLR UDF/UDAgg, etc.). `0` if the query isn't executed as part of a database object (ad hoc query). |
 | `batch_sql_handle` <sup>3</sup> | **varbinary(64)** | ID of the statement batch the query is part of. Populated only if query references temporary tables or table variables. |
 | `query_hash` | **binary(8)** | Zobrist hash over the shape of the individual query, based on the bound (input) logical query tree. Query hints aren't included as part of the hash. |
 | `is_internal_query` <sup>2</sup> | **bit** | The query was generated internally. |
-| `query_parameterization_type` <sup>2</sup> | **tinyint** | Type of parameterization:<br /><br />`0` - None<br />`1` - User<br />`2` - Simple<br /><br />3 - Forced |
+| `query_parameterization_type` <sup>2</sup> | **tinyint** | Type of parameterization:<br /><br />`0` - None<br />`1` - User<br />`2` - Simple<br />`3` - Forced |
 | `query_parameterization_type_desc` <sup>4</sup> | **nvarchar(60)** | Textual description for the parameterization type. |
 | `initial_compile_start_time` | **datetimeoffset** | Compile start time. |
 | `last_compile_start_time` | **datetimeoffset** | Compile start time. |

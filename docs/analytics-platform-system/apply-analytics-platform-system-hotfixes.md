@@ -39,11 +39,11 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
   
         -   If there are disk failures, use the Admin Console Alerts page to verify there is no more than one disk failure within each server or SAN array. If there is no more than one disk failure within each server or SAN array, you can proceed to the next step before fixing the disk failure(s). Be sure to contact Microsoft support to fix the disk failure(s) as soon as possible.  
   
-        -   If there is a non-critical (yellow) disk volume error that is not on the C:\ drive, you can proceed to the next step before resolving the disk volume error.  
+        -   If there is a noncritical (yellow) disk volume error that is not on the C:\ drive, you can proceed to the next step before resolving the disk volume error.  
   
 1. **Install the Analytics Platform System hotfix**  
   
-    1. Login to the <*appliance_domain*>-HST01 node as the domain administrator.  
+    1. Sign in to the <*appliance_domain*>-HST01 node as the domain administrator.  
   
     1. Use the **Run as administrator** option to open a Command Prompt.  
   

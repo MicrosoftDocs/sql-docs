@@ -23,10 +23,10 @@ helpviewer_keywords:
 |Extension Name|Description|  
 |--------------------|-----------------|   
 |**WORDOPENXML**|Render a report in [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] as a DOCX file. The format is shown as **Word** in the Export drop-down of the report toolbar.|  
-|**WORD**|Render a report in [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] as a DOC file. The format is not shown in the Export drop-down of the report toolbar as it is included for backward compatibility|  
-|**EXCELOPENXML**|Renders a report in [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] as an XLSX file.| The format is shown as **Excel** in the Export drop-down of the report toolbar.|
-|**EXCEL**|Renders a report in [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] as an XLS file. The format is not shown in the Export drop-down of the report toolbar as it is included for backward compatibility| 
-|**PPTX**|Renders a report in PowerPoint as a PPTX file.| The format is shown as **PowerPoint** in the Export drop-down of the report toolbar.|
+|**WORD**|Render a report in [!INCLUDE[ofprword](../../../includes/ofprword-md.md)] as a DOC file. The format is not shown in the Export drop-down of the report toolbar as it is included for backward compatibility.|  
+|**EXCELOPENXML**|Renders a report in [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] as an XLSX file. The format is shown as **Excel** in the Export drop-down of the report toolbar.|
+|**EXCEL**|Renders a report in [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] as an XLS file. The format is not shown in the Export drop-down of the report toolbar as it is included for backward compatibility.| 
+|**PPTX**|Renders a report in PowerPoint as a PPTX file. The format is shown as **PowerPoint** in the Export drop-down of the report toolbar.|
 |**PDF**|Renders a report in the PDF.|  
 |**IMAGE**|Renders a report in a page-oriented format. The format is shown as **TIFF file** in the Export drop-down of the report toolbar.| 
 |**MHTML** (part of the HTML rendering extension)|Renders a report in MHTML. The report opens in the browser. The format is shown as **MHTML (web archive)** in the Export drop-down of the report toolbar.|   

@@ -37,5 +37,6 @@ The following steps outline how to update the DNS server.
 ## Related content
 
 - [Use a DNS Forwarder to Resolve Non-Appliance DNS Names in Analytics Platform System](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)
-- [Security - Configure Domain Trusts (SQL Server PDW)](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)
+- [PDW certificate provisioning - Analytics Platform System (PDW)](pdw-certificate-provisioning.md)
+- [Configure domain trusts in Analytics Platform System](configure-domain-trusts.md)
 - [What's new in Analytics Platform System, a scale-out MPP data warehouse](whats-new-analytics-platform-system.md)

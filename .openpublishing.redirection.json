@@ -57261,7 +57261,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/analytics-platform-system/certificate-provisioning.md",
+      "source_path": "docs/analytics-platform-system/provision-certificate.md",
       "redirect_url": "/sql/analytics-platform-system/pdw-certificate-provisioning",
       "redirect_document_id": false
     },

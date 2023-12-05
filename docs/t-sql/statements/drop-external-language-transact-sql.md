@@ -7,7 +7,7 @@ ms.reviewer: rothja
 ms.date: 08/08/2019
 ms.service: sql
 ms.subservice: language-extensions
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
   - "TSQL"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15"

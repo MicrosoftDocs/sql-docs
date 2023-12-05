@@ -1,6 +1,6 @@
 ---
-title: Appliance physical components
-description: Names and descriptions for the PDW and appliance fabric physical components.
+title: Appliance physical components in Analytics Platform System (PDW)
+description: Names and descriptions for the Analytics Platform System (PDW) and appliance fabric physical components.
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: conceptual
 ---
 
-# Appliance physical components - Analytics Platform System
+# Appliance physical components - Analytics Platform System (PDW)
 Names and descriptions for the PDW and appliance fabric physical components. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  

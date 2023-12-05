@@ -74,9 +74,9 @@ With Azure Active Directory Application Proxy, you no longer need to manage your
 
 Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
 
-### Transparent Database Encryption
+### Transparent data encryption
 
-SQL Server 2019 now supports Transparent Database Encryption for the SSRS catalog database for Enterprise and Standard editions. 
+[!INCLUDE [sssql19-md](../includes/sssql19-md.md)] now supports transparent data encryption (TDE) for the SSRS catalog database, for Enterprise and Standard editions.
 
 ### Microsoft Report Builder update
 

@@ -14,6 +14,12 @@ ms.custom:
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v9.5
+
+The v9.5 release of SSMA for Oracle contains the following changes:
+* Support for exclude schema in SSMA console mode
+
 ## SSMA v9.4
 
 The v9.4 release of SSMA for Oracle contains the following changes:

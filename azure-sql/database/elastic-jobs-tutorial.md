@@ -4,7 +4,7 @@ description: "Learn how to create, configure, and manage elastic jobs to run Tra
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: srinia
-ms.date: 11/14/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: elastic-jobs
 ms.topic: how-to
@@ -82,8 +82,11 @@ Use [Microsoft Entra (formerly Azure Active Directory)](authentication-aad-overv
    ```sql
    CREATE USER [jobuserUMI] FROM EXTERNAL PROVIDER; 
    GO 
-   GRANT CREATE TABLE TO [jobuserUMI];
-   GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[job_results_table] TO jobuserUMI;
+   ```
+1. If output parameters are specified in the `sp_add_jobstep` call in [the @output_table_name argument](/sql/relational-databases/system-stored-procedures/sp-add-job-elastic-jobs-transact-sql#section-20), the Job Agent UMI or database-scoped credential must be granted permissions to CREATE TABLE and INSERT data into that output table.
+   ```sql
+   GRANT CREATE TABLE TO [job_user];
+   GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[output_table_name] TO job_user;
    ```
 1. In each of the target server(s)/database(s), grant the database user needed permissions to execute job scripts. These permissions vary based on the requirements of the T-SQL query.
 
@@ -107,12 +110,15 @@ You can use a database-scoped credential in the job database and in each target 
        CREATE LOGIN [job_user] WITH PASSWORD '<same_password_as_database-scoped_credential>'
        GO 
        ``` 
-    1. Connect to the output database and run the following example script for a user named `job_user`: 
+    1. Connect to the output database and run the following example script for a user named `job_user`:
        ```sql
        CREATE USER [job_user] FROM LOGIN [job_user]; 
        GO 
+       ```
+    1. If output parameters are specified in the `sp_add_jobstep` call in the *@output_table_name* argument, the Job Agent UMI or database-scoped credential must be granted permissions to CREATE TABLE and INSERT data into that output table.
+       ```sql
        GRANT CREATE TABLE TO [job_user];
-       GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[job_results_table] TO job_user;
+       GRANT SELECT,INSERT,UPDATE,DELETE ON [dbo].[output_table_name] TO job_user;
        ```
 1. In each of the target server(s)/database(s), grant the database user needed permissions to execute job scripts. These permissions vary based on the requirements of the T-SQL query.
 

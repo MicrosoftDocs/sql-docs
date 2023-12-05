@@ -79,6 +79,10 @@ The following sections describe known issues with [!INCLUDE [sssql22](../../incl
 
 - User permission `ADMINISTER BULK OPERATIONS` isn't supported on Linux at this time.
 
+- On Ubuntu 22.04, you might see the following error message: `Failed to start Microsoft SQL Server Database Engine`. If you review the error log, you see an incorrect path for the system databases.
+
+  - **Resolution:** Start the instance in single-user mode, and use `ALTER DATABASE ... MODIFY FILE` to move the configured location of the system databases to the default location `/var/opt/mssql/data`. After making this change, restart the service.
+
 ### Network
 
 Features that involve outbound TCP connections from the `sqlservr` process, such as linked servers, PolyBase, or availability groups, might not work if both the following conditions are met:

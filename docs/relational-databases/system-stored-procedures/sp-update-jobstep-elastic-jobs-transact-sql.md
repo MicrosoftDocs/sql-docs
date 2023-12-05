@@ -3,7 +3,7 @@ title: "jobs.sp_update_jobstep (Azure Elastic Jobs) (Transact-SQL)"
 description: "jobs.sp_update_jobstep modifies a job step in an existing job in the Azure Elastic Jobs service for Azure SQL Database."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 10/30/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -144,6 +144,8 @@ If not `NULL`, the name of the SQL schema that contains the output destination t
 #### @output_table_name
   
 If not `NULL`, the name of the table that the *command*'s first result set will be written to. If the table doesn't already exist, it will be created based on the schema of the returning result-set. Must be specified if *output_type* equals `SqlDatabase`. To reset the value of *output_server_name* back to `NULL`, set this parameter's value to '' (empty string). *output_table_name* is nvarchar(128), with a default value of `NULL`.
+
+If specifying an *output_table_name*, the Job Agent UMI or database-scoped credential should be granted needed permissions to CREATE TABLE and INSERT data into the table.
 
 #### @job_version  OUTPUT  
 

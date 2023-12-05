@@ -57261,6 +57261,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/analytics-platform-system/certificate-provisioning.md",
+      "redirect_url": "/sql/analytics-platform-system/pdw-certificate-provisioning",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/connect/ado-net/index.md",
       "redirect_url": "/sql/connect/ado-net/microsoft-ado-net-sql-server",
       "redirect_document_id": false

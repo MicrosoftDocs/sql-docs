@@ -29,5 +29,6 @@ A common interval to poll for alerts, which is also used by System Center, is **
 Polling more frequently is acceptable, but polling too frequently can clutter the [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV.  Polling too frequently can make it difficult for users to diagnose query performance issues when their quickly rolls out of view.  
   
 ## See Also  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  

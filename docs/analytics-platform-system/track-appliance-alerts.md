@@ -64,7 +64,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## See Also  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
-  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)

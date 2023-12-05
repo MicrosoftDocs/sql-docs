@@ -32,9 +32,7 @@ These example values would be presented to the user like this:
   
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
-## See Also  
-<!-- MISSING LINKS 
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-[Understanding Admin Console Alerts](understanding-admin-console-alerts.md)  
-  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
+- [Understanding Admin Console Alerts](understanding-admin-console-alerts.md)

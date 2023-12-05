@@ -52,12 +52,8 @@ When configuring the SMP SQL Server to receive remote table copies, use the foll
   
     Although the bulk-logged or simple recovery models use minimal logging for the bulk inserted data, some logging still occurs. To prevent the log files from growing too large, use the SQL Server batch_size option to periodically reclaim log space.  
   
-<!-- MISSING LINKS 
-## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
--->
-  
 ## Related content
 
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)  
 - [Microsoft Analytics Platform System](home-analytics-platform-system-aps-pdw.md)
 - [What's new in Analytics Platform System, a scale-out MPP data warehouse](whats-new-analytics-platform-system.md)

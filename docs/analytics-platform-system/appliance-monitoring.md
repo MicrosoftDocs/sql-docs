@@ -75,6 +75,6 @@ If your monitoring solution does not support direct Transact-SQL queries, or you
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
 ## See Also  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [Appliance Management Tasks &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

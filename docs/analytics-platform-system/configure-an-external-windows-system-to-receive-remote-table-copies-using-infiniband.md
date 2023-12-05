@@ -55,13 +55,8 @@ To configure the external Windows system, use the following steps:
   
 1. If a two port adapter is used, or multiple external Windows systems are connected to an appliance, assign each system a different host number within each IP subnet.  
   
-<!-- MISSING LINKS 
 ## Related content
 
-- [Common Metadata Query Examples (SQL Server PDW)](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)
--->
-
-## Related content
-
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
 - [Microsoft Analytics Platform System](home-analytics-platform-system-aps-pdw.md)
 - [What's new in Analytics Platform System, a scale-out MPP data warehouse](whats-new-analytics-platform-system.md)

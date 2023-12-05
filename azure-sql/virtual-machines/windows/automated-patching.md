@@ -111,6 +111,8 @@ To disable Automated Patching, run the following script with the value of **$fal
 Update-AzSqlVM -ResourceGroupName 'resourcegroupname' -Name 'vmname' -AutoPatchingSettingEnable:$false
 ```
 
+## Understanding What Updates will be applied with Automated Patching
+Please ensure to review the [Update Guide](https://msrc.microsoft.com/update-guide) and apply the **Severity** filter to identify Critical and Important updates in order to understand the updates that will be applied through Automated Patching.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Managed Instance service high availabilit
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma, randolphwest
-ms.date: 11/16/2023
+ms.date: 12/05/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -100,14 +100,13 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
 | Brazil South | France Central | Qatar Central | South Africa North | Australia East |
-| Canada Central | Italy North | | | Central India |
+| Canada Central | Italy North | Israel Central | | Central India |
 | Central US | Germany West Central | | | Japan East |
 | East US | Norway East | | | Korea Central |
-| South Central US | North Europe | | | East Asia |
-| West US 2 | UK South | | | |
-| West US 3 | West Europe | | | |
-| | Sweden Central | | | |
-| | Switzerland North | | | |
+| East US 2 | North Europe | | | Southeast Asia |
+| South Central US | UK South | | | East Asia |
+| West US 2 | Sweden Central | | | |
+| West US 3 | Switzerland North | | | |
 | | Poland Central | | | |
 
 ### Supported regions for General Purpose instances
@@ -118,12 +117,11 @@ Zone redundancy for Business Critical SQL Managed Instance is supported in the f
 | Americas | Europe | Middle East | Africa | Asia Pacific |
 |---|---|---|---|---|
 | Brazil South | France Central | Qatar Central | South Africa North | Australia East |
-| East US | Italy North | | | Central India |
-| South Central US | Germany West Central | | | Japan East |
-| West US 2 | Norway East | | | Korea Central |
-| West US 3 | North Europe | | | Southeast Asia |
-| | UK South | | | East Asia |
-| | West Europe | | | |
+| East US | Italy North | Israel Central | | Central India |
+| East US 2 | Germany West Central | | | Japan East |
+| South Central US | Norway East | | | Korea Central |
+| West US 2 | North Europe | | | Southeast Asia |
+| West US 3 | UK South | | | East Asia |
 | | Sweden Central | | | |
 | | Switzerland North | | | |
 | | Poland Central | | | |

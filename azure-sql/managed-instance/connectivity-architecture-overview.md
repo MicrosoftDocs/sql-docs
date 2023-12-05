@@ -173,7 +173,7 @@ The subnet in which SQL Managed Instance is deployed must have the following cha
   - All resources of type `Microsoft.Network/networkIntentPolicies`
   - All resources of type `Microsoft.Network/virtualNetworks/subnets/contextualServiceEndpointPolicies`
 - **Locks on virtual network**: [Locks](/azure/azure-resource-manager/management/lock-resources) on the dedicated subnet's virtual network, its parent resource group, or subscription, might occasionally interfere with SQL Managed Instance management and maintenance operations. Take special care when you use resource locks.
-- **Replication traffic**: Replication traffic for auto-failover groups between two managed instances should be direct and not routed through a hub network.
+- **Replication traffic**: Replication traffic for failover groups between two managed instances should be direct and not routed through a hub network.
 - **Custom DNS server:** If the virtual network is configured to use a custom DNS server, the DNS server must be able to resolve public DNS records. Using features like Microsoft Entra authentication might require resolving more fully qualified domain names (FQDNs). For more information, see [Resolving private DNS names in Azure SQL Managed Instance](resolve-private-domain-names.md).
 
 

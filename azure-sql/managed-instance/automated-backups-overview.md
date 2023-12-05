@@ -116,7 +116,7 @@ This table summarizes the capabilities and features of [point-in-time restore](r
 | **Restoring via PowerShell** |Yes|Yes|Yes|
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
 
-<sup>1<sup> For business-critical applications that require large databases and must ensure business continuity, see [auto-failover groups](auto-failover-group-sql-mi.md).
+<sup>1<sup> For business-critical applications that require large databases and must ensure business continuity, see [failover groups](failover-group-sql-mi.md).
 
 <sup>2<sup> All PITR backups are stored on geo-redundant storage by default, meaning geo-restore is enabled by default.
 

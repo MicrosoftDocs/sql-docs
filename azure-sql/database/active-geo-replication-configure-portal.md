@@ -16,7 +16,7 @@ ms.custom: sqldbrb=1, devx-track-azurecli, ignite-2023, devx-track-azurepowershe
 
 This article shows you how to configure [active geo-replication for Azure SQL Database](active-geo-replication-overview.md#active-geo-replication-terminology-and-capabilities) using the [Azure portal](https://portal.azure.com) or Azure CLI and to initiate failover.
 
-For best practices using failover groups, see [Failover groups with Azure SQL Database](auto-failover-group-sql-db.md) and [Failover groups with Azure SQL Managed Instance](../managed-instance/auto-failover-group-sql-mi.md).
+For failover groups, see [Failover groups with Azure SQL Database](failover-group-sql-db.md) and [Failover groups with Azure SQL Managed Instance](../managed-instance/failover-group-sql-mi.md).
 
 ## Prerequisites
 
@@ -299,6 +299,7 @@ Use Transact-SQL (T-SQL) create a geo-secondary in a subscription different from
 ## Next steps
 
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
-* To learn about auto-failover groups, see [Auto-failover groups](auto-failover-group-sql-db.md)
+* To learn about failover groups, see [Failover groups](failover-group-sql-db.md)
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).
+1

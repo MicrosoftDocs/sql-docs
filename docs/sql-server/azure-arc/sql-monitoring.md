@@ -21,14 +21,21 @@ During the feature preview, monitoring is available for free. Fees for this feat
 
 In order for monitoring data to be collected on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], the following conditions must be met:
 
-* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is update to the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
+* The version of Azure Extension for SQL Server (WindowsAgent.SqlServer) is v1.1.2504.99 or later
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is running on Windows operating system
+   - Versions of Windows Server 2008 and 2012 aren't presently supported
 * [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is a Standard or Enterprise Edition
+* The server has connectivity to telemetry.{region}.arcdataservices.com (for more information, see [Network Requirements ](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud))
 * The license type on the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is set to "License with Software Assurance" or "Pay-as-you-go"
+
+### Current Limitations
+* FCI clusters aren't supported at this time
+* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+
 
 ## Collected data
 
-The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled.  No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
+The following lists reflect the monitoring data that is collected from DMV datasets on [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] when the monitoring feature is enabled. No personally identifiable information (PII), end-user identifiable information (EUII), or customer content is collected.
 
 ### Active Sessions
 
@@ -211,7 +218,7 @@ Collection Frequency: 1 minute\
 * Bulk Copy Throughput/sec
 * Cache Object Counts
 * Connection Memory (KB)
-* Data File(s) Size (KB)
+* Data File Size (KB)
 * Database pages
 * Errors/sec
 * Failed Auto-Params/sec
@@ -219,8 +226,8 @@ Collection Frequency: 1 minute\
 * Large page allocations (KB)
 * Local node page lookups/sec
 * Lock Timeouts (timeout > 0)/sec
-* Log File(s) Size (KB)
-* Log File(s) Used Size (KB)
+* Log File Size (KB)
+* Log File Used Size (KB)
 * Log Flush Wait Time
 * Log Growths
 * Log Shrinks
@@ -283,7 +290,7 @@ Collection Frequency: 10 seconds\
 ## Disable or enable collection
 
 > [!IMPORTANT]
-> In order to disable or enable data collection, the `sqlServer` extension must be on the November release or later. (See [Release Notes](../azure-arc/release-notes.md))
+> In order to disable or enable data collection, the `sqlServer` extension must be on v1.1.2504.99 or later.
 
 ### Using the Azure portal
 
@@ -296,7 +303,7 @@ Collection Frequency: 10 seconds\
 
 #### Disable monitoring data collection
 
-Run the following command in the Azure CLI to disable monitoring data collection for your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]. Replace the placeholders for subscription ID, resource group, and resource name:
+To disable monitoring data collection for your [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], run the following command in the Azure CLI . Replace the placeholders for subscription ID, resource group, and resource name:
 
 ```azurecli
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=false' --api-version 2023-09-01-preview
@@ -310,14 +317,11 @@ To enable the monitoring data collection for a [!INCLUDE [ssazurearc](../../incl
 az resource update --ids "/subscriptions/<sub_id>/resourceGroups/<resource_group>/providers/Microsoft.AzureArcData/SqlServerInstances/<resource_name>" --set 'properties.monitoring.enabled=true' --api-version 2023-09-01-preview
 ```
 
-Please note that this command might run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
-
-## Limitations
-
-* After adding or removing a SQL Server instance on your Windows machine, you must restart the Microsoft Sql Server (sqlServerExtension) extension service for the update to take effect. This restart is only required to add/remove the instance from monitoring collection.
+Note that this command might run successfully, but all requirements in the [Prerequisites section](#prerequisites) must be met for monitoring data to be collected and shown in the Azure portal.
 
 ## Next steps
   
 * [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 * [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] data collection and reporting](data-collection.md)
 * [Dynamic management views (DMVs)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+

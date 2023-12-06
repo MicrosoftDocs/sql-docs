@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 10/20/2023
+ms.date: 12/06/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -86,7 +86,7 @@ The following table describes serverless support based on purchasing model, serv
 
 ### Scaling responsiveness
 
-In general, serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested within limits set by the max vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it may take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
+In general, serverless databases are run on a machine with sufficient capacity to satisfy resource demand without interruption for any amount of compute requested within limits set by the max vCores value. Occasionally, load balancing automatically occurs if the machine is unable to satisfy resource demand within a few minutes. For example, if the resource demand is 4 vCores, but only 2 vCores are available, then it can take up to a few minutes to load balance before 4 vCores are provided. The database remains online during load balancing except for a brief period at the end of the operation when connections are dropped.
 
 ### Memory management
 
@@ -102,9 +102,9 @@ Unlike provisioned compute databases, memory from the SQL cache is reclaimed fro
 - When cache reclamation occurs, the policy for selecting cache entries to evict is the same selection policy as for provisioned compute databases when memory pressure is high.
 - The cache size is never reduced below the min memory limit as defined by min vCores, that can be configured.
 
-In both serverless and provisioned compute databases, cache entries may be evicted if all available memory is used.
+In both serverless and provisioned compute databases, cache entries can be evicted if all available memory is used.
 
-When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation.  Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity.  For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup may involve reading additional data pages into cache.
+When CPU utilization is low, active cache utilization can remain high depending on the usage pattern and prevent memory reclamation.  Also, there can be other delays after user activity stops before memory reclamation occurs due to periodic background processes responding to prior user activity.  For example, delete operations and Query Store cleanup tasks generate ghost records that are marked for deletion, but are not physically deleted until the ghost cleanup process runs. Ghost cleanup might involve reading additional data pages into cache.
 
 #### Cache hydration
 
@@ -140,7 +140,7 @@ Auto-pausing is temporarily prevented during the deployment of some service upda
 
 #### Auto-pause troubleshooting
 
-If auto-pausing is enabled, but a database does not auto-pause after the delay period, and the features listed above are not used, the application or user sessions may be preventing auto-pausing. To see if there are any application or user sessions currently connected to the database, connect to the database using any client tool, and execute the following query:
+If auto-pausing is enabled, but a database does not auto-pause after the delay period, and the features listed above are not used, the application or user sessions might be preventing auto-pausing. To see if there are any application or user sessions currently connected to the database, connect to the database using any client tool, and execute the following query:
 
 ```sql
 SELECT session_id,
@@ -232,7 +232,7 @@ Creating a new database or moving an existing database into a serverless compute
    |Parameter|Value choices|Default value|
    |---|---|---|---|
    |Min vCores|Depends on max vCores configured - see [resource limits](resource-limits-vcore-single-databases.md#general-purpose---serverless-compute---gen5).|0.5 vCores|
-   |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
+   |Autopause delay|Minimum: 60 minutes (1 hour)<br>Maximum: 10,080 minutes (7 days)<br>Increments: 10 minutes<br>Disable autopause: -1|60 minutes|
 
 The following examples create a new database in the serverless compute tier.
 
@@ -310,7 +310,7 @@ az sql db create -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When using T-SQL, default values are applied for the min vcores and autopause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API).
+When using T-SQL, default values are applied for the min vCores and auto-pause delay. They can later be changed from the Azure portal or via other management APIs (PowerShell, Azure CLI, REST API).
 
 For details, see [CREATE DATABASE](/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&preserve-view=true).  
 
@@ -398,7 +398,7 @@ az sql db update -g $resourceGroupName -s $serverName -n $databaseName `
 
 #### Use Transact-SQL (T-SQL)
 
-When using T-SQL, default values are applied for the min vcores and auto-pause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API). For details, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
+When using T-SQL, default values are applied for the min vCores and auto-pause delay. They can later be changed from the portal or via other management APIs (PowerShell, Azure CLI, REST API). For details, see [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql?view=azuresqldb-current&preserve-view=true).
 
 # [General Purpose](#tab/general-purpose)
 
@@ -526,7 +526,7 @@ The [Azure SQL Database pricing calculator](https://azure.microsoft.com/pricing/
 
 # [General Purpose](#tab/general-purpose)
 
-Consider a serverless database in the General Purpose tier configured with 1 min vCore and 4 max vCores.  This configuration corresponds to around 3 GB min memory and 12 GB max memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
+Consider a serverless database in the General Purpose tier configured with 1 minimum vCore and 4 maximum vCores.  This configuration corresponds to around 3 GB min memory and 12 GB max memory.  Suppose the auto-pause delay is set to 6 hours and the database workload is active during the first 2 hours of a 24-hour period and otherwise inactive.    
 
 In this case, the database is billed for compute and storage during the first 8 hours.  Even though the database is inactive starting after the second hour, it is still billed for compute in the subsequent 6 hours based on the minimum compute provisioned while the database is online.  Only storage is billed during the remainder of the 24-hour period while the database is paused.
 
@@ -538,7 +538,7 @@ More precisely, the compute bill in this example is calculated as follows:
 |1:00-2:00|1|12|Memory used|12 GB * 1/3 * 3600 seconds = 14400 vCore seconds|
 |2:00-8:00|0|0|Min memory provisioned|3 GB * 1/3 * 21600 seconds = 21600 vCore seconds|
 |8:00-24:00|0|0|No compute billed while paused|0 vCore seconds|
-|Total vCore seconds billed over 24 hours||||50400 vCore seconds|
+|Total vCore seconds billed over 24 hours||||50,400 vCore seconds|
 
 Suppose the compute unit price is $0.000145/vCore/second.  Then the compute billed for this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000145/vCore/second * 50400 vCore seconds ~ $7.31.
 
@@ -557,7 +557,7 @@ In this example, the compute billed for the database is summation of the compute
 |0:00-2:00 | 8    | 15 |    vCores used    | 8 vCores * 7200 seconds = 57600 vCore seconds |
 |2:00-14:00 |    1.5    | 6     | Memory used |    6 GB * 1/3 * 43200 seconds = 86400 vCore seconds |
 |14:00-24:00 |    0.5    | 2     | Min vCores provisioned    | 1 vCore * 36000 seconds = 36000 vCore seconds | 
-|**Total vCore seconds billed over 24 hours** |||| 180000 vCore seconds |
+|**Total vCore seconds billed over 24 hours** |||| 180,000 vCore seconds |
 
 Suppose the compute unit price for the primary replica is $0.000163/vCore/second. Then the compute billed for the primary replica over this 24-hour period is the product of the compute unit price and vCore seconds billed: $0.000163/vCore/second * 180000 vCore seconds ~ $29.34.
 
@@ -568,13 +568,13 @@ Suppose the compute unit price for the primary replica is $0.000163/vCore/second
 |0:00-2:00 |    8 |    9    | vCores used    | 8 vCores * 7200 seconds = 57600 vCore seconds |
 | 2:00-8:00    | 1.5     | 3    | Memory used    | 3 GB * 1/3 * 43200 seconds = 43200 vCore seconds|
 |8:00-24:00|    0|    2    |Min memory provisioned    |3 GB * 1/3 * 36000 seconds = 36000 vCore seconds|
-|Total vCore seconds billed over 24 hours||||136800 vCore seconds |
+|Total vCore seconds billed over 24 hours||||136,800 vCore seconds |
 
 Suppose the compute unit price for an HA replica is $0.000105/vCore/second. Then the compute billed for the HA replica over this 24-hour period is $0.000105/vCore/second * 136800 vCore seconds ~ $14.36.
 
 **Named replica** 
 
-Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
+Similarly for the named replica, suppose the total vCore seconds billed over 24 hours is 150,000 vCore seconds and that the compute unit price for a named replica is $0.000105/vCore/second. Then the compute billed for the named replica over this time period is $0.000105/vCore/second * 150000 vCore seconds ~ $15.75.
 
 **Total compute cost**
 

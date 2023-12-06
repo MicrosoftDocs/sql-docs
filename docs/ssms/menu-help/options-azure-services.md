@@ -24,7 +24,7 @@ Use this page to specify options related to Azure cloud services. To access this
 
 | Option | Information | Description |
 |--------|-------------|-------------|
-| Allow single sign-on to SQL using Microsoft Entra authentication | **True** <br> **False** | When true, removes the requirement to provide full credentials to connect to Azure SQL Database and SQL Server using Microsoft Entra ID if using the same account used to login to Windows. |
+| Allow single sign-on to SQL using Microsoft Entra authentication | **True** <br> **False** | When true, removes the requirement to provide full credentials to connect to Azure SQL Database and SQL Server using Microsoft Entra ID if using the same account used to log in to Windows. |
 | Azure Data Factory Portal URL | `https://adf.azure.com/` | Specifies the URL for the Azure Data Factory portal. |
 | Gallery Endpoint | `https://gallery.azure.com/` | Specifies the endpoint for the Resource Manager gallery of deployment templates. |
 | Graph Audience | `https://graph.microsoft.com/` | Graph Endpoint Resource ID. |

@@ -13,7 +13,10 @@ ms.custom: microsoft-excel-add-in
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]&nbsp;[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from Master Data Services (MDS) into Excel and then work with it just as you would any other data. When you are done, you can publish the data back to MDS where it's centrally stored. Security level determines which data you can view and update.  
+With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from Master Data Services (MDS) into Excel and then work with it just as you would any other data. When you are done, you can publish the data back to MDS where it's centrally stored. Security level determines which data you can view and update.
+
+> [!NOTE]  
+> If you want to use Add-in for Excel to view or update data, you must enable ActiveX controls in Microsoft Excel, otherwise the data from the MDS database might not complete the load. For more information, see [Enable or disable ActiveX settings in Office files](https://support.microsoft.com/office/enable-or-disable-activex-settings-in-office-files-f1303e08-a3f8-41c5-a17e-b0b8898743ed).
   
 If you're an administrator, you can use the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] to create entities and attributes, which you can load with data. This process eliminates the need to use other tools to load data into your models.  
   

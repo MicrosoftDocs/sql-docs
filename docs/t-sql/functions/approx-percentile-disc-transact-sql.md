@@ -3,8 +3,8 @@ title: APPROX_PERCENTILE_DISC (Transact-SQL)
 description: A function that returns the value from the set of values in a group based on the provided percentile and sort specification.
 author: blakhani-msft
 ms.author: blakhani
-ms.reviewer: "maghan"
-ms.date: 07/25/2022
+ms.reviewer: maghan
+ms.date: 12/06/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -16,12 +16,12 @@ helpviewer_keywords:
   - "analytic functions,PERCENTILE_DISC"
 dev_langs:
   - "TSQL"
-monikerRange: "azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azuresqledge-current"
+monikerRange: "azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqledge-current||=fabric"
 ---
 
 # APPROX_PERCENTILE_DISC (Transact-SQL)
 
-[!INCLUDE[SQL Server 2022 Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sqlserver2022-asdb-asmi.md)]
+[!INCLUDE [SQL Server 2022 Azure SQL Database Azure SQL Managed Instance Fabric SE DW](../../includes/applies-to-version/sqlserver2022-asdb-asmi-fabricse-fabricdw.md)]
 
 This function returns the value from the set of values in a group based on the provided percentile and sort specification. Since this is an approximate function, the output would be within rank based error bound with certain confidence. As this approximate percentile is based on a discrete distribution of the column values, the output value would be equal to one of the specific values in the column. This function can be used as an alternative to PERCENTILE_DISC for large datasets where negligible error with faster response is acceptable as compared to accurate percentile value with slow response time.
 
@@ -58,7 +58,7 @@ This function provides rank-based error guarantees not value based. The function
 
 ## Known behaviors
 
-- The output of the functions may not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
+- The output of the functions might not be the same in all executions. The algorithm used for these functions is [KLL sketch](https://arxiv.org/pdf/1603.05346v2.pdf) which is a randomized algorithm. Every time the sketch is built, random values are picked. These functions provide rank-based error guarantees not value based.
 
 - The function implementation guarantees up to a 1.33% error bounds within a 99% confidence.
 
@@ -90,6 +90,7 @@ FROM tblEmployee
 GROUP BY DeptId
 ```
 
-## See also  
+## Related content
 
-[PERCENTILE_DISC](../../t-sql/functions/percentile-disc-transact-sql.md)
+- [PERCENTILE_DISC (Transact-SQL)](percentile-disc-transact-sql.md)
+- [APPROX_PERCENTILE_CONT (Transact-SQL)](approx-percentile-cont-transact-sql.md)

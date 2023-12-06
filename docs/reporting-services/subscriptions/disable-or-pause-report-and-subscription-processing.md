@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "roles [Reporting Services], modifying"
   - "shared schedules [Reporting Services], pausing"
 ---
-# Disable or pause report and process subscriptions 
+# Disable or pause report and subscription processing 
 There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following table summarizes the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
   
 ##  <a name="bkmk_top"></a> In this article  
@@ -53,7 +53,7 @@ In the web portal, browse to the subscription from either the **My Subscriptions
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg " PowerShell related content"): **Use Windows PowerShell to disable a single subscription:** Use the following PowerShell script to disable a specific subscription. Update the server name and subscription ID in the script.  
+:::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg"::: **Use Windows PowerShell to disable a single subscription:** Use the following PowerShell script to disable a specific subscription. Update the server name and subscription ID in the script.  
   
 ```PS  
 #disable specific subscription  

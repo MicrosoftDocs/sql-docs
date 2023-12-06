@@ -230,7 +230,7 @@ To remove a standby replica with the Azure CLI, use [az sql db replica delete-li
 
 -  Can I enable the Azure Hybrid Benefit for the standby replica? 
 
-   Designating a replica for standby replaces the discount from the Azure Hybrid Benefit, so you can't modify the licensing model for the replica by using the Azure portal. However, if you want the standby replica to use the Azure Hybrid Benefit upon failover, you can use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell or [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command to update the license type to `AHB` for the standby replica to use when the standby replica becomes primary after failover. 
+   Designating a replica for standby replaces the discount from the Azure Hybrid Benefit, so you can't modify the licensing model for the replica by using the Azure portal. However, if you want the standby replica to use the Azure Hybrid Benefit upon failover, you can use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell or [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command to update the license type to `BasePrice` (Azure Hybrid Benefit) for the standby replica to use when the standby replica becomes primary after failover. 
 
 -  What happens to the standby replica status during failover? 
 

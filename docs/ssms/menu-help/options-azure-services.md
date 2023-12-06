@@ -53,7 +53,7 @@ Select the Azure Cloud to which Management Studio connects to discover and manag
 |--------|-------------|
 | **Azure China Cloud**  | International public cloud service generally available in the China market. For more information, see [Azure China documentation](/azure/china/). |
 | **Azure Cloud**  | Default public cloud. |
-| **Azure US Government** | Dedicated cloud for US government agencies and their partners. For more information, see [Azure Government documentation](/azure/azure-government/azure-government). |
+| **Azure US Government** | Dedicated cloud for US government agencies and their partners. For more information, see [Azure Government documentation](/azure/azure-government/). |
 | **Custom** | Select **Custom** to enter custom URLs and DNS suffixes.  The options listed on the page become editable. |
 
 ## Service Addresses

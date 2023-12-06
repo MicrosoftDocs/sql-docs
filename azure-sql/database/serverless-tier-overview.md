@@ -597,7 +597,7 @@ Currently, 80 max vCores in serverless is supported in the following regions wit
 
 ### Regions supporting availability zones for 80 max vCores
 
-Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: Australia East, Brazil South, Canada Central, Central US, East Asia, East US, East US 2, France Central, Germany West Central, India Central, India South, Japan East, Japan West, North Central US, North Europe, South Central US, UK South, West Central US, West Europe, West US, West US 2, and West US 3.
+Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: Australia East, Brazil South, Canada Central, Central US, East Asia, East US, East US 2, France Central, Germany West Central, India Central, India South, Japan East, Japan West, North Central US, North Europe, UK South, West Central US, West Europe, West US, West US 2, and West US 3.
 
 ## Next steps
 

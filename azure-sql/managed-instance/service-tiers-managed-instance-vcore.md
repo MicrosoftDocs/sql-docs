@@ -4,7 +4,7 @@ description: The vCore purchasing model lets you independently scale compute and
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: sashan, moslake
-ms.date: 04/13/2023
+ms.date: 12/07/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
@@ -200,9 +200,6 @@ Standard-series (Gen5) and premium-series hardware is available in all public re
   
 Memory optimized premium-series hardware is in preview, and has limited regional availability. For more information, see [Azure SQL Managed Instance resource limits](../managed-instance/resource-limits.md#hardware-configuration-characteristics).
 
-#### Previously available hardware
-
-Gen4 hardware has been retired and is not available for provisioning. Migrate your instance of SQL Managed Instance to a [supported hardware generation](resource-limits.md).
 
 ## Next steps
 

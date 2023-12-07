@@ -1,6 +1,6 @@
 ---
-title: Extended Security Updates for Azure Arc-enabled SQL Server
-description: Learn how Azure Arc-enabled SQL Server enables Extended Security Updates
+title: Extended Security Updates
+description: Learn how SQL Server enabled by Azure Arc enables Extended Security Updates
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: randolphwest
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.custom: references_regions
 ---
 
-# Azure Arc-enabled SQL Server supports Extended Security Updates
+# SQL Server enabled by Azure Arc supports Extended Security Updates
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Azure Arc-enabled SQL Server supports Extended Security Updates for eligible products and licenses. For details, see [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md).
+[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] supports Extended Security Updates for eligible products and licenses. For details, see [What are Extended Security Updates for SQL Server?](../end-of-support/sql-server-extended-security-updates.md).
 
 
 ## Extended Security Updates

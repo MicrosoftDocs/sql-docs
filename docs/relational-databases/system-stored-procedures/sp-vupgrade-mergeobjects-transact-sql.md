@@ -4,7 +4,7 @@ description: Regenerates the article-specific triggers, stored procedures, and v
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -48,7 +48,7 @@ The system administrator login to use when creating new system objects in the di
 
 #### [ @password = ] N'*password*'
 
-The system administrator password to use when creating new system objects in the distribution database. *@password* is **sysname**, with a default of `N''` (empty string). This parameter isn't required if *@security_mode* is set to `1`, which is Windows Authentication.
+The system administrator password to use when creating new system objects in the distribution database. *@password* is **sysname**, with a default of an empty string. This parameter isn't required if *@security_mode* is set to `1`, which is Windows Authentication.
 
 #### [ @security_mode = ] *security_mode*
 
@@ -66,7 +66,7 @@ The login security mode to use when creating new system objects in the distribut
 
 Requires membership in the **sysadmin** fixed server role, or execute permission directly on this stored procedure.
 
-## See also
+## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
-- [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)
+- [Upgrade or patch replicated databases](../../database-engine/install-windows/upgrade-replicated-databases.md)

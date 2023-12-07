@@ -191,7 +191,7 @@ This release only applies to Linux and macOS.
 | Dropped support for PHP 7.0. | &nbsp; |
 | Support for Microsoft ODBC Driver 17.3 on all platforms. | &nbsp; |
 | Support for macOS Mojave. | Requires ODBC Driver 17.3 or above. |
-| Support for Ubuntu 18.10 and Suse Linux 15. | Both require ODBC Driver 17.3 or above. |
+| Support for Ubuntu 18.10 and SUSE Linux 15. | Both require ODBC Driver 17.3 or above. |
 | Dropped support for Linux Ubuntu 17.10 and macOS El Capitan. | &nbsp; |
 | Support for Azure AD Access Token. | In Linux and macOS, requires ODBC Driver 17.2+ and unixODBC 2.3.6+. |
 | Support for Authentication with Azure AD using Managed Identity for Azure Resources. | Requires ODBC Driver 17.3+. |
@@ -232,7 +232,7 @@ This release only applies to Linux and macOS.
 - Support for PHP 7.2.1 and up on Windows, and 7.2.0 and up on other platforms
 - Support for Microsoft ODBC Driver 17
   - Version 17 is now the default on all platforms
-- Support for Ubuntu 17.10, Debian 9, and Suse Enterprise Linux 12
+- Support for Ubuntu 17.10, Debian 9, and SUSE Linux Enterprise Server 12
 - Dropped support for Ubuntu 15.10
 - Support for Always Encrypted with CRUD functionalities on Windows. For more information, see [Using Always Encrypted with the PHP Drivers for SQL Server](using-always-encrypted-php-drivers.md)
   - Support for Windows Certificate Store

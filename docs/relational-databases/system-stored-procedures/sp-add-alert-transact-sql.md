@@ -4,7 +4,7 @@ description: "sp_add_alert (Transact-SQL)"
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 05/31/2023
+ms.date: 11/02/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -53,7 +53,7 @@ The name of the alert. The name appears in the e-mail or pager message sent in r
 
 #### [ @message_id = ] *message_id*
 
-The message error number that defines the alert. (It usually corresponds to an error number in the `sysmessages` table.) *@message_id* is **int**, with a default of `0`. If *@severity* is used to define the alert, *@message_id* must be `0` or NULL.
+The message error number that defines the alert. (It usually corresponds to an error number in the `sysmessages` table.) *@message_id* is **int**, with a default of `0`. If *@severity* is used to define the alert, *@message_id* must be `0` or `NULL`.
 
 Only `sysmessages` errors written to the Microsoft Windows application log can cause an alert to be sent.
 
@@ -94,7 +94,7 @@ Whether the description of the [!INCLUDE [ssNoVersion](../../includes/ssnoversio
 
 #### [ @database_name = ] '*database*'
 
-The database in which the error must occur for the alert to fire. If *@database_name* isn't supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is NULL.
+The database in which the error must occur for the alert to fire. If *@database_name* isn't supplied, the alert fires regardless of where the error occurred. *database* is **sysname**. Names that are enclosed in brackets (`[ ]`) aren't allowed. The default value is `NULL`.
 
 #### [ @event_description_keyword = ] N'*event_description_keyword_pattern*'
 
@@ -167,7 +167,7 @@ If an alert isn't functioning properly, check whether:
 
 - The alert is enabled.
 
-- Events generated with `xp_logevent` occur in the `master` database. Therefore, `xp_logevent` doesn't trigger an alert unless the *@database_name* for the alert is `'master'` or NULL.
+- Events generated with `xp_logevent` occur in the `master` database. Therefore, `xp_logevent` doesn't trigger an alert unless the *@database_name* for the alert is `master` or `NULL`.
 
 ## Permissions
 
@@ -193,7 +193,7 @@ EXEC dbo.sp_add_alert
 GO
 ```
 
-## See also
+## Related content
 
 - [sp_add_notification (Transact-SQL)](sp-add-notification-transact-sql.md)
 - [sp_altermessage (Transact-SQL)](sp-altermessage-transact-sql.md)

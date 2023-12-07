@@ -3,10 +3,10 @@ title: "SQL Server, LogPool FreePool object"
 description: "Learn about the SQLServer:LogPool FreePool performance object, wich provides counters for statistics for the free pool inside the Log Pool."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:LogPool FreePool"
 ---
@@ -33,6 +33,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%LogPool FreePool%';
 ```  
 
-## See also  
-[Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+## Related content
 
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

@@ -99,7 +99,7 @@ To troubleshoot Azure App Service access via virtual network, review [Troublesho
 To troubleshoot connectivity issues, review the following:
 
 - If you're unable to connect to SQL Managed Instance from an Azure virtual machine within the same virtual network but a different subnet, check if you have a Network Security Group set up on VM subnet that might be blocking access. Additionally, open outbound connection on SQL port 1433 as well as ports in the range 11000-11999, since those are needed to connect via redirection inside the Azure boundary.
-- Ensure that BGP Propagation is set to **Enabled** for the route table associated with the virtual network.
+- Ensure that propagation of gateway routes is disabled for the route table associated with the virtual network.
 - If using point-to-site VPN, check the configuration in the Azure portal to see if you see **Ingress/Egress** numbers. Nonzero numbers indicate that Azure is routing traffic to/from on-premises.
 
    ![Screenshot showing ingress/egress numbers in the Azure portal.](./media/connect-application-instance/ingress-egress-numbers.png)

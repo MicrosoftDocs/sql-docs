@@ -102,7 +102,7 @@ Any database snapshots on a database must be dropped before the database can be 
 Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.
 
 > [!IMPORTANT]  
-> Stretch Database is deprecated in [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)]. [!INCLUDE [ssNoteDepFutureAvoid-md](../../includes/ssnotedepfutureavoid-md.md)]
+> [!INCLUDE [stretch-database-deprecation](../../includes/stretch-database-deprecation.md)]
 
 ### [!INCLUDE [ssazure-sqldb](../../includes/ssazure-sqldb.md)]
 

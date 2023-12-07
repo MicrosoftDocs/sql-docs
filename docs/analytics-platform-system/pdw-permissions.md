@@ -10,7 +10,7 @@ ms.subservice: data-warehouse
 ms.topic: conceptual
 ---
 
-# Managing permissions in Parallel Data Warehouse
+# Managing permissions in Analytics Platform System (PDW)
 This article describes the requirements and options for managing database permissions for SQL Server PDW.
 
 ## <a name="BackupRestoreBasics"></a>Database Engine Permission Basics
@@ -200,7 +200,7 @@ There are 9 fixed database roles.
 -   **db_denydatareader**
 
 ### Permissions of the Fixed Database Roles
-The system of fixed server roles and fixed database roles is a legacy system originated in the 1980's. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->The following chart shows the permissions that are associated with each fixed database role. All permissions in this SQL Server graphic are not available (or necessary) in APS.
+The system of fixed server roles and fixed database roles is a legacy system originated in the 1980s. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md). -->The following chart shows the permissions that are associated with each fixed database role. All permissions in this SQL Server graphic are not available (or necessary) in APS.
 
 ![APS security fixed database roles](./media/pdw-permissions/APS_security_fixed_db_roles.png "APS_security_fixed_db_roles")
 
@@ -231,14 +231,9 @@ Every login that can connect to SQL Server PDW is a member of the **public** ser
 > **public** is implemented differently than other roles. Because all server principals are members of public, the membership of the **public** role is not listed in the **sys.server_role_members** DMV.
 
 ### Fixed Server Roles vs. Granting Permissions
-The system of fixed server roles and fixed database roles is a legacy system originated in the 1980's. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->
+The system of fixed server roles and fixed database roles is a legacy system originated in the 1980s. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->
 
-## Related Topics
+## Related content
 
 - [Grant permissions](grant-permissions.md)
-
-<!-- MISSING LINKS
-## See Also
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)
--->
-
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

@@ -4,7 +4,7 @@ description: Verifies that the current host for the publishing database is capab
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 08/24/2023
+ms.date: 11/14/2023
 ms.service: sql
 ms.subservice: replication
 ms.topic: "reference"
@@ -31,6 +31,7 @@ sp_validate_redirected_publisher
     [ @original_publisher = ] N'original_publisher'
     , [ @publisher_db = ] N'publisher_db'
     , [ @redirected_publisher = ] N'redirected_publisher' OUTPUT
+    , [ @multi_subnet_failover = ] multi_subnet_failover
 [ ; ]
 ```
 
@@ -47,6 +48,12 @@ The name of the database being published. *@publisher_db* is **sysname**, with n
 #### [ @redirected_publisher = ] N'*redirected_publisher*' OUTPUT
 
 The target of redirection specified when `sp_redirect_publisher` was called for the publisher/database pair. *@redirected_publisher* is an OUTPUT parameter of type **sysname**.
+
+#### [ @multi_subnet_failover = ] *multi_subnet_failover*
+
+**Applies to:** [!INCLUDE [sssql22-md](../../includes/sssql22-md.md)] CU 10 and later versions.
+
+Used to pass information for the creation of the dynamic linked server. If `0`, the dynamic linked server isn't created with the `MultiSubnetFailover` parameter. If `1`, the dynamic linked server is created with the `MultiSubnetFailover` parameter as `1`. *@multi_subnet_failover* is **bit**, with a default of `0`.
 
 ## Return code values
 
@@ -68,7 +75,7 @@ If the validation fails, errors are raised describing the failure.
 
 Caller must either be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role for the distribution database, or a member of a publication access list for a defined publication associated with the publisher database.
 
-## See also
+## Related content
 
 - [Replication stored procedures (Transact-SQL)](replication-stored-procedures-transact-sql.md)
 - [sp_get_redirected_publisher (Transact-SQL)](sp-get-redirected-publisher-transact-sql.md)

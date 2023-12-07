@@ -5,7 +5,7 @@ description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on 
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 07/16/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
 ms.topic: conceptual
@@ -13,18 +13,18 @@ ms.topic: conceptual
 
 # Monitor Big Data Clusters by using Jupyter Notebooks and Azure Data Studio
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
+This page is an index of notebooks for SQL Server 2019 Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
-Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, click **Run all cells**. Upon success return back to the original notebook, then click **Run all cells**.
+Each notebook is designed to check for its own dependencies. The **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the target notebook, select **Run all cells**. Upon success return back to the original notebook, then select **Run all cells**.
 
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
-* For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
-* For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
+- For more information on using notebooks to manage SQL Server Big Data Clusters, see [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](notebooks-manage-bdc.md).
+- For the location of big data cluster administration notebooks, see [Where to find SQL Server Big Data Clusters administration notebooks](view-cluster-status.md#where-to-find--administration-notebooks).
 
-## Monitoring Kubernetes
+## <a id="monitoring-kubernetes"></a> Monitor Kubernetes
 
 This section contains a set of notebooks useful for getting information and status about a SQL Server big data cluster using the `azdata` command line interface (CLI).
 
@@ -54,7 +54,7 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG099 - Get BDC daemonsets (Kubernetes)|Show BDC daemonsets for the Kubernetes cluster. |
 
 
-## Monitor Big Data Clusters 
+## Monitor Big Data Clusters
 
 This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server big data cluster.
 
@@ -72,6 +72,8 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG069 - Show big data cluster Gateway status|Get the BDC Gateway status of BDC deployed in Kubernetes cluster. |
 |TSG070 - Query SQL master pool| Execute SQL query on master instance. |
 
-## Next steps
+## Related content
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+- [Monitor Big Data Clusters status by using Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor Big Data Clusters by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor Big Data Clusters by using azdata and kubectl](cluster-monitor-cmdlet.md)

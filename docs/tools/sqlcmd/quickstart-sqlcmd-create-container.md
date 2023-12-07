@@ -4,7 +4,7 @@ description: A quickstart that walks through using creating a new container and 
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: maghan, randolphwest
-ms.date: 09/18/2023
+ms.date: 12/06/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: quickstart
@@ -39,13 +39,7 @@ This quickstart walks through the process of creating a local copy of a database
 
 ## Create a new container and restore a database
 
-Create a new [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance in a container using the latest version of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. The command also restores the `WideWorldImporters` database.
-
-Open a new terminal window and run the following command:
-
-```bash
-sqlcmd create mssql --accept-eula --using https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak
- ```
+[!INCLUDE [sqlcmd-create-container](../../includes/paragraph-content/sqlcmd-create-container.md)]
 
 ## Query the database in Azure Data Studio
 
@@ -105,6 +99,6 @@ sqlcmd delete --force
 
 The `--force` flag is used here for convenience since we are in a demo environment. In most cases, it's better to leave the `--force` flag off to make sure you aren't inadvertently deleting a database you don't mean to.
 
-## Next steps
+## Related content
 
 - [Create and query a SQL Server container](sqlcmd-use-utility.md#create-and-query-a-sql-server-container)

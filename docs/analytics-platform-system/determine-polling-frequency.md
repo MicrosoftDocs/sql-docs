@@ -4,17 +4,17 @@ description: This article explains how to determine the polling frequency for An
 author: charlesfeddersen
 ms.author: charlesf
 ms.reviewer: martinle
-ms.date: 04/17/2018
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: conceptual
 ---
 
-# Determine Polling Frequency
+# Determine polling frequency
 This article explains how to determine the polling frequency for Analytics Platform System appliance alerts.  
   
-## To Determine the Polling Frequency  
-Since PDW does not currently support proactive notifications when alerts occur, the monitoring solution needs to continuously poll the appliance DLLs.  Internally, PDW polls the components at different intervals:  
+## <a id="to-determine-the-polling-frequency"></a> Determine the Polling Frequency
+Since PDW doesn't currently support proactive notifications when alerts occur, the monitoring solution needs to continuously poll the appliance DLLs.  Internally, PDW polls the components at different intervals:  
   
 -   Cluster - 60 seconds  
   
@@ -24,10 +24,11 @@ Since PDW does not currently support proactive notifications when alerts occur, 
   
 -   Performance counters - three seconds  
   
-A common interval to poll for alerts, which is also used by System Center, is **every 15 minutes**.  Obviously, you could query more or less frequently, but it is not recommended to poll less than every six hours.  
+A common interval to poll for alerts, which is also used by System Center Operations Manager, is **every 15 minutes**.  Obviously, you could query more or less frequently, but it isn't recommended to poll less than every six hours.  
   
-Polling more frequently is acceptable, but polling too frequently can clutter the [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV.  Polling too frequently can make it difficult for users to diagnose query performance issues when their quickly rolls out of view.  
+Polling more frequently is acceptable, but polling too frequently can clutter the [sys.dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) DMV. Polling too frequently can make it difficult for users to diagnose query performance issues when they quickly roll out of view.  
   
-## See Also  
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+## Related content
+
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)
+- [Appliance monitoring for Analytics Platform System](appliance-monitoring.md)

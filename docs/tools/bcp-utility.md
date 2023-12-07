@@ -4,7 +4,7 @@ description: The bulk copy program (bcp) utility bulk copies data between an ins
 author: markingmyname
 ms.author: maghan
 ms.reviewer: v-davidengel, randolphwest
-ms.date: 10/30/2023
+ms.date: 11/15/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -48,6 +48,16 @@ The **bcp** utility can be used to import large numbers of new rows into [!INCLU
 ## Download the latest version of the bcp utility
 
 The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE [sql-server-2019](../includes/sssql19-md.md)] and later versions.
+
+### Windows
+
+- [Download ODBC Driver for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md)
+- [Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2230791)
+- [Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2231320)
+
+### Linux and macOS
+
+See [Install the SQL Server command-line tools sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md) for instructions to install **sqlcmd** and **bcp** on Linux and macOS.
 
 ### Version information
 
@@ -468,23 +478,23 @@ Reports the **bcp** utility version number and copyright.
 
 Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)]. This option doesn't prompt for each field; it uses the default values.
 
-**80** = [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)]
+`80` = [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)]
 
-**90** = [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)]
+`90` = [!INCLUDE [ssVersion2005](../includes/ssversion2005-md.md)]
 
-**100** = [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2](../includes/sql2008r2-md.md)]
+`100` = [!INCLUDE [sql2008-md](../includes/sql2008-md.md)] and [!INCLUDE [sql2008r2](../includes/sql2008r2-md.md)]
 
-**110** = [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
+`110` = [!INCLUDE [ssSQL11](../includes/sssql11-md.md)]
 
-**120** = [!INCLUDE [ssSQL14](../includes/sssql14-md.md)]
+`120` = [!INCLUDE [ssSQL14](../includes/sssql14-md.md)]
 
-**130** = [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]
+`130` = [!INCLUDE [sssql15-md](../includes/sssql16-md.md)]
 
-**140** = [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
+`140` = [!INCLUDE [sssql17-md](../includes/sssql17-md.md)]
 
-**150** = [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
+`150` = [!INCLUDE [sssql19-md](../includes/sssql19-md.md)]
 
-**160** = [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
+`160` = [!INCLUDE [sssql22-md](../includes/sssql22-md.md)]
 
 For example, to generate data for types not supported by [!INCLUDE [ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE [ssNoVersion](../includes/ssnoversion-md.md)], use the -V80 option.
 

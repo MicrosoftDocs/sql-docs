@@ -4,13 +4,11 @@ description: Learn how Hyperscale databases are architected to scale out storage
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/04/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
-ms.custom:
-  - build-2023
-  - build-2023-dataai
+ms.custom: build-2023, build-2023-dataai, ignite-2023
 ---
 
 # Hyperscale distributed functions architecture
@@ -18,6 +16,9 @@ ms.custom:
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 The [Hyperscale service tier](service-tier-hyperscale.md) utilizes an architecture with highly scalable and separate storage and compute tiers. This article describes the components that enable customers to quickly scale Hyperscale databases while benefiting from nearly instantaneous backups and highly scalable transaction logging.
+
+> [!TIP]
+> Simplified pricing for SQL Database Hyperscale coming soon. Review the [Hyperscale pricing blog](https://aka.ms/hsignite2023) for details.
 
 ## Hyperscale architecture overview
 
@@ -43,7 +44,7 @@ The compute node is where the relational engine lives. The compute node is where
 
 Compute nodes have local SSD-based caches called Resilient Buffer Pool Extension (RBPEX Data Cache). RBPEX Data Cache is an intelligent low-latency data cache that minimizes the need to fetch data from remote page servers.
 
-Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. Up to four high-availability secondary compute nodes can be added on demand. They act as hot standby nodes for failover purposes and may serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable various additional OLTP [read-scale out](read-scale-out.md) scenarios and to better support Hybrid Transactional and Analytical Processing (HTAP) workloads. A [geo secondary](active-geo-replication-overview.md) compute node can be added for disaster recovery purposes and to serve as a read-only compute node to offload read workloads in a different Azure region.
+Hyperscale databases have one primary compute node where the read-write workload and transactions are processed. Up to four high-availability secondary compute nodes can be added on demand. They act as hot standby nodes for failover purposes and can serve as read-only compute nodes to offload read workloads when desired. [Named replicas](service-tier-hyperscale-replicas.md#named-replica) are secondary compute nodes designed to enable various additional OLTP [read-scale out](read-scale-out.md) scenarios and to better support Hybrid Transactional and Analytical Processing (HTAP) workloads. A [geo secondary](active-geo-replication-overview.md) compute node can be added for disaster recovery purposes and to serve as a read-only compute node to offload read workloads in a different Azure region.
 
 In serverless, the primary replica and any high availability replicas or named replicas each independently autoscale based on their usage. The compute autoscaling range for the primary replica and any named replicas are configured independently. The autoscaling range of any high-availability replicas is inherited from the autoscaling configuration specified by their associated primary replica or named replica.
 
@@ -61,13 +62,11 @@ Page servers also maintain covering SSD-based caches to enhance performance. Lon
 
 The log service accepts transaction log records that correspond to data changes from the primary compute replica. Page servers then receive the log records from the log service and apply the changes to their respective slices of data. Additionally, compute secondary replicas receive log records from the log service and replay only the changes to pages already in their buffer pool or local RBPEX cache. All data changes from the primary compute replica are propagated through the log service to all the secondary compute replicas and page servers.
 
-Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The log service has local memory and SSD caches to speed up access to log records.
-
-The log for Hyperscale is practically infinite, with the restriction that a single transaction can't generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. Avoid unnecessarily large transactions to stay below this limit.
+Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The common reasons for log growth such as missed log backups or slow data replication to secondary replicas do not apply to Hyperscale. The log service has local memory and SSD caches to speed up access to log records.
 
 ## Azure storage
 
-Azure Storage contains all data files in a database. Page servers keep data files in Azure Storage up to date. This storage is also used for backup purposes and may be replicated between regions based on choice of storage redundancy.
+Azure Storage contains all data files in a database. Page servers keep data files in Azure Storage up to date. This storage is also used for backup purposes and can be replicated between regions based on choice of storage redundancy.
 
 Backups are implemented using storage snapshots of data files. Restore operations using snapshots are fast regardless of data size. A database can be restored to any point in time within its backup retention period.
 

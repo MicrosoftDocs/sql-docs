@@ -66,13 +66,19 @@ The amount of In-memory OLTP space in [Business Critical](../database/service-ti
 | **vCores** | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 
 |:--- |:--- |:--- |:--- |
 | 4 vCores    | 3.14 GB | 4.39 GB | 8.79 GB | 
+| 6 vCores    | - | 6.59 GB | 15.32 GB | 
 | 8 vCores    | 6.28 GB | 8.79 GB | 22.06 GB |  
-| 16    vCores | 15.77 GB | 22.06 GB | 57.58 GB |
-| 24    vCores | 25.25 GB | 35.34 GB | 93.09 GB |
-| 32    vCores | 37.94 GB | 53.09 GB | 128.61 GB |
-| 40    vCores | 52.23 GB | 73.09 GB | 164.13 GB |
-| 64    vCores | 99.9 GB | 139.82 GB | 288.61 GB |
-| 80    vCores | 131.68 GB| 184.30 GB | 288.61 GB |
+| 10 vCores    | - | 12.11 GB | 30.94 GB | 
+| 12 vCores    | - | 15.43 GB | 39.82 GB | 
+| 16 vCores | 15.77 GB | 22.06 GB | 57.58 GB |
+| 20 vCores | - | 28.70 GB | 75.34 GB |
+| 24 vCores | 25.25 GB | 35.34 GB | 93.09 GB |
+| 32 vCores | 37.94 GB | 53.09 GB | 128.61 GB |
+| 40 vCores | 52.23 GB | 73.09 GB | 164.13 GB |
+| 48 vCores | - | 95.34 GB | 199.64 GB |
+| 56 vCores | - | 117.58 GB | 244.13 GB |
+| 64 vCores | 99.9 GB | 139.82 GB | 288.61 GB |
+| 80 vCores | 131.68 GB| 184.30 GB | 288.61 GB |
 | 96 vCores    | N/A | 184.30 GB | 288.61 GB | 
 | 128 vCores | N/A | 184.30 GB | 288.61 GB | 
 
@@ -85,9 +91,9 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 
 | **Feature** | **General Purpose** | **Business Critical** |
 | --- | --- | --- |
-| Number of vCores\* | 4, 8, 16, 24, 32, 40, 64, 80 |  **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 4, 8, 16, 24, 32, 40, 64, 80, 96 <sup>1</sup>, 128<sup>1</sup> <br /> **Memory optimized premium-series**: 4, 8, 16, 24, 32, 40, 64, 80<sup>1</sup>, 96<sup>1</sup>, 128<sup>1</sup> <br />\*Same number of vCores is dedicated for read-only queries. |
+| Number of vCores\* | 4, 8, 16, 24, 32, 40, 64, 80 |  **Standard-series (Gen5)**: 4, 8, 16, 24, 32, 40, 64, 80 <br /> **Premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96 <sup>1</sup>, 128<sup>1</sup> <br /> **Memory optimized premium-series**: 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80<sup>1</sup>, 96<sup>1</sup>, 128<sup>1</sup> <br />\*Same number of vCores is dedicated for read-only queries. |
 | Max memory | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore)<br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore)<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore) | **Standard-series (Gen5)**: 20.4 GB - 408 GB (5.1 GB/vCore) on each replica <br /> **Premium-series**: 28 GB - 560 GB (7 GB/vCore up to 80 vCores<sup>1</sup>) on each replica<br /> **Memory optimized premium-series**: 54.4 GB - 870.4 GB (13.6 GB/vCore up to 64 vCores<sup>1</sup>) on each replica |
-| Max instance storage size (reserved) | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br /> | **Standard-series (Gen5)**: <br />- 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores <br />- 4 TB for 32, 40, 64, 80 vCores <br /> **Premium-series**: <br /> - 1 TB for 4, 8 vCores <br />- 2 TB for 16, 24 vCores <br />- 4 TB for 32 vCores<br />- 5.5 TB for 40, 64, 80 vCores<br /> **Memory optimized premium-series**: <br />- 1 TB for 4, 8 vCores<br />- 2 TB for 16, 24 vCores<br />- 4 TB for 32 vCores<br />- 5.5 TB for 40 vCores <br />- 16 TB for 64 vCores<br /> |
+| Max instance storage size (reserved) | - 2 TB for 4 vCores<br />- 8 TB for 8 vCores<br />- 16 TB for other sizes <br /> | **Standard-series (Gen5)**: <br />- 1 TB for 4, 8, 16 vCores<br />- 2 TB for 24 vCores <br />- 4 TB for 32, 40, 64, 80 vCores <br /> **Premium-series**: <br />- 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24, 32, 40, 48, 56 vCores<br />- 5.5 TB or 16 TB (depending on the region) for 64, 80, 96, 128 vCores <sup>2</sup><br /> **Memory optimized premium-series**: <br />- 1 TB for 4, 6 vCores <br />- 2 TB for 8, 10, 12 vCores <br />- 4 TB for 16, 20 vCores<br />- 5.5 TB for 24 vCores<br />- 5.5 TB or 8 TB (depending on the region) for 32, 40 vCores<sup>3</sup><br />- 12 TB for 48, 56 vCores<br />- 16 TB for 64, 80, 96, 128 vCores<br /> |
 | Max database size | Up to currently available instance size (depending on the number of vCores). | Up to currently available instance size (depending on the number of vCores). |
 | Max `tempdb` database size | Limited to 24 GB/vCore (96 - 1,920 GB) and currently available instance storage size.<br />Add more vCores to get more `tempdb` space.<br /> Log file size is limited to 120 GB.| Up to currently available instance storage size. |
 | Max number of `tempdb` files | 128 | 128 |
@@ -103,10 +109,11 @@ SQL Managed Instance has two service tiers: [General Purpose](../database/servic
 | Max sessions | 30000 | 30000 |
 | Max concurrent workers | 105 * number of vCores + 800 | 105 * number of vCores + 800 |
 | [Read-only replicas](../database/read-scale-out.md) | 0 | 1 (included in price) |
-| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances| **Standard-series (Gen5)**: <br /> Supported for 40, 64, 80 vCores <br /> **Premium-series**: Supported for 64, 80 vCores <br /> **Memory optimized premium-series**: Supported for 64 vCores |
+| Compute isolation | Not supported as General Purpose instances may share physical hardware with other instances| **Standard-series (Gen5)**: <br /> Supported for configurations with 64 or more vCores <br /> **Premium-series**: Supported for configurations with 64 or more vCores <br /> **Memory optimized premium-series**: Supported for configurations with 64 or more vCores |
 
 <sup>1</sup> The memory-to-vCore ratio is only available up to 80 vCores for premium-series hardware, and 64 vCores for memory optimized premium-series. Maximum memory is capped at 560 GB for premium-series vCores above 80, and 870.4 GB for memory optimized premium-series vCores above 64.  
-
+<sup>2</sup> Only [the major regions](#regional-support-for-memory-optimized-premium-series-hardware) in can provide 16 TB of storage for the premium-series hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.  
+<sup>3</sup> Only [the major regions](#regional-support-for-memory-optimized-premium-series-hardware) in can provide 8 TB of storage for the premium-series memory optimized hardware for these CPU vCore numbers, the smaller regions will be limiting with available storage with 5.5 TB.  
 
 A few additional considerations: 
 

@@ -44,13 +44,13 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 - **SQL Server on Azure Virtual Machines.** ESUs are free and enabled by default.
 
-- **SQL Server on-premises or a hosted environment.** ESUs are free and enabled by default on the following Azure services:
+- **SQL Server on-premises or a hosted environment.** ESUs are free on the following Azure services:
 
   - Azure Stack HCI
 
   - Azure Stack Hub
 
-- **SQL Server on-premises or a hosted environment, and connected to Azure Arc.** You can use Extended Security Updates enabled by Azure Arc to enable ESU as a monthly subscription. The updates are automatically installed when they're available. You also benefit from the features that [Azure Arc-enabled SQL Server](../azure-arc/overview.md) provides. If you migrate your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure or upgrade the subscription, charges then automatically stop. You can cancel the ESU subscription manually at any time.
+- **SQL Server on-premises or a hosted environment, and connected to Azure Arc.** You can use Extended Security Updates enabled by Azure Arc to enable ESU as a monthly subscription. The updates can be automatically installed when they're available. You also benefit from the features that [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../azure-arc/overview.md) provides. If you migrate your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] to Azure or upgrade the subscription, charges then automatically stop. You can cancel the ESU subscription manually at any time.
 
 - **SQL Server on-premises or in a hosted environment, and not connected to Azure Arc.** You can purchase the ESU SKU through the Volume Licensing Service Center (VLSC), and manually register your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances on the Azure portal to receive the patches. For more information, see  [Register disconnected SQL Server instances for ESUs](#register-instances-for-esus) later in this article.
 
@@ -61,9 +61,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ## Support
 
-ESUs don't include technical support, but you can use an active support contract, such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3), or Premier/Unified Support, to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
-
-[!INCLUDE [msCoName](../../includes/msconame-md.md)] can't provide technical support for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances (both on-premises, and in hosting environments) that aren't covered with an ESU subscription.
+ESUs don't include technical support for either on-premises or hosted environments. For on-premises environments, you can receive technical support on workloads covered by ESUs through additional active support contracts such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) or Premier/Unified Support. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
 
 ## ESU availability and deployment
 
@@ -112,7 +110,7 @@ For more information, see the [Extended Security Updates frequently asked questi
 
 If your on-premises or hosted environment [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances are connected to Azure Arc, you can enable ESUs as a subscription, which provides you with the flexibility to cancel at any time without having to separately purchase an ESU SKU. The ESU subscription enables automated deployment of the patches as they are released.
 
-You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Configure Azure Arc-enabled SQL Server](../azure-arc/manage-configuration.md).
+You can subscribe to Extended Security Updates by modifying [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] configuration. See [Configure [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]](../azure-arc/manage-configuration.md).
 
 ### [Azure portal](#tab/portal)
 
@@ -269,7 +267,7 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 ## <a id="register-instances-for-esus"></a> Register Extended Security Updates purchased through volume licensing
 
-If you purchased an ESU product through volume licensing (VL), you must register it to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice.
+If you purchased an ESU product through volume licensing (VL), you must register the purchased product on the Azure portal to enable access to previous or future Extended Security Updates. If you purchased the ESU product for the [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances that aren't connected to Azure Arc, you must first register these servers on the Azure portal. If you purchased the ESU product for the Arc-enabled [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instances, you don't need to register these servers as they are already connected to Azure Arc. To finalize the registration of the ESU VL product, you must link the ESU invoice. 
 
 ## <a id="register-instances-on-azure-portal"></a> Register disconnected SQL Server instances on Azure portal
 
@@ -480,3 +478,4 @@ For the full list of frequently asked questions, review the [Extended Security U
 - [Azure migrate: lift-and-shift options to move your current SQL Server into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)
 - [Cloud adoption framework for SQL migration](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [ESU-related scripts on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
+

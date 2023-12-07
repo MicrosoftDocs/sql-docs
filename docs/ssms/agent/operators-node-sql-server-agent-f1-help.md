@@ -3,11 +3,11 @@ title: Operators Node (SQL Server Agent F1 Help)
 description: "Operators Node (SQL Server Agent F1 Help)"
 author: markingmyname
 ms.author: maghan
-ms.date: 01/19/2017
+ms.date: 12/05/2023
 ms.service: sql
 ms.subservice: ssms
-ms.topic: conceptual
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016"
+ms.topic: ui-reference
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016"
 ---
 
 # Operators Node (SQL Server Agent F1 Help)

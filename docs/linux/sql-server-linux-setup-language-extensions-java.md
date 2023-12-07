@@ -26,7 +26,7 @@ Although you can [install the Database Engine and Language Extensions concurrent
 - The Linux version must be [supported by SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), but doesn't include the Docker Engine. Supported versions include:
 
   - [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md) (RHEL)
-  - [SUSE Enterprise Linux Server](quickstart-install-connect-suse.md) (SLES)
+  - [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md) (SLES)
   - [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 - You should have a tool for running Transact-SQL (T-SQL) commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#linux-installation), a free download that runs on Linux.

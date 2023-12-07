@@ -61,9 +61,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ## Support
 
-ESUs don't include technical support, but you can use an active support contract, such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3), or Premier/Unified Support, to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
-
-[!INCLUDE [msCoName](../../includes/msconame-md.md)] can't provide technical support for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances (both on-premises, and in hosting environments) that aren't covered with an ESU subscription.
+ESUs don't include technical support for either on-premises or hosted environments. For on-premises environments, you can receive technical support on workloads covered by ESUs through additional active support contracts such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) or Premier/Unified Support. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
 
 ## ESU availability and deployment
 

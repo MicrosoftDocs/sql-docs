@@ -31,8 +31,6 @@ SQL Managed Instance has characteristics and resource limits that depend on the 
 > [!NOTE]
 > The Gen5 hardware has been renamed to the **standard-series (Gen5)**.
 
-For information on previously available hardware, see [Previously available hardware](#previously-available-hardware) later in this article.
-
 Hardware configurations have different characteristics, as described in the following table:
 
 |    | **Standard-series (Gen5)** | **Premium-series** | **Memory optimized premium-series** | 

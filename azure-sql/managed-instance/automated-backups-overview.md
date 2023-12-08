@@ -141,11 +141,11 @@ Azure SQL Managed Instance automatically manages backups by creating full, diffe
 ### Initial backup
 - **New databases**: Immediately after a database is created, restored, or undergoes backup redundancy changes, the first full backup is initiated. This backup typically completes within 30 minutes, though it may take longer for larger databases.
 
-- **Restored databases**: The duration of the initial backup for restored databases varies, depending on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
+- **Restored databases**: The duration of the initial backup for restored databases varies and depends on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
 
 ### Scheduled Full Backups
 - **Weekly Schedule**: The system sets a weekly full backup window for the entire instance.
-- **Full Backup Window**: This is a designated period when full backups are performed. While the system aims to complete full backups within this window, if necessary, the backup may continue beyond the scheduled time until completion.
+- **Full Backup Window**: This is a designated period when full backups are performed. While the system aims to complete full backups within this window, if necessary, the backup may continue beyond the scheduled time until it completes.
 - **Adaptive Scheduling**: The backup algorithm evaluates the impact of the backup window on the workload approximately once a week, using CPU usage and I/O throughput as indicators. Depending on the previous week's workload, the full backup window may be adjusted.
 - **User Configuration**: It's crucial to note that users **cannot** modify or disable the backup schedule.
 

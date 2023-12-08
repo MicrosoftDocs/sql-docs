@@ -38,7 +38,7 @@ f1_keywords:
   
 ## Related content 
  [Delete an item &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

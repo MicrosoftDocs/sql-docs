@@ -47,7 +47,7 @@ f1_keywords:
  Cancel a single job or multiple jobs. The jobs are canceled immediately and can't be resumed. If you mistakenly cancel a job, you must request the report or subscription again to start a new job.  
   
 ## Related content 
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report server in Management Studio F1 hHelp](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

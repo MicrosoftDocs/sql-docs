@@ -60,7 +60,7 @@ f1_keywords:
  For processes initiated by a user, this column shows the name of the user. For system jobs, the user name is the name of the report server.  
   
 ## Related content  
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

@@ -54,9 +54,9 @@ f1_keywords:
  Select this option to create a schedule that runs only once, on a specific date and time.  
   
 ## Related content  
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Create, modify, and delete schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   

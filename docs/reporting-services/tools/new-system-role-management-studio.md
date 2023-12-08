@@ -33,7 +33,7 @@ f1_keywords:
  Shows a description of the task that enumerates the operations or permissions that the task supports.  
   
 ## Related content  
- [Report server in Management Studio F1 help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Role definitions](../../reporting-services/security/role-definitions.md)  
   
   

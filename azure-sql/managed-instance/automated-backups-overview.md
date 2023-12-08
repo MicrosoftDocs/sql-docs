@@ -143,7 +143,7 @@ Azure SQL Managed Instance automatically manages backups by creating full, diffe
 
 - **Restored databases**: The duration of the initial backup for restored databases varies and depends on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
 
-### Scheduled Full Backups
+### Scheduled full backups
 - **Weekly Schedule**: The system sets a weekly full backup window for the entire instance.
 - **Full Backup Window**: This is a designated period when full backups are performed. While the system aims to complete full backups within this window, if necessary, the backup may continue beyond the scheduled time until it completes.
 - **Adaptive Scheduling**: The backup algorithm evaluates the impact of the backup window on the workload approximately once a week, using CPU usage and I/O throughput as indicators. Depending on the previous week's workload, the full backup window may be adjusted.

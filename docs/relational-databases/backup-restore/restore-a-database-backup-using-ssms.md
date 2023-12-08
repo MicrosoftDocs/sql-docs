@@ -99,19 +99,19 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
 
    1. **WITH** options (not required):
 
-     - **Overwrite the existing database (WITH REPLACE)**
+      - **Overwrite the existing database (WITH REPLACE)**
 
-     - **Preserve the replication settings (WITH KEEP_REPLICATION)**
+      - **Preserve the replication settings (WITH KEEP_REPLICATION)**
 
-     - **Restrict access to the restored database (WITH RESTRICTED_USER)**
+      - **Restrict access to the restored database (WITH RESTRICTED_USER)**
 
    1. Select an option for the **Recovery state** box. This box determines the state of the database after the restore operation.
 
-     - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs can be restored. Select this option if you're restoring all of the necessary backups now.
+      - **RESTORE WITH RECOVERY** is the default behavior that leaves the database ready for use by rolling back the uncommitted transactions. No additional transaction logs can be restored. Select this option if you're restoring all of the necessary backups now.
 
-     - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Additional transaction logs can be restored. The database can't be used until it's recovered.
+      - **RESTORE WITH NORECOVERY** which leaves the database non-operational, and doesn't roll back the uncommitted transactions. Additional transaction logs can be restored. The database can't be used until it's recovered.
 
-     - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.
+      - **RESTORE WITH STANDBY** which leaves the database in read-only mode. It undoes uncommitted transactions, but saves the undo actions in a standby file so that recovery effects can be reverted.
 
    1. **Take tail-log backup before restore.** Not all restore scenarios require a tail-log backup.  For more information, see **Scenarios That Require a Tail-Log Backup** from [Tail-Log Backups (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
   
@@ -119,7 +119,7 @@ For information on SQL Server restore from Azure Blob Storage, see [SQL Server B
   
    1. Select **Prompt before restoring each backup** if you wish to be prompted between each restore operation. This isn't necessary unless the database is large and you wish to monitor the status of the restore operation.
 
-For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).
+   For more information about these restore options, see [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).
 
 1. Select **OK**.
 

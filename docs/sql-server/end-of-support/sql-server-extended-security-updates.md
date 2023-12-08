@@ -170,12 +170,39 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
 
+
+
+
+
+
+
+
+
+
+
 ---
 
 > [!IMPORTANT]  
 > If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
-### View ESU subscriptions
+## Subscribe to Extended Security Updates at-scale using Azure Policy
+
+You can activate the ESU subscription on on multiple Arc-enabled machines using an Azure policy definition called [Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8). When you create an assignment of this policy definition to a scope of your choice, it enables ESU on all Arc-enabled machines that have the Azure extension for SQL Server installed. If any of these machines have a qualified SQL Server instance, the ESU subscription will be activated immediately.
+
+Use the following steps to activate this policy:
+
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
+1. Search for *[Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8)* and right-click on the policy.
+1. Select **Assign policy**.
+1. Select a subscription and optionally a resource group as a scope.
+1. Make sure the policy enforcement is set to **Enabled.** 
+1. Select **Next**, **Next**.
+1. On the **Parameters** tab, set the value of *Enable Extended Security Updates* to **true***.*
+1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity** which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
+1. Click **Review + Create**.
+1. Click **Create**.
+
+## View ESU subscriptions
 
 You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances and their ESU subscription status.
 
@@ -259,6 +286,16 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 > [!WARNING]  
 > The update command overwrites all settings. If your extension settings have a list of excluded [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, you must specify the full exclusion list with the update command.
+
+
+
+
+
+
+
+
+
+
 
 ---
 

@@ -241,13 +241,13 @@ Manage classifications and recommendations for Azure SQL Database and Azure SQL 
 
 You can use the REST API to programmatically manage classifications and recommendations. The published REST API supports the following operations:
 
-- [Create Or Update](/rest/api/sql/sensitivitylabels/createorupdate): Creates or updates the sensitivity label of the specified column.
-- [Delete](/rest/api/sql/sensitivitylabels/delete): Deletes the sensitivity label of the specified column.
-- [Disable Recommendation](/rest/api/sql/sensitivitylabels/disablerecommendation): Disables sensitivity recommendations on the specified column.
-- [Enable Recommendation](/rest/api/sql/sensitivitylabels/enablerecommendation): Enables sensitivity recommendations on the specified column. (Recommendations are enabled by default on all columns.)
-- [Get](/rest/api/sql/sensitivitylabels/get): Gets the sensitivity label of the specified column.
-- [List Current By Database](/rest/api/sql/sensitivitylabels/listcurrentbydatabase): Gets the current sensitivity labels of the specified database.
-- [List Recommended By Database](/rest/api/sql/sensitivitylabels/listrecommendedbydatabase): Gets the recommended sensitivity labels of the specified database.
+- [Create Or Update](/rest/api/sql/sensitivity-labels/create-or-update): Creates or updates the sensitivity label of the specified column.
+- [Delete](/rest/api/sql/sensitivity-labels/delete): Deletes the sensitivity label of the specified column.
+- [Disable Recommendation](/rest/api/sql/sensitivity-labels/disable-recommendation): Disables sensitivity recommendations on the specified column.
+- [Enable Recommendation](/rest/api/sql/sensitivity-labels/enable-recommendation): Enables sensitivity recommendations on the specified column. (Recommendations are enabled by default on all columns.)
+- [Get]( /rest/api/sql/sensitivity-labels/get): Gets the sensitivity label of the specified column.
+- [List Current By Database](/rest/api/sql/sensitivity-labels/list-current-by-database): Gets the current sensitivity labels of the specified database.
+- [List Recommended By Database](/rest/api/sql/sensitivity-labels/list-recommended-by-database): Gets the recommended sensitivity labels of the specified database.
 
 ## Retrieve classifications metadata using SQL drivers
 

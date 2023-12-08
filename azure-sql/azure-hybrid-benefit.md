@@ -62,7 +62,7 @@ To set or update the license type using the Azure CLI:
 
 To set or update the license type using the REST API:
 
-- [Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update) with the properties.licenseType parameter
+- [Create or update](/rest/api/sql/databases/create-or-update) with the properties.licenseType parameter
 - [Update](/rest/api/sql/databases/update) with the properties.licenseType parameter
 
 ---
@@ -95,8 +95,8 @@ To set or update the license type using the Azure CLI:
 
 To set or update the license type using the REST API:
 
-- [Create or update](/rest/api/sql/managedinstances/createorupdate) with the properties.licenseType parameter
-- [Update](/rest/api/sql/managedinstances/update) with the properties.licenseType parameter
+- [Create or update](/rest/api/sql/managed-instances/create-or-update) with the properties.licenseType parameter
+- [Update](/rest/api/sql/managed-instances/update) with the properties.licenseType parameter
 
 ---
 ## Frequently asked questions

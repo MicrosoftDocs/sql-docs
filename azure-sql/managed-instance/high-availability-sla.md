@@ -133,8 +133,8 @@ High availability is a fundamental part of the SQL Managed Instance platform tha
 A failover can be initiated using PowerShell, REST API, or Azure CLI:
 
 | PowerShell | REST API | Azure CLI |
- :--- | :--- | :--- |
- [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/) | [SQL Managed Instance - Failover](/rest/api/sql/managed%20instances%20-%20failover/failover) | [az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) can be used to invoke a REST API call from Azure CLI |
+| :--- | :--- | :--- |
+| [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/Invoke-AzSqlInstanceFailover/) | [SQL Managed Instance - Failover](/rest/api/sql/managed-instances/failover) | [az sql mi failover](/cli/azure/sql/mi/#az-sql-mi-failover) can be used to invoke a REST API call from Azure CLI |
 
 
 ## Conclusion

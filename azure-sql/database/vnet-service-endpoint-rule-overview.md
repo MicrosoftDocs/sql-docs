@@ -304,7 +304,7 @@ Error 40615 is similar, except it relates to *IP address rules* on the firewall.
 
 <!-- Link references, to text, Outside this GitHub repo (HTTP). -->
 [http-azure-portal-link-ref-477t]: https://portal.azure.com/
-[rest-api-virtual-network-rules-operations-862r]: /rest/api/sql/virtualnetworkrules
+[rest-api-virtual-network-rules-operations-862r]: /rest/api/sql/virtual-network-rules
 
 <!-- ??2
 #### Syntax related articles

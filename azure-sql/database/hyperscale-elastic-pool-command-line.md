@@ -183,7 +183,7 @@ Set-AzSqlElasticPool -ResourceGroupName "my-example-rg" -ServerName "my-example-
 
 ## REST API
 
-Use the [2021-11-01-preview](/rest/api/sql/2021-11-01-preview/elastic-pools/update?tabs=HTTP#update-high-availability-replica-count-of-a-hyperscale-elastic-pool) REST API (or later) to work with secondary replicas for Hyperscale elastic pools.
+Use the [2021-11-01](/rest/api/sql/elastic-pools/update?tabs=HTTP#update-high-availability-replica-count-of-a-hyperscale-elastic-pool) REST API (or later) to work with secondary replicas for Hyperscale elastic pools.
 
 The following example scales out  an existing Hyperscale elastic pool to use four secondary replicas:
 
@@ -201,5 +201,5 @@ PATCH https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups
 
 - [Azure SQL Database CLI commands](/cli/azure/sql).
 - [Azure SQL Database PowerShell cmdlets](/powershell/module/az.sql/).
-- [Azure SQL Database elastic pools REST API](/rest/api/sql/2021-11-01-preview/elastic-pools/).
+- [Azure SQL Database elastic pools REST API](/rest/api/sql/elastic-pools/).
 - [Hyperscale elastic pools overview](./hyperscale-elastic-pool-overview.md).

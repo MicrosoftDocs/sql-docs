@@ -32,17 +32,17 @@ For a script example, see [Configure auditing and threat detection using PowerSh
 
 **REST API**:
 
-- [Create or Update Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/create-or-update)
-- [Create or Update Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/create-or-update)
-- [Get Database Auditing Policy](/rest/api/sql/2017-03-01-preview/database-auditing-settings/get)
-- [Get Server Auditing Policy](/rest/api/sql/2017-03-01-preview/server-auditing-settings/get)
+- [Create or Update Database Auditing Policy](/rest/api/sql/database-blob-auditing-policies/create-or-update)
+- [Create or Update Server Auditing Policy](/rest/api/sql/server-blob-auditing-policies/create-or-update)
+- [Get Database Auditing Policy](/rest/api/sql/database-blob-auditing-policies/get)
+- [Get Server Auditing Policy](/rest/api/sql/server-blob-auditing-policies/get)
 
 Extended policy with WHERE clause support for additional filtering:
 
-- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/create-or-update)
-- [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/server%20auditing%20settings/createorupdate)
-- [Get Database *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/database-extended-auditing-settings/get)
-- [Get Server *Extended* Auditing Policy](/rest/api/sql/2017-03-01-preview/server-extended-auditing-settings/get)
+- [Create or Update Database *Extended* Auditing Policy](/rest/api/sql/extended-database-blob-auditing-policies/create-or-update)
+- [Create or Update Server *Extended* Auditing Policy](/rest/api/sql/extended-server-blob-auditing-policies/create-or-update)
+- [Get Database *Extended* Auditing Policy](/rest/api/sql/extended-database-blob-auditing-policies/get)
+- [Get Server *Extended* Auditing Policy](/rest/api/sql/extended-server-blob-auditing-policies/get)
 
 ### Use Azure CLI
 

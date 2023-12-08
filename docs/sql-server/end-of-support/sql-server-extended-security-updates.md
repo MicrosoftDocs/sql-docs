@@ -189,8 +189,8 @@ Use the following steps to activate this policy:
 1. Select **Next**, **Next**.
 1. On the **Parameters** tab, set the value of *Enable Extended Security Updates* to **True**.
 1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity**, which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
-1. Click **Review + Create**.
-1. Click **Create**.
+1. Select **Review + Create**.
+1. Select **Create**.
 
 ## View ESU subscriptions
 

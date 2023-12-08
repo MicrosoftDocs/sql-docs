@@ -16,7 +16,7 @@ To specify a data connection, you can use a shared data source from the report s
   
 In most tutorials you use embedded data sources, but if you have access to shared data sources, then you can use them instead.  
   
-## Gett a data connection from a shared data source  
+## Get a data connection from a shared data source  
 If the report server has available shared data sources that you have permission to use, you can use them instead of an embedded data source. The following procedures tell how to locate the shared data sources and provide any credentials needed to use them.  
   
 To use a shared data source, you browse to a report server and select one. Usually, you get the report server URL from the report server administrator.  

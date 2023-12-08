@@ -39,7 +39,7 @@ You can manage geo-replication and initiate a geo-failover using any of the foll
 - [PowerShell: Single database](scripts/setup-geodr-and-failover-database-powershell.md)
 - [PowerShell: Elastic pool](scripts/setup-geodr-and-failover-elastic-pool-powershell.md)
 - [Transact-SQL: Single database or elastic pool](/sql/t-sql/statements/alter-database-azure-sql-database)
-- [REST API: Single database](/rest/api/sql/replicationlinks)
+- [REST API: Single database](/rest/api/sql/replication-links)
 
 Active geo-replication uses the [Always On availability group](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) technology to asynchronously replicate the transaction log generated on the primary replica to all geo-replicas. While at any given point, a secondary database might be slightly behind the primary database, the data on a secondary is guaranteed to be transactionally consistent. In other words, changes made by uncommitted transactions aren't visible. 
 
@@ -215,13 +215,13 @@ As discussed previously, active geo-replication can also be managed programmatic
 
 | API | Description |
 | --- | --- |
-| [Create or Update Database (createMode=Restore)](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
-| [Get Create or Update Database Status](/rest/api/sql/2022-08-01-preview/databases/create-or-update) |Returns the status during a create operation. |
-| [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replicationlinks/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
-| [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replicationlinks/failoverallowdataloss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
-| [Get Replication Link](/rest/api/sql/replicationlinks/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
-| [Replication Links - List By Database](/rest/api/sql/replicationlinks/listbydatabase) | Gets all replication links for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. |
-| [Delete Replication Link](/rest/api/sql/replicationlinks/delete) | Deletes a database replication link. Can't be done during failover. |
+| [Create or Update Database (createMode=Restore)](/rest/api/sql/databases/create-or-update) |Creates, updates, or restores a primary or a secondary database. |
+| [Get Create or Update Database Status](/rest/api/sql/databases/create-or-update) |Returns the status during a create operation. |
+| [Set Secondary Database as Primary (Planned Failover)](/rest/api/sql/replication-links/failover) |Sets which secondary database is primary by failing over from the current primary database. **This option is not supported for SQL Managed Instance.**|
+| [Set Secondary Database as Primary (Unplanned Failover)](/rest/api/sql/replication-links/failover-allow-data-loss) |Sets which secondary database is primary by failing over from the current primary database. This operation might result in data loss. **This option is not supported for SQL Managed Instance.**|
+| [Get Replication Link](/rest/api/sql/replication-links/get) |Gets a specific replication link for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. **This option is not supported for SQL Managed Instance.**|
+| [Replication Links - List By Database](/rest/api/sql/replication-links/list-by-database) | Gets all replication links for a given database in a geo-replication partnership. It retrieves the information visible in the sys.geo_replication_links catalog view. |
+| [Delete Replication Link](/rest/api/sql/replication-links/delete) | Deletes a database replication link. Can't be done during failover. |
 
 ## Next steps
 

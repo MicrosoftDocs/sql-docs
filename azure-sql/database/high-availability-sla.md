@@ -187,7 +187,7 @@ When a database with a zone-redundant configuration is created on a logical serv
 
 When none of the databases on a server are zone-redundant, or when you create an empty server, then the `master` database associated with the server is **not zone-redundant**.
 
-You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/2021-11-01-preview/databases/get) to check the `ZoneRedundant` property for the `master` database:
+You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/databases/get) to check the `ZoneRedundant` property for the `master` database:
 
 # [Azure PowerShell](#tab/azure-powershell)
 

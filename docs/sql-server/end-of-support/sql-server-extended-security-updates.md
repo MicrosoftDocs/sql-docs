@@ -187,7 +187,7 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 
 ## Subscribe to Extended Security Updates at-scale using Azure Policy
 
-You can activate the ESU subscription on on multiple Arc-enabled machines using an Azure policy definition called [Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8). When you create an assignment of this policy definition to a scope of your choice, it enables ESU on all Arc-enabled machines that have the Azure extension for SQL Server installed. If any of these machines have a qualified SQL Server instance, the ESU subscription will be activated immediately.
+You can activate the ESU subscription on multiple Arc-enabled machines using an Azure policy definition called [Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8). When you create an assignment of this policy definition to a scope of your choice, it enables ESU on all Arc-enabled machines that have the Azure extension for SQL Server installed. If any of these machines have a qualified SQL Server instance, the ESU subscription will be activated immediately.
 
 Use the following steps to activate this policy:
 

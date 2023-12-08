@@ -8222,13 +8222,14 @@ items:
         - name: "Lesson 3: Using the dta Command Prompt Utility"
           href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
   - name: Distributed Replay
-    href: tools/distributed-replay/sql-server-distributed-replay.md
     items:
+    - name: Overview
+      href: tools/distributed-replay/sql-server-distributed-replay.md
     - name: Install
       href: tools/distributed-replay/install-distributed-replay.md
-    - name: Complete the Post-Installation Steps
+    - name: Complete the post-installation steps
       href: tools/distributed-replay/complete-the-post-installation-steps.md
-    - name: Modify the Controller & Client Services Accounts
+    - name: Modify the Controller & Client services accounts
       href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
     - name: Configure
       href: tools/distributed-replay/configure-distributed-replay.md

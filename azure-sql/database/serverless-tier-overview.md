@@ -12,6 +12,7 @@ ms.custom:
   - "test sqldbrb=1"
   - "devx-track-azurecli"
   - "devx-track-azurepowershell"
+  - "references-regions"
 ---
 # Serverless compute tier for Azure SQL Database
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
@@ -655,3 +656,4 @@ Currently, 80 maximum vCores with availability zone support in serverless for th
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
 - For serverless service tier choices, see [General Purpose](service-tier-general-purpose.md) and [Hyperscale (preview)](service-tier-hyperscale.md).
+

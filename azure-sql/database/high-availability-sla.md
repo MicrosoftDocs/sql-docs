@@ -133,17 +133,22 @@ Consider the following when configuring your General Purpose databases with zone
   - (Asia Pacific) China North 3
   - (Asia Pacific) UAE North
   - (Europe) France Central
+  - (Europe) Germany West Central
+  - (Europe) Italy North
   - (Europe) North Europe
   - (Europe) Norway East
+  - (Europe) Poland Central
   - (Europe) West Europe
   - (Europe) UK South
   - (Europe) Switzerland North
   - (Europe) Sweden Central
-  - (Middle East) Qatar Central
+  - (Middle East) Israel Central
+  - (Middle East) Qatar Central  - 
   - (North America) East US
   - (North America) East US 2
   - (North America) South Central US
-  - (North America) West US 2  
+  - (North America) West US 2
+  - (North America) West US 3
   - (South America) Brazil South
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).  
 - Zone-redundant configuration is only available in SQL Database when standard-series (Gen5) hardware is selected. 
@@ -187,7 +192,7 @@ When a database with a zone-redundant configuration is created on a logical serv
 
 When none of the databases on a server are zone-redundant, or when you create an empty server, then the `master` database associated with the server is **not zone-redundant**.
 
-You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/2021-11-01-preview/databases/get) to check the `ZoneRedundant` property for the `master` database:
+You can use Azure PowerShell or the Azure CLI or the [REST API](/rest/api/sql/databases/get) to check the `ZoneRedundant` property for the `master` database:
 
 # [Azure PowerShell](#tab/azure-powershell)
 

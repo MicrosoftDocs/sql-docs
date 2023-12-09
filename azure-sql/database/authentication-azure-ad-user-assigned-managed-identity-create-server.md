@@ -195,7 +195,7 @@ Get-AzSqlServer -ResourceGroupName "<ResourceGroupName>" -ServerName "<ServerNam
 
 # [REST API](#tab/rest-api)
 
-The [Servers - Create Or Update](/rest/api/sql/2020-11-01-preview/servers/create-or-update) REST API can be used to create a logical server with a user-assigned managed identity.
+The [Servers - Create Or Update](/rest/api/sql/servers/create-or-update) REST API can be used to create a logical server with a user-assigned managed identity.
 
 The script below will provision a logical server, set the Microsoft Entra admin as `<AzureADAccount>`, and enable [Microsoft Entra-only authentication](authentication-azure-ad-only-authentication.md). The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 

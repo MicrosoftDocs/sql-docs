@@ -303,12 +303,12 @@ Auto-failover groups can also be managed programmatically using Azure PowerShell
 
 | API | Description |
 | --- | --- |
-| [Create or Update Failover Group](/rest/api/sql/instancefailovergroups/createorupdate) | Creates or updates a failover group's configuration |
-| [Delete Failover Group](/rest/api/sql/instancefailovergroups/delete) | Removes a failover group from the instance |
-| [Failover (Planned)](/rest/api/sql/instancefailovergroups/failover) | Triggers failover from the current primary instance to this instance with full data synchronization. |
-| [Force Failover Allow Data Loss](/rest/api/sql/instancefailovergroups/forcefailoverallowdataloss) | Triggers failover from the current primary instance to the secondary instance without synchronizing data. This operation may result in data loss. |
-| [Get Failover Group](/rest/api/sql/instancefailovergroups/get) | retrieves a failover group's configuration. |
-| [List Failover Groups - List By Location](/rest/api/sql/instancefailovergroups/listbylocation) | Lists the failover groups in a location. |
+| [Create or Update Failover Group](/rest/api/sql/instance-failover-groups/create-or-update) | Creates or updates a failover group's configuration |
+| [Delete Failover Group](/rest/api/sql/instance-failover-groups/delete) | Removes a failover group from the instance |
+| [Failover (Planned)](/rest/api/sql/instance-failover-groups/failover) | Triggers failover from the current primary instance to this instance with full data synchronization. |
+| [Force Failover Allow Data Loss](/rest/api/sql/instance-failover-groups/force-failover-allow-data-loss) | Triggers failover from the current primary instance to the secondary instance without synchronizing data. This operation may result in data loss. |
+| [Get Failover Group](/rest/api/sql/instance-failover-groups/get) | retrieves a failover group's configuration. |
+| [List Failover Groups - List By Location](/rest/api/sql/instance-failover-groups/list-by-location) | Lists the failover groups in a location. |
 
 ---
 

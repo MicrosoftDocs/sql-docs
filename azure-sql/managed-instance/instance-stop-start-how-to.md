@@ -180,7 +180,7 @@ az sql mi stop --mi $instanceName -g $resourceGroupName
 
 ### [REST API](#tab/API)
 
-Stop the managed instance by calling the [SQL Managed Instances - Stop](/rest/api/sql/2022-08-01-preview/managed-instances/stop) API:
+Stop the managed instance by calling the [SQL Managed Instances - Stop](/rest/api/sql/managed-instances/stop) API:
 
 ```http
 POST
@@ -225,7 +225,7 @@ az sql mi start --mi $instanceName -g $resourceGroupName
 
 ### [REST API](#tab/API)
 
-Start the managed instance by calling the [SQL Managed Instances - Start](/rest/api/sql/2022-08-01-preview/managed-instances/start) API:
+Start the managed instance by calling the [SQL Managed Instances - Start](/rest/api/sql/managed-instances/start) API:
 
 ```http
 https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
@@ -376,7 +376,7 @@ az sql mi start-stop-schedule delete --mi "$instanceName" -g "$resourceGroupName
 
 #### Create or update schedule
 
-To create or update a schedule to stop and start a managed instance call the [Start Stop SQL Managed Instance Schedules - Create Or Update](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/create-or-update) API and adjust the body content to match your schedule:
+To create or update a schedule to stop and start a managed instance call the [Start Stop SQL Managed Instance Schedules - Create Or Update](/rest/api/sql/start-stop-managed-instance-schedules/create-or-update) API and adjust the body content to match your schedule:
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedules/default?api-version=2022-08-01-preview
@@ -407,7 +407,7 @@ PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{
 
 #### Check a schedule
 
-To check an existing schedule, call the [Start Stop SQL Managed Instance Schedules - Get](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/get) API:
+To check an existing schedule, call the [Start Stop SQL Managed Instance Schedules - Get](/rest/api/sql/start-stop-managed-instance-schedules/get) API:
 
 ```http
 GET
@@ -419,7 +419,7 @@ providers/Microsoft.Sql/managedInstances/{managedInstanceName}/startStopSchedule
 
 #### Delete a schedule
 
-To delete an existing schedule, call the [Start Stop SQL Managed Instance Schedules - Delete](/rest/api/sql/2022-08-01-preview/start-stop-managed-instance-schedules/delete) API:
+To delete an existing schedule, call the [Start Stop SQL Managed Instance Schedules - Delete](/rest/api/sql/start-stop-managed-instance-schedules/delete) API:
 
 ```http
 DELETE

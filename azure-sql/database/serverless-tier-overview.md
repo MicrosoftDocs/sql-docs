@@ -4,7 +4,7 @@ description: This article describes the new serverless compute tier and compares
 author: oslake
 ms.author: moslake
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/06/2023
+ms.date: 12/08/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -589,17 +589,21 @@ Azure Hybrid Benefit (AHB) and reserved capacity discounts do not apply to the s
 
 ## Available regions
 
-The serverless compute tier with support up to 40 max vCores is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
+Serverless for General Purpose and Hyperscale tiers with support up to 40 max vCores is available worldwide except the following regions: China East, China North, Germany Central, Germany Northeast, and US Gov Central (Iowa).
 
-### Regions supporting 80 max vCores
+### Regions supporting 80 max vCores without availability zones for General Purpose and Hyperscale
 
-Currently, 80 max vCores in serverless is supported in the following regions with more regions planned: Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, Germany West Central, India Central, India South, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West Central US, West US, West US 2, and West US 3.
+Currently, 80 max vCores in serverless for General Purpose and Hyperscale tiers is supported in the following regions with more regions planned: Australia East, Australia Southeast, Brazil South, Canada Central, Central US, East Asia, East US, East US 2, France Central, France South, Germany West Central, India Central, India South, Japan East, Japan West, North Central US, North Europe, Norway East, Qatar Central, South Africa North, South Central US, Switzerland North, UK South, UK West, West Europe, West Central US, West US, West US 2, and West US 3.
 
-### Regions supporting availability zones for 80 max vCores
+### Regions supporting 80 max vCores with availability zones for General Purpose
 
-Currently, 80 max vCores in serverless with availability zone support is limited to the following regions with more regions planned: Australia East, Brazil South, Canada Central, Central US, East Asia, East US, East US 2, France Central, Germany West Central, India Central, India South, Japan East, Japan West, North Central US, North Europe, UK South, West Central US, West Europe, West US, West US 2, and West US 3.
+Currently, 80 max vCores with availability zone support in serverless for the General Purpose tier is provided in the following regions with more regions planned: East US, North Europe, West Europe, and West US 2.
 
-## Next steps
+### Regions supporting 80 max vCores with availability zones for Hyperscale
+
+Currently, 80 max vCores with availability zone support in serverless for the Hyperscale tier is provided in the following regions with more regions planned: Central US, East US, North Europe, West Europe, West US 2, and West US 3.
+
+## Related content
 
 - To get started, see [Quickstart: Create a single database in Azure SQL Database using the Azure portal](single-database-create-quickstart.md).
 - For serverless service tier choices, see [General Purpose](service-tier-general-purpose.md) and [Hyperscale (preview)](service-tier-hyperscale.md). 

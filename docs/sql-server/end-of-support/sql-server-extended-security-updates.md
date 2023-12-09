@@ -61,9 +61,7 @@ The method of receiving Extended Security Updates depends on where your [!INCLUD
 
 ## Support
 
-ESUs don't include technical support, but you can use an active support contract, such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3), or Premier/Unified Support, to get technical support on workloads covered by ESUs if you choose to stay on-premises. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
-
-[!INCLUDE [msCoName](../../includes/msconame-md.md)] can't provide technical support for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances (both on-premises, and in hosting environments) that aren't covered with an ESU subscription.
+ESUs don't include technical support for either on-premises or hosted environments. For on-premises environments, you can receive technical support on workloads covered by ESUs through additional active support contracts such as [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3) or Premier/Unified Support. Alternatively, if you're hosting on Azure, you can use an Azure Support plan to get technical support.
 
 ## ESU availability and deployment
 
@@ -177,7 +175,24 @@ az connectedmachine extension update --machine-name "<machine_name>" -g "<resour
 > [!IMPORTANT]  
 > If you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance from Azure Arc, the ESU charges stop, and you won't have access to the new ESUs. If you haven't manually canceled your ESU subscription using Azure portal or API, the access to ESUs are immediately restored once you reconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance to Azure Arc, and the ESU charges resume. These charges include the time of disconnection. For more information about what happens when you disconnect your [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instances, see [Extended Security Updates: Frequently asked questions](extended-security-updates-frequently-asked-questions.md).
 
-### View ESU subscriptions
+## Subscribe to Extended Security Updates at scale using Azure Policy
+
+You can activate the ESU subscription on multiple Arc-enabled machines using an Azure policy definition called [Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8). When you create an assignment of this policy definition to a scope of your choice, it enables ESU on all Arc-enabled machines that have the Azure extension for SQL Server installed. If any of these machines have a qualified [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance, the ESU subscription will be activated immediately.
+
+Use the following steps to activate this policy:
+
+1. Navigate to **Azure Policy** in the Azure portal and choose **Definitions**.
+1. Search for *[Subscribe eligible Arc-enabled SQL Servers instances to Extended Security Updates](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetail.ReactView/id/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Ff692cc79-76fb-4c61-8861-467e454ac6f8)* and right-click on the policy.
+1. Select **Assign policy**.
+1. Select a subscription and optionally a resource group as a scope.
+1. Make sure the policy enforcement is set to **Enabled**.
+1. Select **Next**, **Next**.
+1. On the **Parameters** tab, set the value of *Enable Extended Security Updates* to **True**.
+1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity**, which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
+1. Select **Review + Create**.
+1. Select **Create**.
+
+## View ESU subscriptions
 
 You can use [Azure Resource Graph](/azure/governance/resource-graph/overview) to query the ESU subscriptions. The following example shows how you can view all eligible [!INCLUDE [sssql11-md](../../includes/sssql11-md.md)] instances and their ESU subscription status.
 

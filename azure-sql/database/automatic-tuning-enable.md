@@ -43,7 +43,7 @@ Automatic tuning options on a server are applied to all databases on this server
 
 ### REST API
 
-To find out more about using a REST API to enable automatic tuning on a **server**, see [Server automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/serverautomatictuning).
+To find out more about using a REST API to enable automatic tuning on a **server**, see [Server automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/server-automatic-tuning).
 
 ## Enable automatic tuning on an individual database
 
@@ -64,7 +64,7 @@ Once you have selected your desired configuration, click **Apply**.
 
 ### REST API
 
-To find out more about using a REST API to enable automatic tuning on a single database, see [Azure SQL Database automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/2022-02-01-preview/database-automatic-tuning).
+To find out more about using a REST API to enable automatic tuning on a single database, see [Azure SQL Database automatic tuning UPDATE and GET HTTP methods](/rest/api/sql/database-automatic-tuning).
 
 ### T-SQL
 

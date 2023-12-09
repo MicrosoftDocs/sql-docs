@@ -260,13 +260,13 @@ As discussed previously, auto-failover groups can also be managed programmatical
 
 | API | Description |
 | --- | --- |
-| [Create or Update Failover Group](/rest/api/sql/failovergroups/createorupdate) | Creates or updates a failover group |
-| [Delete Failover Group](/rest/api/sql/failovergroups/delete) | Removes a failover group from the server |
-| [Failover (Planned)](/rest/api/sql/failovergroups/failover) | Triggers failover from the current primary server to the secondary server with full data synchronization.|
-| [Force Failover Allow Data Loss](/rest/api/sql/failovergroups/forcefailoverallowdataloss) | Triggers failover from the current primary server to the secondary server without synchronizing data. This operation may result in data loss. |
-| [Get Failover Group](/rest/api/sql/failovergroups/get) | Retrieves a failover group's configuration. |
-| [List Failover Groups By Server](/rest/api/sql/failovergroups/listbyserver) | Lists the failover groups on a server. |
-| [Update Failover Group](/rest/api/sql/failovergroups/update) | Updates a failover group's configuration. |
+| [Create or Update Failover Group](/rest/api/sql/failover-groups/create-or-update) | Creates or updates a failover group |
+| [Delete Failover Group](/rest/api/sql/failover-groups/delete) | Removes a failover group from the server |
+| [Failover (Planned)](/rest/api/sql/failover-groups/failover) | Triggers failover from the current primary server to the secondary server with full data synchronization.|
+| [Force Failover Allow Data Loss](/rest/api/sql/failover-groups/force-failover-allow-data-loss) | Triggers failover from the current primary server to the secondary server without synchronizing data. This operation may result in data loss. |
+| [Get Failover Group](/rest/api/sql/failover-groups/get) | Retrieves a failover group's configuration. |
+| [List Failover Groups By Server](/rest/api/sql/failover-groups/list-by-server) | Lists the failover groups on a server. |
+| [Update Failover Group](/rest/api/sql/failover-groups/update) | Updates a failover group's configuration. |
 
 ---
 

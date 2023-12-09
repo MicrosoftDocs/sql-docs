@@ -1,5 +1,5 @@
 ---
-title: "Create a Data Alert in Data Alert Designer"
+title: "Create a data alert in Data Alert Designer"
 description: Learn how to create data alert definitions in Data Alert Designer. Also, learn about editing the alerts and saving the edits when you're finished.
 author: maggiesMSFT
 ms.author: maggies
@@ -11,11 +11,11 @@ ms.custom: updatefrequency5
 monikerRange: ">=sql-server-2016 <=sql-server-2016"
 ---
 
-# Create a Data Alert in Data Alert Designer
+# Create a data alert in Data Alert Designer
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a data alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -24,23 +24,23 @@ You create data alert definitions in Data Alert Designer. After you save the ale
  
 1.  Locate the SharePoint library that contains the report that you want to create a data alert definition for.  
   
-2.  Click the report.  
+2.  Select the report.  
   
      The report runs. If the report is parameterized, verify that the report shows the data that you want to receive alert messages about. If you do not see the columns or values you are interested in, you might want to rerun the report, using different parameter values.  
   
     > [!NOTE]  
     >  The parameter values you chose to run the report are saved in the alert definition and will be used when report is rerun as a step in processing the alert definition. To use different parameter values, you must create a new alert definition.  
   
-3.  On the **Actions** menu, click **New Data Alert**.  
+3.  On the **Actions** menu, select **New Data Alert**.  
   
-     The following picture shows the **Actions** menu.  
+     The following picture shows the **Actions** menu.
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
-  
+     :::image type="content" source="../reporting-services/media/rs-openalertdesigneriw.gif" alt-text="Screenshot of the Open Alert Designer from SharePoint library, highlighting the New Data Alert Option in the Actions menu." lightbox="../reporting-services/media/rs-openalertdesigneriw.gif":::
+
      The Data Alert Designer opens, showing the first 100 rows of the first data feed that the report generates in a table.  
   
     > [!NOTE]  
-    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and Service Applications](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  If you do not see the **New Data Alert** option, the alerting service is not configured on the SharePoint site or the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition does not include data alerts. For more information, see [Reporting Services SharePoint Service and service applications](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  If the **New Data Alert** option is grayed, the report data source is configured to use integrated security credentials or prompt for credentials. To make the **New Data Alert** option available, you must update the data source to use stored credentials or no credentials.  
   
@@ -48,7 +48,7 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 4.  Optionally, select a different data feed in the **Report data name** drop-down list.  
   
-     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generating Data Feeds from Reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+     If no data feed is generated from the report, you cannot create an alert definition for the report. The layout of the report determines the content of each data feed. For more information see, [Generate data feeds from reports &#40;Report Builder and SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 5.  Optionally, in the **Alert name** text box, update the default name to be more meaningful.  
   
@@ -56,39 +56,39 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 6.  Optionally, change the default data option from **any data in the data feed has** to **no data in the data feed has**.  
   
-7.  Click **Add rule**.  
+7.  Select **Add rule**.  
   
      A list of the columns in the data feed appears.  
   
 8.  In the list, select the column that you want to use in the rule, and then select a comparison operator and enter the threshold value.  
   
-     Depending on the data type of the selected column, different comparison operators are listed. If the column has a date data type, a calendar icon displays next to threshold value for the rule. You can enter a data by clicking a date in the calendar or typing the date.  
+     Depending on the data type of the selected column, different comparison operators are listed. If the column has a date data type, a calendar icon displays next to threshold value for the rule. You can enter a data by selecting a date in the calendar or typing the date.  
   
      Data Alert Designer provides two comparison modes: **Value Entry Mode** and **Field Selection Mode**. The default mode is **Value Entry Mode**. You can add OR clauses only when you are in **Value Entry Mode** and are using the **is** comparison.  
   
-9. To add an OR clause, click the down-arrow, and then click **Value Entry Mode**.  
+9. To add an OR clause, select the down-arrow, and then choose **Value Entry Mode**.  
   
 10. Type the comparison value.  
   
-11. Optionally, click the ellipsis **(...)** again.  
+11. Optionally, select the ellipsis **(...)** again.  
   
      The ellipsis **(...)** appears on the line that contains the first clause.  
   
      An OR clause is added below and within the AND rule.  
   
-12. Optionally, click the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
+12. Optionally, select the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
   
-     You will notice that the ellipsis **(...)** that you click to add OR clauses has disappeared.  
+     You will notice that the ellipsis **(...)** that you select to add OR clauses has disappeared.  
   
-13. Optionally, click **Add rule** again to add additional rules.  
+13. Optionally, select **Add rule** again to add additional rules.  
   
      The rules are combined by using the AND logical operator.  
   
 14. Select an option in the recurrence list. Depending on the type of recurrence, enter an interval.  
   
-15. Optionally, click **Advanced**.  
+15. Optionally, select **Advanced**.  
   
-16. Optionally, change the date that the alert message starts on by typing a different date or opening the calendar, and then clicking a date in the calendar.  
+16. Optionally, change the date that the alert message starts on by typing a different date or opening the calendar, and then selecting a date in the calendar.  
   
      The default start date is the current date.  
   
@@ -113,12 +113,12 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 21. Optionally, in the **Description** text box, type a description of the alert message.  
   
-22. Click **Save**.  
+22. Select **Save**.  
 
-## See Also
+## Related content
 
-[Data Alert Designer](../reporting-services/data-alert-designer.md)   
-[Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
-[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
+- [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

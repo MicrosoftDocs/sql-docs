@@ -3,7 +3,7 @@ title: "EXECUTE AS Clause (Transact-SQL)"
 description: EXECUTE AS Clause (Transact-SQL)
 author: VanMSFT
 ms.author: vanto
-ms.date: "03/14/2017"
+ms.date: "12/11/2023"
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -36,29 +36,26 @@ dev_langs:
   
 ```syntaxsql
 -- SQL Server Syntax  
-Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
+-- Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
   
-DDL Triggers with Database Scope  
+-- DDL Triggers with Database Scope  
 { EXEC | EXECUTE } AS { CALLER | SELF | 'user_name' }   
   
-DDL Triggers with Server Scope and logon triggers  
+-- DDL Triggers with Server Scope and logon triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | 'login_name' }   
   
-Queues  
+-- Queues  
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
-  
+
 ```syntaxsql
--- Azure SQL Database Syntax  
-Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
-  
-{ EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
-  
-DDL Triggers with Database Scope  
-  
-{ EXEC | EXECUTE } AS { CALLER | SELF | 'user_name' }  
-  
+-- Azure SQL Database Syntax
+-- Functions (except inline table-valued functions), Stored Procedures, and DML Triggers
+{ EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }
+
+-- DDL Triggers with Database Scope  
+{ EXEC | EXECUTE } AS { CALLER | SELF | 'user_name' }
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -69,7 +66,7 @@ DDL Triggers with Database Scope
   
  CALLER is the default for all modules except queues, and is the same as [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] behavior.  
   
- CALLER cannot be specified in a CREATE QUEUE or ALTER QUEUE statement.  
+ CALLER can't be specified in a CREATE QUEUE or ALTER QUEUE statement.  
   
  **SELF**  
  EXECUTE AS SELF is equivalent to EXECUTE AS *user_name*, where the specified user is the person creating or altering the module. The actual user ID of the person creating or modifying the modules is stored in the **execute_as_principal_id** column in the **sys.sql_modules** or **sys.service_queues** catalog view.  
@@ -80,22 +77,22 @@ DDL Triggers with Database Scope
 >  To change the user ID of the **execute_as_principal_id** in the **sys.service_queues** catalog view, you must explicitly specify the EXECUTE AS setting in the ALTER QUEUE statement.  
   
  OWNER  
- Specifies the statements inside the module executes in the context of the current owner of the module. If the module does not have a specified owner, the owner of the schema of the module is used. OWNER cannot be specified for DDL or logon triggers.  
+ Specifies the statements inside the module executes in the context of the current owner of the module. If the module doesn't have a specified owner, the owner of the schema of the module is used. OWNER can't be specified for DDL or logon triggers.  
   
 > [!IMPORTANT]  
->  OWNER must map to a singleton account and cannot be a role or group.  
+>  OWNER must map to a singleton account and can't be a role or group.  
   
  **'** *user_name* **'**  
- Specifies the statements inside the module execute in the context of the user specified in *user_name*. Permissions for any objects within the module are verified against *user_name*. *user_name* cannot be specified for DDL triggers with server scope or logon triggers. Use *login_name* instead.  
+ Specifies the statements inside the module execute in the context of the user specified in *user_name*. Permissions for any objects within the module are verified against *user_name*. *user_name* can't be specified for DDL triggers with server scope or logon triggers. Use *login_name* instead.  
   
- *user_name* must exist in the current database and must be a singleton account. *user_name* cannot be a group, role, certificate, key, or built-in account, such as NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService, or NT AUTHORITY\LocalSystem.  
+ *user_name* must exist in the current database and must be a singleton account. *user_name* can't be a group, role, certificate, key, or built-in account, such as NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService, or NT AUTHORITY\LocalSystem.  
   
  The user ID of the execution context is stored in metadata and can be viewed in the **execute_as_principal_id** column in the **sys.sql_modules** or **sys.assembly_modules** catalog view.  
   
  **'** *login_name* **'**  
  Specifies the statements inside the module execute in the context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login specified in *login_name*. Permissions for any objects within the module are verified against *login_name*. *login_name* can be specified only for DDL triggers with server scope or logon triggers.  
   
- *login_name* cannot be a group, role, certificate, key, or built-in account, such as NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService, or NT AUTHORITY\LocalSystem.  
+ *login_name* can't be a group, role, certificate, key, or built-in account, such as NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService, or NT AUTHORITY\LocalSystem.  
   
 ## Remarks  
  How the [!INCLUDE[ssDE](../../includes/ssde-md.md)] evaluates permissions on the objects that are referenced in the module depends on the ownership chain that exists between calling objects and referenced objects. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ownership chaining was the only method available to avoid having to grant the calling user access to all referenced objects.  
@@ -106,7 +103,7 @@ DDL Triggers with Database Scope
   
 -   The owners of the calling and the called objects must be the same.  
   
--   Does not apply to dynamic queries inside the module.  
+-   Doesn't apply to dynamic queries inside the module.  
   
  Regardless of the execution context that is specified in the module, the following actions always apply:  
   
@@ -118,8 +115,8 @@ DDL Triggers with Database Scope
   
  The context specified in the EXECUTE AS clause of the module is valid only for the duration of the module execution. Context reverts to the caller when the module execution is completed.  
   
-## Specifying a User or Login Name  
- A database user or server login specified in the EXECUTE AS clause of a module cannot be dropped until the module has been modified to execute under another context.  
+## Specifying a user or login name  
+ A database user or server login specified in the EXECUTE AS clause of a module can't be dropped until the module has been modified to execute under another context.  
   
  The user or login name specified in EXECUTE AS clause must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or else the create or alter module operation fails. Additionally, the user that creates or alters the module must have IMPERSONATE permissions on the principal.  
   
@@ -154,7 +151,7 @@ SELECT user_name();
 GO  
 ```  
   
-## Using EXECUTE AS CALLER Stand-Alone Statement  
+## Using EXECUTE AS CALLER stand-alone statement  
  Use the EXECUTE AS CALLER stand-alone statement inside a module to set the execution context to the caller of the module.  
   
  Assume the following stored procedure is called by `SqlUser2`.  
@@ -171,20 +168,20 @@ SELECT user_name(); -- Shows execution context is set to SqlUser1.
 GO  
 ```  
   
-## Using EXECUTE AS to Define Custom Permission Sets  
- Specifying an execution context for a module can be very useful when you want to define custom permission sets. For example, some actions, such as TRUNCATE TABLE, do not have grantable permissions. By incorporating the TRUNCATE TABLE statement within a module and specifying that module execute as a user who has permissions to alter the table, you can extend the permissions to truncate the table to the user to whom you grant EXECUTE permissions on the module.  
+## Using EXECUTE AS to define custom permission sets  
+ Specifying an execution context for a module can be very useful when you want to define custom permission sets. For example, some actions, such as TRUNCATE TABLE don't have grantable permissions. By incorporating the TRUNCATE TABLE statement within a module and specifying that module execute as a user who has permissions to alter the table, you can extend the permissions to truncate the table to the user to whom you grant EXECUTE permissions on the module.  
   
  To view the definition of the module with the specified execution context, use the [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) catalog view.  
   
-## Best Practice  
- Specify a login or user that has the least privileges required to perform the operations defined in the module. For example, do not specify a database owner account unless those permissions are required.  
+## Best practice  
+ Specify a login or user that has the least privileges required to perform the operations defined in the module. For example, don't specify a database owner account unless those permissions are required.  
   
 ## Permissions  
  To execute a module specified with EXECUTE AS, the caller must have EXECUTE permissions on the module.  
   
  To execute a CLR module specified with EXECUTE AS that accesses resources in another database or server, the target database or server must trust the authenticator of the database from which the module originates (the source database).  
   
- To specify the EXECUTE AS clause when you create or modify a module, you must have IMPERSONATE permissions on the specified  principal and also permissions to create the module. You can always impersonate yourself. When no execution context is specified or EXECUTE AS CALLER is specified, IMPERSONATE permissions are not required.  
+ To specify the EXECUTE AS clause when you create or modify a module, you must have IMPERSONATE permissions on the specified  principal and also permissions to create the module. You can always impersonate yourself. When no execution context is specified or EXECUTE AS CALLER is specified, IMPERSONATE permissions aren't required.  
   
  To specify a *login_name* or *user_name* that has implicit access to the database through a Windows group membership, you must have CONTROL permissions on the database.  
   
@@ -212,7 +209,7 @@ EXECUTE HumanResources.uspEmployeesInDepartment 5;
 GO  
 ```  
   
-## See Also  
+## Related content
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

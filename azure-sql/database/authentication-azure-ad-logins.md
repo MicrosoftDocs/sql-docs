@@ -135,7 +135,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 With Microsoft Entra logins in public preview for Azure SQL Database and Synapse Analytics, the following are known limitations: 
 
 - [Azure SQL Database server roles](security-server-roles.md) aren't supported for Microsoft Entra groups.
-- If your SQL Managed Instance admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually is not part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
+- If your SQL admin is a Microsoft Entra group, there are some limitations when users of that group connect. Each Microsoft Entra user individually is not part of the `sys.server_principals` table. This has various consequences, including calls to `SUSER_SID` returning `NULL`.
 - Microsoft Entra user logins that are part of Microsoft Entra group logins are also not implicitly created, meaning they will not have a default schema, and not be able to perform operations like `CREATE SCHEMA` until a login for the Microsoft Entra user is created, or a default schema is assigned to the group.
 - Changing a database's ownership to a Microsoft Entra group as database owner isn't supported.
   - `ALTER AUTHORIZATION ON database::<mydb> TO [my_aad_group]` fails with an error message:

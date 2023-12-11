@@ -73,7 +73,7 @@ In this article you can find a content reference to various guides, scripts, and
 
 ## Monitoring and tuning
 
-- [Manual tuning](../database/performance-guidance.md)
+- [Manual tuning](performance-guidance.md)
 - [Use DMVs to monitor performance](monitoring-with-dmvs.md)
 - [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
 - [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md)

@@ -1,44 +1,44 @@
 ---
 title: Performance tuning guidance for applications and databases
-titleSuffix: Azure SQL Database
-description: Learn about tuning database applications and databases for performance in Azure SQL Database.
+titleSuffix: Azure SQL Managed Instance
+description: Learn about tuning database applications and databases for performance in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
 ms.date: 12/11/2023
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=2
-monikerRange: "=azuresql||=azuresql-db"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
-# Tune applications and databases for performance in Azure SQL Database
-[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+# Tune applications and databases for performance in Azure SQL Managed Instance
+[!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]
-> * [Azure SQL Database](performance-guidance.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](../managed-instance/performance-guidance.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Database](../database/performance-guidance.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](performance-guidance.md?view=azuresql-mi&preserve-view=true)
 
-Once you have identified a performance issue that you're facing with Azure SQL Database, this article is designed to help you:
+Once you have identified a performance issue that you're facing with Azure SQL Managed Instance, this article is designed to help you:
 
 - Tune your application and apply some best practices that can improve performance.
 - Tune the database by changing indexes and queries to more efficiently work with data.
 
-This article assumes that you have already worked through the Azure SQL Database [database advisor recommendations](database-advisor-implement-performance-recommendations.md) and the Azure SQL Database [automatic tuning recommendations](automatic-tuning-overview.md), if applicable. It also assumes that you have reviewed the [overview of monitoring and tuning](monitor-tune-overview.md) and its related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
+This article assumes that you have reviewed the [overview of monitoring and tuning](../database/monitor-tune-overview.md) and its related articles related to troubleshooting performance issues. Additionally, this article assumes that you do not have a performance issue related to CPU resource utilization that can be resolved by increasing the compute size or service tier to provide more resources to your database.
 
 > [!NOTE]
-> For similar guidance, see [Tune applications and databases for performance in Azure SQL Managed Instance](../managed-instance/performance-guidance.md?view=azuresql-mi&preserve-view=true).
+> For similar guidance, see [Tune applications and databases for performance in Azure SQL Database](../database/performance-guidance.md?view=azuresql-db&preserve-view=true).
 
 ## Tune your application
 
-In traditional on-premises SQL Server, the process of initial capacity planning often is separated from the process of running an application in production. Hardware and product licenses are purchased first, and performance tuning is done afterward. When you use Azure SQL, it's a good idea to interweave the process of running an application and tuning it. With the model of paying for capacity on demand, you can tune your application to use the minimum resources needed now, instead of over-provisioning on hardware based on guesses of future growth plans for an application, which often are incorrect. 
+In traditional on-premises SQL Server, the process of initial capacity planning often is separated from the process of running an application in production. Hardware and product licenses are purchased first, and performance tuning is done afterward. When you use Azure SQL, it's a good idea to interweave the process of running an application and tuning it. With the model of paying for capacity on demand, you can tune your application to use the minimum resources needed now, instead of over-provisioning on hardware based on guesses of future growth plans for an application, which often are incorrect.
 
 Some customers might choose not to tune an application, and instead choose to over-provision hardware resources. This approach might be a good idea if you don't want to change a key application during a busy period. But, tuning an application can minimize resource requirements and lower monthly bills.
 
 ### Application characteristics
 
-Although Azure SQL Database service tiers are designed to improve performance stability and predictability for an application, some best practices can help you tune your application to better take advantage of the resources at a compute size. Although many applications have significant performance gains simply by switching to a higher compute size or service tier, some applications need additional tuning to benefit from a higher level of service. For increased performance, consider additional application tuning for applications that have these characteristics:
+Although Azure SQL Managed Instance service tiers are designed to improve performance stability and predictability for an application, some best practices can help you tune your application to better take advantage of the resources at a compute size. Although many applications have significant performance gains simply by switching to a higher compute size or service tier, some applications need additional tuning to benefit from a higher level of service. For increased performance, consider additional application tuning for applications that have these characteristics:
 
 - **Applications that have slow performance because of "chatty" behavior**
 
@@ -56,11 +56,11 @@ Although Azure SQL Database service tiers are designed to improve performance st
 
    Applications that have inherent data access concurrency issues, for example deadlocking, might not benefit from a higher compute size. Consider reducing round trips against the database by caching data on the client side with the Azure Caching service or another caching technology. See [Application tier caching](#application-tier-caching).
 
-    To prevent deadlocks from reoccurring in Azure SQL Database, see [Analyze and prevent deadlocks in Azure SQL Database](analyze-prevent-deadlocks.md). 
+    To prevent deadlocks in Azure SQL Managed Instance, see [Deadlock tools](/sql/relational-databases/sql-server-deadlocks-guide#deadlock_tools) of the [Deadlocks guide](/sql/relational-databases/sql-server-deadlocks-guide).
 
 ## Tune your database
 
-In this section, we look at some techniques that you can use to tune database to gain the best performance for your application and run it at the lowest possible compute size. Some of these techniques match traditional SQL Server tuning best practices, but others are specific to Azure SQL Database. In some cases, you can examine the consumed resources for a database to find areas to further tune and extend traditional SQL Server techniques to work in Azure SQL Database.
+In this section, we look at some techniques that you can use to tune database to gain the best performance for your application and run it at the lowest possible compute size. Some of these techniques match traditional SQL Server tuning best practices, but others are specific to Azure SQL Managed Instance. In some cases, you can examine the consumed resources for a database to find areas to further tune and extend traditional SQL Server techniques to work in Azure SQL Managed Instance.
 
 ### <a id="identifying-and-adding-missing-indexes"></a> Identify and adding missing indexes
 
@@ -88,7 +88,7 @@ SELECT m1.col1
 
 :::image type="content" source="./media/performance-guidance/query-plan-missing-indexes.png" alt-text="A query plan with missing indexes.":::
 
-Azure SQL Database can help you find and fix common missing index conditions. DMVs that are built into Azure SQL Database look at query compilations in which an index would significantly reduce the estimated cost to run a query. During query execution, the database engine tracks how often each query plan is executed, and tracks the estimated gap between the executing query plan and the imagined one where that index existed. You can use these DMVs to quickly guess which changes to your physical database design might improve overall workload cost for a database and its real workload.
+DMVs that are built into SQL Server since 2005 look at query compilations in which an index would significantly reduce the estimated cost to run a query. During query execution, the database engine tracks how often each query plan is executed, and tracks the estimated gap between the executing query plan and the imagined one where that index existed. You can use these DMVs to quickly guess which changes to your physical database design might improve overall workload cost for a database and its real workload.
 
 You can use this query to evaluate potential missing indexes:
 
@@ -133,9 +133,9 @@ For more information about tuning indexes using missing index requests, see [Tun
 
 ### Query tuning and hinting
 
-The query optimizer in Azure SQL Database is similar to the traditional SQL Server query optimizer. Most of the best practices for tuning queries and understanding the reasoning model limitations for the query optimizer also apply to Azure SQL Database. If you tune queries in Azure SQL Database, you might get the additional benefit of reducing aggregate resource demands. Your application might be able to run at a lower cost than an untuned equivalent because it can run at a lower compute size.
+The query optimizer in Azure SQL Managed Instance is similar to the traditional SQL Server query optimizer. Most of the best practices for tuning queries and understanding the reasoning model limitations for the query optimizer also apply to Azure SQL Managed Instance. If you tune queries in Azure SQL Managed Instance, you might get the additional benefit of reducing aggregate resource demands. Your application might be able to run at a lower cost than an untuned equivalent because it can run at a lower compute size.
 
-An example that is common in SQL Server and which also applies to Azure SQL Database is how the query optimizer "sniffs" parameters. During compilation, the query optimizer evaluates the current value of a parameter to determine whether it can generate a more optimal query plan. Although this strategy often can lead to a query plan that is significantly faster than a plan compiled without known parameter values, currently it works imperfectly both in Azure SQL Database. (A new Intelligent Query Performance feature introduced with SQL Server 2022 named [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/intelligent-query-processing-details) addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. Currently, Parameter Sensitivity Plan Optimization is not available in Azure SQL Database.)
+An example that is common in SQL Server and which also applies to Azure SQL Managed Instance is how the query optimizer "sniffs" parameters. During compilation, the query optimizer evaluates the current value of a parameter to determine whether it can generate a more optimal query plan. Although this strategy often can lead to a query plan that is significantly faster than a plan compiled without known parameter values, currently it works imperfectly both in Azure SQL Managed Instance.  (A new Intelligent Query Performance feature introduced with SQL Server 2022 named [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/intelligent-query-processing-details) addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. Currently, Parameter Sensitivity Plan Optimization is not available in Azure SQL Managed Instance.)
 
 Sometimes the parameter isn't sniffed, and sometimes the parameter is sniffed but the generated plan is suboptimal for the full set of parameter values in a workload. Microsoft includes query hints (directives) so that you can specify intent more deliberately and override the default behavior of parameter sniffing. You might choose to use hints when the default behavior is imperfect for a specific customer workload.
 
@@ -245,21 +245,13 @@ If a workload has a set of repeating queries, often it makes sense to capture an
 
 ## Very large database architectures
 
-Before the release of [Hyperscale](service-tier-hyperscale.md) service tier for single databases in Azure SQL Database, customers could run into [capacity limits for individual databases](service-tiers-sql-database-vcore.md?view=azuresql-db&preserve-view=true#resource-limits). While [Hyperscale elastic pools (preview)](./hyperscale-elastic-pool-overview.md) offer significantly higher storage limits, elastic pools and pooled databases in other service tiers might still be constrained by those storage capacity limits in the non-Hyperscale service tiers.
-
-The following two sections discuss two options for solving problems with very large databases in Azure SQL Database when you can't use the Hyperscale service tier.
-
-> [!NOTE]
-> Hyperscale elastic pools are in preview for Azure SQL Database. Elastic pools are not available for Azure SQL Managed Instance, SQL Server instances on-premises, SQL Server on Azure VMs, or Azure Synapse Analytics.
+The following two sections discuss two options for solving problems with very large databases in Azure SQL Managed Instance.
 
 ### Cross-database sharding
 
-Because Azure SQL Database runs on commodity hardware, the capacity limits for an individual database are lower than for a traditional on-premises SQL Server installation. Some customers use sharding techniques to spread database operations over multiple databases when the operations don't fit inside the limits of an individual database in Azure SQL Database. Most customers who use sharding techniques in Azure SQL Database split their data on a single dimension across multiple databases. For this approach, you need to understand that OLTP applications often perform transactions that apply to only one row or to a small group of rows in the schema.
+Because Azure SQL Managed Instance runs on commodity hardware, the [capacity limits for an individual database](resource-limits.md?view=azuresql-mi&preserve-view=true) are lower than for a traditional on-premises SQL Server installation. Some customers use sharding techniques to spread database operations over multiple databases when the operations don't fit inside the limits of an individual database in Azure SQL Managed Instance. Most customers who use sharding techniques in Azure SQL Managed Instance split their data on a single dimension across multiple databases. For this approach, you need to understand that OLTP applications often perform transactions that apply to only one row or to a small group of rows in the schema.
 
-> [!NOTE]
-> Azure SQL Database now provides a library to assist with sharding. For more information, see [Elastic Database client library overview](elastic-database-client-library.md).
-
-For example, if a database has customer name, order, and order details (like in the `AdventureWorks` database), you could split this data into multiple databases by grouping a customer with the related order and order detail information. You can guarantee that the customer's data stays in an individual database. The application would split different customers across databases, effectively spreading the load across multiple databases. With sharding, customers not only can avoid the maximum database size limit, but Azure SQL Database also can process workloads that are significantly larger than the limits of the different compute sizes, as long as each individual database fits into its service tier limits.
+For example, if a database has customer name, order, and order details (like in the `AdventureWorks` database), you could split this data into multiple databases by grouping a customer with the related order and order detail information. You can guarantee that the customer's data stays in an individual database. The application would split different customers across databases, effectively spreading the load across multiple databases. With sharding, customers not only can avoid the maximum database size limit, but Azure SQL Managed Instance also can process workloads that are significantly larger than the limits of the different compute sizes, as long as each individual database fits into its service tier limits.
 
 Although database sharding doesn't reduce the aggregate resource capacity for a solution, it's highly effective at supporting very large solutions that are spread over multiple databases. Each database can run at a different compute size to support very large, "effective" databases with high resource requirements.
 
@@ -267,7 +259,7 @@ Although database sharding doesn't reduce the aggregate resource capacity for a 
 
 Users often combine many functions in an individual database. For example, if an application has logic to manage inventory for a store, that database might have logic associated with inventory, tracking purchase orders, stored procedures, and indexed or materialized views that manage end-of-month reporting. This technique makes it easier to administer the database for operations like backup, but it also requires you to size the hardware to handle the peak load across all functions of an application.
 
-If you use a scale-out architecture in Azure SQL Database, it's a good idea to split different functions of an application into different databases. If you use this technique, each application scales independently. As an application becomes busier (and the load on the database increases), the administrator can choose independent compute sizes for each function in the application. At the limit, with this architecture, an application can be larger than a single commodity machine can handle because the load is spread across multiple machines.
+If you use a scale-out architecture in Azure SQL Managed Instance, it's a good idea to split different functions of an application into different databases. If you use this technique, each application scales independently. As an application becomes busier (and the load on the database increases), the administrator can choose independent compute sizes for each function in the application. At the limit, with this architecture, an application can be larger than a single commodity machine can handle because the load is spread across multiple machines.
 
 ### Batch queries
 
@@ -277,22 +269,12 @@ Some applications are write-intensive. Sometimes you can reduce the total IO loa
 
 ### Application-tier caching
 
-Some database applications have read-heavy workloads. Caching layers might reduce the load on the database and might potentially reduce the compute size required to support a database by using Azure SQL Database. With [Azure Cache for Redis](https://azure.microsoft.com/services/cache/), if you have a read-heavy workload, you can read the data once (or perhaps once per application-tier machine, depending on how it's configured), and then store that data outside of your database. This is a way to reduce database load (CPU and read IO), but there's an effect on transactional consistency because the data being read from the cache might be out of sync with the data in the database. Although in many applications some level of inconsistency is acceptable, that's not true for all workloads. You should fully understand any application requirements before you implement an application-tier caching strategy.
-
-## Get configuration and design tips
-
-If you use Azure SQL Database, you can execute an open-source T-SQL [script for improving database configuration and design in Azure SQL Database](https://aka.ms/sqldbtips). The script analyzes your database on demand and provide tips to improve database performance and health. Some tips suggest configuration and operational changes based on best practices, while other tips recommend design changes suitable for your workload, such as enabling advanced database engine features.
-
-To learn more about the script and get started, visit the [Azure SQL Tips wiki](https://aka.ms/sqldbtipswiki) page.
+Some database applications have read-heavy workloads. Caching layers might reduce the load on the database and might potentially reduce the compute size required to support a database by using Azure SQL Managed Instance. With [Azure Cache for Redis](https://azure.microsoft.com/services/cache/), if you have a read-heavy workload, you can read the data once (or perhaps once per application-tier machine, depending on how it's configured), and then store that data outside of your database. This is a way to reduce database load (CPU and read IO), but there's an effect on transactional consistency because the data being read from the cache might be out of sync with the data in the database. Although in many applications some level of inconsistency is acceptable, that's not true for all workloads. You should fully understand any application requirements before you implement an application-tier caching strategy.
 
 ## Related content
 
-- Learn about the [DTU-based purchasing model](service-tiers-dtu.md)
-- Learn more about the [vCore-based purchasing model](service-tiers-vcore.md)
-- Read [What is an Azure elastic pool?](elastic-pool-overview.md)
-- Discover [When to consider an elastic pool](elastic-pool-overview.md)
-- Read about [Monitoring performance using dynamic management views](monitoring-with-dmvs.md)
-- Learn to [Diagnose and troubleshoot high CPU on Azure SQL Database](high-cpu-diagnose-troubleshoot.md)
+- [vCore purchasing model - Azure SQL Managed Instance](service-tiers-managed-instance-vcore.md)
+- [Configure tempdb settings for Azure SQL Managed Instance](tempdb-configure.md)
+- [Monitoring Microsoft Azure SQL Managed Instance performance using dynamic management views](monitoring-with-dmvs.md)
 - [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
-- Video: [Data Loading Best Practices on Azure SQL Database](/shows/data-exposed/data-loading-best-practices-on-azure-sql-database?WT.mc_id=dataexposed-c9-niner)
-- [Monitor Azure SQL Database with Azure Monitor](monitoring-sql-database-azure-monitor.md)
+- [Monitor Azure SQL Managed Instance with Azure Monitor](monitoring-sql-managed-instance-azure-monitor.md)

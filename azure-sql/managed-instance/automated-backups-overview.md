@@ -133,13 +133,21 @@ To perform a restore, see [Restore a database from backups](recovery-using-backu
 | **Restore a deleted database** | [SQL Database](../database/recovery-using-backups.md) / [SQL Managed Instance](point-in-time-restore.md#restore-a-deleted-database) | [SQL Database](../database/long-term-backup-retention-configure.md#restore-from-ltr-backups) / [SQL Managed Instance](long-term-backup-retention-configure.md#restore-from-ltr-backups) | [SQL Database](/powershell/module/az.sql/get-azsqldeleteddatabasebackup) / [SQL Managed Instance](/powershell/module/az.sql/get-azsqldeletedinstancedatabasebackup)|
 | **Restore a database from Azure Blob Storage** |  |  | [SQL Managed Instance](restore-sample-database-quickstart.md) |
 
-## Backup scheduling
 
-The first full backup is scheduled immediately after a new database is created or restored, or after backup redundancy changes. This backup usually finishes within 30 minutes, but it can take longer when the database is large.
+## Automatic backups schedule
 
-For a new database, the backup is fast. But the backup time can vary for a restored database, and it depends on the size of the database. For example, the initial backup can take longer on a restored database or a database copy, which would typically be larger than a new database.
+Azure SQL Managed Instance automatically manages backups by creating full, differential, and transaction log backups. This process is governed by an internal schedule.
 
-After the initial full backup completes, all subsequent backups are automatically scheduled and managed. Azure SQL Managed Instance determines the exact timing of these backups, balancing them against the overall system workload. It's important to note the backup schedule **cannot** be altered or disabled by users.
+### Initial backup
+- **New databases**: Immediately after a database is created, restored, or undergoes backup redundancy changes, the first full backup is initiated. This backup typically completes within 30 minutes, though it may take longer for larger databases.
+
+- **Restored databases**: The duration of the initial backup for restored databases varies and depends on the database size. Restored databases or database copies, which are often larger, may require more time for the initial backup.
+
+### Scheduled full backups
+- **Weekly Schedule**: The system sets a weekly full backup window for the entire instance.
+- **Full Backup Window**: This is a designated period when full backups are performed. While the system aims to complete full backups within this window, if necessary, the backup may continue beyond the scheduled time until it completes.
+- **Adaptive Scheduling**: The backup algorithm evaluates the impact of the backup window on the workload approximately once a week, using CPU usage and I/O throughput as indicators. Depending on the previous week's workload, the full backup window may be adjusted.
+- **User Configuration**: It's crucial to note that users **cannot** modify or disable the backup schedule.
 
 > [!IMPORTANT]
 > For a new, restored, or copied database, the point-in-time restore (PITR) capability becomes available when the initial transaction log backup that follows the initial full backup is created.

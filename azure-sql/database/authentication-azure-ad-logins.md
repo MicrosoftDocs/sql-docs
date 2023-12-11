@@ -123,7 +123,7 @@ For a tutorial on how to grant these roles, see [Tutorial: Create and utilize Mi
 - Impersonation of Microsoft Entra server principals (logins) isn't supported for Azure SQL Database and Azure Synapse Analytics. It [is supported](/azure/azure-sql/managed-instance/aad-security-configure-tutorial?view=azuresql#impersonate-azure-ad-server-level-principals-logins) for SQL Managed Instance:
   - [EXECUTE AS Clause (Transact-SQL)](/sql/t-sql/statements/execute-as-clause-transact-sql)
   - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
-  - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all SQL products.
+  - Impersonation of Microsoft Entra database principals (users) in a user database is supported on all Microsoft SQL products.
 - Microsoft Entra logins can't overlap with the Microsoft Entra administrator. The Microsoft Entra admin takes precedence over any login. If a Microsoft Entra account already has access to the server as a Microsoft Entra admin, individually or as part of a group, any login created for this account won't have any effect. However, the login creation isn't blocked through T-SQL. After the account authenticates to the server, the login will have the effective permissions of a Microsoft Entra admin, and not of a newly created login.
 - Changing permissions on specific Microsoft Entra login object isn't supported:
   - `GRANT <PERMISSION> ON LOGIN :: <Microsoft Entra account> TO <Any other login> `

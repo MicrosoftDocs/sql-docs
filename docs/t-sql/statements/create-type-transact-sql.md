@@ -4,7 +4,7 @@ description: Creates an alias data type or a user-defined type in the current da
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest
-ms.date: 11/22/2023
+ms.date: 12/11/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -303,7 +303,32 @@ Requires `CREATE TYPE` permission in the current database and `ALTER` permission
 
 If any columns in the `CREATE TABLE` statement are defined to be of a user-defined type, `REFERENCES` permission on the user-defined type is required.
 
-A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permissions need to be added to the `model` database. If this is done, then this data type and permissions will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1).
+A user creating a table with a column that uses a user-defined type needs the `REFERENCES` permission on the user-defined type. If this table must be created in `tempdb`, then either the `REFERENCES` permission needs to be granted explicitly each time *before* the table is created, or this data type and `REFERENCES` permission need to be added to the `model` database. For example:
+
+```sql
+CREATE TYPE dbo.udt_money FROM varchar(11) NOT NULL;
+GO
+GRANT REFERENCES ON TYPE::dbo.udt_money TO public
+```
+
+If this is done, then this data type and `REFERENCES` permission will be available in `tempdb` permanently. Otherwise, the user-defined data type and permissions will disappear when [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] is restarted. For more information, see [CREATE TABLE](create-table-transact-sql.md#permissions-1).
+
+If you don't want every new database to inherit the definition and permissions for this user- defined data type from model, you can use a startup stored procedure to create and assign the appropriate permissions only in `tempdb` database. For example:
+
+```sql
+USE master
+GO
+CREATE PROCEDURE setup_udt_in_tempdb
+AS
+EXEC ( 'USE tempdb;
+CREATE TYPE dbo.udt_money FROM varchar(11) NOT NULL;
+GRANT REFERENCES ON TYPE::dbo.udt_money TO public;')
+GO
+EXEC sp_procoption 'setup_udt_in_tempdb' , 'startup' , 'on'
+GO
+```
+
+Alternatively, instead of using temporary tables, consider using table variables when you need to reference user-defined data types for temporary storage needs. For table variables to reference user-defined data types, you don't need to explicitly grant permissions for the user-defined data type.
 
 ## Examples
 

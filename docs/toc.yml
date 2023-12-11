@@ -2609,18 +2609,19 @@ items:
         href: relational-databases/json/use-openjson-with-the-default-schema-sql-server.md
       - name: Explicit Schema
         href: relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md
-    - name: Format Query Results
-      href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+    - name: Format query results
       items:
-      - name: Format nested output with PATH Mode
+      - name: Format results as JSON
+        href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
+      - name: Format nested output with PATH mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
-      - name: Format with AUTO Mode
+      - name: Format with AUTO mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
-      - name: Add a Root Node with the ROOT Option
+      - name: Add a root node with the ROOT option
         href: relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md
-      - name: Include Null Values with the INCLUDE_NULL_VALUES Option
+      - name: Include null values with the INCLUDE_NULL_VALUES option
         href: relational-databases/json/include-null-values-in-json-include-null-values-option.md
-      - name: Remove Square Brackets WITHOUT_ARRAY_WRAPPER Option (SQL Server)
+      - name: Remove square brackets WITHOUT_ARRAY_WRAPPER option (SQL Server)
         href: relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md
     - name: FOR JSON
       items:

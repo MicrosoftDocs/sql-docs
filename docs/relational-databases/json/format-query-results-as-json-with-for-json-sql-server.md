@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current || >=sql-server-2016 || >=sql-server-linux-20
 ---
 # Format query results as JSON with FOR JSON
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-dedicated-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-dedicated-pool-only.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-serverless-pool-only](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-serverless-pool-only.md)]
 
 Format query results as JSON, or export data from SQL Server as JSON, by adding the `FOR JSON` clause to a `SELECT` statement. Use the `FOR JSON` clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 

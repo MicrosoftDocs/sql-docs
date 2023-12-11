@@ -74,7 +74,7 @@ Each SQL Server Agent job step that runs PowerShell with the **sqlps** module la
      ```
    - Example 2: Runs a query via SQLCmd.exe against the current server (the example uses SQL Agent token replacement).
      ```cmd
-        PowerShell.exe -Command "&SQLCmd.exe -S $(ESCAPE_NONE(SRVR)) -Q 'select @@version'"
+        PowerShell.exe -Command "sqlcmd.exe -S $(ESCAPE_NONE(SRVR)) -Q 'SELECT @@VERSION'"
      ```
    - Example 3: Runs a PowerShell script (using `pwsh.exe`, the executable name in PowerShell 7.0, which must be installed on the server). Note that the path to the script is local to the server where SQL Agent is running.
      ```cmd

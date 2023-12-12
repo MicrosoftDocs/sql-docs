@@ -4,7 +4,7 @@ description: Guidance on how to deploy the Azure SQL Database free offer for new
 author: NilsPohlmann
 ms.author: nilsp
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/10/2023
+ms.date: 12/12/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: how-to

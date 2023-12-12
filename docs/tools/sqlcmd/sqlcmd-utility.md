@@ -4,7 +4,7 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 09/29/2023
+ms.date: 12/12/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual

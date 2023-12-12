@@ -221,7 +221,7 @@
         href: database/metrics-diagnostic-telemetry-logging-streaming-export-configure.md
       - name: In-memory OLTP
         items:
-        - name: Configure In-Memory OLTP
+        - name: Configure In-memory OLTP
           href: in-memory-oltp-configure.md
         - name: Try in-memory features
           href: in-memory-sample.md

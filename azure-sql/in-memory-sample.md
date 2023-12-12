@@ -92,7 +92,7 @@ SELECT uses_native_compilation, OBJECT_NAME(object_id), definition
     WHERE uses_native_compilation = 1;
 ```
 
-### Run the sample OLTP workload
+## 2. Run the sample OLTP workload
 
 The only difference between the following two *stored procedures* is that the first procedure uses memory-optimized versions of the tables, while the second procedure uses the regular on-disk tables:
 
@@ -142,7 +142,7 @@ END
 
 To make the *_ondisk* version of the preceding T-SQL script for ostress.exe, you would replace both occurrences of the *_inmem* substring with *_ondisk*. These replacements affect the names of tables and stored procedures.
 
-#### Install RML utilities and ostress
+### Install RML utilities and ostress
 
 Ideally, you would plan to run ostress.exe on an Azure virtual machine (VM). You would create an [Azure VM](/azure/virtual-machines/) in the same Azure region of your `AdventureWorksLT` database. But you can run ostress.exe on your local workstation instead.
 
@@ -217,7 +217,7 @@ Our in-memory tests have shown that performance improved by **nine times** for t
 
 <a id="install_analytics_manuallink" name="install_analytics_manuallink"></a>
 
-## 2. Install the in-memory Analytics sample
+## 3. Install the in-memory analytics sample
 
 In this section, you compare the IO and statistics results when you're using a columnstore index versus a traditional b-tree index.
 
@@ -240,11 +240,11 @@ For real-time analytics on an OLTP workload, it's often best to use a noncluster
 
 #### Key tables and columnstore indexes
 
-- dbo.FactResellerSalesXL_CCI is a table that has a clustered columnstore index, which has advanced compression at the *data* level.
+- `dbo.FactResellerSalesXL_CCI` is a table that has a clustered columnstore index, which has advanced compression at the *data* level.
 
-- dbo.FactResellerSalesXL_PageCompressed is a table that has an equivalent regular clustered index, which is compressed only at the *page* level.
+- `dbo.FactResellerSalesXL_PageCompressed` is a table that has an equivalent regular clustered index, which is compressed only at the *page* level.
 
-#### Key queries to compare the columnstore index
+## 4. Key queries to compare the columnstore index
 
 There are [several T-SQL query types that you can run](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/clustered_columnstore_sample_queries.sql) to see performance improvements. In step 2 in the T-SQL script, pay attention to this pair of queries. They differ only on one line:
 

@@ -158,7 +158,7 @@ For example, if you have a database with a maximum size of 1 terabyte (TB) and y
 
 When you use nonclustered columnstore indexes, the base table is still stored in the traditional rowstore format. Therefore, the storage savings aren't as significant as with clustered columnstore indexes. However, if you're replacing many traditional nonclustered indexes with a single columnstore index, you can still see an overall savings in the storage footprint for the table.
 
-### <a id="changing-service-tiers-of-databases-containing-columnstore-indexes"></a> Change service tiers of databases containing Columnstore indexes
+### <a id="changing-service-tiers-of-databases-containing-columnstore-indexes"></a> Change service tiers of databases containing columnstore indexes
 
 *Downgrading single database to Basic or Standard* might not be possible if your target tier is below S3. Columnstore indexes are supported only on the Business Critical/Premium pricing tier and on the Standard tier, S3 and above, and not on the Basic tier. When you downgrade your database to an unsupported tier or level, your columnstore index becomes unavailable. The system maintains your columnstore index, but it never uses the index. If you later upgrade back to a supported tier or level, your columnstore index is immediately ready to be used again.
 

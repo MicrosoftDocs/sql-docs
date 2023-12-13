@@ -21,7 +21,7 @@ To learn more about the offer, see this short video:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=dd55c855-df9f-4627-96c1-de0da0425cea]
 
-This offer is available for one database per Azure subscription and is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept.
+This offer is available for one database per Azure subscription and is designed for new Azure customers looking to get started with Azure SQL Database, and existing customers that may need a development database for a proof of concept. To get started, look for the **Apply offer** banner on the [provisioning page for Azure SQL Database](https://portal.azure.com/#create/Microsoft.SQLDatabase).
 
 :::image type="content" source="media/free-offer/azure-sql-database-free-banner.png" alt-text="Screenshot from the Azure portal of the Free Offer banner.":::
 

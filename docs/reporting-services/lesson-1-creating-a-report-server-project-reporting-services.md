@@ -55,7 +55,7 @@ When you create reports with Report Designer, it creates a report server project
 
 5. Select the **Add button** on the lower right side of the **Add New Item** dialog box to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
 
-    :::image type="content" source="media/ssrs-ssdt-01-new-report-designer.png" alt-text="Screenshot of Visual Studow showing the Report Designer and the Sales Orders report in Design view." lightbox="media/ssrs-ssdt-01-new-report-designer.png":::
+    :::image type="content" source="media/ssrs-ssdt-01-new-report-designer.png" alt-text="Screenshot of Visual Studio showing the Report Designer and the Sales Orders report in Design view." lightbox="media/ssrs-ssdt-01-new-report-designer.png":::
 
 ## Next steps
 

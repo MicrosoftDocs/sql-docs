@@ -21,6 +21,7 @@ You need:
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 - A GitHub repository with a dacpac package (`Database.dacpac`). If you don't have a GitHub account, [sign up for free](https://github.com/join).  
 - An Azure SQL Database. [Quickstart: Create an Azure SQL Database single database](single-database-create-quickstart.md).
+- A [.dacpac file](/sql/relational-databases/data-tier-applications/data-tier-applications#benefits-of-data-tier-applications) to import into your database.
 
 ## Workflow file overview
 

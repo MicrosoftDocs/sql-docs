@@ -24,6 +24,8 @@ ms.custom: ignite-2023
   * IOPS
   * Queue latency storage IO
 
+  For information, review [Storage I/O](sql-monitoring.md#storage-io).
+
 ## December 1, 2023
 
 **Extension version**: `1.1.2512.104`

@@ -6,7 +6,7 @@ ms.author: drskwier
 ms.date: 05/10/2022
 ms.service: sql
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: kr2b-contr-experiment
 helpviewer_keywords:
   - "Best Practices [Database Engine]"

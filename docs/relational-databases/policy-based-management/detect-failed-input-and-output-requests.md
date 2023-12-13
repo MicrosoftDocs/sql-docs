@@ -6,7 +6,7 @@ ms.author: vanto
 ms.date: "03/14/2017"
 ms.service: sql
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ---

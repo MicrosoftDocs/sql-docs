@@ -6,7 +6,7 @@ ms.author: drskwier
 ms.date: "08/31/2020"
 ms.service: sql
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ---

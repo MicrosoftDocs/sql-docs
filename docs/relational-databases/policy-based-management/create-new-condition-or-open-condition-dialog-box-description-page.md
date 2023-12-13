@@ -6,7 +6,7 @@ ms.author: vanto
 ms.date: "03/01/2017"
 ms.service: sql
 ms.subservice: security
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
   - "sql13.swb.dmf.condition.description.f1"
   - "sql13.swb.dmf.policy.description.f1"

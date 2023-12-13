@@ -40,16 +40,16 @@ The following table lists which operating systems are supported by OLE DB Driver
 | Operating system&nbsp;&#8594;<br />&#8595; Driver version | Windows Server 2022 | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 11 | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|---|---|---|---|---|---|---|---|
 |19.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
-|19.2|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|
-|19.1|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|
-|19.0|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.6|Yes|Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.5|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.4|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.3|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.2|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
-|18.1|   |   |Yes|Yes|Yes|   |Yes|Yes|
-|18.0|   |   |Yes|Yes|Yes|   |Yes|Yes|
+|19.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.5|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.4|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.3|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.2|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|18.1|   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.0|   |   |Yes|Yes|Yes|Yes|Yes|Yes|
 
 <sup>1</sup> Supported on Windows Server 2012 with [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Supported on Windows Server 2012 R2 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

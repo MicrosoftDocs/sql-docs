@@ -1,5 +1,6 @@
 ---
 title: Customer-managed keys with transparent data encryption using user-assigned managed identity
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Bring Your Own Key (BYOK) support for transparent data encryption (TDE) using user-assigned managed identity (UMI)
 author: GithubMirek
 ms.author: mireks

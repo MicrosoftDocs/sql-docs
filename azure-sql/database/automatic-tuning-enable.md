@@ -1,5 +1,6 @@
 ---
 title: Enable automatic tuning
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: You can enable automatic tuning on your database easily using the Azure portal.
 author: NikaKinska
 ms.author: nnikolic

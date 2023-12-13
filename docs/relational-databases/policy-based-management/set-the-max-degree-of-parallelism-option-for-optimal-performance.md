@@ -4,7 +4,7 @@ description: Describes configuring a policy to verify the value of max degree of
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: randolphwest
-ms.date: 09/27/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

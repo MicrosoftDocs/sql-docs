@@ -6,7 +6,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: vanto
 ms.date: 05/01/2023
-ms.service: sql-db-mi
+ms.service: sql-database
 ms.subservice: security
 ms.topic: conceptual
 monikerRange: "= azuresql || = azuresql-db"

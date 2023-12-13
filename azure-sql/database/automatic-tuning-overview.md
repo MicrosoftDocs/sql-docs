@@ -1,5 +1,6 @@
 ---
 title: Automatic tuning overview
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL Database and Azure SQL Managed Instance analyzes SQL query and automatically adapts to user workload.
 author: NikaKinska
 ms.author: nnikolic

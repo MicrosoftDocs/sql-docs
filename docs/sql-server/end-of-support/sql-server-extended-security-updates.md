@@ -3,7 +3,7 @@ title: "What are Extended Security Updates?"
 description: Learn about Extended Security Updates enabled by Azure Arc, for your end-of-support and end-of-life SQL Server products such as SQL Server 2012.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 10/22/2023
+ms.date: 12/11/2023
 ms.service: sql
 ms.subservice: install
 ms.topic: conceptual
@@ -186,9 +186,11 @@ Use the following steps to activate this policy:
 1. Select **Assign policy**.
 1. Select a subscription and optionally a resource group as a scope.
 1. Make sure the policy enforcement is set to **Enabled**.
-1. Select **Next**, **Next**.
 1. On the **Parameters** tab, set the value of *Enable Extended Security Updates* to **True**.
-1. Choose **System assigned managed identity** (recommended) or **User assigned managed identity**, which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
+1. On the **Remediation** tab:
+   1. Select **Create remediation task** for this policy to be applied to existing resources. If not selected, the policy is applied to the newly created resources only.
+   1. Select **Create a Managed Identity** and choose **System assigned managed identity** (recommended) or **User assigned managed identity**, which has *Azure Extension for SQL Server Deployment* and *Reader* permissions.
+   1. Select the identity's location.
 1. Select **Review + Create**.
 1. Select **Create**.
 

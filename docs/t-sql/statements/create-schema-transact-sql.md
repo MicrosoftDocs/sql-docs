@@ -3,7 +3,7 @@ title: "CREATE SCHEMA (Transact-SQL)"
 description: CREATE SCHEMA (Transact-SQL)
 author: markingmyname
 ms.author: maghan
-ms.date: "12/01/2016"
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: t-sql
 ms.topic: reference
@@ -118,7 +118,9 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  This behavior is necessary to allow users that are based on Windows groups to create and own objects. However it can result in the unintentional creation of schemas and users. To avoid implicitly creating users and schemas, whenever possible explicitly create database principals and assign a default schema. Or explicitly state an existing schema when creating objects in a database, using two or three-part object names.  
 
 > [!NOTE]
->  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the user's status in Azure AD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** Attempts to create or alter schemas will result in the error 15151: **Cannot find the user '', because it does not exist or you do not have permission.**, also followed by error 2759. To work around these errors, either create the Azure AD user from an external provider, or alter the Azure AD group to assign a default schema. Then rerun the statement creating the object.
+>  The implicit creation of an Azure Active Directory user is not possible on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Since creating an Azure AD user from external provider must check the user's status in Azure AD, creating the user will fail with error 2760: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** And then error 2759: **CREATE SCHEMA failed due to previous errors.** Attempts to create or alter schemas will result in the error 15151: **Cannot find the user '', because it does not exist or you do not have permission.**, also followed by error 2759. To work around these errors, either create the Azure AD user from an external provider, or alter the Azure AD group to assign a default schema. Then rerun the statement creating the object. 
+
+In [!INCLUDE [fabricse](../../includes/fabric-se.md)] and [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)], schema names can't contain `/` or `\` or end with a `.`.
 
 ## Deprecation Notice  
  CREATE SCHEMA statements that do not specify a schema name are currently supported for backward compatibility. Such statements do not actually create a schema inside the database, but they do create tables and views, and grant permissions. Principals do not need CREATE SCHEMA permission to execute this earlier form of CREATE SCHEMA, because no schema is being created. This functionality will be removed from a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

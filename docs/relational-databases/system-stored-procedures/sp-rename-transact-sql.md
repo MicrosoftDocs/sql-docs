@@ -4,7 +4,7 @@ description: "Changes the name of a user-created object in the current database.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: randolphwest, maghan
-ms.date: 11/01/2023
+ms.date: 12/13/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -122,7 +122,13 @@ In `sp_rename` for the SQL Endpoint in [!INCLUDE [fabric](../../includes/fabric.
 
 **Applies to** Azure Synapse Analytics:
 
-In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `COLUMN` in a user object.
+- In [!INCLUDE [ssazuresynapse](../../includes/ssazuresynapse-md.md)], `sp_rename` is in **Preview** for dedicated SQL pools and can only be used to rename a `COLUMN` in a user object.
+
+**Applies to** [!INCLUDE [fabricdw](../../includes/fabric-dw.md)] in [!INCLUDE [fabric](../../includes/fabric.md)]:
+
+- Schema names can't contain `/` or `\` or end with a `.`.
+ 
+- Table names can't contain `/` or `\` or end with a `.`.
 
 ## Permissions
 

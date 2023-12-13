@@ -5,7 +5,7 @@ description: Learn about tuning database applications and databases for performa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma
-ms.date: 12/11/2023
+ms.date: 12/12/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: conceptual
@@ -86,7 +86,7 @@ SELECT m1.col1
     WHERE m1.col2 = 4;
 ```
 
-:::image type="content" source="./media/performance-guidance/query-plan-missing-indexes.png" alt-text="A query plan with missing indexes.":::
+:::image type="content" source="./media/performance-guidance/query-plan-missing-indexes.png" alt-text="Screenshot of a query plan with at least one 'missing' index, featuring an Index Scan.":::
 
 Azure SQL Database can help you find and fix common missing index conditions. DMVs that are built into Azure SQL Database look at query compilations in which an index would significantly reduce the estimated cost to run a query. During query execution, the database engine tracks how often each query plan is executed, and tracks the estimated gap between the executing query plan and the imagined one where that index existed. You can use these DMVs to quickly guess which changes to your physical database design might improve overall workload cost for a database and its real workload.
 

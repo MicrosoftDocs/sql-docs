@@ -13,10 +13,10 @@ ms.custom: sqldbrb=1
 # Elastic Database client library with Entity Framework
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-This document shows the changes in an Entity Framework Classic application that are needed to integrate with the [Elastic Database tools](elastic-scale-introduction.md). The focus is on composing [shard map management](elastic-scale-shard-map-management.md) and [data-dependent routing](elastic-scale-data-dependent-routing.md) with the Entity Framework **Code First** approach. The [Code First - New Database](/ef/ef6/modeling/code-first/workflows/new-database) tutorial for EF serves as the running example throughout this document. The sample code accompanying this document is part of elastic database tools' set of samples in the Visual Studio Code Samples.
+This document shows the changes in an Entity Framework application that are needed to integrate with the [Elastic Database tools](elastic-scale-introduction.md). The focus is on composing [shard map management](elastic-scale-shard-map-management.md) and [data-dependent routing](elastic-scale-data-dependent-routing.md) with the Entity Framework **Code First** approach. The [Code First - New Database](/ef/ef6/modeling/code-first/workflows/new-database) tutorial for EF serves as the running example throughout this document. The sample code accompanying this document is part of elastic database tools' set of samples in the Visual Studio Code Samples.
 
 > [!NOTE]
-> This article is applicable to Entity Framework Classic, not Entity Framework Core. 
+> This article is not applicable to Entity Framework Core (EF Core). 
 
 ## Downloading and Running the Sample Code
 

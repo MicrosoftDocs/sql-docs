@@ -30,7 +30,6 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | 5.1 | January 19, 2023 | 5.1.2 | October 26, 2023 | LTS | January 20, 2026 |
 | 4.0 | November 18, 2021 | 4.0.4 | October 30, 2023 | LTS | November 19, 2024 |
 | 3.1 | March 30, 2022 | 3.1.4 | October 31, 2023 | LTS | March 30, 2025 |
-| 2.1 | November 19, 2020 | 2.1.6 | April 27, 2023 | LTS | November 20, 2023 |
 
 ### Out of support releases
 
@@ -39,6 +38,7 @@ New stable (GA) releases are published every six months on a regular cadence beg
 | 5.0 | July 29, 2022 | 5.0.2 | March 31, 2023 | Current | July 19, 2023 |
 | 4.1 | January 31, 2022 | 4.1.1 | September 13, 2022 | Current | January 29, 2023 |
 | 3.0 | June 9, 2021 | 3.0.1 | September 24, 2021 | Current | May 18, 2022 |
+| 2.1 | November 19, 2020 | 2.1.6 | April 27, 2023 | LTS | November 20, 2023 |
 | 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | Current | May 19, 2021 |
 | 1.1 | November 20, 2019 | 1.1.4 | March 10, 2021 | LTS | November 21, 2022 |
 | 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | Current | May 20, 2020 |

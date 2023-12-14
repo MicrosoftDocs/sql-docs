@@ -1,12 +1,12 @@
 ---
 title: Use Python to query a database
-titleSuffix: Azure SQL Database & SQL Managed Instance
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: This article shows you how to use Python to create a program that connects to a database in Azure SQL Database and query it using Transact-SQL statements.
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, randolphwest
 ms.date: 09/15/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:

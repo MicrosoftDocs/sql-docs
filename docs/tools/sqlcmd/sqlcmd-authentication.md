@@ -91,7 +91,7 @@ To determine your version, execute `sqlcmd "-?"`. For more information, see [Con
 
 ### Microsoft Entra username and password
 
-When you want to use an Microsoft Entra user name and password, you can provide the `-G` option with the user name and password, by using the `-U` and `-P` options.
+When you want to use a Microsoft Entra user name and password, you can provide the `-G` option with the user name and password, by using the `-U` and `-P` options.
 
 ```console
 sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAzureADPassword -G

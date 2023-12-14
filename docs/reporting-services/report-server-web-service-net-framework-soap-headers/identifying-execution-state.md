@@ -31,7 +31,7 @@ helpviewer_keywords:
   
  The following diagram shows the processing and rendering path for reports.  
   
-:::image type="content" source="../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif" alt-text="Diagram that shows the processing and rendering path for reports." lightbox="../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif"::: 
+:::image type="content" source="../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif" alt-text="Diagram that shows the processing and rendering path for reports."::: 
   
  To support the functions described earlier, the current SOAP Render method is split into multiple methods encompassing execution initialization, processing, and rendering phases.  
   

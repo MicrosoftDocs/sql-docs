@@ -5,7 +5,7 @@ description: Learn about the Azure SQL Database service high availability capabi
 author: rajeshsetlem
 ms.author: rsetlem
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 06/14/2023
+ms.date: 12/13/2023
 ms.service: sql-database
 ms.subservice: high-availability
 ms.topic: conceptual
@@ -164,7 +164,6 @@ The zone-redundant version of the high availability architecture is illustrated 
 
 Consider the following when configuring your Premium or Business Critical databases with zone-redundancy: 
 
-- When using the Business Critical tier, zone-redundant configuration is only available when the Gen5 hardware is selected. 
 - For up to date information about the regions that support zone-redundant databases, see [Services support by region](/azure/availability-zones/az-region).
 - For zone redundant availability, choosing a [maintenance window](./maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).
 
@@ -178,7 +177,6 @@ Consider the following limitations:
 
 - Zone redundant configuration can only be specified during database creation. This setting can't be modified once the resource is provisioned. Use [Database copy](database-copy.md), [point-in-time restore](recovery-using-backups.md#point-in-time-restore), or create a [geo-replica](active-geo-replication-overview.md) to update the zone redundant configuration for an existing Hyperscale database. When using one of these update options, if the target database is in a different region than the source or if the database backup storage redundancy from the target differs from the source database, the [copy operation](database-copy.md#database-copy-for-azure-sql-hyperscale) will be a size of data operation.
 - For zone redundant availability, choosing a [maintenance window](maintenance-window.md) other than the default is currently available in [select regions](maintenance-window.md#azure-sql-database-region-support-for-maintenance-windows).
-- Only standard-series (Gen5) hardware is supported.
 - Named replicas aren't currently supported.
 - There's currently no option to specify zone redundancy when migrating a database to Hyperscale using the Azure portal. However, zone redundancy can be specified using Azure PowerShell, Azure CLI, or the REST API when migrating an existing database from another Azure SQL Database service tier to Hyperscale. Here's an example with Azure CLI: `az sql db update --resource-group "myResourceGroup" --server "myServer" --name "myDB" --edition Hyperscale --zone-redundant true`
 - At least 1 high availability compute replica and the use of zone-redundant or geo-zone-redundant backup storage is required for enabling the zone redundant configuration for Hyperscale.

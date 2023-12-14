@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 SharePoint users can view a list of the data alerts that they created and information about the alerts. Users can also delete their alerts, open alert definitions for edit in Data Alert Designer, and run their alerts. The following picture shows the features available to users in Data Alert Manager.
 
-:::image type="content" source="../reporting-services/media/rs-alertmanageriw.gif" alt-text="Screenshot of the features available to users in Data Alert Manager." lightbox="../reporting-services/media/rs-alertmanageriw.gif":::
+:::image type="content" source="../reporting-services/media/rs-alertmanageriw.gif" alt-text="Screenshot of the features available to users in Data Alert Manager.":::
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -30,7 +30,7 @@ SharePoint users can view a list of the data alerts that they created and inform
   
 2.  Select the icon for the expand dropdown menu on a report and select **Manage Data Alerts**. The following picture shows the dropdown menu.  
 
-    :::image type="content" source="../reporting-services/media/rs-openalertmanager.gif" alt-text="Screenshot of the dropdown menu highlighting Manage Data Alerts." lightbox="../reporting-services/media/rs-openalertmanager.gif":::
+    :::image type="content" source="../reporting-services/media/rs-openalertmanager.gif" alt-text="Screenshot of the dropdown menu highlighting Manage Data Alerts.":::
   
      Data Alert Manager opens. By default, it lists the alerts for the report that you selected in the library.  
   

@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 SharePoint alerting administrators can view a list of the data alerts that were created by any site user and information about the alerts. Alerting administrators can also delete alerts. The following picture shows the features available to alerting administrators in Data Alert Manager.
 
-:::image type="content" source="../reporting-services/media/rs-alertmanagersite.gif" alt-text="Screenshot of the Data Alert Manager showing the features available to alerting administrators." lightbox="../reporting-services/media/rs-alertmanagersite.gif":::
+:::image type="content" source="../reporting-services/media/rs-alertmanagersite.gif" alt-text="Screenshot of the Data Alert Manager showing the features available to alerting administrators.":::
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.

@@ -8406,7 +8406,7 @@ items:
     items:
     - name: sqlcmd overview
       href: tools/sqlcmd/sqlcmd-utility.md
-    - name: Authenticate sqlcmd with Azure AD
+    - name: Authenticate sqlcmd with Microsoft Entra ID
       href: tools/sqlcmd/sqlcmd-authentication.md
     - name: Start the utility
       href: tools/sqlcmd/sqlcmd-start-utility.md

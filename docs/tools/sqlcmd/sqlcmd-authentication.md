@@ -122,13 +122,13 @@ SERVER = Target_DB_or_DW.testsrv.database.windows.net;Authentication=ActiveDirec
 
 ### Microsoft Entra interactive authentication
 
-The Microsoft Entra interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
+The Microsoft Entra interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multifactor authentication. For more information, see [Active Directory Interactive Authentication](../../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
 To enable interactive authentication, provide the `-G` option with user name (`-U`) only, without a password.
 
 The following example exports data using Microsoft Entra interactive mode, indicating a username where the user represents a Microsoft Entra account. This is the same example used in the previous section, **Microsoft Entra username and password**.
 
-Interactive mode requires manually entering a password, or for accounts with multi-factor authentication enabled, complete your configured MFA authentication method.
+Interactive mode requires manually entering a password, or for accounts with multifactor authentication enabled, complete your configured MFA authentication method.
 
 ```console
 sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com

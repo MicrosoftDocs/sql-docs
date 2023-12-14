@@ -90,7 +90,7 @@ helpviewer_keywords:
 
 21. Select **OK** to finish.  
   
-:::image type="content" source=".../../reporting-services/security/media/rsexecroledbproperties.gif" alt-text="Screenshot that shows the Database Role Properties page." lightbox="../../reporting-services/security/media/rsexecroledbproperties.gif":::
+:::image type="content" source="../../reporting-services/security/media/rsexecroledbproperties.gif" alt-text="Screenshot that shows the Database Role Properties page." lightbox="../../reporting-services/security/media/rsexecroledbproperties.gif":::
   
 ## Create RSExecRole in MSDB  
  Reporting Services uses stored procedures for SQL Server Agent service and retrieves job information from system tables to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures and Select permissions on the tables to the RSExecRole.  

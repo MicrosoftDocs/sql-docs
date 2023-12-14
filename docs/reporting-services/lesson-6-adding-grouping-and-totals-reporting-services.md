@@ -23,18 +23,18 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
     > [!NOTE]
     > Note that the row handle now has a bracket in it, to indicate a group. The table now also has two `[Date]` expression columns, one on both sides of a vertical dotted line.
     >
-    >:::image type="content" source="media/rs-basictablegroups1design.png" alt-text="Screenshot of a table showing the row handle and two Date expression columns." lightbox="media/rs-basictablegroups1design.png":::
+    >:::image type="content" source="media/rs-basictablegroups1design.png" alt-text="Screenshot of a table showing the row handle and two Date expression columns.":::
 
 4. From the **Report Data** pane, drag the `[Order]` field to the **Row Groups** pane. Place it below **Date** and above **= (Details)**.
 
-    :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details." lightbox="media/ssrs-ssdt-addorderfield.png":::
+    :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details.":::
 
     > [!NOTE]
     > Note that now the row handle has two brackets in it, :::image type="icon" source="media/ssrs-ssdt-rowgroupdoublehandles.png"::: to indicate two groups. The table now also has two `[Order]` expression columns.
 
 5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
-    :::image type="content" source="media/rs-basictablegroupsdeletecols.gif" alt-text="Screenshot of the two columns selected in the table." lightbox="media/rs-basictablegroupsdeletecols.gif":::
+    :::image type="content" source="media/rs-basictablegroupsdeletecols.gif" alt-text="Screenshot of the two columns selected in the table.":::
 
 6. To format the new `[Date]` column, right-click the data region cell that contains the `[Date]` expression, and select **Text Box Properties**.
 7. Select **Number** in the left-most column list box, and **Date** from the **Category** list box.
@@ -42,7 +42,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 9. Select **OK** to apply the format.
 10. Again, preview the report. It should look as below:
 
-    :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table." lightbox="media/rs-basictablegroupspreview.png":::
+    :::image type="content" source="media/rs-basictablegroupspreview.png" alt-text="Screenshot of the preview report for the table.":::
 
 ## Add totals to a report
 
@@ -54,7 +54,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 6. From the **Format** menu, select **Background Color** > **Light Gray** square.
 7. Select **OK** to apply the format.
 
-    :::image type="content" source="media/rs-basictablesumlinetotaldesign.gif" alt-text="Screenshot of the formatted table with the order total." lightbox="media/rs-basictablesumlinetotaldesign.gif":::
+    :::image type="content" source="media/rs-basictablesumlinetotaldesign.gif" alt-text="Screenshot of the formatted table with the order total.":::
 
 ## Add the daily total to the report
 
@@ -64,7 +64,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. From the **Format** menu, select **Background Color** > **Orange** square.
 5. Select **OK** to apply the format.
 
-    :::image type="content" source="media/rs-basictablesumdaytotaldesign.gif" alt-text="Screenshot of the formatted table with the daily total." lightbox="media/rs-basictablesumdaytotaldesign.gif":::
+    :::image type="content" source="media/rs-basictablesumdaytotaldesign.gif" alt-text="Screenshot of the formatted table with the daily total.":::
 
 ## Add the grand total to the report
 
@@ -74,7 +74,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. From the **Format** menu, select **Background Color** > **Light Blue** square.
 5. Select **OK** to apply the format.
 
-    :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with grand total." lightbox="media/rs-basictablesumgrandtotaldesign.gif":::
+    :::image type="content" source="media/rs-basictablesumgrandtotaldesign.gif" alt-text="Screenshot of the formatted table with grand total.":::
 
 ## Preview the report
 
@@ -118,7 +118,7 @@ An optional step is to publish the completed report to the Report Server so you 
 
 8. Select the Tutorial folder, and then select the "Sales Orders" report to view the report.
 
-    :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in the Home panel." lightbox="media/ssrs-tutorial-tutorialfolder.png":::
+    :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in the Home panel.":::
 
 You've successfully completed the **Creating a Basic Table Report tutorial**.
 

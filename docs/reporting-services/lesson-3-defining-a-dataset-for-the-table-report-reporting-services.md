@@ -19,7 +19,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
 1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog box opens with the **Query** section displayed.
 
-    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog box showing the query section." lightbox="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png":::
+    :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog box showing the query section.":::
 
 2. In the **Name** text box, type "AdventureWorksDataset".
 
@@ -62,7 +62,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
 The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
-   :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields." lightbox="media/ssrs-adventureworksdataset.png":::
+   :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.":::
 
 ## Next steps
 

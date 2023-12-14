@@ -27,7 +27,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 1. Select the **Toolbox** tab in the left pane of the Report Designer. With your mouse, select the **Table** object and drag it to the report design surface. Report Designer draws a table data region with three columns in the center of the design surface. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
-    :::image type="content" source="media/ssrs-ssdt-addtable.png" alt-text="Screenshot of the Toolbox tab with the Table option selected." lightbox="media/ssrs-ssdt-addtable.png":::
+    :::image type="content" source="media/ssrs-ssdt-addtable.png" alt-text="Screenshot of the Toolbox tab with the Table option selected.":::
 
     You can also add a table to the report from the design surface. Right-click the design surface and select **Insert** > **Table**.
 
@@ -44,7 +44,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 6. Drag the `[Qty]` field to the right edge of the third column until you get a vertical cursor and the mouse pointer displays a plus sign [+]. When you release the mouse button, a fourth column is created for the `[Qty]` field expression.
 
-    :::image type="content" source="media/ssrs-tutorial-addcolumn.png" alt-text="Screenshot of the Product field in the table." lightbox="media/ssrs-tutorial-addcolumn.png":::
+    :::image type="content" source="media/ssrs-tutorial-addcolumn.png" alt-text="Screenshot of the Product field in the table.":::
 
 7. Add the `[LineTotal]` field in the same way, creating a fifth column. The column label is added as "Line Total". Report Designer automatically creates a friendly name for the column by splitting "LineTotal" into two words.
 
@@ -60,7 +60,7 @@ Previewing a report enables you to view the rendered report without having to fi
 
 - Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
-    :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer." lightbox="media/ssrs-ssdt-preview.png":::
+    :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
 
 The following diagram shows part of the report in **Preview** view.
 

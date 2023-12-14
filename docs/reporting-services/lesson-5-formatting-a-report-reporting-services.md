@@ -48,13 +48,13 @@ You can add other formatting to your report by highlighting the header row, and 
 
 2. Point to the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
 
-    :::image type="content" source="media/rs-basictabledetailsdesign.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns." lightbox="media/rs-basictabledetailsdesign.png":::
+    :::image type="content" source="media/rs-basictabledetailsdesign.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
 
 3. Select the row containing column header labels and from the **Format** menu, select **Font** > **Bold**.
 
 4. Preview your report. It should display as below:
 
-    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers." lightbox="media/rs-basictabledetailsformattedpreview.png":::
+    :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers.":::
 
 5. From the **File** menu, select **Save All** to save the report.
 

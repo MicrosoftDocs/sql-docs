@@ -44,12 +44,12 @@ The following table lists which operating systems are supported by OLE DB Driver
 |19.1|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |19.0|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 |18.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.5|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.4|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.3|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.2|   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
-|18.1|   |   |Yes|Yes|Yes|Yes|Yes|Yes|
-|18.0|   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|18.5|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
+|18.4|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
+|18.3|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
+|18.2|   |Yes|Yes|Yes|Yes|   |Yes|Yes|
+|18.1|   |   |Yes|Yes|Yes|   |Yes|Yes|
+|18.0|   |   |Yes|Yes|Yes|   |Yes|Yes|
 
 <sup>1</sup> Supported on Windows Server 2012 with [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Supported on Windows Server 2012 R2 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

@@ -91,13 +91,13 @@ Parameter  |Source of value  | Value/field
 ## Next steps  
 When the subscription runs, four report files will be delivered to the file share you specified, one for each order in the *Subscribers* data source. Each delivery should be unique in terms of data (the data should be order-specific), rendering format, and file format. You can open each report from the shared folder to verify that each version is customized based on the subscription options you defined.  
 
-:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif" alt-text="Screenshot of the list of files created by the subscription." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif":::
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif" alt-text="Screenshot of the list of files created by the subscription.":::
   
 The subscription page in the web portal will contain the **Last Run** date and **Status** of the subscription. 
 > [!NOTE]
 > Refresh the page after the subscription runs to see the updated information.  
 
-:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot of the subscription information in the portal." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png":::
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot of the subscription information in the portal.":::
   
 This step concludes the tutorial "Define a Data-Driven Subscription".   
   

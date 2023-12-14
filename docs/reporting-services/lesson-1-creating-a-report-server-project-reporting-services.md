@@ -25,7 +25,7 @@ When you create reports with Report Designer, it creates a report server project
   
 1. From the **File** menu, select **New** > **Project**.  
 
-    :::image type="content" source="../reporting-services/media/ssrs-ssdt-file-01-new-project.png" alt-text="Screenshot of Visual Studio showing the project option selected in the new dropdown menu in the file menu." lightbox="../reporting-services/media/ssrs-ssdt-file-01-new-project.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-ssdt-file-01-new-project.png" alt-text="Screenshot of Visual Studio showing the project option selected in the new dropdown menu in the file menu.":::
   
 2. In the left-most column under **Installed**, select **Reporting Services**. In some cases, it may be under the group **Business Intelligence**.
 
@@ -47,7 +47,7 @@ When you create reports with Report Designer, it creates a report server project
 
 2. Select **Add** > **New Item**.
 
-    :::image type="content" source="../reporting-services/media/ssrs-ssdt-add-report.png" alt-text="Screenshot of the Solution Explorer showing the Add option selected on the Reports context menu." lightbox="../reporting-services/media/ssrs-ssdt-add-report.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-ssdt-add-report.png" alt-text="Screenshot of the Solution Explorer showing the Add option selected on the Reports context menu.":::
 
 3. In the **Add New Item** window, select the **Report** icon.
 

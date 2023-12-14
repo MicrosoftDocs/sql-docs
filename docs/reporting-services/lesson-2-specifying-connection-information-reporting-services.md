@@ -21,7 +21,7 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
 
 1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** menu > **Report Data**.
 
-    :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted in the New menu." lightbox="media/ssrs-table-tutorial-2-new-data-source.png":::
+    :::image type="content" source="media/ssrs-table-tutorial-2-new-data-source.png" alt-text="Screenshot of the Report Data pane with the Data Source option highlighted in the New menu.":::
 
     The **Data Source Properties** dialog box opens with the **General** section displayed.
 
@@ -52,7 +52,7 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
 
 Report Designer adds the data source AdventureWorks2022 to the **Report Data** pane.
 
-:::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2016 data source." lightbox="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png":::
+:::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png" alt-text="Screenshot of the Report Data pane that highlights the AdventureWorks2016 data source.":::
 
 
 

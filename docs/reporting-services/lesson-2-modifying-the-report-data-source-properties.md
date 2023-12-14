@@ -54,7 +54,7 @@ You'll also modify the dataset and report to use a parameter to filter the repor
   
 2.  Right-click the dataset `AdventureWorksDataset` and select **Dataset Properties**.
 
-    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png" alt-text="Screenshot of the context menu for AdventureWorksDataset highlighting the Dataset Properties option." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png" alt-text="Screenshot of the context menu for AdventureWorksDataset highlighting the Dataset Properties option.":::
 
 1.  Add the statement `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` before the `Group By` statement. The full query syntax is the following:  
   
@@ -81,7 +81,7 @@ You'll also modify the dataset and report to use a parameter to filter the repor
   
 1.  In the Report Data pane, expand the parameters folder and double-click the **Ordernumber** parameter.  It was created automatically as part of the previous steps when you added the parameter to the dataset. Select **New** and then choose **Parameter...**  
 
-    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png" alt-text="Screenshot of the Report Data pane highlighting the Ordernumber parameter." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-parameter.png" alt-text="Screenshot of the Report Data pane highlighting the Ordernumber parameter.":::
 
 1.  Verify the **Name** is `OrderNumber`.  
   
@@ -99,7 +99,7 @@ You'll also modify the dataset and report to use a parameter to filter the repor
   
     -   Unselect the **Null** option and type an order number, for example *so71949*, then select **View Report** to view only the one order in the report.  
 
-    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png" alt-text="Screenshot of the preview tab and the View Report button highlighted." lightbox="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png":::
+    :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png" alt-text="Screenshot of the preview tab and the View Report button highlighted.":::
  
   
 ## <a name="bkmk_redeploy"></a>Re-deploy the report  

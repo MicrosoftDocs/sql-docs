@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
-description: "Describes how to troubleshoot best practices assessment on Azure Arc-enabled SQL Server."
+title: "Troubleshoot best practices assessment."
+description: "Describes how to troubleshoot best practices assessment on SQL Server enabled by Azure Arc."
 author: nhebbar2011
 ms.author: nhebbar
 ms.reviewer: mikeray
@@ -194,5 +194,5 @@ For more assistance, create a support ticket with Microsoft and attach the log f
 - [Configure SQL best practices assessment](assess.md)
 - [View SQL Server databases - Azure Arc](view-databases.md)
 - [Manage SQL Server license and billing options](manage-configuration.md)
-- [Azure Arc-enabled SQL Server and Databases activity logs](activity-logs.md)
+- [[!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] and Databases activity logs](activity-logs.md)
 - [Data collected by Arc enabled SQL Server](data-collection.md)

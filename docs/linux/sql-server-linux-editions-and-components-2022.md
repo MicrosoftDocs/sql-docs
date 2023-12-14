@@ -233,7 +233,7 @@ The following features and services aren't available for [!INCLUDE[sssql22](../i
 <sup>2</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package isn't supported.
 
 > [!NOTE]  
-> The latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] features that depend on Azure Arc agent, including Microsoft Entra Authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go (PAYG) for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. Azure Arc-enabled SQL Server [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
+> The latest [!INCLUDE [sssql22-md](../includes/sssql22-md.md)] features that depend on Azure Arc agent, including Microsoft Entra Authentication (previously known as Azure Active Directory authentication), Microsoft Purview, Pay-as-you-go (PAYG) for SQL Server, and Defender integration, are currently not supported for SQL Server deployed in containers. [!INCLUDE [ssazurearc-md](../includes/ssazurearc.md)] [doesn't support SQL Server running in containers](../sql-server/azure-arc/overview.md#unsupported-configurations).
 
 [!INCLUDE [editions-supported-features-windows](../includes/editions-supported-features-windows.md)]
 

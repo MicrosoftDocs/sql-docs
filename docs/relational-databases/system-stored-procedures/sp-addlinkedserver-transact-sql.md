@@ -184,7 +184,7 @@ EXEC sp_addlinkedserver
 The following example creates a linked server `S1_instance1` on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.
 
 > [!IMPORTANT]  
-> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it's not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
+> SQL Server Native Client OLE DB provider (SQLNCLI) remains deprecated and it isn't recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
 
 ```sql
 EXEC sp_addlinkedserver

@@ -3,10 +3,10 @@ title: "SQL Server, Database Replica object"
 description: "Learn about the SQLServer:Database Replica performance object, which contains performance counters about secondary databases of an Always On availability group."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/12/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "SQLServer:Database Replica"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 # SQL Server, Database Replica object
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
+  The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE [ssnoversion](../../includes/ssnoversion-md.md)]. This object is valid only on an instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
   
 |Counter Name|Description|View on...|  
 |------------------|-----------------|--------------|  
@@ -54,9 +54,9 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Database Replica%';
 ```  
 
-## See also
-  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
- [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
- [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)
+- [SQL Server, Availability Replica object](sql-server-availability-replica.md)
+- [SQL Server, Databases object](sql-server-databases-object.md)
+- [What is an Always On availability group?](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

@@ -11,11 +11,11 @@ ms.custom: ignite-2023
 
 # Always On availability groups inventory and status
 
-An Always On availability group is an enterprise level high availability and disaster recovery solution for SQL Server. This article describes how to view a list of availability groups and their real time health status for a given Azure Arc-enabled SQL Server, in Azure portal.
+An Always On availability group is an enterprise level high availability and disaster recovery solution for SQL Server. This article describes how to view a list of availability groups and their real time health status for a given [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], in Azure portal.
 
 ## View list of availability groups and Status
 
-Follow the steps to view the availability groups that are configured for the Azure Arc-enabled SQL Server:
+Follow the steps to view the availability groups that are configured for the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)]:
 
 1. In your Azure portal, browse to the overview page of the Arc-enabled SQL Server 
 1. Select **Availability Groups**
@@ -32,7 +32,7 @@ Azure portal displays the health and status of the Always on Availability Group 
 - Failover mode
 - Synchronization state
 
-When the availability group (AG) dashboard loads, fetching the dashboard details is done via a roundtrip down to the Azure Arc-enabled SQL Server instance. The Arc SQL extension agent connects to the SQL Server, queries the AG related DMV (Dynamic Management Views) metadata, and sends the information back to the Azure portal where it is displayed.
+When the availability group (AG) dashboard loads, fetching the dashboard details is done via a roundtrip down to the [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance. The Arc SQL extension agent connects to the SQL Server, queries the AG related DMV (Dynamic Management Views) metadata, and sends the information back to the Azure portal where it is displayed.
 
 ## Failover
 
@@ -60,7 +60,7 @@ This will initiate a planned, manual failover on the AG replica.
 ### Considerations
 
 - Currently, manual planned failover is the only mode of failover supported
-- Azure Arc-enabled SQL Server features are not supported for availability groups on failover cluster instances.
+- [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] features are not supported for availability groups on failover cluster instances.
 
 ## Related content
 

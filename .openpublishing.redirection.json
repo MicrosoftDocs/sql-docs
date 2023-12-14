@@ -36,6 +36,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path_from_root": "/docs/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md",
+      "redirect_url": "/sql/relational-databases/sql-server-index-design-guide",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/sql-server-index-design-guide.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/sql-server-index-design-guide",
       "redirect_document_id": false
@@ -57258,6 +57263,11 @@
     {
       "source_path": "docs/analytics-platform-system/index.md",
       "redirect_url": "/sql/analytics-platform-system/home-analytics-platform-system-aps-pdw",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/analytics-platform-system/provision-certificate.md",
+      "redirect_url": "/sql/analytics-platform-system/pdw-certificate-provisioning",
       "redirect_document_id": false
     },
     {

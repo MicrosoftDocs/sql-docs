@@ -1,10 +1,10 @@
 ---
-title: Connect to Server (Always Encrypted Page) Database Engine
-description: Connect to Server (Always Encrypted  Page) Database Engine.
+title: Connect to Server (Always Encrypted page) - Database Engine
+description: This article describes how to use the Connect to Server (Always Encrypted page) Database Engine.
 author: erinstellato-ms
 ms.author: erinstellato
 ms.reviewer: maghan, randolphwest
-ms.date: 11/16/2023
+ms.date: 11/22/2023
 ms.service: sql
 ms.subservice: ssms
 ms.topic: ui-reference
@@ -16,7 +16,11 @@ f1_keywords:
 
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-Use this tab to view or specify Always Encrypted column encryption options when connecting to Azure SQL Database, Azure SQL Managed Instance, or SQL Server. Use this tab to view or specify Always Encrypted secure enclave options when connecting to Azure SQL Database or SQL Server. Access this tab by selecting **Options >>** on the login tab.
+Use this tab to view or specify Always Encrypted column encryption options when you connect to Azure SQL Database, Azure SQL Managed Instance, or SQL Server. Use this tab to view or specify Always Encrypted secure enclave options when you connect to Azure SQL Database or SQL Server. Access this tab by selecting **Options >>** on the **Login** tab.
+
+## Always Encrypted tab
+
+The **Always Encrypted** tab has two checkboxes.
 
 #### Enable Always Encrypted (column encryption)
 
@@ -29,18 +33,20 @@ SSMS uses the .NET Framework Data Provider for SQL Server. If you don't enable A
 
 #### Enable secure enclaves
 
-Enable this option when connecting to a database configured to use Always Encrypted with secure enclaves. For more information, see [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
+Enable this option when you connect to a database configured to use Always Encrypted with secure enclaves. For more information, see [Getting started using Always Encrypted with secure enclaves](/azure/azure-sql/database/always-encrypted-enclaves-getting-started).
 
 ## Enclave attestation
 
+The **Enclave attestation** section has two options.
+
 #### Protocol
 
-Select the attestation protocol to use when connecting to a database configured to use Always Encrypted with secure enclaves. The protocol value determines:
+Select the attestation protocol to use when you connect to a database configured to use Always Encrypted with secure enclaves. The protocol value determines:
 
 - If the client app uses attestation, and, if so,
 - It specifies the type of the attestation service it uses.
 
-Available options are **None**,**Host Guardian Service**, and **Microsoft Azure Attestation**. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
+Available options are **None**, **Host Guardian Service**, and **Microsoft Azure Attestation**. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md#secure-enclave-attestation).
 
 #### URL
 

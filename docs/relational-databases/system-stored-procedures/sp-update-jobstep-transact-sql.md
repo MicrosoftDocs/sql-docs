@@ -150,7 +150,7 @@ The amount of time in minutes between retry attempts. *@retry_interval* is **int
 
 The name of the file in which the output of this step is saved. *@output_file_name* is **nvarchar(200)**, with a default of `NULL`. This parameter is only valid with commands running in [!INCLUDE [tsql](../../includes/tsql-md.md)] or **CmdExec** subsystems.
 
-To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string (`' '`) or to a string of blank characters, but you can't use the `CHAR(32)` function.
+To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string, or to a string of blank characters, but you can't use the `CHAR(32)` function.
 
 For example, set this argument to an empty string as follows:
 

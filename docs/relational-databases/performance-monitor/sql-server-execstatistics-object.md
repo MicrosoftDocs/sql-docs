@@ -3,10 +3,10 @@ title: "SQL Server, Exec Statistics object"
 description: "Learn about the SQLServer:Exec Statistics object, which provides counters to monitor various executions."
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: "07/13/2021"
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: performance
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
   - "SQLServer:ExecStatistics"
   - "SQLServer:Exec Statistics"
@@ -44,7 +44,6 @@ SELECT * FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%Exec Statistics%';
 ```  
 
-## See also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+## Related content
+
+- [Monitor Resource Usage (Performance Monitor)](monitor-resource-usage-system-monitor.md)

@@ -4,7 +4,7 @@ description: This article describes key differences between Machine Learning Ser
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: mathoma, wiassaf
-ms.date: 08/03/2022
+ms.date: 11/30/2023
 ms.service: sql-managed-instance
 ms.subservice: machine-learning
 ms.topic: conceptual
@@ -81,6 +81,10 @@ If you encounter out of memory errors in Azure SQL Managed Instance, review [sys
 ## SQL Managed Instance pools
 
 Machine Learning Services is currently not supported on [Azure SQL Managed Instance pools (preview)](instance-pools-overview.md).
+
+## Outbound network access
+
+Network access is disallowed or blocked and cannot be enabled. The outbound network connection for Azure SQL Managed Instance is not avaialble for Machine Learning Services.
 
 ## Next steps
 

@@ -4,7 +4,7 @@ description: Learn how Hyperscale databases are architected to scale out storage
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/04/2023
+ms.date: 12/04/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -62,9 +62,7 @@ Page servers also maintain covering SSD-based caches to enhance performance. Lon
 
 The log service accepts transaction log records that correspond to data changes from the primary compute replica. Page servers then receive the log records from the log service and apply the changes to their respective slices of data. Additionally, compute secondary replicas receive log records from the log service and replay only the changes to pages already in their buffer pool or local RBPEX cache. All data changes from the primary compute replica are propagated through the log service to all the secondary compute replicas and page servers.
 
-Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The log service has local memory and SSD caches to speed up access to log records.
-
-The log for Hyperscale is practically infinite, with the restriction that a single transaction can't generate more than 1 TB of log. Additionally, if using [Change Data Capture](/sql/relational-databases/track-changes/about-change-data-capture-sql-server), at most 1 TB of log can be generated since the start of the oldest active transaction. Avoid unnecessarily large transactions to stay below this limit.
+Finally, transaction log records are pushed out to long-term storage in Azure Storage, which is a virtually infinite storage repository. This mechanism removes the need for frequent log truncation. The common reasons for log growth such as missed log backups or slow data replication to secondary replicas do not apply to Hyperscale. The log service has local memory and SSD caches to speed up access to log records.
 
 ## Azure storage
 

@@ -60,8 +60,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||
 
 ## SQL Server and SQL Managed Instance
 
-You must be in the context of the `master` database to alter Resource Governor configuration when using Azure SQL Managed Instance.
-
 [!INCLUDE [alter-workload-group](../includes/alter-workload-group.md)]
 
 ::: moniker-end

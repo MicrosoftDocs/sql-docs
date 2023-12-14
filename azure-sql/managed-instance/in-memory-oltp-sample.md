@@ -5,32 +5,37 @@ author: srinia
 ms.author: srinia
 ms.reviewer: mathoma
 ms.date: 12/12/2023
-ms.service: sql-database
+ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: sample
 ms.custom:
   - sqldbrb=1
-monikerRange: "=azuresql||=azuresql-db"
+monikerRange: "=azuresql-mi"
 ---
 # In-memory sample in Azure SQL Database
-[!INCLUDE [appliesto-sqldb](includes/appliesto-sqldb.md)]
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-In-memory technologies in Azure SQL Database enable you to improve performance of your application, and potentially reduce cost of your database. By using in-memory technologies in Azure SQL Database, you can achieve performance improvements with various workloads.
+In-memory technologies in Azure SQL Database enable you to improve performance of your application, and potentially reduce cost of your SQL managed instance. By using in-memory technologies in Azure SQL Database, you can achieve performance improvements with various workloads.
 
-In this article you'll see two samples that illustrate the use of in-memory OLTP, as well as columnstore indexes in Azure SQL Database.
+In this article you'll see two samples that illustrate the use of in-memory OLTP, as well as columnstore indexes in Azure SQL Managed Instance.
 
 For more information, see:
 
-- [In-memory OLTP Overview and Usage Scenarios](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=azuresql-db&preserve-view=true) (includes references to customer case studies and information to get started)
-- [Documentation for in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
-- [Columnstore Indexes Guide](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true)
-- Hybrid transactional/analytical processing (HTAP), also known as [real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true)
+- [In-memory OLTP Overview and Usage Scenarios](/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=azuresqlmi-current&preserve-view=true) (includes references to customer case studies and information to get started)
+- [Documentation for in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
+- [Columnstore Indexes Guide](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqlmi-current&preserve-view=true)
+- Hybrid transactional/analytical processing (HTAP), also known as [real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqlmi-current&preserve-view=true)
 
 <a id="install_oltp_manuallink"></a>
 
 ## 1. Install the in-memory OLTP sample
 
-You can create the `AdventureWorksLT` sample database with a few steps in the [Azure portal](https://portal.azure.com/). Then, the steps in this section explain how you can enrich your `AdventureWorksLT` database with in-memory OLTP objects and demonstrate performance benefits.
+1. Choose an existing SQL managed instance to create a new, sample database.
+
+    > [!IMPORTANT]
+    > Because of potential resource contention as you experiment with in-memory OLTP objects, don't choose a SQL managed instance that's currently serving a production or performance-sensitive workload.
+
+1. Restore the latest `AdventureWorksLT` sample database available for download at [AdventureWorks sample databases](/sql/samples/adventureworks-install-configure?view=azuresqldb-mi-current&preserve-view=true#download-backup-files). The steps in this section explain how you can enrich your `AdventureWorksLT` database with in-memory OLTP objects and demonstrate performance benefits.
 
 For a more simplistic, but more visually appealing performance demo for in-memory OLTP, see:
 
@@ -39,7 +44,7 @@ For a more simplistic, but more visually appealing performance demo for in-memor
 
 ### Installation steps
 
-1. In the [Azure portal](https://portal.azure.com/), create a Premium or Business Critical database on a server. Set the **Source** to the `AdventureWorksLT` sample database. For detailed instructions, see [Create your first database in Azure SQL Database](database/single-database-create-quickstart.md?view=azuresql-db&preserve-view=true).
+1. In the [Azure portal](https://portal.azure.com/), create a Premium or Business Critical database on a server. Set the **Source** to the `AdventureWorksLT` sample database. Download the XXXXXXXXXXXXX
 
 1. Connect to the database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -253,7 +258,7 @@ There are [several T-SQL query types that you can run](https://raw.githubusercon
 
 A clustered columnstore index is in the `FactResellerSalesXL_CCI` table.
 
-The following T-SQL script prints the logical I/O activity and time statistics, using [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql?view=azuresqldb-current&preserve-view=true) and [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql?view=azuresqldb-current&preserve-view=true) for each query.
+The following T-SQL script prints the logical I/O activity and time statistics, using [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql?view=azuresqlmi-current&preserve-view=true) and [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql?view=azuresqlmi-current&preserve-view=true) for each query.
 
 ```sql
 /*********************************************************************
@@ -321,11 +326,11 @@ In a database with the P2 pricing tier, you can expect about nine times the perf
 
 ## Related content
 
-- [Quickstart 1: In-memory OLTP Technologies for faster T-SQL Performance](/sql/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp?view=azuresqldb-current&preserve-view=true)
-- [Use in-memory OLTP to improve your application performance](in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
-- [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-db&preserve-view=true)
+- [Quickstart 1: In-memory OLTP Technologies for faster T-SQL Performance](/sql/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp?view=azuresqlmi-current&preserve-view=true)
+- [Use in-memory OLTP to improve your application performance](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+- [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 - [Blog: In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [In-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
-- [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true)
-- [Real-time operational analytics with columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true)
+- [In-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
+- [Columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqlmi-current&preserve-view=true)
+- [Real-time operational analytics with columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqlmi-current&preserve-view=true)
 - [Technical article: In-memory OLTP – Common Workload Patterns and Migration Considerations in SQL Server 2014](/previous-versions/dn673538(v=msdn.10))

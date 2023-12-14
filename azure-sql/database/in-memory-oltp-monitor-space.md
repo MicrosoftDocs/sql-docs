@@ -13,7 +13,7 @@ ms.custom:
 monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 ---
 # Monitor in-memory OLTP storage in Azure SQL Database and Azure SQL Managed Instance
-[!INCLUDE [appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]
+[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tables and table variables resides in in-memory OLTP storage.
 
@@ -21,11 +21,10 @@ With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tabl
 
 Determine the storage caps of the different service tiers. Each Premium and Business Critical service tier has a maximum in-memory OLTP storage size.
 
-- [DTU-based resource limits - single database](database/resource-limits-dtu-single-databases.md)
-- [DTU-based resource limits - elastic pools](database/resource-limits-dtu-elastic-pools.md)
-- [vCore-based resource limits - single databases](database/resource-limits-vcore-single-databases.md)
-- [vCore-based resource limits - elastic pools](database/resource-limits-vcore-elastic-pools.md)
-- [vCore-based resource limits - managed instance](managed-instance/resource-limits.md)
+- [DTU-based resource limits - single database](resource-limits-dtu-single-databases.md)
+- [DTU-based resource limits - elastic pools](resource-limits-dtu-elastic-pools.md)
+- [vCore-based resource limits - single databases](resource-limits-vcore-single-databases.md)
+- [vCore-based resource limits - elastic pools](resource-limits-vcore-elastic-pools.md)
 
 Estimating memory requirements for a memory-optimized table works the same way for SQL Server as it does in Azure SQL Database and Azure SQL Managed Instance. Take a few minutes to review [Estimate memory requirements](/sql/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables?view=azuresqldb-current&preserve-view=true).
 
@@ -63,4 +62,4 @@ To resolve this error, either:
 
 ## Related content
 
-- [Monitor Microsoft Azure SQL Database performance using dynamic management views](database/monitoring-with-dmvs.md?view=azuresql-db&preserve-view=true)
+- [Monitor Microsoft Azure SQL Database performance using dynamic management views](monitoring-with-dmvs.md?view=azuresql-db&preserve-view=true)

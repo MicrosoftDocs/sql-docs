@@ -669,6 +669,26 @@
       "source_path_from_root": "/azure-sql/managed-instance/virtual-cluster-delete.md",
       "redirect_url": "/azure/azure-sql/managed-instance/virtual-cluster-architecture",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-configure.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-monitor-space.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-monitor-space",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-oltp-overview.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/azure-sql/in-memory-sample.md",
+      "redirect_url": "/azure/azure-sql/database/in-memory-oltp-sample",
+      "redirect_document_id": false
     }
   ]
 }

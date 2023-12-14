@@ -1,6 +1,6 @@
 ---
 title: In-memory technologies
-description: In-memory technologies greatly improve the performance of transactional and analytics workloads in Azure SQL Database and Azure SQL Managed Instance.
+description: In-memory technologies greatly improve the performance of transactional and analytics workloads in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -10,10 +10,14 @@ ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=2
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "=azuresql||=azuresql-db"
 ---
-# Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance
-[!INCLUDE [appliesto-sqldb-sqlmi](includes/appliesto-sqldb-sqlmi.md)]
+# Optimize performance by using in-memory technologies in Azure SQL Database
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](in-memory-oltp-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-overview.md?view=azuresql-mi&preserve-view=true)
 
 In-memory technologies enable you to improve performance of your application, and potentially reduce cost of your database.
 
@@ -29,13 +33,12 @@ In-memory technologies can improve performance of these workloads by keeping the
 
 ## Overview
 
-Azure SQL Database and Azure SQL Managed Instance have the following in-memory technologies:
+Azure SQL Database supports the following in-memory technologies:
 
 - [In-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true) increases number of transactions per second and reduces latency for transaction processing. Scenarios that benefit from in-memory OLTP are: high-throughput transaction processing such as trading and gaming, data ingestion from events or IoT devices, caching, data load, and temporary table and table variable scenarios.
 - [Clustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true#clustered-columnstore-index) reduce your storage footprint (up to 10 times) and improve performance for reporting and analytics queries. You can use it with fact tables in your data marts to fit more data in your database and improve performance. Also, you can use it with historical data in your operational database to archive and be able to query up to 10 times more data.
 - [Nonclustered columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true#nonclustered-columnstore-index) for HTAP help you to gain real-time insights into your business through querying the operational database directly, without the need to run an expensive extract, transform, and load (ETL) process and wait for the data warehouse to be populated. Nonclustered columnstore indexes allow fast execution of analytics queries on the OLTP database, while reducing the impact on the operational workload.
-- [Memory-optimized clustered columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true)
- for HTAP enables you to perform fast transaction processing, and to *concurrently* run analytics queries very quickly on the same data.
+- [Memory-optimized clustered columnstore indexes](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqldb-current&preserve-view=true) for HTAP enables you to perform fast transaction processing, and to *concurrently* run analytics queries very quickly on the same data.
 
 Columnstore indexes and in-memory OLTP were introduced to SQL Server in 2012 and 2014, respectively. Azure SQL Database, Azure SQL Managed Instance, and SQL Server share the same implementation of in-memory technologies.
 
@@ -46,9 +49,9 @@ Because of the more efficient query and transaction processing, in-memory techno
 By using in-memory OLTP, Quorum Business Solutions was able to double their workload while improving DTUs by 70%. For more information, see [In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
 
 > [!NOTE]  
-> In-memory technologies are available in the Premium and Business Critical tiers.
+> In-memory technologies are available in the Premium and Business Critical tiers of Azure SQL Database.
 
-This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Database and Azure SQL Managed Instance, and also includes samples:
+This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Database, and also includes samples:
 
 - You'll see the impact of these technologies on storage and data size limits.
 - You'll see how to manage the movement of databases that use these technologies between the different pricing tiers.
@@ -83,11 +86,10 @@ In-memory OLTP includes memory-optimized tables, which are used for storing user
 
 Each supported single database pricing tier and each elastic pool pricing tier includes a certain amount of in-memory OLTP storage.
 
-- [DTU-based resource limits - single database](database/resource-limits-dtu-single-databases.md?view=azuresql-db&preserve-view=true)
-- [DTU-based resource limits - elastic pools](database/resource-limits-dtu-elastic-pools.md?view=azuresql-db&preserve-view=true)
-- [vCore-based resource limits - single databases](database/resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true)
-- [vCore-based resource limits - elastic pools](database/resource-limits-vcore-elastic-pools.md?view=azuresql-db&preserve-view=true)
-- [vCore-based resource limits - managed instance](managed-instance/resource-limits.md?view=azuresql-mi&preserve-view=true)
+- [DTU-based resource limits - single database](resource-limits-dtu-single-databases.md?view=azuresql-db&preserve-view=true)
+- [DTU-based resource limits - elastic pools](resource-limits-dtu-elastic-pools.md?view=azuresql-db&preserve-view=true)
+- [vCore-based resource limits - single databases](resource-limits-vcore-single-databases.md?view=azuresql-db&preserve-view=true)
+- [vCore-based resource limits - elastic pools](resource-limits-vcore-elastic-pools.md?view=azuresql-db&preserve-view=true)
 
 The following items count toward your in-memory OLTP storage cap:
 
@@ -108,7 +110,7 @@ With elastic pools, the in-memory OLTP storage is shared across all databases in
 
 ### <a id="changing-service-tiers-of-databases-that-use-in-memory-oltp-technologies"></a> Change service tiers of databases that use in-memory OLTP technologies
 
-You can always upgrade your database or instance to a higher tier, such as from General Purpose (vCore) to Business Critical, or Standard (DTU) to Premium. The available functionality and resources only increase.
+You can always upgrade your database to a higher tier, such as from General Purpose (vCore) to Business Critical, or Standard (DTU) to Premium. The available functionality and resources only increase.
 
 But downgrading the tier can negatively impact your database. The impact is especially apparent when you downgrade from Business Critical to General Purpose (or Premium to Standard or Basic) when your database contains in-memory OLTP objects. You can easily [find in-memory objects in your database](#determine-whether-in-memory-objects-exist).
 
@@ -117,7 +119,7 @@ Memory-optimized tables are unavailable after the downgrade (even if they remain
 > [!IMPORTANT]
 > In-memory OLTP isn't supported in the General Purpose, or the Standard or Basic DTU tiers of Azure SQL Database. Therefore, it isn't possible to move a database that has any in-memory OLTP objects to one of these tiers. Before you downgrade the database, remove all memory-optimized tables and table types as well as all natively compiled T-SQL modules, or convert them to row-based objects.
 
-*Scaling-down resources in Business Critical tier*: Data in memory-optimized tables must fit within the in-memory OLTP storage that is associated with the tier of the database or the managed instance, or it is available in the elastic pool. If you try to scale-down the tier or move the database into a pool that doesn't have enough available in-memory OLTP storage, the operation fails.
+*Scaling-down resources in Business Critical tier*: Data in memory-optimized tables must fit within the in-memory OLTP storage that is associated with the tier of the database, or it is available in the elastic pool. If you try to scale-down the tier or move the database into a pool that doesn't have enough available in-memory OLTP storage, the operation fails.
 
 #### Determine whether in-memory objects exist
 
@@ -127,7 +129,7 @@ There is a programmatic way to understand whether a given database supports in-m
 SELECT DatabasePropertyEx(DB_NAME(), 'IsXTPSupported');
 ```
 
-If the query returns **1**, in-memory OLTP is supported in this database. 
+If the query returns `1`, in-memory OLTP is supported in this database. 
 
 The following queries identify all objects that need to be removed before a database can be downgraded to General Purpose, Standard, or Basic:
 
@@ -151,7 +153,7 @@ There are two types of columnstore models that you can use to organize your data
 
 ### Data size and storage for columnstore indexes
 
-Columnstore indexes aren't required to fit in memory. Therefore, the only cap on the size of the indexes is the maximum overall database size, which is documented in the [DTU-based purchasing model](database/service-tiers-dtu.md?view=azuresql-db&preserve-view=true) and [vCore-based purchasing model](database/service-tiers-vcore.md?view=azuresql-db&preserve-view=true) articles.
+Columnstore indexes aren't required to fit in memory. Therefore, the only cap on the size of the indexes is the maximum overall database size, which is documented in the [DTU-based purchasing model](service-tiers-dtu.md?view=azuresql-db&preserve-view=true) and [vCore-based purchasing model](service-tiers-vcore.md?view=azuresql-db&preserve-view=true) articles.
 
 When you use clustered columnstore indexes, columnar compression is used for the base table storage. This compression can significantly reduce the storage footprint of your user data, which means that you can fit more data in the database. And the compression can be further increased with [columnar archival compression](/sql/relational-databases/data-compression/data-compression?view=azuresqldb-current&preserve-view=true#using-columnstore-and-columnstore-archive-compression). The amount of compression that you can achieve depends on the nature of the data, but 10 times the compression is not uncommon.
 
@@ -164,9 +166,6 @@ When you use nonclustered columnstore indexes, the base table is still stored in
 *Downgrading single database to Basic or Standard* might not be possible if your target tier is below S3. Columnstore indexes are supported only on the Business Critical/Premium pricing tier and on the Standard tier, S3 and above, and not on the Basic tier. When you downgrade your database to an unsupported tier or level, your columnstore index becomes unavailable. The system maintains your columnstore index, but it never uses the index. If you later upgrade back to a supported tier or level, your columnstore index is immediately ready to be used again.
 
 If you have a **clustered** columnstore index, the whole table becomes unavailable after the downgrade. Drop all *clustered* columnstore indexes (and replace with rowstore clustered indexes) before you downgrade your database to an unsupported tier or level.
-
-> [!NOTE]
-> Azure SQL Managed Instance supports columnstore indexes in all tiers.
 
 ## Related content
 

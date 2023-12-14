@@ -3,7 +3,7 @@ title: "Check disk IO subsystem for IO delay problems"
 description: Learn how to enable a policy to check the disk IO subsystem for IO delay problems by checking the event log for error message 833 for Policy-Based Management with SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

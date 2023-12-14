@@ -3,7 +3,7 @@ title: "Outdated Backup"
 description: "Outdated Backup"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -22,7 +22,7 @@ We recommend that you perform backups frequently enough to protect databases aga
 
 The simple recovery model and full recovery model both require data backups. For either recovery model, you can supplement your full backups with differential backups to efficiently reduce the risk of data loss.
 
-For a database that uses the full recovery model, we recommend that you take frequent log backups. For a production database that contains very important data, log backups would typically be taken every one to fifteen minutes.
+For a database that uses the full recovery model, we recommend that you take frequent log backups. For a production database that contains important data, log backups would typically be taken every one to fifteen minutes.
 
 > [!NOTE]  
 > The recommended method for scheduling backups is a database maintenance plan.

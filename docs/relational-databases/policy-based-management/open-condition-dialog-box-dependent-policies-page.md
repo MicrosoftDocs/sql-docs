@@ -3,7 +3,7 @@ title: "'Dependent Policies' page of 'Open Condition' dialog box"
 description: Describes the 'Dependent Policies' page of the 'Open Condition' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -22,7 +22,7 @@ Use this dialog box to display a list of policies that currently reference this 
 Lists the name of each policy that references this current condition.
 
 **Enabled**  
-A check mark indicates that the policy is currently enabled. Is blank if the policy is not enabled.
+A check mark indicates that the policy is currently enabled. Is blank if the policy isn't enabled.
 
 **History**  
 Select the View History hyperlink to display the execution history report.

@@ -3,7 +3,7 @@ title: "Symmetric Keys on User Databases"
 description: "Symmetric Keys on User Databases"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -14,11 +14,11 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks whether keys that have a length of less than 128 bytes do not use the RC2 or RC4 encryption algorithm.
+This rule checks whether keys that have a length of less than 128 bytes don't use the RC2 or RC4 encryption algorithm.
 
 ## Best practices recommendations
 
-Use AES 128 bit or larger to create symmetric keys for data encryption. If AES is not supported by your operating system, use 3DES.
+Use AES 128 bit or larger to create symmetric keys for data encryption. If AES isn't supported by your operating system, use 3DES.
 
 ## For more information
 

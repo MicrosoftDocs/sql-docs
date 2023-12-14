@@ -3,7 +3,7 @@ title: "Select Source Dialog Box"
 description: "Select Source Dialog Box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -47,7 +47,7 @@ Two authentication modes are available when you connect to an instance of the [!
 Windows Authentication mode allows for a user to connect through a Windows user account.
 
 **SQL Server Authentication**  
-When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.
+When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] doesn't have a login account set, authentication fails, and the user receives an error message.
 
 > [!IMPORTANT]  
 > When possible, use Windows Authentication.

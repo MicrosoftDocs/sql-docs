@@ -3,7 +3,7 @@ title: "Check disk IO Subsystem for read retry problems - Policy-Based Managemen
 description: This rule checks the event log for SQL Server error message 825, which indicates SQL Server was unable to read data from the disk on the first try.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks the event log for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error message 825. This message indicates that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] was unable to read data from the disk on the first try. This message indicates a major problem with the disk I/O subsystem. This message does not currently indicate a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] problem. However, the disk problem could cause data loss or database corruption if it is not resolved.
+This rule checks the event log for [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] error message 825. This message indicates that [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] was unable to read data from the disk on the first try. This message indicates a major problem with the disk I/O subsystem. This message doesn't currently indicate a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] problem. However, the disk problem could cause data loss or database corruption if it isn't resolved.
 
 ## Best practices recommendations
 

@@ -3,7 +3,7 @@ title: "Facet Properties Dialog Box, Dependent Conditions Page"
 description: "Facet Properties Dialog Box, Dependent Conditions Page"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference

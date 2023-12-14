@@ -1,9 +1,9 @@
 ---
-title: "Check Integrity of Database with Suspect Pages"
-description: "Check Integrity of Database with Suspect Pages"
+title: "Check integrity of database with suspect pages"
+description: "Check integrity of database with suspect pages."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -28,4 +28,4 @@ Error 824 indicates that a logical consistency error was detected during a read 
 
 ## For more information
 
-[Manage the suspect_pages Table (SQL Server)](../backup-restore/manage-the-suspect-pages-table-sql-server.md)
+[Manage the suspect_pages Table (SQL Server).](../backup-restore/manage-the-suspect-pages-table-sql-server.md)

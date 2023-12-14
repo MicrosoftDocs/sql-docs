@@ -3,7 +3,7 @@ title: "Server public Permissions"
 description: "Server public Permissions"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -18,7 +18,7 @@ This rule determines whether the public server role has server permissions. Ever
 
 ## Best practices recommendations
 
-Do not grant server permissions to the server public role.
+Don't grant server permissions to the server public role.
 
 > [!IMPORTANT]  
 > After setup completes the **PUBLIC** role has **CONNECT** permission on all the endpoints except the **Dedicated Admin Connection**. This is normal and should not be normally changed. (Access is controlled by using the **CONNECT SQL** permission which is automatically granted when new logins are created.)

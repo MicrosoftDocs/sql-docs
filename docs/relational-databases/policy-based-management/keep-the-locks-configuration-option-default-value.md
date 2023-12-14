@@ -1,9 +1,9 @@
 ---
 title: "Keep the Locks Configuration Option Default Value"
-description: "Keep the Locks Configuration Option Default Value"
+description: "Keep the Locks Configuration Option Default Value."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -16,7 +16,7 @@ helpviewer_keywords:
 
 This rule checks the value of the locks configuration option. This option determines the maximum number of available locks. This limits how much memory the [!INCLUDE [ssDEnoversion](../../includes/ssdenoversion-md.md)] uses for locks. The default setting of 0 enables the [!INCLUDE [ssDE](../../includes/ssde-md.md)] to allocate and deallocate lock structures dynamically based on changing system requirements.
 
-If locks is nonzero, batch jobs will stop, and an "out of locks" error message will be generated, if the value specified is exceeded.
+If locks are nonzero, batch jobs stop and an `out of locks` error message will be generated if the value specified is exceeded.
 
 ## Best practices recommendations
 

@@ -3,7 +3,7 @@ title: "View Facets Dialog Box"
 description: "View Facets Dialog Box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -14,7 +14,7 @@ f1_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use this dialog box to view the properties of a Policy-Based Management facet. The properties of a facet are defined when a facet is created and cannot be changed by using this dialog box.
+Use this dialog box to view the properties of a Policy-Based Management facet. The properties of a facet are defined when a facet is created and can't be changed by using this dialog box.
 
 ## Options
 

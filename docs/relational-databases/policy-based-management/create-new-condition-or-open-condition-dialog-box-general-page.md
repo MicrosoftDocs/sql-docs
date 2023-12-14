@@ -3,7 +3,7 @@ title: "'General Page of 'Create New Condition' or 'Open Condition' dialog box"
 description: Describes the 'General Page' of the 'Create New Condition' or 'Open Condition dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -25,20 +25,20 @@ For a new condition, type the new condition name. For an existing condition, the
 The facet used by this condition.
 
 **AndOr**  
-When you add multiple expressions, indicates whether the expressions should be joined by using **And** or **Or**. Remains blank when there is only one expression.
+When you add multiple expressions, indicates whether the expressions should be joined by using **And** or **Or**. Remains blank when there's only one expression.
 
 **Field**  
 Each facet exposes one or more properties that can be set. In the field box, select a property from the list of available properties to create an expression for this condition.
 
 **Operator**  
-Select a comparison operator for this expression. Operators are as follows: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Not all operators are available for some properties.
+Select a comparison operator for this expression. Operators are as follows: `=`, `!=`, `>`, `>=`, `<`, `<=`, [NOT]LIKE, [NOT]IN. Not all operators are available for some properties.
 
 **Value**  
 The value setting for this expression. The allowed values depend on the facet. Values can be TRUE/FALSE, string, or numeric. String values must be enclosed in single quotation marks, for example: **'AdventureWorks'**. Not all operators are available for some properties.
 
 ## Group clauses
 
-Clauses can be grouped to operate as a single unit separate from the rest of the query, just like putting parentheses around an expression in a mathematical equation or logic statement. Grouping clauses is useful when you are building complex queries.
+Clauses can be grouped to operate as a single unit separate from the rest of the query, just like putting parentheses around an expression in a mathematical equation or logic statement. Grouping clauses is useful when you're building complex queries.
 
 **To group clauses**
 

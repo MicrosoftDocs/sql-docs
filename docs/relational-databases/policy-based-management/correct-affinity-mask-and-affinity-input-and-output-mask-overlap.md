@@ -1,9 +1,9 @@
 ---
 title: "Correct affinity mask & affinity IO mask overlap policy"
-description: Learn how to enable a policy that checks whether an instance of SQL Server has one ore more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options for Policy-Based Management in SQL Server.
+description: Learn how to enable a policy that checks whether an instance of SQL Server has one or more processors that are assigned to be used with both the affinity mask and the affinity I/O mask options for Policy-Based Management in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -20,7 +20,7 @@ This rule checks whether the instance of [!INCLUDE [ssNoVersion](../../includes/
 
 When you specify either the affinity mask or the affinity I/O mask options, you should specify both, but only enable each CPU no more than once.
 
-Do not enable the same CPU in both the affinity mask option and the affinity I/O mask option. The bits that correspond to each CPU should be in one of the following states:
+Don't enable the same CPU in both the affinity mask option and the affinity I/O mask option. The bits that correspond to each CPU should be in one of the following states:
 
 - 0 in both the affinity mask option and the affinity I/O mask option
 

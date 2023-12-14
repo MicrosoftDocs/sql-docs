@@ -3,7 +3,7 @@ title: "Device Driver Control Error"
 description: "Device Driver Control Error"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

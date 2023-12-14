@@ -3,7 +3,7 @@ title: "'Policy Selection' page of the 'Evaluate Policies' dialog box"
 description: Describes the 'Policy Selection' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -14,7 +14,7 @@ f1_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use this dialog box to evaluate Policy-Based Management policies. By selecting the **Evaluation Results** page, you can apply policies to the items in a target set that do not comply with the policies.
+Use this dialog box to evaluate Policy-Based Management policies. By selecting the **Evaluation Results** page, you can apply policies to the items in a target set that doesn't comply with the policies.
 
 ## Options
 
@@ -37,7 +37,7 @@ The category of the policy. This box is read-only.
 The facet implemented by the policy. This box is read-only.
 
 **Evaluate**  
-Runs the policy in evaluation mode. This generates a compliance report for the target set but does not reconfigure [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or enforce future compliance.
+Runs the policy in evaluation mode. This generates a compliance report for the target set but doesn't reconfigure [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] or enforce future compliance.
 
 ## Possible errors
 
@@ -53,7 +53,7 @@ Runs the policy in evaluation mode. This generates a compliance report for the t
 
     -   The target-set filter might exclude all targets on this instance of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)].
 
-    -   The target server type is different from the server type on which the policy is evaluated. For example, in the [!INCLUDE [ssDE](../../includes/ssde-md.md)], if you try to evaluate a policy that has been created for [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)], you will receive an empty target set
+    -   The target server type is different from the server type on which the policy is evaluated. For example, in the [!INCLUDE [ssDE](../../includes/ssde-md.md)], if you try to evaluate a policy that has been created for [!INCLUDE [ssASnoversion](../../includes/ssasnoversion-md.md)], you'll receive an empty target set.
 
 ## Related content
 

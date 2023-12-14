@@ -3,7 +3,7 @@ title: "SQL Server Login Password Expiration"
 description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -20,7 +20,7 @@ This rule checks whether "Password expiration" of each [!INCLUDE [ssNoVersion](.
 
 We recommend that you upgrade the operating system to [!INCLUDE [winserver2003](../../includes/winserver2003-md.md)].
 
-If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is not required in your environment, use Windows Authentication. For more information, see [Choose an authentication mode](../security/choose-an-authentication-mode.md).
+If [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication isn't required in your environment, use Windows Authentication. For more information, see [Choose an authentication mode](../security/choose-an-authentication-mode.md).
 
 Enable "Password expiration" for all the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] logins. Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) to configure the password policy for the [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] login.
 

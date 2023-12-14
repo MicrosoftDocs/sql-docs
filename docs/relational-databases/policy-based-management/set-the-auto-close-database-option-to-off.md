@@ -3,7 +3,7 @@ title: "Set the AUTO_CLOSE Database Option to OFF"
 description: Check whether the AUTO_ CLOSE option is OFF. The AUTO_ CLOSE option has implications for performance in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

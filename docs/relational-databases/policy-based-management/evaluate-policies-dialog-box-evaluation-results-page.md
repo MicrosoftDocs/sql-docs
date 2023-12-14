@@ -3,7 +3,7 @@ title: "'Evaluation Results' page of 'Evaluate Policies' dialog box"
 description: Describes the 'Evaluation Results' page of the 'Evaluate Policies' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -14,7 +14,7 @@ f1_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use this dialog box to view policy evaluation results, and to apply Policy-Based Management policies to a set of targets that does not comply with the policies.
+Use this dialog box to view policy evaluation results, and to apply Policy-Based Management policies to a set of targets that doesn't comply with the policies.
 
 ## Options
 

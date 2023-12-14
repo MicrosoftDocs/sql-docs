@@ -3,7 +3,7 @@ title: "Policy Management Node (Object Explorer)"
 description: "Policy Management Node (Object Explorer)"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -12,7 +12,7 @@ ms.topic: reference
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This section contains the following F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+This section contains the following F1 Help articles for the **PolicyManagement** node of Object Explorer in [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 - [Create new condition or open condition dialog box, general page](create-new-condition-or-open-condition-dialog-box-general-page.md)
 

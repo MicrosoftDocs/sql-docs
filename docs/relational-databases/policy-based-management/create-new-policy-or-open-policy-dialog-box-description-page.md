@@ -3,7 +3,7 @@ title: "'Description' page of 'Create New Policy' or 'Open Policy' dialog box"
 description: Describes the 'Description' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -17,7 +17,7 @@ Use this dialog box to add a description and additional information to a Policy-
 ## Options
 
 **Category**  
-When you are creating a new policy, select a policy category.
+When you're creating a new policy, select a policy category.
 
 **Description**  
 Type a description of the policy.

@@ -1,9 +1,9 @@
 ---
-title: "Create New Condition or Open Condition Dialog Box, Description Page"
-description: "Create New Condition or Open Condition Dialog Box, Description Page"
+title: "Create new condition or open condition dialog box, description page"
+description: "Create new condition or open condition dialog box, description page."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference

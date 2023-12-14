@@ -1,9 +1,9 @@
 ---
 title: "Set the AUTO_SHRINK Database Option to OFF"
-description: "Set the AUTO_SHRINK Database Option to OFF"
+description: "Set the AUTO_SHRINK Database Option to OFF."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -18,7 +18,7 @@ This rule checks whether the AUTO_SHRINK database option is set to OFF. Frequent
 
 ## Best practices recommendations
 
-Set the AUTO_SHRINK database option to OFF. If you know that the space that you are reclaiming will not be needed in the future, you can reclaim the space by manually shrinking the database.
+Set the AUTO_SHRINK database option to OFF. If you know that the space that you're reclaiming won't be needed in the future, you can reclaim the space by manually shrinking the database.
 
 ## For more information
 

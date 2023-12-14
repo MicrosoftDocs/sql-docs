@@ -3,7 +3,7 @@ title: "Symmetric Keys on System Databases"
 description: "Symmetric Keys on System Databases"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -18,7 +18,7 @@ This rule checks for user-created symmetric keys in the master, `msdb`, model, a
 
 ## Best practices recommendations
 
-Do not create symmetric keys in the system databases.
+Don't create symmetric keys in the system databases.
 
 ## For more information
 

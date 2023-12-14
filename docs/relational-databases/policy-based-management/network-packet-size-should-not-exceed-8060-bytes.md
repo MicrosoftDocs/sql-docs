@@ -1,24 +1,24 @@
 ---
-title: "Network Packet Size Should Not Exceed 8060 Bytes"
-description: "Network Packet Size Should Not Exceed 8060 Bytes"
+title: "Network packet size shouldn't exceed 8,060 bytes"
+description: "Network packet size shouldn't exceed 8,060 bytes."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
 helpviewer_keywords:
   - "Best Practices [Database Engine]"
 ---
-# Network packet size should not exceed 8060 bytes
+# Network packet size shouldn't exceed 8,060 bytes
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-If the value specified for `sp_configure` 'network packet size' or if the network packet size of any logged-in user is more than 8060 bytes, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] performs different memory allocation operations. This can cause an increase in the process virtual address space that is not reserved for the buffer pool.
+If the value specified for `sp_configure` 'network packet size' or if the network packet size of any logged-in user is more than 8060 bytes, [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] performs different memory allocation operations. This can cause an increase in the process virtual address space that isn't reserved for the buffer pool.
 
 ## Best practices recommendations
 
-The network packet size should not exceed 8060 bytes.
+The network packet size shouldn't exceed 8,060 bytes.
 
 ## For more information
 

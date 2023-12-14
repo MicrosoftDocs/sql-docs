@@ -3,7 +3,7 @@ title: "View Policies Dialog Box"
 description: "View Policies Dialog Box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference

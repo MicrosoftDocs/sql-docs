@@ -1,9 +1,9 @@
 ---
 title: "Use Database Mail Instead of SQL Mail"
-description: "Use Database Mail Instead of SQL Mail"
+description: "Use Database Mail Instead of SQL Mail."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -20,7 +20,7 @@ This rule checks the `sys.configurations` catalog view to determine whether the 
 
 SQL Mail will be removed in a future version of [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. To send mail, use Database Mail.
 
-SQL Mail runs in-process to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service. If SQL Mail goes down, so does the server. Database Mail runs outside [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] in a separate process, is scalable, and does not require Extended MAPI client components to be installed on the production server.
+SQL Mail runs in-process to [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] service. If SQL Mail goes down, so does the server. Database Mail runs outside [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] in a separate process, is scalable, and doesn't require Extended MAPI client components to be installed on the production server.
 
 ## For more information
 

@@ -3,7 +3,7 @@ title: "Verify Max Worker Threads Setting"
 description: "Verify Max Worker Threads Setting"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -14,7 +14,7 @@ helpviewer_keywords:
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This rule checks the max worker threads server option for potentially incorrect settings. Setting the max worker threads option to a small value might prevent enough threads from servicing incoming client requests in a timely manner and could lead to "thread starvation". However, setting the option to a large value can waste address space, because each active thread consumes up to 4 MB on 64-bit servers.
+This rule checks the max worker threads server option for potentially incorrect settings. Setting the max worker threads option to a small value might prevent enough threads from servicing incoming client requests in a timely manner and could lead to "thread starvation." However, setting the option to a large value can waste address space, because each active thread consumes up to 4 MB on 64-bit servers.
 
 ## Best practices recommendations
 

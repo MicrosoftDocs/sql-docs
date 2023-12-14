@@ -1,9 +1,9 @@
 ---
 title: "Guest Permissions on User Databases"
-description: Determine whether the guest user has permission to access user databases in SQL Server. Revoke the guest user permission if it is not required.
+description: Determine whether the guest user has permission to access user databases in SQL Server. Revoke the guest user permission if it isn't required.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference
@@ -18,9 +18,9 @@ This rule determines whether the guest user has permission to access the databas
 
 ## Best practices recommendations
 
-Revoke the guest user permission to access the database if it is not required.
+Revoke the guest user permission to access the database if it isn't required.
 
-The guest user cannot be dropped, but guest user can be disabled by revoking its CONNECT permission by executing REVOKE CONNECT FROM GUEST within any database other than master, `tempdb`, or `msdb`.
+The guest user can't be dropped, but guest user can be disabled by revoking its CONNECT permission by executing REVOKE CONNECT FROM GUEST within any database other than `master`, `tempdb`, or `msdb`.
 
 ## For more information
 

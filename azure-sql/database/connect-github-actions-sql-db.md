@@ -72,7 +72,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
 
 2. Select **Set up your workflow yourself**.
 
-2. Delete everything after the `on:` section of your workflow file. For example, your remaining workflow may look like this. 
+3. Delete everything after the `on:` section of your workflow file. For example, your remaining workflow may look like this. 
 
     ```yaml
     name: SQL for GitHub Actions
@@ -84,7 +84,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
             branches: [ main ]
     ```
 
-1. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions check out your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
+4. Rename your workflow `SQL for GitHub Actions` and add the checkout and login actions. These actions check out your site code and authenticate with Azure using the `AZURE_CREDENTIALS` GitHub secret you created earlier.
 
     # [Service principal](#tab/userlevel)
 
@@ -132,7 +132,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
   
   ---
 
-1. Use the Azure SQL Deploy action to connect to your SQL instance. You should have a dacpac package (`Database.dacpac`) at the root level of your repository. Use the `AZURE_SQL_CONNECTION_STRING` GitHub secret you created earlier.
+5. Use the Azure SQL Deploy action to connect to your SQL instance. You should have a dacpac package (`Database.dacpac`) at the root level of your repository. Use the `AZURE_SQL_CONNECTION_STRING` GitHub secret you created earlier.
 
     ```yaml
     - uses: azure/sql-action@v2
@@ -142,7 +142,7 @@ You'll set the connection string as a GitHub secret, `AZURE_SQL_CONNECTION_STRIN
         action: 'Publish'
     ```
 
-1. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file appears in the `.github/workflows` folder of your repository.
+6. Complete your workflow by adding an action to logout of Azure. Here's the completed workflow. The file appears in the `.github/workflows` folder of your repository.
 
     # [Service principal](#tab/userlevel)
 

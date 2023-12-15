@@ -23,6 +23,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
+| [Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
 | [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
@@ -63,6 +64,39 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 | Contained databases not supported in SQL Managed Instance | | Resolved | Aug 2019 |
 
 ## Has workaround
+
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
+
+Procedure `sp_send_dbmail` may fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
+
+This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
+
+**Workaround**: Make sure you call `sp_send_dbmail` under appropriate custom account you've created, and not under sysadmin account.
+
+Here's an example of how you can create a dedicated account and modify existing objects that are sending email via `sp_send_dbmail`.
+
+```sql
+USE [msdb]
+GO
+
+-- Step 1: Create a user mapped to a login to specify as a runtime user.
+CREATE USER [user_name] FOR LOGIN [login_name]
+GO
+EXEC msdb.dbo.sp_update_jobstep @job_name=N'db_mail_sending_job', @step_id=db_mail_sending_job_id , @database_user_name=N'user_name'
+GO
+
+-- Step 2: Grant DB Mail permissions to the user who created it.
+ALTER ROLE [DatabaseMailUserRole] ADD MEMBER [user_name]
+GO
+
+-- Step 3: If the database of the job step is not msdb, the permission error cannot be avoided even if it is a member of the role, so set it to msdb.
+EXEC msdb.dbo.sp_update_jobstep @job_name=N'db_mail_sending_job', @step_id=db_mail_sending_job_id , @database_name=N'msdb'
+GO 
+
+-- Step 4: Set a principal in the email profile
+EXEC msdb.dbo.sysmail_add_principalprofile_sp @principal_name=N'user_name', @profile_name=N'profile_name', @is_default=0
+GO
+```
 
 ### Interim guidance on 2022 time zone updates for Chile
 

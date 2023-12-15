@@ -24,7 +24,7 @@ helpviewer_keywords:
   
 2.  Locate the ReportViewer control in the **Toolbox**. If the **Toolbox** isn't visible, you can access it from the **View** menu by selecting **Toolbox**.  
   
-     :::image type="content" source="media/windows-app-toolbox-report-viewer.png" alt-text="Screenshot of the Toolbox, highlighting ReportViewer control." lightbox="media/windows-app-toolbox-report-viewer.png":::  
+     :::image type="content" source="media/windows-app-toolbox-report-viewer.png" alt-text="Screenshot of the Toolbox, highlighting ReportViewer control.":::  
   
 3.  Drag the ReportViewer control onto the design surface of the Windows Form.  
   
@@ -34,11 +34,11 @@ helpviewer_keywords:
   
  If the report you wish to view is deployed to a report server, select the **\<Server Report>** option from the **Choose Report** drop-down list. After the **\<Server Report>** option is selected, two more properties appear: **Report Server Url** and **Report Path**. The **Report Server Url** is the address to the report server and the **Report Path** is the full path to the report to render.  
   
- :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the server report." lightbox="media/windows-app-server-report-settings.png":::  
+ :::image type="content" source="media/windows-app-server-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the server report.":::  
   
  If the report you wish to view a report in local mode, select either the **Design a new report** option to launch the report designer or select a report that is already part of the existing project.  
   
- :::image type="content" source="media/windows-app-local-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the local report." lightbox="media/windows-app-local-report-settings.png":::  
+ :::image type="content" source="media/windows-app-local-report-settings.png" alt-text="Screenshot of the ReportViewer Tasks smart tag, highlighting the local report.":::  
   
 ## Viewing reports in remote processing mode  
  The following example demonstrates how to render a report that is deployed to a report server using the WinForms ReportViewer control. This example uses the Sales Order Detail report that is included with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample reports project.  
@@ -151,7 +151,7 @@ End Class
   
      The Sales Order Detail.rdl file should now be part of the project.  
   
-     :::image type="content" source="media/windows-app-sales-order-detail-report.png" alt-text="Screenshot of the Solution Explorer, highlighting the Sales Order Detail Report." lightbox="media/windows-app-sales-order-detail-report.png":::  
+     :::image type="content" source="media/windows-app-sales-order-detail-report.png" alt-text="Screenshot of the Solution Explorer, highlighting the Sales Order Detail Report.":::  
   
 5.  Right-click the Sales Order Detail.rdl file in Solution Explorer and select **Rename**. Rename the report to **Sales Order Detail.rdlc** and press ENTER.  
   
@@ -162,7 +162,7 @@ End Class
   
 6.  After the report is renamed, select the file and locate the Properties window. Change the **Copy to Output Directory** property to **Copy if Newer**.  
   
-     :::image type="content" source="media/windows-app-copy-to-output-setting.png" alt-text="Screenshot of the Properties window, highlighting the Copy To Output setting." lightbox="media/windows-app-copy-to-output-setting.png":::  
+     :::image type="content" source="media/windows-app-copy-to-output-setting.png" alt-text="Screenshot of the Properties window, highlighting the Copy To Output setting.":::  
   
      If the **Properties** window isn't visible, you can open it from the **View** menu by selecting **Properties Window**.  
   

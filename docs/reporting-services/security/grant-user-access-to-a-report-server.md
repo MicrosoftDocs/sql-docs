@@ -60,7 +60,7 @@ Review the following list before adding users to a native mode report server.
     > [!NOTE]
     > If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.
 
-6. Select a system role, and then select **OK**.
+6. Choose a system role, and then select **OK**.
 
     Roles are cumulative, so if you select both System Administrator and System User, a user or group is able to perform the tasks in both roles.
 
@@ -72,7 +72,7 @@ Review the following list before adding users to a native mode report server.
 
 2. Select the **...** (ellipse) on an item.
 
-3. In the drop-down menu, select **Manage**.
+3. In the menu, select **Manage**.
 
 4. Select **Security**.
 

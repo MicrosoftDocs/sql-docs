@@ -182,7 +182,7 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
 ##  <a name="bkmk_StagesofReports"></a> Stages of Reporting Services paginated reports  
  A report definition can be created, published or saved, compiled, processed, cached, rendered, viewed, exported, and saved as history. When you run a report, the report server processes a report in three steps: report processing, data processing, and rendering. Data and report processing are performed on a report definition; the results are in an internal intermediate format. Reports that are in intermediate format are subsequently rendered to a specific viewing format. The following diagram shows the stages and elements of report processing.  
 
-:::image type="content" source="../reporting-services/media/report-execution.gif " alt-text="Diagram that shows the stages and elements of report processing." lightbox="../reporting-services/media/report-execution.gif ":::
+:::image type="content" source="../reporting-services/media/report-execution.gif" alt-text="Diagram that shows the stages and elements of report processing.":::
   
 ### Report definition  
  The report definition file (.rdl) stored on a report server. For more information, see [Report definition language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md).  

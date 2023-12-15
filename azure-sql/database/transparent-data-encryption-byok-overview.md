@@ -180,7 +180,7 @@ After access to the key is restored, taking database back online requires extra 
 > [!NOTE]
 > - If key access is restored within 30 minutes, the database will autoheal within the next hour.
 > - If key access is restored after more than 30 minutes, autoheal of the database isn't possible. Bringing back the database requires extra steps on the Azure portal and can take a significant amount of time depending on the size of the database.
-> - Once the database is back online, previously configured server-level settings that may include [failover group](auto-failover-group-sql-db.md) configuration, tags, and database-level settings such as elastic pools configuration, read scale, auto pause, point-in-time-restore history, long term retention policy, and others will be lost. Therefore, it's recommended that customers implement a notification system that identifies loss of encryption key access within 30 minutes. Once the 30 minutes window has expired, we recommend validating all server and database level settings on the recovered database.
+> - Once the database is back online, previously configured server-level settings that may include [failover group](failover-group-sql-db.md) configuration, tags, and database-level settings such as elastic pools configuration, read scale, auto pause, point-in-time-restore history, long term retention policy, and others will be lost. Therefore, it's recommended that customers implement a notification system that identifies loss of encryption key access within 30 minutes. Once the 30 minutes window has expired, we recommend validating all server and database level settings on the recovered database.
 
 Below is a view of the extra steps required on the portal to bring an inaccessible database back online.
 
@@ -260,7 +260,7 @@ Alternatively, it can be accomplished by generating key using the primary key va
 
 ## Geo-DR and customer-managed TDE
 
-In both [active geo-replication](active-geo-replication-overview.md) and [failover groups](auto-failover-group-sql-db.md) scenarios, the primary and secondary servers involved can be linked either to the same key vault (in any region) or to separate key vaults. If separate key vaults are linked to the primary and secondary servers, customer is responsible for keeping the key material across the key vaults consistent, so that geo-secondary is in sync and can take over using the same key from its linked key vault if primary becomes inaccessible due to an outage in the region and a failover is triggered. Up to four secondaries can be configured, and chaining (secondaries of secondaries) isn't supported.
+In both [active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md) scenarios, the primary and secondary servers involved can be linked either to the same key vault (in any region) or to separate key vaults. If separate key vaults are linked to the primary and secondary servers, customer is responsible for keeping the key material across the key vaults consistent, so that geo-secondary is in sync and can take over using the same key from its linked key vault if primary becomes inaccessible due to an outage in the region and a failover is triggered. Up to four secondaries can be configured, and chaining (secondaries of secondaries) isn't supported.
 
 To avoid issues while establishing or during geo-replication due to incomplete key material, it's important to follow these rules when configuring customer-managed TDE (if separate key vaults are used for the primary and secondary servers):
 

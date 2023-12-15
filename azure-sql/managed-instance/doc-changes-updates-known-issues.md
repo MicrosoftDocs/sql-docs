@@ -72,9 +72,9 @@ On August 8, 2022, the Chilean government made an official announcement about a 
 
 ### Changing the connection type doesn't affect connections through the failover group endpoint
 
-If an instance participates in an [auto-failover group](auto-failover-group-sql-mi.md), changing the instance's [connection type](../managed-instance/connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
+If an instance participates in a [failover group](failover-group-sql-mi.md), changing the instance's [connection type](connection-types-overview.md) doesn't take effect for the connections established through the failover group listener endpoint.
 
-**Workaround**: Drop and recreate auto-failover group after changing the connection type.
+**Workaround**: Drop and recreate failover group after changing the connection type.
 
 ### <a id="procedure-sp_send_dbmail-may-transiently-fail-when-query-parameter-is-used"></a> Procedure sp_send_dbmail may transiently fail when @query parameter is used
 
@@ -265,7 +265,7 @@ Impersonation using `EXECUTE AS USER` or `EXECUTE AS LOGIN` of the following Mic
 
 ### Transactional replication must be reconfigured after geo-failover
 
-If transactional replication is enabled on a database in an auto-failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
+If transactional replication is enabled on a database in a failover group, the SQL Managed Instance administrator must clean up all publications on the old primary and reconfigure them on the new primary after a failover to another region occurs. For more information, see [Replication](../managed-instance/transact-sql-tsql-differences-sql-server.md#replication).
 
 ### `tempdb` structure and content is re-created
 

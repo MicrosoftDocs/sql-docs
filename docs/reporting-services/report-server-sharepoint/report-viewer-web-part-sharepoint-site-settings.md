@@ -21,7 +21,7 @@ The site settings can be accessed by:
 
 1. In your SharePoint site, select the **gear** icon in the upper left and choose **Site Settings**.
 
-    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear icon menu, highlighting Site settings.:::
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear icon menu, highlighting Site settings.":::
 
 2. Clicking **Report Viewer Web Part Settings** in the **Reporting Services** site settings group.
 

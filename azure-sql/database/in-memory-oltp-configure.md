@@ -15,6 +15,11 @@ monikerRange: "=azuresql||=azuresql-db"
 # Use in-memory OLTP in Azure SQL Database to improve your application performance
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+
+
 [In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, in [Premium and Business Critical tier](service-tiers-vcore.md) databases without increasing the pricing tier.
 
 Follow these steps to adopt in-memory OLTP in your existing database.

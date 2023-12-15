@@ -15,6 +15,10 @@ monikerRange: "=azuresql||=azuresql-db"
 # Monitor in-memory OLTP storage in Azure SQL Database 
 [!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](in-memory-oltp-monitor-space.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
+
 With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tables and table variables resides in in-memory OLTP storage.
 
 ## Determine whether data fits within the in-memory OLTP storage cap

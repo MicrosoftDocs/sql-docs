@@ -119,14 +119,12 @@ This query is not expected to return any rows unless you are using a feature tha
   ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-## See also
+## Related content
 
 - [Introduction to Memory-Optimized Tables](../in-memory-oltp/introduction-to-memory-optimized-tables.md)
 - [Memory-Optimized Table Dynamic Management Views](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 - [SQL Server and Azure SQL index architecture and design guide: Hash index design guidelines](../sql-server-index-design-guide.md#hash_index)
-
-## Next steps 
-
 - [[!INCLUDE[inmemory](../../includes/inmemory-md.md)] Overview and Usage Scenarios](../in-memory-oltp/overview-and-usage-scenarios.md)
-- [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](/azure/azure-sql/in-memory-oltp-overview)
 - [Troubleshooting Hash Indexes for Memory-Optimized Tables](../in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)
+- [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true)
+- [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true)

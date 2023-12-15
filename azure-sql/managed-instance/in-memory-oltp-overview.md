@@ -10,12 +10,16 @@ ms.subservice: performance
 ms.topic: conceptual
 ms.custom:
   - sqldbrb=2
-monikerRange: "=azuresql-mi"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Optimize performance by using in-memory technologies in Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-In-memory technologies enable you to improve performance of your application, and potentially reduce cost of your SQL managed instance.
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](../database/in-memory-oltp-overview.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](in-memory-oltp-overview.md?view=azuresql-mi&preserve-view=true)
+
+In-memory technologies enable you to improve performance of your application, and potentially reduce cost of your SQL managed instance. In-memory OLTP is available in the [Business Critical](resource-limits.md#service-tier-characteristics) service tier of Azure SQL Managed Instance.
 
 ## When to use in-memory technologies
 
@@ -40,12 +44,7 @@ Columnstore indexes and in-memory OLTP were introduced to SQL Server in 2012 and
 
 ## Benefits of in-memory technology
 
-Because of the more efficient query and transaction processing, in-memory technologies also help you to reduce cost. You typically don't need to upgrade the SQL managed instance to achieve performance gains. In some cases, you might even be able reduce the pricing tier, while still seeing performance improvements with in-memory technologies.
-
-By using in-memory OLTP, Quorum Business Solutions was able to double their workload while improving DTUs by 70%. For more information, see [In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
-
-> [!NOTE]  
-> In-memory technologies are available in the Business Critical tier of Azure SQL Managed Instance.
+Because of the more efficient query and transaction processing, in-memory technologies also help you to reduce cost. Once in the Business Critical service tier of Azure SQL Managed Instance, you typically don't need to upgrade the SQL managed instance to achieve performance gains. In some cases, you might even be able reduce the pricing tier, while still seeing performance improvements with in-memory technologies.
 
 This article describes aspects of in-memory OLTP and columnstore indexes that are specific to Azure SQL Managed Instance, and also includes samples:
 
@@ -80,7 +79,7 @@ In-memory OLTP technology provides extremely fast data access operations by keep
 
 In-memory OLTP includes memory-optimized tables, which are used for storing user data. These tables are required to fit in memory. This idea is referred to as *in-memory OLTP storage*.
 
-Each supported pricing tier includes a certain amount of **Max In-Memory OLTP memory**, a [limit determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
+The Business Critical service tier includes a certain amount of **Max In-Memory OLTP memory**, [determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
 The following items count toward your in-memory OLTP storage cap:
 

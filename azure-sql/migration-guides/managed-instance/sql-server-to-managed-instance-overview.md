@@ -199,9 +199,9 @@ If you have memory-optimized tables or memory-optimized table types in your on-p
    SELECT * FROM sys.sql_modules WHERE uses_native_compilation=1
    ```
 
-To learn more about in-memory technologies, see [Optimize performance by using in-memory technologies in Azure SQL Database and Azure SQL Managed Instance](../../in-memory-oltp-overview.md).
+To learn more about in-memory technologies, see [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](../../managed-instance/in-memory-oltp-overview.md).
 
-## Advanced features 
+## Advanced features
 
 Be sure to take advantage of the advanced cloud-based features in SQL Managed Instance. For example, you don't need to worry about managing backups because the service does it for you. You can restore to any [point in time within the retention period](../../database/recovery-using-backups.md#point-in-time-restore). Additionally, you don't need to worry about setting up high availability, because [high availability is built in](../../database/high-availability-sla.md). 
 

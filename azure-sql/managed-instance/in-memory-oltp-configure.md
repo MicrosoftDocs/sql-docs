@@ -8,12 +8,16 @@ ms.date: 12/12/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
-monikerRange: "=azuresql-mi"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Use in-memory OLTP Azure SQL Managed Instance to improve your application performance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, without increasing the pricing tier. Each supported pricing tier includes a certain amount of **Max In-Memory OLTP memory**, a [limit determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](../database/in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
+
+[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios. The Business Critical service tier includes a certain amount of **Max In-Memory OLTP memory**, a [limit determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
 Follow these steps to adopt in-memory OLTP in an existing database in Azure SQL Managed Instance.
 
@@ -32,7 +36,7 @@ For more information on assessing the benefits of in-memory OLTP, see [Determini
 
 Suppose the report indicates your database has a table that would benefit from being converted to a memory-optimized table. We recommend that you first test to confirm the indication by testing.
 
-You need a test copy of your production database. The test database should be at the same service tier level as your production database.
+You need a test copy of your production database. The test database should be at the same service tier (Business Critical) and vCore count as your production database.
 
 To ease testing, tweak your test database as follows:
 

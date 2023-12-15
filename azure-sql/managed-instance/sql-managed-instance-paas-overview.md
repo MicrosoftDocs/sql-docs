@@ -202,7 +202,7 @@ The following list outlines the key characteristics of the Business Critical ser
 - Comes with super-fast local SSD storage (up to 4 TB on standard series (Gen5), up to 5.5 TB on premium series and up to 16 TB on memory optimized premium-series)
 - Built-in [high availability](high-availability-sla.md#locally-redundant-availability) based on [Always On availability groups](/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) and [Azure Service Fabric](/azure/service-fabric/service-fabric-overview)
 - Additional built-in [read-only database replicas](../database/read-scale-out.md) that can be used for reporting and other read-only workloads
-- [In-Memory OLTP](../in-memory-oltp-overview.md) that can be used for workload with high-performance requirements  
+- [In-Memory OLTP](in-memory-oltp-overview.md) that can be used for workload with high-performance requirements
 
 Find more information about the differences between service tiers in [SQL Managed Instance resource limits](resource-limits.md#service-tier-characteristics).
 

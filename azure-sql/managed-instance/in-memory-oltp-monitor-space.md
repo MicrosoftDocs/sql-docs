@@ -8,16 +8,20 @@ ms.date: 12/12/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
-monikerRange: "=azuresql-mi"
+monikerRange: "=azuresql||=azuresql-mi"
 ---
 # Monitor in-memory OLTP storage in Azure SQL Managed Instance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+
+> [!div class="op_single_selector"]
+> * [Azure SQL Database](../database/in-memory-oltp-monitor-space.md?view=azuresql-db&preserve-view=true)
+> * [Azure SQL Managed Instance](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
 
 With [in-memory OLTP](in-memory-oltp-overview.md), data in memory-optimized tables and table variables resides in in-memory OLTP storage.
 
 ## Determine whether data fits within the in-memory OLTP storage cap
 
-Each supported pricing tier includes a certain amount of **Max In-Memory OLTP memory**, a [limit determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
+The Business Critical service tier includes a certain amount of **Max In-Memory OLTP memory**, [determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
 Estimating memory requirements for a memory-optimized table works the same way for SQL Server as it does in Azure SQL Managed Instance. Take a few minutes to review [Estimate memory requirements](/sql/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables?view=azuresqlmi-current&preserve-view=true).
 
@@ -34,7 +38,7 @@ Error 41823 indicate that the memory-optimized tables and table variables in the
 To resolve this error, either:
 
 - Delete data from the memory-optimized tables, potentially offloading the data to traditional, disk-based tables; or,
-- Upgrade the service tier to one with enough in-memory storage for the data you need to keep in memory-optimized tables.
+- Upgrade the vCore count add in-memory storage for the data you need to keep in memory-optimized tables.
 
 > [!NOTE]
 > In rare cases, error 41823 can be transient, meaning there is enough available in-memory OLTP storage, and retrying the operation succeeds. We therefore recommend to both monitor the overall available in-memory OLTP storage and to retry when first encountering error 41823. For more information about retry logic, see [Conflict Detection and Retry Logic with in-memory OLTP](/sql/relational-databases/In-memory-oltp/transactions-with-memory-optimized-tables#conflict-detection-and-retry-logic).

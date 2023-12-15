@@ -46,7 +46,7 @@ To resolve this error, either:
 ## Monitor with DMVs
 
 
-- By monitoring the memory consumption periodically, you can determine how memory consumption is growing and how much head room you have left in the resource limits. Identify how much memory is being consumed by the objects in your database or instance. For example, the DMVs [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=azuresqldb-current&preserve-view=true) or [sys.dm_os_memory_clerks](../../docs/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
+- By monitoring the memory consumption periodically, you can determine how memory consumption is growing and how much head room you have left in the resource limits. Identify how much memory is being consumed by the objects in your database or instance. For example, the DMVs [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=azuresqlmi-current&preserve-view=true) or [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql?view=azuresqlmi-current&preserve-view=true).
 
     - You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats`:
 
@@ -74,13 +74,13 @@ To resolve this error, either:
         MEMORYCLERK_XTP      Default    64             0  
     ```
 
-- You can also get more information about out of memory errors in Azure SQL Database with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md?view=azuresqldb-current&preserve-view=true). For example:
+- You can also get more information about out of memory errors in Azure SQL Managed Instance with the dynamic management view [sys.dm_os_out_of_memory_events](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-out-of-memory-events.md?view=azuresqlmi-current&preserve-view=true). For example:
 
     ```sql
     SELECT * FROM sys.dm_os_out_of_memory_events ORDER BY event_time DESC;
     ```
 
-    For more information, see [Monitor and troubleshoot in-Memory OLTP memory usage](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md?view=azuresqlmi-current&preserve-view=true).
+    For more information, see [Monitor and troubleshoot in-Memory OLTP memory usage](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage?view=azuresqlmi-current&preserve-view=true).
 
 ## Related content
 

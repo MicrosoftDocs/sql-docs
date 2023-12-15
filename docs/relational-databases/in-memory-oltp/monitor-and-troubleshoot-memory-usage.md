@@ -251,24 +251,24 @@ memory_object_address pages_ in_bytes bytes_used type
 
  Memory allocated to the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE [inmemory](../../includes/inmemory-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE [inmemory](../../includes/inmemory-md.md)] engine.  
   
-    ```sql  
-    -- This DMV accounts for all memory used by the in-memory engine  
-    SELECT type  
-         , name  
-         , memory_node_id  
-         , pages_kb/1024 AS pages_MB   
-       FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
-    ```  
+   ```sql  
+   -- This DMV accounts for all memory used by the in-memory engine  
+   SELECT type  
+      , name  
+      , memory_node_id  
+      , pages_kb/1024 AS pages_MB   
+      FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
+   ```  
   
 The following sample output shows that the memory allocated is 18 MB system-level memory and 1358 MB allocated to `database_id` = 5. Since this database is mapped to a dedicated resource pool, this memory is accounted for in that resource pool.  
   
-    ```output
-    type                 name       memory_node_id pages_MB  
-    -------------------- ---------- -------------- --------------------  
-    MEMORYCLERK_XTP      Default    0              18  
-    MEMORYCLERK_XTP      DB_ID_5    0              1358  
-    MEMORYCLERK_XTP      Default    64             0  
-    ```  
+   ```output
+   type                 name       memory_node_id pages_MB  
+   -------------------- ---------- -------------- --------------------  
+   MEMORYCLERK_XTP      Default    0              18  
+   MEMORYCLERK_XTP      DB_ID_5    0              1358  
+   MEMORYCLERK_XTP      Default    64             0  
+   ```  
   
  For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   

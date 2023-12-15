@@ -97,8 +97,8 @@ The in-memory feature can also modify a stored procedure for improved performanc
 
 A natively compiled stored procedure must have the following options on its T-SQL `WITH` clause:
 
-- [NATIVE_COMPILATION](sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures?view=azuresqlmi-current&preserve-view=true#native-compilation-of-stored-procedures): meaning the Transact-SQL statements in the procedure are all compiled to native code for efficient execution.
-- `SCHEMABINDING`: meaning tables that the stored procedure cannot have their column definitions changed in any way that would affect the stored procedure, unless you drop the stored procedure.
+- [NATIVE_COMPILATION](/sql/relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures?view=azuresqlmi-current&preserve-view=true#native-compilation-of-stored-procedures): meaning the Transact-SQL statements in the procedure are all compiled to native code for efficient execution.
+- [SCHEMABINDING](/sql/t-sql/statements/create-view-transact-sql?view=azuresqlmi-current&preserve-view=true#schemabinding): meaning tables that the stored procedure cannot have their column definitions changed in any way that would affect the stored procedure, unless you drop the stored procedure.
 
 A native module must use one big [ATOMIC block](/sql/relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures) for transaction management. There is no role for an explicit `BEGIN TRANSACTION` or `ROLLBACK TRANSACTION.` If your code detects a violation of a business rule, it can terminate the atomic block with a [THROW](/sql/t-sql/language-elements/throw-transact-sql) statement.
 

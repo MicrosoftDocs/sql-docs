@@ -96,7 +96,7 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 
 Comments are now available for reports, to add perspective, and collaborate with others. You can also include attachments with comments.
 
-:::image type="content" source="media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png" alt-text="Screenshot of the Comments button on a report." lightbox="media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png":::
+:::image type="content" source="media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png" alt-text="Screenshot of the Comments button on a report.":::
 
 For more information, see [Add comments to a report in a report server - Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
 
@@ -142,7 +142,7 @@ To create Mobile Reports, you need the [!INCLUDE[SS_MobileReptPub_Short](../incl
 
 For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-:::image type="content" source="../reporting-services/media/ssrsportal.png" alt-text="Screenshot that shows the SQL Server Reporting Services portal." lightbox="../reporting-services/media/ssrsportal.png":::
+:::image type="content" source="../reporting-services/media/ssrsportal.png" alt-text="Screenshot that shows the SQL Server Reporting Services portal.":::
 
 #### Custom branding for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -154,7 +154,7 @@ For more information about custom branding, see [Branding the web portal](./bran
 
 You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] that are contextual to the current folder. When creating KPIs, you can choose dataset fields, and summarize their values. You can also select related content to drill-through to expose more details.
 
-:::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIS in the SQL Server Reporting Services portal." lightbox="../reporting-services/media/ssrs-webportal-kpi.png":::
+:::image type="content" source="../reporting-services/media/ssrs-webportal-kpi.png" alt-text="Screenshot that shows KPIS in the SQL Server Reporting Services portal.":::
 
 For more information, see [Working with KPIs in the web portal](./working-with-kpis-in-reporting-services.md)
 
@@ -171,7 +171,7 @@ Reporting Services mobile reports are dedicated reports optimized for a wide var
 
 The [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] allows you to create and publish SQL Server mobile reports to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface." lightbox="../reporting-services/media/ss-mrp-layouttabsm.png":::
+:::image type="content" source="../reporting-services/media/ss-mrp-layouttabsm.png" alt-text="Screenshot of the SQL Server Mobile Report Publisher interface.":::
 
 For more information, see [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -179,7 +179,7 @@ For more information, see [Create mobile reports with SQL Server Mobile Report P
 
 The Power BI Mobile app for iOS on iPad and iPhone can now display SQL Server mobile reports hosted on your local report server.  
 
-:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS." lightbox="../reporting-services/media/ss-mrp-ipad-homesm.png":::
+:::image type="content" source="../reporting-services/media/ss-mrp-ipad-homesm.png" alt-text="Screenshot of the interface for the Power BI Mobile app for iOS.":::
 
 You can't connect by default without some configuration changes. For more information on how to allow the Power BI Mobile app to connect to your report server, see [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 
@@ -220,13 +220,13 @@ For more information on browser support, see [Browser Support for Reporting Serv
 > [!NOTE]
 > The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
 
-:::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot that shows the Pin to Power BI Dashboard dialog box." lightbox="../reporting-services/media/ssrs-pin-to-powerbi.png":::
+:::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot that shows the Pin to Power BI Dashboard dialog box.":::
 
 For more information, see [Power BI report server integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services paginated report items to dashboards in Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
 **PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
-:::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot that shows the Export dropdown list with the PowerPoint option called out." lightbox="../reporting-services/media/ssrs-export-powerpoint.png":::
+:::image type="content" source="../reporting-services/media/ssrs-export-powerpoint.png" alt-text="Screenshot that shows the Export dropdown list with the PowerPoint option called out.":::
 
 You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, the following  URL command in your browser exports a report from a named instance of the report server.  
 
@@ -240,7 +240,7 @@ For more information, see [Export a report by using URL access](../reporting-ser
 
 For more information, see [Enable and disable client-side printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
-:::image type="content" source="../reporting-services/media/ssrs-pdf-printing.png" alt-text="Screenshot of the Print dialog box for a PDF report." lightbox="../reporting-services/media/ssrs-pdf-printing.png":::
+:::image type="content" source="../reporting-services/media/ssrs-pdf-printing.png" alt-text="Screenshot of the Print dialog box for a PDF report.":::
 
 ### Subscription Improvements  
 
@@ -261,7 +261,7 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 |New|Previous|  
 |-|-|  
-|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface." lightbox="../reporting-services/media/ssrs-rbfacelift-new.png":::|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the old Report Builder interface." lightbox="../reporting-services/media/ssrs-rbfacelift-old.png":::|  
+|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-new.png" alt-text="Screenshot of the new Report Builder interface.":::|:::image type="content" source="../reporting-services/media/ssrs-rbfacelift-old.png" alt-text="Screenshot of the old Report Builder interface.":::|  
 
 **Custom Parameters Pane:** You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the parameters pane in a paginated report (Report Builder)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 

@@ -85,15 +85,15 @@ The web portal will group items into different categories. The available categor
 
 You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View dropdown with the Show hidden items option selected." lightbox="../reporting-services/media/ssrswebportal-view.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-view.png" alt-text="Screenshot of the View dropdown with the Show hidden items option selected.":::
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-hidden.png" alt-text="Screenshot that shows the unavailable Paginated Reports option." lightbox="../reporting-services/media/ssrswebportal-hidden.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-hidden.png" alt-text="Screenshot that shows the unavailable Paginated Reports option.":::
 
 ### Power BI Desktop reports and Excel workbooks
 
 You can upload, organize, and manage permissions for Power BI Desktop reports and Excel workbooks. They're grouped together within the web portal.
 
-:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-view-power-bi-excel.png" alt-text="Screenshot that shows the Power BI Desktop Reports section and the Excel Workbooks section." lightbox="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-view-power-bi-excel.png":::
+:::image type="content" source="../reporting-services/media/web-portal-ssrs-native-mode/ssrs-web-portal-view-power-bi-excel.png" alt-text="Screenshot that shows the Power BI Desktop Reports section and the Excel Workbooks section.":::
 
 The files are stored within Reporting Services, similar to other resource files. Selecting one of these items downloads them locally to your desktop. You can save changes you've made by reuploading them to the report server.
 

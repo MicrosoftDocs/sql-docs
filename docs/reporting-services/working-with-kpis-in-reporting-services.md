@@ -39,7 +39,7 @@ KPIs can be created in any folder in your report server.  Before you create a KP
   
 After you have determined the location of your KPI, go to that folder and select **New** > **KPI** from the top menu.  
 
-:::image type="content" source="../reporting-services/media/rscreatekpi1.png" alt-text="Screenshot that shows the New dropdown list with the KPI option called out." lightbox="../reporting-services/media/rscreatekpi1.png":::
+:::image type="content" source="../reporting-services/media/rscreatekpi1.png" alt-text="Screenshot that shows the New dropdown list with the KPI option called out.":::
 
 
   
@@ -66,37 +66,37 @@ To use data from a shared dataset, you can do the following steps.
   
 1. Change the fields drop down box from **Set manually**, or **Not set**, to **Dataset field**.  
 
-    :::image type="content" source="../reporting-services/media/rscreatekpi3.png" alt-text="Screenshot that shows the Value option set to Dataset field and the Pick dataset field set to Not set." lightbox="../reporting-services/media/rscreatekpi3.png":::
+    :::image type="content" source="../reporting-services/media/rscreatekpi3.png" alt-text="Screenshot that shows the Value option set to Dataset field and the Pick dataset field set to Not set.":::
   
 2. Select **More options (...)** in the data box to open the **Pick a Dataset** screen.  
 
-    :::image type="content" source="../reporting-services/media/rscreatekpi4.png" alt-text="Screenshot of the Pick a Dataset section with the Finance_KPI option being selected." lightbox="../reporting-services/media/rscreatekpi4.png":::
+    :::image type="content" source="../reporting-services/media/rscreatekpi4.png" alt-text="Screenshot of the Pick a Dataset section with the Finance_KPI option being selected.":::
   
 3. Select the dataset that has the data you want to display.  
   
 4. Choose the field you want to use. Select **OK**.  
 
-    :::image type="content" source="../reporting-services/media/rscreatekpi5.png" alt-text="Screenshot that shows the Pick a Field from Finance_KPI section with the Sum_Amount option being selected." lightbox="../reporting-services/media/rscreatekpi5.png":::
+    :::image type="content" source="../reporting-services/media/rscreatekpi5.png" alt-text="Screenshot that shows the Pick a Field from Finance_KPI section with the Sum_Amount option being selected.":::
   
 5. Change **Value format** to match the format of your value. In this example, the value is a currency.  
   
-    :::image type="content" source="../reporting-services/media/rscreatekpi6.png" alt-text="Screenshot of the KPI preview that shows the Value format option set to Currency." lightbox="../reporting-services/media/rscreatekpi6.png":::
+    :::image type="content" source="../reporting-services/media/rscreatekpi6.png" alt-text="Screenshot of the KPI preview that shows the Value format option set to Currency.":::
   
 6. Select **Apply**.  
 
-    :::image type="content" source="../reporting-services/media/rscreatekpi7.png" alt-text="Screenshot of the KPIs that shows that the Datasets has two items." lightbox="../reporting-services/media/rscreatekpi7.png":::
+    :::image type="content" source="../reporting-services/media/rscreatekpi7.png" alt-text="Screenshot of the KPIs that shows that the Datasets has two items.":::
 
 ## Configure related content
 
 When you choose **Mobile Report**, you can choose the destination in a dialog.
 
-:::image type="content" source="media/rscreatekpi-related-content-mobile-report.png" alt-text="Screenshot that shows the Related content option set to Mobile report and the Choose a mobile report option set to Not set." lightbox="media/rscreatekpi-related-content-mobile-report.png":::
+:::image type="content" source="media/rscreatekpi-related-content-mobile-report.png" alt-text="Screenshot that shows the Related content option set to Mobile report and the Choose a mobile report option set to Not set.":::
 
 When you now select the KPI in the portal, a thumbnail of the mobile report shows under the related content dropdown. Selecting this thumbnail can directly navigate you to this report.
 
 You can also specify a custom URL. This task can be anything: a website, a SharePoint site, a URL to an SSRS report (which would allow you to pass along hardcoded parameters).
 
-:::image type="content" source="media/rscreatekpi-related-content-custom-url.png" alt-text="Screenshot that shows the Related content option set to Custom URL and the Enter a URL option set to http://." lightbox="media/rscreatekpi-related-content-custom-url.png":::
+:::image type="content" source="media/rscreatekpi-related-content-custom-url.png" alt-text="Screenshot that shows the Related content option set to Custom URL and the Enter a URL option set to http://.":::
 
 When you now select the KPI, the URL shows under related content.
 
@@ -112,11 +112,11 @@ To remove a KPI, you can do the following steps.
   
 1. Select the **ellipsis (...)** of the KPI you want to remove. Select **Manage**.  
 
-    :::image type="content" source="../reporting-services/media/rsremovekpi1.png" alt-text="Screenshot of the ellipsis option for a KPI selected and the MANAGE option called out." lightbox="../reporting-services/media/rsremovekpi1.png":::
+    :::image type="content" source="../reporting-services/media/rsremovekpi1.png" alt-text="Screenshot of the ellipsis option for a KPI selected and the MANAGE option called out.":::
   
 2. Select **Delete**. Select **Delete** again on the confirmation dialog.  
 
-    :::image type="content" source="../reporting-services/media/rsremovekpi2.png" alt-text="Screenshot of the Delete option on the confirmation dialog box." lightbox="../reporting-services/media/rsremovekpi2.png":::
+    :::image type="content" source="../reporting-services/media/rsremovekpi2.png" alt-text="Screenshot of the Delete option on the confirmation dialog box.":::
   
  
 ## Related content

@@ -25,7 +25,7 @@ You can create a cache snapshot, to allow for faster loading of specific executi
   
 You can create a snapshot by doing the following.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching4.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot." lightbox="../reporting-services/media/ssrswebportal-report-caching4.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching4.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.":::
 
 
   
@@ -45,7 +45,7 @@ Report history is always viewed within the context of the report from which it o
   
 To generate a history snapshot, the report must be able to run unattended (that is, it must use stored credentials; parameterized reports must contain default parameter values for all parameters). Report history can be generated manually or as a scheduled operation. History properties on the report determine the ways in which report history can be created.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots1.png" alt-text="Screenshot that shows the History Snapshots screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot." lightbox="../reporting-services/media/ssrswebportal-historysnapshots1.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots1.png" alt-text="Screenshot that shows the History Snapshots screen of the Edit Company Sales dialog box with three magenta circles with the numbers 1, 2, and 3 in them designating the three steps below the screenshot.":::
 
 1.  To create a history snapshot, select **+ New History Snapshot**. This will process the report and add an entry to the list.  
   
@@ -57,7 +57,7 @@ To generate a history snapshot, the report must be able to run unattended (that 
   
 Selecting **Schedule and Settings** will provide additional options to schedule and control retention of created snapshots.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots2.png" alt-text="Screenshot that shows the Schedule and Advanced sections." lightbox="../reporting-services/media/ssrswebportal-historysnapshots2.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-historysnapshots2.png" alt-text="Screenshot that shows the Schedule and Advanced sections.":::
 
 You can optionally create a schedule for the snapshots to get created. You can also prevent other people from creating new snapshots. Unchecking **Allow people to create snapshots manually** will disable the **+ New Snapshot History button**.  
   

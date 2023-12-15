@@ -24,7 +24,7 @@ To create a new shared dataset, you can do the following.
   
 2.  Select **Paginated Report**.  
 
-    :::image type="content" source="../reporting-services/media/ssrswebportal-new-report.png" alt-text="Screenshot that shows the New dropdown list with the Paginated Report option called out." lightbox="../reporting-services/media/ssrswebportal-new-report.png":::
+    :::image type="content" source="../reporting-services/media/ssrswebportal-new-report.png" alt-text="Screenshot that shows the New dropdown list with the Paginated Report option called out.":::
 
 
   
@@ -41,28 +41,28 @@ To manage an existing paginated report, you can do the following.
   
 1.  Select the **ellipsis (...)** for the dataset you want to manage.  
 
-    :::image type="content" source="../reporting-services/media/ssrswebportal-manage-report1.png" alt-text="Screenshot that shows the user selecting the ellipsis option for the dataset." lightbox="../reporting-services/media/ssrswebportal-manage-report1.png":::
+    :::image type="content" source="../reporting-services/media/ssrswebportal-manage-report1.png" alt-text="Screenshot that shows the user selecting the ellipsis option for the dataset.":::
   
 2.  Select **Manage** which will take you to the edit screen.  
 
-    :::image type="content" source="../reporting-services/media/ssrswebportal-manage-report2.png" alt-text="Screenshot that shows the ellipsis option selected and the MANAGE option called out." lightbox="../reporting-services/media/ssrswebportal-manage-report2.png":::
+    :::image type="content" source="../reporting-services/media/ssrswebportal-manage-report2.png" alt-text="Screenshot that shows the ellipsis option selected and the MANAGE option called out.":::
   
 ## Properties  
   
 On the properties screen, you can change the **name** and **description** for the paginated report. You can also **Delete**, **Move**, **Create Linked Report**, **Edit in Report Builder**, **Download** or **replace**.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-properties.png" alt-text="Screenshot that shows the Properties screen of the Edit Company Sales dialog box." lightbox="../reporting-services/media/ssrswebportal-report-properties.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-properties.png" alt-text="Screenshot that shows the Properties screen of the Edit Company Sales dialog box.":::
 
 ## Parameters  
   
 You can modify existing parameters of a paginated report. To add a new parameter, you must edit the report in Report Builder or SQL Server Data Tools.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-parameters.png" alt-text="Screenshot that shows the Parameters screen of the Edit Company Sales dialog box." lightbox="../reporting-services/media/ssrswebportal-report-parameters.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-parameters.png" alt-text="Screenshot that shows the Parameters screen of the Edit Company Sales dialog box.":::
 
 ## Data source  
 You can point to a shared data source, or enter connection information for a custom data source.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-datasource.png" alt-text="Screenshot that shows the Data Sources screen of the Edit Company Sales dialog box." lightbox="../reporting-services/media/ssrswebportal-report-datasource.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-datasource.png" alt-text="Screenshot that shows the Data Sources screen of the Edit Company Sales dialog box.":::
   
 The following options are used to specify a custom data source.  
   
@@ -118,7 +118,7 @@ To use this option, you must have previously configured the unattended execution
 ## Subscriptions  
 A Reporting Services subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values. For more information, see [Work with subscriptions (web portal)](working-with-subscriptions-web-portal.md).
   
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-subscription1.png" alt-text="Screenshot that shows the Subscriptions screen of the Edit Company Sales dialog box." lightbox="../reporting-services/media/ssrswebportal-report-subscription1.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-subscription1.png" alt-text="Screenshot that shows the Subscriptions screen of the Edit Company Sales dialog box.":::
 
 ## Dependent items  
 Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipsis (...)** on each item to manage those items further.  
@@ -132,11 +132,11 @@ You have options when it comes to caching data for a paginated report. You will 
   
 3.  **Always run this report against pregenerated snapshots** will cache the report layout and data for a given time period. You can run a report as a report snapshot to prevent the report from being run at arbitrary times (for example, during a scheduled backup). The snapshot can be refreshed on a schedule. [Learn more]  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected." lightbox="../reporting-services/media/ssrswebportal-report-caching1.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected.":::
 
 Selecting **Cache Copies of this report and use them when available** will present you with some more options.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching2.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected." lightbox="../reporting-services/media/ssrswebportal-report-caching2.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching2.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected.":::
 
 For more information, see [Work with snapshots (web portal)](working-with-snapshots-web-portal.md).
   
@@ -159,7 +159,7 @@ To create a new cache refresh plan, select **New Cache Refresh Plan**. You can t
   
 Once you are done, you can select **Create Cache Refresh Plan**.  
 
-:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching3.png" alt-text="Screenshot of the Edit Company Sales dialog box that shows the Create Cache Refresh Plan option." lightbox="../reporting-services/media/ssrswebportal-report-caching3.png":::
+:::image type="content" source="../reporting-services/media/ssrswebportal-report-caching3.png" alt-text="Screenshot of the Edit Company Sales dialog box that shows the Create Cache Refresh Plan option.":::
   
 > [!NOTE]
 > SQL Server Agent needs to be running to create a cache refresh plan.  

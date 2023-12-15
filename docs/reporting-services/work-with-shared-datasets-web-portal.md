@@ -25,7 +25,7 @@ To create a new shared dataset, do the following steps.
   
 2.  Select **Dataset**.  
 
-    :::image type="content" source="../reporting-services/media/ssrsdataset-newdataset.png" alt-text="Screenshot that shows the New dropdown list with the Dataset option called out." lightbox="../reporting-services/media/ssrsdataset-newdataset.png":::
+    :::image type="content" source="../reporting-services/media/ssrsdataset-newdataset.png" alt-text="Screenshot that shows the New dropdown list with the Dataset option called out.":::
   
 3.  This will either launch Report Builder, or prompt you to download it.  
   
@@ -44,17 +44,17 @@ To manage an existing shared dataset, do the following steps.
   
 1.  Select the **ellipsis (...)** for the dataset you want to manage.  
 
-    :::image type="content" source="../reporting-services/media/ssrsdataset-ellipse.png" alt-text="Screenshot that shows the user selecting the ellipsis option for the dataset." lightbox="../reporting-services/media/ssrsdataset-ellipse.png":::
+    :::image type="content" source="../reporting-services/media/ssrsdataset-ellipse.png" alt-text="Screenshot that shows the user selecting the ellipsis option for the dataset.":::
   
 2.  Select **Manage** which will take you to the edit screen.  
 
-    :::image type="content" source="../reporting-services/media/ssrsdataset-manage.png" alt-text="Screenshot that shows the ellipsis option selected and the MANAGE option called out." lightbox="../reporting-services/media/ssrsdataset-manage.png":::  
+    :::image type="content" source="../reporting-services/media/ssrsdataset-manage.png" alt-text="Screenshot that shows the ellipsis option selected and the MANAGE option called out.":::  
   
 ## Properties
   
 On the properties screen, you can change the **name** and **description** for the dataset. You can also **Delete**, **Move**, **Edit in Report Builder**, **Download** or **Replace**.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-properties.png" alt-text="Screenshot that shows the Properties screen of the Edit Company Sales dialog box." lightbox="../reporting-services/media/ssrsdataset-properties.png":::  
+:::image type="content" source="../reporting-services/media/ssrsdataset-properties.png" alt-text="Screenshot that shows the Properties screen of the Edit Company Sales dialog box.":::  
   
 ## Cache
   
@@ -64,17 +64,17 @@ You have options when it comes to caching data for a dataset. You will start off
   
 2.  **Cache copies of this report and use them when available** will place a temporary copy of the data in a cache for use with items that use this dataset. Caching usually improves performance because the data is returned from the cache instead of running the dataset query again.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected." lightbox="../reporting-services/media/ssrsdataset-caching1.png":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching1.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Always run this report with the most recent data option selected.":::
   
 Selecting **Cache Copies of this report and use them when available** will present you with some more options.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching2.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected." lightbox="../reporting-services/media/ssrsdataset-caching2.png":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching2.png" alt-text="Screenshot that shows the Caching screen of the Edit Company Sales dialog box with the Cache copies of this report and use them when available option selected.":::
   
 ### Cache expiration  
   
 You can control whether you want to expire the cache for the shared dataset after a certain amount of time, or if you'd prefer, you can make it expire on a schedule. You can use a shared schedule.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching3.png" alt-text="Screenshot that shows the Cache expires on a schedule option selected." lightbox="../reporting-services/media/ssrsdataset-caching3.png":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching3.png" alt-text="Screenshot that shows the Cache expires on a schedule option selected.":::
   
 > [!NOTE]
 > Setting an expiration does not refresh the cache. Without a cache refresh plan, the data will be refreshed on the next execution of the dataset.  
@@ -91,7 +91,7 @@ To create a new cache refresh plan, select **New Cache Refresh Plan**. You can t
   
 Once you are done, you can select **Create Cache Refresh Plan**.  
 
-:::image type="content" source="../reporting-services/media/ssrsdataset-caching4.png" alt-text="Screenshot of the Edit Company Sales dialog box that shows the Create Cache Refresh Plan option." lightbox="../reporting-services/media/ssrsdataset-caching4.png":::
+:::image type="content" source="../reporting-services/media/ssrsdataset-caching4.png" alt-text="Screenshot of the Edit Company Sales dialog box that shows the Create Cache Refresh Plan option.":::
   
 > [!NOTE]
 > - SQL Server Agent needs to be running to create a cache refresh plan. 

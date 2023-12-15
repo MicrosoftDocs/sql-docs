@@ -20,7 +20,7 @@ Column charts are useful to:
   
 The following illustration shows the column chart you will create, with a moving average.  
 
-:::image type="content" source="../reporting-services/media/report-builder-column-chart-tutorial.png" alt-text="Screenshot that shows a report builder column chart." lightbox="../reporting-services/media/report-builder-column-chart-tutorial.png":::
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-tutorial.png" alt-text="Screenshot that shows a report builder column chart.":::
 
 > [!NOTE]  
 > In this tutorial, the steps for the wizard are consolidated into one procedure. For step-by-step instructions about how to browse to a report server, choose a data source, and create a dataset, see the first tutorial in this series: [Tutorial: Create a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -99,13 +99,13 @@ You can choose from several predefined chart types, and then modify the chart af
   
     The chart is added to the design surface. Note that the new column chart just shows representational data. The legend reads Sales Date A, Sales Date B, etc., just to give an idea of what your report will look like. 
     
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-design-view.png" alt-text="Screenshot of a Report Builder column in the design view." lightbox="../reporting-services/media/report-builder-column-chart-1-design-view.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-design-view.png" alt-text="Screenshot of a Report Builder column in the design view.":::
   
 7.  Select the chart to display the chart handles. Drag the bottom-right corner of the chart to increase the size of the chart. Note that the report design surface increases in size to accommodate the chart size.  
   
 8.  Select **Run** to preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart." lightbox="../reporting-services/media/report-builder-column-chart-1-preview.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-1-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart.":::
 
 Note that the chart does not label every category on the horizontal axis. By default, only labels that fit next to the axis are included. 
   
@@ -126,7 +126,7 @@ By default, the horizontal axis displays values in a general format that is auto
   
 The date displays in the date format that you selected. The chart still does not label every category on the horizontal axis. 
 
-:::image type="content" source="../reporting-services/media/report-builder-column-chart-2-preview.png" alt-text="Screenshot of the Report Builder column chart displaying the date format." lightbox="../reporting-services/media/report-builder-column-chart-2-preview.png":::
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-2-preview.png" alt-text="Screenshot of the Report Builder column chart displaying the date format.":::
   
 You can customize the label display by rotating the labels and specifying the interval.  
   
@@ -146,13 +146,13 @@ You can customize the label display by rotating the labels and specifying the in
   
     The sample text for the horizontal axis rotates by 90 degrees.  
     
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis.png" alt-text="Screenshot of the Report Builder column chart with rotated x-axis text in the design view." lightbox="../reporting-services/media/report-builder-column-chart-rotate-x-axis.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis.png" alt-text="Screenshot of the Report Builder column chart with rotated x-axis text in the design view.":::
   
 9. Select **Run** to preview the report.  
   
 On the chart, the labels are rotated.  
 
-:::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with rotated x-axis text." lightbox="../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png":::
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-rotate-x-axis-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with rotated x-axis text.":::
   
 ## <a name="Legend"></a>5. Move the legend  
 The legend is automatically created from category and series data. You can move the legend below the chart area of a column chart.  
@@ -208,7 +208,7 @@ By default, the vertical axis displays values in a general format that is automa
   
 12. Select **Run** to preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-format-y-axis.png" alt-text="Screenshot that shows a preview of the Report Builder column chart format with the y-axis labeled correctly." lightbox="../reporting-services/media/report-builder-column-chart-format-y-axis.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-format-y-axis.png" alt-text="Screenshot that shows a preview of the Report Builder column chart format with the y-axis labeled correctly.":::
     
 ## 8. Show all the labels on the horizontal (x) axis
 
@@ -220,13 +220,13 @@ You notice that only some of the labels on the x axis are showing. In this secti
 
 3. In the Properties pane, set LabelInterval to 1.
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-set-label-interval.png" alt-text="Screenshot that shows how to set the label interval of the Report Builder column chart." lightbox="../reporting-services/media/report-builder-column-chart-set-label-interval.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-set-label-interval.png" alt-text="Screenshot that shows how to set the label interval of the Report Builder column chart.":::
 
     The chart looks the same in design view. 
     
 5.  Select **Run** to preview the report.
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with the label interval set to one." lightbox="../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png" alt-text="Screenshot that shows a preview of the Report Builder column chart with the label interval set to one.":::
     
     Now the chart displays all its labels.
   
@@ -240,7 +240,7 @@ A moving average is an average of the data in your series, calculated over time.
   
 3.  Right-click the **[Sum(Sales)]** field in the **Values** area, then select **Add Calculated Series**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-column-chart-add-calculated-series.png" alt-text="Screenshot that shows how to add calculated series to the Report Builder column chart." lightbox="../reporting-services/media/report-builder-column-chart-add-calculated-series.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-column-chart-add-calculated-series.png" alt-text="Screenshot that shows how to add calculated series to the Report Builder column chart.":::
   
 4.  In **Formula**, verify that **Moving average** is selected.  
   
@@ -254,7 +254,7 @@ A moving average is an average of the data in your series, calculated over time.
   
 The chart displays a line that shows the moving average for total sales by date, averaged over every four dates. For more information, see [Add a moving average to a chart in a paginated report (Report Builder)](../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md).
 
-:::image type="content" source="../reporting-services/media/report-builder-column-chart-moving-average.png" alt-text="Screenshot of a Report Builder column chart depicting a moving average." lightbox="../reporting-services/media/report-builder-column-chart-moving-average.png":::
+:::image type="content" source="../reporting-services/media/report-builder-column-chart-moving-average.png" alt-text="Screenshot of a Report Builder column chart depicting a moving average.":::
   
 ## <a name="Title"></a>10. Add a report title  
   

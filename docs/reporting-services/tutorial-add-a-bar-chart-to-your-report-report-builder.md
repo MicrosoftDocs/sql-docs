@@ -20,7 +20,7 @@ A bar chart displays category data horizontally. This can help to:
   
 The following illustration shows the bar chart that you will create, with sales for 2014 and 2015 for the top five salespeople, from most to least 2015 sales.  
 
-:::image type="content" source="../reporting-services/media/report-builder-bar-chart.png" alt-text="Screenshot of a report builder bar chart." lightbox="../reporting-services/media/report-builder-bar-chart.png":::
+:::image type="content" source="../reporting-services/media/report-builder-bar-chart.png" alt-text="Screenshot of a report builder bar chart.":::
 
 
   
@@ -43,7 +43,7 @@ In which you create an embedded dataset, choose a shared data source, and create
   
      The **Getting Started** dialog box appears.  
   
-    :::image type="content" source="media/tutorial-add-a-bar-chart-to-your-report-report-builder/report-builder-get-started.png" alt-text="Screenshot of Report Builder Get Started dialog box." lightbox="media/tutorial-add-a-bar-chart-to-your-report-report-builder/report-builder-get-started.png":::
+    :::image type="content" source="media/tutorial-add-a-bar-chart-to-your-report-report-builder/report-builder-get-started.png" alt-text="Screenshot of Report Builder Get Started dialog box.":::
   
      If you don't see the **Getting Started** dialog box, select **File** >**New**. The **New Report or Dataset** dialog box has most of the same contents as the **Getting Started** dialog box. 
       

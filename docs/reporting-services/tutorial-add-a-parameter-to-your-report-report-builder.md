@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Tutorial: Add a parameter to your report (Report Builder)
 In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
 
-:::image type="content" source="../reporting-services/media/report-builder-parameter-tutorial.png" alt-text="Screenshot that shows you can add a parameter to a paginated report." lightbox="../reporting-services/media/report-builder-parameter-tutorial.png":::
+:::image type="content" source="../reporting-services/media/report-builder-parameter-tutorial.png" alt-text="Screenshot that shows you can add a parameter to a paginated report.":::
 
 Report parameters are created automatically for each query parameter that you include in a dataset query. The parameter data type determines how it appears on the report view toolbar. 
    
@@ -107,17 +107,17 @@ The wizard provides a starting design for displaying data. The preview pane in t
   
     The matrix is added to the design surface. The matrix displays three columns and three rows. The contents of the cells in the first row are Subcategory, [StoreID], and Total. The contents of the cells in the second row contain expressions that represent the subcategory, the quantity of items sold for each store, and the total quantity for each subcategory for all stores. The cells in the final row display the grand total for each store.  
 
-    :::image type="content" source="../reporting-services/media/ssrb-paramtut-design.png" alt-text="Screenshot of the matrix with the three columns and three rows." lightbox="../reporting-services/media/ssrb-paramtut-design.png":::
+    :::image type="content" source="../reporting-services/media/ssrb-paramtut-design.png" alt-text="Screenshot of the matrix with the three columns and three rows.":::
   
 9. Select in the matrix, hover over the edge of the first column, grab the handle, and expand the column width.  
   
-    :::image type="content" source="../reporting-services/media/ssrb-paramtut-drag.png" alt-text="Screenshot of the matrix while expanding the column width." lightbox="../reporting-services/media/ssrb-paramtut-drag.png":::
+    :::image type="content" source="../reporting-services/media/ssrb-paramtut-drag.png" alt-text="Screenshot of the matrix while expanding the column width.":::
   
 10. Select **Run** to preview the report.  
   
 The report runs on the report server and displays the title and the time the report processing occurred.  
 
-:::image type="content" source="../reporting-services/media/ssrb-paramtut-preview1.png" alt-text="Screenshot of the report preview run on the report server." lightbox="../reporting-services/media/ssrb-paramtut-preview1.png":::
+:::image type="content" source="../reporting-services/media/ssrb-paramtut-preview1.png" alt-text="Screenshot of the report preview run on the report server.":::
   
 So far the column headings display the store identifier but not the store name. Later, you will add an expression to look up the store name in a dataset that contains store identifier/store name pairs.  
   
@@ -415,7 +415,7 @@ To change a parameter from single to multivalued, you must change the query and 
   
 19. From the drop-down list, select **Select All** to clear the list, choose "Contoso Catalog Store" and "Contoso Asia Online Store", and then select **View Report**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-parameter-multiselect.png" alt-text="Screenshot that shows you can multi-select parameters to add to a report." lightbox="../reporting-services/media/report-builder-parameter-multiselect.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-parameter-multiselect.png" alt-text="Screenshot that shows you can multi-select parameters to add to a report.":::
  
 ## <a name="Boolean"></a>8. Add a Boolean parameter for conditional visibility  
   

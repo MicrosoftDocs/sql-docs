@@ -16,7 +16,7 @@ Pie and doughnut charts display data as a proportion of the whole. They have no 
 
 This illustration shows the pie chart you will create. 
 
-:::image type="content" source="../reporting-services/media/report-builder-pie-chart-final.png" alt-text="Screenshot of the report builder pie chart." lightbox="../reporting-services/media/report-builder-pie-chart-final.png":::
+:::image type="content" source="../reporting-services/media/report-builder-pie-chart-final.png" alt-text="Screenshot of the report builder pie chart.":::
   
 If there are too many data points on a pie chart, your data point labels might be too crowded to read. In that case, consider combining a number of small slices into one larger slice. Pie charts are more readable when you have aggregated your data into a few data points.  
  
@@ -87,7 +87,7 @@ You can choose from a variety of predefined chart types.
   
     The chart is added to the design surface. You don't see the actual values of the pie chart -- you see Product 1, Product 2, etc., to give an idea of how the chart will look.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-pie-chart-first-design.png" alt-text="Screenshot of the report builder pie chart in the design view." lightbox="../reporting-services/media/report-builder-pie-chart-first-design.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-pie-chart-first-design.png" alt-text="Screenshot of the report builder pie chart in the design view.":::
   
 6.  Select the chart to display the chart handles. Drag the bottom-right corner of the chart to make it bigger. Note that the report design surface also gets bigger, to accommodate the chart size.  
   
@@ -95,7 +95,7 @@ You can choose from a variety of predefined chart types.
   
 The report displays the pie chart with eight slices, one for each product. Now you see the actual products and the size of each slice represents the sales for that product. Three of the slices are quite thin.  
 
-:::image type="content" source="../reporting-services/media/report-builder-pie-chart-first-preview.png" alt-text="Screenshot that shows a preview of the report builder pie chart." lightbox="../reporting-services/media/report-builder-pie-chart-first-preview.png":::
+:::image type="content" source="../reporting-services/media/report-builder-pie-chart-first-preview.png" alt-text="Screenshot that shows a preview of the report builder pie chart.":::
   
 ## <a name="Percentages"></a>3. Display percentages in each slice  
 On each slice of the pie, you can display a percentage for this slice compared to the whole pie.  
@@ -122,7 +122,7 @@ On each slice of the pie, you can display a percentage for this slice compared t
   
 The report displays the percentage of the whole for each pie slice.  
 
-:::image type="content" source="../reporting-services/media/report-builder-pie-chart-preview-percents.png" alt-text="Screenshot that shows a preview of the report builder pie chart with percentages in each slice." lightbox="../reporting-services/media/report-builder-pie-chart-preview-percents.png":::
+:::image type="content" source="../reporting-services/media/report-builder-pie-chart-preview-percents.png" alt-text="Screenshot that shows a preview of the report builder pie chart with percentages in each slice.":::
   
 ## <a name="CombineSlices"></a>4. Combine small slices into one slice  
 Three of the slices in the pie are quite small. You can combine multiple small slices into one larger "Other" slice that represents all three.  
@@ -137,7 +137,7 @@ Three of the slices in the pie are quite small. You can combine multiple small s
   
 5.  Set the **CollectedStyle** property to **SingleSlice**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-pie-chart-single-slice-property.png" alt-text="Screenshot that shows how to set a property of a single slice in the report builder pie chart." lightbox="../reporting-services/media/report-builder-pie-chart-single-slice-property.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-pie-chart-single-slice-property.png" alt-text="Screenshot that shows how to set a property of a single slice in the report builder pie chart.":::
  
 6.  Verify that the **CollectedThreshold** property is set to 5.  
   
@@ -147,7 +147,7 @@ Three of the slices in the pie are quite small. You can combine multiple small s
   
 In the legend, you now see the category "Other". The new pie slice combines all the slices that were under 5% into one slice that is 6% of the whole pie.  
 
-:::image type="content" source="../reporting-services/media/report-builder-pie-chart-start-at-90.png" alt-text="Screenshot that shows how the report builder pie chart starts at 90 degrees from the top of the chart." lightbox="../reporting-services/media/report-builder-pie-chart-start-at-90.png":::
+:::image type="content" source="../reporting-services/media/report-builder-pie-chart-start-at-90.png" alt-text="Screenshot that shows how the report builder pie chart starts at 90 degrees from the top of the chart.":::
  
 ## <a name="DrawingEffect"></a>5. Start pie chart values at the top 
 
@@ -165,7 +165,7 @@ In this section, we'll make the first value start at the top.
 
 Now the pie chart slices are in alphabetical order, starting at the top, and ending with the "Other" slice.
 
-:::image type="content" source="../reporting-services/media/report-builder-pie-chart-start-at-top.png" alt-text="Screenshot that shows how the report builder pie chart starts at the top." lightbox="../reporting-services/media/report-builder-pie-chart-start-at-top.png":::
+:::image type="content" source="../reporting-services/media/report-builder-pie-chart-start-at-top.png" alt-text="Screenshot that shows how the report builder pie chart starts at the top.":::
   
 ## <a name="Title"></a>6. Add a report title  
   

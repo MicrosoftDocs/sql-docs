@@ -16,7 +16,7 @@ In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], 
   
 Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
 
-:::image type="content" source="../reporting-services/media/report-builder-sparkline-final.png" alt-text="Screenshot that shows the Report Builder sparkline." lightbox="../reporting-services/media/report-builder-sparkline-final.png":::
+:::image type="content" source="../reporting-services/media/report-builder-sparkline-final.png" alt-text="Screenshot that shows the Report Builder sparkline.":::
 
 Estimated time to complete this tutorial: 30 minutes.  
   
@@ -127,7 +127,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 8.  Drag **SalesDate** to **Column groups**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-arrange-fields.png" alt-text="Screenshot that shows how to arrange fields." lightbox="../reporting-services/media/report-builder-sparkline-arrange-fields.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-arrange-fields.png" alt-text="Screenshot that shows how to arrange fields.":::
   
 9. Select **Next**.  
   
@@ -141,7 +141,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     *  The third row will appear once for the table to display the grand totals.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-choose-layout.png" alt-text="Screenshot that shows how to choose a layout." lightbox="../reporting-services/media/report-builder-sparkline-choose-layout.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-choose-layout.png" alt-text="Screenshot that shows how to choose a layout.":::
   
 11. Select **Next**.  
   
@@ -151,7 +151,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
     Look in the Grouping pane. If you can't see the Grouping pane on the **View** menu, select **Grouping**. The Row Groups pane shows one row group: **Product**. The Column Groups pane shows one column group: **SalesDate**. Detail data is all the data that is retrieved by the dataset query.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-grouping-pane.png" alt-text="Screenshot that shows the Report Builder grouping pane." lightbox="../reporting-services/media/report-builder-sparkline-grouping-pane.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-grouping-pane.png" alt-text="Screenshot that shows the Report Builder grouping pane.":::
   
 15. Select **Run** to preview the report.  
 
@@ -162,15 +162,15 @@ By default, the summary data for the **Sales** field displays a general number. 
   
 2.  Select the cell in the second row (under the column headings row) in the **SalesDate** column. Hold down the Ctrl key and select all cells that contain `[Sum(Sales)]`. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-select-sum-sales.png" alt-text="Screenshot that shows how to select sum sales." lightbox="../reporting-services/media/report-builder-select-sum-sales.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-select-sum-sales.png" alt-text="Screenshot that shows how to select sum sales.":::
   
 3.  On the **Home** tab > **Number** group, select **Currency**. The cells change to show the formatted currency.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-currency.png" alt-text="Screenshot that shows the sales replaced by placeholder currency values." lightbox="../reporting-services/media/report-builder-placeholder-currency.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-currency.png" alt-text="Screenshot that shows the sales replaced by placeholder currency values.":::
   
     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot that shows the Sample Values option selected." lightbox="../reporting-services/media/report-builder-placeholder-value-button.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot that shows the Sample Values option selected.":::
    
 ### <a name="FormatDates"></a>2b. (Optional) Format data as dates  
 By default, the **SalesDate** field displays both date and time information. You can format them to display only the date.  
@@ -193,11 +193,11 @@ The **SalesDate** values display in the default date format, and the summary val
   
 3.  Right-click, point to **Insert Column**, and then select **Left**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-add-column-left.png" alt-text="Screenshot that shows how to insert a left column." lightbox="../reporting-services/media/report-builder-add-column-left.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-add-column-left.png" alt-text="Screenshot that shows how to insert a left column.":::
   
 4.  In the new column, right-click the cell in the `[Product]` row > **Insert** > **Sparkline**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-insert-sparkline.png" alt-text="Screenshot that shows how to insert a sparkline." lightbox="../reporting-services/media/report-builder-insert-sparkline.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-insert-sparkline.png" alt-text="Screenshot that shows how to insert a sparkline.":::
   
 5.  In the **Select Sparkline Type** dialog box, make sure the first sparkline in the **Column** row is selected, then select **OK**.  
   
@@ -205,7 +205,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
 7.  Select the plus (+) sign in the Values box, then choose **Sales**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-values.png" alt-text="Screenshot that shows how to add values to the Report Builder sparkline." lightbox="../reporting-services/media/report-builder-sparkline-values.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-values.png" alt-text="Screenshot that shows how to add values to the Report Builder sparkline.":::
   
     The values in the **Sales** field are now the values for the sparkline.  
   
@@ -217,7 +217,7 @@ The **SalesDate** values display in the default date format, and the summary val
   
     Also, for each row the tallest bar is the height of the row. This is misleading, too, because the largest values for each row are not equal: the largest value for Budget Movie-Maker is $10,400, but for Slim Digital it's $26,576 - more than twice as large. And yet the largest bars in those two rows are about the same height. All the sparklines need to use the same scale.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-sparkline-misaligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is misaligned." lightbox="../reporting-services/media/report-builder-sparkline-misaligned.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-sparkline-misaligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is misaligned.":::
   
 ## <a name="AlignSparklines"></a>4. Align the sparklines vertically and horizontally  
 Sparklines are hard to read when they don't all use the same measurements. Both the horizontal and vertical axes for each need to match the rest.  
@@ -244,7 +244,7 @@ Sparklines are hard to read when they don't all use the same measurements. Both 
   
 Now all the bars in each sparkline align with the bars in the other sparklines, and the heights are relative.  
 
-:::image type="content" source="../reporting-services/media/report-builder-sparkline-aligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is aligned." lightbox="../reporting-services/media/report-builder-sparkline-aligned.png":::
+:::image type="content" source="../reporting-services/media/report-builder-sparkline-aligned.png" alt-text="Screenshot that shows a Report Builder sparkline that is aligned.":::
   
 ## <a name="Width"></a>7. (Optional) Change column widths  
 By default, each cell in a table contains a text box. A text box expands vertically to accommodate text when the page is rendered. In the rendered report, each row expands to the height of the tallest rendered text box in the row. The height of the row on the design surface has no effect on the height of the row in the rendered report.  

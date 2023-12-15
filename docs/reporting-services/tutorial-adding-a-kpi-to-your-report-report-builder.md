@@ -16,7 +16,7 @@ KPIs are measurable values with business significance. In this scenario, the sal
   
 The following illustration is similar to the report you will create.  
 
-:::image type="content" source="../reporting-services/media/report-builder-kpi-report.png" alt-text="Screenshot of a Report Builder KPI report." lightbox="../reporting-services/media/report-builder-kpi-report.png":::
+:::image type="content" source="../reporting-services/media/report-builder-kpi-report.png" alt-text="Screenshot of a Report Builder KPI report.":::
     
 > [!NOTE]  
 > In this tutorial, the steps for the wizard are consolidated into two procedures: one to create the dataset and one to create a table. For step-by-step instructions about how to browse to a report server, choose a data source, create a dataset, and run the wizard, see the first tutorial in this series: [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
@@ -132,13 +132,13 @@ The Table or Matrix wizard provides a starting design in which to display data. 
   
       The table is added to the design surface. The table has five columns and five rows. The Row Groups pane shows three row groups: SalesDate, Subcategory, and Details. Detail data is all the data that is retrieved by the dataset query. The Column Groups pane is empty.  
 
-      :::image type="content" source="../reporting-services/media/report-builder-kpi-row-groups.png" alt-text="Screenshot that shows three row groups in the Row Groups pane." lightbox="../reporting-services/media/report-builder-kpi-row-groups.png":::
+      :::image type="content" source="../reporting-services/media/report-builder-kpi-row-groups.png" alt-text="Screenshot that shows three row groups in the Row Groups pane.":::
   
 12. Select **Run** to preview the report.  
   
 For each product that is sold on a specific date, the table displays the product name, the quantity sold, and the sales total. The data is organized first by sales date and then by subcategory. 
 
-:::image type="content" source="../reporting-services/media/report-builder-kpi-basic-table.png" alt-text="Screenshot that shows a basic Report Builder KPI table." lightbox="../reporting-services/media/report-builder-kpi-basic-table.png":::
+:::image type="content" source="../reporting-services/media/report-builder-kpi-basic-table.png" alt-text="Screenshot that shows a basic Report Builder KPI table.":::
     
 ### Format dates and currency
 Let's make the columns wider and set the format for the dates and currency.
@@ -153,7 +153,7 @@ Let's make the columns wider and set the format for the dates and currency.
 
    If your regional setting is English (United States), the default sample text is [$12,345.00]. If you don't see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot of the Report Builder Sample Values option selected." lightbox="../reporting-services/media/report-builder-placeholder-value-button.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot of the Report Builder Sample Values option selected.":::
 
 5. (Optional) On the **Home** tab, in the **Number** group, select the **Decrease Decimals** button twice to display dollar figures with no cents.
 
@@ -165,7 +165,7 @@ Let's make the columns wider and set the format for the dates and currency.
 
 12. Select **Run** to preview the report.  
 
-:::image type="content" source="../reporting-services/media/report-builder-kpi-format-numbers.png" alt-text="Screenshot of the Report Builder KPI report with formatted numbers." lightbox="../reporting-services/media/report-builder-kpi-format-numbers.png":::
+:::image type="content" source="../reporting-services/media/report-builder-kpi-format-numbers.png" alt-text="Screenshot of the Report Builder KPI report with formatted numbers.":::
 
 ## <a name="BackgroundColors"></a>3. Use background colors to display a KPI  
 Background colors can be set to an expression that is evaluated when you run the report.  
@@ -176,7 +176,7 @@ Background colors can be set to an expression that is evaluated when you run the
 
     Make sure you've selected the cell, not the text in the cell, to view **Text Box Properties**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-text-box-properties.png" alt-text="Screenshot of the Report Builder Text Box Properties option." lightbox="../reporting-services/media/report-builder-text-box-properties.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-text-box-properties.png" alt-text="Screenshot of the Report Builder Text Box Properties option.":::
   
 2.  On the **Fill** tab, select the **fx** button next to **Fill color** and enter the following expression in the **Set expression for: BackgroundColor** field:  
   
@@ -190,7 +190,7 @@ Background colors can be set to an expression that is evaluated when you run the
   
 In the subtotal row that displays the sales for a subcategory, the background color of the cell is red, yellow, or green depending on value of the sales sum.  
 
-:::image type="content" source="../reporting-services/media/report-builder-kpi-colors.png" alt-text="Screenshot of the Report Builder KPI report with colors in certain cells." lightbox="../reporting-services/media/report-builder-kpi-colors.png":::
+:::image type="content" source="../reporting-services/media/report-builder-kpi-colors.png" alt-text="Screenshot of the Report Builder KPI report with colors in certain cells.":::
   
 ## <a name="Gauge"></a>4. Display a KPI by using a gauge  
 A gauge depicts a single value in a dataset. This tutorial uses a horizontal linear gauge because its shape and simplicity make it easy to read, even in when it is small and within a table cell. For more information, see [Gauges in a paginated report (Report Builder)](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
@@ -201,7 +201,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
 2.  In the table, right-click the column handle for the Sales column > **Insert Column** > **Right**. A new column is added to the table.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-kpi-insert-column.png" alt-text="Screenshot that shows how to insert a column to the Report Builder KPI report." lightbox="../reporting-services/media/report-builder-kpi-insert-column.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-kpi-insert-column.png" alt-text="Screenshot that shows how to insert a column to the Report Builder KPI report.":::
   
 3.  Type **Linear KPI** in the column heading.  
   
@@ -217,7 +217,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
     When you drop the `Sales` field onto the gauge, it goes to the **Values** list and is aggregated by using the built-in Sum function.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-kpi-drag-sales-field.png" alt-text="Screenshot that shows how to drag the Sales field into a Report Builder KPI report." lightbox="../reporting-services/media/report-builder-kpi-drag-sales-field.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-kpi-drag-sales-field.png" alt-text="Screenshot that shows how to drag the Sales field into a Report Builder KPI report.":::
    
 9. In the **Gauge Data** pane, select the arrow next to **LinearPointer1** > **Pointer Properties**.  
   
@@ -245,7 +245,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
     The horizontal length of the green bar in the gauge changes depending on the value of the KPI.  
 
-:::image type="content" source="../reporting-services/media/report-builder-linear-kpi.png" alt-text="Screenshot that shows a Linear KPI column added to the Report Builder KPI report." lightbox="../reporting-services/media/report-builder-linear-kpi.png":::
+:::image type="content" source="../reporting-services/media/report-builder-linear-kpi.png" alt-text="Screenshot that shows a Linear KPI column added to the Report Builder KPI report.":::
   
 ## <a name="Indicator"></a>5. Display a KPI by using an indicator  
 Indicators are small simple gauges that communicate data values at a glance. Because of their size and simplicity, indicators are often used in tables and matrices. For more information, see [Indicators in a paginated report (Report Builder)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -280,7 +280,7 @@ Indicators are small simple gauges that communicate data values at a glance. Bec
 
 11. Select **Run** to preview the report.  
 
-:::image type="content" source="../reporting-services/media/report-builder-kpi-stoplight.png" alt-text="Screenshot that shows a Stoplight KPI column added to the Report Builder KPI report." lightbox="../reporting-services/media/report-builder-kpi-stoplight.png":::
+:::image type="content" source="../reporting-services/media/report-builder-kpi-stoplight.png" alt-text="Screenshot that shows a Stoplight KPI column added to the Report Builder KPI report.":::
   
 ## <a name="Title"></a>6. Add a report title to your report 
 A report title appears at the top of the report. You can place the report title in a report header or if the report does not use one, in a text box at the top of the report body. In this section, you use the text box that is automatically placed at the top of the report body.  

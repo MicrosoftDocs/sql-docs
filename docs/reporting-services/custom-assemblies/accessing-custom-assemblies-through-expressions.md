@@ -21,7 +21,7 @@ helpviewer_keywords:
 ## Call static members from a report definition file  
  Static members belong to the class or type itself and not to an instantiated object. These members can be accessed by directly calling them from the class. You should use static members to call custom functions in a report whenever possible, because static members perform best. To call a static member, you need to reference it as an expression that takes the form =*Namespace.Class.Method*.  
   
-#### Call static members  
+### Call static members  
   
 -   To call a static member, set your expression equal to the fully qualified name of the member, which includes the namespace, class name, and member name. The following example calls the **ToGBP** method, which converts the **StandardCost** field value from dollars to pounds sterling and displays it in a report:  
   
@@ -37,7 +37,7 @@ helpviewer_keywords:
   
  To call a static member, you need to reference it as an expression that takes the form =Code*.InstanceName.Method*.  
   
-#### Call instance members  
+### Call instance members  
   
 -   To call an instance member of a custom assembly, you must reference the **Code** keyword followed by the instance name and the method. The following example calls an instance method **ToEUR** which converts the **StandardCost** field value from dollars to euros and displays it in a report:  
   

@@ -35,15 +35,15 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  Point to a report in the library.  
   
-2.  Select the down arrow, and select **Manage processing options**.  
+2.  Select the down arrow, and choose **Manage processing options**.  
   
 3.  In **Data Refresh Options**, select **Use snapshot data**. If you see "This report can not run from a snapshot because one or more of the data sources credentials are not stored," the report isn't configured to run unattended, and you must modify the data sources to use stored credentials before setting this option.  
   
 4.  In **Data Snapshot Options**, select **Schedule data processing**.  
   
-5.  Select **On a shared schedule** if you have an existing shared schedule that you want to use, otherwise select **On a custom schedule**, and then select **Configure**.  
+5.  Select **On a shared schedule** if you have an existing shared schedule that you want to use, otherwise select **On a custom schedule**, and then choose **Configure**.  
   
-6.  Select frequency, schedule, and start and end dates, and then select **OK**.  
+6.  Select frequency, schedule, and start and end dates, and then choose **OK**.  
   
 7.  In **Data Snapshot Options**, select **Create or update the snapshot when this page is saved** if you want to immediately create snapshot data to use with the report, without waiting for the scheduled data processing to occur.  
   
@@ -51,7 +51,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  Point to a report in the library.  
   
-2.  Select the down arrow, and select **Manage processing options**.  
+2.  Select the down arrow, and choose **Manage processing options**.  
   
 3.  In **Data Refresh Options**, select **Use cached data**. If you see "This report can not be cached because one or more of the data sources credentials are not stored," the report isn't configured to run unattended and you must modify the data sources to use stored credentials before setting this option.  
   
@@ -67,7 +67,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  Point to a report in the library.  
   
-2.  Select the down arrow, and select **Manage processing options**.  
+2.  Select the down arrow, and choose **Manage processing options**.  
   
 3.  In **Processing Time-out**, select **Use site default setting** if you want to use the value specified at the report server level. Otherwise, select **Do not time out report processing** or **Limit report processing in seconds** if you want to override that value with no time-out or different time-out values.  
   
@@ -75,7 +75,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  Point to a report in the library.  
   
-2.  Select the down arrow, and select **Manage processing options**.  
+2.  Select the down arrow, and choose **Manage processing options**.  
   
 3.  In **History Snapshot Options**, specify how and when data processing occurs and is saved.  
   

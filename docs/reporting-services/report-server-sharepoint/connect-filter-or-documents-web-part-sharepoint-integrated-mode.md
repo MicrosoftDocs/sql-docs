@@ -42,7 +42,7 @@ If you use a SharePoint product, you can create a dashboard or web part Page tha
   
 8.  Select **Add**. The web part is added at the top of the zone.  
   
-9. In the zone that contains the web part, select the web part **edit** menu, point to **Connections**, point to **Send Filter Values To**, and then select **Report Viewer** - *report name*.  
+9. In the zone that contains the web part, select the web part **edit** menu, point to **Connections**, point to **Send Filter Values To**, and then choose **Report Viewer** - *report name*.  
   
 10. Check in your changes and save the page.  
   
@@ -58,7 +58,7 @@ If you use a SharePoint product, you can create a dashboard or web part Page tha
   
 5.  Select **Add**. The web part is added at the top of the zone.  
   
-6.  Select **Apply** at the bottom of the tool pane, and then select **OK** to close the pane.  
+6.  Select **Apply** at the bottom of the tool pane, and then choose **OK** to close the pane.  
   
 7.  On another zone in the same web part page or dashboard, select **Add a web part**.  
   
@@ -66,7 +66,7 @@ If you use a SharePoint product, you can create a dashboard or web part Page tha
   
 9. Select **Add**. The web part is added at the top of the zone.  
   
-10. In the zone that contains the web part, select the web part **edit** menu, point to **Connections**, point to **Get report definitions from**, and then select **Documents**.  
+10. In the zone that contains the web part, select the web part **edit** menu, point to **Connections**, point to **Get report definitions from**, and then choose **Documents**.  
   
 11. Check in your changes and save the page.  
   

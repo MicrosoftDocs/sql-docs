@@ -63,11 +63,11 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 4.  Find the **Report Server Integration Feature** and select **Deactivate**.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif" alt-text="Screenshot of the Report Server Integration Feature showing the Deactivate and Activate options." lightbox="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif":::  
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-active.gif" alt-text="Screenshot of the Report Server Integration Feature showing the Deactivate and Activate options.":::  
   
 5.  Refresh the browser then select **Activate** for the **Report Server Integration Feature**.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif" alt-text="Screenshot of the Report Server Integration Feature showing the Activate option." lightbox="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif":::  
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif" alt-text="Screenshot of the Report Server Integration Feature showing the Activate option.":::  
   
 ##  <a name="bkmk_enable_content_management"></a> Enable content type management for a single document library (SharePoint 2013)  
   
@@ -75,15 +75,15 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 2.  Select **Library** in the ribbon.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-libraryribbon.gif " alt-text="Screenshot of the Library ribbon." lightbox="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-libraryribbon.gif":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-libraryribbon.gif " alt-text="Screenshot that is showing the Library ribbon.":::
   
 3.  On the **Library** ribbon, select **Library Settings**. If you don't see **Library Settings** or the button is disabled, you don't have permission to configure library settings, including content types.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings.gif " alt-text="Screenshot of the Library Settings button." lightbox="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings.gif ":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings.gif " alt-text="Screenshot of the Library Settings button.":::
   
 4.  In the **General Settings** section, select **Advanced settings**.  
 
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings-advancedsettings.gif " alt-text="Screenshot of the General Settings menu, highlighting Advanced settings." lightbox="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings-advancedsettings.gif ":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2013-librarysettings-advancedsettings.gif " alt-text="Screenshot of the General Settings menu, highlighting Advanced settings.":::
   
 5.  In the **Content Types** section, select **Yes** to allow management of content types.  
   
@@ -101,7 +101,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 5.  In **Select site content types from**, select **SQL Server Reporting Services Content Types**.  
   
-6.  In the **Available Site Content Types** list, select **Report Builder**, and then select **Add** to move the selected content type to the **Content types to add** list.  
+6.  In the **Available Site Content Types** list, select **Report Builder**, and then choose **Add** to move the selected content type to the **Content types to add** list.  
   
 7.  To add **Report Model** and **Report Data Source** content types, repeat the previous step.  
   
@@ -122,7 +122,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 2.  On the **Library Tools** ribbon, select **Library**.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2010-libraryribbon.gif" alt-text="Screenshot of the Library Tools ribbon." lightbox="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2010-libraryribbon.gif":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint2010-libraryribbon.gif" alt-text="Screenshot that shows the Library Tools ribbon.":::
   
 3.  On the **Settings** ribbon group, select **Library Settings**.  
   
@@ -142,9 +142,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 4.  Under **Content Types**, select **Add from existing site content types**.  
   
-5.  In the **Select Content Types** section, in **Select site content types from**, select the arrow to select **SQL Server Reporting Services Content Types**.  
+5.  In the **Select Content Types** section, in **Select site content types from**, select the arrow to choose **SQL Server Reporting Services Content Types**.  
   
-6.  In the **Available Site Content Types** list, select **Report Builder**, and then select **Add** to move the selected content type to the **Content types to add** list.  
+6.  In the **Available Site Content Types** list, select **Report Builder**, and then choose **Add** to move the selected content type to the **Content types to add** list.  
   
 7.  To add **Report Model** and **Report Data Source** content types, repeat the previous step.  
   
@@ -156,11 +156,11 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 2.  In SharePoint Central Administration, select **General Applications settings**. In the **SQL Server Reporting Services (2008 and 2008 R2)** section, select **Reporting Services Integration**.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif " alt-text="Screenshot of SQL Server Reporting Services." lightbox="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif ":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings.gif " alt-text="Screenshot of SQL Server Reporting Services.":::
   
 3.  Select **Activate feature in all exciting site collections**.  
   
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif" alt-text="Screenshot of the Activate the Reporting Services feature selection." lightbox="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-general-app-settings-old-integrations.gif" alt-text="Screenshot of the Activate the Reporting Services feature selection.":::
 
 4.  Select **Ok**.  
   

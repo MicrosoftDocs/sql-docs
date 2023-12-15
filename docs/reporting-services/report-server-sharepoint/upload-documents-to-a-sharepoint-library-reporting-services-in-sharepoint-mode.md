@@ -30,13 +30,13 @@ You can upload report definitions and report models to a SharePoint library. Whe
   
 ## Add a report definition or report model to a library
   
-1.  Open the library or a folder within a library. If the library isn't already open, select its name on the Quick Launch. If the name of your library doesn't appear, select **View All Site Content**, and then select the name of your library.  
+1.  Open the library or a folder within a library. If the library isn't already open, select its name on the Quick Launch. If the name of your library doesn't appear, select **View All Site Content**, and then choose the name of your library.  
   
 2.  On the **Upload** menu, select **Upload document**.  
   
 3.  To upload a single report or report model file, select a report definition (.rdl) or report model (.smdl) file and then select **OK**.  
   
-     If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, select **Upload Multiple Documents**, specify both files, and then select **OK**.  
+     If the report definition uses a shared data source (.rsds) file to store connection information to an external data source, you can upload the .rdl and the .rsds file at the same time. To do this, select **Upload Multiple Documents**, specify both files, and then choose **OK**.  
   
  If you upload a report that contains references to shared data sources, report models, or subreports, the references will be broken in the report when the files are uploaded. For more information about how to reset the references, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).  
   

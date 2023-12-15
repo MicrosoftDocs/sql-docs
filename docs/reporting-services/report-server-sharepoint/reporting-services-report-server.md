@@ -67,7 +67,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
  The following diagram shows the three-tier architecture of a Reporting Services Native mode deployment. It shows the report server database and data sources in the data tier, the report server components in the middle tier, and the client applications and built-in or custom tools in the presentation tier. It shows the flow of requests and data among the server components and which components send and retrieve content from a data store.  
   
- :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reporting-serv-arch.gif" alt-text="Diagram of the Reporting Services architecture." lightbox="../../reporting-services/report-server-sharepoint/media/reporting-serv-arch.gif":::  
+ :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reporting-serv-arch.gif" alt-text="Diagram of the Reporting Services architecture.":::  
   
  The report server is implemented as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows service, called the "Report Server service," that hosts a Web service, background processing, and other operations. In the Services console application, the service is listed as SQL Server Reporting Services (MSSQLSERVER).  
   
@@ -91,7 +91,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
  The following illustration shows a SharePoint mode Reporting Services environment:  
   
- :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif" alt-text="Diagram of SSRS SharePoint Functional Architecture" lightbox="../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif"::: 
+ :::image type="content" source="../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif" alt-text="Diagram of SSRS SharePoint Functional Architecture."::: 
   
 ||Description|  
 |-|-----------------|  

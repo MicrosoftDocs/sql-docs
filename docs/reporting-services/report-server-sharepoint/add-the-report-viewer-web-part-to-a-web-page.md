@@ -32,7 +32,7 @@ To add a web part to a web page, you must have the Add and Customize Pages permi
   
 3.  Select **Add a web part**.  
   
-4.  In the list of web part categories, select the **Miscellaneous** category, and then select **SQL Server Reporting Services Report Viewer**.  
+4.  In the list of web part categories, select the **Miscellaneous** category, and then choose **SQL Server Reporting Services Report Viewer**.  
   
 5.  Select **Add**. The web part is added at the top of the zone. You can drag it to a different location in the zone.  
   
@@ -45,7 +45,7 @@ To add a web part to a web page, you must have the Add and Customize Pages permi
   
 8.  While the tool pane is open, you can set properties to modify the default appearance and layout.  
   
-9. Select **Apply** at the bottom of the tool pane, and then select **OK** to close the pane.  
+9. Select **Apply** at the bottom of the tool pane, and then choose **OK** to close the pane.  
   
 ## Related content
 

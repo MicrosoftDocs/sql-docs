@@ -74,9 +74,9 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 ## Activate feature
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
+1. In your SharePoint site, select the **gear** icon in the upper left and choose **Site Settings**.
 
-    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screnshot of the gear menu, highlighting the Site settings." lightbox="media/sharepoint-site-settings.png":::
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear menu, highlighting Site settings.":::
 
     By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
 
@@ -86,7 +86,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 5. Select **Activate**.
 
-    :::image type="content" source="media/web-part-activiate-feature.png" alt-text="Screenshot that shows the Activate Report Viewer web part feature." lightbox="media/web-part-activiate-feature.png":::
+    :::image type="content" source="media/web-part-activiate-feature.png" alt-text="Screenshot that shows the Activate Report Viewer web part feature.":::
 
 6. Repeat for more site collections by opening each site and clicking Site Actions.
 
@@ -114,9 +114,9 @@ Although SharePoint Central Administration provides solution retraction, you don
 
 Retracting the solution doesn't remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
+1. In your SharePoint site, select the **gear** icon in the upper left and choose **Site Settings**.
 
-    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screnshot of the gear menu, with Site settings highlighted." lightbox="media/sharepoint-site-settings.png":::
+    :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear menu, with Site settings highlighted.":::
 
     By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
 
@@ -125,7 +125,7 @@ Retracting the solution doesn't remove the Report Viewer web part from the list 
 3. Select the **edit icon** next to **ReportViewerNativeMode.dwp**. It might not be listed on the first page of results.
 
 4. Select **Delete Item**.
-    :::image type="content" source="media/report-viewer-native-mode-edit-delete.png" alt-text="Screenshot of the Web Part Gallery, highlighting Delete Item." lightbox="media/report-viewer-native-mode-edit-delete.png":::
+    :::image type="content" source="media/report-viewer-native-mode-edit-delete.png" alt-text="Screenshot of the Web Part Gallery, highlighting Delete Item.":::
 
 Deletion of the web part can be attempted by using PowerShell, but there isn't a direct command for it. For a script example, see [How to delete web parts from the web part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
 

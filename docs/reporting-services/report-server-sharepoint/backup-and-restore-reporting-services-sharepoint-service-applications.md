@@ -62,7 +62,7 @@ To back up the Service Application, complete the following steps:
   
 4.  Type the path for the **Backup location:** and select **Start Backup**  
   
-5.  Repeat this process but instead of selecting the service application, expand the **Shared Services Proxies** node, and select service application proxy. It has a type of **SQL Server Reporting Services Service Application Proxy**.  
+5.  Repeat this process but instead of selecting the service application, expand the **Shared Services Proxies** node, and choose service application proxy. It has a type of **SQL Server Reporting Services Service Application Proxy**.  
   
  For more information, see the following articles in the SharePoint documentation:  
   
@@ -76,7 +76,7 @@ To back up the Service Application, complete the following steps:
   
 1.  In SharePoint Central Administration, select **Manage Service Applications** in the **Application Management** group.  
   
-2.  Select the name of your service application and then select **Manage** in the SharePoint Ribbon.  
+2.  Select the name of your service application and then choose **Manage** in the SharePoint Ribbon.  
   
 3.  Select **Execution Account**.  
   
@@ -86,7 +86,7 @@ To back up the Service Application, complete the following steps:
   
 1.  In SharePoint Central Administration, select **Manage Service Applications** in the **Application Management** group.  
   
-2.  Select the name of your service application and then select **Properties** in the SharePoint Ribbon.  
+2.  Select the name of your service application and then choose **Properties** in the SharePoint Ribbon.  
   
 3.  Review the **Reporting Services (SSRS) Service Database** section.  
   
@@ -108,9 +108,9 @@ To back up the Service Application, complete the following steps:
   
 2.  Type the path to your backup file in **Backup Directory Location** box and select **Refresh**.  
   
-3.  Select your service application backup from the **Top Component** list and then select **Next**.  
+3.  Select your service application backup from the **Top Component** list and then choose **Next**.  
   
-4.  Select your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application and then select **Next**.  
+4.  Select your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application and then choose **Next**.  
   
 5.  In the **Login Names and Passwords** section, type the password for the login name. The login name box should be populated with the login the service application was using prior to the backup.  
   
@@ -134,7 +134,7 @@ To back up the Service Application, complete the following steps:
   
 1.  In SharePoint Central Administration, select **Manage Service Applications** in the **Application Management** group.  
   
-2.  Select the name of your service application and then select **Manage** in the SharePoint Ribbon.  
+2.  Select the name of your service application and then choose **Manage** in the SharePoint Ribbon.  
   
 3.  Select **Execution Account**.  
   
@@ -146,7 +146,7 @@ To back up the Service Application, complete the following steps:
   
 1.  In SharePoint Central Administration select **Manage Service Applications** in the **Application Management** group.  
   
-2.  Select the name of your service application and then select **Properties** in the SharePoint Ribbon.  
+2.  Select the name of your service application and then choose **Properties** in the SharePoint Ribbon.  
   
 3.  Review the **Reporting Services (SSRS) Service Database** section.  
   

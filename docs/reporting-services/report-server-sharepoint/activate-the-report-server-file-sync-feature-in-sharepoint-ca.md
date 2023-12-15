@@ -40,7 +40,7 @@ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server 
 4.  Select **Activate**.  
 
 > [!NOTE]
-> To deactivate the Report Server file sync feature, you can use the same procedure but click **Deactivate**.
+> To deactivate the Report Server file sync feature, you can use the same procedure but select **Deactivate**.
 
 ## Related content
 

@@ -31,7 +31,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
 2. On the **Web Service URL** page, select a TLS/SSL port and TLS/SSL Certificate.  
 
-     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png" alt-text="Screenshot of the Report Server Configuration Manager." lightbox="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png":::
+     :::image type="content" source="../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png" alt-text="Screenshot of the Report Server Configuration Manager.":::
   
      The configuration manager registers the TLS/SSL certificate for the port.  
   
@@ -136,7 +136,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
     >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
     >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 
-11. On the **Report Server Status** page of the Report Server Configuration Manager, select **Stop** and then select **Start** to restart the report server.  
+11. On the **Report Server Status** page of the Report Server Configuration Manager, select **Stop** and then choose **Start** to restart the report server.  
   
 ## Related content
 

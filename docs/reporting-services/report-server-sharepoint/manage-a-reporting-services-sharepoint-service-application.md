@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 1.  In Central Administration, in the Application Management group, select **Manage service applications**.  
   
-2.  Select near the name of your service application or on the **type** column, which selects the entire row, and then select **Properties** in the SharePoint ribbon.  
+2.  Select near the name of your service application or on the **type** column, which selects the entire row, and then choose **Properties** in the SharePoint ribbon.  
   
  For more information on service application properties, see [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
@@ -39,7 +39,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 2.  Select the name of your service application, and the **Manage Reporting Services Application** page opens.  
   
-3.  Alternatively, you could select near the name or on the **type** column for your service application, which selects the entire row, and then select **Manage** in the SharePoint ribbon.  
+3.  Alternatively, you could select near the name or on the **type** column for your service application, which selects the entire row, and then choose **Manage** in the SharePoint ribbon.  
   
 ## System settings page
 
@@ -96,7 +96,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
  You can view and delete the running jobs, for example jobs that are created by report subscriptions and data-driven subscriptions. The page isn't used to manage subscriptions, but rather jobs that are triggered by a subscription. For example a subscription that is scheduled to run once an hour generates a job once an hour that appears on the **Manage Jobs** page.  
   
-:::image type="content" source="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif" alt-text="Screenshot of the Manage Jobs page." lightbox="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif":::  
+:::image type="content" source="../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif" alt-text="Screenshot that shows the Manage Jobs page.":::  
   
 ## Key management
  The following table summarizes the Kay Management pages  

@@ -118,7 +118,7 @@ In this article you can find a content reference of various guides, scripts, and
 - [Design for elastic pools](disaster-recovery-strategies-for-applications-with-elastic-pool.md)
 - [Design for app upgrades](manage-application-rolling-upgrade.md)
 
-### Design Multi-tenant software as a service (SaaS) applications
+### Design multitenant software as a service (SaaS) applications
 
 - [SaaS design patterns](saas-tenancy-app-design-patterns.md)
 - [SaaS video indexer](saas-tenancy-video-index-wingtip-brk3120-20171011.md)

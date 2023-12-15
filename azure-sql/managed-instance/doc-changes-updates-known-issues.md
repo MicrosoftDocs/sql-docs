@@ -23,7 +23,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 | Issue | Date discovered | Status | Date resolved |
 | --- | --- | --- | --- |
-| [Procedure sp_send_dbmail fails when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-fails-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
+| [Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances](#procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances) | Dec 2023 | Has Workaround | |
 | [Increased number of system logins used for transactional replication](#increased-number-of-system-logins-used-for-transactional-replication) | Dec 2022 | No resolution | |
 | [msdb table for manual backups doesn't preserve the username](#msdb-table-for-manual-backups-doesnt-preserve-the-username) | Nov 2022 | No resolution | |
 | [Interim guidance on 2022 time zone updates for Chile](#interim-guidance-on-2022-time-zone-updates-for-chile) | Aug 2022 | Has Workaround | |
@@ -65,13 +65,13 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 ## Has workaround
 
-### Procedure sp_send_dbmail fails when @query parameter is used on Nov22FW enabled managed instances
+### Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
 
-Procedure `sp_send_dbmail` will fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled.
+Procedure `sp_send_dbmail` may fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
 
 This problem is caused by a known bug related to how `sp_send_dbmail` is using impersonation.
 
-**Workaround**: Make sure you call `sp_send_dbmail` under appropriate custom account you've created, and not sysadmin account.
+**Workaround**: Make sure you call `sp_send_dbmail` under appropriate custom account you've created, and not under sysadmin account.
 
 Here's an example of how you can create a dedicated account and modify existing objects that are sending email via `sp_send_dbmail`.
 

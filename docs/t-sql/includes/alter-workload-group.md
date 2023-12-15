@@ -7,6 +7,9 @@ ms.topic: include
 ---
 Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.
 
+> [!NOTE]  
+> For Azure SQL Managed Instance, you must be in the context of the `master` database to alter Resource Governor configuration.
+
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax

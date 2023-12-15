@@ -66,21 +66,26 @@ You don't create backups on Azure SQL Database and that is because you don't hav
 |Premium|35|
 
 
-In addition, the [Long-Term Retention (LTR)](long-term-retention-overview.md) feature allows you to hold onto your backup files for a much longer period specifically, for up to 10 years, and restore data from these backups at any point within that period. Furthermore, the database backups are kept in geo-replicated storage to ensure resilience from regional catastrophe. You can also restore these backups in any Azure region at any point of time within the retention period. See [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+In addition, the [Long-Term Retention (LTR)](long-term-retention-overview.md) feature allows you to hold onto your backup files for a much longer period specifically, for up to 10 years, and restore data from these backups at any point within that period. Furthermore, the database backups are kept in geo-replicated storage to ensure resilience from regional catastrophe. You can also restore these backups in any Azure region at any point of time within the retention period. See [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md) to learn more.
 
 ### How do I ensure business continuity in the event of a datacenter-level disaster or regional catastrophe
 
-Because your database backups are stored in geo-replicated storage to ensure that in case of a regional disaster, you can restore the backup to another Azure region. This is called geo-restore. The RPO (Recovery Point Objective) for this is generally < 1 hour and the ERT (Estimated Recovery Time – few minutes to hours).
+Your database backups are stored in geo-replicated storage to ensure that, during a regional disaster, you can restore the backup to another Azure region. This is called geo-restore. The RPO (Recovery Point Objective) for geo-restore is generally < 1 hour and the ERT (Estimated Recovery Time) – few minutes to hours.
 
-For mission-critical databases, Azure SQL Database offers, active geo-replication. What this essentially does is that it creates a geo-replicated secondary copy of your original database in another region. For example, if your database is initially hosted in Azure West US region and you want regional disaster resilience. You'd create an active geo replica of the database in West US to say East US. When the calamity strikes on West US, you can fail over to the East US region. Configuring them in an auto-failover Group is even better because this ensures that the database automatically fails over to the secondary in East US in case of a disaster. The RPO for this is < 5 seconds and the ERT < 30 seconds.
+For mission-critical databases, Azure SQL Database offers [active geo-replication](active-geo-replication-overview.md), which creates a geo-replicated secondary copy of your original database in another region. For example, if your database is initially hosted in Azure West US region and you want regional disaster resilience, create an active geo replica of the database in West US to East US. When calamity strikes on West US, you can fail over to the East US region. 
 
-If an auto-failover group is not configured, then your application needs to actively monitor for a disaster and initiate a failover to the secondary. You can create up to 4 such active geo-replicas in different Azure regions. It gets even better. You can also access these secondary active geo-replicas for read-only access. This comes in very handy to reduce latency for a geo-distributed application scenario.
+In addition to active geo-replication, failover groups provide a convenient way to manage replication and failover of a group of databases. You can create a failover group that contains multiple databases in the same or different regions. You can then initiate a failover of all databases in the failover group to the secondary region. For more information, see [Failover groups](failover-group-sql-db.md). 
 
-### How does my disaster recovery plan change from on-premises to SQL Database
+To achieve resiliency for datacenter or availability zone failures, ensure zone redundancy is enabled for the database or elastic pool.  
 
-In summary, SQL Server setup requires you to actively manage your Availability by using features such as Failover Clustering, Database Mirroring, Transaction Replication, or Log Shipping and maintain and manage backups to ensure Business Continuity. With SQL Database, the platform manages these for you, so you can focus on developing and optimizing your database application and not worry about disaster management as much. You can have backup and disaster recovery plans configured and working with just a few clicks on the Azure portal (or a few commands using the PowerShell APIs).
+Actively monitor your application for a disaster and initiate a failover to the secondary. You can create up to 4 such active geo-replicas in different Azure regions. It gets even better. You can also access these secondary active geo-replicas for read-only access. This comes in very handy to reduce latency for a geo-distributed application scenario.
 
-To learn more about Disaster recovery, see: [Azure SQL Database Disaster Recovery 101](https://azure.microsoft.com/blog/azure-sql-databases-disaster-recovery-101/)
+
+### What does disaster recovery look like with SQL Database
+
+Configuration and management of disaster recovery can be done with just a few clicks in Azure SQL Database when you use [active geo-replication](active-geo-replication-overview.md) or [failover groups](failover-group-sql-db.md). You still have to monitor the application and its database for any regional disaster and fail over to the secondary region to restore business continuity. 
+
+To learn more, see [Azure SQL Database Disaster Recovery 101](https://azure.microsoft.com/blog/azure-sql-databases-disaster-recovery-101/). 
 
 ## Security and compliance
 

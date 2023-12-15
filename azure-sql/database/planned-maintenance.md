@@ -1,5 +1,6 @@
 ---
 title: Plan for Azure maintenance events
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to prepare for planned maintenance events in Azure SQL Database and Azure SQL Managed Instance.
 author: aamalvea
 ms.author: aamalvea

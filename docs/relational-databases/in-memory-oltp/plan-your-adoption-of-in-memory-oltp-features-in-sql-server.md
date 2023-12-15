@@ -13,18 +13,15 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 
-This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.
+This article describes the ways in which the adoption of In-Memory features in SQL Server affects other aspects of your business system.
 
-
+> [!NOTE]
+> - For more information specific to in-memory data in Azure SQL Database, see [Optimize performance by using in-memory technologies in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql-db&preserve-view=true) and [Blog: [!INCLUDE [inmemory](../../includes/inmemory-md.md)] in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/).
+> - For more information specific to in-memory data in Azure SQL Managed Instance, see [Optimize performance by using in-memory technologies in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql-mi&preserve-view=true).
 
 ## A. Adoption of In-Memory OLTP features
 
-
-The following subsections discuss factors you must consider when you plan to adopt and implement In-Memory features. A lot of explanatory information is available at:
-
-- [Use In-Memory OLTP to improve your application performance in Azure SQL Database](/azure/azure-sql/in-memory-oltp-configure)
-
-
+The following subsections discuss factors you must consider when you plan to adopt and implement In-Memory features. 
 
 ### A.1 Prerequisites
 
@@ -44,12 +41,16 @@ A memory-optimized table which contains 200 GB of data requires more than 200 GB
 
 - [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)
 
+Similar guidance is available for Azure SQL Managed Instance:
+
+- [Monitor In-Memory OLTP storage in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
+
 #### Azure SQL Database
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
 - Review the In-Memory OLTP Storage limits for your [Pricing Tier](/azure/sql-database/sql-database-purchase-models)
-- [Monitor In-Memory OLTP Storage](/azure/azure-sql/in-memory-oltp-monitor-space)
+- [Monitor In-Memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
 
 #### Memory-optimized table variables
 

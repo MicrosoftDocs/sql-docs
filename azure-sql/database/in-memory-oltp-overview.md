@@ -173,7 +173,7 @@ If you have a **clustered** columnstore index, the whole table becomes unavailab
 - [Use in-memory OLTP in an existing Azure SQL application](in-memory-oltp-configure.md?view=azuresql-db&preserve-view=true)
 - [In-memory OLTP overview and usage scenarios](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
 - [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-db&preserve-view=true)
-- [In-memory sample in Azure SQL Database](in-memory-sample.md?view=azuresql-db&preserve-view=true)
+- [In-memory sample in Azure SQL Database](in-memory-oltp-sample.md?view=azuresql-db&preserve-view=true)
 - [Blog: In-memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Learn about in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqldb-current&preserve-view=true)
 - [Learn about columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqldb-current&preserve-view=true)

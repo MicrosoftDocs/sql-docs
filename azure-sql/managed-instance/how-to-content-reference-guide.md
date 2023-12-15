@@ -51,7 +51,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Microsoft Entra multifactor authentication](../database/authentication-mfa-ssms-overview.md)
 - [Configure auto-failover group](auto-failover-group-configure-sql-mi.md) to automatically fail over all databases on an instance to a secondary instance in another region in the event of a disaster. 
 - [Configure a temporal retention policy](../database/temporal-tables-retention-policy.md)
-- [Configure In-Memory OLTP](../in-memory-oltp-configure.md)
+- [Configure In-Memory OLTP](in-memory-oltp-configure.md)
 - [Configure Azure Automation](../database/automation-manage.md)
 - [Transactional replication](replication-between-two-instances-configure-tutorial.md) enables you to replicate your data between managed instances, or from SQL Server on-premises to SQL Managed Instance, and vice versa.
 - [Configure threat detection](threat-detection-configure.md) – [threat detection](../database/threat-detection-overview.md) is a built-in Azure SQL Managed Instance feature that detects various potential attacks such as SQL injection or access from suspicious locations. 
@@ -78,7 +78,7 @@ In this article you can find a content reference to various guides, scripts, and
 - [Use Query Store to monitor performance](/sql/relational-databases/performance/best-practice-with-the-query-store#Insight)
 - [Troubleshoot performance with Intelligent Insights](../database/intelligent-insights-troubleshoot-performance.md)
 - [Use the Intelligent Insights diagnostics log](../database/intelligent-insights-use-diagnostics-log.md)
-- [Monitor In-Memory OLTP space](../in-memory-oltp-monitor-space.md)
+- [Monitor In-Memory OLTP space](in-memory-oltp-monitor-space.md)
 
 ### Extended events
 

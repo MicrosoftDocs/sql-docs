@@ -143,7 +143,7 @@ Major attributes of the workload are:
 - Number of concurrent connections.
 - Read/write ratio.
 
-To tailor and run the test workload, consider using the handy ostress.exe tool. For more information, see [In-memory sample in Azure SQL Managed Instance](in-memory-sample.md?view=azuresql-mi&preserve-view=true).
+To tailor and run the test workload, consider using the handy ostress.exe tool.
 
 To minimize network latency, run your test in the same Azure geographic region where the database exists.
 

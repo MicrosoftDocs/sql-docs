@@ -143,7 +143,6 @@ When you use nonclustered columnstore indexes, the base table is still stored in
 - [Use in-memory OLTP in an existing Azure SQL application](in-memory-oltp-configure.md?view=azuresql-mi&preserve-view=true)
 - [In-memory OLTP overview and usage scenarios](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
 - [Monitor in-memory OLTP storage](in-memory-oltp-monitor-space.md?view=azuresql-mi&preserve-view=true)
-- [In-memory sample in Azure SQL Managed Instance](in-memory-sample.md?view=azuresql-mi&preserve-view=true)
 - [Learn about in-memory OLTP](/sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization?view=azuresqlmi-current&preserve-view=true)
 - [Learn about columnstore indexes](/sql/relational-databases/indexes/columnstore-indexes-overview?view=azuresqlmi-current&preserve-view=true)
 - [Learn about real-time operational analytics](/sql/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics?view=azuresqlmi-current&preserve-view=true)

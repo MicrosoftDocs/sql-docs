@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Tutorial: Create a basic table report (Report Builder)
 This tutorial teaches you to create a basic table report based on sample sales data. The following illustration shows the report you will create.  
 
-:::image type="content" source="../reporting-services/media/ssrs-tutorial-basic-table-report.png" alt-text="Screenshot of a Product Sales table report." lightbox="../reporting-services/media/ssrs-tutorial-basic-table-report.png":::
+:::image type="content" source="../reporting-services/media/ssrs-tutorial-basic-table-report.png" alt-text="Screenshot of a Product Sales table report.":::
 
 Estimated time to complete this tutorial: 20 minutes.  
   

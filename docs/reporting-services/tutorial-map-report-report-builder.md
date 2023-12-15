@@ -16,7 +16,7 @@ Maps are based on spatial data that typically consists of points, lines, and pol
   
 To vary the appearance of map elements, you specify a field that has values that match the map elements with analytical data from a dataset. You can also define rules that vary color, size, or other properties based on ranges of data.  
 
-:::image type="content" source="../reporting-services/media/report-builder-map-final-map-only.png" alt-text="Screenshot that shows a Report Builder map." lightbox="../reporting-services/media/report-builder-map-final-map-only.png":::
+:::image type="content" source="../reporting-services/media/report-builder-map-final-map-only.png" alt-text="Screenshot that shows a Report Builder map.":::
   
 In this tutorial, you build a map report that displays store locations in New York state counties.  
    
@@ -51,7 +51,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
     The Map Preview pane displays the New York county map.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-ny-counties.png" alt-text="Screenshot that shows the Choose a source of spatial data step of the New Map wizard with New York called out in the Map Gallery section." lightbox="../reporting-services/media/report-builder-map-ny-counties.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-ny-counties.png" alt-text="Screenshot that shows the Choose a source of spatial data step of the New Map wizard with New York called out in the Map Gallery section.":::
   
 7.  Select **Next**.  
   
@@ -77,7 +77,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
     -   A distance scale that displays kilometers (km) and miles (mi).  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-choose-color-theme.png" alt-text="Screenshot of the Choose color theme and data visualization step of the New Map wizard." lightbox="../reporting-services/media/report-builder-map-choose-color-theme.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-choose-color-theme.png" alt-text="Screenshot of the Choose color theme and data visualization step of the New Map wizard.":::
   
 14. Select **Finish**.  
   
@@ -96,7 +96,7 @@ In this section, you add a map to your report from the map gallery. The map has 
 
 17. On the **Home** tab > **Run** to preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-first-preview.png" alt-text="Screenshot that shows a preview of the newly created Report Builder map." lightbox="../reporting-services/media/report-builder-map-first-preview.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-first-preview.png" alt-text="Screenshot that shows a preview of the newly created Report Builder map.":::
   
 The rendered report displays the map title, the map, and the distance scale. The counties are on a map polygon layer. Each county is a polygon that varies by color from a color palette, but the colors are not associated with any data. The distance scale displays distances in both kilometers and miles.  
   
@@ -114,7 +114,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 2.  Double-click the map to display the **Map Layers** pane. On the toolbar, select the **New layer wizard** button :::image type="icon" source="../reporting-services/media/rs-iconmaplayerwizard.gif"::: .
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-new-layer-wizard-icon.png" alt-text="Screenshot that shows the Map Layers pane with the New Layer Wizard icon called out." lightbox="../reporting-services/media/report-builder-map-new-layer-wizard-icon.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-new-layer-wizard-icon.png" alt-text="Screenshot that shows the Map Layers pane with the New Layer Wizard icon called out.":::
   
 3.  On the **Choose a source of spatial data** page, select **SQL Server spatial query**, and select **Next**.  
   
@@ -171,7 +171,7 @@ In this section, you use the map layer wizard to add a point layer that displays
     *   **Sales**: Total sales. 
     *   **SpatialLocation**: Location in longitude and latitude. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-design-query.png" alt-text="Screenshot of the Design a query step of the New Map Layer wizard." lightbox="../reporting-services/media/report-builder-map-design-query.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-design-query.png" alt-text="Screenshot of the Design a query step of the New Map Layer wizard.":::
   
 10. Select **Next**.  
   
@@ -203,11 +203,11 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 21. In the **Map Layers Pane**, select the arrow next to PointLayer1, and then choose **Point Properties**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties.png" alt-text="Screenshot of the Map Layers pane that shows the Point Properties option." lightbox="../reporting-services/media/report-builder-map-point-properties.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties.png" alt-text="Screenshot of the Map Layers pane that shows the Point Properties option.":::
   
 22. On the **Font** tab, make the style **Bold** and the size **10pt**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties-font.png" alt-text="Screenshot Showing the Change font, size, and color options section of the Map Point Properties dialog box." lightbox="../reporting-services/media/report-builder-map-point-properties-font.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-point-properties-font.png" alt-text="Screenshot Showing the Change font, size, and color options section of the Map Point Properties dialog box.":::
   
 23. On the **General** tab, select **Bottom** for **Placement**.
 
@@ -215,7 +215,7 @@ In this section, you use the map layer wizard to add a point layer that displays
   
 24. Select **Run** to preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-city-names.png" alt-text="Screenshot that shows a preview of the Report Builder map with the city names displayed in bold 10 point font." lightbox="../reporting-services/media/report-builder-map-city-names.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-city-names.png" alt-text="Screenshot that shows a preview of the Report Builder map with the city names displayed in bold 10 point font.":::
   
     The map displays the locations of stores in New York state. The marker size for each store is based on the display area. Five ranges of display area were automatically calculated for you.
 
@@ -265,7 +265,7 @@ Use the map layer wizard to add a map layer that displays a route between two st
   
 14. Select **Finish**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-line.png" alt-text="Screenshot that shows the Report Builder map with a line layer." lightbox="../reporting-services/media/report-builder-map-line.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-line.png" alt-text="Screenshot that shows the Report Builder map with a line layer.":::
   
      The map displays a new line layer with spatial data source type **DataRegion**. In this example, the spatial data comes from a dataset but no analytical data is associated with the line.  
 
@@ -274,7 +274,7 @@ Use the map layer wizard to add a map layer that displays a route between two st
 
 15. Expand the **View** section, then expand **View** so you can see the **Zoom** property. Set it to **125**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-zoom.png" alt-text="Screenshot that shows how to adjust the zoom of the Report Builder map." lightbox="../reporting-services/media/report-builder-map-zoom.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-zoom.png" alt-text="Screenshot that shows how to adjust the zoom of the Report Builder map.":::
 
       This is the zoom percentage. At 125% you should see the whole state.
   
@@ -296,7 +296,7 @@ In this section, you add a map layer that displays a Bing Maps tile background.
   
 5.  On the **General** tab, under **Type**, select **Aerial**. The aerial view does not contain text.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-bing-aerial.png" alt-text="Screenshot that shows the Bing Maps aerial Tile Layer added to the Report Builder map." lightbox="../reporting-services/media/report-builder-map-bing-aerial.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-bing-aerial.png" alt-text="Screenshot that shows the Bing Maps aerial Tile Layer added to the Report Builder map.":::
   
 6.  Select **OK**.
   
@@ -313,7 +313,7 @@ In this section, to let the items on one layer show through another layer, you a
   
      The design surface displays the counties as semi-transparent.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-transparency.png" alt-text="Screenshot that shows how to set the transparency of a layer of the Report Builder map." lightbox="../reporting-services/media/report-builder-map-transparency.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-transparency.png" alt-text="Screenshot that shows how to set the transparency of a layer of the Report Builder map.":::
   
 ## <a name="Vary"></a>6. Vary county color based on sales  
 Each county on the polygon layer has a different color because the report processor automatically assigns a color value from the color palette based on the theme that you chose on the last page of the map wizard.  
@@ -337,13 +337,13 @@ To vary the county shapes by color based on analytical data, you first need to a
   
 8.  Under **From analytical dataset**, select [County].  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-county-colors.png" alt-text="Screenshot that shows the Analytical data tab in the Map Polygon Layer Properties dialog box." lightbox="../reporting-services/media/report-builder-map-county-colors.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-county-colors.png" alt-text="Screenshot that shows the Analytical data tab in the Map Polygon Layer Properties dialog box.":::
   
 9. Select **OK**.
   
 10. Preview the report.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-county-highlight.png" alt-text="Screenshot that shows a preview of the Report Builder map with specific counties highlighted." lightbox="../reporting-services/media/report-builder-map-county-highlight.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-county-highlight.png" alt-text="Screenshot that shows a preview of the Report Builder map with specific counties highlighted.":::
   
 By specifying a match field from the spatial data source and from the analytical dataset, you enable the report processor to group analytical data based on the map elements. A data-bound map element has a successful match for the values that you specified.  
   
@@ -370,7 +370,7 @@ To create a rule that varies the color of each county based store sales, you mus
   
     **Red** represents low sales values, **Yellow** represents middle sales values, and **Green** represents high sales values. The report processor calculates a range of colors based on these values and the options that you choose on the **Distribution** page.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-county-color-rules.png" alt-text="Screenshot that shows the Change polygon color rules section of the Map Color Rules Properties dialog box." lightbox="../reporting-services/media/report-builder-map-county-color-rules.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-county-color-rules.png" alt-text="Screenshot that shows the Change polygon color rules section of the Map Color Rules Properties dialog box.":::
   
 8.  Select **Distribution**.  
   
@@ -388,7 +388,7 @@ To create a rule that varies the color of each county based store sales, you mus
 
 15. Preview the report.
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-county-color-rule-preview.png" alt-text="Screenshot that shows a preview of the Report Builder map county with specific color rules applied." lightbox="../reporting-services/media/report-builder-map-county-color-rule-preview.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-county-color-rule-preview.png" alt-text="Screenshot that shows a preview of the Report Builder map county with specific color rules applied.":::
   
     The color scale displays four colors: red, orange, yellow, and green. Each color represents a sales range that is automatically calculated based on the sales by county.  
   
@@ -411,7 +411,7 @@ By default, data has a general format. In this section, you apply custom formats
 
 3. Change the TextColor property to **White**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-color-scale-title.png" alt-text="Screenshot that shows how to configure the title of a legend." lightbox="../reporting-services/media/report-builder-map-color-scale-title.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-color-scale-title.png" alt-text="Screenshot that shows how to configure the title of a legend.":::
   
 8.  Preview the report.  
   
@@ -428,7 +428,7 @@ You can set the default display options for all map elements on a layer. Color r
   
 3.  Select the down arrow on PolygonLayer1, and then select **Polygon Properties**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-polygon-layer-properties.png" alt-text="Screenshot that shows how to select the Polygon Properties option." lightbox="../reporting-services/media/report-builder-map-polygon-layer-properties.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-polygon-layer-properties.png" alt-text="Screenshot that shows how to select the Polygon Properties option.":::
 
      The **Map Polygon Properties** dialog box opens. Display options set in this dialog box apply to all polygons on the layer before rule-based display options are applied.  
   
@@ -457,13 +457,13 @@ To represent a new store that has not yet been built, in this section you specif
   
 5.  Select the location on the map where you want to add a point. In this tutorial, select a location in Oneida county. A point marked by a circle is added to the layer at the spot where you clicked. By default, the point is selected.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point.png" alt-text="Screenshot that shows how to add a custom point to the Report Builder map." lightbox="../reporting-services/media/report-builder-map-custom-point.png":::  
+    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point.png" alt-text="Screenshot that shows how to add a custom point to the Report Builder map.":::  
 
 6.  Right-click the point you added, and then select **Embedded Point Properties**.  
   
 7.  Select **Override point options for this layer**. Additional pages appear in the dialog box. Values that you set here take precedence over display options for the layer or for color rules.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point-general.png" alt-text="Screenshot that shows the Change embedded point options section of the Map Embedded Point Properties dialog box." lightbox="../reporting-services/media/report-builder-map-custom-point-general.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point-general.png" alt-text="Screenshot that shows the Change embedded point options section of the Map Embedded Point Properties dialog box.":::
   
 8.  On the **Marker** tab, for **Marker type**, select **Star**.  
 
@@ -475,7 +475,7 @@ To represent a new store that has not yet been built, in this section you specif
 
 13. On the **Font** tab, make the font size **10pt** and **Bold**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point-font.png" alt-text="Screenshot that shows the Change font, size, and color options section of the Map Embedded Point Properties dialog box." lightbox="../reporting-services/media/report-builder-map-custom-point-font.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-map-custom-point-font.png" alt-text="Screenshot that shows the Change font, size, and color options section of the Map Embedded Point Properties dialog box.":::
   
 6.  Select **OK**.
   
@@ -483,7 +483,7 @@ To represent a new store that has not yet been built, in this section you specif
   
 The label appears above the store location.  
 
-:::image type="content" source="../reporting-services/media/report-builder-map-custom-point-new-store.png" alt-text="Screenshot that shows a preview of the Report Builder map with the custom point new store called out." lightbox="../reporting-services/media/report-builder-map-custom-point-new-store.png":::
+:::image type="content" source="../reporting-services/media/report-builder-map-custom-point-new-store.png" alt-text="Screenshot that shows a preview of the Report Builder map with the custom point new store called out.":::
   
 ## <a name="CenterView"></a>8. Center and resize the map   
 In this section, you learn to change the map center, and another way to change the zoom level.  
@@ -528,7 +528,7 @@ This title will appear at the top of the report. Items at the top of the report 
 
 If you save it to a report server, you can view it there.
 
-:::image type="content" source="../reporting-services/media/report-builder-map-in-portal.png" alt-text="Screenshot that shows the completed Report Builder map displayed in the portal." lightbox="../reporting-services/media/report-builder-map-in-portal.png":::
+:::image type="content" source="../reporting-services/media/report-builder-map-in-portal.png" alt-text="Screenshot that shows the completed Report Builder map displayed in the portal.":::
   
 ## Next steps  
 This concludes the walkthrough for how to add a map to your report.  

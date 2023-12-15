@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Tutorial: Create a free form report (Report Builder)
 In this tutorial, you create a paginated report that acts as a newsletter. Each page displays static text, summary visuals, and detailed sample sales data.
 
-:::image type="content" source="../reporting-services/media/report-builder-free-form-report-complete.png" alt-text="Screenshot of a Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-report-complete.png":::
+:::image type="content" source="../reporting-services/media/report-builder-free-form-report-complete.png" alt-text="Screenshot of a Report Builder free form report.":::
 
 The report groups information by territory and displays the name of the sales manager for the territory as well as detailed and summary sales information. You start with a list data region as the foundation for the free form report, then add a decorative panel with an image, static text with data inserted, a table to show detailed information, and optionally, pie and column charts to display summary information.  
   
@@ -105,7 +105,7 @@ For more information about requirements, see [Prerequisites for tutorials &#40;R
   
     The query results are the data available to display in your report.  
   
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-tutorial-data.png" alt-text="Screenshot of the Query Designer that shows the data that is available to display in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-tutorial-data.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-tutorial-data.png" alt-text="Screenshot of the Query Designer that shows the data that is available to display in the Report Builder free form report.":::
   
 8.  Select **OK**.
   
@@ -125,7 +125,7 @@ You will use a list to display the sales information for sales territories in a 
   
 2.  Select inside the list box, right-click the bar at the top of the list, and select **Tablix Properties**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-tablix-properties.png" alt-text="Screenshot that shows the Tablix Properties option for the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-tablix-properties.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-tablix-properties.png" alt-text="Screenshot that shows the Tablix Properties option for the Report Builder free form report.":::
   
 3.  In the **Dataset name** drop-down list, select **ListDataset**.  
   
@@ -141,7 +141,7 @@ You will use a list to display the sales information for sales territories in a 
   
 1.  In the Row Groups pane, right-click the Details group, point to **Add Group**, and then select **Parent Group**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-add-parent-group.png" alt-text="Screenshot that shows how to add a Parent Group to a Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-add-parent-group.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-add-parent-group.png" alt-text="Screenshot that shows how to add a Parent Group to a Report Builder free form report.":::
   
 2.  In the **Group by** list, select `[Territory].`  
   
@@ -151,7 +151,7 @@ You will use a list to display the sales information for sales territories in a 
   
 4.  Right-click the Territory column in the list, and then select **Delete Columns**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-delete-columns.png" alt-text="Screenshot that shows how to delete a column from the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-delete-columns.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-delete-columns.png" alt-text="Screenshot that shows how to delete a column from the Report Builder free form report.":::
   
 5.  Select **Delete Columns only**.  
   
@@ -182,7 +182,7 @@ One advantage of list data regions is that you can add report items such as rect
   
 The left side of the report now has vertical graphic that consists of a light gray rectangle, as shown in the following image.  
 
-:::image type="content" source="../reporting-services/media/report-builder-free-form-gray-rectangle.png" alt-text="Screenshot for the Report Builder that shows a vertical graphic that consists of a light gray rectangle." lightbox="../reporting-services/media/report-builder-free-form-gray-rectangle.png":::
+:::image type="content" source="../reporting-services/media/report-builder-free-form-gray-rectangle.png" alt-text="Screenshot for the Report Builder that shows a vertical graphic that consists of a light gray rectangle.":::
  
 ## <a name="Text"></a>4. Add free form text  
 You can add text boxes to display static text that is repeated on each report page, as well as data fields.  
@@ -195,11 +195,11 @@ You can add text boxes to display static text that is repeated on each report pa
   
 3.  With the cursor in the text box and type: **Newsletter for** . Include a space after the word "for", to separate the text from the field you will add in the next step.   
 
-    :::image type="content" source="../reporting-services/media/tutorial-newsletterfor.png" alt-text="Screenshot of Design View that shows the report with the heading." lightbox="../reporting-services/media/tutorial-newsletterfor.png":::
+    :::image type="content" source="../reporting-services/media/tutorial-newsletterfor.png" alt-text="Screenshot of Design View that shows the report with the heading.":::
   
 4.  Drag the `[Territory]` field from ListDataSet in the Report Data pane to the text box and place it after "Newsletter for ".  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-territory-field.png" alt-text="Screenshot that shows how to drag a Territory field into the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-territory-field.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-territory-field.png" alt-text="Screenshot that shows how to drag a Territory field into the Report Builder free form report.":::
   
 5.  Select the text and the `[Territory]` field.  
   
@@ -260,7 +260,7 @@ You can add text boxes to display static text that is repeated on each report pa
   
 24. Select **OK**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-text-box.png" alt-text="Screenshot that shows a text box in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-text-box.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-text-box.png" alt-text="Screenshot that shows a text box in the Report Builder free form report.":::
  
 29. With `[Sum(Sales)]` still selected, on the **Home** tab > **Number** group > **Currency**.  
   
@@ -268,13 +268,13 @@ You can add text boxes to display static text that is repeated on each report pa
   
 31. Select the list box. Select the two double-headed arrows and move it to the top of the page.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-drag-list.png" alt-text="Screenshot that shows how to drag a list in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-drag-list.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-drag-list.png" alt-text="Screenshot that shows how to drag a list in the Report Builder free form report.":::
   
 32. Select **Run** to preview the report.  
   
 The report displays static text and each report page includes data that pertains to a territory. Sales are formatted as currency.  
 
-:::image type="content" source="../reporting-services/media/report-builder-newsletter-page-preview.png" alt-text="Screenshot that shows the preview of the newsletter page in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-newsletter-page-preview.png":::
+:::image type="content" source="../reporting-services/media/report-builder-newsletter-page-preview.png" alt-text="Screenshot that shows the preview of the newsletter page in the Report Builder free form report.":::
   
 ## <a name="Table"></a>5. Add a table to show sales details 
 Use the New Table and Matrix Wizard to add a table to the free form report. After you complete the wizard, you will manually add a row for totals.  
@@ -306,11 +306,11 @@ Use the New Table and Matrix Wizard to add a table to the free form report. Afte
   
 12. With the table selected, in the **Row Group** pane right-click **Details** > **Add Total** > **After**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-table-totals.png" alt-text="Screenshot that shows how to Add Totals to the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-table-totals.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-table-totals.png" alt-text="Screenshot that shows how to Add Totals to the Report Builder free form report.":::
   
 13. Select the cell in the Product column and type **Total**.
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-type-total.png" alt-text="Screenshot of a cell in the Product column with Total typed into it." lightbox="../reporting-services/media/report-builder-free-form-type-total.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-type-total.png" alt-text="Screenshot of a cell in the Product column with Total typed into it.":::
 
 12. Select the [SalesDate] field. On the **Home** tab > **Number**, change **Default** to **Date**.
 
@@ -320,7 +320,7 @@ Select **Run** to preview the report.
   
 The report displays a table with sales details and totals.  
 
-:::image type="content" source="../reporting-services/media/report-builder-free-form-with-table.png" alt-text="Screenshot that shows the preview of the table in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-with-table.png":::
+:::image type="content" source="../reporting-services/media/report-builder-free-form-with-table.png" alt-text="Screenshot that shows the preview of the table in the Report Builder free form report.":::
    
 ## <a name="Save"></a>6. Save the report  
 You can save reports to a report server, SharePoint library, or your computer.  
@@ -414,7 +414,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
 
 16. Drag to make the chart region taller, if necessary.
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-pie.png" alt-text="Screenshot that shows the pie chart to be added to the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-pie.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-pie.png" alt-text="Screenshot that shows the pie chart to be added to the Report Builder free form report.":::
   
 ## Add a column chart  
   
@@ -450,7 +450,7 @@ Rectangles help you control how the report renders. Place a pie and column chart
     > [!NOTE]  
     > Removing the legend makes the chart more readable when the chart is small.  
   
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-column.png" alt-text="Screenshot that shows the column chart to be added to the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-column.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-column.png" alt-text="Screenshot that shows the column chart to be added to the Report Builder free form report.":::
 
 12. Select the chart axis, and on the **Home** tab > **Number** > **Currency**.
 
@@ -463,13 +463,13 @@ You can use rectangles as containers for other items on a report page. Read more
   
     In the Properties pane, the **Name** property displays the name of the rectangle.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-rectangle-name.png" alt-text="Screenshot that shows how to view the Name property in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-rectangle-name.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-rectangle-name.png" alt-text="Screenshot that shows how to view the Name property in the Report Builder free form report.":::
   
 2.  Select the pie chart.  
   
 3.  In the **Properties** pane, verify that the **Parent** property contains the name of the rectangle.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-free-form-pie-parent.png" alt-text="Screenshot that shows how to view the Parent property in the Report Builder free form report." lightbox="../reporting-services/media/report-builder-free-form-pie-parent.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-free-form-pie-parent.png" alt-text="Screenshot that shows how to view the Parent property in the Report Builder free form report.":::
   
 4.  Select the column chart and repeat step 3.  
   

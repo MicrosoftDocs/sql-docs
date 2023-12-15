@@ -16,7 +16,7 @@ In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ss
 
 After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
 
-:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot of a formatted Report Builder report." lightbox="../reporting-services/media/report-build-format-report.png":::
+:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot of a formatted Report Builder report.":::
   
 In one step, you make a mistake on purpose so you can see why it is a mistake. Then you correct the mistake to achieve the desired effect.  
     
@@ -178,7 +178,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 3.  On the **Arrange fields** page, drag the **Territory**, **LinkText**, and **Product** fields to **Row groups**, drag the **Sales** field to **Values**, then select **Next**. 
 
-    :::image type="content" source="../reporting-services/media/report-builder-text-arrange-fields.png" alt-text="Screenshot that shows how to arrange text fields in Report Builder." lightbox="../reporting-services/media/report-builder-text-arrange-fields.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-text-arrange-fields.png" alt-text="Screenshot that shows how to arrange text fields in Report Builder.":::
   
 4.  On the **Choose the layout** page, clear the **Expand/collapse groups** check box so you can see the whole table, then select **Next**. 
   
@@ -188,7 +188,7 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
     The table looks OK, but it has two Total rows. The **LinkText** column doesn't need a Total row.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-2-totals.png" alt-text="Screenshot that shows two totals in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-2-totals.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-2-totals.png" alt-text="Screenshot that shows two totals in the Report Builder report.":::
   
 8.  Select **Design** to return to design view.  
   
@@ -196,13 +196,13 @@ Create this table so you'll have a place to put hyperlinks and rotated text.
   
 11. With those three cells selected, right-click one of those cells and select **Delete Rows**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-delete-rows.png" alt-text="Screenshot that shows how to delete rows from a Report Builder report." lightbox="../reporting-services/media/report-builder-format-delete-rows.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-delete-rows.png" alt-text="Screenshot that shows how to delete rows from a Report Builder report.":::
   
 12. Select **Run**.  
 
     Now it has only one Total row.
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-one-total.png" alt-text="Screenshot that shows one total in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-one-total.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-one-total.png" alt-text="Screenshot that shows one total in the Report Builder report.":::
   
 ## <a name="AddHyperlink"></a>Add a hyperlink to the report  
 In this section, you add a hyperlink to text in the table from the previous section.  
@@ -225,7 +225,7 @@ In this section, you add a hyperlink to text in the table from the previous sect
   
     The text now looks like a link.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-format-hyperlink.png" alt-text="Screenshot that shows hyperlinked text in the Report Builder report." lightbox="../reporting-services/media/report-builder-format-hyperlink.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-format-hyperlink.png" alt-text="Screenshot that shows hyperlinked text in the Report Builder report.":::
   
 10. Select a link. If the computer is connected to the Internet, a browser will open to a Report Builder Help topic.  
   
@@ -245,7 +245,7 @@ In this section, you rotate some of the text in the table from the previous sect
     > [!NOTE]  
     > When the properties in the Properties pane are organized into categories, WritingMode is in the **Localization** category. Be sure you have selected the cell and not the text. WritingMode is a property of the text box, not of the text.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot of the Territory field in the Report Builder report." lightbox="../reporting-services/media/report-builder-select-territory-cell.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-select-territory-cell.png" alt-text="Screenshot of the Territory field in the Report Builder report.":::
    
 6.  On the **Home** tab > **Paragraph** section, select **Middle** and **Center** to locate the text in the center of the cell both vertically and horizontally.  
   
@@ -253,7 +253,7 @@ In this section, you rotate some of the text in the table from the previous sect
   
 Now the text in the `[Territory]` cell runs vertically from the bottom to the top of the cells.  
 
-:::image type="content" source="../reporting-services/media/report-builder-format-rotate-270.png" alt-text="Screenshot that shows the Territory values rotated 270 degrees." lightbox="../reporting-services/media/report-builder-format-rotate-270.png":::
+:::image type="content" source="../reporting-services/media/report-builder-format-rotate-270.png" alt-text="Screenshot that shows the Territory values rotated 270 degrees.":::
 
 ## <a name="FormatCurrency"></a>Format currency  
   
@@ -265,7 +265,7 @@ Now the text in the `[Territory]` cell runs vertically from the bottom to the to
   
 4.  (Optional)     If your regional setting is English (United States), the default sample text is [**$12,345.00**]. If you do not see an example currency value in the **Numbers** group, select **Placeholder Styles** > **Sample Values**.  
 
-    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot of the Sample Values option in the Report Builder." lightbox="../reporting-services/media/report-builder-placeholder-value-button.png":::
+    :::image type="content" source="../reporting-services/media/report-builder-placeholder-value-button.png" alt-text="Screenshot of the Sample Values option in the Report Builder.":::
   
 5.  (Optional) On the **Home** tab in the **Number** group, select the **Decrease Decimals** button twice to display dollar figures with no cents.  
   
@@ -273,7 +273,7 @@ Now the text in the `[Territory]` cell runs vertically from the bottom to the to
   
 The report now displays formatted data and is easier to read.  
 
-:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot that shows the reformatted report build format report." lightbox="../reporting-services/media/report-build-format-report.png":::
+:::image type="content" source="../reporting-services/media/report-build-format-report.png" alt-text="Screenshot that shows the reformatted report build format report.":::
 
 ## <a name="FormatHTML"></a>Display text with HTML formatting  
   
@@ -315,7 +315,7 @@ The report now displays formatted data and is easier to read.
   
 The text in the text box is displayed as a heading, paragraph, and bulleted list.  
 
-:::image type="content" source="../reporting-services/media/report-builder-format-html.png" alt-text="Screenshot that shows formatted text in a Report Builder report." lightbox="../reporting-services/media/report-builder-format-html.png":::
+:::image type="content" source="../reporting-services/media/report-builder-format-html.png" alt-text="Screenshot that shows formatted text in a Report Builder report.":::
 
 ## <a name="Save"></a>Save the report  
 You can save reports to a report server, SharePoint library, or your computer.  

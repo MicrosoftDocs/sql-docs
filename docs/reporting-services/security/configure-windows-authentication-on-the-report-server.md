@@ -21,10 +21,10 @@ To use Windows integrated security, each user who requires access to a report se
 
 The following requirements must also be met:
 
-- The RSReportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.
+- The RSReportServer.config files must have `AuthenticationType` set to `RSWindowsNegotiate`, `RSWindowsKerberos`, or `RSWindowsNTLM`. By default, the RSReportServer.config file includes the `RSWindowsNegotiate` setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the `RSWindowsNTLM` setting is used. You can add `RSWindowsKerberos` if you have applications that only use Kerberos authentication.
 
   > [!IMPORTANT]  
-  > When you use **RSWindowsNegotiate**, a Kerberos authentication error occurs if you configured the Report Server service to run under a domain user account and you didn't register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos authentication errors when connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.
+  > When you use `RSWindowsNegotiate`, a Kerberos authentication error occurs if you configured the Report Server service to run under a domain user account and you didn't register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos authentication errors when connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.
 
 - [!INCLUDE [vstecasp](../../includes/vstecasp-md.md)] must be configured for Windows Authentication. By default, the Web.config files for the Report Server Web service include the `<authentication mode="Windows">` setting. If you change it to `<authentication mode="Forms">`, the Windows Authentication for [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] fails.
 
@@ -44,11 +44,11 @@ Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support f
 
 ### Configure a report server to use Windows integrated security
 
-1. Open `RSReportServer.config` in a text editor.
+1. Open RSReportServer.config in a text editor.
 
 1. Find `<Authentication>`.
 
-1. Copy one of the following XML structures that best fits your needs. You can specify **RSWindowsNegotiate**, **RSWindowsNTLM**, and **RSWindowsKerberos** in any order. You should enable authentication persistence if you want to authenticate the connection rather than each individual request. Under authentication persistence, all requests that require authentication are allowed during the connection.
+1. Copy one of the following XML structures that best fits your needs. You can specify `RSWindowsNegotiate`, `RSWindowsNTLM`, and `RSWindowsKerberos` in any order. You should enable authentication persistence if you want to authenticate the connection rather than each individual request. Under authentication persistence, all requests that require authentication are allowed during the connection.
 
    The first XML structure is the default configuration when the Report Server service account is either NetworkService or LocalSystem:
 
@@ -153,7 +153,7 @@ Determine if the [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
   appdomainmanager!DefaultDomain!8f8!01/14/2010-14:42:28:: i INFO: The UserAccountControl value for the service account is 590336
   ```
 
-- One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the 'Dec' option and 'Hex' options. Select the 'Dec' option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.
+- One option for converting the value Decimal value to hexadecimal form is to us the [!INCLUDE [msCoName](../../includes/msconame-md.md)] Windows Calculator. Windows Calculator supports several modes that show the `Dec` option and `Hex` options. Select the `Dec` option, paste or type in the decimal value you found in the log file and then select the 'Hex' option.
 
 - Then refer to the article [User-Account-Control Attribute](/windows/win32/adschema/a-useraccountcontrol) to derive the attribute for the service account.
 

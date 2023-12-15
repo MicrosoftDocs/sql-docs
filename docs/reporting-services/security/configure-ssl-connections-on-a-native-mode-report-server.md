@@ -67,7 +67,7 @@ helpviewer_keywords:
   
 3.  In **Multiple HTTPS Identities for the currently Reporting Service feature**, select **Add**.  
   
-4.  Select the certificate, select **OK**, and then select **Apply**.  
+4.  Choose the certificate, select **OK**, and then select **Apply**.  
   
 5.  Test the URL to verify it works.  
   

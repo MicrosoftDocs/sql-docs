@@ -1,6 +1,6 @@
 ---
 title: In-memory OLTP improves SQL transaction performance
-description: Adopt In-memory OLTP to improve transactional performance in an existing database in Azure SQL Database and Azure SQL Managed Instance.
+description: Adopt In-memory OLTP to improve transactional performance in an existing database in Azure SQL Database.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -10,18 +10,18 @@ ms.subservice: performance
 ms.topic: how-to
 ms.custom:
   - sqldbrb=2
-monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
+monikerRange: "=azuresql||=azuresql-db"
 ---
-# Use in-memory OLTP in Azure SQL Database and Azure SQL Managed Instance to improve your application performance
-[!INCLUDE [appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
+# Use in-memory OLTP in Azure SQL Database to improve your application performance
+[!INCLUDE [appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
 [In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, in [Premium and Business Critical tier](service-tiers-vcore.md) databases without increasing the pricing tier.
 
 Follow these steps to adopt in-memory OLTP in your existing database.
 
-## Step 1: Ensure you are using a Premium and Business Critical tier database
+## Step 1: Ensure you are using a Premium or Business Critical tier database
 
-In-memory OLTP is supported only in Premium (DTU) and Business Critical (vCore) tier databases. In-memory OLTP is supported if the returned result is `1` (not `0`):
+In-memory OLTP is supported only in Premium (DTU) and Business Critical (vCore) tier of Azure SQL Database. In-memory OLTP is supported if the returned result is `1` (not `0`):
 
 ```sql
 SELECT DatabasePropertyEx(Db_Name(), 'IsXTPSupported');

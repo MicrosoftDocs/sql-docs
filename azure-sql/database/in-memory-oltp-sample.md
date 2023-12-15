@@ -1,9 +1,9 @@
 ---
 title: In-memory sample
 description: Try in-memory technologies in Azure SQL Database with OLTP and columnstore sample.
-author: srinia
-ms.author: srinia
-ms.reviewer: mathoma
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.reviewer: mathoma, srinia
 ms.date: 12/12/2023
 ms.service: sql-database
 ms.subservice: performance
@@ -39,7 +39,7 @@ For a more simplistic, but more visually appealing performance demo for in-memor
 
 ### Installation steps
 
-1. In the [Azure portal](https://portal.azure.com/), create a Premium or Business Critical database on a server. Set the **Source** to the `AdventureWorksLT` sample database. For detailed instructions, see [Create your first database in Azure SQL Database](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true).
+1. In the [Azure portal](https://portal.azure.com/), create a Premium (DTU) or Business Critical (vCore) database on a server. Set the **Source** to the `AdventureWorksLT` sample database. For detailed instructions, see [Create your first database in Azure SQL Database](single-database-create-quickstart.md?view=azuresql-db&preserve-view=true).
 
 1. Connect to the database with [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 

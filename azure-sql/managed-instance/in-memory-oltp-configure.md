@@ -1,6 +1,6 @@
 ---
 title: In-memory OLTP improves SQL transaction performance
-description: Adopt In-memory OLTP to improve transactional performance in an existing database in Azure SQL Database and Azure SQL Managed Instance.
+description: Adopt In-memory OLTP to improve transactional performance in an existing database in Azure SQL Managed Instance.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: mathoma
@@ -8,28 +8,16 @@ ms.date: 12/12/2023
 ms.service: sql-managed-instance
 ms.subservice: performance
 ms.topic: how-to
-ms.custom:
-  - sqldbrb=2
 monikerRange: "=azuresql-mi"
 ---
-# Use in-memory OLTP in Azure SQL Database and Azure SQL Managed Instance to improve your application performance
+# Use in-memory OLTP Azure SQL Managed Instance to improve your application performance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, without increasing the pricing tier.
+[In-memory OLTP](in-memory-oltp-overview.md) can be used to improve the performance of transaction processing, data ingestion, and transient data scenarios, without increasing the pricing tier. Each supported pricing tier includes a certain amount of **Max In-Memory OLTP memory**, a [limit determined by the number of vCores](resource-limits.md?view=azuresql-mi&preserve-view=true).
 
-Follow these steps to adopt in-memory OLTP in your existing database.
+Follow these steps to adopt in-memory OLTP in an existing database in Azure SQL Managed Instance.
 
-## Step 1: Ensure you are using a Premium and Business Critical tier database
-
-In-memory OLTP is supported only in Premium (DTU) and Business Critical (vCore) tier databases. In-memory OLTP is supported if the returned result is `1` (not `0`):
-
-```sql
-SELECT DatabasePropertyEx(Db_Name(), 'IsXTPSupported');
-```
-
-*XTP* stands for *Extreme Transaction Processing*.
-
-## Step 2: Identify objects to migrate to in-memory OLTP
+## Step 1: Identify objects to migrate to in-memory OLTP
 
 [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) includes a **Transaction Performance Analysis Overview** report that you can run against a database with an active workload. The report identifies tables and stored procedures that are candidates for migration to in-memory OLTP.
 
@@ -40,7 +28,7 @@ In SSMS, to generate the report:
 
 For more information on assessing the benefits of in-memory OLTP, see [Determining if a table or stored procedure should be ported to in-memory OLTP](/sql/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp?view=azuresqlmi-current&preserve-view=true).
 
-## Step 3: Create a comparable test database
+## Step 2: Create a comparable test database
 
 Suppose the report indicates your database has a table that would benefit from being converted to a memory-optimized table. We recommend that you first test to confirm the indication by testing.
 
@@ -56,7 +44,7 @@ To ease testing, tweak your test database as follows:
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
    ```
 
-## Step 4: Migrate tables
+## Step 3: Migrate tables
 
 You must create and populate a memory-optimized copy of the table you want to test. You can create it by using either:
 
@@ -76,6 +64,7 @@ To use this migration option:
    * The *memory optimization checklist* in [Memory Optimization Advisor](/sql/relational-databases/in-memory-oltp/memory-optimization-advisor).
    * [Transact-SQL Constructs Not Supported by in-memory OLTP](/sql/relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp).
    * [Migrating to in-memory OLTP](/sql/relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server).
+
 1. If the table has no unsupported features, the advisor can perform the actual schema and data migration for you.
 
 ### Manual T-SQL
@@ -96,7 +85,7 @@ To use this migration option:
             SELECT * FROM [<old_disk_based_table>];
     ```
 
-## Step 5 (optional): Migrate stored procedures
+## Step 4 (optional): Migrate stored procedures
 
 The in-memory feature can also modify a stored procedure for improved performance.
 
@@ -141,7 +130,7 @@ The migration steps are:
 1. Rename the old stored procedure by using [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql?view=azuresqlmi-current&preserve-view=true). Or simply DROP it.
 1. Run your edited `CREATE PROCEDURE` T-SQL script.
 
-## Step 6: Run your workload in test
+## Step 5: Run your workload in test
 
 Run a workload in your test database that is similar to the workload that runs in your production database. This should reveal the performance gain achieved by your use of the in-memory feature for tables and stored procedures.
 
@@ -150,11 +139,11 @@ Major attributes of the workload are:
 - Number of concurrent connections.
 - Read/write ratio.
 
-To tailor and run the test workload, consider using the handy ostress.exe tool. For more information, see [In-memory sample in Azure SQL Database](in-memory-sample.md?view=azuresql-mi&preserve-view=true).
+To tailor and run the test workload, consider using the handy ostress.exe tool. For more information, see [In-memory sample in Azure SQL Managed Instance](in-memory-sample.md?view=azuresql-mi&preserve-view=true).
 
 To minimize network latency, run your test in the same Azure geographic region where the database exists.
 
-## Step 7: Post-implementation monitoring
+## Step 6: Post-implementation monitoring
 
 Consider monitoring the performance effects of your in-memory implementations in production:
 

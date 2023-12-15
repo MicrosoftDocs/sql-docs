@@ -4,7 +4,7 @@ description: The sqlcmd utility lets you enter Transact-SQL statements, system p
 author: dlevy-msft
 ms.author: dlevy
 ms.reviewer: randolphwest, maghan
-ms.date: 09/29/2023
+ms.date: 12/12/2023
 ms.service: sql
 ms.subservice: tools-other
 ms.topic: conceptual
@@ -43,9 +43,9 @@ The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures
 
 There are two versions of **sqlcmd**:
 
-- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
-
 - The `go-mssqldb`-based **sqlcmd**, sometimes styled as **go-sqlcmd**. This version is a standalone tool you can download independently of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+
+- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
 
 To determine the version you have installed, run the following statement at the command line:
 
@@ -73,6 +73,18 @@ sqlcmd -?
 
 ::: zone-end
 
+### [sqlcmd (Go)](#tab/go)
+
+If you're using the new version of **sqlcmd** (Go), the output is similar to the following example:
+
+```output
+Version: 1.3.1
+```
+
+#### Check version
+
+You can use `sqlcmd --version` to determine which version is installed. You should have at least version 1.0.0 installed.
+
 ### [sqlcmd (ODBC)](#tab/odbc)
 
 If you're using **sqlcmd** (ODBC), the output is similar to the following example:
@@ -87,19 +99,9 @@ Copyright (C) 2022 Microsoft Corporation. All rights reserved.
 
 You may have several versions of **sqlcmd** (ODBC) installed on your computer. Be sure you're using the correct version. You should have at least version 15.0.4298.1 installed.
 
-Always Encrypted (`-g`) and Azure AD authentication (`-G`) require at least version 13.1.
+Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
 
-### [sqlcmd (Go)](#tab/go)
-
-If you're using the new version of **sqlcmd** (Go), the output is similar to the following example:
-
-```output
-Version: 1.3.1
-```
-
-#### Check version
-
-You can use `sqlcmd --version` to determine which version is installed. You should have at least version 1.0.0 installed.
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ---
 
@@ -113,13 +115,13 @@ You can use `sqlcmd --version` to determine which version is installed. You shou
 
 ## Download and install sqlcmd
 
-### [sqlcmd (ODBC)](#tab/odbc)
-
-[!INCLUDE [install-odbc](includes/install-odbc.md)]
-
 ### [sqlcmd (Go)](#tab/go)
 
 [!INCLUDE [install-go](includes/install-go.md)]
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+[!INCLUDE [install-odbc](includes/install-odbc.md)]
 
 ---
 
@@ -142,61 +144,6 @@ To run SQLCMD statements in [SQL Server Management Studio](../../ssms/download-s
 SSMS uses the Microsoft [!INCLUDE [dnprdnshort_md](../../includes/dnprdnshort-md.md)] `SqlClient` for execution in regular and SQLCMD mode in **Query Editor**. When **sqlcmd** is run from the command-line, **sqlcmd** uses the ODBC driver. Because different default options may apply, you might see different behavior when you execute the same query in SSMS in SQLCMD Mode and in the **sqlcmd** utility.
 
 ## Syntax
-
-### [sqlcmd (ODBC)](#tab/odbc)
-
-```output
-sqlcmd
-   -a packet_size
-   -A (dedicated administrator connection)
-   -b (terminate batch job if there is an error)
-   -c batch_terminator
-   -C (trust the server certificate)
-   -d db_name
-   -D
-   -e (echo input)
-   -E (use trusted connection)
-   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
-   -g (enable column encryption)
-   -G (use Azure Active Directory for authentication)
-   -h rows_per_header
-   -H workstation_name
-   -i input_file
-   -I (enable quoted identifiers)
-   -j (Print raw error messages)
-   -k[1 | 2] (remove or replace control characters)
-   -K application_intent
-   -l login_timeout
-   -L[c] (list servers, optional clean output)
-   -m error_level
-   -M multisubnet_failover
-   -N (encrypt connection)
-   -o output_file
-   -p[1] (print statistics, optional colon format)
-   -P password
-   -q "cmdline query"
-   -Q "cmdline query" (and exit)
-   -r[0 | 1] (msgs to stderr)
-   -R (use client regional settings)
-   -s col_separator
-   -S [protocol:]server[instance_name][,port]
-   -t query_timeout
-   -u (unicode output file)
-   -U login_id
-   -v var = "value"
-   -V error_severity_level
-   -w screen_width
-   -W (remove trailing spaces)
-   -x (disable variable substitution)
-   -X[1] (disable commands, startup script, environment variables, optional exit)
-   -y variable_length_type_display_width
-   -Y fixed_length_type_display_width
-   -z new_password
-   -Z new_password (and exit)
-   -? (usage)
-```
-
-Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.
 
 ### [sqlcmd (Go)](#tab/go)
 
@@ -274,6 +221,61 @@ Connections from the **sqlcmd** (Go) utility are limited to TCP connections. Nam
 - The new `--driver-logging-level` command line parameter allows you to see traces from the `go-mssqldb` driver. Use `64` to see all traces.
 
 - **sqlcmd** can now print results using a vertical format. Use the new `-F vertical` command line switch to set it. The `SQLCMDFORMAT` scripting variable also controls it.
+
+### [sqlcmd (ODBC)](#tab/odbc)
+
+```output
+sqlcmd
+   -a packet_size
+   -A (dedicated administrator connection)
+   -b (terminate batch job if there is an error)
+   -c batch_terminator
+   -C (trust the server certificate)
+   -d db_name
+   -D
+   -e (echo input)
+   -E (use trusted connection)
+   -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
+   -g (enable column encryption)
+   -G (use Azure Active Directory for authentication)
+   -h rows_per_header
+   -H workstation_name
+   -i input_file
+   -I (enable quoted identifiers)
+   -j (Print raw error messages)
+   -k[1 | 2] (remove or replace control characters)
+   -K application_intent
+   -l login_timeout
+   -L[c] (list servers, optional clean output)
+   -m error_level
+   -M multisubnet_failover
+   -N (encrypt connection)
+   -o output_file
+   -p[1] (print statistics, optional colon format)
+   -P password
+   -q "cmdline query"
+   -Q "cmdline query" (and exit)
+   -r[0 | 1] (msgs to stderr)
+   -R (use client regional settings)
+   -s col_separator
+   -S [protocol:]server[instance_name][,port]
+   -t query_timeout
+   -u (unicode output file)
+   -U login_id
+   -v var = "value"
+   -V error_severity_level
+   -w screen_width
+   -W (remove trailing spaces)
+   -x (disable variable substitution)
+   -X[1] (disable commands, startup script, environment variables, optional exit)
+   -y variable_length_type_display_width
+   -Y fixed_length_type_display_width
+   -z new_password
+   -Z new_password (and exit)
+   -? (usage)
+```
+
+Currently, **sqlcmd** doesn't require a space between the command-line option and the value. However, in a future release, a space may be required between the command-line option and the value.
 
 ---
 

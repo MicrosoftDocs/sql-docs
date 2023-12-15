@@ -147,7 +147,7 @@ Alternatively, you can consider migrating your on-premises Analysis Services tab
 
 The SQL Server high-availability features Always On failover cluster instances and Always On availability groups become obsolete on the target SQL managed instance. High-availability architecture is already built into both [General Purpose (standard availability model)](../../database/high-availability-sla.md#locally-redundant-availability) and [Business Critical (premium availability model)](../../database/high-availability-sla.md#locally-redundant-availability) service tiers for SQL Managed Instance. The premium availability model also provides read scale-out that allows connecting into one of the secondary nodes for read-only purposes.     
 
-Beyond the high-availability architecture that's included in SQL Managed Instance, the [auto-failover groups](../../managed-instance/auto-failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
+Beyond the high-availability architecture that's included in SQL Managed Instance, the [failover groups](../../managed-instance/failover-group-sql-mi.md) feature allows you to manage the replication and failover of databases in a managed instance to another region. 
 
 ### SQL Agent jobs
 

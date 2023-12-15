@@ -327,12 +327,6 @@
         href: database/design-first-database-csharp-tutorial.md
     - name: Business continuity
       items: 
-        - name: Add db to failover group 
-          href: database/failover-group-add-single-database-tutorial.md
-        - name: Add pool to failover group
-          href: database/failover-group-add-elastic-pool-tutorial.md
-        - name: Configure security for replicas
-          href: database/active-geo-replication-security-configure.md
         - name: Geo-distributed application
           href: database/geo-distributed-application-configure-tutorial.md
         - name: Active geo-replication
@@ -517,18 +511,20 @@
         href: database/business-continuity-high-availability-disaster-recover-hadr-overview.md
       - name: High availability
         href: database/high-availability-sla.md
-      - name: Automated backups
-        href: database/automated-backups-overview.md
-      - name: Active geo-replication
-        href: database/active-geo-replication-overview.md
-      - name: Auto-failover groups
-        href: database/auto-failover-group-sql-db.md
       - name: HA/DR checklist
         href: database/high-availability-disaster-recovery-checklist.md
-      - name: Outage recovery guidance
-        href: database/disaster-recovery-guidance.md
-      - name: Recovery drills
-        href: database/disaster-recovery-drills.md
+      - name: Automated backups
+        href: database/automated-backups-overview.md
+      - name: Disaster recovery
+        items: 
+        - name: Active geo-replication
+          href: database/active-geo-replication-overview.md
+        - name: Failover groups
+          href: database/failover-group-sql-db.md
+        - name: Outage recovery guidance
+          href: database/disaster-recovery-guidance.md
+        - name: Recovery drills
+          href: database/disaster-recovery-drills.md
 
 
     - name: SQL Data Sync
@@ -695,10 +691,8 @@
         href: database/long-term-backup-retention-configure.md
       - name: Recover using backups
         href: database/recovery-using-backups.md
-      - name: Create auto-failover group
-        href: database/auto-failover-group-configure-sql-db.md
-      - name: Configure geo-replication - Portal
-        href: database/active-geo-replication-configure-portal.md
+      - name: Create failover group
+        href: database/failover-group-configure-sql-db.md
       - name: Configure security for geo-replicas
         href: database/active-geo-replication-security-configure.md
       - name: Configure license-free standby replica 
@@ -1114,8 +1108,6 @@
       href: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/azure-sql/toc.json
     - name: Configure security
       href: managed-instance/aad-security-configure-tutorial.md
-    - name: Add instance to failover group
-      href: managed-instance/failover-group-add-instance-tutorial.md
     - name: Migrate on-premises users and groups
       href: managed-instance/migrate-sql-server-users-to-instance-transact-sql-tsql-tutorial.md
     - name: Transactional replication
@@ -1181,8 +1173,8 @@
         href: managed-instance/automated-backups-overview.md 
       - name: Backup transparency
         href: managed-instance/backup-transparency.md
-      - name: Auto-failover groups
-        href: managed-instance/auto-failover-group-sql-mi.md
+      - name: Failover groups
+        href: managed-instance/failover-group-sql-mi.md
     - name: Management operations
       items:
       - name: Overview
@@ -1517,12 +1509,12 @@
         href: managed-instance/restore-database-to-sql-server.md
       - name: Monitor backup
         href: managed-instance/backup-activity-monitor.md
-      - name: Auto-failover groups
+      - name: Failover groups
         items: 
         - name: Create failover group
-          href: managed-instance/auto-failover-group-configure-sql-mi.md
+          href: managed-instance/failover-group-configure-sql-mi.md
         - name: Configure standby replica
-          href: managed-instance/auto-failover-group-standby-replica-how-to-configure.md
+          href: managed-instance/failover-group-standby-replica-how-to-configure.md
         - name: Manually initiate a failover
           href: managed-instance/user-initiated-failover.md          
   - name: Samples

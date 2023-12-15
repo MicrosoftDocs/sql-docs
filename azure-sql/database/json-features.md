@@ -1,5 +1,6 @@
 ---
 title: Working with JSON data
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL Database and Azure SQL Managed Instance enable you to parse, query, and format data in JavaScript Object Notation (JSON) notation.
 author: uc-msft
 ms.author: umajay

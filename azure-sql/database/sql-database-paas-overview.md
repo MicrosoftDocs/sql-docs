@@ -140,10 +140,11 @@ In addition, SQL Database provides built-in [business continuity and global scal
   All SQL Database deployment options support recovery to any point in time within the automatic backup retention period for any database.
 - [Active geo-replication](active-geo-replication-overview.md):
 
-  The single database and pooled databases options allow you to configure up to four readable secondary databases in either the same or globally distributed Azure datacenters. For example, if you have a SaaS application with a catalog database that has a high volume of concurrent read-only transactions, use active geo-replication to enable global read scale and remove bottlenecks on the primary that are due to read workloads. For managed instances, use auto-failover groups.
-- [Auto-failover groups](auto-failover-group-sql-db.md):
+  The single database and pooled databases options allow you to configure up to four readable secondary databases in either the same or globally distributed Azure datacenters. For example, if you have a SaaS application with a catalog database that has a high volume of concurrent read-only transactions, use active geo-replication to enable global read scale and remove bottlenecks on the primary that are due to read workloads. 
 
-  All SQL Database deployment options allow you to use failover groups to enable high availability and load balancing at global scale. Failover groups allow for transparent geo-replication and failover of large sets of databases, elastic pools, and managed instances. Failover groups enable the creation of globally distributed SaaS applications, with minimal administration overhead. This leaves all the complex monitoring, routing, and failover orchestration to SQL Database.
+- [Failover groups](failover-group-sql-db.md):
+
+  All SQL Database deployment options allow you to use failover groups to enable high availability and load balancing at global scale. Failover groups allow for transparent geo-replication and failover of large sets of databases, and elastic pools. Failover groups enable the creation of globally distributed SaaS applications, with minimal administration overhead. This leaves all the complex monitoring, routing, and failover orchestration to SQL Database.
 - [Zone-redundant databases](high-availability-sla.md):
 
   SQL Database allows you to provision Premium or Business Critical databases or elastic pools across multiple availability zones. Because these databases and elastic pools have multiple redundant replicas for high availability, placing these replicas into multiple availability zones provides higher resilience. This includes the ability to recover automatically from the datacenter scale failures, without data loss.

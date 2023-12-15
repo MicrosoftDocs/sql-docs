@@ -69,7 +69,7 @@ First, get the virtual network where the DNS settings have changed, and then use
 
 
 ```azurecli
-resourceGroup="auto-failover-group"
+resourceGroup="failover-group"
 virtualNetworkName="vnet-fog-eastus"
 virtualNetwork=$(az network vnet show -g $resourceGroup -n $virtualNetworkName --query "id" -otsv)
 

@@ -93,7 +93,7 @@ You can use the following quickstart template to deploy a SQL Server VM using st
 > [!NOTE]
 > Some VM sizes might not have [temporary or local storage](/azure/virtual-machines/azure-vms-no-temp-disk). If you deploy a SQL Server on Azure VM without temporary storage, `tempdb` data and log files are placed in the data folder. 
 
-## <a id="existing-vms"></a> Exist VMs
+## Existing VMs
 
 For existing SQL Server VMs, you can modify some storage settings in the Azure portal. Open your [SQL virtual machines resource](manage-sql-vm-portal.md#access-the-resource), and select **Overview**. The SQL Server **Overview** page shows the current storage usage of your VM. All drives that exist on your VM are displayed in this chart. For each drive, the storage space displays in four sections:
 

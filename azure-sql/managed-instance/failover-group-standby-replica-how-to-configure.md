@@ -4,7 +4,7 @@ description: Learn how to save on licensing costs by using a standby Azure SQL M
 author: Stralle
 ms.author: strrodic
 ms.reviewer: mathoma
-ms.date: 07/30/2023
+ms.date: 12/15/2023
 ms.service: sql-managed-instance
 ms.subservice: high-availability
 ms.custom: ignite-2023
@@ -16,12 +16,12 @@ ms.topic: how-to
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](../database/standby-replica-how-to-configure.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL Managed Instance](auto-failover-group-standby-replica-how-to-configure.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Managed Instance](failover-group-standby-replica-how-to-configure.md?view=azuresql-mi&preserve-view=true)
 
 This article describes how you can save on licensing costs by designating your secondary managed instance for standby when using Azure SQL Managed Instance.
 
 > [!NOTE]
-> The **Failover benefit** is only applicable when you configure a secondary instance as standby _within an auto-failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-replica) instead. 
+> The **Failover benefit** is only applicable when you configure a secondary instance as standby _within a failover group_. For hybrid environments between SQL Server and SQL Managed Instance, use the [Hybrid failover benefit](managed-instance-link-feature-overview.md#license-free-passive-replica) instead. 
 
 ## Overview
 
@@ -29,7 +29,7 @@ If you use a secondary Azure SQL Managed Instance deployment as a standby for di
 
 When a secondary instance is designated for standby, Microsoft provides you with the number of vCores licensed to the primary instance at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary instance uses.
 
-Auto-failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
+Failover groups for a SQL Managed Instance deployment support only one replica. The replica must be either a readable replica or be designated as a standby replica.
 
 ## Cost benefit
 
@@ -66,8 +66,8 @@ The standby instance must _only_ be used for disaster recovery. No production ap
 
 You have two options to designate your secondary managed instance as standby:
 
-- Designate it as standby when you create your auto-failover group.
-- Update the configuration of an existing auto-failover group.
+- Designate it as standby when you create your failover group.
+- Update the configuration of an existing failover group.
 
 ### New failover group
 
@@ -77,9 +77,9 @@ You can designate your secondary instance as a standby replica when you create a
 
 When you create a new failover group in the Azure portal, for **Failover rights**, select **On**. Check the box next to **I confirm that I will use the secondary instance as a standby replica**. Select **Create** to create your failover group.
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/new-failover-group.png" alt-text="Screenshot that shows creating a new failover group in the Azure portal, with the Failover rights option highlighted. ":::
+:::image type="content" source="media/failover-group-standby-replica-how-to-configure/new-failover-group.png" alt-text="Screenshot that shows creating a new failover group in the Azure portal, with the Failover rights option highlighted. ":::
 
-For more information, see [Configure an auto-failover group](auto-failover-group-configure-sql-mi.md) or [Tutorial: Add SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
+For more information, see [Configure a failover group](failover-group-configure-sql-mi.md).
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
@@ -109,18 +109,18 @@ To update the failover rights for an existing failover group by using the Azure 
 1. In the left menu under **Data management**, select **Failover groups**.
 1. In the command bar, select **Edit Configurations**.
 
-   :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-group-configuration.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Edit Configurations highlighted. ":::
+   :::image type="content" source="media/failover-group-standby-replica-how-to-configure/update-failover-group-configuration.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Edit Configurations highlighted. ":::
 
 1. In **Edit configurations** for your failover group, for **Failover rights**, select **On**. Select the **I confirm that I will use the secondary instance as a standby replica** checkbox.
 
-   :::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/update-failover-rights-existing-instance.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Failover rights highlighted." :::
+   :::image type="content" source="media/failover-group-standby-replica-how-to-configure/update-failover-rights-existing-instance.png" alt-text="Screenshot that shows the Failover groups pane in the portal and Failover rights highlighted." :::
 
 1. Select **Apply** to save your new settings and close the configuration pane.
 
 Alternatively, you can enable failover rights in **Compute + storage** for your *secondary* managed instance. To learn more, review [View licensing rights](#view-licensing-rights).
 
 > [!IMPORTANT]
-> If you see **Hybrid failover rights** and not **Failover rights**, you are likely on the *primary* managed instance. Go to your *secondary* managed instance to correctly activate **Failover rights**. Activating **Hybrid failover rights** on the primary instance does not save you on licensing costs for the secondary instance when used with auto-failover groups. 
+> If you see **Hybrid failover rights** and not **Failover rights**, you are likely on the *primary* managed instance. Go to your *secondary* managed instance to correctly activate **Failover rights**. Activating **Hybrid failover rights** on the primary instance does not save you on licensing costs for the secondary instance when used with failover groups. 
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
@@ -152,17 +152,17 @@ In the Azure portal, you can check the licensing for your secondary managed inst
 
 In **Failover groups**, be sure that **Failover rights status** is set to **ON** and that the license model for the secondary instance is **Failover rights currently activated**.
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot that shows the Failover groups page, with failover rights on and the license model highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
+:::image type="content" source="media/failover-group-standby-replica-how-to-configure/view-failover-group-settings.png" alt-text="Screenshot that shows the Failover groups page, with failover rights on and the license model highlighted." lightbox="media/failover-group-standby-replica-how-to-configure/view-failover-group-settings.png":::
 
 The default license model indicates the licensing model the instance reverts to if the failover group fails over and the current secondary instance becomes the new primary instance. You might incur charges upon failover, depending on the default license model.
 
 In **Compute + storage** for your *secondary managed instance*, confirm that the **Failover rights** license is activated. Under **Cost summary**, view the failover discount you're currently receiving for that instance.
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot that shows the Compute and storage page, with failover rights highlighted." lightbox="media/auto-failover-group-standby-replica-how-to-configure/compute-storage.png":::
+:::image type="content" source="media/failover-group-standby-replica-how-to-configure/compute-storage.png" alt-text="Screenshot that shows the Compute and storage page, with failover rights highlighted." lightbox="media/failover-group-standby-replica-how-to-configure/compute-storage.png":::
 
 If failover rights aren't activated and you qualify for the benefit, you also see the following recommendation in **Overview** for either instance. To activate the benefit, select the recommendation to go to **Edit Configurations**.
 
-:::image type="content" source="media/auto-failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane, and recommendations showing failover rights aren't used." :::
+:::image type="content" source="media/failover-group-standby-replica-how-to-configure/failover-rights-notification.png" alt-text="Screenshot that shows the SQL Managed Instance overview pane, and recommendations showing failover rights aren't used." :::
 
 ### [Azure PowerShell](#tab/azure-powershell)
 
@@ -180,8 +180,8 @@ A value of `Standby` for the `secondaryType` parameter indicates failover rights
 
 ## Next steps
 
-- For a detailed tutorial, see [Add SQL Managed Instance to a failover group](failover-group-add-instance-tutorial.md).
-- For a sample script, see [Use PowerShell to create an auto-failover group in SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
+- For a guide, see [Add SQL Managed Instance to a failover group](failover-group-configure-sql-mi.md).
+- For a sample script, see [Use PowerShell to create a failover group in SQL Managed Instance](scripts/add-to-failover-group-powershell.md).
 - For a business continuity overview and scenarios, see [Business continuity with Azure SQL Database and Azure SQL Managed Instance](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 - To learn about automated backups, see [SQL Database automated backups](automated-backups-overview.md).
 - To learn about using automated backups for recovery, see [Restore a database from service-initiated backups](recovery-using-backups.md).

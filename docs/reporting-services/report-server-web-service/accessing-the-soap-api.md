@@ -23,7 +23,7 @@ helpviewer_keywords:
 # Accessing the SOAP API
   The Report Server Web service uses Simple Object Access Protocol (SOAP) over HTTP and acts as a communications interface between client programs and the report server. The Web service provides two endpoints - one for report execution and one for report management - and consists of methods and a set of complex type objects that you can use to access the complete functionality of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To call the service, you must reference the Reporting Services Web Services Description Language (WSDL).  
   
-## Referencing the Reporting Services WSDL  
+## Reference the Reporting Services WSDL  
  To call a Web service successfully, you must know how to access the service, what operations the service supports, what parameters the service expects, and what the service returns. WSDL provides this information in an XML document that can be read or processed by a computer.  
   
  The Report Server Web services are exposed in three different endpoints. The name of the WSDL file is different for each endpoint. The <xref:ReportService2010> endpoint contains methods for managing objects in a Report Server in either native or SharePoint integrated mode. The WSDL for this endpoint is accessed through `ReportService2010.asmx?wsdl.`  
@@ -51,7 +51,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.  
   
-## See Also  
+## Related content  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

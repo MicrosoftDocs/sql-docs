@@ -72,14 +72,14 @@ helpviewer_keywords:
 
 ## Related content
 
-[Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)
-[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
-[Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)
-[Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)
-[Implement a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)
-[Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)
+ [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
+ [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)    
+[Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)    
+[Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)    
+[Implement a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)    
+[Configure TLS connections on a native mode report server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)    
 [Security extensions overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
-[Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)
+[Authentication in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)    
 [Authorization in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

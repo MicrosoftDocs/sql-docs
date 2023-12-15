@@ -32,7 +32,7 @@ helpviewer_keywords:
   
      To find the config file, see the [File Location](../report-server/rsreportserver-config-configuration-file.md#bkmk_file_location) section in the "RsReportServer.config Configuration File" article.
   
-2. Find \<**Authentication**>.  
+2. Find `<Authentication>`.  
   
 3. Copy one of the following XML structures that best fits your needs. The first XML structure provides placeholders for specifying all of the elements, which are described in the next section:  
 
@@ -72,13 +72,13 @@ helpviewer_keywords:
       </Authentication>
     ```
 
-4. Paste it over the existing entries for \<**Authentication**>.  
+4. Paste it over the existing entries for `<Authentication>`.  
   
-     If you're using multiple authentication types, add just the **RSWindowsBasic** element but don't delete the entries for **RSWindowsNegotiate**, **RSWindowsNTLM**, or **RSWindowsKerberos**.  
+     If you're using multiple authentication types, add just the `RSWindowsBasic` element but don't delete the entries for `RSWindowsNegotiate`, `RSWindowsNTLM`, or `RSWindowsKerberos`.  
   
-     You can't use **Custom** with other authentication types.  
+     You can't use `Custom` with other authentication types.  
   
-5. Replace empty values for \<**Realm**> or \<**DefaultDomain**> with values that are valid for your environment.  
+5. Replace empty values for `<Realm>` or `<DefaultDomain>` with values that are valid for your environment.  
   
 6. Save the file.  
   

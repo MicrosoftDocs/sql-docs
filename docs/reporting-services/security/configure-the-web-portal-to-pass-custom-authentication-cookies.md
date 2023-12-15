@@ -18,7 +18,7 @@ If you're using a custom authentication extension, you should configure the web 
 
 ## Modify the RSReportServer.Config file
 
-You can enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to transmit other cookies through to the report server by adding a \<**PassThroughCookies**> element to the web portal configuration settings in the RSReportServer.config file. Transmitting other cookies is helpful in a single sign-on authentication solution that requires not only the report server authentication cookies, but also cookies from a third-party authentication system.
+You can enable the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to transmit other cookies through to the report server by adding a `<PassThroughCookies>` element to the web portal configuration settings in the RSReportServer.config file. Transmitting other cookies is helpful in a single sign-on authentication solution that requires not only the report server authentication cookies, but also cookies from a third-party authentication system.
 
 To enable other cookies to be transmitted through HTTP requests by using the web portal, set the following elements in the RSReportServer.config file:
   

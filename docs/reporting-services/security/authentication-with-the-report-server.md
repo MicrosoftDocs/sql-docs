@@ -72,8 +72,8 @@ helpviewer_keywords:
 
 ## Related content
 
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
- [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)    
+[Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
+[RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)    
 [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md)    
 [Specify credential and connection information for report data sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)    
 [Implement a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)    

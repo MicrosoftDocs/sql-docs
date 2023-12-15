@@ -51,7 +51,7 @@ helpviewer_keywords:
     </Authentication>  
     ```  
   
-    If you're using default values, you can copy the minimum element structure:  
+    If you use default values, you can copy the minimum element structure:  
   
     ```xml
           <AuthenticationTypes>  
@@ -74,7 +74,7 @@ helpviewer_keywords:
 
 4. Paste it over the existing entries for `<Authentication>`.  
   
-     If you're using multiple authentication types, add just the `RSWindowsBasic` element but don't delete the entries for `RSWindowsNegotiate`, `RSWindowsNTLM`, or `RSWindowsKerberos`.  
+     If you use multiple authentication types, add just the `RSWindowsBasic` element but don't delete the entries for `RSWindowsNegotiate`, `RSWindowsNTLM`, or `RSWindowsKerberos`.  
   
      You can't use `Custom` with other authentication types.  
   

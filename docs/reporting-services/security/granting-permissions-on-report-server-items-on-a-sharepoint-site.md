@@ -40,7 +40,7 @@ helpviewer_keywords:
   
 -   A SharePoint group is a group of users that you can create on a SharePoint site to manage permissions to the site and to provide an e-mail distribution list for site members. A SharePoint group consists of Windows user and group accounts, or user logins if you're using Forms authentication. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] provides three groups. You can customize them or create new ones if needed.  
   
--   Permission inheritance allows subsites, lists and libraries, and items to inherit the security settings of the parent site. You can use inherited permissions to access report server items that are stored in a SharePoint library. Using permission inheritance and the predefined SharePoint groups can help simplify your deployment and provides immediate access to most report server operations.  
+-   Permission inheritance allows subsites, lists and libraries, and items to inherit the security settings of the parent site. You can use inherited permissions to access report server items that are stored in a SharePoint library. Use permission inheritance and the predefined SharePoint groups to help simplify your deployment and provide immediate access to most report server operations.  
   
 ## Who sets permissions  
  The administrator who installs [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], runs the SharePoint Configuration Wizard, and creates the portal site becomes the default portal site owner. The site owner can set permissions in Central Administration for a farm or a stand-alone SharePoint Web application, and can set permission at the top-level site for each SharePoint Web application. This person can also designate other site owners.  

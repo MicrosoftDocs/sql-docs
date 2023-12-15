@@ -21,13 +21,13 @@ helpviewer_keywords:
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based security to grant user access to a report server. On a new report server installation, only users who are members of the local Administrators group have permissions to report server content and operations. To make the report server available to other users, you must create role assignments that map  user or group accounts to a predefined role that specifies a collection of tasks.
 
- **SharePoint mode report servers:** For a report server that is configured for SharePoint integrated mode, you configure access from a SharePoint site using SharePoint permissions. Permission levels on the SharePoint site determine access to report server content and operations. You must be a site administrator to grant permissions on a SharePoint site. For more information, see [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
+ **SharePoint mode report servers:** For a report server that is configured for SharePoint integrated mode, you configure access from a SharePoint site by using SharePoint permissions. Permission levels on the SharePoint site determine access to report server content and operations. You must be a site administrator to grant permissions on a SharePoint site. For more information, see [Grant permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
  **Native mode report servers:** This article is focused on a report server that is configured for native mode and the use of the web portal to assign users to a role. There are two types of roles:
 
 - Item-level roles are used to view, add, and manage report server content, subscriptions, report processing, and report history. Item-level role assignments are defined on the root node (the Home folder) or on specific folders or items farther down the hierarchy.
 
-- System-level roles grant access to site-wide operations that aren't bound to any specific item. Examples include using Report Builder and using shared schedules.
+- System-level roles grant access to site-wide operations that aren't bound to any specific item. Examples include how to use Report Builder and shared schedules.
 
     The two types of roles complement each other and should be used together. For this reason, adding a user to a report server is a two-part operation. If you assign a user to an item-level role, you should also assign them to a system-level role. When assigning a user to a role, you must select a role that is already defined. To create, modify, or delete roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
@@ -49,7 +49,7 @@ Review the following list before adding users to a native mode report server.
 
 2. Select the **Gear** icon in the upper right and then select **Site Settings** from the dropdown menu.
 
-    :::image type="content" source="../../reporting-services/security/media/settings-icon-and-menu.png" alt-text="Screenshot that shows the report server web portal gear icon and dropdown menu." lightbox="../../reporting-services/security/media/settings-icon-and-menu.png":::
+    :::image type="content" source="../../reporting-services/security/media/settings-icon-and-menu.png" alt-text="Screenshot that shows the report server web portal gear icon and dropdown menu.":::
 
 3. Select **Security**.
 

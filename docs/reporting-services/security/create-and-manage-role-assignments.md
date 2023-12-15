@@ -53,7 +53,7 @@ To create or manage a system-level role assignment or for more information, see 
 
 ## Modify a role assignment
 
-You can modify a role assignment at any time. Your changes take effect when you save the role assignment. Role assignment changes don't affect user sessions. If a user has a report open, and you modify a role assignment to deny access, the user can continue using the report for that active session.
+You can modify a role assignment at any time. Your changes take effect when you save the role assignment. Role assignment changes don't affect user sessions. If a user has a report open, and you modify a role assignment to deny access, the user can continue to use the report for that active session.
 
 If you add a user account to a group that is already part of a role assignment, there's a delay before the user account is able to access items from the change. The Internet Information Services (IIS) causes the delay by caching authentication tokens. You can either wait for the tokens to refresh (typically 15 minutes), or you can reset IIS to update the cache immediately.
 

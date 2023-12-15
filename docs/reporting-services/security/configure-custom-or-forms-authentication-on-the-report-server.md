@@ -29,7 +29,7 @@ Additionally, you can use Forms authentication or a custom authentication extens
 
 1.  Open the rsreportserver.config in a text editor.
 
-2.  Find the \<**Authentication**> section.
+2.  Find the `<Authentication>` section.
 
 3.  Copy the following XML structure:
 
@@ -42,26 +42,26 @@ Additionally, you can use Forms authentication or a custom authentication extens
     </Authentication>
     ```
 
-4.  Paste it over the existing entries for the \<**Authentication**> section.
+4.  Paste it over the existing entries for the `<Authentication>` section.
 
-     You can't use **Custom** with other authentication types.
+     You can't use ``Custom`` with other authentication types.
 
 5.  Save the file.
 
 6.  Open the Web.config file for the report server. By default, the file is located in the same folder as the rsreportserver.config file (see [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md#bkmk_file_location)).
 
-7.  Find **authentication mode** and set it to **Forms**.
+7.  Find `authentication mode` and set it to `Forms`.
 
     ```
     <authentication mode = "Forms" />
     ```
 
-8.  Find **identity impersonate** and set it to **False**.
+8.  Find `identity impersonate` and set it to `False`.
 
     ```
     <identity impersonate = "false" />  
     ```
-9. Add the **PassThroughCookies** element structure to the configuration file. For more information, see [Configure the web portal to pass custom authentication cookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Add the `PassThroughCookies` element structure to the configuration file. For more information, see [Configure the web portal to pass custom authentication cookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
 10. Save the file.  
   

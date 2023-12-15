@@ -24,9 +24,9 @@ The following requirements must also be met:
 - The RSReportServer.config files must have **AuthenticationType** set to **RSWindowsNegotiate**, **RSWindowsKerberos**, or **RSWindowsNTLM**. By default, the RSReportServer.config file includes the **RSWindowsNegotiate** setting if the Report Server service account is either NetworkService or LocalSystem; otherwise, the **RSWindowsNTLM** setting is used. You can add **RSWindowsKerberos** if you have applications that only use Kerberos authentication.
 
   > [!IMPORTANT]  
-  > Using **RSWindowsNegotiate** will result in a Kerberos authentication error if you configured the Report Server service to run under a domain user account and you did not register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos authentication errors when connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.
+  > When you use **RSWindowsNegotiate**, a Kerberos authentication error occurs if you configured the Report Server service to run under a domain user account and you didn't register a Service Principal Name (SPN) for the account. For more information, see [Resolving Kerberos authentication errors when connecting to a report server](#proxyfirewallRSWindowsNegotiate) in this topic.
 
-- [!INCLUDE [vstecasp](../../includes/vstecasp-md.md)] must be configured for Windows Authentication. By default, the Web.config files for the Report Server Web service include the \<authentication mode="Windows"> setting. If you change it to \<authentication mode="Forms">, the Windows Authentication for [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] fails.
+- [!INCLUDE [vstecasp](../../includes/vstecasp-md.md)] must be configured for Windows Authentication. By default, the Web.config files for the Report Server Web service include the `<authentication mode="Windows">` setting. If you change it to `<authentication mode="Forms">`, the Windows Authentication for [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] fails.
 
 - The Web.config files for the Report Server Web service must have `<identity impersonate= "true" />`.
 - The client application or browser must support Windows integrated security.
@@ -40,13 +40,13 @@ The following instructions are intended for a native mode report server. If the 
 
 ## Extended Protection for authentication
 
-Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. You can determine [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection by specific settings in the RSReportServer.config file. You can update the file by either editing the file or using WMI APIs. For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
+Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support for Extended Protection for Authentication is available. The [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] feature supports the use of channel binding and service binding to enhance protection of authentication. The [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] features need to be used with an operating system that supports Extended Protection. You can determine [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration for extended protection by specific settings in the RSReportServer.config file. You can update the file by either editing the file or by using WMI APIs. For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).
 
 ### Configure a report server to use Windows integrated security
 
 1. Open `RSReportServer.config` in a text editor.
 
-1. Find \<**Authentication**>.
+1. Find `<Authentication>`.
 
 1. Copy one of the following XML structures that best fits your needs. You can specify **RSWindowsNegotiate**, **RSWindowsNTLM**, and **RSWindowsKerberos** in any order. You should enable authentication persistence if you want to authenticate the connection rather than each individual request. Under authentication persistence, all requests that require authentication are allowed during the connection.
 
@@ -90,11 +90,11 @@ Beginning with [!INCLUDE [sql2008r2](../../includes/sql2008r2-md.md)], support f
    </AuthenticationTypes>
    ```
 
-1. Paste it over the existing entries for \<**Authentication**>.
+1. Paste it over the existing entries for `<Authentication>`.
 
-   You can't use **Custom** with the **RSWindows** types.
+   You can't use `Custom` with the `RSWindows` types.
 
-1. Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries aren't present, the current computer might not be running a version of [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended Protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
+1. Modify as appropriate the settings for extended protection. Extended protection is disabled by default.  If these entries aren't present, the current computer might not be running a version of [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] which supports extended protection. For more information, see [Extended protection for authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
 
    ```xml
    <RSWindowsExtendedProtectionLevel>Allow</RSWindowsExtendedProtectionLevel>
@@ -113,13 +113,13 @@ On a report server that is configured for Negotiate or Kerberos authentication, 
 
 - The Report Server service runs as a Windows domain user account and you didn't register a Service Principal Name (SPN) for the account.
 
-- The report server is configured with the **RSWindowsNegotiate** setting.
+- The report server is configured with the `RSWindowsNegotiate` setting.
 
 - The browser chooses Kerberos over NTLM in the authentication header in the request it sends to the report server.
 
 You can detect the error if you enabled Kerberos logging. Another symptom of the error is that you're prompted for credentials multiple times and then see an empty browser window.
 
-You can confirm that you're encountering a Kerberos authentication error by removing < **RSWindowsNegotiate** /> from your configuration file and reattempting the connection.
+You can confirm that you're encountering a Kerberos authentication error by removing `<RSWindowsNegotiate>` from your configuration file and reattempting the connection.
 
 After you confirm the problem, you can address it in the following ways:
 
@@ -127,7 +127,7 @@ After you confirm the problem, you can address it in the following ways:
 
 - Change the service account to run under a built-in account such as Network Service. Built-in accounts map HTTP SPN to the Host SPN, which is defined when you join a computer to your network. For more information, see [Configure a service account (Report Server Configuration Manager)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
 
-- Use NTLM. NTLM generally works in cases where Kerberos authentication fails. To use NTLM, remove **RSWindowsNegotiate** from the RSReportServer.config file and verify that only **RSWindowsNTLM** is specified. If you choose this approach, you can continue to use a domain user account for the Report Server service even if you don't define an SPN for it.
+- Use NTLM. NTLM generally works in cases where Kerberos authentication fails. To use NTLM, remove `RSWindowsNegotiate` from the RSReportServer.config file and verify that only `RSWindowsNTLM` is specified. If you choose this approach, you can continue to use a domain user account for the Report Server service even if you don't define an SPN for it.
 
 To summarize, you should run commands similar to the following example. Replace the values as appropriate.
 
@@ -170,7 +170,7 @@ To log the SPNs in the [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md
 
 - Restart the [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.
 
-If you don't want to continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.
+If you don't want to continue to use Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE [ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.
 
 ```xml
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>

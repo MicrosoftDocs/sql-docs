@@ -65,7 +65,7 @@ This article lists the currently known issues with [Azure SQL Managed Instance](
 
 ## Has workaround
 
-### Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
+### <a id="procedure-sp_send_dbmail-may-fail-when-query-parameter-is-used-on-nov22fw-enabled-managed-instances"></a> Procedure sp_send_dbmail may fail when @query parameter is used on Nov22FW enabled managed instances
 
 Procedure `sp_send_dbmail` may fail when `@query` parameter is used, and this affects instances that have November 2022 feature wave enabled. Failures happen when the stored procedure is executed under sysadmin account.
 

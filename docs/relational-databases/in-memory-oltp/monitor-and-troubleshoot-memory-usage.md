@@ -19,7 +19,6 @@ This article covers monitoring your [!INCLUDE [inmemory](../../includes/inmemory
 > [!NOTE]
 > This tutorial does not apply in Azure SQL Managed Instance or Azure SQL Database. Instead, for a demonstration of in-memory OLTP in Azure SQL, see:
 > - [In-memory sample in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-sample?view=azuresql-db&preserve-view=true)
-> - [In-memory sample in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-sample?view=azuresql-mi&preserve-view=true)
 >
 > For more information on monitoring in-memory OLTP usage, see:
 > - [Monitor in-memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)

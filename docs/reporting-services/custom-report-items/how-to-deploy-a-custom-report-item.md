@@ -53,9 +53,9 @@ helpviewer_keywords:
     </CodeGroup>  
     ```  
   
-4.  Copy the custom report item run-time component DLL to the %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies and \Program Files\Microsoft SQL Server\MSRS10_50.SQLSERVER\Reporting Services\ReportServer\bin directories.  
+4.  Copy the custom report item run-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies and \Program Files\Microsoft SQL Server\MSRS10_50.SQLSERVER\Reporting Services\ReportServer\bin``` directories.  
   
-5.  Copy the custom report item design-time component DLL to the %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies directory.  
+5.  Copy the custom report item design-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies``` directory.  
   
 ## Related content  
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   

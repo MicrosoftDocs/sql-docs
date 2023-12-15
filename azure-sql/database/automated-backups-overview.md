@@ -125,7 +125,7 @@ This table summarizes the capabilities and features of [point-in-time restore (P
 | **Restoring via Azure CLI** |Yes|Yes|Yes|
 
 
-\* For business-critical applications that require large databases and must ensure business continuity, use [auto-failover groups](auto-failover-group-sql-db.md). 
+\* For business-critical applications that require large databases and must ensure business continuity, use [failover groups](failover-group-sql-db.md). 
 
 \*\* All PITR backups are stored on geo-redundant storage by default, so geo-restore is enabled by default. 
 

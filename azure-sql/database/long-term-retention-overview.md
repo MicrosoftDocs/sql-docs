@@ -12,6 +12,7 @@ ms.topic: conceptual
 monikerRange: "=azuresql || =azuresql-db || =azuresql-mi"
 ---
 # Long-term retention - Azure SQL Database and Azure SQL Managed Instance
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqldb-sqlmi.md)]
 
 This article provides a conceptual overview of long-term retention of backups for Azure SQL Database and Azure SQL Managed Instance. Long-term retention can be configured for up to 10 years on backups for Azure SQL Database (including in the Hyperscale service tier), and Azure SQL Managed Instance.
 

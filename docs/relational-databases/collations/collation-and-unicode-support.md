@@ -159,7 +159,7 @@ The following table shows the default collation designations, as determined by t
 |Afrikaans (South Africa)|0x0436|0x0409|Latin1_General_CI_AS|
 |Albanian (Albania)|0x041c|0x041c|Albanian_CI_AS|
 |Alsatian (France)|0x0484|0x0409|Latin1_General_CI_AS|
-|Amharic (Ethiopia)|0x045e|0x0409|Latin1_General_CI_AS|
+|Amharic (Ethiopia)|0x045e|0x0409|Latin1_General_CI_AI|
 |Arabic (Algeria)|0x1401|0x0401|Arabic_CI_AS|
 |Arabic (Bahrain)|0x3c01|0x0401|Arabic_CI_AS|
 |Arabic (Egypt)|0x0c01|0x0401|Arabic_CI_AS|
@@ -177,22 +177,22 @@ The following table shows the default collation designations, as determined by t
 |Arabic (U.A.E.)|0x3801|0x0401|Arabic_CI_AS|
 |Arabic (Yemen)|0x2401|0x0401|Arabic_CI_AS|
 |Armenian (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
-|Assamese (India)|0x044d|0x044d|Not available at server level|
-|Azerbaijani (Azerbaijan, Cyrillic)|0x082c|0x082c|Deprecated, not available at server level|
-|Azerbaijani (Azerbaijan, Latin)|0x042c|0x042c|Deprecated, not available at server level|
+|Assamese (India)|0x044d|0x044d|Latin1_General_CI_AI(*)|
+|Azerbaijani (Azerbaijan, Cyrillic)|0x082c|0x082c|Azeri_Cyrillic_100_CI_AS|
+|Azerbaijani (Azerbaijan, Latin)|0x042c|0x042c|Azeri_Latin_100_CI_AS|
 |Bashkir (Russia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basque (Basque)|0x042d|0x0409|Latin1_General_CI_AS|
 |Belarusian (Belarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
-|Bangla (Bangladesh)|0x0845|0x0445|Not available at server level|
-|Bengali (India)|0x0445|0x0439|Not available at server level|
+|Bangla (Bangladesh)|0x0845|0x0445|Latin1_General_CI_AI|
+|Bengali (India)|0x0445|0x0439|Latin1_General_CI_AI|
 |Bosnian (Bosnia and Herzegovina, Cyrillic)|0x201a|0x201a|Latin1_General_CI_AI|
 |Bosnian (Bosnia and Herzegovina, Latin)|0x141a|0x141a|Latin1_General_CI_AI|
 |Breton (France)|0x047e|0x047e|Latin1_General_CI_AI|
 |Bulgarian (Bulgaria)|0x0402|0x0419|Cyrillic_General_CI_AS|
 |Catalan (Catalan)|0x0403|0x0409|Latin1_General_CI_AS|
 |Chinese (Hong Kong SAR, PRC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
-|Chinese (Macao SAR)|0x1404|0x1404|Latin1_General_CI_AI|
-|Chinese (Macao SAR)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chinese (Macao SAR)|0x1404|0x1404|Chinese_PRC_CI_AS|
+|Chinese (Macao SAR)|0x21404|0x21404|Chinese_PRC_CI_AS|
 |Chinese (PRC)|0x0804|0x0804|Chinese_PRC_CI_AS|
 |Chinese (PRC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
 |Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
@@ -205,7 +205,7 @@ The following table shows the default collation designations, as determined by t
 |Czech (Czech Republic)|0x0405|0x0405|Czech_CI_AS|
 |Danish (Denmark)|0x0406|0x0406|Danish_Norwegian_CI_AS|
 |Dari (Afghanistan)|0x048c|0x048c|Latin1_General_CI_AI|
-|Divehi (Maldives)|0x0465|0x0465|Not available at server level|
+|Divehi (Maldives)|0x0465|0x0465|Divehi_90_Ci_AS_SC_UTF8|
 |Dutch (Belgium)|0x0813|0x0409|Latin1_General_CI_AS|
 |Dutch (Netherlands)|0x0413|0x0409|Latin1_General_CI_AS|
 |English (Australia)|0x0c09|0x0409|Latin1_General_CI_AS|
@@ -246,10 +246,10 @@ The following table shows the default collation designations, as determined by t
 |German (Switzerland)|0x0807|0x0409|Latin1_General_CI_AS|
 |Greek (Greece)|0x0408|0x0408|Greek_CI_AS|
 |Greenlandic (Greenland)|0x046f|0x0406|Danish_Norwegian_CI_AS|
-|Gujarati (India)|0x0447|0x0439|Not available at server level|
+|Gujarati (India)|0x0447|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Hausa (Nigeria, Latin)|0x0468|0x0409|Latin1_General_CI_AS|
 |Hebrew (Israel)|0x040d|0x040d|Hebrew_CI_AS|
-|Hindi (India)|0x0439|0x0439|Not available at server level|
+|Hindi (India)|0x0439|0x0439|Indic_General_90_CI_AS_SC_UTF8|
 |Hungarian (Hungary)|0x040e|0x040e|Hungarian_CI_AS|
 |Hungarian Technical Sort|0x1040e|0x1040e|Hungarian_Technical_CI_AS|
 |Icelandic (Iceland)|0x040f|0x040f|Icelandic_CI_AS|
@@ -262,15 +262,15 @@ The following table shows the default collation designations, as determined by t
 |Italian (Switzerland)|0x0810|0x0409|Latin1_General_CI_AS|
 |Japanese (Japan XJIS)|0x0411|0x0411|Japanese_CI_AS|
 |Japanese (Japan)|0x040411|0x40411|Latin1_General_CI_AI|
-|Kannada (India)|0x044b|0x0439|Not available at server level|
+|Kannada (India)|0x044b|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Kazakh (Kazakhstan)|0x043f|0x043f|Kazakh_90_CI_AS|
-|Khmer (Cambodia)|0x0453|0x0453|Not available at server level|
+|Khmer (Cambodia)|0x0453|0x0453|Latin_General_CI_AI(*)|
 |K'iche (Guatemala)|0x0486|0x0c0a|Modern_Spanish_CI_AS|
 |Kinyarwanda (Rwanda)|0x0487|0x0409|Latin1_General_CI_AS|
-|Konkani (India)|0x0457|0x0439|Not available at server level|
+|Konkani (India)|0x0457|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Korean (Korea Dictionary Sort)|0x0412|0x0412|Korean_Wansung_CI_AS|
 |Kyrgyz (Kyrgyzstan)|0x0440|0x0419|Cyrillic_General_CI_AS|
-|Lao (Lao PDR)|0x0454|0x0454|Not available at server level|
+|Lao (Lao PDR)|0x0454|0x0454|Latin_General_CI_AI(*)|
 |Latvian (Latvia)|0x0426|0x0426|Latvian_CI_AS|
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
@@ -278,20 +278,20 @@ The following table shows the default collation designations, as determined by t
 |Macedonian (North Macedonia)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
-|Malayalam (India)|0x044c|0x0439|Not available at server level|
+|Malayalam (India)|0x044c|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Maltese (Malta)|0x043a|0x043a|Latin1_General_CI_AI|
 |Maori (New Zealand)|0x0481|0x0481|Latin1_General_CI_AI|
 |Mapudungun (Chile)|0x047a|0x047a|Latin1_General_CI_AI|
-|Marathi (India)|0x044e|0x0439|Not available at server level|
+|Marathi (India)|0x044e|0x0439|Indic_General_90_CI_AS_SC_UTF8|
 |Mohawk (Canada)|0x047c|0x047c|Latin1_General_CI_AI|
 |Mongolian (Mongolia)|0x0450|0x0419|Cyrillic_General_CI_AS|
 |Mongolian (PRC)|0x0850|0x0419|Cyrillic_General_CI_AS|
-|Nepali (Nepal)|0x0461|0x0461|Not available at server level|
-|Norwegian (Bokmål, Norway)|0x0414|0x0414|Latin1_General_CI_AI|
-|Norwegian (Nynorsk, Norway)|0x0814|0x0414|Latin1_General_CI_AI|
+|Nepali (Nepal)|0x0461|0x0461|Latin_General_CI_AI(*)|
+|Norwegian (Bokmål, Norway)|0x0414|0x0414|Danish_Norwegian_CI_AS|
+|Norwegian (Nynorsk, Norway)|0x0814|0x0414|Danish_Norwegian_CI_AS|
 |Occitan (France)|0x0482|0x040c|French_CI_AS|
-|Odia (India)|0x0448|0x0439|Not available at server level|
-|Pashto (Afghanistan)|0x0463|0x0463|Not available at server level|
+|Odia (India)|0x0448|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
+|Pashto (Afghanistan)|0x0463|0x0463|Latin_General_CI_AI(*)|
 |Persian (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polish (Poland)|0x0415|0x0415|Polish_CI_AS|
 |Portuguese (Brazil)|0x0416|0x0409|Latin1_General_CI_AS|
@@ -313,14 +313,14 @@ The following table shows the default collation designations, as determined by t
 |Sami (Skolt, Finland)|0x203b|0x083b|Latin1_General_CI_AI|
 |Sami (Southern, Norway)|0x183b|0x043b|Latin1_General_CI_AI|
 |Sami (Southern, Sweden)|0x1c3b|0x083b|Latin1_General_CI_AI|
-|Sanskrit (India)|0x044f|0x0439|Not available at server level|
+|Sanskrit (India)|0x044f|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Serbian (Bosnia and Herzegovina, Cyrillic)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
 |Serbian (Bosnia and Herzegovina, Latin)|0x181a|0x081a|Latin1_General_CI_AI|
 |Serbian (Serbia, Cyrillic)|0x0c1a|0x0c1a|Latin1_General_CI_AI|
 |Serbian (Serbia, Latin)|0x081a|0x081a|Latin1_General_CI_AI|
 |Sesotho sa Leboa/Northern Sotho (South Africa)|0x046c|0x0409|Latin1_General_CI_AS|
 |Setswana/Tswana (South Africa)|0x0432|0x0409|Latin1_General_CI_AS|
-|Sinhala (Sri Lanka)|0x045b|0x0439|Not available at server level|
+|Sinhala (Sri Lanka)|0x045b|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Slovak (Slovakia)|0x041b|0x041b|Slovak_CI_AS|
 |Slovenian (Slovenia)|0x0424|0x0424|Slovenian_CI_AS|
 |Spanish (Argentina)|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|
@@ -347,14 +347,14 @@ The following table shows the default collation designations, as determined by t
 |Swahili (Kenya)|0x0441|0x0409|Latin1_General_CI_AS|
 |Swedish (Finland)|0x081d|0x040b|Finnish_Swedish_CI_AS|
 |Swedish (Sweden)|0x041d|0x040b|Finnish_Swedish_CI_AS|
-|Syriac (Syria)|0x045a|0x045a|Not available at server level|
+|Syriac (Syria)|0x045a|0x045a|Syriac_90_CI_AS_SC_UTF8|
 |Tajik (Tajikistan)|0x0428|0x0419|Cyrillic_General_CI_AS|
 |Tamazight (Algeria, Latin)|0x085f|0x085f|Latin1_General_CI_AI|
-|Tamil (India)|0x0449|0x0439|Not available at server level|
+|Tamil (India)|0x0449|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Tatar (Russia)|0x0444|0x0444|Cyrillic_General_CI_AS|
-|Telugu (India)|0x044a|0x0439|Not available at server level|
+|Telugu (India)|0x044a|0x0439|Indic_General_90_CI_AS_SC_UTF8(*)|
 |Thai (Thailand)|0x041e|0x041e|Thai_CI_AS|
-|Tibetan (PRC)|0x0451|0x0451|Not available at server level|
+|Tibetan (PRC)|0x0451|0x0451|Latin1_General_CI_AI(*)|
 |Turkish (Türkiye)|0x041f|0x041f|Turkish_CI_AS|
 |Turkmen (Turkmenistan)|0x0442|0x0442|Latin1_General_CI_AI|
 |Uighur (PRC)|0x0480|0x0480|Latin1_General_CI_AI|

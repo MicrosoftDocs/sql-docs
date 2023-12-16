@@ -31,7 +31,7 @@ helpviewer_keywords:
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Itemlevel tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. Role assignments that include item-level tasks secure all items accessed through the folders on a report server or through URL access.|  
+|[Item-level tasks](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|Actions that are performed on items managed by a report server, such as folders, reports, report models, and resources.<br /><br /> Item-level tasks are scoped to the report server folder namespace. Role assignments that include item-level tasks secure all items accessed through the folders on a report server or through URL access.|  
 |[System-level tasks](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Actions that are performed at the system level, such as managing jobs or shared schedules that can be used with many items. System-level tasks are scoped outside of the report server folder namespace.|  
   
 ## Related content  

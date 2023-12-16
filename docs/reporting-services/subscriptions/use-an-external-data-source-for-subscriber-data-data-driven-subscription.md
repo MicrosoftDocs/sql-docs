@@ -38,7 +38,7 @@ helpviewer_keywords:
   
 -   SAP Netweaver BI databases  
   
--   report models  
+-   Report models  
   
  If you have a custom data processing extension that you want to use in data-driven subscriptions, it must implement the <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> and the <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> interfaces. The data processing extension must support a schema-only query execution. This query is used to retrieve column metadata at design-time so that users can map columns to delivery options and report parameters in the subscription definition. Schema-only query execution occurs at an early stage when the user is defining the subscription.  
   

@@ -28,7 +28,7 @@ helpviewer_keywords:
 3. When you're ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
 ##  <a name="bkmk_rolelist"></a> Predefined role definitions  
- Predefined roles are defined by the tasks that it supports. You can modify these roles or replace them with custom roles.  
+ Predefined roles define the tasks they support. You can modify these roles or replace them with custom roles.  
   
  *Scope* defines the boundaries within which roles are used. Item-level roles provide varying levels of access to report server items and operations that affect those items. Item-level roles are defined on the root node (Home) and all items throughout the report server folder hierarchy. System-level roles authorize access at the site level. Item and system-level roles are mutually exclusive but are used together to provide comprehensive permissions to report server content and operations.  
   
@@ -63,8 +63,8 @@ helpviewer_keywords:
 |Manage folders|Create, view, and delete folders, and view and modify folder properties.| 
 |Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports. This task also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Manage models|Create, view, and delete models, and view and modify model properties.|  
-|Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
-|Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
+|Manage report history|Create, view, and delete report history, and view report history properties. Also includes view and modify settings that determine snapshot history limits and how caching works.|  
+|Manage reports|Add and delete reports, modify report parameters, view and modify report properties. Also includes view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
 |Set security for individual items|Define security policies for reports, linked reports, folders, resources, and data sources. For more information, see [Securable Items](../../reporting-services/security/securable-items.md).|  
 |View data sources|View shared data source items in the folder hierarchy.|  
@@ -98,7 +98,7 @@ helpviewer_keywords:
 |Manage data sources|Create and delete shared data source items, view and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders; view and modify folder properties.|  
 |Manage models|Create, view, and delete report models; view and modify report model properties.|  
-|Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view, and modify report definitions.|  
+|Manage reports|Add and delete reports, modify report parameters, and view and modify report properties. Also includes view and modify data sources that provide content to the report, view, and modify report definitions.|  
 |Manage resources|Create, modify, and delete resources; view and modify resource properties.|  
   
 ### Customizing the publisher role  
@@ -129,7 +129,7 @@ helpviewer_keywords:
  At a minimum, this role should support both the "View reports" task and the "View folders" tasks to support viewing and folder navigation. You shouldn't remove the "View folders" task unless you want to eliminate folder navigation. Likewise, you shouldn't remove the "View reports task" unless you want to prevent users from seeing reports. These kinds of modifications suggest the need for a custom role definition that is applied selectively for a specific group of users.  
   
 ##  <a name="bkmk_reportbuilder"></a> Report Builder role  
- The **Report Builder** role is a predefined role that includes tasks for loading reports in Report Builder and viewing and navigating the folder hierarchy. To create and modify reports in Report Builder, you must also have a system role assignment that includes the "Execute report definitions" task. This task is required for processing reports locally in Report Builder.  
+ The **Report Builder** role is a predefined role that includes tasks for loading reports in Report Builder and viewing and navigating the folder hierarchy. You must also have a system role assignment that includes the "Execute report definitions" task to create and modify reports in Report Builder. This task is required for processing reports locally in Report Builder.  
   
 ### Report Builder tasks  
  The following table describes the tasks that are included in the **Report Builder** role:  
@@ -168,8 +168,8 @@ helpviewer_keywords:
 |Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
 |Manage individual subscriptions|Create, view, modify, and delete subscriptions for reports and linked reports.|  
-|Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
-|Manage reports|Add and delete reports, modify report parameters, view, and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
+|Manage report history|Create, view, and delete report history, view report history properties. Also includes view and modify settings that determine snapshot history limits and how caching works.|  
+|Manage reports|Add and delete reports, modify report parameters, view, and modify report properties. Also includes view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
 |View data sources|View shared data source items in the folder hierarchy.|  
 |View folders|View folder contents.|  

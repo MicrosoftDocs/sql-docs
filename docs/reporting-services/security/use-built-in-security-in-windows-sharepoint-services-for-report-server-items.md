@@ -36,7 +36,7 @@ helpviewer_keywords:
 ## Use built-in groups and permission levels to access report server items  
  When you use permission inheritance and standard SharePoint groups, you can access most report server operations immediately after you configure integration settings on the report server and SharePoint instances.  
   
- SharePoint provides standard groups that map to predefined permission levels that determine how you access documents and pages on a SharePoint site. If you use standard groups and default permission levels, and your sites are configured to inherit permissions, you can expect to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features in the following ways:  
+ SharePoint provides standard groups that map to predefined permission levels that determine how you access documents and pages on a SharePoint site. You can expect to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features if you use standard groups and default permission levels, and your sites are configured to inherit permissions. You can work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features in the following ways:  
   
 |**SharePoint Groups**|**Permission level**|**Summary**|**Report Server Access**|  
 |---------------------------|--------------------------|-----------------|------------------------------|  

@@ -21,7 +21,7 @@ helpviewer_keywords:
   
  Low-security folders can be used to store reports that you want to be easily accessible.  
   
- Folder security forms the basis of item-level security, starting with the root node of the report server folder hierarchy, the Home folder. Because security is inherited, it's advisable to set a fairly restrictive security policy on the Home folder. By using the **Browser** role in Home folder, role assignments does exactly that by providing view-only access.  
+ Folder security forms the basis of item-level security, starting with the root node of the report server folder hierarchy, the Home folder. Because security is inherited, it's advisable to set a fairly restrictive security policy on the Home folder. Role assignments provide view-only access when you use the **Browser** role in the Home folder.  
   
 ## Tasks and folder access  
  When creating role assignments for folders, consider the tasks listed in the following table.  

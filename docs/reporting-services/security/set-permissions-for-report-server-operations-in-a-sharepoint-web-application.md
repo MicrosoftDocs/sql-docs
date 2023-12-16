@@ -82,7 +82,7 @@ helpviewer_keywords:
 |Create a report definition in Report Builder and save a report to a library.|**Add Items** to save the file to a library.|  
 |Edit a report in Report Builder.|**Edit Items** on the report definition file.|  
   
- Permissions to create and use subscriptions, report history, and set report or data processing options on a Report Builder report are the same as those permissions used for performing identical actions on standard report definition files.  
+ Permissions to create and use subscriptions, report history, and set report or data processing options on a Report Builder report are the same. These permissions are used for performing identical actions on standard report definition files.  
   
 ##  <a name="permissionSharedSchedules"></a> Permissions to create and manage shared schedules  
  Shared schedules aren't documents stored in a library. For this reason, creating and managing these schedules requires site permissions. You can't restrict access to specific shared schedules. Any shared schedule that you create is available to any user who has Open permission throughout the site.  

@@ -1,16 +1,16 @@
 ---
-title: "Import Policies Dialog Box"
-description: "Import Policies Dialog Box"
+title: "Import Policies dialog box"
+description: "Import Policies dialog box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dmf.importpolicy.f1"
 ---
-# Import policies dialog box
+# Import Policies dialog box
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

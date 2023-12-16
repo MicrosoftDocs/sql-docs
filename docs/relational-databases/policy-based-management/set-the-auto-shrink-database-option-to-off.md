@@ -3,7 +3,7 @@ title: "Set the AUTO_SHRINK Database Option to OFF"
 description: "Set the AUTO_SHRINK Database Option to OFF."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

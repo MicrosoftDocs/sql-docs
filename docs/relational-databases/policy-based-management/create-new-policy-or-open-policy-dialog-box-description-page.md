@@ -3,12 +3,12 @@ title: "'Description' page of 'Create New Policy' or 'Open Policy' dialog box"
 description: Describes the 'Description' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 ---
-# Create new policy or open policy dialog box, description page
+# Create New Policy or Open Policy dialog box, Description page
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -1,16 +1,16 @@
 ---
-title: "Facet Properties Dialog Box, Dependent Conditions Page"
-description: "Facet Properties Dialog Box, Dependent Conditions Page"
+title: "Facet Properties dialog box, Dependent Conditions page"
+description: "Facet Properties dialog box, Dependent Conditions page"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dmf.facet.dependentconditions.f1"
 ---
-# Facet properties dialog box, dependent conditions page
+# Facet Properties dialog box, Dependent Conditions page
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -1,9 +1,9 @@
 ---
-title: "Create new condition or open condition dialog box, description page"
-description: "Create new condition or open condition dialog box, description page."
+title: "Create New Condition or Open Condition dialog box, Description page"
+description: "Create New Condition or Open Condition dialog box, Description page."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.swb.dmf.condition.description.f1"
   - "sql13.swb.dmf.policy.description.f1"
 ---
-# Create new condition or open condition dialog box, description page
+# Create New Condition or Open Condition dialog box, Description page
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -1,16 +1,16 @@
 ---
-title: "Facet Properties dialog box, General Page"
-description: Describes the 'General Page' of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+title: "Facet Properties dialog box, General page"
+description: Describes the 'General' page of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dmf.facet.f1"
 ---
-# Facet properties dialog box, general page
+# Facet Properties dialog box, General page
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

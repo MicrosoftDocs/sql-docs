@@ -3,7 +3,7 @@ title: "Increase or Disable Blocked Process Threshold"
 description: "Increase or Disable Blocked Process Threshold."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

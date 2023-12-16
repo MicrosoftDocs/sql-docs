@@ -3,7 +3,7 @@ title: "Guest Permissions on User Databases"
 description: Determine whether the guest user has permission to access user databases in SQL Server. Revoke the guest user permission if it isn't required.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

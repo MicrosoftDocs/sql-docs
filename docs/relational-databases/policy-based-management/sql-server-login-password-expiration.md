@@ -3,7 +3,7 @@ title: "SQL Server Login Password Expiration"
 description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

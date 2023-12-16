@@ -3,7 +3,7 @@ title: "Keep the Affinity Mask Default Value"
 description: "Keep the Affinity Mask Default Value."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

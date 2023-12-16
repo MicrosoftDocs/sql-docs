@@ -1,16 +1,16 @@
 ---
-title: "View Facets Dialog Box"
-description: "View Facets Dialog Box"
+title: "View Facets dialog box"
+description: "View Facets dialog box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dmf.viewfacet.f1"
 ---
-# View facets dialog box
+# View Facets dialog box
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

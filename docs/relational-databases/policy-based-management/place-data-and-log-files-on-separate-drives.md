@@ -3,7 +3,7 @@ title: "Place Data and Log Files on Separate Drives"
 description: Place data and log files on separate logical drives. Separate locations allow activity for each to occur at the same time, improving SQL performance.
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

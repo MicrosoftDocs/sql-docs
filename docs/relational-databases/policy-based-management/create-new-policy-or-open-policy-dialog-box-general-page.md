@@ -1,9 +1,9 @@
 ---
-title: "Create new policy or open policy dialog box, general page"
-description: "Create new policy or open policy dialog box, general page."
+title: "'General' page of 'Create New Policy' or 'Open Policy' dialog box"
+description: "Describes the 'General' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server."
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -12,7 +12,7 @@ f1_keywords:
   - "sql13.swb.dmf.policy.filter.f1"
   - "sql13.swb.dmf.newgroup.f1"
 ---
-# Create new policy or open policy dialog box, general page
+# Create New Policy or Open Policy dialog box, General page
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

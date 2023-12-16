@@ -1,16 +1,16 @@
 ---
-title: "View Policies Dialog Box"
-description: "View Policies Dialog Box"
+title: "View Policies dialog box"
+description: "View Policies dialog box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
 f1_keywords:
   - "sql13.swb.dmf.managepolicies.general.f1"
 ---
-# View policies dialog box
+# View Policies dialog box
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

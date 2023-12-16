@@ -1,9 +1,9 @@
 ---
-title: "Results Detailed View Dialog Box"
-description: "Results Detailed View Dialog Box"
+title: "Results Detailed View dialog box"
+description: "Results Detailed View dialog box"
 author: VanMSFT
 ms.author: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: ui-reference
@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.swb.results.f1"
   - "sql13.swb.dmf.policy.resultdetails.f1"
 ---
-# Results detailed view dialog box
+# Results Detailed View dialog box
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

@@ -4,7 +4,7 @@ description: Learn how to enable a policy to check the backup recovery model for
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: vanto
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.service: sql
 ms.subservice: security
 ms.topic: reference

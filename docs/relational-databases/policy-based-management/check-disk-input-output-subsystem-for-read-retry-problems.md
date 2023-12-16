@@ -28,7 +28,7 @@ The following actions might help you discover and resolve the underlying hardwar
 
 - Contact the disk manufacturer for the latest driver updates.
 
-## For more information
+## Related content
 
 [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)
 

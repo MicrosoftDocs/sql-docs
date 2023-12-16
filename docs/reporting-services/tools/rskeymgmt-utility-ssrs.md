@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "scale-out deployments [Reporting Services]"
 ---
 # rskeymgmt utility (SSRS)
-  Extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  
+  The utility extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  
   
 ## Syntax  
   
@@ -62,7 +62,7 @@ rskeymgmt {-?}
  Deletes all symmetric key instances and all encrypted data in a report server database. This argument doesn't take a value.  
   
  **-s**  
- Generates a new symmetric key and re-encrypts all encrypted content using the new key. All instances of the symmetric key are regenerated.  
+ Generates a new symmetric key and re-encrypts all encrypted content by using the new key. All instances of the symmetric key are regenerated.  
   
  **-j**  
  Configures a remote report server instance to share the report server database that is used by the local report server instance.  
@@ -102,10 +102,10 @@ rskeymgmt {-?}
  You must be a local administrator to run the tool, and you must run it locally on the computer that hosts the report server. The rskeymgmt utility works with the local Report Server Windows instance. The utility can't connect to remote instances of the Report Server Windows service so it can't be used to manage the encryption keys of a remote report server instance.  
   
 > [!NOTE]  
->  If you are using the **-u** and **-v** arguments, be sure to specify an account that has administrator permissions on the remote computer.  
+>  If you use the **-u** and **-v** arguments, be sure to specify an account that has administrator permissions on the remote computer.  
   
 ## Examples  
- The following examples illustrate ways of using **rskeymgmt**. The following examples show how to extract, restore, and delete encryption keys, and how to configure a report server scale-out deployment.  
+ The following examples illustrate ways to use **rskeymgmt**. The following examples show how to extract, restore, and delete encryption keys, and how to configure a report server scale-out deployment.  
   
 #### Extract encryption keys  
  This example shows how to create a backup copy of the encryption key and save it to a password-protected file on a floppy disk. If the report server is installed as a named instance, add the **-i** argument.  
@@ -141,7 +141,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### Join report server instances on the same computer  
  You can create a scale-out deployment from multiple report server instances that are installed on the same computer. Don't set the **-u** and **-v** arguments if you're joining report server instances that are installed locally. The **-u** and **-v** arguments are used only when you're joining an instance from a remote computer. If you specify the arguments, you get the following error: "User credentials can't be used for local connections."  
   
- The following example illustrates the syntax for creating a scale-out deployment using multiple local instances. In this example, \<**initializedinstance**> is the name of an instance that is already initialized to use the report server database, and \<**newinstance**> is the name of the instance that you want to add to the deployment:  
+ The following example illustrates the syntax for creating a scale-out deployment by using multiple local instances. In this example, `<initializedinstance>` is the name of an instance that is already initialized to use the report server database, and `<newinstance>` is the name of the instance that you want to add to the deployment:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

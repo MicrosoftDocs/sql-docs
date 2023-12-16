@@ -44,10 +44,10 @@ rsconfig {-?}
 |**-e**|Required if **-c** argument isn't used.|Specifies the unattended report execution account.<br /><br /> This argument doesn't take a value. However, you must include other arguments on the command line to specify that values that are encrypted in the configuration file.<br /><br /> Arguments that you can specify with **-e** include **-u** and **-p**. You can also set **-t**.|  
 |**-m**  *computername*|Required if you're configuring a remote report server instance.|Specifies the name of the computer that is hosting the report server. If this argument is omitted, the default is **localhost**.|  
 |**-s**  *servername*|Required.|Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that hosts the report server database.|  
-|**-i**  *instancename*|Required if you're using named instances.|If you used a named Reporting Services instance, this value specifies the name of the Reporting Services instance.|  
+|**-i**  *instancename*|Required if you use named instances.|If you used a named Reporting Services instance, this value specifies the name of the Reporting Services instance.|  
 |**-d**  *databasename*|Required.|Specifies the name of the report server database.|  
 |**-a**  *authmethod*|Required.|Specifies the authentication method that the report server uses to connect to the report server database. Valid values are **Windows** or **SQL** (this argument isn't case-sensitive).<br /><br /> **Windows** specifies that the report server use Windows Authentication.<br /><br /> **SQL** specifies that the report server use SQL Server Authentication.|  
-|**-u**  *[domain\\]username*|Required with **-e** Optional with **-c**.|Specifies a user account for the report server database connection or for the unattended account.<br /><br /> For **rsconfig -e**, this argument is required. It must be a domain user account.<br /><br /> For **rsconfig -c** and **-a SQL**, this argument must specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign in.<br /><br /> For **rsconfig -c** and **-a Windows**, this argument might specify a domain user, a built-in account, or service account credentials. If you're specifying a domain account, specify *domain* and *username* in the format *domain\username*. If you're using a built-in account, this argument is optional. If you want to use service account credentials, omit this argument.|  
+|**-u**  *[domain\\]username*|Required with **-e** Optional with **-c**.|Specifies a user account for the report server database connection or for the unattended account.<br /><br /> For **rsconfig -e**, this argument is required. It must be a domain user account.<br /><br /> For **rsconfig -c** and **-a SQL**, this argument must specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sign in.<br /><br /> For **rsconfig -c** and **-a Windows**, this argument might specify a domain user, a built-in account, or service account credentials. If you're specifying a domain account, specify *domain* and *username* in the format *domain\username*. If you use a built-in account, this argument is optional. If you want to use service account credentials, omit this argument.|  
 |**-p**  *password*|Required if **-u** is specified.|Specifies the password to use with the *username* argument. You can set this argument to a blank value if the account doesn't require a password. This value is case-sensitive for domain accounts.|  
 |**-t**|Optional.|Outputs error messages to the trace log. This argument doesn't take a value. For more information, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -69,7 +69,7 @@ You can run the **rsconfig** utility on a local or remote instance of [!INCLUDE[
 Before you can run this utility, Windows Management Instrumentation (WMI) must be installed on the computer that you're configuring.  
   
 ## Examples  
- The following examples illustrate ways of using **rsconfig**.  
+ The following examples illustrate ways to use **rsconfig**.  
   
 #### Specify a domain user account  
  This example shows how to configure a report server to use a domain user account when connecting to a local report server database.  

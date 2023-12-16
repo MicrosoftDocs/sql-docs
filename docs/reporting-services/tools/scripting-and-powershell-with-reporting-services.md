@@ -1,6 +1,6 @@
 ---
 title: "Scripting and PowerShell with Reporting Services"
-description: Learn about the support for scripting and using PowerShell cmdlets for SharePoint mode report servers in Reporting Services.
+description: Learn about the support for scripting and PowerShell cmdlets for SharePoint mode report servers in Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 09/14/2015
@@ -44,7 +44,7 @@ helpviewer_keywords:
   
 -   [Use PowerShell to create an Azure VM With a native mode report server](/previous-versions/azure/dn449661(v=azure.100)).  
   
--   See the section "Access the WMI classes using PowerShell" in [Access the Reporting Services WMI provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+-   See the section "Access the WMI classes by using PowerShell" in [Access the Reporting Services WMI provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 
 ## RS.exe scripting samples  

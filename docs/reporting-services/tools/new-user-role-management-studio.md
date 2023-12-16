@@ -21,12 +21,12 @@ f1_keywords:
   
 ## Options  
  **Name**  
- Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
+ Enter the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
   
  `; ? : \@ & = + , $ / * < > " /`  
   
  **Description**  
- Type a description that explains how to use the role and enumerates what the role supports.  
+ Enter a description that explains how to use the role and enumerates what the role supports.  
   
  **Task**  
  Select the tasks that can be performed through this role. You can't create new tasks or modify the existing tasks that [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports. Only item-level tasks can be used in an item-level role definition.  

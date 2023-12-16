@@ -16,12 +16,12 @@ helpviewer_keywords:
 # Preview view
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use **Preview** view to display the rendered report. When a report is previewed, Report Designer runs the report locally and displays it in the Preview view. In preview mode, the report is processed in full. A report might have a complex query or a large amount of data. If that happens, preview might take several minutes to complete the first time you view it. For subsequent changes that affect only the format of the report, preview uses cached data.
 
-:::image type="content" source="../../reporting-services/media/ssrs-ssdt-preview.png" alt-text="Screenshot that shows the Preview view." lightbox="../../reporting-services/media/ssrs-ssdt-preview.png":::
+:::image type="content" source="../../reporting-services/media/ssrs-ssdt-preview.png" alt-text="Screenshot that shows the Preview view.":::
   
 ## Options  
  Use the toolbar to manage preview functions.  
 
-:::image type="content" source="../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png" alt-text="Screenshot that shows the Preview viewer toolbar." lightbox="../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png":::
+:::image type="content" source="../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png" alt-text="Screenshot that shows the Preview viewer toolbar.":::
 
 
  **(1) First Page**  
@@ -67,7 +67,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Desig
  Select a zoom factor to zoom in or out on the report.  
   
  **(15) Find Text in report**  
- Type text to search for a match within the report. You can't use search operators. Select **Find** to search for the first instance.  
+ Enter text to search for a match within the report. You can't use search operators. Select **Find** to search for the first instance.  
 
  **(16) Show or Hide Parameter Area**  
  Choose this option to show or hide the parameters boxes for reports with parameters.

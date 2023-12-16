@@ -44,7 +44,7 @@ helpviewer_keywords:
  Type the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of **ErrorLevel** are reported as errors; otherwise, the issues are reported as warnings. Any error causes the build task to fail. The valid severity levels are 0 through 4 inclusively. The default value is 2.  
   
  **StartItem**  
- Select the report that is displayed in the Web browser after the project is published to the report server or in the preview window when the project is run locally. A start item is required for configurations that build but don't deploy the project and for using the **Debug** command (**F5**). A start item is also required for configurations that deploy the project.  
+ Select the report that is displayed in the Web browser after the project is published to the report server or in the preview window when the project is run locally. A start item is required for configurations that build but don't deploy the project. A start item is also required to use the **Debug** command (**F5**) and for configurations that deploy the project.  
   
  **OverwriteDataSources**  
  Select **True** to overwrite the data source on the server with the data source in the project when the reports are published. Select **False** to leave the existing data source on the server.  

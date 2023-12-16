@@ -46,9 +46,7 @@ helpviewer_keywords:
     - Preview the report locally
 
     After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
-  
- :::image type="icon" source="/analysis-services/analysis-services/media/ssdt-biprojects.png":::
-  
+    
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Report Designer windows and panes  
  Report Designer supports two views: **Design** to define the report data and report layout, and **Preview** to display a rendered view of the report. In each view, you can display multiple windows to help you design or view a rendered report.  
   
@@ -100,7 +98,7 @@ helpviewer_keywords:
   
  Use the Properties pane to:  
   
--   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also type the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Select **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](/previous-versions/sql/).  
+-   Set properties for the currently selected item on the design surface. Some properties provide a drop-down list of values. You can also enter the value directly in the cell. Some properties contain a collection of values, indicated by the value **(Collection)**. Most properties can accept an expression; complex expressions are indicated by the value **\<Expression>**. Select **\<Expression>** to open the **Expression** dialog box. For more information, see [Expression Dialog Box](/previous-versions/sql/).  
   
 -   Use the Properties pane toolbar buttons to change the grid from category view to alphabetical view. In category view, you might need to expand a category to see all the properties under it. To open an item's Properties dialog box, select the **Property Pages** button on the toolbar or by right-clicking the item and select **Properties**.  
   
@@ -138,15 +136,15 @@ helpviewer_keywords:
   
   
 ##  <a name="bkmk_ReportDesignerPreview"></a> Report Designer preview  
- Use Preview to run the report and view the rendered report in the report viewer. Preview caches report data locally. You can also set configuration properties to run the report in debug view, using a browser.  
+ Use Preview to run the report and view the rendered report in the report viewer. Preview caches report data locally. You can also set configuration properties to run the report in debug view by using a browser.  
   
  When you preview a report, Report Designer connects to the report data sources, runs dataset queries, caches the data on the local computer, processes the report to combine data and layout, and renders the report. You can view the report in on the Preview tab or you can set up project properties to view the report in debug mode and view it directly in a browser.  
   
 -   **Previewing Parameterized Reports.** When you preview a report, the report is processed automatically if all report parameters have valid default values. If one or more report parameters don't have a valid default value, you must choose a value for each unassigned parameter, and then, on the report toolbar, select **View Report**.  
   
--   **Understanding the Local Data Cache** When you preview a report, the report processor runs all the queries for datasets in the report using the current parameter defaults, and saves the results as a local data cache (.rdl.data) file. You can continue to design your report without incurring the overhead of retrieving this data again if you make no changes to either the report dataset queries or the report parameters.  
+-   **Understanding the Local Data Cache** When you preview a report, the report processor runs all the queries for datasets in the report by using the current parameter defaults, and saves the results as a local data cache (.rdl.data) file. You can continue to design your report without incurring the overhead of retrieving this data again if you make no changes to either the report dataset queries or the report parameters.  
   
--   **Previewing the Report using Configuration Manager and Debug.** In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, from the **Project** menu, select **Properties**. Use these settings to test your reports and publish them to the report server.  
+-   **Previewing the Report by using Configuration Manager and Debug.** In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, from the **Project** menu, select **Properties**. Use these settings to test your reports and publish them to the report server.  
   
 -   **Monitoring the Output Pane for Error Messages.** When you preview a report and the report processor detects a problem, it writes error messages to the Output pane.  
   
@@ -234,7 +232,7 @@ helpviewer_keywords:
   
 -   **Report Borders** Set the color, style, and width for all selected lines and the borders of all selected report items.  
   
--   **Report Formatting** Set the format of selected report items. For text boxes, the following types of formatting can be changed using the toolbar: font properties and text color, background color, and text justification.  
+-   **Report Formatting** Set the format of selected report items. For text boxes, the following types of formatting can be changed by using the toolbar: font properties and text color, background color, and text justification.  
   
 -   **Layout** Set the drawing order of report items and merging cells within a data region.  
   

@@ -1,6 +1,6 @@
 ---
 title: "Script with the rs.exe utility and the web service"
-description: Learn about the RS.exe utility that can be used to programmatically administer a report server using scripts written with Microsoft Visual Basic.
+description: Learn about the RS.exe utility that can be used to programmatically administer a report server by using scripts written with Microsoft Visual Basic.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "scripts [Reporting Services], Web service"
 ---
 # Script with the rs.exe utility and the web service
-  Developers and report server administrators can perform operations on a report server by using the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+  Developers and report server administrators can perform operations on a report server by using the **rs** utility (RS.exe). By using this utility, you can programmatically administer a report server by using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scripts can be used to run any of the Report Server Web service operations. Scripting can be used to copy security to multiple reports on a server, to add and delete items, to copy report server items from one server to another and more. For more information about the scripting environment, see [Run a Reporting Services script file](../../reporting-services/tools/run-a-reporting-services-script-file.md). Script files take a certain format and are written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. For more information, see [Format a Reporting Services script file](../../reporting-services/tools/format-a-reporting-services-script-file.md).  
   

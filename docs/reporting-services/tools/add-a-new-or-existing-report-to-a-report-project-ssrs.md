@@ -1,6 +1,6 @@
 ---
 title: "Add a new or existing report to a report project"
-description: Learn how to add a new or existing report to a report project using the Report Wizard in SQL Server Reporting Services.
+description: Learn how to add a new or existing report to a report project by using the Report Wizard in SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 10/26/2023
@@ -19,7 +19,7 @@ helpviewer_keywords:
   
  After you add a report, you can define data sources, datasets, and design a report layout. To get started, see [Create a basic table report &#40;SSRS tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) or [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
-## Add a new report using the Report Wizard  
+## Add a new report by using the Report Wizard  
   
 1.  In Solution Explorer, right-click the Reports folder, and then select **Add New Report**. The **Report Wizard** dialog box opens.  
   
@@ -27,7 +27,7 @@ helpviewer_keywords:
   
     -   **Select a Data Source.** The first step in creating a report is to define a data source. Report Wizard provides a list of all shared data sources in the report project, in addition to an option to create a new data source.  
   
-    -   **Design a Query.** The next step is to design a query. You can type the query string, build it using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services query designers](../../reporting-services/report-data/query-design-tools-ssrs.md).  
+    -   **Design a Query.** The next step is to design a query. You can enter the query string, build it by using Query Designer, or import a query from another report. For information about Query Designers, see [Reporting Services query designers](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
     -   **Choose a Report Type.** The next step is to select the type of report you want. You can choose a tabular or matrix report. A tabular report has a fixed number of columns. A matrix, or crosstab, report has a variable number of columns based on the results of the query. A map report displays analytical against a geographic background.  
   
@@ -45,9 +45,9 @@ helpviewer_keywords:
   
 ## Add an existing report  
   
-1.  From the **Project** menu, select **Add**, and then  **Existing Item**.  
+1.  From the **Project** menu, select **Add**, and then choose  **Existing Item**.  
   
-2.  Navigate to the location of the .rdl file, select it, and then select **Add**.  
+2.  Navigate to the location of the .rdl file, choose it, and then select **Add**.  
   
      The report is added to the project under the **Reports** folder. When you close and reopen the project, reports are sorted alphabetically.  
   

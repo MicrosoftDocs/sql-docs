@@ -1,6 +1,6 @@
 ---
 title: "New shared schedule (Management Studio)"
-description: Learn how to create a new shared schedule to run published reports and subscriptions using the options on the New Schedule page in SQL Server Management Studio.
+description: Learn how to create a new shared schedule to run published reports and subscriptions by using the options on the New Schedule page in SQL Server Management Studio.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -25,7 +25,7 @@ f1_keywords:
   
 ## Options  
  **Name**  
- Type a name for the shared schedule. This name appears in drop-down lists when users select a shared schedule for reports and subscriptions. Be sure to provide a descriptive name that fits easily within a list and that easily distinguishes one shared schedule from another. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
+ Enter a name for the shared schedule. This name appears in drop-down lists when users select a shared schedule for reports and subscriptions. Be sure to provide a descriptive name that fits easily within a list and that easily distinguishes one shared schedule from another. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
   
 ` ; ? : \@ & = + , $ / * < > " /  `
   

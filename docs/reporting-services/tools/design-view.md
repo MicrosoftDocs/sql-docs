@@ -15,20 +15,21 @@ helpviewer_keywords:
 ---
 # Design view
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Report Designer, use Design view to arrange report items in the report. Design view is sometimes called the design surface or layout view.  
-  ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)
+  :::image type="content" source="../../reporting-services/media/ssrs-ssdt-preview.png" alt-text="Screenshot that shows the Preview button.":::
+
 ## Report design surface  
 The design surface consists of three sections: 
 + report body
 + page header
 + page footer 
 
-Use the Toolbox to select items to place in any of these three sections. Use the Report Data pane to view images, parameters, data sources, and datasets, including dataset queries and field lists. After you add report items to the design surface, drag dataset fields from the **Report Data** pane onto data regions such as table, matrix, or list. Each item on the report design surface contains properties that can be managed using a properties dialog box or the Properties pane.  
+Use the Toolbox to select items to place in any of these three sections. Use the Report Data pane to view images, parameters, data sources, and datasets, including dataset queries and field lists. After you add report items to the design surface, drag dataset fields from the **Report Data** pane onto data regions such as table, matrix, or list. Each item on the report design surface contains properties that can be managed by using a properties dialog box or the Properties pane.  
   
 ## Toolbox  
  The Toolbox lists data regions and other report items that are available for your report. To add report items from the Toolbox, double-click the item or drag it to the design surface. You can then change the shape and size by using the object handles.  
   
 ## Report Data pane  
- To view the Report Data pane, on the **View** menu, select **Report Data**. Use this pane to define parameters, images, data sources, and datasets, and to reference built-in fields such as ReportName. To add a new item, select the **New** menu and select an item. To add calculated fields to an existing dataset, select **Dataset**, and in the **Dataset Properties** dialog box, select **Fields**. Select an item and select **Edit** to open the **Properties** dialog box. You can also right-click items in the Report Data pane to add items or update their properties.  
+ To view the Report Data pane, on the **View** menu, select **Report Data**. Use this pane to define parameters, images, data sources, and datasets, and to reference built-in fields such as ReportName. To add a new item, select the **New** menu and choose an item. To add calculated fields to an existing dataset, select **Dataset**, and in the **Dataset Properties** dialog box, choose **Fields**. Choose an item and select **Edit** to open the **Properties** dialog box. You can also right-click items in the Report Data pane to add items or update their properties.  
   
  Drag items from the Report Data pane to data regions and text boxes on the design surface to add data and images to a report.  
   

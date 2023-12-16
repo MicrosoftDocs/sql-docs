@@ -16,7 +16,7 @@ helpviewer_keywords:
 # Grouping pane
 When you design [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] reports, the Grouping pane displays the row groups and column groups for the currently selected Tablix data region. The Grouping pane isn't available for the Chart or Gauge data regions. The Grouping pane consists of a Row Groups pane and a Column Groups pane. The Grouping pane has two modes: default and Advanced. Default mode displays a hierarchical view of the dynamic members for row and column groups. Advanced mode displays both dynamic and static members for row and column groups. A group is a named set of data from a report dataset that is displayed on a data region. Groups are organized into hierarchies that include static and dynamic members. For more information, see [Understanding groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) If you don't see the Grouping pane, then on the **Report** menu, select **Grouping**.
+  :::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png"::: If you don't see the Grouping pane, then on the **Report** menu, select **Grouping**.
   
  Cells in the row and column group areas can be static or dynamic members of a group. Static members repeat once per group and typically contain labels or totals. Dynamic members repeat once per group instance and typically contain the unique values of the group expression. As you select Tablix cells in the row group area or column group area, the corresponding group member is selected in the Row Groups or Column Groups pane. Conversely, if you select groups in the Grouping pane, the corresponding cell associated with the group member is selected on the design surface. For more information about Tablix row and column group areas, see [Tablix data region areas &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -29,12 +29,12 @@ When you design [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]
 ## Default mode  
  In default mode, the Row Groups pane and the Column Groups pane display a hierarchical view for all parent groups, child groups, and adjacent groups. A child group appears indented under its parent group. An adjacent group appears at the same indent level as its sibling groups. The following figure shows a Tablix data region with nested row groups and nested and adjacent column groups.  
   
- :::image type="content" source="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif" alt-text="Screenshot that shows a nested tablix with adjacent row and column groups." lightbox="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif":::
+ :::image type="content" source="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif" alt-text="Screenshot that shows a nested tablix with adjacent row and column groups.":::
   
   
  The Grouping pane displays the corresponding row and column groups. In the following figure, the group based on subcategory is selected in the Row Groups pane, and the [Subcat] grouping cell is selected in the Tablix data region:  
   
- :::image type="content" source="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif" alt-text="Screenshot that shows a Grouping pane for nested row and column groups." lightbox="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif":::
+ :::image type="content" source="../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif" alt-text="Screenshot that shows a Grouping pane for nested row and column groups.":::
    
  In the Row Groups pane, the group based on subcategory is a child of the group based on category. In the Column Groups pane, the country/region group is a child of the geography group. The year group and the country/region groups are adjacent groups.  
   
@@ -55,7 +55,7 @@ To edit the default values, you must select the group member in the Row or Colum
   
 -   **KeepTogether**.  
   
--   **KeepWithGroup**. Boolean. For static row members only. Where possible, keep this row with the previous or following sibling dynamic member, if it isn't hidden.  
+-   **KeepWithGroup**. Boolean. Used for static row members only. Where possible, keep this row with the previous or following sibling dynamic member, if it isn't hidden.  
   
 -   **RepeatOnNewPage**. Boolean. For static row members only and where KeepWithGroup isn't None. Where possible, repeat this static row on every page that has at least one instance of the dynamic member specified by KeepWithGroup.  
   

@@ -19,7 +19,7 @@ f1_keywords:
   
 ## Options  
  **Name**  
- Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
+ Enter the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Don't use the following characters when specifying a name:  
   
  `; ? : \@ & = + , $ / * < > " /`  
   

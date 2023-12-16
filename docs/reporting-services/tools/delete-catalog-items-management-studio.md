@@ -14,11 +14,11 @@ f1_keywords:
 # Delete Catalog Items (Management Studio)
   Use this page to delete shared schedules and role definitions.  
   
- If you delete a shared schedule that is used by multiple reports and subscriptions, the report server creates individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule contains the date, time, and recurrence pattern that was specified in the shared schedule. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doesn't provide central management of individual schedules. If you delete a shared schedule, you now need to maintain the schedule information for each individual item. Before deleting a shared schedule, use the [Reports page](../../reporting-services/tools/schedule-properties-reports-page.md) to determine which reports are currently using the shared schedule.  
+ If you delete a shared schedule that is used by multiple reports and subscriptions, the report server creates individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule contains the date, time, and recurrence pattern that was specified in the shared schedule. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doesn't provide central management of individual schedules. If you delete a shared schedule, you now need to maintain the schedule information for each individual item. Before deleting a shared schedule, use the [Reports page](../../reporting-services/tools/schedule-properties-reports-page.md) to determine the reports that currently use the shared schedule.  
   
  For role definitions, you can only delete those definitions that aren't actively used in a role assignment. If you try to delete a role that is currently in use, the report server doesn't delete the role and you see an error message to that effect. If this page contains a single role definition that isn't currently in use, you delete it when you select **OK**. If this page contains multiple roles, you can't select which roles to keep or remove. All unused role definitions are deleted when you select **OK**.  
   
- You can't undo a delete operation. If you want to recover an item that you deleted, you must either recreate it or restore a backup copy of the report server database.  
+ You can't undo a delete operation. To recover an item that you deleted, you must either recreate it or restore a backup copy of the report server database.  
   
 ## Options  
  **Name**  

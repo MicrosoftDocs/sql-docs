@@ -51,7 +51,7 @@ Or, use the following query to show the in-memory storage utilization:
 SELECT xtp_storage_percent FROM sys.dm_db_resource_stats;
 ```
 
-## Correct out-of-In-memory OLTP storage situations - Errors 41823 and 41840
+## Correct out-of-memory OLTP storage situations - Errors 41823 and 41840
 
 Meeting the in-memory OLTP storage cap in your database results in INSERT, UPDATE, ALTER and CREATE operations failing with error 41823 (for single databases) or error 41840 (for elastic pools). Both errors cause the active transaction to abort. 
 

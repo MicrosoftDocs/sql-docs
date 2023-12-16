@@ -29,7 +29,7 @@ Table and table variable rows, as well as indexes, count toward the max user dat
 
 Once this limit is exceeded, insert and update operations might start failing with error 41823.
 
-## Correct out-of-In-memory OLTP storage situations - error 41823
+## Correct out-of-memory OLTP storage situations - error 41823
 
 Meeting the in-memory OLTP storage cap in your database results in INSERT, UPDATE, ALTER and CREATE operations failing with error 41823. This error can cause the active transaction to abort.
 

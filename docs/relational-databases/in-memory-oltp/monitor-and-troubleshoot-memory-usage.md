@@ -24,7 +24,7 @@ This article covers monitoring your [!INCLUDE [inmemory](../../includes/inmemory
 > - [Monitor in-memory OLTP storage in Azure SQL Database](/azure/azure-sql/database/in-memory-oltp-monitor-space?view=azuresql-db&preserve-view=true)
 > - [Monitor in-memory OLTP storage in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/in-memory-oltp-monitor-space?view=azuresql-mi&preserve-view=true)
 
-## <a id="bkmk_CreateDB"></a> Create a sample database with memory-optimized tables
+## <a id="bkmk_CreateDB"></a> 1. Create a sample database with memory-optimized tables
 
  The following steps create a database to use for our exercise.
 
@@ -32,8 +32,8 @@ This article covers monitoring your [!INCLUDE [inmemory](../../includes/inmemory
   
 1. Select **New Query**.  
 
-> [!NOTE]
-> You can skip this next step if you already have a database with memory-optimized tables.
+   > [!NOTE]
+   > You can skip this next step if you already have a database with memory-optimized tables.
   
 1. Paste this code into the new query window and execute each section to create the test database for this exercise, `IMOLTP_DB`.
 
@@ -122,7 +122,7 @@ This article covers monitoring your [!INCLUDE [inmemory](../../includes/inmemory
     GO  
     ```  
   
-## <a id="bkmk_Monitoring"></a> 3. Monitor memory usage
+## <a id="bkmk_Monitoring"></a> 2. Monitor memory usage
   
 ### <a id="bkmk_UsingSSMS"></a> Monitor memory usage with [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
  Since [!INCLUDE [ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE [ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using **Object Explorer**. You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
@@ -272,13 +272,13 @@ The following sample output shows that the memory allocated is 18 MB system-leve
   
  For more information, see [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-## <a id="bkmk_MemOptObjects"></a> 4. Manage memory consumed by memory-optimized objects
+## <a id="bkmk_MemOptObjects"></a> 3. Manage memory consumed by memory-optimized objects
  
  You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool. For more information, see [Bind a database with memory-optimized tables to a resource pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 ## <a id="bkmk_Troubleshooting"></a> Troubleshoot memory issues
 
- Troubleshooting memory issues is a three-step process:  
+Troubleshooting memory issues is a three-step process:  
   
 1. Identify how much memory is being consumed by the objects in your database or instance. You can use a rich set of monitoring tools available for memory-optimized tables as described earlier. For example, see the sample queries on the DMVs `sys.dm_db_xtp_table_memory_stats` or `sys.dm_os_memory_clerks`.  
   

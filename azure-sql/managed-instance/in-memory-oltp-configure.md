@@ -10,7 +10,7 @@ ms.subservice: performance
 ms.topic: how-to
 monikerRange: "=azuresql||=azuresql-mi"
 ---
-# Use in-memory OLTP Azure SQL Managed Instance to improve your application performance
+# Use in-memory OLTP in Azure SQL Managed Instance to improve your application performance
 [!INCLUDE [appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
 > [!div class="op_single_selector"]

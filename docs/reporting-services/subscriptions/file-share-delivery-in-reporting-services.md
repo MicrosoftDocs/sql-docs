@@ -39,7 +39,7 @@ helpviewer_keywords:
   
 -   If the report includes charts, the default presentation is used. If the report links through to another report, the link is rendered as static text.  
   
--   If you want to retain interactive features in a delivered report, use e-mail delivery instead. The e-mail contains a link to the report on the report server and users can use the interactive features. For more information, see [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   If you want to retain interactive features in a delivered report, use e-mail delivery instead. The e-mail contains a link to the report on the report server and users can use the interactive features. For more information, see [E-mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 ##  <a name="bkmk_target_folders"></a> Target folders  
  When defining a subscription that uses file share delivery, you must specify an existing folder as the target folder. The report server doesn't create folders on the file system. The folder that you specify must be accessible over a network connection.  

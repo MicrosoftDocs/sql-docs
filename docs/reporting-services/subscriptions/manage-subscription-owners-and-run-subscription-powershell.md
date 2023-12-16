@@ -14,9 +14,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Starting with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This article provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report displays the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
-
-:::image type="icon" source="/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg":::
+Starting with [!INCLUDE[sql2008r2](../../includes/sql2008r2-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This article provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report displays the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>. 
 
 ##  <a name="bkmk_top"></a> In this article:
   
@@ -326,7 +324,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
 ## <a name="bkmk_run_1_subscription"></a> Script: Run (fire) a single subscription  
 
-This script runs a specific subscription by using the FireEvent method. The script immediately runs the subscription regardless of the schedule configured for the subscription. The EventType is matched against the known set of events that are defined in the report server configuration file **rsreportserver.config** The script uses the following event type for standard subscriptions:  
+This script runs a specific subscription by using the FireEvent method. The script immediately runs the subscription regardless of the schedule configured for the subscription. The EventType is matched against the known set of events that are defined in the report server configuration file **rsreportserver.config**. The script uses the following event type for standard subscriptions:  
   
  `<Event>`  
   
@@ -379,11 +377,7 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 ```  
 
 ## Related content 
-
-- [ReportingService2010.ListSubscriptions method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
-
-- [ReportingService2010.ChangeSubscriptionOwner method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
-
-- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
-
-- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)
+[ReportingService2010.ListSubscriptions method](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)    
+[ReportingService2010.ChangeSubscriptionOwner method](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
+[ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)    
+[ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)    

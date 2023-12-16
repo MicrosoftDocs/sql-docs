@@ -39,7 +39,7 @@ f1_keywords:
  Valid values are **User** and **System**. A user job is any job that an individual user initiates. This job includes running a report on-demand, manually generating a report history snapshot, or manually creating a report execution snapshot. An in-progress standard subscription is also a user job. A system job is a job that the report server initiates. System jobs include report processing that a schedule triggers.  
   
  **Job Action**  
- For reports, this column shows which report execution processes are underway. This value is always **Render**.  
+ For reports, this column shows the report execution processes that are underway. This value is always **Render**.  
   
  **Job Description**  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doesn't provide job descriptions by default.  

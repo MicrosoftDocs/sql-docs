@@ -80,7 +80,7 @@ This section summarizes the permission levels required to use each of the method
   
 3. Open a command prompt with administrative privileges.  
   
-4. Run each script file, using the sample command-line syntax provided with each example.  
+4. Run each script file by using the sample command-line syntax provided with each example.  
   
 **Tested environments**
   
@@ -326,7 +326,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
 ## <a name="bkmk_run_1_subscription"></a> Script: Run (fire) a single subscription  
 
-This script runs a specific subscription using the FireEvent method. The script immediately runs the subscription regardless of the schedule configured for the subscription. The EventType is matched against the known set of events that are defined in the report server configuration file **rsreportserver.config** The script uses the following event type for standard subscriptions:  
+This script runs a specific subscription by using the FireEvent method. The script immediately runs the subscription regardless of the schedule configured for the subscription. The EventType is matched against the known set of events that are defined in the report server configuration file **rsreportserver.config** The script uses the following event type for standard subscriptions:  
   
  `<Event>`  
   

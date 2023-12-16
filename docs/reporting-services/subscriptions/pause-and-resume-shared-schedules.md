@@ -33,18 +33,18 @@ helpviewer_keywords:
 ##  <a name="bkmk_native"></a> Pause and resume shared schedules (native mode)  
  To pause and resume a shared schedule, use the Schedules page in Report Manager. You can't use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; it doesn't provide options for pausing and resuming schedules. For more information, see [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
-#### Pause or resume a shared schedule  
+### Pause or resume a shared schedule  
   
 1.  From Report Manager select, **Site Settings**.  
   
 2.  Select **Schedules**.  
   
-3.  Select the schedule, and select **Pause** or **Resume** in the ribbon. If a Schedule is currently paused, the **Status** column contains **Paused**.  
+3.  Choose the schedule, and select **Pause** or **Resume** in the ribbon. If a Schedule is currently paused, the **Status** column contains **Paused**.  
   
 ##  <a name="bkmk_sharepoint"></a> Pause and resume shared schedules (SharePoint mode)  
  To pause and resume a shared schedule, use the Site Settings page or PowerShell. Schedules are managed per SharePoint site.  
   
-#### Pause or resume a shared schedule  
+### Pause or resume a shared schedule  
   
 1.  Select **Site Actions**.  
   
@@ -52,7 +52,7 @@ helpviewer_keywords:
   
 3.  In the Reporting Services section, select **Manage Shared Schedules**.  
   
-4.  Select the schedule, and select **Pause Selected Schedules** or **Run Selected Schedules**. If a Schedule is currently paused, the **Status** column contains **Paused**.  
+4.  Choose the schedule, and select **Pause Selected Schedules** or **Run Selected Schedules**. If a Schedule is currently paused, the **Status** column contains **Paused**.  
   
 ## Related content 
  [Schedules](../../reporting-services/subscriptions/schedules.md)   

@@ -35,7 +35,7 @@ helpviewer_keywords:
 ## When you delete a shared schedule
 Shared schedules must be deleted manually using the Schedules page in the web portal or the Shared Schedules folder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. If you delete a shared schedule that's in use, all references to it are replaced with report-specific schedules.
 
-If you delete a shared schedule that is used by multiple reports and subscriptions, the report server creates individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule contains the date, time, and recurrence pattern that was specified in the shared schedule. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doesn't provide central management of individual schedules. If you delete a shared schedule, you now have to maintain the schedule information for each individual item.
+If you delete a shared schedule that is used by multiple reports and subscriptions, the report server creates individual schedules for each report and subscription that previously used the shared schedule. Each new individual schedule contains the date, time, and recurrence pattern that was specified in the shared schedule. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doesn't provide central management of individual schedules. When you delete a shared schedule, you have to maintain the schedule information for each individual item.
 
 **Note:**  If you aren't sure if a shared schedule is used, consider deleting it in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] instead of the Web portal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] provides the same shared schedule management features as Report Manager. But, it provides another Reports page that shows you the name of each report that uses the schedule.
 
@@ -53,14 +53,14 @@ A report-specific schedule that expired remains attached to the report. You can 
 
  If you're modifying a shared schedule, you can pause it before you make changes. The changes take effect when you resume the schedule.
 
-1. In the web portal, select **Settings** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) in the toolbar.  
+1. In the web portal, select **Settings** :::image type="icon" source="../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png"::: in the toolbar.  
 
    >[!NOTE]  
    >If **Settings** is not available, you do not have permission to access site settings.  
 
 1. Select **Site settings** from the dropdown menu.
 1. Select the **Schedules** tab.
-1. Select **+ New schedule**. (To modify an existing schedule, select the name of the schedule.)
+1. Select **+ New schedule**. To modify an existing schedule, select the name of the schedule.
 1. Type a descriptive name for the schedule.
 1. Select **Hour**, **Day**, **Week**, or **Month**. Select **Once** to create a schedule that runs one time only. Other options appear when you specify the basis of your schedule.
 1. Optionally select a date to start the schedule. The default is the current day. You can postpone the schedule start time by choosing a later date.
@@ -70,15 +70,15 @@ A report-specific schedule that expired remains attached to the report. You can 
 
 ### Delete a shared schedule (web portal)
 
-1. In the web portal, select **Settings** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) in the toolbar.
+1. In the web portal, select **Settings** :::image type="icon" source="../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png"::: in the toolbar.
 2. Select **Site settings** from the dropdown menu.
 3. Select the **Schedules** tab.
-4. Select the check box next to the shared schedule you want to delete, and then select **Delete**.
+4. Select the check box next to the shared schedule you want to delete, and then choose **Delete**.
 
 ### Create, delete, or modify a shared schedule (Management Studio)
  A shared schedule contains schedule and recurrence information. Any number of published reports and subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server can use that information. If you have many reports and subscriptions that run at the same time, you can create a shared schedule for those jobs. If you want to change the recurrence pattern or the end date, you can make the change in one place.
 
- Shared schedules are easier to maintain and give you more flexibility in managing scheduled operations. For example, you can pause and resume shared schedules. Also, if you find that too many scheduled operations are running at the same time, you can create multiple shared schedules that run at different times. Then, you can adjust the schedule information until the processing load evens out across the report server.
+ Shared schedules are easier to maintain and give you more flexibility in managing scheduled operations. For example, you can pause and resume shared schedules. Also, if you find that too many scheduled operations are running at the same time, you can create multiple shared schedules. These schedules can run at different times. Then, you can adjust the schedule information until the processing load evens out across the report server.
 
 #### Create or modify a shared schedule (Management Studio)
 
@@ -102,7 +102,7 @@ A report-specific schedule that expired remains attached to the report. You can 
 1.  In Object Explorer, expand a report server node.
 2.  To verify the shared schedule isn't currently used by reports, Expand the Shared Schedules folder, right-click the schedule and select **Properties**.
 3. Select the **Reports** tab to view the list of reports currently using the schedule.
-Select **Cancel**
+Select **Cancel**.
 4.  Expand the Shared Schedules folder, right-click the schedule you want to delete, and then select **Delete**. The **Delete Catalog Items** dialog box appears.
 5.  Select **OK**.
 
@@ -120,12 +120,12 @@ Select **Cancel**
 1.  Select **Site Actions**.
 2.  Select **Site Settings**.
 3.  In the Reporting Services section, select **Manage Shared Schedules**.
-4.  Select **Add Schedule** to open the Schedule Properties page.
+4.  Select **Add Schedule** to open the **Schedule Properties** page.
 5.  Enter a descriptive name for the schedule. On the application pages used to work with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports, this name appears in drop-down lists in schedule definition pages throughout the site. Avoid long names that are hard to read. Do follow a naming convention that puts the most description information at the beginning of the name.
 6.  Choose a frequency. Depending on the frequency you choose, the schedule options that appear on the page might change to support that frequency (for example, if you choose **Month**, the name of each month appears on the page).
 7.  Define the schedule. Not all schedule combinations can be supported in a single schedule.
 8.  Set a start and end date.
-9. Select **OK**.
+9.  Select **OK**.
 
 ### Delete shared schedules (SharePoint mode)
  All schedules, whether shared or report specific, must be deleted manually. When you delete a shared schedule that's in use, all references to it are replaced with unspecified custom schedules. An unspecified custom schedule is a custom schedule that doesn't have date or time information.

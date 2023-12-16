@@ -67,7 +67,7 @@ helpviewer_keywords:
   
  You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to view or cancel a job that is running on the report server. You must refresh the page to retrieve a list of jobs that are currently running or to get up-to-date job status from the report server database. When you connect to a report server in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], you can open a Jobs folder to view a list of reports that are currently processing on the report server computer. Status information for each job is displayed in the Job Properties page. You can view status information for all jobs by opening the Cancel Report Server Jobs dialog box.  
   
- You can't use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to list or cancel model generation, model processing, or data-driven subscriptions. Reporting a service doesn't provide a way to cancel model generation or processing. However, you can cancel data-driven subscriptions using the instructions provided in this article.  
+ You can't use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to list or cancel model generation, model processing, or data-driven subscriptions. Reporting a service doesn't provide a way to cancel model generation or processing. However, you can cancel data-driven subscriptions by using the instructions provided in this article.  
   
 ### How to cancel report processing or subscription  
   
@@ -97,7 +97,7 @@ helpviewer_keywords:
  A running job is stored in the report server temporary database. You can modify configuration settings in the RSReportServer.config file to control how often the report server scans for in-progress jobs and the interval after which the status of a running job changes from new to running. The **RunningRequestsDbCycle** setting specifies how often the report server scans for running processes. By default, status information is recorded every 60 seconds. The **RunningRequestsAge** setting specifies the interval at which a job is transitioned from new to running.  
   
 ##  <a name="bkmk_sharepoint"></a> View and cancel jobs (SharePoint mode)  
- Management of jobs in a SharePoint mode deployment is completed using SharePoint Central Administration, for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
+ Management of jobs in a SharePoint mode deployment is completed by using SharePoint Central Administration, for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
   
 #### Manage jobs in SharePoint mode  
   
@@ -109,7 +109,7 @@ helpviewer_keywords:
   
 4.  Select the **Job Id** to see the details of the job.  
   
-5.  Or select the box for your job and select **Delete** to cancel the job. Deleting the job doesn't delete the subscription.  
+5.  Or choose the box for your job and select **Delete** to cancel the job. Deleting the job doesn't delete the subscription.  
   
 ##  <a name="bkmk_programmatically"></a> Manage jobs programmatically  
  You can manage jobs programmatically or by using a script. For more information, see <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>.  

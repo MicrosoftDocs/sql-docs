@@ -32,16 +32,16 @@ helpviewer_keywords:
 ##  <a name="bkmk_manage_and_delete"></a> Manage and delete a data-driven subscription  
  A data-driven subscription that is in progress can't be stopped or deleted via the web portal. For this reason, it's advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- To delete a data-driven subscription, select the checkbox next to the report on the **Subscriptions** page, and then select **Delete**.  
+ To delete a data-driven subscription, select the checkbox next to the report on the **Subscriptions** page, and then choose **Delete**.  
   
  For instructions on how to cancel a data-driven subscription, see [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
 ##  <a name="bkmk_create_and_modify"></a> Create and modify a data-driven subscription  
- To create a data-driven subscription, select a report that uses stored credentials or no credentials. When you create the data-driven subscription, consider using a naming convention for the description field so you can easily differentiate standard subscriptions from data-driven subscriptions.  
+ To create a data-driven subscription, select a report that uses stored credentials or no credentials. When you create the data-driven subscription, you might decide to use a naming convention for the description field so you can easily differentiate standard subscriptions from data-driven subscriptions.  
   
 ### Create a data-driven subscription (native mode)  
   
-1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the dropdown menu.  
+1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the menu.  
   
 2. Select the **Subscriptions** tab.  
   
@@ -55,11 +55,11 @@ helpviewer_keywords:
   
 ### Modify a data-driven subscription (native mode)  
   
-1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the dropdown menu.  
+1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the menu.  
   
 2. Select the **Subscriptions** tab.  
   
-3. Select the checkbox next to the subscription you want to modify, and select **Edit**. Data-driven subscriptions have the value "Data-driven" in the **Type** column.  
+3. Select the checkbox next to the subscription you want to modify, and choose **Edit**. Data-driven subscriptions have the value "Data-driven" in the **Type** column.  
   
 ### Modify an existing data-driven subscription (SharePoint mode)  
   
@@ -68,7 +68,7 @@ helpviewer_keywords:
 2.  Select the subscription you want to modify.  
   
     > [!NOTE]  
-    > You can modify any value that is already specified. All values are presented as they were first created, except for the password that is used to access the subscriber data store. You must retype the password every time you modify values on the second page or any subsequent page.  
+    > You can modify any value that is already specified. All values are presented as they were first created, except for the password that is used to access the subscriber data store. You must reenter the password every time you modify values on the second page or any subsequent page.  
   
   Before you can create a data-driven subscription, ensure that you satisfy the following requirements:  
   
@@ -80,10 +80,10 @@ helpviewer_keywords:
   
 -   **Data requirements**. You must have an accessible external data source that contains subscriber data.  
   
--   **User requirements**. The author of the subscription must have permission to "Manage reports" and "Manage all subscriptions." For more information about item-level task permissions, see [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md). The author must also have the necessary credentials to access the external data source that contains subscriber data.  
+-   **User requirements**. The author of the subscription must have permission to "Manage reports" and "Manage all subscriptions." For more information about item-level task permissions, see [Tasks and permissions](../../reporting-services/security/tasks-and-permissions.md). The author must also have the necessary credentials to access the external data source that contains subscriber data.  
   
 ##  <a name="bkmk_define_query"></a> Define a query that retrieves subscription information  
- A data-driven subscription must specify a query or command that retrieves subscriber data. The query should produce one row for each subscriber. If you're using the e-mail delivery extension, the query should return a valid e-mail alias for each subscriber. The number of deliveries that are made is based on the number of rows returned by the query. If the row set consists of 10,000 rows, the subscription delivers 10,000 reports.  
+ A data-driven subscription must specify a query or command that retrieves subscriber data. The query should produce one row for each subscriber. If you use the e-mail delivery extension, the query should return a valid e-mail alias for each subscriber. The number of deliveries that are made is based on the number of rows returned by the query. If the row set consists of 10,000 rows, the subscription delivers 10,000 reports.  
   
  If executing the query is time-consuming, you can increase the time-out value to accommodate other processing.  
   

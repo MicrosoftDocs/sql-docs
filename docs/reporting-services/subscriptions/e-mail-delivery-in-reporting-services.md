@@ -19,7 +19,7 @@ helpviewer_keywords:
 
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes an email delivery extension that provides a way to email a report to individual users or groups. To distribute a report by email, first, you configure the report server for email delivery. Then, define either a standard subscription or a data-driven subscription. A single subscription can't deliver multiple reports in a single email message. However you can create multiple subscriptions.  
   
- The report server connects with an email server through a standard connection. It doesn't use communication that is encrypted using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The email server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
+ The report server connects with an email server through a standard connection. It doesn't use communication that is encrypted by using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL). The email server must be a remote or local Simple Mail Transport Protocol (SMTP) server on the same network as the report server.  
   
  For detailed steps that walk you through creating a subscription, see the following articles:  
   
@@ -64,7 +64,7 @@ helpviewer_keywords:
 ::: moniker-end
 
 ## Specify email addresses in a subscription  
- If you're distributing reports within an intranet and you use an SMTP gateway to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Exchange server, type the email alias. For example, type the alias as if you were sending email to a coworker. If delivery is to an external email account, type the full email address. If you specify more email addresses to add others to your subscription, subscribers get an exact copy of the report that is produced from this subscription.  
+ If you're distributing reports within an intranet and you use an SMTP gateway to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Exchange server, enter the email alias. For example, enter the alias as if you were sending email to a coworker. If delivery is to an external email account, enter the full email address. If you specify more email addresses to add others to your subscription, subscribers get an exact copy of the report that is produced from this subscription.  
   
  The report server doesn't validate email addresses or obtain email addresses from an email server. You must know in advance which email addresses you want to use. By default, you can email reports to any valid email account within or outside of your organization. Configuration settings can be used, however, to restrict email delivery to mail server hosts that you identify by name. You can specify other hosts if you want to support email delivery to people that aren't members of your organization.  
   

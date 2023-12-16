@@ -148,7 +148,8 @@ helpviewer_keywords:
   
 3.  Select the checkbox next to the subscription, and select **Delete**.  
   
-## Related content  
+## Related content
+  
  [Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [E-Mail delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [File share delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   

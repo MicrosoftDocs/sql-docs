@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
 ---
-# Create and Manage Subscriptions for Native Mode Report Servers
-  A standard subscription is one that individual users create who want to have a report delivered through e-mail or to a shared folder. This article provides information about standard subscriptions that individual users create and manage. Data-driven subscriptions have different requirements and steps, and are discussed in a separate article. For more information, see [Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
+# Create and manage subscriptions for native mode report servers
+  A standard subscription is one that individual users create who want to have a report delivered through e-mail or to a shared folder. This article provides information about standard subscriptions that individual users create and manage. Data-driven subscriptions have different requirements and steps, and are discussed in a separate article. For more information, see [Create, modify, and delete data-driven subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
   
  **In this article:**  
   
@@ -28,7 +28,7 @@ helpviewer_keywords:
 -   [Delete a subscription](#bkmk_delete_subscription)  
   
 ##  <a name="bkmk_create_subscription"></a> General requirements for subscriptions  
- The content in this article explains how to create subscriptions on a native mode report server using the web portal in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. After you define a subscription, you can access it in web portal through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
+ The content in this article explains how to create subscriptions on a native mode report server by using the web portal in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. After you define a subscription, you can access it in web portal through the My Subscriptions page or the **Subscriptions** tab of a specific report.  
   
  [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) explains how to use the application pages in a SharePoint site to subscribe to reports on a SharePoint mode report server.  
   
@@ -61,15 +61,15 @@ helpviewer_keywords:
 7. Under **Destination**, select **Windows File Share**.  
   
 8. Under **Delivery options (Windows File Share)**, specify:  
-   - **File Name**: Type a file name for the report.
+   - **File Name**: Enter a file name for the report.
    - **Add a file extension when the file is created**: This option adds a three-character file extension to the file name. The report output format you select determines the file extension.  
-   - **Path**: Type a Universal Naming Convention (UNC) path to an existing folder where you want to deliver the reports (for example, \\<servername\>\<myreports>). Include double backslash characters at the beginning of the path. Don't specify a trailing backslash.  
+   - **Path**: Enter a Universal Naming Convention (UNC) path to an existing folder where you want to deliver the reports, for example, `\\<servername>\<myreports>`. Include double backslash characters at the beginning of the path. Don't specify a trailing backslash.  
   
-     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png" alt-text="Screenshot that shows a file share subscription." lightbox="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png":::
+     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png" alt-text="Screenshot that shows a file share subscription.":::
   
    - **Render Format**: Select a report output format for file delivery. Choose a format that corresponds to the desktop application that is used to open the report. Avoid formats that don't render a report in a single stream. Also, avoid formats that introduce interactivity that can't be supported in a static file (for example, HTML 4.0).  
   
-   - **Credentials**: Select to use either the File share account or a specific Windows user credentials. The **Use file share account** is disabled if your report administrator doesn't configure a file share account. For more information, see [Subscription settings and a file share account &#40;configuration manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). In the **User name** and **Password** text boxes, specify the credentials required to access the file share, using the format *\<domain>*\\*\<user name>* for the user name.  
+   - **Credentials**: Select to use either the File share account or a specific Windows user credentials. The **Use file share account** is disabled if your report administrator doesn't configure a file share account. For more information, see [Subscription settings and a file share account &#40;configuration manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). In the **User name** and **Password** text boxes, specify the credentials required to access the file share in the format `\<domain>\<user name>` for the user name.  
   
    - **Overwrite options**:  
      - **Overwrite an existing file with a newer version**.  
@@ -86,7 +86,7 @@ The report is delivered as a static file. If the report includes interactive fea
   
 2. Navigate to the desired report. Right-click the report and select **Subscribe**.  
   
-3. **Description**: Type a description for the report subscription, maximum 512 characters.  
+3. **Description**: Enter a description for the report subscription, maximum 512 characters.  
   
 4.  **Owner**: The owner field defaults to the current user and can't be edited when you create the subscription. However, after the subscription is saved, you can change the subscription properties including the owner and description.  
 
@@ -101,14 +101,14 @@ The report is delivered as a static file. If the report includes interactive fea
 7. Under **Destination**, select **E-Mail**.  If the **E-Mail** option isn't available, your report server isn't configured for e-mail subscriptions. See [Configure e-mail for a Reporting Services service application](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md).
   
 8. Under **Delivery options (E-Mail)**, specify:
-   - **To**: The recipient name in the To: field is self-addressed using your domain user account. Verify the format is [user name]@[domain.com]. Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure e-mail for a Reporting Services service application](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
+   - **To**: The recipient name in the To: field is self-addressed by using your domain user account. Verify the format is [user name]@[domain.com]. Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure e-mail for a Reporting Services service application](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)
 
      >[!NOTE]  
-     > Depending on your permissions, you might be able to type the e-mail address you want the report delivered to. To specify multiple e-mail addresses, separate them with a semicolon (;). You can also type additional e-mail addresses in the **Cc**, **Bcc**, and **Reply-To** text boxes. This requires that you have permission to manage all subscriptions.  
+     > Depending on your permissions, you might be able to enter the e-mail address you want the report delivered to. To specify multiple e-mail addresses, separate them with a semicolon (;). You can also enter additional e-mail addresses in the **Cc**, **Bcc**, and **Reply-To** text boxes. This requires that you have permission to manage all subscriptions.  
   
    - **Subject**: Defaults to "@ReportName was executed at @ExecutionTime." You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
   
-     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png" alt-text="Screenshot that shows an email subscription." lightbox="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png":::
+     :::image type="content" source="../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png" alt-text="Screenshot that shows an email subscription.":::
 
    - **Include Report**: Select this option to embed or attach a copy of the report. The rendering format you select determines the format of the report. Don't choose this option if you think the report size exceeds the limit defined for your e-mail system.  
   
@@ -131,7 +131,7 @@ The report is delivered as a static file. If the report includes interactive fea
   
  A user who creates a subscription owns that subscription. Each user can modify or delete the subscriptions that they own. You can change the owner of the report from the subscription properties page or you can change the ownership programmatically. For more information, see the following link:  
   
--   [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   

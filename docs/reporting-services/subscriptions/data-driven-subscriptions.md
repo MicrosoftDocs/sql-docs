@@ -17,7 +17,7 @@ helpviewer_keywords:
   
 -    Distribute a report to a fluctuating list of subscribers. For example, you can use data-driven subscriptions to distribute a report throughout a large organization where subscribers vary from one month to the next. Or, you can use other criteria that determine group membership from an existing set of users.  
   
--   Filter the report output using report parameter values that are retrieved at run time.  
+-   Filter the report output by using report parameter values that are retrieved at run time.  
   
 -   Vary report output formats and delivery options for each report delivery.  
   

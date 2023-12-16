@@ -40,7 +40,7 @@ helpviewer_keywords:
 -   [Manage inactive subscriptions](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> Native mode user interface  
- Individual [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription using the **My Subscriptions** page or the **Subscriptions** tab in the web portal. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message isn't updated.  
+ Individual [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] users can monitor the status of a subscription by using the **My Subscriptions** page or the **Subscriptions** tab in the web portal. Subscription pages include columns that indicate when the subscription was last run and the status of the subscription. Status messages are updated when the subscription is scheduled to process. If the trigger never occurs (for example, a report execution snapshot is never refreshed or a schedule never runs), the status message isn't updated.  
   
  The following table describes the possible values for the **Status** column.  
   
@@ -58,7 +58,7 @@ helpviewer_keywords:
 |Failure connecting to the destination folder, \<path>. Verify the destination folder or file share exists.|Indicates that the folder you specified couldn't be found; this message is from the file share delivery extension.|  
 |The file \<filename> couldn't be written to \<path>. Attempting to retry.|Indicates that the file couldn't be updated with a newer version; this message is from the file share delivery extension.|  
 |Failure writing file \<filename>: \<message>|Indicates that the delivery to the file share location didn't succeed; this message is from the file share delivery extension.|  
-|\<custom status messages>|Status messages about delivery success and failure, provided by delivery extensions. If you're using a third-party or custom delivery extension, other status messages might be provided.|  
+|\<custom status messages>|Status messages about delivery success and failure, provided by delivery extensions. If you use a third-party or custom delivery extension, other status messages might be provided.|  
   
  Report server administrators can also monitor standard subscriptions that are currently processing. Data-driven subscriptions can't be monitored. For more information, see [Manage a running process](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -69,11 +69,15 @@ helpviewer_keywords:
   
  Report server administrators can review the **ReportServerService_*.log** files to determine subscription delivery status. For e-mail delivery, report server log files include a record of processing and deliveries to specific e-mail accounts. The following path is the default location of the log files:  
   
- `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
+ ```
+ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles
+ ```  
   
  The following example is a log filename:  
   
- `ReportServerService__05_21_2019_00_05_07.log`  
+ ```
+ ReportServerService__05_21_2019_00_05_07.log
+ ```
   
  The following example is a trace log file error message related to subscriptions:  
   

@@ -1,6 +1,6 @@
 ---
 title: "SharePoint library delivery in Reporting Services"
-description: Learn how to use the SharePoint library delivery extension in Reporting Services, using a subscription from an application page on a SharePoint site.
+description: Learn how to use the SharePoint library delivery extension in Reporting Services by using a subscription from an application page on a SharePoint site.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -43,11 +43,11 @@ helpviewer_keywords:
   
 1.  Go to the SharePoint site from which you access the report.  
   
-2.  Select the report, select the down arrow next to the report, and select **Manage Subscriptions**.  
+2.  Choose the report, select the down arrow next to the report, and choose **Manage Subscriptions**.  
   
 3.  Select **Create**, **Edit**, or **Delete**.  
   
- A Status message on the Manage Subscriptions list displays current information about the subscription, including whether it succeeded and the date and time the subscription last ran.  
+ A Status message on the **Manage Subscriptions** list displays current information about the subscription, including whether it succeeded and the date and time the subscription last ran.  
   
 ## Set delivery options  
  You can set the following delivery options on a subscription that delivers a report to a SharePoint library.  
@@ -74,7 +74,7 @@ helpviewer_keywords:
  Specifies whether the subscription processing replaces a file with the same name and extension with a newer version. Choose **Overwrite** if you want to replace an existing file with a newer version. Choose **None** if you don't want the subscription to replace a file. In this case, no delivery occurs if a file exists with the target name and extension. Choose **Autoincrement** if you want to add successive versions of the same file by appending a number at the end of the file name.  
   
  Autocopy  
- If you're using the Autocopy feature to automatically copy the latest version of a file to multiple locations, the file is copied if **Overwrite** is enabled. If you used **Autoincrement** or **None**, the delivery fails and the **rsDeliveryError** error occurs.  
+ If you use the Autocopy feature to automatically copy the latest version of a file to multiple locations, the file is copied if **Overwrite** is enabled. If you used **Autoincrement** or **None**, the delivery fails and the **rsDeliveryError** error occurs.  
   
 ## Related content  
  [Create and manage subscriptions for SharePoint mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   

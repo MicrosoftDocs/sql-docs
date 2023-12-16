@@ -73,7 +73,7 @@ helpviewer_keywords:
  To specify stored credentials or the unattended report processing account, edit the data source properties of the report. If the report uses a shared data source, edit the shared data source instead.  
   
 ##  <a name="bkmk_credentials"></a> Store credentials and processing accounts  
- How you work with a schedule depends on tasks that are part of your role assignment. If you're using predefined roles, users who are Content Managers and System Administrators can create and manage any schedule. If you use custom role assignments, the role assignment must include tasks that support scheduled operations.  
+ How you work with a schedule depends on tasks that are part of your role assignment. If you use predefined roles, users who are Content Managers and System Administrators can create and manage any schedule. If you use custom role assignments, the role assignment must include tasks that support scheduled operations.  
   
 |To do this task|Include this task|Native Mode Predefined roles|SharePoint mode Groups|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
@@ -99,7 +99,7 @@ helpviewer_keywords:
   
 2.  The report server saves the schedule information in the report server database.  
   
-3.  The report server creates a corresponding job in SQL Server Agent that includes the schedule information provided. The jobs are created through a stored procedure, using the existing open connection to the report server database.  
+3.  The report server creates a corresponding job in SQL Server Agent that includes the schedule information provided. The jobs are created through a stored procedure and use the existing open connection to the report server database.  
   
 4.  SQL Server Agent runs the job on the date and time specified in the schedule. The job creates an event that is added to a queue maintained by Reporting Services.  
   

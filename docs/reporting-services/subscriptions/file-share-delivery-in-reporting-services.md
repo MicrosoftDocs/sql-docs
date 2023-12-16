@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "file share delivery [Reporting Services]"
 ---
 # File share delivery in Reporting Services
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a file share delivery extension so that you can deliver a report to a folder. The file share delivery extension is available by default and requires no other configuration. In order for file delivery to succeed, you must set write access permissions on the shared folder. The account that requires writer permissions can either be credentials configured in the subscription or a **File share account** configured for the report server. For more information on the file share account, see [Subscription settings and a file share account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). In addition, users who require access to the reports must have read permissions on the shared folder.  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes a file share delivery extension so that you can deliver a report to a folder. The file share delivery extension is available by default and requires no other configuration. In order for file delivery to succeed, you must set write access permissions on the shared folder. The account that requires writer permissions can either be credentials configured in the subscription or a **File share account** configured for the report server. For more information on the file share account, see [Subscription settings and a file share account &#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). In addition, users who require access to the reports must have Read permissions on the shared folder.  
   
  To distribute a report to a file share, you define either a standard subscription or a data-driven subscription. To learn how to use file share delivery in a data-driven subscription, see [Create a data-driven subscription &#40;SSRS tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Additionally, the account that runs remote file share subscriptions requires rights to sign in locally on the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] computer.  
   
@@ -70,7 +70,7 @@ helpviewer_keywords:
   
  The following image is an example of the settings for a subscription configured for file share delivery.  
   
- :::image type="content" source="../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png" alt-text="Screenshot that shows the settings for a file share subscription." lightbox="../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png":::
+ :::image type="content" source="../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png" alt-text="Screenshot that shows the settings for a file share subscription.":::
   
 ## Related content 
  [Create and manage subscriptions for native mode report servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

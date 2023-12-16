@@ -16,7 +16,7 @@ helpviewer_keywords:
 ---
 
 # Change time zones and clock settings on a report server
-  A report server always uses the local time of the computer on which it's installed. You can't configure it to use a different time zone. If a client application points to a report server in a different time zone, the report server time zone is used to execute a scheduled operation. In Report Manager and SharePoint management pages, the time zone is indicated on each scheduling page so that you know exactly when a scheduled operation occurs. For example, the page for creating custom schedules notes, "Times are expressed in (UTC-08:00) Pacific time (US and Canada)."
+  A report server always uses the local time of the computer on which the server is installed. You can't configure it to use a different time zone. If a client application points to a report server in a different time zone, the report server time zone is used to execute a scheduled operation. In Report Manager and SharePoint management pages, the time zone is indicated on each scheduling page so that you know exactly when a scheduled operation occurs. For example, the page for creating custom schedules notes, "Times are expressed in (UTC-08:00) Pacific time (US and Canada)."
   The report server creates a SQL Server Agent job that is used to trigger the schedule. When the Report Server and the SQL Server Agent are located on separate servers, the time zone must be the same on all servers.
   
 > [!NOTE]
@@ -35,10 +35,10 @@ helpviewer_keywords:
  The time zone configuration for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode is managed as part of the SharePoint regional settings. For more information, see [Regional settings (SharePoint Server 2010 (/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14))](/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14)).  
   
 ## Change the clock settings  
- Changing the computer clock has no effect on existing timestamp values (for example, if you move the clock forward an hour, the timestamps of report history snapshots don't change). There might be a delay of 10 seconds before the Scheduling and Delivery Processor uses the new setting. The actual delay might vary if you modified polling interval settings in the configuration files.  
+ Changing the computer clock has no effect on existing timestamp values. For example, if you move the clock forward an hour, the timestamps of report history snapshots don't change. There might be a delay of 10 seconds before the Scheduling and Delivery Processor uses the new setting. The actual delay might vary if you modified polling interval settings in the configuration files.  
 
 ## Related content 
- [Start and stop the Report Server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [Start and stop the report server service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)  
   
 

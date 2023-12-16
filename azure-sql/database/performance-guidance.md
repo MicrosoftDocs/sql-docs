@@ -137,7 +137,7 @@ The query optimizer in Azure SQL Database is similar to the traditional SQL Serv
 
 An example that is common in SQL Server and which also applies to Azure SQL Database is how the query optimizer "sniffs" parameters. During compilation, the query optimizer evaluates the current value of a parameter to determine whether it can generate a more optimal query plan. Although this strategy often can lead to a query plan that is significantly faster than a plan compiled without known parameter values, currently it works imperfectly both in Azure SQL Database. (A new Intelligent Query Performance feature introduced with SQL Server 2022 named [Parameter Sensitivity Plan Optimization](/sql/relational-databases/performance/intelligent-query-processing-details) addresses the scenario where a single cached plan for a parameterized query is not optimal for all possible incoming parameter values. Currently, Parameter Sensitivity Plan Optimization is not available in Azure SQL Database.)
 
-Sometimes the parameter isn't sniffed, and sometimes the parameter is sniffed but the generated plan is suboptimal for the full set of parameter values in a workload. Microsoft includes query hints (directives) so that you can specify intent more deliberately and override the default behavior of parameter sniffing. You might choose to use hints when the default behavior is imperfect for a specific customer workload.
+The database engine supports [query hints](/sql/t-sql/queries/hints-transact-sql-query) (directives) so that you can specify intent more deliberately and override the default behavior of parameter sniffing. You might choose to use hints when the default behavior is imperfect for a specific workload.
 
 The next example demonstrates how the query processor can generate a plan that is suboptimal both for performance and resource requirements. This example also shows that if you use a query hint, you can reduce query run time and resource requirements for your database:
 
@@ -179,7 +179,7 @@ CREATE TABLE t1 (col1 int primary key, col2 int, col3 binary(200));
 GO
 ```
 
-The setup code creates a table that has irregularly distributed data in the `t1` table. The optimal query plan differs based on which parameter is selected. Unfortunately, the plan caching behavior doesn't always recompile the query based on the most common parameter value. So, it's possible for a suboptimal plan to be cached and used for many values, even when a different plan might be a better plan choice on average. Then the query plan creates two stored procedures that are identical, except that one has a special query hint.
+The setup code creates a table that has skewed (or irregularly distributed) data in the `t1` table. The optimal query plan differs based on which parameter is selected. Unfortunately, the plan caching behavior doesn't always recompile the query based on the most common parameter value. So, it's possible for a suboptimal plan to be cached and used for many values, even when a different plan might be a better plan choice on average. Then the query plan creates two stored procedures that are identical, except that one has a special query hint.
 
 ```sql
 -- Prime Procedure Cache with scan plan

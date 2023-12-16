@@ -24,7 +24,7 @@ helpviewer_keywords:
   
  Tasks can be performed only if they are part of a role and that role is included in a role assignment. Thus, if the View Models task is not included in a role, or that role is not included in a role assignment, users cannot view report models. The following diagram shows how permissions are combined into tasks, and how tasks are combined into roles that can be used for specific role assignments.  
  
- :::image type="content" source="../../reporting-services/security/media/report-securityobjects.gif" alt-text="Diagram that shows permissions and tasks." lightbox="../../reporting-services/security/media/report-securityobjects.gif"::: 
+ :::image type="content" source="../../reporting-services/security/media/report-securityobjects.gif" alt-text="Diagram that shows permissions and tasks."::: 
   
 ## System and item level tasks  
  Tasks fall into two categories: system level and item level. A role can include tasks only from a single category. The following table describes each category of tasks.  

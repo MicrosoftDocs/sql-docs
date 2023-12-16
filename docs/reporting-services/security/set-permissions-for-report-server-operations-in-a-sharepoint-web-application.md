@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "model item security [Reporting Services]"
 ---
 # Set permissions for report server operations in a SharePoint web application
-  For a report server that runs in SharePoint integrated mode, the security settings defined on the SharePoint site determine how you view and manage reports, report models, and shared data sources. If you're using the default SharePoint groups, permission levels, and permission assignments, you can work with reports and other documents using the current security settings.  
+  For a report server that runs in SharePoint integrated mode, the security settings defined on the SharePoint site determine how you view and manage reports, report models, and shared data sources. If you use the default SharePoint groups, permission levels, and permission assignments, you can work with reports and other documents by using the current security settings.  
   
  The default security settings might not provide the level of access that you want. If they don't, you can use the information provided in the following sections to learn which permissions are necessary for specific operations:  
   
@@ -41,9 +41,9 @@ helpviewer_keywords:
   
 -   View Application Pages  
   
- If you're using predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, you must add the permission if you're using custom permission levels or editing the permissions assigned to a particular user or group.  
+ If you use predefined permission levels, no action is required because the above permissions are already included in Full Control, Design, Contribute, Read, and Limited Access. However, you must add the permission if you use custom permission levels or editing the permissions assigned to a particular user or group.  
   
- "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server returns the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user '\<domain>\\<user\>' are insufficient for performing this operation."  
+ "Browse User Information" permission allows the report server to return information about the creator of the item and the user who last modified the item. Without this permission, the report server returns the following errors. For browse operations, the error is: "Report Server has encountered a SharePoint error. ---> System.UnauthorizedAccessException: Access is denied." For publish operations, the error is: "The permissions granted to user `<domain>\<user>` are insufficient for performing this operation."  
   
 ##  <a name="permissionReports"></a> Permissions to view and manage reports  
  Report definition permissions are defined through List permissions on the library that contains the report, but you can set permissions on individual reports if you want to restrict access. The following table provides a list of tasks and permissions that support each one.  
@@ -69,7 +69,7 @@ helpviewer_keywords:
 > [!NOTE]  
 >  Access to Report Builder can be determined by factors other than permissions. A site administrator can disable ad hoc reporting by setting server properties or limit the availability of Report Builder by not adding the Report Builder Report content type, which prevents users from creating new reports from the **New** menu on a library. In addition, a report server administrator can make Report Builder unavailable by setting properties on the report server. If any of these conditions are true for your server, you cannot use Report Builder even if you have the necessary permissions.  
   
- The following table provides a list of tasks for creating reports and using Report Builder, and permissions that support each one:  
+ The following table provides a list of tasks that allow you to create reports and use Report Builder, and permissions that support each one:  
   
 |Task|Permission|  
 |----------|----------------|  
@@ -87,7 +87,7 @@ helpviewer_keywords:
 ##  <a name="permissionSharedSchedules"></a> Permissions to create and manage shared schedules  
  Shared schedules aren't documents stored in a library. For this reason, creating and managing these schedules requires site permissions. You can't restrict access to specific shared schedules. Any shared schedule that you create is available to any user who has Open permission throughout the site.  
   
- The following table provides a list of tasks and permissions for creating, managing, and using shared schedules:  
+ The following table provides a list of tasks and permissions that allow you to create, manage, and use shared schedules:  
   
 |Task|Permission|  
 |----------|----------------|  
@@ -97,7 +97,7 @@ helpviewer_keywords:
 ##  <a name="permissionSubscriptions"></a> Permissions to create and manage subscriptions  
  SharePoint enforces a dependency between subscription and view permissions. You can't subscribe to a report that you don't have permission to view. If you grant permissions to subscribe to a report, view permissions are granted automatically.  
   
- The following table provides a list of tasks and permissions for creating, managing, and using subscriptions:  
+ The following table provides a list of tasks and permissions that allow you to create, manage, and use subscriptions:  
   
 |Task|Permission|  
 |----------|----------------|  
@@ -106,7 +106,7 @@ helpviewer_keywords:
 |Create, edit, or delete any subscription throughout a site.|**Manage Alerts** on the site.|  
   
 ##  <a name="permissionDataSources"></a> Permissions to create and manage shared data sources and report models  
- A shared data source (.rsds) file contains data source connection information that multiple reports and models can use. For standard reports, using an .rsds file to specify data source connection information is optional. For model-driven reports, using an .rsds file is required. A report model always uses an .rsds file to connect to external data sources.  
+ A shared data source (.rsds) file contains data source connection information that multiple reports and models can use. For standard reports, using an .rsds file to specify data source connection information is optional. For model-driven reports, you must use an .rsds file. A report model always uses an .rsds file to connect to external data sources.  
   
  You can set properties on shared data sources that determine whether individual users can view or manage shared data sources. Permissions to view or manage a shared data source are different from report viewing permissions. You can view a report that uses an .rsds file without having view permission on the .rsds file itself.  
   

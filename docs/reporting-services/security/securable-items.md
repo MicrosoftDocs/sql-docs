@@ -48,8 +48,8 @@ helpviewer_keywords:
 |Shared datasets|Shared datasets can be secured to control the range of actions that users can perform, such as viewing or changing the definition, or changing the properties of a given shared dataset.<br /><br /> For more information, see [Secure Shared Dataset Items](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
 ## Related content  
- [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Grant permissions on a native mode report server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)    
+ [Create, delete, or modify a role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)    
  [Grant user access to a report server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)   
  [Modify or delete a role assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   

@@ -64,7 +64,7 @@ helpviewer_keywords:
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Manage Permissions|Create and change permission levels on the Web site and assign permissions to users and groups.|X|||You can change permissions for all report server items and operations. You can set model item security.|  
 |Manage Web Site|Perform all administration tasks for the Web site and manage content.|X|||Create, change, and delete shared schedules.|  
-|Add and Customize Pages|Add, change, or delete HTML pages or Web Part pages, and edit the Web site using a [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]-compatible editor.|X|||Add or remove a Report Viewer Web Part.|  
+|Add and Customize Pages|Add, change, or delete HTML pages or Web Part pages, and edit the Web site by using a [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]-compatible editor.|X|||Add or remove a Report Viewer Web Part.|  
 |Browse User Information|View information about the users of the Web site.|X|X|X|Browse for reports and other items across different sites, libraries, and folders. Publish reports and other items to a library.|  
 |Enumerate Permissions|Enumerate permissions on the Web site, list, folder, document, or list item.|X|||Read permissions for all report server items. View a clickthrough report that uses a report model that contains model item security settings.|  
 |Manage Alerts|Manage alerts for all users of the Web site.|X|||Create, change, and delete any subscription on a site.|  

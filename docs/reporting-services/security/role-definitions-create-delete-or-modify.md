@@ -38,13 +38,13 @@ To create, modify, or delete roles, you can use [!INCLUDE[SQL Server Management 
 
     Or, if you're creating a system-level role definition, right-click **System Roles** > **New System Role**.
 
-4. Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the following characters `[; : \ / @ & = + , $ / * < > | "]`.
+4. Enter a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the following characters `[; : \ / @ & = + , $ / * < > | "]`.
 
-5. Optionally type a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], this description is visible only on this page. Users who view this item through the web portal can see this description in that tool.
+5. Optionally enter a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], this description is visible only on this page. Users who view this item through the web portal can see this description in that tool.
 
 6. Select the tasks that members of this role can do.
 
-7. Select **Ok**.
+7. Select **OK**.
 
 ### Delete or modify a role definition  
 

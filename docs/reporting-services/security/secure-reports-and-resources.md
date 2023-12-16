@@ -50,7 +50,7 @@ helpviewer_keywords:
   
 2.  The report is published to a report server or otherwise made available in such a way that the report parameter value can be controlled from the URL of a web page.  
   
-3.  An attacker creates a link to the web page or report server. That link specifies the value of the parameter in the form "javascript:\<malicious script here>" and sends that link to someone else in a luring attack.  
+3.  An attacker creates a link to the web page or report server. That link specifies the value of the parameter in the form `javascript:<malicious script here>` and sends that link to someone else in a luring attack.  
   
 ## Mitigate script injection attacks in a hyperlink in a published report or document  
  Reports can contain embedded hyperlinks in the value of the Action property on a report item or part of a report item. Hyperlinks can be bound to data that is retrieved from an external data source when the report is processed. If a malicious user modifies the underlying data, the hyperlink might be at risk for scripting exploits. If a user selects the link in the published or exported report, malicious script could run.  

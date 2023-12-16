@@ -1,7 +1,8 @@
 ### YamlMime:FAQ
 metadata:
   title: Maintenance Window FAQ
-  description: FAQ on how the Azure SQL Database and managed instance maintenance window can be configured.
+  titleSuffix: Azure SQL Database & Azure SQL Managed Instance
+  description: FAQ on how the Azure SQL Database and Azure SQL Managed Instance maintenance window can be configured.
   services: sql-database
   ms.service: sql-db-mi
   ms.subservice: service-overview
@@ -14,7 +15,7 @@ metadata:
   monikerRange: "=azuresql||=azuresql-db||=azuresql-mi"
 
 title: Maintenance window FAQ
-summary: This article answers frequently asked questions about the maintenance window for [Azure SQL database](sql-database-paas-overview.md) and [SQL managed instance](../managed-instance/sql-managed-instance-paas-overview.md).
+summary: This article answers frequently asked questions about the maintenance window for [Azure SQL Database](sql-database-paas-overview.md) and [Azure SQL Managed Instance](../managed-instance/sql-managed-instance-paas-overview.md).
 sections:
   - name: General
     questions: 

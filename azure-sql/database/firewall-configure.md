@@ -117,7 +117,7 @@ To be able to create and manage IP firewall rules for the Azure SQL Server, you 
 
 ## Create and manage IP firewall rules
 
-You create the first server-level firewall setting by using the [Azure portal](https://portal.azure.com/) or programmatically by using [Azure PowerShell](/powershell/module/az.sql), [Azure CLI](/cli/azure/sql/server/firewall-rule), or an Azure [REST API](/rest/api/sql/firewallrules/createorupdate). You create and manage additional server-level IP firewall rules by using these methods or Transact-SQL.
+You create the first server-level firewall setting by using the [Azure portal](https://portal.azure.com/) or programmatically by using [Azure PowerShell](/powershell/module/az.sql), [Azure CLI](/cli/azure/sql/server/firewall-rule), or an Azure [REST API](/rest/api/sql/firewall-rules/create-or-update). You create and manage additional server-level IP firewall rules by using these methods or Transact-SQL.
 
 > [!IMPORTANT]
 > Database-level IP firewall rules can only be created and managed by using Transact-SQL.
@@ -253,10 +253,10 @@ az synapse workspace firewall-rule create --name AllowAllWindowsAzureIps --works
 
 | API | Level | Description |
 | --- | --- | --- |
-| [List firewall rules](/rest/api/sql/firewallrules/listbyserver) |Server |Displays the current server-level IP firewall rules |
-| [Create or update firewall rules](/rest/api/sql/firewallrules/createorupdate) |Server |Creates or updates server-level IP firewall rules |
-| [Delete firewall rules](/rest/api/sql/firewallrules/delete) |Server |Removes server-level IP firewall rules |
-| [Get firewall rules](/rest/api/sql/firewallrules/get) | Server | Gets server-level IP firewall rules |
+| [List firewall rules](/rest/api/sql/firewall-rules/list-by-server) |Server |Displays the current server-level IP firewall rules |
+| [Create or update firewall rules](/rest/api/sql/firewall-rules/create-or-update) |Server |Creates or updates server-level IP firewall rules |
+| [Delete firewall rules](/rest/api/sql/firewall-rules/delete) |Server |Removes server-level IP firewall rules |
+| [Get firewall rules](/rest/api/sql/firewall-rules/get) | Server | Gets server-level IP firewall rules |
 
 ## Troubleshoot the database firewall
 

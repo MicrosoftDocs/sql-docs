@@ -161,7 +161,7 @@ For more information, see [New-AzSqlServer](/powershell/module/az.sql/new-azsqls
 
 # [REST API](#tab/rest-api)
 
-The [Servers - Create Or Update](/rest/api/sql/2020-11-01-preview/servers/create-or-update) REST API can be used to create a logical server with Microsoft Entra-only authentication enabled during provisioning. 
+The [Servers - Create Or Update](/rest/api/sql/servers/create-or-update) REST API can be used to create a logical server with Microsoft Entra-only authentication enabled during provisioning. 
 
 The script below will provision a logical server, set the Microsoft Entra admin as `<AzureADAccount>`, and enable Microsoft Entra-only authentication. The server SQL Administrator login will also be created automatically and the password will be set to a random password. Since SQL Authentication connectivity is disabled with this provisioning, the SQL Administrator login won't be used.
 
@@ -416,7 +416,7 @@ For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsq
 
 # [REST API](#tab/rest-api)
 
-The [SQL Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
+The [SQL Managed Instances - Create Or Update](/rest/api/sql/managed-instances/create-or-update) REST API can be used to create a managed instance with Microsoft Entra-only authentication enabled during provisioning.
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.

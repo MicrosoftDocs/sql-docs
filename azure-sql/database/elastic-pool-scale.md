@@ -23,7 +23,7 @@ After initially picking the number of vCores or eDTUs, you can scale an elastic 
 * [Azure portal](elastic-pool-manage.md#azure-portal)
 * [PowerShell](/powershell/module/az.sql/Get-AzSqlElasticPool)
 * [Azure CLI](/cli/azure/sql/elastic-pool#az-sql-elastic-pool-update)
-* [REST API](/rest/api/sql/elasticpools/update)
+* [REST API](/rest/api/sql/elastic-pools/update)
 
 
 ### Impact of changing service tier or rescaling compute size
@@ -88,7 +88,7 @@ You are billed for each hour a database exists using the highest service tier + 
 
 ## Change elastic pool storage size
 
-The storage size (max data size) for the elastic pool can be specified using the [Azure portal](elastic-pool-manage.md#azure-portal), [PowerShell](/powershell/module/az.sql/Get-AzSqlElasticPool), the [Azure CLI](/cli/azure/sql/elastic-pool#az-sql-elastic-pool-update), or the [REST API](/rest/api/sql/elasticpools/update). When you increase the max data size of the elastic pool, the value specified cannot exceed the max data size limit of the pool's service objective. When decreasing the max data size, the new value specified has to be equal to or greater than the summation of space allocated across all databases in the pool.
+The storage size (max data size) for the elastic pool can be specified using the [Azure portal](elastic-pool-manage.md#azure-portal), [PowerShell](/powershell/module/az.sql/Get-AzSqlElasticPool), the [Azure CLI](/cli/azure/sql/elastic-pool#az-sql-elastic-pool-update), or the [REST API](/rest/api/sql/elastic-pools/update). When you increase the max data size of the elastic pool, the value specified cannot exceed the max data size limit of the pool's service objective. When decreasing the max data size, the new value specified has to be equal to or greater than the summation of space allocated across all databases in the pool.
 
 > [!IMPORTANT]
 > Under some circumstances, you may need to shrink a database to reclaim unused space. For more information, see [Manage file space in Azure SQL Database](file-space-manage.md).

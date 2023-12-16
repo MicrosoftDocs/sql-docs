@@ -16,7 +16,7 @@ ms.topic: how-to
 
 > [!div class="op_single_selector"]
 > * [Azure SQL Database](standby-replica-how-to-configure.md?view=azuresql-db&preserve-view=true)
-> * [Azure SQL database](../managed-instance/auto-failover-group-standby-replica-how-to-configure.md?view=azuresql-mi&preserve-view=true)
+> * [Azure SQL Managed Instance](../managed-instance/failover-group-standby-replica-how-to-configure.md?view=azuresql-mi&preserve-view=true)
 
 This article describes how you can save on licensing costs by designating your secondary disaster recovery (DR) database for standby when using Azure SQL Database.
 
@@ -27,7 +27,7 @@ This article describes how you can save on licensing costs by designating your s
 
 When a secondary database replica is used _only_ for disaster recovery, and doesn't have any workloads running on it, or applications connecting to it, you can save on licensing costs by designating the database as a *standby replica*. When a secondary database is designated for standby, Microsoft provides you with the number of vCores licensed to the primary database at no extra charge under the failover rights benefit in the [product licensing terms](https://www.microsoft.com/Licensing/product-licensing/sql-server). You're still billed for the compute and storage that the secondary database uses.
 
-You designate a replica for standby when you configure a new [active geo-replication](active-geo-replication-overview.md) replication. You can then, optionally, add the replica to an [auto-failover group](auto-failover-group-sql-db.md). 
+You designate a replica for standby when you configure a new [active geo-replication](active-geo-replication-overview.md) replication. You can then, optionally, add the replica to a [failover group](failover-group-sql-db.md). 
 
 While active geo-replication supports adding four secondary replicas, you can only designate one secondary database replica for standby. Failover groups support one secondary database replica per primary database, and it can be either readable, or standby. 
 
@@ -144,7 +144,7 @@ az sql db replica create --resource-group  <PrimaryResourceGroup> --server <Prim
 
 ## Add to a failover group (optional)
 
-Once your active geo-replication relationship has been established for your new standby database replica, you can choose to add it to a failover group. For more information, review the [Failover group tutorial](failover-group-add-single-database-tutorial.md). 
+Once your active geo-replication relationship has been established for your new standby database replica, you can choose to add it to a failover group. For more information, review [configure failover groups](failover-group-configure-sql-db.md). 
 
 ---
 
@@ -230,7 +230,7 @@ To remove a standby replica with the Azure CLI, use [az sql db replica delete-li
 
 -  Can I enable the Azure Hybrid Benefit for the standby replica? 
 
-   Designating a replica for standby replaces the discount from the Azure Hybrid Benefit, so you can't modify the licensing model for the replica by using the Azure portal. However, if you want the standby replica to use the Azure Hybrid Benefit upon failover, you can use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell or [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command to update the license type to `AHB` for the standby replica to use when the standby replica becomes primary after failover. 
+   Designating a replica for standby replaces the discount from the Azure Hybrid Benefit, so you can't modify the licensing model for the replica by using the Azure portal. However, if you want the standby replica to use the Azure Hybrid Benefit upon failover, you can use the [Set-AzSqlDatabase](/powershell/module/az.sql/set-azsqldatabase) PowerShell or [az sql db update](/cli/azure/sql/db#az-sql-db-update) Azure CLI command to update the license type to `BasePrice` (Azure Hybrid Benefit) for the standby replica to use when the standby replica becomes primary after failover. 
 
 -  What happens to the standby replica status during failover? 
 
@@ -257,4 +257,4 @@ To remove a standby replica with the Azure CLI, use [az sql db replica delete-li
 * To learn more about active geo-replication, see [active geo-replication](active-geo-replication-overview.md).
 * For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
 * Save on licensing costs by designating your secondary DR replica for [standby](standby-replica-how-to-configure.md).
-* To learn about failover groups, see [Failover groups](auto-failover-group-sql-db.md).
+* To learn about failover groups, see [Failover groups](failover-group-sql-db.md).

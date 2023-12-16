@@ -4,11 +4,12 @@ description: Use these guidelines to install antivirus software on Analytics Pla
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: martinle
-ms.date: 06/23/2022
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: data-warehouse
 ms.topic: how-to
-ms.custom: kr2b-contr-experiment
+ms.custom:
+  - kr2b-contr-experiment
 ---
 
 # Antivirus software for Analytics Platform System
@@ -68,6 +69,7 @@ Virtual machine `_appliance_domain_-ISCSI01`
 
 - *C:\iscsitarget*
 
-## Next steps
+## Next step
 
-[Appliance Management Tasks (Analytics Platform System)](appliance-management-tasks.md)
+> [!div class="nextstepaction"]
+> [Appliance management tasks for Analytics Platform System](appliance-management-tasks.md)

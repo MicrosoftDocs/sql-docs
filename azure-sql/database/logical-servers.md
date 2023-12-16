@@ -16,7 +16,7 @@ This article describes the logical server in Azure used by databases in Azure SQ
 
 ## Overview 
 
-In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [auto-failover groups](auto-failover-group-sql-db.md). A logical server can be in a different region than its resource group. The logical server must exist before you can create a database in Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. All databases managed by a single logical server are created within the same region as the logical server.
+In Azure SQL Database and Azure Synapse Analytics, a server is a logical construct that acts as a central administrative point for a collection of databases. At the logical server level, you can administer [logins](logins-create-manage.md), [firewall rules](firewall-configure.md), [auditing rules](./auditing-overview.md), [threat detection policies](threat-detection-configure.md), and [failover groups](failover-group-sql-db.md). A logical server can be in a different region than its resource group. The logical server must exist before you can create a database in Azure SQL Database or a dedicated SQL pool in Azure Synapse Analytics. All databases managed by a single logical server are created within the same region as the logical server.
 
 This logical server is distinct from a SQL Server instance that you may be familiar with in the on-premises world. Specifically, there are no guarantees regarding location of the databases or dedicated SQL pool in relation to the server that manages them. Azure SQL Database and Azure Synapse don't expose any instance-level access or features. In contrast, the instance databases in a managed instance are all physically co-located - in the same way that you are familiar with SQL Server in the on-premises or virtual machine world.
 
@@ -184,22 +184,22 @@ To create and manage servers, databases, and firewalls, use these REST API reque
 
 | Command | Description |
 | --- | --- |
-|[Servers - Create or update](/rest/api/sql/servers/createorupdate)|Creates or updates a new server.|
+|[Servers - Create or update](/rest/api/sql/servers/create-or-update)|Creates or updates a new server.|
 |[Servers - Delete](/rest/api/sql/servers/delete)|Deletes a server.|
 |[Servers - Get](/rest/api/sql/servers/get)|Gets a server.|
 |[Servers - List](/rest/api/sql/servers/list)|Returns a list of servers.|
-|[Servers - List by resource group](/rest/api/sql/servers/listbyresourcegroup)|Returns a list of servers in a resource group.|
+|[Servers - List by resource group](/rest/api/sql/servers/list-by-resource-group)|Returns a list of servers in a resource group.|
 |[Servers - Update](/rest/api/sql/servers/update)|Updates an existing server.|
-|[Databases - Create or update](/rest/api/sql/2022-08-01-preview/databases/create-or-update)|Creates a new database or updates an existing database.|
+|[Databases - Create or update](/rest/api/sql/databases/create-or-update)|Creates a new database or updates an existing database.|
 |[Databases - Delete](/rest/api/sql/databases/delete)|Deletes a database.|
 |[Databases - Get](/rest/api/sql/databases/get)|Gets a database.|
-|[Databases - List by elastic pool](/rest/api/sql/2022-08-01-preview/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
-|[Databases - List by server](/rest/api/sql/2022-08-01-preview/databases/list-by-server)|Returns a list of databases in a server.|
+|[Databases - List by elastic pool](/rest/api/sql/databases/list-by-elastic-pool)|Returns a list of databases in an elastic pool.|
+|[Databases - List by server](/rest/api/sql/databases/list-by-server)|Returns a list of databases in a server.|
 |[Databases - Update](/rest/api/sql/databases/update)|Updates an existing database.|
-|[Firewall rules - Create or update](/rest/api/sql/firewallrules/createorupdate)|Creates or updates a firewall rule.|
-|[Firewall rules - Delete](/rest/api/sql/firewallrules/delete)|Deletes a firewall rule.|
-|[Firewall rules - Get](/rest/api/sql/firewallrules/get)|Gets a firewall rule.|
-|[Firewall rules - List by server](/rest/api/sql/firewallrules/listbyserver)|Returns a list of firewall rules.|
+|[Firewall rules - Create or update](/rest/api/sql/firewall-rules/create-or-update)|Creates or updates a firewall rule.|
+|[Firewall rules - Delete](/rest/api/sql/firewall-rules/delete)|Deletes a firewall rule.|
+|[Firewall rules - Get](/rest/api/sql/firewall-rules/get)|Gets a firewall rule.|
+|[Firewall rules - List by server](/rest/api/sql/firewall-rules/list-by-server)|Returns a list of firewall rules.|
 
 ---
 

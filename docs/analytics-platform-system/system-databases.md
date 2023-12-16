@@ -20,7 +20,7 @@ System databases are databases that SQL Server Parallel Data Warehouse (PDW) use
 - [master Database](master-database.md)  
 - [tempdb Database](tempdb-database.md)  
   
-## Next steps
+## Related content
 
-[Reserved database names in Parallel Data Warehouse](reserved-database-names.md)
-<!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
+- [Reserved database names in Parallel Data Warehouse](reserved-database-names.md)
+- [Monitor the appliance with system views - Analytics Platform System](monitor-the-appliance-by-using-system-views.md)

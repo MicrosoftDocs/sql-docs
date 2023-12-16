@@ -85,16 +85,16 @@ The following SQL Server Reporting Services features won't be supported in the n
 |--------------|------------------------| 
 |Report Server|HTML4.0 renderer. Use the HTML5 renderer.|
 
-## Features Not Supported in Previous Versions of SQL Server Reporting Services
+## Features not supported in previous versions of SQL Server Reporting Services
 
 SQL Server 2014 Reporting Services Deprecated Features
-- [SQL Server 2014 Reporting Services Deprecated Features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
+- [SQL Server 2014 Reporting Services deprecated features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
-## Next steps
+## Related content
 
- [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
- [Backward Compatibility | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
- [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
- [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
+- [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
+- [Backward compatibility | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
+- [Behavior changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+- [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -41,15 +41,6 @@ f1_keywords:
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article describes how to enable and configure [Database Mail](database-mail.md) using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.
 
-## <a id="troubleshooting"></a> Troubleshoot
-
-For troubleshooting Database Mail, visit:
-
-- [Troubleshoot Database Mail issues](/troubleshoot/sql/tools/troubleshoot-database-mail-issues)
-- [General database mail troubleshooting steps](database-mail-general-troubleshooting.md)
-- [Database mail: Mail queued, not delivered](database-mail-mail-queued-not-delivered.md)
-- [Common errors with database mail](database-mail-common-errors.md)
-
 ## <a id="BeforeYouBegin"></a> Before You Begin
 
  Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) reference article.  
@@ -61,6 +52,15 @@ For troubleshooting Database Mail, visit:
 ### <a id="Security"></a> Security
 
  To configure Database Mail, you must be a member of the **sysadmin** fixed server role. To send an email with Database Mail, you must be a member of the **DatabaseMailUserRole** database role in the `msdb` database.  
+
+## <a id="troubleshooting"></a> Troubleshoot
+
+For troubleshooting Database Mail, visit:
+
+- [Troubleshoot Database Mail issues](/troubleshoot/sql/tools/troubleshoot-database-mail-issues)
+- [General database mail troubleshooting steps](database-mail-general-troubleshooting.md)
+- [Database mail: Mail queued, not delivered](database-mail-mail-queued-not-delivered.md)
+- [Common errors with database mail](database-mail-common-errors.md)
 
 ## <a id="DBWizard"></a> Use the Database Mail Configuration Wizard
 
@@ -424,9 +424,11 @@ The following steps use SQL Server Management Studio (SSMS). Download the latest
  The **Database Mail Test E-Mail** dialog box confirms that the test message that Database Mail attempted to send the message and provides the **mailitem_id** for the test e-mail message. Check with the recipient to determine if the e-mail arrived. Normally e-mail is received in a few minutes, but the e-mail can be delayed because of slow network performance, a backlog of messages at the mail server, or if the server is temporarily unavailable. Use the **mailitem_id** for troubleshooting.  
 
  **Sent e-mail**  
+
  The **mailitem_id** of the test e-mail message.  
 
  **Troubleshoot**
+
  Selecting this button brings you to this document, [Configure Database Mail](configure-database-mail.md).
 
 ## <a id="Template"></a> Use SQL Server Management Studio templates to generate T-SQL

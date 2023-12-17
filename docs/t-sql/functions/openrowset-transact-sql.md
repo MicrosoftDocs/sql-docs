@@ -490,11 +490,9 @@ SELECT * FROM OPENROWSET(
 
 ```sql
 SELECT *
-FROM OPENROWSET
-   (  'MSDASQL'
-     ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
-     ,'select * from E:\Tlog\TerritoryData.csv')
-;
+FROM OPENROWSET('MSDASQL',
+    'Driver={Microsoft Access Text Driver (*.txt, *.csv)}',
+    'select * from E:\Tlog\TerritoryData.csv');
 ```
 
 > [!IMPORTANT]
@@ -533,19 +531,19 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  -- that expiration period is valid (all dates are in UTC time)
 
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+WITH (
+    TYPE = BLOB_STORAGE,
+    LOCATION = 'https://****************.blob.core.windows.net/curriculum',
+    CREDENTIAL= MyAzureBlobStorageCredential --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
 );
 
 INSERT INTO achievements with (TABLOCK) (id, description)
 SELECT * FROM OPENROWSET(
-   BULK  'csv/achievements.csv',
-   DATA_SOURCE = 'MyAzureBlobStorage',
-   FORMAT ='CSV',
-   FORMATFILE='csv/achievements-c.xml',
-   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
-    ) AS DataFile;
+    BULK  'csv/achievements.csv',
+    DATA_SOURCE = 'MyAzureBlobStorage',
+    FORMAT ='CSV',
+    FORMATFILE='csv/achievements-c.xml',
+    FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage') AS DataFile;
 ```
 
 > [!IMPORTANT]
@@ -562,18 +560,20 @@ First, create the credential and specify blob storage as the external source:
 CREATE DATABASE SCOPED CREDENTIAL sampletestcred WITH IDENTITY = 'MANAGED IDENTITY';
 
 CREATE EXTERNAL DATA SOURCE SampleSource
-WITH (TYPE = BLOB_STORAGE,
-LOCATION = 'https://****************.blob.core.windows.net/curriculum',
-CREDENTIAL = sampletestcred
+WITH (
+    TYPE = BLOB_STORAGE,
+    LOCATION = 'https://****************.blob.core.windows.net/curriculum',
+    CREDENTIAL = sampletestcred
+)
 ```
 
 Next, load data from the CSV file hosted on blob storage: 
 
 ```sql
 SELECT * FROM OPENROWSET(
-BULK 'Test - Copy.csv',
-DATA_SOURCE = 'SampleSource',
-SINGLE_CLOB
+    BULK 'Test - Copy.csv',
+    DATA_SOURCE = 'SampleSource',
+    SINGLE_CLOB
 ) as test
 ```
 
@@ -587,7 +587,6 @@ SINGLE_CLOB
 The following example uses access several parquet files from different location, all stored on S3-compatible object storage:
 
 ```sql
-
 CREATE DATABASE SCOPED CREDENTIAL s3_dsc
 WITH IDENTITY = 'S3 Access Key',
 SECRET = 'contosoadmin:contosopwd'
@@ -596,8 +595,8 @@ GO
 CREATE EXTERNAL DATA SOURCE s3_eds
 WITH
 (
- LOCATION = 's3://10.199.40.235:9000/movies'
-,CREDENTIAL = s3_dsc
+    LOCATION = 's3://10.199.40.235:9000/movies',
+    CREDENTIAL = s3_dsc
 )
 GO
 
@@ -606,13 +605,11 @@ FROM
     OPENROWSET(
         BULK (
             '/decades/1950s/*.parquet',
-			'/decades/1960s/*.parquet',
-			'/decades/1970s/*.parquet'),
-        FORMAT='PARQUET'
-		,DATA_SOURCE = 's3_eds'
-    )
-AS [data]
-
+	    '/decades/1960s/*.parquet',
+	    '/decades/1970s/*.parquet'),
+        FORMAT = 'PARQUET',
+        DATA_SOURCE = 's3_eds'
+    ) AS data
 ```
 
 ### M. Use OPENROWSET to access several delta files from Azure Data Lake Gen2
@@ -629,17 +626,14 @@ SECRET = '<SAS Token>';
 CREATE EXTERNAL DATA SOURCE Delta_ED
 WITH
 (
- LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net'
-,CREDENTIAL = delta_storage_dsc 
+    LOCATION = 'adls://<container>@<storage_account>.dfs.core.windows.net',
+    CREDENTIAL = delta_storage_dsc 
 );
 
 SELECT  * 
-FROM    OPENROWSET
-        (   BULK '/Contoso'
-        ,   FORMAT = 'DELTA'
-        ,   DATA_SOURCE = 'Delta_ED'
-        ) as [result];
-
+FROM OPENROWSET (BULK '/Contoso',
+    FORMAT = 'DELTA',
+    DATA_SOURCE = 'Delta_ED') as result;
 ```
 
 ### Additional Examples

@@ -101,8 +101,8 @@ landingContent:
             url: ../database/business-continuity-high-availability-disaster-recover-hadr-overview.md
           - text: High availability
             url: ../database/high-availability-sla.md
-          - text: Auto-failover groups
-            url: auto-failover-group-sql-mi.md 
+          - text: Failover groups
+            url: failover-group-sql-mi.md 
           - text: Automated backups
             url: automated-backups-overview.md
           - text: Recover with backup 

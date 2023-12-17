@@ -226,7 +226,7 @@ Consider the following limitations of the copy and move feature:
 - You can't rename a database during a copy or move operation.
 - Database tags aren't copied with copy or move operation.
 - Database copy and move operations don't copy or move PITR backups.
-- You can't copy or move a database that's part of an [auto-failover group](auto-failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
+- You can't copy or move a database that's part of a [failover group](failover-group-sql-mi.md), or that's using the [Managed Instance link](managed-instance-link-feature-overview.md).
 - The source or destination managed instance shouldn't be configured with a failover group (geo-disaster recovery) setup.
 - You'll need to reconfigure transactional replication, change data capture (CDC), or distributed transactions after you move a database that relies on these features.
 

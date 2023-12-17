@@ -387,7 +387,7 @@ order ag-before-listener Mandatory: ms-ag1:promot virtual ip-group:start
      ADD LISTENER 'ag1-listener' (
          WITH IP((
              '10.0.0.7',
-             '255.255.255.0'
+             '255.255.255.255'
          )),
          PORT = 1433
      );

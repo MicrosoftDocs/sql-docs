@@ -1,5 +1,6 @@
 ---
 title: Create alerts with SQL Insights (preview)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Create alerts with SQL Insights (preview) in Azure Monitor
 author: WilliamDAssafMSFT
 ms.author: wiassaf

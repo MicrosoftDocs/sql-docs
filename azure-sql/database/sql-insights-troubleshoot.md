@@ -1,5 +1,6 @@
 ---
 title: Troubleshoot SQL Insights (preview)
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Learn how to troubleshoot SQL Insights (preview) in Azure Monitor.
 author: WilliamDAssafMSFT
 ms.author: wiassaf

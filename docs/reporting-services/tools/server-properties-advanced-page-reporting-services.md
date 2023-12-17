@@ -98,7 +98,7 @@ We recommend validating the configuration of your topology to ensure the set of 
 
 #### Set the CustomHeaders property
 
-- You can set it using [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
+- You can set it by using [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP endpoint passing CustomHeaders property as parameter.
 - You can use REST endpoint [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties):  `/System/Properties` passing CustomHeaders property
 
 #### Example
@@ -197,7 +197,7 @@ Indicates whether or not a customer can export underlying data from Power BI vis
 
 *Power BI Report Server September 2022, Reporting Services 2022 and later only*
 
-Enables .rdl report migrations to Power BI using the publish feature in the web portal. The default is **true**. The valid values are as follows:
+Enables .rdl report migrations to Power BI by using the feature to publish in the web portal. The default is **true**. The valid values are as follows:
 
 |Values |Description  |
 |---------|---------|
@@ -210,7 +210,7 @@ For more information, see [Publish .rdl files to Power BI from Power BI Report S
 Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable remote errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 ### EnableTestConnectionDetailedErrors
-Indicates whether to send detailed error messages to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
+Indicates whether to send detailed error messages to the client computer when users test data source connections by using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
 
 ###  ExecutionLogDaysKept  
 The number of days to keep report execution information in the execution log. Valid values for this property include **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, entries aren't deleted from the Execution Log table. The default value is **60**.  

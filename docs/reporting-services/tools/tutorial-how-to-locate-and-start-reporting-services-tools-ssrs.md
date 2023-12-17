@@ -22,7 +22,7 @@ helpviewer_keywords:
 
 # Tutorial: How to locate and start Reporting Services tools (SSRS)
 
-This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. If you're already familiar with the tools, you can move on to other tutorials to learn skills for using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
+This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. If you're already familiar with the tools, you can move on to other tutorials to learn how to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).
 
 ## <a name="bkmk_configuration_manager"></a> Report Server Configuration Manager (native mode)
 Use the Native mode configuration manager to complete the following tasks:
@@ -38,17 +38,17 @@ Use the Native mode configuration manager to complete the following tasks:
 
 ### Start the Report Server Configuration Manager
 
-1. In the Windows start menu, type **reporting** and in the **Apps** search results, select **Report Server Configuration Manager**.
+1. In the Windows start menu, enter **reporting** and in the **Apps** search results, select **Report Server Configuration Manager**.
 
-    :::image type="content" source="../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif" alt-text="Screenshot that shows the Report Server Configuration Manager button in the Start menu." lightbox="../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif":::
+    :::image type="content" source="../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif" alt-text="Screenshot that shows the Report Server Configuration Manager button in the Start menu.":::
 
     **Or**
 
-    Select **Start**, then select **Programs**, then select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], then select **Configuration Tools**, and then select **Report Server Configuration Manager**.
+    Select **Start**, then choose **Programs**, then [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], then choose **Configuration Tools**, and then select **Report Server Configuration Manager**.
 
     The **Report Server Installation Instance Selection** dialog box appears so that you can select the report server instance you want to configure.
 
-2. In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer is specified by default, but you can also type the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+2. In **Server Name**, specify the name of the computer on which the report server instance is installed. The name of the local computer is specified by default, but you can also enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
     If you specify a remote computer, select **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a report server for remote administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
@@ -75,7 +75,7 @@ Before you can open the Web Portal, you must have sufficient permissions (initia
 
 1. Open your browser. For information on supported browsers and browser versions, see [Browser support for Reporting Services](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
-2. In the address bar of the Web browser, type the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
+2. In the address bar of the Web browser, enter the Web Portal URL. By default, the URL is `https://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure report server URLs &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).
 
 3. The Web Portal opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see other folders, hyperlinks to reports, and resource files within the startup page. You might also see other buttons and commands on the toolbar.
 
@@ -87,20 +87,20 @@ Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssman
 
 ### Start SQL Server Management Studio
 
-1. From the Windows start menu, type **sql server** and in the **Apps** search results, select **SQL Server Management Studio**.
+1. From the Windows start menu, enter **sql server** and in the **Apps** search results, select **SQL Server Management Studio**.
 
-    :::image type="content" source="../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif" alt-text="Screenshot that shows the SQL Server Management Studio from the Windows button in the Start menu." lightbox="../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif":::
+    :::image type="content" source="../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif" alt-text="Screenshot that shows the SQL Server Management Studio from the Windows button in the Start menu.":::
 
 
     **Or**
 
-    Select **Start**, then select **All Programs**, then select [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**. The **Connect to Server** dialog box appears.
+    Select **Start**, then choose **All Programs**, then [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then select **SQL Server Management Studio**. The **Connect to Server** dialog box appears.
 
-2. If the **Connect to Server** dialog box doesn't appear, in **Object Explorer**, select **Connect** and then select **Reporting Services**.
+2. If the **Connect to Server** dialog box doesn't appear, in **Object Explorer**, select **Connect** and then choose **Reporting Services**.
 
 3. In the **Server type** list, select **Reporting Services**. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't on the list, it isn't installed.
 
-4. In the **Server name** list, select a report server instance. Local instances appear in the list. You can also type the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+4. In the **Server name** list, select a report server instance. Local instances appear in the list. You can also enter the name of a remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 5. Select **Connect**. You can expand the root node to set server properties, modify role definitions, or turn off report server features.
 
@@ -122,9 +122,9 @@ Download [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.
 
 4. In the **Templates** list, select **Report Server Project**. The following diagram shows how the project templates appear in the dialog box:
 
-    :::image type="content" source="../../reporting-services/tools/media/rs-ui-newrsproject.gif" alt-text="Screenshot that shows the New Project template dialog box." lightbox="../../reporting-services/tools/media/rs-ui-newrsproject.gif":::
+    :::image type="content" source="../../reporting-services/tools/media/rs-ui-newrsproject.gif" alt-text="Screenshot that shows the New Project template dialog box.":::
 
-5. Type a name and location for the project, or select **Browse** and select a location.
+5. Enter a name and location for the project, or select **Browse** and choose a location.
 
 6. Select **OK**. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] start page. Solution Explorer provides categories for creating reports and data sources. You can use these categories to create new reports and data sources. Tabbed windows appear when you create a report definition. The tabbed windows are Data, Layout, and Preview.
 
@@ -141,7 +141,7 @@ When your paginated report is ready, publish it to a report server or [save it t
 
 1. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal, on the **New** menu, select **Paginated Report**.
 
-    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png" alt-text="Screenshot that shows the New menu options." lightbox="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png":::
+    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png" alt-text="Screenshot that shows the New menu options.":::
 
 2. If [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] isn't installed on this computer yet, select **Get [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]**.
 
@@ -165,7 +165,7 @@ You can install it from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 1. In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] web portal, on the **New** menu, select **Mobile Report**.
 
-    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png" alt-text="Screenshot that shows the New menu options." lightbox="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png":::
+    :::image type="content" source="../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png" alt-text="Screenshot that shows the New menu options.":::
 
 2. If [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] isn't installed on this computer yet, select **Get [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]**.
 

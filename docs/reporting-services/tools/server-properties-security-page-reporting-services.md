@@ -26,7 +26,7 @@ f1_keywords:
 
 ### Enable Windows-Integrated Security for report data sources
 
- Specify whether a connection to a report data source is using the Windows security token of the user who requested the report.  
+ Specify whether a connection to a report data source uses the Windows security token of the user who requested the report.  
   
  If you turn off the feature, the Windows-Integrated Security feature in the report data source property pages becomes unavailable. If your report data sources are configured for Windows-integrated security and you turn off this feature, the report server immediately updates all your data source connection properties to prompt for credentials.  
   

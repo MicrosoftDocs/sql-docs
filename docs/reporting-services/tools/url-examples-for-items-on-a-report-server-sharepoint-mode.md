@@ -1,6 +1,6 @@
 ---
 title: "URL examples for items on a report server - SharePoint mode"
-description: View examples of using URLs that specify locations in a SharePoint site Web hierarchy on a report server.
+description: View examples of how to use URLs that specify locations in a SharePoint site Web hierarchy on a report server.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/14/2017
@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # URL examples for items on a report server - SharePoint mode
-  To publish reports and related items to a SharePoint library, you can publish the content using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer. You can also upload the content by using SharePoint site actions.  
+  To publish reports and related items to a SharePoint library, you can publish the content by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer. You can also upload the content by using SharePoint site actions.  
   
  SharePoint sites use different Web addresses than a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode. A SharePoint site Web hierarchy includes the SharePoint Web application, a top-level site, optional subsites, and libraries. You must know how to create a URL address that specifies the SharePoint server and the location in the SharePoint site hierarchy where you want to publish a report or related items.  
   
@@ -38,7 +38,7 @@ ms.custom: updatefrequency5
   
  To find the name of the server to use, open a browser and locate the SharePoint library where you want to publish a report. The server name appears immediately after the protocol prefix, for example, `http:*//servername*`.  
   
- Using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL proxy endpoint isn't supported. A proxy endpoint includes a port number, for example, `http:*//servername:8080/reportserver*`.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL proxy endpoint use isn't supported. A proxy endpoint includes a port number, for example, `http:*//servername:8080/reportserver*`.  
   
 ### URL for a SharePoint server site or subsite  
  When you deploy a report or report data source, you must use a URL to a SharePoint site and subsite, if there's one. In the URL, the site name appears immediately after the server name, for example, `https://*servername/site*` or `https://*servername/site/subsite*`.  
@@ -46,7 +46,7 @@ ms.custom: updatefrequency5
  On a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web application, the site and subsite frequently correspond to the tabs on the main site. To find the site name or subsite name, select **Home**, and then **All Site Content**. Scroll to the bottom and look for **Sites and Workspaces**. The list of sites appears in this section.  
   
 ### URL for a SharePoint library  
- When you deploy a report or related item to a SharePoint library, you must use a URL to the SharePoint library. The URL to use for a library differs depending on the version of SharePoint you're using.  
+ When you deploy a report or related item to a SharePoint library, you must use a URL to the SharePoint library. The URL to use for a library differs depending on the version of SharePoint that you use.  
   
  On [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 or [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], the library appears after the server name, for example, `https://*servername/*Shared Documents`.  
   

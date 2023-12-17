@@ -30,7 +30,7 @@ f1_keywords:
 ## Related content  
  [Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Reporting Serviceslog files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Report server ExecutionLog and the ExecutionLog3 view](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   

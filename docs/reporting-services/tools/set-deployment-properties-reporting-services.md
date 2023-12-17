@@ -36,9 +36,9 @@ helpviewer_keywords:
     > [!NOTE]  
     > You can use multiple configurations to switch quickly between different report servers or settings.  
   
-3. In the **OutputPath**  textbox, type or paste the path in your local file system to store the report definition used in build verification, deployment, and preview of reports. The path must be different than the path that you use for the project and a relative path that is a child folder under the path of the project.  
+3. In the **OutputPath**  textbox, enter or paste the path in your local file system to store the report definition used in build verification, deployment, and preview of reports. The path must be different than the path that you use for the project and a relative path that is a child folder under the path of the project.  
   
-4. In the **ErrorLevel**  text box, type the severity of the build issues that are reported as errors. Issues occurring when building reports, data sources, or other project resources with severity levels less than or equal to the value of **ErrorLevel**  are reported as errors; otherwise, the issues are reported as warnings. Any error causes the build task to fail. The valid severity levels are 0 through 4 inclusive. The default value is 2.  
+4. In the **ErrorLevel**  text box, enter the severity of the build issues that are reported as errors. Issues occurring when building reports, data sources, or other project resources with severity levels less than or equal to the value of **ErrorLevel**  are reported as errors; otherwise, the issues are reported as warnings. Any error causes the build task to fail. The valid severity levels are 0 through 4 inclusive. The default value is 2.  
   
      **ErrorLevel** can be used to increase or decrease the sensitivity of the build. For example, when a report with a map is built during deployment to a [!INCLUDE[sql2008-md](../../includes/sql2008-md.md)] report server an error displays by default and building the report fails. If you lower **ErrorLevel** the map is removed from the report, a warning displays, and building the report continues.  
   
@@ -50,14 +50,14 @@ helpviewer_keywords:
   
      Use **TargetServerVersion** to customize the built reports, placed in the path specified in OutputPath, for the version of the report server specified in **TargetServer URL**.  
   
-8. In the **TargetDataSourceFolder** text box, type the folder on the report server in which to place the published shared data sources. The default value for **TargetDataSourceFolder** is Data Sources. If you leave this value blank, the data sources are published to the location specified in **TargetReportFolder**.  
+8. In the **TargetDataSourceFolder** text box, enter the folder on the report server in which to place the published shared data sources. The default value for **TargetDataSourceFolder** is Data Sources. If you leave this value blank, the data sources are published to the location specified in **TargetReportFolder**.  
   
-9. In the **TargetReportFolder** text box, type the folder on the report server in which to place the published reports. The default value for **TargetReportFolder**  is the name of the report project.  
+9. In the **TargetReportFolder** text box, enter the folder on the report server in which to place the published reports. The default value for **TargetReportFolder**  is the name of the report project.  
   
     > [!NOTE]  
     > For a report server running in native mode, you must have **Publish** permissions on the target folder to publish reports to that folder. Publish permissions are provided through a role assignment that maps your user account to a role that includes publish operations. For more information, see [Create and manage role assignments](../../reporting-services/security/create-and-manage-role-assignments.md). For a report server running in SharePoint integrated mode, you must have **Member** or **Owner** permission on the SharePoint site. For more information, see [SharePoint site and list permission reference for report server items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. In the **TargetServerURL** text box, type the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This virtual directory is on the report server, not the web portal.  
+10. In the **TargetServerURL** text box, enter the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This virtual directory is on the report server, not the web portal.  
   
      When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you don't specify a site, the default top-level site is used, for example, `https://*servername*`, `https://*servername*/*site*`, or `https://*servername*/*site*/*subsite*`.  
   

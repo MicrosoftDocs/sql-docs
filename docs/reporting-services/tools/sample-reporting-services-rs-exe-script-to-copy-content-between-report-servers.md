@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2008r2-and-later](../../includes/ssrs-appliesto-2008r2-and-later.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
-This article includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.
+This article includes and describes a sample [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS script that copies content items and settings from one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server by using the **RS.exe** utility. RS.exe is installed with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], both native and SharePoint mode. The script copies [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] items, for example reports and subscriptions, from server to another server. The script supports both SharePoint mode and Native mode report servers.
 
 > [!NOTE]  
 >The open-source [ReportingServicesTools PowerShell module](https://www.powershellgallery.com/packages/ReportingServicesTools) is also available.
@@ -109,7 +109,7 @@ The script can be used to copy content between report servers of the same mode o
   
  The following example migrates content from the native mode **Sourceserver** to the native mode **Targetserver**.  
   
- `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
+ ```rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"```  
   
  **Usage notes:**  
   
@@ -234,7 +234,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ###  <a name="bkmk_native_2_sharepoint_root"></a> Native mode to SharePoint mode - root site  
  The following example migrates content from a native mode **SourceServer** to the "root site " on a SharePoint mode server **TargetServer**. The "Reports" and "Data Sources" folders on the native mode server are migrated as new libraries on the SharePoint deployment.  
    
- :::image type="content" source="../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif" alt-text="Screenshoh that shows the highlighted Data Sources and Reports menu options." lightbox="../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif":::
+ :::image type="content" source="../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif" alt-text="Screenshoh that shows the highlighted Data Sources and Reports menu options.":::
  
   
 ```  
@@ -242,7 +242,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 ###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint mode -'bi' site collection  
- The following example migrates content from a native mode server to a SharePoint server that contains a site collection of "sites/bi" and a shared documents library. The script creates folders in document the destination library. For example, the script creates a "Reports" and "Data Sources" folders in the target document library.  
+ The following example migrates content from a native mode server to a SharePoint server that contains a site collection of "sites/bi" and a shared documents library. The script creates folders in document the destination library. For example, the script creates a "Reports" folder and a "Data Sources" folder in the target document library.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
@@ -308,11 +308,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ##  <a name="bkmk_troubleshoot"></a> Troubleshooting  
  Use the trace flag **-t** to receive more information. For example, if you run the script and see a message similar to the following  
   
--   Couldn't connect to server: https://\<servername>/ReportServer/ReportService2010.asmx  
+-   Couldn't connect to server: `https://\<servername>/ReportServer/ReportService2010.asmx`  
   
  Run the script again with the **-t** flag, to see a message similar to this one:  
   
--   System.Exception: Couldn't connect to server: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
+-   `System.Exception: Couldn't connect to server: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  `
   
 ## Related content 
  [RS.exe utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

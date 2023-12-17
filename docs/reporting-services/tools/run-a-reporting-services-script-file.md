@@ -1,6 +1,6 @@
 ---
 title: "Run a Reporting Services script file"
-description: View examples of how to run a Reporting Services script file from the command prompt using the Reporting Services script environment (RS.exe).
+description: View examples of how to run a Reporting Services script file from the command prompt by using the Reporting Services script environment (RS.exe).
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 03/01/2017
@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "scripts [Reporting Services], running"
 ---
 # Run a Reporting Services script file
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script files are run from the command prompt using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script environment (RS.exe). RS.exe has many command prompt arguments available for you to use. For more information about the command prompt options, see [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). For more script samples, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script files are run from the command prompt by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] script environment (RS.exe). RS.exe has many command prompt arguments available for you to use. For more information about the command prompt options, see [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). For more script samples, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Sample command lines  
   

@@ -372,10 +372,10 @@ Indicates whether the report server should use session cookies when communicatin
 
 ## Related content
 
-[Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
-[Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
-[Reporting Services properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
-[Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+[Set report server properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)    
+[Connect to a report server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)    
+[Reporting Services properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)    
+[Report server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)    
 [Report server system properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
 [Script deployment and administrative tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Enable and disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  

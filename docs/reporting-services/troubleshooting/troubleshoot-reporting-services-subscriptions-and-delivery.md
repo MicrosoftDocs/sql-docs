@@ -16,7 +16,8 @@ Use this article to troubleshoot problems that you encounter when working with [
 ## Log information
  
 The Subscription page in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] includes a status of a subscription but if there's a problem with the subscription, the detailed information is in the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] logs. 
-![ssrs_tutorial_datadriven_subscription_status_ReportManager](../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png)
+:::image type="content" source="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot that shows the status." lightbox="../../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png":::
+
 
 **Trace logs:**
 The trace logs are text files written to: `\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`
@@ -37,22 +38,18 @@ For more information on [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
 
 ----------
 ## Unable to send reports by using e-mail with Windows Server 2003 and POP3  
-If you're running an e-mail application with Post Office Protocol version 3 (POP3) on Microsoft Windows Server 2003, you might not be able to send reports using the local POP3 server. If you configure the report server to send e-mail with the local POP3 Server and create a subscription that sends a report, you might receive the following error message:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
-  
-where \<error message> is replaced with other error message information returned from Collaboration Data Objects (CDO).  
+If you're running an e-mail application with Post Office Protocol version 3 (POP3) on Microsoft Windows Server 2003, you might not be able to send reports by using the local POP3 server. If you configure the report server to send e-mail with the local POP3 Server and create a subscription that sends a report, you might receive the following error message: `Failure sending mail: <error message>`, where \<error message> is replaced with other error message information returned from Collaboration Data Objects (CDO).  
   
 ### Resolve this problem 
-* Set the value of the `SendUsing` element in the **Rsreportserver.config** file to 1.  
+* Set the value of the `SendUsing` element in the **Rsreportserver.config** file to `1`.  
 * Clear the value of the `SMTPServer` property so that it's empty. You also need to provide a value for the `SMTPServerPickupDirectory` property.   
-  
-For more information about using a local SMTP service for e-mail delivery of reports, see Configuring a Report Server for E-Mail Delivery.  
-  
-## Failure sending mail: The server rejected the sender address. The server response was: 454 5.7.3 Client does not have permission to submit mail to this server  
+    
+## Failure sending mail: The server rejected the sender address. The server response was: 454 5.7.3 Client doesn't have permission to submit mail to this server  
 This error occurs when security policy settings on the SMTP server allow only authenticated users to submit mail for subsequent delivery. If the SMTP server doesn't accept e-mail submissions from anonymous users, see the system administrator about getting permission to use the server.  
-> This error can also occur when you specify an Exchange server name as the SMTPServer. To use an Exchange server for e-mail delivery, you must specify the name of the SMTP gateway that is configured for your Exchange server. See your Exchange administrator for this information.  
+
+This error can also occur when you specify an Exchange server name as the SMTPServer. To use an Exchange server for e-mail delivery, you must specify the name of the SMTP gateway that is configured for your Exchange server. See your Exchange administrator for this information.  
   
-## Subscriptions are not processing  
+## Subscriptions aren't processing  
 Subscriptions can fail under these conditions.   
 * The schedule used to trigger the report expired. For subscriptions that trigger off of a report snapshot update, the schedule used to refresh the snapshot might be expired.  
   

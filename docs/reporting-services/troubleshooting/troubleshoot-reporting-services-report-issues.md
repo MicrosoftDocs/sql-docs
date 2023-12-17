@@ -13,7 +13,7 @@ ms.custom: updatefrequency5
 This article helps you in troubleshooting problems with  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report design and previewing a report. It also provides guidance on resolving issues when publishing a report to a report server in native mode or SharePoint mode. Additionally, it covers troubleshooting for viewing a report on the report server or exporting a report to a different file format. 
  
 ## Monitor report servers  
-You can use system and database tools to monitor report server activity. You can also view report server trace log files, or query the report server execution log for detailed information about specific reports. If you're using Performance Monitor, you can add performance counters for the Report Server Web service and Windows service to identity bottlenecks in on-demand or scheduled processing.  
+You can use system and database tools to monitor report server activity. You can also view report server trace log files, or query the report server execution log for detailed information about specific reports. If you use Performance Monitor, you can add performance counters for the Report Server Web service and Windows service to identity bottlenecks in on-demand or scheduled processing.  
 For more information, see [Monitor report server performance](../report-server/monitoring-report-server-performance.md).  
   
   

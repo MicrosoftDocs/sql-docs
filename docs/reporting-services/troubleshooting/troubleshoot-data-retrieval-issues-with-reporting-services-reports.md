@@ -13,17 +13,17 @@ ms.custom: updatefrequency5
 The first step during report processing is to retrieve the report data for each dataset by running the dataset query. When you preview a report locally, your data source connections and credentials must use sufficient permissions to retrieve the data to your computer. When you run a report on the report server, the data source connections and credentials must use sufficient permissions to retrieve the data on the report server. Use this article to help troubleshoot issues about report data retrieval.   
   
 ## I can't create a connection to a data source  
-When you create a data source, run a dataset query, or preview a report, you might get the following message: Can't create a connection to data source `<data source name>`.   
+When you create a data source, run a dataset query, or preview a report, you might get the following message: "Can't create a connection to data source `<data source name>`."   
     
-### Data source is not available.  
+### Data source isn't available.  
 The data source is offline or unavailable for some other reason.   
   
 Verify that you have access to the data source and that it's available. For example, use Sql Server Management Studio to connect to the data source. For relational databases and multidimensional database, use the **Test** button on the **Connection Properties** dialog box to verify the connection and permissions to the data source.   
   
-### Data source credentials are not valid.  
-The credentials that you're using to connect to the data source have insufficient permissions to retrieve the data specified in the query.  
+### Data source credentials aren't valid.  
+The credentials that you used to connect to the data source have insufficient permissions to retrieve the data specified in the query.  
   
-Verify that the credentials that you're using the correct credentials. For example, you might have permission to retrieve data from a Table or View, but not for a specific column. Or, you might not have sufficient permissions to run a stored procedure that populates a view.   
+Verify that the credentials that you use are the correct credentials. For example, you might have permission to retrieve data from a Table or View, but not for a specific column. Or, you might not have sufficient permissions to run a stored procedure that populates a view.   
   
 > [!NOTE]  
 > Permissions that you use to retrieve data for previewing a report may be different than permissions that are needed to retrieve data after a report is published to a report server.   
@@ -39,19 +39,19 @@ Verify that the password doesn't include special characters. If changing the pas
 ## Why do I see no data when I run my query in the query designer?  
 When you create a dataset, the dataset field collection appears in the Report Data pane. Sometimes the dataset field collection doesn't appear as expected.   
   
-### Import query does not import calculated fields  
+### Import query doesn't import calculated fields  
   
 Although calculated fields are saved in a report definition, they aren't included when you import a dataset query from another report. Only fields specified by the dataset query appear in the Report Data pane after you create a dataset by importing a query from another report.   
   
 To view calculated fields in the Report Data pane, you must define them for each report in which they're used.   
   
-### Some data providers do not support automatic population of the dataset field collection  
+### Some data providers don't support automatic population of the dataset field collection  
 When you define a query in the Dataset Properties dialog box, and then close the dialog box, the dataset field collection usually appears in the Report Data pane. For some data sources, the dataset field collection isn't automatically populated.   
   
 To populate the dataset field collection, do the following tasks:  
-* Make sure that you have permissions to retrieve field information from the database. For some data sources, you might have permissions to access the data source but not the table or column. You might have permission to access a view but not the permissions to run the stored procedures that create the view. To validate your access to specific tables or columns in a database, verify your query results in a separate application such as SQL Server Management Studio using the same permissions you use for the report. If you can't see the results that you want for your query, work with the system administrator to adjust your permissions to the data.   
-* Run the query in the query pane of the **Dataset Properties** dialog box. For more information, see [Report Datasets (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Add fields manually. For more information, see [How to: Add, Edit, Refresh Fields in the Report Data Pane (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
+* Make sure that you have permissions to retrieve field information from the database. For some data sources, you might have permissions to access the data source but not the table or column. You might have permission to access a view but not the permissions to run the stored procedures that create the view. To validate your access to specific tables or columns in a database, verify your query results in a separate application such as SQL Server Management Studio. Verify the results by using the same permissions you use for the report. If you can't see the results that you want for your query, work with the system administrator to adjust your permissions to the data.   
+* Run the query in the query pane of the **Dataset Properties** dialog box. For more information, see [Report datasets (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
+* Add fields manually. For more information, see [How to: Add, edit, refresh fields in the Report Data pane (Report Builder 3.0 and SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## Related content  
 [Errors and events (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

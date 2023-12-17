@@ -30,12 +30,12 @@ The built-in fields `[&PageNumber]` and `[&TotalPages]` aren't valid in the repo
 PageNumber and TotalPages are Valid Only in the Page Header and Page Footer.  
   
   
-The built-in fields [&PageNumber] and [&TotalPages] are valid only in the page header and page footer.   
+The built-in fields `[&PageNumber]` and `[&TotalPages]` are valid only in the page header and page footer.   
   
-To add [&PageNumber] or [&TotalPages] to a report, you must first add a page header or page footer. For more information, see [Add or remove a page header](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
+To add `[&PageNumber]` or `[&TotalPages]` to a report, you must first add a page header or page footer. For more information, see [Add or remove a page header](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Including [&TotalPages] in the page header or page footer can have consequences for report processing. For more information, see Troubleshooting Reports: Reports Exported to a Specific File Format.  
+> Including `[&TotalPages]` in the page header or page footer can have consequences for report processing. For more information, see Troubleshooting Reports: Reports Exported to a Specific File Format.  
 [Troubleshoot processing of Reporting Services reports](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## How do I design two tables or a chart and a table to display side-by-side?  

@@ -12,12 +12,12 @@ ms.custom: updatefrequency5
 # Troubleshoot processing of Reporting Services reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this article to help troubleshoot these issues.   
   
-## My report definition is not valid.  
+## My report definition isn't valid.  
 At run time, the report processor combines data and layout elements in the report definition, and evaluates expressions for report item properties.   
   
 The report processor checks that the report definition (.rdl file) conforms to the schema that is specified in the namespace declaration at the beginning of the .rdl file. For more information about RDL schemas, see [Find the report definition schema version (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-In addition, the report expressions that are evaluated at run time must follow a set of rules that ensure the report data and layout can be combined correctly. When the report processor detects a problem, you might see the following message: The definition of the report `<report name>` is invalid.  
+In addition, the report expressions that are evaluated at run time must follow a set of rules that ensure the report data and layout can be combined correctly. When the report processor detects a problem, you might see the following message: "The definition of the report `<report name>` is invalid."  
   
 ### Report item expressions can only refer to fields within the current dataset scope or, if inside an aggregate, the specified dataset scope.  
   

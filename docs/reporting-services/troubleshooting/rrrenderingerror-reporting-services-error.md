@@ -36,7 +36,7 @@ helpviewer_keywords:
   
  A message that indicates an unsupported color specified is typically caused when a color specified in the RDL isn't valid. Choose a color supported by RDL and then try again.  
   
-A message indicates that the action label is only optional when using a single action. It also notes that adding multiple actions requires labels for each action when an action label isn't valid. Specify a valid action label for each action.  
+A message indicates that the action label is only optional when you use a single action. It also notes that adding multiple actions requires labels for each action when an action label isn't valid. Specify a valid action label for each action.  
   
  A message that indicates the style argument has to be of a specific type is typically caused when an incorrect style value for the data type is specified. The RDL specification identifies the valid types that you can use in the style values of different RDL elements. For example, an incorrect style value for background color is `2pt` and incorrect value for height is `true`. Specify a correct value and then try again.  
   

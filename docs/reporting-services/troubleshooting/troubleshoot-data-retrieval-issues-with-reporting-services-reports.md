@@ -12,7 +12,7 @@ ms.custom: updatefrequency5
 # Troubleshoot data retrieval issues with Reporting Services reports
 The first step during report processing is to retrieve the report data for each dataset by running the dataset query. When you preview a report locally, your data source connections and credentials must use sufficient permissions to retrieve the data to your computer. When you run a report on the report server, the data source connections and credentials must use sufficient permissions to retrieve the data on the report server. Use this article to help troubleshoot issues about report data retrieval.   
   
-## I cannot create a connection to a data source  
+## I can't create a connection to a data source  
 When you create a data source, run a dataset query, or preview a report, you might get the following message: Can't create a connection to data source `<data source name>`.   
     
 ### Data source is not available.  

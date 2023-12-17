@@ -103,9 +103,9 @@ helpviewer_keywords:
   
  You can also pass the name of a specific scope to an aggregate function. Scope can refer to the name of a dataset, a data region, or the name of a scope higher on the data hierarchy. This name applies to the following messages:  
   
--   The *\<report item type>* '*\<report item name>*' has an invalid scope "*\<scope name>*". The scope must be the current scope, or contained within the current scope.  
+-   The *\<report item type>* *\<report item name>* has an invalid scope *\<scope name>*. The scope must be the current scope, or contained within the current scope.  
   
--   The *\<property name>* expression for the *\<report item type>* '*\<report item name>*' has a scope parameter that isn't valid for an aggregate function. The scope parameter must be set to a string constant that is equal to either the name of a containing group, the name of a containing data region, or the name of a dataset.  
+-   The *\<property name>* expression for the *\<report item type>*. *\<report item name>* has a scope parameter that isn't valid for an aggregate function. The scope parameter must be set to a string constant that is equal to either the name of a containing group, the name of a containing data region, or the name of a dataset.  
   
  For aggregate functions that calculate running totals (**Previous**, **RunningValue**, or **RowNumber**), you can specify a scope parameter that is either a row group name or a column group name, but not both. This function applies to the following error message:  
   

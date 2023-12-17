@@ -27,7 +27,7 @@ helpviewer_keywords:
  The report model couldn't be generated. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 SP1 and earlier versions, this error is most likely displayed when the System.Data.DataSet object can't handle a table or relationship within the database schema. For example, when two foreign keys are defined on the same column within a table.  
   
 ## User action  
- Determine the specific reason that caused this message to appear, review the report server log files, which are located at `\Microsoft SQL Server\\<SQL Server Instance\>\Reporting Services\LogFiles`.  
+ Determine the specific reason that caused this message to appear. Then, review the report server log files, which are located at \Microsoft SQL Server\\&lt;SQL Server Instance&gt;\Reporting Services\LogFiles.  
   
 ## Internal-only  
   

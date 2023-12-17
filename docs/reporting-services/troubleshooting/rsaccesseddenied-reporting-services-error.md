@@ -20,7 +20,7 @@ helpviewer_keywords:
   
 - If the error occurred while accessing the report server directly through a URL, the exception is mapped to an HTTP 401 error.  
   
-- If the error occurred while using the web portal, the exception is typically mapped to an HTTP 401 error, or other defined HTML error page.  
+- If the error occurs when you use the web portal, the exception is typically mapped to an HTTP 401 error, or other defined HTML error page.  
   
 - If the error occurred during a scheduled operation, subscription, or delivery, the error appears in the report server log file only.  
   

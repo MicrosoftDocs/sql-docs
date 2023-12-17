@@ -29,7 +29,7 @@ helpviewer_keywords:
  Internal errors are uncommon. If you get this error, more information is available in report server trace logs. In addition, if you're running as local administrator on the same computer on which the error occurs, you can view the call stack for more information.  
   
 ## User action  
- To determine the specific cause for this message, review the report server log files, which are located at \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. For more information, see [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ To determine the specific cause for this message, review the report server log files, which are located at \Microsoft SQL Server\MSRS12.\\&lt;instancename&gt;\Reporting Services\LogFiles. For more information, see [Reporting Services log files and sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
  To view the call stack, right-click the page on which the error occurs and point to **View Source**. Viewing the call stack requires administrator permissions on the same computer on which the error occurs.  
   

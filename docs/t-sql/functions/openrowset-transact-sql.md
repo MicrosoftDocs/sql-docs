@@ -565,6 +565,7 @@ CREATE EXTERNAL DATA SOURCE SampleSource
 WITH (TYPE = BLOB_STORAGE,
 LOCATION = 'https://****************.blob.core.windows.net/curriculum',
 CREDENTIAL = sampletestcred
+)
 ```
 
 Next, load data from the CSV file hosted on blob storage: 

@@ -55,7 +55,7 @@ The script can be used to copy content between report servers of the same mode o
 |Shared dataset|Yes|Yes|| 
 |Folder|Yes|Yes|The script doesn't overwrite existing items on the target server. If an item on the target server already exists with the same name, you see an error message similar to this one:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |Report|Yes|Yes|The script doesn't overwrite existing items on the target server. If an item on the target server already exists with the same name, you see an error message similar to this one:<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
-|Power BI Reports|No|No|**Only available with Power BI Report Server**<br /><br />[Reporting Services PowerShell commands](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
+|Power BI Reports|No|No|**Only available with Power BI Report Server**<br /><br />[PowerShell commands in Reporting Services](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
 |Parameters|Yes|Yes||  
 |Subscriptions|Yes|Yes||  
 |History Settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
@@ -64,9 +64,9 @@ The script can be used to copy content between report servers of the same mode o
 |Cache refresh plans|Yes|Yes||  
 |Images|Yes|Yes||  
 |Report parts|Yes|Yes||  
-|KPIs|No|No|[Reporting Services PowerShell commands](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
-|Mobile Reports|No|No|[Reporting Services PowerShell commands](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
-|Excel Workbooks|No|No|**Only available with Power BI Report Server**<br /><br />Use [Reporting Services PowerShell commands](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
+|KPIs|No|No|[PowerShell commands for Reporting Services](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
+|Mobile Reports|No|No|[PowerShell commands for Reporting Services](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
+|Excel Workbooks|No|No|**Only available with Power BI Report Server**<br /><br />Use [PowerShell commands for Reporting Services](https://github.com/microsoft/ReportingServicesTools), such as Out-RsRestFolderContent and Write-RsRestFolderContent, might be used as an alternative.|  
 
 [!INCLUDE [ssrs-report-parts-deprecated](../../includes/ssrs-report-parts-deprecated.md)]
 

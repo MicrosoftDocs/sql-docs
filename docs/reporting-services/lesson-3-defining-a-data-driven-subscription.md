@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 3: Define a data-driven subscription
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal's data-driven subscription pages to connect to a subscription data source. You then build a query that retrieves subscription data, and you map the result set to report and delivery options.  
   
 > [!NOTE]  
 > Before you start, verify that **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).
@@ -22,7 +22,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 2.  In the context menu :::image type="icon" source="../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png"::: of the report, select **Manage**, and then choose **Subscriptions** in the left pane.  
   
-3. Select **+ New Subscription**. If you do not see this button, you do not have Content Manager permissions.
+3. Select **+ New Subscription**. If you don't see this button, you don't have Content Manager permissions.
   
 ## Define a description  
 1.  Type **Sales Order delivery** in description.
@@ -31,7 +31,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 1. Select **Data-driven subscription**. 
 
 ## Schedule
-1. In the schedule section select **Report-specific schedule**.
+1. In the schedule section, select **Report-specific schedule**.
 2. Select **Edit schedule**.
 3. In **Schedule Details**, select **Once**.  
 4. Specify a start time that is a few minutes ahead of the current time.  
@@ -89,17 +89,17 @@ Parameter  |Source of value  | Value/field
  2. Select **Create Subscription**.
    
 ## Next steps  
-When the subscription runs, four report files will be delivered to the file share you specified, one for each order in the *Subscribers* data source. Each delivery should be unique in terms of data (the data should be order-specific), rendering format, and file format. You can open each report from the shared folder to verify that each version is customized based on the subscription options you defined.  
+When the subscription runs, it delivers the four report files to the file share you specified, one for each order in the *Subscribers* data source. Each delivery should be unique in terms of data (the data should be order-specific), rendering format, and file format. You can open each report from the shared folder to verify that each version is customized based on the subscription options you defined.  
 
 :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif" alt-text="Screenshot of the list of files created by the subscription.":::
   
-The subscription page in the web portal will contain the **Last Run** date and **Status** of the subscription. 
+The subscription page in the web portal contains the **Last Run** date and **Status** of the subscription. 
 > [!NOTE]
 > Refresh the page after the subscription runs to see the updated information.  
 
 :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png" alt-text="Screenshot of the subscription information in the portal.":::
   
-This step concludes the tutorial "Define a Data-Driven Subscription".   
+This step concludes the tutorial "Define a Data-Driven Subscription."
   
 ## Related content
 

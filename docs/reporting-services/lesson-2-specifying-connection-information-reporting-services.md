@@ -27,7 +27,7 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
 
     :::image type="content" source="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png" alt-text="Screenshot of the Data Source Properties dialog box." lightbox="media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png":::
 
-2. In the **Name** text box, type "AdventureWorks2022".
+2. In the **Name** text box, enter "AdventureWorks2022".
 
 3. Select the **Embedded connection** radio button.
 
@@ -44,7 +44,7 @@ For this report, you're going to add the [!INCLUDE [sssampledbobject-md](../incl
     >
     > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2022`
     >
-    > For more information about connection strings, you can refer to the `Related content` section below.
+    > For more information about connection strings, see the `Related content` section.
 
 6. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
 
@@ -56,9 +56,9 @@ Report Designer adds the data source AdventureWorks2022 to the **Report Data** p
 
 
 
-## Next steps
+## Next step
 
-In this lesson, you've successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
+In this lesson, you successfully defined a connection to the [!INCLUDE [sssampledbobject-md](../includes/sssampledbobject-md.md)] sample database. Continue with [Lesson 3: Define a dataset for the table report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) to define a dataset for the report.
 
 ## Related content
 

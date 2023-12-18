@@ -1,6 +1,6 @@
 ---
 title: "Lesson 2: Modify the report data source properties"
-description: Learn how to use the web portal to select a report that will be delivered to recipients and also how to modify the Report Data Source properties.
+description: Learn how to use the web portal to select a report for delivery to recipients and also how to modify the Report Data Source properties.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/23/2016
@@ -10,9 +10,9 @@ ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
 # Lesson 2: Modify the report data source properties
-In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you'll define will distribute the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you'll modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
+In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report for delivery to recipients. The data-driven subscription that you define distributes the **Sales Order** report created in the tutorial [Create a basic table report &#40;SSRS tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  
   
-You'll also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
+You also modify the dataset and report to use a parameter to filter the report on the `[Order]` so the subscription can output different instances of the report for specific orders and rendering formats.  
   
 ## <a name="bkmk_modify_datasource"></a>Modify the data source to use stored credentials  
   
@@ -44,19 +44,19 @@ You'll also modify the dataset and report to use a parameter to filter the repor
 9. Select **Test Connection** to verify you can connect to the data source.  
   
 10. Select **Save**.
-11. Select **Cancel**  
+11. Select **Cancel**.
   
 11. View the report to verify that the report runs with the credentials you specified.  
   
 ## <a name="bkmk_modify_dataset"></a>Modify the AdventureWorksDataset  
- In the following steps, you'll modify the dataset to use a parameter to filter the data set based an order number.
-1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
+ In the following steps, you modify the dataset to use a parameter to filter the data set based an order number.
+1.  Open the **Sales Orders** report in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].
   
 2.  Right-click the dataset `AdventureWorksDataset` and select **Dataset Properties**.
 
     :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png" alt-text="Screenshot of the context menu for AdventureWorksDataset highlighting the Dataset Properties option.":::
 
-1.  Add the statement `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` before the `Group By` statement. The full query syntax is the following:  
+1.  Add the statement `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` before the `Group By` statement. The following example is the full query syntax:  
   
     ```  
     SELECT soh.OrderDate AS Date, soh.SalesOrderNumber AS [Order], pps.Name AS Subcat, pp.Name AS Product, SUM(sd.OrderQty) AS Qty, SUM(sd.LineTotal)  AS LineTotal  
@@ -76,7 +76,7 @@ You'll also modify the dataset and report to use a parameter to filter the repor
     ```  
   
 4.  Select **OK**  
- In the following steps you'll add a parameter to the report.  The report parameter feeds the dataset parameter. 
+ In the following steps you add a parameter to the report.  The report parameter feeds the dataset parameter. 
 ## <a name="bkmk_add_reportparameter"></a>Add a report parameter and republish the report  
   
 1.  In the Report Data pane, expand the parameters folder and double-click the **Ordernumber** parameter.  It was created automatically as part of the previous steps when you added the parameter to the dataset. Select **New** and then choose **Parameter...**  
@@ -102,13 +102,13 @@ You'll also modify the dataset and report to use a parameter to filter the repor
     :::image type="content" source="../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png" alt-text="Screenshot of the preview tab and the View Report button highlighted.":::
  
   
-## <a name="bkmk_redeploy"></a>Re-deploy the report  
+## <a name="bkmk_redeploy"></a>Redeploy the report  
   
-1.  Re-deploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Redeploy the report so the subscription configuration in the next lesson can utilize the changes you made in this lesson. For more information on the project properties used in the table tutorial, see section 'To Publish the Report to the Report Server (Optional)' of [Lesson 6: Adding grouping and totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  On the toolbar, select **Build** and then choose **Deploy tutorial**.  
   
-## Next steps  
+## Next step 
 + You successfully configured the report to get data using stored credentials and the data can be filtered with a parameter. 
 + In the next lesson, you configure the subscription using the web portal Data-Driven Subscription pages. See [Lesson 3: Defining a data-driven subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   

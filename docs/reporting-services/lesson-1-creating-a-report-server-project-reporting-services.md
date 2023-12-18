@@ -27,7 +27,7 @@ When you create reports with Report Designer, it creates a report server project
 
     :::image type="content" source="../reporting-services/media/ssrs-ssdt-file-01-new-project.png" alt-text="Screenshot of Visual Studio showing the project option selected in the new dropdown menu in the file menu.":::
   
-2. In the left-most column under **Installed**, select **Reporting Services**. In some cases, it may be under the group **Business Intelligence**.
+2. In the left-most column under **Installed**, select **Reporting Services**. In some cases, it might be under the group **Business Intelligence**.
 
     :::image type="content" source="../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png" alt-text="Screenshot of the New Project dialog box showing Reporting Services selected and the Report Server Project template highlighted.":::
 
@@ -57,9 +57,9 @@ When you create reports with Report Designer, it creates a report server project
 
     :::image type="content" source="media/ssrs-ssdt-01-new-report-designer.png" alt-text="Screenshot of Visual Studio showing the Report Designer and the Sales Orders report in Design view." lightbox="media/ssrs-ssdt-01-new-report-designer.png":::
 
-## Next steps
+## Next step
 
-So far you've created the Tutorial report project and the Sales Orders report. In the remaining lessons, you're going to learn how to:
+In this lesson, you created the Tutorial report project and the Sales Orders report. In the remaining lessons, you're going to learn how to:
 
 - Configure a data source for the report.
 - Create a dataset from the data source.

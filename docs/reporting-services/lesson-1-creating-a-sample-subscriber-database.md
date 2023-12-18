@@ -55,7 +55,7 @@ This lesson assumes you're using [!INCLUDE[ssManStudioFull_md](../includes/ssman
   
 8.  Use a SELECT statement to verify that you have three rows of data. For example: `select * from OrderInfo`  
   
-## Next steps  
+## Next step  
 + You successfully created the subscription data that drives report distribution and vary the report output for each subscriber. 
 + Next, you modify the data source properties of the report to use stored credentials. 
 + You also modify the report design to include a parameter that the subscription uses with the subscriber data. [Lesson 2: Modify the report data source properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  

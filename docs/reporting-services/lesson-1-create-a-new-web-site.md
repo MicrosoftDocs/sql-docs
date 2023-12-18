@@ -16,7 +16,7 @@ In this lesson, you learn how to create a new website project using the ASP.NET 
   
 1.  Open Microsoft Visual Studio 2015.  
   
-2.  On the **File** menu, point to **New**, and select **Web Site**.  
+2.  On the **File** menu, select **New**, and choose **Web Site**.  
   
 3.  In the **New Web Site** dialog box, in the **Installed Templates** pane, select **Visual C#** and then choose **ASP.NET Reports Web Site**.  
   
@@ -24,5 +24,6 @@ In this lesson, you learn how to create a new website project using the ASP.NET 
   
 The website project opens and launches the **Report Wizard**. **Cancel** out of the Data Source and Report Wizard. You create a custom dataset in the next step.  
   
-## Next task  
+## Next step
+
 You successfully created a new website project. Next, you create a data connection and a data table for the parent report. See [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).

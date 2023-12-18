@@ -10423,6 +10423,8 @@ items:
         href: sql-server/azure-arc/release-notes.md
       - name: Prerequisites
         href: sql-server/azure-arc/prerequisites.md
+      - name: Known issues
+        href: sql-server/azure-arc/known-issues.md
       - name: How-to guides
         items:
         - name: Connect SQL Server to Azure using Arc

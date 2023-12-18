@@ -32,7 +32,7 @@ helpviewer_keywords:
   
  You can develop data processing extensions for your own data sources, or you can use the interfaces to add an additional layer of data processing to common database infrastructures. You can deploy your custom data processing extensions to enable seamless integration of data into the existing report servers in your organization. You can also use them as part of a custom reporting suite that you provide to your consumers.  
 
-:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif" alt-text="Screenshot of the Reporting Services data processing extension architecture." lightbox="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif":::  
+:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif" alt-text="Screenshot of the Reporting Services data processing extension architecture.":::  
 Reporting Services data processing extension architecture  
   
  The advantages to implementing a custom [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension include:  
@@ -46,7 +46,7 @@ Reporting Services data processing extension architecture
 ## Data extension process flow  
  Before developing your custom data extension, you should understand how the report server uses data extensions to process data. You should also understand the constructors and methods that are called by the report server.  
 
-:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif" alt-text="Screenshot of the step-by-step process flow of a data extension that is called by the report server." lightbox="../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif":::
+:::image type="content" source="../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif" alt-text="Screenshot of the step-by-step process flow of a data extension that is called by the report server.":::
   
  The illustration shows the following sequence of events:  
   

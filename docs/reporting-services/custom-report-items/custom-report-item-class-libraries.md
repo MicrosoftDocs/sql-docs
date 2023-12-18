@@ -124,7 +124,7 @@ helpviewer_keywords:
   
 ## Related content  
  [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
+ [Creating a custom report Item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Creating a custom report Item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   
   

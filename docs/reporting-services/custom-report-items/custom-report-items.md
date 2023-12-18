@@ -43,6 +43,6 @@ helpviewer_keywords:
  Describes the custom report item infrastructure classes and managed wrapper classes in the **Microsoft.ReportDesigner** namespace.  
   
 ## Related content  
- [Technical Reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Technical reference &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

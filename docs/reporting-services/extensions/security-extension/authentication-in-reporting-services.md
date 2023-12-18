@@ -94,7 +94,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  The following illustration depicts the method of authenticating users to the Web service when your application is deployed with a report server configured to use a custom authentication extension.  
 
-:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif" alt-text="Screenshot of the Reporting Services security authentication flow." lightbox="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif":::
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif" alt-text="Screenshot of the Reporting Services security authentication flow.":::
   
  As shown in Figure 2, the authentication process is as follows:  
   

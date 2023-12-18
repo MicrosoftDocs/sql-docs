@@ -16,7 +16,7 @@ helpviewer_keywords:
   
  Because security extensions are based on an open and extensible API, you can create new authentication and authorization extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The following is an example of a typical security extension implementation that uses Forms-based authentication and authorization:  
 
-:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif" alt-text="Screenshot of the Reporting Services security extension process." lightbox="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif":::
+:::image type="content" source="../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif" alt-text="Screenshot of the Reporting Services security extension process.":::
   
  As shown in the illustration, authentication and authorization occur as follows:  
   

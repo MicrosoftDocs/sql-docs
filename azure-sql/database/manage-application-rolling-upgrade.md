@@ -14,7 +14,7 @@ ms.custom: sqldbrb=1
 # Manage rolling upgrades of cloud applications by using SQL Database active geo-replication
 [!INCLUDE[appliesto-sqldb](../includes/appliesto-sqldb.md)]
 
-Learn how to use [active geo-replication](auto-failover-group-sql-db.md) in Azure SQL Database to enable rolling upgrades of your cloud application. Because upgrades are disruptive operations, they should be part of your business-continuity planning and design. In this article, we look at two different methods of orchestrating the upgrade process and discuss the benefits and tradeoffs of each option. For the purposes of this article, we refer to an application that consists of a website that's connected to a single database as its data tier. Our goal is to upgrade version 1 (V1) of the application to version 2 (V2) without any significant impact on the user experience.
+Learn how to use [active geo-replication](failover-group-sql-db.md) in Azure SQL Database to enable rolling upgrades of your cloud application. Because upgrades are disruptive operations, they should be part of your business-continuity planning and design. In this article, we look at two different methods of orchestrating the upgrade process and discuss the benefits and tradeoffs of each option. For the purposes of this article, we refer to an application that consists of a website that's connected to a single database as its data tier. Our goal is to upgrade version 1 (V1) of the application to version 2 (V2) without any significant impact on the user experience.
 
 When evaluating upgrade options, consider these factors:
 
@@ -68,7 +68,7 @@ The main tradeoff is that, if a catastrophic failure occurs during the upgrade, 
 
 ## Upgrade applications that rely on database geo-replication for disaster recovery
 
-If your application uses active geo-replication or auto-failover groups for business continuity, it's deployed to at least two different regions. There's an active, primary database in a primary region and a read-only, secondary database in a backup region. Along with the factors mentioned at the beginning of this article, the upgrade process must also guarantee that:
+If your application uses active geo-replication or failover groups for business continuity, it's deployed to at least two different regions. There's an active, primary database in a primary region and a read-only, secondary database in a backup region. Along with the factors mentioned at the beginning of this article, the upgrade process must also guarantee that:
 
 * The application remains protected from catastrophic failures at all times during the upgrade process.
 * The geo-redundant components of the application are upgraded in parallel with the active components.
@@ -142,10 +142,10 @@ The main tradeoff is that it requires double redundancy of each application comp
 
 The two upgrade methods described in the article differ in complexity and dollar cost, but they both focus on minimizing how long the user is limited to read-only operations. That time is directly defined by the duration of the upgrade script. It doesn't depend on the database size, the service tier you chose, the website configuration, or other factors that you can't easily control. All preparation steps are decoupled from the upgrade steps and don't impact the production application. The efficiency of the upgrade script is a key factor that determines the user experience during upgrades. So, the best way to improve that experience is to focus your efforts on making the upgrade script as efficient as possible.
 
-## Next steps
+## Related content
 
-* For a business continuity overview and scenarios, see [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
-* To learn about Azure SQL Database active geo-replication, see [Create readable secondary databases using active geo-replication](active-geo-replication-overview.md).
-* To learn about Azure SQL Database auto-failover groups, see [Use auto-failover groups to enable transparent and coordinated failover of multiple databases](auto-failover-group-sql-db.md).
-* To learn about staging environments in Azure App Service, see [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots).
-* To learn about Azure Traffic Manager profiles, see [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles).
+* [Business continuity overview](business-continuity-high-availability-disaster-recover-hadr-overview.md).
+* [Create readable secondary databases using active geo-replication](active-geo-replication-overview.md).
+* [Use failover groups to enable transparent and coordinated failover of multiple databases](failover-group-sql-db.md).
+* [Set up staging environments in Azure App Service](/azure/app-service/deploy-staging-slots).
+* [Manage an Azure Traffic Manager profile](/azure/traffic-manager/traffic-manager-manage-profiles).

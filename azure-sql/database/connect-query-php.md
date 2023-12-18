@@ -6,7 +6,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: wiassaf, mathoma, v-masebo, randolphwest
 ms.date: 09/15/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: connect
 ms.topic: quickstart
 ms.custom:

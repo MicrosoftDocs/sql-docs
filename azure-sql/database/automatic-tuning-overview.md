@@ -1,5 +1,6 @@
 ---
 title: Automatic tuning overview
+titleSuffix: Azure SQL Database & Azure SQL Managed Instance
 description: Azure SQL Database and Azure SQL Managed Instance analyzes SQL query and automatically adapts to user workload.
 author: NikaKinska
 ms.author: nnikolic
@@ -57,7 +58,7 @@ The automatic tuning options available in Azure SQL Database and Azure SQL Manag
 
 ### Automatic tuning for SQL Database
 
-Automatic tuning for Azure SQL Database uses the **[CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, **[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, and **FORCE_LAST_GOOD_PLAN** database advisor recommendations to optimize your database performance. For more information, see [Database advisor recommendations in the Azure portal](database-advisor-find-recommendations-portal.md), in [PowerShell](/powershell/module/az.sql/get-azsqldatabaserecommendedaction), and in the [REST API](/rest/api/sql/serverautomatictuning).
+Automatic tuning for Azure SQL Database uses the **[CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, **[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql?view=azuresqldb-current&preserve-view=true)**, and **FORCE_LAST_GOOD_PLAN** database advisor recommendations to optimize your database performance. For more information, see [Database advisor recommendations in the Azure portal](database-advisor-find-recommendations-portal.md), in [PowerShell](/powershell/module/az.sql/get-azsqldatabaserecommendedaction), and in the [REST API](/rest/api/sql/server-automatic-tuning).
 
 You can either manually apply tuning recommendations using the Azure portal, or you can let automatic tuning autonomously apply tuning recommendations for you. The benefits of letting the system autonomously apply tuning recommendations for you is that it automatically validates there exists a positive gain to workload performance, and if there is no significant performance improvement detected or if performance regresses, the system automatically reverts the changes that were made. Depending on query execution frequency, the validation process can take from 30 minutes to 72 hours, taking longer for less frequently executing queries. If at any point during validation a regression is detected, changes are reverted immediately.
 

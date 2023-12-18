@@ -6,7 +6,7 @@ author: GithubMirek
 ms.author: mireks
 ms.reviewer: wiassaf, vanto, mathoma
 ms.date: 09/19/2023
-ms.service: sql-database
+ms.service: sql-db-mi
 ms.subservice: security
 ms.topic: how-to
 ms.custom:

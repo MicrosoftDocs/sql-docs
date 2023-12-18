@@ -178,7 +178,7 @@ For more information, see [New-AzSqlInstance](/powershell/module/az.sql/new-azsq
 
 # [REST API](#tab/rest-api)
 
-The [SQL Managed Instances - Create Or Update](/rest/api/sql/2020-11-01-preview/managed-instances/create-or-update) REST API can be used to create a managed instance with a user-assigned managed identity.
+The [SQL Managed Instances - Create Or Update](/rest/api/sql/managed-instances/create-or-update) REST API can be used to create a managed instance with a user-assigned managed identity.
 
 > [!NOTE]
 > The script requires a virtual network and subnet be created as a prerequisite.

@@ -58,7 +58,7 @@ helpviewer_keywords:
 5.  Copy the custom report item design-time component DLL to the ```%ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies``` directory.  
   
 ## Related content  
- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Reporting Services configuration files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   

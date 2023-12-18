@@ -25,8 +25,8 @@ helpviewer_keywords:
 :::image type="content" source="../../reporting-services/custom-report-items/media/customreportitemdesign-timecomponentarchitecture.gif" alt-text="Diagram of a custom report item design-time component.":::
   
 ## Related content  
- [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Creating a custom report item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

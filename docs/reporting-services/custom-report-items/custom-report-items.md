@@ -24,22 +24,22 @@ helpviewer_keywords:
  In addition to providing functionality that isn't natively supported, some developers might want to extend existing functionality with alternative versions of controls that are already included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In this scenario, a developer could provide three components: a run-time component, a design-time component, and a design-time report item conversion component that converts an existing report item into a custom report item on demand.  
   
 ## In this section  
- [Custom Report Item Architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
+ [Custom report item architecture](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
  Describes the components that make up a custom report item.  
   
- [Custom Report Item Implementation Requirements](../../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md)  
+ [Custom report item implementation requirements](../../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md)  
  Describes prerequisites for creating a custom report item.  
   
- [Creating a Custom Report Item Run-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)  
+ [Creating a custom report item run-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)  
  Describes how to create a custom report item run-time component.  
   
- [Creating a Custom Report Item Design-Time Component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
+ [Creating a custom report item design-time component](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  Describes how to create a custom report item design-time component.  
   
- [How to: Deploy a Custom Report Item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [How to: Deploy a custom report item](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  Describes how to deploy a custom report item.  
   
- [Custom Report Item Class Libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Custom report item class libraries](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  Describes the custom report item infrastructure classes and managed wrapper classes in the **Microsoft.ReportDesigner** namespace.  
   
 ## Related content  

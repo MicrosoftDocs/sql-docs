@@ -17,7 +17,7 @@ helpviewer_keywords:
 # Use a Notification class for a delivery extension
   The <xref:Microsoft.ReportingServices.Interfaces.Notification> class is located in the <xref:Microsoft.ReportingServices.Interfaces> namespace and represents subscription information that delivery extensions use for delivering reports. The <xref:Microsoft.ReportingServices.Interfaces.Notification> class provides a number of properties that can be used to render the reports for delivery, determine the status of the notification, and set user data.  
 
-:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif" alt-text="Screenshot of the Report notification process." lightbox="../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif":::
+:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif" alt-text="Screenshot of the Report notification process.":::
 
 The notification is the central object of any delivery  
   

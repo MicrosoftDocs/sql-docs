@@ -22,7 +22,7 @@ helpviewer_keywords:
 |Report Server E-Mail|Uses an SMTP server to e-mail reports to individual users or groups.|  
 |Report Server File Share|Used to distribute reports within your organization to network file shares. Provides the ability to automatically copy a report to a file share on a designated schedule.|  
 
-:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif" alt-text="Screenshot of the Reporting Services delivery extension architecture." lightbox="../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif":::
+:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif" alt-text="Screenshot of the Reporting Services delivery extension architecture.":::
 
 Reporting Services delivery extension architecture.
   

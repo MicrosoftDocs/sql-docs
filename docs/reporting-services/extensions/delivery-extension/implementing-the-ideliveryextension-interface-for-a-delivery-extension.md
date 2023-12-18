@@ -16,7 +16,7 @@ helpviewer_keywords:
 # Implement the IDeliveryExtension interface for a delivery extension
   Your delivery extension class is used to deliver report notifications to users based on the contents of the notifications. The delivery extension class also provides infrastructure for validating user settings that are passed to the delivery extension. In addition, your delivery extension class should contain specific properties that clients can use to gain information about the name of the extension, the settings that the extension supports, and the rendering formats that are available to the delivery extension.  
 
-:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif" alt-text="Screenshot of the IDeliveryExtension interface process." lightbox="../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif":::
+:::image type="content" source="../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif" alt-text="Screenshot of the IDeliveryExtension interface process.":::
 
 The IDeliveryExtension interface allows validation of user data as well as for clients to learn about the required delivery settings  
   

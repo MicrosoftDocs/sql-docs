@@ -131,7 +131,7 @@ An option is provided to disable auto-pausing if desired.
 
 The following features do not support auto-pausing, but do support auto-scaling. If any of the following features are used, then auto-pausing must be disabled and the database remains online regardless of the duration of database inactivity:
 
-- Geo-replication ([active geo-replication](active-geo-replication-overview.md) and [auto-failover groups](auto-failover-group-sql-db.md)).
+- Geo-replication ([active geo-replication](active-geo-replication-overview.md) and [failover groups](failover-group-sql-db.md)).
 - [Long-term backup retention](long-term-retention-overview.md) (LTR).
 - The sync database used in [SQL Data Sync](sql-data-sync-data-sql-server-sql-database.md).  Unlike sync databases, hub and member databases support auto-pausing.
 - [DNS alias](dns-alias-overview.md) created for the logical server containing a serverless database.

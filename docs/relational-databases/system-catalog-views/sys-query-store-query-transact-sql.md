@@ -3,7 +3,7 @@ title: "sys.query_store_query (Transact-SQL)"
 description: Contains information about the query and its associated overall aggregated runtime execution statistics.
 author: rwestMSFT
 ms.author: randolphwest
-ms.date: 12/04/2023
+ms.date: 12/16/2023
 ms.service: sql
 ms.subservice: system-objects
 ms.topic: "reference"
@@ -58,7 +58,7 @@ Contains information about the query and its associated overall aggregated runti
 | `max_compile_memory_kb` <sup>2</sup> | **bigint** | Compile memory statistics. |
 | `is_clouddb_internal_query` <sup>2</sup> | **bit** | Always `0` in [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] on-premises. |
 
-<sup>1</sup> Azure Synapse Analytics always returns zero (`1`).
+<sup>1</sup> Azure Synapse Analytics always returns one (`1`).
 
 <sup>2</sup> Azure Synapse Analytics always returns zero (`0`).
 

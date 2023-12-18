@@ -43,9 +43,9 @@ The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures
 
 There are two versions of **sqlcmd**:
 
-- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
-
 - The `go-mssqldb`-based **sqlcmd**, sometimes styled as **go-sqlcmd**. This version is a standalone tool you can download independently of [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)].
+
+- The ODBC-based **sqlcmd**, available with [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] or the Microsoft Command Line Utilities, and part of the `mssql-tools` package on Linux.
 
 To determine the version you have installed, run the following statement at the command line:
 
@@ -99,7 +99,9 @@ Copyright (C) 2022 Microsoft Corporation. All rights reserved.
 
 You may have several versions of **sqlcmd** (ODBC) installed on your computer. Be sure you're using the correct version. You should have at least version 15.0.4298.1 installed.
 
-Always Encrypted (`-g`) and Azure AD authentication (`-G`) require at least version 13.1.
+Always Encrypted (`-g`) and Microsoft Entra authentication (`-G`) require at least version 13.1.
+
+[!INCLUDE [entra-id-hard-coded](../../includes/entra-id-hard-coded.md)]
 
 ---
 

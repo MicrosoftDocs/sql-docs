@@ -4,7 +4,7 @@ description: This article describes the Hyperscale service tier in the vCore-bas
 author: dimitri-furman
 ms.author: dfurman
 ms.reviewer: wiassaf, mathoma, oslake, randolphwest
-ms.date: 10/24/2023
+ms.date: 12/15/2023
 ms.service: sql-database
 ms.subservice: service-overview
 ms.topic: conceptual
@@ -56,6 +56,9 @@ The Hyperscale service tier is intended for all customers who require higher per
 > [Elastic pools for Hyperscale](hyperscale-elastic-pool-overview.md) are currently in preview.
 
 ## Hyperscale pricing model
+
+> [!NOTE]
+> Simplified pricing for Azure SQL Database Hyperscale has arrived! Review the [new pricing tier for Azure SQL Database Hyperscale announcement](https://aka.ms/hsignite2023), and for pricing change details, see [Azure SQL Database Hyperscale – lower, simplified pricing!](https://techcommunity.microsoft.com/t5/azure-sql-blog/azure-sql-database-hyperscale-lower-simplified-pricing/ba-p/3982209).
 
 Hyperscale service tier is only available in [vCore model](service-tiers-vcore.md). To align with the new architecture, the pricing model is slightly different from General Purpose or Business Critical service tiers:
 

@@ -48,7 +48,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 -   (4) Represents a software or hardware network load balancing solution (NLB)  
 
-:::image type="content" source="../../reporting-services/install-windows/media/rs-sharepointscale.gif" alt-text="Screenshot of a typical three tier environment showing the numbered items." lightbox="../../reporting-services/install-windows/media/rs-sharepointscale.gif":::
+:::image type="content" source="../../reporting-services/install-windows/media/rs-sharepointscale.gif" alt-text="Screenshot of a typical three tier environment showing the numbered items.":::
   
  The following steps assume that an administrator is installing and configuring the server. The server is set up as a new application server in the farm and not used as a web front-end (WFE).  
   

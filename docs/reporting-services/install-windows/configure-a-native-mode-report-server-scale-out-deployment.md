@@ -126,7 +126,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
 2.  Select **Scale-out Deployment** to open the Scale-out Deployment page. You should see two entries, one for each report server instance that is connected to the report server database. The first report server instance should be joined. The second report server should be "Waiting to join". If you do not see similar entries for your deployment, verify you are connected to the first report server that is already configured and initialized to use the report server database.  
 
-    :::image type="content" source="../../reporting-services/install-windows/media/scaloutscreen.gif" alt-text="Screenshot that partially shows the scale-out deployment page." lightbox="../../reporting-services/install-windows/media/scaloutscreen.gif":::
+    :::image type="content" source="../../reporting-services/install-windows/media/scaloutscreen.gif" alt-text="Screenshot that partially shows the scale-out deployment page.":::
 
  
   

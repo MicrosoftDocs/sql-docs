@@ -162,6 +162,9 @@ Specifies the name of an asymmetric key to be associated with this login. This k
 - Only users with **ALTER ANY LOGIN** permission on the server or membership in the **securityadmin** fixed server role can create logins. For more information, see [Server-Level Roles](/azure/sql-database/sql-database-manage-logins#groups-and-roles) and [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - If the **CREDENTIAL** option is used, also requires **ALTER ANY CREDENTIAL** permission on the server.
 
+### Permissions for SQL Server 2022 and later
+Requires CREATE LOGIN permission on the server or membership in the **##MS_LoginManager##** fixed server role.
+
 ## After creating a login
 
 After creating a login, the login can connect to SQL Server, but only has the permissions granted to the **public** role. Consider performing some of the following activities.

@@ -142,6 +142,8 @@ The name of the distribution database. *@distribution_db* is **sysname**, with a
 
 #### [ @distributor_security_mode = ] *distributor_security_mode*
 
+[!INCLUDE [entra-id](../../includes/entra-id.md)]
+
 The security mode to use when connecting to a Distributor when synchronizing. *@distributor_security_mode* is **int**, with a default of `1`. The following values define the security mode:
 
 - `0` specifies [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.

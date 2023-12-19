@@ -39,7 +39,7 @@ Fast provisioning only applies:
 - to instances with 4-8 vCores. 
 - to instances that use the default maintenance window. 
 - to instances that are deployed into subnets that have the November 2022 feature wave enabled, which includes both dev/test and production subscriptions.
-- to instances that are not zone redundant
+- to instances that are not zone redundant.
 
 ## Duration
 

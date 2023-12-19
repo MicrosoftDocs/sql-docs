@@ -1,5 +1,5 @@
 ---
-title: "Plan for report design and report deployment | Reporting Services"
+title: "Plan for report design and report deployment"
 description: Learn how to plan a report authoring and report server environment that work together using Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,7 +9,7 @@ ms.subservice: reporting-services
 ms.topic: conceptual
 ms.custom: updatefrequency5
 ---
-# Plan for report design and report deployment | Reporting Services
+# Plan for report design and report deployment
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying paginated reports. Learn how to plan a report authoring and report server environment that work together.
 
 This article is an overview of report definition support by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components. A report definition is an XML file that is written in the Report Definition Language (RDL) or the Report Definition Language for Clients (RDLC). Each report definition conforms to a specific schema version that is listed at the beginning of the file.  
@@ -68,7 +68,7 @@ This article is an overview of report definition support by [!INCLUDE[ssRSnovers
 
 ::: moniker range="=sql-server-2016"
 
-In a SharePoint mode deployment, browse to the document library, select the report and select **Download a Copy**.  
+In a SharePoint mode deployment, browse to the document library, select the report and choose **Download a Copy**.  
 
 ::: moniker-end
   
@@ -79,11 +79,11 @@ In a SharePoint mode deployment, browse to the document library, select the repo
 ##  <a name="bkmk_report_authoring_and_deployment"></a> Report authoring and deployment support  
  Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide various support for reports like:
 
-    - Upgrade
-    - Design
-    - Report preview in local mode
-    - Report preview on the report server
-    - Deployment.  
+- Upgrade
+- Design
+- Report preview in local mode
+- Report preview on the report server
+- Deployment.  
   
  The following table summarizes support for authoring and deploying report definitions for different schema versions:  
   

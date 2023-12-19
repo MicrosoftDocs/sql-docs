@@ -15,7 +15,7 @@ ms.custom: updatefrequency5
 **General Reporting Services Feature Planning and Architecture**  
  [Browser support for Reporting Services and Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Plan for report design and report deployment | Reporting Services](./plan-for-report-design-and-report-deployment-reporting-services.md)  
+ [Plan for report design and report deployment](./plan-for-report-design-and-report-deployment-reporting-services.md)  
   
  [What's new in SQL Server Reporting Services (SSRS)](./what-s-new-in-sql-server-reporting-services-ssrs.md)  
 

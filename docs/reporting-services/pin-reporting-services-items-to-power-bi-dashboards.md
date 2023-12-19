@@ -63,7 +63,7 @@ You can pin an on-premises [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md
   
 4. Select the report item you want to pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. You can only pin one item at a time. The report viewer presents a shaded view of your report, and the report items you can pin are highlighted. The items that you can't pin are shaded dark.  
   
-    **(1)** select the group that contains the dashboard you want to pin to, **(2)** select the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard. The refresh is managed by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions. After the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
+    **(1)** select the group that contains the dashboard you want to pin to, **(2)** choose the dashboard you want to pin the item too and **(3)** select how frequently you want the tile updated in the dashboard. The refresh is managed by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions. After the item is pinned, you can edit the subscription and configure a different  refresh schedule.  
   
     :::image type="content" source="../reporting-services/media/ssrs-pin-to-powerbi.png" alt-text="Screenshot of the Pin to Power BI Dashboard dialog box.":::
   
@@ -103,7 +103,7 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
     "Power BI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)"
   
--   **Expired Power BI credentials:**  You attempt to pin an item and see the following error message. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select **My Settings** and on the My Settings  page, select **Sign in**. For more information, see [My Settings for Power BI integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md).  
+-   **Expired Power BI credentials:**  You attempt to pin an item and see the following error message. In the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select **My Settings** and on the My Settings  page, choose **Sign in**. For more information, see [My Settings for Power BI integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
     "Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials."  
   

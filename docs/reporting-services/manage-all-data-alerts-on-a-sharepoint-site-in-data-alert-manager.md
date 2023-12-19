@@ -36,7 +36,7 @@ SharePoint alerting administrators can view a list of the data alerts that any s
   
 5.  Select the down arrow by the **View alerts for user** list and select the user whose alerts you want to view.  
   
-6.  Select the down arrow next to the **View alerts for report** list and select a specific alert to view, or select **Show All** to list all alerts created by the selected user.  
+6.  Select the down arrow next to the **View alerts for report** list and choose a specific alert to view, or select **Show All** to list all alerts created by the selected user.  
   
   A table lists the following pieces of information:
         - Name
@@ -46,7 +46,7 @@ SharePoint alerting administrators can view a list of the data alerts that any s
         - The last time the data alert definition was modified
         - Status of the data alert
   
-    If the data alert can't be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
+  If the data alert can't be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
   
 ## Delete an alert definition  
   

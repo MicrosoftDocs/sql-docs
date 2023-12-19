@@ -79,9 +79,9 @@
         "**/*.md": "/azure/azure-sql/breadcrumb/toc.json"
       },
       "feedback_product_url": {
-        "articles/azure-sql/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
-        "articles/azure-sql/database/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
-        "articles/azure-sql/virtual-machines/**/*.md": "https://feedback.azure.com/d365community/forum/04fe6ee0-3b25-ec11-b6e6-000d3a4f0da0",
+        "articles/azure-sql/*.md": "https://aka.ms/sqlfeedback",
+        "articles/azure-sql/database/**/*.md": "https://feedback.azure.com/d365community/forum/ef2b2b38-2f25-ec11-b6e6-000d3a4f0f84",
+        "articles/azure-sql/virtual-machines/**/*.md": "https://aka.ms/sqlfeedback",
         "articles/azure-sql/managed-instance/**/*.md": "https://feedback.azure.com/d365community/forum/a99f7006-3425-ec11-b6e6-000d3a4f0f84"
       },
       "titleSuffix": {

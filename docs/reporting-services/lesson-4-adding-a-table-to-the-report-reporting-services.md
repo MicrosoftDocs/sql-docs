@@ -21,7 +21,7 @@ After you define the dataset, you can start designing the paginated report. You 
 - Chart
 - Map
 
-Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields to the data region. A basic report will have only one data region. You can add additional ones to display more information such as a chart.
+Items that contain repeated rows of data from underlying datasets are called *data regions*. After you add a data region, you can add fields to the data region. A basic report has only one data region. You can add extras to display more information such as a chart.
 
 ## Add a table data region and fields to a report layout
 
@@ -48,9 +48,9 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 7. Add the `[LineTotal]` field in the same way, creating a fifth column. The column label is added as "Line Total". Report Designer automatically creates a friendly name for the column by splitting "LineTotal" into two words.
 
-The following diagram shows a table data region that has been populated with these fields: Date, Order, Product, Qty, and Line Total.
+The following diagram shows a table data region populated with these fields: Date, Order, Product, Qty, and Line Total.
 
-:::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region that has been populated with the fields: Date, Order, Product, Qty, and Line Total.":::
+:::image type="content" source="./media/rs-basictabledetailsdesign.png" alt-text="Diagram of a table data region populated with the fields: Date, Order, Product, Qty, and Line Total.":::
 
 ## Preview your report
 
@@ -73,7 +73,7 @@ Look at the Date and Line Total values. In the next lesson, you're going to lear
 
 ## Next steps
 
-You've successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
+You successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   
 ## Related content
 

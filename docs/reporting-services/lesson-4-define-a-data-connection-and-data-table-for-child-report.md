@@ -20,9 +20,9 @@ After you design the parent report, your next step is to create a data connectio
   
 2.  In the **Add New Item** dialog box, select **DataSet** and then select **Add**. When prompted, you should add the item to the **App_Code** folder by selecting **Yes**.  
   
-    This adds a new XSD file **DataSet2.xsd** to the project and opens the DataSet Designer.  
+    This action adds a new XSD file **DataSet2.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **TableAdapter** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **TableAdapter** control to the design surface. This action launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, you can select the connection you created in Lesson 2. If you did, select **Next** and go to step 8. Otherwise, select **New Connection**.  
   
@@ -57,11 +57,11 @@ After you design the parent report, your next step is to create a data connectio
     > [!WARNING]  
     > Be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**  
   
-    You have now completed configuring the ADO.NET [DataTable](/dotnet/api/system.data.datatable) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
+    You configured the ADO.NET [DataTable](/dotnet/api/system.data.datatable) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
   
 11. Save the file.  
   
 12. To preview the data, select **Preview Data** on the **Data** menu, and then select **Preview**.  
   
 ## Next task  
-You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the child report by using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+You successfully created a data connection and data table for the child report. Next, you design the child report using the Report Wizard. See [Lesson 5: Design the child report by using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  

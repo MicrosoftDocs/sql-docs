@@ -23,7 +23,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
 2. In the **Name** text box, type "AdventureWorksDataset".
 
-3. Below that, select the **Use a dataset embedded in my report** radio button.
+3. Then select the **Use a dataset embedded in my report** radio button.
 
 4. From the **Data source** dropdown box, select AdventureWorks2022.
 
@@ -66,7 +66,7 @@ The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
 ## Next steps
 
-You've successfully specified a query that retrieves data for your report. Next, you're going to create the report layout. Continue with [Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+You successfully specified a query that retrieves data for your report. Next, you're going to create the report layout. Continue with [Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
 ## Related content
 

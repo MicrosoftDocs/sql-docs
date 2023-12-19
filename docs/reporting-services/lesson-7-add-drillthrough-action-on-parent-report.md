@@ -34,7 +34,7 @@ After you add a ReportViewer control to the website application, your next step 
 8.  Select **Ok** to finish.  
   
 ## Next task  
-You have successfully added a drillthrough action on the parent report. Next, you will create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a data filter](../reporting-services/lesson-8-create-a-data-filter.md).  
+You successfully added a drillthrough action on the parent report. Next, you create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a data filter](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

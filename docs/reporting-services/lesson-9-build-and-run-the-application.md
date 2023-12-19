@@ -20,7 +20,7 @@ After you create a data filter for the data table, your next step is to build an
   
     The webpage appears in the browser. The ReportViewer control displays the report. You can use the toolbar to browse through the report, zoom, and export the report to Excel.  
   
-2.  Hover the mouse over any of the rows under **Name** column. The mouse cursor will display a Hand symbol.  
+2.  Hover the mouse over any of the rows under **Name** column. The mouse cursor displays a Hand symbol.  
   
 3.  Select a value in the **Name** column. The child report is shown with the corresponding filtered data.  
   

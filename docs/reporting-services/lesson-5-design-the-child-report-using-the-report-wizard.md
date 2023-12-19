@@ -20,7 +20,7 @@ After you create a data connection and data table for the child report, your nex
   
 3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
   
-    This launches the Report Wizard.  
+    This action launches the Report Wizard.  
   
 4.  In the **Dataset Properties** page, in the **Data source** box, select **DataSet2**.  
   
@@ -36,9 +36,9 @@ After you create a data connection and data table for the child report, your nex
   
 7.  Select **Next** twice, then Select **Finish** to close the **Report Wizard**.  
   
-    You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+    You created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
-8.  With the .rdlc file open, add a parameter by doing the following:  
+8.  With the .rdlc file open, add a parameter by doing the following steps:  
   
     1.  Right-click **Parameters** in the **Report Data** pane, and then select **Add Parameters**.  
   
@@ -51,7 +51,7 @@ After you create a data connection and data table for the child report, your nex
 9. Save the .rdlc file.  
   
 ## Next task  
-You have successfully designed the child report by using the Report Wizard. Next, you will add a ReportViewer control to the website application. See [Lesson 6: Add a ReportViewer control to the application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
+You successfully designed the child report by using the Report Wizard. Next, you add a ReportViewer control to the website application. See [Lesson 6: Add a ReportViewer control to the application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
   
   
   

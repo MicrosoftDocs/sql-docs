@@ -1,6 +1,6 @@
 ---
 title: "Lesson 5: Format a report (Reporting Services)"
-description: Learn how to format the date and currency fields and the column headers after you've added a data region and some fields to the Sales Orders report.
+description: Learn how to format the date and currency fields and the column headers after you add a data region and some fields to the Sales Orders report.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 04/29/2019
@@ -11,7 +11,7 @@ ms.custom: updatefrequency5
 ---
 # Lesson 5: Format a report (Reporting Services)
 
-Now that you've added a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.
+Now that you have a data region and some fields to the Sales Orders report, you can format the date and currency fields and the column headers.
 
 ## <a name="bkmk_format_date"></a>Format the date
 
@@ -52,7 +52,7 @@ You can add other formatting to your report by highlighting the header row, and 
 
 3. Select the row containing column header labels and from the **Format** menu, select **Font** > **Bold**.
 
-4. Preview your report. It should display as below:
+4. Preview your report. It should display as shown in the following image:
 
     :::image type="content" source="media/rs-basictabledetailsformattedpreview.png" alt-text="Screenshot of a table preview with bold column headers.":::
 

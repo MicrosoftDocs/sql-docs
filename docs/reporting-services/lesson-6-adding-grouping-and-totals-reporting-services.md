@@ -25,7 +25,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
     >
     >:::image type="content" source="media/rs-basictablegroups1design.png" alt-text="Screenshot of a table showing the row handle and two Date expression columns.":::
 
-4. From the **Report Data** pane, drag the `[Order]` field to the **Row Groups** pane. Place it below **Date** and above **= (Details)**.
+4. From the **Report Data** pane, drag the `[Order]` field to the **Row Groups** pane. Place it after **Date** and before **= (Details)**.
 
     :::image type="content" source="media/ssrs-ssdt-addorderfield.png" alt-text="Screenshot of the Order field in the Report data field between Date and Details.":::
 
@@ -78,7 +78,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 
 ## Preview the report
 
-To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as below:
+To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like :::image type="icon" source="media/ssrs-ssdt-viewertoolbar-lastpage.png"::: The results should display as shown in the following image:
 
 :::image type="content" source="./media/rs-basictablesumgrandtotalpreview.gif" alt-text="Screenshot of the full preview for the formatted table.":::
 
@@ -95,7 +95,7 @@ An optional step is to publish the completed report to the Report Server so you 
 4. Select **OK**.
 5. Select **Build** menu > **Deploy Tutorial**.
 
-    If you see a message like below in the **Output** window, it indicates a successful deployment.
+    If you see something like the message in the following **Output** window, it indicates a successful deployment.
 
     > ------ Build started: Project: tutorial, Configuration: Debug ------  
     > Skipping 'Sales Orders.rdl'. Item is up to date.  
@@ -107,7 +107,7 @@ An optional step is to publish the completed report to the Report Server so you 
     > ========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
     > ========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========  
 
-    If you see an error message similar to below, verify you've the appropriate permissions on the report server and you've started [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] with administrator privileges.
+    If you see something similar to the following error message, verify you have the appropriate permissions on the report server and you started [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] with administrator privileges.
     >
     > "The permissions granted to user 'XXXXXXXX\\[your user name]' are insufficient for performing this operation"
 
@@ -120,7 +120,7 @@ An optional step is to publish the completed report to the Report Server so you 
 
     :::image type="content" source="media/ssrs-tutorial-tutorialfolder.png" alt-text="Screenshot of the Tutorial folder in the Home panel.":::
 
-You've successfully completed the **Creating a Basic Table Report tutorial**.
+You successfully completed the **Creating a Basic Table Report tutorial**.
 
 ## Related content
 

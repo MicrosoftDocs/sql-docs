@@ -20,11 +20,11 @@ After you create a data connection and a data table for the parent report, your 
   
 3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
   
-    This launches the Report Wizard.  
+    This action launches the Report Wizard.  
   
 4.  On the **Dataset Properties** page, in the **Data source** box, select the **DataSet1** you created in [Lesson 2: Define a data connection and data table for the parent report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
-    The **Available datasets** box is automatically updated with the **DataTable** you created above.  
+    The **Available datasets** box is automatically updated with the **DataTable** you previously created.  
   
 5.  Select **Next**.  
   
@@ -36,12 +36,12 @@ After you create a data connection and a data table for the parent report, your 
   
 7.  Select **Next** twice, then select **Finish** to close the **Report Wizard**.  
   
-    You've now created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
+    You created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  Save the .rdlc file.  
   
 ## Next task  
-You have successfully designed the parent report using the Report Wizard. Next, you will create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+You successfully designed the parent report using the Report Wizard. Next, you create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
   
   

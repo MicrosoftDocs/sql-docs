@@ -18,7 +18,7 @@ After you create a data connection and a data table for the parent report, your 
   
 2.  Right-click on the website and select **Add New Item**.  
   
-3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
+3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then choose **Add**.  
   
     This action launches the Report Wizard.  
   
@@ -32,15 +32,16 @@ After you create a data connection and a data table for the parent report, your 
   
     1.  Drag **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**, and **ReorderLevel** from **Available fields** to the **Values** box.  
   
-    2.  Select the arrow next to **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** and clear the **Sum** selection.  
+    2.  Select the arrow next to **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)**, and clear the **Sum** selection.  
   
-7.  Select **Next** twice, then select **Finish** to close the **Report Wizard**.  
+7.  Select **Next** twice, then choose **Finish** to close the **Report Wizard**.  
   
     You created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
 8.  Save the .rdlc file.  
   
-## Next task  
+## Next step
+
 You successfully designed the parent report using the Report Wizard. Next, you create a data connection and a data table for the child report. See [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
   

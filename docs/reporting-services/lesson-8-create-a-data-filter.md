@@ -27,15 +27,15 @@ You need to complete the following tasks to implement a table-based filter.
   
 1.  Open the child report.  
   
-2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then select **Tablix Properties**.  
+2.  Select a column heading in the tablix, right-click the gray cell that appears above the column heading, and then choose **Tablix Properties**.  
   
-3.  Select the **Filters** page, and then select **Add**.  
+3.  Select the **Filters** page, and then choose **Add**.  
   
 4.  In the **Expression** filed, select **ProductID** from the drop-down list. This column is where you apply the filter.  
   
 5.  Select the equal (**=**) operator in the **Operator** drop-down list.  
   
-6.  Select the expression button next to the **Value** field, select **Parameters** in the **Category** area, and then double-click **productid** in the **Values** area. The **Set expression for: Value** field should now contain expression similar to **=Parameters!productid.Value**.  
+6.  Select the expression button next to the **Value** field, choose **Parameters** in the **Category** area, and then double-click **productid** in the **Values** area. The **Set expression for: Value** field should now contain expression similar to **=Parameters!productid.Value**.  
   
 7.  Select **OK,** and **OK** again in the **Tablix Properties** dialog box.  
   
@@ -45,9 +45,9 @@ You need to complete the following tasks to implement a table-based filter.
   
 1.  In Solution Explorer, expand Default.aspx, and then double-click Default.aspx.cs.  
   
-2.  Create a new function that accepts a parameter, **productid**, of type Integer and returns a **datatable** object, and does the following.  
+2.  Create a new function that accepts a parameter called **productid** of type Integer. It should return a **datatable** object and do the following:  
   
-    1.  Creates an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Create an instance of the dataset, **DataSet2**, which was created in Step 2 of [Lesson 4: Define a data connection and data table for the child report](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Create a connection to the SqlServer database to execute the query defined in **Lesson 4: Define a data connection and data table for the child report**.  
   
@@ -280,7 +280,8 @@ You need to complete the following tasks to implement a query filter.
   
 6.  Save the file.  
   
-## Next task  
+## Next step
+
 You successfully created a data filter for the data table that you defined for the child report. Next, you build and run the website application. See [Lesson 9: Build and run the application](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   

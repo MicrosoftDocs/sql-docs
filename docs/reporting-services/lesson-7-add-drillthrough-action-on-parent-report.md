@@ -29,12 +29,13 @@ After you add a ReportViewer control to the website application, your next step 
   
 6.  Select **Add** under **Use these parameters to run the report** section.  
   
-7.  Type **productid** in the **name** box, and then select **ProductID** in the **Value** drop-down list.  
+7.  Enter **productid** in the **name** box, and then select **ProductID** in the **Value** drop-down list.  
   
 8.  Select **Ok** to finish.  
   
-## Next task  
-You successfully added a drillthrough action on the parent report. Next, you create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a data filter](../reporting-services/lesson-8-create-a-data-filter.md).  
+## Next step
+
+You successfully added a drillthrough action on the parent report. Next, you'll create a data filter for the data table that you defined for the child report. See [Lesson 8: Create a data filter](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

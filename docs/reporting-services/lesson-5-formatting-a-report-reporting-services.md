@@ -19,7 +19,7 @@ The Date field expression displays date and time information by default. You can
 
 1. Select the **Design** tab.
 2. Right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
-3. Select **Number**, and then in the **Category** field, select **Date**.
+3. Select **Number**, and then in the **Category** field, choose **Date**.
 4. In the **Type** box, select **January 31, 2000**.
 5. Select **OK** to apply the format.
 6. Preview the report to see the change to the `[Date]` field formatting, and then change back to design view.
@@ -50,7 +50,7 @@ You can add other formatting to your report by highlighting the header row, and 
 
     :::image type="content" source="media/rs-basictabledetailsdesign.png" alt-text="Screenshot of a table showing the double arrow cursor between two columns.":::
 
-3. Select the row containing column header labels and from the **Format** menu, select **Font** > **Bold**.
+3. Select the row containing column header labels and from the **Format** menu, choose **Font** > **Bold**.
 
 4. Preview your report. It should display as shown in the following image:
 
@@ -58,7 +58,7 @@ You can add other formatting to your report by highlighting the header row, and 
 
 5. From the **File** menu, select **Save All** to save the report.
 
-## Next steps
+## Next step
 
 In this lesson, you successfully formatted column headers and field expressions. Next, you're going to add grouping and totals to your report. Continue with [Lesson 6: Add Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 

@@ -25,7 +25,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 
 ## Add a table data region and fields to a report layout
 
-1. Select the **Toolbox** tab in the left pane of the Report Designer. With your mouse, select the **Table** object and drag it to the report design surface. Report Designer draws a table data region with three columns in the center of the design surface. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
+1. Select the **Toolbox** tab in the left pane of the Report Designer. With your mouse, choose the **Table** object and drag it to the report design surface. Report Designer draws a table data region with three columns in the center of the design surface. If you don't see the **Toolbox** tab, select **View** menu > **Toolbox**.
 
     :::image type="content" source="media/ssrs-ssdt-addtable.png" alt-text="Screenshot of the Toolbox tab with the Table option selected.":::
 
@@ -36,7 +36,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 3. Drag the `[Date]` field from the **Report Data** pane to the first column in the table.
 
     > [!IMPORTANT]
-    > When you drop the field into the first column, two things happen. First, Report Designer displays the field name, known as the *field expression*, in brackets: `[Date]` in the data cell. Second, it adds a column label to the header row, just above the field expression. By default, the column label is the name of the field. You can select the column label and type a new value if you want to change it.
+    > When you drop the field into the first column, two things happen. First, Report Designer displays the field name, known as the *field expression*, in brackets: `[Date]` in the data cell. Second, it adds a column label to the header row, just above the field expression. By default, the column label is the name of the field. You can select the column label and enter a new value if you want to change it.
 
 4. Drag the `[Order]` field from the **Report Data** pane to the second column in the table.
 
@@ -58,7 +58,7 @@ Previewing a report enables you to view the rendered report without having to fi
 
 ### Preview a report
 
-- Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
+Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
     :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
 
@@ -71,7 +71,7 @@ Look at the Date and Line Total values. In the next lesson, you're going to lear
 > [!NOTE]
 > From the **File** menu, select **Save All** to save the report.
 
-## Next steps
+## Next step
 
 You successfully added a table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you're going to learn how to format column headers and field expressions. Next, continue with [Lesson 5: Format a report &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md).
   

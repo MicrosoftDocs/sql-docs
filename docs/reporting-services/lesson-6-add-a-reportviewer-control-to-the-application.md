@@ -30,5 +30,6 @@ After you design the child report by using the Report Wizard, your next step is 
   
     The report is compiled and any errors such as a syntax error in a report expression appear in the **Error List** area. Select **Error List** at the bottom of the Visual Studio window to display the **Error List** area.  
   
-## Next task  
+## Next step
+
 You successfully added a ReportViewer control to the website application. Next, you add a drillthrough action on the parent report. See [Lesson 7: Add drillthrough action on the parent report](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  

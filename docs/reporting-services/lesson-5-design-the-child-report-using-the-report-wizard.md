@@ -18,7 +18,7 @@ After you create a data connection and data table for the child report, your nex
   
 2.  Right-click on the website and select **Add New Item**.  
   
-3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then select **Add**.  
+3.  In the **Add New Item** dialog box, select **Report Wizard**, enter a name for the report file, and then choose **Add**.  
   
     This action launches the Report Wizard.  
   
@@ -34,7 +34,7 @@ After you create a data connection and data table for the child report, your nex
   
     2.  Select the arrow next to **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)**, and **Sum(StockedQty)** and clear the **Sum** selection.  
   
-7.  Select **Next** twice, then Select **Finish** to close the **Report Wizard**.  
+7.  Select **Next** twice, then choose **Finish** to close the **Report Wizard**.  
   
     You created the .rdlc file. The file opens in Report Designer. The tablix you designed is now displayed in the design surface.  
   
@@ -50,7 +50,8 @@ After you create a data connection and data table for the child report, your nex
   
 9. Save the .rdlc file.  
   
-## Next task  
+## Next step
+
 You successfully designed the child report by using the Report Wizard. Next, you add a ReportViewer control to the website application. See [Lesson 6: Add a ReportViewer control to the application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
   
   

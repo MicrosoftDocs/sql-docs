@@ -21,7 +21,7 @@ Use the Query Designer in Report Designer to define the dataset. For this tutori
 
     :::image type="content" source="media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png" alt-text="Screenshot of the Dataset Properties dialog box showing the query section.":::
 
-2. In the **Name** text box, type "AdventureWorksDataset".
+2. In the **Name** text box, enter "AdventureWorksDataset".
 
 3. Then select the **Use a dataset embedded in my report** radio button.
 
@@ -64,7 +64,7 @@ The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
    :::image type="content" source="media/ssrs-adventureworksdataset.png" alt-text="Screenshot of the Datasets folder showing the AdventureWorksDataset and its fields.":::
 
-## Next steps
+## Next step
 
 You successfully specified a query that retrieves data for your report. Next, you're going to create the report layout. Continue with [Lesson 4: Add a table to the report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 

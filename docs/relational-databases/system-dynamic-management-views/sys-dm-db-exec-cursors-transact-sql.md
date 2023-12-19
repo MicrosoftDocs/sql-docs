@@ -65,7 +65,7 @@ dm_db_exec_cursors (session_id | 0 )
   
 ## Permissions  
 
-Requires VIEW DATABASE STATE permission in the current database to view all declared or open cursors for all sessions in the database.  For the server admin login (set when creating a [logical server in Azure](/azure/azure-sql/database/logical-servers), the results are still scoped to cursors declared or open in the current database.
+Requires VIEW DATABASE STATE permission in the current database to view all declared or open cursors for all sessions in the database.  For the server admin login (set when creating a [logical server in Azure](/azure/azure-sql/database/logical-servers)), the results are still scoped to cursors declared or open in the current database.
 
 ## Remarks  
 

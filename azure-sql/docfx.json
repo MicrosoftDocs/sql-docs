@@ -47,7 +47,7 @@
     "globalMetadata": {
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/azure-docs",
-      "feedback_product_url": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
+      "feedback_product_url": "https://aka.ms/sqlfeedback",
       "layout": "Conceptual",
       "uhfHeaderId": "Azure",
       "contributors_to_exclude": [
@@ -121,9 +121,10 @@
     "rules": {
       "sensitive-language-sl": {
         "exclude": [
-          "virtual-machines/linux/rhel-high-availability-stonith-tutorial.md",
-          "virtual-machines/linux/rhel-high-availability-listener-tutorial.md",
-          "virtual-machines/linux/sles-high-availability-stonith-tutorial.md"
+          "virtual-machines/linux/rhel-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/sles-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/ubuntu-high-availability-fencing-tutorial.md",
+          "virtual-machines/linux/high-availability-listener-tutorial.md"
         ]
       }
     }

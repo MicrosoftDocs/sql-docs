@@ -18,7 +18,7 @@ ms.topic: conceptual
 > Use the method below, if your server is already connected to Azure, but Azure extension for SQL Server is not deployed automatically using above methods.
 >
 
-This article explains how to connect your SQL Server instance to Azure Arc with an installer (.msi). Before you proceed, complete the [Prerequisites](prerequisites.md#prerequisites).
+This article explains how to connect your SQL Server instance to Azure Arc with an installer (.msi). Before you proceed, complete the [Prerequisites](prerequisites.md).
 
 ## Deploy SQL Server extension from AzureExtensionForSQLServer.msi
 
@@ -46,7 +46,7 @@ You can also onboard your SQL Servers to Azure Arc by directly using  AzureExten
    > Command line parameter "--machineName" is an optional parameter, if it is not provided then name of the Arc enabled server resource will be the host name of the machine.
 
    > [!IMPORTANT]  
-   > Microsoft Azure Arc-enabled SQL Server is licensed to you as part of your or your company's subscription license for Microsoft Azure Services. You may only use the software with Microsoft Azure Services and are subject to the terms and conditions of the agreement under which you obtained Microsoft Azure Services. You may not use the software if you do not have an active subscription license for Microsoft Azure Services.  
+   > Microsoft [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] is licensed to you as part of your or your company's subscription license for Microsoft Azure Services. You may only use the software with Microsoft Azure Services and are subject to the terms and conditions of the agreement under which you obtained Microsoft Azure Services. You may not use the software if you do not have an active subscription license for Microsoft Azure Services.  
    > Microsoft Azure Legal Information: [Microsoft Azure Legal Information](https://azure.microsoft.com/support/legal/) and [Microsoft Privacy Statement](https://azure.microsoft.com/support/legal/)
 
 ## Validate your Arc-enabled SQL Server resources
@@ -58,4 +58,4 @@ Go to **Azure Arc > SQL Server** and open the newly registered Arc-enabled SQL S
 ## Next steps
 
 - [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-- [Configure best practices assessment on an Azure Arc-enabled SQL Server instance](assess.md)
+- [Configure best practices assessment on a [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] instance](assess.md)

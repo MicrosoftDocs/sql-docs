@@ -5,15 +5,16 @@ description: Monitoring applications with azdata and kubectl on SQL Server 2019 
 author: HugoMSFT
 ms.author: hudequei
 ms.reviewer: wiassaf
-ms.date: 07/16/2021
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Monitor Big Data Clusters by using azdata and kubectl
+This article explains how to view the status of a big data cluster using azdata and kubectl.
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Use azdata
 
@@ -241,6 +242,8 @@ Sample output:
 You can view the controller status with the [`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller components of the big data cluster.
 
 
-## Next steps
+## Related content
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+- [Monitor Big Data Clusters status by using Azure Data Studio](cluster-monitor-ads.md)
+- [Monitor Big Data Clusters by using azdata and Grafana Dashboard](cluster-monitor-grafana.md)
+- [Monitor Big Data Clusters by using Jupyter Notebooks and Azure Data Studio](cluster-monitor-notebooks.md)

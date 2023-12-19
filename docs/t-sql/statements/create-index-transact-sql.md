@@ -531,7 +531,7 @@ Indicates time (an integer value specified in minutes) that a resumable online i
 > For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
 > [!NOTE]  
-> Resumable online index rebuilds are not supported on columnstore indexes.
+> Resumable online index rebuilds are not supported on columnstore indexes or disabled indexes.
 
 #### ALLOW_ROW_LOCKS = { ON | OFF }
 
@@ -838,7 +838,8 @@ The following guidelines apply for resumable index operations:
 - Re-executing the original `CREATE INDEX` statement for resumable index, automatically resumes a paused index create operation.
 - The `SORT_IN_TEMPDB = ON` option isn't supported for resumable index.
 - The DDL command with `RESUMABLE = ON` can't be executed inside an explicit transaction (can't be part of begin `TRAN ... COMMIT` block).
-- To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax
+- To resume/abort an index create/rebuild, use the [ALTER INDEX](alter-index-transact-sql.md) T-SQL syntax.
+- Disabled indexes aren't supported.
 
 > [!NOTE]  
 > The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well.

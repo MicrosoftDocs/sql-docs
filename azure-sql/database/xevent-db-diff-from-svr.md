@@ -4,7 +4,7 @@ description: Describes extended events (XEvents) in Azure SQL Database, and how 
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.reviewer: wiassaf, mathoma, randolphwest
-ms.date: 10/22/2023
+ms.date: 11/28/2023
 ms.service: sql-database
 ms.subservice: performance
 ms.topic: reference
@@ -39,6 +39,8 @@ There are two examples to help you get started with Extended Events in Azure SQL
 - [Create a session with an event_file target in Azure Storage](xevent-code-event-file.md). This example shows you how to capture event data in a file (blob) in Azure Storage using the `event_file` target. Use this if you need to persist captured event data, or if you want to use event viewer in SQL Server Management Studio (SSMS) to analyze captured data.
 - [Create a session with a ring_buffer target in memory](xevent-code-ring-buffer.md). This example shows you how to capture the latest events from an event session in memory using the `ring_buffer` target. Use this as a quick way to look at recent events during ad hoc investigations or troubleshooting, without having to store captured event data.
 
+Extended Events can be used to monitor read-only replicas. For more information, see [Read queries on replicas](read-scale-out.md#monitor-read-only-replicas-with-extended-events).
+
 ## Best practices
 
 Adopt the following best practices to use Extended Events in Azure SQL Database reliably and without affecting database health and workload performance.
@@ -59,6 +61,10 @@ Azure SQL Database supports the following targets:
 - [ring_buffer](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#ring_buffer-target) target. Holds event data in memory until replaced by new event data.
 - [event_counter](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_counter-target) target. Counts all events that occur during an extended events session.
 - [histogram](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#histogram-target) target. Counts the occurrences of different values of fields or actions in separate buckets.
+- [event_stream](/sql/relational-databases/extended-events/targets-for-extended-events-in-sql-server#event_stream-target). Streams event data to a .Net application.
+
+> [!NOTE]
+> The `event_stream` target in Azure SQL Database is in preview.
 
 ## Transact-SQL differences
 

@@ -4,17 +4,17 @@ titleSuffix: SQL Server Big Data Clusters
 description: This article explains how to configure HDFS tiering to mount an external S3 file system into HDFS on a SQL Server 2019 big data cluster.
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.date: 08/21/2019
+ms.date: 12/04/2023
 ms.service: sql
 ms.subservice: big-data-cluster
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to mount S3 for HDFS tiering in a big data cluster
 
 The following sections provide an example of how to configure HDFS tiering with an S3 Storage data source.
 
-[!INCLUDE[big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
+[!INCLUDE [big-data-clusters-banner-retirement](../includes/bdc-banner-retirement.md)]
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 ### Set environment variable for access key credentials
 
-Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. The credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -92,12 +92,12 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **azdata bdc hdfs mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the `azdata bdc hdfs mount delete` command, and specify the mount path in HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## Next steps
+## Related content
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [Introducing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+- [Configure HDFS tiering on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](hdfs-tiering.md)

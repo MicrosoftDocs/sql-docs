@@ -1,9 +1,9 @@
 ---
 title: "sp_update_jobstep (Transact-SQL)"
-description: Changes the setting for a step in a job that is used to perform automated activities.
+description: "sp_update_jobstep changes the settings for a step in a job in the SQL Agent service."
 author: markingmyname
 ms.author: maghan
-ms.reviewer: randolphwest
+ms.reviewer: randolphwest,wiassaf
 ms.date: 08/28/2023
 ms.service: sql
 ms.subservice: system-objects
@@ -15,12 +15,13 @@ helpviewer_keywords:
   - "sp_update_jobstep"
 dev_langs:
   - "TSQL"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_update_jobstep (Transact-SQL)
 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Changes the setting for a step in a job that is used to perform automated activities.
+Changes the setting for a step in a job that is used to perform automated activities in the SQL Agent service.
 
 :::image type="icon" source="../../includes/media/topic-link-icon.svg" border="false"::: [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -131,7 +132,7 @@ The name of the database in which to execute a [!INCLUDE [tsql](../../includes/t
 
 #### [ @database_user_name = ] N'*database_user_name*'
 
-The name of the user account to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of `NULL`.
+The name of the database user to use when executing a [!INCLUDE [tsql](../../includes/tsql-md.md)] step. *@database_user_name* is **sysname**, with a default of `NULL`.
 
 #### [ @retry_attempts = ] *retry_attempts*
 
@@ -149,7 +150,7 @@ The amount of time in minutes between retry attempts. *@retry_interval* is **int
 
 The name of the file in which the output of this step is saved. *@output_file_name* is **nvarchar(200)**, with a default of `NULL`. This parameter is only valid with commands running in [!INCLUDE [tsql](../../includes/tsql-md.md)] or **CmdExec** subsystems.
 
-To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string (`' '`) or to a string of blank characters, but you can't use the `CHAR(32)` function.
+To set *@output_file_name* back to `NULL`, you must set *@output_file_name* to an empty string, or to a string of blank characters, but you can't use the `CHAR(32)` function.
 
 For example, set this argument to an empty string as follows:
 
@@ -185,6 +186,8 @@ The name of the proxy that the job step runs as. *@proxy_name* is **sysname**, w
 
 Updating a job step increments the job version number.
 
+ This stored procedure shares the name of `sp_update_jobstep` with a similar object for the [Azure Elastic Jobs service for Azure SQL Database](/azure/azure-sql/database/elastic-jobs-overview?view=azuresql-db&preserve-view=true). For information about the elastic jobs version, see [jobs.sp_update_jobstep (Azure Elastic Jobs) (Transact-SQL)](sp-update-jobstep-elastic-jobs-transact-sql.md?view=azuresqldb-current&preserve-view=true).
+
 ## Permissions
 
 [!INCLUDE [msdb-execute-permissions](../../includes/msdb-execute-permissions.md)]
@@ -216,9 +219,9 @@ EXEC dbo.sp_update_jobstep
 GO
 ```
 
-## See also
+## Next steps
 
 - [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_delete_jobstep (Transact-SQL)](sp-delete-jobstep-transact-sql.md)
 - [sp_help_jobstep (Transact-SQL)](sp-help-jobstep-transact-sql.md)
-- [System stored procedures (Transact-SQL)](system-stored-procedures-transact-sql.md)
+- [SQL Server Agent stored procedures (Transact-SQL)](sql-server-agent-stored-procedures-transact-sql.md)

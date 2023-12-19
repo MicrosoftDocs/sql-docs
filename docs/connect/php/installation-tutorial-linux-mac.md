@@ -12,7 +12,7 @@ ms.custom: intro-installation
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 
-The following instructions assume a clean environment and show how to install PHP 8.1, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, Suse, Alpine, and macOS. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 8.1, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu, Red Hat, Debian, SUSE, Alpine, and macOS. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 The following instructions install PHP 8.1 by default using `pecl install`, if the PHP 8.1 packages are available. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 8.0 or 8.2 instead.
 
@@ -309,16 +309,16 @@ sudo service apache2 restart
 
 To test your installation, see [Testing your installation](#testing-your-installation) at the end of this document.
 
-## Installing on Suse
+## Installing on SUSE
 
 
 > [!NOTE]
-> In the following instructions, replace `<SuseVersion>` with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15_SP3 or SLE_15_SP4 (or above). For Suse 12, use SLE_12_SP5 (or above). Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or check `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
+> In the following instructions, replace `<SuseVersion>` with your version of SUSE - if you are using SUSE Linux Enterprise Server 15, it will be SLE_15_SP3 or SLE_15_SP4 (or above). For SUSE 12, use SLE_12_SP5 (or above). Not all versions of PHP are available for all versions of SUSE Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of SUSE have the default version PHP available, or check `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of SUSE.
 
 > [!NOTE]
-> Packages for PHP 7.4 or above are not available for Suse 12, as of today.
+> Packages for PHP 7.4 or above are not available for SUSE 12, as of today.
 
-### Step 1. Install PHP (Suse)
+### Step 1. Install PHP (SUSE)
 
 ```bash
 sudo su
@@ -327,11 +327,11 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php8 php8-pdo php8-devel php8-openssl
 ```
 
-### Step 2. Install prerequisites (Suse)
+### Step 2. Install prerequisites (SUSE)
 
-Install the ODBC driver for Suse by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
+Install the ODBC driver for SUSE by following the instructions on the [Install the Microsoft ODBC driver for SQL Server (Linux)](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). Make sure to also install the `unixodbc-dev` package. It's used by the `pecl` command to install the PHP drivers.
 
-### Step 3. Install the PHP drivers for Microsoft SQL Server (Suse)
+### Step 3. Install the PHP drivers for Microsoft SQL Server (SUSE)
 
 ```bash
 sudo pecl install sqlsrv
@@ -342,7 +342,7 @@ echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" |
 exit
 ```
 
-### Step 4. Install Apache and configure driver loading (Suse)
+### Step 4. Install Apache and configure driver loading (SUSE)
 
 ```bash
 sudo su
@@ -353,7 +353,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php8/apache2/php.ini
 exit
 ```
 
-### Step 5. Restart Apache and test the sample script (Suse)
+### Step 5. Restart Apache and test the sample script (SUSE)
 
 ```bash
 sudo systemctl restart apache2

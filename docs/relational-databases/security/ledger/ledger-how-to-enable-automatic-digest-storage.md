@@ -4,10 +4,10 @@ description: This article discusses how to enable automatic digest storage in Az
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mathoma
-ms.date: 06/06/2023
+ms.date: 11/14/2023
 ms.service: sql-database
 ms.subservice: security
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, ignite-2023
 ms.topic: how-to
 zone_pivot_groups: as1-azuresql-sql
 monikerRange: "= azuresqldb-current||>= sql-server-ver16||>= sql-server-linux-ver16"
@@ -49,7 +49,8 @@ In this article, we'll describe how you can configure automatic generation and s
 
 Update the database to start uploading ledger digests to the Azure Blob Storage account or Azure Confidential Ledger, by using the [Enable-AzSqlDatabaseLedgerDigestUpload](/powershell/module/az.sql/enable-azsqldatabaseledgerdigestupload) cmdlet. When the endpoint parameter is an Azure Blob Storage endpoint, the database server will create a new container, named **sqldbledgerdigests**, within the storage account and it will start writing ledger digests to the container.
   
-*Note: Make sure you modify the parameters ResourceGroupName, ServerName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*
+In the following script, be sure to modify the following parameters: *ResourceGroupName, ServerName, DatabaseName and Endpoint (ACL endpoint or Azure Storage endpoint)*: 
+
 
 ```azurepowershell-interactive
 Write-host "Enabling ledger digest upload..." 
@@ -84,9 +85,6 @@ az sql db ledger-digest-uploads enable \
 
 In this article, we'll describe how you can configure automatic generation and storage of database digests through the Azure portal, PowerShell, or the Azure CLI.
 
-> [!NOTE]
-> Ledger in Azure SQL Managed Instance is currently in public preview.
-
 ## Prerequisites
 
 - Have an active Azure subscription. If you don't have one, [create a free account](https://azure.microsoft.com/free/).
@@ -97,8 +95,9 @@ In this article, we'll describe how you can configure automatic generation and s
 # [Portal](#tab/Portal2)
 
 1. Open the [Azure portal](https://portal.azure.com/) and locate the managed database for which you want to enable automatic digest storage.
+   
    > [!NOTE]
-   > Ledger in Azure SQL Managed Instance is currently in public preview. Enable automatic digest storage can only be configured *after* the database has been created.
+   > Enable automatic digest storage can also be configured when creating a new database.
 
 1. In **Security**, select the **Ledger** option. 
 

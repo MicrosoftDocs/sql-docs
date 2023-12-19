@@ -16,10 +16,10 @@ ms.custom:
 # User-initiated manual failover on SQL Managed Instance
 [!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
 
-This article explains how to manually failover a primary node on SQL Managed Instance General Purpose (GP) and Business Critical (BC) service tiers, and how to manually failover a secondary read-only replica node on the BC service tier only. 
+This article explains how to manually fail over a primary node on SQL Managed Instance General Purpose (GP) and Business Critical (BC) service tiers, and how to manually fail over a secondary read-only replica node on the BC service tier only. 
 
 > [!NOTE]
-> This article is not related with cross-region failovers on [auto-failover groups](auto-failover-group-sql-mi.md).
+> This article is not related to cross-region failovers with [failover groups](failover-group-sql-mi.md).
 
 ## When to use manual failover
 
@@ -96,7 +96,7 @@ az sql mi failover -g myresourcegroup -n myinstancename --replica-type ReadableS
 
 ### Using REST API
 
-For advanced users who would perhaps need to automate failovers of their SQL Managed Instances for purposes of implementing continuous testing pipeline, or automated performance mitigators, this function can be accomplished through initiating failover through an API call. see [Managed Instances - Failover REST API](/rest/api/sql/managed%20instances%20-%20failover/failover) for details.
+For advanced users who would perhaps need to automate failovers of their SQL Managed Instances for purposes of implementing continuous testing pipeline, or automated performance mitigators, this function can be accomplished through initiating failover through an API call. see [Managed Instances - Failover REST API](/rest/api/sql/managed-instances/failover) for details.
 
 To initiate failover using REST API call, first generate the Auth Token using API client of your choice. The generated authentication token is used as Authorization property in the header of API request and it is mandatory.
 

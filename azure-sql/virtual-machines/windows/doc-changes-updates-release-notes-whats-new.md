@@ -4,11 +4,11 @@ description: Learn about the new features for and improvements to SQL Server on 
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: randolphwest
-ms.date: 10/06/2023
+ms.date: 11/14/2023
 ms.service: virtual-machines-sql
 ms.subservice: service-overview
 ms.topic: whats-new
-ms.custom: ignite-2022
+ms.custom: ignite-2022, ignite-2023
 tags: azure-service-management
 ---
 # What's new with SQL Server on Azure Virtual Machines?
@@ -25,6 +25,13 @@ When you deploy an Azure virtual machine (VM) with SQL Server installed on it, e
 For updates made in previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md). 
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
+
+
+## November 2023
+
+| Changes | Details |
+| --- | --- |
+|**Azure SQL triggers for Azure Functions GA** | Azure Functions supports function triggers for SQL Server on Azure VMs. This feature is now generally available. Review [SQL triggers for Azure Functions](/azure/azure-functions/functions-bindings-azure-sql) to learn more. | 
 
 ## October 2023
 

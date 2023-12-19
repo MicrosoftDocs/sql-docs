@@ -1,7 +1,6 @@
 ---
 title: Microsoft Entra ID certificate rotation 
-titleSuffix: Azure Arc-enabled SQL Server
-description: Explains how Azure Arc automatically rotates certificates for Microsoft Entra ID on Azure Arc-enabled SQL Server.
+description: Explains how Azure Arc automatically rotates certificates for Microsoft Entra ID on SQL Server enabled by Azure Arc.
 author: ntakru
 ms.author: nikitatakru
 ms.reviewer: mikeray
@@ -13,7 +12,7 @@ ms.topic: conceptual
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-On Azure Arc-enabled SQL Server, Azure extension for SQL Server can automatically rotate certificates for Microsoft Entra ID for service managed certificates. For customer managed certificates, you can follow the steps to rotate the certificate used for Microsoft Entra ID.
+On [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)], Azure extension for SQL Server can automatically rotate certificates for Microsoft Entra ID for service managed certificates. For customer managed certificates, you can follow the steps to rotate the certificate used for Microsoft Entra ID.
 
 [!INCLUDE [entra-id](../../includes/entra-id.md)]
 
@@ -31,7 +30,7 @@ Azure Key Vault automatically rotates the certificate for you. Key vault rotates
 
 ## Prerequisite
 
-The functionality described in this article applies to an instance of Azure Arc-enabled SQL Server configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
+The functionality described in this article applies to an instance of [!INCLUDE [ssazurearc](../../includes/ssazurearc.md)] configured for authentication with Microsoft Entra ID. For instructions to configure such an instance, see:
 
 - [Microsoft Entra ID authentication for SQL Server](../../relational-databases/security/authentication-access/azure-ad-authentication-sql-server-overview.md)
 

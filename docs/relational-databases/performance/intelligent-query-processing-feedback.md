@@ -322,7 +322,7 @@ Feedback information can be tracked using the [sys.query_store_plan_feedback](..
 
 If a query has a query plan forced through Query Store, DOP feedback can still be used for that query.
 
-If a query uses the MAXDOP hint, either as a hard-coded query hints or through the Query Store hinting mechanism, and the MAXDOP hint is greater than 2, DOP feedback will lower the DOP using the hinted value as the ceiling. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hints](../../relational-databases/performance/query-store-hints.md).
+Currently, DOP Feedback is not compatible with query hints. For more information, see [Hints (Transact-SQL) - Query](../../t-sql/queries/hints-transact-sql-query.md) and [Query Store hints](../../relational-databases/performance/query-store-hints.md).
 
 #### Extended events for DOP feedback
 

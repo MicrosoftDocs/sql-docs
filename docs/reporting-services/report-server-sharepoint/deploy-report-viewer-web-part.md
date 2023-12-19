@@ -25,8 +25,8 @@ Use the following instructions to manually deploy the solution package that adds
 ## Requirements
 
 > [!IMPORTANT]
-> Starting with version "15.X.X.X" you can install the ReportViewerWebPart side by side with your existing Reporting Services SharePoint integrated mode shared service applications.
-> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the Uninstall-SPSolution and Install-SPSolution cmdlets, respectively.
+> Starting with version "15.X.X.X" you can install the ```ReportViewerWebPart``` side by side with your existing Reporting Services SharePoint integrated mode shared service applications.
+> With this update of the .wsp solution we introduced new files and the previous solution must be retracted and the new .wsp redeployed by using the ```Uninstall-SPSolution``` and ```Install-SPSolution``` cmdlets, respectively.
 >
 
 **Support SharePoint Server versions:**
@@ -78,7 +78,7 @@ This section shows you how to deploy the solution package to your SharePoint far
 
     :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear menu, highlighting Site settings.":::
 
-    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
+    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering ```https://\<computer name\>``` to open the root site collection.
 
 3. In **Site Collection Administration**, select **Site collection features**.
 
@@ -118,7 +118,7 @@ Retracting the solution doesn't remove the Report Viewer web part from the list 
 
     :::image type="content" source="media/sharepoint-site-settings.png" alt-text="Screenshot of the gear menu, with Site settings highlighted.":::
 
-    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *https://\<computer name\>* to open the root site collection.
+    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering ```https://\<computer name\>``` to open the root site collection.
 
 2. Under **Web Designer Galleries**, select **web parts**.
 

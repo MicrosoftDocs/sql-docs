@@ -28,16 +28,16 @@ The Report Definition Language (RDL) sandboxing feature lets you detect and rest
 
  When RDL Sandboxing is enabled, the following features are disabled:  
   
--   Custom code in the `<Code>` element of a report definition.  
+-   Custom code in the ```<Code>``` element of a report definition.  
   
 -   RDL backward compatibility mode for [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] custom report items.  
   
 -   Named parameters in expressions.  
   
- This article describes each element in the \<**RDLSandboxing**> element in the RSReportServer.Config file. For more information about how to modify this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). A server trace log records activity related to the RDL Sandboxing feature. For more information about trace logs, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
+ This article describes each element in the ```<RDLSandboxing>``` element in the RSReportServer.Config file. For more information about how to modify this file, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). A server trace log records activity related to the RDL Sandboxing feature. For more information about trace logs, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
 ## Example configuration
- The following example shows the settings and example values for the \<**RDLSandboxing**> element in the RSReportServer.Config file.  
+ The following example shows the settings and example values for the ```<RDLSandboxing>``` element in the RSReportServer.Config file.  
   
 ```  
 <RDLSandboxing>  
@@ -68,11 +68,11 @@ The Report Definition Language (RDL) sandboxing feature lets you detect and rest
 |**MaxArrayResultLength**|Maximum number of items allowed in an array return value for an RDL expression.<br /><br /> Default: 100|  
 |**Types**|The list of members to allow within RDL expressions.|  
 |**Allow**|A type or set of types to allow in RDL expressions.|  
-|**Namespace**|Attribute for **Allow** that is the namespace that contains one or more types that apply to Value. This property is case-insensitive.|  
-|**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed in RDL expressions or in an RDL **\<Class>** element.<br /><br /> When **RDLSandboxing** is enabled, new arrays can't be created in RDL expressions, regardless of the setting of **AllowNew**.|  
-|**Value**|Value for **Allow** that is the name of the type to allow in RDL expressions. The value **\*** indicates that all types in the namespace are allowed. This property is case-insensitive.|  
-|**Members**|Value for the list of types that are in the **\<Types>** element, and the list of member names that aren't allowed in RDL expressions.|  
-|**Deny**|The name of a member that isn't allowed in RDL expressions. This property is case-insensitive.<br /><br /> When **Deny** is specified for a member, all members with this name for all types aren't allowed.|  
+|**Namespace**|Attribute for ```Allow``` that is the namespace that contains one or more types that apply to Value. This property is case-insensitive.|  
+|**AllowNew**|Boolean attribute for ```Allow``` that controls whether new instances of the type are allowed in RDL expressions or in an RDL **\<Class>** element.<br /><br /> When ```RDLSandboxing``` is enabled, new arrays can't be created in RDL expressions, regardless of the setting of **AllowNew**.|  
+|**Value**|Value for ```Allow``` that is the name of the type to allow in RDL expressions. The value ```*``` indicates that all types in the namespace are allowed. This property is case-insensitive.|  
+|**Members**|Value for the list of types that are in the ```<Types>``` element, and the list of member names that aren't allowed in RDL expressions.|  
+|**Deny**|The name of a member that isn't allowed in RDL expressions. This property is case-insensitive.<br /><br /> When ```Deny``` is specified for a member, all members with this name for all types aren't allowed.|  
   
 ## Working with expressions when RDL sandboxing is enabled
 
@@ -99,9 +99,9 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   Static members of a type.  
   
--   The [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
+-   The [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ```New``` method.  
   
--   The **\<Classes>** element in the report definition.  
+-   The ```<Classes>``` element in the report definition.  
   
 -   Members that you added to the blocklist for a type in the allowlist.  
   
@@ -115,15 +115,15 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
  To enable a member of one type but deny a member with the same name for a different type, you must do the following actions:  
   
--   Add a **\<Deny>** element for the member name.  
+-   Add a ```<Deny>``` element for the member name.  
   
 -   Create a proxy member with a different name on a class in a custom assembly for the member that you want to enable.  
   
 -   Add that new class to the allowlist.  
   
- To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework functions to the allowlist, add the corresponding types from the Microsoft.VisualBasic namespace to the allowlist.  
+ To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework functions to the allowlist, add the corresponding types from the ```Microsoft.VisualBasic``` namespace to the allowlist.  
   
- To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework type keywords to the allowlist, add the corresponding CLR type to the allowlist. For example, to use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the **\<RDLSandboxing>** element:  
+ To add [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework type keywords to the allowlist, add the corresponding CLR type to the allowlist. For example, to use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework keyword **Integer**, add the following XML fragment to the ```<RDLSandboxing>``` element:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -151,9 +151,9 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 -   When you update a report server to handle a later RDL schema, because new members might have been added to RDL types.  
   
-### Working with operators and new
+### Working with operators and New
 
- By default, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework language operators, except for **New**, are always allowed. The **New** operator is controlled by the **AllowNew** attribute on the **\<Allow>** element. Other language operators, such as the default collection accessor operator **!** and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
+ By default, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework language operators, except for ```New```, are always allowed. The ```New``` operator is controlled by the ```AllowNew``` attribute on the ```<Allow>``` element. Other language operators, such as the default collection accessor operator ```!``` and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework cast macros such as **CInt**, are always allowed.  
   
  Adding operators to a blocklist, including custom operators, isn't supported. To exclude operators for a type, you must do the following actions:  
   

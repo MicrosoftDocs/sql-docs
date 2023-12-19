@@ -33,8 +33,8 @@ Reporting Services SharePoint mode provides three SharePoint site collection fea
 
 ## Related content
 
-[Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
-[Reporting Services Site Settings and Site Features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
-[Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
+[Activate the Report Server and Power View integration features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
+[Reporting Services site settings and site features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
+[Activate the Report Server file sync feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

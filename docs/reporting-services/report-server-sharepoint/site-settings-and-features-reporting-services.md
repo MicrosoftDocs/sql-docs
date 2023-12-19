@@ -44,6 +44,6 @@ Reporting Services SharePoint mode has several site level custom features and si
   
 ## Related content
 
- [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+ [Manage a Reporting Services SharePoint service application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
   

@@ -165,6 +165,6 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 4.  Select **Ok**.  
   
 ## Related content  
- [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [SharePoint site and list permission reference for report server items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   

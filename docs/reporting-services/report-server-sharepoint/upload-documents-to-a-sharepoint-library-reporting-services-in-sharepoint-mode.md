@@ -46,8 +46,8 @@ You can upload report definitions and report models to a SharePoint library. Whe
   
 ## Related content
 
- [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a Shared Data Source to a SharePoint Library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Publish a report to a SharePoint library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Publish a shared data source to a SharePoint library](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Granting permissions on report server items on a SharePoint site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

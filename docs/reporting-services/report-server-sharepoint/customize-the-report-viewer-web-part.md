@@ -95,7 +95,7 @@ You can use the Report Viewer web part to view reports that run on a report serv
   
 ## Related content
 
- [Report Viewer web part on a SharePoint Site](./report-viewer-web-part-sharepoint-site.md)   
+ [Report Viewer web part on a SharePoint site](./report-viewer-web-part-sharepoint-site.md)   
  [Add the Report Viewer web part to a web page](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

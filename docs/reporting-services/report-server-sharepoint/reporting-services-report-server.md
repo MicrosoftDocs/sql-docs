@@ -141,12 +141,12 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 
 ## Related content
 
-[Reporting Services Extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
-[Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
-[Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
-[Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-[Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Reporting Services extensions](../../reporting-services/extensions/reporting-services-extensions.md)   
+[Reporting Services tools](../../reporting-services/tools/reporting-services-tools.md)   
+[Subscriptions and delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+[Report server database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Implementing a security extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[Implementing a data processing extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+[Data sources supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
 More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)

@@ -68,10 +68,10 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
   
 |Setting|Comments|  
 |-------------|--------------|  
-|Enable Execution Logging|Default is TRUE.<br /><br /> specify whether the report server generates trace logs and the number of days the log is kept. The logs are stored on the report server computer in the \Microsoft SQL Server\MSSQL.n\ReportServer\Log folder. A new log file is started each time the service is restarted. For more information about log files, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
+|Enable Execution Logging|Default is TRUE.<br /><br /> specify whether the report server generates trace logs and the number of days the log is kept. The logs are stored on the report server computer in the ```\Microsoft SQL Server\MSSQL.n\ReportServer\Log``` folder. A new log file is started each time the service is restarted. For more information about log files, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)|  
 |Execution Log Days Kept|Default is 60 days.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging.  For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] all supports SharePoint ULS logging. For more information, see [Turn on Reporting Services events for the SharePoint trace log &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ### Security settings
   
@@ -87,7 +87,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 |Setting|Comments|  
 |-------------|--------------|  
 |Enable Report Builder Download|Default is TRUE.<br /><br /> Specifies whether clients are able to see the button for downloading the report builder application.|  
-|Report Builder Launch URL|Specify a custom URL when the report server doesn't use the default Report Builder URL. This setting is optional. If you don't specify a value, the default URL is used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|Report Builder Launch URL|Specify a custom URL when the report server doesn't use the default Report Builder URL. This setting is optional. If you don't specify a value, the default URL is used, which launches Report Builder. To launch Report Builder 3.0 as a Click-Once application, enter the following value: ```https://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application```.|  
 |Enable Client Printing|The Default is TRUE.<br /><br /> Specifies whether users can download the client side control, which provides printing options.|  
 |Edit Session Timeout|Default is 7200 seconds.|  
 |Edit Session Cache Limit|Default is 5.|  

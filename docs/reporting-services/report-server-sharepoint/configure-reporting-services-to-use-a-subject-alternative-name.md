@@ -19,7 +19,7 @@ The instructions apply to the Web Service URL and the Web Portal URL in the Repo
 
 To use a SAN, the TLS/SSL certificate must be registered on the server, signed, and have the private key. You can't use a self-signed certificate.
 
-URLs in Reporting Services and Power BI Report Server can be configured to use a TLS/SSL certificate. A certificate normally has just a subject name, which allows only one URL for a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), session. The SAN is another field in the certificate that allows a TLS service to listen for many URLs, and to share the TLS port with other applications. For example, a SAN could look something like `www.myreports.com`.
+URLs in Reporting Services and Power BI Report Server can be configured to use a TLS/SSL certificate. A certificate normally has just a subject name, which allows only one URL for a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), session. The SAN is another field in the certificate that allows a TLS service to listen for many URLs, and to share the TLS port with other applications. For example, a SAN could look something like ```www.myreports.com```.
 
 For more information about TLS settings for Reporting Services, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   

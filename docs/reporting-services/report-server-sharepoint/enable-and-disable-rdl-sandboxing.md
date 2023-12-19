@@ -172,6 +172,6 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
 ## Related content
 
  [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Report server service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

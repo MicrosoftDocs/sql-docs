@@ -39,11 +39,11 @@ Use the following sections to help you understand concepts, deployment scenarios
   
 -   [Reporting Services site collection features](../../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md)  
   
--   [Activate the Report Server and Power View integration features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)  
+-   [Activate the report server and Power View integration features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)  
   
 -   [Reporting Services site settings and site features&#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)  
   
--   [Activate the Report Server File Sync feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
+-   [Activate the report server File Sync feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
   
 -   [Add Reporting Services content types to a SharePoint library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   

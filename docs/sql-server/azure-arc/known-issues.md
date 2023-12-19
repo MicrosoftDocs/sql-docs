@@ -61,6 +61,6 @@ or more H4 sections.
 
 [Troubleshoot Azure extension for SQL Server](troubleshoot-deployment.md)
 
-[Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](../../../azure-sql/database/troubleshoot-common-connectivity-issues.md)
+[Troubleshoot connectivity to the data processing service and telemetry endpoints](troubleshoot-telemetry-endpoint.md)
 
 [Troubleshoot best practices assessment on SQL Server](troubleshoot-assessment.md)

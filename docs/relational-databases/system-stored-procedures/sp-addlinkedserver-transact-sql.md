@@ -382,10 +382,10 @@ EXEC master.dbo.sp_addlinkedsrvlogin
 
 To enable authentication with managed identities, a managed identity assigned to the Azure SQL Managed Instance needs to be added as a login to the remote managed instance. Both system-assigned and user-assigned managed identities are supported.
 
-If primary identity is set, it is used, otherwise system assigned managed identity is used. If the managed identity is recreated with the same name, the login on the remote instance also needs to be recreated, because the new managed identity Application ID and SQL Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
+If a primary identity is set, it is used, otherwise the system-assigned managed identity is used. If the managed identity is recreated with the same name, the login on the remote instance also needs to be recreated, because the new managed identity Application ID and SQL Managed Instance service principal SID no longer match. To verify these two values match, convert SID to application ID with following query.
 
 ```sql
-SELECT convert(uniqueidentifier, sid) as AzureADApplicationID
+SELECT convert(uniqueidentifier, sid) as MSEntraApplicationID
 FROM sys.server_principals
 WHERE name = '<managed_instance_name>';
 ```

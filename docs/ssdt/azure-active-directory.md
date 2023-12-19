@@ -24,7 +24,7 @@ In Visual Studio, open the **SQL Server Object Explorer** (in the **View** menu)
 
 #### Which Azure SQL products?
 
-This article discusses Microsoft Entra ID for the following list of *Azure SQL products* in the [Azure cloud](https://azure.microsoft.com/):
+This article discusses Microsoft Entra ID for the following list of *SQL* products in the [Azure cloud](https://azure.microsoft.com/):
 
 - [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview)
 - [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview)
@@ -73,7 +73,7 @@ When authenticating with *Active Directory Interactive Authentication*, an authe
 
 ## Known issues and limitations
 
-- *Active Directory Interactive Authentication* is only supported when connecting to the Azure SQL products that were listed at the start of this article. It is not supported for SQL Server (on-premises or on a VM).
+- *Active Directory Interactive Authentication* is only supported when connecting to the SQL products that were listed at the start of this article. 
 - Single sign-on integration with the currently logged in Visual Studio account is not supported for SSDT.
 - The SQLPackage.exe that is installed into the Extensions directory during Visual Studio installation is not meant to be used from that location. To use SQLPackage.exe with Microsoft Entra ID, go to [Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=55088) 
 

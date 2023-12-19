@@ -483,7 +483,7 @@ az sql server update -g <resource-group> -n <azure-sql-server> --identity-type S
 
 After that, configure Event Hubs to allow Azure SQL Server's Managed Identity to be able to send messages ("Azure Event Hubs Data Sender" role) to the desired event hub. For more information, see [Use Event Hubs with managed identities](/azure/event-hubs/authenticate-managed-identity?tabs=latest#use-event-hubs-with-managed-identities).
 
-Once this is done, you can use the `Managed Identity` identity name when defining the database scoped credential that will be used by `sp_invoke_external_rest_endpoint`. As explained in the [Authenticate an application with Microsoft Entra ID to access Event Hubs resources](/azure/event-hubs/authenticate-application) document, the resource name (or ID) to use when using Microsoft Entra authentication is `https://eventhubs.azure.net`:
+Once this is done, you can use the `Managed Identity` identity name when defining the database scoped credential that will be used by `sp_invoke_external_rest_endpoint`. As explained in [Authenticate an application with Microsoft Entra ID to access Event Hubs resources](/azure/event-hubs/authenticate-application), the resource name (or ID) to use when using Microsoft Entra authentication is `https://eventhubs.azure.net`:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL [https://<EVENT-HUBS-NAME>.servicebus.windows.net]

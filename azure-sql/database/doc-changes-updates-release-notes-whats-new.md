@@ -134,7 +134,7 @@ Learn about significant changes to the Azure SQL Database documentation. For pre
 
 ## Archive
 
-For previous news, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+For previous updates, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
 
 ## Contribute to content
 

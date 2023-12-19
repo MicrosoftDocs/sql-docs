@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services features and tasks"
-description: Learn how Reporting Services foundational content is organized by reports and report features, report server features, and Reporting Services product features.
+description: Learn how to access Reporting Services foundational content organized by reports and report features, report server features, and Reporting Services product features.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/18/2015
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "development [Reporting Services]"
 ---
 # Reporting Services features and tasks (SSRS)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized into categories: reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  
   
 ## In this section
 

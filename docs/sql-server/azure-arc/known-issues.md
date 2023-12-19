@@ -12,7 +12,7 @@ ms.date: 12/18/2023
 
 This article identifies current known issues with SQL Server enabled by Azure Arc
 
-## [Issue title]
+## Deleted database renders on portal
 
 <!-- Required: Database inventory deletion - H2
 
@@ -22,13 +22,11 @@ easily identify the issue that they are experiencing.
 
 -->
 
-[Describe the issue.]
+<!-- Required: Issue description (no heading) -->
 
-<!-- Required: Issue description (no heading)
+Databases deleted on-premises might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on-premises but propagation to database inventory is being worked on. The fix is expected to be out soon.
 
-Databases deleted on prem might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on On-Prem but propagation to database inventory is being worked on. The fix is expected to be out soon.
-
--->
+<---->
 
 ## Prerequisites
 

@@ -39,7 +39,7 @@ SharePoint users can view a list of the data alerts that they created and inform
     > [!NOTE]  
     >  If the report that you selected does not have any alerts, you do not have to return to the SharePoint library to locate and select a report that hasalerts. Instead, select **Show All** to see a list of all your alerts.  
   
-     A table lists the alert name, report name, your name as the creator of the alert, the number the alert was sent, the last time the alert definition was modified, and the status of the alert. If the alert cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
+     A table lists the alert name, report name, your name as the creator of the alert, the number the alert was sent, the last time the alert definition was modified, and the status of the alert. If the alert can't be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
   
 ### Edit an alert definition  
   

@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "passing parameters [Reporting Services]"
 ---
 # Pass a report parameter within a URL
-  You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  
+  You can pass report parameters to a report by including them in a report URL. These URL parameters aren't prefixed because they're passed directly to the report processing engine.  
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -75,7 +75,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  If your report contains a report parameter that has a default value and the value of the **Prompt** property is **false** (that is, the Prompt User property is not selected in Report Manager), then you cannot pass a value for that report parameter within a URL. This provides administrators an option for preventing end users from adding or modifying the values of certain report parameters.  
   
-##  <a name="bkmk_examples"></a> Additional examples  
+##  <a name="bkmk_examples"></a> More examples  
  The following URL example includes spaces and multiple parameters  
   
 -   Folder name of "SQL Server User Education Team" includes spaces and therefore the "+" replaces each space.  

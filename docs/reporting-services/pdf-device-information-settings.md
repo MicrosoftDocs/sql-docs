@@ -17,7 +17,7 @@ helpviewer_keywords:
   
 |Setting|Value|  
 |-------------|-----------|  
-| **AccessiblePDF** | Indicates whether to render an accessible/tagged PDF, which is larger in size but easier for screen readers and other assistive technologies to read and navigate. The default value is **false**. [Available in Power BI Report Server (March 2018) and later] |
+| **AccessiblePDF** | Indicates whether to render an accessible/tagged PDF. The PDF is larger in size but easier for screen readers and other assistive technologies to read and navigate. The default value is **false**. [Available in Power BI Report Server (March 2018) and later] |
 |**Columns**|The number of columns to set for the report. This value overrides the report's original settings.|  
 |**ColumnSpacing**|The column spacing to set for the report. This value overrides the report's original settings.|  
 |**DpiX**|The resolution of the output device in x-direction.|  

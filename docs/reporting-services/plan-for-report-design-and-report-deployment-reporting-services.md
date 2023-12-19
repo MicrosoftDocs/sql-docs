@@ -12,12 +12,12 @@ ms.custom: updatefrequency5
 # Plan for report design and report deployment | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides several approaches for authoring and deploying paginated reports. Learn how to plan a report authoring and report server environment that work together.
 
-This topic is an overview of report definition support by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components. A report definition is an XML file that is written in the Report Definition Language (RDL) or the Report Definition Language for Clients (RDLC). Each report definition conforms to a specific schema version that is listed at the beginning of the file.  
+This article is an overview of report definition support by [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components. A report definition is an XML file that is written in the Report Definition Language (RDL) or the Report Definition Language for Clients (RDLC). Each report definition conforms to a specific schema version that is listed at the beginning of the file.  
   
  RDL files are authored in Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and in Report Builder. RDLC files are authored by using the ReportViewer controls that are included in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
   
 ##  <a name="bkmk_rdl_schema_versions"></a> RDL schema versions  
- The following table lists each available schema version and the abbreviation that is used throughout the rest of this topic:  
+ The following table lists each available schema version and the abbreviation that is used throughout the rest of this article:  
   
 |Abbreviation|Schema version|  
 |------------------|--------------------|  
@@ -27,7 +27,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
 |2005 RDL<br /><br /> 2005 RDLC|`https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition`|  
 |2000 RDL|`https://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition`|  
   
- For more information on RDL and RDL schemas, see the following:  
+ For more information on RDL and RDL schemas, see the following resources:  
 
 -   [Microsoft SQL Server XML schemas](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
@@ -62,7 +62,7 @@ This topic is an overview of report definition support by [!INCLUDE[ssRSnoversio
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[sql2008-md](../includes/sql2008-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
   
- When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself is not upgraded.  
+ When you upload a report definition to the report server or upgrade a report server that contains existing reports, the report server preserves the report definition in the original format. **On first use**, the report server upgrades the report in the report server database to a binary format that is preserved for subsequent views. The report definition (.rdl) itself isn't upgraded.  
   
  You can extract from the report server a read-only copy of the report definition file (.rdl). On a native mode report server, browse to the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the report and choose **Download**. 
 
@@ -77,7 +77,13 @@ In a SharePoint mode deployment, browse to the document library, select the repo
  For more information about report upgrades and the schema versions that are supported, see [Upgrade reports (SSRS)](../reporting-services/install-windows/upgrade-reports.md).  
   
 ##  <a name="bkmk_report_authoring_and_deployment"></a> Report authoring and deployment support  
- Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  
+ Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide various support for reports like:
+
+    - Upgrade
+    - Design
+    - Report preview in local mode
+    - Report preview on the report server
+    - Deployment.  
   
  The following table summarizes support for authoring and deploying report definitions for different schema versions:  
   
@@ -89,7 +95,7 @@ In a SharePoint mode deployment, browse to the document library, select the repo
 |Report Designer in [!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)] Business Intelligence Development Studio|Authors 2010 RDL<br /><br /> Will upgrade older RDL versions to 2010 RDL|2010 RDL|[!INCLUDE[sql2008r2](../includes/sql2008r2-md.md)]|  
 |Report Designer in [!INCLUDE[sql2008-md](../includes/sql2008-md.md)] Business Intelligence Development Studio|Authors 2008 RDL<br /><br /> Will upgrade older RDL versions to 2008 RDL|2008 RDL|[!INCLUDE[sql2008-md](../includes/sql2008-md.md)]|
   
- For more information on SQL Server Data Tools (SSDT), see the following:  
+ For more information on SQL Server Data Tools (SSDT), see the following resources:  
   
 -   [Deployment and version support in SQL Server Data Tools &#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
@@ -103,7 +109,7 @@ In a SharePoint mode deployment, browse to the document library, select the repo
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>Or<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010|2008 RDL|  
 |[!INCLUDE[vsprvs2005](../includes/vsprvs2005-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs2008](../includes/vsprvs2008-md.md)]|2005 RDL|  
   
- For more information, see the following:  
+ For more information, see the following resources:  
   
 -   [Converting RDLC files to RDL files](/previous-versions/ms252109(v=vs.140))  
   

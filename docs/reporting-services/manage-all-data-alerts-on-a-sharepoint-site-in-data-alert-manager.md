@@ -1,6 +1,6 @@
 ---
 title: "Manage all data alerts on a SharePoint site in Data Alert Manager"
-description: Learn how to view the data alerts that were created by any site user and information about the alerts. Also, learn how to delete alerts.
+description: Learn how to view the data alerts that any site user creates along with information about the alerts. Also, learn how to delete alerts.
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 08/17/2017
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016"
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-SharePoint alerting administrators can view a list of the data alerts that were created by any site user and information about the alerts. Alerting administrators can also delete alerts. The following picture shows the features available to alerting administrators in Data Alert Manager.
+SharePoint alerting administrators can view a list of the data alerts that any site user creates along with information about the alerts. Alerting administrators can also delete alerts. The following picture shows the features available to alerting administrators in Data Alert Manager.
 
 :::image type="content" source="../reporting-services/media/rs-alertmanagersite.gif" alt-text="Screenshot of the Data Alert Manager showing the features available to alerting administrators.":::
 
@@ -38,7 +38,15 @@ SharePoint alerting administrators can view a list of the data alerts that were 
   
 6.  Select the down arrow next to the **View alerts for report** list and select a specific alert to view, or select **Show All** to list all alerts created by the selected user.  
   
-     A table lists the name, report name, name of the person who created the data alert, the number times the data alert was sent, the last time the data alert definition was modified, and the status of the data alert. If the data alert cannot be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
+  A table lists the following pieces of information:
+        - Name
+        - Report name
+        - Name of the person who created the data alert
+        - Number times the data alert was sent
+        - The last time the data alert definition was modified
+        - Status of the data alert
+  
+    If the data alert can't be generated or sent, the status column contains information about the error and helps you troubleshoot the problem.  
   
 ## Delete an alert definition  
   

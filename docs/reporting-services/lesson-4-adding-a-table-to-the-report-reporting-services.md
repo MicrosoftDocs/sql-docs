@@ -60,7 +60,7 @@ Previewing a report enables you to view the rendered report without having to fi
 
 Select the **Preview** tab. Report Designer runs the report and displays it in the **Preview** view.
 
-    :::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
+:::image type="content" source="./media/ssrs-ssdt-preview.png" alt-text="Screenshot of the Preview tab in Report Designer.":::
 
 The following diagram shows part of the report in **Preview** view.
 

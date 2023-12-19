@@ -26,7 +26,7 @@ easily identify the issue that they are experiencing.
 
 Databases deleted on-premises might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on-premises but propagation to database inventory is being worked on. The fix is expected to be out soon.
 
-<---->
+<!--
 
 ## Prerequisites
 
@@ -38,7 +38,6 @@ first H2 in the article.
 Use clear and unambiguous language, and use
 an unordered list format. 
 
--->
 
 ### Troubleshooting steps
 
@@ -46,8 +45,6 @@ an unordered list format.
 
 Not all known issues can be corrected, but if a solution 
 is known, describe the steps to take to correct the issue.
-
--->
 
 ### Possible causes
 
@@ -59,3 +56,11 @@ In an H3 section, describe potential causes in one
 or more H4 sections.
 
 -->
+
+## Related content
+
+[Troubleshoot Azure extension for SQL Server](troubleshoot-deployment.md)
+
+[Troubleshoot transient connection errors in SQL Database and SQL Managed Instance](../../../azure-sql/database/troubleshoot-common-connectivity-issues.md)
+
+[Troubleshoot best practices assessment on SQL Server](troubleshoot-assessment.md)

@@ -14,7 +14,7 @@ This article identifies current known issues with SQL Server enabled by Azure Ar
 
 ## [Issue title]
 
-<!-- Required: Issue name - H2
+<!-- Required: Database inventory deletion - H2
 
 Each known issue should be in its own section. 
 Provide a title for the section so that users can 
@@ -26,7 +26,7 @@ easily identify the issue that they are experiencing.
 
 <!-- Required: Issue description (no heading)
 
-Describe the issue.
+Databases deleted on prem might not be immediately deleted on Azure. There's no impact on how database CRUD operations happen on On-Prem but propagation to database inventory is being worked on. The fix is expected to be out soon.
 
 -->
 

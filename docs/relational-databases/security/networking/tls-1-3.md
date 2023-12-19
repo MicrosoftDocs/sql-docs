@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver16 || >=sql-server-linux-ver16"
 Beginning with [!INCLUDE [sssql22-md](../../../includes/sssql22-md.md)], [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports Transport Layer Security (TLS) 1.3 when TDS 8.0 is used.
 
 > [!IMPORTANT]
-> Even with TLS 1.3 support for TDS connections TLS 1.2 is still required for starting up SQL Server satellite services. Do not disable TLS 1.2 on the machine.
+> Even with TLS 1.3 support for TDS connections, TLS 1.2 is still required for starting up [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] satellite services. Don't disable TLS 1.2 on the machine.
 
 [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] and earlier versions don't support TLS 1.3.
 

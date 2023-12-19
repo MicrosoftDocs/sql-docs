@@ -97,6 +97,22 @@ Requires ALTER permission on the table.
        CONSTRAINT AK_TransactionID UNIQUE(TransactionID)  
     );  
     GO  
+    ```
+### To create a unique constraint on a nullable column
+
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+
+2. On the Standard bar, select **New Query**.  
+
+3. Copy and paste the following example into the query window and select **Execute**. The example creates a unique constraint using the `CREATE UNIQUE INDEX` syntax, which is the only syntax that supports filtering out values such as `null`. 
+
+    ```sql  
+    USE AdventureWorks2022;  
+    GO
+    CREATE UNIQUE INDEX UQ_AdventureWorksDWBuildVersion
+    ON dbo.AdventureWorksDWBuildVersion (DBVersion)
+    WHERE (DBVersion IS NOT NULL);
+    GO  
     ```  
 
 ## Next steps

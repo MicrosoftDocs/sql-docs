@@ -317,4 +317,4 @@ The following list summarizes the key areas of [!INCLUDE[ssRSnoversion](../inclu
 - [Data Alert Manager for alerting administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 - [Data Alert Manager for SharePoint users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

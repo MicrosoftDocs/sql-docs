@@ -15,34 +15,35 @@ helpviewer_keywords:
 # Reporting Services features and tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] foundational content is organized by reports and report features, report server features, and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] product features.  
   
-## In this section  
- [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
+## In this section
+
+- [Create mobile reports with SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
- [Reporting Services report server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+- [Reporting Services report server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
- [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)  
+- [Reporting Services reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)  
   
- [Report data &#40;SSRS&#41;](../reporting-services/report-data/report-data-ssrs.md)  
+- [Report data &#40;SSRS&#41;](../reporting-services/report-data/report-data-ssrs.md)  
   
- [Report parameters &#40;Report Builder and Report Designer&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+- [Report parameters &#40;Report Builder and Report Designer&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [Report parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+- [Report parts in Report Designer &#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
  
- [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
+- [!INCLUDE [ssrs-report-parts-deprecated](../includes/ssrs-report-parts-deprecated.md)]  
  
- [Schedules](../reporting-services/subscriptions/schedules.md)  
+- [Schedules](../reporting-services/subscriptions/schedules.md)  
   
- [Subscriptions and delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+- [Subscriptions and delivery &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
+- [Reporting Services data alerts](../reporting-services/reporting-services-data-alerts.md)  
   
- [Reporting Services security and protection](../reporting-services/security/reporting-services-security-and-protection.md)  
+- [Reporting Services security and protection](../reporting-services/security/reporting-services-security-and-protection.md)  
   
- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+- [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
   
- [Extensions &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)  
+- [Extensions &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)  
   
- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
+- [Reporting Services tools](../reporting-services/tools/reporting-services-tools.md)  
   
 ## Related content
 

@@ -24,7 +24,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
     On a report server, select **New** > **Paginated Report**.
   
-    On a report server in SharePoint integrated mode, navigate to the **Documents** tab. Select **New Document**, and from the drop-down list, select **Report Builder Report**. For example, `https://<servername>/sites/mySite/reports`. The SharePoint administrator must enable the Report Builder Report feature for each document library.  
+    On a report server in SharePoint integrated mode, navigate to the **Documents** tab. Select **New Document**, and from the drop-down list, choose **Report Builder Report**. For example, `https://<servername>/sites/mySite/reports`. The SharePoint administrator must enable the Report Builder Report feature for each document library.  
   
 -   The URL to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server or a SharePoint site that is integrated with a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] report server. You must have permission to save and view reports, shared data sources, shared datasets, and models. By default, the URL for a report server is `https://<servername>/reportserver`. By default, the URL for a SharePoint site is `https://<sitename>` or `https://<server>/site`.  
   
@@ -40,4 +40,4 @@ The report server administrator must grant you the necessary permissions on the 
 
 - [Report Builder tutorials](../reporting-services/report-builder-tutorials.md)  
 
-More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user)
+More questions? [Try asking the Reporting Services forum](/answers/search.html?c=&f=&includeChildren=&q=ssrs+OR+reporting+services&redirect=search%2fsearch&sort=relevance&type=question+OR+idea+OR+kbentry+OR+answer+OR+topic+OR+user).

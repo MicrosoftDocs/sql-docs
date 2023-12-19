@@ -142,8 +142,8 @@ You create Reporting Services mobile reports (.rsmobile files) in SQL Server Mob
   
   
 ##  <a name="bkmk_TypesofReports"></a> Types of Reporting Services paginated reports  
- In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the term *report* can apply to a specific type of report server item, a layout design, or a solution design. A single Reporting Services paginated report can have characteristics from more than one type. For example, a report can be, at the same time, a stand-alone report, a subreport referenced by a main report, the target of a drillthrough report in a different main report, and a linked report.  
-  
+ In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the term *report* can apply to a specific type of report server item, a layout design, or a solution design. A single Reporting Services paginated report can have characteristics from more than one type. For example, a report can be, at the same time, a stand-alone report, a subreport referenced by a main report, the target of a drillthrough report in a different main report, and a linked report.
+
 ### Drilldown reports 
  A drilldown report is a layout design that at first hides complexity and enables the user to toggle conditionally hidden report items to control how much detail data they want to see. Drilldown reports must retrieve all possible data that can be shown in the report. For reports that use large amounts of data, consider drillthrough reports instead. For more information, see [Drilldown action &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md).  
   

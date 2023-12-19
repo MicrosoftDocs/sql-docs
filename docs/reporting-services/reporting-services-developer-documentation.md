@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 
 # Reporting Services developer documentation
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offers several programming interfaces that you can leverage in your own applications. You can use the existing features and capabilities of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to build custom reporting and management tools into Web sites and Windows applications, or you can extend the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] platform.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offers several programming interfaces that you can apply in your own applications. You can use the existing features and capabilities of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to build custom reporting and management tools into Web sites and Windows applications. Or you can extend the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] platform.  
   
  Extending the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] platform includes creating new components and resources that can be used for data access, report delivery and more. You can market these components and resources to companies that are using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in their organization.  
   
@@ -26,14 +26,14 @@ helpviewer_keywords:
  [Integrate Reporting Services into applications](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Provides an overview of how to use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] to integrate reporting into custom applications. Describes when to use direct URL access and when to use the Web service to access the report server.  
   
- [Report Server Web service for ASP.net and traditional applications](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Report Server Web service for ASP.NET and traditional applications](../reporting-services/report-server-web-service/report-server-web-service.md)  
  The Report Server Web service provides access to the full functionality of the report server. The Web service uses SOAP over HTTP and is designed to act as a communications interface between client programs and the report server. The Web service and its methods expose the functionality of the report server and allow you to create custom tools for any part of the report life cycle, from management to execution.  
  
  [Develop with REST APIs for modern applications](developer/rest-api.md)</br>
  The Reporting Services REST APIs provide programmatic access to the objects in Reporting Services report server catalog. When using the REST APIs, you can navigate to a folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects.
 
  [URL access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports a complete set of URL-based requests that you can use as a quick and easy access point for report navigation and viewing. You can use this technology in conjunction with the Report Server Web service to integrate a complete reporting solution into your custom business applications. URL access is particularly useful when integrating reports as part of a Web portal or when viewing reports from a Web browser.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports a complete set of URL-based requests that you can use as a quick and easy access point for report navigation and viewing. You can use this technology with the Report Server Web service to integrate a complete reporting solution into your custom business applications. URL access is useful when integrating reports as part of a Web portal or when viewing reports from a Web browser.  
   
  [Reporting Services extensions](../reporting-services/extensions/reporting-services-extensions.md)  
  The modular architecture of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is designed for extensibility. A managed code API is available so that you can easily develop, install, and manage extensions consumed by many [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components. You can create assemblies using the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] and add new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rendering, security, delivery, and data processing functionality to meet your evolving business needs.  

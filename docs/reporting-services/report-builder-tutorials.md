@@ -60,7 +60,7 @@ Follow the steps in this tutorial to learn how to customize the appearance and c
 Follow the steps in this tutorial to learn how to create reports for a drillthrough scenario based on an Analysis Services cube. You create the main report and enable it for drillthrough and the report that is the target of the drillthrough action.  
   
 [Tutorial: Introduce expressions](../reporting-services/tutorial-introducing-expressions.md)  
-Follow the steps in this tutorial to learn how to use expressions to concatenate, calculate, and look up field values and show them a report. You will also learn how to conditionally display different images and indicator states using expressions.  
+Follow the steps in this tutorial to learn how to use expressions to concatenate, calculate, and look up field values and show them a report. You also learn how to conditionally display different images and indicator states using expressions.  
 
 ## Related content
 

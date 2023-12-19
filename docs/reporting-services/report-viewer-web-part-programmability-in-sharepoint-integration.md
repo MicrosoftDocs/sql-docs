@@ -16,7 +16,7 @@ ms.custom: updatefrequency5
  The Report Viewer Web Part is a connection consumer to SharePoint Web Parts that implement <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> or T:Microsoft.SharePoint.WebPartPages.IFilterValues. An <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part, such as the **Documents** Web Part can supply a report path to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part. Likewise, an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part, such as the **Text Filter** or the **Choice Filter**, can supply a report parameter to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part.  
   
 ### Implement a report path provider with IWebPartRow  
- To supply a report path to the Report Viewer Web Part through Web Part connections, do the following:  
+ Use the following steps to supply a report path to the Report Viewer Web Part through Web Part connections:  
   
 1.  Create a Web Part that implements the <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface.  
   
@@ -27,7 +27,7 @@ ms.custom: updatefrequency5
     > [!NOTE]  
     >  You can only connect one <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part to the Report Viewer Web Part at a time, and you cannot connect both an <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part and an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part at the same time.  
   
- For your <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part to work properly with the T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, you must do the following in the <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> method:  
+ For your <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part to work properly with the T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, you need to use the following steps for the <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> method:  
   
 -   Invoke the callback method with a <xref:System.Data.DataRowView> object as the input parameter.  
   
@@ -39,7 +39,7 @@ ms.custom: updatefrequency5
 ### Implement a report parameter provider with IFilterValues  
  A Web Part that implements T:Microsoft.SharePoint.WebPartPages.IFilterValues can provide one parameter value to the Report Viewer Web Part. The parameter value sent to the Report Viewer Web Part is subject to the same restrictions placed on the report parameter as specified in the report definition, such as data type, valid values, and so on  
   
- To supply a report parameter to the Report Viewer Web Part, do the following:  
+ Use the following steps to supply a report parameter to the Report Viewer Web Part:  
   
 1.  Create a Web Part that implements the T:Microsoft.SharePoint.WebPartPages.IFilterValues interface.  
   

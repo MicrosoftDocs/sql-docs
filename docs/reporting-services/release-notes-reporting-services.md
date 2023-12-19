@@ -61,7 +61,7 @@ Fixed slowness of Large MDX Query as an Expression.
 ## 16.0.8361.39598, 2022/11/23
 *(Product Version: 16.0.1113.11)*
 
--  Fixed issue where some SQL Server 2022 product keys were not working with SQL Server 2022 Reporting Services.
+-  Fixed issue where some SQL Server 2022 product keys weren't working with SQL Server 2022 Reporting Services.
 
 ## 16.0.8353.8096, 2022/11/16
 *(Product Version: 16.0.1112.48)*
@@ -78,7 +78,7 @@ Initial release.
 - [Deprecated features](./deprecated-features-in-sql-server-reporting-services-ssrs.md): 
     - Report Parts support 
 - [Discontinued features](./discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md): 
-    - Pin to PowerBI functionality
+    - Pin to Power BI functionality
     - Mobile Reports functionality (.rsmobile) and Mobile Report Publisher
 
 ## 15.0.8264.8408, 2022/08/19
@@ -207,7 +207,7 @@ Initial release.
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Fixed an issue rendering some reports in Edge browser.  | &nbsp; |
+| Fixed an issue rendering some reports in Microsoft Edge browser.  | &nbsp; |
 | Fixed an issue for some locales when working with data from an Essbase datasource.  | &nbsp; |
 
 ## 14.0.600.1763, 2021/06/28 
@@ -297,7 +297,7 @@ The following issue has been fixed:
 | :---------- | :------ |
 | Textbox inside Rectangle causes the rectangle to not grow vertically when rc:Toolbar=False and it has long text. | &nbsp; |
 | Text size isn't scaling if pageHeight is less than 0.5 inches. | &nbsp; |
-| Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
+| Deadlock occurs in the SSRS catalog database when it's used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
 | Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
 | Thai character isn't exported correctly into the PDF. | &nbsp; |
@@ -310,9 +310,9 @@ The following issue has been fixed:
 
 | Fixed issue | Details |
 | :---------- | :------ |
-| Data Driven Subscription page doesn't show the Delivery Option once it is created. | &nbsp; |
+| Data Driven Subscription page doesn't show the Delivery Option once it's created. | &nbsp; |
 | Upgrading SSRS 2012 to SSRS 2017 results in RSManagement throwing an exception every few seconds. | &nbsp; |
-| Cannot change defaults values for multi-value parameters in IE11. | &nbsp; |
+| Can't change defaults values for multi-value parameters in IE11. | &nbsp; |
 | Schedules are empty whenever shared schedule is executed. | &nbsp; |
 
 ## 14.0.600.689, 2018/02/28

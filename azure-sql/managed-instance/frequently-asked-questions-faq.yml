@@ -171,7 +171,7 @@ sections:
 
           ### Can I use my Student subscription with the free Azure SQL Managed Instance? 
 
-          Currently, the Student subscription is ineligble. For eligible subscriptions, review the [free SQL Managed Instance offer prerequisites](free-offer.md#prerequisites). 
+          Currently, the Student subscription is ineligible. For eligible subscriptions, review the [free SQL Managed Instance offer prerequisites](free-offer.md#prerequisites). 
          
 
       - question: |

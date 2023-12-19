@@ -34,6 +34,7 @@ The following table lists the features of Azure SQL Managed Instance that are cu
 | Feature | Details |
 | ---| --- |
 |[Endpoint policies](./service-endpoint-policies-configure.md) | Configure which Azure Storage accounts can be accessed from a SQL Managed Instance subnet. Grants an extra layer of protection against inadvertent or malicious data exfiltration.|		
+|[Free SQL Managed Instance](free-offer.md) | Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. |
 |[Instance pools](instance-pools-overview.md) | A convenient and cost-efficient way to migrate smaller SQL Server instances to the cloud. |		
 |[Link from SQL MI to SQL Server](managed-instance-link-feature-overview.md) | Configure a link from Azure SQL Managed Instance to SQL Server 2022. | 		
 |[Maintenance window advance notifications](../database/advance-notifications.md)| Advance notifications for databases configured to use a non-default [maintenance window](../database/maintenance-window.md).  |		
@@ -68,8 +69,6 @@ The following table lists the new generally available (GA) features of Azure SQL
 |[Approximate percentile](/sql/t-sql/functions/approx-percentile-cont-transact-sql)| March 2023 | Quickly compute percentiles for a large dataset with acceptable rank-based error bounds to help make rapid decisions by using approximate percentile aggregate functions. | 
 |[Tempdb configurations - max size](tempdb-configure.md)| January 2023 | Specify the maximum size for your `tempdb` files.  |
 
-
-
 ## November 2022 feature wave
 
 The features and benefits provided by the November 2022 feature wave are now generally available. All new instances in eligible subnets in both dev/test and production subscriptions are eligible for the feature wave. Existing instances will be enrolled gradually as part of regular updates during configured maintenance windows. To learn more, see [November 2022 feature wave](november-2022-feature-wave-enroll.md).
@@ -77,6 +76,12 @@ The features and benefits provided by the November 2022 feature wave are now gen
 ## Documentation changes
 
 Learn about significant changes to the Azure SQL Managed Instance documentation. For previous years, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
+
+### December 2023
+
+| Changes | Details |
+| --- | --- |
+|**Free Azure SQL Managed Instance preview** |  Try Azure SQL Managed Instance for free, for the first 12 months after you create your instance. This free offer provides a General Purpose instance with up to 100 databases, and 720 vCore hours of compute every month. This offer is currently in preview. Review [Free SQL Managed Instance offer](free-offer.md) to learn more. |
 
 ### November 2023
 
@@ -96,7 +101,6 @@ Learn about significant changes to the Azure SQL Managed Instance documentation.
 ## Archive
 
 For previous news, see the [What's new archive](doc-changes-updates-release-notes-whats-new-archive.md).
-
 
 ## Known issues
 

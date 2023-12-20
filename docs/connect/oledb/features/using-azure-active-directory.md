@@ -19,31 +19,26 @@ ms.topic: conceptual
 
 Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to Azure SQL Database or Azure SQL Managed Instance using a [federated](/azure/active-directory/hybrid/connect/whatis-fed) identity. The new Microsoft Entra authentication methods include:
 
-
 - Username and password
 
 - Access token
 
 - Integrated authentication
 
-
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following Microsoft Entra authentication methods:
-
 
 - Interactive authentication
 
 - Managed identity authentication (only from within an [Azure Virtual Machine configured with Managed Identity](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm))
 
-
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 
 - Microsoft Entra service principal authentication
 
-> [!NOTE]
+> [!NOTE]  
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
 >
 > - Microsoft Entra authentication using username and password
-
 > - Microsoft Entra authentication using access token
 > - Microsoft Entra integrated authentication
 > - Microsoft Entra interactive authentication

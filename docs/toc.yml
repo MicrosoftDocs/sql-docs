@@ -10485,8 +10485,6 @@ items:
         href: sql-server/azure-arc/data-collection.md
       - name: Troubleshoot
         items:
-        - name: Known issues
-          href: sql-server/azure-arc/known-issues.md
         - name: Troubleshoot deployment
           href: sql-server/azure-arc/troubleshoot-deployment.md
         - name: Troubleshoot connectivity to DPS or telemetry endpoints

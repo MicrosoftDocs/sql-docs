@@ -54,7 +54,36 @@ The following table illustrates the cadence and expiration of the long-term back
 
 `W=12 weeks` (84 days), `M=12 months` (365 days), `Y=10 years` (3650 days), `WeekOfYear=20` (the week after May 13)
 
-   :::image type="content" source="media/long-term-retention-overview/ltr-example.png" alt-text="Diagram showing an example of Long-term retention.":::
+The following dates are in ISO 8601 (`YYYY-MM-DD`).
+
+|**PITR backup to LTR**|**Expiration W**|**Expiration M**|**Expiration Y**|
+|:--|:--|:--|:--|
+|**2018-03-07** | | 2019-07-03     | |
+|2018-03-14     | 2018-06-06     | | |
+|2018-03-21     | 2018-06-13     | | |
+|2018-03-28     | 2018-06-20     | | |
+|**2018-04-04** | | 2019-04-25     | |
+|2018-04-11     | 2018-07-04     | | |
+|2018-04-18     | 2018-07-11     | | |
+|2018-04-25     | 2018-07-18     | | |
+|**2018-05-02** | | 2019-05-23     | |
+|2018-05-09     | 2018-08-01     | | |
+|**2018-05-16** | | | 2028-05-13     |
+|2018-05-23     | 2018-08-15     | | |
+|2018-05-30     | 2018-08-22     | | |
+|**2018-06-06** | | 2019-06-20     | |
+|2018-06-13     | 2018-09-05     | | |
+|2018-06-20     | 2018-09-12     | | |
+|2018-06-27     | 2018-09-19     | | |
+|**2018-07-04** | | 2019-07-25     | |
+|2018-07-11     | 2018-10-03     | | |
+|2018-07-18     | 2018-10-10     | | |
+|2018-07-25     | 2018-10-17     | | |
+|**2018-08-01** | | 2019-08-22     | |
+|2018-08-08     | 2018-10-31     | | |
+|2018-08-15     | 2018-11-07     | | |
+|2018-08-22     | 2018-11-14     | | |
+|2018-08-29     | 2018-11-21     | | |
 
 If you modify the above policy and set `W=0` (no weekly backups), the service only retains the monthly and yearly backups. No weekly backups are stored under the LTR policy. The storage amount needed to keep these backups reduces accordingly.
 

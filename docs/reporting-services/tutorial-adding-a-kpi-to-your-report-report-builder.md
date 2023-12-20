@@ -45,7 +45,7 @@ In this section, you choose a shared data source, create an embedded dataset, an
   
 5.  Select **Next**.  
   
-6.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and choose a data source. If there no data source is available or you don't have access to a report server, you can use an embedded data source instead. For more information, see [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  On the **Choose a connection to a data source** page, select an existing data source. Or browse to the report server, and choose a data source. If there no data source is available or you don't have access to a report server, you can use an embedded data source instead. For more information, see [Tutorial: Creating a basic table report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Select **Next**.  
   

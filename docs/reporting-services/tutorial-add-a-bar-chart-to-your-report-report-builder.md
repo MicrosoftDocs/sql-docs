@@ -53,7 +53,7 @@ In which you create an embedded dataset, choose a shared data source, and create
   
 4.  On the **Choose a dataset** page, select **Create a dataset**, and then choose **Next**.  
   
-5.  On the **Choose a connection to a data source** page, select an existing data source or browse to the report server and choose a data source, and then select **Next**. You might need to enter a user name and password.  
+5.  On the **Choose a connection to a data source** page, select an existing data source. Or browse to the report server, and choose a data source. Then select **Next**. You might need to enter a user name and password.  
   
     > [!NOTE]  
     > The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Alternative ways to get a data connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  

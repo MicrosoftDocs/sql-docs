@@ -44,7 +44,7 @@ Create a matrix report, a data source, and a dataset.
   
 4.  On the **Choose a dataset** page, select **Create a dataset** > **Next**.  
   
-7.  On the **Choose a connection to a data source** page, select a data source from the list or browse to the report server to select one. Select any data source that is type **SQL Server**.  
+7.  On the **Choose a connection to a data source** page, select a data source from the list, or browse to the report server to select one. Select any data source that is type **SQL Server**.  
       
 8.  Select **Next**.  
 

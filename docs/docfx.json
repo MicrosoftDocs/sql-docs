@@ -269,7 +269,7 @@
       },
 
       "ms.service": {
-        "sql-server/azure-arc**/*.md": "sql"
+        "sql-server/azure-arc/**/*.md": "sql"
       },
 
       "ms.subservice": {
